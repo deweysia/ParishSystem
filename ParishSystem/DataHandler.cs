@@ -76,7 +76,7 @@ namespace ParishSystem
 
             return runNonQuery(q);*/
 
-            return true; //TEST
+            return true; //TEST1
         }
 
         public bool editGeneralProfile(int profileID, string firstName, string midName, string lastName, string suffix, string gender, DateTime birthDate, string bloodType)
