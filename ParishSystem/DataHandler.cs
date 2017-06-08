@@ -9,11 +9,12 @@ using System.Data;
 namespace ParishSystem
 {
 
-    public class DataHandler //Data Handler for BloodDonation
+    public class DataHandler
     {
         public MySqlConnection conn;
         public MySqlCommand com;
-        int userID;
+
+        private int userID;
 
         public DataHandler(string server, string database, string user, string password, int userID)
         {
@@ -21,6 +22,7 @@ namespace ParishSystem
             this.userID = userID;
         }
 
+        //                                         ========[HELPER FUNCTIONS]=========
 
         public bool runNonQuery(string q)
         {
@@ -43,12 +45,37 @@ namespace ParishSystem
             return dt;
         }
 
+        public string[,] toArray(DataTable dt)
+        {
+            string[,] arr = new string[dt.Rows.Count, dt.Columns.Count];
 
-        
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                for (int j = 0; j < dt.Columns.Count; j++)
+                {
+                    arr[i, j] = dt.Rows[i][j].ToString();
+                }
+            }
+
+            return arr;
+        }
+
+
+
+        /*
+                                         =============================================================
+                                               ================ GENERAL PROFILE =================
+                                         =============================================================
+        */
+
         public bool addGeneralProfile(string firstName, string midName, string lastName, string suffix, string gender, DateTime birthDate)
         {
-            string q = "INSERT INTO generalProfile(firstName, midName, lastName, suffix, gender, birthDate) VALUES " +
-                "(" + firstName + ", " + midName + ", " + lastName + ", " + suffix + ", " + gender + ", " + birthDate.ToString("yyyy-mm-dd") + ")";
+            if (generalProfileExists(firstName, midName, lastName, suffix, gender, birthDate))
+                throw new Exception("DataHandler: Duplicate in GeneralProfile");
+
+            string q = "INSERT INTO generalProfile(firstName, midName, lastName, suffix, gender, birthDate, lastModified, userID) VALUES " +
+                "(" + firstName + ", " + midName + ", " + lastName + ", " + suffix + ", " + gender + ", " + birthDate.ToString("yyyy-mm-dd") +
+                "NOW(), " + userID + ")";
 
             return runNonQuery(q);
         }
@@ -63,47 +90,77 @@ namespace ParishSystem
             return int.Parse(dt.Rows[0][0].ToString()) > 0;
         }
 
-        
-
-        public bool addBloodDonor(string firstName, string midName, string lastName, string suffix, string gender, DateTime birthDate, string bloodType)
+        //Returns the profileID of an entry with fields matching the columns
+        public int getGeneralProfileID(string firstName, string midName, string lastName, string suffix, string gender, DateTime birthDate)
         {
+            string q = "SELECT profileID FROM generalProfile WHERE firstName = '" + firstName + "' AND midName = '" + midName + "' " +
+                " AND lastName = '" + lastName + "' AND suffix = '" + suffix + "' AND gender = '" + gender + "' AND DATE(birthDate) = '" + birthDate.ToString("yyyy-mm-dd") + "'";
 
-            if (generalProfileExists(firstName, midName, lastName, suffix, gender, birthDate)) ;
-            //INITIAL COMMIT
-
-            /*string q = "INSERT INTO generalProfile(firstName, midName, lastName, suffix, gender, birthDate, bloodType) VALUES " +
-                "(" + firstName + ", " + midName + ", " + lastName + ", " + suffix + ", " + gender + ", " + birthDate.ToString("yyyy-mm-dd") + ", " + bloodType + ");";
-
-            return runNonQuery(q);*/
-
-            return true; //TEST1
+            DataTable dt = runQuery(q);
+            if (dt.Rows.Count == 0)
+                return -1;
+            else
+                return int.Parse(dt.Rows[0][0].ToString());
         }
 
-        public bool editGeneralProfile(int profileID, string firstName, string midName, string lastName, string suffix, string gender, DateTime birthDate, string bloodType)
+
+        public string[,] getGeneralProfile(int profileID)
         {
-            addToGeneralProfileLog(profileID);
+            string q = "SELECT firstName, midName, lastName, suffix, gender, birthdate FROM generalProfile WHERE profileID = " + profileID;
+
+            DataTable dt = runQuery(q);
+
+            return toArray(dt);
+        }
+
+        public bool editGeneralProfile(int profileID, string firstName, string midName, string lastName, string suffix, string gender, DateTime birthDate)
+        {
+            addGeneralProfileLog(profileID);
+
             string q = "UPDATE TABLE generalProfile SET firstName = '" + firstName + "', midName = '" + midName + "', lastName = '" + lastName +
-                "', suffix = '" + suffix + "', gender = '" + gender + "', birthDate = '" + birthDate.ToString("yyyy-mm-dd") + "', bloodType = '" + bloodType + "');";
+                "', suffix = '" + suffix + "', gender = '" + gender + "', birthDate = '" + birthDate.ToString("yyyy-mm-dd") + 
+                "', lastModified = NOW(), userID = " + userID + ");";
 
             return runNonQuery(q);
-        }
-
-        public bool logGeneralProfile(int profileID)
-        {
-            return addToGeneralProfileLog(profileID) && deleteGeneralProfile(profileID);
         }
 
         public bool deleteGeneralProfile(int profileID)
         {
+            addGeneralProfileLog(profileID);
+
             string q = "DELETE FROM generalProfile WHERE profileID = " + profileID + ";";
+
             return runNonQuery(q);
         }
 
-        public bool addToGeneralProfileLog(int profileID)
+        public bool addGeneralProfileLog(int profileID)
         {
             string q = "INSERT INTO generalProfileLog VALUES (SELECT * from generalProfile WHERE profileID = " + profileID + ");";
             return runNonQuery(q);
         }
+
+
+
+        /*
+                                         =============================================================
+                                               ================ BLOOD DONATION =================
+                                         =============================================================
+        */
+
+        public bool addBloodDonor(string firstName, string midName, string lastName, string suffix, string gender, DateTime birthDate, string bloodType)
+        {
+
+            if (!generalProfileExists(firstName, midName, lastName, suffix, gender, birthDate))
+                addGeneralProfile(firstName, midName, lastName, suffix, gender, birthDate);
+
+            string q = "INSERT INTO generalProfile(firstName, midName, lastName, suffix, gender, birthDate, bloodType) VALUES " +
+                "(" + firstName + ", " + midName + ", " + lastName + ", " + suffix + ", " + gender + ", " + birthDate.ToString("yyyy-mm-dd") + ", " + bloodType + ");";
+
+            return runNonQuery(q);
+
+            return true; //TEST1
+        }
+
 
         public bool addBloodDonationEvent(string eventName, DateTime eventDate, string eventStatus, string eventVenue, string eventDetails, int userID)
         {
