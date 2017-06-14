@@ -78,6 +78,15 @@ namespace ParishSystem
             return int.Parse(dt.Rows[0][0].ToString());
         }
 
+        public bool idExists(string tableName, string primaryKeyName, int primaryKeyValue)
+        {
+            string q = "SELECT * FROM "+ tableName + " WHERE "+ primaryKeyName + " = "+ primaryKeyValue;
+
+            DataTable dt = runQuery(q);
+
+            return dt.Rows.Count > 0;
+        }
+
 
 
         /*
@@ -118,11 +127,20 @@ namespace ParishSystem
         //DELETE
         public bool deleteGeneralProfile(int profileID)
         {
+            if (!idExists("generalProfile", "profileID", profileID))
+                return false;
+
+            addGeneralProfileLog(profileID);
+            updateModificationInfo("generalProfile", "profileID", profileID);
             addGeneralProfileLog(profileID);
 
             string q = "DELETE FROM generalProfile WHERE profileID = " + profileID + ";";
 
-            return runNonQuery(q);
+            bool success = runNonQuery(q);
+
+            return success;
+
+            
         }
 
 
@@ -151,7 +169,7 @@ namespace ParishSystem
         }
 
 
-        public string[,] getGeneralProfile(int profileID)
+        public DataTable getGeneralProfile(int profileID)
         {
             string q = "SELECT * FROM generalProfile WHERE profileID = " + profileID;
 
@@ -160,7 +178,7 @@ namespace ParishSystem
             if (dt.Rows.Count == 0)
                 return null;
 
-            return toArray(dt);
+            return dt;
         }
 
         public bool addGeneralProfileLog(int profileID)
@@ -258,13 +276,15 @@ namespace ParishSystem
 
         public bool deleteBloodDonation(int bloodDonationID)
         {
-            addBloodDonationLog(bloodDonationID); //ModInfo before deletion
+            if (!idExists("bloodDonation", "bloodDonationID", bloodDonationID))
+                return false;
 
-            string q = "DELETE FROM bloodDonation WHERE bloodDonationID = " + bloodDonationID;
+            addBloodDonationLog(bloodDonationID); //ModInfo before deletion
             updateModificationInfo("bloodDonation", "bloodDonationID", bloodDonationID);
 
             addBloodDonationLog(bloodDonationID); //ModInfo after deletion
 
+            string q = "DELETE FROM bloodDonation WHERE bloodDonationID = " + bloodDonationID;
             return runNonQuery(q);
         }
 
@@ -304,12 +324,16 @@ namespace ParishSystem
 
         public bool deleteBloodDonationEvent(int donationEventID)
         {
+
+            if (!idExists("bloodDonationEvent", "donationEventID", donationEventID))
+                return false;
+
+            addBloodDonationLog(donationEventID);
+            updateModificationInfo("bloodDonationEvent", "donationEventID", donationEventID);
             addBloodDonationLog(donationEventID);
 
             string q = "DELETE FROM bloodDonationEvent WHERE donationEventID = " + donationEventID;
-            updateModificationInfo("bloodDonationEvent" , "donationEventID", donationEventID);
-            addBloodDonationLog(donationEventID);
-
+            
             return runNonQuery(q);
         }
 
@@ -321,7 +345,7 @@ namespace ParishSystem
             return runNonQuery(q);
         }
 
-        public string[,] getBloodDonation(int profileID)
+        public DataTable getBloodDonation(int profileID)
         {
             string q = "SELECT * FROM BloodDonation WHERE profileID = " + profileID;
             DataTable dt = runQuery(q);
@@ -329,7 +353,7 @@ namespace ParishSystem
             if (dt.Rows.Count == 0)
                 return null;
 
-            return toArray(dt);
+            return dt;
         }
 
         public bool addBloodDonationRetrieval(int bloodDonationID, DateTime claimDate, string firstName, string midName, string lastName, string suffix, DateTime birthDate, int gender)
@@ -358,7 +382,7 @@ namespace ParishSystem
             return success;
         }
 
-        public string[,] getBloodDonationRetrieval(int bloodDonationID)
+        public DataTable getBloodDonationRetrieval(int bloodDonationID)
         {
             string q = "SELECT * FROM BloodDonationRetrieval WHERE bloodDonationID = " + bloodDonationID;
             DataTable dt = runQuery(q);
@@ -366,7 +390,7 @@ namespace ParishSystem
             if (dt.Rows.Count == 0)
                 return null;
 
-            return toArray(dt);
+            return dt;
         }
 
 
@@ -410,7 +434,7 @@ namespace ParishSystem
             return runNonQuery(q);
         }
 
-        public string[,] getParent(int parentID)
+        public DataTable getParent(int parentID)
         {
             string q = "SELECT * FROM Parent WHERE parentID = " + parentID;
 
@@ -419,7 +443,7 @@ namespace ParishSystem
             if (dt.Rows.Count == 0)
                 return null;
 
-            return toArray(dt);
+            return dt;
         }
 
 
@@ -445,9 +469,55 @@ namespace ParishSystem
 
         public bool editIncome(int incomeID, int incomeTypeID, int profileID, string incomeDescription, double incomeAmount, DateTime incomeDateTime, string ORnum)
         {
-            string q = "UPDATE TABLE income SET incomeTypeID = '"+ incomeTypeID + "', profileID = '"+ profileID + "', incomeDescription = '"+ incomeDescription + "', incomeAmount = '"+ incomeAmount + "', incomeDateTime = '"+ incomeDateTime.ToString("")"', ORnum = 'ORnum' WHERE incomeID = 'incomeID'";
+            addIncomeLog(incomeID);
 
+            string q = "UPDATE TABLE income SET incomeTypeID = '" + incomeTypeID + "', profileID = '" + profileID
+                + "', incomeDescription = '" + incomeDescription + "', incomeAmount = '" + incomeAmount
+                + "', incomeDateTime = '" + incomeDateTime.ToString("yyyy-MM-dd HH:mm:ss.ff") + "', ORnum = '" + ORnum
+                + "' WHERE incomeID = 'incomeID'";
+
+            bool success = runNonQuery(q);
+            if (success)
+                updateModificationInfo("income", "incomeID", incomeID);
+
+            return success;
         }
+
+        public bool addIncomeLog(int incomeID)
+        {
+            string q = "INSERT INTO incomeLog VALUES (SELECT * FROM income WHERE incomeID = '"+ incomeID + "')";
+
+            return runNonQuery(q);
+        }
+
+        public bool deleteIncome(int incomeID)
+        {
+            if (!idExists("income", "incomeID", incomeID))
+                return false;
+
+            addIncomeLog(incomeID);
+            updateModificationInfo("income", "incomeID", incomeID);
+            addIncomeLog(incomeID);
+
+            string q = "DELETE FROM income WHERE incomeID = " + incomeID;
+
+            bool success = runNonQuery(q);
+            return success;
+        }
+
+
+        public DataTable getIncomeBetweenDates(DateTime start, DateTime end)
+        {
+            string q = "SELECT * FROM income WHERE incomeDateTime => '"+ start.ToString("yyyy-MM-dd") 
+                + "' AND incomeDateTime <= '"+ end.ToString("yyyy-MM-dd") + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        
+
 
 
 
