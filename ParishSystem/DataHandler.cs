@@ -251,7 +251,7 @@ namespace ParishSystem
 
         public bool addBloodDonation(int profileID, double donationAmount, int bloodDonationEventID)
         {
-            string q = "INSERT INTO blooddonation VALUES (profileID, donationAmount, bloodDonationEventID) VALUES " +
+            string q = "INSERT INTO blooddonation(profileID, donationAmount, bloodDonationEventID) VALUES " +
                 "('" + profileID + "', '" + donationAmount + "', '" + bloodDonationEventID + "')";
             
             bool success = runNonQuery(q);
@@ -516,7 +516,96 @@ namespace ParishSystem
             return dt;
         }
 
-        
+        public DataTable getIncomeOfMonth(DateTime month, DateTime year)
+        {
+            string q = "SELECT * FROM income WHERE MONTH(incomeDateTime) = '" + int.Parse(month.ToString("MM")) + "' AND YEAR(incomeDateTime) = '" + int.Parse(year.ToString("yyyy")) + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+
+        /*
+                                         =============================================================
+                                                ================ SACRAMENT TABLE =================
+                                         =============================================================
+        */
+
+        public bool addSacrament(int profileID, int ministerID, int sponsorID, string sacramentType)
+        {
+            string q = "INSERT INTO Sacrament(profileID, ministerID, sponsorID, sacramentType) VALUES ('"
+                + profileID + "', '"+ ministerID +"', '"+ sponsorID + "', '"+ sacramentType + "')";
+
+            bool success = runNonQuery(q);
+
+            if (success)
+                updateModificationInfo("sacrament", "sacramentID", getLatestID("sacrament", "sacramentID"));
+
+            return success;
+
+        }
+
+        public bool editSacrament(int sacramentID, int profileID, int ministerID, int sponsorID, string sacramentType)
+        {
+            string q = "UPDATE TABLE Sacrament SET sacramentID = '"+ sacramentID + "',  profileID = '"+ profileID 
+                + "',  ministerID = '"+ ministerID + "',  sponsorID = '"+ sponsorID + "',  sacramentType = '"+ sacramentType 
+                +"' WHERE sacramentID = '"+ sacramentID + "'";
+
+            bool success = runNonQuery(q);
+
+            if(success)
+                updateModificationInfo("sacrament", "sacramentID", sacramentID);
+
+
+            return success;
+
+        }
+
+        public bool addSacramentLog(int sacramentID)
+        {
+            string q = "INSERT INTO SacramentLog VALUES (SELECT * FROM Sacrament WHERE sacramentID = '"+ sacramentID+"')";
+
+            return runNonQuery(q);
+        }
+
+        public DataTable getSacrament(int sacramentID)
+        {
+            string q = "SELECT * FROM Sacrament WHERE sacramentID = '"+ sacramentID + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+
+        /*
+                                         =============================================================
+                                              ================ BAPTISM TABLE =================
+                                         =============================================================
+        */
+
+        public bool addBaptism(int sacramentID, string recordNumber, string pageNumber, string registryNumber, DateTime baptismDate)
+        {
+            string q = "INSERT INTO Baptism(sacramentID, recordNumber, pageNumber, registryNumber, baptismDate) VALUES ('"
+                + sacramentID + "', '"+ recordNumber + "', '"+ pageNumber + "', '"
+                + registryNumber + "', '"+ baptismDate.ToString("yyyy-MM-dd") + "')";
+
+            bool success = runNonQuery(q);
+
+            if (success)
+                updateModificationInfo("baptism", "sacramentID", getLatestID("baptism", "sacramentID"));
+
+            return success;
+        }
+
+        public bool addBaptismReference(int sacramentID, string recordNumber, string pageNumber, string registryNumber)
+        {
+            string q = "";
+
+            return false;
+        }
+
 
 
 
