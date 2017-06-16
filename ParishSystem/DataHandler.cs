@@ -87,7 +87,30 @@ namespace ParishSystem
             return dt.Rows.Count > 0;
         }
 
+        public bool addSponsors(int sacramentID, int[,] sponsorIDs, string sacramentType)
+        {
+            bool success = true;
+            foreach (int sponsorID in sponsorIDs)
+            {
+                string q = "INSERT INTO Sacrament_Sponsor(sacramentID, sponsorID, sacramentType) VALUES ('"
+                    + sacramentID + "', '"+ sponsorID + "', '"+ sacramentType + "')";
 
+                success = success && runNonQuery(q);
+
+            }
+
+            return success;
+            
+        }
+
+        public bool addSponsor(int sacramentID, int sponsorID, string sacramentType)
+        {
+            string q = "INSERT INTO Sacrament_Sponsor(sacramentID, sponsorID, sacramentType) VALUES ('"
+                        + sacramentID + "', '" + sponsorID + "', '" + sacramentType + "')";
+
+            // *Still record changes to log or nah?
+            return runNonQuery(q);
+        }
 
         /*
                                          =============================================================
@@ -528,7 +551,7 @@ namespace ParishSystem
 
         /*
                                          =============================================================
-                                                ================ SACRAMENT TABLE =================
+                                         ================= SACRAMENT TABLE (obsolete)=================
                                          =============================================================
         */
 
@@ -585,25 +608,70 @@ namespace ParishSystem
                                          =============================================================
         */
 
-        public bool addBaptism(int sacramentID, string recordNumber, string pageNumber, string registryNumber, DateTime baptismDate)
+        public bool addBaptism(int profileID, int ministerID, DateTime baptismDate)
         {
-            string q = "INSERT INTO Baptism(sacramentID, recordNumber, pageNumber, registryNumber, baptismDate) VALUES ('"
-                + sacramentID + "', '"+ recordNumber + "', '"+ pageNumber + "', '"
-                + registryNumber + "', '"+ baptismDate.ToString("yyyy-MM-dd") + "')";
+            int latestID = getLatestID("baptism", "baptismID");
+
+            string q = "INSERT INTO Baptism(profileID, ministerID, baptismDate) VALUES ('" 
+                + profileID + "', '" + ministerID + "', '"  + baptismDate.ToString("yyyy-MM-dd") + "')";
 
             bool success = runNonQuery(q);
 
             if (success)
-                updateModificationInfo("baptism", "sacramentID", getLatestID("baptism", "sacramentID"));
+                updateModificationInfo("baptism", "baptismID", latestID);
 
             return success;
         }
 
-        public bool addBaptismReference(int sacramentID, string recordNumber, string pageNumber, string registryNumber)
-        {
-            string q = "";
 
+        public bool editBaptism(int baptismID, int ministerID, DateTime baptismDate)
+        {
+            if (!idExists("baptism", "baptismID", baptismID))
+                return false;
+
+            string q = "UPDATE TABLE baptism(ministerID, baptismDate) VALUES ('"
+                + ministerID + "', '"+ baptismDate.ToString("yyyy - MM - dd") 
+                + "' WHERE baptismID = '"+ baptismID + "'";
+
+            bool success = runNonQuery(q);
+
+            if (success)
+                updateModificationInfo("baptism", "baptismID", baptismID);
+
+            return success;
+
+        }
+
+        public bool addBaptismLog(int baptismID)
+        {
             return false;
+        }
+
+        public bool editBaptismReference(int baptismID, string recordNumber, string pageNumber, string registryNumber)
+        {
+            if (!idExists("baptism", "baptismID", baptismID))
+                return false;
+
+            string q = "UPDATE TABLE Baptism SET recordNumber = '"+ recordNumber 
+                + "', pageNumber = '"+ pageNumber + "', registryNumber = '"+ registryNumber 
+                + "' WHERE baptismID = '"+ baptismID + "'";
+
+            bool success = runNonQuery(q);
+
+            if (success)
+                updateModificationInfo("baptism", "baptismID", baptismID);
+
+            return success;
+        }
+
+        public bool removeBaptismReference(int baptismID)
+        {
+            if (!idExists("baptism", "baptismID", baptismID))
+                return false;
+
+            string q = "DELETE ";
+
+
         }
 
 
