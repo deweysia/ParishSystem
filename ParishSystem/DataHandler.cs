@@ -627,7 +627,7 @@ namespace ParishSystem
             if (!idExists("baptism", "baptismID", baptismID))
                 return false;
 
-            string q = "UPDATE TABLE baptism(ministerID, baptismDate) VALUES ('"
+            string q = "UPDATE baptism(ministerID, baptismDate) VALUES ('"
                 + ministerID + "', '"+ baptismDate.ToString("yyyy - MM - dd") 
                 + "' WHERE baptismID = '"+ baptismID + "'";
 
@@ -741,9 +741,45 @@ namespace ParishSystem
             return success;
         }
 
-        public bool editConfirmation(int ministerID, DateTime confirmationDate)
+        public bool editConfirmation(int confirmationID, int ministerID, DateTime confirmationDate)
         {
-            return false;
+            if (!idExists("Confirmation", "confirmationID", confirmationID))
+                return false;
+
+            addConfirmationLog(confirmationID);
+
+
+            string q = "UPDATE Confirmation SET ministerID = '"
+                + ministerID + "', confirmationDate = '"+ confirmationDate.ToString("yyyy-MM-dd") 
+                + "' WHERE confirmationID = " + confirmationID;
+
+            bool success = runNonQuery(q);
+
+            if(success)
+                updateModificationInfo("Confirmation", "confirmationID", confirmationID);
+
+            return success;
+        }
+
+        public bool editConfirmationReference(int confirmationID, string recordNumber, string pageNumber, string registryNumber)
+        {
+            if (!idExists("Confirmation", "confirmationID", confirmationID))
+                return false;
+
+            addConfirmationLog(confirmationID);
+
+            string q = "UPDATE Confirmation SET recordNumber = '"
+                + recordNumber + "', pageNumber = '"+ pageNumber 
+                + "', registryNumber = '"+ registryNumber 
+                + "' WHERE confirmationID = " + confirmationID;
+
+            bool success = runNonQuery(q);
+
+            if (success)
+                updateModificationInfo("Confirmation", "confirmationID", confirmationID);
+
+            return success;
+
         }
 
 
