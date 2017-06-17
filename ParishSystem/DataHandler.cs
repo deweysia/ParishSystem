@@ -716,8 +716,23 @@ namespace ParishSystem
 
             string q = "UPDATE Baptism SET recordNumber = NULL, pageNumber = NULL, registryNumber = NULL WHERE baptismID =  " + baptismID;
 
-            return runNonQuery(q);
+            bool success = runNonQuery(q);
 
+            if (success)
+                updateModificationInfo("baptism", "baptismID", baptismID);
+
+            return success;
+
+        }
+
+
+        public DataTable getBaptismReference(int baptismID)
+        {
+            string q = "SELECT * FROM Baptism WHERE baptismID = " + baptismID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
         }
 
 
@@ -781,6 +796,212 @@ namespace ParishSystem
             return success;
 
         }
+
+        public bool addConfirmationLog(int confirmationID)
+        {
+            if (!idExists("Confirmation", "confirmationID", confirmationID))
+                return false;
+
+            string q = "INSERT INTO ConfirmationLog VALUES ( SELECT * FROM Confirmation WHERE confirmationID = " + confirmationID + ")";
+
+            return runNonQuery(q);
+        }
+
+
+        public DataTable getConfirmation(int confirmationID)
+        {
+            string q = "SELECT * FROM Confirmation WHERE confirmationID = " + confirmationID;
+
+            DataTable dt = runQuery(q);
+
+            if (dt.Rows.Count == 0)
+                return null;
+
+            return dt;
+        }
+
+        public DataTable getConfirmationBetweenDates(DateTime start, DateTime end)
+        {
+            string q = "SELECT * FROM Confirmation WHERE confirmationDate >= '" 
+                + start.ToString("yyyy-MM-dd") + "' AND confirmationDate <= '"+ start.ToString("yyyy-MM-dd") + "'";
+
+            DataTable dt = runQuery(q);
+
+            if (dt.Rows.Count == 0)
+                return null;
+
+            return dt;
+        }
+
+        public bool removeConfirmationReference(int confirmationID)
+        {
+            if (!idExists("Confirmation", "confirmationID", confirmationID))
+                return false;
+
+            addBaptismLog(confirmationID);
+
+            string q = "UPDATE Confirmation SET recordNumber = NULL, pageNumber = NULL, registryNumber = NULL WHERE confirmationID =  " + confirmationID;
+
+            bool success = runNonQuery(q);
+
+            if (success)
+                updateModificationInfo("Confirmation", "confirmationID", confirmationID);
+
+            return success;
+
+        }
+
+
+        public DataTable getConfirmationReference(int confirmationID)
+        {
+            string q = "SELECT * FROM Confirmation WHERE confirmationID = " + confirmationID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+
+
+        /*
+                                         =============================================================
+                                            ================= MARRIAGE TABLE =================
+                                         =============================================================
+        */
+
+
+        public bool addMarriage(int groomID, int brideID, int ministerID, string licenseDate, DateTime marriageDate, string status)
+        {
+            string q = "INSERT INTO Marriage(groomID, brideID, ministerID, licenseDate, marriageDate, status) VALUES ('"
+                + groomID + "', '"+ brideID+"', '"+ ministerID + "', '"+ licenseDate + "', '"+ marriageDate + "', '"+ status + "')";
+
+            bool success = runNonQuery(q);
+
+            if (success)
+                updateModificationInfo("Marriage", "marriageID", getLatestID("Marriage", "marriageID"));
+
+            return success;
+        }
+
+        public bool editMarriage(int marriageID, int groomID, int brideID, int ministerID, DateTime licenseDate, DateTime marriageDate, string status)
+        {
+            if (!idExists("Marriage", "marriageID", marriageID))
+                return false;
+
+            addMarriageLog(marriageID);
+
+            string q = "UPDATE Marriage SET groomID = groomID, brideID = '" + brideID
+                + "', ministerID = '" + ministerID + "', licenseDate = '" + licenseDate.ToString("yyyy-MM-dd")
+                + "', marriageDate = '" + marriageDate.ToString("yyyy-MM-dd") + "', status = '"+ status + "' WHERE marriageID = " + marriageID;
+
+            bool success = runNonQuery(q);
+
+            if (success)
+                updateModificationInfo("Marriage", "marriageID", marriageID);
+
+            return success;
+        }
+
+        public bool addMarriageLog(int marriageID)
+        {
+            if (idExists("Marriage", "marriageID", marriageID))
+                return false;
+
+            string q = "INSERT INTO MarriageLog VALUES (SELECT * FROM Marriage WHERE marriageID = " + marriageID;
+
+            return runNonQuery(q);
+        }
+
+        public bool editMarriageReference(int marriageID, string recordNumber, string pageNumber, string registryNumber)
+        {
+            if (!idExists("Marriage", "marriageID", marriageID))
+                return false;
+
+            string q = "UPDATE Marriage SET recordNumber = '"+ recordNumber 
+                + "', pageNumber = '"+ pageNumber + "', registryNumber = '"+ registryNumber 
+                + "' WHERE marriageID = '"+ marriageID + "'";
+
+            bool success = runNonQuery(q);
+
+            if (success)
+                updateModificationInfo("marriage", "marriageID", marriageID);
+
+            return success;
+        }
+
+        public bool removeMarriageReference(int marriageID)
+        {
+            if (!idExists("Marriage", "marriageID", marriageID))
+                return false;
+
+            addBaptismLog(marriageID);
+
+            string q = "UPDATE Marriage SET recordNumber = NULL, pageNumber = NULL, registryNumber = NULL WHERE marriageID =  " + marriageID;
+
+            bool success = runNonQuery(q);
+
+            if (success)
+                updateModificationInfo("Marriage", "marriageID", marriageID);
+
+            return success;
+
+        }
+
+        public bool deleteMarriage(int marriageID)
+        {
+            if (!idExists("Marriage", "marriageID", marriageID))
+                return false;
+
+            addBaptismLog(marriageID);
+
+            updateModificationInfo("Marriage", "marriageID", marriageID);
+
+            addBaptismLog(marriageID);
+
+            string q = "DELETE FROM Marriage WHERE marriageID = " + marriageID;
+
+            return runNonQuery(q);
+        }
+
+        public DataTable getMarriage(int marriageID)
+        {
+            string q = "SELECT * FROM Marriage WHERE marriageID = " + marriageID;
+
+            DataTable dt = runQuery(q);
+
+            if (dt.Rows.Count == 0)
+                return null;
+
+            return dt;
+        }
+
+        public DataTable getMarriageBetweenDates(DateTime start, DateTime end)
+        {
+            string q = "SELECT * FROM Marriage WHERE marriageDate >= '"
+                + start.ToString("yyyy-MM-dd") + "' AND marriageDate <= '" + start.ToString("yyyy-MM-dd") + "'";
+
+            DataTable dt = runQuery(q);
+
+            if (dt.Rows.Count == 0)
+                return null;
+
+            return dt;
+        }
+
+        public DataTable getMarriageReference(int marriageID)
+        {
+            string q = "SELECT * FROM Marriage WHERE marriageID = " + marriageID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+
+
+
+
+
 
 
 
