@@ -62,7 +62,7 @@ namespace ParishSystem
 
         public bool updateModificationInfo(string tableName, string primaryKeyName, int primaryKeyValue)
         {
-            string q = "UPDATE TABLE " + tableName  + " SET " + primaryKeyName + " = "+ primaryKeyValue + ", lastModified = NOW(), userID = '"+ userID + "'";
+            string q = "UPDATE " + tableName  + " SET " + primaryKeyName + " = "+ primaryKeyValue + ", lastModified = NOW(), userID = '"+ userID + "'";
 
             return runNonQuery(q);
         }
@@ -1152,14 +1152,35 @@ namespace ParishSystem
             return dt;
         }
 
+        //Gets sponsors of a sacrament
         public DataTable getSacramentSponsors(string sacramentType, int sacramentID)
         {
-            
-            
+            string q = "SELECT * FROM Sponsor WHERE sacramentType = '"
+                + sacramentType + "' AND sacramentID = '" + sacramentID + "'";
+
+            DataTable dt = runQuery(q);
+
+            if (dt.Rows.Count == 0)
+                return null;
+
+            return dt;
 
         }
 
-        
+        /*
+                                         =============================================================
+                                            ================= APPOINTMENT TABLE =================
+                                         =============================================================
+        */
+
+
+
+
+
+
+
+
+
 
 
 
