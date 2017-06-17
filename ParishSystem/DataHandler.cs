@@ -998,6 +998,172 @@ namespace ParishSystem
         }
 
 
+        /*
+                                         =============================================================
+                                            ================= MINISTER TABLE =================
+                                         =============================================================
+        */
+
+
+        public bool addMinister(string firstName, string midName, string lastName, string suffix, DateTime birthDate, string ministryType, string status, string licenseNumber, DateTime expirationDate)
+        {
+            string q = "INSERT INTO Minister(firstName, midName, lastName, suffix, birthDate, ministryType, status, licenseNumber, expirationDate) VALUES ('"
+                + firstName + "', '"+ midName + "', '"+ lastName+"', '"+ suffix + "', '"
+                + birthDate.ToString("yyyy-MM-dd")+"', ministryType, status, licenseNumber, expirationDate)";
+
+            bool success = runNonQuery(q);
+
+            if (success)
+                updateModificationInfo("Minister", "ministerID", getLatestID("Minister", "ministerID"));
+
+            return success;
+        }
+
+        public bool editMinister(int ministerID, string firstName, string midName, string lastName, string suffix, DateTime birthDate, string ministryType, string status, string licenseNumber, DateTime expirationDate)
+        {
+            if (!idExists("Minister", "ministerID", ministerID))
+                return false;
+
+            //No need addMinisterLog
+
+            string q = "UPDATE Minister SET firstName = '"+ firstName 
+                + "', midName = '"+ midName + "', lastName = '"+ lastName
+                + "', suffix = '"+ suffix + "', birthDate = '"+ birthDate 
+                + "', ministryType = '"+ ministryType + "', status = '"+ status 
+                + "', licenseNumber = '"+ licenseNumber 
+                + "', expirationDate = '"+ expirationDate 
+                + "' WHERE ministerID =" + ministerID;
+
+            bool success = runNonQuery(q);
+
+            if (success)
+                updateModificationInfo("Minister", "ministerID", ministerID);
+
+            return success;
+
+
+        }
+
+        public int getMinisterID(string firstName, string midName, string lastName, string suffix, DateTime birthDate)
+        {
+            string q = "SELECT ministerID from Minister WHERE firstName = '"
+                + firstName + "' AND midName = '"+ midName + "' AND lastName = '"+ lastName 
+                + "' AND suffix = '"+ suffix + "' AND birthDate = '"+ birthDate.ToString("yyyy-MM-dd") + "'";
+
+            DataTable dt = runQuery(q);
+
+            if (dt.Rows.Count == 0)
+                return -1;
+
+            return int.Parse(dt.Rows[0][0].ToString());
+        }
+
+        public bool ministerIsActive(int ministerID)
+        {
+            if (!idExists("Minister", "ministerID", ministerID))
+                throw new MissingPrimaryKeyException();
+
+            string q = "SELECT status FROM Minister WHERE ministerID = " + ministerID;
+
+            DataTable dt = runQuery(q);
+
+            bool active = dt.Rows[0][0].ToString().ToUpper() == "ACTIVE" ? true : false;
+
+            return active;
+             
+        }
+
+        public bool ministerChangeStatus(int ministerID, string status)
+        {
+            if (!idExists("Minister", "ministerID", ministerID))
+                throw new MissingPrimaryKeyException();
+
+            string q = "UPDATE Minister SET status = '"+ status + "' WHERE ministerID = '"+ ministerID + "'";
+
+            bool success = runNonQuery(q);
+
+            if (success)
+                updateModificationInfo("Minister", "ministerID", ministerID);
+
+            return success;
+
+        }
+
+        public DataTable getMinister(int ministerID)
+        {
+            string q = "SELECT * FROM Minister WHERE ministerID = " + ministerID;
+
+            DataTable dt = runQuery(q);
+
+            if (dt.Rows.Count == 0)
+                return null;
+            return dt;
+        }
+
+
+        /*
+                                         =============================================================
+                                            ================= SPONSOR TABLE =================
+                                         =============================================================
+        */
+
+
+        public bool addSponsor(string firstName, string midName, string lastName, string suffix, string gender)
+        {
+            string q = "INSERT INTO Sponsor(firstName, midName, lastName, suffix, gender) VALUES ('"
+                + firstName + "', '"+ midName + "', '"+ lastName + "', '"+ suffix + "', '"+ gender + "')";
+
+            bool success = runNonQuery(q);
+
+            if (success)
+                updateModificationInfo("Sponsor", "sponsorID", getLatestID("Sponsor", "sponsorID"));
+
+            return success;
+        }
+
+        public bool editSponsor(int sponsorID, string firstName, string midName, string lastName, string suffix, string gender)
+        {
+            if (!idExists("Sponsor", "sponsorID", sponsorID))
+                return false;
+
+            string q = "UPDATE Sponsor SET  firstName = '" + firstName 
+                + "', midName = '" + midName + "', lastName = '" + lastName 
+                + "', suffix = '"+ suffix + "', gender = '"+ gender 
+                + "' WHERE sponsorID = " + sponsorID;
+
+            bool success = runNonQuery(q);
+
+            if (success)
+                updateModificationInfo("Sponsor", "sponsorID", sponsorID);
+
+            return success;
+
+       } 
+
+       public DataTable getSponsor(int sponsorID)
+        {
+            string q = "SELECT * FROM Sponsor WHERE sponsorID = " + sponsorID;
+
+            DataTable dt = runQuery(q);
+
+            if (dt.Rows.Count == 0)
+                return null;
+
+            return dt;
+        }
+
+        public DataTable getSacramentSponsors(string sacramentType, int sacramentID)
+        {
+            
+            
+
+        }
+
+        
+
+
+
+
 
 
 
