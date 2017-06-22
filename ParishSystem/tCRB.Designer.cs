@@ -1,4 +1,4 @@
-﻿namespace SAD3
+﻿namespace ParishSystem
 {
     partial class tCRB
     {

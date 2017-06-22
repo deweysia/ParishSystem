@@ -54,11 +54,66 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sApplicant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sApplicant.Designer.cs">
+      <DependentUpon>sApplicant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sBloodletting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sBloodletting.Designer.cs">
+      <DependentUpon>sBloodletting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sTransaction.Designer.cs">
+      <DependentUpon>sTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tCDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tCDB.Designer.cs">
+      <DependentUpon>tCDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tCRB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tCRB.Designer.cs">
+      <DependentUpon>tCRB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="topBarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="topBarControl.Designer.cs">
+      <DependentUpon>topBarControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tReport.Designer.cs">
+      <DependentUpon>tReport.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\ParishSystem.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\ParishSystem.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\SAD3.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\SAD3.sApplicant.resources" />
+    <EmbeddedResource Include="obj\Debug\SAD3.sBloodletting.resources" />
+    <EmbeddedResource Include="obj\Debug\SAD3.sTransaction.resources" />
+    <EmbeddedResource Include="obj\Debug\SAD3.tCDB.resources" />
+    <EmbeddedResource Include="obj\Debug\SAD3.tCRB.resources" />
+    <EmbeddedResource Include="obj\Debug\SAD3.topBarControl.resources" />
+    <EmbeddedResource Include="obj\Debug\SAD3.tReport.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -68,6 +123,37 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="sApplicant.resx">
+      <DependentUpon>sApplicant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sBloodletting.resx">
+      <DependentUpon>sBloodletting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sTransaction.resx">
+      <DependentUpon>sTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tCDB.resx">
+      <DependentUpon>tCDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tCRB.resx">
+      <DependentUpon>tCRB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="topBarControl.resx">
+      <DependentUpon>topBarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tReport.resx">
+      <DependentUpon>tReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\ParishSystem.exe.config" />
+    <None Include="bin\Debug\ParishSystem.vshost.exe.config" />
+    <None Include="bin\Debug\ParishSystem.vshost.exe.manifest" />
+    <None Include="bin\Debug\SAD3.exe.config" />
+    <None Include="bin\Debug\SAD3.vshost.exe.config" />
+    <None Include="bin\Debug\SAD3.vshost.exe.manifest" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ParishSystem.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\SAD3.csproj.GenerateResource.Cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -80,6 +166,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\MySql.Data.dll" />
+    <Content Include="bin\Debug\MySql.Data.xml" />
+    <Content Include="bin\Debug\ParishSystem.exe" />
+    <Content Include="bin\Debug\ParishSystem.pdb" />
+    <Content Include="bin\Debug\ParishSystem.vshost.exe" />
+    <Content Include="bin\Debug\SAD3.exe" />
+    <Content Include="bin\Debug\SAD3.pdb" />
+    <Content Include="bin\Debug\SAD3.vshost.exe" />
+    <Content Include="obj\Debug\ParishSystem.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\ParishSystem.exe" />
+    <Content Include="obj\Debug\ParishSystem.pdb" />
+    <Content Include="obj\Debug\SAD3.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\SAD3.exe" />
+    <Content Include="obj\Debug\SAD3.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Resources\btn_closeImage.png" />
+    <Content Include="Resources\btn_maxImage.png" />
+    <Content Include="Resources\btn_minImage.png" />
+    <Content Include="SAD3.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

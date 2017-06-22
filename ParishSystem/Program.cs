@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SAD3
+
+namespace ParishSystem
 {
     static class Program
     {
@@ -16,7 +17,7 @@ namespace SAD3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new sTransaction());
+            Application.Run();
         }
     }
 }

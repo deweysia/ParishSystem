@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SAD3
+namespace ParishSystem
 {
     public partial class topBarControl : UserControl
     {
