@@ -212,6 +212,7 @@
     <Content Include="bin\Debug\SAD3.exe" />
     <Content Include="bin\Debug\SAD3.pdb" />
     <Content Include="bin\Debug\SAD3.vshost.exe" />
+    <Content Include="database\parishDB.sql" />
     <Content Include="obj\Debug\ParishSystem.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\ParishSystem.exe" />
     <Content Include="obj\Debug\ParishSystem.pdb" />
