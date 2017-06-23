@@ -219,7 +219,6 @@
     <Content Include="Resources\btn_closeImage.png" />
     <Content Include="Resources\btn_maxImage.png" />
     <Content Include="Resources\btn_minImage.png" />
-    <Content Include="SAD3.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
