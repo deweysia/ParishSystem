@@ -62,7 +62,7 @@
             this.date2_lbl = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.topBarControl1 = new SAD3.topBarControl();
+            this.topBarControl1 = new ParishSystem.topBarControl();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.summary_dgv)).BeginInit();
