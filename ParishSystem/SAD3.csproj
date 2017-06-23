@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3B623AF4-B0B1-47A7-AA31-82A2497A8319}</ProjectGuid>
+    <ProjectGuid>{DF59A2EC-9C1F-4154-B82B-A22F505667E6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ParishSystem</RootNamespace>
-    <AssemblyName>ParishSystem</AssemblyName>
+    <RootNamespace>SAD3</RootNamespace>
+    <AssemblyName>SAD3</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,35 +44,13 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataHandler.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Menu_bar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Menu_bar.Designer.cs">
-      <DependentUpon>Menu_bar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sApplicant.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="sApplicant.Designer.cs">
       <DependentUpon>sApplicant.cs</DependentUpon>
-    </Compile>
-    <Compile Include="sBaptism.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sBaptism.Designer.cs">
-      <DependentUpon>sBaptism.cs</DependentUpon>
     </Compile>
     <Compile Include="sBloodletting.cs">
       <SubType>Form</SubType>
@@ -83,30 +58,14 @@
     <Compile Include="sBloodletting.Designer.cs">
       <DependentUpon>sBloodletting.cs</DependentUpon>
     </Compile>
-    <Compile Include="sConfirmation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sConfirmation.Designer.cs">
-      <DependentUpon>sConfirmation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="sMarriage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sMarriage.Designer.cs">
-      <DependentUpon>sMarriage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="sParent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sParent.Designer.cs">
-      <DependentUpon>sParent.cs</DependentUpon>
-    </Compile>
     <Compile Include="sTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="sTransaction.Designer.cs">
       <DependentUpon>sTransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tCDB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,14 +90,15 @@
     <Compile Include="tReport.Designer.cs">
       <DependentUpon>tReport.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="sApplicant.resx">
+      <DependentUpon>sApplicant.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_bar.resx">
-      <DependentUpon>Menu_bar.cs</DependentUpon>
+    <EmbeddedResource Include="sBloodletting.resx">
+      <DependentUpon>sBloodletting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\ParishSystem.Form1.resources" />
-    <EmbeddedResource Include="obj\Debug\ParishSystem.Properties.Resources.resources" />
+    <EmbeddedResource Include="sTransaction.resx">
+      <DependentUpon>sTransaction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -147,28 +107,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="sApplicant.resx">
-      <DependentUpon>sApplicant.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sBaptism.resx">
-      <DependentUpon>sBaptism.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sBloodletting.resx">
-      <DependentUpon>sBloodletting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sConfirmation.resx">
-      <DependentUpon>sConfirmation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sMarriage.resx">
-      <DependentUpon>sMarriage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sParent.resx">
-      <DependentUpon>sParent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sTransaction.resx">
-      <DependentUpon>sTransaction.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="tCDB.resx">
       <DependentUpon>tCDB.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,15 +121,6 @@
     <EmbeddedResource Include="tReport.resx">
       <DependentUpon>tReport.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="bin\Debug\ParishSystem.exe.config" />
-    <None Include="bin\Debug\ParishSystem.vshost.exe.config" />
-    <None Include="bin\Debug\ParishSystem.vshost.exe.manifest" />
-    <None Include="bin\Debug\SAD3.exe.config" />
-    <None Include="bin\Debug\SAD3.vshost.exe.config" />
-    <None Include="bin\Debug\SAD3.vshost.exe.manifest" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\Debug\ParishSystem.csproj.GenerateResource.Cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -204,25 +135,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\MySql.Data.dll" />
-    <Content Include="bin\Debug\MySql.Data.xml" />
-    <Content Include="bin\Debug\ParishSystem.exe" />
-    <Content Include="bin\Debug\ParishSystem.pdb" />
-    <Content Include="bin\Debug\ParishSystem.vshost.exe" />
-    <Content Include="bin\Debug\SAD3.exe" />
-    <Content Include="bin\Debug\SAD3.pdb" />
-    <Content Include="bin\Debug\SAD3.vshost.exe" />
-    <Content Include="obj\Debug\ParishSystem.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\ParishSystem.exe" />
-    <Content Include="obj\Debug\ParishSystem.pdb" />
-    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
-    <Content Include="Resources\btn_closeImage.png" />
-    <Content Include="Resources\btn_maxImage.png" />
-    <Content Include="Resources\btn_minImage.png" />
-    <Content Include="SAD3.csproj" />
+    <None Include="Resources\btn_closeImage.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\Release\" />
+    <None Include="Resources\btn_maxImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_minImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
