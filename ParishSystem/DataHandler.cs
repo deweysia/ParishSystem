@@ -255,7 +255,7 @@ namespace ParishSystem
             return int.Parse(dt.Rows[0][0].ToString()) > 0;
         }
 
-        public double getTotalBalance(int profileID){
+        public double getTotalBalanceOf(int profileID){
 
             string q = "SELECT SUM(Item.Price * Item.Quantity) FROM Item JOIN Income ON item.incomeID = income.incomeID " 
                 + "JOIN GeneralProfile ON generalprofile.profileID = income.sourceID WHERE generalprofile.profileID = " + profileID;
@@ -642,12 +642,12 @@ namespace ParishSystem
 
         public bool deleteIncome(int incomeID)
         {
-            if (!idExists("income", "incomeID", incomeID))
-                return false;
+            //if (!idExists("income", "incomeID", incomeID))
+            //    return false;
 
-            addIncomeLog(incomeID);
-            updateModificationInfo("income", "incomeID", incomeID);
-            addIncomeLog(incomeID);
+            //addIncomeLog(incomeID);
+            //updateModificationInfo("income", "incomeID", incomeID);
+            //addIncomeLog(incomeID);
 
             string q = "DELETE FROM income WHERE incomeID = " + incomeID;
 
@@ -666,9 +666,51 @@ namespace ParishSystem
             return dt;
         }
 
-        public DataTable getIncomeOfMonth(DateTime month, DateTime year)
+        public DataTable getIncomeOfMonth(DateTime date)
         {
-            string q = "SELECT * FROM income WHERE MONTH(incomeDateTime) = '" + int.Parse(month.ToString("MM")) + "' AND YEAR(incomeDateTime) = '" + int.Parse(year.ToString("yyyy")) + "'";
+            string q = "SELECT * FROM income WHERE MONTH(incomeDateTime) = '" 
+                + int.Parse(date.ToString("MM")) + "' AND YEAR(incomeDateTime) = '" 
+                + int.Parse(date.ToString("yyyy")) + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getIncome(int incomeID)
+        {
+            string q = "SELECT * FROM Income WHERE incomeID = " + incomeID;
+
+            DataTable dt = runQuery(q);
+            return dt;
+        }
+
+        public double getTotalPrice(int incomeID)
+        {
+            string q = "SELECT SUM(item.price * item.quantity) FROM Item JOIN Income ON Income.incomeID = Item.incomeID WHERE Income.incomeID = " + incomeID;
+
+            DataTable dt = runQuery(q);
+
+            return double.Parse(dt.Rows[0][0].ToString());
+        }
+
+        public double getTotalPayment(int incomeID)
+        {
+            string q = "SELECT SUM(paymentAmount) FROM Income JOIN Invoice ON Income.incomeID = Invoice.invoiceID WHERE Income.incomeID = " + incomeID;
+
+            DataTable dt = runQuery(q);
+
+            return double.Parse(dt.Rows[0][0].ToString());
+        }
+
+        public bool isPaid(int incomeID)
+        {
+            return getTotalPrice(incomeID) == getTotalPayment(incomeID);
+        }
+
+        public DataTable getInvoices(int incomeID)
+        {
+            string q = "SELECT * FROM Invoice WHERE incomeID = " + incomeID;
 
             DataTable dt = runQuery(q);
 
@@ -676,6 +718,129 @@ namespace ParishSystem
         }
 
         #endregion
+
+        /*
+                                         =============================================================
+                                                  ================= Invoice =================
+                                         =============================================================
+        */
+
+
+        #region
+
+        public bool addInvoice(int incomeID, int ORnum, double paymentAmount)
+        {
+            string q = "INSERT INTO Invoice(incomeID, ORnum, paymentAmount, invoiceDateTime) VALUES ('" + incomeID + "', '" + ORnum + "', '" + paymentAmount + "', '" + invoiceDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff") + "')";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public bool editInvoice(int invoiceID, int ORnum, double paymentAmount)
+        {
+            string q = "UPDATE Invoice SET ORnum = '" + ORnum + "', paymentAmount = '" + paymentAmount + "' WHERE invoiceID = '" + invoiceID + "'";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public bool deleteInvoice(int invoiceID)
+        {
+            string q = "DELETE FROM Invoice WHERE invoiceID = " + invoiceID;
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public DataTable getInvoice(int invoiceID)
+        {
+            string q = "SELECT * FROM Invoice WHERE invoiceID = " + invoiceID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+
+        #endregion
+
+
+
+        /*
+                                        =============================================================
+                                           ================= INCOME SOURCE TABLE =================
+                                        =============================================================
+       */
+
+        #region
+        public bool addIncomeSource(string name)
+        {
+            string q = "INSERT INTO IncomeSource(name) VALUES ('" + name + "')";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public DataTable getIncomeSource(int incomeSourceID)
+        {
+            string q = "SELECT * FROM Income WHERE incomeSourceID = " + incomeSourceID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+
+        #endregion
+
+
+       /*
+                                       =============================================================
+                                          ================= ITEM TYPE TABLE =================
+                                       =============================================================
+      */
+
+       public bool addItemType(string itemType, string bookType, double suggestedPrice, string status)
+       {
+            string q = "INSERT INTO ItemType(itemType, bookType, suggestedPrice, status) VALUES ('" 
+                + itemType + "', '" + bookType + "', '" + suggestedPrice + "', '" + status + "')";
+
+            bool success = runNonQuery(q);
+
+            return success;
+       }
+
+        public bool editItemType(int itemTypeID, string itemType, string bookType, double suggestedPrice, string status)
+        {
+            string q = "UPDATE ItemType SET itemType = '" + itemType 
+                + "', bookType = '" + bookType 
+                + "', suggestedPrice = '" + suggestedPrice 
+                + "', status = '" + status 
+                + "' WHERE itemTypeID = '" + itemTypeID + "'";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public DataTable getItemTypesOfBook(string bookType)
+        {
+            string q = "SELECT * FROM ItemType WHERE bookType = '"+ bookType + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        
+
+
+
+
         /*
                                          =============================================================
                                          ================= SACRAMENT TABLE (obsolete)=================
