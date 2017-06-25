@@ -152,7 +152,7 @@ namespace ParishSystem
 
             //addGeneralProfileLog(profileID);
 
-            string q = "UPDATE tableName SET midName = '" + midName + "', lastName = '" + lastName
+            string q = "UPDATE GeneralProfile SET midName = '" + midName + "', lastName = '" + lastName
                 + "', suffix = '" + suffix + "', gender = '" + gender
                 + "', birthDate = '" + birthDate.ToString("yyyy-MM-dd HH:mm:ss.fff")
                 + "', contactNumber = '" + contactNumber + "', address = '" + address
@@ -291,7 +291,7 @@ namespace ParishSystem
 
         public bool editBloodDonor(int bloodDonorID, string bloodType)
         {
-            string q = "UPDATE tableName SET bloodType = '" + bloodType + "' WHERE bloodDonorID = '" + bloodDonorID + "'";
+            string q = "UPDATE BloodDonor SET bloodType = '" + bloodType + "' WHERE bloodDonorID = '" + bloodDonorID + "'";
 
             //updateModificationInfo("bloodDonorID", bloodDonor);
 
@@ -345,7 +345,7 @@ namespace ParishSystem
         {
             //addBloodDonationLog(bloodDonationID);
 
-            string q = "UPDATE tableName SET bloodDonorID = '" + bloodDonorID 
+            string q = "UPDATE BloodDonation SET bloodDonorID = '" + bloodDonorID 
                 + "', donationEventID = '" + donationEventID 
                 + "', donationAmount = '" + donationAmount 
                 + "', bloodDonationDateTime = '" + bloodDonationDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff") 
@@ -435,13 +435,13 @@ namespace ParishSystem
 
         public bool editBloodDonationEvent(int donationEventID, string eventName, DateTime eventDate, string eventStatus, string eventVenue, string eventDetails)
         {
-            string q = "UPDATE TABLE bloodDonationEvent SET eventName = '" + eventName + "', eventDate = '" + eventDate.ToString("yyyy-MM-dd") + "', "
+            string q = "UPDATE TABLE bloodDonationEvent SET eventName = '" + eventName + "', eventDate = '" + eventDate.ToString("yyyy-MM-dd HH:mm:ss.fff") + "', "
                 + "eventStatus = '" + eventStatus + "', eventVenue = '" + eventVenue + "', eventDetails = '" + eventDetails
                 + "' WHERE donationEventID = " + donationEventID;
 
             bool success = runNonQuery(q);
-            if (success)
-                updateModificationInfo("bloodDonationEvent", "donationEventID", donationEventID);
+            //if (success)
+            //    updateModificationInfo("bloodDonationEvent", "donationEventID", donationEventID);
 
             return success;
         }
@@ -449,12 +449,12 @@ namespace ParishSystem
         public bool deleteBloodDonationEvent(int donationEventID)
         {
 
-            if (!idExists("bloodDonationEvent", "donationEventID", donationEventID))
-                return false;
+            //if (!idExists("bloodDonationEvent", "donationEventID", donationEventID))
+            //    return false;
 
-            addBloodDonationLog(donationEventID);
-            updateModificationInfo("bloodDonationEvent", "donationEventID", donationEventID);
-            addBloodDonationLog(donationEventID);
+            //addBloodDonationLog(donationEventID);
+            //updateModificationInfo("bloodDonationEvent", "donationEventID", donationEventID);
+            //addBloodDonationLog(donationEventID);
 
             string q = "DELETE FROM bloodDonationEvent WHERE donationEventID = " + donationEventID;
 
@@ -471,6 +471,11 @@ namespace ParishSystem
 
         #endregion
 
+        /*
+                                         =============================================================
+                                           =========== BLOOD DONATION RETRIEVAL TABLE ============
+                                         =============================================================
+        */
         public bool addBloodDonationRetrieval(int bloodDonationID, DateTime claimDate, string firstName, string midName, string lastName, string suffix, DateTime birthDate, int gender)
         {
             string q = "INSERT INTO bloodDonationRetrieval(bloodDonationID, claimDate, firstName, midName, lastName, suffix, birthDate, gender, userID) "
@@ -502,8 +507,8 @@ namespace ParishSystem
             string q = "SELECT * FROM BloodDonationRetrieval WHERE bloodDonationID = " + bloodDonationID;
             DataTable dt = runQuery(q);
 
-            if (dt.Rows.Count == 0)
-                return null;
+            //if (dt.Rows.Count == 0)
+            //    return null;
 
             return dt;
         }
@@ -515,26 +520,14 @@ namespace ParishSystem
                                          =============================================================
         */
         #region
-        public int getParentID(string firstName, string midName, string lastName, string suffix, char gender, string birthPlace)
+
+
+        public bool addParent(int profileID, string firstName, string midName, string lastName, string suffix, char gender, string birthPlace)
         {
-            string q = "SELECT parentID from Parent WHERE firstName = '"+ firstName 
-                + "' AND midName = '"+ midName + "' AND lastName = '"+ lastName 
-                + "' AND suffix = '"+ suffix + "' AND  gender = '"+ gender 
-                + "' AND birthPlace = '"+ birthPlace + "'";
-
-            DataTable dt = runQuery(q);
-
-            if (dt.Rows.Count == 0)
-                return -1;
-
-            return int.Parse(dt.Rows[0][0].ToString());
-            
-        }
-
-        public bool addParent(string firstName, string midName, string lastName, string suffix, char gender, string birthPlace)
-        {
-            string q = "INSERT INTO Parent(firstName,  midName,  lastName,  suffix, gender, birthPlace, userID) VALUES ('"
-                + firstName + "',  '" + midName + "',  '" + lastName + "',  '" + suffix + "', '" + gender + "', '" + birthPlace + "', '"+ userID + "')";
+            string q = "INSERT INTO Parent(profileID, firstName, midName, lastName, suffix, gender, birthPlace) VALUES ('" 
+                + profileID + "', '" + firstName + "', '" + midName 
+                + "', '" + lastName + "', '" + suffix + "', '" + gender 
+                + "', '" + birthPlace + "')";
 
             return runNonQuery(q);
         }
@@ -561,6 +554,48 @@ namespace ParishSystem
             return dt;
         }
 
+        public bool isMaxParents(int profileID)
+        {
+            string q = "SELECT * FROM Parent WHERE profileID = " + profileID;
+
+            DataTable dt = runQuery(q);
+
+            return dt.Rows.Count == 2;
+        }
+
+        public bool isValidParent(int profileID, char gender)
+        {
+            string q = "SELECT * FROM Parent WHERE profileID = '"+ profileID + "' AND gender = '"+ gender + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt.Rows.Count == 0;
+        }
+
+        public DataTable getParentsOf(int profileID)
+        {
+            string q = "SELECT * FROM Parent WHERE profileID = '"+ profileID + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public int getParentID(string firstName, string midName, string lastName, string suffix, char gender, string birthPlace)
+        {
+            string q = "SELECT parentID from Parent WHERE firstName = '" + firstName
+                + "' AND midName = '" + midName + "' AND lastName = '" + lastName
+                + "' AND suffix = '" + suffix + "' AND  gender = '" + gender
+                + "' AND birthPlace = '" + birthPlace + "'";
+
+            DataTable dt = runQuery(q);
+
+            if (dt.Rows.Count == 0)
+                return -1;
+
+            return int.Parse(dt.Rows[0][0].ToString());
+        }
+
 
         #endregion
         /*
@@ -569,31 +604,31 @@ namespace ParishSystem
                                          =============================================================
         */
         #region
-        public bool addIncome(int incomeTypeID, int profileID, string incomeDescription, double incomeAmount, DateTime incomeDateTime, string ORnum)
+        public bool addIncome(int sourceID, string sourceType, string bookType, string remarks)
         {
-            string q = "INSERT INTO Income(incomeTypeID,  profileID,  incomeDescription, incomeAmount, incomeDateTime,  ORnum, lastModified)"
-                + " VALUES ('"+ incomeTypeID + "',  '"+ profileID + "',  '"+ incomeDescription + "', '"+ incomeAmount + "', '"
-                + incomeDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff") + "',  '"+ ORnum + "', NOW())";
+            string q = "INSERT INTO Income(sourceID, sourceType, bookType, remarks, incomeDateTime) VALUES ('" 
+                + sourceID + "', '" + sourceType + "', '" + bookType + "', '" 
+                + remarks + "', NOW())";
 
             bool success = runNonQuery(q);
-            if(success)
-                updateModificationInfo("income", "incomeID", getLatestID("income", "incomeID"));
+            //if(success)
+            //    updateModificationInfo("income", "incomeID", getLatestID("income", "incomeID"));
 
             return success;
         }
 
-        public bool editIncome(int incomeID, int incomeTypeID, int profileID, string incomeDescription, double incomeAmount, DateTime incomeDateTime, string ORnum)
+        public bool editIncome(int incomeID, int sourceID, string sourceType, string bookType, string remarks)
         {
-            addIncomeLog(incomeID);
 
-            string q = "UPDATE TABLE income SET incomeTypeID = '" + incomeTypeID + "', profileID = '" + profileID
-                + "', incomeDescription = '" + incomeDescription + "', incomeAmount = '" + incomeAmount
-                + "', incomeDateTime = '" + incomeDateTime.ToString("yyyy-MM-dd HH:mm:ss.ff") + "', ORnum = '" + ORnum
-                + "' WHERE incomeID = 'incomeID'";
+
+            string q = "UPDATE Income SET sourceID = '" 
+                + sourceID + "', sourceType = '" + sourceType + "', bookType = '" + bookType
+                + "', remarks = '" + remarks 
+                + "' WHERE incomeID = '" + incomeID + "'";
 
             bool success = runNonQuery(q);
-            if (success)
-                updateModificationInfo("income", "incomeID", incomeID);
+            //if (success)
+            //    updateModificationInfo("income", "incomeID", incomeID);
 
             return success;
         }
