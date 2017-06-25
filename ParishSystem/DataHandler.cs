@@ -9,12 +9,17 @@ using System.Data;
 namespace ParishSystem
 {
     //I changed something
+
     public class DataHandler
     {
         public MySqlConnection conn;
         public MySqlCommand com;
 
         private int userID;
+
+        //temporary
+        public DataHandler() { }
+
 
         public DataHandler(string server, string database, string user, string password, int userID)
         {
@@ -23,7 +28,7 @@ namespace ParishSystem
         }
 
         //                                         ========[HELPER FUNCTIONS]=========
-
+        #region
         public bool runNonQuery(string q)
         {
             conn.Open();
@@ -111,13 +116,13 @@ namespace ParishSystem
             // *Still record changes to log or nah?
             return runNonQuery(q);
         }
-
+        #endregion
         /*
                                          =============================================================
                                                ================ GENERAL PROFILE =================
                                          =============================================================
         */
-
+        #region
         //ADD
         public bool addGeneralProfile(string firstName, string midName, string lastName, string suffix, string gender, DateTime birthDate)
         {
@@ -237,18 +242,18 @@ namespace ParishSystem
             return int.Parse(dt.Rows[0][0].ToString()) > 0;
         }
 
-        
 
 
 
 
 
+        #endregion
         /*
                                          =============================================================
                                             ================ BLOOD DONATION MODULE=================
                                          =============================================================
         */
-
+        #region
 
         //EDIT AND ADD have same processes
         public bool addBloodDonor(int profileID, string bloodType)
@@ -416,13 +421,13 @@ namespace ParishSystem
             return dt;
         }
 
-
+        #endregion
         /*
                                          =============================================================
                                                     ================ PARENT =================
                                          =============================================================
         */
-
+        #region
         public int getParentID(string firstName, string midName, string lastName, string suffix, char gender, string birthPlace)
         {
             string q = "SELECT parentID from Parent WHERE firstName = '"+ firstName 
@@ -470,13 +475,13 @@ namespace ParishSystem
         }
 
 
-
+        #endregion
         /*
                                          =============================================================
                                                 ================ INCOME TABLE =================
                                          =============================================================
         */
-
+        #region
         public bool addIncome(int incomeTypeID, int profileID, string incomeDescription, double incomeAmount, DateTime incomeDateTime, string ORnum)
         {
             string q = "INSERT INTO Income(incomeTypeID,  profileID,  incomeDescription, incomeAmount, incomeDateTime,  ORnum, lastModified)"
@@ -548,13 +553,13 @@ namespace ParishSystem
             return dt;
         }
 
-
+        #endregion
         /*
                                          =============================================================
                                          ================= SACRAMENT TABLE (obsolete)=================
                                          =============================================================
         */
-
+        #region
         public bool addSacrament(int profileID, int ministerID, int sponsorID, string sacramentType)
         {
             string q = "INSERT INTO Sacrament(profileID, ministerID, sponsorID, sacramentType) VALUES ('"
@@ -600,14 +605,14 @@ namespace ParishSystem
 
             return dt;
         }
-
+        #endregion
 
         /*
                                          =============================================================
                                               ================ BAPTISM TABLE =================
                                          =============================================================
         */
-
+        #region
         public bool addBaptism(int profileID, int ministerID, DateTime baptismDate)
         {
             string q = "INSERT INTO Baptism(profileID, ministerID, baptismDate) VALUES ('" 
@@ -734,14 +739,14 @@ namespace ParishSystem
 
             return dt;
         }
-
+        #endregion
 
         /*
                                          =============================================================
                                             ================= CONFIRMATION TABLE =================
                                          =============================================================
         */
-
+        #region
         public bool addConfirmation(int profileID, int ministerID, DateTime confirmationDate)
         {
             string q = "INSERT INTO Confirmation(profileID, ministerID, confirmationDate) VALUES ('"
@@ -862,13 +867,13 @@ namespace ParishSystem
         }
 
 
-
+        #endregion
         /*
                                          =============================================================
                                             ================= MARRIAGE TABLE =================
                                          =============================================================
         */
-
+        #region
 
         public bool addMarriage(int groomID, int brideID, int ministerID, string licenseDate, DateTime marriageDate, string status)
         {
@@ -997,13 +1002,13 @@ namespace ParishSystem
             return dt;
         }
 
-
+        #endregion
         /*
                                          =============================================================
                                             ================= MINISTER TABLE =================
                                          =============================================================
         */
-
+        #region
 
         public bool addMinister(string firstName, string midName, string lastName, string suffix, DateTime birthDate, string ministryType, string status, string licenseNumber, DateTime expirationDate)
         {
@@ -1100,13 +1105,13 @@ namespace ParishSystem
             return dt;
         }
 
-
+        #endregion
         /*
                                          =============================================================
                                             ================= SPONSOR TABLE =================
                                          =============================================================
         */
-
+        #region
 
         public bool addSponsor(string firstName, string midName, string lastName, string suffix, string gender)
         {
@@ -1166,7 +1171,7 @@ namespace ParishSystem
             return dt;
 
         }
-
+        #endregion
         /*
                                          =============================================================
                                             ================= APPOINTMENT TABLE =================

@@ -31,23 +31,23 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.suffix_textbox_baptist = new System.Windows.Forms.TextBox();
-            this.lastname_textbox_baptist = new System.Windows.Forms.TextBox();
-            this.middlename_textbox_baptist = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.suffix_textbox = new System.Windows.Forms.TextBox();
+            this.lastname_textbox = new System.Windows.Forms.TextBox();
+            this.middlename_textbox = new System.Windows.Forms.TextBox();
             this.birthplace_textbox_baptist = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.firstname_textbox_baptist = new System.Windows.Forms.TextBox();
+            this.firstname_textbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,10 +57,10 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(412, 71);
+            this.dataGridView1.Location = new System.Drawing.Point(666, 71);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(698, 663);
+            this.dataGridView1.Size = new System.Drawing.Size(444, 663);
             this.dataGridView1.TabIndex = 0;
             // 
             // textBox1
@@ -80,51 +80,100 @@
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.suffix_textbox_baptist);
-            this.panel1.Controls.Add(this.lastname_textbox_baptist);
-            this.panel1.Controls.Add(this.middlename_textbox_baptist);
+            this.panel1.Controls.Add(this.suffix_textbox);
+            this.panel1.Controls.Add(this.lastname_textbox);
+            this.panel1.Controls.Add(this.middlename_textbox);
             this.panel1.Controls.Add(this.birthplace_textbox_baptist);
             this.panel1.Controls.Add(this.label33);
-            this.panel1.Controls.Add(this.firstname_textbox_baptist);
+            this.panel1.Controls.Add(this.firstname_textbox);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(12, 71);
+            this.panel1.Location = new System.Drawing.Point(266, 71);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(393, 291);
+            this.panel1.Size = new System.Drawing.Size(393, 276);
             this.panel1.TabIndex = 27;
             // 
-            // suffix_textbox_baptist
+            // button2
             // 
-            this.suffix_textbox_baptist.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.suffix_textbox_baptist.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suffix_textbox_baptist.Location = new System.Drawing.Point(350, 28);
-            this.suffix_textbox_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.suffix_textbox_baptist.Name = "suffix_textbox_baptist";
-            this.suffix_textbox_baptist.Size = new System.Drawing.Size(21, 16);
-            this.suffix_textbox_baptist.TabIndex = 23;
+            this.button2.Location = new System.Drawing.Point(197, 229);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(182, 27);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // lastname_textbox_baptist
+            // button5
             // 
-            this.lastname_textbox_baptist.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lastname_textbox_baptist.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastname_textbox_baptist.Location = new System.Drawing.Point(256, 28);
-            this.lastname_textbox_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.lastname_textbox_baptist.Name = "lastname_textbox_baptist";
-            this.lastname_textbox_baptist.Size = new System.Drawing.Size(94, 16);
-            this.lastname_textbox_baptist.TabIndex = 24;
+            this.button5.Location = new System.Drawing.Point(197, 196);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(182, 27);
+            this.button5.TabIndex = 29;
+            this.button5.Text = "Add Marriage";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // middlename_textbox_baptist
+            // button4
             // 
-            this.middlename_textbox_baptist.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.middlename_textbox_baptist.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.middlename_textbox_baptist.Location = new System.Drawing.Point(162, 28);
-            this.middlename_textbox_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.middlename_textbox_baptist.Name = "middlename_textbox_baptist";
-            this.middlename_textbox_baptist.Size = new System.Drawing.Size(94, 16);
-            this.middlename_textbox_baptist.TabIndex = 22;
+            this.button4.Location = new System.Drawing.Point(197, 163);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(182, 27);
+            this.button4.TabIndex = 29;
+            this.button4.Text = "Add Confirmation";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(197, 130);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(182, 27);
+            this.button3.TabIndex = 29;
+            this.button3.Text = "Add Baptism";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(197, 97);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(182, 27);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Add Profile";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // suffix_textbox
+            // 
+            this.suffix_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.suffix_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suffix_textbox.Location = new System.Drawing.Point(350, 28);
+            this.suffix_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.suffix_textbox.Name = "suffix_textbox";
+            this.suffix_textbox.Size = new System.Drawing.Size(21, 16);
+            this.suffix_textbox.TabIndex = 23;
+            // 
+            // lastname_textbox
+            // 
+            this.lastname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lastname_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastname_textbox.Location = new System.Drawing.Point(256, 28);
+            this.lastname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lastname_textbox.Name = "lastname_textbox";
+            this.lastname_textbox.Size = new System.Drawing.Size(94, 16);
+            this.lastname_textbox.TabIndex = 24;
+            // 
+            // middlename_textbox
+            // 
+            this.middlename_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.middlename_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.middlename_textbox.Location = new System.Drawing.Point(162, 28);
+            this.middlename_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.middlename_textbox.Name = "middlename_textbox";
+            this.middlename_textbox.Size = new System.Drawing.Size(94, 16);
+            this.middlename_textbox.TabIndex = 22;
             // 
             // birthplace_textbox_baptist
             // 
@@ -146,15 +195,15 @@
             this.label33.TabIndex = 27;
             this.label33.Text = "Name";
             // 
-            // firstname_textbox_baptist
+            // firstname_textbox
             // 
-            this.firstname_textbox_baptist.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstname_textbox_baptist.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstname_textbox_baptist.Location = new System.Drawing.Point(68, 28);
-            this.firstname_textbox_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.firstname_textbox_baptist.Name = "firstname_textbox_baptist";
-            this.firstname_textbox_baptist.Size = new System.Drawing.Size(94, 16);
-            this.firstname_textbox_baptist.TabIndex = 13;
+            this.firstname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.firstname_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstname_textbox.Location = new System.Drawing.Point(68, 28);
+            this.firstname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.firstname_textbox.Name = "firstname_textbox";
+            this.firstname_textbox.Size = new System.Drawing.Size(94, 16);
+            this.firstname_textbox.TabIndex = 13;
             // 
             // label1
             // 
@@ -205,15 +254,6 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "Firstname";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(197, 97);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 27);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Add Profile";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -221,45 +261,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(175, 29);
             this.comboBox1.TabIndex = 28;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(197, 229);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(182, 27);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(197, 130);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(182, 27);
-            this.button3.TabIndex = 29;
-            this.button3.Text = "Add Baptism";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(197, 163);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(182, 27);
-            this.button4.TabIndex = 29;
-            this.button4.Text = "Add Confirmation";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(197, 196);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(182, 27);
-            this.button5.TabIndex = 29;
-            this.button5.Text = "Add Marriage";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // sApplicant
             // 
@@ -289,12 +290,12 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox suffix_textbox_baptist;
-        private System.Windows.Forms.TextBox lastname_textbox_baptist;
-        private System.Windows.Forms.TextBox middlename_textbox_baptist;
+        private System.Windows.Forms.TextBox suffix_textbox;
+        private System.Windows.Forms.TextBox lastname_textbox;
+        private System.Windows.Forms.TextBox middlename_textbox;
         private System.Windows.Forms.TextBox birthplace_textbox_baptist;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox firstname_textbox_baptist;
+        private System.Windows.Forms.TextBox firstname_textbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;

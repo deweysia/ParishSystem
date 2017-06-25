@@ -12,9 +12,17 @@ namespace ParishSystem
 {
     public partial class sBaptism : Form
     {
-        public sBaptism()
+        public DataHandler dh = new DataHandler();
+
+        int PersonID;
+        public sBaptism(int ID)
         {
             InitializeComponent();
+            PersonID = ID;
+
+            dh.getBaptism(ID);
+
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -53,6 +61,21 @@ namespace ParishSystem
         }
 
         private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lastname_textbox_father_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sBaptism_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
         {
 
         }
