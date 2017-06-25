@@ -13,11 +13,12 @@ namespace ParishSystem
   
     public partial class sApplicant : Form
     {
-    
-        DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
-        public sApplicant()
+    public DataHandler dh;
+       
+        public sApplicant(DataHandler dh)
         {
             InitializeComponent();
+            this.dh = dh;
         }
 
         private void button3_Click(object sender, EventArgs e)

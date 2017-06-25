@@ -60,7 +60,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(666, 71);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(444, 663);
+            this.dataGridView1.Size = new System.Drawing.Size(444, 631);
             this.dataGridView1.TabIndex = 0;
             // 
             // textBox1
@@ -91,7 +91,7 @@
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(266, 71);
+            this.panel1.Location = new System.Drawing.Point(266, 89);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(393, 276);
             this.panel1.TabIndex = 27;
@@ -266,7 +266,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1128, 759);
+            this.ClientSize = new System.Drawing.Size(1128, 727);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);

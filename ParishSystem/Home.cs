@@ -10,20 +10,24 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class login : Form
+    public partial class Home : Form
     {
-        public login()
+        DataHandler dh;
+
+        public Home() {
+            InitializeComponent();
+        } //temp
+
+        public Home(DataHandler dh)
         {
             InitializeComponent();
+            this.dh = dh;
+      
         }
 
-        private void login_button_Click(object sender, EventArgs e)
+        private void Home_Load(object sender, EventArgs e)
         {
-            DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
-            Form home = new Home(dh);
-            home.Show();
-            this.Hide();
-
+            this.username_label.Text = "username";
 
         }
     }

@@ -15,14 +15,14 @@ namespace ParishSystem
         public MySqlConnection conn;
         public MySqlCommand com;
 
-        private int userID;
+        private int userID=1;//change kasi tamad si dewey
 
       
 
-        public DataHandler(string server, string database, string user, string password)
+        public DataHandler(string server, string database, string user, string password ,int UserID)
         {
             conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";");
-           
+            userID = UserID;
         }
 
         public DataHandler(string server, string database, string user, string password)

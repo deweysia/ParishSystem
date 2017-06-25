@@ -17,7 +17,7 @@ namespace ParishSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new sApplicant());
+            Application.Run(new Home());
         }
     }
 }

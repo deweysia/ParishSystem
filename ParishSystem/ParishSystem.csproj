@@ -57,6 +57,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,12 @@
     <Compile Include="sParent.Designer.cs">
       <DependentUpon>sParent.cs</DependentUpon>
     </Compile>
+    <Compile Include="sSacraments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sSacraments.Designer.cs">
+      <DependentUpon>sSacraments.cs</DependentUpon>
+    </Compile>
     <Compile Include="sTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +158,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +177,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="sApplicant.resx">
       <DependentUpon>sApplicant.cs</DependentUpon>
@@ -180,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sParent.resx">
       <DependentUpon>sParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sSacraments.resx">
+      <DependentUpon>sSacraments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sTransaction.resx">
       <DependentUpon>sTransaction.cs</DependentUpon>
@@ -233,6 +252,8 @@
     <Content Include="obj\Debug\ParishSystem.exe" />
     <Content Include="obj\Debug\ParishSystem.pdb" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\11273972-orange-leaf-texture.jpg" />
+    <None Include="Resources\BookA.png" />
     <Content Include="Resources\btn_closeImage.png" />
     <Content Include="Resources\btn_maxImage.png" />
     <Content Include="Resources\btn_minImage.png" />
