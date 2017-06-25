@@ -275,7 +275,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "sApplicant";
             this.Text = "sApplicant";
-            this.Load += new System.EventHandler(this.sApplicant_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

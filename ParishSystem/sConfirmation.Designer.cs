@@ -156,6 +156,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(616, 139);
             this.panel1.TabIndex = 26;
+        
             // 
             // suffix_textbox_baptist
             // 

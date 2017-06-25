@@ -17,14 +17,12 @@ namespace ParishSystem
 
         private int userID;
 
-        //temporary
-        public DataHandler() { }
+      
 
-
-        public DataHandler(string server, string database, string user, string password, int userID)
+        public DataHandler(string server, string database, string user, string password)
         {
             conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";");
-            this.userID = userID;
+           
         }
 
         //                                         ========[HELPER FUNCTIONS]=========

@@ -127,7 +127,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(613, 117);
             this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            
             // 
             // label1
             // 
@@ -172,7 +172,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(616, 139);
             this.panel1.TabIndex = 26;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+           
             // 
             // suffix_textbox_baptist
             // 
@@ -531,7 +531,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(616, 89);
             this.panel2.TabIndex = 29;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+           
             // 
             // suffix_textbox_father
             // 
@@ -552,7 +552,7 @@
             this.lastname_textbox_father.Name = "lastname_textbox_father";
             this.lastname_textbox_father.Size = new System.Drawing.Size(94, 16);
             this.lastname_textbox_father.TabIndex = 24;
-            this.lastname_textbox_father.TextChanged += new System.EventHandler(this.lastname_textbox_father_TextChanged);
+           
             // 
             // middlename_textbox_father
             // 
@@ -682,7 +682,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(616, 88);
             this.panel3.TabIndex = 29;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+           
             // 
             // suffix_textbox_mother
             // 
@@ -831,7 +831,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(616, 88);
             this.panel4.TabIndex = 29;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+           
             // 
             // button2
             // 
@@ -977,7 +977,7 @@
             this.label9.Size = new System.Drawing.Size(97, 30);
             this.label9.TabIndex = 43;
             this.label9.Text = "Sponsors";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+           
             // 
             // requirementName
             // 
@@ -1019,7 +1019,7 @@
             this.MinimizeBox = false;
             this.Name = "sBaptism";
             this.Text = "sBaptism";
-            this.Load += new System.EventHandler(this.sBaptism_Load);
+           
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -13,41 +13,11 @@ namespace ParishSystem
   
     public partial class sApplicant : Form
     {
-        DataHandler dh = new DataHandler();
+    
+        DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
         public sApplicant()
         {
             InitializeComponent();
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_MouseHover(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form father = new sParent();
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form mother = new sParent();
-        }
-
-        private void sApplicant_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
         }
 
         private void button3_Click(object sender, EventArgs e)
