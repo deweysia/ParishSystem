@@ -27,6 +27,12 @@ namespace ParishSystem
             this.userID = userID;
         }
 
+        public DataHandler(string server, string database, string user, string password)
+        {
+            conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";");
+            this.userID = -1;
+        }
+
         //                                         ========[HELPER FUNCTIONS]=========
         #region
         public bool runNonQuery(string q)
