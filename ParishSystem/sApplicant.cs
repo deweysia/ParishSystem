@@ -53,7 +53,7 @@ namespace ParishSystem
         private void button3_Click(object sender, EventArgs e)
         {
             
-            Form a = new sBaptism(/*max + 1 gen profile*/);
+            Form a = new sBaptism();
             a.ShowDialog();
         }
 

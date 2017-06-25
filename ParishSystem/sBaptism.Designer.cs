@@ -1017,7 +1017,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "sBaptism";
+//this.Name = "sBaptism";
             this.Text = "sBaptism";
             this.Load += new System.EventHandler(this.sBaptism_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
