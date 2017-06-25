@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS `sad2`.`generalprofile` (
   `suffix` VARCHAR(5) NULL DEFAULT NULL,
   `birthdate` DATE NULL DEFAULT NULL,
   `gender` CHAR(1) NULL DEFAULT NULL,
+  `contactNumber` VARCHAR(45) NULL DEFAULT NULL,
   `address` VARCHAR(45) NULL DEFAULT NULL,
   `birthplace` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`profileID`),
