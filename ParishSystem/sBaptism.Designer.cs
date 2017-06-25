@@ -107,9 +107,9 @@
             this.label43 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Compiled = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label9 = new System.Windows.Forms.Label();
+            this.requirementName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Compiled = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.requirements_dataGridView)).BeginInit();
@@ -347,7 +347,7 @@
             this.requirements_dataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.requirements_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.requirements_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Name,
+            this.requirementName,
             this.Compiled});
             this.requirements_dataGridView.Location = new System.Drawing.Point(649, 44);
             this.requirements_dataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -968,22 +968,6 @@
             this.button4.Text = "Cancel";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // Name
-            // 
-            this.Name.HeaderText = "Name";
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
-            this.Name.Width = 200;
-            // 
-            // Compiled
-            // 
-            this.Compiled.HeaderText = "";
-            this.Compiled.Name = "Compiled";
-            this.Compiled.ReadOnly = true;
-            this.Compiled.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Compiled.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Compiled.Width = 33;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -994,6 +978,22 @@
             this.label9.TabIndex = 43;
             this.label9.Text = "Sponsors";
             this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // requirementName
+            // 
+            this.requirementName.HeaderText = "Name";
+            this.requirementName.Name = "requirementName";
+            this.requirementName.ReadOnly = true;
+            this.requirementName.Width = 200;
+            // 
+            // Compiled
+            // 
+            this.Compiled.HeaderText = "";
+            this.Compiled.Name = "Compiled";
+            this.Compiled.ReadOnly = true;
+            this.Compiled.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Compiled.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Compiled.Width = 33;
             // 
             // sBaptism
             // 
@@ -1017,7 +1017,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-//this.Name = "sBaptism";
+            this.Name = "sBaptism";
             this.Text = "sBaptism";
             this.Load += new System.EventHandler(this.sBaptism_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -1117,8 +1117,8 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Compiled;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn requirementName;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Compiled;
     }
 }

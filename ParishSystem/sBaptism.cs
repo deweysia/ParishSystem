@@ -14,7 +14,7 @@ namespace ParishSystem
     {
         public DataHandler dh = new DataHandler();
 
-        int PersonID;
+      
         public sBaptism()
         {
             InitializeComponent();
