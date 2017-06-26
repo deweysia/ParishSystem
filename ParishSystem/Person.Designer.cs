@@ -33,9 +33,12 @@
             this.baptism_button = new System.Windows.Forms.Button();
             this.confirmation_button = new System.Windows.Forms.Button();
             this.marriage_button = new System.Windows.Forms.Button();
+            this.balance_button = new System.Windows.Forms.Button();
+            this.bloodletting_button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.bloodtype_combobox_baptist = new System.Windows.Forms.ComboBox();
+            this.contactNumber_textbox_baptist = new System.Windows.Forms.MaskedTextBox();
+            this.address_baptist_textarea = new System.Windows.Forms.TextBox();
             this.suffix_textbox_baptist = new System.Windows.Forms.TextBox();
             this.lastname_textbox_baptist = new System.Windows.Forms.TextBox();
             this.middlename_textbox_baptist = new System.Windows.Forms.TextBox();
@@ -46,8 +49,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.gender_radiobutton2_baptist = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.birthdate_datetimepicker_baptist = new System.Windows.Forms.DateTimePicker();
             this.gender_radiobutton1_baptist = new System.Windows.Forms.RadioButton();
+            this.label109 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.firstname_textbox_baptist = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -92,6 +96,11 @@
             this.label31 = new System.Windows.Forms.Label();
             this.basic_panel = new System.Windows.Forms.Panel();
             this.baptism_panel = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox36 = new System.Windows.Forms.TextBox();
+            this.textBox37 = new System.Windows.Forms.TextBox();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label100 = new System.Windows.Forms.Label();
             this.textBox30 = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
@@ -138,6 +147,11 @@
             this.label34 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.confirmation_panel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox33 = new System.Windows.Forms.TextBox();
+            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
             this.textBox31 = new System.Windows.Forms.TextBox();
             this.label53 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
@@ -180,6 +194,11 @@
             this.label71 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
             this.marriage_panel = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox34 = new System.Windows.Forms.TextBox();
+            this.textBox35 = new System.Windows.Forms.TextBox();
+            this.label97 = new System.Windows.Forms.Label();
+            this.label98 = new System.Windows.Forms.Label();
             this.textBox29 = new System.Windows.Forms.TextBox();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
@@ -229,54 +248,35 @@
             this.label83 = new System.Windows.Forms.Label();
             this.save_button = new System.Windows.Forms.Button();
             this.cancel_button = new System.Windows.Forms.Button();
-            this.bloodletting_button = new System.Windows.Forms.Button();
-            this.balance_button = new System.Windows.Forms.Button();
-            this.label95 = new System.Windows.Forms.Label();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.label96 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.label97 = new System.Windows.Forms.Label();
-            this.label98 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.label99 = new System.Windows.Forms.Label();
-            this.label100 = new System.Windows.Forms.Label();
             this.bloodletting_panel = new System.Windows.Forms.Panel();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
-            this.label101 = new System.Windows.Forms.Label();
-            this.label102 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.bloodDonation_add = new System.Windows.Forms.Button();
-            this.bloodDonation_delete = new System.Windows.Forms.Button();
-            this.totalDonation_textbox = new System.Windows.Forms.TextBox();
-            this.label103 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label104 = new System.Windows.Forms.Label();
-            this.textBox38 = new System.Windows.Forms.TextBox();
-            this.label105 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label106 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.label107 = new System.Windows.Forms.Label();
             this.label108 = new System.Windows.Forms.Label();
-            this.label109 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.label107 = new System.Windows.Forms.Label();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.textBox38 = new System.Windows.Forms.TextBox();
+            this.totalDonation_textbox = new System.Windows.Forms.TextBox();
+            this.button21 = new System.Windows.Forms.Button();
+            this.bloodDonation_delete = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.bloodDonation_add = new System.Windows.Forms.Button();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label104 = new System.Windows.Forms.Label();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label105 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.balance_panel = new System.Windows.Forms.Panel();
-            this.dataGridView9 = new System.Windows.Forms.DataGridView();
-            this.label110 = new System.Windows.Forms.Label();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.dataGridView10 = new System.Windows.Forms.DataGridView();
-            this.label111 = new System.Windows.Forms.Label();
-            this.label112 = new System.Windows.Forms.Label();
             this.button22 = new System.Windows.Forms.Button();
+            this.label112 = new System.Windows.Forms.Label();
+            this.label111 = new System.Windows.Forms.Label();
+            this.textBox39 = new System.Windows.Forms.TextBox();
+            this.label110 = new System.Windows.Forms.Label();
+            this.dataGridView10 = new System.Windows.Forms.DataGridView();
+            this.dataGridView9 = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -298,12 +298,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.bloodletting_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             this.balance_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -364,12 +364,34 @@
             this.marriage_button.UseVisualStyleBackColor = true;
             this.marriage_button.Click += new System.EventHandler(this.panel_change);
             // 
+            // balance_button
+            // 
+            this.balance_button.Location = new System.Drawing.Point(0, 208);
+            this.balance_button.Margin = new System.Windows.Forms.Padding(0);
+            this.balance_button.Name = "balance_button";
+            this.balance_button.Size = new System.Drawing.Size(146, 52);
+            this.balance_button.TabIndex = 5;
+            this.balance_button.Text = "Balance";
+            this.balance_button.UseVisualStyleBackColor = true;
+            this.balance_button.Click += new System.EventHandler(this.panel_change);
+            // 
+            // bloodletting_button
+            // 
+            this.bloodletting_button.Location = new System.Drawing.Point(0, 260);
+            this.bloodletting_button.Margin = new System.Windows.Forms.Padding(0);
+            this.bloodletting_button.Name = "bloodletting_button";
+            this.bloodletting_button.Size = new System.Drawing.Size(146, 52);
+            this.bloodletting_button.TabIndex = 5;
+            this.bloodletting_button.Text = "Bloodletting";
+            this.bloodletting_button.UseVisualStyleBackColor = true;
+            this.bloodletting_button.Click += new System.EventHandler(this.panel_change);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.comboBox7);
-            this.panel2.Controls.Add(this.maskedTextBox1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.bloodtype_combobox_baptist);
+            this.panel2.Controls.Add(this.contactNumber_textbox_baptist);
+            this.panel2.Controls.Add(this.address_baptist_textarea);
             this.panel2.Controls.Add(this.suffix_textbox_baptist);
             this.panel2.Controls.Add(this.lastname_textbox_baptist);
             this.panel2.Controls.Add(this.middlename_textbox_baptist);
@@ -380,7 +402,7 @@
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label33);
             this.panel2.Controls.Add(this.gender_radiobutton2_baptist);
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.birthdate_datetimepicker_baptist);
             this.panel2.Controls.Add(this.gender_radiobutton1_baptist);
             this.panel2.Controls.Add(this.label109);
             this.panel2.Controls.Add(this.label4);
@@ -396,24 +418,33 @@
             this.panel2.Size = new System.Drawing.Size(851, 225);
             this.panel2.TabIndex = 27;
             // 
-            // maskedTextBox1
+            // bloodtype_combobox_baptist
             // 
-            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(546, 159);
-            this.maskedTextBox1.Mask = "(+63) 000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(97, 18);
-            this.maskedTextBox1.TabIndex = 30;
+            this.bloodtype_combobox_baptist.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodtype_combobox_baptist.FormattingEnabled = true;
+            this.bloodtype_combobox_baptist.Location = new System.Drawing.Point(752, 153);
+            this.bloodtype_combobox_baptist.Name = "bloodtype_combobox_baptist";
+            this.bloodtype_combobox_baptist.Size = new System.Drawing.Size(85, 25);
+            this.bloodtype_combobox_baptist.TabIndex = 31;
             // 
-            // textBox1
+            // contactNumber_textbox_baptist
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(481, 23);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(357, 114);
-            this.textBox1.TabIndex = 29;
+            this.contactNumber_textbox_baptist.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contactNumber_textbox_baptist.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactNumber_textbox_baptist.Location = new System.Drawing.Point(546, 159);
+            this.contactNumber_textbox_baptist.Mask = "(+63) 000-0000";
+            this.contactNumber_textbox_baptist.Name = "contactNumber_textbox_baptist";
+            this.contactNumber_textbox_baptist.Size = new System.Drawing.Size(97, 18);
+            this.contactNumber_textbox_baptist.TabIndex = 30;
+            // 
+            // address_baptist_textarea
+            // 
+            this.address_baptist_textarea.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.address_baptist_textarea.Location = new System.Drawing.Point(481, 23);
+            this.address_baptist_textarea.Multiline = true;
+            this.address_baptist_textarea.Name = "address_baptist_textarea";
+            this.address_baptist_textarea.Size = new System.Drawing.Size(357, 114);
+            this.address_baptist_textarea.TabIndex = 29;
             // 
             // suffix_textbox_baptist
             // 
@@ -522,15 +553,15 @@
             this.gender_radiobutton2_baptist.Text = "Female";
             this.gender_radiobutton2_baptist.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // birthdate_datetimepicker_baptist
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(217, 106);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(133, 25);
-            this.dateTimePicker1.TabIndex = 18;
+            this.birthdate_datetimepicker_baptist.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.birthdate_datetimepicker_baptist.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.birthdate_datetimepicker_baptist.Location = new System.Drawing.Point(217, 106);
+            this.birthdate_datetimepicker_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.birthdate_datetimepicker_baptist.Name = "birthdate_datetimepicker_baptist";
+            this.birthdate_datetimepicker_baptist.Size = new System.Drawing.Size(133, 25);
+            this.birthdate_datetimepicker_baptist.TabIndex = 18;
             // 
             // gender_radiobutton1_baptist
             // 
@@ -544,6 +575,16 @@
             this.gender_radiobutton1_baptist.TabStop = true;
             this.gender_radiobutton1_baptist.Text = "Male";
             this.gender_radiobutton1_baptist.UseVisualStyleBackColor = true;
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Location = new System.Drawing.Point(659, 157);
+            this.label109.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(86, 21);
+            this.label109.TabIndex = 14;
+            this.label109.Text = "Blood Type";
             // 
             // label4
             // 
@@ -1033,6 +1074,49 @@
             this.baptism_panel.Name = "baptism_panel";
             this.baptism_panel.Size = new System.Drawing.Size(854, 508);
             this.baptism_panel.TabIndex = 33;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(85, 473);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(163, 30);
+            this.button3.TabIndex = 69;
+            this.button3.Text = "Add payment";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // textBox36
+            // 
+            this.textBox36.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox36.Location = new System.Drawing.Point(83, 401);
+            this.textBox36.Name = "textBox36";
+            this.textBox36.Size = new System.Drawing.Size(165, 25);
+            this.textBox36.TabIndex = 67;
+            // 
+            // textBox37
+            // 
+            this.textBox37.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox37.Location = new System.Drawing.Point(83, 434);
+            this.textBox37.Name = "textBox37";
+            this.textBox37.Size = new System.Drawing.Size(165, 25);
+            this.textBox37.TabIndex = 68;
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Location = new System.Drawing.Point(22, 404);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(44, 21);
+            this.label99.TabIndex = 65;
+            this.label99.Text = "Price";
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Location = new System.Drawing.Point(8, 435);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(63, 21);
+            this.label100.TabIndex = 66;
+            this.label100.Text = "Balance";
             // 
             // textBox30
             // 
@@ -1527,6 +1611,49 @@
             this.confirmation_panel.Size = new System.Drawing.Size(854, 515);
             this.confirmation_panel.TabIndex = 51;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(83, 465);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(163, 30);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "Add payment";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox33
+            // 
+            this.textBox33.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox33.Location = new System.Drawing.Point(83, 397);
+            this.textBox33.Name = "textBox33";
+            this.textBox33.Size = new System.Drawing.Size(165, 25);
+            this.textBox33.TabIndex = 53;
+            // 
+            // textBox32
+            // 
+            this.textBox32.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox32.Location = new System.Drawing.Point(83, 430);
+            this.textBox32.Name = "textBox32";
+            this.textBox32.Size = new System.Drawing.Size(165, 25);
+            this.textBox32.TabIndex = 53;
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Location = new System.Drawing.Point(22, 400);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(44, 21);
+            this.label96.TabIndex = 52;
+            this.label96.Text = "Price";
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Location = new System.Drawing.Point(8, 431);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(63, 21);
+            this.label95.TabIndex = 52;
+            this.label95.Text = "Balance";
+            // 
             // textBox31
             // 
             this.textBox31.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1984,6 +2111,49 @@
             this.marriage_panel.Name = "marriage_panel";
             this.marriage_panel.Size = new System.Drawing.Size(854, 504);
             this.marriage_panel.TabIndex = 52;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(252, 465);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(163, 30);
+            this.button2.TabIndex = 64;
+            this.button2.Text = "Add payment";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox34
+            // 
+            this.textBox34.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox34.Location = new System.Drawing.Point(74, 434);
+            this.textBox34.Name = "textBox34";
+            this.textBox34.Size = new System.Drawing.Size(165, 25);
+            this.textBox34.TabIndex = 62;
+            // 
+            // textBox35
+            // 
+            this.textBox35.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox35.Location = new System.Drawing.Point(74, 467);
+            this.textBox35.Name = "textBox35";
+            this.textBox35.Size = new System.Drawing.Size(165, 25);
+            this.textBox35.TabIndex = 63;
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Location = new System.Drawing.Point(13, 437);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(44, 21);
+            this.label97.TabIndex = 60;
+            this.label97.Text = "Price";
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Location = new System.Drawing.Point(-1, 468);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(63, 21);
+            this.label98.TabIndex = 61;
+            this.label98.Text = "Balance";
             // 
             // textBox29
             // 
@@ -2480,6 +2650,7 @@
             this.save_button.TabIndex = 53;
             this.save_button.Text = "Save";
             this.save_button.UseVisualStyleBackColor = false;
+            this.save_button.Click += new System.EventHandler(this.save_button_Click);
             // 
             // cancel_button
             // 
@@ -2490,157 +2661,7 @@
             this.cancel_button.TabIndex = 53;
             this.cancel_button.Text = "Cancel";
             this.cancel_button.UseVisualStyleBackColor = false;
-            // 
-            // bloodletting_button
-            // 
-            this.bloodletting_button.Location = new System.Drawing.Point(0, 260);
-            this.bloodletting_button.Margin = new System.Windows.Forms.Padding(0);
-            this.bloodletting_button.Name = "bloodletting_button";
-            this.bloodletting_button.Size = new System.Drawing.Size(146, 52);
-            this.bloodletting_button.TabIndex = 5;
-            this.bloodletting_button.Text = "Bloodletting";
-            this.bloodletting_button.UseVisualStyleBackColor = true;
-            this.bloodletting_button.Click += new System.EventHandler(this.panel_change);
-            // 
-            // balance_button
-            // 
-            this.balance_button.Location = new System.Drawing.Point(0, 208);
-            this.balance_button.Margin = new System.Windows.Forms.Padding(0);
-            this.balance_button.Name = "balance_button";
-            this.balance_button.Size = new System.Drawing.Size(146, 52);
-            this.balance_button.TabIndex = 5;
-            this.balance_button.Text = "Balance";
-            this.balance_button.UseVisualStyleBackColor = true;
-            this.balance_button.Click += new System.EventHandler(this.panel_change);
-            // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(8, 431);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(63, 21);
-            this.label95.TabIndex = 52;
-            this.label95.Text = "Balance";
-            // 
-            // textBox32
-            // 
-            this.textBox32.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox32.Location = new System.Drawing.Point(83, 430);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(165, 25);
-            this.textBox32.TabIndex = 53;
-            // 
-            // textBox33
-            // 
-            this.textBox33.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox33.Location = new System.Drawing.Point(83, 397);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(165, 25);
-            this.textBox33.TabIndex = 53;
-            // 
-            // label96
-            // 
-            this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(22, 400);
-            this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(44, 21);
-            this.label96.TabIndex = 52;
-            this.label96.Text = "Price";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(83, 465);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 30);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "Add payment";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(252, 465);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(163, 30);
-            this.button2.TabIndex = 64;
-            this.button2.Text = "Add payment";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox34
-            // 
-            this.textBox34.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox34.Location = new System.Drawing.Point(74, 434);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(165, 25);
-            this.textBox34.TabIndex = 62;
-            // 
-            // textBox35
-            // 
-            this.textBox35.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox35.Location = new System.Drawing.Point(74, 467);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(165, 25);
-            this.textBox35.TabIndex = 63;
-            // 
-            // label97
-            // 
-            this.label97.AutoSize = true;
-            this.label97.Location = new System.Drawing.Point(13, 437);
-            this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(44, 21);
-            this.label97.TabIndex = 60;
-            this.label97.Text = "Price";
-            // 
-            // label98
-            // 
-            this.label98.AutoSize = true;
-            this.label98.Location = new System.Drawing.Point(-1, 468);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(63, 21);
-            this.label98.TabIndex = 61;
-            this.label98.Text = "Balance";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(85, 473);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(163, 30);
-            this.button3.TabIndex = 69;
-            this.button3.Text = "Add payment";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // textBox36
-            // 
-            this.textBox36.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox36.Location = new System.Drawing.Point(83, 401);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(165, 25);
-            this.textBox36.TabIndex = 67;
-            // 
-            // textBox37
-            // 
-            this.textBox37.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox37.Location = new System.Drawing.Point(83, 434);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(165, 25);
-            this.textBox37.TabIndex = 68;
-            // 
-            // label99
-            // 
-            this.label99.AutoSize = true;
-            this.label99.Location = new System.Drawing.Point(22, 404);
-            this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(44, 21);
-            this.label99.TabIndex = 65;
-            this.label99.Text = "Price";
-            // 
-            // label100
-            // 
-            this.label100.AutoSize = true;
-            this.label100.Location = new System.Drawing.Point(8, 435);
-            this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(63, 21);
-            this.label100.TabIndex = 66;
-            this.label100.Text = "Balance";
+            this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
             // 
             // bloodletting_panel
             // 
@@ -2669,168 +2690,14 @@
             this.bloodletting_panel.Size = new System.Drawing.Size(854, 512);
             this.bloodletting_panel.TabIndex = 54;
             // 
-            // dataGridView7
+            // label108
             // 
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(56, 53);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(333, 251);
-            this.dataGridView7.TabIndex = 0;
-            // 
-            // dataGridView8
-            // 
-            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Location = new System.Drawing.Point(452, 52);
-            this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.Size = new System.Drawing.Size(353, 257);
-            this.dataGridView8.TabIndex = 0;
-            // 
-            // label101
-            // 
-            this.label101.AutoSize = true;
-            this.label101.Location = new System.Drawing.Point(57, 318);
-            this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(117, 21);
-            this.label101.TabIndex = 1;
-            this.label101.Text = "Total Donations";
-            this.label101.Click += new System.EventHandler(this.label101_Click);
-            // 
-            // label102
-            // 
-            this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(451, 320);
-            this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(93, 21);
-            this.label102.TabIndex = 1;
-            this.label102.Text = "Total Claims";
-            this.label102.Click += new System.EventHandler(this.label101_Click);
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(178, 370);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(212, 25);
-            this.comboBox4.TabIndex = 2;
-            // 
-            // bloodDonation_add
-            // 
-            this.bloodDonation_add.Location = new System.Drawing.Point(307, 459);
-            this.bloodDonation_add.Name = "bloodDonation_add";
-            this.bloodDonation_add.Size = new System.Drawing.Size(83, 29);
-            this.bloodDonation_add.TabIndex = 3;
-            this.bloodDonation_add.Text = "Add";
-            this.bloodDonation_add.UseVisualStyleBackColor = true;
-            // 
-            // bloodDonation_delete
-            // 
-            this.bloodDonation_delete.Location = new System.Drawing.Point(178, 461);
-            this.bloodDonation_delete.Name = "bloodDonation_delete";
-            this.bloodDonation_delete.Size = new System.Drawing.Size(83, 29);
-            this.bloodDonation_delete.TabIndex = 3;
-            this.bloodDonation_delete.Text = "Delete";
-            this.bloodDonation_delete.UseVisualStyleBackColor = true;
-            // 
-            // totalDonation_textbox
-            // 
-            this.totalDonation_textbox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalDonation_textbox.Location = new System.Drawing.Point(181, 314);
-            this.totalDonation_textbox.Name = "totalDonation_textbox";
-            this.totalDonation_textbox.Size = new System.Drawing.Size(121, 25);
-            this.totalDonation_textbox.TabIndex = 4;
-            // 
-            // label103
-            // 
-            this.label103.AutoSize = true;
-            this.label103.Location = new System.Drawing.Point(18, 373);
-            this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(151, 21);
-            this.label103.TabIndex = 1;
-            this.label103.Text = "Blood Donatin Event";
-            this.label103.Click += new System.EventHandler(this.label101_Click);
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(178, 412);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(212, 25);
-            this.numericUpDown1.TabIndex = 5;
-            // 
-            // label104
-            // 
-            this.label104.AutoSize = true;
-            this.label104.Location = new System.Drawing.Point(95, 415);
-            this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(70, 21);
-            this.label104.TabIndex = 1;
-            this.label104.Text = "Quantity";
-            this.label104.Click += new System.EventHandler(this.label101_Click);
-            // 
-            // textBox38
-            // 
-            this.textBox38.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox38.Location = new System.Drawing.Point(560, 315);
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(135, 25);
-            this.textBox38.TabIndex = 4;
-            // 
-            // label105
-            // 
-            this.label105.AutoSize = true;
-            this.label105.Location = new System.Drawing.Point(451, 415);
-            this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(98, 21);
-            this.label105.TabIndex = 1;
-            this.label105.Text = "Blood Donor";
-            this.label105.Click += new System.EventHandler(this.label101_Click);
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(560, 415);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(245, 25);
-            this.comboBox5.TabIndex = 6;
-            // 
-            // label106
-            // 
-            this.label106.AutoSize = true;
-            this.label106.Location = new System.Drawing.Point(451, 368);
-            this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(86, 21);
-            this.label106.TabIndex = 1;
-            this.label106.Text = "Blood Type";
-            this.label106.Click += new System.EventHandler(this.label101_Click);
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(560, 366);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(245, 25);
-            this.comboBox6.TabIndex = 6;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(722, 459);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(83, 29);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Add";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button21
-            // 
-            this.button21.Location = new System.Drawing.Point(593, 461);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(83, 29);
-            this.button21.TabIndex = 3;
-            this.button21.Text = "Delete";
-            this.button21.UseVisualStyleBackColor = true;
+            this.label108.AutoSize = true;
+            this.label108.Location = new System.Drawing.Point(449, 31);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(57, 21);
+            this.label108.TabIndex = 7;
+            this.label108.Text = "Claims";
             // 
             // label107
             // 
@@ -2841,33 +2708,162 @@
             this.label107.TabIndex = 7;
             this.label107.Text = "Donations";
             // 
-            // label108
+            // comboBox6
             // 
-            this.label108.AutoSize = true;
-            this.label108.Location = new System.Drawing.Point(449, 31);
-            this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(57, 21);
-            this.label108.TabIndex = 7;
-            this.label108.Text = "Claims";
+            this.comboBox6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(560, 366);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(245, 25);
+            this.comboBox6.TabIndex = 6;
             // 
-            // label109
+            // comboBox5
             // 
-            this.label109.AutoSize = true;
-            this.label109.Location = new System.Drawing.Point(659, 157);
-            this.label109.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(86, 21);
-            this.label109.TabIndex = 14;
-            this.label109.Text = "Blood Type";
+            this.comboBox5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(560, 415);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(245, 25);
+            this.comboBox5.TabIndex = 6;
             // 
-            // comboBox7
+            // numericUpDown1
             // 
-            this.comboBox7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(752, 153);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(85, 25);
-            this.comboBox7.TabIndex = 31;
+            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(178, 412);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(212, 25);
+            this.numericUpDown1.TabIndex = 5;
+            // 
+            // textBox38
+            // 
+            this.textBox38.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox38.Location = new System.Drawing.Point(560, 315);
+            this.textBox38.Name = "textBox38";
+            this.textBox38.Size = new System.Drawing.Size(135, 25);
+            this.textBox38.TabIndex = 4;
+            // 
+            // totalDonation_textbox
+            // 
+            this.totalDonation_textbox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalDonation_textbox.Location = new System.Drawing.Point(181, 314);
+            this.totalDonation_textbox.Name = "totalDonation_textbox";
+            this.totalDonation_textbox.Size = new System.Drawing.Size(121, 25);
+            this.totalDonation_textbox.TabIndex = 4;
+            // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(593, 461);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(83, 29);
+            this.button21.TabIndex = 3;
+            this.button21.Text = "Delete";
+            this.button21.UseVisualStyleBackColor = true;
+            // 
+            // bloodDonation_delete
+            // 
+            this.bloodDonation_delete.Location = new System.Drawing.Point(178, 461);
+            this.bloodDonation_delete.Name = "bloodDonation_delete";
+            this.bloodDonation_delete.Size = new System.Drawing.Size(83, 29);
+            this.bloodDonation_delete.TabIndex = 3;
+            this.bloodDonation_delete.Text = "Delete";
+            this.bloodDonation_delete.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(722, 459);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(83, 29);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Add";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // bloodDonation_add
+            // 
+            this.bloodDonation_add.Location = new System.Drawing.Point(307, 459);
+            this.bloodDonation_add.Name = "bloodDonation_add";
+            this.bloodDonation_add.Size = new System.Drawing.Size(83, 29);
+            this.bloodDonation_add.TabIndex = 3;
+            this.bloodDonation_add.Text = "Add";
+            this.bloodDonation_add.UseVisualStyleBackColor = true;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(178, 370);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(212, 25);
+            this.comboBox4.TabIndex = 2;
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Location = new System.Drawing.Point(451, 320);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(93, 21);
+            this.label102.TabIndex = 1;
+            this.label102.Text = "Total Claims";
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Location = new System.Drawing.Point(95, 415);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(70, 21);
+            this.label104.TabIndex = 1;
+            this.label104.Text = "Quantity";
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Location = new System.Drawing.Point(451, 368);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(86, 21);
+            this.label106.TabIndex = 1;
+            this.label106.Text = "Blood Type";
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Location = new System.Drawing.Point(451, 415);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(98, 21);
+            this.label105.TabIndex = 1;
+            this.label105.Text = "Blood Donor";
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Location = new System.Drawing.Point(18, 373);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(151, 21);
+            this.label103.TabIndex = 1;
+            this.label103.Text = "Blood Donatin Event";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Location = new System.Drawing.Point(57, 318);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(117, 21);
+            this.label101.TabIndex = 1;
+            this.label101.Text = "Total Donations";
+            // 
+            // dataGridView8
+            // 
+            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView8.Location = new System.Drawing.Point(452, 52);
+            this.dataGridView8.Name = "dataGridView8";
+            this.dataGridView8.Size = new System.Drawing.Size(353, 257);
+            this.dataGridView8.TabIndex = 0;
+            // 
+            // dataGridView7
+            // 
+            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView7.Location = new System.Drawing.Point(56, 53);
+            this.dataGridView7.Name = "dataGridView7";
+            this.dataGridView7.Size = new System.Drawing.Size(333, 251);
+            this.dataGridView7.TabIndex = 0;
             // 
             // balance_panel
             // 
@@ -2883,47 +2879,14 @@
             this.balance_panel.Size = new System.Drawing.Size(854, 512);
             this.balance_panel.TabIndex = 55;
             // 
-            // dataGridView9
+            // button22
             // 
-            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView9.Location = new System.Drawing.Point(15, 52);
-            this.dataGridView9.Name = "dataGridView9";
-            this.dataGridView9.Size = new System.Drawing.Size(573, 196);
-            this.dataGridView9.TabIndex = 0;
-            // 
-            // label110
-            // 
-            this.label110.AutoSize = true;
-            this.label110.Location = new System.Drawing.Point(597, 210);
-            this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(63, 21);
-            this.label110.TabIndex = 1;
-            this.label110.Text = "Balance";
-            // 
-            // textBox39
-            // 
-            this.textBox39.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox39.Location = new System.Drawing.Point(671, 208);
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(153, 25);
-            this.textBox39.TabIndex = 2;
-            // 
-            // dataGridView10
-            // 
-            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView10.Location = new System.Drawing.Point(17, 287);
-            this.dataGridView10.Name = "dataGridView10";
-            this.dataGridView10.Size = new System.Drawing.Size(573, 196);
-            this.dataGridView10.TabIndex = 0;
-            // 
-            // label111
-            // 
-            this.label111.AutoSize = true;
-            this.label111.Location = new System.Drawing.Point(11, 264);
-            this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(63, 21);
-            this.label111.TabIndex = 3;
-            this.label111.Text = "Payable";
+            this.button22.Location = new System.Drawing.Point(601, 244);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(225, 45);
+            this.button22.TabIndex = 4;
+            this.button22.Text = "Add Payment";
+            this.button22.UseVisualStyleBackColor = true;
             // 
             // label112
             // 
@@ -2934,14 +2897,47 @@
             this.label112.TabIndex = 3;
             this.label112.Text = "Paid";
             // 
-            // button22
+            // label111
             // 
-            this.button22.Location = new System.Drawing.Point(601, 244);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(225, 45);
-            this.button22.TabIndex = 4;
-            this.button22.Text = "Add Payment";
-            this.button22.UseVisualStyleBackColor = true;
+            this.label111.AutoSize = true;
+            this.label111.Location = new System.Drawing.Point(11, 264);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(63, 21);
+            this.label111.TabIndex = 3;
+            this.label111.Text = "Payable";
+            // 
+            // textBox39
+            // 
+            this.textBox39.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox39.Location = new System.Drawing.Point(671, 208);
+            this.textBox39.Name = "textBox39";
+            this.textBox39.Size = new System.Drawing.Size(153, 25);
+            this.textBox39.TabIndex = 2;
+            // 
+            // label110
+            // 
+            this.label110.AutoSize = true;
+            this.label110.Location = new System.Drawing.Point(597, 210);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(63, 21);
+            this.label110.TabIndex = 1;
+            this.label110.Text = "Balance";
+            // 
+            // dataGridView10
+            // 
+            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView10.Location = new System.Drawing.Point(17, 287);
+            this.dataGridView10.Name = "dataGridView10";
+            this.dataGridView10.Size = new System.Drawing.Size(573, 196);
+            this.dataGridView10.TabIndex = 0;
+            // 
+            // dataGridView9
+            // 
+            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView9.Location = new System.Drawing.Point(15, 52);
+            this.dataGridView9.Name = "dataGridView9";
+            this.dataGridView9.Size = new System.Drawing.Size(573, 196);
+            this.dataGridView9.TabIndex = 0;
             // 
             // Person
             // 
@@ -2996,13 +2992,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.bloodletting_panel.ResumeLayout(false);
             this.bloodletting_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             this.balance_panel.ResumeLayout(false);
             this.balance_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3022,7 +3018,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.RadioButton gender_radiobutton2_baptist;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker birthdate_datetimepicker_baptist;
         private System.Windows.Forms.RadioButton gender_radiobutton1_baptist;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox firstname_textbox_baptist;
@@ -3045,8 +3041,8 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.MaskedTextBox contactNumber_textbox_baptist;
+        private System.Windows.Forms.TextBox address_baptist_textarea;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label23;
@@ -3236,7 +3232,7 @@
         private System.Windows.Forms.Button bloodDonation_add;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label102;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox bloodtype_combobox_baptist;
         private System.Windows.Forms.Label label109;
         private System.Windows.Forms.Label label108;
         private System.Windows.Forms.Label label107;

@@ -12,9 +12,14 @@ namespace ParishSystem
 {
     public partial class Person : Form
     {
-        public Person()
+        public int ProfileID;
+        public DataHandler dh;
+        public Person(int ProfileID,DataHandler dh)
         {
             InitializeComponent();
+            this.ProfileID = ProfileID;
+            this.dh = dh;
+           
         }
 
         private void panel_change(object sender, EventArgs e)
@@ -36,7 +41,35 @@ namespace ParishSystem
 
         }
 
-        private void label101_Click(object sender, EventArgs e)
+        private void save() {
+            
+        }
+        private void saveGeneralProfile() {
+            char gender='z';
+            if (gender_radiobutton1_baptist.Checked == true) { gender = 'm'; }
+            else if (gender_radiobutton2_baptist.Checked == true) { gender = 'f'; }
+            dh.editGeneralProfile(
+                ProfileID,
+                firstname_textbox_baptist.Text,
+                middlename_textbox_baptist.Text,
+                lastname_textbox_baptist.Text,
+                suffix_textbox_baptist.Text,
+                gender,
+                birthdate_datetimepicker_baptist.Value,
+                contactNumber_textbox_baptist.Text,
+                address_baptist_textarea.Text,
+                birthplace_textbox_baptist.Text,
+                bloodtype_combobox_baptist.SelectedValue.ToString());
+        }
+
+
+
+        private void cancel_button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void save_button_Click(object sender, EventArgs e)
         {
 
         }

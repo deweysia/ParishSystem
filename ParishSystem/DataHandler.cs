@@ -143,7 +143,7 @@ namespace ParishSystem
         }
 
         //EDIT
-        public bool editGeneralProfile(int profileID, string firstName, string midName, string lastName, string suffix, char gender, DateTime birthDate, string contactNumber, string address, string birthplace)
+        public bool editGeneralProfile(int profileID, string firstName, string midName, string lastName, string suffix, char gender, DateTime birthDate, string contactNumber, string address, string birthplace,string bloodtype)
         {
             if (!idExists("generalProfile", "profileID", profileID))
                 return false;
@@ -154,7 +154,7 @@ namespace ParishSystem
                 + "', suffix = '" + suffix + "', gender = '" + gender
                 + "', birthDate = '" + birthDate.ToString("yyyy-MM-dd HH:mm:ss.fff")
                 + "', contactNumber = '" + contactNumber + "', address = '" + address
-                + "', birthplace = '" + birthplace + "' WHERE profileID = '" + profileID + "'";
+                + "', birthplace = '" + birthplace + "',bloodType='"+bloodtype+"' WHERE profileID = '" + profileID + "'";
 
             //updateModificationInfo("generalProfile", "profileID", profileID);
 
