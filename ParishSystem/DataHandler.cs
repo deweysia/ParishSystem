@@ -829,104 +829,140 @@ namespace ParishSystem
 
         public DataTable getItemTypesOfBook(string bookType)
         {
-            string q = "SELECT * FROM ItemType WHERE bookType = '"+ bookType + "'";
+            string q = "SELECT * FROM ItemType WHERE bookType = '"+ bookType + "' AND status = 'active'";
 
             DataTable dt = runQuery(q);
 
             return dt;
         }
 
-        
+        public bool deleteItemType(int itemTypeID)
+        {
+            string q = "DELETE FROM ItemType WHERE itemTypeID = " + itemTypeID;
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public int getItemTypeID(string itemType, string bookType)
+        {
+            string q = "SELECT itemTypeID FROM ItemType WHERE itemType = '"+ itemType + "' AND bookType = '"+ bookType + "'";
+
+            DataTable dt = runQuery(q);
 
 
+            if (dt.Rows.Count == 0)
+                return -1;
+            else if(dt.Rows.Count > 1)
+                throw new DuplicateNameException("DUPLICATE NAME FOR ITEM TYPE in ItemType! btch");
+
+            return int.Parse(dt.Rows[0][0].ToString());
+        }
+
+        public DataTable getItemType(int itemTypeID)
+        {
+            string q = "SELECT * FROM ItemType WHERE itemTypeID = " + itemTypeID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
 
 
         /*
                                          =============================================================
-                                         ================= SACRAMENT TABLE (obsolete)=================
+                                             ================ APPOINTMENT TABLE =================
                                          =============================================================
         */
-        #region
-        public bool addSacrament(int profileID, int ministerID, int sponsorID, string sacramentType)
+
+
+        public bool addApplication(int profileID, string sacramentType)
         {
-            string q = "INSERT INTO Sacrament(profileID, ministerID, sponsorID, sacramentType) VALUES ('"
-                + profileID + "', '"+ ministerID +"', '"+ sponsorID + "', '"+ sacramentType + "')";
+            string q = "INSERT INTO Application(profileID, sacramentType) VALUES ('" + profileID + "', '" + sacramentType + "')";
 
             bool success = runNonQuery(q);
 
-            if (success)
-                updateModificationInfo("sacrament", "sacramentID", getLatestID("sacrament", "sacramentID"));
-
             return success;
-
         }
 
-        public bool editSacrament(int sacramentID, int profileID, int ministerID, int sponsorID, string sacramentType)
+        public bool editApplication(int applicationID, int profileID, string sacramentType)
         {
-            string q = "UPDATE TABLE Sacrament SET sacramentID = '"+ sacramentID + "',  profileID = '"+ profileID 
-                + "',  ministerID = '"+ ministerID + "',  sponsorID = '"+ sponsorID + "',  sacramentType = '"+ sacramentType 
-                +"' WHERE sacramentID = '"+ sacramentID + "'";
+            string q = "UPDATE Application SET profileID = '" + profileID + "', sacramentType = '" + sacramentType + "' WHERE applicationID = '" + applicationID + "'";
 
             bool success = runNonQuery(q);
 
-            if(success)
-                updateModificationInfo("sacrament", "sacramentID", sacramentID);
-
-
             return success;
-
         }
 
-        public bool addSacramentLog(int sacramentID)
+        public DataTable getRequirement(string sacramentType)
         {
-            string q = "INSERT INTO SacramentLog VALUES (SELECT * FROM Sacrament WHERE sacramentID = '"+ sacramentID+"')";
-
-            return runNonQuery(q);
-        }
-
-        public DataTable getSacrament(int sacramentID)
-        {
-            string q = "SELECT * FROM Sacrament WHERE sacramentID = '"+ sacramentID + "'";
+            string q = "SELECT requirementName FROM Requirement WHERE sacramentType = '"+ sacramentType + "'";
 
             DataTable dt = runQuery(q);
 
             return dt;
         }
-        #endregion
+
+        public bool isApprovedApplication(int applicationID)
+        {
+            return getApplicationStatus(applicationID).ToUpper() == "ACTIVE";
+
+        }
+
+        public bool isActiveApplication(int applicationID)
+        {
+            string status = getApplicationStatus(applicationID).ToUpper();
+
+            return status == "ACTIVE" || status == "PENDING";
+        }
+
+        public string getApplicationStatus(int applicationID)
+        {
+            string q = "SELECT status FROM Application WHERE applicationID = '" + applicationID + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt.Rows[0][0].ToString();
+        }
+
 
         /*
                                          =============================================================
                                               ================ BAPTISM TABLE =================
                                          =============================================================
         */
+
         #region
-        public bool addBaptism(int profileID, int ministerID, DateTime baptismDate)
+        public bool addBaptism(int applicationID, int ministerID, int legitimacy, DateTime baptismDate)
         {
-            string q = "INSERT INTO Baptism(profileID, ministerID, baptismDate) VALUES ('" 
-                + profileID + "', '" + ministerID + "', '"  + baptismDate.ToString("yyyy-MM-dd") + "')";
+            string q = "INSERT INTO Baptism(applicationID, ministerID, legitimacy, baptismDate) VALUES ('" 
+                + applicationID + "', '" + ministerID + "', '" 
+                + legitimacy + "', '" + baptismDate.ToString("yyyy-MM-dd") + "')";
 
             bool success = runNonQuery(q);
 
-            if (success)
-                updateModificationInfo("baptism", "baptismID", getLatestID("baptism", "baptismID"));
+            //if (success)
+            //    updateModificationInfo("baptism", "baptismID", getLatestID("baptism", "baptismID"));
 
             return success;
         }
 
 
-        public bool editBaptism(int baptismID, int ministerID, DateTime baptismDate)
+        public bool editBaptism(int baptismID, int ministerID, int legitimacy, DateTime baptismDate)
         {
-            if (!idExists("baptism", "baptismID", baptismID))
-                return false;
+            //if (!idExists("baptism", "baptismID", baptismID))
+            //    return false;
 
-            string q = "UPDATE baptism(ministerID, baptismDate) VALUES ('"
-                + ministerID + "', '"+ baptismDate.ToString("yyyy - MM - dd") 
-                + "' WHERE baptismID = '"+ baptismID + "'";
+            string q = "UPDATE Baptism SET ministerID = '" + ministerID 
+                + "', legitimacy = '" + legitimacy 
+                + "', baptismDate = '" + baptismDate.ToString("yyyy-MM-dd") 
+                + "' WHERE baptismID = '" + baptismID + "'";
 
             bool success = runNonQuery(q);
 
-            if (success)
-                updateModificationInfo("baptism", "baptismID", baptismID);
+            //if (success)
+            //    updateModificationInfo("baptism", "baptismID", baptismID);
 
             return success;
 
@@ -934,12 +970,12 @@ namespace ParishSystem
 
         public bool deleteBaptism(int baptismID)
         {
-            if (!idExists("Baptism", "baptismID", baptismID))
-                return false;
+            //if (!idExists("Baptism", "baptismID", baptismID))
+            //    return false;
 
-            addBaptismLog(baptismID);
-            updateModificationInfo("Baptism", "baptismID", baptismID);
-            addBaptismLog(baptismID);
+            //addBaptismLog(baptismID);
+            //updateModificationInfo("Baptism", "baptismID", baptismID);
+            //addBaptismLog(baptismID);
 
             string q = "DELETE FROM Baptism WHERE baptismID = " + baptismID;
 
@@ -954,8 +990,8 @@ namespace ParishSystem
 
             DataTable dt = runQuery(q);
 
-            if (dt.Rows.Count == 0)
-                return null;
+            //if (dt.Rows.Count == 0)
+            //    return null;
 
             return dt;
         }
@@ -980,52 +1016,49 @@ namespace ParishSystem
             return runNonQuery(q);
         }
 
-        public bool editBaptismReference(int baptismID, string recordNumber, string pageNumber, string registryNumber)
+        public bool addBaptismReference(int baptismID, string registryNumber, string recordNumber, string pageNumber)
         {
-            if (!idExists("baptism", "baptismID", baptismID))
-                return false;
-
-            addBaptismLog(baptismID);
-
-            string q = "UPDATE TABLE Baptism SET recordNumber = '"+ recordNumber 
-                + "', pageNumber = '"+ pageNumber + "', registryNumber = '"+ registryNumber 
-                + "' WHERE baptismID = '"+ baptismID + "'";
+            string q = "INSERT INTO BaptismReference(baptismID, registryNumber, recordNumber, pageNumber) VALUES ('" 
+                + baptismID + "', '" + registryNumber + "', '" 
+                + recordNumber + "', '" + pageNumber + "')";
 
             bool success = runNonQuery(q);
-
-            if (success)
-                updateModificationInfo("baptism", "baptismID", baptismID);
-
-            return success;
-        }
-
-        public bool removeBaptismReference(int baptismID)
-        {
-            if (!idExists("baptism", "baptismID", baptismID))
-                return false;
-
-            addBaptismLog(baptismID);
-
-            string q = "UPDATE Baptism SET recordNumber = NULL, pageNumber = NULL, registryNumber = NULL WHERE baptismID =  " + baptismID;
-
-            bool success = runNonQuery(q);
-
-            if (success)
-                updateModificationInfo("baptism", "baptismID", baptismID);
 
             return success;
 
         }
 
+        public bool editBaptismReference(int baptismID, string registryNumber, string recordNumber, string pageNumber)
+        {
+            //if (!idExists("baptism", "baptismID", baptismID))
+            //    return false;
+
+            //addBaptismLog(baptismID);
+
+            string q = "UPDATE BaptismReference SET registryNumber = '" + registryNumber 
+                + "', recordNumber = '" + recordNumber 
+                + "', pageNumber = '" + pageNumber
+                + "' WHERE baptismID = '" + baptismID + "'";
+
+            bool success = runNonQuery(q);
+
+
+            //if (success)
+            //    updateModificationInfo("baptism", "baptismID", baptismID);
+
+            return success;
+        }
+        
 
         public DataTable getBaptismReference(int baptismID)
         {
-            string q = "SELECT * FROM Baptism WHERE baptismID = " + baptismID;
+            string q = "SELECT * FROM BaptismReference WHERE baptismID = " + baptismID;
 
             DataTable dt = runQuery(q);
 
             return dt;
         }
+
         #endregion
 
         /*
@@ -1034,56 +1067,77 @@ namespace ParishSystem
                                          =============================================================
         */
         #region
-        public bool addConfirmation(int profileID, int ministerID, DateTime confirmationDate)
+        public bool addConfirmation(int applicationID, int ministerID, DateTime confirmationDate)
         {
-            string q = "INSERT INTO Confirmation(profileID, ministerID, confirmationDate) VALUES ('"
-                + profileID + "', '"+ ministerID + "', '"+ confirmationDate.ToString("yyyy-MM-dd") + "')";
+            string q = "INSERT INTO Confirmation(applicationID, ministerID, confirmationDate) VALUES ('" 
+                + applicationID + "', '" + ministerID 
+                + "', '" + confirmationDate.ToString("yyyy-MM-dd") + "')";
 
             
             bool success = runNonQuery(q);
 
-            if (success)
-                updateModificationInfo("confirmation", "confirmationID", getLatestID("confirmation", "confirmationID"));
+            //if (success)
+            //    updateModificationInfo("confirmation", "confirmationID", getLatestID("confirmation", "confirmationID"));
 
             return success;
         }
 
         public bool editConfirmation(int confirmationID, int ministerID, DateTime confirmationDate)
         {
-            if (!idExists("Confirmation", "confirmationID", confirmationID))
-                return false;
+            //if (!idExists("Confirmation", "confirmationID", confirmationID))
+            //    return false;
 
-            addConfirmationLog(confirmationID);
+            //addConfirmationLog(confirmationID);
 
 
-            string q = "UPDATE Confirmation SET ministerID = '"
-                + ministerID + "', confirmationDate = '"+ confirmationDate.ToString("yyyy-MM-dd") 
-                + "' WHERE confirmationID = " + confirmationID;
+            string q = "UPDATE Confirmation SET ministerID = '" 
+                + ministerID + "', confirmationDate = '" + confirmationDate.ToString("yyyy-MM-dd") 
+                + "' WHERE confirmationID = '" + confirmationID + "'";
 
             bool success = runNonQuery(q);
 
-            if(success)
-                updateModificationInfo("Confirmation", "confirmationID", confirmationID);
+            //if(success)
+            //    updateModificationInfo("Confirmation", "confirmationID", confirmationID);
 
             return success;
         }
 
-        public bool editConfirmationReference(int confirmationID, string recordNumber, string pageNumber, string registryNumber)
+
+        public bool deleteConfirmation(int confirmationID)
         {
-            if (!idExists("Confirmation", "confirmationID", confirmationID))
-                return false;
-
-            addConfirmationLog(confirmationID);
-
-            string q = "UPDATE Confirmation SET recordNumber = '"
-                + recordNumber + "', pageNumber = '"+ pageNumber 
-                + "', registryNumber = '"+ registryNumber 
-                + "' WHERE confirmationID = " + confirmationID;
+            string q = "DELETE FROM Confirmation WHERE confirmationID = " + confirmationID;
 
             bool success = runNonQuery(q);
 
-            if (success)
-                updateModificationInfo("Confirmation", "confirmationID", confirmationID);
+            return success;
+        }
+
+        public bool addConfirmationReference(int confirmatonID, string registryNumber, string pageNumber, string recordNumber)
+        {
+            string q = "INSERT INTO ConfirmationReference(confirmatonID, registryNumber, pageNumber, recordNumber) VALUES ('" 
+                + confirmatonID + "', '" + registryNumber 
+                + "', '" + pageNumber + "', '" + recordNumber + "')";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+        public bool editConfirmationReference(int confirmationID, string recordNumber, string pageNumber, string registryNumber)
+        {
+            //if (!idExists("Confirmation", "confirmationID", confirmationID))
+            //    return false;
+
+            //addConfirmationLog(confirmationID);
+
+            string q = "UPDATE ConfirmationReference SET recordNumber = '" + recordNumber 
+                + "', pageNumber = '" + pageNumber 
+                + "', registryNumber = '" + registryNumber 
+                + "' WHERE confirmationID = '" + confirmationID + "'";
+
+            bool success = runNonQuery(q);
+
+            //if (success)
+            //    updateModificationInfo("Confirmation", "confirmationID", confirmationID);
 
             return success;
 
@@ -1106,8 +1160,8 @@ namespace ParishSystem
 
             DataTable dt = runQuery(q);
 
-            if (dt.Rows.Count == 0)
-                return null;
+            //if (dt.Rows.Count == 0)
+            //    return null;
 
             return dt;
         }
@@ -1115,43 +1169,27 @@ namespace ParishSystem
         public DataTable getConfirmationBetweenDates(DateTime start, DateTime end)
         {
             string q = "SELECT * FROM Confirmation WHERE confirmationDate >= '" 
-                + start.ToString("yyyy-MM-dd") + "' AND confirmationDate <= '"+ start.ToString("yyyy-MM-dd") + "'";
+                + start.ToString("yyyy-MM-dd") + "' AND confirmationDate <= '"+ end.ToString("yyyy-MM-dd") + "'";
 
             DataTable dt = runQuery(q);
 
-            if (dt.Rows.Count == 0)
-                return null;
+            //if (dt.Rows.Count == 0)
+            //    return null;
 
             return dt;
-        }
-
-        public bool removeConfirmationReference(int confirmationID)
-        {
-            if (!idExists("Confirmation", "confirmationID", confirmationID))
-                return false;
-
-            addBaptismLog(confirmationID);
-
-            string q = "UPDATE Confirmation SET recordNumber = NULL, pageNumber = NULL, registryNumber = NULL WHERE confirmationID =  " + confirmationID;
-
-            bool success = runNonQuery(q);
-
-            if (success)
-                updateModificationInfo("Confirmation", "confirmationID", confirmationID);
-
-            return success;
-
         }
 
 
         public DataTable getConfirmationReference(int confirmationID)
         {
-            string q = "SELECT * FROM Confirmation WHERE confirmationID = " + confirmationID;
+            string q = "SELECT * FROM ConfirmationReference WHERE confirmationID = " + confirmationID;
 
             DataTable dt = runQuery(q);
 
             return dt;
         }
+
+
 
 
         #endregion
@@ -1162,52 +1200,66 @@ namespace ParishSystem
         */
         #region
 
-        public bool addMarriage(int groomID, int brideID, int ministerID, string licenseDate, DateTime marriageDate, string status)
+        public bool addMarriage(int applicationID, int groomID, int brideID, int ministerID, DateTime licenseDate, DateTime marriageDate, string status)
         {
-            string q = "INSERT INTO Marriage(groomID, brideID, ministerID, licenseDate, marriageDate, status) VALUES ('"
-                + groomID + "', '"+ brideID+"', '"+ ministerID + "', '"+ licenseDate + "', '"+ marriageDate + "', '"+ status + "')";
+            string q = "INSERT INTO Marriage(applicationID, groomID, brideID, ministerID, licenseDate, marriageDate, status) VALUES ('"
+                + applicationID + "', '" + groomID + "', '"+ brideID+"', '"+ ministerID + "', '"+ licenseDate.ToString("yyyy-MM-dd") + "', '"+ marriageDate.ToString("yyyy-MM-dd") + "', '"+ status + "')";
 
             bool success = runNonQuery(q);
 
-            if (success)
-                updateModificationInfo("Marriage", "marriageID", getLatestID("Marriage", "marriageID"));
+            //if (success)
+            //    updateModificationInfo("Marriage", "marriageID", getLatestID("Marriage", "marriageID"));
 
             return success;
         }
 
         public bool editMarriage(int marriageID, int groomID, int brideID, int ministerID, DateTime licenseDate, DateTime marriageDate, string status)
         {
-            if (!idExists("Marriage", "marriageID", marriageID))
-                return false;
+            //if (!idExists("Marriage", "marriageID", marriageID))
+            //    return false;
 
-            addMarriageLog(marriageID);
+            //addMarriageLog(marriageID);
 
-            string q = "UPDATE Marriage SET groomID = groomID, brideID = '" + brideID
-                + "', ministerID = '" + ministerID + "', licenseDate = '" + licenseDate.ToString("yyyy-MM-dd")
-                + "', marriageDate = '" + marriageDate.ToString("yyyy-MM-dd") + "', status = '"+ status + "' WHERE marriageID = " + marriageID;
+            string q = "UPDATE Marriage SET groomID = '" + groomID 
+                + "', brideID = '" + brideID 
+                + "', ministerID = '" + ministerID 
+                + "', licenseDate = '" + licenseDate.ToString("yyyy-MM-dd") 
+                + "', marriageDate = '" + marriageDate.ToString("yyyy-MM-dd") 
+                + "', status = '" + status 
+                + "' WHERE marriageID = '" + marriageID + "'";
 
             bool success = runNonQuery(q);
 
-            if (success)
-                updateModificationInfo("Marriage", "marriageID", marriageID);
+            //if (success)
+            //    updateModificationInfo("Marriage", "marriageID", marriageID);
 
             return success;
         }
 
-        public bool addMarriageLog(int marriageID)
+        public bool deleteMarriage(int marriageID)
         {
-            if (idExists("Marriage", "marriageID", marriageID))
-                return false;
+            string q = "DELETE FROM Marriage WHERE marriageID = " + marriageID;
 
-            string q = "INSERT INTO MarriageLog VALUES (SELECT * FROM Marriage WHERE marriageID = " + marriageID;
+            bool success = runNonQuery(q);
 
-            return runNonQuery(q);
+            return success;
         }
+
+       public bool addMarriageReference(int marriageID, string registryNumber, string pageNumber, string recordNumber)
+       {
+            string q = "INSERT INTO MarriageReference(marriageID, registryNumber, pageNumber, recordNumber) VALUES ('" 
+                + marriageID + "', '" + registryNumber + "', '" 
+                + pageNumber + "', '" + recordNumber + "')";
+
+            bool success = runNonQuery(q);
+
+            return success;
+       }
 
         public bool editMarriageReference(int marriageID, string recordNumber, string pageNumber, string registryNumber)
         {
-            if (!idExists("Marriage", "marriageID", marriageID))
-                return false;
+            //if (!idExists("Marriage", "marriageID", marriageID))
+            //    return false;
 
             string q = "UPDATE Marriage SET recordNumber = '"+ recordNumber 
                 + "', pageNumber = '"+ pageNumber + "', registryNumber = '"+ registryNumber 
@@ -1215,54 +1267,16 @@ namespace ParishSystem
 
             bool success = runNonQuery(q);
 
-            if (success)
-                updateModificationInfo("marriage", "marriageID", marriageID);
+            //if (success)
+            //    updateModificationInfo("marriage", "marriageID", marriageID);
 
             return success;
-        }
-
-        public bool removeMarriageReference(int marriageID)
-        {
-            if (!idExists("Marriage", "marriageID", marriageID))
-                return false;
-
-            addBaptismLog(marriageID);
-
-            string q = "UPDATE Marriage SET recordNumber = NULL, pageNumber = NULL, registryNumber = NULL WHERE marriageID =  " + marriageID;
-
-            bool success = runNonQuery(q);
-
-            if (success)
-                updateModificationInfo("Marriage", "marriageID", marriageID);
-
-            return success;
-
-        }
-
-        public bool deleteMarriage(int marriageID)
-        {
-            if (!idExists("Marriage", "marriageID", marriageID))
-                return false;
-
-            addBaptismLog(marriageID);
-
-            updateModificationInfo("Marriage", "marriageID", marriageID);
-
-            addBaptismLog(marriageID);
-
-            string q = "DELETE FROM Marriage WHERE marriageID = " + marriageID;
-
-            return runNonQuery(q);
         }
 
         public DataTable getMarriage(int marriageID)
         {
             string q = "SELECT * FROM Marriage WHERE marriageID = " + marriageID;
-
             DataTable dt = runQuery(q);
-
-            if (dt.Rows.Count == 0)
-                return null;
 
             return dt;
         }
@@ -1270,7 +1284,7 @@ namespace ParishSystem
         public DataTable getMarriageBetweenDates(DateTime start, DateTime end)
         {
             string q = "SELECT * FROM Marriage WHERE marriageDate >= '"
-                + start.ToString("yyyy-MM-dd") + "' AND marriageDate <= '" + start.ToString("yyyy-MM-dd") + "'";
+                + start.ToString("yyyy-MM-dd") + "' AND marriageDate <= '" + end.ToString("yyyy-MM-dd") + "'";
 
             DataTable dt = runQuery(q);
 
@@ -1282,7 +1296,7 @@ namespace ParishSystem
 
         public DataTable getMarriageReference(int marriageID)
         {
-            string q = "SELECT * FROM Marriage WHERE marriageID = " + marriageID;
+            string q = "SELECT * FROM MarriageReference WHERE marriageID = " + marriageID;
 
             DataTable dt = runQuery(q);
 
@@ -1299,14 +1313,18 @@ namespace ParishSystem
 
         public bool addMinister(string firstName, string midName, string lastName, string suffix, DateTime birthDate, string ministryType, string status, string licenseNumber, DateTime expirationDate)
         {
-            string q = "INSERT INTO Minister(firstName, midName, lastName, suffix, birthDate, ministryType, status, licenseNumber, expirationDate) VALUES ('"
-                + firstName + "', '"+ midName + "', '"+ lastName+"', '"+ suffix + "', '"
-                + birthDate.ToString("yyyy-MM-dd")+"', ministryType, status, licenseNumber, expirationDate)";
+            string q = "INSERT INTO Minister(firstName, midName, lastName, suffix, birthDate, ministryType, status, licenseNumber, expirationDate) VALUES ('" 
+                + firstName + "', '" + midName + "', '" 
+                + lastName + "', '" + suffix + "', '" 
+                + birthDate.ToString("yyyy-MM-dd") + "', '"
+                + ministryType + "', '" + status + "', '" 
+                + licenseNumber + "', '" 
+                + expirationDate.ToString("yyyy-MM-dd") + "')";
 
             bool success = runNonQuery(q);
 
-            if (success)
-                updateModificationInfo("Minister", "ministerID", getLatestID("Minister", "ministerID"));
+            //if (success)
+            //    updateModificationInfo("Minister", "ministerID", getLatestID("Minister", "ministerID"));
 
             return success;
         }
@@ -1328,8 +1346,8 @@ namespace ParishSystem
 
             bool success = runNonQuery(q);
 
-            if (success)
-                updateModificationInfo("Minister", "ministerID", ministerID);
+            //if (success)
+            //    updateModificationInfo("Minister", "ministerID", ministerID);
 
             return success;
 
@@ -1374,8 +1392,8 @@ namespace ParishSystem
 
             bool success = runNonQuery(q);
 
-            if (success)
-                updateModificationInfo("Minister", "ministerID", ministerID);
+            //if (success)
+            //    updateModificationInfo("Minister", "ministerID", ministerID);
 
             return success;
 
@@ -1407,8 +1425,8 @@ namespace ParishSystem
 
             bool success = runNonQuery(q);
 
-            if (success)
-                updateModificationInfo("Sponsor", "sponsorID", getLatestID("Sponsor", "sponsorID"));
+            //if (success)
+            //    updateModificationInfo("Sponsor", "sponsorID", getLatestID("Sponsor", "sponsorID"));
 
             return success;
         }
