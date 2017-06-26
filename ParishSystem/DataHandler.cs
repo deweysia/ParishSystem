@@ -726,7 +726,7 @@ namespace ParishSystem
 
         #region
 
-        public bool addInvoice(int incomeID, int ORnum, double paymentAmount)
+        public bool addInvoice(int incomeID, int ORnum, double paymentAmount,DateTime invoiceDateTime)
         {
             string q = "INSERT INTO Invoice(incomeID, ORnum, paymentAmount, invoiceDateTime) VALUES ('" + incomeID + "', '" + ORnum + "', '" + paymentAmount + "', '" + invoiceDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff") + "')";
 

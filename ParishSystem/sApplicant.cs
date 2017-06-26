@@ -42,8 +42,7 @@ namespace ParishSystem
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, null, DateTime.MinValue)) { }
-            else { MessageBox.Show("Returned False", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+           
         }
     }
 }

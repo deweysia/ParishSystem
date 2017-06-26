@@ -81,8 +81,20 @@
     <Compile Include="Menu_bar.Designer.cs">
       <DependentUpon>Menu_bar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Person.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person.Designer.cs">
+      <DependentUpon>Person.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SAD.Designer.cs">
+      <DependentUpon>SAD.cs</DependentUpon>
+    </Compile>
     <Compile Include="sApplicant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\ParishSystem.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\ParishSystem.Properties.Resources.resources" />
+    <EmbeddedResource Include="Person.resx">
+      <DependentUpon>Person.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -179,6 +194,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SAD.resx">
+      <DependentUpon>SAD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="sApplicant.resx">
       <DependentUpon>sApplicant.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,9 +236,6 @@
     <None Include="bin\Debug\ParishSystem.exe.config" />
     <None Include="bin\Debug\ParishSystem.vshost.exe.config" />
     <None Include="bin\Debug\ParishSystem.vshost.exe.manifest" />
-    <None Include="bin\Debug\SAD3.exe.config" />
-    <None Include="bin\Debug\SAD3.vshost.exe.config" />
-    <None Include="bin\Debug\SAD3.vshost.exe.manifest" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\ParishSystem.csproj.GenerateResource.Cache" />
@@ -243,9 +258,6 @@
     <Content Include="bin\Debug\ParishSystem.exe" />
     <Content Include="bin\Debug\ParishSystem.pdb" />
     <Content Include="bin\Debug\ParishSystem.vshost.exe" />
-    <Content Include="bin\Debug\SAD3.exe" />
-    <Content Include="bin\Debug\SAD3.pdb" />
-    <Content Include="bin\Debug\SAD3.vshost.exe" />
     <Content Include="database\parishDB.sql" />
     <Content Include="database\parishDB_5.sql" />
     <Content Include="obj\Debug\ParishSystem.csproj.FileListAbsolute.txt" />
