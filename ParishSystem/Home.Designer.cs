@@ -38,7 +38,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.notif_panel = new System.Windows.Forms.Panel();
             this.username_label = new System.Windows.Forms.Label();
-            this.menu_bar1 = new ParishSystem.Menu_bar();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -136,7 +135,7 @@
             this.panel4.Controls.Add(this.notif_panel);
             this.panel4.Location = new System.Drawing.Point(0, 159);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(873, 418);
+            this.panel4.Size = new System.Drawing.Size(876, 418);
             this.panel4.TabIndex = 4;
             // 
             // notif_panel
@@ -145,9 +144,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.notif_panel.BackColor = System.Drawing.Color.White;
-            this.notif_panel.Location = new System.Drawing.Point(161, 21);
+            this.notif_panel.Location = new System.Drawing.Point(161, 32);
             this.notif_panel.Name = "notif_panel";
-            this.notif_panel.Size = new System.Drawing.Size(688, 378);
+            this.notif_panel.Size = new System.Drawing.Size(680, 342);
             this.notif_panel.TabIndex = 3;
             // 
             // username_label
@@ -162,23 +161,11 @@
             this.username_label.TabIndex = 1;
             this.username_label.Text = "label2";
             // 
-            // menu_bar1
-            // 
-            this.menu_bar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.menu_bar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.menu_bar1.Location = new System.Drawing.Point(-4, 0);
-            this.menu_bar1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.menu_bar1.Name = "menu_bar1";
-            this.menu_bar1.Size = new System.Drawing.Size(113, 722);
-            this.menu_bar1.TabIndex = 1;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 711);
-            this.Controls.Add(this.menu_bar1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -204,6 +191,5 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
-        private Menu_bar menu_bar1;
     }
 }
