@@ -287,7 +287,7 @@
             this.add_button.TabIndex = 6;
             this.add_button.Text = "Add";
             this.add_button.UseVisualStyleBackColor = true;
-            this.add_button.Click += new System.EventHandler(this.button1_Click);
+           
             // 
             // textBox3
             // 
@@ -369,7 +369,7 @@
             this.fistnameDonation_tb.Name = "fistnameDonation_tb";
             this.fistnameDonation_tb.Size = new System.Drawing.Size(226, 29);
             this.fistnameDonation_tb.TabIndex = 0;
-            this.fistnameDonation_tb.TextChanged += new System.EventHandler(this.fistnameDonation_tb_TextChanged);
+           
             // 
             // tabPage2
             // 

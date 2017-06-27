@@ -15,16 +15,14 @@ namespace ParishSystem
         public MySqlConnection conn;
         public MySqlCommand com;
 
-        private int userID;
+        private int userID=1;//change kasi tamad si dewey
 
-        //temporary
-        public DataHandler() { }
+      
 
-
-        public DataHandler(string server, string database, string user, string password, int userID)
+        public DataHandler(string server, string database, string user, string password ,int UserID)
         {
             conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";");
-            this.userID = userID;
+            userID = UserID;
         }
 
         public DataHandler(string server, string database, string user, string password)
@@ -145,7 +143,7 @@ namespace ParishSystem
         }
 
         //EDIT
-        public bool editGeneralProfile(int profileID, string firstName, string midName, string lastName, string suffix, char gender, DateTime birthDate, string contactNumber, string address, string birthplace)
+        public bool editGeneralProfile(int profileID, string firstName, string midName, string lastName, string suffix, char gender, DateTime birthDate, string contactNumber, string address, string birthplace,string bloodtype)
         {
             if (!idExists("generalProfile", "profileID", profileID))
                 return false;
@@ -156,7 +154,7 @@ namespace ParishSystem
                 + "', suffix = '" + suffix + "', gender = '" + gender
                 + "', birthDate = '" + birthDate.ToString("yyyy-MM-dd HH:mm:ss.fff")
                 + "', contactNumber = '" + contactNumber + "', address = '" + address
-                + "', birthplace = '" + birthplace + "' WHERE profileID = '" + profileID + "'";
+                + "', birthplace = '" + birthplace + "',bloodType='"+bloodtype+"' WHERE profileID = '" + profileID + "'";
 
             //updateModificationInfo("generalProfile", "profileID", profileID);
 
@@ -736,7 +734,7 @@ namespace ParishSystem
 
         #region
 
-        public bool addInvoice(int incomeID, int ORnum, double paymentAmount)
+        public bool addInvoice(int incomeID, int ORnum, double paymentAmount,DateTime invoiceDateTime)
         {
             string q = "INSERT INTO Invoice(incomeID, ORnum, paymentAmount, invoiceDateTime) VALUES ('" + incomeID + "', '" + ORnum + "', '" + paymentAmount + "', '" + invoiceDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff") + "')";
 

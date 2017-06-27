@@ -47,7 +47,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +59,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(666, 71);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(444, 663);
+            this.dataGridView1.Size = new System.Drawing.Size(444, 631);
             this.dataGridView1.TabIndex = 0;
             // 
             // textBox1
@@ -254,20 +253,11 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "Firstname";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(935, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(175, 29);
-            this.comboBox1.TabIndex = 28;
-            // 
             // sApplicant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1128, 759);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(1128, 727);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
@@ -275,7 +265,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "sApplicant";
             this.Text = "sApplicant";
-            this.Load += new System.EventHandler(this.sApplicant_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -305,6 +294,5 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class sConifirmation : Form
+    public partial class sSacraments : Form
     {
-        public sConifirmation()
+        public sSacraments()
         {
             InitializeComponent();
         }
-
-       
     }
 }
