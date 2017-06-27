@@ -10,30 +10,19 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class tCDB : Form
+    public partial class login : Form
     {
-        public tCDB()
+        public login()
         {
             InitializeComponent();
         }
 
-        private void tCDB_Load(object sender, EventArgs e)
+        private void login_button_Click(object sender, EventArgs e)
         {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
+            Form home = new Home(dh);
+            home.Show();
+            this.Hide();
 
 
         }

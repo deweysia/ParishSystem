@@ -10,31 +10,24 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class tCDB : Form
+    public partial class Home : Form
     {
-        public tCDB()
+        DataHandler dh;
+
+        public Home() {
+            InitializeComponent();
+        } //temp
+
+        public Home(DataHandler dh)
         {
             InitializeComponent();
+            this.dh = dh;
+      
         }
 
-        private void tCDB_Load(object sender, EventArgs e)
+        private void Home_Load(object sender, EventArgs e)
         {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            this.username_label.Text = "username";
 
         }
     }

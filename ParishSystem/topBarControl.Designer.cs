@@ -36,7 +36,7 @@
             // btn_Min
             // 
             this.btn_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Min.BackgroundImage = global::ParishSystem.Properties.Resources.btn_minImage;
+            this.btn_Min.BackgroundImage = global::SAD3.Properties.Resources.btn_minImage;
             this.btn_Min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Min.FlatAppearance.BorderSize = 0;
             this.btn_Min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -52,7 +52,7 @@
             // btn_Max
             // 
             this.btn_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Max.BackgroundImage = global::ParishSystem.Properties.Resources.btn_maxImage;
+            this.btn_Max.BackgroundImage = global::SAD3.Properties.Resources.btn_maxImage;
             this.btn_Max.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Max.FlatAppearance.BorderSize = 0;
             this.btn_Max.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -68,7 +68,7 @@
             // btn_Close
             // 
             this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Close.BackgroundImage = global::ParishSystem.Properties.Resources.btn_closeImage;
+            this.btn_Close.BackgroundImage = global::SAD3.Properties.Resources.btn_closeImage;
             this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Close.FlatAppearance.BorderSize = 0;
             this.btn_Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

@@ -10,32 +10,13 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class tCDB : Form
+    public partial class sConifirmation : Form
     {
-        public tCDB()
+        public sConifirmation()
         {
             InitializeComponent();
         }
 
-        private void tCDB_Load(object sender, EventArgs e)
-        {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        }
+       
     }
 }
