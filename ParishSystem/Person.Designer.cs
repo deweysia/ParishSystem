@@ -317,7 +317,7 @@
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(146, 330);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(146, 314);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
             // biodata_button
@@ -2646,7 +2646,7 @@
             this.save_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.save_button.Location = new System.Drawing.Point(0, 430);
             this.save_button.Name = "save_button";
-            this.save_button.Size = new System.Drawing.Size(138, 39);
+            this.save_button.Size = new System.Drawing.Size(151, 39);
             this.save_button.TabIndex = 53;
             this.save_button.Text = "Save";
             this.save_button.UseVisualStyleBackColor = false;
@@ -2657,7 +2657,7 @@
             this.cancel_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.cancel_button.Location = new System.Drawing.Point(0, 469);
             this.cancel_button.Name = "cancel_button";
-            this.cancel_button.Size = new System.Drawing.Size(138, 39);
+            this.cancel_button.Size = new System.Drawing.Size(151, 39);
             this.cancel_button.TabIndex = 53;
             this.cancel_button.Text = "Cancel";
             this.cancel_button.UseVisualStyleBackColor = false;
