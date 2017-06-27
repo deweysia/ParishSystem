@@ -222,6 +222,14 @@ namespace ParishSystem
             return dt;
         }
 
+        public DataTable getGeneralProfiles()
+        {
+            string q = "SELECT * FROM GeneralProfile";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
         public bool addGeneralProfileLog(int profileID)
         {
             string q = "INSERT INTO generalProfileLog VALUES (SELECT * from generalProfile WHERE profileID = " + profileID + ");";
@@ -1681,7 +1689,72 @@ namespace ParishSystem
                                          =============================================================
         */
 
+        public bool addRequirement(string requirementName, string sacramentType)
+        {
+            string q = "INSERT INTO Requirement(requirementName, sacramentType) VALUES ('" + requirementName + "', '" + sacramentType + "')";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public bool editRequirement(int requirementID, string requirementName, string sacramentType)
+        {
+            string q = "UPDATE Requirement SET requirementName = '" + requirementName 
+                + "', sacramentType = '" + sacramentType 
+                + "' WHERE requirementID = '" + requirementID + "'";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public DataTable getRequirementsFor(string sacramentType)
+        {
+            string q = "SELECT * FROM Requirement WHERE sacramentType = " + sacramentType;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public bool addCashRelease(int cashReleaseTypeID, DateTime cashReleaseDateTime, string remark, double releaseAmount, int checkNum, int CVnum)
+        {
+            string q = "INSERT INTO CashRelease(cashReleaseTypeID, cashReleaseDateTime, remark, releaseAmount, checkNum, CVnum) VALUES ('" 
+                + cashReleaseTypeID + "', '" + cashReleaseDateTime.ToString("yyyy-MM-dd HH:mm:ss") + "', '" + remark + "', '" + releaseAmount + "', '" + checkNum + "', '" + CVnum + "')";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public bool editCashRelease(int cashReleaseID, int cashReleaseTypeID, DateTime cashReleaseDateTime, string remark, double releaseAmount, int checkNum, int CVnum)
+        {
+            string q = "UPDATE CashRelease SET cashReleaseTypeID = '" + cashReleaseTypeID 
+                + "', cashReleaseDateTime = '" + cashReleaseDateTime.ToString("yyyy-MM-dd HH:mm:ss") 
+                + "', remark = '" + remark + "', releaseAmount = '" + releaseAmount 
+                + "', checkNum = '" + checkNum + "', CVnum = '" + CVnum 
+                + "' WHERE cashReleaseID = '" + cashReleaseID + "'";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
         
+        public bool deleteCashRelease(int cashReleaseID)
+        {
+            string q = "DELETE FROM CashRelease WHERE cashReleaseID = " + cashReleaseID;
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public DataTable getCashReleaseBetweenDates(DateTime start, DateTime end)
+        {
+            string q = "SELECT ";
+        }
+
 
 
 
