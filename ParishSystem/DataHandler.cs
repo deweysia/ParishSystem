@@ -1718,6 +1718,11 @@ namespace ParishSystem
             return dt;
         }
 
+        /*
+                                         =============================================================
+                                            ================= CASH RELEASE TABLE =================
+                                         =============================================================
+        */
         public bool addCashRelease(int cashReleaseTypeID, DateTime cashReleaseDateTime, string remark, double releaseAmount, int checkNum, int CVnum)
         {
             string q = "INSERT INTO CashRelease(cashReleaseTypeID, cashReleaseDateTime, remark, releaseAmount, checkNum, CVnum) VALUES ('" 
@@ -1776,8 +1781,66 @@ namespace ParishSystem
             DataTable dt = runQuery(q);
 
             return dt;
+        }
 
 
+
+        /*
+                                         =============================================================
+                                            ================= CASH RELEASE TYPE TABLE =================
+                                         =============================================================
+        */
+
+        public bool addCashReleaseType(string cashReleaseType, string description, int active)
+        {
+            string q = "INSERT INTO CashReleaseType(cashReleaseType, description, active) VALUES ('" 
+                + cashReleaseType + "', '" + description + "', '" + active + "')";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+
+        public bool addCashReleaseType(string cashReleaseType, string description)
+        {
+            string q = "INSERT INTO CashReleaseType(cashReleaseType, description) VALUES ('" 
+                + cashReleaseType + "', '" + description + "')";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+
+        public bool editCashReleaseType(int cashReleaseTypeID, string cashReleaseType, string description, int active)
+        {
+            string q = "UPDATE CashReleaseType SET cashReleaseType = '" + cashReleaseType 
+                + "', description = '" + description 
+                + "', active = '" + active 
+                + "' WHERE cashReleaseTypeID = '" + cashReleaseTypeID + "'";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public bool cashReleaseTypeIsActive(int cashReleaseTypeID)
+        {
+            string q = "SELECT * FROM CashReleaseType WHERE cashReleaseTypeID = " + cashReleaseTypeID + " AND active = 1";
+
+            DataTable dt = runQuery(q);
+
+            return dt.Rows.Count > 0;
+        }
+
+        public DataTable getCashReleaseTypes()
+        {
+            string q = "SELECT * FROM CashReleaseType WHERE active = 1";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
         }
 
 
