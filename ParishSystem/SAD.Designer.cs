@@ -60,12 +60,47 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.eventName_textbox_Bloodletting = new System.Windows.Forms.TextBox();
+            this.add_button_bloodletting = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1.SuspendLayout();
             this.home_panel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.profile_panel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -126,10 +161,10 @@
             this.home_panel.Controls.Add(this.panel3);
             this.home_panel.Controls.Add(this.panel4);
             this.home_panel.Controls.Add(this.username_label);
-            this.home_panel.Location = new System.Drawing.Point(145, 0);
+            this.home_panel.Location = new System.Drawing.Point(857, 0);
             this.home_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.home_panel.Name = "home_panel";
-            this.home_panel.Size = new System.Drawing.Size(889, 715);
+            this.home_panel.Size = new System.Drawing.Size(75, 715);
             this.home_panel.TabIndex = 1;
             // 
             // panel8
@@ -139,7 +174,7 @@
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel8.Location = new System.Drawing.Point(0, 138);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(889, 15);
+            this.panel8.Size = new System.Drawing.Size(75, 15);
             this.panel8.TabIndex = 6;
             // 
             // panel7
@@ -149,7 +184,7 @@
             this.panel7.BackColor = System.Drawing.Color.Gray;
             this.panel7.Location = new System.Drawing.Point(0, 587);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(889, 15);
+            this.panel7.Size = new System.Drawing.Size(75, 15);
             this.panel7.TabIndex = 5;
             // 
             // panel6
@@ -159,7 +194,7 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel6.Location = new System.Drawing.Point(1, 608);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(888, 85);
+            this.panel6.Size = new System.Drawing.Size(74, 85);
             this.panel6.TabIndex = 6;
             // 
             // label1
@@ -169,7 +204,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(347, 84);
+            this.label1.Location = new System.Drawing.Point(-467, 84);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 37);
@@ -205,7 +240,7 @@
             this.panel4.Controls.Add(this.notif_panel);
             this.panel4.Location = new System.Drawing.Point(0, 159);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(889, 472);
+            this.panel4.Size = new System.Drawing.Size(75, 472);
             this.panel4.TabIndex = 4;
             // 
             // notif_panel
@@ -216,7 +251,7 @@
             this.notif_panel.BackColor = System.Drawing.Color.White;
             this.notif_panel.Location = new System.Drawing.Point(161, 32);
             this.notif_panel.Name = "notif_panel";
-            this.notif_panel.Size = new System.Drawing.Size(693, 472);
+            this.notif_panel.Size = new System.Drawing.Size(0, 472);
             this.notif_panel.TabIndex = 3;
             // 
             // username_label
@@ -225,7 +260,7 @@
             this.username_label.AutoSize = true;
             this.username_label.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.username_label.Location = new System.Drawing.Point(490, 45);
+            this.username_label.Location = new System.Drawing.Point(-324, 45);
             this.username_label.Name = "username_label";
             this.username_label.Size = new System.Drawing.Size(219, 86);
             this.username_label.TabIndex = 1;
@@ -238,7 +273,7 @@
             this.profile_panel.Controls.Add(this.dataGridView1);
             this.profile_panel.Location = new System.Drawing.Point(149, 0);
             this.profile_panel.Name = "profile_panel";
-            this.profile_panel.Size = new System.Drawing.Size(885, 715);
+            this.profile_panel.Size = new System.Drawing.Size(883, 715);
             this.profile_panel.TabIndex = 29;
             // 
             // panel1
@@ -408,7 +443,7 @@
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(595, 14);
+            this.textBox1.Location = new System.Drawing.Point(593, 14);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(286, 29);
@@ -423,8 +458,315 @@
             this.dataGridView1.Location = new System.Drawing.Point(403, 52);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(478, 658);
+            this.dataGridView1.Size = new System.Drawing.Size(838, 658);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.panel9);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.eventName_textbox_Bloodletting);
+            this.panel2.Controls.Add(this.add_button_bloodletting);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.dataGridView3);
+            this.panel2.Controls.Add(this.dataGridView2);
+            this.panel2.Location = new System.Drawing.Point(759, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(77, 693);
+            this.panel2.TabIndex = 30;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(428, 297);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(309, 29);
+            this.comboBox1.TabIndex = 29;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Controls.Add(this.button4);
+            this.panel9.Controls.Add(this.button3);
+            this.panel9.Controls.Add(this.numericUpDown1);
+            this.panel9.Controls.Add(this.button2);
+            this.panel9.Controls.Add(this.button5);
+            this.panel9.Controls.Add(this.textBox2);
+            this.panel9.Controls.Add(this.textBox3);
+            this.panel9.Controls.Add(this.textBox4);
+            this.panel9.Controls.Add(this.textBox5);
+            this.panel9.Controls.Add(this.label17);
+            this.panel9.Controls.Add(this.label9);
+            this.panel9.Controls.Add(this.textBox6);
+            this.panel9.Controls.Add(this.label12);
+            this.panel9.Controls.Add(this.label13);
+            this.panel9.Controls.Add(this.label14);
+            this.panel9.Controls.Add(this.label15);
+            this.panel9.Controls.Add(this.label16);
+            this.panel9.Location = new System.Drawing.Point(387, 347);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(393, 242);
+            this.panel9.TabIndex = 28;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(245, 155);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(140, 27);
+            this.button4.TabIndex = 32;
+            this.button4.Text = "Add Donation";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(245, 188);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(140, 27);
+            this.button3.TabIndex = 31;
+            this.button3.Text = "Open Profile";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(96, 111);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(131, 29);
+            this.numericUpDown1.TabIndex = 30;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(245, 122);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(140, 27);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "Delete Profile";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(245, 89);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(140, 27);
+            this.button5.TabIndex = 29;
+            this.button5.Text = "Add Profile";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(350, 28);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(21, 16);
+            this.textBox2.TabIndex = 23;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(256, 28);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(94, 16);
+            this.textBox3.TabIndex = 24;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(162, 28);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(94, 16);
+            this.textBox4.TabIndex = 22;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(472, 29);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(133, 16);
+            this.textBox5.TabIndex = 20;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(20, 113);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(70, 21);
+            this.label17.TabIndex = 27;
+            this.label17.Text = "Quantity";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(2, 28);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 21);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Name";
+            // 
+            // textBox6
+            // 
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(68, 28);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(94, 16);
+            this.textBox6.TabIndex = 13;
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(60, 32);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(325, 21);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "_____________________________________________";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(275, 51);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 15);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "Lastname";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(345, 51);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(36, 15);
+            this.label14.TabIndex = 26;
+            this.label14.Text = "Suffix";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(175, 50);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(74, 15);
+            this.label15.TabIndex = 25;
+            this.label15.Text = "Middlename";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(87, 50);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(59, 15);
+            this.label16.TabIndex = 28;
+            this.label16.Text = "Firstname";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(19, 235);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 30);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Donors";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(484, 116);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(220, 25);
+            this.dateTimePicker1.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(383, 116);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 21);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Event Date";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(383, 83);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 21);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Event Name";
+            // 
+            // eventName_textbox_Bloodletting
+            // 
+            this.eventName_textbox_Bloodletting.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.eventName_textbox_Bloodletting.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eventName_textbox_Bloodletting.Location = new System.Drawing.Point(483, 86);
+            this.eventName_textbox_Bloodletting.Name = "eventName_textbox_Bloodletting";
+            this.eventName_textbox_Bloodletting.Size = new System.Drawing.Size(221, 18);
+            this.eventName_textbox_Bloodletting.TabIndex = 3;
+            // 
+            // add_button_bloodletting
+            // 
+            this.add_button_bloodletting.Location = new System.Drawing.Point(610, 162);
+            this.add_button_bloodletting.Name = "add_button_bloodletting";
+            this.add_button_bloodletting.Size = new System.Drawing.Size(94, 31);
+            this.add_button_bloodletting.TabIndex = 2;
+            this.add_button_bloodletting.Text = "Add";
+            this.add_button_bloodletting.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(483, 162);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 31);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Delete";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(19, 44);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 30);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Events";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(20, 268);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(357, 422);
+            this.dataGridView3.TabIndex = 0;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(20, 76);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(357, 150);
+            this.dataGridView2.TabIndex = 0;
             // 
             // SAD
             // 
@@ -433,6 +775,7 @@
             this.ClientSize = new System.Drawing.Size(1034, 715);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.profile_panel);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.home_panel);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -447,6 +790,13 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -485,5 +835,35 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button openProfile_button;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox eventName_textbox_Bloodletting;
+        private System.Windows.Forms.Button add_button_bloodletting;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label8;
     }
 }

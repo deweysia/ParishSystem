@@ -43,6 +43,8 @@ namespace ParishSystem
             if (dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, '0', DateTime.MinValue, null, null, null)) { }
             else { MessageBox.Show("Entry not added"); }
         }
-        #endregion 
+        #endregion
+
+       
     }
 }
