@@ -54,7 +54,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.searchBar = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.generalprofile_datagridview = new System.Windows.Forms.DataGridView();
             this.btn_Min = new System.Windows.Forms.Button();
             this.btn_Max = new System.Windows.Forms.Button();
             this.btn_Close = new System.Windows.Forms.Button();
@@ -62,7 +62,7 @@
             this.home_panel.SuspendLayout();
             this.profile_panel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -188,7 +188,7 @@
             // 
             this.profile_panel.Controls.Add(this.panel1);
             this.profile_panel.Controls.Add(this.searchBar);
-            this.profile_panel.Controls.Add(this.dataGridView1);
+            this.profile_panel.Controls.Add(this.generalprofile_datagridview);
             this.profile_panel.Location = new System.Drawing.Point(145, 53);
             this.profile_panel.Name = "profile_panel";
             this.profile_panel.Size = new System.Drawing.Size(889, 628);
@@ -382,18 +382,18 @@
             this.searchBar.Size = new System.Drawing.Size(395, 29);
             this.searchBar.TabIndex = 1;
             // 
-            // dataGridView1
+            // generalprofile_datagridview
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.generalprofile_datagridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(490, 52);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(395, 556);
-            this.dataGridView1.TabIndex = 0;
+            this.generalprofile_datagridview.BackgroundColor = System.Drawing.Color.White;
+            this.generalprofile_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.generalprofile_datagridview.Location = new System.Drawing.Point(490, 52);
+            this.generalprofile_datagridview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.generalprofile_datagridview.Name = "generalprofile_datagridview";
+            this.generalprofile_datagridview.Size = new System.Drawing.Size(395, 556);
+            this.generalprofile_datagridview.TabIndex = 0;
             // 
             // btn_Min
             // 
@@ -470,7 +470,7 @@
             this.profile_panel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -497,7 +497,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox searchBar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView generalprofile_datagridview;
         private System.Windows.Forms.Button openProfile_button;
         private System.Windows.Forms.Button btn_Min;
         private System.Windows.Forms.Button btn_Max;

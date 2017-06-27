@@ -50,6 +50,8 @@ namespace ParishSystem
         {
             home_panel.Hide();
             profile_panel.Show();
+            generalprofile_datagridview.DataSource = dh.getGeneralProfiles();
+
         }
 
         private void btn_Close_Click(object sender, EventArgs e)

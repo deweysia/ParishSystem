@@ -260,7 +260,6 @@
     <Content Include="bin\Debug\ParishSystem.exe" />
     <Content Include="bin\Debug\ParishSystem.pdb" />
     <Content Include="bin\Debug\ParishSystem.vshost.exe" />
-    <Content Include="database\parishDB.sql" />
     <Content Include="database\parishDB_5.sql" />
     <Content Include="obj\Debug\ParishSystem.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\ParishSystem.exe" />
