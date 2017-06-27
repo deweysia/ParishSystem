@@ -1411,6 +1411,8 @@ namespace ParishSystem
         }
 
         #endregion
+        
+        
         /*
                                          =============================================================
                                             ================= SPONSOR TABLE =================
@@ -1418,10 +1420,12 @@ namespace ParishSystem
         */
         #region
 
-        public bool addSponsor(string firstName, string midName, string lastName, string suffix, string gender)
+        public bool addSponsor(string firstName, string midName, string lastName, string suffix, string sacramentType, string residence, char gender)
         {
-            string q = "INSERT INTO Sponsor(firstName, midName, lastName, suffix, gender) VALUES ('"
-                + firstName + "', '"+ midName + "', '"+ lastName + "', '"+ suffix + "', '"+ gender + "')";
+            string q = "INSERT INTO Sponsor(firstName, midName, lastName, suffix, sacramentType, residence, gender) VALUES ('" 
+                + firstName + "', '" + midName + "', '" 
+                + lastName + "', '" + suffix + "', '" 
+                + sacramentType + "', '" + residence + "', '" + gender + "')";
 
             bool success = runNonQuery(q);
 
@@ -1431,20 +1435,24 @@ namespace ParishSystem
             return success;
         }
 
-        public bool editSponsor(int sponsorID, string firstName, string midName, string lastName, string suffix, string gender)
+        public bool editSponsor(int sponsorID, string firstName, string midName, string lastName, string suffix, string sacramentType, string residence, char gender)
         {
-            if (!idExists("Sponsor", "sponsorID", sponsorID))
-                return false;
+            //if (!idExists("Sponsor", "sponsorID", sponsorID))
+            //    return false;
 
-            string q = "UPDATE Sponsor SET  firstName = '" + firstName 
-                + "', midName = '" + midName + "', lastName = '" + lastName 
-                + "', suffix = '"+ suffix + "', gender = '"+ gender 
-                + "' WHERE sponsorID = " + sponsorID;
+            string q = "UPDATE Sponsor SET firstName = '" 
+                + firstName + "', midName = '" + midName 
+                + "', lastName = '" + lastName 
+                + "', suffix = '" + suffix 
+                + "', sacramentType = '" + sacramentType 
+                + "', residence = '" + residence 
+                + "', gender = '" + gender 
+                + "' WHERE sponsorID = '" + sponsorID + "'";
 
             bool success = runNonQuery(q);
 
-            if (success)
-                updateModificationInfo("Sponsor", "sponsorID", sponsorID);
+            //if (success)
+            //    updateModificationInfo("Sponsor", "sponsorID", sponsorID);
 
             return success;
 
@@ -1456,32 +1464,237 @@ namespace ParishSystem
 
             DataTable dt = runQuery(q);
 
-            if (dt.Rows.Count == 0)
-                return null;
+            //if (dt.Rows.Count == 0)
+            //    return null;
 
             return dt;
         }
 
         //Gets sponsors of a sacrament
-        public DataTable getSacramentSponsors(string sacramentType, int sacramentID)
+        public DataTable getSacramentSponsors(int sacramentID, string sacramentType)
         {
             string q = "SELECT * FROM Sponsor WHERE sacramentType = '"
                 + sacramentType + "' AND sacramentID = '" + sacramentID + "'";
 
             DataTable dt = runQuery(q);
 
-            if (dt.Rows.Count == 0)
-                return null;
+            //if (dt.Rows.Count == 0)
+            //    return null;
 
             return dt;
 
         }
         #endregion
+
+
+
+        /*
+                                         =============================================================
+                                            ================= SCHEDULE TABLE =================
+                                         =============================================================
+        */
+
+        public bool addSchedule(string scheduleType, DateTime startTimeDate, DateTime endDateTime, string details, string priority)
+        {
+            string q = "INSERT INTO Schedule(scheduleType, startTimeDate, endDateTime, details, priority) VALUES ('" 
+                + scheduleType + "', '" + startTimeDate.ToString("yyyy-MM-dd HH:mm:ss.fff") 
+                + "', '" + endDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff") 
+                + "', '" + details + "', '" + priority + "')";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public bool editSchedule(int scheduleID, string scheduleType, DateTime startTimeDate, DateTime endDateTime, string details, string status, string priority)
+        {
+            string q = "UPDATE Schedule SET scheduleType = '" + scheduleType 
+                + "', startTimeDate = '" + startTimeDate.ToString("yyyy-MM-dd HH:mm:ss.fff") 
+                + "', endDateTime = '" + endDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff") 
+                + "', details = '" + details + "', status = '" + status 
+                + "', priority = '" + priority 
+                + "' WHERE scheduleID = '" + scheduleID + "'";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public DataTable getSchedule(int scheduleID)
+        {
+            string q = "SELECT * FROM Schedule WHERE scheduleID = " + scheduleID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getScheduleOfDay(DateTime day)
+        {
+            string q = "SELECT * FROM Schedule WHERE DAY(startDateTime) = DAY(" + day.ToString("yyyy-MM-dd") + ")";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getScheduleOfToday()
+        {
+            string q = "SELECT * FROM Schedule WHERE DAY(startDateTime) = DAY(NOW())";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public int getLatestScheduleID()
+        {
+            int id = getLatestID("Schedule", "scheduleID");
+
+            return id;
+        }
+
+
         /*
                                          =============================================================
                                             ================= APPOINTMENT TABLE =================
                                          =============================================================
         */
+
+        public bool addAppointment(int profileID, int ministerID, int scheduleID)
+        {
+            string q = "INSERT INTO Appointment(profileID, ministerID, scheduleID) VALUES ('" 
+                + profileID + "', '" + ministerID + "', '" + scheduleID + "')";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public bool editAppointment(int appointmentID, int ministerID, int scheduleID)
+        {
+            string q = "UPDATE Application SET ministerID = '" + ministerID 
+                + "', scheduleID = '" + scheduleID 
+                + "' WHERE appointmentID = '" + appointmentID + "'";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public bool setSchedule(int profileID, int ministerID, int scheduleID, string scheduleType, DateTime startDateTime, DateTime endDateTime, string details, string priority)
+        {
+            bool success = addSchedule(scheduleType, startDateTime, endDateTime, details, priority);
+
+            bool success2 = addAppointment(profileID, ministerID, getLatestScheduleID());
+
+            if (!(success && success2))
+                throw new Exception("One of the Successes don't work. Btch");
+
+
+            return true;
+        }
+
+        public DataTable getAppointment(int appointmentID)
+        {
+            string q = "SELECT GeneralProfile.firstName, GeneralProfile.midName, GeneralProfile.lastName, GeneralProfile.suffix, GeneralProfile.gender, "
+                +" DATE_FORMAT(GeneralProfile.birthDate, '%m-%d-%Y'), "
+                +" GeneralProfile.contactNumber, DATE_FORMAT(startTimeDate, '%m-%d-%Y'),"
+                +" DATE_FORMAT(Schedule.endDateTime, '%m-%d-%Y'), "
+                +" Schedule.details, Schedule.priority, Minister.firstName, Minister.midName, Minister.lastName, Minister.suffix "
+                +" FROM GeneralProfile JOIN Appointment ON GeneralProfile.profileID = Appointment.profileID"
+                +" JOIN Schedule ON Schedule.scheduleID = Appointment.appointmentID "
+                +" WHERE appointmentID = " + appointmentID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+
+        }
+
+        public bool appointmentHasConflict(DateTime start, DateTime end, int ministerID)
+        {
+            string q = "SELECT * FROM Schedule JOIN Appointment ON Appointment.scheduleID = Schedule.scheduleID "
+                +"WHERE DATE_FORMAT(startDateTime) >= '" + start.ToString("yyyy-MM-dd HH:mm:ss") 
+                + "' AND DATE_FORMAT(endDateTime) <= '"+ end.ToString("yyyy - MM - dd HH: mm: ss") 
+                + "' AND ministerID = '" + ministerID + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt.Rows.Count > 0;
+        }
+
+
+
+        /*
+                                         =============================================================
+                                            ================= USER TABLE =================
+                                         =============================================================
+        */
+
+        public bool addUser(string username, string password, string userType, int active)
+        {
+            string q = "INSERT INTO User(username, password, userType, active) VALUES ('" 
+                + username + "', '" + password + "', '" + userType + "', '" + active + "')";
+
+            bool success = runNonQuery(q);
+
+            return success;
+
+
+        }
+
+        public bool addUser(string username, string password, string userType)
+        {
+            //SHOULD BE INSERT IGNORE User
+            string q = "INSERT INTO User(username, password, userType) VALUES ('" 
+                + username + "', '" + password + "', '" + userType + "')";
+
+            bool succcess = runNonQuery(q);
+
+            return succcess;
+        }
+
+        public bool editUser(int userID, string password, string userType)
+        {
+            string q = "UPDATE User SET password = '" + password 
+                + "', userType = '" + userType 
+                + "' WHERE userID = '" + userID + "'";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public DataTable getUser(int userID)
+        {
+            string q = "SELECT * FROM User WHERE userID = " + userID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        /*
+                                         =============================================================
+                                            ================= REQUIREMENT TABLE =================
+                                         =============================================================
+        */
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
