@@ -1752,7 +1752,32 @@ namespace ParishSystem
 
         public DataTable getCashReleaseBetweenDates(DateTime start, DateTime end)
         {
-            string q = "SELECT ";
+            string q = "SELECT DATE_FORMAT(cashReleaseDateTime, 'MM-dd-yyyy HH:mm:ss'),"
+                +" remark, releaseAmount, description "
+                +"FROM CashRelease "
+                +"JOIN CashReleaseType "
+                +"ON cashRelease.cashReleaseTypeID = cashReleaseType.cashReleaseTypeID "
+                +"WHERE cashReleaseDateTime BETWEEN '"+ start.ToString("yyyy-MM-dd") 
+                + "' AND '"+ end.ToString("yyyy-MM-dd") + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getCashReleaseOfMonth(DateTime date)
+        {
+            string q = "SELECT DATE_FORMAT(cashReleaseDateTime, 'MM-dd-yyyy HH:mm:ss'), "
+                + " remark, releaseAmount, description"
+                +" FROM CashRelease WHERE MONTH(cashReleaseDateTime) = '"
+                + int.Parse(date.ToString("MM")) + "' AND YEAR(cashReleaseDateTime) = '"
+                + int.Parse(date.ToString("yyyy")) + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+
+
         }
 
 
