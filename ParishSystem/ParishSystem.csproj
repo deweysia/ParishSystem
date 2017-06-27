@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2015\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -264,8 +266,14 @@
     <Content Include="obj\Debug\ParishSystem.exe" />
     <Content Include="obj\Debug\ParishSystem.pdb" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\HIcon.png" />
+    <None Include="Resources\FIcon.png" />
+    <None Include="Resources\RIcon.png" />
+    <None Include="Resources\UIcon.png" />
+    <None Include="Resources\user_icon.png" />
     <None Include="Resources\11273972-orange-leaf-texture.jpg" />
     <None Include="Resources\BookA.png" />
+    <None Include="Resources\BLIcon.png" />
     <Content Include="Resources\btn_closeImage.png" />
     <Content Include="Resources\btn_maxImage.png" />
     <Content Include="Resources\btn_minImage.png" />

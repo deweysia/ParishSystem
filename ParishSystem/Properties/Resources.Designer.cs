@@ -73,6 +73,16 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BLIcon {
+            get {
+                object obj = ResourceManager.GetObject("BLIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BookA {
             get {
                 object obj = ResourceManager.GetObject("BookA", resourceCulture);
@@ -106,6 +116,46 @@ namespace ParishSystem.Properties {
         internal static System.Drawing.Bitmap btn_minImage {
             get {
                 object obj = ResourceManager.GetObject("btn_minImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FIcon {
+            get {
+                object obj = ResourceManager.GetObject("FIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HIcon {
+            get {
+                object obj = ResourceManager.GetObject("HIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RIcon {
+            get {
+                object obj = ResourceManager.GetObject("RIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UIcon {
+            get {
+                object obj = ResourceManager.GetObject("UIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
