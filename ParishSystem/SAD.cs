@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace ParishSystem
@@ -47,6 +48,7 @@ namespace ParishSystem
 
         private void profile_menu_button_Click(object sender, EventArgs e)
         {
+            home_panel.Hide();
             profile_panel.Show();
         }
 
@@ -54,6 +56,12 @@ namespace ParishSystem
         {
             this.Close();
         }
+
+        private void btn_Min_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         #region Clearing of Textboxes
 
         private void firstname_textbox_MouseClick(object sender, MouseEventArgs e)
@@ -78,5 +86,28 @@ namespace ParishSystem
             suffix_textbox.Text = "";
         }
         #endregion
+
+        private void SAD_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        #region Form Move Region
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
+
+            base.WndProc(ref m);
+        }
+        #endregion
+
+       
     }
 }
