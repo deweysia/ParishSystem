@@ -22,7 +22,7 @@ namespace ParishSystem
         private void menu_select(object sender, EventArgs e)
         {
             profile_panel.Hide();
-            home_panel.Hide();
+            home_panel.Show();
 
             Button button = sender as Button;
             if (button.Text == "Home") { home_panel.Show(); }
@@ -43,6 +43,40 @@ namespace ParishSystem
             if (dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, '0', DateTime.MinValue, null, null, null)) { }
             else { MessageBox.Show("Entry not added"); }
         }
-        #endregion 
+        #endregion
+
+        private void profile_menu_button_Click(object sender, EventArgs e)
+        {
+            profile_panel.Show();
+        }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #region Clearing of Textboxes
+
+        private void firstname_textbox_MouseClick(object sender, MouseEventArgs e)
+        {
+            firstname_textbox.Text = "";
+        }
+
+      
+
+        private void middlename_textbox_MouseClick(object sender, MouseEventArgs e)
+        {
+            middlename_textbox.Text = "";
+        }
+
+        private void lastname_textbox_MouseClick(object sender, MouseEventArgs e)
+        {
+            lastname_textbox.Text = "";
+        }
+
+        private void suffix_textbox_MouseClick(object sender, MouseEventArgs e)
+        {
+            suffix_textbox.Text = "";
+        }
+        #endregion
     }
 }
