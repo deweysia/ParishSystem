@@ -22,5 +22,10 @@ namespace ParishSystem
         {
             currentform.Close();
         }
+
+        private void topBarControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

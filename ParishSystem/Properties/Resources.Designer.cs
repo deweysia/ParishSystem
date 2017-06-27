@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SAD3.Properties {
+namespace ParishSystem.Properties {
     using System;
     
     
