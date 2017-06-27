@@ -154,10 +154,10 @@
             this.home_panel.BackColor = System.Drawing.Color.White;
             this.home_panel.Controls.Add(this.label1);
             this.home_panel.Controls.Add(this.username_label);
-            this.home_panel.Location = new System.Drawing.Point(149, 53);
+            this.home_panel.Location = new System.Drawing.Point(1007, 53);
             this.home_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.home_panel.Name = "home_panel";
-            this.home_panel.Size = new System.Drawing.Size(881, 608);
+            this.home_panel.Size = new System.Drawing.Size(23, 608);
             this.home_panel.TabIndex = 1;
             // 
             // label1
@@ -169,7 +169,7 @@
             this.label1.Location = new System.Drawing.Point(8, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 35);
+            this.label1.Size = new System.Drawing.Size(97, 27);
             this.label1.TabIndex = 32;
             this.label1.Text = "Welcome";
             // 
@@ -180,7 +180,7 @@
             this.username_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.username_label.Location = new System.Drawing.Point(129, 13);
             this.username_label.Name = "username_label";
-            this.username_label.Size = new System.Drawing.Size(157, 35);
+            this.username_label.Size = new System.Drawing.Size(123, 27);
             this.username_label.TabIndex = 33;
             this.username_label.Text = "USERNAME";
             // 
@@ -256,7 +256,7 @@
             this.suffix_textbox.Location = new System.Drawing.Point(363, 78);
             this.suffix_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.suffix_textbox.Name = "suffix_textbox";
-            this.suffix_textbox.Size = new System.Drawing.Size(54, 20);
+            this.suffix_textbox.Size = new System.Drawing.Size(54, 16);
             this.suffix_textbox.TabIndex = 23;
             this.suffix_textbox.Text = "Suffix";
             this.suffix_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -270,7 +270,7 @@
             this.lastname_textbox.Location = new System.Drawing.Point(265, 79);
             this.lastname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastname_textbox.Name = "lastname_textbox";
-            this.lastname_textbox.Size = new System.Drawing.Size(94, 20);
+            this.lastname_textbox.Size = new System.Drawing.Size(94, 16);
             this.lastname_textbox.TabIndex = 24;
             this.lastname_textbox.Text = "Last Name";
             this.lastname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -284,7 +284,7 @@
             this.middlename_textbox.Location = new System.Drawing.Point(169, 78);
             this.middlename_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.middlename_textbox.Name = "middlename_textbox";
-            this.middlename_textbox.Size = new System.Drawing.Size(94, 20);
+            this.middlename_textbox.Size = new System.Drawing.Size(94, 16);
             this.middlename_textbox.TabIndex = 22;
             this.middlename_textbox.Text = "Middle Name";
             this.middlename_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -297,7 +297,7 @@
             this.birthplace_textbox_baptist.Location = new System.Drawing.Point(472, 29);
             this.birthplace_textbox_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.birthplace_textbox_baptist.Name = "birthplace_textbox_baptist";
-            this.birthplace_textbox_baptist.Size = new System.Drawing.Size(133, 20);
+            this.birthplace_textbox_baptist.Size = new System.Drawing.Size(133, 16);
             this.birthplace_textbox_baptist.TabIndex = 20;
             // 
             // label33
@@ -306,7 +306,7 @@
             this.label33.Location = new System.Drawing.Point(5, 70);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(64, 28);
+            this.label33.Size = new System.Drawing.Size(52, 21);
             this.label33.TabIndex = 27;
             this.label33.Text = "Name";
             // 
@@ -318,7 +318,7 @@
             this.firstname_textbox.Location = new System.Drawing.Point(72, 78);
             this.firstname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstname_textbox.Name = "firstname_textbox";
-            this.firstname_textbox.Size = new System.Drawing.Size(94, 20);
+            this.firstname_textbox.Size = new System.Drawing.Size(94, 16);
             this.firstname_textbox.TabIndex = 13;
             this.firstname_textbox.Text = "First Name";
             this.firstname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -329,7 +329,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(63, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(372, 28);
+            this.label2.Size = new System.Drawing.Size(325, 21);
             this.label2.TabIndex = 11;
             this.label2.Text = "_____________________________________________";
             // 
@@ -339,7 +339,7 @@
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(274, 101);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 20);
+            this.label10.Size = new System.Drawing.Size(58, 15);
             this.label10.TabIndex = 27;
             this.label10.Text = "Lastname";
             // 
@@ -349,7 +349,7 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(368, 100);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 20);
+            this.label11.Size = new System.Drawing.Size(36, 15);
             this.label11.TabIndex = 26;
             this.label11.Text = "Suffix";
             // 
@@ -359,7 +359,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(170, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 20);
+            this.label3.Size = new System.Drawing.Size(74, 15);
             this.label3.TabIndex = 25;
             this.label3.Text = "Middlename";
             // 
@@ -369,7 +369,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(83, 100);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 20);
+            this.label4.Size = new System.Drawing.Size(59, 15);
             this.label4.TabIndex = 28;
             this.label4.Text = "Firstname";
             // 
@@ -379,7 +379,7 @@
             this.searchBar.Location = new System.Drawing.Point(490, 13);
             this.searchBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(395, 34);
+            this.searchBar.Size = new System.Drawing.Size(395, 29);
             this.searchBar.TabIndex = 1;
             // 
             // dataGridView1
@@ -447,7 +447,7 @@
             // 
             // SAD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
             this.ClientSize = new System.Drawing.Size(1034, 673);
