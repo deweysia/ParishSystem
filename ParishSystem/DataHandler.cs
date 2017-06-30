@@ -265,11 +265,11 @@ namespace ParishSystem
 
         public double getTotalBalanceOf(int profileID){
 
-            string q = "SELECT SUM(Item.Price * Item.Quantity) FROM Item JOIN Income ON item.incomeID = income.incomeID " 
+            string q = "SELECT IF(SUM(Item.Price * Item.Quantity) IS NULL, 0, SUM(Item.Price * Item.Quantity)) FROM Item JOIN Income ON item.incomeID = income.incomeID "
                 + "JOIN GeneralProfile ON generalprofile.profileID = income.sourceID WHERE generalprofile.profileID = " + profileID;
 
             DataTable dt = runQuery(q);
-
+            
             return double.Parse(dt.Rows[0][0].ToString());
         }
 
@@ -804,15 +804,70 @@ namespace ParishSystem
 
 
         #endregion
-
-
-       /*
+        /*
                                        =============================================================
-                                          ================= ITEM TYPE TABLE =================
+                                                ================= ITEM TABLE =================
                                        =============================================================
       */
 
-       public bool addItemType(string itemType, string bookType, double suggestedPrice, string status)
+        public bool addItem(int itemType, int incomeID, double price, int quantity)
+        {
+            string q = "INSERT INTO Item(itemType, incomeID, price, quantity) VALUES ('" 
+                + itemType + "', '" + incomeID + "', '" + price + "', '" + quantity + "')";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public bool editItem(int itemID, int itemType, int incomeID, double price, int quantity)
+        {
+            string q = "UPDATE Item SET itemType = '" + itemType 
+                + "', incomeID = '" + incomeID 
+                + "', price = '" + price 
+                + "', quantity = '" + quantity 
+                + "' WHERE itemID = '" + itemID + "'";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public bool deleteItem(int itemID)
+        {
+            string q = "DELETE FROM Income WHERE itemID = " + itemID;
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public DataTable getItem(int itemID)
+        {
+            string q = "SELECT * FROM Item WHERE itemID = " + itemID;
+
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getItemsOf(int incomeID)
+        {
+            string q = "SELECT itemID, price, quantity WHERE incomeID = " + incomeID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        /*
+                                        =============================================================
+                                           ================= ITEM TYPE TABLE =================
+                                        =============================================================
+       */
+
+        public bool addItemType(string itemType, string bookType, double suggestedPrice, string status)
        {
             string q = "INSERT INTO ItemType(itemType, bookType, suggestedPrice, status) VALUES ('" 
                 + itemType + "', '" + bookType + "', '" + suggestedPrice + "', '" + status + "')";
@@ -1623,8 +1678,8 @@ namespace ParishSystem
         public bool appointmentHasConflict(DateTime start, DateTime end, int ministerID)
         {
             string q = "SELECT * FROM Schedule JOIN Appointment ON Appointment.scheduleID = Schedule.scheduleID "
-                +"WHERE DATE_FORMAT(startDateTime) >= '" + start.ToString("yyyy-MM-dd HH:mm:ss") 
-                + "' AND DATE_FORMAT(endDateTime) <= '"+ end.ToString("yyyy - MM - dd HH: mm: ss") 
+                + "WHERE DATE_FORMAT(startDateTime, 'yyyy-MM-dd HH:mm') < '" + end.ToString("yyyy-MM-dd HH:mm") 
+                + "' AND DATE_FORMAT(endDateTime, 'yyyy-MM-dd HH:mm') > '" + start.ToString("yyyy - MM - dd HH:mm") 
                 + "' AND ministerID = '" + ministerID + "'";
 
             DataTable dt = runQuery(q);
@@ -1842,53 +1897,6 @@ namespace ParishSystem
 
             return dt;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
