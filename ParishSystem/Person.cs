@@ -73,7 +73,7 @@ namespace ParishSystem
 		private void load_Biodata() {
 
 			DataTable TempDT = dh.getGeneralProfile(ProfileID);
-
+			//LOAD PERSON
 			if (!(TempDT.Rows[0]["gender"].Equals(null)))
 			{
 				if (TempDT.Rows[0]["gender"].ToString() == "m")
@@ -89,11 +89,26 @@ namespace ParishSystem
 			address_baptist_textarea.Text = TempDT.Rows[0]["address"].ToString();
 			contactNumber_textbox_baptist.Text= TempDT.Rows[0]["contactNumber"].ToString();
 			bloodtype_combobox_baptist.SelectedIndex = int.Parse(TempDT.Rows[0]["bloodType"].ToString());
-			//birthdate_datetimepicker_baptist.Value = new DateTime();
-			//string[] balance = TempDT.Rows[0]["birthdate"].ToString().Split('/');
-			int[] a =new int[3];
-			
-			Console.WriteLine(TempDT.Rows[0]["birthdate"].ToString());
+			//==================================================================================================================insert birthdate
+			//LOAD FATHER
+			DataTable TempFatherDT = dh.getParentsOf(ProfileID);
+			//==================================================================================================================change get parents of function
+			firstname_textbox_father.Text = TempFatherDT.Rows[0]["firstname"].ToString();
+			middlename_textbox_father.Text = TempFatherDT.Rows[0]["midname"].ToString();
+			lastname_textbox_father.Text = TempFatherDT.Rows[0]["lastname"].ToString();
+			suffix_textbox_father.Text = TempFatherDT.Rows[0]["suffix"].ToString();
+			birthplace_textbox_father.Text = TempFatherDT.Rows[0]["birthplace"].ToString();
+			residence_textbox_father.Text= TempFatherDT.Rows[0]["residence"].ToString();
+
+			//LOAD MOTHER
+			DataTable TempMotherDT = dh.getParentsOf(ProfileID);
+			//==================================================================================================================change get parents of function
+			firstname_textbox_mother.Text = TempFatherDT.Rows[0]["firstname"].ToString();
+			middlename_textbox_mother.Text = TempFatherDT.Rows[0]["midname"].ToString();
+			lastname_textbox_mother.Text = TempFatherDT.Rows[0]["lastname"].ToString();
+			suffix_textbox_mother.Text = TempFatherDT.Rows[0]["suffix"].ToString();
+			birthplace_textbox_mother.Text = TempFatherDT.Rows[0]["birthplace"].ToString();
+			residence_textbox_mother.Text = TempFatherDT.Rows[0]["residence"].ToString();
 		}
 		
 		#endregion

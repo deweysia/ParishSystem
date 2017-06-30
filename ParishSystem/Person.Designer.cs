@@ -66,7 +66,7 @@
 			this.middlename_textbox_father = new System.Windows.Forms.TextBox();
 			this.label23 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
-			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.residence_textbox_father = new System.Windows.Forms.TextBox();
 			this.birthplace_textbox_father = new System.Windows.Forms.TextBox();
 			this.label12 = new System.Windows.Forms.Label();
 			this.firstname_textbox_father = new System.Windows.Forms.TextBox();
@@ -78,15 +78,15 @@
 			this.label19 = new System.Windows.Forms.Label();
 			this.label14 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.textBox4 = new System.Windows.Forms.TextBox();
-			this.textBox5 = new System.Windows.Forms.TextBox();
+			this.suffix_textbox_mother = new System.Windows.Forms.TextBox();
+			this.lastname_textbox_mother = new System.Windows.Forms.TextBox();
+			this.middlename_textbox_mother = new System.Windows.Forms.TextBox();
 			this.label20 = new System.Windows.Forms.Label();
 			this.label21 = new System.Windows.Forms.Label();
-			this.textBox6 = new System.Windows.Forms.TextBox();
-			this.textBox7 = new System.Windows.Forms.TextBox();
+			this.residence_textbox_mother = new System.Windows.Forms.TextBox();
+			this.birthplace_textbox_mother = new System.Windows.Forms.TextBox();
 			this.label22 = new System.Windows.Forms.Label();
-			this.textBox8 = new System.Windows.Forms.TextBox();
+			this.firstname_textbox_mother = new System.Windows.Forms.TextBox();
 			this.label24 = new System.Windows.Forms.Label();
 			this.label25 = new System.Windows.Forms.Label();
 			this.label26 = new System.Windows.Forms.Label();
@@ -543,7 +543,7 @@
 			// label33
 			// 
 			this.label33.AutoSize = true;
-			this.label33.Location = new System.Drawing.Point(-2, 28);
+			this.label33.Location = new System.Drawing.Point(2, 28);
 			this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label33.Name = "label33";
 			this.label33.Size = new System.Drawing.Size(52, 21);
@@ -683,7 +683,7 @@
 			this.panel1.Controls.Add(this.middlename_textbox_father);
 			this.panel1.Controls.Add(this.label23);
 			this.panel1.Controls.Add(this.label5);
-			this.panel1.Controls.Add(this.textBox2);
+			this.panel1.Controls.Add(this.residence_textbox_father);
 			this.panel1.Controls.Add(this.birthplace_textbox_father);
 			this.panel1.Controls.Add(this.label12);
 			this.panel1.Controls.Add(this.firstname_textbox_father);
@@ -752,16 +752,16 @@
 			this.label5.TabIndex = 21;
 			this.label5.Text = "Birthplace";
 			// 
-			// textBox2
+			// residence_textbox_father
 			// 
-			this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox2.Location = new System.Drawing.Point(495, 76);
-			this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(133, 16);
-			this.textBox2.TabIndex = 20;
-			this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.residence_textbox_father.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.residence_textbox_father.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.residence_textbox_father.Location = new System.Drawing.Point(495, 76);
+			this.residence_textbox_father.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.residence_textbox_father.Name = "residence_textbox_father";
+			this.residence_textbox_father.Size = new System.Drawing.Size(133, 16);
+			this.residence_textbox_father.TabIndex = 20;
+			this.residence_textbox_father.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// birthplace_textbox_father
 			// 
@@ -865,15 +865,15 @@
 			// panel3
 			// 
 			this.panel3.BackColor = System.Drawing.Color.White;
-			this.panel3.Controls.Add(this.textBox3);
-			this.panel3.Controls.Add(this.textBox4);
-			this.panel3.Controls.Add(this.textBox5);
+			this.panel3.Controls.Add(this.suffix_textbox_mother);
+			this.panel3.Controls.Add(this.lastname_textbox_mother);
+			this.panel3.Controls.Add(this.middlename_textbox_mother);
 			this.panel3.Controls.Add(this.label20);
 			this.panel3.Controls.Add(this.label21);
-			this.panel3.Controls.Add(this.textBox6);
-			this.panel3.Controls.Add(this.textBox7);
+			this.panel3.Controls.Add(this.residence_textbox_mother);
+			this.panel3.Controls.Add(this.birthplace_textbox_mother);
 			this.panel3.Controls.Add(this.label22);
-			this.panel3.Controls.Add(this.textBox8);
+			this.panel3.Controls.Add(this.firstname_textbox_mother);
 			this.panel3.Controls.Add(this.label24);
 			this.panel3.Controls.Add(this.label25);
 			this.panel3.Controls.Add(this.label26);
@@ -886,38 +886,38 @@
 			this.panel3.Size = new System.Drawing.Size(851, 128);
 			this.panel3.TabIndex = 31;
 			// 
-			// textBox3
+			// suffix_textbox_mother
 			// 
-			this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.textBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox3.Location = new System.Drawing.Point(350, 28);
-			this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(21, 16);
-			this.textBox3.TabIndex = 23;
-			this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.suffix_textbox_mother.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.suffix_textbox_mother.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.suffix_textbox_mother.Location = new System.Drawing.Point(350, 28);
+			this.suffix_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.suffix_textbox_mother.Name = "suffix_textbox_mother";
+			this.suffix_textbox_mother.Size = new System.Drawing.Size(21, 16);
+			this.suffix_textbox_mother.TabIndex = 23;
+			this.suffix_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
-			// textBox4
+			// lastname_textbox_mother
 			// 
-			this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.textBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox4.Location = new System.Drawing.Point(256, 28);
-			this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(94, 16);
-			this.textBox4.TabIndex = 24;
-			this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.lastname_textbox_mother.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lastname_textbox_mother.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lastname_textbox_mother.Location = new System.Drawing.Point(256, 28);
+			this.lastname_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.lastname_textbox_mother.Name = "lastname_textbox_mother";
+			this.lastname_textbox_mother.Size = new System.Drawing.Size(94, 16);
+			this.lastname_textbox_mother.TabIndex = 24;
+			this.lastname_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
-			// textBox5
+			// middlename_textbox_mother
 			// 
-			this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.textBox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox5.Location = new System.Drawing.Point(162, 28);
-			this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.textBox5.Name = "textBox5";
-			this.textBox5.Size = new System.Drawing.Size(94, 16);
-			this.textBox5.TabIndex = 22;
-			this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.middlename_textbox_mother.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.middlename_textbox_mother.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.middlename_textbox_mother.Location = new System.Drawing.Point(162, 28);
+			this.middlename_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.middlename_textbox_mother.Name = "middlename_textbox_mother";
+			this.middlename_textbox_mother.Size = new System.Drawing.Size(94, 16);
+			this.middlename_textbox_mother.TabIndex = 22;
+			this.middlename_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// label20
 			// 
@@ -939,27 +939,27 @@
 			this.label21.TabIndex = 21;
 			this.label21.Text = "Birthplace";
 			// 
-			// textBox6
+			// residence_textbox_mother
 			// 
-			this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.textBox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox6.Location = new System.Drawing.Point(495, 76);
-			this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.textBox6.Name = "textBox6";
-			this.textBox6.Size = new System.Drawing.Size(133, 16);
-			this.textBox6.TabIndex = 20;
-			this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.residence_textbox_mother.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.residence_textbox_mother.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.residence_textbox_mother.Location = new System.Drawing.Point(495, 76);
+			this.residence_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.residence_textbox_mother.Name = "residence_textbox_mother";
+			this.residence_textbox_mother.Size = new System.Drawing.Size(133, 16);
+			this.residence_textbox_mother.TabIndex = 20;
+			this.residence_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
-			// textBox7
+			// birthplace_textbox_mother
 			// 
-			this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.textBox7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox7.Location = new System.Drawing.Point(495, 20);
-			this.textBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.textBox7.Name = "textBox7";
-			this.textBox7.Size = new System.Drawing.Size(133, 16);
-			this.textBox7.TabIndex = 20;
-			this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.birthplace_textbox_mother.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.birthplace_textbox_mother.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.birthplace_textbox_mother.Location = new System.Drawing.Point(495, 20);
+			this.birthplace_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.birthplace_textbox_mother.Name = "birthplace_textbox_mother";
+			this.birthplace_textbox_mother.Size = new System.Drawing.Size(133, 16);
+			this.birthplace_textbox_mother.TabIndex = 20;
+			this.birthplace_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// label22
 			// 
@@ -971,16 +971,16 @@
 			this.label22.TabIndex = 27;
 			this.label22.Text = "Mother";
 			// 
-			// textBox8
+			// firstname_textbox_mother
 			// 
-			this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.textBox8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox8.Location = new System.Drawing.Point(68, 28);
-			this.textBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.textBox8.Name = "textBox8";
-			this.textBox8.Size = new System.Drawing.Size(94, 16);
-			this.textBox8.TabIndex = 13;
-			this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.firstname_textbox_mother.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.firstname_textbox_mother.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.firstname_textbox_mother.Location = new System.Drawing.Point(68, 28);
+			this.firstname_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.firstname_textbox_mother.Name = "firstname_textbox_mother";
+			this.firstname_textbox_mother.Size = new System.Drawing.Size(94, 16);
+			this.firstname_textbox_mother.TabIndex = 13;
+			this.firstname_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// label24
 			// 
@@ -3056,20 +3056,20 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox residence_textbox_father;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Button biodata_button;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox suffix_textbox_mother;
+        private System.Windows.Forms.TextBox lastname_textbox_mother;
+        private System.Windows.Forms.TextBox middlename_textbox_mother;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox residence_textbox_mother;
+        private System.Windows.Forms.TextBox birthplace_textbox_mother;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox firstname_textbox_mother;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
