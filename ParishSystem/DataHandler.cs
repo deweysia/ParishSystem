@@ -17,17 +17,17 @@ namespace ParishSystem
 
         private int userID=1;//change kasi tamad si dewey
 
-      
 
+        //MySqlConnection connect = new MySqlConnection("server=localhost; database=luttop; user=root; password=1234; pooling = false; convert zero datetime=True");
         public DataHandler(string server, string database, string user, string password ,int UserID)
         {
-            conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";");
+            conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True;");
             userID = UserID;
         }
 
         public DataHandler(string server, string database, string user, string password)
         {
-            conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";");
+            conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True;");
             this.userID = -1;
         }
 
@@ -155,7 +155,7 @@ namespace ParishSystem
                 + "', birthDate = '" + birthDate.ToString("yyyy-MM-dd HH:mm:ss.fff")
                 + "', contactNumber = '" + contactNumber + "', address = '" + address
                 + "', birthplace = '" + birthplace + "',bloodType='"+bloodtype+"' WHERE profileID = '" + profileID + "'";
-
+            Console.WriteLine(q);
             //updateModificationInfo("generalProfile", "profileID", profileID);
 
             bool success = runNonQuery(q);
@@ -217,15 +217,17 @@ namespace ParishSystem
             if (dt.Rows.Count == 0)
                 return null;
 
+
             return dt;
         }
 
         public DataTable getGeneralProfiles()
         {
-            string q = "SELECT * FROM GeneralProfile";
+            string q = "SELECT profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix) as Name FROM GeneralProfile";
 
             DataTable dt = runQuery(q);
 
+           
             return dt;
         }
         public bool addGeneralProfileLog(int profileID)
