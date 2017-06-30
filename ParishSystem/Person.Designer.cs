@@ -329,7 +329,7 @@
 			this.biodata_button.TabIndex = 1;
 			this.biodata_button.Text = "Biodata";
 			this.biodata_button.UseVisualStyleBackColor = true;
-			this.biodata_button.Click += new System.EventHandler(this.panel_change);
+			this.biodata_button.Click += new System.EventHandler(this.biodata_button_Click);
 			// 
 			// baptism_button
 			// 
@@ -340,7 +340,7 @@
 			this.baptism_button.TabIndex = 2;
 			this.baptism_button.Text = "Baptism";
 			this.baptism_button.UseVisualStyleBackColor = true;
-			this.baptism_button.Click += new System.EventHandler(this.panel_change);
+			this.baptism_button.Click += new System.EventHandler(this.baptism_button_Click);
 			// 
 			// confirmation_button
 			// 
@@ -351,7 +351,6 @@
 			this.confirmation_button.TabIndex = 3;
 			this.confirmation_button.Text = "Confirmation";
 			this.confirmation_button.UseVisualStyleBackColor = true;
-			this.confirmation_button.Click += new System.EventHandler(this.panel_change);
 			// 
 			// marriage_button
 			// 
@@ -362,7 +361,6 @@
 			this.marriage_button.TabIndex = 4;
 			this.marriage_button.Text = "Marriage";
 			this.marriage_button.UseVisualStyleBackColor = true;
-			this.marriage_button.Click += new System.EventHandler(this.panel_change);
 			// 
 			// balance_button
 			// 
@@ -373,7 +371,6 @@
 			this.balance_button.TabIndex = 5;
 			this.balance_button.Text = "Balance";
 			this.balance_button.UseVisualStyleBackColor = true;
-			this.balance_button.Click += new System.EventHandler(this.panel_change);
 			// 
 			// bloodletting_button
 			// 
@@ -384,7 +381,6 @@
 			this.bloodletting_button.TabIndex = 5;
 			this.bloodletting_button.Text = "Bloodletting";
 			this.bloodletting_button.UseVisualStyleBackColor = true;
-			this.bloodletting_button.Click += new System.EventHandler(this.panel_change);
 			// 
 			// panel2
 			// 
