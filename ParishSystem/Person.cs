@@ -102,12 +102,18 @@ namespace ParishSystem
 
 		private void biodata_button_Click(object sender, EventArgs e)
 		{
-
+            load_Biodata();
+            
 		}
 
 		private void baptism_button_Click(object sender, EventArgs e)
 		{
 		
 		}
-	}
+
+        private void basic_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
 }
