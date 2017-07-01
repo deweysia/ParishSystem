@@ -961,9 +961,9 @@ namespace ParishSystem
         */
 
 
-        public bool addApplication(int profileID, string sacramentType)
+        public bool addApplication(int profileID, string applicationType)
         {
-            string q = "INSERT INTO Application(profileID, sacramentType) VALUES ('" + profileID + "', '" + sacramentType + "')";
+            string q = "INSERT INTO Application(profileID, applicationType) VALUES ('" + profileID + "', '" + applicationType + "')";
 
             bool success = runNonQuery(q);
 
@@ -1954,7 +1954,7 @@ namespace ParishSystem
 
         public DataTable getFather(int ProfileID) { return new DataTable(); }
 
-        public DataTable getSponsors(string sacrament,int ProfileID)
+        public DataTable getSponsors(string sacrament,int applicationID)
         {
             return new DataTable();
             //please add a column to format the names to be fn mn ln sf, but use select * parin

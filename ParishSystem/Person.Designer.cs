@@ -103,20 +103,20 @@
             this.label100 = new System.Windows.Forms.Label();
             this.textBox30 = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.exportCertificate_baptism_button = new System.Windows.Forms.Button();
             this.print_baptism_button = new System.Windows.Forms.Button();
             this.appointment_baptism_button = new System.Windows.Forms.Button();
             this.cancel_baptism_button = new System.Windows.Forms.Button();
             this.approve_baptism_button = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.record_baptism_textbox = new System.Windows.Forms.TextBox();
+            this.page_baptism_textbox = new System.Windows.Forms.TextBox();
+            this.registry_baptism_textbox = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.minister_baptism_combobox = new System.Windows.Forms.ComboBox();
+            this.baptism_date_dtp = new System.Windows.Forms.DateTimePicker();
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
@@ -351,6 +351,7 @@
             this.confirmation_button.TabIndex = 3;
             this.confirmation_button.Text = "Confirmation";
             this.confirmation_button.UseVisualStyleBackColor = true;
+            this.confirmation_button.Click += new System.EventHandler(this.confirmation_button_Click);
             // 
             // marriage_button
             // 
@@ -361,6 +362,7 @@
             this.marriage_button.TabIndex = 4;
             this.marriage_button.Text = "Marriage";
             this.marriage_button.UseVisualStyleBackColor = true;
+            this.marriage_button.Click += new System.EventHandler(this.marriage_button_Click);
             // 
             // balance_button
             // 
@@ -950,7 +952,7 @@
             // 
             this.birthplace_textbox_mother.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.birthplace_textbox_mother.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.birthplace_textbox_mother.Location = new System.Drawing.Point(495, 20);
+            this.birthplace_textbox_mother.Location = new System.Drawing.Point(495, 23);
             this.birthplace_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.birthplace_textbox_mother.Name = "birthplace_textbox_mother";
             this.birthplace_textbox_mother.Size = new System.Drawing.Size(133, 16);
@@ -1054,7 +1056,6 @@
             this.basic_panel.Name = "basic_panel";
             this.basic_panel.Size = new System.Drawing.Size(854, 512);
             this.basic_panel.TabIndex = 32;
-           
             // 
             // baptism_panel
             // 
@@ -1065,7 +1066,7 @@
             this.baptism_panel.Controls.Add(this.label100);
             this.baptism_panel.Controls.Add(this.textBox30);
             this.baptism_panel.Controls.Add(this.label52);
-            this.baptism_panel.Controls.Add(this.button7);
+            this.baptism_panel.Controls.Add(this.exportCertificate_baptism_button);
             this.baptism_panel.Controls.Add(this.print_baptism_button);
             this.baptism_panel.Controls.Add(this.appointment_baptism_button);
             this.baptism_panel.Controls.Add(this.cancel_baptism_button);
@@ -1143,14 +1144,14 @@
             this.label52.TabIndex = 50;
             this.label52.Text = "Baptism";
             // 
-            // button7
+            // exportCertificate_baptism_button
             // 
-            this.button7.Location = new System.Drawing.Point(38, 319);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(226, 31);
-            this.button7.TabIndex = 49;
-            this.button7.Text = "Export Batismal Certificate ";
-            this.button7.UseVisualStyleBackColor = true;
+            this.exportCertificate_baptism_button.Location = new System.Drawing.Point(38, 319);
+            this.exportCertificate_baptism_button.Name = "exportCertificate_baptism_button";
+            this.exportCertificate_baptism_button.Size = new System.Drawing.Size(226, 31);
+            this.exportCertificate_baptism_button.TabIndex = 49;
+            this.exportCertificate_baptism_button.Text = "Export Batismal Certificate ";
+            this.exportCertificate_baptism_button.UseVisualStyleBackColor = true;
             // 
             // print_baptism_button
             // 
@@ -1191,14 +1192,14 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.textBox17);
-            this.panel7.Controls.Add(this.textBox16);
-            this.panel7.Controls.Add(this.textBox14);
+            this.panel7.Controls.Add(this.record_baptism_textbox);
+            this.panel7.Controls.Add(this.page_baptism_textbox);
+            this.panel7.Controls.Add(this.registry_baptism_textbox);
             this.panel7.Controls.Add(this.label44);
             this.panel7.Controls.Add(this.label45);
             this.panel7.Controls.Add(this.label46);
-            this.panel7.Controls.Add(this.comboBox1);
-            this.panel7.Controls.Add(this.dateTimePicker2);
+            this.panel7.Controls.Add(this.minister_baptism_combobox);
+            this.panel7.Controls.Add(this.baptism_date_dtp);
             this.panel7.Controls.Add(this.label47);
             this.panel7.Controls.Add(this.label48);
             this.panel7.Controls.Add(this.label49);
@@ -1209,38 +1210,38 @@
             this.panel7.Size = new System.Drawing.Size(249, 199);
             this.panel7.TabIndex = 48;
             // 
-            // textBox17
+            // record_baptism_textbox
             // 
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(110, 167);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(21, 16);
-            this.textBox17.TabIndex = 35;
-            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.record_baptism_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.record_baptism_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.record_baptism_textbox.Location = new System.Drawing.Point(110, 167);
+            this.record_baptism_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.record_baptism_textbox.Name = "record_baptism_textbox";
+            this.record_baptism_textbox.Size = new System.Drawing.Size(21, 16);
+            this.record_baptism_textbox.TabIndex = 35;
+            this.record_baptism_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox16
+            // page_baptism_textbox
             // 
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(108, 136);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(21, 16);
-            this.textBox16.TabIndex = 34;
-            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.page_baptism_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.page_baptism_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.page_baptism_textbox.Location = new System.Drawing.Point(108, 136);
+            this.page_baptism_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.page_baptism_textbox.Name = "page_baptism_textbox";
+            this.page_baptism_textbox.Size = new System.Drawing.Size(21, 16);
+            this.page_baptism_textbox.TabIndex = 34;
+            this.page_baptism_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox14
+            // registry_baptism_textbox
             // 
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(108, 109);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(21, 16);
-            this.textBox14.TabIndex = 29;
-            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.registry_baptism_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.registry_baptism_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registry_baptism_textbox.Location = new System.Drawing.Point(108, 109);
+            this.registry_baptism_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.registry_baptism_textbox.Name = "registry_baptism_textbox";
+            this.registry_baptism_textbox.Size = new System.Drawing.Size(21, 16);
+            this.registry_baptism_textbox.TabIndex = 29;
+            this.registry_baptism_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label44
             // 
@@ -1272,24 +1273,24 @@
             this.label46.TabIndex = 31;
             this.label46.Text = "Registry";
             // 
-            // comboBox1
+            // minister_baptism_combobox
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(86, 50);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(148, 23);
-            this.comboBox1.TabIndex = 30;
+            this.minister_baptism_combobox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minister_baptism_combobox.FormattingEnabled = true;
+            this.minister_baptism_combobox.Location = new System.Drawing.Point(86, 50);
+            this.minister_baptism_combobox.Name = "minister_baptism_combobox";
+            this.minister_baptism_combobox.Size = new System.Drawing.Size(148, 23);
+            this.minister_baptism_combobox.TabIndex = 30;
             // 
-            // dateTimePicker2
+            // baptism_date_dtp
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(108, 6);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(126, 25);
-            this.dateTimePicker2.TabIndex = 29;
+            this.baptism_date_dtp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.baptism_date_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.baptism_date_dtp.Location = new System.Drawing.Point(108, 6);
+            this.baptism_date_dtp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.baptism_date_dtp.Name = "baptism_date_dtp";
+            this.baptism_date_dtp.Size = new System.Drawing.Size(126, 25);
+            this.baptism_date_dtp.TabIndex = 29;
             // 
             // label47
             // 
@@ -3102,20 +3103,20 @@
         private System.Windows.Forms.DataGridView baptism_sponsor_dgv;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button exportCertificate_baptism_button;
         private System.Windows.Forms.Button print_baptism_button;
         private System.Windows.Forms.Button appointment_baptism_button;
         private System.Windows.Forms.Button cancel_baptism_button;
         private System.Windows.Forms.Button approve_baptism_button;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox record_baptism_textbox;
+        private System.Windows.Forms.TextBox page_baptism_textbox;
+        private System.Windows.Forms.TextBox registry_baptism_textbox;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.ComboBox minister_baptism_combobox;
+        private System.Windows.Forms.DateTimePicker baptism_date_dtp;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label49;

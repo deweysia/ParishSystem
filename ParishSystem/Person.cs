@@ -106,10 +106,22 @@ namespace ParishSystem
 
         public void load_Baptism()
         {
-            if (dh.hasBaptismApplication(ProfileID))
-            {
-                baptism_sponsor_dgv.DataSource = dh.getSponsors("bap",ProfileID);
-            }
+            baptism_sponsor_dgv.DataSource = dh.getSponsors("bap",ProfileID);
+
+
+
+           
+
+        }
+
+        public void load_Confirmation()
+        {
+
+        }
+
+        public void load_Marriage()
+        {
+
         }
 
 
@@ -141,7 +153,8 @@ namespace ParishSystem
         }
         #endregion
 
-        
+        #region Menu_Clicks
+
         private void biodata_button_Click(object sender, EventArgs e)
 		{
             load_Biodata();
@@ -152,7 +165,6 @@ namespace ParishSystem
             balance_panel.Visible = false;
             bloodletting_panel.Visible = false;
             
-            
 		}
 
 		private void baptism_button_Click(object sender, EventArgs e)
@@ -160,24 +172,66 @@ namespace ParishSystem
             if (dh.hasBaptismApplication(ProfileID))
             {
                 load_Baptism();
+                basic_panel.Visible = false;
+                baptism_panel.Visible = true;
+                confirmation_panel.Visible = false;
+                marriage_panel.Visible = false;
+                balance_panel.Visible = false;
+                bloodletting_panel.Visible = false;
             }
             else
             {
-                dh.addApplication(ProfileID, "bap");
+                dh.addApplication(ProfileID, "bap");      
             }
 
         }
 
-      
+        private void confirmation_button_Click(object sender, EventArgs e)
+        {
+            if (dh.hasConfirmaionApplication(ProfileID))
+            {
+                load_Confirmation();
+                basic_panel.Visible = false;
+                baptism_panel.Visible = false;
+                confirmation_panel.Visible = true;
+                marriage_panel.Visible = false;
+                balance_panel.Visible = false;
+                bloodletting_panel.Visible = false;
+            }
+            else
+            {
+                dh.addApplication(ProfileID, "conf");
+            }
+        }
+
+        private void marriage_button_Click(object sender, EventArgs e)
+        {
+            if (dh.hasMarriageApplication(ProfileID))
+            {
+                load_Marriage();
+                basic_panel.Visible = false;
+                baptism_panel.Visible = false;
+                confirmation_panel.Visible = false;
+                marriage_panel.Visible = true;
+                balance_panel.Visible = false;
+                bloodletting_panel.Visible = false;
+            }
+            else
+            {
+                dh.addApplication(ProfileID, "mar");
+            }
+        }
+
+
+        #endregion
+
 
         private void Person_Load(object sender, EventArgs e)
         {
             if (dh.hasBaptismApplication(ProfileID)) { baptism_button.BackColor = Color.Green; } else { baptism_button.BackColor = Color.Red; }
-            if (dh.hasMarriageApplication(ProfileID))   { marriage_button.BackColor = Color.Green; } else { marriage_button.BackColor = Color.Red; }
+            if (dh.hasMarriageApplication(ProfileID)) { marriage_button.BackColor = Color.Green; } else { marriage_button.BackColor = Color.Red; }
             if (dh.hasConfirmaionApplication(ProfileID)) { confirmation_button.BackColor = Color.Green; } else { confirmation_button.BackColor = Color.Red; }
 
         }
-
-       
     }
 }
