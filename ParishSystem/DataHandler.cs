@@ -123,7 +123,7 @@ namespace ParishSystem
 
         public DateTime toDateTime(string s, bool timePortion)
         {
-            Char c = ' ';
+           
             string[] components = s.Split(' ');
             string[] date = components[0].Split('/');
             int month = int.Parse(date[0]);
