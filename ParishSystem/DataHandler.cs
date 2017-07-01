@@ -1936,8 +1936,8 @@ namespace ParishSystem
         {
             return true;
         }
-
-        public bool hasConfirmaionApplication(int ProfileID)
+        
+        public bool hasConfirmationApplication(int ProfileID)
         {
             return true;
         }
