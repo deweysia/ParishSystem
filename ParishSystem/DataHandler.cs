@@ -101,7 +101,7 @@ namespace ParishSystem
             bool success = true;
             foreach (int sponsorID in sponsorIDs)
             {
-                string q = "INSERT INTO Sacrament_Sponsor(sacramentID, sponsorID, sacramentType) VALUES ('"
+                string q = "INSERT INTO Sponsor(sacramentID, sponsorID, sacramentType) VALUES ('"
                     + sacramentID + "', '"+ sponsorID + "', '"+ sacramentType + "')";
 
                 success = success && runNonQuery(q);
@@ -114,7 +114,7 @@ namespace ParishSystem
 
         public bool addSponsor(int sacramentID, int sponsorID, string sacramentType)
         {
-            string q = "INSERT INTO Sacrament_Sponsor(sacramentID, sponsorID, sacramentType) VALUES ('"
+            string q = "INSERT INTO Sponsor(sacramentID, sponsorID, sacramentType) VALUES ('"
                         + sacramentID + "', '" + sponsorID + "', '" + sacramentType + "')";
 
             // *Still record changes to log or nah?
@@ -123,7 +123,7 @@ namespace ParishSystem
 
         public DateTime toDateTime(string s, bool timePortion)
         {
-           
+
             string[] components = s.Split(' ');
             string[] date = components[0].Split('/');
             int month = int.Parse(date[0]);
@@ -548,6 +548,7 @@ namespace ParishSystem
                                                     ================ PARENT =================
                                          =============================================================
         */
+
         #region
 
 
@@ -609,6 +610,26 @@ namespace ParishSystem
 
             return dt;
         }
+
+        public DataTable getMotherOf(int profileID)
+        {
+            string q = "SELECT * FROM Parent WHERE gender = 'F' AND profileID = '" + profileID + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+
+        public DataTable getFatherOf(int profileID)
+        {
+            string q = "SELECT * FROM Parent WHERE gender = 'M' AND profileID = '" + profileID + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
 
         public int getParentID(string firstName, string midName, string lastName, string suffix, char gender, string birthPlace)
         {
@@ -1928,6 +1949,7 @@ namespace ParishSystem
             return dt;
         }
 
+        
 
 
         //-------------functions i need-----------------------//
