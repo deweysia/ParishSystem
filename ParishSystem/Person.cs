@@ -76,9 +76,9 @@ namespace ParishSystem
             //birthdate_datetimepicker_baptist.Value = dh.toDateTime(TempDT.Rows[0]["birthdate"].ToString(),false);<<<<<<<<<<<<<<<<<<<<<<<<DEWEY HERE
 
             //LOAD FATHER
-            if (dh.getFather(ProfileID).Rows.Count != 0)
+            if (dh.getFatherOf(ProfileID).Rows.Count != 0)
             {
-                DataTable TempFatherDT = dh.getFather(ProfileID);
+                DataTable TempFatherDT = dh.getFatherOf(ProfileID);
                 firstname_textbox_father.Text = TempFatherDT.Rows[0]["firstname"].ToString();
                 middlename_textbox_father.Text = TempFatherDT.Rows[0]["midname"].ToString();
                 lastname_textbox_father.Text = TempFatherDT.Rows[0]["lastname"].ToString();
@@ -88,9 +88,9 @@ namespace ParishSystem
             }
 
             //LOAD MOTHER
-            if (dh.getFather(ProfileID).Rows.Count != 0)
+            if (dh.getFatherOf(ProfileID).Rows.Count != 0)
             {
-                DataTable TempMotherDT = dh.getMother(ProfileID);
+                DataTable TempMotherDT = dh.getMotherOf(ProfileID);
                 firstname_textbox_mother.Text = TempMotherDT.Rows[0]["firstname"].ToString();
                 middlename_textbox_mother.Text = TempMotherDT.Rows[0]["midname"].ToString();
                 lastname_textbox_mother.Text = TempMotherDT.Rows[0]["lastname"].ToString();

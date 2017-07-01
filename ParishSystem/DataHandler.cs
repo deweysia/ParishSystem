@@ -294,6 +294,35 @@ namespace ParishSystem
             return double.Parse(dt.Rows[0][0].ToString());
         }
 
+        public DataTable getGeneralProfilesByName(string firstName, string midName, string lastName)
+        {
+            string q = "SELECT * FROM GeneralProfile WHERE firstName = '%"+ firstName 
+                + "%' AND midName = '%"+ midName 
+                + "%' AND lastName = '%"+ lastName + "%'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getGeneralProfilesByBirthDate(DateTime birthdate)
+        {
+            string q = "SELECT * FROM GeneralProfile WHERE birthdate = '"+ birthdate.ToString("yyyy-MM-dd") + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getListOfBalances(int generalProfileID)
+        {
+            string q = "SELECT * FROM Income WHERE sourceType = 'GeneralProfile' AND sourceID = " + generalProfileID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
 
 
 
@@ -346,6 +375,8 @@ namespace ParishSystem
             return dt;
         }
 
+        
+
 
         #endregion
 
@@ -357,11 +388,11 @@ namespace ParishSystem
 
         #region
 
-        public bool addBloodDonation(int bloodDonorID, int donationEventID, int donationAmount, DateTime bloodDonationDateTime)
+        public bool addBloodDonation(int generalProfileID, int donationEventID, int donationAmount, DateTime bloodDonationDateTime)
         {
-            string q = "INSERT INTO BloodDonation(bloodDonorID, donationEventID, donationAmount, bloodDonationDateTime) VALUES ('" 
-                + bloodDonorID + "', '" + donationEventID + "', '" + donationAmount 
-                + "', '" + bloodDonationDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff") + "')";
+            string q = "INSERT INTO BloodDonation(generalProfileID, donationEventID, donationAmount, bloodDonationDateTime) VALUES ('" 
+                + generalProfileID + "', '" + donationEventID + "', '" + donationAmount + "', '" 
+                + bloodDonationDateTime.ToString("yyyy-MM-dd HH:mm:ss") + "')";
             
             bool success = runNonQuery(q);
             //if(success)
@@ -370,14 +401,14 @@ namespace ParishSystem
             return success; 
         }
 
-        public bool editBloodDonation(int bloodDonationID, int bloodDonorID, int donationEventID, int donationAmount, DateTime bloodDonationDateTime)
+        public bool editBloodDonation(int bloodDonationID, int generalProfileID, int donationEventID, int donationAmount, DateTime bloodDonationDateTime)
         {
             //addBloodDonationLog(bloodDonationID);
 
-            string q = "UPDATE BloodDonation SET bloodDonorID = '" + bloodDonorID 
+            string q = "UPDATE BloodDonation SET generalProfileID = '" + generalProfileID 
                 + "', donationEventID = '" + donationEventID 
                 + "', donationAmount = '" + donationAmount 
-                + "', bloodDonationDateTime = '" + bloodDonationDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff") 
+                + "', bloodDonationDateTime = '" + bloodDonationDateTime.ToString("yyyy-MM-dd HH:mm:ss") 
                 + "' WHERE bloodDonationID = '" + bloodDonationID + "'";
 
             //updateModificationInfo("BloodDonation", "bloodDonationID", bloodDonationID);
@@ -420,9 +451,9 @@ namespace ParishSystem
 
 
         //SPECIAL FUNCTION
-        public int getTotalBloodDonationOf(int bloodDonorID)
+        public int getTotalBloodDonationOf(int generalProfileID)
         {
-            string q = "SELECT SUM(donationAmount) FROM bloodDonation WHERE bloodDonorID =  " + bloodDonorID;
+            string q = "SELECT SUM(donationAmount) FROM BloodDonation WHERE generalProfileID =  " + generalProfileID;
 
             DataTable dt = runQuery(q);
 
@@ -435,6 +466,65 @@ namespace ParishSystem
             string q = "INSERT INTO bloodDonationLog VALUES (SELECT * FROM bloodDonation WHERE bloodDonationID = "+ bloodDonationID + ")";
             return runNonQuery(q);
 
+        }
+
+        public DataTable getBloodDonors()
+        {
+            string q = "SELECT DISTINCT GeneralProfile.profileID, firstName, midName, lastName, suffix, gender, "
+                + "DATE_FORMAT(birthdate, 'yyyy-MM-dd'), contactNumber, address, birthplace, bloodType  "
+                + "FROM GeneralProfile JOIN bloodDonation ON GeneralProfile.profileID = BloodDonation.profileID";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getBloodDonorsBetweenDates(DateTime start, DateTime end)
+        {
+            string q = "SELECT DISTINCT GeneralProfile.profileID, firstName, midName, lastName, suffix, gender, "
+                + "DATE_FORMAT(birthdate, 'yyyy-MM-dd'), contactNumber, address, birthplace, bloodType  "
+                + "FROM GeneralProfile JOIN bloodDonation ON GeneralProfile.profileID = BloodDonation.profileID "
+                + "WHERE bloodDonationDate BETWEEN '" + start.ToString("yyyy-MM-dd") + "' AND '" + end.ToString("yyyy-MM-dd") + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getBloodDonorsOfMonth(DateTime date)
+        {
+            string q = "SELECT DISTINCT GeneralProfile.profileID, firstName, midName, lastName, suffix, gender, "
+                + "DATE_FORMAT(birthdate, 'yyyy-MM-dd'), contactNumber, address, birthplace, bloodType  "
+                + "FROM GeneralProfile JOIN bloodDonation ON GeneralProfile.profileID = BloodDonation.profileID "
+                + "WHERE MONTH(bloodDonationDateTime) = '" + date.ToString("MM")
+                + "' AND YEAR(bloodDonationDateTime) = '" + date.ToString("yyyy") + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getBloodDonationsOfEvent(string eventName)
+        {
+            string q = "SELECT GeneralProfile.profileID, firstName, midName, lastName, suffix,"
+                + " gender, birthdate, bloodType, donationAmount "
+                + " FROM GeneralProfile JOIN BloodDonation "
+                + " ON GeneralProfile.profileID = BloodDonation.profileID"
+                + " JOIN BloodDonationEvent ON BloodDonationEvent.donationEventID = BloodDonation.donationEventID"
+                + " WHERE eventName = '%" + eventName + "%' ";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public int getTotalBloodDonationOfGeneralProfile(int profileID)
+        {
+            string q = "SELECT SUM(donationAmount) FROM BloodDonation WHERE profileID = " + profileID;
+
+            DataTable dt = runQuery(q);
+
+            return int.Parse(dt.Rows[0][0].ToString());
         }
 
 
@@ -498,6 +588,15 @@ namespace ParishSystem
             return runNonQuery(q);
         }
 
+        public DataTable getActiveBloodDonationEvents()
+        {
+            string q = "SELECT * FROM BloodDonationEvent WHERE eventStatus = 'active'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
         #endregion
 
         /*
@@ -508,7 +607,7 @@ namespace ParishSystem
         public bool addBloodDonationRetrieval(int bloodDonationID, DateTime claimDate, string firstName, string midName, string lastName, string suffix, DateTime birthDate, int gender)
         {
             string q = "INSERT INTO bloodDonationRetrieval(bloodDonationID, claimDate, firstName, midName, lastName, suffix, birthDate, gender, userID) "
-                + "VALUES ('" + bloodDonationID + "', '" + claimDate.ToString("yyyy-MM-dd HH:mm:ss.fff") + "', '" + firstName + "', '" + midName + "', '"+ lastName 
+                + "VALUES ('" + bloodDonationID + "', '" + claimDate.ToString("yyyy-MM-dd HH:mm:ss") + "', '" + firstName + "', '" + midName + "', '"+ lastName 
                 + "', '" + suffix + "', '" + birthDate.ToString("yyyy-MM-dd") + "', '" + gender + "', '" + userID + "')";
 
             bool success = runNonQuery(q);
@@ -520,7 +619,7 @@ namespace ParishSystem
         public bool editBloodDonationRetrieval(int bloodDonationID, DateTime claimDate, string firstName, string midName, string lastName, string suffix, DateTime birthDate, int gender)
         {
             string q = "UPDATE TABLE BloodDonationRetrieval SET VALUES bloodDonationID = '"+ bloodDonationID 
-                + "', claimDate = '"+ claimDate.ToString("yyyy-MM-dd HH:mm:ss.fff")
+                + "', claimDate = '"+ claimDate.ToString("yyyy-MM-dd HH:mm:ss")
                 + "', firstName = '"+ firstName + "', lastName = '"+ lastName 
                 + "', suffix = '"+ suffix + "', birthDate = '"+ birthDate.ToString("yyyy-MM-dd") 
                 + "', gender = '"+ gender 
@@ -1972,11 +2071,10 @@ namespace ParishSystem
         {
             
         }
-        public DataTable getMother(int ProfileID) { return new DataTable(); }
+       
 
-        public DataTable getFather(int ProfileID) { return new DataTable(); }
 
-        public DataTable getSponsors(string sacrament,int applicationID)
+        public DataTable getSponsors(int sacramentID, string sacramentType)
         {
             return new DataTable();
             //please add a column to format the names to be fn mn ln sf, but use select * parin
