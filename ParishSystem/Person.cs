@@ -106,11 +106,21 @@ namespace ParishSystem
 
         public void load_Baptism()
         {
-            baptism_sponsor_dgv.DataSource = dh.getSponsors("bap",ProfileID);
+            DataTable minister = dh.getMinisters();
+            foreach (DataRow row in minister.Rows) {
+                minister_baptism_combobox.Items.Add(row.ToString());
+            }
+            
+            DataTable temp = dh.getApplication(ProfileID, "bap");
+            if (temp.Rows.Count > 0)
+            {
+                registry_baptism_textbox.Text = temp.Rows[0]["registryNumber"].ToString();
+                page_baptism_textbox.Text = temp.Rows[0]["pageNumber"].ToString();
+                record_baptism_textbox.Text = temp.Rows[0]["recordNumber"].ToString();
+            }
+            //baptism_sponsor_dgv.DataSource = dh.getSponsors(ProfileID,"bap");
 
 
-
-           
 
         }
 
@@ -188,7 +198,7 @@ namespace ParishSystem
 
         private void confirmation_button_Click(object sender, EventArgs e)
         {
-            if (dh.hasConfirmaionApplication(ProfileID))
+            if (dh.hasConfirmationApplication(ProfileID))
             {
                 load_Confirmation();
                 basic_panel.Visible = false;
@@ -230,7 +240,7 @@ namespace ParishSystem
         {
             if (dh.hasBaptismApplication(ProfileID)) { baptism_button.BackColor = Color.Green; } else { baptism_button.BackColor = Color.Red; }
             if (dh.hasMarriageApplication(ProfileID)) { marriage_button.BackColor = Color.Green; } else { marriage_button.BackColor = Color.Red; }
-            if (dh.hasConfirmaionApplication(ProfileID)) { confirmation_button.BackColor = Color.Green; } else { confirmation_button.BackColor = Color.Red; }
+            if (dh.hasConfirmationApplication(ProfileID)) { confirmation_button.BackColor = Color.Green; } else { confirmation_button.BackColor = Color.Red; }
 
         }
     }

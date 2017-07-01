@@ -1937,7 +1937,7 @@ namespace ParishSystem
             return true;
         }
 
-        public bool hasConfirmaionApplication(int ProfileID)
+        public bool hasConfirmationApplication(int ProfileID)
         {
             return true;
         }
@@ -1958,6 +1958,20 @@ namespace ParishSystem
         {
             return new DataTable();
             //please add a column to format the names to be fn mn ln sf, but use select * parin
+        }
+        public DataTable getApplication(int ProfileID, string ApplicationType)
+        {
+           //this is only for baptism and conf
+            return new DataTable();
+        }
+        public DataTable getApplication(int ProfileIDA, int ProfileIDB)
+        {
+            //this is only for marriage
+            return new DataTable();
+        }
+        public DataTable getMinisters()
+        {
+            return new DataTable();
         }
     }
 
