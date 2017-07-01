@@ -50,70 +50,134 @@ namespace ParishSystem
 				birthplace_textbox_baptist.Text,
 				bloodtype_combobox_baptist.SelectedValue.ToString());
 		}
-		#endregion
+        #endregion
 
-		#region Loads
-		private void load_Biodata() {
+        #region Loads
+        private void load_Biodata()
+        {
 
-			DataTable TempDT = dh.getGeneralProfile(ProfileID);
-			//LOAD PERSON
-			if (!(TempDT.Rows[0]["gender"].Equals(null)))
-			{
-				if (TempDT.Rows[0]["gender"].ToString() == "m")
-					gender_radiobutton1_baptist.Checked = true;
-				else if (TempDT.Rows[0]["gender"].ToString() == "f")
-					gender_radiobutton2_baptist.Checked = true;
-			}
-			firstname_textbox.Text = TempDT.Rows[0]["firstname"].ToString();
-			middlename_textbox.Text = TempDT.Rows[0]["midname"].ToString();
-			lastname_textbox.Text = TempDT.Rows[0]["lastname"].ToString();
-			suffix_textbox.Text = TempDT.Rows[0]["suffix"].ToString();
-			birthplace_textbox_baptist.Text = TempDT.Rows[0]["birthplace"].ToString();
-			address_baptist_textarea.Text = TempDT.Rows[0]["address"].ToString();
-			contactNumber_textbox_baptist.Text= TempDT.Rows[0]["contactNumber"].ToString();
-			bloodtype_combobox_baptist.SelectedIndex = int.Parse(TempDT.Rows[0]["bloodType"].ToString());
-			Console.WriteLine(TempDT.Rows[0]["birthdate"].ToString());
-			
-			//==================================================================================================================insert birthdate
-			//LOAD FATHER
-			DataTable TempFatherDT = dh.getParentsOf(ProfileID);
-			//==================================================================================================================change get parents of function
-			firstname_textbox_father.Text = TempFatherDT.Rows[0]["firstname"].ToString();
-			middlename_textbox_father.Text = TempFatherDT.Rows[0]["midname"].ToString();
-			lastname_textbox_father.Text = TempFatherDT.Rows[0]["lastname"].ToString();
-			suffix_textbox_father.Text = TempFatherDT.Rows[0]["suffix"].ToString();
-			birthplace_textbox_father.Text = TempFatherDT.Rows[0]["birthplace"].ToString();
-			residence_textbox_father.Text= TempFatherDT.Rows[0]["residence"].ToString();
+            DataTable TempDT = dh.getGeneralProfile(ProfileID);
+            //LOAD PERSON
+            if (!(TempDT.Rows[0]["gender"].Equals(null)))
+            {
+                if (TempDT.Rows[0]["gender"].ToString() == "m")
+                    gender_radiobutton1_baptist.Checked = true;
+                else if (TempDT.Rows[0]["gender"].ToString() == "f")
+                    gender_radiobutton2_baptist.Checked = true;
+            }
+            firstname_textbox.Text = TempDT.Rows[0]["firstname"].ToString();
+            middlename_textbox.Text = TempDT.Rows[0]["midname"].ToString();
+            lastname_textbox.Text = TempDT.Rows[0]["lastname"].ToString();
+            suffix_textbox.Text = TempDT.Rows[0]["suffix"].ToString();
+            birthplace_textbox_baptist.Text = TempDT.Rows[0]["birthplace"].ToString();
+            address_baptist_textarea.Text = TempDT.Rows[0]["address"].ToString();
+            contactNumber_textbox_baptist.Text = TempDT.Rows[0]["contactNumber"].ToString();
+            bloodtype_combobox_baptist.SelectedItem = TempDT.Rows[0]["bloodType"].ToString();
+            //birthdate_datetimepicker_baptist.Value = dh.toDateTime(TempDT.Rows[0]["birthdate"].ToString(),false);<<<<<<<<<<<<<<<<<<<<<<<<DEWEY HERE
 
-			//LOAD MOTHER
-			DataTable TempMotherDT = dh.getParentsOf(ProfileID);
-			//==================================================================================================================change get parents of function
-			firstname_textbox_mother.Text = TempMotherDT.Rows[0]["firstname"].ToString();
-			middlename_textbox_mother.Text = TempMotherDT.Rows[0]["midname"].ToString();
-			lastname_textbox_mother.Text = TempMotherDT.Rows[0]["lastname"].ToString();
-			suffix_textbox_mother.Text = TempMotherDT.Rows[0]["suffix"].ToString();
-			birthplace_textbox_mother.Text = TempMotherDT.Rows[0]["birthplace"].ToString();
-			residence_textbox_mother.Text = TempMotherDT.Rows[0]["residence"].ToString();
-			
-		}
+            //LOAD FATHER
+            if (dh.getFather(ProfileID).Rows.Count != 0)
+            {
+                DataTable TempFatherDT = dh.getFather(ProfileID);
+                firstname_textbox_father.Text = TempFatherDT.Rows[0]["firstname"].ToString();
+                middlename_textbox_father.Text = TempFatherDT.Rows[0]["midname"].ToString();
+                lastname_textbox_father.Text = TempFatherDT.Rows[0]["lastname"].ToString();
+                suffix_textbox_father.Text = TempFatherDT.Rows[0]["suffix"].ToString();
+                birthplace_textbox_father.Text = TempFatherDT.Rows[0]["birthplace"].ToString();
+                residence_textbox_father.Text = TempFatherDT.Rows[0]["residence"].ToString();
+            }
+
+            //LOAD MOTHER
+            if (dh.getFather(ProfileID).Rows.Count != 0)
+            {
+                DataTable TempMotherDT = dh.getMother(ProfileID);
+                firstname_textbox_mother.Text = TempMotherDT.Rows[0]["firstname"].ToString();
+                middlename_textbox_mother.Text = TempMotherDT.Rows[0]["midname"].ToString();
+                lastname_textbox_mother.Text = TempMotherDT.Rows[0]["lastname"].ToString();
+                suffix_textbox_mother.Text = TempMotherDT.Rows[0]["suffix"].ToString();
+                birthplace_textbox_mother.Text = TempMotherDT.Rows[0]["birthplace"].ToString();
+                residence_textbox_mother.Text = TempMotherDT.Rows[0]["residence"].ToString();
+
+            }
+        }
 
 
-		#endregion
+        
 
-		private void biodata_button_Click(object sender, EventArgs e)
+        public void load_Baptism()
+        {
+            if (dh.hasBaptismApplication(ProfileID))
+            {
+                baptism_sponsor_dgv.DataSource = dh.getSponsors("bap",ProfileID);
+            }
+        }
+
+
+        #endregion
+
+        #region DGV clicks
+        int sponsorBaptismLastClick;
+
+        private void baptism_sponsor_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            sponsorBaptismLastClick = int.Parse(baptism_sponsor_dgv.CurrentRow.Cells["sponsorID"].Value.ToString());
+            firstname_textbox_sponsor_baptism.Text = baptism_sponsor_dgv.CurrentRow.Cells["firstName"].Value.ToString();
+            middlename_textbox_sponsor_baptism.Text = baptism_sponsor_dgv.CurrentRow.Cells["middleName"].Value.ToString();
+            lastname_textbox_sponsor_baptism.Text = baptism_sponsor_dgv.CurrentRow.Cells["lastName"].Value.ToString();
+            suffix_textbox_sponsor_baptism.Text = baptism_sponsor_dgv.CurrentRow.Cells["suffix"].Value.ToString();
+            residence_textbox_sponsor_baptism.Text = baptism_sponsor_dgv.CurrentRow.Cells["residence"].Value.ToString();
+
+            if (baptism_sponsor_dgv.CurrentRow.Cells["gender"].Value != null)
+            {
+                if (baptism_sponsor_dgv.CurrentRow.Cells["gender"].Value.ToString().Equals("m"))
+                {
+                    genderM_radiobutton_sponsor_baptism.Checked = true;
+                }
+                else if (baptism_sponsor_dgv.CurrentRow.Cells["gender"].Value.ToString().Equals("f"))
+                {
+                    genderF_radiobutton_sponsor_baptism.Checked = false;
+                }
+            }
+        }
+        #endregion
+
+        
+        private void biodata_button_Click(object sender, EventArgs e)
 		{
             load_Biodata();
+            basic_panel.Visible = true;
+            baptism_panel.Visible = false;
+            confirmation_panel.Visible = false;
+            marriage_panel.Visible = false;
+            balance_panel.Visible = false;
+            bloodletting_panel.Visible = false;
+            
             
 		}
 
 		private void baptism_button_Click(object sender, EventArgs e)
 		{
-		
-		}
-
-        private void basic_panel_Paint(object sender, PaintEventArgs e)
-        {
+            if (dh.hasBaptismApplication(ProfileID))
+            {
+                load_Baptism();
+            }
+            else
+            {
+                dh.addApplication(ProfileID, "bap");
+            }
 
         }
+
+      
+
+        private void Person_Load(object sender, EventArgs e)
+        {
+            if (dh.hasBaptismApplication(ProfileID)) { baptism_button.BackColor = Color.Green; } else { baptism_button.BackColor = Color.Red; }
+            if (dh.hasMarriageApplication(ProfileID))   { marriage_button.BackColor = Color.Green; } else { marriage_button.BackColor = Color.Red; }
+            if (dh.hasConfirmaionApplication(ProfileID)) { confirmation_button.BackColor = Color.Green; } else { confirmation_button.BackColor = Color.Red; }
+
+        }
+
+       
     }
 }

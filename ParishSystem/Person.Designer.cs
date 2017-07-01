@@ -122,30 +122,30 @@
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.baptism_requirement_dgv = new System.Windows.Forms.DataGridView();
             this.label93 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.suffix_textbox_sponsor = new System.Windows.Forms.TextBox();
-            this.lastname_textbox_sponsor = new System.Windows.Forms.TextBox();
-            this.middlename_textbox_sponsor = new System.Windows.Forms.TextBox();
+            this.genderF_radiobutton_sponsor_baptism = new System.Windows.Forms.RadioButton();
+            this.genderM_radiobutton_sponsor_baptism = new System.Windows.Forms.RadioButton();
+            this.residence_textbox_sponsor_baptism = new System.Windows.Forms.TextBox();
+            this.delete_button_sponsor_baptism = new System.Windows.Forms.Button();
+            this.add_button_sponsor_baptism = new System.Windows.Forms.Button();
+            this.suffix_textbox_sponsor_baptism = new System.Windows.Forms.TextBox();
+            this.lastname_textbox_sponsor_baptism = new System.Windows.Forms.TextBox();
+            this.middlename_textbox_sponsor_baptism = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.firstname_textbox_sponsor = new System.Windows.Forms.TextBox();
+            this.firstname_textbox_sponsor_baptism = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.baptism_sponsor_dgv = new System.Windows.Forms.DataGridView();
             this.confirmation_panel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox33 = new System.Windows.Forms.TextBox();
@@ -284,9 +284,9 @@
             this.basic_panel.SuspendLayout();
             this.baptism_panel.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baptism_requirement_dgv)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baptism_sponsor_dgv)).BeginInit();
             this.confirmation_panel.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -1054,7 +1054,7 @@
             this.basic_panel.Name = "basic_panel";
             this.basic_panel.Size = new System.Drawing.Size(854, 512);
             this.basic_panel.TabIndex = 32;
-            this.basic_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.basic_panel_Paint);
+           
             // 
             // baptism_panel
             // 
@@ -1071,12 +1071,12 @@
             this.baptism_panel.Controls.Add(this.cancel_baptism_button);
             this.baptism_panel.Controls.Add(this.approve_baptism_button);
             this.baptism_panel.Controls.Add(this.panel7);
-            this.baptism_panel.Controls.Add(this.dataGridView2);
+            this.baptism_panel.Controls.Add(this.baptism_requirement_dgv);
             this.baptism_panel.Controls.Add(this.label93);
             this.baptism_panel.Controls.Add(this.label39);
             this.baptism_panel.Controls.Add(this.label32);
             this.baptism_panel.Controls.Add(this.panel6);
-            this.baptism_panel.Controls.Add(this.dataGridView1);
+            this.baptism_panel.Controls.Add(this.baptism_sponsor_dgv);
             this.baptism_panel.Location = new System.Drawing.Point(149, 0);
             this.baptism_panel.Name = "baptism_panel";
             this.baptism_panel.Size = new System.Drawing.Size(854, 508);
@@ -1336,13 +1336,13 @@
             this.label51.TabIndex = 37;
             this.label51.Text = "___";
             // 
-            // dataGridView2
+            // baptism_requirement_dgv
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(544, 244);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(297, 166);
-            this.dataGridView2.TabIndex = 47;
+            this.baptism_requirement_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.baptism_requirement_dgv.Location = new System.Drawing.Point(544, 244);
+            this.baptism_requirement_dgv.Name = "baptism_requirement_dgv";
+            this.baptism_requirement_dgv.Size = new System.Drawing.Size(297, 166);
+            this.baptism_requirement_dgv.TabIndex = 47;
             // 
             // label93
             // 
@@ -1377,18 +1377,18 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.radioButton2);
-            this.panel6.Controls.Add(this.radioButton1);
-            this.panel6.Controls.Add(this.textBox9);
-            this.panel6.Controls.Add(this.button5);
-            this.panel6.Controls.Add(this.button6);
-            this.panel6.Controls.Add(this.suffix_textbox_sponsor);
-            this.panel6.Controls.Add(this.lastname_textbox_sponsor);
-            this.panel6.Controls.Add(this.middlename_textbox_sponsor);
+            this.panel6.Controls.Add(this.genderF_radiobutton_sponsor_baptism);
+            this.panel6.Controls.Add(this.genderM_radiobutton_sponsor_baptism);
+            this.panel6.Controls.Add(this.residence_textbox_sponsor_baptism);
+            this.panel6.Controls.Add(this.delete_button_sponsor_baptism);
+            this.panel6.Controls.Add(this.add_button_sponsor_baptism);
+            this.panel6.Controls.Add(this.suffix_textbox_sponsor_baptism);
+            this.panel6.Controls.Add(this.lastname_textbox_sponsor_baptism);
+            this.panel6.Controls.Add(this.middlename_textbox_sponsor_baptism);
             this.panel6.Controls.Add(this.label37);
             this.panel6.Controls.Add(this.label35);
             this.panel6.Controls.Add(this.label36);
-            this.panel6.Controls.Add(this.firstname_textbox_sponsor);
+            this.panel6.Controls.Add(this.firstname_textbox_sponsor_baptism);
             this.panel6.Controls.Add(this.label38);
             this.panel6.Controls.Add(this.label40);
             this.panel6.Controls.Add(this.label41);
@@ -1400,91 +1400,91 @@
             this.panel6.Size = new System.Drawing.Size(525, 166);
             this.panel6.TabIndex = 45;
             // 
-            // radioButton2
+            // genderF_radiobutton_sponsor_baptism
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(90, 129);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(67, 21);
-            this.radioButton2.TabIndex = 49;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.genderF_radiobutton_sponsor_baptism.AutoSize = true;
+            this.genderF_radiobutton_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderF_radiobutton_sponsor_baptism.Location = new System.Drawing.Point(90, 129);
+            this.genderF_radiobutton_sponsor_baptism.Name = "genderF_radiobutton_sponsor_baptism";
+            this.genderF_radiobutton_sponsor_baptism.Size = new System.Drawing.Size(67, 21);
+            this.genderF_radiobutton_sponsor_baptism.TabIndex = 49;
+            this.genderF_radiobutton_sponsor_baptism.TabStop = true;
+            this.genderF_radiobutton_sponsor_baptism.Text = "Female";
+            this.genderF_radiobutton_sponsor_baptism.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // genderM_radiobutton_sponsor_baptism
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(91, 102);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(55, 21);
-            this.radioButton1.TabIndex = 49;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.genderM_radiobutton_sponsor_baptism.AutoSize = true;
+            this.genderM_radiobutton_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderM_radiobutton_sponsor_baptism.Location = new System.Drawing.Point(91, 102);
+            this.genderM_radiobutton_sponsor_baptism.Name = "genderM_radiobutton_sponsor_baptism";
+            this.genderM_radiobutton_sponsor_baptism.Size = new System.Drawing.Size(55, 21);
+            this.genderM_radiobutton_sponsor_baptism.TabIndex = 49;
+            this.genderM_radiobutton_sponsor_baptism.TabStop = true;
+            this.genderM_radiobutton_sponsor_baptism.Text = "Male";
+            this.genderM_radiobutton_sponsor_baptism.UseVisualStyleBackColor = true;
             // 
-            // textBox9
+            // residence_textbox_sponsor_baptism
             // 
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(274, 107);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(94, 16);
-            this.textBox9.TabIndex = 47;
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.residence_textbox_sponsor_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.residence_textbox_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.residence_textbox_sponsor_baptism.Location = new System.Drawing.Point(274, 107);
+            this.residence_textbox_sponsor_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.residence_textbox_sponsor_baptism.Name = "residence_textbox_sponsor_baptism";
+            this.residence_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 16);
+            this.residence_textbox_sponsor_baptism.TabIndex = 47;
+            this.residence_textbox_sponsor_baptism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button5
+            // delete_button_sponsor_baptism
             // 
-            this.button5.Location = new System.Drawing.Point(411, 87);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(88, 27);
-            this.button5.TabIndex = 46;
-            this.button5.Text = "Delete";
-            this.button5.UseVisualStyleBackColor = true;
+            this.delete_button_sponsor_baptism.Location = new System.Drawing.Point(411, 87);
+            this.delete_button_sponsor_baptism.Name = "delete_button_sponsor_baptism";
+            this.delete_button_sponsor_baptism.Size = new System.Drawing.Size(88, 27);
+            this.delete_button_sponsor_baptism.TabIndex = 46;
+            this.delete_button_sponsor_baptism.Text = "Delete";
+            this.delete_button_sponsor_baptism.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // add_button_sponsor_baptism
             // 
-            this.button6.Location = new System.Drawing.Point(411, 38);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(88, 27);
-            this.button6.TabIndex = 45;
-            this.button6.Text = "Add";
-            this.button6.UseVisualStyleBackColor = true;
+            this.add_button_sponsor_baptism.Location = new System.Drawing.Point(411, 38);
+            this.add_button_sponsor_baptism.Name = "add_button_sponsor_baptism";
+            this.add_button_sponsor_baptism.Size = new System.Drawing.Size(88, 27);
+            this.add_button_sponsor_baptism.TabIndex = 45;
+            this.add_button_sponsor_baptism.Text = "Add";
+            this.add_button_sponsor_baptism.UseVisualStyleBackColor = true;
             // 
-            // suffix_textbox_sponsor
+            // suffix_textbox_sponsor_baptism
             // 
-            this.suffix_textbox_sponsor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.suffix_textbox_sponsor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suffix_textbox_sponsor.Location = new System.Drawing.Point(350, 28);
-            this.suffix_textbox_sponsor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.suffix_textbox_sponsor.Name = "suffix_textbox_sponsor";
-            this.suffix_textbox_sponsor.Size = new System.Drawing.Size(21, 16);
-            this.suffix_textbox_sponsor.TabIndex = 23;
-            this.suffix_textbox_sponsor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.suffix_textbox_sponsor_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.suffix_textbox_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suffix_textbox_sponsor_baptism.Location = new System.Drawing.Point(350, 28);
+            this.suffix_textbox_sponsor_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.suffix_textbox_sponsor_baptism.Name = "suffix_textbox_sponsor_baptism";
+            this.suffix_textbox_sponsor_baptism.Size = new System.Drawing.Size(21, 16);
+            this.suffix_textbox_sponsor_baptism.TabIndex = 23;
+            this.suffix_textbox_sponsor_baptism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lastname_textbox_sponsor
+            // lastname_textbox_sponsor_baptism
             // 
-            this.lastname_textbox_sponsor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lastname_textbox_sponsor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastname_textbox_sponsor.Location = new System.Drawing.Point(256, 28);
-            this.lastname_textbox_sponsor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.lastname_textbox_sponsor.Name = "lastname_textbox_sponsor";
-            this.lastname_textbox_sponsor.Size = new System.Drawing.Size(94, 16);
-            this.lastname_textbox_sponsor.TabIndex = 24;
-            this.lastname_textbox_sponsor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lastname_textbox_sponsor_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lastname_textbox_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastname_textbox_sponsor_baptism.Location = new System.Drawing.Point(256, 28);
+            this.lastname_textbox_sponsor_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lastname_textbox_sponsor_baptism.Name = "lastname_textbox_sponsor_baptism";
+            this.lastname_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 16);
+            this.lastname_textbox_sponsor_baptism.TabIndex = 24;
+            this.lastname_textbox_sponsor_baptism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // middlename_textbox_sponsor
+            // middlename_textbox_sponsor_baptism
             // 
-            this.middlename_textbox_sponsor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.middlename_textbox_sponsor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.middlename_textbox_sponsor.Location = new System.Drawing.Point(162, 28);
-            this.middlename_textbox_sponsor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.middlename_textbox_sponsor.Name = "middlename_textbox_sponsor";
-            this.middlename_textbox_sponsor.Size = new System.Drawing.Size(94, 16);
-            this.middlename_textbox_sponsor.TabIndex = 22;
-            this.middlename_textbox_sponsor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.middlename_textbox_sponsor_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.middlename_textbox_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.middlename_textbox_sponsor_baptism.Location = new System.Drawing.Point(162, 28);
+            this.middlename_textbox_sponsor_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.middlename_textbox_sponsor_baptism.Name = "middlename_textbox_sponsor_baptism";
+            this.middlename_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 16);
+            this.middlename_textbox_sponsor_baptism.TabIndex = 22;
+            this.middlename_textbox_sponsor_baptism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label37
             // 
@@ -1509,23 +1509,23 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(-2, 25);
+            this.label36.Location = new System.Drawing.Point(1, 25);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(68, 21);
             this.label36.TabIndex = 27;
             this.label36.Text = "Sponsor";
             // 
-            // firstname_textbox_sponsor
+            // firstname_textbox_sponsor_baptism
             // 
-            this.firstname_textbox_sponsor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstname_textbox_sponsor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstname_textbox_sponsor.Location = new System.Drawing.Point(68, 28);
-            this.firstname_textbox_sponsor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.firstname_textbox_sponsor.Name = "firstname_textbox_sponsor";
-            this.firstname_textbox_sponsor.Size = new System.Drawing.Size(94, 16);
-            this.firstname_textbox_sponsor.TabIndex = 13;
-            this.firstname_textbox_sponsor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.firstname_textbox_sponsor_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.firstname_textbox_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstname_textbox_sponsor_baptism.Location = new System.Drawing.Point(68, 28);
+            this.firstname_textbox_sponsor_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.firstname_textbox_sponsor_baptism.Name = "firstname_textbox_sponsor_baptism";
+            this.firstname_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 16);
+            this.firstname_textbox_sponsor_baptism.TabIndex = 13;
+            this.firstname_textbox_sponsor_baptism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label38
             // 
@@ -1585,14 +1585,15 @@
             this.label34.TabIndex = 48;
             this.label34.Text = "_______________";
             // 
-            // dataGridView1
+            // baptism_sponsor_dgv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(544, 39);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(297, 166);
-            this.dataGridView1.TabIndex = 44;
+            this.baptism_sponsor_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.baptism_sponsor_dgv.Location = new System.Drawing.Point(544, 39);
+            this.baptism_sponsor_dgv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.baptism_sponsor_dgv.Name = "baptism_sponsor_dgv";
+            this.baptism_sponsor_dgv.Size = new System.Drawing.Size(297, 166);
+            this.baptism_sponsor_dgv.TabIndex = 44;
+            this.baptism_sponsor_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.baptism_sponsor_dgv_CellClick);
             // 
             // confirmation_panel
             // 
@@ -2954,17 +2955,18 @@
             this.Controls.Add(this.cancel_button);
             this.Controls.Add(this.save_button);
             this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.basic_panel);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.marriage_panel);
             this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.balance_panel);
+            this.Controls.Add(this.basic_panel);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Person";
             this.Text = "Person";
+            this.Load += new System.EventHandler(this.Person_Load);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -2977,10 +2979,10 @@
             this.baptism_panel.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baptism_requirement_dgv)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baptism_sponsor_dgv)).EndInit();
             this.confirmation_panel.ResumeLayout(false);
             this.confirmation_panel.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -3076,28 +3078,28 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Panel basic_panel;
         private System.Windows.Forms.Panel baptism_panel;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView baptism_requirement_dgv;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox suffix_textbox_sponsor;
-        private System.Windows.Forms.TextBox lastname_textbox_sponsor;
-        private System.Windows.Forms.TextBox middlename_textbox_sponsor;
+        private System.Windows.Forms.RadioButton genderF_radiobutton_sponsor_baptism;
+        private System.Windows.Forms.RadioButton genderM_radiobutton_sponsor_baptism;
+        private System.Windows.Forms.TextBox residence_textbox_sponsor_baptism;
+        private System.Windows.Forms.Button delete_button_sponsor_baptism;
+        private System.Windows.Forms.Button add_button_sponsor_baptism;
+        private System.Windows.Forms.TextBox suffix_textbox_sponsor_baptism;
+        private System.Windows.Forms.TextBox lastname_textbox_sponsor_baptism;
+        private System.Windows.Forms.TextBox middlename_textbox_sponsor_baptism;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox firstname_textbox_sponsor;
+        private System.Windows.Forms.TextBox firstname_textbox_sponsor_baptism;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView baptism_sponsor_dgv;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Button button7;

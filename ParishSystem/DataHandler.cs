@@ -264,14 +264,7 @@ namespace ParishSystem
             return runNonQuery(q);
         }
 
-        public bool isBaptized(int profileID)
-        {
-            string q = "SELECT COUNT(*) FROM Sacrament JOIN Baptism ON sacrament.sacramentID = baptism.sacramentID"
-                +" WHERE sacrament.profileID = " + profileID;
-            DataTable dt = runQuery(q);
-
-            return int.Parse(dt.Rows[0][0].ToString()) > 0;
-        }
+        
 
         public bool isConfirmed(int profileID)
         {
@@ -1025,6 +1018,15 @@ namespace ParishSystem
         */
 
         #region
+
+        public bool isBaptized(int profileID)
+        {
+            string q = "SELECT COUNT(*) FROM Baptism   WHERE profileID = " + profileID;
+            DataTable dt = runQuery(q);
+
+            return int.Parse(dt.Rows[0][0].ToString()) > 0;
+        }
+
         public bool addBaptism(int applicationID, int ministerID, int legitimacy, DateTime baptismDate)
         {
             string q = "INSERT INTO Baptism(applicationID, ministerID, legitimacy, baptismDate) VALUES ('" 
@@ -1927,6 +1929,36 @@ namespace ParishSystem
         }
 
 
+
+        //-------------functions i need-----------------------//
+
+        public bool hasBaptismApplication(int ProfileID)
+        {
+            return true;
+        }
+
+        public bool hasConfirmaionApplication(int ProfileID)
+        {
+            return true;
+        }
+
+        public bool hasMarriageApplication(int ProfileID)
+        {
+            return true;
+        } 
+        public void deleteParent(int parentID)
+        {
+            
+        }
+        public DataTable getMother(int ProfileID) { return new DataTable(); }
+
+        public DataTable getFather(int ProfileID) { return new DataTable(); }
+
+        public DataTable getSponsors(string sacrament,int ProfileID)
+        {
+            return new DataTable();
+            //please add a column to format the names to be fn mn ln sf, but use select * parin
+        }
     }
 
 }
