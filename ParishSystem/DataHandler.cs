@@ -120,6 +120,34 @@ namespace ParishSystem
             // *Still record changes to log or nah?
             return runNonQuery(q);
         }
+
+        public DateTime toDateTime(string s, bool timePortion)
+        {
+            Char c = ' ';
+            string[] components = s.Split(' ');
+            string[] date = components[0].Split('/');
+            int month = int.Parse(date[0]);
+            int day = int.Parse(date[1]);
+            int year = int.Parse(date[2]);
+
+            if (timePortion)
+            {
+                string[] time = components[1].Split(':');
+
+                int hour = int.Parse(time[0]) % 12;
+                if (components[components.Length - 1] == "PM")
+                    hour += 12;
+
+                int min = int.Parse(time[1]);
+                int sec = int.Parse(time[2]);
+
+                return new DateTime(year, month, day, hour, min, sec);
+            }
+
+            return new DateTime(year, month, day);
+
+        }
+
         #endregion
         /*
                                          =============================================================
