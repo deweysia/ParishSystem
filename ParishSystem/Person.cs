@@ -22,24 +22,7 @@ namespace ParishSystem
            
         }
 		#region GUI basic
-		private void panel_change(object sender, EventArgs e)
-		{
-			basic_panel.Hide();
-			baptism_panel.Hide();
-			confirmation_panel.Hide();
-			marriage_panel.Hide();
-			balance_panel.Hide();
-			bloodletting_panel.Hide();
-
-			Button button = sender as Button;
-			if (button.Text == "Biodata") { basic_panel.Show(); load_Biodata(); }
-			else if (button.Text == "Baptism") { baptism_panel.Show(); }
-			else if (button.Text == "Confirmation") { confirmation_panel.Show(); }
-			else if (button.Text == "Marriage") { marriage_panel.Show(); }
-			else if (button.Text == "Balance") { balance_panel.Show(); }
-			else if (button.Text == "Bloodletting") { bloodletting_panel.Show(); }
-
-		}
+		
 
 		private void cancel_button_Click(object sender, EventArgs e)
 		{
@@ -73,7 +56,7 @@ namespace ParishSystem
 		private void load_Biodata() {
 
 			DataTable TempDT = dh.getGeneralProfile(ProfileID);
-
+			//LOAD PERSON
 			if (!(TempDT.Rows[0]["gender"].Equals(null)))
 			{
 				if (TempDT.Rows[0]["gender"].ToString() == "m")
@@ -89,13 +72,48 @@ namespace ParishSystem
 			address_baptist_textarea.Text = TempDT.Rows[0]["address"].ToString();
 			contactNumber_textbox_baptist.Text= TempDT.Rows[0]["contactNumber"].ToString();
 			bloodtype_combobox_baptist.SelectedIndex = int.Parse(TempDT.Rows[0]["bloodType"].ToString());
-			//birthdate_datetimepicker_baptist.Value = new DateTime();
-			//string[] balance = TempDT.Rows[0]["birthdate"].ToString().Split('/');
-			int[] a =new int[3];
-			
 			Console.WriteLine(TempDT.Rows[0]["birthdate"].ToString());
+			
+			//==================================================================================================================insert birthdate
+			//LOAD FATHER
+			DataTable TempFatherDT = dh.getParentsOf(ProfileID);
+			//==================================================================================================================change get parents of function
+			firstname_textbox_father.Text = TempFatherDT.Rows[0]["firstname"].ToString();
+			middlename_textbox_father.Text = TempFatherDT.Rows[0]["midname"].ToString();
+			lastname_textbox_father.Text = TempFatherDT.Rows[0]["lastname"].ToString();
+			suffix_textbox_father.Text = TempFatherDT.Rows[0]["suffix"].ToString();
+			birthplace_textbox_father.Text = TempFatherDT.Rows[0]["birthplace"].ToString();
+			residence_textbox_father.Text= TempFatherDT.Rows[0]["residence"].ToString();
+
+			//LOAD MOTHER
+			DataTable TempMotherDT = dh.getParentsOf(ProfileID);
+			//==================================================================================================================change get parents of function
+			firstname_textbox_mother.Text = TempMotherDT.Rows[0]["firstname"].ToString();
+			middlename_textbox_mother.Text = TempMotherDT.Rows[0]["midname"].ToString();
+			lastname_textbox_mother.Text = TempMotherDT.Rows[0]["lastname"].ToString();
+			suffix_textbox_mother.Text = TempMotherDT.Rows[0]["suffix"].ToString();
+			birthplace_textbox_mother.Text = TempMotherDT.Rows[0]["birthplace"].ToString();
+			residence_textbox_mother.Text = TempMotherDT.Rows[0]["residence"].ToString();
+			
 		}
-		
+
+
 		#endregion
-	}
+
+		private void biodata_button_Click(object sender, EventArgs e)
+		{
+            load_Biodata();
+            
+		}
+
+		private void baptism_button_Click(object sender, EventArgs e)
+		{
+		
+		}
+
+        private void basic_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
 }
