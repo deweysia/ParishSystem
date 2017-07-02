@@ -37,19 +37,51 @@ namespace ParishSystem
 			char gender = 'z';
 			if (gender_radiobutton1_baptist.Checked == true) { gender = 'm'; }
 			else if (gender_radiobutton2_baptist.Checked == true) { gender = 'f'; }
-			dh.editGeneralProfile(
-				ProfileID,
-				firstname_textbox.Text,
-				middlename_textbox.Text,
-				lastname_textbox.Text,
-				suffix_textbox.Text,
-				gender,
-				birthdate_datetimepicker_baptist.Value,
-				contactNumber_textbox_baptist.Text,
-				address_baptist_textarea.Text,
-				birthplace_textbox_baptist.Text,
-				bloodtype_combobox_baptist.SelectedValue.ToString());
+            dh.editGeneralProfile(
+                ProfileID,
+                firstname_textbox.Text,
+                middlename_textbox.Text,
+                lastname_textbox.Text,
+                suffix_textbox.Text,
+                gender,
+                birthdate_datetimepicker_baptist.Value,
+                contactNumber_textbox_baptist.Text,
+                address_baptist_textarea.Text,
+                birthplace_textbox_baptist.Text,
+                bloodtype_combobox_baptist.Text
+                );
+            
+
+            if (father_checkbox.Checked == true)
+            {
+                try
+                {
+                   
+                    int fatherID = int.Parse(dh.getFatherOf(ProfileID).Rows[0]["parentID"].ToString());
+                    dh.editParent(fatherID, firstname_textbox_father.Text, middlename_textbox_father.Text, lastname_textbox_father.Text, suffix_textbox_father.Text, 'm', birthplace_textbox_father.Text);
+                }
+               catch
+                {
+                    dh.conn.Close();
+                    dh.addParent(ProfileID, firstname_textbox_father.Text, middlename_textbox_father.Text, lastname_textbox_father.Text, suffix_textbox_father.Text, 'm', birthplace_textbox_father.Text);
+                }
+            }
+
+            if(mother_checkbox.Checked== true)
+            {
+                try
+                {
+                    int motherID = int.Parse(dh.getMotherOf(ProfileID).Rows[0]["parentID"].ToString());
+                    dh.editParent(motherID, firstname_textbox_father.Text, middlename_textbox_father.Text, lastname_textbox_father.Text, suffix_textbox_father.Text, 'f', birthplace_textbox_father.Text);
+                }
+                catch
+                {
+                    dh.conn.Close();
+                    dh.addParent(ProfileID, firstname_textbox_father.Text, middlename_textbox_father.Text, lastname_textbox_father.Text, suffix_textbox_father.Text, 'f', birthplace_textbox_father.Text);
+                }
+            }
 		}
+            
         #endregion
 
         #region Loads
@@ -58,7 +90,7 @@ namespace ParishSystem
 
             DataTable TempDT = dh.getGeneralProfile(ProfileID);
             //LOAD PERSON
-            if (!(TempDT.Rows[0]["gender"].Equals(null)))
+            if (!(TempDT.Rows[0]["gender"]==null))
             {
                 if (TempDT.Rows[0]["gender"].ToString() == "m")
                     gender_radiobutton1_baptist.Checked = true;
@@ -72,8 +104,18 @@ namespace ParishSystem
             birthplace_textbox_baptist.Text = TempDT.Rows[0]["birthplace"].ToString();
             address_baptist_textarea.Text = TempDT.Rows[0]["address"].ToString();
             contactNumber_textbox_baptist.Text = TempDT.Rows[0]["contactNumber"].ToString();
-            bloodtype_combobox_baptist.SelectedItem = TempDT.Rows[0]["bloodType"].ToString();
-            //birthdate_datetimepicker_baptist.Value = dh.toDateTime(TempDT.Rows[0]["birthdate"].ToString(),false);<<<<<<<<<<<<<<<<<<<<<<<<DEWEY HERE
+            bloodtype_combobox_baptist.SelectedItem = TempDT.Rows[0]["bloodType"].ToString();     
+            try
+            {
+                    birthdate_datetimepicker_baptist.Format = DateTimePickerFormat.Short;
+                    birthdate_datetimepicker_baptist.Value = dh.toDateTime(TempDT.Rows[0]["birthdate"].ToString(), false);
+            }
+            catch
+            {
+                    birthdate_datetimepicker_baptist.Format = DateTimePickerFormat.Custom;
+            }
+            //Console.WriteLine(TempDT.Rows[0]["birthdate"].ToString());
+           
 
             //LOAD FATHER
             if (dh.getFatherOf(ProfileID).Rows.Count != 0)
@@ -85,6 +127,9 @@ namespace ParishSystem
                 suffix_textbox_father.Text = TempFatherDT.Rows[0]["suffix"].ToString();
                 birthplace_textbox_father.Text = TempFatherDT.Rows[0]["birthplace"].ToString();
                 residence_textbox_father.Text = TempFatherDT.Rows[0]["residence"].ToString();
+                father_checkbox.Checked = true;
+                father_checkbox.Enabled = false;
+                
             }
 
             //LOAD MOTHER
@@ -97,6 +142,8 @@ namespace ParishSystem
                 suffix_textbox_mother.Text = TempMotherDT.Rows[0]["suffix"].ToString();
                 birthplace_textbox_mother.Text = TempMotherDT.Rows[0]["birthplace"].ToString();
                 residence_textbox_mother.Text = TempMotherDT.Rows[0]["residence"].ToString();
+                mother_checkbox.Checked = true;
+                mother_checkbox.Enabled = false;
 
             }
         }
@@ -123,7 +170,7 @@ namespace ParishSystem
             baptism_requirement_dgv.DataSource = dh.getRequirementsFor("bap");
             foreach (DataGridViewRow row in baptism_requirement_dgv.Rows)
             {
-                if(row.Cells[0].Value=="false")<<<<<<<
+                if(row.Cells[0].Value=="false")
                 row.Cells["Complied"].Value=true;
             }
           
@@ -218,7 +265,7 @@ namespace ParishSystem
             }
             else
             {
-                dh.addApplication(ProfileID, "conf");
+                dh.addApplication(ProfileID, "con");
             }
         }
 
@@ -250,6 +297,18 @@ namespace ParishSystem
             if (dh.hasMarriageApplication(ProfileID)) { marriage_button.BackColor = Color.Green; } else { marriage_button.BackColor = Color.Red; }
             if (dh.hasConfirmationApplication(ProfileID)) { confirmation_button.BackColor = Color.Green; } else { confirmation_button.BackColor = Color.Red; }
 
+        }
+
+        private void birthdate_datetimepicker_baptist_ValueChanged(object sender, EventArgs e)
+        {
+            DateTimePicker dtp = sender as DateTimePicker;
+            try {
+                birthdate_datetimepicker_baptist.Format = DateTimePickerFormat.Short;     
+            }
+            catch
+            {
+                birthdate_datetimepicker_baptist.Format = DateTimePickerFormat.Custom;
+            }
         }
     }
 }

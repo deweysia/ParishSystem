@@ -15,7 +15,7 @@ namespace ParishSystem
         public MySqlConnection conn;
         public MySqlCommand com;
 
-        private int userID=1;//change kasi tamad si dewey
+        private int userID=1;
 
 
         //MySqlConnection connect = new MySqlConnection("server=localhost; database=luttop; user=root; password=1234; pooling = false; convert zero datetime=True");
@@ -39,7 +39,7 @@ namespace ParishSystem
             com = new MySqlCommand(q, conn);
             int rowsAffected = com.ExecuteNonQuery();
             conn.Close();
-            Console.Write(q);
+            Console.WriteLine(q);
             return rowsAffected > 0;
         }
 
@@ -51,6 +51,7 @@ namespace ParishSystem
             DataTable dt = new DataTable();
             adp.Fill(dt);
             conn.Close();
+            Console.WriteLine(q);
             return dt;
         }
 
@@ -663,11 +664,11 @@ namespace ParishSystem
 
         public bool editParent(int parentID, string firstName, string midName, string lastName, string suffix, char gender, string birthPlace)
         {
-            string q = "UPDATE TABLE Parent SET  firstName = '"+ firstName 
+            string q = "UPDATE Parent SET  firstName = '"+ firstName 
                 + "',  midName = '"+ midName + "',  lastName = '"+ lastName 
                 + "',  suffix = '"+ suffix + "' , gender = '"+ gender + "',  birthPlace = '"+ birthPlace 
                 + "' WHERE parentID = '" + parentID + "' ";
-
+            
             return runNonQuery(q);
         }
 
@@ -725,25 +726,7 @@ namespace ParishSystem
             return int.Parse(dt.Rows[0][0].ToString());
         }
 
-        public DataTable getMotherOf(int profileID)
-        {
-            string q = "SELECT * FROM Parent WHERE gender = 'F' AND profileID = '" + profileID + "'";
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
-
-        public DataTable getFatherOf(int profileID)
-        {
-            string q = "SELECT * FROM Parent WHERE gender = 'M' AND profileID = '" + profileID + "'";
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
+       
         public bool deleteParent(int parentID)
         {
             string q = "DELETE FROM Parent WHERE parentID = " + parentID;
@@ -2056,10 +2039,30 @@ namespace ParishSystem
             return dt;
         }
 
-        
+
 
 
         //-------------functions i need-----------------------//
+
+        public DataTable getMotherOf(int profileID)
+        {
+            string q = "SELECT * FROM Parent WHERE gender = 'F' AND profileID = '" + profileID + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+
+        public DataTable getFatherOf(int profileID)
+        {
+            string q = "SELECT * FROM Parent WHERE gender = 'M' AND profileID = '" + profileID + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
 
         public bool hasBaptismApplication(int ProfileID)
         {
@@ -2098,6 +2101,7 @@ namespace ParishSystem
             return new DataTable();
             
         }
+        
     }
 
 }
