@@ -710,6 +710,21 @@ namespace ParishSystem
             return dt;
         }
 
+        public int getParentID(string firstName, string midName, string lastName, string suffix, char gender, string birthPlace)
+        {
+            string q = "SELECT parentID from Parent WHERE firstName = '" + firstName
+                + "' AND midName = '" + midName + "' AND lastName = '" + lastName
+                + "' AND suffix = '" + suffix + "' AND  gender = '" + gender
+                + "' AND birthPlace = '" + birthPlace + "'";
+
+            DataTable dt = runQuery(q);
+
+            if (dt.Rows.Count == 0)
+                return -1;
+
+            return int.Parse(dt.Rows[0][0].ToString());
+        }
+
         public DataTable getMotherOf(int profileID)
         {
             string q = "SELECT * FROM Parent WHERE gender = 'F' AND profileID = '" + profileID + "'";
@@ -729,20 +744,13 @@ namespace ParishSystem
             return dt;
         }
 
-
-        public int getParentID(string firstName, string midName, string lastName, string suffix, char gender, string birthPlace)
+        public bool deleteParent(int parentID)
         {
-            string q = "SELECT parentID from Parent WHERE firstName = '" + firstName
-                + "' AND midName = '" + midName + "' AND lastName = '" + lastName
-                + "' AND suffix = '" + suffix + "' AND  gender = '" + gender
-                + "' AND birthPlace = '" + birthPlace + "'";
+            string q = "DELETE FROM Parent WHERE parentID = " + parentID;
 
-            DataTable dt = runQuery(q);
+            bool success = runNonQuery(q);
 
-            if (dt.Rows.Count == 0)
-                return -1;
-
-            return int.Parse(dt.Rows[0][0].ToString());
+            return success;
         }
 
 
@@ -2067,10 +2075,6 @@ namespace ParishSystem
         {
             return true;
         } 
-        public void deleteParent(int parentID)
-        {
-            
-        }
        
 
 
