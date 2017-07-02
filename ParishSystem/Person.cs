@@ -118,10 +118,18 @@ namespace ParishSystem
                 page_baptism_textbox.Text = temp.Rows[0]["pageNumber"].ToString();
                 record_baptism_textbox.Text = temp.Rows[0]["recordNumber"].ToString();
             }
-            //baptism_sponsor_dgv.DataSource = dh.getSponsors(ProfileID,"bap");
+            baptism_sponsor_dgv.DataSource = dh.getSponsors(ProfileID,"bap");
 
-
-
+            baptism_requirement_dgv.DataSource = dh.getRequirementsFor("bap");
+            foreach (DataGridViewRow row in baptism_requirement_dgv.Rows)
+            {
+                if(row.Cells[0].Value=="false")<<<<<<<
+                row.Cells["Complied"].Value=true;
+            }
+          
+            baptism_requirement_dgv.Columns["requirementID"].Visible = false;
+            baptism_requirement_dgv.Columns["sacramentType"].Visible = false;
+            baptism_requirement_dgv.Columns["requirementName"].HeaderText = "Requirement";
         }
 
         public void load_Confirmation()

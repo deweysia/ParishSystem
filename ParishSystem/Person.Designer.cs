@@ -277,6 +277,7 @@
             this.label110 = new System.Windows.Forms.Label();
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.dataGridView9 = new System.Windows.Forms.DataGridView();
+            this.Complied = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -1132,7 +1133,7 @@
             this.textBox30.Location = new System.Drawing.Point(377, 420);
             this.textBox30.Multiline = true;
             this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(447, 81);
+            this.textBox30.Size = new System.Drawing.Size(463, 81);
             this.textBox30.TabIndex = 51;
             // 
             // label52
@@ -1340,6 +1341,8 @@
             // baptism_requirement_dgv
             // 
             this.baptism_requirement_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.baptism_requirement_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Complied});
             this.baptism_requirement_dgv.Location = new System.Drawing.Point(544, 244);
             this.baptism_requirement_dgv.Name = "baptism_requirement_dgv";
             this.baptism_requirement_dgv.Size = new System.Drawing.Size(297, 166);
@@ -1349,7 +1352,7 @@
             // 
             this.label93.AutoSize = true;
             this.label93.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label93.Location = new System.Drawing.Point(280, 426);
+            this.label93.Location = new System.Drawing.Point(280, 420);
             this.label93.Name = "label93";
             this.label93.Size = new System.Drawing.Size(91, 30);
             this.label93.TabIndex = 46;
@@ -1666,10 +1669,10 @@
             // textBox31
             // 
             this.textBox31.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox31.Location = new System.Drawing.Point(256, 357);
+            this.textBox31.Location = new System.Drawing.Point(360, 357);
             this.textBox31.Multiline = true;
             this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(585, 140);
+            this.textBox31.Size = new System.Drawing.Size(481, 140);
             this.textBox31.TabIndex = 51;
             // 
             // label53
@@ -1886,7 +1889,7 @@
             // 
             this.label94.AutoSize = true;
             this.label94.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label94.Location = new System.Drawing.Point(155, 356);
+            this.label94.Location = new System.Drawing.Point(260, 357);
             this.label94.Name = "label94";
             this.label94.Size = new System.Drawing.Size(91, 30);
             this.label94.TabIndex = 46;
@@ -2948,6 +2951,11 @@
             this.dataGridView9.Size = new System.Drawing.Size(573, 196);
             this.dataGridView9.TabIndex = 0;
             // 
+            // Complied
+            // 
+            this.Complied.HeaderText = "";
+            this.Complied.Name = "Complied";
+            // 
             // Person
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -3264,5 +3272,6 @@
         private System.Windows.Forms.Label label110;
         private System.Windows.Forms.DataGridView dataGridView10;
         private System.Windows.Forms.DataGridView dataGridView9;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Complied;
     }
 }

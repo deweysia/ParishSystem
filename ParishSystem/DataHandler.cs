@@ -1817,7 +1817,7 @@ namespace ParishSystem
 
         public DataTable getRequirementsFor(string sacramentType)
         {
-            string q = "SELECT * FROM Requirement WHERE sacramentType = " + sacramentType;
+            string q = "SELECT * FROM Requirement WHERE sacramentType = '" + sacramentType+ "'";
 
             DataTable dt = runQuery(q);
 
@@ -1979,7 +1979,7 @@ namespace ParishSystem
 
         public DataTable getFather(int ProfileID) { return new DataTable(); }
 
-        public DataTable getSponsors(string sacrament,int applicationID)
+        public DataTable getSponsors(int applicationID,string sacrament)
         {
             return new DataTable();
             //please add a column to format the names to be fn mn ln sf, but use select * parin
@@ -1997,6 +1997,7 @@ namespace ParishSystem
         public DataTable getMinisters()
         {
             return new DataTable();
+            
         }
     }
 
