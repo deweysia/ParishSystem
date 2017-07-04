@@ -417,6 +417,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SAD";
             this.Text = "SAD";
+            this.Load += new System.EventHandler(this.SAD_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.home_panel.ResumeLayout(false);
             this.home_panel.PerformLayout();

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace ParishSystem
 {
@@ -18,7 +19,7 @@ namespace ParishSystem
         private int userID=1;
 
 
-        //MySqlConnection connect = new MySqlConnection("server=localhost; database=luttop; user=root; password=1234; pooling = false; convert zero datetime=True");
+      //  MySqlConnection connect = new MySqlConnection("server=localhost; database=sad2; user=root; password=root; pooling = false; convert zero datetime=True");
         public DataHandler(string server, string database, string user, string password ,int UserID)
         {
             conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True;");
@@ -29,6 +30,9 @@ namespace ParishSystem
         {
             conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True;");
             this.userID = -1;
+
+            //MessageBox.Show("connected");
+            
         }
 
         //                                         ========[HELPER FUNCTIONS]=========
@@ -253,7 +257,7 @@ namespace ParishSystem
         public DataTable getGeneralProfiles()
         {
             string q = "SELECT firstname,midname,lastname,suffix, profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix) as Name FROM GeneralProfile";
-
+            MessageBox.Show("in getGeneralProfiles");
             DataTable dt = runQuery(q);
 
            
