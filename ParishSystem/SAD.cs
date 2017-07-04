@@ -120,7 +120,7 @@ namespace ParishSystem
  
         private void addProfile_button_Click(object sender, EventArgs e)
         {//adds basic profile with name values only 
-            if (dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, '0', DateTime.MinValue, null, null, null)) { refreshGeneralProfileTable(); }
+            if (dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, '0',DateTime.MinValue , null, null, null)) { refreshGeneralProfileTable(); }
             else { MessageBox.Show("Entry not added"); }
         }
 
@@ -145,8 +145,12 @@ namespace ParishSystem
 
 
 
+
         #endregion
 
-        
+        private void SAD_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

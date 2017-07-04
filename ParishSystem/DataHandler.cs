@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace ParishSystem
 {
@@ -15,11 +16,11 @@ namespace ParishSystem
         public MySqlConnection conn;
         public MySqlCommand com;
 
-        private int userID = 1;//change kasi tamad si dewey
+        private int userID=1;
 
 
-        //MySqlConnection connect = new MySqlConnection("server=localhost; database=luttop; user=root; password=1234; pooling = false; convert zero datetime=True");
-        public DataHandler(string server, string database, string user, string password, int UserID)
+      //  MySqlConnection connect = new MySqlConnection("server=localhost; database=sad2; user=root; password=root; pooling = false; convert zero datetime=True");
+        public DataHandler(string server, string database, string user, string password ,int UserID)
         {
             conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True;");
             userID = UserID;
@@ -29,6 +30,9 @@ namespace ParishSystem
         {
             conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True;");
             this.userID = -1;
+
+            //MessageBox.Show("connected");
+            
         }
 
         //                                         ========[HELPER FUNCTIONS]=========
@@ -39,7 +43,7 @@ namespace ParishSystem
             com = new MySqlCommand(q, conn);
             int rowsAffected = com.ExecuteNonQuery();
             conn.Close();
-            Console.Write(q);
+            Console.WriteLine(q);
             return rowsAffected > 0;
         }
 
@@ -51,6 +55,7 @@ namespace ParishSystem
             DataTable dt = new DataTable();
             adp.Fill(dt);
             conn.Close();
+            Console.WriteLine(q);
             return dt;
         }
 
@@ -251,8 +256,10 @@ namespace ParishSystem
 
         public DataTable getGeneralProfiles()
         {
-            string q = "SELECT profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix) as Name FROM GeneralProfile";
 
+            MessageBox.Show("in getGeneralProfiles");
+            string q = "SELECT profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix) as Name FROM GeneralProfile";
+            MessageBox.Show("in getGeneralProfiles");
             DataTable dt = runQuery(q);
 
 
@@ -663,11 +670,11 @@ namespace ParishSystem
 
         public bool editParent(int parentID, string firstName, string midName, string lastName, string suffix, char gender, string birthPlace)
         {
-            string q = "UPDATE TABLE Parent SET  firstName = '" + firstName
-                + "',  midName = '" + midName + "',  lastName = '" + lastName
-                + "',  suffix = '" + suffix + "' , gender = '" + gender + "',  birthPlace = '" + birthPlace
+            string q = "UPDATE TABLE Parent SET  firstName = '"+ firstName 
+                + "',  midName = '"+ midName + "',  lastName = '"+ lastName 
+                + "',  suffix = '"+ suffix + "' , gender = '"+ gender + "',  birthPlace = '"+ birthPlace 
                 + "' WHERE parentID = '" + parentID + "' ";
-
+            
             return runNonQuery(q);
         }
 
@@ -725,25 +732,7 @@ namespace ParishSystem
             return int.Parse(dt.Rows[0][0].ToString());
         }
 
-        public DataTable getMotherOf(int profileID)
-        {
-            string q = "SELECT * FROM Parent WHERE gender = 'F' AND profileID = '" + profileID + "'";
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
-
-        public DataTable getFatherOf(int profileID)
-        {
-            string q = "SELECT * FROM Parent WHERE gender = 'M' AND profileID = '" + profileID + "'";
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
+       
         public bool deleteParent(int parentID)
         {
             string q = "DELETE FROM Parent WHERE parentID = " + parentID;
@@ -1377,7 +1366,7 @@ namespace ParishSystem
             return dt;
         }
 
-        public DataTable getBaptismWithReference()
+        public DataTable getBaptismsWithReference()
         {
             string q = "SELECT profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix),"
                 + " gender, birthdate, remarks FROM Baptism"
@@ -2049,7 +2038,7 @@ namespace ParishSystem
 
         public DataTable getRequirementsFor(string sacramentType)
         {
-            string q = "SELECT * FROM Requirement WHERE sacramentType = " + sacramentType;
+            string q = "SELECT * FROM Requirement WHERE sacramentType = '" + sacramentType+ "'";
 
             DataTable dt = runQuery(q);
 
@@ -2186,7 +2175,27 @@ namespace ParishSystem
 
         //-------------functions i need-----------------------//
 
-        public bool hasBaptismApplication(int profileID)
+        public DataTable getMotherOf(int profileID)
+        {
+            string q = "SELECT * FROM Parent WHERE gender = 'F' AND profileID = '" + profileID + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+
+        public DataTable getFatherOf(int profileID)
+        {
+            string q = "SELECT * FROM Parent WHERE gender = 'M' AND profileID = '" + profileID + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+
+        public bool hasBaptismApplication(int ProfileID)
         {
             string q = "SELECT * FROM Application WHERE sacramentType = 'bap' AND profileID = " + profileID;
 
@@ -2194,7 +2203,7 @@ namespace ParishSystem
 
             return dt.Rows.Count > 0;
         }
-
+        
         public bool hasConfirmationApplication(int profileID)
         {
             string q = "SELECT * FROM Application WHERE sacramentType = 'con' AND profileID = " + profileID;
@@ -2214,7 +2223,6 @@ namespace ParishSystem
         }
 
 
-
         public DataTable getSponsors(int sacramentID, string sacramentType)
         {
 
@@ -2229,6 +2237,35 @@ namespace ParishSystem
 
 
         }
+        public DataTable getApplications(int profileID, string sacramentType)
+        {
+            string q = "SELECT CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix) AS Name, sacramentType, status "
+                +"FROM Application WHERE sacramentType = '"+ sacramentType + "' AND profileID = " + profileID;
+
+            DataTable dt = runQuery(q);
+
+            //this is only for baptism and conf
+            return dt;
+        }
+
+        public DataTable getApplications(int groomID, int brideID)
+        {
+            string q = "SELECT * FROM Application WHERE groomID = "+ groomID + " AND brideID = " + brideID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getMinisters()
+        {
+            string q = "SELECT ministerID, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix), birthdate, ministryType, status, licenseNumber, expirationDate FROM Minister";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+        
     }
 
 }

@@ -410,13 +410,14 @@
             this.Controls.Add(this.btn_Max);
             this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.home_panel);
             this.Controls.Add(this.profile_panel);
+            this.Controls.Add(this.home_panel);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SAD";
             this.Text = "SAD";
+            this.Load += new System.EventHandler(this.SAD_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.home_panel.ResumeLayout(false);
             this.home_panel.PerformLayout();
