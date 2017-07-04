@@ -61,6 +61,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.father_checkbox = new System.Windows.Forms.CheckBox();
             this.suffix_textbox_father = new System.Windows.Forms.TextBox();
             this.lastname_textbox_father = new System.Windows.Forms.TextBox();
             this.middlename_textbox_father = new System.Windows.Forms.TextBox();
@@ -77,6 +78,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.mother_checkbox = new System.Windows.Forms.CheckBox();
             this.suffix_textbox_mother = new System.Windows.Forms.TextBox();
             this.lastname_textbox_mother = new System.Windows.Forms.TextBox();
             this.middlename_textbox_mother = new System.Windows.Forms.TextBox();
@@ -93,12 +95,9 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.basic_panel = new System.Windows.Forms.Panel();
+            this.cancel_button = new System.Windows.Forms.Button();
+            this.save_button = new System.Windows.Forms.Button();
             this.baptism_panel = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.label99 = new System.Windows.Forms.Label();
-            this.label100 = new System.Windows.Forms.Label();
             this.textBox30 = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.exportCertificate_baptism_button = new System.Windows.Forms.Button();
@@ -245,8 +244,6 @@
             this.label82 = new System.Windows.Forms.Label();
             this.label92 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
-            this.save_button = new System.Windows.Forms.Button();
-            this.cancel_button = new System.Windows.Forms.Button();
             this.bloodletting_panel = new System.Windows.Forms.Panel();
             this.label108 = new System.Windows.Forms.Label();
             this.label107 = new System.Windows.Forms.Label();
@@ -276,8 +273,6 @@
             this.label110 = new System.Windows.Forms.Label();
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.dataGridView9 = new System.Windows.Forms.DataGridView();
-            this.father_checkbox = new System.Windows.Forms.CheckBox();
-            this.mother_checkbox = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -700,6 +695,16 @@
             this.panel1.Size = new System.Drawing.Size(851, 128);
             this.panel1.TabIndex = 30;
             // 
+            // father_checkbox
+            // 
+            this.father_checkbox.AutoSize = true;
+            this.father_checkbox.Location = new System.Drawing.Point(3, 3);
+            this.father_checkbox.Name = "father_checkbox";
+            this.father_checkbox.Size = new System.Drawing.Size(72, 25);
+            this.father_checkbox.TabIndex = 30;
+            this.father_checkbox.Text = "Father";
+            this.father_checkbox.UseVisualStyleBackColor = true;
+            // 
             // suffix_textbox_father
             // 
             this.suffix_textbox_father.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -877,6 +882,16 @@
             this.panel3.Size = new System.Drawing.Size(851, 128);
             this.panel3.TabIndex = 31;
             // 
+            // mother_checkbox
+            // 
+            this.mother_checkbox.AutoSize = true;
+            this.mother_checkbox.Location = new System.Drawing.Point(6, 5);
+            this.mother_checkbox.Name = "mother_checkbox";
+            this.mother_checkbox.Size = new System.Drawing.Size(80, 25);
+            this.mother_checkbox.TabIndex = 30;
+            this.mother_checkbox.Text = "Mother";
+            this.mother_checkbox.UseVisualStyleBackColor = true;
+            // 
             // suffix_textbox_mother
             // 
             this.suffix_textbox_mother.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1042,13 +1057,30 @@
             this.basic_panel.Size = new System.Drawing.Size(854, 557);
             this.basic_panel.TabIndex = 32;
             // 
+            // cancel_button
+            // 
+            this.cancel_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.cancel_button.Location = new System.Drawing.Point(542, 507);
+            this.cancel_button.Name = "cancel_button";
+            this.cancel_button.Size = new System.Drawing.Size(151, 39);
+            this.cancel_button.TabIndex = 53;
+            this.cancel_button.Text = "Cancel";
+            this.cancel_button.UseVisualStyleBackColor = false;
+            this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
+            // 
+            // save_button
+            // 
+            this.save_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.save_button.Location = new System.Drawing.Point(699, 507);
+            this.save_button.Name = "save_button";
+            this.save_button.Size = new System.Drawing.Size(151, 39);
+            this.save_button.TabIndex = 53;
+            this.save_button.Text = "Save";
+            this.save_button.UseVisualStyleBackColor = false;
+            this.save_button.Click += new System.EventHandler(this.saveGeneralProfile);
+            // 
             // baptism_panel
             // 
-            this.baptism_panel.Controls.Add(this.button3);
-            this.baptism_panel.Controls.Add(this.textBox36);
-            this.baptism_panel.Controls.Add(this.textBox37);
-            this.baptism_panel.Controls.Add(this.label99);
-            this.baptism_panel.Controls.Add(this.label100);
             this.baptism_panel.Controls.Add(this.textBox30);
             this.baptism_panel.Controls.Add(this.label52);
             this.baptism_panel.Controls.Add(this.exportCertificate_baptism_button);
@@ -1065,59 +1097,16 @@
             this.baptism_panel.Controls.Add(this.baptism_sponsor_dgv);
             this.baptism_panel.Location = new System.Drawing.Point(149, 0);
             this.baptism_panel.Name = "baptism_panel";
-            this.baptism_panel.Size = new System.Drawing.Size(854, 508);
+            this.baptism_panel.Size = new System.Drawing.Size(854, 557);
             this.baptism_panel.TabIndex = 33;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(85, 473);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(163, 30);
-            this.button3.TabIndex = 69;
-            this.button3.Text = "Add payment";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // textBox36
-            // 
-            this.textBox36.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox36.Location = new System.Drawing.Point(83, 401);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(165, 25);
-            this.textBox36.TabIndex = 67;
-            // 
-            // textBox37
-            // 
-            this.textBox37.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox37.Location = new System.Drawing.Point(83, 434);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(165, 25);
-            this.textBox37.TabIndex = 68;
-            // 
-            // label99
-            // 
-            this.label99.AutoSize = true;
-            this.label99.Location = new System.Drawing.Point(22, 404);
-            this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(44, 21);
-            this.label99.TabIndex = 65;
-            this.label99.Text = "Price";
-            // 
-            // label100
-            // 
-            this.label100.AutoSize = true;
-            this.label100.Location = new System.Drawing.Point(8, 435);
-            this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(63, 21);
-            this.label100.TabIndex = 66;
-            this.label100.Text = "Balance";
             // 
             // textBox30
             // 
             this.textBox30.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox30.Location = new System.Drawing.Point(377, 420);
+            this.textBox30.Location = new System.Drawing.Point(130, 420);
             this.textBox30.Multiline = true;
             this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(463, 81);
+            this.textBox30.Size = new System.Drawing.Size(710, 81);
             this.textBox30.TabIndex = 51;
             // 
             // label52
@@ -1341,7 +1330,7 @@
             // 
             this.label93.AutoSize = true;
             this.label93.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label93.Location = new System.Drawing.Point(280, 420);
+            this.label93.Location = new System.Drawing.Point(33, 413);
             this.label93.Name = "label93";
             this.label93.Size = new System.Drawing.Size(91, 30);
             this.label93.TabIndex = 46;
@@ -1445,6 +1434,7 @@
             this.add_button_sponsor_baptism.TabIndex = 45;
             this.add_button_sponsor_baptism.Text = "Add";
             this.add_button_sponsor_baptism.UseVisualStyleBackColor = true;
+            this.add_button_sponsor_baptism.Click += new System.EventHandler(this.add_button_sponsor_baptism_Click);
             // 
             // suffix_textbox_sponsor_baptism
             // 
@@ -2642,28 +2632,6 @@
             this.label83.TabIndex = 46;
             this.label83.Text = "Requirements";
             // 
-            // save_button
-            // 
-            this.save_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.save_button.Location = new System.Drawing.Point(699, 507);
-            this.save_button.Name = "save_button";
-            this.save_button.Size = new System.Drawing.Size(151, 39);
-            this.save_button.TabIndex = 53;
-            this.save_button.Text = "Save";
-            this.save_button.UseVisualStyleBackColor = false;
-            this.save_button.Click += new System.EventHandler(this.saveGeneralProfile);
-            // 
-            // cancel_button
-            // 
-            this.cancel_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.cancel_button.Location = new System.Drawing.Point(542, 507);
-            this.cancel_button.Name = "cancel_button";
-            this.cancel_button.Size = new System.Drawing.Size(151, 39);
-            this.cancel_button.TabIndex = 53;
-            this.cancel_button.Text = "Cancel";
-            this.cancel_button.UseVisualStyleBackColor = false;
-            this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
-            // 
             // bloodletting_panel
             // 
             this.bloodletting_panel.Controls.Add(this.label108);
@@ -2940,38 +2908,18 @@
             this.dataGridView9.Size = new System.Drawing.Size(573, 196);
             this.dataGridView9.TabIndex = 0;
             // 
-            // father_checkbox
-            // 
-            this.father_checkbox.AutoSize = true;
-            this.father_checkbox.Location = new System.Drawing.Point(3, 3);
-            this.father_checkbox.Name = "father_checkbox";
-            this.father_checkbox.Size = new System.Drawing.Size(72, 25);
-            this.father_checkbox.TabIndex = 30;
-            this.father_checkbox.Text = "Father";
-            this.father_checkbox.UseVisualStyleBackColor = true;
-            // 
-            // mother_checkbox
-            // 
-            this.mother_checkbox.AutoSize = true;
-            this.mother_checkbox.Location = new System.Drawing.Point(6, 5);
-            this.mother_checkbox.Name = "mother_checkbox";
-            this.mother_checkbox.Size = new System.Drawing.Size(80, 25);
-            this.mother_checkbox.TabIndex = 30;
-            this.mother_checkbox.Text = "Mother";
-            this.mother_checkbox.UseVisualStyleBackColor = true;
-            // 
             // Person
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1003, 557);
             this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.basic_panel);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.marriage_panel);
             this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.balance_panel);
+            this.Controls.Add(this.basic_panel);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -3226,11 +3174,6 @@
         private System.Windows.Forms.Button cancel_button;
         private System.Windows.Forms.Button balance_button;
         private System.Windows.Forms.Button bloodletting_button;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.Label label99;
-        private System.Windows.Forms.Label label100;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox33;
         private System.Windows.Forms.TextBox textBox32;

@@ -310,5 +310,12 @@ namespace ParishSystem
                 birthdate_datetimepicker_baptist.Format = DateTimePickerFormat.Custom;
             }
         }
+
+        private void add_button_sponsor_baptism_Click(object sender, EventArgs e)
+        {
+            //firstname_textbox_sponsor_baptism.Text
+            int baptismID = dh.getBaptismID(ProfileID);
+            //dh.addSponsor(baptismID,);
+        }
     }
 }

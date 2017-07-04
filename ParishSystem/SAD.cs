@@ -104,12 +104,20 @@ namespace ParishSystem
             DataTable dt = dh.getGeneralProfiles();
             generalprofile_datagridview.DataSource = dt;
             generalprofile_datagridview.Columns["profileID"].Visible = false;
-            
+            generalprofile_datagridview.Columns["firstName"].Visible = false;
+            generalprofile_datagridview.Columns["midName"].Visible = false;
+            generalprofile_datagridview.Columns["lastName"].Visible = false;
+            generalprofile_datagridview.Columns["suffix"].Visible = false;
         }
 
         private void generalprofile_datagridview_CellClick(object sender, DataGridViewCellEventArgs e)
         {//data grid cell click
             lastGeneralProfile = int.Parse(generalprofile_datagridview.CurrentRow.Cells["profileID"].Value.ToString());
+            firstname_textbox.Text=generalprofile_datagridview.CurrentRow.Cells[1].Value.ToString();
+            middlename_textbox.Text=generalprofile_datagridview.CurrentRow.Cells["midname"].Value.ToString();
+            lastname_textbox.Text = generalprofile_datagridview.CurrentRow.Cells["lastname"].Value.ToString();
+            suffix_textbox.Text = generalprofile_datagridview.CurrentRow.Cells["suffix"].Value.ToString();
+
             Console.WriteLine(lastGeneralProfile);
         }
 
