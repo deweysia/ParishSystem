@@ -1364,7 +1364,7 @@ namespace ParishSystem
             return dt;
         }
 
-        public DataTable getBaptismWithReference()
+        public DataTable getBaptismsWithReference()
         {
             string q = "SELECT profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix),"
                 + " gender, birthdate, remarks FROM Baptism"
@@ -2227,7 +2227,6 @@ namespace ParishSystem
         } 
        
 
-
         public DataTable getSponsors(int sacramentID, string sacramentType)
         {
 
@@ -2242,20 +2241,33 @@ namespace ParishSystem
 
 
         }
-        public DataTable getApplication(int ProfileID, string ApplicationType)
+        public DataTable getApplications(int profileID, string sacramentType)
         {
-           //this is only for baptism and conf
-            return new DataTable();
+            string q = "SELECT CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix) AS Name, sacramentType, status "
+                +"FROM Application WHERE sacramentType = '"+ sacramentType + "' AND profileID = " + profileID;
+
+            DataTable dt = runQuery(q);
+
+            //this is only for baptism and conf
+            return dt;
         }
-        public DataTable getApplication(int ProfileIDA, int ProfileIDB)
+
+        public DataTable getApplications(int groomID, int brideID)
         {
-            //this is only for marriage
-            return new DataTable();
+            string q = "SELECT * FROM Application WHERE groomID = "+ groomID + " AND brideID = " + brideID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
         }
+
         public DataTable getMinisters()
         {
-            return new DataTable();
-            
+            string q = "SELECT ministerID, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix), birthdate, ministryType, status, licenseNumber, expirationDate FROM Minister";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
         }
         public int getBaptismID(int profileID)
         {
