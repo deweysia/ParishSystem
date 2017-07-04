@@ -68,7 +68,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.residence_textbox_father = new System.Windows.Forms.TextBox();
             this.birthplace_textbox_father = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.firstname_textbox_father = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -85,7 +84,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.residence_textbox_mother = new System.Windows.Forms.TextBox();
             this.birthplace_textbox_mother = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.firstname_textbox_mother = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -123,6 +121,7 @@
             this.label50 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.baptism_requirement_dgv = new System.Windows.Forms.DataGridView();
+            this.Complied = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label93 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -277,6 +276,8 @@
             this.label110 = new System.Windows.Forms.Label();
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.dataGridView9 = new System.Windows.Forms.DataGridView();
+            this.father_checkbox = new System.Windows.Forms.CheckBox();
+            this.mother_checkbox = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -563,13 +564,15 @@
             // 
             // birthdate_datetimepicker_baptist
             // 
+            this.birthdate_datetimepicker_baptist.CustomFormat = "_____-_____-_____";
             this.birthdate_datetimepicker_baptist.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.birthdate_datetimepicker_baptist.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.birthdate_datetimepicker_baptist.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.birthdate_datetimepicker_baptist.Location = new System.Drawing.Point(217, 106);
             this.birthdate_datetimepicker_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.birthdate_datetimepicker_baptist.Name = "birthdate_datetimepicker_baptist";
             this.birthdate_datetimepicker_baptist.Size = new System.Drawing.Size(132, 25);
             this.birthdate_datetimepicker_baptist.TabIndex = 18;
+            this.birthdate_datetimepicker_baptist.ValueChanged += new System.EventHandler(this.birthdate_datetimepicker_baptist_ValueChanged);
             // 
             // gender_radiobutton1_baptist
             // 
@@ -676,6 +679,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.father_checkbox);
             this.panel1.Controls.Add(this.suffix_textbox_father);
             this.panel1.Controls.Add(this.lastname_textbox_father);
             this.panel1.Controls.Add(this.middlename_textbox_father);
@@ -683,7 +687,6 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.residence_textbox_father);
             this.panel1.Controls.Add(this.birthplace_textbox_father);
-            this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.firstname_textbox_father);
             this.panel1.Controls.Add(this.label27);
             this.panel1.Controls.Add(this.label15);
@@ -772,16 +775,6 @@
             this.birthplace_textbox_father.TabIndex = 20;
             this.birthplace_textbox_father.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 27);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 21);
-            this.label12.TabIndex = 27;
-            this.label12.Text = "Father";
-            // 
             // firstname_textbox_father
             // 
             this.firstname_textbox_father.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -863,6 +856,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.mother_checkbox);
             this.panel3.Controls.Add(this.suffix_textbox_mother);
             this.panel3.Controls.Add(this.lastname_textbox_mother);
             this.panel3.Controls.Add(this.middlename_textbox_mother);
@@ -870,7 +864,6 @@
             this.panel3.Controls.Add(this.label21);
             this.panel3.Controls.Add(this.residence_textbox_mother);
             this.panel3.Controls.Add(this.birthplace_textbox_mother);
-            this.panel3.Controls.Add(this.label22);
             this.panel3.Controls.Add(this.firstname_textbox_mother);
             this.panel3.Controls.Add(this.label24);
             this.panel3.Controls.Add(this.label25);
@@ -959,16 +952,6 @@
             this.birthplace_textbox_mother.TabIndex = 20;
             this.birthplace_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(1, 28);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(61, 21);
-            this.label22.TabIndex = 27;
-            this.label22.Text = "Mother";
-            // 
             // firstname_textbox_mother
             // 
             this.firstname_textbox_mother.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1049,12 +1032,14 @@
             // 
             // basic_panel
             // 
+            this.basic_panel.Controls.Add(this.cancel_button);
             this.basic_panel.Controls.Add(this.panel3);
+            this.basic_panel.Controls.Add(this.save_button);
             this.basic_panel.Controls.Add(this.panel1);
             this.basic_panel.Controls.Add(this.panel2);
             this.basic_panel.Location = new System.Drawing.Point(149, 0);
             this.basic_panel.Name = "basic_panel";
-            this.basic_panel.Size = new System.Drawing.Size(854, 512);
+            this.basic_panel.Size = new System.Drawing.Size(854, 557);
             this.basic_panel.TabIndex = 32;
             // 
             // baptism_panel
@@ -1132,7 +1117,7 @@
             this.textBox30.Location = new System.Drawing.Point(377, 420);
             this.textBox30.Multiline = true;
             this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(447, 81);
+            this.textBox30.Size = new System.Drawing.Size(463, 81);
             this.textBox30.TabIndex = 51;
             // 
             // label52
@@ -1340,16 +1325,23 @@
             // baptism_requirement_dgv
             // 
             this.baptism_requirement_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.baptism_requirement_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Complied});
             this.baptism_requirement_dgv.Location = new System.Drawing.Point(544, 244);
             this.baptism_requirement_dgv.Name = "baptism_requirement_dgv";
             this.baptism_requirement_dgv.Size = new System.Drawing.Size(297, 166);
             this.baptism_requirement_dgv.TabIndex = 47;
             // 
+            // Complied
+            // 
+            this.Complied.HeaderText = "";
+            this.Complied.Name = "Complied";
+            // 
             // label93
             // 
             this.label93.AutoSize = true;
             this.label93.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label93.Location = new System.Drawing.Point(280, 426);
+            this.label93.Location = new System.Drawing.Point(280, 420);
             this.label93.Name = "label93";
             this.label93.Size = new System.Drawing.Size(91, 30);
             this.label93.TabIndex = 46;
@@ -1666,10 +1658,10 @@
             // textBox31
             // 
             this.textBox31.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox31.Location = new System.Drawing.Point(256, 357);
+            this.textBox31.Location = new System.Drawing.Point(360, 357);
             this.textBox31.Multiline = true;
             this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(585, 140);
+            this.textBox31.Size = new System.Drawing.Size(481, 140);
             this.textBox31.TabIndex = 51;
             // 
             // label53
@@ -1886,7 +1878,7 @@
             // 
             this.label94.AutoSize = true;
             this.label94.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label94.Location = new System.Drawing.Point(155, 356);
+            this.label94.Location = new System.Drawing.Point(260, 357);
             this.label94.Name = "label94";
             this.label94.Size = new System.Drawing.Size(91, 30);
             this.label94.TabIndex = 46;
@@ -2653,7 +2645,7 @@
             // save_button
             // 
             this.save_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.save_button.Location = new System.Drawing.Point(0, 430);
+            this.save_button.Location = new System.Drawing.Point(699, 507);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(151, 39);
             this.save_button.TabIndex = 53;
@@ -2664,7 +2656,7 @@
             // cancel_button
             // 
             this.cancel_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.cancel_button.Location = new System.Drawing.Point(0, 469);
+            this.cancel_button.Location = new System.Drawing.Point(542, 507);
             this.cancel_button.Name = "cancel_button";
             this.cancel_button.Size = new System.Drawing.Size(151, 39);
             this.cancel_button.TabIndex = 53;
@@ -2948,20 +2940,38 @@
             this.dataGridView9.Size = new System.Drawing.Size(573, 196);
             this.dataGridView9.TabIndex = 0;
             // 
+            // father_checkbox
+            // 
+            this.father_checkbox.AutoSize = true;
+            this.father_checkbox.Location = new System.Drawing.Point(3, 3);
+            this.father_checkbox.Name = "father_checkbox";
+            this.father_checkbox.Size = new System.Drawing.Size(72, 25);
+            this.father_checkbox.TabIndex = 30;
+            this.father_checkbox.Text = "Father";
+            this.father_checkbox.UseVisualStyleBackColor = true;
+            // 
+            // mother_checkbox
+            // 
+            this.mother_checkbox.AutoSize = true;
+            this.mother_checkbox.Location = new System.Drawing.Point(6, 5);
+            this.mother_checkbox.Name = "mother_checkbox";
+            this.mother_checkbox.Size = new System.Drawing.Size(80, 25);
+            this.mother_checkbox.TabIndex = 30;
+            this.mother_checkbox.Text = "Mother";
+            this.mother_checkbox.UseVisualStyleBackColor = true;
+            // 
             // Person
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 511);
-            this.Controls.Add(this.cancel_button);
-            this.Controls.Add(this.save_button);
+            this.ClientSize = new System.Drawing.Size(1003, 557);
             this.Controls.Add(this.flowLayoutPanel2);
+            this.Controls.Add(this.basic_panel);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.marriage_panel);
             this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.balance_panel);
-            this.Controls.Add(this.basic_panel);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -3044,7 +3054,6 @@
         private System.Windows.Forms.TextBox middlename_textbox_father;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox birthplace_textbox_father;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox firstname_textbox_father;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
@@ -3068,7 +3077,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox residence_textbox_mother;
         private System.Windows.Forms.TextBox birthplace_textbox_mother;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox firstname_textbox_mother;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
@@ -3264,5 +3272,8 @@
         private System.Windows.Forms.Label label110;
         private System.Windows.Forms.DataGridView dataGridView10;
         private System.Windows.Forms.DataGridView dataGridView9;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Complied;
+        private System.Windows.Forms.CheckBox father_checkbox;
+        private System.Windows.Forms.CheckBox mother_checkbox;
     }
 }
