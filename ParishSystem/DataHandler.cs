@@ -2173,6 +2173,7 @@ namespace ParishSystem
 
         //-------------functions i need-----------------------//
 
+
         public DataTable getMotherOf(int profileID)
         {
             string q = "SELECT * FROM Parent WHERE gender = 'F' AND profileID = '" + profileID + "'";
@@ -2193,7 +2194,9 @@ namespace ParishSystem
         }
 
 
-        public bool hasBaptismApplication(int ProfileID)
+       
+        public bool hasBaptismApplication(int profileID)
+
         {
             string q = "SELECT * FROM Application WHERE sacramentType = 'bap' AND profileID = " + profileID;
 
@@ -2201,8 +2204,11 @@ namespace ParishSystem
 
             return dt.Rows.Count > 0;
         }
+
+
         
         public bool hasConfirmationApplication(int profileID)
+
         {
             string q = "SELECT * FROM Application WHERE sacramentType = 'con' AND profileID = " + profileID;
 
