@@ -105,7 +105,7 @@
             this.appointment_baptism_button = new System.Windows.Forms.Button();
             this.cancel_baptism_button = new System.Windows.Forms.Button();
             this.approve_baptism_button = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.baptism_information_panel = new System.Windows.Forms.Panel();
             this.record_baptism_textbox = new System.Windows.Forms.TextBox();
             this.page_baptism_textbox = new System.Windows.Forms.TextBox();
             this.registry_baptism_textbox = new System.Windows.Forms.TextBox();
@@ -119,8 +119,6 @@
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
-            this.baptism_requirement_dgv = new System.Windows.Forms.DataGridView();
-            this.Complied = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label93 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -273,14 +271,17 @@
             this.label110 = new System.Windows.Forms.Label();
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.dataGridView9 = new System.Windows.Forms.DataGridView();
+            this.Complied = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.baptism_requirement_dgv = new System.Windows.Forms.DataGridView();
+            this.minister_baptism_textbox = new System.Windows.Forms.TextBox();
+            this.baptism_date_textbox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.basic_panel.SuspendLayout();
             this.baptism_panel.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.baptism_requirement_dgv)).BeginInit();
+            this.baptism_information_panel.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.baptism_sponsor_dgv)).BeginInit();
             this.confirmation_panel.SuspendLayout();
@@ -300,6 +301,7 @@
             this.balance_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baptism_requirement_dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -1088,7 +1090,7 @@
             this.baptism_panel.Controls.Add(this.appointment_baptism_button);
             this.baptism_panel.Controls.Add(this.cancel_baptism_button);
             this.baptism_panel.Controls.Add(this.approve_baptism_button);
-            this.baptism_panel.Controls.Add(this.panel7);
+            this.baptism_panel.Controls.Add(this.baptism_information_panel);
             this.baptism_panel.Controls.Add(this.baptism_requirement_dgv);
             this.baptism_panel.Controls.Add(this.label93);
             this.baptism_panel.Controls.Add(this.label39);
@@ -1162,27 +1164,31 @@
             this.approve_baptism_button.TabIndex = 49;
             this.approve_baptism_button.Text = "Approve Application";
             this.approve_baptism_button.UseVisualStyleBackColor = true;
+            this.approve_baptism_button.Click += new System.EventHandler(this.approve_baptism_button_Click);
             // 
-            // panel7
+            // baptism_information_panel
             // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.record_baptism_textbox);
-            this.panel7.Controls.Add(this.page_baptism_textbox);
-            this.panel7.Controls.Add(this.registry_baptism_textbox);
-            this.panel7.Controls.Add(this.label44);
-            this.panel7.Controls.Add(this.label45);
-            this.panel7.Controls.Add(this.label46);
-            this.panel7.Controls.Add(this.minister_baptism_combobox);
-            this.panel7.Controls.Add(this.baptism_date_dtp);
-            this.panel7.Controls.Add(this.label47);
-            this.panel7.Controls.Add(this.label48);
-            this.panel7.Controls.Add(this.label49);
-            this.panel7.Controls.Add(this.label50);
-            this.panel7.Controls.Add(this.label51);
-            this.panel7.Location = new System.Drawing.Point(282, 211);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(249, 199);
-            this.panel7.TabIndex = 48;
+            this.baptism_information_panel.BackColor = System.Drawing.Color.White;
+            this.baptism_information_panel.Controls.Add(this.baptism_date_textbox);
+            this.baptism_information_panel.Controls.Add(this.minister_baptism_textbox);
+            this.baptism_information_panel.Controls.Add(this.record_baptism_textbox);
+            this.baptism_information_panel.Controls.Add(this.page_baptism_textbox);
+            this.baptism_information_panel.Controls.Add(this.registry_baptism_textbox);
+            this.baptism_information_panel.Controls.Add(this.label44);
+            this.baptism_information_panel.Controls.Add(this.label45);
+            this.baptism_information_panel.Controls.Add(this.label46);
+            this.baptism_information_panel.Controls.Add(this.minister_baptism_combobox);
+            this.baptism_information_panel.Controls.Add(this.baptism_date_dtp);
+            this.baptism_information_panel.Controls.Add(this.label47);
+            this.baptism_information_panel.Controls.Add(this.label48);
+            this.baptism_information_panel.Controls.Add(this.label49);
+            this.baptism_information_panel.Controls.Add(this.label50);
+            this.baptism_information_panel.Controls.Add(this.label51);
+            this.baptism_information_panel.Enabled = false;
+            this.baptism_information_panel.Location = new System.Drawing.Point(282, 211);
+            this.baptism_information_panel.Name = "baptism_information_panel";
+            this.baptism_information_panel.Size = new System.Drawing.Size(249, 199);
+            this.baptism_information_panel.TabIndex = 48;
             // 
             // record_baptism_textbox
             // 
@@ -1311,21 +1317,6 @@
             this.label51.Size = new System.Drawing.Size(31, 21);
             this.label51.TabIndex = 37;
             this.label51.Text = "___";
-            // 
-            // baptism_requirement_dgv
-            // 
-            this.baptism_requirement_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.baptism_requirement_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Complied});
-            this.baptism_requirement_dgv.Location = new System.Drawing.Point(544, 244);
-            this.baptism_requirement_dgv.Name = "baptism_requirement_dgv";
-            this.baptism_requirement_dgv.Size = new System.Drawing.Size(297, 166);
-            this.baptism_requirement_dgv.TabIndex = 47;
-            // 
-            // Complied
-            // 
-            this.Complied.HeaderText = "";
-            this.Complied.Name = "Complied";
             // 
             // label93
             // 
@@ -2910,6 +2901,35 @@
             this.dataGridView9.Size = new System.Drawing.Size(573, 196);
             this.dataGridView9.TabIndex = 0;
             // 
+            // Complied
+            // 
+            this.Complied.HeaderText = "";
+            this.Complied.Name = "Complied";
+            // 
+            // baptism_requirement_dgv
+            // 
+            this.baptism_requirement_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.baptism_requirement_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Complied});
+            this.baptism_requirement_dgv.Location = new System.Drawing.Point(544, 244);
+            this.baptism_requirement_dgv.Name = "baptism_requirement_dgv";
+            this.baptism_requirement_dgv.Size = new System.Drawing.Size(297, 166);
+            this.baptism_requirement_dgv.TabIndex = 47;
+            // 
+            // minister_baptism_textbox
+            // 
+            this.minister_baptism_textbox.Location = new System.Drawing.Point(98, 77);
+            this.minister_baptism_textbox.Name = "minister_baptism_textbox";
+            this.minister_baptism_textbox.Size = new System.Drawing.Size(148, 29);
+            this.minister_baptism_textbox.TabIndex = 38;
+            // 
+            // baptism_date_textbox
+            // 
+            this.baptism_date_textbox.Location = new System.Drawing.Point(8, 77);
+            this.baptism_date_textbox.Name = "baptism_date_textbox";
+            this.baptism_date_textbox.Size = new System.Drawing.Size(148, 29);
+            this.baptism_date_textbox.TabIndex = 39;
+            // 
             // Person
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -2938,9 +2958,8 @@
             this.basic_panel.ResumeLayout(false);
             this.baptism_panel.ResumeLayout(false);
             this.baptism_panel.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.baptism_requirement_dgv)).EndInit();
+            this.baptism_information_panel.ResumeLayout(false);
+            this.baptism_information_panel.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.baptism_sponsor_dgv)).EndInit();
@@ -2969,6 +2988,7 @@
             this.balance_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baptism_requirement_dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3037,7 +3057,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Panel basic_panel;
         private System.Windows.Forms.Panel baptism_panel;
-        private System.Windows.Forms.DataGridView baptism_requirement_dgv;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.RadioButton genderF_radiobutton_sponsor_baptism;
@@ -3066,7 +3085,7 @@
         private System.Windows.Forms.Button appointment_baptism_button;
         private System.Windows.Forms.Button cancel_baptism_button;
         private System.Windows.Forms.Button approve_baptism_button;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel baptism_information_panel;
         private System.Windows.Forms.TextBox record_baptism_textbox;
         private System.Windows.Forms.TextBox page_baptism_textbox;
         private System.Windows.Forms.TextBox registry_baptism_textbox;
@@ -3217,8 +3236,11 @@
         private System.Windows.Forms.Label label110;
         private System.Windows.Forms.DataGridView dataGridView10;
         private System.Windows.Forms.DataGridView dataGridView9;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Complied;
         private System.Windows.Forms.CheckBox father_checkbox;
         private System.Windows.Forms.CheckBox mother_checkbox;
+        private System.Windows.Forms.DataGridView baptism_requirement_dgv;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Complied;
+        private System.Windows.Forms.TextBox minister_baptism_textbox;
+        private System.Windows.Forms.TextBox baptism_date_textbox;
     }
 }

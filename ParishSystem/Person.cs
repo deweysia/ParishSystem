@@ -15,29 +15,29 @@ namespace ParishSystem
     {
         public int ProfileID;
         public DataHandler dh;
-        public Person(int ProfileID,DataHandler dh)
+        public Person(int ProfileID, DataHandler dh)
         {
             InitializeComponent();
             this.ProfileID = ProfileID;
             this.dh = dh;
-           
+
         }
-		#region GUI basic
-		
+        #region GUI basic
 
-		private void cancel_button_Click(object sender, EventArgs e)
-		{
-			this.Close();
-		}
 
-		#endregion
-
-		#region Saves
-		private void saveGeneralProfile(object sender, EventArgs e)
+        private void cancel_button_Click(object sender, EventArgs e)
         {
-			char gender = 'z';
-			if (gender_radiobutton1_baptist.Checked == true) { gender = 'm'; }
-			else if (gender_radiobutton2_baptist.Checked == true) { gender = 'f'; }
+            this.Close();
+        }
+
+        #endregion
+
+        #region Saves
+        private void saveGeneralProfile(object sender, EventArgs e)
+        {
+            char gender = 'z';
+            if (gender_radiobutton1_baptist.Checked == true) { gender = 'm'; }
+            else if (gender_radiobutton2_baptist.Checked == true) { gender = 'f'; }
             dh.editGeneralProfile(
                 ProfileID,
                 firstname_textbox.Text,
@@ -51,24 +51,24 @@ namespace ParishSystem
                 birthplace_textbox_baptist.Text,
                 bloodtype_combobox_baptist.Text
                 );
-            
+
 
             if (father_checkbox.Checked == true)
             {
                 try
                 {
-                   
+
                     int fatherID = int.Parse(dh.getFatherOf(ProfileID).Rows[0]["parentID"].ToString());
                     dh.editParent(fatherID, firstname_textbox_father.Text, middlename_textbox_father.Text, lastname_textbox_father.Text, suffix_textbox_father.Text, 'm', birthplace_textbox_father.Text);
                 }
-               catch
+                catch
                 {
                     dh.conn.Close();
                     dh.addParent(ProfileID, firstname_textbox_father.Text, middlename_textbox_father.Text, lastname_textbox_father.Text, suffix_textbox_father.Text, 'm', birthplace_textbox_father.Text);
                 }
             }
 
-            if(mother_checkbox.Checked== true)
+            if (mother_checkbox.Checked == true)
             {
                 try
                 {
@@ -81,8 +81,8 @@ namespace ParishSystem
                     dh.addParent(ProfileID, firstname_textbox_father.Text, middlename_textbox_father.Text, lastname_textbox_father.Text, suffix_textbox_father.Text, 'f', birthplace_textbox_father.Text);
                 }
             }
-		}
-            
+        }
+
         #endregion
 
         #region Loads
@@ -91,7 +91,7 @@ namespace ParishSystem
 
             DataTable TempDT = dh.getGeneralProfile(ProfileID);
             //LOAD PERSON
-            if (!(TempDT.Rows[0]["gender"]==null))
+            if (!(TempDT.Rows[0]["gender"] == null))
             {
                 if (TempDT.Rows[0]["gender"].ToString() == "m")
                     gender_radiobutton1_baptist.Checked = true;
@@ -105,18 +105,18 @@ namespace ParishSystem
             birthplace_textbox_baptist.Text = TempDT.Rows[0]["birthplace"].ToString();
             address_baptist_textarea.Text = TempDT.Rows[0]["address"].ToString();
             contactNumber_textbox_baptist.Text = TempDT.Rows[0]["contactNumber"].ToString();
-            bloodtype_combobox_baptist.SelectedItem = TempDT.Rows[0]["bloodType"].ToString();     
+            bloodtype_combobox_baptist.SelectedItem = TempDT.Rows[0]["bloodType"].ToString();
             try
             {
-                    birthdate_datetimepicker_baptist.Format = DateTimePickerFormat.Short;
-                    birthdate_datetimepicker_baptist.Value = dh.toDateTime(TempDT.Rows[0]["birthdate"].ToString(), false);
+                birthdate_datetimepicker_baptist.Format = DateTimePickerFormat.Short;
+                birthdate_datetimepicker_baptist.Value = dh.toDateTime(TempDT.Rows[0]["birthdate"].ToString(), false);
             }
             catch
             {
-                    birthdate_datetimepicker_baptist.Format = DateTimePickerFormat.Custom;
+                birthdate_datetimepicker_baptist.Format = DateTimePickerFormat.Custom;
             }
             //Console.WriteLine(TempDT.Rows[0]["birthdate"].ToString());
-           
+
 
             //LOAD FATHER
             if (dh.getFatherOf(ProfileID).Rows.Count != 0)
@@ -130,7 +130,7 @@ namespace ParishSystem
                 residence_textbox_father.Text = TempFatherDT.Rows[0]["residence"].ToString();
                 father_checkbox.Checked = true;
                 father_checkbox.Enabled = false;
-                
+
             }
 
             //LOAD MOTHER
@@ -150,54 +150,37 @@ namespace ParishSystem
         }
 
 
-        
+
 
         public void load_Baptism()
         {
-            //minister
-            DataTable minister = dh.getMinisters();
-            foreach (DataRow row in minister.Rows) {
-                minister_baptism_combobox.Items.Add(row.ToString());
+            if (dh.getApplications(ProfileID, "B").Rows[0]["status"].ToString().Equals("approved")) {
+                //minister
+                DataTable minister = dh.getMinisters();
+                foreach (DataRow row in minister.Rows)
+                {
+                    minister_baptism_combobox.Items.Add(new ComboBoxItem(row["Name"].ToString(), row["ministerID"].ToString()));
+                }
+
+                //sponsors
+                baptism_sponsor_dgv.DataSource= dh.getSacramentSponsors(dh.getBaptismID(ProfileID), "b");
+
             }
-            //baptism info
-            DataTable temp = dh.getApplications(ProfileID, "bap");
-            if (temp.Rows.Count > 0)
+            else if (dh.getApplications(ProfileID, "B").Rows[0]["status"].ToString().Equals("added"))
             {
-                registry_baptism_textbox.Text = temp.Rows[0]["registryNumber"].ToString();
-                page_baptism_textbox.Text = temp.Rows[0]["pageNumber"].ToString();
-                record_baptism_textbox.Text = temp.Rows[0]["recordNumber"].ToString();
-                try
-                {
-                    baptism_date_dtp.Format = DateTimePickerFormat.Short;
-                    baptism_date_dtp.Value = dh.toDateTime(temp.Rows[0]["birthdate"].ToString(), false);
-                }
-                catch
-                {
-                    baptism_date_dtp.Format = DateTimePickerFormat.Custom;
-                }
+                baptism_sponsor_dgv.DataSource = dh.getSacramentSponsors(dh.getBaptismID(ProfileID), "b");
+
+                DataTable bapInfo = dh.getBaptismOf(ProfileID);
+                baptism_date_textbox.Text = dh.getBaptismOf(ProfileID).Rows[0]["baptismDate"].ToString();
+                minister_baptism_textbox.Text = dh.getMinister(int.Parse(dh.getBaptismOf(ProfileID).Rows[0]["ministerID"].ToString())).Rows[0]["Name"].ToString();
+                registry_baptism_textbox.Text = bapInfo.Rows[0]["RegistryNumber"].ToString();
+                page_baptism_textbox.Text = bapInfo.Rows[0]["PageNumber"].ToString();
+                record_baptism_textbox.Text = bapInfo.Rows[0]["RecordNumber"].ToString();
             }
 
-            //sponsors
-            baptism_sponsor_dgv.DataSource = dh.getSponsors(ProfileID,"bap");
-            baptism_sponsor_dgv.Columns["firstName"].Visible = false;
-            baptism_sponsor_dgv.Columns["middlename"].Visible = false;
-            baptism_sponsor_dgv.Columns["lastname"].Visible = false;
-            baptism_sponsor_dgv.Columns["suffix"].Visible = false;
-            baptism_sponsor_dgv.Columns["gender"].Visible = false;
-            baptism_sponsor_dgv.Columns["sacramentID"].Visible = false;
-            baptism_sponsor_dgv.Columns["sponsorID"].Visible = false;
-            baptism_sponsor_dgv.Columns["sacramentType"].Visible = false;
-            baptism_sponsor_dgv.Columns["residence"].Visible = false;
-
-
-            
-
-            /*baptism_requirement_dgv.Columns["requirementID"].Visible = false;
-            baptism_requirement_dgv.Columns["sacramentType"].Visible = false;
-            baptism_requirement_dgv.Columns["requirementName"].HeaderText = "Requirement";
-            */        
-
+           
         }
+    
 
         public void load_Confirmation()
         {
@@ -266,7 +249,7 @@ namespace ParishSystem
             }
             else
             {
-                dh.addApplication(ProfileID, "bap");      
+                dh.addApplication(ProfileID, "B");      
             }
 
         }
@@ -285,7 +268,7 @@ namespace ParishSystem
             }
             else
             {
-                dh.addApplication(ProfileID, "con");
+                dh.addApplication(ProfileID, "C");
             }
         }
 
@@ -303,7 +286,7 @@ namespace ParishSystem
             }
             else
             {
-                dh.addApplication(ProfileID, "mar");
+                dh.addApplication(ProfileID, "M");
             }
         }
 
@@ -345,7 +328,7 @@ namespace ParishSystem
                 {
                     gender = 'f';
                 }
-                dh.addSponsor(firstname_textbox_sponsor_baptism.Text, middlename_textbox_sponsor_baptism.Text, lastname_textbox_sponsor_baptism.Text, suffix_textbox_sponsor_baptism.Text, "bap", residence_textbox_sponsor_baptism.Text, gender);
+                dh.addSponsor(firstname_textbox_sponsor_baptism.Text, middlename_textbox_sponsor_baptism.Text, lastname_textbox_sponsor_baptism.Text, suffix_textbox_sponsor_baptism.Text, "B", residence_textbox_sponsor_baptism.Text, gender);
             }
             else
             {
@@ -366,12 +349,17 @@ namespace ParishSystem
 
         private void registry_baptism_textbox_TextChanged(object sender, EventArgs e)
         {
-           // dh.addBaptism(int.Parse(dh.getApplications(ProfileID, "bap").Rows[0]["applicationID"].ToString()), minister_baptism_combobox.SelectedIndex,dh.toDateTime(baptism_date_dtp.Value.ToString(),false));
+           // dh.addBaptism(int.Parse(dh.getApplications(ProfileID, "B").Rows[0]["applicationID"].ToString()), minister_baptism_combobox.SelectedIndex,dh.toDateTime(baptism_date_dtp.Value.ToString(),false));
         }
 
         private void delete_button_sponsor_baptism_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void approve_baptism_button_Click(object sender, EventArgs e)
+        {
+            baptism_information_panel.Enabled = true;
         }
     }
 }

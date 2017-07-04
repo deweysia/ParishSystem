@@ -1333,7 +1333,7 @@ namespace ParishSystem
                 + " JOIN Application ON applicationID = applicationID"
                 + " JOIN GeneralProfile ON generalProfile.profileID = Application.profileID "
                 + " WHERE registryNumber IS NULL AND recordNumber IS NULL AND pageNumber IS NULL " 
-                + " AND sacramentType = 'bap'";
+                + " AND sacramentType = 'b'";
 
             DataTable dt = runQuery(q);
 
@@ -1347,14 +1347,14 @@ namespace ParishSystem
                 + " JOIN Application ON applicationID = applicationID"
                 + " JOIN GeneralProfile ON generalProfile.profileID = Application.profileID "
                 + " WHERE registryNumber IS NOT NULL AND recordNumber IS NOT NULL AND pageNumber IS NOT NULL"
-                + " AND sacramentType = 'bap'";
+                + " AND sacramentType = 'b'";
 
             DataTable dt = runQuery(q);
            
             return dt;
         }
 
-        public DataTable getBaptismOf(int profileID)
+        public DataTable getBaptismOf(int profileID)//COMMENT: ambiguous profile id
         {
             string q = "SELECT profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix),"
                 + " gender, birthdate, remarks FROM Baptism"
@@ -1708,17 +1708,7 @@ namespace ParishSystem
 
         }
 
-        public DataTable getMinister(int ministerID)
-        {
-            string q = "SELECT * FROM Minister WHERE ministerID = " + ministerID;
-
-            DataTable dt = runQuery(q);
-
-            if (dt.Rows.Count == 0)
-                return null;
-            return dt;
-        }
-
+        
         #endregion
         
         
@@ -2161,7 +2151,7 @@ namespace ParishSystem
         public bool hasBaptismApplication(int profileID)
 
         {
-            string q = "SELECT * FROM Application WHERE applicationType = 'bap' AND profileID = " + profileID;
+            string q = "SELECT * FROM Application WHERE applicationType = 'B' AND profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -2173,7 +2163,7 @@ namespace ParishSystem
         public bool hasConfirmationApplication(int profileID)
 
         {
-            string q = "SELECT * FROM Application WHERE applicationType = 'con' AND profileID = " + profileID;
+            string q = "SELECT * FROM Application WHERE applicationType = 'C' AND profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -2182,7 +2172,7 @@ namespace ParishSystem
 
         public bool hasMarriageApplication(int profileID)
         {
-            string q = "SELECT * FROM Application WHERE applicationType = 'mar' AND profileID = " + profileID;
+            string q = "SELECT * FROM Application WHERE applicationType = 'M' AND profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -2196,7 +2186,7 @@ namespace ParishSystem
             //please add a column to format the names to be fn mn ln sf, but use select * parin
 
             string q = "SELECT *, CONCAT(firstName, ' ', middleName, ' ', lastName, ' ', suffix) as Name FROM Sponsor"
-                + " WHERE sacramentType = 'bap' AND sacramentID = " + sacramentID;
+                + " WHERE sacramentType = 'b' AND sacramentID = " + sacramentID;
 
             DataTable dt = runQuery(q);
 
@@ -2204,9 +2194,9 @@ namespace ParishSystem
 
 
         }
-        public DataTable getApplications(int profileID, string sacramentType)//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        public DataTable getApplications(int profileID, string applicationType)//comment: wrong query, input> (1 , "b") output (application table *)
         {
-            string q = "SELECT baptismID,applicationID,ministerID,recordNumber,pageNumber,registryNumber,baptismDate from baptism inner join generalprofile on profileID= " + profileID;
+            string q = "SELECT * from application where applicationType='"+ applicationType + "' and profileID= " + profileID ;
 
             DataTable dt = runQuery(q);
 
@@ -2249,6 +2239,18 @@ namespace ParishSystem
 
             return success;
         }
+        //COMMENT: merge names into field "Name"
+        public DataTable getMinister(int ministerID)
+        {
+            string q = "SELECT * FROM Minister WHERE ministerID = " + ministerID;
+
+            DataTable dt = runQuery(q);
+
+            if (dt.Rows.Count == 0)
+                return null;
+            return dt;
+        }
+
     }
 
 }
