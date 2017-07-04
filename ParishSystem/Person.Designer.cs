@@ -1216,6 +1216,7 @@
             this.registry_baptism_textbox.Size = new System.Drawing.Size(21, 16);
             this.registry_baptism_textbox.TabIndex = 29;
             this.registry_baptism_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.registry_baptism_textbox.TextChanged += new System.EventHandler(this.registry_baptism_textbox_TextChanged);
             // 
             // label44
             // 
@@ -1425,6 +1426,7 @@
             this.delete_button_sponsor_baptism.TabIndex = 46;
             this.delete_button_sponsor_baptism.Text = "Delete";
             this.delete_button_sponsor_baptism.UseVisualStyleBackColor = true;
+            this.delete_button_sponsor_baptism.Click += new System.EventHandler(this.delete_button_sponsor_baptism_Click);
             // 
             // add_button_sponsor_baptism
             // 
@@ -2913,13 +2915,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1003, 557);
-            this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.baptism_panel);
+            this.Controls.Add(this.basic_panel);
+            this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.marriage_panel);
             this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.balance_panel);
-            this.Controls.Add(this.basic_panel);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

@@ -31,7 +31,7 @@ namespace ParishSystem
             conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True;");
             this.userID = -1;
 
-            //MessageBox.Show("connected");
+          
             
         }
 
@@ -39,23 +39,24 @@ namespace ParishSystem
         #region
         public bool runNonQuery(string q)
         {
+            Console.WriteLine(q);
             conn.Open();
             com = new MySqlCommand(q, conn);
             int rowsAffected = com.ExecuteNonQuery();
             conn.Close();
-            Console.WriteLine(q);
+           
             return rowsAffected > 0;
         }
 
         public DataTable runQuery(string q)
         {
+            Console.WriteLine(q);
             conn.Open();
             com = new MySqlCommand(q, conn);
             MySqlDataAdapter adp = new MySqlDataAdapter(com);
             DataTable dt = new DataTable();
             adp.Fill(dt);
-            conn.Close();
-            Console.WriteLine(q);
+            conn.Close();      
             return dt;
         }
 
@@ -101,31 +102,7 @@ namespace ParishSystem
             return dt.Rows.Count > 0;
         }
 
-        public bool addSponsors(int sacramentID, int[,] sponsorIDs, string sacramentType)
-        {
-            bool success = true;
-            foreach (int sponsorID in sponsorIDs)
-            {
-                string q = "INSERT INTO Sponsor(sacramentID, sponsorID, sacramentType) VALUES ('"
-                    + sacramentID + "', '"+ sponsorID + "', '"+ sacramentType + "')";
-
-                success = success && runNonQuery(q);
-
-            }
-
-            return success;
-            
-        }
-
-        public bool addSponsor(int sacramentID, int sponsorID, string sacramentType)
-        {
-            string q = "INSERT INTO Sponsor(sacramentID, sponsorID, sacramentType) VALUES ('"
-                        + sacramentID + "', '" + sponsorID + "', '" + sacramentType + "')";
-
-            // *Still record changes to log or nah?
-            return runNonQuery(q);
-        }
-
+       
         public DateTime toDateTime(string s, bool timePortion)
         {
 
@@ -257,7 +234,7 @@ namespace ParishSystem
         public DataTable getGeneralProfiles()
         {
             string q = "SELECT firstname,midname,lastname,suffix, profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix) as Name FROM GeneralProfile";
-            MessageBox.Show("in getGeneralProfiles");
+           
             DataTable dt = runQuery(q);
 
            
@@ -1181,11 +1158,11 @@ namespace ParishSystem
             return int.Parse(dt.Rows[0][0].ToString()) > 0;
         }
 
-        public bool addBaptism(int applicationID, int ministerID, int legitimacy, DateTime baptismDate)
+        public bool addBaptism(int applicationID, int ministerID, DateTime baptismDate)
         {
-            string q = "INSERT INTO Baptism(applicationID, ministerID, legitimacy, baptismDate) VALUES ('" 
+            string q = "INSERT INTO Baptism(applicationID, ministerID, baptismDate) VALUES ('" 
                 + applicationID + "', '" + ministerID + "', '" 
-                + legitimacy + "', '" + baptismDate.ToString("yyyy-MM-dd") + "')";
+                +  "', '" + baptismDate.ToString("yyyy-MM-dd") + "')";
 
             bool success = runNonQuery(q);
 
@@ -1196,13 +1173,12 @@ namespace ParishSystem
         }
 
 
-        public bool editBaptism(int baptismID, int ministerID, int legitimacy, DateTime baptismDate)
+        public bool editBaptism(int baptismID, int ministerID, DateTime baptismDate)
         {
             //if (!idExists("baptism", "baptismID", baptismID))
             //    return false;
 
             string q = "UPDATE Baptism SET ministerID = '" + ministerID 
-                + "', legitimacy = '" + legitimacy 
                 + "', baptismDate = '" + baptismDate.ToString("yyyy-MM-dd") 
                 + "' WHERE baptismID = '" + baptismID + "'";
 
@@ -1753,20 +1729,7 @@ namespace ParishSystem
         */
         #region
 
-        public bool addSponsor(string firstName, string midName, string lastName, string suffix, string sacramentType, string residence, char gender)
-        {
-            string q = "INSERT INTO Sponsor(firstName, midName, lastName, suffix, sacramentType, residence, gender) VALUES ('" 
-                + firstName + "', '" + midName + "', '" 
-                + lastName + "', '" + suffix + "', '" 
-                + sacramentType + "', '" + residence + "', '" + gender + "')";
-
-            bool success = runNonQuery(q);
-
-            //if (success)
-            //    updateModificationInfo("Sponsor", "sponsorID", getLatestID("Sponsor", "sponsorID"));
-
-            return success;
-        }
+       
 
         public bool editSponsor(int sponsorID, string firstName, string midName, string lastName, string suffix, string sacramentType, string residence, char gender)
         {
@@ -2198,7 +2161,7 @@ namespace ParishSystem
         public bool hasBaptismApplication(int profileID)
 
         {
-            string q = "SELECT * FROM Application WHERE sacramentType = 'bap' AND profileID = " + profileID;
+            string q = "SELECT * FROM Application WHERE applicationType = 'bap' AND profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -2210,7 +2173,7 @@ namespace ParishSystem
         public bool hasConfirmationApplication(int profileID)
 
         {
-            string q = "SELECT * FROM Application WHERE sacramentType = 'con' AND profileID = " + profileID;
+            string q = "SELECT * FROM Application WHERE applicationType = 'con' AND profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -2219,7 +2182,7 @@ namespace ParishSystem
 
         public bool hasMarriageApplication(int profileID)
         {
-            string q = "SELECT * FROM Application WHERE sacramentType = 'mar' AND profileID = " + profileID;
+            string q = "SELECT * FROM Application WHERE applicationType = 'mar' AND profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -2232,7 +2195,7 @@ namespace ParishSystem
 
             //please add a column to format the names to be fn mn ln sf, but use select * parin
 
-            string q = "SELECT CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix), residence, gender FROM Sponsor"
+            string q = "SELECT *, CONCAT(firstName, ' ', middleName, ' ', lastName, ' ', suffix) as Name FROM Sponsor"
                 + " WHERE sacramentType = 'bap' AND sacramentID = " + sacramentID;
 
             DataTable dt = runQuery(q);
@@ -2241,10 +2204,9 @@ namespace ParishSystem
 
 
         }
-        public DataTable getApplications(int profileID, string sacramentType)
+        public DataTable getApplications(int profileID, string sacramentType)//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         {
-            string q = "SELECT CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix) AS Name, sacramentType, status "
-                +"FROM Application WHERE sacramentType = '"+ sacramentType + "' AND profileID = " + profileID;
+            string q = "SELECT baptismID,applicationID,ministerID,recordNumber,pageNumber,registryNumber,baptismDate from baptism inner join generalprofile on profileID= " + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -2273,7 +2235,20 @@ namespace ParishSystem
         {
             return 1;
         }
-        
+         public bool addSponsor(string firstName, string midName, string lastName, string suffix, string sacramentType, string residence, char gender)///////////////------------fix this no sacrament iD
+        {
+            string q = "INSERT INTO Sponsor(firstName, midName, lastName, suffix, sacramentType, residence, gender) VALUES ('" 
+                + firstName + "', '" + midName + "', '" 
+                + lastName + "', '" + suffix + "', '" 
+                + sacramentType + "', '" + residence + "', '" + gender + "')";
+
+            bool success = runNonQuery(q);
+
+            //if (success)
+            //    updateModificationInfo("Sponsor", "sponsorID", getLatestID("Sponsor", "sponsorID"));
+
+            return success;
+        }
     }
 
 }

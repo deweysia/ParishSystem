@@ -154,30 +154,49 @@ namespace ParishSystem
 
         public void load_Baptism()
         {
+            //minister
             DataTable minister = dh.getMinisters();
             foreach (DataRow row in minister.Rows) {
                 minister_baptism_combobox.Items.Add(row.ToString());
             }
-            
-            DataTable temp = dh.getApplication(ProfileID, "bap");
+            //baptism info
+            DataTable temp = dh.getApplications(ProfileID, "bap");
             if (temp.Rows.Count > 0)
             {
                 registry_baptism_textbox.Text = temp.Rows[0]["registryNumber"].ToString();
                 page_baptism_textbox.Text = temp.Rows[0]["pageNumber"].ToString();
                 record_baptism_textbox.Text = temp.Rows[0]["recordNumber"].ToString();
+                try
+                {
+                    baptism_date_dtp.Format = DateTimePickerFormat.Short;
+                    baptism_date_dtp.Value = dh.toDateTime(temp.Rows[0]["birthdate"].ToString(), false);
+                }
+                catch
+                {
+                    baptism_date_dtp.Format = DateTimePickerFormat.Custom;
+                }
             }
-            baptism_sponsor_dgv.DataSource = dh.getSponsors(ProfileID,"bap");
 
-            baptism_requirement_dgv.DataSource = dh.getRequirementsFor("bap");
-            foreach (DataGridViewRow row in baptism_requirement_dgv.Rows)
-            {
-                if(row.Cells[0].Value=="false")
-                row.Cells["Complied"].Value=true;
-            }
-          
-            baptism_requirement_dgv.Columns["requirementID"].Visible = false;
+            //sponsors
+            baptism_sponsor_dgv.DataSource = dh.getSponsors(ProfileID,"bap");
+            baptism_sponsor_dgv.Columns["firstName"].Visible = false;
+            baptism_sponsor_dgv.Columns["middlename"].Visible = false;
+            baptism_sponsor_dgv.Columns["lastname"].Visible = false;
+            baptism_sponsor_dgv.Columns["suffix"].Visible = false;
+            baptism_sponsor_dgv.Columns["gender"].Visible = false;
+            baptism_sponsor_dgv.Columns["sacramentID"].Visible = false;
+            baptism_sponsor_dgv.Columns["sponsorID"].Visible = false;
+            baptism_sponsor_dgv.Columns["sacramentType"].Visible = false;
+            baptism_sponsor_dgv.Columns["residence"].Visible = false;
+
+
+            
+
+            /*baptism_requirement_dgv.Columns["requirementID"].Visible = false;
             baptism_requirement_dgv.Columns["sacramentType"].Visible = false;
             baptism_requirement_dgv.Columns["requirementName"].HeaderText = "Requirement";
+            */        
+
         }
 
         public void load_Confirmation()
@@ -314,9 +333,45 @@ namespace ParishSystem
 
         private void add_button_sponsor_baptism_Click(object sender, EventArgs e)
         {
-            //firstname_textbox_sponsor_baptism.Text
-            int baptismID = dh.getBaptismID(ProfileID);
-            //dh.addSponsor(baptismID,);
+            if (add_button_sponsor_baptism.Text.Equals("Add"))
+            {
+                int baptismID = dh.getBaptismID(ProfileID);
+                char gender = '0';
+                if (genderM_radiobutton_sponsor_baptism.Checked)
+                {
+                    gender = 'm';
+                }
+                else if (genderF_radiobutton_sponsor_baptism.Checked)
+                {
+                    gender = 'f';
+                }
+                dh.addSponsor(firstname_textbox_sponsor_baptism.Text, middlename_textbox_sponsor_baptism.Text, lastname_textbox_sponsor_baptism.Text, suffix_textbox_sponsor_baptism.Text, "bap", residence_textbox_sponsor_baptism.Text, gender);
+            }
+            else
+            {
+                int baptismID = dh.getBaptismID(ProfileID);
+                char gender = '0';
+                if (genderM_radiobutton_sponsor_baptism.Checked)
+                {
+                    gender = 'm';
+                }
+                else if (genderF_radiobutton_sponsor_baptism.Checked)
+                {
+                    gender = 'f';
+                }
+                dh.editSponsor(sponsorBaptismLastClick,firstname_textbox_sponsor_baptism.Text, middlename_textbox_sponsor_baptism.Text, lastname_textbox_sponsor_baptism.Text, suffix_textbox_sponsor_baptism.Text, "bap", residence_textbox_sponsor_baptism.Text, gender);
+            }
+           
+        }
+
+        private void registry_baptism_textbox_TextChanged(object sender, EventArgs e)
+        {
+           // dh.addBaptism(int.Parse(dh.getApplications(ProfileID, "bap").Rows[0]["applicationID"].ToString()), minister_baptism_combobox.SelectedIndex,dh.toDateTime(baptism_date_dtp.Value.ToString(),false));
+        }
+
+        private void delete_button_sponsor_baptism_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
