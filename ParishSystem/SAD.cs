@@ -153,12 +153,8 @@ namespace ParishSystem
 
 
 
-
         #endregion
 
-        private void SAD_Load(object sender, EventArgs e)
-        {
-
-        }
+        #endregion
     }
 }

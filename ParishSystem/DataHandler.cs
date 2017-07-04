@@ -301,9 +301,9 @@ namespace ParishSystem
 
         public DataTable getGeneralProfilesByName(string firstName, string midName, string lastName)
         {
-            string q = "SELECT * FROM GeneralProfile WHERE firstName = '%"+ firstName 
-                + "%' AND midName = '%"+ midName 
-                + "%' AND lastName = '%"+ lastName + "%'";
+            string q = "SELECT * FROM GeneralProfile WHERE firstName LIKE '%"+ firstName 
+                + "%' AND midName LIKE '%"+ midName 
+                + "%' AND lastName LIKE '%"+ lastName + "%'";
 
             DataTable dt = runQuery(q);
 
@@ -741,6 +741,8 @@ namespace ParishSystem
         }
 
 
+
+
         #endregion
         /*
                                          =============================================================
@@ -859,7 +861,9 @@ namespace ParishSystem
             DataTable dt = runQuery(q);
 
             return dt;
+
         }
+
 
         #endregion
 
@@ -908,6 +912,15 @@ namespace ParishSystem
             return dt;
         }
 
+        public DataTable getInvoicesOfIncome(int incomeID)
+        {
+            string q = "SELECT invoiceID, ORnum, paymentAmount, invoiceDateTime FROM Invoice WHERE incomeID = " + incomeID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
 
         #endregion
 
@@ -923,6 +936,23 @@ namespace ParishSystem
         public bool addIncomeSource(string name)
         {
             string q = "INSERT INTO IncomeSource(name) VALUES ('" + name + "')";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public bool editIncomeSource(int incomeSourceID, string name)
+        {
+            string q = "UPDATE IncomeSource SET name = '" + name + "'";
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public bool deleteIncomeSource(int incomeSourceID)
+        {
+            string q = "DELETE FROM IncomeSource WHERE incomeSourceID = " + incomeSourceID;
 
             bool success = runNonQuery(q);
 
@@ -988,7 +1018,7 @@ namespace ParishSystem
             return dt;
         }
 
-        public DataTable getItemsOf(int incomeID)
+        public DataTable getItemsOfIncome(int incomeID)
         {
             string q = "SELECT itemID, price, quantity WHERE incomeID = " + incomeID;
 
@@ -1024,16 +1054,7 @@ namespace ParishSystem
             bool success = runNonQuery(q);
 
             return success;
-        }
-
-        public DataTable getItemTypesOfBook(string bookType)
-        {
-            string q = "SELECT * FROM ItemType WHERE bookType = '"+ bookType + "' AND status = 'active'";
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
+        }        
 
         public bool deleteItemType(int itemTypeID)
         {
@@ -1067,6 +1088,24 @@ namespace ParishSystem
 
             return dt;
         }
+
+        public DataTable getItemTypesOfBook(string bookType)
+        {
+            string q = "SELECT * FROM ItemType WHERE bookType = '" + bookType + "' AND status = 'active'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public bool setItemTypeStatus(int itemTypeID, string status)
+        {
+            string q = "UPDATE ItemType SET status = '" + status + "'";
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
 
 
         /*
@@ -1224,11 +1263,13 @@ namespace ParishSystem
             return runNonQuery(q);
         }
 
+        //addReference is same as editReference!!!!!!!!!
         public bool addBaptismReference(int baptismID, string registryNumber, string recordNumber, string pageNumber)
         {
-            string q = "INSERT INTO BaptismReference(baptismID, registryNumber, recordNumber, pageNumber) VALUES ('" 
-                + baptismID + "', '" + registryNumber + "', '" 
-                + recordNumber + "', '" + pageNumber + "')";
+            string q = "UPDATE Baptism SET registryNumber = '" + registryNumber 
+                + "', recordNumber = '" + recordNumber 
+                + "', pageNumber = '" + pageNumber 
+                + "' WHERE baptismID = '" + baptismID + "'";
 
             bool success = runNonQuery(q);
 
@@ -1266,6 +1307,90 @@ namespace ParishSystem
 
             return dt;
         }
+
+        public DataTable getBaptisms()
+        {
+            string q = "SELECT * FROM Baptism";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getBaptismsByYear(int year)
+        {
+            string q = "SELECT profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix),"
+                +" gender, birthdate FROM Baptism WHERE YEAR(baptismDate) = " + year;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getBaptismsByMonth(DateTime date)
+        {
+            string q = "SELECT profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix),"
+                + " gender, birthdate FROM Baptism"
+                +" WHERE YEAR(baptismDate) = '"+ date.ToString("yyyy") 
+                + "' AND MONTH(baptismDate) = '"+ date.ToString("MM") + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getBaptismsByName(string firstName, string midName, string lastName)
+        {
+            string q = "SELECT profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix),"
+                + " gender, birthdate FROM Baptism WHERE firstName LIKE '%"+ firstName 
+                + "%' AND midName LIKE '%"+ midName + "%' AND lastName LIKE '%"+ lastName + "%'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getBaptismsWithNoReference()
+        {
+            string q = "SELECT profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix),"
+                + " gender, birthdate, remarks FROM Baptism"
+                + " JOIN Application ON applicationID = applicationID"
+                + " JOIN GeneralProfile ON generalProfile.profileID = Application.profileID "
+                + " WHERE registryNumber IS NULL AND recordNumber IS NULL AND pageNumber IS NULL " 
+                + " AND sacramentType = 'bap'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getBaptismWithReference()
+        {
+            string q = "SELECT profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix),"
+                + " gender, birthdate, remarks FROM Baptism"
+                + " JOIN Application ON applicationID = applicationID"
+                + " JOIN GeneralProfile ON generalProfile.profileID = Application.profileID "
+                + " WHERE registryNumber IS NOT NULL AND recordNumber IS NOT NULL AND pageNumber IS NOT NULL"
+                + " AND sacramentType = 'bap'";
+
+            DataTable dt = runQuery(q);
+           
+            return dt;
+        }
+
+        public DataTable getBaptismOf(int profileID)
+        {
+            string q = "SELECT profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix),"
+                + " gender, birthdate, remarks FROM Baptism"
+                + " JOIN Application ON applicationID = applicationID"
+                + " JOIN GeneralProfile ON generalProfile.profileID = Application.profileID WHERE GeneralProfile.profileID = " + profileID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        
 
         #endregion
 
@@ -2070,25 +2195,46 @@ namespace ParishSystem
 
         public bool hasBaptismApplication(int ProfileID)
         {
-            return true;
+            string q = "SELECT * FROM Application WHERE sacramentType = 'bap' AND profileID = " + profileID;
+
+            DataTable dt = runQuery(q);
+
+            return dt.Rows.Count > 0;
+        }
+        
+        public bool hasConfirmationApplication(int profileID)
+        {
+            string q = "SELECT * FROM Application WHERE sacramentType = 'con' AND profileID = " + profileID;
+
+            DataTable dt = runQuery(q);
+
+            return dt.Rows.Count > 0;
         }
 
-        public bool hasConfirmationApplication(int ProfileID)
+        public bool hasMarriageApplication(int profileID)
         {
-            return true;
-        }
+            string q = "SELECT * FROM Application WHERE sacramentType = 'mar' AND profileID = " + profileID;
 
-        public bool hasMarriageApplication(int ProfileID)
-        {
-            return true;
+            DataTable dt = runQuery(q);
+
+            return dt.Rows.Count > 0;
         } 
        
 
 
         public DataTable getSponsors(int sacramentID, string sacramentType)
         {
-            return new DataTable();
+
             //please add a column to format the names to be fn mn ln sf, but use select * parin
+
+            string q = "SELECT CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix), residence, gender FROM Sponsor"
+                + " WHERE sacramentType = 'bap' AND sacramentID = " + sacramentID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+
+
         }
         public DataTable getApplication(int ProfileID, string ApplicationType)
         {
