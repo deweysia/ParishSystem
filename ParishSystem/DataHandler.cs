@@ -2197,7 +2197,7 @@ namespace ParishSystem
 
         public bool hasBaptismApplication(int ProfileID)
         {
-            string q = "SELECT * FROM Application WHERE sacramentType = 'bap' AND profileID = " + profileID;
+            string q = "SELECT * FROM Application WHERE sacramentType = 'bap' AND profileID = " + ProfileID;
 
             DataTable dt = runQuery(q);
 
@@ -2206,7 +2206,7 @@ namespace ParishSystem
 
         public bool hasConfirmationApplication(int ProfileID)
         {
-            string q = "SELECT * FROM Application WHERE sacramentType = 'con' AND profileID = " + profileID;
+            string q = "SELECT * FROM Application WHERE sacramentType = 'con' AND profileID = " + ProfileID;
 
             DataTable dt = runQuery(q);
 
