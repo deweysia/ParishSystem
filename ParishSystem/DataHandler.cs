@@ -478,7 +478,7 @@ namespace ParishSystem
         public DataTable getBloodDonors()
         {
             string q = "SELECT DISTINCT GeneralProfile.profileID, firstName, midName, lastName, suffix, gender, "
-                + "DATE_FORMAT(birthdate, 'yyyy-MM-dd'), contactNumber, address, birthplace, bloodType  "
+                + "DATE_FORMAT(birthdate, '%m-%d-%Y %H:%i'), contactNumber, address, birthplace, bloodType  "
                 + "FROM GeneralProfile JOIN bloodDonation ON GeneralProfile.profileID = BloodDonation.profileID";
 
             DataTable dt = runQuery(q);
@@ -501,7 +501,7 @@ namespace ParishSystem
         public DataTable getBloodDonorsOfMonth(DateTime date)
         {
             string q = "SELECT DISTINCT GeneralProfile.profileID, firstName, midName, lastName, suffix, gender, "
-                + "DATE_FORMAT(birthdate, 'yyyy-MM-dd'), contactNumber, address, birthplace, bloodType  "
+                + "DATE_FORMAT(birthdate, '%m-%d-%Y %H:%i'), contactNumber, address, birthplace, bloodType  "
                 + "FROM GeneralProfile JOIN bloodDonation ON GeneralProfile.profileID = BloodDonation.profileID "
                 + "WHERE MONTH(bloodDonationDateTime) = '" + date.ToString("MM")
                 + "' AND YEAR(bloodDonationDateTime) = '" + date.ToString("yyyy") + "'";
@@ -1286,28 +1286,13 @@ namespace ParishSystem
 
             //addBaptismLog(baptismID);
 
-            string q = "UPDATE BaptismReference SET registryNumber = '" + registryNumber
-                + "', recordNumber = '" + recordNumber
-                + "', pageNumber = '" + pageNumber
-                + "' WHERE baptismID = '" + baptismID + "'";
-
-            bool success = runNonQuery(q);
+            bool success = addBaptismReference(baptismID, registryNumber, recordNumber, pageNumber);
 
 
             //if (success)
             //    updateModificationInfo("baptism", "baptismID", baptismID);
 
             return success;
-        }
-
-
-        public DataTable getBaptismReference(int baptismID)
-        {
-            string q = "SELECT * FROM BaptismReference WHERE baptismID = " + baptismID;
-
-            DataTable dt = runQuery(q);
-
-            return dt;
         }
 
         public DataTable getBaptisms()
@@ -1392,7 +1377,9 @@ namespace ParishSystem
             return dt;
         }
 
+        
 
+       
 
         #endregion
 
@@ -1447,16 +1434,18 @@ namespace ParishSystem
             return success;
         }
 
-        public bool addConfirmationReference(int confirmatonID, string registryNumber, string pageNumber, string recordNumber)
+        public bool addConfirmationReference(int confirmationID, string registryNumber, string pageNumber, string recordNumber)
         {
-            string q = "INSERT INTO ConfirmationReference(confirmatonID, registryNumber, pageNumber, recordNumber) VALUES ('"
-                + confirmatonID + "', '" + registryNumber
-                + "', '" + pageNumber + "', '" + recordNumber + "')";
+            string q = "UPDATE Confirmation SET registryNumber = '" + registryNumber
+                + "', pageNumber = '" + pageNumber
+                + "', recordNumber = '" + recordNumber
+                + "' WHERE confirmationID = '" + confirmationID + "'";
 
             bool success = runNonQuery(q);
 
             return success;
         }
+
         public bool editConfirmationReference(int confirmationID, string recordNumber, string pageNumber, string registryNumber)
         {
             //if (!idExists("Confirmation", "confirmationID", confirmationID))
@@ -1464,12 +1453,9 @@ namespace ParishSystem
 
             //addConfirmationLog(confirmationID);
 
-            string q = "UPDATE ConfirmationReference SET recordNumber = '" + recordNumber
-                + "', pageNumber = '" + pageNumber
-                + "', registryNumber = '" + registryNumber
-                + "' WHERE confirmationID = '" + confirmationID + "'";
 
-            bool success = runNonQuery(q);
+
+            bool success = addConfirmationReference(confirmationID, recordNumber, pageNumber, registryNumber);
 
             //if (success)
             //    updateModificationInfo("Confirmation", "confirmationID", confirmationID);
@@ -1503,7 +1489,11 @@ namespace ParishSystem
 
         public DataTable getConfirmationBetweenDates(DateTime start, DateTime end)
         {
-            string q = "SELECT * FROM Confirmation WHERE confirmationDate >= '"
+            string q = "SELECT profileID, confirmationID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix) AS Name,"
+                + " gender, birthdate, registryNumber, pageNumber, recordNumber, DATE_FORMAT(confirmationDate, '%m-%d-%Y %H:%i') FROM Confirmation "
+                + "JOIN Application ON Confirmation.applicationID = Application.applicationID "
+                + "JOIN GeneralProfile ON GeneralProfile.profileID = Application.profileID "
+                + " WHERE confirmationDate >= '"
                 + start.ToString("yyyy-MM-dd") + "' AND confirmationDate <= '" + end.ToString("yyyy-MM-dd") + "'";
 
             DataTable dt = runQuery(q);
@@ -1515,14 +1505,59 @@ namespace ParishSystem
         }
 
 
-        public DataTable getConfirmationReference(int confirmationID)
+        public DataTable getConfirmations()
         {
-            string q = "SELECT * FROM ConfirmationReference WHERE confirmationID = " + confirmationID;
+            string q = "SELECT * FROM Confirmation";
 
             DataTable dt = runQuery(q);
 
             return dt;
         }
+
+        public DataTable getConfirmationsByYear(DateTime date)
+        {
+            string q = "SELECT profileID, confirmationID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix) AS Name,"
+                + " gender, birthdate, registryNumber, pageNumber, recordNumber, DATE_FORMAT(confirmationDate, '%m-%d-%Y %H:%i') FROM Confirmation "
+                + "JOIN Application ON Confirmation.applicationID = Application.applicationID "
+                + "JOIN GeneralProfile ON GeneralProfile.profileID = Application.profileID "
+                + "WHERE YEAR(confirmationDate) = '" + date.ToString("yyyy") + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getConfirmationByMonth(DateTime date)
+        {
+            string q = "SELECT profileID, confirmationID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix) AS Name,"
+                + " gender, birthdate, registryNumber, pageNumber, recordNumber, DATE_FORMAT(confirmationDate, '%m-%d-%Y %H:%i') FROM Confirmation "
+                + "JOIN Application ON Confirmation.applicationID = Application.applicationID "
+                + "JOIN GeneralProfile ON GeneralProfile.profileID = Application.profileID "
+                + " WHERE YEAR(confirmationDate) = '"+ date.ToString("yyyy") 
+                + "' AND MONTH(confirmationDate) = '"+ date.ToString("yyyy") + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getConfirmationByName(string firstName, string midName, string lastName, string suffix)
+        {
+            string q = "SELECT profileID, confirmationID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix) AS Name,"
+                + " gender, birthdate, registryNumber, pageNumber, recordNumber, DATE_FORMAT(confirmationDate, '%m-%d-%Y %H:%i') FROM Confirmation "
+                + "JOIN Application ON Confirmation.applicationID = Application.applicationID "
+                + "JOIN GeneralProfile ON GeneralProfile.profileID = Application.profileID "
+                + "WHERE firstName LIKE '%" + firstName
+                + "%' AND midName LIKE '%" + midName + "%' AND lastName LIKE '%" + lastName + "%'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+
+
+        
 
 
 
@@ -1628,15 +1663,7 @@ namespace ParishSystem
 
             return dt;
         }
-
-        public DataTable getMarriageReference(int marriageID)
-        {
-            string q = "SELECT * FROM MarriageReference WHERE marriageID = " + marriageID;
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
+        
 
         #endregion
         /*
@@ -1851,7 +1878,7 @@ namespace ParishSystem
                 + "' WHERE scheduleID = '" + scheduleID + "'";
 
             bool success = runNonQuery(q);
-
+            
             return success;
         }
 
@@ -1950,8 +1977,8 @@ namespace ParishSystem
         public bool appointmentHasConflict(DateTime start, DateTime end, int ministerID)
         {
             string q = "SELECT * FROM Schedule JOIN Appointment ON Appointment.scheduleID = Schedule.scheduleID "
-                + "WHERE DATE_FORMAT(startDateTime, 'yyyy-MM-dd HH:mm') < '" + end.ToString("yyyy-MM-dd HH:mm")
-                + "' AND DATE_FORMAT(endDateTime, 'yyyy-MM-dd HH:mm') > '" + start.ToString("yyyy - MM - dd HH:mm")
+                + "WHERE DATE_FORMAT(startDateTime, '%m-%d-%Y %H:%i') < '" + end.ToString("yyyy-MM-dd HH:mm")
+                + "' AND DATE_FORMAT(endDateTime, '%m-%d-%Y %H:%i') > '" + start.ToString("yyyy - MM - dd HH:mm")
                 + "' AND ministerID = '" + ministerID + "'";
 
             DataTable dt = runQuery(q);
@@ -2084,7 +2111,7 @@ namespace ParishSystem
 
         public DataTable getCashReleaseBetweenDates(DateTime start, DateTime end)
         {
-            string q = "SELECT DATE_FORMAT(cashReleaseDateTime, 'MM-dd-yyyy HH:mm:ss'),"
+            string q = "SELECT DATE_FORMAT(cashReleaseDateTime, '%m-%d-%Y %H:%i'),"
                 + " remark, releaseAmount, description "
                 + "FROM CashRelease "
                 + "JOIN CashReleaseType "
