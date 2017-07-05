@@ -222,11 +222,13 @@ namespace ParishSystem
         #endregion
 
         #region Menu_Clicks
-
+       
+       
         private void biodata_button_Click(object sender, EventArgs e)
 		{
             load_Biodata();
-            basic_panel.Visible = true;
+           
+            profile_panel.Visible = true;
             baptism_panel.Visible = false;
             confirmation_panel.Visible = false;
             marriage_panel.Visible = false;
@@ -240,7 +242,7 @@ namespace ParishSystem
             if (dh.hasBaptismApplication(ProfileID))
             {
                 load_Baptism();
-                basic_panel.Visible = false;
+                profile_panel.Visible = false;
                 baptism_panel.Visible = true;
                 confirmation_panel.Visible = false;
                 marriage_panel.Visible = false;
@@ -259,7 +261,7 @@ namespace ParishSystem
             if (dh.hasConfirmationApplication(ProfileID))
             {
                 load_Confirmation();
-                basic_panel.Visible = false;
+                profile_panel.Visible = false;
                 baptism_panel.Visible = false;
                 confirmation_panel.Visible = true;
                 marriage_panel.Visible = false;
@@ -277,7 +279,7 @@ namespace ParishSystem
             if (dh.hasMarriageApplication(ProfileID))
             {
                 load_Marriage();
-                basic_panel.Visible = false;
+                profile_panel.Visible = false;
                 baptism_panel.Visible = false;
                 confirmation_panel.Visible = false;
                 marriage_panel.Visible = true;
@@ -296,9 +298,9 @@ namespace ParishSystem
 
         private void Person_Load(object sender, EventArgs e)
         {
-            if (dh.hasBaptismApplication(ProfileID)) { baptism_button.BackColor = Color.Green; } else { baptism_button.BackColor = Color.Red; }
-            if (dh.hasMarriageApplication(ProfileID)) { marriage_button.BackColor = Color.Green; } else { marriage_button.BackColor = Color.Red; }
-            if (dh.hasConfirmationApplication(ProfileID)) { confirmation_button.BackColor = Color.Green; } else { confirmation_button.BackColor = Color.Red; }
+           // if (dh.hasBaptismApplication(ProfileID)) { baptism_button.BackColor = Color.Green; } else { baptism_button.BackColor = Color.Red; }
+            //if (dh.hasMarriageApplication(ProfileID)) { marriage_button.BackColor = Color.Green; } else { marriage_button.BackColor = Color.Red; }
+            //if (dh.hasConfirmationApplication(ProfileID)) { confirmation_button.BackColor = Color.Green; } else { confirmation_button.BackColor = Color.Red; }
 
         }
 
@@ -357,9 +359,31 @@ namespace ParishSystem
 
         }
 
+        Color BackColorOnClick = Color.FromArgb(255, 255, 255);
+        Color ForeColorOnClick = Color.FromArgb(21, 40, 54);
+
         private void approve_baptism_button_Click(object sender, EventArgs e)
         {
             baptism_information_panel.Enabled = true;
         }
+
+        
+        private void menu_button_Enter(object sender, EventArgs e)
+        {
+            Button a = sender as Button;
+            a.Font = new Font(biodata_button.Font, FontStyle.Bold);
+            a.ForeColor = ForeColorOnClick;
+            a.BackColor = BackColorOnClick;
+        }
+
+        private void menu_button_Leave(object sender, EventArgs e)
+        {
+            Button a = sender as Button;
+            a.Font = new Font(biodata_button.Font, FontStyle.Regular);
+            a.ForeColor = BackColorOnClick;
+            a.BackColor = ForeColorOnClick;
+        }
+
+       
     }
 }
