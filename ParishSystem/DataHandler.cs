@@ -1555,6 +1555,49 @@ namespace ParishSystem
             return dt;
         }
 
+        public DataTable getConfirmationsWithNotReference()
+        {
+            string q = "SELECT profileID, confirmationID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix),"
+                + " gender, birthdate, remarks FROM Confirmation"
+                + " JOIN Application ON applicationID = applicationID"
+                + " JOIN GeneralProfile ON generalProfile.profileID = Application.profileID "
+                + " WHERE registryNumber IS NULL AND recordNumber IS NULL AND pageNumber IS NULL "
+                + " AND sacramentType = 'con'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getConfirmationWithReference()
+        {
+            string q = "SELECT profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix),"
+                + " gender, birthdate, remarks FROM Confirmation"
+                + " JOIN Application ON applicationID = applicationID"
+                + " JOIN GeneralProfile ON generalProfile.profileID = Application.profileID "
+                + " WHERE registryNumber IS NOT NULL AND recordNumber IS NOT NULL AND pageNumber IS NOT NULL"
+                + " AND sacramentType = 'con'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getConfirmationOf(int profileID)
+        {
+            string q = "SELECT profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix),"
+                + " gender, birthdate, remarks FROM Baptism"
+                + " JOIN Application ON applicationID = applicationID"
+                + " JOIN GeneralProfile ON GeneralProfile.profileID = Application.profileID WHERE GeneralProfile.profileID = " + profileID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        
+
+
 
 
         
@@ -1617,20 +1660,6 @@ namespace ParishSystem
 
         public bool addMarriageReference(int marriageID, string registryNumber, string pageNumber, string recordNumber)
         {
-            string q = "INSERT INTO MarriageReference(marriageID, registryNumber, pageNumber, recordNumber) VALUES ('"
-                + marriageID + "', '" + registryNumber + "', '"
-                + pageNumber + "', '" + recordNumber + "')";
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public bool editMarriageReference(int marriageID, string recordNumber, string pageNumber, string registryNumber)
-        {
-            //if (!idExists("Marriage", "marriageID", marriageID))
-            //    return false;
-
             string q = "UPDATE Marriage SET recordNumber = '" + recordNumber
                 + "', pageNumber = '" + pageNumber + "', registryNumber = '" + registryNumber
                 + "' WHERE marriageID = '" + marriageID + "'";
@@ -1641,6 +1670,15 @@ namespace ParishSystem
             //    updateModificationInfo("marriage", "marriageID", marriageID);
 
             return success;
+        }
+
+        public bool editMarriageReference(int marriageID, string recordNumber, string pageNumber, string registryNumber)
+        {
+            //if (!idExists("Marriage", "marriageID", marriageID))
+            //    return false;
+
+            return addMarriageReference(marriageID, recordNumber, pageNumber, registryNumber);
+
         }
 
         public DataTable getMarriage(int marriageID)
@@ -1664,6 +1702,62 @@ namespace ParishSystem
             return dt;
         }
         
+        public bool marriageIsActive(int marriageID)
+        {
+            string q = "SELECT status FROM Marriage WHERE marriageID = " + marriageID;
+
+            DataTable dt = runQuery(q);
+
+            return dt.Rows[0][0].ToString() == "active";
+        }
+
+        public DataTable getMarriagesByYear(DateTime date)
+        {
+            string q = "SELECT Marriage.profileID, marriageID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix) AS Name,"
+                + " gender, birthdate, registryNumber, pageNumber, recordNumber, DATE_FORMAT(marriageDate, '%m-%d-%Y %H:%i') FROM Marriage "
+                + "JOIN Application ON Marriage.applicationID = Application.applicationID "
+                + "JOIN GeneralProfile ON GeneralProfile.profileID = Application.profileID "
+                + "WHERE YEAR(marriageDate) = '" + date.ToString("yyyy") + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getMarriagesByMonth(DateTime date)
+        {
+            string q = "SELECT profileID, marriageID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix),"
+                + " gender, birthdate FROM Marriage"
+                + " WHERE YEAR(marriageDate) = '" + date.ToString("yyyy")
+                + "' AND MONTH(marriageDate) = '" + date.ToString("MM") + "'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getMarriagesByName(string firstName, string midName, string lastName)
+        {
+            string q = "SELECT profileID, marriageID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix),"
+                + " gender, birthdate FROM Marriage JOIN GeneralProfile "
+                + " ON (generalProfile.profileID = Marriage.groomID) "
+                + " OR (generalProfile.profileID = Marriage.brideID) "
+                + " WHERE firstName LIKE '%" + firstName
+                + "%' AND midName LIKE '%" + midName + "%' AND lastName LIKE '%" + lastName + "%'";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getMarriagesWithNoReference()
+        {
+            return new DataTable();
+        }
+        
+        
+
+
 
         #endregion
         /*
@@ -2292,6 +2386,7 @@ namespace ParishSystem
 
             return dt;
         }
+
 
 
         
