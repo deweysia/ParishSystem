@@ -2222,7 +2222,7 @@ namespace ParishSystem
         }
 
 
-        public bool hasBaptismApplication(int ProfileID)
+        public bool hasBaptismApplication(int profileID)
         {
             string q = "SELECT * FROM Application WHERE sacramentType = 'bap' AND profileID = " + profileID;
 
