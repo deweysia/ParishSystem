@@ -311,5 +311,13 @@ namespace ParishSystem
                 birthdate_datetimepicker_baptist.Format = DateTimePickerFormat.Custom;
             }
         }
+
+        private void add_button_sponsor_baptism_Click(object sender, EventArgs e)
+        {
+            char gender = '0';
+            if (genderM_radiobutton_sponsor_baptism.Checked) { gender = 'm'; }
+            else if (genderF_radiobutton_sponsor_baptism.Checked) { gender = 'f'; }
+            dh.addSponsor(firstname_textbox_sponsor_baptism.Text,  middlename_textbox_sponsor_baptism.Text,  lastname_textbox_sponsor_baptism.Text,  suffix_textbox_sponsor_baptism.Text,  gender,  residence_textbox_sponsor_baptism.Text);
+        }
     }
 }

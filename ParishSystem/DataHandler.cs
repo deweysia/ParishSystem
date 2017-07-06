@@ -2253,6 +2253,10 @@ namespace ParishSystem
             return new DataTable();
             
         }
+        public void addSponsor(string fn, string mn, string ln, string sf, char gender, string residence )
+        {
+
+        }
         
     }
 
