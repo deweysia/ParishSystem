@@ -60,12 +60,12 @@
             this.username_Welcome_Text = new System.Windows.Forms.Label();
             this.time_Text = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.home_panel.SuspendLayout();
             this.profile_panel.SuspendLayout();
@@ -168,10 +168,10 @@
             this.home_panel.BackColor = System.Drawing.Color.White;
             this.home_panel.Controls.Add(this.label1);
             this.home_panel.Controls.Add(this.username_label);
-            this.home_panel.Location = new System.Drawing.Point(1003, 9);
+            this.home_panel.Location = new System.Drawing.Point(993, 9);
             this.home_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.home_panel.Name = "home_panel";
-            this.home_panel.Size = new System.Drawing.Size(881, 608);
+            this.home_panel.Size = new System.Drawing.Size(891, 608);
             this.home_panel.TabIndex = 1;
             // 
             // label1
@@ -205,9 +205,9 @@
             this.profile_panel.Controls.Add(this.label3);
             this.profile_panel.Controls.Add(this.searchBar);
             this.profile_panel.Controls.Add(this.generalprofile_datagridview);
-            this.profile_panel.Location = new System.Drawing.Point(1021, 6);
+            this.profile_panel.Location = new System.Drawing.Point(1006, 9);
             this.profile_panel.Name = "profile_panel";
-            this.profile_panel.Size = new System.Drawing.Size(889, 628);
+            this.profile_panel.Size = new System.Drawing.Size(36, 628);
             this.profile_panel.TabIndex = 29;
             // 
             // panel1
@@ -387,7 +387,7 @@
             // searchBar
             // 
             this.searchBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBar.Location = new System.Drawing.Point(490, 8);
+            this.searchBar.Location = new System.Drawing.Point(-363, 8);
             this.searchBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchBar.Name = "searchBar";
             this.searchBar.Size = new System.Drawing.Size(395, 29);
@@ -405,7 +405,7 @@
             this.generalprofile_datagridview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.generalprofile_datagridview.Name = "generalprofile_datagridview";
             this.generalprofile_datagridview.RowHeadersVisible = false;
-            this.generalprofile_datagridview.Size = new System.Drawing.Size(395, 556);
+            this.generalprofile_datagridview.Size = new System.Drawing.Size(0, 556);
             this.generalprofile_datagridview.TabIndex = 0;
             this.generalprofile_datagridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.generalprofile_datagridview_CellClick);
             // 
@@ -512,40 +512,6 @@
             this.panel2.Size = new System.Drawing.Size(883, 626);
             this.panel2.TabIndex = 34;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(541, 102);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 33);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(694, 102);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 33);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(38, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 30);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Applications";
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -577,13 +543,46 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(38, 34);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(136, 30);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Applications";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(694, 102);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(117, 33);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(541, 102);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 33);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // SAD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1034, 673);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.time_Text);
             this.Controls.Add(this.welcome_Text);
             this.Controls.Add(this.username_Welcome_Text);
@@ -593,6 +592,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.home_panel);
+            this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
