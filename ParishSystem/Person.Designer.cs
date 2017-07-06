@@ -970,7 +970,7 @@
             this.baptism_panel.Controls.Add(this.label32);
             this.baptism_panel.Controls.Add(this.panel6);
             this.baptism_panel.Controls.Add(this.baptism_sponsor_dgv);
-            this.baptism_panel.Location = new System.Drawing.Point(0, 0);
+            this.baptism_panel.Location = new System.Drawing.Point(11, 79);
             this.baptism_panel.Margin = new System.Windows.Forms.Padding(2);
             this.baptism_panel.Name = "baptism_panel";
             this.baptism_panel.Size = new System.Drawing.Size(854, 38);
@@ -1591,6 +1591,7 @@
             this.confirmation_viewCertificate_button.TabIndex = 61;
             this.confirmation_viewCertificate_button.Text = "View Certificate";
             this.confirmation_viewCertificate_button.UseVisualStyleBackColor = false;
+            this.confirmation_viewCertificate_button.Click += new System.EventHandler(this.confirmation_viewCertificate_button_Click);
             // 
             // panel4
             // 
@@ -3017,11 +3018,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(947, 646);
-            this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.biodata_button);
             this.Controls.Add(this.bloodletting_button);
+            this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.balance_button);
             this.Controls.Add(this.marriage_button);
             this.Controls.Add(this.confirmation_button);

@@ -434,5 +434,10 @@ namespace ParishSystem
         {
 
         }
+
+        private void confirmation_viewCertificate_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
