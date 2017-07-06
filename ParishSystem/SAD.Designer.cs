@@ -39,6 +39,7 @@
             this.username_label = new System.Windows.Forms.Label();
             this.profile_panel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.clear_profile_button = new System.Windows.Forms.Button();
             this.deleteProfile_button = new System.Windows.Forms.Button();
             this.openProfile_button = new System.Windows.Forms.Button();
             this.addProfile_button = new System.Windows.Forms.Button();
@@ -49,30 +50,43 @@
             this.label33 = new System.Windows.Forms.Label();
             this.firstname_textbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.searchBar = new System.Windows.Forms.TextBox();
             this.generalprofile_datagridview = new System.Windows.Forms.DataGridView();
             this.btn_Min = new System.Windows.Forms.Button();
             this.btn_Max = new System.Windows.Forms.Button();
             this.btn_Close = new System.Windows.Forms.Button();
+            this.welcome_Text = new System.Windows.Forms.Label();
+            this.username_Welcome_Text = new System.Windows.Forms.Label();
+            this.time_Text = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1.SuspendLayout();
             this.home_panel.SuspendLayout();
             this.profile_panel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Controls.Add(this.home_menu_button);
             this.flowLayoutPanel1.Controls.Add(this.profile_menu_button);
             this.flowLayoutPanel1.Controls.Add(this.bloodletting_menu_button);
             this.flowLayoutPanel1.Controls.Add(this.record_menu_button);
             this.flowLayoutPanel1.Controls.Add(this.finance_menu_button);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 53);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 43);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(146, 608);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(146, 650);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // home_menu_button
@@ -80,11 +94,12 @@
             this.home_menu_button.BackgroundImage = global::ParishSystem.Properties.Resources.HIcon;
             this.home_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.home_menu_button.FlatAppearance.BorderSize = 0;
+            this.home_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.home_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.home_menu_button.Location = new System.Drawing.Point(0, 0);
             this.home_menu_button.Margin = new System.Windows.Forms.Padding(0);
             this.home_menu_button.Name = "home_menu_button";
-            this.home_menu_button.Size = new System.Drawing.Size(146, 80);
+            this.home_menu_button.Size = new System.Drawing.Size(146, 62);
             this.home_menu_button.TabIndex = 0;
             this.home_menu_button.UseVisualStyleBackColor = true;
             // 
@@ -93,11 +108,12 @@
             this.profile_menu_button.BackgroundImage = global::ParishSystem.Properties.Resources.UIcon;
             this.profile_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.profile_menu_button.FlatAppearance.BorderSize = 0;
+            this.profile_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.profile_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profile_menu_button.Location = new System.Drawing.Point(0, 80);
+            this.profile_menu_button.Location = new System.Drawing.Point(0, 62);
             this.profile_menu_button.Margin = new System.Windows.Forms.Padding(0);
             this.profile_menu_button.Name = "profile_menu_button";
-            this.profile_menu_button.Size = new System.Drawing.Size(146, 80);
+            this.profile_menu_button.Size = new System.Drawing.Size(146, 62);
             this.profile_menu_button.TabIndex = 4;
             this.profile_menu_button.UseVisualStyleBackColor = true;
             this.profile_menu_button.Click += new System.EventHandler(this.profile_menu_button_Click);
@@ -107,11 +123,12 @@
             this.bloodletting_menu_button.BackgroundImage = global::ParishSystem.Properties.Resources.BLIcon;
             this.bloodletting_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bloodletting_menu_button.FlatAppearance.BorderSize = 0;
+            this.bloodletting_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bloodletting_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bloodletting_menu_button.Location = new System.Drawing.Point(0, 160);
+            this.bloodletting_menu_button.Location = new System.Drawing.Point(0, 124);
             this.bloodletting_menu_button.Margin = new System.Windows.Forms.Padding(0);
             this.bloodletting_menu_button.Name = "bloodletting_menu_button";
-            this.bloodletting_menu_button.Size = new System.Drawing.Size(146, 80);
+            this.bloodletting_menu_button.Size = new System.Drawing.Size(146, 62);
             this.bloodletting_menu_button.TabIndex = 0;
             this.bloodletting_menu_button.UseVisualStyleBackColor = true;
             // 
@@ -120,11 +137,12 @@
             this.record_menu_button.BackgroundImage = global::ParishSystem.Properties.Resources.RIcon;
             this.record_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.record_menu_button.FlatAppearance.BorderSize = 0;
+            this.record_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.record_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.record_menu_button.Location = new System.Drawing.Point(0, 240);
+            this.record_menu_button.Location = new System.Drawing.Point(0, 186);
             this.record_menu_button.Margin = new System.Windows.Forms.Padding(0);
             this.record_menu_button.Name = "record_menu_button";
-            this.record_menu_button.Size = new System.Drawing.Size(146, 80);
+            this.record_menu_button.Size = new System.Drawing.Size(146, 62);
             this.record_menu_button.TabIndex = 3;
             this.record_menu_button.UseVisualStyleBackColor = true;
             // 
@@ -133,11 +151,12 @@
             this.finance_menu_button.BackgroundImage = global::ParishSystem.Properties.Resources.FIcon;
             this.finance_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.finance_menu_button.FlatAppearance.BorderSize = 0;
+            this.finance_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.finance_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.finance_menu_button.Location = new System.Drawing.Point(0, 320);
+            this.finance_menu_button.Location = new System.Drawing.Point(0, 248);
             this.finance_menu_button.Margin = new System.Windows.Forms.Padding(0);
             this.finance_menu_button.Name = "finance_menu_button";
-            this.finance_menu_button.Size = new System.Drawing.Size(146, 80);
+            this.finance_menu_button.Size = new System.Drawing.Size(146, 62);
             this.finance_menu_button.TabIndex = 1;
             this.finance_menu_button.UseVisualStyleBackColor = true;
             // 
@@ -149,7 +168,7 @@
             this.home_panel.BackColor = System.Drawing.Color.White;
             this.home_panel.Controls.Add(this.label1);
             this.home_panel.Controls.Add(this.username_label);
-            this.home_panel.Location = new System.Drawing.Point(149, 53);
+            this.home_panel.Location = new System.Drawing.Point(1003, 9);
             this.home_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.home_panel.Name = "home_panel";
             this.home_panel.Size = new System.Drawing.Size(881, 608);
@@ -181,10 +200,12 @@
             // 
             // profile_panel
             // 
+            this.profile_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.profile_panel.Controls.Add(this.panel1);
+            this.profile_panel.Controls.Add(this.label3);
             this.profile_panel.Controls.Add(this.searchBar);
             this.profile_panel.Controls.Add(this.generalprofile_datagridview);
-            this.profile_panel.Location = new System.Drawing.Point(145, 53);
+            this.profile_panel.Location = new System.Drawing.Point(1021, 6);
             this.profile_panel.Name = "profile_panel";
             this.profile_panel.Size = new System.Drawing.Size(889, 628);
             this.profile_panel.TabIndex = 29;
@@ -192,6 +213,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.clear_profile_button);
             this.panel1.Controls.Add(this.deleteProfile_button);
             this.panel1.Controls.Add(this.openProfile_button);
             this.panel1.Controls.Add(this.addProfile_button);
@@ -202,42 +224,68 @@
             this.panel1.Controls.Add(this.label33);
             this.panel1.Controls.Add(this.firstname_textbox);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(4, 52);
+            this.panel1.Location = new System.Drawing.Point(4, 42);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(480, 556);
             this.panel1.TabIndex = 27;
             // 
+            // clear_profile_button
+            // 
+            this.clear_profile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.clear_profile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear_profile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear_profile_button.ForeColor = System.Drawing.Color.White;
+            this.clear_profile_button.Location = new System.Drawing.Point(227, 333);
+            this.clear_profile_button.Name = "clear_profile_button";
+            this.clear_profile_button.Size = new System.Drawing.Size(128, 43);
+            this.clear_profile_button.TabIndex = 31;
+            this.clear_profile_button.Text = "Clear";
+            this.clear_profile_button.UseVisualStyleBackColor = false;
+            this.clear_profile_button.Click += new System.EventHandler(this.clear_profile_button_Click);
+            // 
             // deleteProfile_button
             // 
-            this.deleteProfile_button.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteProfile_button.Location = new System.Drawing.Point(296, 234);
+            this.deleteProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.deleteProfile_button.Enabled = false;
+            this.deleteProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteProfile_button.ForeColor = System.Drawing.Color.White;
+            this.deleteProfile_button.Location = new System.Drawing.Point(169, 261);
             this.deleteProfile_button.Name = "deleteProfile_button";
             this.deleteProfile_button.Size = new System.Drawing.Size(139, 43);
             this.deleteProfile_button.TabIndex = 30;
             this.deleteProfile_button.Text = "Delete Profile";
-            this.deleteProfile_button.UseVisualStyleBackColor = true;
+            this.deleteProfile_button.UseVisualStyleBackColor = false;
             this.deleteProfile_button.Click += new System.EventHandler(this.deleteProfile_button_Click);
             // 
             // openProfile_button
             // 
-            this.openProfile_button.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openProfile_button.Location = new System.Drawing.Point(162, 234);
+            this.openProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.openProfile_button.Enabled = false;
+            this.openProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.openProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openProfile_button.ForeColor = System.Drawing.Color.White;
+            this.openProfile_button.Location = new System.Drawing.Point(167, 176);
             this.openProfile_button.Name = "openProfile_button";
             this.openProfile_button.Size = new System.Drawing.Size(128, 43);
             this.openProfile_button.TabIndex = 29;
             this.openProfile_button.Text = "Open Profile";
-            this.openProfile_button.UseVisualStyleBackColor = true;
+            this.openProfile_button.UseVisualStyleBackColor = false;
             this.openProfile_button.Click += new System.EventHandler(this.openProfile_button_Click);
             // 
             // addProfile_button
             // 
-            this.addProfile_button.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addProfile_button.Location = new System.Drawing.Point(28, 234);
+            this.addProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.addProfile_button.Enabled = false;
+            this.addProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addProfile_button.ForeColor = System.Drawing.Color.White;
+            this.addProfile_button.Location = new System.Drawing.Point(33, 176);
             this.addProfile_button.Name = "addProfile_button";
             this.addProfile_button.Size = new System.Drawing.Size(128, 43);
             this.addProfile_button.TabIndex = 29;
             this.addProfile_button.Text = "Add Profile";
-            this.addProfile_button.UseVisualStyleBackColor = true;
+            this.addProfile_button.UseVisualStyleBackColor = false;
             this.addProfile_button.Click += new System.EventHandler(this.addProfile_button_Click);
             // 
             // suffix_textbox
@@ -325,10 +373,21 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "__________________________________________________";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(3, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 27);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "PROFILES";
+            // 
             // searchBar
             // 
             this.searchBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBar.Location = new System.Drawing.Point(490, 13);
+            this.searchBar.Location = new System.Drawing.Point(490, 8);
             this.searchBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchBar.Name = "searchBar";
             this.searchBar.Size = new System.Drawing.Size(395, 29);
@@ -342,7 +401,7 @@
             this.generalprofile_datagridview.BackgroundColor = System.Drawing.Color.White;
             this.generalprofile_datagridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.generalprofile_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.generalprofile_datagridview.Location = new System.Drawing.Point(490, 52);
+            this.generalprofile_datagridview.Location = new System.Drawing.Point(490, 42);
             this.generalprofile_datagridview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.generalprofile_datagridview.Name = "generalprofile_datagridview";
             this.generalprofile_datagridview.RowHeadersVisible = false;
@@ -400,12 +459,134 @@
             this.btn_Close.UseVisualStyleBackColor = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
+            // welcome_Text
+            // 
+            this.welcome_Text.AutoSize = true;
+            this.welcome_Text.BackColor = System.Drawing.Color.Transparent;
+            this.welcome_Text.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcome_Text.ForeColor = System.Drawing.Color.White;
+            this.welcome_Text.Location = new System.Drawing.Point(13, 10);
+            this.welcome_Text.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.welcome_Text.Name = "welcome_Text";
+            this.welcome_Text.Size = new System.Drawing.Size(97, 27);
+            this.welcome_Text.TabIndex = 35;
+            this.welcome_Text.Text = "Welcome";
+            // 
+            // username_Welcome_Text
+            // 
+            this.username_Welcome_Text.AutoSize = true;
+            this.username_Welcome_Text.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username_Welcome_Text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.username_Welcome_Text.Location = new System.Drawing.Point(110, 11);
+            this.username_Welcome_Text.Name = "username_Welcome_Text";
+            this.username_Welcome_Text.Size = new System.Drawing.Size(123, 27);
+            this.username_Welcome_Text.TabIndex = 36;
+            this.username_Welcome_Text.Text = "USERNAME";
+            // 
+            // time_Text
+            // 
+            this.time_Text.AutoSize = true;
+            this.time_Text.BackColor = System.Drawing.Color.Transparent;
+            this.time_Text.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time_Text.ForeColor = System.Drawing.Color.White;
+            this.time_Text.Location = new System.Drawing.Point(781, 9);
+            this.time_Text.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.time_Text.Name = "time_Text";
+            this.time_Text.Size = new System.Drawing.Size(84, 27);
+            this.time_Text.TabIndex = 35;
+            this.time_Text.Text = "HH:MM";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.tabControl1);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Location = new System.Drawing.Point(150, 43);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(883, 626);
+            this.panel2.TabIndex = 34;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(541, 102);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 33);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(694, 102);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(117, 33);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(38, 34);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(136, 30);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Applications";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(43, 141);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(768, 460);
+            this.tabControl1.TabIndex = 3;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.ForeColor = System.Drawing.Color.White;
+            this.tabPage1.Location = new System.Drawing.Point(4, 30);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(760, 426);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Baptism Applications";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 30);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(760, 426);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // SAD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1034, 673);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.time_Text);
+            this.Controls.Add(this.welcome_Text);
+            this.Controls.Add(this.username_Welcome_Text);
             this.Controls.Add(this.btn_Min);
             this.Controls.Add(this.btn_Max);
             this.Controls.Add(this.btn_Close);
@@ -417,7 +598,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SAD";
             this.Text = "SAD";
-            this.Load += new System.EventHandler(this.SAD_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.home_panel.ResumeLayout(false);
             this.home_panel.PerformLayout();
@@ -426,7 +606,11 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -458,5 +642,17 @@
         private System.Windows.Forms.Button record_menu_button;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label username_label;
+        private System.Windows.Forms.Label welcome_Text;
+        private System.Windows.Forms.Label username_Welcome_Text;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label time_Text;
+        private System.Windows.Forms.Button clear_profile_button;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label label4;
     }
 }

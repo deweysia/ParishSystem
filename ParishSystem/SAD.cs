@@ -104,12 +104,23 @@ namespace ParishSystem
             DataTable dt = dh.getGeneralProfiles();
             generalprofile_datagridview.DataSource = dt;
             generalprofile_datagridview.Columns["profileID"].Visible = false;
-            
+            generalprofile_datagridview.Columns["firstName"].Visible = false;
+            generalprofile_datagridview.Columns["midName"].Visible = false;
+            generalprofile_datagridview.Columns["lastName"].Visible = false;
+            generalprofile_datagridview.Columns["suffix"].Visible = false;
         }
 
         private void generalprofile_datagridview_CellClick(object sender, DataGridViewCellEventArgs e)
         {//data grid cell click
+            openProfile_button.Enabled = true;
+            deleteProfile_button.Enabled = true;
+
             lastGeneralProfile = int.Parse(generalprofile_datagridview.CurrentRow.Cells["profileID"].Value.ToString());
+            firstname_textbox.Text=generalprofile_datagridview.CurrentRow.Cells[1].Value.ToString();
+            middlename_textbox.Text=generalprofile_datagridview.CurrentRow.Cells["midname"].Value.ToString();
+            lastname_textbox.Text = generalprofile_datagridview.CurrentRow.Cells["lastname"].Value.ToString();
+            suffix_textbox.Text = generalprofile_datagridview.CurrentRow.Cells["suffix"].Value.ToString();
+
             Console.WriteLine(lastGeneralProfile);
         }
 
@@ -122,12 +133,15 @@ namespace ParishSystem
         {//adds basic profile with name values only 
             if (dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, '0',DateTime.MinValue , null, null, null)) { refreshGeneralProfileTable(); }
             else { MessageBox.Show("Entry not added"); }
+            clearProfile();
         }
 
         private void openProfile_button_Click(object sender, EventArgs e)
         {//open person complete profile
+           
             Form person = new Person(lastGeneralProfile, dh);
             person.ShowDialog();
+            clearProfile();
         }
 
         private void deleteProfile_button_Click(object sender, EventArgs e)
@@ -146,11 +160,26 @@ namespace ParishSystem
 
 
 
+
         #endregion
 
-        private void SAD_Load(object sender, EventArgs e)
+        private void clearProfile()
         {
+            lastname_textbox.Text="Last Name";
+            middlename_textbox.Text="Middle Name";
+            firstname_textbox.Text="First Name";
+            suffix_textbox.Text="Suffix";
+            lastGeneralProfile = 0;
+        }
+        private void clear_profile_button_Click(object sender, EventArgs e)
+        {
+            clearProfile();
+            deleteProfile_button.Enabled = false;
+            openProfile_button.Enabled = false;
+            addProfile_button.Enabled = false;
 
         }
+
+      
     }
 }
