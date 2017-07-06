@@ -42,8 +42,22 @@ namespace ParishSystem
         {
             home_panel.Hide();
             profile_panel.Show();
+            application_panel.Hide();
             refreshGeneralProfileTable();
 
+        }
+        private void application_menu_button_Click(object sender, EventArgs e)
+        {
+            application_panel.Show();
+            home_panel.Hide();
+            profile_panel.Hide();
+          
+        }
+        private void home_menu_button_Click(object sender, EventArgs e)
+        {
+            application_panel.Hide();
+            home_panel.Show();
+            profile_panel.Hide();
         }
         #endregion
 
@@ -180,6 +194,6 @@ namespace ParishSystem
 
         }
 
-      
+        
     }
 }
