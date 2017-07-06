@@ -219,10 +219,10 @@
             // 
             // deleteProfile_button
             // 
-            this.deleteProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.deleteProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(77)))));
             this.deleteProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteProfile_button.Location = new System.Drawing.Point(301, 176);
+            this.deleteProfile_button.Location = new System.Drawing.Point(301, 144);
             this.deleteProfile_button.Name = "deleteProfile_button";
             this.deleteProfile_button.Size = new System.Drawing.Size(139, 43);
             this.deleteProfile_button.TabIndex = 30;
@@ -232,10 +232,10 @@
             // 
             // openProfile_button
             // 
-            this.openProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.openProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(77)))));
             this.openProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openProfile_button.Location = new System.Drawing.Point(167, 176);
+            this.openProfile_button.Location = new System.Drawing.Point(167, 144);
             this.openProfile_button.Name = "openProfile_button";
             this.openProfile_button.Size = new System.Drawing.Size(128, 43);
             this.openProfile_button.TabIndex = 29;
@@ -245,10 +245,10 @@
             // 
             // addProfile_button
             // 
-            this.addProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.addProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(77)))));
             this.addProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addProfile_button.Location = new System.Drawing.Point(33, 176);
+            this.addProfile_button.Location = new System.Drawing.Point(33, 144);
             this.addProfile_button.Name = "addProfile_button";
             this.addProfile_button.Size = new System.Drawing.Size(128, 43);
             this.addProfile_button.TabIndex = 29;
@@ -433,7 +433,7 @@
             // 
             this.username_Welcome_Text.AutoSize = true;
             this.username_Welcome_Text.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username_Welcome_Text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.username_Welcome_Text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(77)))));
             this.username_Welcome_Text.Location = new System.Drawing.Point(110, 11);
             this.username_Welcome_Text.Name = "username_Welcome_Text";
             this.username_Welcome_Text.Size = new System.Drawing.Size(123, 27);
