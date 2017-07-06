@@ -54,7 +54,6 @@
             this.firstname_textbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.FatherPNL = new System.Windows.Forms.Panel();
-            this.father_checkbox = new System.Windows.Forms.CheckBox();
             this.suffix_textbox_father = new System.Windows.Forms.TextBox();
             this.lastname_textbox_father = new System.Windows.Forms.TextBox();
             this.middlename_textbox_father = new System.Windows.Forms.TextBox();
@@ -66,10 +65,10 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.father_checkbox = new System.Windows.Forms.CheckBox();
             this.MotherPNL = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.mother_checkbox = new System.Windows.Forms.CheckBox();
             this.suffix_textbox_mother = new System.Windows.Forms.TextBox();
             this.lastname_textbox_mother = new System.Windows.Forms.TextBox();
             this.middlename_textbox_mother = new System.Windows.Forms.TextBox();
@@ -79,6 +78,7 @@
             this.birthplace_textbox_mother = new System.Windows.Forms.TextBox();
             this.firstname_textbox_mother = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.mother_checkbox = new System.Windows.Forms.CheckBox();
             this.cancel_button = new System.Windows.Forms.Button();
             this.save_button = new System.Windows.Forms.Button();
             this.textBox30 = new System.Windows.Forms.TextBox();
@@ -164,6 +164,7 @@
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.balance_panel = new System.Windows.Forms.Panel();
             this.button22 = new System.Windows.Forms.Button();
+            this.label51 = new System.Windows.Forms.Label();
             this.label112 = new System.Windows.Forms.Label();
             this.textBox39 = new System.Windows.Forms.TextBox();
             this.label110 = new System.Windows.Forms.Label();
@@ -173,6 +174,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.baptism_panel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -216,6 +218,7 @@
             this.button23 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button25 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -244,6 +247,7 @@
             this.textBox36 = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
@@ -258,10 +262,6 @@
             this.button27 = new System.Windows.Forms.Button();
             this.button28 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.FatherPNL.SuspendLayout();
             this.MotherPNL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.baptism_requirement_dgv)).BeginInit();
@@ -281,6 +281,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
             this.profile_panel.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
             this.baptism_panel.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.baptism_details_panel.SuspendLayout();
@@ -292,7 +293,6 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.flowLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // biodata_button
@@ -637,20 +637,6 @@
             this.FatherPNL.Size = new System.Drawing.Size(506, 107);
             this.FatherPNL.TabIndex = 30;
             // 
-            // father_checkbox
-            // 
-            this.father_checkbox.AutoSize = true;
-            this.father_checkbox.Checked = true;
-            this.father_checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.father_checkbox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.father_checkbox.Location = new System.Drawing.Point(3, 3);
-            this.father_checkbox.Name = "father_checkbox";
-            this.father_checkbox.Size = new System.Drawing.Size(86, 29);
-            this.father_checkbox.TabIndex = 30;
-            this.father_checkbox.Text = "Father";
-            this.father_checkbox.UseVisualStyleBackColor = true;
-            this.father_checkbox.CheckedChanged += new System.EventHandler(this.father_checkbox_CheckedChanged);
-            // 
             // suffix_textbox_father
             // 
             this.suffix_textbox_father.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -770,6 +756,20 @@
             this.label14.TabIndex = 29;
             this.label14.Text = "_______________________________________________________";
             // 
+            // father_checkbox
+            // 
+            this.father_checkbox.AutoSize = true;
+            this.father_checkbox.Checked = true;
+            this.father_checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.father_checkbox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.father_checkbox.Location = new System.Drawing.Point(3, 3);
+            this.father_checkbox.Name = "father_checkbox";
+            this.father_checkbox.Size = new System.Drawing.Size(86, 29);
+            this.father_checkbox.TabIndex = 30;
+            this.father_checkbox.Text = "Father";
+            this.father_checkbox.UseVisualStyleBackColor = true;
+            this.father_checkbox.CheckedChanged += new System.EventHandler(this.father_checkbox_CheckedChanged);
+            // 
             // MotherPNL
             // 
             this.MotherPNL.BackColor = System.Drawing.Color.White;
@@ -806,20 +806,6 @@
             this.label11.Size = new System.Drawing.Size(147, 19);
             this.label11.TabIndex = 31;
             this.label11.Text = "_______________________";
-            // 
-            // mother_checkbox
-            // 
-            this.mother_checkbox.AutoSize = true;
-            this.mother_checkbox.Checked = true;
-            this.mother_checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.mother_checkbox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mother_checkbox.Location = new System.Drawing.Point(3, 170);
-            this.mother_checkbox.Name = "mother_checkbox";
-            this.mother_checkbox.Size = new System.Drawing.Size(97, 29);
-            this.mother_checkbox.TabIndex = 30;
-            this.mother_checkbox.Text = "Mother";
-            this.mother_checkbox.UseVisualStyleBackColor = true;
-            this.mother_checkbox.CheckedChanged += new System.EventHandler(this.mother_checkbox_CheckedChanged);
             // 
             // suffix_textbox_mother
             // 
@@ -921,6 +907,20 @@
             this.label16.Size = new System.Drawing.Size(339, 19);
             this.label16.TabIndex = 31;
             this.label16.Text = "_______________________________________________________";
+            // 
+            // mother_checkbox
+            // 
+            this.mother_checkbox.AutoSize = true;
+            this.mother_checkbox.Checked = true;
+            this.mother_checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.mother_checkbox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mother_checkbox.Location = new System.Drawing.Point(3, 170);
+            this.mother_checkbox.Name = "mother_checkbox";
+            this.mother_checkbox.Size = new System.Drawing.Size(97, 29);
+            this.mother_checkbox.TabIndex = 30;
+            this.mother_checkbox.Text = "Mother";
+            this.mother_checkbox.UseVisualStyleBackColor = true;
+            this.mother_checkbox.CheckedChanged += new System.EventHandler(this.mother_checkbox_CheckedChanged);
             // 
             // cancel_button
             // 
@@ -1847,6 +1847,16 @@
             this.button22.Text = "Add Payment";
             this.button22.UseVisualStyleBackColor = true;
             // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(431, 72);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(118, 37);
+            this.label51.TabIndex = 3;
+            this.label51.Text = "Payable";
+            // 
             // label112
             // 
             this.label112.AutoSize = true;
@@ -1953,6 +1963,19 @@
             this.label10.TabIndex = 35;
             this.label10.Text = "_________________________________________________________________________________" +
     "______________________________________________";
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.AutoScroll = true;
+            this.flowLayoutPanel4.Controls.Add(this.father_checkbox);
+            this.flowLayoutPanel4.Controls.Add(this.FatherPNL);
+            this.flowLayoutPanel4.Controls.Add(this.label8);
+            this.flowLayoutPanel4.Controls.Add(this.mother_checkbox);
+            this.flowLayoutPanel4.Controls.Add(this.MotherPNL);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(100, 271);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(538, 261);
+            this.flowLayoutPanel4.TabIndex = 54;
             // 
             // label8
             // 
@@ -2474,6 +2497,15 @@
             this.panel4.Size = new System.Drawing.Size(850, 540);
             this.panel4.TabIndex = 56;
             // 
+            // comboBox3
+            // 
+            this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(371, 23);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(148, 23);
+            this.comboBox3.TabIndex = 59;
+            // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2775,6 +2807,16 @@
             this.label41.TabIndex = 33;
             this.label41.Text = "Record";
             // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(287, 22);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(66, 21);
+            this.label50.TabIndex = 0;
+            this.label50.Text = "Partner";
+            // 
             // label42
             // 
             this.label42.AutoSize = true;
@@ -2907,57 +2949,15 @@
             this.button29.Text = "Set up Appointment";
             this.button29.UseVisualStyleBackColor = true;
             // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(371, 23);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(148, 23);
-            this.comboBox3.TabIndex = 59;
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(287, 22);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(66, 21);
-            this.label50.TabIndex = 0;
-            this.label50.Text = "Partner";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(431, 72);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(118, 37);
-            this.label51.TabIndex = 3;
-            this.label51.Text = "Payable";
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.AutoScroll = true;
-            this.flowLayoutPanel4.Controls.Add(this.father_checkbox);
-            this.flowLayoutPanel4.Controls.Add(this.FatherPNL);
-            this.flowLayoutPanel4.Controls.Add(this.label8);
-            this.flowLayoutPanel4.Controls.Add(this.mother_checkbox);
-            this.flowLayoutPanel4.Controls.Add(this.MotherPNL);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(100, 271);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(538, 261);
-            this.flowLayoutPanel4.TabIndex = 54;
-            // 
             // Person
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(944, 647);
+            this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.baptism_panel);
-            this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.marriage_panel);
             this.Controls.Add(this.balance_panel);
             this.Controls.Add(this.bloodletting_panel);
@@ -3000,6 +3000,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             this.profile_panel.ResumeLayout(false);
             this.profile_panel.PerformLayout();
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.flowLayoutPanel4.PerformLayout();
             this.baptism_panel.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.baptism_details_panel.ResumeLayout(false);
@@ -3017,8 +3019,6 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.flowLayoutPanel4.ResumeLayout(false);
-            this.flowLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
