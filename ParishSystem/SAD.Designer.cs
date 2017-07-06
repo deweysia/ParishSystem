@@ -72,7 +72,6 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button5 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.button6 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -583,6 +582,7 @@
             this.button2.TabIndex = 0;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
@@ -663,7 +663,6 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.button5);
-            this.tabPage3.Controls.Add(this.comboBox3);
             this.tabPage3.Controls.Add(this.dataGridView3);
             this.tabPage3.Controls.Add(this.button6);
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
@@ -685,14 +684,6 @@
             this.button5.TabIndex = 6;
             this.button5.Text = "Delete";
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(129, 24);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(262, 29);
-            this.comboBox3.TabIndex = 9;
             // 
             // dataGridView3
             // 
@@ -719,7 +710,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(38, 34);
+            this.label4.Location = new System.Drawing.Point(29, 40);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(136, 30);
             this.label4.TabIndex = 2;
@@ -905,13 +896,13 @@
             this.Controls.Add(this.welcome_Text);
             this.Controls.Add(this.username_Welcome_Text);
             this.Controls.Add(this.btn_Min);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btn_Max);
             this.Controls.Add(this.btn_Close);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.application_panel);
             this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.home_panel);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.application_panel);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -986,7 +977,6 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button3;
