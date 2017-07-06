@@ -262,6 +262,7 @@
     <Content Include="bin\Debug\ParishSystem.pdb" />
     <Content Include="bin\Debug\ParishSystem.vshost.exe" />
     <Content Include="database\updatedDB.sql" />
+    <Content Include="database\updatedSQLDB2.sql" />
     <Content Include="obj\Debug\ParishSystem.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\ParishSystem.exe" />
     <Content Include="obj\Debug\ParishSystem.pdb" />

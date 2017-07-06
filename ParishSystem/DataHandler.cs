@@ -132,9 +132,14 @@ namespace ParishSystem
 
             string[] components = s.Split(' ');
             string[] date = components[0].Split('/');
-            int month = int.Parse(date[0]);
-            int day = int.Parse(date[1]);
+
+            Console.Write(date[0] + " --- " + date[1] + " --- " + date[2]);
+
+            int day = int.Parse(date[0]);
+            int month = int.Parse(date[1]);
             int year = int.Parse(date[2]);
+            
+            
 
             if (timePortion)
             {
@@ -2331,15 +2336,15 @@ namespace ParishSystem
 
             //please add a column to format the names to be fn mn ln sf, but use select * parin
 
-            string q = "SELECT *, CONCAT(firstName, ' ', middleName, ' ', lastName, ' ', suffix) as Name FROM Sponsor"
-                + " WHERE sacramentType = 'b' AND sacramentID = " + sacramentID;
+            string q = "SELECT *, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix) as Name FROM Sponsor"
+                + " WHERE sacramentType = '" + sacramentType +"' AND sacramentID = " + sacramentID;
 
             DataTable dt = runQuery(q);
 
             return dt;
-
-
         }
+
+        
         public DataTable getApplications(int profileID, string applicationType)//comment: wrong query, input> (1 , "b") output (application table *)
         {
             string q = "SELECT * from application where applicationType='"+ applicationType + "' and profileID= " + profileID ;

@@ -130,7 +130,7 @@ namespace ParishSystem
             deleteProfile_button.Enabled = true;
 
             lastGeneralProfile = int.Parse(generalprofile_datagridview.CurrentRow.Cells["profileID"].Value.ToString());
-            firstname_textbox.Text=generalprofile_datagridview.CurrentRow.Cells[1].Value.ToString();
+            firstname_textbox.Text=generalprofile_datagridview.CurrentRow.Cells["firstname"].Value.ToString();
             middlename_textbox.Text=generalprofile_datagridview.CurrentRow.Cells["midname"].Value.ToString();
             lastname_textbox.Text = generalprofile_datagridview.CurrentRow.Cells["lastname"].Value.ToString();
             suffix_textbox.Text = generalprofile_datagridview.CurrentRow.Cells["suffix"].Value.ToString();
