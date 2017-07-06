@@ -154,30 +154,40 @@ namespace ParishSystem
 
         public void load_Baptism()
         {
-            if (dh.getApplications(ProfileID, "B").Rows[0]["status"].ToString().Equals("approved"))
-            {
-                //minister
-                DataTable minister = dh.getMinisters();
-                foreach (DataRow row in minister.Rows)
-                {
-                    minister_combobox_baptism.Items.Add(new ComboBoxItem(row["Name"].ToString(), row["ministerID"].ToString()));
-                }
 
-                //sponsors
-                sponsor_datagridview_baptism.DataSource = dh.getSacramentSponsors(dh.getBaptismID(ProfileID), "b");
+            DataTable dt = dh.getBaptismOf(ProfileID);
 
-            }
-            else if (dh.getApplications(ProfileID, "B").Rows[0]["status"].ToString().Equals("added"))
-            {
-                sponsor_datagridview_baptism.DataSource = dh.getSacramentSponsors(dh.getBaptismID(ProfileID), "b");
+            int ministerID = int.Parse(dt.Rows[0]["ministerID"].ToString());
+            int applicationID = int.Parse(dt.Rows[0]["applicationID"].ToString());
+            int baptismID = int.Parse(dt.Rows[0]["baptismID"].ToString());
 
-                DataTable bapInfo = dh.getBaptismOf(ProfileID);
-                date_textbox_baptism.Text = dh.getBaptismOf(ProfileID).Rows[0]["baptismDate"].ToString();
-                minister_textbox_baptism.Text = dh.getMinister(int.Parse(dh.getBaptismOf(ProfileID).Rows[0]["ministerID"].ToString())).Rows[0]["Name"].ToString();
-                registry_textbox_baptism.Text = bapInfo.Rows[0]["RegistryNumber"].ToString();
-                page_textbox_baptism.Text = bapInfo.Rows[0]["PageNumber"].ToString();
-                record_textbox_baptism.Text = bapInfo.Rows[0]["RecordNumber"].ToString();
-            }
+            registry_textbox_baptism.Text = dt.Rows[0]["registryNumber"].ToString();
+            page_textbox_baptism.Text = dt.Rows[0]["pageNumber"].ToString();
+            record_textbox_baptism.Text = dt.Rows[0]["recordNumber"].ToString();
+            Console.WriteLine("Date: " + dt.Rows[0]["baptismID"].ToString());
+            date_datetimepicker_baptism.Value = dh.toDateTime(dt.Rows[0]["baptismDate"].ToString(), false);
+            remarks_textbox_baptism.Text = dt.Rows[0]["remarks"].ToString();
+
+            //MessageBox.Show("loading");
+            dt = dh.getMinister(ministerID);
+
+            minister_combobox_baptism.Text = dt.Rows[0]["lastName"].ToString() + ", "
+                + dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["midName"].ToString()
+                + " " + dt.Rows[0]["suffix"].ToString();
+
+            dt = dh.getSponsors(baptismID, "B");
+
+            firstname_textbox_sponsor_baptism.Text = dt.Rows[0]["firstName"].ToString();
+            middlename_textbox_sponsor_baptism.Text = dt.Rows[0]["midName"].ToString();
+            lastname_textbox_sponsor_baptism.Text = dt.Rows[0]["lastName"].ToString();
+            suffix_textbox_sponsor_baptism.Text = dt.Rows[0]["suffix"].ToString();
+            residence_textbox_sponsor_baptism.Text = dt.Rows[0]["residence"].ToString();
+
+
+            string gender = dt.Rows[0]["gender"].ToString();
+
+            gender_male_radiobutton_sponsor_baptism.Checked = gender == "M";
+            gender_female_radiobutton_sponsor_baptism.Checked = gender == "F";
 
 
         }
@@ -274,6 +284,7 @@ namespace ParishSystem
         {
             if (dh.hasBaptismApplication(ProfileID))
             {
+
                 load_Baptism();
                 profile_panel.Visible = false;
                 baptism_panel.Visible = true;
@@ -284,7 +295,7 @@ namespace ParishSystem
             }
             else
             {
-                dh.addApplication(ProfileID, "B");
+                //dh.addApplication(ProfileID, "B");
             }
 
         }

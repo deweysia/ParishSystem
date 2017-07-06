@@ -1371,10 +1371,9 @@ namespace ParishSystem
 
         public DataTable getBaptismOf(int profileID)//COMMENT: ambiguous profile id
         {
-            string q = "SELECT profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix),"
-                + " gender, birthdate, remarks FROM Baptism"
-                + " JOIN Application ON applicationID = applicationID"
-                + " JOIN GeneralProfile ON generalProfile.profileID = Application.profileID WHERE GeneralProfile.profileID = " + profileID;
+            string q = "SELECT * FROM Baptism"
+                + " JOIN Application ON Application.applicationID = Baptism.applicationID"
+                + " WHERE Application.profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
