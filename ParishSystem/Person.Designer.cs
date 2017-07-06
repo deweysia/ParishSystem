@@ -81,152 +81,66 @@
             this.label16 = new System.Windows.Forms.Label();
             this.cancel_button = new System.Windows.Forms.Button();
             this.save_button = new System.Windows.Forms.Button();
-            this.baptism_panel = new System.Windows.Forms.Panel();
             this.textBox30 = new System.Windows.Forms.TextBox();
-            this.label52 = new System.Windows.Forms.Label();
-            this.exportCertificate_baptism_button = new System.Windows.Forms.Button();
-            this.print_baptism_button = new System.Windows.Forms.Button();
-            this.appointment_baptism_button = new System.Windows.Forms.Button();
-            this.cancel_baptism_button = new System.Windows.Forms.Button();
-            this.approve_baptism_button = new System.Windows.Forms.Button();
-            this.baptism_information_panel = new System.Windows.Forms.Panel();
-            this.baptism_date_textbox = new System.Windows.Forms.TextBox();
-            this.minister_baptism_textbox = new System.Windows.Forms.TextBox();
             this.record_baptism_textbox = new System.Windows.Forms.TextBox();
             this.page_baptism_textbox = new System.Windows.Forms.TextBox();
             this.registry_baptism_textbox = new System.Windows.Forms.TextBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
             this.minister_baptism_combobox = new System.Windows.Forms.ComboBox();
             this.baptism_date_dtp = new System.Windows.Forms.DateTimePicker();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
             this.baptism_requirement_dgv = new System.Windows.Forms.DataGridView();
             this.Complied = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.label93 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.genderF_radiobutton_sponsor_baptism = new System.Windows.Forms.RadioButton();
-            this.genderM_radiobutton_sponsor_baptism = new System.Windows.Forms.RadioButton();
-            this.residence_textbox_sponsor_baptism = new System.Windows.Forms.TextBox();
             this.delete_button_sponsor_baptism = new System.Windows.Forms.Button();
             this.add_button_sponsor_baptism = new System.Windows.Forms.Button();
             this.suffix_textbox_sponsor_baptism = new System.Windows.Forms.TextBox();
             this.lastname_textbox_sponsor_baptism = new System.Windows.Forms.TextBox();
             this.middlename_textbox_sponsor_baptism = new System.Windows.Forms.TextBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
             this.firstname_textbox_sponsor_baptism = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
             this.baptism_sponsor_dgv = new System.Windows.Forms.DataGridView();
             this.confirmation_panel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.confirmation_requirement_button = new System.Windows.Forms.Button();
-            this.confirmation_printCertificate_button = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.confirmation_application_button = new System.Windows.Forms.Button();
+            this.confirmation_details_button = new System.Windows.Forms.Button();
             this.confirmation_viewCertificate_button = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.confirmation_printCertificate_button = new System.Windows.Forms.Button();
+            this.confirmation_details_panel = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.female_sponsor_confirmation_radio = new System.Windows.Forms.RadioButton();
-            this.male_sponsor_confirmation_radio = new System.Windows.Forms.RadioButton();
-            this.residence_sponsor_confirmation_textbox = new System.Windows.Forms.TextBox();
-            this.suffix_sponsor_confirmation_textbox = new System.Windows.Forms.TextBox();
-            this.lastname_sponsor_confirmation_textbox = new System.Windows.Forms.TextBox();
-            this.middlename_sponsor_confirmation_textbox = new System.Windows.Forms.TextBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox19 = new System.Windows.Forms.TextBox();
             this.label64 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
-            this.firstname_sponsor_confirmation_textbox = new System.Windows.Forms.TextBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
             this.label67 = new System.Windows.Forms.Label();
-            this.minister_confirmation_textbox = new System.Windows.Forms.TextBox();
-            this.confirmationdate_confirmation_textbox = new System.Windows.Forms.TextBox();
-            this.recordnumber_confirmation_textbox = new System.Windows.Forms.TextBox();
-            this.pagenumber_confirmation_textbox = new System.Windows.Forms.TextBox();
-            this.remarks_sponsor_confirmation_textbox = new System.Windows.Forms.TextBox();
-            this.registrynumber_confirmation_textbox = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             this.label94 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
-            this.confirmationdate_confirmation_dtp = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label56 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label57 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.confirmation_application_panel = new System.Windows.Forms.Panel();
             this.label62 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.marriage_panel = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.label97 = new System.Windows.Forms.Label();
-            this.label98 = new System.Windows.Forms.Label();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.label84 = new System.Windows.Forms.Label();
-            this.label85 = new System.Windows.Forms.Label();
-            this.label86 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.label87 = new System.Windows.Forms.Label();
-            this.label88 = new System.Windows.Forms.Label();
-            this.label89 = new System.Windows.Forms.Label();
-            this.label90 = new System.Windows.Forms.Label();
-            this.label91 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.label73 = new System.Windows.Forms.Label();
-            this.label74 = new System.Windows.Forms.Label();
-            this.label75 = new System.Windows.Forms.Label();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.label76 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label79 = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
-            this.label81 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.label82 = new System.Windows.Forms.Label();
-            this.label92 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
             this.bloodletting_panel = new System.Windows.Forms.Panel();
             this.label108 = new System.Windows.Forms.Label();
             this.label107 = new System.Windows.Forms.Label();
@@ -251,7 +165,6 @@
             this.balance_panel = new System.Windows.Forms.Panel();
             this.button22 = new System.Windows.Forms.Button();
             this.label112 = new System.Windows.Forms.Label();
-            this.label111 = new System.Windows.Forms.Label();
             this.textBox39 = new System.Windows.Forms.TextBox();
             this.label110 = new System.Windows.Forms.Label();
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
@@ -261,24 +174,103 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.baptism_panel = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.application_baptism_button = new System.Windows.Forms.Button();
+            this.details_baptism_button = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.baptism_details_panel = new System.Windows.Forms.Panel();
+            this.label96 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.genderF_radiobutton_sponsor_baptism = new System.Windows.Forms.RadioButton();
+            this.genderM_radiobutton_sponsor_baptism = new System.Windows.Forms.RadioButton();
+            this.residence_textbox_sponsor_baptism = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.minister_baptism_textbox = new System.Windows.Forms.TextBox();
+            this.baptism_date_textbox = new System.Windows.Forms.TextBox();
+            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.baptism_application_panel = new System.Windows.Forms.Panel();
+            this.label95 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.marriage_panel = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button25 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button26 = new System.Windows.Forms.Button();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label34 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBox33 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox36 = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label49 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.button27 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.baptism_panel.SuspendLayout();
-            this.baptism_information_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.baptism_requirement_dgv)).BeginInit();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.baptism_sponsor_dgv)).BeginInit();
             this.confirmation_panel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.confirmation_details_panel.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.confirmation_application_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.marriage_panel.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.bloodletting_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -288,6 +280,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
             this.profile_panel.SuspendLayout();
+            this.baptism_panel.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.baptism_details_panel.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.baptism_application_panel.SuspendLayout();
+            this.marriage_panel.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // biodata_button
@@ -296,7 +299,7 @@
             this.biodata_button.FlatAppearance.BorderSize = 0;
             this.biodata_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.biodata_button.ForeColor = System.Drawing.Color.White;
-            this.biodata_button.Location = new System.Drawing.Point(46, -1);
+            this.biodata_button.Location = new System.Drawing.Point(47, -1);
             this.biodata_button.Margin = new System.Windows.Forms.Padding(0);
             this.biodata_button.Name = "biodata_button";
             this.biodata_button.Size = new System.Drawing.Size(100, 39);
@@ -371,6 +374,7 @@
             this.balance_button.TabIndex = 5;
             this.balance_button.Text = "Balance";
             this.balance_button.UseVisualStyleBackColor = false;
+            this.balance_button.Click += new System.EventHandler(this.balance_button_Click);
             this.balance_button.Enter += new System.EventHandler(this.menu_button_Enter);
             this.balance_button.Leave += new System.EventHandler(this.menu_button_Leave);
             // 
@@ -387,6 +391,7 @@
             this.bloodletting_button.TabIndex = 5;
             this.bloodletting_button.Text = "Bloodletting";
             this.bloodletting_button.UseVisualStyleBackColor = false;
+            this.bloodletting_button.Click += new System.EventHandler(this.bloodletting_button_Click);
             this.bloodletting_button.Enter += new System.EventHandler(this.menu_button_Enter);
             this.bloodletting_button.Leave += new System.EventHandler(this.menu_button_Leave);
             // 
@@ -404,28 +409,25 @@
             "O-",
             "AB+",
             "AB-"});
-            this.bloodtype_combobox_baptist.Location = new System.Drawing.Point(735, 197);
-            this.bloodtype_combobox_baptist.Margin = new System.Windows.Forms.Padding(2);
+            this.bloodtype_combobox_baptist.Location = new System.Drawing.Point(734, 197);
             this.bloodtype_combobox_baptist.Name = "bloodtype_combobox_baptist";
-            this.bloodtype_combobox_baptist.Size = new System.Drawing.Size(54, 29);
+            this.bloodtype_combobox_baptist.Size = new System.Drawing.Size(54, 25);
             this.bloodtype_combobox_baptist.TabIndex = 31;
             // 
             // contactNumber_textbox_baptist
             // 
             this.contactNumber_textbox_baptist.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.contactNumber_textbox_baptist.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactNumber_textbox_baptist.Location = new System.Drawing.Point(511, 198);
-            this.contactNumber_textbox_baptist.Margin = new System.Windows.Forms.Padding(2);
+            this.contactNumber_textbox_baptist.Location = new System.Drawing.Point(511, 199);
             this.contactNumber_textbox_baptist.Mask = "(+63) 000-0000";
             this.contactNumber_textbox_baptist.Name = "contactNumber_textbox_baptist";
-            this.contactNumber_textbox_baptist.Size = new System.Drawing.Size(97, 22);
+            this.contactNumber_textbox_baptist.Size = new System.Drawing.Size(97, 18);
             this.contactNumber_textbox_baptist.TabIndex = 30;
             // 
             // address_baptist_textarea
             // 
             this.address_baptist_textarea.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.address_baptist_textarea.Location = new System.Drawing.Point(478, 95);
-            this.address_baptist_textarea.Margin = new System.Windows.Forms.Padding(2);
             this.address_baptist_textarea.Multiline = true;
             this.address_baptist_textarea.Name = "address_baptist_textarea";
             this.address_baptist_textarea.Size = new System.Drawing.Size(310, 69);
@@ -438,7 +440,7 @@
             this.suffix_textbox.Location = new System.Drawing.Point(504, 47);
             this.suffix_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.suffix_textbox.Name = "suffix_textbox";
-            this.suffix_textbox.Size = new System.Drawing.Size(53, 23);
+            this.suffix_textbox.Size = new System.Drawing.Size(52, 18);
             this.suffix_textbox.TabIndex = 23;
             this.suffix_textbox.Text = "Suffix";
             this.suffix_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -450,7 +452,7 @@
             this.lastname_textbox.Location = new System.Drawing.Point(400, 47);
             this.lastname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastname_textbox.Name = "lastname_textbox";
-            this.lastname_textbox.Size = new System.Drawing.Size(94, 23);
+            this.lastname_textbox.Size = new System.Drawing.Size(94, 18);
             this.lastname_textbox.TabIndex = 24;
             this.lastname_textbox.Text = "Lastname";
             this.lastname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -462,7 +464,7 @@
             this.middlename_textbox.Location = new System.Drawing.Point(284, 47);
             this.middlename_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.middlename_textbox.Name = "middlename_textbox";
-            this.middlename_textbox.Size = new System.Drawing.Size(94, 23);
+            this.middlename_textbox.Size = new System.Drawing.Size(94, 18);
             this.middlename_textbox.TabIndex = 22;
             this.middlename_textbox.Text = "Middlename";
             this.middlename_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -474,7 +476,7 @@
             this.label7.Location = new System.Drawing.Point(92, 197);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 23);
+            this.label7.Size = new System.Drawing.Size(70, 17);
             this.label7.TabIndex = 21;
             this.label7.Text = "Birthplace";
             // 
@@ -485,7 +487,7 @@
             this.birthplace_textbox_baptist.Location = new System.Drawing.Point(186, 195);
             this.birthplace_textbox_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.birthplace_textbox_baptist.Name = "birthplace_textbox_baptist";
-            this.birthplace_textbox_baptist.Size = new System.Drawing.Size(167, 23);
+            this.birthplace_textbox_baptist.Size = new System.Drawing.Size(167, 18);
             this.birthplace_textbox_baptist.TabIndex = 20;
             this.birthplace_textbox_baptist.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -496,7 +498,7 @@
             this.label6.Location = new System.Drawing.Point(97, 145);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 23);
+            this.label6.Size = new System.Drawing.Size(65, 17);
             this.label6.TabIndex = 19;
             this.label6.Text = "Birthdate";
             // 
@@ -507,7 +509,7 @@
             this.label13.Location = new System.Drawing.Point(403, 200);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(130, 23);
+            this.label13.Size = new System.Drawing.Size(101, 17);
             this.label13.TabIndex = 27;
             this.label13.Text = "Phone Number";
             // 
@@ -518,7 +520,7 @@
             this.label9.Location = new System.Drawing.Point(413, 95);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 23);
+            this.label9.Size = new System.Drawing.Size(57, 17);
             this.label9.TabIndex = 27;
             this.label9.Text = "Address";
             // 
@@ -526,10 +528,10 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(119, 55);
+            this.label33.Location = new System.Drawing.Point(118, 55);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(57, 23);
+            this.label33.Size = new System.Drawing.Size(44, 17);
             this.label33.TabIndex = 27;
             this.label33.Text = "Name";
             // 
@@ -537,10 +539,10 @@
             // 
             this.gender_radiobutton2_baptist.AutoSize = true;
             this.gender_radiobutton2_baptist.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gender_radiobutton2_baptist.Location = new System.Drawing.Point(270, 99);
+            this.gender_radiobutton2_baptist.Location = new System.Drawing.Point(270, 98);
             this.gender_radiobutton2_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gender_radiobutton2_baptist.Name = "gender_radiobutton2_baptist";
-            this.gender_radiobutton2_baptist.Size = new System.Drawing.Size(85, 27);
+            this.gender_radiobutton2_baptist.Size = new System.Drawing.Size(67, 21);
             this.gender_radiobutton2_baptist.TabIndex = 16;
             this.gender_radiobutton2_baptist.TabStop = true;
             this.gender_radiobutton2_baptist.Text = "Female";
@@ -554,7 +556,7 @@
             this.birthdate_datetimepicker_baptist.Location = new System.Drawing.Point(186, 139);
             this.birthdate_datetimepicker_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.birthdate_datetimepicker_baptist.Name = "birthdate_datetimepicker_baptist";
-            this.birthdate_datetimepicker_baptist.Size = new System.Drawing.Size(178, 29);
+            this.birthdate_datetimepicker_baptist.Size = new System.Drawing.Size(177, 25);
             this.birthdate_datetimepicker_baptist.TabIndex = 18;
             this.birthdate_datetimepicker_baptist.ValueChanged += new System.EventHandler(this.birthdate_datetimepicker_baptist_ValueChanged);
             // 
@@ -565,7 +567,7 @@
             this.gender_radiobutton1_baptist.Location = new System.Drawing.Point(186, 99);
             this.gender_radiobutton1_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gender_radiobutton1_baptist.Name = "gender_radiobutton1_baptist";
-            this.gender_radiobutton1_baptist.Size = new System.Drawing.Size(68, 27);
+            this.gender_radiobutton1_baptist.Size = new System.Drawing.Size(55, 21);
             this.gender_radiobutton1_baptist.TabIndex = 17;
             this.gender_radiobutton1_baptist.TabStop = true;
             this.gender_radiobutton1_baptist.Text = "Male";
@@ -578,7 +580,7 @@
             this.label109.Location = new System.Drawing.Point(650, 200);
             this.label109.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(100, 23);
+            this.label109.Size = new System.Drawing.Size(77, 17);
             this.label109.TabIndex = 14;
             this.label109.Text = "Blood Type";
             // 
@@ -589,7 +591,7 @@
             this.label4.Location = new System.Drawing.Point(110, 100);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 23);
+            this.label4.Size = new System.Drawing.Size(52, 17);
             this.label4.TabIndex = 14;
             this.label4.Text = "Gender";
             // 
@@ -600,7 +602,7 @@
             this.firstname_textbox.Location = new System.Drawing.Point(165, 47);
             this.firstname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstname_textbox.Name = "firstname_textbox";
-            this.firstname_textbox.Size = new System.Drawing.Size(94, 23);
+            this.firstname_textbox.Size = new System.Drawing.Size(94, 18);
             this.firstname_textbox.TabIndex = 13;
             this.firstname_textbox.Text = "Firstname";
             this.firstname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -608,10 +610,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(160, 54);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(160, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(472, 23);
+            this.label1.Size = new System.Drawing.Size(405, 19);
             this.label1.TabIndex = 11;
             this.label1.Text = "__________________________________________________________________";
             // 
@@ -631,7 +632,6 @@
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Location = new System.Drawing.Point(78, 275);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(506, 119);
             this.panel1.TabIndex = 30;
@@ -640,10 +640,9 @@
             // 
             this.father_checkbox.AutoSize = true;
             this.father_checkbox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.father_checkbox.Location = new System.Drawing.Point(2, 2);
-            this.father_checkbox.Margin = new System.Windows.Forms.Padding(2);
+            this.father_checkbox.Location = new System.Drawing.Point(3, 3);
             this.father_checkbox.Name = "father_checkbox";
-            this.father_checkbox.Size = new System.Drawing.Size(107, 36);
+            this.father_checkbox.Size = new System.Drawing.Size(86, 29);
             this.father_checkbox.TabIndex = 30;
             this.father_checkbox.Text = "Father";
             this.father_checkbox.UseVisualStyleBackColor = true;
@@ -655,7 +654,7 @@
             this.suffix_textbox_father.Location = new System.Drawing.Point(391, 26);
             this.suffix_textbox_father.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.suffix_textbox_father.Name = "suffix_textbox_father";
-            this.suffix_textbox_father.Size = new System.Drawing.Size(50, 20);
+            this.suffix_textbox_father.Size = new System.Drawing.Size(50, 16);
             this.suffix_textbox_father.TabIndex = 23;
             this.suffix_textbox_father.Text = "Suffix";
             this.suffix_textbox_father.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -667,7 +666,7 @@
             this.lastname_textbox_father.Location = new System.Drawing.Point(297, 27);
             this.lastname_textbox_father.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastname_textbox_father.Name = "lastname_textbox_father";
-            this.lastname_textbox_father.Size = new System.Drawing.Size(94, 20);
+            this.lastname_textbox_father.Size = new System.Drawing.Size(94, 16);
             this.lastname_textbox_father.TabIndex = 24;
             this.lastname_textbox_father.Text = "Lastname";
             this.lastname_textbox_father.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -679,7 +678,7 @@
             this.middlename_textbox_father.Location = new System.Drawing.Point(203, 27);
             this.middlename_textbox_father.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.middlename_textbox_father.Name = "middlename_textbox_father";
-            this.middlename_textbox_father.Size = new System.Drawing.Size(94, 20);
+            this.middlename_textbox_father.Size = new System.Drawing.Size(94, 16);
             this.middlename_textbox_father.TabIndex = 22;
             this.middlename_textbox_father.Text = "Middlename";
             this.middlename_textbox_father.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -688,10 +687,10 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(253, 75);
+            this.label23.Location = new System.Drawing.Point(253, 76);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(89, 23);
+            this.label23.Size = new System.Drawing.Size(69, 17);
             this.label23.TabIndex = 21;
             this.label23.Text = "Residence";
             // 
@@ -699,10 +698,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(31, 74);
+            this.label5.Location = new System.Drawing.Point(30, 74);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 23);
+            this.label5.Size = new System.Drawing.Size(70, 17);
             this.label5.TabIndex = 21;
             this.label5.Text = "Birthplace";
             // 
@@ -713,7 +712,7 @@
             this.residence_textbox_father.Location = new System.Drawing.Point(331, 73);
             this.residence_textbox_father.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.residence_textbox_father.Name = "residence_textbox_father";
-            this.residence_textbox_father.Size = new System.Drawing.Size(133, 20);
+            this.residence_textbox_father.Size = new System.Drawing.Size(133, 16);
             this.residence_textbox_father.TabIndex = 20;
             this.residence_textbox_father.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -721,10 +720,10 @@
             // 
             this.birthplace_textbox_father.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.birthplace_textbox_father.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.birthplace_textbox_father.Location = new System.Drawing.Point(108, 73);
+            this.birthplace_textbox_father.Location = new System.Drawing.Point(107, 73);
             this.birthplace_textbox_father.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.birthplace_textbox_father.Name = "birthplace_textbox_father";
-            this.birthplace_textbox_father.Size = new System.Drawing.Size(133, 20);
+            this.birthplace_textbox_father.Size = new System.Drawing.Size(133, 16);
             this.birthplace_textbox_father.TabIndex = 20;
             this.birthplace_textbox_father.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -735,7 +734,7 @@
             this.firstname_textbox_father.Location = new System.Drawing.Point(109, 27);
             this.firstname_textbox_father.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstname_textbox_father.Name = "firstname_textbox_father";
-            this.firstname_textbox_father.Size = new System.Drawing.Size(94, 20);
+            this.firstname_textbox_father.Size = new System.Drawing.Size(94, 16);
             this.firstname_textbox_father.TabIndex = 13;
             this.firstname_textbox_father.Text = "Firstname";
             this.firstname_textbox_father.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -744,9 +743,8 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Location = new System.Drawing.Point(329, 77);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(164, 23);
+            this.label27.Size = new System.Drawing.Size(141, 19);
             this.label27.TabIndex = 23;
             this.label27.Text = "______________________";
             // 
@@ -754,19 +752,17 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(99, 77);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(171, 23);
+            this.label15.Size = new System.Drawing.Size(147, 19);
             this.label15.TabIndex = 23;
             this.label15.Text = "_______________________";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(101, 28);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(102, 28);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(395, 23);
+            this.label14.Size = new System.Drawing.Size(339, 19);
             this.label14.TabIndex = 29;
             this.label14.Text = "_______________________________________________________";
             // 
@@ -786,7 +782,6 @@
             this.panel3.Controls.Add(this.firstname_textbox_mother);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Location = new System.Drawing.Point(78, 419);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(506, 128);
             this.panel3.TabIndex = 31;
@@ -795,9 +790,8 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(329, 80);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(164, 23);
+            this.label12.Size = new System.Drawing.Size(141, 19);
             this.label12.TabIndex = 31;
             this.label12.Text = "______________________";
             // 
@@ -805,9 +799,8 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(99, 83);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(171, 23);
+            this.label11.Size = new System.Drawing.Size(147, 19);
             this.label11.TabIndex = 31;
             this.label11.Text = "_______________________";
             // 
@@ -816,9 +809,8 @@
             this.mother_checkbox.AutoSize = true;
             this.mother_checkbox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mother_checkbox.Location = new System.Drawing.Point(6, 5);
-            this.mother_checkbox.Margin = new System.Windows.Forms.Padding(2);
             this.mother_checkbox.Name = "mother_checkbox";
-            this.mother_checkbox.Size = new System.Drawing.Size(121, 36);
+            this.mother_checkbox.Size = new System.Drawing.Size(97, 29);
             this.mother_checkbox.TabIndex = 30;
             this.mother_checkbox.Text = "Mother";
             this.mother_checkbox.UseVisualStyleBackColor = true;
@@ -827,10 +819,10 @@
             // 
             this.suffix_textbox_mother.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.suffix_textbox_mother.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suffix_textbox_mother.Location = new System.Drawing.Point(391, 30);
+            this.suffix_textbox_mother.Location = new System.Drawing.Point(391, 31);
             this.suffix_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.suffix_textbox_mother.Name = "suffix_textbox_mother";
-            this.suffix_textbox_mother.Size = new System.Drawing.Size(43, 20);
+            this.suffix_textbox_mother.Size = new System.Drawing.Size(43, 16);
             this.suffix_textbox_mother.TabIndex = 23;
             this.suffix_textbox_mother.Text = "Suffix";
             this.suffix_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -839,10 +831,10 @@
             // 
             this.lastname_textbox_mother.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastname_textbox_mother.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastname_textbox_mother.Location = new System.Drawing.Point(297, 30);
+            this.lastname_textbox_mother.Location = new System.Drawing.Point(297, 31);
             this.lastname_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastname_textbox_mother.Name = "lastname_textbox_mother";
-            this.lastname_textbox_mother.Size = new System.Drawing.Size(94, 20);
+            this.lastname_textbox_mother.Size = new System.Drawing.Size(94, 16);
             this.lastname_textbox_mother.TabIndex = 24;
             this.lastname_textbox_mother.Text = "Lastname";
             this.lastname_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -851,10 +843,10 @@
             // 
             this.middlename_textbox_mother.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.middlename_textbox_mother.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.middlename_textbox_mother.Location = new System.Drawing.Point(203, 30);
+            this.middlename_textbox_mother.Location = new System.Drawing.Point(203, 31);
             this.middlename_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.middlename_textbox_mother.Name = "middlename_textbox_mother";
-            this.middlename_textbox_mother.Size = new System.Drawing.Size(94, 20);
+            this.middlename_textbox_mother.Size = new System.Drawing.Size(94, 16);
             this.middlename_textbox_mother.TabIndex = 22;
             this.middlename_textbox_mother.Text = "Middlename";
             this.middlename_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -866,7 +858,7 @@
             this.label20.Location = new System.Drawing.Point(254, 80);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(89, 23);
+            this.label20.Size = new System.Drawing.Size(69, 17);
             this.label20.TabIndex = 21;
             this.label20.Text = "Residence";
             // 
@@ -877,7 +869,7 @@
             this.label21.Location = new System.Drawing.Point(26, 80);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(92, 23);
+            this.label21.Size = new System.Drawing.Size(70, 17);
             this.label21.TabIndex = 21;
             this.label21.Text = "Birthplace";
             // 
@@ -885,10 +877,10 @@
             // 
             this.residence_textbox_mother.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.residence_textbox_mother.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.residence_textbox_mother.Location = new System.Drawing.Point(331, 75);
+            this.residence_textbox_mother.Location = new System.Drawing.Point(331, 76);
             this.residence_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.residence_textbox_mother.Name = "residence_textbox_mother";
-            this.residence_textbox_mother.Size = new System.Drawing.Size(133, 20);
+            this.residence_textbox_mother.Size = new System.Drawing.Size(133, 16);
             this.residence_textbox_mother.TabIndex = 20;
             this.residence_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -899,7 +891,7 @@
             this.birthplace_textbox_mother.Location = new System.Drawing.Point(106, 80);
             this.birthplace_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.birthplace_textbox_mother.Name = "birthplace_textbox_mother";
-            this.birthplace_textbox_mother.Size = new System.Drawing.Size(133, 20);
+            this.birthplace_textbox_mother.Size = new System.Drawing.Size(133, 16);
             this.birthplace_textbox_mother.TabIndex = 20;
             this.birthplace_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -907,10 +899,10 @@
             // 
             this.firstname_textbox_mother.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstname_textbox_mother.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstname_textbox_mother.Location = new System.Drawing.Point(109, 30);
+            this.firstname_textbox_mother.Location = new System.Drawing.Point(109, 31);
             this.firstname_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstname_textbox_mother.Name = "firstname_textbox_mother";
-            this.firstname_textbox_mother.Size = new System.Drawing.Size(94, 20);
+            this.firstname_textbox_mother.Size = new System.Drawing.Size(94, 16);
             this.firstname_textbox_mother.TabIndex = 13;
             this.firstname_textbox_mother.Text = "Firstname";
             this.firstname_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -918,10 +910,9 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(101, 34);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Location = new System.Drawing.Point(102, 34);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(395, 23);
+            this.label16.Size = new System.Drawing.Size(339, 19);
             this.label16.TabIndex = 31;
             this.label16.Text = "_______________________________________________________";
             // 
@@ -930,10 +921,9 @@
             this.cancel_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.cancel_button.FlatAppearance.BorderSize = 0;
             this.cancel_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel_button.Location = new System.Drawing.Point(653, 422);
-            this.cancel_button.Margin = new System.Windows.Forms.Padding(2);
+            this.cancel_button.Location = new System.Drawing.Point(653, 493);
             this.cancel_button.Name = "cancel_button";
-            this.cancel_button.Size = new System.Drawing.Size(152, 39);
+            this.cancel_button.Size = new System.Drawing.Size(151, 39);
             this.cancel_button.TabIndex = 53;
             this.cancel_button.Text = "Cancel";
             this.cancel_button.UseVisualStyleBackColor = false;
@@ -945,295 +935,87 @@
             this.save_button.FlatAppearance.BorderSize = 0;
             this.save_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save_button.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.save_button.Location = new System.Drawing.Point(653, 364);
-            this.save_button.Margin = new System.Windows.Forms.Padding(2);
+            this.save_button.Location = new System.Drawing.Point(653, 447);
             this.save_button.Name = "save_button";
-            this.save_button.Size = new System.Drawing.Size(152, 39);
+            this.save_button.Size = new System.Drawing.Size(151, 39);
             this.save_button.TabIndex = 53;
             this.save_button.Text = "Save";
             this.save_button.UseVisualStyleBackColor = false;
             this.save_button.Click += new System.EventHandler(this.saveGeneralProfile);
             // 
-            // baptism_panel
-            // 
-            this.baptism_panel.Controls.Add(this.textBox30);
-            this.baptism_panel.Controls.Add(this.label52);
-            this.baptism_panel.Controls.Add(this.exportCertificate_baptism_button);
-            this.baptism_panel.Controls.Add(this.print_baptism_button);
-            this.baptism_panel.Controls.Add(this.appointment_baptism_button);
-            this.baptism_panel.Controls.Add(this.cancel_baptism_button);
-            this.baptism_panel.Controls.Add(this.approve_baptism_button);
-            this.baptism_panel.Controls.Add(this.baptism_information_panel);
-            this.baptism_panel.Controls.Add(this.baptism_requirement_dgv);
-            this.baptism_panel.Controls.Add(this.label93);
-            this.baptism_panel.Controls.Add(this.label39);
-            this.baptism_panel.Controls.Add(this.label32);
-            this.baptism_panel.Controls.Add(this.panel6);
-            this.baptism_panel.Controls.Add(this.baptism_sponsor_dgv);
-            this.baptism_panel.Location = new System.Drawing.Point(11, 79);
-            this.baptism_panel.Margin = new System.Windows.Forms.Padding(2);
-            this.baptism_panel.Name = "baptism_panel";
-            this.baptism_panel.Size = new System.Drawing.Size(854, 38);
-            this.baptism_panel.TabIndex = 33;
-            // 
             // textBox30
             // 
             this.textBox30.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox30.Location = new System.Drawing.Point(130, 420);
-            this.textBox30.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox30.Location = new System.Drawing.Point(522, 378);
             this.textBox30.Multiline = true;
             this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(710, 81);
+            this.textBox30.Size = new System.Drawing.Size(280, 69);
             this.textBox30.TabIndex = 51;
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(11, 13);
-            this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(82, 28);
-            this.label52.TabIndex = 50;
-            this.label52.Text = "Baptism";
-            // 
-            // exportCertificate_baptism_button
-            // 
-            this.exportCertificate_baptism_button.Location = new System.Drawing.Point(38, 319);
-            this.exportCertificate_baptism_button.Margin = new System.Windows.Forms.Padding(2);
-            this.exportCertificate_baptism_button.Name = "exportCertificate_baptism_button";
-            this.exportCertificate_baptism_button.Size = new System.Drawing.Size(226, 30);
-            this.exportCertificate_baptism_button.TabIndex = 49;
-            this.exportCertificate_baptism_button.Text = "Export Batismal Certificate ";
-            this.exportCertificate_baptism_button.UseVisualStyleBackColor = true;
-            // 
-            // print_baptism_button
-            // 
-            this.print_baptism_button.Location = new System.Drawing.Point(38, 355);
-            this.print_baptism_button.Margin = new System.Windows.Forms.Padding(2);
-            this.print_baptism_button.Name = "print_baptism_button";
-            this.print_baptism_button.Size = new System.Drawing.Size(226, 30);
-            this.print_baptism_button.TabIndex = 49;
-            this.print_baptism_button.Text = "Print Batismal Certificate ";
-            this.print_baptism_button.UseVisualStyleBackColor = true;
-            // 
-            // appointment_baptism_button
-            // 
-            this.appointment_baptism_button.Location = new System.Drawing.Point(38, 282);
-            this.appointment_baptism_button.Margin = new System.Windows.Forms.Padding(2);
-            this.appointment_baptism_button.Name = "appointment_baptism_button";
-            this.appointment_baptism_button.Size = new System.Drawing.Size(226, 30);
-            this.appointment_baptism_button.TabIndex = 49;
-            this.appointment_baptism_button.Text = "Set up Appointment";
-            this.appointment_baptism_button.UseVisualStyleBackColor = true;
-            // 
-            // cancel_baptism_button
-            // 
-            this.cancel_baptism_button.Location = new System.Drawing.Point(38, 246);
-            this.cancel_baptism_button.Margin = new System.Windows.Forms.Padding(2);
-            this.cancel_baptism_button.Name = "cancel_baptism_button";
-            this.cancel_baptism_button.Size = new System.Drawing.Size(226, 30);
-            this.cancel_baptism_button.TabIndex = 49;
-            this.cancel_baptism_button.Text = "Cancel Application";
-            this.cancel_baptism_button.UseVisualStyleBackColor = true;
-            // 
-            // approve_baptism_button
-            // 
-            this.approve_baptism_button.Location = new System.Drawing.Point(38, 211);
-            this.approve_baptism_button.Margin = new System.Windows.Forms.Padding(2);
-            this.approve_baptism_button.Name = "approve_baptism_button";
-            this.approve_baptism_button.Size = new System.Drawing.Size(226, 30);
-            this.approve_baptism_button.TabIndex = 49;
-            this.approve_baptism_button.Text = "Approve Application";
-            this.approve_baptism_button.UseVisualStyleBackColor = true;
-            this.approve_baptism_button.Click += new System.EventHandler(this.approve_baptism_button_Click);
-            // 
-            // baptism_information_panel
-            // 
-            this.baptism_information_panel.BackColor = System.Drawing.Color.White;
-            this.baptism_information_panel.Controls.Add(this.baptism_date_textbox);
-            this.baptism_information_panel.Controls.Add(this.minister_baptism_textbox);
-            this.baptism_information_panel.Controls.Add(this.record_baptism_textbox);
-            this.baptism_information_panel.Controls.Add(this.page_baptism_textbox);
-            this.baptism_information_panel.Controls.Add(this.registry_baptism_textbox);
-            this.baptism_information_panel.Controls.Add(this.label44);
-            this.baptism_information_panel.Controls.Add(this.label45);
-            this.baptism_information_panel.Controls.Add(this.label46);
-            this.baptism_information_panel.Controls.Add(this.minister_baptism_combobox);
-            this.baptism_information_panel.Controls.Add(this.baptism_date_dtp);
-            this.baptism_information_panel.Controls.Add(this.label47);
-            this.baptism_information_panel.Controls.Add(this.label48);
-            this.baptism_information_panel.Controls.Add(this.label49);
-            this.baptism_information_panel.Controls.Add(this.label50);
-            this.baptism_information_panel.Controls.Add(this.label51);
-            this.baptism_information_panel.Enabled = false;
-            this.baptism_information_panel.Location = new System.Drawing.Point(282, 211);
-            this.baptism_information_panel.Margin = new System.Windows.Forms.Padding(2);
-            this.baptism_information_panel.Name = "baptism_information_panel";
-            this.baptism_information_panel.Size = new System.Drawing.Size(249, 198);
-            this.baptism_information_panel.TabIndex = 48;
-            // 
-            // baptism_date_textbox
-            // 
-            this.baptism_date_textbox.Location = new System.Drawing.Point(9, 77);
-            this.baptism_date_textbox.Margin = new System.Windows.Forms.Padding(2);
-            this.baptism_date_textbox.Name = "baptism_date_textbox";
-            this.baptism_date_textbox.Size = new System.Drawing.Size(148, 34);
-            this.baptism_date_textbox.TabIndex = 39;
-            // 
-            // minister_baptism_textbox
-            // 
-            this.minister_baptism_textbox.Location = new System.Drawing.Point(98, 77);
-            this.minister_baptism_textbox.Margin = new System.Windows.Forms.Padding(2);
-            this.minister_baptism_textbox.Name = "minister_baptism_textbox";
-            this.minister_baptism_textbox.Size = new System.Drawing.Size(148, 34);
-            this.minister_baptism_textbox.TabIndex = 38;
             // 
             // record_baptism_textbox
             // 
-            this.record_baptism_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.record_baptism_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.record_baptism_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.record_baptism_textbox.Location = new System.Drawing.Point(110, 167);
+            this.record_baptism_textbox.Location = new System.Drawing.Point(391, 230);
             this.record_baptism_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.record_baptism_textbox.Name = "record_baptism_textbox";
-            this.record_baptism_textbox.Size = new System.Drawing.Size(21, 20);
+            this.record_baptism_textbox.Size = new System.Drawing.Size(108, 23);
             this.record_baptism_textbox.TabIndex = 35;
+            this.record_baptism_textbox.Text = "Record Number";
             this.record_baptism_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // page_baptism_textbox
             // 
-            this.page_baptism_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.page_baptism_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.page_baptism_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.page_baptism_textbox.Location = new System.Drawing.Point(108, 136);
+            this.page_baptism_textbox.Location = new System.Drawing.Point(389, 186);
             this.page_baptism_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.page_baptism_textbox.Name = "page_baptism_textbox";
-            this.page_baptism_textbox.Size = new System.Drawing.Size(21, 20);
+            this.page_baptism_textbox.Size = new System.Drawing.Size(110, 23);
             this.page_baptism_textbox.TabIndex = 34;
+            this.page_baptism_textbox.Text = "Page Number";
             this.page_baptism_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // registry_baptism_textbox
             // 
-            this.registry_baptism_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.registry_baptism_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.registry_baptism_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registry_baptism_textbox.Location = new System.Drawing.Point(108, 110);
+            this.registry_baptism_textbox.Location = new System.Drawing.Point(389, 144);
             this.registry_baptism_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.registry_baptism_textbox.Name = "registry_baptism_textbox";
-            this.registry_baptism_textbox.Size = new System.Drawing.Size(21, 20);
+            this.registry_baptism_textbox.Size = new System.Drawing.Size(108, 23);
             this.registry_baptism_textbox.TabIndex = 29;
+            this.registry_baptism_textbox.Text = "Registry Number";
             this.registry_baptism_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.registry_baptism_textbox.TextChanged += new System.EventHandler(this.registry_baptism_textbox_TextChanged);
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(53, 166);
-            this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(63, 23);
-            this.label44.TabIndex = 33;
-            this.label44.Text = "Record";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(66, 134);
-            this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(47, 23);
-            this.label45.TabIndex = 32;
-            this.label45.Text = "Page";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(48, 108);
-            this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(70, 23);
-            this.label46.TabIndex = 31;
-            this.label46.Text = "Registry";
             // 
             // minister_baptism_combobox
             // 
             this.minister_baptism_combobox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minister_baptism_combobox.FormattingEnabled = true;
-            this.minister_baptism_combobox.Location = new System.Drawing.Point(86, 50);
-            this.minister_baptism_combobox.Margin = new System.Windows.Forms.Padding(2);
+            this.minister_baptism_combobox.Location = new System.Drawing.Point(361, 84);
             this.minister_baptism_combobox.Name = "minister_baptism_combobox";
-            this.minister_baptism_combobox.Size = new System.Drawing.Size(148, 28);
+            this.minister_baptism_combobox.Size = new System.Drawing.Size(148, 23);
             this.minister_baptism_combobox.TabIndex = 30;
             // 
             // baptism_date_dtp
             // 
             this.baptism_date_dtp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.baptism_date_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.baptism_date_dtp.Location = new System.Drawing.Point(108, 6);
+            this.baptism_date_dtp.Location = new System.Drawing.Point(362, 37);
             this.baptism_date_dtp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.baptism_date_dtp.Name = "baptism_date_dtp";
-            this.baptism_date_dtp.Size = new System.Drawing.Size(126, 29);
+            this.baptism_date_dtp.Size = new System.Drawing.Size(153, 25);
             this.baptism_date_dtp.TabIndex = 29;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(13, 52);
-            this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(83, 28);
-            this.label47.TabIndex = 0;
-            this.label47.Text = "Minister";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(1, 9);
-            this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(128, 28);
-            this.label48.TabIndex = 0;
-            this.label48.Text = "Baptism Date";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(104, 110);
-            this.label49.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(36, 28);
-            this.label49.TabIndex = 29;
-            this.label49.Text = "___";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(104, 136);
-            this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(36, 28);
-            this.label50.TabIndex = 36;
-            this.label50.Text = "___";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(105, 167);
-            this.label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(36, 28);
-            this.label51.TabIndex = 37;
-            this.label51.Text = "___";
             // 
             // baptism_requirement_dgv
             // 
             this.baptism_requirement_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.baptism_requirement_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Complied});
-            this.baptism_requirement_dgv.Location = new System.Drawing.Point(544, 243);
-            this.baptism_requirement_dgv.Margin = new System.Windows.Forms.Padding(2);
+            this.baptism_requirement_dgv.Location = new System.Drawing.Point(32, 61);
             this.baptism_requirement_dgv.Name = "baptism_requirement_dgv";
-            this.baptism_requirement_dgv.Size = new System.Drawing.Size(297, 166);
+            this.baptism_requirement_dgv.Size = new System.Drawing.Size(770, 405);
             this.baptism_requirement_dgv.TabIndex = 47;
             // 
             // Complied
@@ -1241,107 +1023,9 @@
             this.Complied.HeaderText = "";
             this.Complied.Name = "Complied";
             // 
-            // label93
-            // 
-            this.label93.AutoSize = true;
-            this.label93.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label93.Location = new System.Drawing.Point(33, 413);
-            this.label93.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(116, 37);
-            this.label93.TabIndex = 46;
-            this.label93.Text = "Remarks";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(539, 211);
-            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(179, 37);
-            this.label39.TabIndex = 46;
-            this.label39.Text = "Requirements";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(539, 6);
-            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(125, 37);
-            this.label32.TabIndex = 46;
-            this.label32.Text = "Sponsors";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.genderF_radiobutton_sponsor_baptism);
-            this.panel6.Controls.Add(this.genderM_radiobutton_sponsor_baptism);
-            this.panel6.Controls.Add(this.residence_textbox_sponsor_baptism);
-            this.panel6.Controls.Add(this.delete_button_sponsor_baptism);
-            this.panel6.Controls.Add(this.add_button_sponsor_baptism);
-            this.panel6.Controls.Add(this.suffix_textbox_sponsor_baptism);
-            this.panel6.Controls.Add(this.lastname_textbox_sponsor_baptism);
-            this.panel6.Controls.Add(this.middlename_textbox_sponsor_baptism);
-            this.panel6.Controls.Add(this.label37);
-            this.panel6.Controls.Add(this.label35);
-            this.panel6.Controls.Add(this.label36);
-            this.panel6.Controls.Add(this.firstname_textbox_sponsor_baptism);
-            this.panel6.Controls.Add(this.label38);
-            this.panel6.Controls.Add(this.label40);
-            this.panel6.Controls.Add(this.label41);
-            this.panel6.Controls.Add(this.label42);
-            this.panel6.Controls.Add(this.label43);
-            this.panel6.Controls.Add(this.label34);
-            this.panel6.Location = new System.Drawing.Point(12, 39);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(526, 166);
-            this.panel6.TabIndex = 45;
-            // 
-            // genderF_radiobutton_sponsor_baptism
-            // 
-            this.genderF_radiobutton_sponsor_baptism.AutoSize = true;
-            this.genderF_radiobutton_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genderF_radiobutton_sponsor_baptism.Location = new System.Drawing.Point(90, 129);
-            this.genderF_radiobutton_sponsor_baptism.Margin = new System.Windows.Forms.Padding(2);
-            this.genderF_radiobutton_sponsor_baptism.Name = "genderF_radiobutton_sponsor_baptism";
-            this.genderF_radiobutton_sponsor_baptism.Size = new System.Drawing.Size(85, 27);
-            this.genderF_radiobutton_sponsor_baptism.TabIndex = 49;
-            this.genderF_radiobutton_sponsor_baptism.TabStop = true;
-            this.genderF_radiobutton_sponsor_baptism.Text = "Female";
-            this.genderF_radiobutton_sponsor_baptism.UseVisualStyleBackColor = true;
-            // 
-            // genderM_radiobutton_sponsor_baptism
-            // 
-            this.genderM_radiobutton_sponsor_baptism.AutoSize = true;
-            this.genderM_radiobutton_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genderM_radiobutton_sponsor_baptism.Location = new System.Drawing.Point(90, 102);
-            this.genderM_radiobutton_sponsor_baptism.Margin = new System.Windows.Forms.Padding(2);
-            this.genderM_radiobutton_sponsor_baptism.Name = "genderM_radiobutton_sponsor_baptism";
-            this.genderM_radiobutton_sponsor_baptism.Size = new System.Drawing.Size(68, 27);
-            this.genderM_radiobutton_sponsor_baptism.TabIndex = 49;
-            this.genderM_radiobutton_sponsor_baptism.TabStop = true;
-            this.genderM_radiobutton_sponsor_baptism.Text = "Male";
-            this.genderM_radiobutton_sponsor_baptism.UseVisualStyleBackColor = true;
-            // 
-            // residence_textbox_sponsor_baptism
-            // 
-            this.residence_textbox_sponsor_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.residence_textbox_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.residence_textbox_sponsor_baptism.Location = new System.Drawing.Point(274, 107);
-            this.residence_textbox_sponsor_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.residence_textbox_sponsor_baptism.Name = "residence_textbox_sponsor_baptism";
-            this.residence_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 20);
-            this.residence_textbox_sponsor_baptism.TabIndex = 47;
-            this.residence_textbox_sponsor_baptism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // delete_button_sponsor_baptism
             // 
-            this.delete_button_sponsor_baptism.Location = new System.Drawing.Point(411, 86);
-            this.delete_button_sponsor_baptism.Margin = new System.Windows.Forms.Padding(2);
+            this.delete_button_sponsor_baptism.Location = new System.Drawing.Point(219, 464);
             this.delete_button_sponsor_baptism.Name = "delete_button_sponsor_baptism";
             this.delete_button_sponsor_baptism.Size = new System.Drawing.Size(88, 27);
             this.delete_button_sponsor_baptism.TabIndex = 46;
@@ -1351,8 +1035,7 @@
             // 
             // add_button_sponsor_baptism
             // 
-            this.add_button_sponsor_baptism.Location = new System.Drawing.Point(411, 38);
-            this.add_button_sponsor_baptism.Margin = new System.Windows.Forms.Padding(2);
+            this.add_button_sponsor_baptism.Location = new System.Drawing.Point(333, 463);
             this.add_button_sponsor_baptism.Name = "add_button_sponsor_baptism";
             this.add_button_sponsor_baptism.Size = new System.Drawing.Size(88, 27);
             this.add_button_sponsor_baptism.TabIndex = 45;
@@ -1364,147 +1047,57 @@
             // 
             this.suffix_textbox_sponsor_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.suffix_textbox_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suffix_textbox_sponsor_baptism.Location = new System.Drawing.Point(350, 28);
+            this.suffix_textbox_sponsor_baptism.Location = new System.Drawing.Point(365, 50);
             this.suffix_textbox_sponsor_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.suffix_textbox_sponsor_baptism.Name = "suffix_textbox_sponsor_baptism";
-            this.suffix_textbox_sponsor_baptism.Size = new System.Drawing.Size(21, 20);
+            this.suffix_textbox_sponsor_baptism.Size = new System.Drawing.Size(54, 16);
             this.suffix_textbox_sponsor_baptism.TabIndex = 23;
+            this.suffix_textbox_sponsor_baptism.Text = "Suffix";
             this.suffix_textbox_sponsor_baptism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lastname_textbox_sponsor_baptism
             // 
             this.lastname_textbox_sponsor_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastname_textbox_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastname_textbox_sponsor_baptism.Location = new System.Drawing.Point(255, 28);
+            this.lastname_textbox_sponsor_baptism.Location = new System.Drawing.Point(274, 54);
             this.lastname_textbox_sponsor_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastname_textbox_sponsor_baptism.Name = "lastname_textbox_sponsor_baptism";
-            this.lastname_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 20);
+            this.lastname_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 16);
             this.lastname_textbox_sponsor_baptism.TabIndex = 24;
+            this.lastname_textbox_sponsor_baptism.Text = "Lastname";
             this.lastname_textbox_sponsor_baptism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // middlename_textbox_sponsor_baptism
             // 
             this.middlename_textbox_sponsor_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.middlename_textbox_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.middlename_textbox_sponsor_baptism.Location = new System.Drawing.Point(163, 28);
+            this.middlename_textbox_sponsor_baptism.Location = new System.Drawing.Point(187, 53);
             this.middlename_textbox_sponsor_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.middlename_textbox_sponsor_baptism.Name = "middlename_textbox_sponsor_baptism";
-            this.middlename_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 20);
+            this.middlename_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 16);
             this.middlename_textbox_sponsor_baptism.TabIndex = 22;
+            this.middlename_textbox_sponsor_baptism.Text = "Middlename";
             this.middlename_textbox_sponsor_baptism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(20, 102);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(76, 28);
-            this.label37.TabIndex = 27;
-            this.label37.Text = "Gender";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(188, 102);
-            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(98, 28);
-            this.label35.TabIndex = 27;
-            this.label35.Text = "Residence";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(1, 26);
-            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(85, 28);
-            this.label36.TabIndex = 27;
-            this.label36.Text = "Sponsor";
             // 
             // firstname_textbox_sponsor_baptism
             // 
             this.firstname_textbox_sponsor_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstname_textbox_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstname_textbox_sponsor_baptism.Location = new System.Drawing.Point(68, 28);
+            this.firstname_textbox_sponsor_baptism.Location = new System.Drawing.Point(88, 55);
             this.firstname_textbox_sponsor_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstname_textbox_sponsor_baptism.Name = "firstname_textbox_sponsor_baptism";
-            this.firstname_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 20);
+            this.firstname_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 16);
             this.firstname_textbox_sponsor_baptism.TabIndex = 13;
+            this.firstname_textbox_sponsor_baptism.Text = "Firstname";
             this.firstname_textbox_sponsor_baptism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(65, 32);
-            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(372, 28);
-            this.label38.TabIndex = 11;
-            this.label38.Text = "_____________________________________________";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(275, 51);
-            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(72, 20);
-            this.label40.TabIndex = 27;
-            this.label40.Text = "Lastname";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(345, 51);
-            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(46, 20);
-            this.label41.TabIndex = 26;
-            this.label41.Text = "Suffix";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(175, 50);
-            this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(93, 20);
-            this.label42.TabIndex = 25;
-            this.label42.Text = "Middlename";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(87, 50);
-            this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(73, 20);
-            this.label43.TabIndex = 28;
-            this.label43.Text = "Firstname";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(266, 107);
-            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(132, 28);
-            this.label34.TabIndex = 48;
-            this.label34.Text = "_______________";
             // 
             // baptism_sponsor_dgv
             // 
             this.baptism_sponsor_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.baptism_sponsor_dgv.Location = new System.Drawing.Point(544, 39);
+            this.baptism_sponsor_dgv.Location = new System.Drawing.Point(124, 373);
             this.baptism_sponsor_dgv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.baptism_sponsor_dgv.Name = "baptism_sponsor_dgv";
-            this.baptism_sponsor_dgv.Size = new System.Drawing.Size(297, 166);
+            this.baptism_sponsor_dgv.Size = new System.Drawing.Size(297, 77);
             this.baptism_sponsor_dgv.TabIndex = 44;
             this.baptism_sponsor_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.baptism_sponsor_dgv_CellClick);
             // 
@@ -1512,225 +1105,220 @@
             // 
             this.confirmation_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.confirmation_panel.Controls.Add(this.flowLayoutPanel1);
-            this.confirmation_panel.Controls.Add(this.panel4);
-            this.confirmation_panel.Controls.Add(this.panel2);
-            this.confirmation_panel.Location = new System.Drawing.Point(46, 38);
-            this.confirmation_panel.Margin = new System.Windows.Forms.Padding(2);
+            this.confirmation_panel.Controls.Add(this.confirmation_details_panel);
+            this.confirmation_panel.Controls.Add(this.confirmation_application_panel);
+            this.confirmation_panel.Location = new System.Drawing.Point(47, 38);
             this.confirmation_panel.Name = "confirmation_panel";
             this.confirmation_panel.Size = new System.Drawing.Size(849, 577);
             this.confirmation_panel.TabIndex = 51;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
-            this.flowLayoutPanel1.Controls.Add(this.confirmation_requirement_button);
-            this.flowLayoutPanel1.Controls.Add(this.confirmation_printCertificate_button);
-            this.flowLayoutPanel1.Controls.Add(this.button3);
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel1.Controls.Add(this.confirmation_application_button);
+            this.flowLayoutPanel1.Controls.Add(this.confirmation_details_button);
             this.flowLayoutPanel1.Controls.Add(this.confirmation_viewCertificate_button);
+            this.flowLayoutPanel1.Controls.Add(this.confirmation_printCertificate_button);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(849, 39);
             this.flowLayoutPanel1.TabIndex = 56;
             // 
-            // confirmation_requirement_button
+            // confirmation_application_button
             // 
-            this.confirmation_requirement_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
-            this.confirmation_requirement_button.FlatAppearance.BorderSize = 0;
-            this.confirmation_requirement_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.confirmation_requirement_button.ForeColor = System.Drawing.Color.White;
-            this.confirmation_requirement_button.Location = new System.Drawing.Point(725, 2);
-            this.confirmation_requirement_button.Margin = new System.Windows.Forms.Padding(2);
-            this.confirmation_requirement_button.Name = "confirmation_requirement_button";
-            this.confirmation_requirement_button.Size = new System.Drawing.Size(122, 39);
-            this.confirmation_requirement_button.TabIndex = 57;
-            this.confirmation_requirement_button.Text = "Application";
-            this.confirmation_requirement_button.UseVisualStyleBackColor = false;
+            this.confirmation_application_button.BackColor = System.Drawing.Color.White;
+            this.confirmation_application_button.FlatAppearance.BorderSize = 0;
+            this.confirmation_application_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmation_application_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
+            this.confirmation_application_button.Location = new System.Drawing.Point(724, 3);
+            this.confirmation_application_button.Name = "confirmation_application_button";
+            this.confirmation_application_button.Size = new System.Drawing.Size(122, 39);
+            this.confirmation_application_button.TabIndex = 57;
+            this.confirmation_application_button.Text = "Application";
+            this.confirmation_application_button.UseVisualStyleBackColor = false;
+            this.confirmation_application_button.Click += new System.EventHandler(this.confirmation_menu_button_Click);
+            this.confirmation_application_button.Leave += new System.EventHandler(this.confirmation_menu_button_Leave);
             // 
-            // confirmation_printCertificate_button
+            // confirmation_details_button
             // 
-            this.confirmation_printCertificate_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
-            this.confirmation_printCertificate_button.FlatAppearance.BorderSize = 0;
-            this.confirmation_printCertificate_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.confirmation_printCertificate_button.ForeColor = System.Drawing.Color.White;
-            this.confirmation_printCertificate_button.Location = new System.Drawing.Point(514, 2);
-            this.confirmation_printCertificate_button.Margin = new System.Windows.Forms.Padding(2);
-            this.confirmation_printCertificate_button.Name = "confirmation_printCertificate_button";
-            this.confirmation_printCertificate_button.Size = new System.Drawing.Size(207, 39);
-            this.confirmation_printCertificate_button.TabIndex = 59;
-            this.confirmation_printCertificate_button.Text = "Print Certificate";
-            this.confirmation_printCertificate_button.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(388, 2);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 39);
-            this.button3.TabIndex = 60;
-            this.button3.Text = "Details";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.confirmation_details_button.BackColor = System.Drawing.Color.White;
+            this.confirmation_details_button.FlatAppearance.BorderSize = 0;
+            this.confirmation_details_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmation_details_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
+            this.confirmation_details_button.Location = new System.Drawing.Point(578, 3);
+            this.confirmation_details_button.Name = "confirmation_details_button";
+            this.confirmation_details_button.Size = new System.Drawing.Size(140, 39);
+            this.confirmation_details_button.TabIndex = 60;
+            this.confirmation_details_button.Text = "Details";
+            this.confirmation_details_button.UseVisualStyleBackColor = false;
+            this.confirmation_details_button.Click += new System.EventHandler(this.confirmation_menu_button_Click);
+            this.confirmation_details_button.Leave += new System.EventHandler(this.confirmation_menu_button_Leave);
             // 
             // confirmation_viewCertificate_button
             // 
-            this.confirmation_viewCertificate_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
             this.confirmation_viewCertificate_button.FlatAppearance.BorderSize = 0;
             this.confirmation_viewCertificate_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.confirmation_viewCertificate_button.ForeColor = System.Drawing.Color.White;
-            this.confirmation_viewCertificate_button.Location = new System.Drawing.Point(224, 2);
-            this.confirmation_viewCertificate_button.Margin = new System.Windows.Forms.Padding(2);
+            this.confirmation_viewCertificate_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
+            this.confirmation_viewCertificate_button.Location = new System.Drawing.Point(412, 3);
             this.confirmation_viewCertificate_button.Name = "confirmation_viewCertificate_button";
             this.confirmation_viewCertificate_button.Size = new System.Drawing.Size(160, 39);
             this.confirmation_viewCertificate_button.TabIndex = 61;
             this.confirmation_viewCertificate_button.Text = "View Certificate";
             this.confirmation_viewCertificate_button.UseVisualStyleBackColor = false;
-            this.confirmation_viewCertificate_button.Click += new System.EventHandler(this.confirmation_viewCertificate_button_Click);
+            this.confirmation_viewCertificate_button.Click += new System.EventHandler(this.confirmation_menu_button_Click);
+            this.confirmation_viewCertificate_button.Leave += new System.EventHandler(this.confirmation_menu_button_Leave);
             // 
-            // panel4
+            // confirmation_printCertificate_button
             // 
-            this.panel4.Controls.Add(this.panel10);
-            this.panel4.Controls.Add(this.minister_confirmation_textbox);
-            this.panel4.Controls.Add(this.confirmationdate_confirmation_textbox);
-            this.panel4.Controls.Add(this.recordnumber_confirmation_textbox);
-            this.panel4.Controls.Add(this.pagenumber_confirmation_textbox);
-            this.panel4.Controls.Add(this.remarks_sponsor_confirmation_textbox);
-            this.panel4.Controls.Add(this.registrynumber_confirmation_textbox);
-            this.panel4.Controls.Add(this.label94);
-            this.panel4.Controls.Add(this.label54);
-            this.panel4.Controls.Add(this.label58);
-            this.panel4.Controls.Add(this.label55);
-            this.panel4.Controls.Add(this.confirmationdate_confirmation_dtp);
-            this.panel4.Controls.Add(this.label56);
-            this.panel4.Controls.Add(this.comboBox2);
-            this.panel4.Controls.Add(this.label57);
-            this.panel4.Controls.Add(this.label59);
-            this.panel4.Controls.Add(this.label17);
-            this.panel4.Controls.Add(this.label18);
-            this.panel4.Location = new System.Drawing.Point(2, 39);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(847, 541);
-            this.panel4.TabIndex = 56;
+            this.confirmation_printCertificate_button.FlatAppearance.BorderSize = 0;
+            this.confirmation_printCertificate_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmation_printCertificate_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
+            this.confirmation_printCertificate_button.Location = new System.Drawing.Point(199, 3);
+            this.confirmation_printCertificate_button.Name = "confirmation_printCertificate_button";
+            this.confirmation_printCertificate_button.Size = new System.Drawing.Size(207, 39);
+            this.confirmation_printCertificate_button.TabIndex = 59;
+            this.confirmation_printCertificate_button.Text = "Print Certificate";
+            this.confirmation_printCertificate_button.UseVisualStyleBackColor = false;
+            this.confirmation_printCertificate_button.Click += new System.EventHandler(this.confirmation_menu_button_Click);
+            this.confirmation_printCertificate_button.Leave += new System.EventHandler(this.confirmation_menu_button_Leave);
+            // 
+            // confirmation_details_panel
+            // 
+            this.confirmation_details_panel.BackColor = System.Drawing.Color.White;
+            this.confirmation_details_panel.Controls.Add(this.panel10);
+            this.confirmation_details_panel.Controls.Add(this.textBox2);
+            this.confirmation_details_panel.Controls.Add(this.textBox1);
+            this.confirmation_details_panel.Controls.Add(this.textBox10);
+            this.confirmation_details_panel.Controls.Add(this.textBox11);
+            this.confirmation_details_panel.Controls.Add(this.textBox31);
+            this.confirmation_details_panel.Controls.Add(this.textBox12);
+            this.confirmation_details_panel.Controls.Add(this.label94);
+            this.confirmation_details_panel.Controls.Add(this.label54);
+            this.confirmation_details_panel.Controls.Add(this.label58);
+            this.confirmation_details_panel.Controls.Add(this.label55);
+            this.confirmation_details_panel.Controls.Add(this.dateTimePicker3);
+            this.confirmation_details_panel.Controls.Add(this.label56);
+            this.confirmation_details_panel.Controls.Add(this.comboBox2);
+            this.confirmation_details_panel.Controls.Add(this.label57);
+            this.confirmation_details_panel.Controls.Add(this.label59);
+            this.confirmation_details_panel.Controls.Add(this.label17);
+            this.confirmation_details_panel.Controls.Add(this.label18);
+            this.confirmation_details_panel.Location = new System.Drawing.Point(3, 39);
+            this.confirmation_details_panel.Name = "confirmation_details_panel";
+            this.confirmation_details_panel.Size = new System.Drawing.Size(847, 540);
+            this.confirmation_details_panel.TabIndex = 56;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.Controls.Add(this.label19);
-            this.panel10.Controls.Add(this.female_sponsor_confirmation_radio);
-            this.panel10.Controls.Add(this.male_sponsor_confirmation_radio);
-            this.panel10.Controls.Add(this.residence_sponsor_confirmation_textbox);
-            this.panel10.Controls.Add(this.suffix_sponsor_confirmation_textbox);
-            this.panel10.Controls.Add(this.lastname_sponsor_confirmation_textbox);
-            this.panel10.Controls.Add(this.middlename_sponsor_confirmation_textbox);
+            this.panel10.Controls.Add(this.radioButton3);
+            this.panel10.Controls.Add(this.radioButton4);
+            this.panel10.Controls.Add(this.textBox13);
+            this.panel10.Controls.Add(this.textBox15);
+            this.panel10.Controls.Add(this.textBox18);
+            this.panel10.Controls.Add(this.textBox19);
             this.panel10.Controls.Add(this.label64);
             this.panel10.Controls.Add(this.label65);
             this.panel10.Controls.Add(this.label66);
             this.panel10.Controls.Add(this.label72);
-            this.panel10.Controls.Add(this.firstname_sponsor_confirmation_textbox);
+            this.panel10.Controls.Add(this.textBox20);
             this.panel10.Controls.Add(this.label67);
-            this.panel10.Location = new System.Drawing.Point(3, 271);
+            this.panel10.Location = new System.Drawing.Point(32, 277);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(841, 112);
+            this.panel10.Size = new System.Drawing.Size(785, 112);
             this.panel10.TabIndex = 56;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(2, 2);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Location = new System.Drawing.Point(3, 2);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(118, 28);
+            this.label19.Size = new System.Drawing.Size(95, 21);
             this.label19.TabIndex = 57;
             this.label19.Text = "God Parent";
             // 
-            // female_sponsor_confirmation_radio
+            // radioButton3
             // 
-            this.female_sponsor_confirmation_radio.AutoSize = true;
-            this.female_sponsor_confirmation_radio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.female_sponsor_confirmation_radio.Location = new System.Drawing.Point(726, 50);
-            this.female_sponsor_confirmation_radio.Margin = new System.Windows.Forms.Padding(2);
-            this.female_sponsor_confirmation_radio.Name = "female_sponsor_confirmation_radio";
-            this.female_sponsor_confirmation_radio.Size = new System.Drawing.Size(85, 27);
-            this.female_sponsor_confirmation_radio.TabIndex = 49;
-            this.female_sponsor_confirmation_radio.TabStop = true;
-            this.female_sponsor_confirmation_radio.Text = "Female";
-            this.female_sponsor_confirmation_radio.UseVisualStyleBackColor = true;
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.Location = new System.Drawing.Point(702, 56);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(67, 21);
+            this.radioButton3.TabIndex = 49;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Female";
+            this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // male_sponsor_confirmation_radio
+            // radioButton4
             // 
-            this.male_sponsor_confirmation_radio.AutoSize = true;
-            this.male_sponsor_confirmation_radio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.male_sponsor_confirmation_radio.Location = new System.Drawing.Point(726, 23);
-            this.male_sponsor_confirmation_radio.Margin = new System.Windows.Forms.Padding(2);
-            this.male_sponsor_confirmation_radio.Name = "male_sponsor_confirmation_radio";
-            this.male_sponsor_confirmation_radio.Size = new System.Drawing.Size(68, 27);
-            this.male_sponsor_confirmation_radio.TabIndex = 49;
-            this.male_sponsor_confirmation_radio.TabStop = true;
-            this.male_sponsor_confirmation_radio.Text = "Male";
-            this.male_sponsor_confirmation_radio.UseVisualStyleBackColor = true;
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton4.Location = new System.Drawing.Point(702, 29);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(55, 21);
+            this.radioButton4.TabIndex = 49;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Male";
+            this.radioButton4.UseVisualStyleBackColor = true;
             // 
-            // residence_sponsor_confirmation_textbox
+            // textBox13
             // 
-            this.residence_sponsor_confirmation_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.residence_sponsor_confirmation_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.residence_sponsor_confirmation_textbox.Location = new System.Drawing.Point(524, 54);
-            this.residence_sponsor_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.residence_sponsor_confirmation_textbox.Name = "residence_sponsor_confirmation_textbox";
-            this.residence_sponsor_confirmation_textbox.Size = new System.Drawing.Size(94, 20);
-            this.residence_sponsor_confirmation_textbox.TabIndex = 47;
-            this.residence_sponsor_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.Location = new System.Drawing.Point(524, 54);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(94, 16);
+            this.textBox13.TabIndex = 47;
+            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // suffix_sponsor_confirmation_textbox
+            // textBox15
             // 
-            this.suffix_sponsor_confirmation_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.suffix_sponsor_confirmation_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suffix_sponsor_confirmation_textbox.Location = new System.Drawing.Point(376, 55);
-            this.suffix_sponsor_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.suffix_sponsor_confirmation_textbox.Name = "suffix_sponsor_confirmation_textbox";
-            this.suffix_sponsor_confirmation_textbox.Size = new System.Drawing.Size(54, 20);
-            this.suffix_sponsor_confirmation_textbox.TabIndex = 23;
-            this.suffix_sponsor_confirmation_textbox.Text = "Suffix";
-            this.suffix_sponsor_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox15.Location = new System.Drawing.Point(377, 55);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(54, 16);
+            this.textBox15.TabIndex = 23;
+            this.textBox15.Text = "Suffix";
+            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lastname_sponsor_confirmation_textbox
+            // textBox18
             // 
-            this.lastname_sponsor_confirmation_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lastname_sponsor_confirmation_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastname_sponsor_confirmation_textbox.Location = new System.Drawing.Point(275, 55);
-            this.lastname_sponsor_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.lastname_sponsor_confirmation_textbox.Name = "lastname_sponsor_confirmation_textbox";
-            this.lastname_sponsor_confirmation_textbox.Size = new System.Drawing.Size(94, 20);
-            this.lastname_sponsor_confirmation_textbox.TabIndex = 24;
-            this.lastname_sponsor_confirmation_textbox.Text = "Lastname";
-            this.lastname_sponsor_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox18.Location = new System.Drawing.Point(275, 55);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(94, 16);
+            this.textBox18.TabIndex = 24;
+            this.textBox18.Text = "Lastname";
+            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // middlename_sponsor_confirmation_textbox
+            // textBox19
             // 
-            this.middlename_sponsor_confirmation_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.middlename_sponsor_confirmation_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.middlename_sponsor_confirmation_textbox.Location = new System.Drawing.Point(174, 55);
-            this.middlename_sponsor_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.middlename_sponsor_confirmation_textbox.Name = "middlename_sponsor_confirmation_textbox";
-            this.middlename_sponsor_confirmation_textbox.Size = new System.Drawing.Size(94, 20);
-            this.middlename_sponsor_confirmation_textbox.TabIndex = 22;
-            this.middlename_sponsor_confirmation_textbox.Text = "Middlename";
-            this.middlename_sponsor_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox19.Location = new System.Drawing.Point(173, 55);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(94, 16);
+            this.textBox19.TabIndex = 22;
+            this.textBox19.Text = "Middlename";
+            this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(655, 32);
+            this.label64.Location = new System.Drawing.Point(631, 38);
             this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(76, 28);
+            this.label64.Size = new System.Drawing.Size(61, 21);
             this.label64.TabIndex = 27;
             this.label64.Text = "Gender";
             // 
@@ -1741,7 +1329,7 @@
             this.label65.Location = new System.Drawing.Point(447, 55);
             this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(89, 23);
+            this.label65.Size = new System.Drawing.Size(69, 17);
             this.label65.TabIndex = 27;
             this.label65.Text = "Residence";
             // 
@@ -1749,10 +1337,10 @@
             // 
             this.label66.AutoSize = true;
             this.label66.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(35, 55);
+            this.label66.Location = new System.Drawing.Point(36, 55);
             this.label66.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(57, 23);
+            this.label66.Size = new System.Drawing.Size(44, 17);
             this.label66.TabIndex = 27;
             this.label66.Text = "Name";
             // 
@@ -1760,104 +1348,98 @@
             // 
             this.label72.AutoSize = true;
             this.label72.Location = new System.Drawing.Point(516, 56);
-            this.label72.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(132, 28);
+            this.label72.Size = new System.Drawing.Size(115, 21);
             this.label72.TabIndex = 48;
             this.label72.Text = "_______________";
             // 
-            // firstname_sponsor_confirmation_textbox
+            // textBox20
             // 
-            this.firstname_sponsor_confirmation_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstname_sponsor_confirmation_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstname_sponsor_confirmation_textbox.Location = new System.Drawing.Point(75, 55);
-            this.firstname_sponsor_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.firstname_sponsor_confirmation_textbox.Name = "firstname_sponsor_confirmation_textbox";
-            this.firstname_sponsor_confirmation_textbox.Size = new System.Drawing.Size(94, 20);
-            this.firstname_sponsor_confirmation_textbox.TabIndex = 13;
-            this.firstname_sponsor_confirmation_textbox.Text = "Firstname";
-            this.firstname_sponsor_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox20.Location = new System.Drawing.Point(74, 55);
+            this.textBox20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(94, 16);
+            this.textBox20.TabIndex = 13;
+            this.textBox20.Text = "Firstname";
+            this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label67
             // 
             this.label67.AutoSize = true;
             this.label67.Location = new System.Drawing.Point(81, 56);
-            this.label67.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(396, 28);
+            this.label67.Size = new System.Drawing.Size(346, 21);
             this.label67.TabIndex = 11;
             this.label67.Text = "________________________________________________";
             // 
-            // minister_confirmation_textbox
+            // textBox2
             // 
-            this.minister_confirmation_textbox.Location = new System.Drawing.Point(522, 82);
-            this.minister_confirmation_textbox.Margin = new System.Windows.Forms.Padding(2);
-            this.minister_confirmation_textbox.Name = "minister_confirmation_textbox";
-            this.minister_confirmation_textbox.Size = new System.Drawing.Size(153, 34);
-            this.minister_confirmation_textbox.TabIndex = 55;
+            this.textBox2.Location = new System.Drawing.Point(522, 82);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(153, 29);
+            this.textBox2.TabIndex = 55;
             // 
-            // confirmationdate_confirmation_textbox
+            // textBox1
             // 
-            this.confirmationdate_confirmation_textbox.Location = new System.Drawing.Point(522, 34);
-            this.confirmationdate_confirmation_textbox.Margin = new System.Windows.Forms.Padding(2);
-            this.confirmationdate_confirmation_textbox.Name = "confirmationdate_confirmation_textbox";
-            this.confirmationdate_confirmation_textbox.Size = new System.Drawing.Size(153, 34);
-            this.confirmationdate_confirmation_textbox.TabIndex = 54;
+            this.textBox1.Location = new System.Drawing.Point(522, 34);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(153, 29);
+            this.textBox1.TabIndex = 54;
             // 
-            // recordnumber_confirmation_textbox
+            // textBox10
             // 
-            this.recordnumber_confirmation_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.recordnumber_confirmation_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.recordnumber_confirmation_textbox.Location = new System.Drawing.Point(376, 233);
-            this.recordnumber_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.recordnumber_confirmation_textbox.Name = "recordnumber_confirmation_textbox";
-            this.recordnumber_confirmation_textbox.Size = new System.Drawing.Size(121, 27);
-            this.recordnumber_confirmation_textbox.TabIndex = 35;
-            this.recordnumber_confirmation_textbox.Text = "Record Number";
-            this.recordnumber_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Location = new System.Drawing.Point(377, 232);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(120, 16);
+            this.textBox10.TabIndex = 35;
+            this.textBox10.Text = "Record Number";
+            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pagenumber_confirmation_textbox
+            // textBox11
             // 
-            this.pagenumber_confirmation_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pagenumber_confirmation_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pagenumber_confirmation_textbox.Location = new System.Drawing.Point(376, 187);
-            this.pagenumber_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pagenumber_confirmation_textbox.Name = "pagenumber_confirmation_textbox";
-            this.pagenumber_confirmation_textbox.Size = new System.Drawing.Size(121, 27);
-            this.pagenumber_confirmation_textbox.TabIndex = 34;
-            this.pagenumber_confirmation_textbox.Text = "Page Number";
-            this.pagenumber_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Location = new System.Drawing.Point(377, 187);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(120, 16);
+            this.textBox11.TabIndex = 34;
+            this.textBox11.Text = "Page Number";
+            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // remarks_sponsor_confirmation_textbox
+            // textBox31
             // 
-            this.remarks_sponsor_confirmation_textbox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.remarks_sponsor_confirmation_textbox.Location = new System.Drawing.Point(271, 403);
-            this.remarks_sponsor_confirmation_textbox.Margin = new System.Windows.Forms.Padding(2);
-            this.remarks_sponsor_confirmation_textbox.Multiline = true;
-            this.remarks_sponsor_confirmation_textbox.Name = "remarks_sponsor_confirmation_textbox";
-            this.remarks_sponsor_confirmation_textbox.Size = new System.Drawing.Size(404, 86);
-            this.remarks_sponsor_confirmation_textbox.TabIndex = 51;
+            this.textBox31.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox31.Location = new System.Drawing.Point(271, 403);
+            this.textBox31.Multiline = true;
+            this.textBox31.Name = "textBox31";
+            this.textBox31.Size = new System.Drawing.Size(404, 86);
+            this.textBox31.TabIndex = 51;
             // 
-            // registrynumber_confirmation_textbox
+            // textBox12
             // 
-            this.registrynumber_confirmation_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.registrynumber_confirmation_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registrynumber_confirmation_textbox.Location = new System.Drawing.Point(376, 144);
-            this.registrynumber_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.registrynumber_confirmation_textbox.Name = "registrynumber_confirmation_textbox";
-            this.registrynumber_confirmation_textbox.Size = new System.Drawing.Size(121, 27);
-            this.registrynumber_confirmation_textbox.TabIndex = 29;
-            this.registrynumber_confirmation_textbox.Text = "Registry Number";
-            this.registrynumber_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox12.Location = new System.Drawing.Point(377, 144);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(120, 16);
+            this.textBox12.TabIndex = 29;
+            this.textBox12.Text = "Registry Number";
+            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label94
             // 
             this.label94.AutoSize = true;
             this.label94.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label94.Location = new System.Drawing.Point(160, 436);
-            this.label94.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(112, 32);
+            this.label94.Size = new System.Drawing.Size(88, 25);
             this.label94.TabIndex = 46;
             this.label94.Text = "Remarks";
             // 
@@ -1865,10 +1447,9 @@
             // 
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(275, 236);
-            this.label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label54.Location = new System.Drawing.Point(305, 236);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(66, 23);
+            this.label54.Size = new System.Drawing.Size(50, 17);
             this.label54.TabIndex = 33;
             this.label54.Text = "Record";
             // 
@@ -1876,10 +1457,9 @@
             // 
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.Location = new System.Drawing.Point(174, 37);
-            this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label58.Location = new System.Drawing.Point(205, 37);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(188, 28);
+            this.label58.Size = new System.Drawing.Size(152, 21);
             this.label58.TabIndex = 0;
             this.label58.Text = "Confirmation Date";
             // 
@@ -1887,31 +1467,29 @@
             // 
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(276, 197);
-            this.label55.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label55.Location = new System.Drawing.Point(307, 197);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(49, 23);
+            this.label55.Size = new System.Drawing.Size(38, 17);
             this.label55.TabIndex = 32;
             this.label55.Text = "Page";
             // 
-            // confirmationdate_confirmation_dtp
+            // dateTimePicker3
             // 
-            this.confirmationdate_confirmation_dtp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmationdate_confirmation_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.confirmationdate_confirmation_dtp.Location = new System.Drawing.Point(362, 37);
-            this.confirmationdate_confirmation_dtp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.confirmationdate_confirmation_dtp.Name = "confirmationdate_confirmation_dtp";
-            this.confirmationdate_confirmation_dtp.Size = new System.Drawing.Size(153, 29);
-            this.confirmationdate_confirmation_dtp.TabIndex = 29;
+            this.dateTimePicker3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker3.Location = new System.Drawing.Point(362, 37);
+            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(153, 25);
+            this.dateTimePicker3.TabIndex = 29;
             // 
             // label56
             // 
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.Location = new System.Drawing.Point(265, 150);
-            this.label56.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label56.Location = new System.Drawing.Point(296, 150);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(77, 23);
+            this.label56.Size = new System.Drawing.Size(59, 17);
             this.label56.TabIndex = 31;
             this.label56.Text = "Registry";
             // 
@@ -1920,19 +1498,17 @@
             this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(362, 86);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(153, 28);
+            this.comboBox2.Size = new System.Drawing.Size(153, 23);
             this.comboBox2.TabIndex = 30;
             // 
             // label57
             // 
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.Location = new System.Drawing.Point(251, 84);
-            this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label57.Location = new System.Drawing.Point(282, 84);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(91, 28);
+            this.label57.Size = new System.Drawing.Size(73, 21);
             this.label57.TabIndex = 0;
             this.label57.Text = "Minister";
             // 
@@ -1940,9 +1516,8 @@
             // 
             this.label59.AutoSize = true;
             this.label59.Location = new System.Drawing.Point(351, 152);
-            this.label59.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(196, 28);
+            this.label59.Size = new System.Drawing.Size(171, 21);
             this.label59.TabIndex = 29;
             this.label59.Text = "_______________________";
             // 
@@ -1950,9 +1525,8 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(351, 194);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(196, 28);
+            this.label17.Size = new System.Drawing.Size(171, 21);
             this.label17.TabIndex = 52;
             this.label17.Text = "_______________________";
             // 
@@ -1960,34 +1534,31 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(351, 239);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(196, 28);
+            this.label18.Size = new System.Drawing.Size(171, 21);
             this.label18.TabIndex = 53;
             this.label18.Text = "_______________________";
             // 
-            // panel2
+            // confirmation_application_panel
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label62);
-            this.panel2.Controls.Add(this.dataGridView3);
-            this.panel2.Controls.Add(this.button12);
-            this.panel2.Controls.Add(this.button11);
-            this.panel2.Controls.Add(this.button10);
-            this.panel2.Location = new System.Drawing.Point(2, 39);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(847, 541);
-            this.panel2.TabIndex = 55;
+            this.confirmation_application_panel.BackColor = System.Drawing.Color.White;
+            this.confirmation_application_panel.Controls.Add(this.label62);
+            this.confirmation_application_panel.Controls.Add(this.dataGridView3);
+            this.confirmation_application_panel.Controls.Add(this.button12);
+            this.confirmation_application_panel.Controls.Add(this.button11);
+            this.confirmation_application_panel.Controls.Add(this.button10);
+            this.confirmation_application_panel.Location = new System.Drawing.Point(3, 39);
+            this.confirmation_application_panel.Name = "confirmation_application_panel";
+            this.confirmation_application_panel.Size = new System.Drawing.Size(847, 540);
+            this.confirmation_application_panel.TabIndex = 55;
             // 
             // label62
             // 
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label62.Location = new System.Drawing.Point(32, 19);
-            this.label62.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(179, 37);
+            this.label62.Size = new System.Drawing.Size(140, 30);
             this.label62.TabIndex = 46;
             this.label62.Text = "Requirements";
             // 
@@ -1995,640 +1566,49 @@
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(32, 61);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(522, 383);
+            this.dataGridView3.Size = new System.Drawing.Size(785, 384);
             this.dataGridView3.TabIndex = 47;
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(53, 482);
-            this.button12.Margin = new System.Windows.Forms.Padding(2);
+            this.button12.Location = new System.Drawing.Point(161, 485);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(145, 30);
+            this.button12.Size = new System.Drawing.Size(146, 31);
             this.button12.TabIndex = 49;
             this.button12.Text = "Approve Application";
             this.button12.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(368, 482);
-            this.button11.Margin = new System.Windows.Forms.Padding(2);
+            this.button11.Location = new System.Drawing.Point(569, 485);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(145, 30);
+            this.button11.Size = new System.Drawing.Size(146, 31);
             this.button11.TabIndex = 49;
             this.button11.Text = "Cancel Application";
             this.button11.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(211, 482);
-            this.button10.Margin = new System.Windows.Forms.Padding(2);
+            this.button10.Location = new System.Drawing.Point(322, 485);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(145, 30);
+            this.button10.Size = new System.Drawing.Size(224, 31);
             this.button10.TabIndex = 49;
             this.button10.Text = "Set up Appointment";
             this.button10.UseVisualStyleBackColor = true;
             // 
-            // marriage_panel
-            // 
-            this.marriage_panel.Controls.Add(this.button2);
-            this.marriage_panel.Controls.Add(this.textBox34);
-            this.marriage_panel.Controls.Add(this.textBox35);
-            this.marriage_panel.Controls.Add(this.label97);
-            this.marriage_panel.Controls.Add(this.label98);
-            this.marriage_panel.Controls.Add(this.textBox29);
-            this.marriage_panel.Controls.Add(this.button15);
-            this.marriage_panel.Controls.Add(this.button16);
-            this.marriage_panel.Controls.Add(this.button17);
-            this.marriage_panel.Controls.Add(this.button18);
-            this.marriage_panel.Controls.Add(this.button20);
-            this.marriage_panel.Controls.Add(this.button19);
-            this.marriage_panel.Controls.Add(this.panel13);
-            this.marriage_panel.Controls.Add(this.panel12);
-            this.marriage_panel.Controls.Add(this.label63);
-            this.marriage_panel.Controls.Add(this.dataGridView4);
-            this.marriage_panel.Controls.Add(this.dataGridView6);
-            this.marriage_panel.Controls.Add(this.dataGridView5);
-            this.marriage_panel.Controls.Add(this.label82);
-            this.marriage_panel.Controls.Add(this.label92);
-            this.marriage_panel.Controls.Add(this.label83);
-            this.marriage_panel.Location = new System.Drawing.Point(1094, 122);
-            this.marriage_panel.Margin = new System.Windows.Forms.Padding(2);
-            this.marriage_panel.Name = "marriage_panel";
-            this.marriage_panel.Size = new System.Drawing.Size(854, 33);
-            this.marriage_panel.TabIndex = 52;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(252, 465);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(163, 30);
-            this.button2.TabIndex = 64;
-            this.button2.Text = "Add payment";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox34
-            // 
-            this.textBox34.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox34.Location = new System.Drawing.Point(75, 435);
-            this.textBox34.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(165, 29);
-            this.textBox34.TabIndex = 62;
-            // 
-            // textBox35
-            // 
-            this.textBox35.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox35.Location = new System.Drawing.Point(75, 467);
-            this.textBox35.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(165, 29);
-            this.textBox35.TabIndex = 63;
-            // 
-            // label97
-            // 
-            this.label97.AutoSize = true;
-            this.label97.Location = new System.Drawing.Point(13, 437);
-            this.label97.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(54, 28);
-            this.label97.TabIndex = 60;
-            this.label97.Text = "Price";
-            // 
-            // label98
-            // 
-            this.label98.AutoSize = true;
-            this.label98.Location = new System.Drawing.Point(-1, 467);
-            this.label98.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(78, 28);
-            this.label98.TabIndex = 61;
-            this.label98.Text = "Balance";
-            // 
-            // textBox29
-            // 
-            this.textBox29.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox29.Location = new System.Drawing.Point(517, 429);
-            this.textBox29.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox29.Multiline = true;
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(333, 69);
-            this.textBox29.TabIndex = 59;
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(9, 355);
-            this.button15.Margin = new System.Windows.Forms.Padding(2);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(226, 30);
-            this.button15.TabIndex = 54;
-            this.button15.Text = "Export Marriage Certificate ";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(9, 390);
-            this.button16.Margin = new System.Windows.Forms.Padding(2);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(226, 30);
-            this.button16.TabIndex = 55;
-            this.button16.Text = "Print Marriage Certificate ";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(9, 323);
-            this.button17.Margin = new System.Windows.Forms.Padding(2);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(226, 30);
-            this.button17.TabIndex = 56;
-            this.button17.Text = "Set up Appointment";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(9, 289);
-            this.button18.Margin = new System.Windows.Forms.Padding(2);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(226, 30);
-            this.button18.TabIndex = 57;
-            this.button18.Text = "Cancel Application";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(9, 219);
-            this.button20.Margin = new System.Windows.Forms.Padding(2);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(226, 30);
-            this.button20.TabIndex = 58;
-            this.button20.Text = "Go to Partner\'s profile";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(9, 254);
-            this.button19.Margin = new System.Windows.Forms.Padding(2);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(226, 30);
-            this.button19.TabIndex = 58;
-            this.button19.Text = "Approve Application";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.Controls.Add(this.textBox26);
-            this.panel13.Controls.Add(this.textBox27);
-            this.panel13.Controls.Add(this.textBox28);
-            this.panel13.Controls.Add(this.label84);
-            this.panel13.Controls.Add(this.label85);
-            this.panel13.Controls.Add(this.label86);
-            this.panel13.Controls.Add(this.comboBox3);
-            this.panel13.Controls.Add(this.dateTimePicker4);
-            this.panel13.Controls.Add(this.label87);
-            this.panel13.Controls.Add(this.label88);
-            this.panel13.Controls.Add(this.label89);
-            this.panel13.Controls.Add(this.label90);
-            this.panel13.Controls.Add(this.label91);
-            this.panel13.Location = new System.Drawing.Point(242, 215);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(249, 207);
-            this.panel13.TabIndex = 53;
-            // 
-            // textBox26
-            // 
-            this.textBox26.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox26.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox26.Location = new System.Drawing.Point(110, 167);
-            this.textBox26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(21, 20);
-            this.textBox26.TabIndex = 35;
-            this.textBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox27
-            // 
-            this.textBox27.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox27.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox27.Location = new System.Drawing.Point(108, 136);
-            this.textBox27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(21, 20);
-            this.textBox27.TabIndex = 34;
-            this.textBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox28
-            // 
-            this.textBox28.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox28.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox28.Location = new System.Drawing.Point(108, 110);
-            this.textBox28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(21, 20);
-            this.textBox28.TabIndex = 29;
-            this.textBox28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label84.Location = new System.Drawing.Point(53, 166);
-            this.label84.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(63, 23);
-            this.label84.TabIndex = 33;
-            this.label84.Text = "Record";
-            // 
-            // label85
-            // 
-            this.label85.AutoSize = true;
-            this.label85.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label85.Location = new System.Drawing.Point(66, 134);
-            this.label85.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(47, 23);
-            this.label85.TabIndex = 32;
-            this.label85.Text = "Page";
-            // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label86.Location = new System.Drawing.Point(48, 108);
-            this.label86.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(70, 23);
-            this.label86.TabIndex = 31;
-            this.label86.Text = "Registry";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(86, 50);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(148, 28);
-            this.comboBox3.TabIndex = 30;
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker4.Location = new System.Drawing.Point(108, 6);
-            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(126, 29);
-            this.dateTimePicker4.TabIndex = 29;
-            // 
-            // label87
-            // 
-            this.label87.AutoSize = true;
-            this.label87.Location = new System.Drawing.Point(13, 52);
-            this.label87.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(83, 28);
-            this.label87.TabIndex = 0;
-            this.label87.Text = "Minister";
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.Location = new System.Drawing.Point(1, 9);
-            this.label88.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(137, 28);
-            this.label88.TabIndex = 0;
-            this.label88.Text = "Marriage Date";
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.Location = new System.Drawing.Point(104, 110);
-            this.label89.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(36, 28);
-            this.label89.TabIndex = 29;
-            this.label89.Text = "___";
-            // 
-            // label90
-            // 
-            this.label90.AutoSize = true;
-            this.label90.Location = new System.Drawing.Point(104, 136);
-            this.label90.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(36, 28);
-            this.label90.TabIndex = 36;
-            this.label90.Text = "___";
-            // 
-            // label91
-            // 
-            this.label91.AutoSize = true;
-            this.label91.Location = new System.Drawing.Point(105, 167);
-            this.label91.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(36, 28);
-            this.label91.TabIndex = 37;
-            this.label91.Text = "___";
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Controls.Add(this.radioButton5);
-            this.panel12.Controls.Add(this.radioButton6);
-            this.panel12.Controls.Add(this.textBox21);
-            this.panel12.Controls.Add(this.button13);
-            this.panel12.Controls.Add(this.button14);
-            this.panel12.Controls.Add(this.textBox22);
-            this.panel12.Controls.Add(this.textBox23);
-            this.panel12.Controls.Add(this.textBox24);
-            this.panel12.Controls.Add(this.label73);
-            this.panel12.Controls.Add(this.label74);
-            this.panel12.Controls.Add(this.label75);
-            this.panel12.Controls.Add(this.textBox25);
-            this.panel12.Controls.Add(this.label76);
-            this.panel12.Controls.Add(this.label77);
-            this.panel12.Controls.Add(this.label78);
-            this.panel12.Controls.Add(this.label79);
-            this.panel12.Controls.Add(this.label80);
-            this.panel12.Controls.Add(this.label81);
-            this.panel12.Location = new System.Drawing.Point(174, 44);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(497, 166);
-            this.panel12.TabIndex = 52;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.Location = new System.Drawing.Point(90, 129);
-            this.radioButton5.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(85, 27);
-            this.radioButton5.TabIndex = 49;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Female";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton6.Location = new System.Drawing.Point(90, 102);
-            this.radioButton6.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(68, 27);
-            this.radioButton6.TabIndex = 49;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Male";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // textBox21
-            // 
-            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(274, 107);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(94, 20);
-            this.textBox21.TabIndex = 47;
-            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(398, 84);
-            this.button13.Margin = new System.Windows.Forms.Padding(2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(88, 27);
-            this.button13.TabIndex = 46;
-            this.button13.Text = "Delete";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(398, 38);
-            this.button14.Margin = new System.Windows.Forms.Padding(2);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(88, 27);
-            this.button14.TabIndex = 45;
-            this.button14.Text = "Add";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // textBox22
-            // 
-            this.textBox22.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox22.Location = new System.Drawing.Point(350, 28);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(21, 20);
-            this.textBox22.TabIndex = 23;
-            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox23
-            // 
-            this.textBox23.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.Location = new System.Drawing.Point(255, 28);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(94, 20);
-            this.textBox23.TabIndex = 24;
-            this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox24
-            // 
-            this.textBox24.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox24.Location = new System.Drawing.Point(163, 28);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(94, 20);
-            this.textBox24.TabIndex = 22;
-            this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(20, 102);
-            this.label73.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(76, 28);
-            this.label73.TabIndex = 27;
-            this.label73.Text = "Gender";
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(188, 102);
-            this.label74.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(98, 28);
-            this.label74.TabIndex = 27;
-            this.label74.Text = "Residence";
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(-2, 28);
-            this.label75.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(85, 28);
-            this.label75.TabIndex = 27;
-            this.label75.Text = "Sponsor";
-            // 
-            // textBox25
-            // 
-            this.textBox25.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox25.Location = new System.Drawing.Point(68, 28);
-            this.textBox25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(94, 20);
-            this.textBox25.TabIndex = 13;
-            this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(65, 32);
-            this.label76.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(372, 28);
-            this.label76.TabIndex = 11;
-            this.label76.Text = "_____________________________________________";
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.Location = new System.Drawing.Point(275, 51);
-            this.label77.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(72, 20);
-            this.label77.TabIndex = 27;
-            this.label77.Text = "Lastname";
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.Location = new System.Drawing.Point(345, 51);
-            this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(46, 20);
-            this.label78.TabIndex = 26;
-            this.label78.Text = "Suffix";
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label79.Location = new System.Drawing.Point(175, 50);
-            this.label79.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(93, 20);
-            this.label79.TabIndex = 25;
-            this.label79.Text = "Middlename";
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.Location = new System.Drawing.Point(87, 50);
-            this.label80.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(73, 20);
-            this.label80.TabIndex = 28;
-            this.label80.Text = "Firstname";
-            // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.Location = new System.Drawing.Point(266, 107);
-            this.label81.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(132, 28);
-            this.label81.TabIndex = 48;
-            this.label81.Text = "_______________";
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(9, 15);
-            this.label63.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(159, 28);
-            this.label63.TabIndex = 51;
-            this.label63.Text = "Marriage History";
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(9, 45);
-            this.dataGridView4.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(164, 166);
-            this.dataGridView4.TabIndex = 0;
-            // 
-            // dataGridView6
-            // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(499, 246);
-            this.dataGridView6.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(351, 175);
-            this.dataGridView6.TabIndex = 47;
-            // 
             // dataGridView5
             // 
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(680, 45);
+            this.dataGridView5.Location = new System.Drawing.Point(124, 373);
             this.dataGridView5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(171, 166);
+            this.dataGridView5.Size = new System.Drawing.Size(297, 77);
             this.dataGridView5.TabIndex = 44;
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.Location = new System.Drawing.Point(673, 13);
-            this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(125, 37);
-            this.label82.TabIndex = 46;
-            this.label82.Text = "Sponsors";
-            // 
-            // label92
-            // 
-            this.label92.AutoSize = true;
-            this.label92.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label92.Location = new System.Drawing.Point(420, 429);
-            this.label92.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(116, 37);
-            this.label92.TabIndex = 46;
-            this.label92.Text = "Remarks";
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label83.Location = new System.Drawing.Point(497, 213);
-            this.label83.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(179, 37);
-            this.label83.TabIndex = 46;
-            this.label83.Text = "Requirements";
             // 
             // bloodletting_panel
             // 
+            this.bloodletting_panel.BackColor = System.Drawing.Color.White;
             this.bloodletting_panel.Controls.Add(this.label108);
             this.bloodletting_panel.Controls.Add(this.label107);
             this.bloodletting_panel.Controls.Add(this.comboBox6);
@@ -2649,29 +1629,28 @@
             this.bloodletting_panel.Controls.Add(this.label101);
             this.bloodletting_panel.Controls.Add(this.dataGridView8);
             this.bloodletting_panel.Controls.Add(this.dataGridView7);
-            this.bloodletting_panel.Location = new System.Drawing.Point(1094, 304);
-            this.bloodletting_panel.Margin = new System.Windows.Forms.Padding(2);
+            this.bloodletting_panel.Location = new System.Drawing.Point(47, 38);
             this.bloodletting_panel.Name = "bloodletting_panel";
-            this.bloodletting_panel.Size = new System.Drawing.Size(625, 50);
+            this.bloodletting_panel.Size = new System.Drawing.Size(849, 577);
             this.bloodletting_panel.TabIndex = 54;
             // 
             // label108
             // 
             this.label108.AutoSize = true;
-            this.label108.Location = new System.Drawing.Point(449, 30);
-            this.label108.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label108.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label108.Location = new System.Drawing.Point(464, 82);
             this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(69, 28);
+            this.label108.Size = new System.Drawing.Size(77, 30);
             this.label108.TabIndex = 7;
             this.label108.Text = "Claims";
             // 
             // label107
             // 
             this.label107.AutoSize = true;
-            this.label107.Location = new System.Drawing.Point(53, 30);
-            this.label107.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label107.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label107.Location = new System.Drawing.Point(54, 82);
             this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(102, 28);
+            this.label107.Size = new System.Drawing.Size(114, 30);
             this.label107.TabIndex = 7;
             this.label107.Text = "Donations";
             // 
@@ -2680,9 +1659,8 @@
             this.comboBox6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(560, 366);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(245, 29);
+            this.comboBox6.Size = new System.Drawing.Size(245, 25);
             this.comboBox6.TabIndex = 6;
             // 
             // comboBox5
@@ -2690,42 +1668,37 @@
             this.comboBox5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(560, 415);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(245, 29);
+            this.comboBox5.Size = new System.Drawing.Size(245, 25);
             this.comboBox5.TabIndex = 6;
             // 
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(178, 411);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown1.Location = new System.Drawing.Point(178, 412);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(211, 29);
+            this.numericUpDown1.Size = new System.Drawing.Size(212, 25);
             this.numericUpDown1.TabIndex = 5;
             // 
             // textBox38
             // 
             this.textBox38.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox38.Location = new System.Drawing.Point(560, 315);
-            this.textBox38.Margin = new System.Windows.Forms.Padding(2);
             this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(135, 29);
+            this.textBox38.Size = new System.Drawing.Size(135, 25);
             this.textBox38.TabIndex = 4;
             // 
             // totalDonation_textbox
             // 
             this.totalDonation_textbox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalDonation_textbox.Location = new System.Drawing.Point(181, 314);
-            this.totalDonation_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.totalDonation_textbox.Name = "totalDonation_textbox";
-            this.totalDonation_textbox.Size = new System.Drawing.Size(121, 29);
+            this.totalDonation_textbox.Size = new System.Drawing.Size(121, 25);
             this.totalDonation_textbox.TabIndex = 4;
             // 
             // button21
             // 
             this.button21.Location = new System.Drawing.Point(593, 461);
-            this.button21.Margin = new System.Windows.Forms.Padding(2);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(83, 29);
             this.button21.TabIndex = 3;
@@ -2735,7 +1708,6 @@
             // bloodDonation_delete
             // 
             this.bloodDonation_delete.Location = new System.Drawing.Point(178, 461);
-            this.bloodDonation_delete.Margin = new System.Windows.Forms.Padding(2);
             this.bloodDonation_delete.Name = "bloodDonation_delete";
             this.bloodDonation_delete.Size = new System.Drawing.Size(83, 29);
             this.bloodDonation_delete.TabIndex = 3;
@@ -2745,7 +1717,6 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(722, 459);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(83, 29);
             this.button4.TabIndex = 3;
@@ -2755,7 +1726,6 @@
             // bloodDonation_add
             // 
             this.bloodDonation_add.Location = new System.Drawing.Point(307, 459);
-            this.bloodDonation_add.Margin = new System.Windows.Forms.Padding(2);
             this.bloodDonation_add.Name = "bloodDonation_add";
             this.bloodDonation_add.Size = new System.Drawing.Size(83, 29);
             this.bloodDonation_add.TabIndex = 3;
@@ -2767,108 +1737,104 @@
             this.comboBox4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(178, 370);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(212, 29);
+            this.comboBox4.Size = new System.Drawing.Size(212, 25);
             this.comboBox4.TabIndex = 2;
             // 
             // label102
             // 
             this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(451, 320);
-            this.label102.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label102.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label102.Location = new System.Drawing.Point(451, 318);
             this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(116, 28);
+            this.label102.Size = new System.Drawing.Size(103, 21);
             this.label102.TabIndex = 1;
             this.label102.Text = "Total Claims";
             // 
             // label104
             // 
             this.label104.AutoSize = true;
+            this.label104.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label104.Location = new System.Drawing.Point(95, 415);
-            this.label104.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(88, 28);
+            this.label104.Size = new System.Drawing.Size(77, 21);
             this.label104.TabIndex = 1;
             this.label104.Text = "Quantity";
             // 
             // label106
             // 
             this.label106.AutoSize = true;
+            this.label106.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label106.Location = new System.Drawing.Point(451, 368);
-            this.label106.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(110, 28);
+            this.label106.Size = new System.Drawing.Size(95, 21);
             this.label106.TabIndex = 1;
             this.label106.Text = "Blood Type";
             // 
             // label105
             // 
             this.label105.AutoSize = true;
-            this.label105.Location = new System.Drawing.Point(451, 415);
-            this.label105.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label105.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label105.Location = new System.Drawing.Point(448, 415);
             this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(125, 28);
+            this.label105.Size = new System.Drawing.Size(107, 21);
             this.label105.TabIndex = 1;
             this.label105.Text = "Blood Donor";
             // 
             // label103
             // 
             this.label103.AutoSize = true;
-            this.label103.Location = new System.Drawing.Point(18, 373);
-            this.label103.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label103.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label103.Location = new System.Drawing.Point(7, 371);
             this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(192, 28);
+            this.label103.Size = new System.Drawing.Size(168, 21);
             this.label103.TabIndex = 1;
             this.label103.Text = "Blood Donatin Event";
             // 
             // label101
             // 
             this.label101.AutoSize = true;
-            this.label101.Location = new System.Drawing.Point(57, 318);
-            this.label101.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label101.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label101.Location = new System.Drawing.Point(43, 314);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(149, 28);
+            this.label101.Size = new System.Drawing.Size(131, 21);
             this.label101.TabIndex = 1;
             this.label101.Text = "Total Donations";
             // 
             // dataGridView8
             // 
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Location = new System.Drawing.Point(452, 52);
-            this.dataGridView8.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView8.Location = new System.Drawing.Point(452, 120);
             this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.Size = new System.Drawing.Size(353, 257);
+            this.dataGridView8.Size = new System.Drawing.Size(353, 189);
             this.dataGridView8.TabIndex = 0;
             // 
             // dataGridView7
             // 
             this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(56, 54);
-            this.dataGridView7.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView7.Location = new System.Drawing.Point(56, 120);
             this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(332, 251);
+            this.dataGridView7.Size = new System.Drawing.Size(333, 184);
             this.dataGridView7.TabIndex = 0;
             // 
             // balance_panel
             // 
+            this.balance_panel.BackColor = System.Drawing.Color.White;
             this.balance_panel.Controls.Add(this.button22);
+            this.balance_panel.Controls.Add(this.label51);
             this.balance_panel.Controls.Add(this.label112);
-            this.balance_panel.Controls.Add(this.label111);
             this.balance_panel.Controls.Add(this.textBox39);
             this.balance_panel.Controls.Add(this.label110);
             this.balance_panel.Controls.Add(this.dataGridView10);
             this.balance_panel.Controls.Add(this.dataGridView9);
-            this.balance_panel.Location = new System.Drawing.Point(1094, 235);
-            this.balance_panel.Margin = new System.Windows.Forms.Padding(2);
+            this.balance_panel.Location = new System.Drawing.Point(47, 38);
             this.balance_panel.Name = "balance_panel";
-            this.balance_panel.Size = new System.Drawing.Size(893, 43);
+            this.balance_panel.Size = new System.Drawing.Size(849, 577);
             this.balance_panel.TabIndex = 55;
             // 
             // button22
             // 
-            this.button22.Location = new System.Drawing.Point(601, 243);
-            this.button22.Margin = new System.Windows.Forms.Padding(2);
+            this.button22.Location = new System.Drawing.Point(319, 497);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(225, 45);
             this.button22.TabIndex = 4;
@@ -2878,58 +1844,45 @@
             // label112
             // 
             this.label112.AutoSize = true;
-            this.label112.Location = new System.Drawing.Point(11, 26);
-            this.label112.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label112.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label112.Location = new System.Drawing.Point(32, 66);
             this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(49, 28);
+            this.label112.Size = new System.Drawing.Size(73, 37);
             this.label112.TabIndex = 3;
             this.label112.Text = "Paid";
-            // 
-            // label111
-            // 
-            this.label111.AutoSize = true;
-            this.label111.Location = new System.Drawing.Point(11, 264);
-            this.label111.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(79, 28);
-            this.label111.TabIndex = 3;
-            this.label111.Text = "Payable";
             // 
             // textBox39
             // 
             this.textBox39.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox39.Location = new System.Drawing.Point(671, 208);
-            this.textBox39.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox39.Location = new System.Drawing.Point(397, 446);
             this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(153, 29);
+            this.textBox39.Size = new System.Drawing.Size(153, 25);
             this.textBox39.TabIndex = 2;
             // 
             // label110
             // 
             this.label110.AutoSize = true;
-            this.label110.Location = new System.Drawing.Point(596, 211);
-            this.label110.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label110.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label110.Location = new System.Drawing.Point(254, 434);
             this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(78, 28);
+            this.label110.Size = new System.Drawing.Size(141, 47);
             this.label110.TabIndex = 1;
             this.label110.Text = "Balance";
             // 
             // dataGridView10
             // 
             this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView10.Location = new System.Drawing.Point(17, 287);
-            this.dataGridView10.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView10.Location = new System.Drawing.Point(427, 113);
             this.dataGridView10.Name = "dataGridView10";
-            this.dataGridView10.Size = new System.Drawing.Size(573, 196);
+            this.dataGridView10.Size = new System.Drawing.Size(393, 285);
             this.dataGridView10.TabIndex = 0;
             // 
             // dataGridView9
             // 
             this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView9.Location = new System.Drawing.Point(15, 52);
-            this.dataGridView9.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView9.Location = new System.Drawing.Point(30, 113);
             this.dataGridView9.Name = "dataGridView9";
-            this.dataGridView9.Size = new System.Drawing.Size(573, 196);
+            this.dataGridView9.Size = new System.Drawing.Size(391, 287);
             this.dataGridView9.TabIndex = 0;
             // 
             // profile_panel
@@ -2963,8 +1916,7 @@
             this.profile_panel.Controls.Add(this.label10);
             this.profile_panel.Controls.Add(this.label8);
             this.profile_panel.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.profile_panel.Location = new System.Drawing.Point(46, 38);
-            this.profile_panel.Margin = new System.Windows.Forms.Padding(2);
+            this.profile_panel.Location = new System.Drawing.Point(47, 38);
             this.profile_panel.Name = "profile_panel";
             this.profile_panel.Size = new System.Drawing.Size(849, 577);
             this.profile_panel.TabIndex = 32;
@@ -2972,10 +1924,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 239);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(49, 238);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(899, 23);
+            this.label3.Size = new System.Drawing.Size(771, 19);
             this.label3.TabIndex = 33;
             this.label3.Text = "_________________________________________________________________________________" +
     "______________________________________________";
@@ -2984,9 +1935,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(182, 200);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 23);
+            this.label2.Size = new System.Drawing.Size(171, 19);
             this.label2.TabIndex = 32;
             this.label2.Text = "___________________________";
             // 
@@ -2994,9 +1944,8 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(49, 545);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(899, 23);
+            this.label10.Size = new System.Drawing.Size(771, 19);
             this.label10.TabIndex = 35;
             this.label10.Text = "_________________________________________________________________________________" +
     "______________________________________________";
@@ -3005,31 +1954,1002 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(49, 391);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(668, 23);
+            this.label8.Size = new System.Drawing.Size(573, 19);
             this.label8.TabIndex = 34;
             this.label8.Text = "_________________________________________________________________________________" +
     "_____________";
             // 
+            // baptism_panel
+            // 
+            this.baptism_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.baptism_panel.Controls.Add(this.flowLayoutPanel2);
+            this.baptism_panel.Controls.Add(this.baptism_details_panel);
+            this.baptism_panel.Controls.Add(this.baptism_application_panel);
+            this.baptism_panel.Location = new System.Drawing.Point(47, 38);
+            this.baptism_panel.Name = "baptism_panel";
+            this.baptism_panel.Size = new System.Drawing.Size(849, 581);
+            this.baptism_panel.TabIndex = 56;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel2.Controls.Add(this.application_baptism_button);
+            this.flowLayoutPanel2.Controls.Add(this.details_baptism_button);
+            this.flowLayoutPanel2.Controls.Add(this.button5);
+            this.flowLayoutPanel2.Controls.Add(this.button6);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(849, 39);
+            this.flowLayoutPanel2.TabIndex = 56;
+            // 
+            // application_baptism_button
+            // 
+            this.application_baptism_button.BackColor = System.Drawing.Color.White;
+            this.application_baptism_button.FlatAppearance.BorderSize = 0;
+            this.application_baptism_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.application_baptism_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
+            this.application_baptism_button.Location = new System.Drawing.Point(724, 3);
+            this.application_baptism_button.Name = "application_baptism_button";
+            this.application_baptism_button.Size = new System.Drawing.Size(122, 39);
+            this.application_baptism_button.TabIndex = 57;
+            this.application_baptism_button.Text = "Application";
+            this.application_baptism_button.UseVisualStyleBackColor = false;
+            this.application_baptism_button.Click += new System.EventHandler(this.baptism_menu_button_Click);
+            this.application_baptism_button.Leave += new System.EventHandler(this.baptism_menu_button_Leave);
+            // 
+            // details_baptism_button
+            // 
+            this.details_baptism_button.BackColor = System.Drawing.Color.White;
+            this.details_baptism_button.FlatAppearance.BorderSize = 0;
+            this.details_baptism_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.details_baptism_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
+            this.details_baptism_button.Location = new System.Drawing.Point(578, 3);
+            this.details_baptism_button.Name = "details_baptism_button";
+            this.details_baptism_button.Size = new System.Drawing.Size(140, 39);
+            this.details_baptism_button.TabIndex = 60;
+            this.details_baptism_button.Text = "Details";
+            this.details_baptism_button.UseVisualStyleBackColor = false;
+            this.details_baptism_button.Click += new System.EventHandler(this.baptism_menu_button_Click);
+            this.details_baptism_button.Leave += new System.EventHandler(this.baptism_menu_button_Leave);
+            // 
+            // button5
+            // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
+            this.button5.Location = new System.Drawing.Point(412, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(160, 39);
+            this.button5.TabIndex = 61;
+            this.button5.Text = "View Certificate";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.baptism_menu_button_Click);
+            this.button5.Leave += new System.EventHandler(this.baptism_menu_button_Leave);
+            // 
+            // button6
+            // 
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
+            this.button6.Location = new System.Drawing.Point(199, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(207, 39);
+            this.button6.TabIndex = 59;
+            this.button6.Text = "Print Certificate";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.baptism_menu_button_Click);
+            this.button6.Leave += new System.EventHandler(this.baptism_menu_button_Leave);
+            // 
+            // baptism_details_panel
+            // 
+            this.baptism_details_panel.BackColor = System.Drawing.Color.White;
+            this.baptism_details_panel.Controls.Add(this.textBox30);
+            this.baptism_details_panel.Controls.Add(this.delete_button_sponsor_baptism);
+            this.baptism_details_panel.Controls.Add(this.record_baptism_textbox);
+            this.baptism_details_panel.Controls.Add(this.add_button_sponsor_baptism);
+            this.baptism_details_panel.Controls.Add(this.label96);
+            this.baptism_details_panel.Controls.Add(this.baptism_sponsor_dgv);
+            this.baptism_details_panel.Controls.Add(this.page_baptism_textbox);
+            this.baptism_details_panel.Controls.Add(this.minister_baptism_combobox);
+            this.baptism_details_panel.Controls.Add(this.registry_baptism_textbox);
+            this.baptism_details_panel.Controls.Add(this.panel5);
+            this.baptism_details_panel.Controls.Add(this.minister_baptism_textbox);
+            this.baptism_details_panel.Controls.Add(this.baptism_date_textbox);
+            this.baptism_details_panel.Controls.Add(this.baptism_date_dtp);
+            this.baptism_details_panel.Controls.Add(this.textBox32);
+            this.baptism_details_panel.Controls.Add(this.label30);
+            this.baptism_details_panel.Controls.Add(this.label31);
+            this.baptism_details_panel.Controls.Add(this.label53);
+            this.baptism_details_panel.Controls.Add(this.label60);
+            this.baptism_details_panel.Controls.Add(this.label61);
+            this.baptism_details_panel.Controls.Add(this.label68);
+            this.baptism_details_panel.Controls.Add(this.label69);
+            this.baptism_details_panel.Controls.Add(this.label70);
+            this.baptism_details_panel.Controls.Add(this.label71);
+            this.baptism_details_panel.Location = new System.Drawing.Point(0, 39);
+            this.baptism_details_panel.Name = "baptism_details_panel";
+            this.baptism_details_panel.Size = new System.Drawing.Size(850, 540);
+            this.baptism_details_panel.TabIndex = 56;
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label96.Location = new System.Drawing.Point(15, 379);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(95, 25);
+            this.label96.TabIndex = 58;
+            this.label96.Text = "Sponsors";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.label22);
+            this.panel5.Controls.Add(this.genderF_radiobutton_sponsor_baptism);
+            this.panel5.Controls.Add(this.genderM_radiobutton_sponsor_baptism);
+            this.panel5.Controls.Add(this.suffix_textbox_sponsor_baptism);
+            this.panel5.Controls.Add(this.residence_textbox_sponsor_baptism);
+            this.panel5.Controls.Add(this.lastname_textbox_sponsor_baptism);
+            this.panel5.Controls.Add(this.middlename_textbox_sponsor_baptism);
+            this.panel5.Controls.Add(this.label24);
+            this.panel5.Controls.Add(this.label25);
+            this.panel5.Controls.Add(this.firstname_textbox_sponsor_baptism);
+            this.panel5.Controls.Add(this.label26);
+            this.panel5.Controls.Add(this.label28);
+            this.panel5.Controls.Add(this.label29);
+            this.panel5.Location = new System.Drawing.Point(32, 269);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(785, 85);
+            this.panel5.TabIndex = 56;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(3, 2);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(95, 21);
+            this.label22.TabIndex = 57;
+            this.label22.Text = "God Parent";
+            // 
+            // genderF_radiobutton_sponsor_baptism
+            // 
+            this.genderF_radiobutton_sponsor_baptism.AutoSize = true;
+            this.genderF_radiobutton_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderF_radiobutton_sponsor_baptism.Location = new System.Drawing.Point(702, 56);
+            this.genderF_radiobutton_sponsor_baptism.Name = "genderF_radiobutton_sponsor_baptism";
+            this.genderF_radiobutton_sponsor_baptism.Size = new System.Drawing.Size(67, 21);
+            this.genderF_radiobutton_sponsor_baptism.TabIndex = 49;
+            this.genderF_radiobutton_sponsor_baptism.TabStop = true;
+            this.genderF_radiobutton_sponsor_baptism.Text = "Female";
+            this.genderF_radiobutton_sponsor_baptism.UseVisualStyleBackColor = true;
+            // 
+            // genderM_radiobutton_sponsor_baptism
+            // 
+            this.genderM_radiobutton_sponsor_baptism.AutoSize = true;
+            this.genderM_radiobutton_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderM_radiobutton_sponsor_baptism.Location = new System.Drawing.Point(702, 29);
+            this.genderM_radiobutton_sponsor_baptism.Name = "genderM_radiobutton_sponsor_baptism";
+            this.genderM_radiobutton_sponsor_baptism.Size = new System.Drawing.Size(55, 21);
+            this.genderM_radiobutton_sponsor_baptism.TabIndex = 49;
+            this.genderM_radiobutton_sponsor_baptism.TabStop = true;
+            this.genderM_radiobutton_sponsor_baptism.Text = "Male";
+            this.genderM_radiobutton_sponsor_baptism.UseVisualStyleBackColor = true;
+            // 
+            // residence_textbox_sponsor_baptism
+            // 
+            this.residence_textbox_sponsor_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.residence_textbox_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.residence_textbox_sponsor_baptism.Location = new System.Drawing.Point(524, 54);
+            this.residence_textbox_sponsor_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.residence_textbox_sponsor_baptism.Name = "residence_textbox_sponsor_baptism";
+            this.residence_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 16);
+            this.residence_textbox_sponsor_baptism.TabIndex = 47;
+            this.residence_textbox_sponsor_baptism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(631, 38);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(61, 21);
+            this.label24.TabIndex = 27;
+            this.label24.Text = "Gender";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(447, 55);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(69, 17);
+            this.label25.TabIndex = 27;
+            this.label25.Text = "Residence";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(36, 55);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(44, 17);
+            this.label26.TabIndex = 27;
+            this.label26.Text = "Name";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(516, 56);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(115, 21);
+            this.label28.TabIndex = 48;
+            this.label28.Text = "_______________";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(81, 56);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(346, 21);
+            this.label29.TabIndex = 11;
+            this.label29.Text = "________________________________________________";
+            // 
+            // minister_baptism_textbox
+            // 
+            this.minister_baptism_textbox.Location = new System.Drawing.Point(522, 82);
+            this.minister_baptism_textbox.Name = "minister_baptism_textbox";
+            this.minister_baptism_textbox.Size = new System.Drawing.Size(153, 29);
+            this.minister_baptism_textbox.TabIndex = 55;
+            // 
+            // baptism_date_textbox
+            // 
+            this.baptism_date_textbox.Location = new System.Drawing.Point(522, 34);
+            this.baptism_date_textbox.Name = "baptism_date_textbox";
+            this.baptism_date_textbox.Size = new System.Drawing.Size(153, 29);
+            this.baptism_date_textbox.TabIndex = 54;
+            // 
+            // textBox32
+            // 
+            this.textBox32.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox32.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox32.Location = new System.Drawing.Point(377, 144);
+            this.textBox32.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox32.Name = "textBox32";
+            this.textBox32.Size = new System.Drawing.Size(120, 16);
+            this.textBox32.TabIndex = 29;
+            this.textBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(427, 379);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(88, 25);
+            this.label30.TabIndex = 46;
+            this.label30.Text = "Remarks";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(305, 236);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(50, 17);
+            this.label31.TabIndex = 33;
+            this.label31.Text = "Record";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(243, 39);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(112, 21);
+            this.label53.TabIndex = 0;
+            this.label53.Text = "Baptism Date";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.Location = new System.Drawing.Point(307, 197);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(38, 17);
+            this.label60.TabIndex = 32;
+            this.label60.Text = "Page";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Location = new System.Drawing.Point(296, 150);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(59, 17);
+            this.label61.TabIndex = 31;
+            this.label61.Text = "Registry";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.Location = new System.Drawing.Point(282, 84);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(73, 21);
+            this.label68.TabIndex = 0;
+            this.label68.Text = "Minister";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(351, 152);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(171, 21);
+            this.label69.TabIndex = 29;
+            this.label69.Text = "_______________________";
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Location = new System.Drawing.Point(351, 194);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(171, 21);
+            this.label70.TabIndex = 52;
+            this.label70.Text = "_______________________";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(351, 239);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(171, 21);
+            this.label71.TabIndex = 53;
+            this.label71.Text = "_______________________";
+            // 
+            // baptism_application_panel
+            // 
+            this.baptism_application_panel.BackColor = System.Drawing.Color.White;
+            this.baptism_application_panel.Controls.Add(this.label95);
+            this.baptism_application_panel.Controls.Add(this.baptism_requirement_dgv);
+            this.baptism_application_panel.Controls.Add(this.button7);
+            this.baptism_application_panel.Controls.Add(this.button8);
+            this.baptism_application_panel.Controls.Add(this.button9);
+            this.baptism_application_panel.Location = new System.Drawing.Point(0, 39);
+            this.baptism_application_panel.Name = "baptism_application_panel";
+            this.baptism_application_panel.Size = new System.Drawing.Size(850, 540);
+            this.baptism_application_panel.TabIndex = 55;
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label95.Location = new System.Drawing.Point(32, 19);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(140, 30);
+            this.label95.TabIndex = 46;
+            this.label95.Text = "Requirements";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(161, 485);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(146, 31);
+            this.button7.TabIndex = 49;
+            this.button7.Text = "Approve Application";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(569, 485);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(146, 31);
+            this.button8.TabIndex = 49;
+            this.button8.Text = "Cancel Application";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(322, 485);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(224, 31);
+            this.button9.TabIndex = 49;
+            this.button9.Text = "Set up Appointment";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // marriage_panel
+            // 
+            this.marriage_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.marriage_panel.Controls.Add(this.flowLayoutPanel3);
+            this.marriage_panel.Controls.Add(this.panel4);
+            this.marriage_panel.Controls.Add(this.panel7);
+            this.marriage_panel.Location = new System.Drawing.Point(47, 38);
+            this.marriage_panel.Name = "marriage_panel";
+            this.marriage_panel.Size = new System.Drawing.Size(849, 581);
+            this.marriage_panel.TabIndex = 57;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel3.Controls.Add(this.button1);
+            this.flowLayoutPanel3.Controls.Add(this.button3);
+            this.flowLayoutPanel3.Controls.Add(this.button23);
+            this.flowLayoutPanel3.Controls.Add(this.button24);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(849, 39);
+            this.flowLayoutPanel3.TabIndex = 56;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
+            this.button1.Location = new System.Drawing.Point(724, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 39);
+            this.button1.TabIndex = 57;
+            this.button1.Text = "Application";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
+            this.button3.Location = new System.Drawing.Point(578, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(140, 39);
+            this.button3.TabIndex = 60;
+            this.button3.Text = "Details";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button23
+            // 
+            this.button23.FlatAppearance.BorderSize = 0;
+            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
+            this.button23.Location = new System.Drawing.Point(412, 3);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(160, 39);
+            this.button23.TabIndex = 61;
+            this.button23.Text = "View Certificate";
+            this.button23.UseVisualStyleBackColor = false;
+            // 
+            // button24
+            // 
+            this.button24.FlatAppearance.BorderSize = 0;
+            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
+            this.button24.Location = new System.Drawing.Point(199, 3);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(207, 39);
+            this.button24.TabIndex = 59;
+            this.button24.Text = "Print Certificate";
+            this.button24.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.comboBox3);
+            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.button25);
+            this.panel4.Controls.Add(this.textBox4);
+            this.panel4.Controls.Add(this.button26);
+            this.panel4.Controls.Add(this.label32);
+            this.panel4.Controls.Add(this.textBox5);
+            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.textBox6);
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.textBox17);
+            this.panel4.Controls.Add(this.textBox33);
+            this.panel4.Controls.Add(this.dateTimePicker1);
+            this.panel4.Controls.Add(this.textBox36);
+            this.panel4.Controls.Add(this.label40);
+            this.panel4.Controls.Add(this.label41);
+            this.panel4.Controls.Add(this.label50);
+            this.panel4.Controls.Add(this.label42);
+            this.panel4.Controls.Add(this.dataGridView5);
+            this.panel4.Controls.Add(this.label43);
+            this.panel4.Controls.Add(this.label44);
+            this.panel4.Controls.Add(this.label45);
+            this.panel4.Controls.Add(this.label46);
+            this.panel4.Controls.Add(this.label47);
+            this.panel4.Controls.Add(this.label48);
+            this.panel4.Location = new System.Drawing.Point(0, 39);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(850, 540);
+            this.panel4.TabIndex = 56;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(522, 378);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(280, 69);
+            this.textBox3.TabIndex = 51;
+            // 
+            // button25
+            // 
+            this.button25.Location = new System.Drawing.Point(219, 464);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(88, 27);
+            this.button25.TabIndex = 46;
+            this.button25.Text = "Delete";
+            this.button25.UseVisualStyleBackColor = true;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(394, 235);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(108, 23);
+            this.textBox4.TabIndex = 35;
+            this.textBox4.Text = "Record Number";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button26
+            // 
+            this.button26.Location = new System.Drawing.Point(333, 463);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(88, 27);
+            this.button26.TabIndex = 45;
+            this.button26.Text = "Add";
+            this.button26.UseVisualStyleBackColor = true;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(15, 379);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(95, 25);
+            this.label32.TabIndex = 58;
+            this.label32.Text = "Sponsors";
+            // 
+            // textBox5
+            // 
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(392, 191);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(110, 23);
+            this.textBox5.TabIndex = 34;
+            this.textBox5.Text = "Page Number";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(368, 106);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(148, 23);
+            this.comboBox1.TabIndex = 30;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(392, 149);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(108, 23);
+            this.textBox6.TabIndex = 29;
+            this.textBox6.Text = "Registry Number";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.label34);
+            this.panel6.Controls.Add(this.radioButton1);
+            this.panel6.Controls.Add(this.radioButton2);
+            this.panel6.Controls.Add(this.textBox7);
+            this.panel6.Controls.Add(this.textBox8);
+            this.panel6.Controls.Add(this.textBox9);
+            this.panel6.Controls.Add(this.textBox14);
+            this.panel6.Controls.Add(this.label35);
+            this.panel6.Controls.Add(this.label36);
+            this.panel6.Controls.Add(this.textBox16);
+            this.panel6.Controls.Add(this.label37);
+            this.panel6.Controls.Add(this.label38);
+            this.panel6.Controls.Add(this.label39);
+            this.panel6.Location = new System.Drawing.Point(32, 269);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(785, 85);
+            this.panel6.TabIndex = 56;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(3, 2);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(72, 21);
+            this.label34.TabIndex = 57;
+            this.label34.Text = "Sponsor";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(702, 56);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(67, 21);
+            this.radioButton1.TabIndex = 49;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Female";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(702, 29);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(55, 21);
+            this.radioButton2.TabIndex = 49;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Male";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(365, 50);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(54, 16);
+            this.textBox7.TabIndex = 23;
+            this.textBox7.Text = "Suffix";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox8
+            // 
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Location = new System.Drawing.Point(524, 54);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(94, 16);
+            this.textBox8.TabIndex = 47;
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox9
+            // 
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(274, 54);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(94, 16);
+            this.textBox9.TabIndex = 24;
+            this.textBox9.Text = "Lastname";
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox14
+            // 
+            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.Location = new System.Drawing.Point(187, 53);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(94, 16);
+            this.textBox14.TabIndex = 22;
+            this.textBox14.Text = "Middlename";
+            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(631, 38);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(61, 21);
+            this.label35.TabIndex = 27;
+            this.label35.Text = "Gender";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(447, 55);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(69, 17);
+            this.label36.TabIndex = 27;
+            this.label36.Text = "Residence";
+            // 
+            // textBox16
+            // 
+            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox16.Location = new System.Drawing.Point(88, 55);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(94, 16);
+            this.textBox16.TabIndex = 13;
+            this.textBox16.Text = "Firstname";
+            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(36, 55);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(44, 17);
+            this.label37.TabIndex = 27;
+            this.label37.Text = "Name";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(516, 56);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(115, 21);
+            this.label38.TabIndex = 48;
+            this.label38.Text = "_______________";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(81, 56);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(346, 21);
+            this.label39.TabIndex = 11;
+            this.label39.Text = "________________________________________________";
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(529, 104);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(153, 29);
+            this.textBox17.TabIndex = 55;
+            // 
+            // textBox33
+            // 
+            this.textBox33.Location = new System.Drawing.Point(529, 56);
+            this.textBox33.Name = "textBox33";
+            this.textBox33.Size = new System.Drawing.Size(153, 29);
+            this.textBox33.TabIndex = 54;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(369, 59);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(153, 25);
+            this.dateTimePicker1.TabIndex = 29;
+            // 
+            // textBox36
+            // 
+            this.textBox36.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox36.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox36.Location = new System.Drawing.Point(377, 144);
+            this.textBox36.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox36.Name = "textBox36";
+            this.textBox36.Size = new System.Drawing.Size(120, 16);
+            this.textBox36.TabIndex = 29;
+            this.textBox36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(427, 379);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(88, 25);
+            this.label40.TabIndex = 46;
+            this.label40.Text = "Remarks";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(308, 241);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(50, 17);
+            this.label41.TabIndex = 33;
+            this.label41.Text = "Record";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(250, 61);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(113, 21);
+            this.label42.TabIndex = 0;
+            this.label42.Text = "Mariage Date";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(310, 202);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(38, 17);
+            this.label43.TabIndex = 32;
+            this.label43.Text = "Page";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(299, 155);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(59, 17);
+            this.label44.TabIndex = 31;
+            this.label44.Text = "Registry";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(289, 106);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(73, 21);
+            this.label45.TabIndex = 0;
+            this.label45.Text = "Minister";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(354, 157);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(171, 21);
+            this.label46.TabIndex = 29;
+            this.label46.Text = "_______________________";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(354, 199);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(171, 21);
+            this.label47.TabIndex = 52;
+            this.label47.Text = "_______________________";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(354, 244);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(171, 21);
+            this.label48.TabIndex = 53;
+            this.label48.Text = "_______________________";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Controls.Add(this.label49);
+            this.panel7.Controls.Add(this.dataGridView2);
+            this.panel7.Controls.Add(this.button27);
+            this.panel7.Controls.Add(this.button28);
+            this.panel7.Controls.Add(this.button29);
+            this.panel7.Location = new System.Drawing.Point(0, 39);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(850, 540);
+            this.panel7.TabIndex = 55;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(32, 19);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(140, 30);
+            this.label49.TabIndex = 46;
+            this.label49.Text = "Requirements";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewCheckBoxColumn1});
+            this.dataGridView2.Location = new System.Drawing.Point(32, 61);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(770, 405);
+            this.dataGridView2.TabIndex = 47;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.HeaderText = "";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            // 
+            // button27
+            // 
+            this.button27.Location = new System.Drawing.Point(161, 485);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(146, 31);
+            this.button27.TabIndex = 49;
+            this.button27.Text = "Approve Application";
+            this.button27.UseVisualStyleBackColor = true;
+            // 
+            // button28
+            // 
+            this.button28.Location = new System.Drawing.Point(569, 485);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(146, 31);
+            this.button28.TabIndex = 49;
+            this.button28.Text = "Cancel Application";
+            this.button28.UseVisualStyleBackColor = true;
+            // 
+            // button29
+            // 
+            this.button29.Location = new System.Drawing.Point(322, 485);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(224, 31);
+            this.button29.TabIndex = 49;
+            this.button29.Text = "Set up Appointment";
+            this.button29.UseVisualStyleBackColor = true;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(371, 23);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(148, 23);
+            this.comboBox3.TabIndex = 59;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(287, 22);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(66, 21);
+            this.label50.TabIndex = 0;
+            this.label50.Text = "Partner";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(431, 72);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(118, 37);
+            this.label51.TabIndex = 3;
+            this.label51.Text = "Payable";
+            // 
             // Person
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(947, 646);
-            this.Controls.Add(this.confirmation_panel);
+            this.ClientSize = new System.Drawing.Size(944, 647);
             this.Controls.Add(this.profile_panel);
-            this.Controls.Add(this.biodata_button);
-            this.Controls.Add(this.bloodletting_button);
             this.Controls.Add(this.baptism_panel);
+            this.Controls.Add(this.confirmation_panel);
+            this.Controls.Add(this.marriage_panel);
+            this.Controls.Add(this.balance_panel);
+            this.Controls.Add(this.bloodletting_panel);
+            this.Controls.Add(this.biodata_button);
+            this.Controls.Add(this.baptism_button);
+            this.Controls.Add(this.bloodletting_button);
             this.Controls.Add(this.balance_button);
             this.Controls.Add(this.marriage_button);
             this.Controls.Add(this.confirmation_button);
-            this.Controls.Add(this.baptism_button);
-            this.Controls.Add(this.marriage_panel);
-            this.Controls.Add(this.bloodletting_panel);
-            this.Controls.Add(this.balance_panel);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -3040,31 +2960,17 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.baptism_panel.ResumeLayout(false);
-            this.baptism_panel.PerformLayout();
-            this.baptism_information_panel.ResumeLayout(false);
-            this.baptism_information_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.baptism_requirement_dgv)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.baptism_sponsor_dgv)).EndInit();
             this.confirmation_panel.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.confirmation_details_panel.ResumeLayout(false);
+            this.confirmation_details_panel.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.confirmation_application_panel.ResumeLayout(false);
+            this.confirmation_application_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.marriage_panel.ResumeLayout(false);
-            this.marriage_panel.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.bloodletting_panel.ResumeLayout(false);
             this.bloodletting_panel.PerformLayout();
@@ -3077,6 +2983,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             this.profile_panel.ResumeLayout(false);
             this.profile_panel.PerformLayout();
+            this.baptism_panel.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.baptism_details_panel.ResumeLayout(false);
+            this.baptism_details_panel.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.baptism_application_panel.ResumeLayout(false);
+            this.baptism_application_panel.PerformLayout();
+            this.marriage_panel.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3124,127 +3047,43 @@
         private System.Windows.Forms.TextBox residence_textbox_mother;
         private System.Windows.Forms.TextBox birthplace_textbox_mother;
         private System.Windows.Forms.TextBox firstname_textbox_mother;
-        private System.Windows.Forms.Panel baptism_panel;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.RadioButton genderF_radiobutton_sponsor_baptism;
-        private System.Windows.Forms.RadioButton genderM_radiobutton_sponsor_baptism;
-        private System.Windows.Forms.TextBox residence_textbox_sponsor_baptism;
         private System.Windows.Forms.Button delete_button_sponsor_baptism;
         private System.Windows.Forms.Button add_button_sponsor_baptism;
         private System.Windows.Forms.TextBox suffix_textbox_sponsor_baptism;
         private System.Windows.Forms.TextBox lastname_textbox_sponsor_baptism;
         private System.Windows.Forms.TextBox middlename_textbox_sponsor_baptism;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
         private System.Windows.Forms.TextBox firstname_textbox_sponsor_baptism;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label34;
         private System.Windows.Forms.DataGridView baptism_sponsor_dgv;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Button exportCertificate_baptism_button;
-        private System.Windows.Forms.Button print_baptism_button;
-        private System.Windows.Forms.Button appointment_baptism_button;
-        private System.Windows.Forms.Button cancel_baptism_button;
-        private System.Windows.Forms.Button approve_baptism_button;
-        private System.Windows.Forms.Panel baptism_information_panel;
         private System.Windows.Forms.TextBox record_baptism_textbox;
         private System.Windows.Forms.TextBox page_baptism_textbox;
         private System.Windows.Forms.TextBox registry_baptism_textbox;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label46;
         private System.Windows.Forms.ComboBox minister_baptism_combobox;
         private System.Windows.Forms.DateTimePicker baptism_date_dtp;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Panel confirmation_panel;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.TextBox recordnumber_confirmation_textbox;
-        private System.Windows.Forms.TextBox pagenumber_confirmation_textbox;
-        private System.Windows.Forms.TextBox registrynumber_confirmation_textbox;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DateTimePicker confirmationdate_confirmation_dtp;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.Panel marriage_panel;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.Label label84;
-        private System.Windows.Forms.Label label85;
-        private System.Windows.Forms.Label label86;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
-        private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.Label label88;
-        private System.Windows.Forms.Label label89;
-        private System.Windows.Forms.Label label90;
-        private System.Windows.Forms.Label label91;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.Label label77;
-        private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.Label label81;
-        private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.Label label82;
-        private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.Label label93;
-        private System.Windows.Forms.TextBox remarks_sponsor_confirmation_textbox;
+        private System.Windows.Forms.TextBox textBox31;
         private System.Windows.Forms.Label label94;
-        private System.Windows.Forms.Label label92;
         private System.Windows.Forms.Button save_button;
         private System.Windows.Forms.Button cancel_button;
         private System.Windows.Forms.Button balance_button;
         private System.Windows.Forms.Button bloodletting_button;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox34;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.Label label97;
-        private System.Windows.Forms.Label label98;
         private System.Windows.Forms.Panel bloodletting_panel;
         private System.Windows.Forms.Label label101;
         private System.Windows.Forms.DataGridView dataGridView8;
@@ -3278,9 +3117,6 @@
         private System.Windows.Forms.CheckBox mother_checkbox;
         private System.Windows.Forms.DataGridView baptism_requirement_dgv;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Complied;
-        private System.Windows.Forms.TextBox minister_baptism_textbox;
-        private System.Windows.Forms.TextBox baptism_date_textbox;
-        private System.Windows.Forms.Label label111;
         private System.Windows.Forms.Label label110;
         private System.Windows.Forms.Panel profile_panel;
         private System.Windows.Forms.Label label12;
@@ -3291,29 +3127,116 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button confirmation_viewCertificate_button;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button confirmation_details_button;
         private System.Windows.Forms.Button confirmation_printCertificate_button;
-        private System.Windows.Forms.Button confirmation_requirement_button;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button confirmation_application_button;
+        private System.Windows.Forms.Panel confirmation_application_panel;
+        private System.Windows.Forms.Panel confirmation_details_panel;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.RadioButton female_sponsor_confirmation_radio;
-        private System.Windows.Forms.RadioButton male_sponsor_confirmation_radio;
-        private System.Windows.Forms.TextBox residence_sponsor_confirmation_textbox;
-        private System.Windows.Forms.TextBox suffix_sponsor_confirmation_textbox;
-        private System.Windows.Forms.TextBox lastname_sponsor_confirmation_textbox;
-        private System.Windows.Forms.TextBox middlename_sponsor_confirmation_textbox;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.TextBox firstname_sponsor_confirmation_textbox;
+        private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.TextBox minister_confirmation_textbox;
-        private System.Windows.Forms.TextBox confirmationdate_confirmation_textbox;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel baptism_panel;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Button application_baptism_button;
+        private System.Windows.Forms.Button details_baptism_button;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel baptism_details_panel;
+        private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.RadioButton genderF_radiobutton_sponsor_baptism;
+        private System.Windows.Forms.RadioButton genderM_radiobutton_sponsor_baptism;
+        private System.Windows.Forms.TextBox residence_textbox_sponsor_baptism;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox minister_baptism_textbox;
+        private System.Windows.Forms.TextBox textBox32;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Panel baptism_application_panel;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox baptism_date_textbox;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Panel marriage_panel;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox textBox33;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox36;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.Button button28;
+        private System.Windows.Forms.Button button29;
     }
 }
