@@ -456,5 +456,17 @@ namespace ParishSystem
             a.BackColor = submenu_front;
             a.ForeColor = submenu_back;
         }
+
+        private void father_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (father_checkbox.Checked) FatherPNL.Visible = true;
+            else FatherPNL.Visible = false;
+        }
+
+        private void mother_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (mother_checkbox.Checked) MotherPNL.Visible = true;
+            else MotherPNL.Visible = false;
+        }
     }
 }
