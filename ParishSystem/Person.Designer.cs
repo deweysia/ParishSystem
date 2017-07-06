@@ -406,7 +406,7 @@
             "AB-"});
             this.bloodtype_combobox_baptist.Location = new System.Drawing.Point(734, 197);
             this.bloodtype_combobox_baptist.Name = "bloodtype_combobox_baptist";
-            this.bloodtype_combobox_baptist.Size = new System.Drawing.Size(54, 25);
+            this.bloodtype_combobox_baptist.Size = new System.Drawing.Size(54, 29);
             this.bloodtype_combobox_baptist.TabIndex = 31;
             // 
             // contactNumber_textbox_baptist
@@ -416,7 +416,7 @@
             this.contactNumber_textbox_baptist.Location = new System.Drawing.Point(511, 199);
             this.contactNumber_textbox_baptist.Mask = "(+63) 000-0000";
             this.contactNumber_textbox_baptist.Name = "contactNumber_textbox_baptist";
-            this.contactNumber_textbox_baptist.Size = new System.Drawing.Size(97, 18);
+            this.contactNumber_textbox_baptist.Size = new System.Drawing.Size(97, 22);
             this.contactNumber_textbox_baptist.TabIndex = 30;
             // 
             // address_baptist_textarea
@@ -435,7 +435,7 @@
             this.suffix_textbox.Location = new System.Drawing.Point(504, 47);
             this.suffix_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.suffix_textbox.Name = "suffix_textbox";
-            this.suffix_textbox.Size = new System.Drawing.Size(52, 18);
+            this.suffix_textbox.Size = new System.Drawing.Size(52, 23);
             this.suffix_textbox.TabIndex = 23;
             this.suffix_textbox.Text = "Suffix";
             this.suffix_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -447,7 +447,7 @@
             this.lastname_textbox.Location = new System.Drawing.Point(400, 47);
             this.lastname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastname_textbox.Name = "lastname_textbox";
-            this.lastname_textbox.Size = new System.Drawing.Size(94, 18);
+            this.lastname_textbox.Size = new System.Drawing.Size(94, 23);
             this.lastname_textbox.TabIndex = 24;
             this.lastname_textbox.Text = "Lastname";
             this.lastname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -459,7 +459,7 @@
             this.middlename_textbox.Location = new System.Drawing.Point(284, 47);
             this.middlename_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.middlename_textbox.Name = "middlename_textbox";
-            this.middlename_textbox.Size = new System.Drawing.Size(94, 18);
+            this.middlename_textbox.Size = new System.Drawing.Size(94, 23);
             this.middlename_textbox.TabIndex = 22;
             this.middlename_textbox.Text = "Middlename";
             this.middlename_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -471,7 +471,7 @@
             this.label7.Location = new System.Drawing.Point(92, 197);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 17);
+            this.label7.Size = new System.Drawing.Size(92, 23);
             this.label7.TabIndex = 21;
             this.label7.Text = "Birthplace";
             // 
@@ -482,7 +482,7 @@
             this.birthplace_textbox_baptist.Location = new System.Drawing.Point(186, 195);
             this.birthplace_textbox_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.birthplace_textbox_baptist.Name = "birthplace_textbox_baptist";
-            this.birthplace_textbox_baptist.Size = new System.Drawing.Size(167, 18);
+            this.birthplace_textbox_baptist.Size = new System.Drawing.Size(167, 23);
             this.birthplace_textbox_baptist.TabIndex = 20;
             this.birthplace_textbox_baptist.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -493,7 +493,7 @@
             this.label6.Location = new System.Drawing.Point(97, 145);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 17);
+            this.label6.Size = new System.Drawing.Size(86, 23);
             this.label6.TabIndex = 19;
             this.label6.Text = "Birthdate";
             // 
@@ -504,7 +504,7 @@
             this.label13.Location = new System.Drawing.Point(403, 200);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(101, 17);
+            this.label13.Size = new System.Drawing.Size(130, 23);
             this.label13.TabIndex = 27;
             this.label13.Text = "Phone Number";
             // 
@@ -515,7 +515,7 @@
             this.label9.Location = new System.Drawing.Point(413, 95);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 17);
+            this.label9.Size = new System.Drawing.Size(74, 23);
             this.label9.TabIndex = 27;
             this.label9.Text = "Address";
             // 
@@ -526,7 +526,7 @@
             this.label33.Location = new System.Drawing.Point(118, 55);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(44, 17);
+            this.label33.Size = new System.Drawing.Size(57, 23);
             this.label33.TabIndex = 27;
             this.label33.Text = "Name";
             // 
@@ -537,7 +537,7 @@
             this.gender_radiobutton2_baptist.Location = new System.Drawing.Point(270, 98);
             this.gender_radiobutton2_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gender_radiobutton2_baptist.Name = "gender_radiobutton2_baptist";
-            this.gender_radiobutton2_baptist.Size = new System.Drawing.Size(67, 21);
+            this.gender_radiobutton2_baptist.Size = new System.Drawing.Size(85, 27);
             this.gender_radiobutton2_baptist.TabIndex = 16;
             this.gender_radiobutton2_baptist.TabStop = true;
             this.gender_radiobutton2_baptist.Text = "Female";
@@ -551,7 +551,7 @@
             this.birthdate_datetimepicker_baptist.Location = new System.Drawing.Point(186, 139);
             this.birthdate_datetimepicker_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.birthdate_datetimepicker_baptist.Name = "birthdate_datetimepicker_baptist";
-            this.birthdate_datetimepicker_baptist.Size = new System.Drawing.Size(177, 25);
+            this.birthdate_datetimepicker_baptist.Size = new System.Drawing.Size(177, 29);
             this.birthdate_datetimepicker_baptist.TabIndex = 18;
             this.birthdate_datetimepicker_baptist.ValueChanged += new System.EventHandler(this.birthdate_datetimepicker_baptist_ValueChanged);
             // 
@@ -562,7 +562,7 @@
             this.gender_radiobutton1_baptist.Location = new System.Drawing.Point(186, 99);
             this.gender_radiobutton1_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gender_radiobutton1_baptist.Name = "gender_radiobutton1_baptist";
-            this.gender_radiobutton1_baptist.Size = new System.Drawing.Size(55, 21);
+            this.gender_radiobutton1_baptist.Size = new System.Drawing.Size(68, 27);
             this.gender_radiobutton1_baptist.TabIndex = 17;
             this.gender_radiobutton1_baptist.TabStop = true;
             this.gender_radiobutton1_baptist.Text = "Male";
@@ -575,7 +575,7 @@
             this.label109.Location = new System.Drawing.Point(650, 200);
             this.label109.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(77, 17);
+            this.label109.Size = new System.Drawing.Size(100, 23);
             this.label109.TabIndex = 14;
             this.label109.Text = "Blood Type";
             // 
@@ -586,7 +586,7 @@
             this.label4.Location = new System.Drawing.Point(110, 100);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 17);
+            this.label4.Size = new System.Drawing.Size(68, 23);
             this.label4.TabIndex = 14;
             this.label4.Text = "Gender";
             // 
@@ -597,7 +597,7 @@
             this.firstname_textbox.Location = new System.Drawing.Point(165, 47);
             this.firstname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstname_textbox.Name = "firstname_textbox";
-            this.firstname_textbox.Size = new System.Drawing.Size(94, 18);
+            this.firstname_textbox.Size = new System.Drawing.Size(94, 23);
             this.firstname_textbox.TabIndex = 13;
             this.firstname_textbox.Text = "Firstname";
             this.firstname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -607,7 +607,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(160, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(405, 19);
+            this.label1.Size = new System.Drawing.Size(472, 23);
             this.label1.TabIndex = 11;
             this.label1.Text = "__________________________________________________________________";
             // 
@@ -637,7 +637,7 @@
             this.father_checkbox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.father_checkbox.Location = new System.Drawing.Point(3, 3);
             this.father_checkbox.Name = "father_checkbox";
-            this.father_checkbox.Size = new System.Drawing.Size(86, 29);
+            this.father_checkbox.Size = new System.Drawing.Size(107, 36);
             this.father_checkbox.TabIndex = 30;
             this.father_checkbox.Text = "Father";
             this.father_checkbox.UseVisualStyleBackColor = true;
@@ -649,7 +649,7 @@
             this.suffix_textbox_father.Location = new System.Drawing.Point(391, 26);
             this.suffix_textbox_father.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.suffix_textbox_father.Name = "suffix_textbox_father";
-            this.suffix_textbox_father.Size = new System.Drawing.Size(50, 16);
+            this.suffix_textbox_father.Size = new System.Drawing.Size(50, 20);
             this.suffix_textbox_father.TabIndex = 23;
             this.suffix_textbox_father.Text = "Suffix";
             this.suffix_textbox_father.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -661,7 +661,7 @@
             this.lastname_textbox_father.Location = new System.Drawing.Point(297, 27);
             this.lastname_textbox_father.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastname_textbox_father.Name = "lastname_textbox_father";
-            this.lastname_textbox_father.Size = new System.Drawing.Size(94, 16);
+            this.lastname_textbox_father.Size = new System.Drawing.Size(94, 20);
             this.lastname_textbox_father.TabIndex = 24;
             this.lastname_textbox_father.Text = "Lastname";
             this.lastname_textbox_father.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -673,7 +673,7 @@
             this.middlename_textbox_father.Location = new System.Drawing.Point(203, 27);
             this.middlename_textbox_father.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.middlename_textbox_father.Name = "middlename_textbox_father";
-            this.middlename_textbox_father.Size = new System.Drawing.Size(94, 16);
+            this.middlename_textbox_father.Size = new System.Drawing.Size(94, 20);
             this.middlename_textbox_father.TabIndex = 22;
             this.middlename_textbox_father.Text = "Middlename";
             this.middlename_textbox_father.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -685,7 +685,7 @@
             this.label23.Location = new System.Drawing.Point(253, 76);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(69, 17);
+            this.label23.Size = new System.Drawing.Size(89, 23);
             this.label23.TabIndex = 21;
             this.label23.Text = "Residence";
             // 
@@ -696,7 +696,7 @@
             this.label5.Location = new System.Drawing.Point(30, 74);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 17);
+            this.label5.Size = new System.Drawing.Size(92, 23);
             this.label5.TabIndex = 21;
             this.label5.Text = "Birthplace";
             // 
@@ -707,7 +707,7 @@
             this.residence_textbox_father.Location = new System.Drawing.Point(331, 73);
             this.residence_textbox_father.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.residence_textbox_father.Name = "residence_textbox_father";
-            this.residence_textbox_father.Size = new System.Drawing.Size(133, 16);
+            this.residence_textbox_father.Size = new System.Drawing.Size(133, 20);
             this.residence_textbox_father.TabIndex = 20;
             this.residence_textbox_father.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -718,7 +718,7 @@
             this.birthplace_textbox_father.Location = new System.Drawing.Point(107, 73);
             this.birthplace_textbox_father.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.birthplace_textbox_father.Name = "birthplace_textbox_father";
-            this.birthplace_textbox_father.Size = new System.Drawing.Size(133, 16);
+            this.birthplace_textbox_father.Size = new System.Drawing.Size(133, 20);
             this.birthplace_textbox_father.TabIndex = 20;
             this.birthplace_textbox_father.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -729,7 +729,7 @@
             this.firstname_textbox_father.Location = new System.Drawing.Point(109, 27);
             this.firstname_textbox_father.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstname_textbox_father.Name = "firstname_textbox_father";
-            this.firstname_textbox_father.Size = new System.Drawing.Size(94, 16);
+            this.firstname_textbox_father.Size = new System.Drawing.Size(94, 20);
             this.firstname_textbox_father.TabIndex = 13;
             this.firstname_textbox_father.Text = "Firstname";
             this.firstname_textbox_father.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -739,7 +739,7 @@
             this.label27.AutoSize = true;
             this.label27.Location = new System.Drawing.Point(329, 77);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(141, 19);
+            this.label27.Size = new System.Drawing.Size(164, 23);
             this.label27.TabIndex = 23;
             this.label27.Text = "______________________";
             // 
@@ -748,7 +748,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(99, 77);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(147, 19);
+            this.label15.Size = new System.Drawing.Size(171, 23);
             this.label15.TabIndex = 23;
             this.label15.Text = "_______________________";
             // 
@@ -757,7 +757,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(102, 28);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(339, 19);
+            this.label14.Size = new System.Drawing.Size(395, 23);
             this.label14.TabIndex = 29;
             this.label14.Text = "_______________________________________________________";
             // 
@@ -786,7 +786,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(329, 80);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(141, 19);
+            this.label12.Size = new System.Drawing.Size(164, 23);
             this.label12.TabIndex = 31;
             this.label12.Text = "______________________";
             // 
@@ -795,7 +795,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(99, 83);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(147, 19);
+            this.label11.Size = new System.Drawing.Size(171, 23);
             this.label11.TabIndex = 31;
             this.label11.Text = "_______________________";
             // 
@@ -805,7 +805,7 @@
             this.mother_checkbox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mother_checkbox.Location = new System.Drawing.Point(6, 5);
             this.mother_checkbox.Name = "mother_checkbox";
-            this.mother_checkbox.Size = new System.Drawing.Size(97, 29);
+            this.mother_checkbox.Size = new System.Drawing.Size(121, 36);
             this.mother_checkbox.TabIndex = 30;
             this.mother_checkbox.Text = "Mother";
             this.mother_checkbox.UseVisualStyleBackColor = true;
@@ -817,7 +817,7 @@
             this.suffix_textbox_mother.Location = new System.Drawing.Point(391, 31);
             this.suffix_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.suffix_textbox_mother.Name = "suffix_textbox_mother";
-            this.suffix_textbox_mother.Size = new System.Drawing.Size(43, 16);
+            this.suffix_textbox_mother.Size = new System.Drawing.Size(43, 20);
             this.suffix_textbox_mother.TabIndex = 23;
             this.suffix_textbox_mother.Text = "Suffix";
             this.suffix_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -829,7 +829,7 @@
             this.lastname_textbox_mother.Location = new System.Drawing.Point(297, 31);
             this.lastname_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastname_textbox_mother.Name = "lastname_textbox_mother";
-            this.lastname_textbox_mother.Size = new System.Drawing.Size(94, 16);
+            this.lastname_textbox_mother.Size = new System.Drawing.Size(94, 20);
             this.lastname_textbox_mother.TabIndex = 24;
             this.lastname_textbox_mother.Text = "Lastname";
             this.lastname_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -841,7 +841,7 @@
             this.middlename_textbox_mother.Location = new System.Drawing.Point(203, 31);
             this.middlename_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.middlename_textbox_mother.Name = "middlename_textbox_mother";
-            this.middlename_textbox_mother.Size = new System.Drawing.Size(94, 16);
+            this.middlename_textbox_mother.Size = new System.Drawing.Size(94, 20);
             this.middlename_textbox_mother.TabIndex = 22;
             this.middlename_textbox_mother.Text = "Middlename";
             this.middlename_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -853,7 +853,7 @@
             this.label20.Location = new System.Drawing.Point(254, 80);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(69, 17);
+            this.label20.Size = new System.Drawing.Size(89, 23);
             this.label20.TabIndex = 21;
             this.label20.Text = "Residence";
             // 
@@ -864,7 +864,7 @@
             this.label21.Location = new System.Drawing.Point(26, 80);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(70, 17);
+            this.label21.Size = new System.Drawing.Size(92, 23);
             this.label21.TabIndex = 21;
             this.label21.Text = "Birthplace";
             // 
@@ -875,7 +875,7 @@
             this.residence_textbox_mother.Location = new System.Drawing.Point(331, 76);
             this.residence_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.residence_textbox_mother.Name = "residence_textbox_mother";
-            this.residence_textbox_mother.Size = new System.Drawing.Size(133, 16);
+            this.residence_textbox_mother.Size = new System.Drawing.Size(133, 20);
             this.residence_textbox_mother.TabIndex = 20;
             this.residence_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -886,7 +886,7 @@
             this.birthplace_textbox_mother.Location = new System.Drawing.Point(106, 80);
             this.birthplace_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.birthplace_textbox_mother.Name = "birthplace_textbox_mother";
-            this.birthplace_textbox_mother.Size = new System.Drawing.Size(133, 16);
+            this.birthplace_textbox_mother.Size = new System.Drawing.Size(133, 20);
             this.birthplace_textbox_mother.TabIndex = 20;
             this.birthplace_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -897,7 +897,7 @@
             this.firstname_textbox_mother.Location = new System.Drawing.Point(109, 31);
             this.firstname_textbox_mother.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstname_textbox_mother.Name = "firstname_textbox_mother";
-            this.firstname_textbox_mother.Size = new System.Drawing.Size(94, 16);
+            this.firstname_textbox_mother.Size = new System.Drawing.Size(94, 20);
             this.firstname_textbox_mother.TabIndex = 13;
             this.firstname_textbox_mother.Text = "Firstname";
             this.firstname_textbox_mother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -907,7 +907,7 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(102, 34);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(339, 19);
+            this.label16.Size = new System.Drawing.Size(395, 23);
             this.label16.TabIndex = 31;
             this.label16.Text = "_______________________________________________________";
             // 
@@ -973,7 +973,7 @@
             this.label52.AutoSize = true;
             this.label52.Location = new System.Drawing.Point(11, 13);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(66, 21);
+            this.label52.Size = new System.Drawing.Size(82, 28);
             this.label52.TabIndex = 50;
             this.label52.Text = "Baptism";
             // 
@@ -1051,14 +1051,14 @@
             // 
             this.baptism_date_textbox.Location = new System.Drawing.Point(8, 77);
             this.baptism_date_textbox.Name = "baptism_date_textbox";
-            this.baptism_date_textbox.Size = new System.Drawing.Size(148, 29);
+            this.baptism_date_textbox.Size = new System.Drawing.Size(148, 34);
             this.baptism_date_textbox.TabIndex = 39;
             // 
             // minister_baptism_textbox
             // 
             this.minister_baptism_textbox.Location = new System.Drawing.Point(98, 77);
             this.minister_baptism_textbox.Name = "minister_baptism_textbox";
-            this.minister_baptism_textbox.Size = new System.Drawing.Size(148, 29);
+            this.minister_baptism_textbox.Size = new System.Drawing.Size(148, 34);
             this.minister_baptism_textbox.TabIndex = 38;
             // 
             // record_baptism_textbox
@@ -1068,7 +1068,7 @@
             this.record_baptism_textbox.Location = new System.Drawing.Point(110, 167);
             this.record_baptism_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.record_baptism_textbox.Name = "record_baptism_textbox";
-            this.record_baptism_textbox.Size = new System.Drawing.Size(21, 16);
+            this.record_baptism_textbox.Size = new System.Drawing.Size(21, 20);
             this.record_baptism_textbox.TabIndex = 35;
             this.record_baptism_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1079,7 +1079,7 @@
             this.page_baptism_textbox.Location = new System.Drawing.Point(108, 136);
             this.page_baptism_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.page_baptism_textbox.Name = "page_baptism_textbox";
-            this.page_baptism_textbox.Size = new System.Drawing.Size(21, 16);
+            this.page_baptism_textbox.Size = new System.Drawing.Size(21, 20);
             this.page_baptism_textbox.TabIndex = 34;
             this.page_baptism_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1090,7 +1090,7 @@
             this.registry_baptism_textbox.Location = new System.Drawing.Point(108, 109);
             this.registry_baptism_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.registry_baptism_textbox.Name = "registry_baptism_textbox";
-            this.registry_baptism_textbox.Size = new System.Drawing.Size(21, 16);
+            this.registry_baptism_textbox.Size = new System.Drawing.Size(21, 20);
             this.registry_baptism_textbox.TabIndex = 29;
             this.registry_baptism_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.registry_baptism_textbox.TextChanged += new System.EventHandler(this.registry_baptism_textbox_TextChanged);
@@ -1101,7 +1101,7 @@
             this.label44.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.Location = new System.Drawing.Point(53, 165);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(50, 17);
+            this.label44.Size = new System.Drawing.Size(63, 23);
             this.label44.TabIndex = 33;
             this.label44.Text = "Record";
             // 
@@ -1111,7 +1111,7 @@
             this.label45.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.Location = new System.Drawing.Point(66, 134);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(37, 17);
+            this.label45.Size = new System.Drawing.Size(47, 23);
             this.label45.TabIndex = 32;
             this.label45.Text = "Page";
             // 
@@ -1121,7 +1121,7 @@
             this.label46.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.Location = new System.Drawing.Point(48, 108);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(55, 17);
+            this.label46.Size = new System.Drawing.Size(70, 23);
             this.label46.TabIndex = 31;
             this.label46.Text = "Registry";
             // 
@@ -1131,7 +1131,7 @@
             this.minister_baptism_combobox.FormattingEnabled = true;
             this.minister_baptism_combobox.Location = new System.Drawing.Point(86, 50);
             this.minister_baptism_combobox.Name = "minister_baptism_combobox";
-            this.minister_baptism_combobox.Size = new System.Drawing.Size(148, 23);
+            this.minister_baptism_combobox.Size = new System.Drawing.Size(148, 28);
             this.minister_baptism_combobox.TabIndex = 30;
             // 
             // baptism_date_dtp
@@ -1141,7 +1141,7 @@
             this.baptism_date_dtp.Location = new System.Drawing.Point(108, 6);
             this.baptism_date_dtp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.baptism_date_dtp.Name = "baptism_date_dtp";
-            this.baptism_date_dtp.Size = new System.Drawing.Size(126, 25);
+            this.baptism_date_dtp.Size = new System.Drawing.Size(126, 29);
             this.baptism_date_dtp.TabIndex = 29;
             // 
             // label47
@@ -1149,7 +1149,7 @@
             this.label47.AutoSize = true;
             this.label47.Location = new System.Drawing.Point(13, 52);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(67, 21);
+            this.label47.Size = new System.Drawing.Size(83, 28);
             this.label47.TabIndex = 0;
             this.label47.Text = "Minister";
             // 
@@ -1158,7 +1158,7 @@
             this.label48.AutoSize = true;
             this.label48.Location = new System.Drawing.Point(1, 8);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(102, 21);
+            this.label48.Size = new System.Drawing.Size(128, 28);
             this.label48.TabIndex = 0;
             this.label48.Text = "Baptism Date";
             // 
@@ -1167,7 +1167,7 @@
             this.label49.AutoSize = true;
             this.label49.Location = new System.Drawing.Point(104, 109);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(31, 21);
+            this.label49.Size = new System.Drawing.Size(36, 28);
             this.label49.TabIndex = 29;
             this.label49.Text = "___";
             // 
@@ -1176,7 +1176,7 @@
             this.label50.AutoSize = true;
             this.label50.Location = new System.Drawing.Point(104, 136);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(31, 21);
+            this.label50.Size = new System.Drawing.Size(36, 28);
             this.label50.TabIndex = 36;
             this.label50.Text = "___";
             // 
@@ -1185,7 +1185,7 @@
             this.label51.AutoSize = true;
             this.label51.Location = new System.Drawing.Point(105, 167);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(31, 21);
+            this.label51.Size = new System.Drawing.Size(36, 28);
             this.label51.TabIndex = 37;
             this.label51.Text = "___";
             // 
@@ -1210,7 +1210,7 @@
             this.label93.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label93.Location = new System.Drawing.Point(33, 413);
             this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(91, 30);
+            this.label93.Size = new System.Drawing.Size(116, 37);
             this.label93.TabIndex = 46;
             this.label93.Text = "Remarks";
             // 
@@ -1220,7 +1220,7 @@
             this.label39.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.Location = new System.Drawing.Point(539, 211);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(140, 30);
+            this.label39.Size = new System.Drawing.Size(179, 37);
             this.label39.TabIndex = 46;
             this.label39.Text = "Requirements";
             // 
@@ -1230,7 +1230,7 @@
             this.label32.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.Location = new System.Drawing.Point(539, 6);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(97, 30);
+            this.label32.Size = new System.Drawing.Size(125, 37);
             this.label32.TabIndex = 46;
             this.label32.Text = "Sponsors";
             // 
@@ -1266,7 +1266,7 @@
             this.genderF_radiobutton_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genderF_radiobutton_sponsor_baptism.Location = new System.Drawing.Point(90, 129);
             this.genderF_radiobutton_sponsor_baptism.Name = "genderF_radiobutton_sponsor_baptism";
-            this.genderF_radiobutton_sponsor_baptism.Size = new System.Drawing.Size(67, 21);
+            this.genderF_radiobutton_sponsor_baptism.Size = new System.Drawing.Size(85, 27);
             this.genderF_radiobutton_sponsor_baptism.TabIndex = 49;
             this.genderF_radiobutton_sponsor_baptism.TabStop = true;
             this.genderF_radiobutton_sponsor_baptism.Text = "Female";
@@ -1278,7 +1278,7 @@
             this.genderM_radiobutton_sponsor_baptism.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genderM_radiobutton_sponsor_baptism.Location = new System.Drawing.Point(91, 102);
             this.genderM_radiobutton_sponsor_baptism.Name = "genderM_radiobutton_sponsor_baptism";
-            this.genderM_radiobutton_sponsor_baptism.Size = new System.Drawing.Size(55, 21);
+            this.genderM_radiobutton_sponsor_baptism.Size = new System.Drawing.Size(68, 27);
             this.genderM_radiobutton_sponsor_baptism.TabIndex = 49;
             this.genderM_radiobutton_sponsor_baptism.TabStop = true;
             this.genderM_radiobutton_sponsor_baptism.Text = "Male";
@@ -1291,7 +1291,7 @@
             this.residence_textbox_sponsor_baptism.Location = new System.Drawing.Point(274, 107);
             this.residence_textbox_sponsor_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.residence_textbox_sponsor_baptism.Name = "residence_textbox_sponsor_baptism";
-            this.residence_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 16);
+            this.residence_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 20);
             this.residence_textbox_sponsor_baptism.TabIndex = 47;
             this.residence_textbox_sponsor_baptism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1322,7 +1322,7 @@
             this.suffix_textbox_sponsor_baptism.Location = new System.Drawing.Point(350, 28);
             this.suffix_textbox_sponsor_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.suffix_textbox_sponsor_baptism.Name = "suffix_textbox_sponsor_baptism";
-            this.suffix_textbox_sponsor_baptism.Size = new System.Drawing.Size(21, 16);
+            this.suffix_textbox_sponsor_baptism.Size = new System.Drawing.Size(21, 20);
             this.suffix_textbox_sponsor_baptism.TabIndex = 23;
             this.suffix_textbox_sponsor_baptism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1333,7 +1333,7 @@
             this.lastname_textbox_sponsor_baptism.Location = new System.Drawing.Point(256, 28);
             this.lastname_textbox_sponsor_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastname_textbox_sponsor_baptism.Name = "lastname_textbox_sponsor_baptism";
-            this.lastname_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 16);
+            this.lastname_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 20);
             this.lastname_textbox_sponsor_baptism.TabIndex = 24;
             this.lastname_textbox_sponsor_baptism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1344,7 +1344,7 @@
             this.middlename_textbox_sponsor_baptism.Location = new System.Drawing.Point(162, 28);
             this.middlename_textbox_sponsor_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.middlename_textbox_sponsor_baptism.Name = "middlename_textbox_sponsor_baptism";
-            this.middlename_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 16);
+            this.middlename_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 20);
             this.middlename_textbox_sponsor_baptism.TabIndex = 22;
             this.middlename_textbox_sponsor_baptism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1354,7 +1354,7 @@
             this.label37.Location = new System.Drawing.Point(20, 102);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(61, 21);
+            this.label37.Size = new System.Drawing.Size(76, 28);
             this.label37.TabIndex = 27;
             this.label37.Text = "Gender";
             // 
@@ -1364,7 +1364,7 @@
             this.label35.Location = new System.Drawing.Point(188, 102);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(80, 21);
+            this.label35.Size = new System.Drawing.Size(98, 28);
             this.label35.TabIndex = 27;
             this.label35.Text = "Residence";
             // 
@@ -1374,7 +1374,7 @@
             this.label36.Location = new System.Drawing.Point(1, 25);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(68, 21);
+            this.label36.Size = new System.Drawing.Size(85, 28);
             this.label36.TabIndex = 27;
             this.label36.Text = "Sponsor";
             // 
@@ -1385,7 +1385,7 @@
             this.firstname_textbox_sponsor_baptism.Location = new System.Drawing.Point(68, 28);
             this.firstname_textbox_sponsor_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstname_textbox_sponsor_baptism.Name = "firstname_textbox_sponsor_baptism";
-            this.firstname_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 16);
+            this.firstname_textbox_sponsor_baptism.Size = new System.Drawing.Size(94, 20);
             this.firstname_textbox_sponsor_baptism.TabIndex = 13;
             this.firstname_textbox_sponsor_baptism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1394,7 +1394,7 @@
             this.label38.AutoSize = true;
             this.label38.Location = new System.Drawing.Point(65, 32);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(325, 21);
+            this.label38.Size = new System.Drawing.Size(372, 28);
             this.label38.TabIndex = 11;
             this.label38.Text = "_____________________________________________";
             // 
@@ -1404,7 +1404,7 @@
             this.label40.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.Location = new System.Drawing.Point(275, 51);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(58, 15);
+            this.label40.Size = new System.Drawing.Size(72, 20);
             this.label40.TabIndex = 27;
             this.label40.Text = "Lastname";
             // 
@@ -1414,7 +1414,7 @@
             this.label41.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.Location = new System.Drawing.Point(345, 51);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(36, 15);
+            this.label41.Size = new System.Drawing.Size(46, 20);
             this.label41.TabIndex = 26;
             this.label41.Text = "Suffix";
             // 
@@ -1424,7 +1424,7 @@
             this.label42.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.Location = new System.Drawing.Point(175, 50);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(74, 15);
+            this.label42.Size = new System.Drawing.Size(93, 20);
             this.label42.TabIndex = 25;
             this.label42.Text = "Middlename";
             // 
@@ -1434,7 +1434,7 @@
             this.label43.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.Location = new System.Drawing.Point(87, 50);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(59, 15);
+            this.label43.Size = new System.Drawing.Size(73, 20);
             this.label43.TabIndex = 28;
             this.label43.Text = "Firstname";
             // 
@@ -1443,7 +1443,7 @@
             this.label34.AutoSize = true;
             this.label34.Location = new System.Drawing.Point(266, 107);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(115, 21);
+            this.label34.Size = new System.Drawing.Size(132, 28);
             this.label34.TabIndex = 48;
             this.label34.Text = "_______________";
             // 
@@ -1586,7 +1586,7 @@
             this.label19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(3, 2);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(95, 21);
+            this.label19.Size = new System.Drawing.Size(118, 28);
             this.label19.TabIndex = 57;
             this.label19.Text = "God Parent";
             // 
@@ -1596,7 +1596,7 @@
             this.radioButton3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton3.Location = new System.Drawing.Point(726, 50);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(67, 21);
+            this.radioButton3.Size = new System.Drawing.Size(85, 27);
             this.radioButton3.TabIndex = 49;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Female";
@@ -1608,7 +1608,7 @@
             this.radioButton4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton4.Location = new System.Drawing.Point(726, 23);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(55, 21);
+            this.radioButton4.Size = new System.Drawing.Size(68, 27);
             this.radioButton4.TabIndex = 49;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Male";
@@ -1621,7 +1621,7 @@
             this.residence_sponsor_confirmation_textbox.Location = new System.Drawing.Point(524, 54);
             this.residence_sponsor_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.residence_sponsor_confirmation_textbox.Name = "residence_sponsor_confirmation_textbox";
-            this.residence_sponsor_confirmation_textbox.Size = new System.Drawing.Size(94, 16);
+            this.residence_sponsor_confirmation_textbox.Size = new System.Drawing.Size(94, 20);
             this.residence_sponsor_confirmation_textbox.TabIndex = 47;
             this.residence_sponsor_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1632,7 +1632,7 @@
             this.suffix_sponsor_confirmation_textbox.Location = new System.Drawing.Point(377, 55);
             this.suffix_sponsor_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.suffix_sponsor_confirmation_textbox.Name = "suffix_sponsor_confirmation_textbox";
-            this.suffix_sponsor_confirmation_textbox.Size = new System.Drawing.Size(54, 16);
+            this.suffix_sponsor_confirmation_textbox.Size = new System.Drawing.Size(54, 20);
             this.suffix_sponsor_confirmation_textbox.TabIndex = 23;
             this.suffix_sponsor_confirmation_textbox.Text = "Suffix";
             this.suffix_sponsor_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1644,7 +1644,7 @@
             this.lastname_sponsor_confirmation_textbox.Location = new System.Drawing.Point(275, 55);
             this.lastname_sponsor_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastname_sponsor_confirmation_textbox.Name = "lastname_sponsor_confirmation_textbox";
-            this.lastname_sponsor_confirmation_textbox.Size = new System.Drawing.Size(94, 16);
+            this.lastname_sponsor_confirmation_textbox.Size = new System.Drawing.Size(94, 20);
             this.lastname_sponsor_confirmation_textbox.TabIndex = 24;
             this.lastname_sponsor_confirmation_textbox.Text = "Lastname";
             this.lastname_sponsor_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1656,7 +1656,7 @@
             this.middlename_sponsor_confirmation_textbox.Location = new System.Drawing.Point(173, 55);
             this.middlename_sponsor_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.middlename_sponsor_confirmation_textbox.Name = "middlename_sponsor_confirmation_textbox";
-            this.middlename_sponsor_confirmation_textbox.Size = new System.Drawing.Size(94, 16);
+            this.middlename_sponsor_confirmation_textbox.Size = new System.Drawing.Size(94, 20);
             this.middlename_sponsor_confirmation_textbox.TabIndex = 22;
             this.middlename_sponsor_confirmation_textbox.Text = "Middlename";
             this.middlename_sponsor_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1667,7 +1667,7 @@
             this.label64.Location = new System.Drawing.Point(655, 32);
             this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(61, 21);
+            this.label64.Size = new System.Drawing.Size(76, 28);
             this.label64.TabIndex = 27;
             this.label64.Text = "Gender";
             // 
@@ -1678,7 +1678,7 @@
             this.label65.Location = new System.Drawing.Point(447, 55);
             this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(69, 17);
+            this.label65.Size = new System.Drawing.Size(89, 23);
             this.label65.TabIndex = 27;
             this.label65.Text = "Residence";
             // 
@@ -1689,7 +1689,7 @@
             this.label66.Location = new System.Drawing.Point(36, 55);
             this.label66.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(44, 17);
+            this.label66.Size = new System.Drawing.Size(57, 23);
             this.label66.TabIndex = 27;
             this.label66.Text = "Name";
             // 
@@ -1698,7 +1698,7 @@
             this.label72.AutoSize = true;
             this.label72.Location = new System.Drawing.Point(516, 56);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(115, 21);
+            this.label72.Size = new System.Drawing.Size(132, 28);
             this.label72.TabIndex = 48;
             this.label72.Text = "_______________";
             // 
@@ -1709,7 +1709,7 @@
             this.firstname_sponsor_confirmation_textbox.Location = new System.Drawing.Point(74, 55);
             this.firstname_sponsor_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstname_sponsor_confirmation_textbox.Name = "firstname_sponsor_confirmation_textbox";
-            this.firstname_sponsor_confirmation_textbox.Size = new System.Drawing.Size(94, 16);
+            this.firstname_sponsor_confirmation_textbox.Size = new System.Drawing.Size(94, 20);
             this.firstname_sponsor_confirmation_textbox.TabIndex = 13;
             this.firstname_sponsor_confirmation_textbox.Text = "Firstname";
             this.firstname_sponsor_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1719,7 +1719,7 @@
             this.label67.AutoSize = true;
             this.label67.Location = new System.Drawing.Point(81, 56);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(346, 21);
+            this.label67.Size = new System.Drawing.Size(396, 28);
             this.label67.TabIndex = 11;
             this.label67.Text = "________________________________________________";
             // 
@@ -1727,14 +1727,14 @@
             // 
             this.minister_confirmation_textbox.Location = new System.Drawing.Point(522, 82);
             this.minister_confirmation_textbox.Name = "minister_confirmation_textbox";
-            this.minister_confirmation_textbox.Size = new System.Drawing.Size(153, 29);
+            this.minister_confirmation_textbox.Size = new System.Drawing.Size(153, 34);
             this.minister_confirmation_textbox.TabIndex = 55;
             // 
             // confirmationdate_confirmation_textbox
             // 
             this.confirmationdate_confirmation_textbox.Location = new System.Drawing.Point(522, 34);
             this.confirmationdate_confirmation_textbox.Name = "confirmationdate_confirmation_textbox";
-            this.confirmationdate_confirmation_textbox.Size = new System.Drawing.Size(153, 29);
+            this.confirmationdate_confirmation_textbox.Size = new System.Drawing.Size(153, 34);
             this.confirmationdate_confirmation_textbox.TabIndex = 54;
             // 
             // recordnumber_confirmation_textbox
@@ -1744,7 +1744,7 @@
             this.recordnumber_confirmation_textbox.Location = new System.Drawing.Point(377, 232);
             this.recordnumber_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.recordnumber_confirmation_textbox.Name = "recordnumber_confirmation_textbox";
-            this.recordnumber_confirmation_textbox.Size = new System.Drawing.Size(120, 23);
+            this.recordnumber_confirmation_textbox.Size = new System.Drawing.Size(120, 27);
             this.recordnumber_confirmation_textbox.TabIndex = 35;
             this.recordnumber_confirmation_textbox.Text = "Record Number";
             this.recordnumber_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1756,7 +1756,7 @@
             this.pagenumber_confirmation_textbox.Location = new System.Drawing.Point(377, 187);
             this.pagenumber_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pagenumber_confirmation_textbox.Name = "pagenumber_confirmation_textbox";
-            this.pagenumber_confirmation_textbox.Size = new System.Drawing.Size(120, 23);
+            this.pagenumber_confirmation_textbox.Size = new System.Drawing.Size(120, 27);
             this.pagenumber_confirmation_textbox.TabIndex = 34;
             this.pagenumber_confirmation_textbox.Text = "Page Number";
             this.pagenumber_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1777,7 +1777,7 @@
             this.registrynumber_confirmation_textbox.Location = new System.Drawing.Point(377, 144);
             this.registrynumber_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.registrynumber_confirmation_textbox.Name = "registrynumber_confirmation_textbox";
-            this.registrynumber_confirmation_textbox.Size = new System.Drawing.Size(120, 23);
+            this.registrynumber_confirmation_textbox.Size = new System.Drawing.Size(120, 27);
             this.registrynumber_confirmation_textbox.TabIndex = 29;
             this.registrynumber_confirmation_textbox.Text = "Registry Number";
             this.registrynumber_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1788,7 +1788,7 @@
             this.label94.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label94.Location = new System.Drawing.Point(160, 436);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(88, 25);
+            this.label94.Size = new System.Drawing.Size(112, 32);
             this.label94.TabIndex = 46;
             this.label94.Text = "Remarks";
             // 
@@ -1798,7 +1798,7 @@
             this.label54.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.Location = new System.Drawing.Point(305, 236);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(50, 17);
+            this.label54.Size = new System.Drawing.Size(66, 23);
             this.label54.TabIndex = 33;
             this.label54.Text = "Record";
             // 
@@ -1808,7 +1808,7 @@
             this.label58.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.Location = new System.Drawing.Point(205, 37);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(152, 21);
+            this.label58.Size = new System.Drawing.Size(188, 28);
             this.label58.TabIndex = 0;
             this.label58.Text = "Confirmation Date";
             // 
@@ -1818,7 +1818,7 @@
             this.label55.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.Location = new System.Drawing.Point(307, 197);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(38, 17);
+            this.label55.Size = new System.Drawing.Size(49, 23);
             this.label55.TabIndex = 32;
             this.label55.Text = "Page";
             // 
@@ -1829,7 +1829,7 @@
             this.dateTimePicker3.Location = new System.Drawing.Point(362, 37);
             this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(153, 25);
+            this.dateTimePicker3.Size = new System.Drawing.Size(153, 29);
             this.dateTimePicker3.TabIndex = 29;
             // 
             // label56
@@ -1838,7 +1838,7 @@
             this.label56.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.Location = new System.Drawing.Point(296, 150);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(59, 17);
+            this.label56.Size = new System.Drawing.Size(77, 23);
             this.label56.TabIndex = 31;
             this.label56.Text = "Registry";
             // 
@@ -1848,7 +1848,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(362, 86);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(153, 23);
+            this.comboBox2.Size = new System.Drawing.Size(153, 28);
             this.comboBox2.TabIndex = 30;
             // 
             // label57
@@ -1857,7 +1857,7 @@
             this.label57.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.Location = new System.Drawing.Point(282, 84);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(73, 21);
+            this.label57.Size = new System.Drawing.Size(91, 28);
             this.label57.TabIndex = 0;
             this.label57.Text = "Minister";
             // 
@@ -1866,7 +1866,7 @@
             this.label59.AutoSize = true;
             this.label59.Location = new System.Drawing.Point(351, 152);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(171, 21);
+            this.label59.Size = new System.Drawing.Size(196, 28);
             this.label59.TabIndex = 29;
             this.label59.Text = "_______________________";
             // 
@@ -1875,7 +1875,7 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(351, 194);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(171, 21);
+            this.label17.Size = new System.Drawing.Size(196, 28);
             this.label17.TabIndex = 52;
             this.label17.Text = "_______________________";
             // 
@@ -1884,7 +1884,7 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(351, 239);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(171, 21);
+            this.label18.Size = new System.Drawing.Size(196, 28);
             this.label18.TabIndex = 53;
             this.label18.Text = "_______________________";
             // 
@@ -1907,7 +1907,7 @@
             this.label62.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label62.Location = new System.Drawing.Point(32, 19);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(140, 30);
+            this.label62.Size = new System.Drawing.Size(179, 37);
             this.label62.TabIndex = 46;
             this.label62.Text = "Requirements";
             // 
@@ -1988,7 +1988,7 @@
             this.textBox34.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox34.Location = new System.Drawing.Point(74, 434);
             this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(165, 25);
+            this.textBox34.Size = new System.Drawing.Size(165, 29);
             this.textBox34.TabIndex = 62;
             // 
             // textBox35
@@ -1996,7 +1996,7 @@
             this.textBox35.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox35.Location = new System.Drawing.Point(74, 467);
             this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(165, 25);
+            this.textBox35.Size = new System.Drawing.Size(165, 29);
             this.textBox35.TabIndex = 63;
             // 
             // label97
@@ -2004,7 +2004,7 @@
             this.label97.AutoSize = true;
             this.label97.Location = new System.Drawing.Point(13, 437);
             this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(44, 21);
+            this.label97.Size = new System.Drawing.Size(54, 28);
             this.label97.TabIndex = 60;
             this.label97.Text = "Price";
             // 
@@ -2013,7 +2013,7 @@
             this.label98.AutoSize = true;
             this.label98.Location = new System.Drawing.Point(-1, 468);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(63, 21);
+            this.label98.Size = new System.Drawing.Size(78, 28);
             this.label98.TabIndex = 61;
             this.label98.Text = "Balance";
             // 
@@ -2108,7 +2108,7 @@
             this.textBox26.Location = new System.Drawing.Point(110, 167);
             this.textBox26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(21, 16);
+            this.textBox26.Size = new System.Drawing.Size(21, 20);
             this.textBox26.TabIndex = 35;
             this.textBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2119,7 +2119,7 @@
             this.textBox27.Location = new System.Drawing.Point(108, 136);
             this.textBox27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(21, 16);
+            this.textBox27.Size = new System.Drawing.Size(21, 20);
             this.textBox27.TabIndex = 34;
             this.textBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2130,7 +2130,7 @@
             this.textBox28.Location = new System.Drawing.Point(108, 109);
             this.textBox28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(21, 16);
+            this.textBox28.Size = new System.Drawing.Size(21, 20);
             this.textBox28.TabIndex = 29;
             this.textBox28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2140,7 +2140,7 @@
             this.label84.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label84.Location = new System.Drawing.Point(53, 165);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(50, 17);
+            this.label84.Size = new System.Drawing.Size(63, 23);
             this.label84.TabIndex = 33;
             this.label84.Text = "Record";
             // 
@@ -2150,7 +2150,7 @@
             this.label85.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label85.Location = new System.Drawing.Point(66, 134);
             this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(37, 17);
+            this.label85.Size = new System.Drawing.Size(47, 23);
             this.label85.TabIndex = 32;
             this.label85.Text = "Page";
             // 
@@ -2160,7 +2160,7 @@
             this.label86.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label86.Location = new System.Drawing.Point(48, 108);
             this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(55, 17);
+            this.label86.Size = new System.Drawing.Size(70, 23);
             this.label86.TabIndex = 31;
             this.label86.Text = "Registry";
             // 
@@ -2170,7 +2170,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(86, 50);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(148, 23);
+            this.comboBox3.Size = new System.Drawing.Size(148, 28);
             this.comboBox3.TabIndex = 30;
             // 
             // dateTimePicker4
@@ -2180,7 +2180,7 @@
             this.dateTimePicker4.Location = new System.Drawing.Point(108, 6);
             this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(126, 25);
+            this.dateTimePicker4.Size = new System.Drawing.Size(126, 29);
             this.dateTimePicker4.TabIndex = 29;
             // 
             // label87
@@ -2188,7 +2188,7 @@
             this.label87.AutoSize = true;
             this.label87.Location = new System.Drawing.Point(13, 52);
             this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(67, 21);
+            this.label87.Size = new System.Drawing.Size(83, 28);
             this.label87.TabIndex = 0;
             this.label87.Text = "Minister";
             // 
@@ -2197,7 +2197,7 @@
             this.label88.AutoSize = true;
             this.label88.Location = new System.Drawing.Point(1, 8);
             this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(109, 21);
+            this.label88.Size = new System.Drawing.Size(137, 28);
             this.label88.TabIndex = 0;
             this.label88.Text = "Marriage Date";
             // 
@@ -2206,7 +2206,7 @@
             this.label89.AutoSize = true;
             this.label89.Location = new System.Drawing.Point(104, 109);
             this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(31, 21);
+            this.label89.Size = new System.Drawing.Size(36, 28);
             this.label89.TabIndex = 29;
             this.label89.Text = "___";
             // 
@@ -2215,7 +2215,7 @@
             this.label90.AutoSize = true;
             this.label90.Location = new System.Drawing.Point(104, 136);
             this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(31, 21);
+            this.label90.Size = new System.Drawing.Size(36, 28);
             this.label90.TabIndex = 36;
             this.label90.Text = "___";
             // 
@@ -2224,7 +2224,7 @@
             this.label91.AutoSize = true;
             this.label91.Location = new System.Drawing.Point(105, 167);
             this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(31, 21);
+            this.label91.Size = new System.Drawing.Size(36, 28);
             this.label91.TabIndex = 37;
             this.label91.Text = "___";
             // 
@@ -2260,7 +2260,7 @@
             this.radioButton5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton5.Location = new System.Drawing.Point(90, 129);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(67, 21);
+            this.radioButton5.Size = new System.Drawing.Size(85, 27);
             this.radioButton5.TabIndex = 49;
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "Female";
@@ -2272,7 +2272,7 @@
             this.radioButton6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton6.Location = new System.Drawing.Point(91, 102);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(55, 21);
+            this.radioButton6.Size = new System.Drawing.Size(68, 27);
             this.radioButton6.TabIndex = 49;
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "Male";
@@ -2285,7 +2285,7 @@
             this.textBox21.Location = new System.Drawing.Point(274, 107);
             this.textBox21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(94, 16);
+            this.textBox21.Size = new System.Drawing.Size(94, 20);
             this.textBox21.TabIndex = 47;
             this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2314,7 +2314,7 @@
             this.textBox22.Location = new System.Drawing.Point(350, 28);
             this.textBox22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(21, 16);
+            this.textBox22.Size = new System.Drawing.Size(21, 20);
             this.textBox22.TabIndex = 23;
             this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2325,7 +2325,7 @@
             this.textBox23.Location = new System.Drawing.Point(256, 28);
             this.textBox23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(94, 16);
+            this.textBox23.Size = new System.Drawing.Size(94, 20);
             this.textBox23.TabIndex = 24;
             this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2336,7 +2336,7 @@
             this.textBox24.Location = new System.Drawing.Point(162, 28);
             this.textBox24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(94, 16);
+            this.textBox24.Size = new System.Drawing.Size(94, 20);
             this.textBox24.TabIndex = 22;
             this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2346,7 +2346,7 @@
             this.label73.Location = new System.Drawing.Point(20, 102);
             this.label73.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(61, 21);
+            this.label73.Size = new System.Drawing.Size(76, 28);
             this.label73.TabIndex = 27;
             this.label73.Text = "Gender";
             // 
@@ -2356,7 +2356,7 @@
             this.label74.Location = new System.Drawing.Point(188, 102);
             this.label74.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(80, 21);
+            this.label74.Size = new System.Drawing.Size(98, 28);
             this.label74.TabIndex = 27;
             this.label74.Text = "Residence";
             // 
@@ -2366,7 +2366,7 @@
             this.label75.Location = new System.Drawing.Point(-3, 28);
             this.label75.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(68, 21);
+            this.label75.Size = new System.Drawing.Size(85, 28);
             this.label75.TabIndex = 27;
             this.label75.Text = "Sponsor";
             // 
@@ -2377,7 +2377,7 @@
             this.textBox25.Location = new System.Drawing.Point(68, 28);
             this.textBox25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(94, 16);
+            this.textBox25.Size = new System.Drawing.Size(94, 20);
             this.textBox25.TabIndex = 13;
             this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2386,7 +2386,7 @@
             this.label76.AutoSize = true;
             this.label76.Location = new System.Drawing.Point(65, 32);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(325, 21);
+            this.label76.Size = new System.Drawing.Size(372, 28);
             this.label76.TabIndex = 11;
             this.label76.Text = "_____________________________________________";
             // 
@@ -2396,7 +2396,7 @@
             this.label77.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label77.Location = new System.Drawing.Point(275, 51);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(58, 15);
+            this.label77.Size = new System.Drawing.Size(72, 20);
             this.label77.TabIndex = 27;
             this.label77.Text = "Lastname";
             // 
@@ -2406,7 +2406,7 @@
             this.label78.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label78.Location = new System.Drawing.Point(345, 51);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(36, 15);
+            this.label78.Size = new System.Drawing.Size(46, 20);
             this.label78.TabIndex = 26;
             this.label78.Text = "Suffix";
             // 
@@ -2416,7 +2416,7 @@
             this.label79.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label79.Location = new System.Drawing.Point(175, 50);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(74, 15);
+            this.label79.Size = new System.Drawing.Size(93, 20);
             this.label79.TabIndex = 25;
             this.label79.Text = "Middlename";
             // 
@@ -2426,7 +2426,7 @@
             this.label80.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label80.Location = new System.Drawing.Point(87, 50);
             this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(59, 15);
+            this.label80.Size = new System.Drawing.Size(73, 20);
             this.label80.TabIndex = 28;
             this.label80.Text = "Firstname";
             // 
@@ -2435,7 +2435,7 @@
             this.label81.AutoSize = true;
             this.label81.Location = new System.Drawing.Point(266, 107);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(115, 21);
+            this.label81.Size = new System.Drawing.Size(132, 28);
             this.label81.TabIndex = 48;
             this.label81.Text = "_______________";
             // 
@@ -2444,7 +2444,7 @@
             this.label63.AutoSize = true;
             this.label63.Location = new System.Drawing.Point(9, 15);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(127, 21);
+            this.label63.Size = new System.Drawing.Size(159, 28);
             this.label63.TabIndex = 51;
             this.label63.Text = "Marriage History";
             // 
@@ -2479,7 +2479,7 @@
             this.label82.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label82.Location = new System.Drawing.Point(674, 13);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(97, 30);
+            this.label82.Size = new System.Drawing.Size(125, 37);
             this.label82.TabIndex = 46;
             this.label82.Text = "Sponsors";
             // 
@@ -2489,7 +2489,7 @@
             this.label92.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label92.Location = new System.Drawing.Point(420, 429);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(91, 30);
+            this.label92.Size = new System.Drawing.Size(116, 37);
             this.label92.TabIndex = 46;
             this.label92.Text = "Remarks";
             // 
@@ -2499,7 +2499,7 @@
             this.label83.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label83.Location = new System.Drawing.Point(498, 213);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(140, 30);
+            this.label83.Size = new System.Drawing.Size(179, 37);
             this.label83.TabIndex = 46;
             this.label83.Text = "Requirements";
             // 
@@ -2535,7 +2535,7 @@
             this.label108.AutoSize = true;
             this.label108.Location = new System.Drawing.Point(449, 31);
             this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(57, 21);
+            this.label108.Size = new System.Drawing.Size(69, 28);
             this.label108.TabIndex = 7;
             this.label108.Text = "Claims";
             // 
@@ -2544,7 +2544,7 @@
             this.label107.AutoSize = true;
             this.label107.Location = new System.Drawing.Point(52, 31);
             this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(81, 21);
+            this.label107.Size = new System.Drawing.Size(102, 28);
             this.label107.TabIndex = 7;
             this.label107.Text = "Donations";
             // 
@@ -2554,7 +2554,7 @@
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(560, 366);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(245, 25);
+            this.comboBox6.Size = new System.Drawing.Size(245, 29);
             this.comboBox6.TabIndex = 6;
             // 
             // comboBox5
@@ -2563,7 +2563,7 @@
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(560, 415);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(245, 25);
+            this.comboBox5.Size = new System.Drawing.Size(245, 29);
             this.comboBox5.TabIndex = 6;
             // 
             // numericUpDown1
@@ -2571,7 +2571,7 @@
             this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown1.Location = new System.Drawing.Point(178, 412);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(212, 25);
+            this.numericUpDown1.Size = new System.Drawing.Size(212, 29);
             this.numericUpDown1.TabIndex = 5;
             // 
             // textBox38
@@ -2579,7 +2579,7 @@
             this.textBox38.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox38.Location = new System.Drawing.Point(560, 315);
             this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(135, 25);
+            this.textBox38.Size = new System.Drawing.Size(135, 29);
             this.textBox38.TabIndex = 4;
             // 
             // totalDonation_textbox
@@ -2587,7 +2587,7 @@
             this.totalDonation_textbox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalDonation_textbox.Location = new System.Drawing.Point(181, 314);
             this.totalDonation_textbox.Name = "totalDonation_textbox";
-            this.totalDonation_textbox.Size = new System.Drawing.Size(121, 25);
+            this.totalDonation_textbox.Size = new System.Drawing.Size(121, 29);
             this.totalDonation_textbox.TabIndex = 4;
             // 
             // button21
@@ -2632,7 +2632,7 @@
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(178, 370);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(212, 25);
+            this.comboBox4.Size = new System.Drawing.Size(212, 29);
             this.comboBox4.TabIndex = 2;
             // 
             // label102
@@ -2640,7 +2640,7 @@
             this.label102.AutoSize = true;
             this.label102.Location = new System.Drawing.Point(451, 320);
             this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(93, 21);
+            this.label102.Size = new System.Drawing.Size(116, 28);
             this.label102.TabIndex = 1;
             this.label102.Text = "Total Claims";
             // 
@@ -2649,7 +2649,7 @@
             this.label104.AutoSize = true;
             this.label104.Location = new System.Drawing.Point(95, 415);
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(70, 21);
+            this.label104.Size = new System.Drawing.Size(88, 28);
             this.label104.TabIndex = 1;
             this.label104.Text = "Quantity";
             // 
@@ -2658,7 +2658,7 @@
             this.label106.AutoSize = true;
             this.label106.Location = new System.Drawing.Point(451, 368);
             this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(86, 21);
+            this.label106.Size = new System.Drawing.Size(110, 28);
             this.label106.TabIndex = 1;
             this.label106.Text = "Blood Type";
             // 
@@ -2667,7 +2667,7 @@
             this.label105.AutoSize = true;
             this.label105.Location = new System.Drawing.Point(451, 415);
             this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(98, 21);
+            this.label105.Size = new System.Drawing.Size(125, 28);
             this.label105.TabIndex = 1;
             this.label105.Text = "Blood Donor";
             // 
@@ -2676,7 +2676,7 @@
             this.label103.AutoSize = true;
             this.label103.Location = new System.Drawing.Point(18, 373);
             this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(151, 21);
+            this.label103.Size = new System.Drawing.Size(192, 28);
             this.label103.TabIndex = 1;
             this.label103.Text = "Blood Donatin Event";
             // 
@@ -2685,7 +2685,7 @@
             this.label101.AutoSize = true;
             this.label101.Location = new System.Drawing.Point(57, 318);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(117, 21);
+            this.label101.Size = new System.Drawing.Size(149, 28);
             this.label101.TabIndex = 1;
             this.label101.Text = "Total Donations";
             // 
@@ -2733,7 +2733,7 @@
             this.label112.AutoSize = true;
             this.label112.Location = new System.Drawing.Point(11, 26);
             this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(39, 21);
+            this.label112.Size = new System.Drawing.Size(49, 28);
             this.label112.TabIndex = 3;
             this.label112.Text = "Paid";
             // 
@@ -2742,7 +2742,7 @@
             this.label111.AutoSize = true;
             this.label111.Location = new System.Drawing.Point(11, 264);
             this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(63, 21);
+            this.label111.Size = new System.Drawing.Size(79, 28);
             this.label111.TabIndex = 3;
             this.label111.Text = "Payable";
             // 
@@ -2751,7 +2751,7 @@
             this.textBox39.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox39.Location = new System.Drawing.Point(671, 208);
             this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(153, 25);
+            this.textBox39.Size = new System.Drawing.Size(153, 29);
             this.textBox39.TabIndex = 2;
             // 
             // label110
@@ -2759,7 +2759,7 @@
             this.label110.AutoSize = true;
             this.label110.Location = new System.Drawing.Point(597, 210);
             this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(63, 21);
+            this.label110.Size = new System.Drawing.Size(78, 28);
             this.label110.TabIndex = 1;
             this.label110.Text = "Balance";
             // 
@@ -2820,7 +2820,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(49, 238);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(771, 19);
+            this.label3.Size = new System.Drawing.Size(899, 23);
             this.label3.TabIndex = 33;
             this.label3.Text = "_________________________________________________________________________________" +
     "______________________________________________";
@@ -2830,7 +2830,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(182, 200);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 19);
+            this.label2.Size = new System.Drawing.Size(199, 23);
             this.label2.TabIndex = 32;
             this.label2.Text = "___________________________";
             // 
@@ -2839,7 +2839,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(49, 545);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(771, 19);
+            this.label10.Size = new System.Drawing.Size(899, 23);
             this.label10.TabIndex = 35;
             this.label10.Text = "_________________________________________________________________________________" +
     "______________________________________________";
@@ -2849,14 +2849,14 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(49, 391);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(573, 19);
+            this.label8.Size = new System.Drawing.Size(668, 23);
             this.label8.TabIndex = 34;
             this.label8.Text = "_________________________________________________________________________________" +
     "_____________";
             // 
             // Person
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(947, 647);
