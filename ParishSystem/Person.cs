@@ -185,7 +185,39 @@ namespace ParishSystem
 
         public void load_Confirmation()
         {
+            DataTable dt = dh.getConfirmationOf(ProfileID);
 
+            int ministerID = int.Parse(dt.Rows[0]["ministerID"].ToString());
+            int applicationID = int.Parse(dt.Rows[0]["applicationID"].ToString());
+            int confirmationID = int.Parse(dt.Rows[0]["confirmationID"].ToString());
+
+            registryNumber_textbox_confirmation.Text = dt.Rows[0]["registryNumber"].ToString();
+            pageNumber_textbox_confirmation.Text = dt.Rows[0]["pageNumber"].ToString();
+            recordNumber_textbox_confirmation.Text = dt.Rows[0]["recordNumber"].ToString();
+            Console.WriteLine("Date: " + dt.Rows[0]["confirmationDate"].ToString());
+            date_datetimepicker_baptism.Value = dh.toDateTime(dt.Rows[0]["confirmationDate"].ToString(), false);
+            remarks_textbox_confirmation.Text = dt.Rows[0]["remarks"].ToString();
+
+            MessageBox.Show("loading");
+            dt = dh.getMinister(ministerID);
+
+            minister_combobox_confirmation.Text = dt.Rows[0]["lastName"].ToString() + ", "
+                + dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["midName"].ToString()
+                + " " + dt.Rows[0]["suffix"].ToString();
+
+            dt = dh.getSponsors(confirmationID, "C");
+
+            firstname_textbox_sponsor_confirmation.Text = dt.Rows[0]["firstName"].ToString();
+            middlename_textbox_sponsor_confirmation.Text = dt.Rows[0]["midName"].ToString();
+            lastname_textbox_sponsor_confirmation.Text = dt.Rows[0]["lastName"].ToString();
+            suffix_textbox_sponsor_confirmation.Text = dt.Rows[0]["suffix"].ToString();
+            residence_textbox_sponsor_confirmation_textbox.Text = dt.Rows[0]["residence"].ToString();
+
+
+            string gender = dt.Rows[0]["gender"].ToString();
+
+            gender_male_radiobutton_confirmation.Checked = gender == "M";
+            gender_female_radiobutton_confirmation.Checked = gender == "F";
         }
 
         public void load_Marriage()

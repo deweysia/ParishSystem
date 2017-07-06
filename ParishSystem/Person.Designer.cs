@@ -107,15 +107,15 @@
             this.label19 = new System.Windows.Forms.Label();
             this.gender_female_radiobutton_confirmation = new System.Windows.Forms.RadioButton();
             this.gender_male_radiobutton_confirmation = new System.Windows.Forms.RadioButton();
-            this.residence_textbox_confirmation_textbox = new System.Windows.Forms.TextBox();
-            this.suffix_textbox_confirmation = new System.Windows.Forms.TextBox();
-            this.lastname_textbox_confirmation = new System.Windows.Forms.TextBox();
-            this.middlename_textbox_confirmation = new System.Windows.Forms.TextBox();
+            this.residence_textbox_sponsor_confirmation_textbox = new System.Windows.Forms.TextBox();
+            this.suffix_textbox_sponsor_confirmation = new System.Windows.Forms.TextBox();
+            this.lastname_textbox_sponsor_confirmation = new System.Windows.Forms.TextBox();
+            this.middlename_textbox_sponsor_confirmation = new System.Windows.Forms.TextBox();
             this.label64 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
-            this.firstname_textbox_confirmation = new System.Windows.Forms.TextBox();
+            this.firstname_textbox_sponsor_confirmation = new System.Windows.Forms.TextBox();
             this.label67 = new System.Windows.Forms.Label();
             this.minister_textbox_confirmation = new System.Windows.Forms.TextBox();
             this.date_textbox_confirmation = new System.Windows.Forms.TextBox();
@@ -1104,8 +1104,8 @@
             // 
             this.confirmation_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.confirmation_panel.Controls.Add(this.menu_panel_confirmation);
-            this.confirmation_panel.Controls.Add(this.confirmation_application_panel);
             this.confirmation_panel.Controls.Add(this.confirmation_details_panel);
+            this.confirmation_panel.Controls.Add(this.confirmation_application_panel);
             this.confirmation_panel.Location = new System.Drawing.Point(47, 38);
             this.confirmation_panel.Name = "confirmation_panel";
             this.confirmation_panel.Size = new System.Drawing.Size(849, 577);
@@ -1215,15 +1215,15 @@
             this.sponsor_panel_confirmation.Controls.Add(this.label19);
             this.sponsor_panel_confirmation.Controls.Add(this.gender_female_radiobutton_confirmation);
             this.sponsor_panel_confirmation.Controls.Add(this.gender_male_radiobutton_confirmation);
-            this.sponsor_panel_confirmation.Controls.Add(this.residence_textbox_confirmation_textbox);
-            this.sponsor_panel_confirmation.Controls.Add(this.suffix_textbox_confirmation);
-            this.sponsor_panel_confirmation.Controls.Add(this.lastname_textbox_confirmation);
-            this.sponsor_panel_confirmation.Controls.Add(this.middlename_textbox_confirmation);
+            this.sponsor_panel_confirmation.Controls.Add(this.residence_textbox_sponsor_confirmation_textbox);
+            this.sponsor_panel_confirmation.Controls.Add(this.suffix_textbox_sponsor_confirmation);
+            this.sponsor_panel_confirmation.Controls.Add(this.lastname_textbox_sponsor_confirmation);
+            this.sponsor_panel_confirmation.Controls.Add(this.middlename_textbox_sponsor_confirmation);
             this.sponsor_panel_confirmation.Controls.Add(this.label64);
             this.sponsor_panel_confirmation.Controls.Add(this.label65);
             this.sponsor_panel_confirmation.Controls.Add(this.label66);
             this.sponsor_panel_confirmation.Controls.Add(this.label72);
-            this.sponsor_panel_confirmation.Controls.Add(this.firstname_textbox_confirmation);
+            this.sponsor_panel_confirmation.Controls.Add(this.firstname_textbox_sponsor_confirmation);
             this.sponsor_panel_confirmation.Controls.Add(this.label67);
             this.sponsor_panel_confirmation.Location = new System.Drawing.Point(32, 277);
             this.sponsor_panel_confirmation.Name = "sponsor_panel_confirmation";
@@ -1265,52 +1265,52 @@
             this.gender_male_radiobutton_confirmation.Text = "Male";
             this.gender_male_radiobutton_confirmation.UseVisualStyleBackColor = true;
             // 
-            // residence_textbox_confirmation_textbox
+            // residence_textbox_sponsor_confirmation_textbox
             // 
-            this.residence_textbox_confirmation_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.residence_textbox_confirmation_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.residence_textbox_confirmation_textbox.Location = new System.Drawing.Point(524, 54);
-            this.residence_textbox_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.residence_textbox_confirmation_textbox.Name = "residence_textbox_confirmation_textbox";
-            this.residence_textbox_confirmation_textbox.Size = new System.Drawing.Size(94, 16);
-            this.residence_textbox_confirmation_textbox.TabIndex = 47;
-            this.residence_textbox_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.residence_textbox_sponsor_confirmation_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.residence_textbox_sponsor_confirmation_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.residence_textbox_sponsor_confirmation_textbox.Location = new System.Drawing.Point(524, 54);
+            this.residence_textbox_sponsor_confirmation_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.residence_textbox_sponsor_confirmation_textbox.Name = "residence_textbox_sponsor_confirmation_textbox";
+            this.residence_textbox_sponsor_confirmation_textbox.Size = new System.Drawing.Size(94, 16);
+            this.residence_textbox_sponsor_confirmation_textbox.TabIndex = 47;
+            this.residence_textbox_sponsor_confirmation_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // suffix_textbox_confirmation
+            // suffix_textbox_sponsor_confirmation
             // 
-            this.suffix_textbox_confirmation.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.suffix_textbox_confirmation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suffix_textbox_confirmation.Location = new System.Drawing.Point(377, 55);
-            this.suffix_textbox_confirmation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.suffix_textbox_confirmation.Name = "suffix_textbox_confirmation";
-            this.suffix_textbox_confirmation.Size = new System.Drawing.Size(54, 16);
-            this.suffix_textbox_confirmation.TabIndex = 23;
-            this.suffix_textbox_confirmation.Text = "Suffix";
-            this.suffix_textbox_confirmation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.suffix_textbox_sponsor_confirmation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.suffix_textbox_sponsor_confirmation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suffix_textbox_sponsor_confirmation.Location = new System.Drawing.Point(377, 55);
+            this.suffix_textbox_sponsor_confirmation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.suffix_textbox_sponsor_confirmation.Name = "suffix_textbox_sponsor_confirmation";
+            this.suffix_textbox_sponsor_confirmation.Size = new System.Drawing.Size(54, 16);
+            this.suffix_textbox_sponsor_confirmation.TabIndex = 23;
+            this.suffix_textbox_sponsor_confirmation.Text = "Suffix";
+            this.suffix_textbox_sponsor_confirmation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lastname_textbox_confirmation
+            // lastname_textbox_sponsor_confirmation
             // 
-            this.lastname_textbox_confirmation.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lastname_textbox_confirmation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastname_textbox_confirmation.Location = new System.Drawing.Point(275, 55);
-            this.lastname_textbox_confirmation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.lastname_textbox_confirmation.Name = "lastname_textbox_confirmation";
-            this.lastname_textbox_confirmation.Size = new System.Drawing.Size(94, 16);
-            this.lastname_textbox_confirmation.TabIndex = 24;
-            this.lastname_textbox_confirmation.Text = "Lastname";
-            this.lastname_textbox_confirmation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lastname_textbox_sponsor_confirmation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lastname_textbox_sponsor_confirmation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastname_textbox_sponsor_confirmation.Location = new System.Drawing.Point(275, 55);
+            this.lastname_textbox_sponsor_confirmation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lastname_textbox_sponsor_confirmation.Name = "lastname_textbox_sponsor_confirmation";
+            this.lastname_textbox_sponsor_confirmation.Size = new System.Drawing.Size(94, 16);
+            this.lastname_textbox_sponsor_confirmation.TabIndex = 24;
+            this.lastname_textbox_sponsor_confirmation.Text = "Lastname";
+            this.lastname_textbox_sponsor_confirmation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // middlename_textbox_confirmation
+            // middlename_textbox_sponsor_confirmation
             // 
-            this.middlename_textbox_confirmation.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.middlename_textbox_confirmation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.middlename_textbox_confirmation.Location = new System.Drawing.Point(173, 55);
-            this.middlename_textbox_confirmation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.middlename_textbox_confirmation.Name = "middlename_textbox_confirmation";
-            this.middlename_textbox_confirmation.Size = new System.Drawing.Size(94, 16);
-            this.middlename_textbox_confirmation.TabIndex = 22;
-            this.middlename_textbox_confirmation.Text = "Middlename";
-            this.middlename_textbox_confirmation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.middlename_textbox_sponsor_confirmation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.middlename_textbox_sponsor_confirmation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.middlename_textbox_sponsor_confirmation.Location = new System.Drawing.Point(173, 55);
+            this.middlename_textbox_sponsor_confirmation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.middlename_textbox_sponsor_confirmation.Name = "middlename_textbox_sponsor_confirmation";
+            this.middlename_textbox_sponsor_confirmation.Size = new System.Drawing.Size(94, 16);
+            this.middlename_textbox_sponsor_confirmation.TabIndex = 22;
+            this.middlename_textbox_sponsor_confirmation.Text = "Middlename";
+            this.middlename_textbox_sponsor_confirmation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label64
             // 
@@ -1355,17 +1355,17 @@
             this.label72.TabIndex = 48;
             this.label72.Text = "_______________";
             // 
-            // firstname_textbox_confirmation
+            // firstname_textbox_sponsor_confirmation
             // 
-            this.firstname_textbox_confirmation.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstname_textbox_confirmation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstname_textbox_confirmation.Location = new System.Drawing.Point(74, 55);
-            this.firstname_textbox_confirmation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.firstname_textbox_confirmation.Name = "firstname_textbox_confirmation";
-            this.firstname_textbox_confirmation.Size = new System.Drawing.Size(94, 16);
-            this.firstname_textbox_confirmation.TabIndex = 13;
-            this.firstname_textbox_confirmation.Text = "Firstname";
-            this.firstname_textbox_confirmation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.firstname_textbox_sponsor_confirmation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.firstname_textbox_sponsor_confirmation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstname_textbox_sponsor_confirmation.Location = new System.Drawing.Point(74, 55);
+            this.firstname_textbox_sponsor_confirmation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.firstname_textbox_sponsor_confirmation.Name = "firstname_textbox_sponsor_confirmation";
+            this.firstname_textbox_sponsor_confirmation.Size = new System.Drawing.Size(94, 16);
+            this.firstname_textbox_sponsor_confirmation.TabIndex = 13;
+            this.firstname_textbox_sponsor_confirmation.Text = "Firstname";
+            this.firstname_textbox_sponsor_confirmation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label67
             // 
@@ -2930,12 +2930,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(944, 647);
+            this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.marriage_panel);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.balance_panel);
-            this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.biodata_button);
             this.Controls.Add(this.baptism_button);
             this.Controls.Add(this.bloodletting_button);
@@ -3128,15 +3128,15 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.RadioButton gender_female_radiobutton_confirmation;
         private System.Windows.Forms.RadioButton gender_male_radiobutton_confirmation;
-        private System.Windows.Forms.TextBox residence_textbox_confirmation_textbox;
-        private System.Windows.Forms.TextBox suffix_textbox_confirmation;
-        private System.Windows.Forms.TextBox lastname_textbox_confirmation;
-        private System.Windows.Forms.TextBox middlename_textbox_confirmation;
+        private System.Windows.Forms.TextBox residence_textbox_sponsor_confirmation_textbox;
+        private System.Windows.Forms.TextBox suffix_textbox_sponsor_confirmation;
+        private System.Windows.Forms.TextBox lastname_textbox_sponsor_confirmation;
+        private System.Windows.Forms.TextBox middlename_textbox_sponsor_confirmation;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.TextBox firstname_textbox_confirmation;
+        private System.Windows.Forms.TextBox firstname_textbox_sponsor_confirmation;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.TextBox minister_textbox_confirmation;
         private System.Windows.Forms.TextBox date_textbox_confirmation;
