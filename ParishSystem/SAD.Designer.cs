@@ -60,12 +60,12 @@
             this.username_Welcome_Text = new System.Windows.Forms.Label();
             this.time_Text = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.home_panel.SuspendLayout();
             this.profile_panel.SuspendLayout();
@@ -168,7 +168,7 @@
             this.home_panel.BackColor = System.Drawing.Color.White;
             this.home_panel.Controls.Add(this.label1);
             this.home_panel.Controls.Add(this.username_label);
-            this.home_panel.Location = new System.Drawing.Point(1003, 9);
+            this.home_panel.Location = new System.Drawing.Point(306, 21);
             this.home_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.home_panel.Name = "home_panel";
             this.home_panel.Size = new System.Drawing.Size(881, 608);
@@ -183,7 +183,7 @@
             this.label1.Location = new System.Drawing.Point(8, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 27);
+            this.label1.Size = new System.Drawing.Size(124, 35);
             this.label1.TabIndex = 32;
             this.label1.Text = "Welcome";
             // 
@@ -194,7 +194,7 @@
             this.username_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.username_label.Location = new System.Drawing.Point(129, 13);
             this.username_label.Name = "username_label";
-            this.username_label.Size = new System.Drawing.Size(123, 27);
+            this.username_label.Size = new System.Drawing.Size(157, 35);
             this.username_label.TabIndex = 33;
             this.username_label.Text = "USERNAME";
             // 
@@ -205,7 +205,7 @@
             this.profile_panel.Controls.Add(this.label3);
             this.profile_panel.Controls.Add(this.searchBar);
             this.profile_panel.Controls.Add(this.generalprofile_datagridview);
-            this.profile_panel.Location = new System.Drawing.Point(1021, 6);
+            this.profile_panel.Location = new System.Drawing.Point(153, 6);
             this.profile_panel.Name = "profile_panel";
             this.profile_panel.Size = new System.Drawing.Size(889, 628);
             this.profile_panel.TabIndex = 29;
@@ -235,7 +235,7 @@
             this.clear_profile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_profile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clear_profile_button.ForeColor = System.Drawing.Color.White;
-            this.clear_profile_button.Location = new System.Drawing.Point(227, 333);
+            this.clear_profile_button.Location = new System.Drawing.Point(163, 225);
             this.clear_profile_button.Name = "clear_profile_button";
             this.clear_profile_button.Size = new System.Drawing.Size(128, 43);
             this.clear_profile_button.TabIndex = 31;
@@ -250,7 +250,7 @@
             this.deleteProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteProfile_button.ForeColor = System.Drawing.Color.White;
-            this.deleteProfile_button.Location = new System.Drawing.Point(169, 261);
+            this.deleteProfile_button.Location = new System.Drawing.Point(301, 173);
             this.deleteProfile_button.Name = "deleteProfile_button";
             this.deleteProfile_button.Size = new System.Drawing.Size(139, 43);
             this.deleteProfile_button.TabIndex = 30;
@@ -296,7 +296,7 @@
             this.suffix_textbox.Location = new System.Drawing.Point(363, 74);
             this.suffix_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.suffix_textbox.Name = "suffix_textbox";
-            this.suffix_textbox.Size = new System.Drawing.Size(54, 16);
+            this.suffix_textbox.Size = new System.Drawing.Size(54, 20);
             this.suffix_textbox.TabIndex = 23;
             this.suffix_textbox.Text = "Suffix";
             this.suffix_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -310,7 +310,7 @@
             this.lastname_textbox.Location = new System.Drawing.Point(261, 74);
             this.lastname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastname_textbox.Name = "lastname_textbox";
-            this.lastname_textbox.Size = new System.Drawing.Size(94, 16);
+            this.lastname_textbox.Size = new System.Drawing.Size(94, 20);
             this.lastname_textbox.TabIndex = 24;
             this.lastname_textbox.Text = "Last Name";
             this.lastname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -324,7 +324,7 @@
             this.middlename_textbox.Location = new System.Drawing.Point(169, 74);
             this.middlename_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.middlename_textbox.Name = "middlename_textbox";
-            this.middlename_textbox.Size = new System.Drawing.Size(94, 16);
+            this.middlename_textbox.Size = new System.Drawing.Size(94, 20);
             this.middlename_textbox.TabIndex = 22;
             this.middlename_textbox.Text = "Middle Name";
             this.middlename_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -337,7 +337,7 @@
             this.birthplace_textbox_baptist.Location = new System.Drawing.Point(472, 29);
             this.birthplace_textbox_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.birthplace_textbox_baptist.Name = "birthplace_textbox_baptist";
-            this.birthplace_textbox_baptist.Size = new System.Drawing.Size(133, 16);
+            this.birthplace_textbox_baptist.Size = new System.Drawing.Size(133, 20);
             this.birthplace_textbox_baptist.TabIndex = 20;
             // 
             // label33
@@ -346,7 +346,7 @@
             this.label33.Location = new System.Drawing.Point(5, 70);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(52, 21);
+            this.label33.Size = new System.Drawing.Size(64, 28);
             this.label33.TabIndex = 27;
             this.label33.Text = "Name";
             // 
@@ -358,7 +358,7 @@
             this.firstname_textbox.Location = new System.Drawing.Point(67, 74);
             this.firstname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstname_textbox.Name = "firstname_textbox";
-            this.firstname_textbox.Size = new System.Drawing.Size(94, 16);
+            this.firstname_textbox.Size = new System.Drawing.Size(94, 20);
             this.firstname_textbox.TabIndex = 13;
             this.firstname_textbox.Text = "First Name";
             this.firstname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -369,7 +369,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(63, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(360, 21);
+            this.label2.Size = new System.Drawing.Size(412, 28);
             this.label2.TabIndex = 11;
             this.label2.Text = "__________________________________________________";
             // 
@@ -380,7 +380,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(3, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 27);
+            this.label3.Size = new System.Drawing.Size(134, 35);
             this.label3.TabIndex = 36;
             this.label3.Text = "PROFILES";
             // 
@@ -390,7 +390,7 @@
             this.searchBar.Location = new System.Drawing.Point(490, 8);
             this.searchBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(395, 29);
+            this.searchBar.Size = new System.Drawing.Size(395, 34);
             this.searchBar.TabIndex = 1;
             // 
             // generalprofile_datagridview
@@ -401,11 +401,11 @@
             this.generalprofile_datagridview.BackgroundColor = System.Drawing.Color.White;
             this.generalprofile_datagridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.generalprofile_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.generalprofile_datagridview.Location = new System.Drawing.Point(490, 42);
+            this.generalprofile_datagridview.Location = new System.Drawing.Point(490, 43);
             this.generalprofile_datagridview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.generalprofile_datagridview.Name = "generalprofile_datagridview";
             this.generalprofile_datagridview.RowHeadersVisible = false;
-            this.generalprofile_datagridview.Size = new System.Drawing.Size(395, 556);
+            this.generalprofile_datagridview.Size = new System.Drawing.Size(391, 556);
             this.generalprofile_datagridview.TabIndex = 0;
             this.generalprofile_datagridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.generalprofile_datagridview_CellClick);
             // 
@@ -468,7 +468,7 @@
             this.welcome_Text.Location = new System.Drawing.Point(13, 10);
             this.welcome_Text.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.welcome_Text.Name = "welcome_Text";
-            this.welcome_Text.Size = new System.Drawing.Size(97, 27);
+            this.welcome_Text.Size = new System.Drawing.Size(124, 35);
             this.welcome_Text.TabIndex = 35;
             this.welcome_Text.Text = "Welcome";
             // 
@@ -479,7 +479,7 @@
             this.username_Welcome_Text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.username_Welcome_Text.Location = new System.Drawing.Point(110, 11);
             this.username_Welcome_Text.Name = "username_Welcome_Text";
-            this.username_Welcome_Text.Size = new System.Drawing.Size(123, 27);
+            this.username_Welcome_Text.Size = new System.Drawing.Size(157, 35);
             this.username_Welcome_Text.TabIndex = 36;
             this.username_Welcome_Text.Text = "USERNAME";
             // 
@@ -492,7 +492,7 @@
             this.time_Text.Location = new System.Drawing.Point(781, 9);
             this.time_Text.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.time_Text.Name = "time_Text";
-            this.time_Text.Size = new System.Drawing.Size(84, 27);
+            this.time_Text.Size = new System.Drawing.Size(106, 35);
             this.time_Text.TabIndex = 35;
             this.time_Text.Text = "HH:MM";
             // 
@@ -512,40 +512,6 @@
             this.panel2.Size = new System.Drawing.Size(883, 626);
             this.panel2.TabIndex = 34;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(541, 102);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 33);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(694, 102);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 33);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(38, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 30);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Applications";
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -559,31 +525,64 @@
             // tabPage1
             // 
             this.tabPage1.ForeColor = System.Drawing.Color.White;
-            this.tabPage1.Location = new System.Drawing.Point(4, 30);
+            this.tabPage1.Location = new System.Drawing.Point(4, 37);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(760, 426);
+            this.tabPage1.Size = new System.Drawing.Size(760, 419);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Baptism Applications";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 30);
+            this.tabPage2.Location = new System.Drawing.Point(4, 37);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(760, 426);
+            this.tabPage2.Size = new System.Drawing.Size(760, 419);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(38, 34);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(178, 37);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Applications";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(694, 102);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(117, 33);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(541, 102);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 33);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // SAD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1034, 673);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.time_Text);
             this.Controls.Add(this.welcome_Text);
             this.Controls.Add(this.username_Welcome_Text);
@@ -593,6 +592,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.home_panel);
+            this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

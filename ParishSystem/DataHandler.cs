@@ -132,9 +132,14 @@ namespace ParishSystem
 
             string[] components = s.Split(' ');
             string[] date = components[0].Split('/');
-            int month = int.Parse(date[0]);
-            int day = int.Parse(date[1]);
+
+            Console.Write(date[0] + " --- " + date[1] + " --- " + date[2]);
+
+            int day = int.Parse(date[0]);
+            int month = int.Parse(date[1]);
             int year = int.Parse(date[2]);
+            
+            
 
             if (timePortion)
             {

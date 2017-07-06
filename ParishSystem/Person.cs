@@ -185,6 +185,41 @@ namespace ParishSystem
         public void load_Confirmation()
         {
 
+            
+            DataTable dt = dh.getConfirmationOf(ProfileID);
+
+            int ministerID = int.Parse(dt.Rows[0]["ministerID"].ToString());
+            int applicationID = int.Parse(dt.Rows[0]["applicationID"].ToString());
+            int confirmationID = int.Parse(dt.Rows[0]["confirmationID"].ToString());
+
+            registrynumber_confirmation_textbox.Text = dt.Rows[0]["registryNumber"].ToString();
+            pagenumber_confirmation_textbox.Text = dt.Rows[0]["pageNumber"].ToString();
+            recordnumber_confirmation_textbox.Text = dt.Rows[0]["recordNumber"].ToString();
+            Console.WriteLine("Date: " + dt.Rows[0]["confirmationDate"].ToString());
+            confirmationdate_confirmation_dtp.Value = dh.toDateTime(dt.Rows[0]["confirmationDate"].ToString(), false);
+
+
+            MessageBox.Show("loading");
+            dt = dh.getMinister(ministerID);
+
+            minister_confirmation_textbox.Text = dt.Rows[0]["lastName"].ToString() + ", "
+                + dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["midName"].ToString()
+                + " " + dt.Rows[0]["suffix"].ToString();
+            minister_confirmation_textbox.Text = "JOHN";
+
+            dt = dh.getSponsors(confirmationID, "C");
+
+            firstname_sponsor_confirmation_textbox.Text = dt.Rows[0]["firstName"].ToString();
+            middlename_sponsor_confirmation_textbox.Text = dt.Rows[0]["midName"].ToString();
+            lastname_sponsor_confirmation_textbox.Text = dt.Rows[0]["lastName"].ToString();
+            suffix_sponsor_confirmation_textbox.Text = dt.Rows[0]["suffix"].ToString();
+
+            string gender = dt.Rows[0]["gender"].ToString();
+
+            male_sponsor_confirmtion_radio.Checked = gender == "M";
+            female_sponsor_confirmtion_radio.Checked = gender == "F";
+
+
         }
 
         public void load_Marriage()
@@ -256,30 +291,11 @@ namespace ParishSystem
 
         }
 
-        public void load_confirmation()
-        {
-            DataTable dt = dh.getConfirmationOf(ProfileID);
-
-            int ministerID = int.Parse(dt.Rows[0]["ministerID"].ToString());
-            int applicationID = int.Parse(dt.Rows[0]["applicationID"].ToString());
-
-            registrynumber_confirmation_textbox.Text = dt.Rows[0]["registryNumber"].ToString();
-            pagenumber_confirmation_textbox.Text = dt.Rows[0]["pageNumber"].ToString();
-            recordnumber_confirmation_textbox.Text = dt.Rows[0]["recordNumber"].ToString();
-
-            dt = dh.getMinister(ministerID);
-
-            minister_confirmation_textbox.Text = dt.Rows[0]["lastName"].ToString() + ", " 
-                + dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["midName"].ToString() 
-                + " " + dt.Rows[0]["suffix"].ToString();
-
-            residence_sponsor_confirmation_textbox.Text = dt.Rows[0]["residence"].ToString();
-
-
-        }
 
         private void confirmation_button_Click(object sender, EventArgs e)
         {
+
+            
             if (dh.hasConfirmationApplication(ProfileID))
             {
                 load_Confirmation();
@@ -292,7 +308,7 @@ namespace ParishSystem
             }
             else
             {
-                dh.addApplication(ProfileID, "C");
+                //dh.addApplication(ProfileID, "C");
             }
         }
 
@@ -406,5 +422,9 @@ namespace ParishSystem
             a.BackColor = ForeColorOnClick;
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

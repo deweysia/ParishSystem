@@ -84,7 +84,7 @@ DEFAULT CHARACTER SET = utf8;
 -- Table `sad2`.`minister`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `sad2`.`minister` (
-  `minsiterID` INT(11) NOT NULL AUTO_INCREMENT ,
+  `ministerID` INT(11) NOT NULL AUTO_INCREMENT ,
   `firstName` VARCHAR(45) NULL DEFAULT NULL ,
   `midName` VARCHAR(45) NULL DEFAULT NULL ,
   `lastName` VARCHAR(45) NULL DEFAULT NULL ,
@@ -94,7 +94,7 @@ CREATE  TABLE IF NOT EXISTS `sad2`.`minister` (
   `status` VARCHAR(45) NULL DEFAULT NULL ,
   `licenseNumber` VARCHAR(45) NULL DEFAULT NULL ,
   `expirationDate` DATE NULL DEFAULT NULL ,
-  PRIMARY KEY (`minsiterID`) )
+  PRIMARY KEY (`ministerID`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
@@ -134,7 +134,7 @@ CREATE  TABLE IF NOT EXISTS `sad2`.`appointment` (
     ON UPDATE NO ACTION,
   CONSTRAINT `app_min`
     FOREIGN KEY (`ministerID` )
-    REFERENCES `sad2`.`minister` (`minsiterID` )
+    REFERENCES `sad2`.`minister` (`ministerID` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `app_sched`
@@ -169,7 +169,7 @@ CREATE  TABLE IF NOT EXISTS `sad2`.`baptism` (
     ON UPDATE NO ACTION,
   CONSTRAINT `baptism_minister`
     FOREIGN KEY (`ministerID` )
-    REFERENCES `sad2`.`minister` (`minsiterID` )
+    REFERENCES `sad2`.`minister` (`ministerID` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -296,7 +296,7 @@ CREATE  TABLE IF NOT EXISTS `sad2`.`confirmation` (
     ON UPDATE NO ACTION,
   CONSTRAINT `confirmation_minister`
     FOREIGN KEY (`ministerID` )
-    REFERENCES `sad2`.`minister` (`minsiterID` )
+    REFERENCES `sad2`.`minister` (`ministerID` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -412,7 +412,7 @@ CREATE  TABLE IF NOT EXISTS `sad2`.`marriage` (
   INDEX `marriage_minister_idx` (`ministerID` ASC) ,
   CONSTRAINT `marriage_minister`
     FOREIGN KEY (`ministerID` )
-    REFERENCES `sad2`.`minister` (`minsiterID` )
+    REFERENCES `sad2`.`minister` (`ministerID` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
