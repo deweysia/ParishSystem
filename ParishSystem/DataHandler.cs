@@ -1584,10 +1584,9 @@ namespace ParishSystem
 
         public DataTable getConfirmationOf(int profileID)
         {
-            string q = "SELECT profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix),"
-                + " gender, birthdate, remarks FROM Baptism"
-                + " JOIN Application ON applicationID = applicationID"
-                + " JOIN GeneralProfile ON GeneralProfile.profileID = Application.profileID WHERE GeneralProfile.profileID = " + profileID;
+            string q = "SELECT * FROM Confirmation JOIN Application "
+                +"ON Confirmation.applicationID = Application.applicationID "
+                +"WHERE Application.profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
