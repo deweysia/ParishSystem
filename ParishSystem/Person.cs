@@ -256,6 +256,28 @@ namespace ParishSystem
 
         }
 
+        public void load_confirmation()
+        {
+            DataTable dt = dh.getConfirmationOf(ProfileID);
+
+            int ministerID = int.Parse(dt.Rows[0]["ministerID"].ToString());
+            int applicationID = int.Parse(dt.Rows[0]["applicationID"].ToString());
+
+            registrynumber_confirmation_textbox.Text = dt.Rows[0]["registryNumber"].ToString();
+            pagenumber_confirmation_textbox.Text = dt.Rows[0]["pageNumber"].ToString();
+            recordnumber_confirmation_textbox.Text = dt.Rows[0]["recordNumber"].ToString();
+
+            dt = dh.getMinister(ministerID);
+
+            minister_confirmation_textbox.Text = dt.Rows[0]["lastName"].ToString() + ", " 
+                + dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["midName"].ToString() 
+                + " " + dt.Rows[0]["suffix"].ToString();
+
+            residence_sponsor_confirmation_textbox.Text = dt.Rows[0]["residence"].ToString();
+
+
+        }
+
         private void confirmation_button_Click(object sender, EventArgs e)
         {
             if (dh.hasConfirmationApplication(ProfileID))
@@ -359,13 +381,12 @@ namespace ParishSystem
 
         }
 
-        #region MENU COLOR
         Color BackColorOnClick = Color.FromArgb(255, 255, 255);
         Color ForeColorOnClick = Color.FromArgb(21, 40, 54);
 
         private void approve_baptism_button_Click(object sender, EventArgs e)
         {
-            baptism_details_panel.Enabled = true;
+            baptism_information_panel.Enabled = true;
         }
 
         
@@ -384,89 +405,6 @@ namespace ParishSystem
             a.ForeColor = BackColorOnClick;
             a.BackColor = ForeColorOnClick;
         }
-        #endregion
-        #region CONFIRMATION MENU
-        Color submenu_front = Color.FromArgb(255, 255, 255);
-        Color submenu_back = Color.FromArgb(39, 74, 99);
-        private void confirmation_menu_button_Click(object sender, EventArgs e)
-        {
-            Button a = sender as Button;
-            a.BackColor = submenu_back;
-            a.ForeColor = submenu_front;
-            if (a.Name.Equals("confirmation_application_button")){
-                confirmation_details_panel.Visible = false;
-                confirmation_application_panel.Visible = true;
-            }
-            else if (a.Name.Equals("confirmation_details_button")) {
-                confirmation_details_panel.Visible = true;
-                confirmation_application_panel.Visible = false;
-            }
-        
-        }
-        private void confirmation_menu_button_Leave(object sender, EventArgs e)
-        {
-            Button a = sender as Button;
-            a.BackColor = submenu_front;
-            a.ForeColor = submenu_back;
-        }
-        #endregion
 
-
-        private void balance_button_Click(object sender, EventArgs e)
-        {
-            profile_panel.Visible = false;
-            baptism_panel.Visible = false;
-            confirmation_panel.Visible = false;
-            marriage_panel.Visible = false;
-            balance_panel.Visible = true;
-            bloodletting_panel.Visible = false;
-        }
-
-        private void bloodletting_button_Click(object sender, EventArgs e)
-        {
-            profile_panel.Visible = false;
-            baptism_panel.Visible = false;
-            confirmation_panel.Visible = false;
-            marriage_panel.Visible = false;
-            balance_panel.Visible = false;
-            bloodletting_panel.Visible = true;
-        }
-
-        private void baptism_menu_button_Click(object sender, EventArgs e)
-        {
-           Button a = sender as Button;
-            if (a.Name.Equals("application_baptism_button"))
-            {
-                baptism_details_panel.Visible = false;
-                baptism_application_panel.Visible = true;
-            }
-            else if (a.Name.Equals("details_baptism_button"))
-            {
-                baptism_details_panel.Visible = true;
-                baptism_application_panel.Visible = false;
-            }
-
-            a.BackColor = submenu_back;
-            a.ForeColor = submenu_front;
-        }
-
-        private void baptism_menu_button_Leave(object sender, EventArgs e)
-        {
-            Button a = sender as Button;
-            a.BackColor = submenu_front;
-            a.ForeColor = submenu_back;
-        }
-
-        private void father_checkbox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (father_checkbox.Checked) FatherPNL.Visible = true;
-            else FatherPNL.Visible = false;
-        }
-
-        private void mother_checkbox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (mother_checkbox.Checked) MotherPNL.Visible = true;
-            else MotherPNL.Visible = false;
-        }
     }
 }
