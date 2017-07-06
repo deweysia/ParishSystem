@@ -1182,7 +1182,7 @@ namespace ParishSystem
             return int.Parse(dt.Rows[0][0].ToString()) > 0;
         }
 
-        public bool addBaptism(int applicationID, int ministerID, DateTime baptismDate)
+        public bool addBaptism(int applicationID, int ministerID, string legitimacy, DateTime baptismDate)
         {
             string q = "INSERT INTO Baptism(applicationID, ministerID, legitimacy, baptismDate) VALUES ('" 
                 + applicationID + "', '" + ministerID + "', '" 
@@ -1197,7 +1197,7 @@ namespace ParishSystem
         }
 
 
-        public bool editBaptism(int baptismID, int ministerID, DateTime baptismDate)
+        public bool editBaptism(int baptismID, int ministerID, string legitimacy, DateTime baptismDate)
         {
             //if (!idExists("baptism", "baptismID", baptismID))
             //    return false;
@@ -1854,7 +1854,7 @@ namespace ParishSystem
 
         }
 
-        
+
         #endregion
 
 
@@ -1867,12 +1867,15 @@ namespace ParishSystem
 
         public bool addSponsor(string firstName, string midName, string lastName, string suffix, string sacramentType, string residence, char gender)
         {
-            string q = "INSERT INTO Sponsor(firstName, midName, lastName, suffix, sacramentType, residence, gender) VALUES ('" 
-                + firstName + "', '" + midName + "', '" 
-                + lastName + "', '" + suffix + "', '" 
+            string q = "INSERT INTO Sponsor(firstName, midName, lastName, suffix, sacramentType, residence, gender) VALUES ('"
+                + firstName + "', '" + midName + "', '"
+                + lastName + "', '" + suffix + "', '"
                 + sacramentType + "', '" + residence + "', '" + gender + "')";
 
             bool success = runNonQuery(q);
+
+            return success;
+        }
 
         public bool editSponsor(int sponsorID, string firstName, string midName, string lastName, string suffix, string sacramentType, string residence, char gender)
         {
@@ -2274,9 +2277,6 @@ namespace ParishSystem
             return dt;
         }
 
-
-
-
         //-------------functions i need-----------------------//
 
 
@@ -2289,7 +2289,6 @@ namespace ParishSystem
             return dt;
         }
 
-
         public DataTable getFatherOf(int profileID)
         {
             string q = "SELECT * FROM Parent WHERE gender = 'M' AND profileID = '" + profileID + "'";
@@ -2300,7 +2299,7 @@ namespace ParishSystem
         }
 
 
-        public bool hasBaptismApplication(int ProfileID)
+        public bool hasBaptismApplication(int profileID)
         {
             string q = "SELECT * FROM Application WHERE applicationType = 'B' AND profileID = " + profileID;
 
@@ -2309,7 +2308,7 @@ namespace ParishSystem
             return dt.Rows.Count > 0;
         }
 
-        public bool hasConfirmationApplication(int ProfileID)
+        public bool hasConfirmationApplication(int profileID)
         {
             string q = "SELECT * FROM Application WHERE applicationType = 'C' AND profileID = " + profileID;
 
@@ -2373,7 +2372,8 @@ namespace ParishSystem
         {
             return 1;
         }
-         public bool addSponsor(string firstName, string midName, string lastName, string suffix, string sacramentType, string residence, char gender)///////////////------------fix this no sacrament iD
+
+         public bool addSponsor(int sacramentID, string firstName, string midName, string lastName, string suffix, string sacramentType, string residence, char gender)///////////////------------fix this no sacrament iD
         {
             string q = "INSERT INTO Sponsor(firstName, midName, lastName, suffix, sacramentType, residence, gender) VALUES ('" 
                 + firstName + "', '" + midName + "', '" 
@@ -2387,6 +2387,7 @@ namespace ParishSystem
 
             return success;
         }
+
         //COMMENT: merge names into field "Name"
         public DataTable getMinister(int ministerID)
         {
