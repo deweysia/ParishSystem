@@ -139,8 +139,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.female_sponsor_confirmtion_radio = new System.Windows.Forms.RadioButton();
-            this.male_sponsor_confirmtion_radio = new System.Windows.Forms.RadioButton();
+            this.female_sponsor_confirmation_radio = new System.Windows.Forms.RadioButton();
+            this.male_sponsor_confirmation_radio = new System.Windows.Forms.RadioButton();
             this.residence_sponsor_confirmation_textbox = new System.Windows.Forms.TextBox();
             this.suffix_sponsor_confirmation_textbox = new System.Windows.Forms.TextBox();
             this.lastname_sponsor_confirmation_textbox = new System.Windows.Forms.TextBox();
@@ -970,10 +970,10 @@
             this.baptism_panel.Controls.Add(this.label32);
             this.baptism_panel.Controls.Add(this.panel6);
             this.baptism_panel.Controls.Add(this.baptism_sponsor_dgv);
-            this.baptism_panel.Location = new System.Drawing.Point(1094, 177);
+            this.baptism_panel.Location = new System.Drawing.Point(0, 0);
             this.baptism_panel.Margin = new System.Windows.Forms.Padding(2);
             this.baptism_panel.Name = "baptism_panel";
-            this.baptism_panel.Size = new System.Drawing.Size(854, 37);
+            this.baptism_panel.Size = new System.Drawing.Size(854, 38);
             this.baptism_panel.TabIndex = 33;
             // 
             // textBox30
@@ -1622,8 +1622,8 @@
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.Controls.Add(this.label19);
-            this.panel10.Controls.Add(this.female_sponsor_confirmtion_radio);
-            this.panel10.Controls.Add(this.male_sponsor_confirmtion_radio);
+            this.panel10.Controls.Add(this.female_sponsor_confirmation_radio);
+            this.panel10.Controls.Add(this.male_sponsor_confirmation_radio);
             this.panel10.Controls.Add(this.residence_sponsor_confirmation_textbox);
             this.panel10.Controls.Add(this.suffix_sponsor_confirmation_textbox);
             this.panel10.Controls.Add(this.lastname_sponsor_confirmation_textbox);
@@ -1650,31 +1650,31 @@
             this.label19.TabIndex = 57;
             this.label19.Text = "God Parent";
             // 
-            // female_sponsor_confirmtion_radio
+            // female_sponsor_confirmation_radio
             // 
-            this.female_sponsor_confirmtion_radio.AutoSize = true;
-            this.female_sponsor_confirmtion_radio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.female_sponsor_confirmtion_radio.Location = new System.Drawing.Point(726, 50);
-            this.female_sponsor_confirmtion_radio.Margin = new System.Windows.Forms.Padding(2);
-            this.female_sponsor_confirmtion_radio.Name = "female_sponsor_confirmtion_radio";
-            this.female_sponsor_confirmtion_radio.Size = new System.Drawing.Size(85, 27);
-            this.female_sponsor_confirmtion_radio.TabIndex = 49;
-            this.female_sponsor_confirmtion_radio.TabStop = true;
-            this.female_sponsor_confirmtion_radio.Text = "Female";
-            this.female_sponsor_confirmtion_radio.UseVisualStyleBackColor = true;
+            this.female_sponsor_confirmation_radio.AutoSize = true;
+            this.female_sponsor_confirmation_radio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.female_sponsor_confirmation_radio.Location = new System.Drawing.Point(726, 50);
+            this.female_sponsor_confirmation_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.female_sponsor_confirmation_radio.Name = "female_sponsor_confirmation_radio";
+            this.female_sponsor_confirmation_radio.Size = new System.Drawing.Size(85, 27);
+            this.female_sponsor_confirmation_radio.TabIndex = 49;
+            this.female_sponsor_confirmation_radio.TabStop = true;
+            this.female_sponsor_confirmation_radio.Text = "Female";
+            this.female_sponsor_confirmation_radio.UseVisualStyleBackColor = true;
             // 
-            // male_sponsor_confirmtion_radio
+            // male_sponsor_confirmation_radio
             // 
-            this.male_sponsor_confirmtion_radio.AutoSize = true;
-            this.male_sponsor_confirmtion_radio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.male_sponsor_confirmtion_radio.Location = new System.Drawing.Point(726, 23);
-            this.male_sponsor_confirmtion_radio.Margin = new System.Windows.Forms.Padding(2);
-            this.male_sponsor_confirmtion_radio.Name = "male_sponsor_confirmtion_radio";
-            this.male_sponsor_confirmtion_radio.Size = new System.Drawing.Size(68, 27);
-            this.male_sponsor_confirmtion_radio.TabIndex = 49;
-            this.male_sponsor_confirmtion_radio.TabStop = true;
-            this.male_sponsor_confirmtion_radio.Text = "Male";
-            this.male_sponsor_confirmtion_radio.UseVisualStyleBackColor = true;
+            this.male_sponsor_confirmation_radio.AutoSize = true;
+            this.male_sponsor_confirmation_radio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.male_sponsor_confirmation_radio.Location = new System.Drawing.Point(726, 23);
+            this.male_sponsor_confirmation_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.male_sponsor_confirmation_radio.Name = "male_sponsor_confirmation_radio";
+            this.male_sponsor_confirmation_radio.Size = new System.Drawing.Size(68, 27);
+            this.male_sponsor_confirmation_radio.TabIndex = 49;
+            this.male_sponsor_confirmation_radio.TabStop = true;
+            this.male_sponsor_confirmation_radio.Text = "Male";
+            this.male_sponsor_confirmation_radio.UseVisualStyleBackColor = true;
             // 
             // residence_sponsor_confirmation_textbox
             // 
@@ -3017,6 +3017,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(947, 646);
+            this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.biodata_button);
@@ -3025,7 +3026,6 @@
             this.Controls.Add(this.marriage_button);
             this.Controls.Add(this.confirmation_button);
             this.Controls.Add(this.baptism_button);
-            this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.marriage_panel);
             this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.balance_panel);
@@ -3297,8 +3297,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.RadioButton female_sponsor_confirmtion_radio;
-        private System.Windows.Forms.RadioButton male_sponsor_confirmtion_radio;
+        private System.Windows.Forms.RadioButton female_sponsor_confirmation_radio;
+        private System.Windows.Forms.RadioButton male_sponsor_confirmation_radio;
         private System.Windows.Forms.TextBox residence_sponsor_confirmation_textbox;
         private System.Windows.Forms.TextBox suffix_sponsor_confirmation_textbox;
         private System.Windows.Forms.TextBox lastname_sponsor_confirmation_textbox;

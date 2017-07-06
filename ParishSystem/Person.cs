@@ -154,38 +154,6 @@ namespace ParishSystem
 
         public void load_Baptism()
         {
-            if (dh.getApplications(ProfileID, "B").Rows[0]["status"].ToString().Equals("approved")) {
-                //minister
-                DataTable minister = dh.getMinisters();
-                foreach (DataRow row in minister.Rows)
-                {
-                    minister_baptism_combobox.Items.Add(new ComboBoxItem(row["Name"].ToString(), row["ministerID"].ToString()));
-                }
-
-                //sponsors
-                baptism_sponsor_dgv.DataSource= dh.getSacramentSponsors(dh.getBaptismID(ProfileID), "b");
-
-            }
-            else if (dh.getApplications(ProfileID, "B").Rows[0]["status"].ToString().Equals("added"))
-            {
-                baptism_sponsor_dgv.DataSource = dh.getSacramentSponsors(dh.getBaptismID(ProfileID), "b");
-
-                DataTable bapInfo = dh.getBaptismOf(ProfileID);
-                baptism_date_textbox.Text = dh.getBaptismOf(ProfileID).Rows[0]["baptismDate"].ToString();
-                minister_baptism_textbox.Text = dh.getMinister(int.Parse(dh.getBaptismOf(ProfileID).Rows[0]["ministerID"].ToString())).Rows[0]["Name"].ToString();
-                registry_baptism_textbox.Text = bapInfo.Rows[0]["RegistryNumber"].ToString();
-                page_baptism_textbox.Text = bapInfo.Rows[0]["PageNumber"].ToString();
-                record_baptism_textbox.Text = bapInfo.Rows[0]["RecordNumber"].ToString();
-            }
-
-           
-        }
-    
-
-        public void load_Confirmation()
-        {
-
-            
             DataTable dt = dh.getConfirmationOf(ProfileID);
 
             int ministerID = int.Parse(dt.Rows[0]["ministerID"].ToString());
@@ -197,7 +165,7 @@ namespace ParishSystem
             recordnumber_confirmation_textbox.Text = dt.Rows[0]["recordNumber"].ToString();
             Console.WriteLine("Date: " + dt.Rows[0]["confirmationDate"].ToString());
             confirmationdate_confirmation_dtp.Value = dh.toDateTime(dt.Rows[0]["confirmationDate"].ToString(), false);
-
+            remarks_sponsor_confirmation_textbox.Text = dt.Rows[0]["remarks"].ToString();
 
             MessageBox.Show("loading");
             dt = dh.getMinister(ministerID);
@@ -205,7 +173,6 @@ namespace ParishSystem
             minister_confirmation_textbox.Text = dt.Rows[0]["lastName"].ToString() + ", "
                 + dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["midName"].ToString()
                 + " " + dt.Rows[0]["suffix"].ToString();
-            minister_confirmation_textbox.Text = "JOHN";
 
             dt = dh.getSponsors(confirmationID, "C");
 
@@ -213,13 +180,54 @@ namespace ParishSystem
             middlename_sponsor_confirmation_textbox.Text = dt.Rows[0]["midName"].ToString();
             lastname_sponsor_confirmation_textbox.Text = dt.Rows[0]["lastName"].ToString();
             suffix_sponsor_confirmation_textbox.Text = dt.Rows[0]["suffix"].ToString();
+            residence_sponsor_confirmation_textbox.Text = dt.Rows[0]["residence"].ToString();
+
 
             string gender = dt.Rows[0]["gender"].ToString();
 
-            male_sponsor_confirmtion_radio.Checked = gender == "M";
-            female_sponsor_confirmtion_radio.Checked = gender == "F";
+            male_sponsor_confirmation_radio.Checked = gender == "M";
+            female_sponsor_confirmation_radio.Checked = gender == "F";
 
 
+        }
+
+      
+
+        public void load_Confirmation()
+        {
+            DataTable dt = dh.getConfirmationOf(ProfileID);
+
+            int ministerID = int.Parse(dt.Rows[0]["ministerID"].ToString());
+            int applicationID = int.Parse(dt.Rows[0]["applicationID"].ToString());
+            int confirmationID = int.Parse(dt.Rows[0]["confirmationID"].ToString());
+
+            registrynumber_confirmation_textbox.Text = dt.Rows[0]["registryNumber"].ToString();
+            pagenumber_confirmation_textbox.Text = dt.Rows[0]["pageNumber"].ToString();
+            recordnumber_confirmation_textbox.Text = dt.Rows[0]["recordNumber"].ToString();
+            Console.WriteLine("Date: " + dt.Rows[0]["confirmationDate"].ToString());
+            confirmationdate_confirmation_dtp.Value = dh.toDateTime(dt.Rows[0]["confirmationDate"].ToString(), false);
+            remarks_sponsor_confirmation_textbox.Text = dt.Rows[0]["remarks"].ToString();
+
+            MessageBox.Show("loading");
+            dt = dh.getMinister(ministerID);
+
+            minister_confirmation_textbox.Text = dt.Rows[0]["lastName"].ToString() + ", "
+                + dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["midName"].ToString()
+                + " " + dt.Rows[0]["suffix"].ToString();
+
+            dt = dh.getSponsors(confirmationID, "C");
+
+            firstname_sponsor_confirmation_textbox.Text = dt.Rows[0]["firstName"].ToString();
+            middlename_sponsor_confirmation_textbox.Text = dt.Rows[0]["midName"].ToString();
+            lastname_sponsor_confirmation_textbox.Text = dt.Rows[0]["lastName"].ToString();
+            suffix_sponsor_confirmation_textbox.Text = dt.Rows[0]["suffix"].ToString();
+            residence_sponsor_confirmation_textbox.Text = dt.Rows[0]["residence"].ToString();
+            
+
+            string gender = dt.Rows[0]["gender"].ToString();
+
+            male_sponsor_confirmation_radio.Checked = gender == "M";
+            female_sponsor_confirmation_radio.Checked = gender == "F";
         }
 
         public void load_Marriage()
@@ -237,7 +245,7 @@ namespace ParishSystem
         {
             sponsorBaptismLastClick = int.Parse(baptism_sponsor_dgv.CurrentRow.Cells["sponsorID"].Value.ToString());
             firstname_textbox_sponsor_baptism.Text = baptism_sponsor_dgv.CurrentRow.Cells["firstName"].Value.ToString();
-            middlename_textbox_sponsor_baptism.Text = baptism_sponsor_dgv.CurrentRow.Cells["middleName"].Value.ToString();
+            middlename_textbox_sponsor_baptism.Text = baptism_sponsor_dgv.CurrentRow.Cells["midName"].Value.ToString();
             lastname_textbox_sponsor_baptism.Text = baptism_sponsor_dgv.CurrentRow.Cells["lastName"].Value.ToString();
             suffix_textbox_sponsor_baptism.Text = baptism_sponsor_dgv.CurrentRow.Cells["suffix"].Value.ToString();
             residence_textbox_sponsor_baptism.Text = baptism_sponsor_dgv.CurrentRow.Cells["residence"].Value.ToString();
