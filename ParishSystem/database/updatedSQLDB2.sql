@@ -212,12 +212,11 @@ CREATE TABLE IF NOT EXISTS `sad2`.`blooddonation` (
   `bloodDonationID` INT(11) NOT NULL AUTO_INCREMENT,
   `profileID` INT(11) NOT NULL,
   `bloodDonationEventID` INT(11) NOT NULL,
-  `donationAmount` INT(11) NULL DEFAULT NULL,
   `bloodDonationDateTime` DATETIME NULL DEFAULT NULL,
   PRIMARY KEY (`bloodDonationID`),
   INDEX `fk_blooddonation_blooddonationevent1_idx` (`bloodDonationEventID` ASC),
-  INDEX `bloodDonation_bloodDonor_idx` (`profileID` ASC),
-  CONSTRAINT `bloodDonation_bloodDonor`
+  INDEX `bloodDonation_generalProfile_idx` (`profileID` ASC),
+  CONSTRAINT `bloodDonation_generalProfile`
     FOREIGN KEY (`profileID`)
     REFERENCES `sad2`.`generalprofile` (`profileID`)
     ON DELETE NO ACTION
