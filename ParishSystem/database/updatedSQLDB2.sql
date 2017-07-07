@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `sad2`.`generalprofile` (
   PRIMARY KEY (`profileID`),
   UNIQUE INDEX `personName` (`firstName` ASC, `midName` ASC, `lastName` ASC, `suffix` ASC, `birthdate` ASC, `gender` ASC))
 ENGINE = InnoDB
-AUTO_INCREMENT = 3
+
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `sad2`.`application` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
-AUTO_INCREMENT = 3
+
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -475,7 +475,7 @@ CREATE TABLE IF NOT EXISTS `sad2`.`sponsor` (
   `residence` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`sponsorID`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 3
+
 DEFAULT CHARACTER SET = utf8;
 
 
