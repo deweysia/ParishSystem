@@ -261,6 +261,7 @@
     <Content Include="bin\Debug\ParishSystem.exe" />
     <Content Include="bin\Debug\ParishSystem.pdb" />
     <Content Include="bin\Debug\ParishSystem.vshost.exe" />
+    <Content Include="database\DB_Populator.txt" />
     <Content Include="database\updatedDB.sql" />
     <Content Include="database\updatedSQLDB2.sql" />
     <Content Include="obj\Debug\ParishSystem.csproj.FileListAbsolute.txt" />
