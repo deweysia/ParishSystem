@@ -234,7 +234,8 @@ DEFAULT CHARACTER SET = utf8;
 -- Table `sad2`.`blooddonationretrieval`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sad2`.`blooddonationretrieval` (
-  `bloodDonationID` INT(11) NOT NULL,
+  `bloodDonationEventID` INT(11) NOT NULL AUTO_INCREMENT,
+  `bloodDonationID` INT(11) NULL DEFAULT NULL,
   `claimDate` DATETIME NULL DEFAULT NULL,
   `firstName` VARCHAR(45) NULL DEFAULT NULL,
   `midName` VARCHAR(45) NULL DEFAULT NULL,
@@ -242,8 +243,9 @@ CREATE TABLE IF NOT EXISTS `sad2`.`blooddonationretrieval` (
   `suffix` VARCHAR(5) NULL DEFAULT NULL,
   `birthdate` DATE NULL DEFAULT NULL,
   `gender` CHAR(1) NULL DEFAULT NULL,
-  PRIMARY KEY (`bloodDonationID`),
-  CONSTRAINT `bdretrieve_bd`
+  PRIMARY KEY (`bloodDonationEventID`),
+  INDEX `bloodDonationEvent_bloodDonation_idx` (`bloodDonationID` ASC),
+  CONSTRAINT `bloodDonationEvent_bloodDonation`
     FOREIGN KEY (`bloodDonationID`)
     REFERENCES `sad2`.`blooddonation` (`bloodDonationID`)
     ON DELETE NO ACTION

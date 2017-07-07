@@ -576,7 +576,7 @@ namespace ParishSystem
             return success;
         }
 
-        public bool deleteBloodDonationEvent(int bloodbloodDonationEventID)
+        public bool deleteBloodDonationEvent(int bloodDonationEventID)
         {
 
             //if (!idExists("bloodDonationEvent", "bloodbloodDonationEventID", bloodbloodDonationEventID))
