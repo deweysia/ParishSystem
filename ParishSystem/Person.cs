@@ -15,13 +15,25 @@ namespace ParishSystem
     {
         public int ProfileID;
         public DataHandler dh;
+        private List<Panel> panelList = new List<Panel>();
+        private Dictionary<string, Panel> panelDict = new Dictionary<string, Panel>();
+
         public Person(int ProfileID, DataHandler dh)
         {
             InitializeComponent();
             this.ProfileID = ProfileID;
             this.dh = dh;
 
+            panelDict.Add("baptism_panel", baptism_panel);
+            panelDict.Add("confirmation_panel", confirmation_panel);
+            panelDict.Add("profile_panel", profile_panel);
+            panelDict.Add("bloodletting_panel", bloodletting_panel);
+            panelDict.Add("marriage_panel", marriage_panel);
+            panelDict.Add("balance_panel", balance_panel);
+
         }
+
+        
         #region GUI basic
 
 
@@ -90,6 +102,7 @@ namespace ParishSystem
         {
 
             DataTable TempDT = dh.getGeneralProfile(ProfileID);
+            
             //LOAD PERSON
             if (!(TempDT.Rows[0]["gender"] == null))
             {
@@ -271,12 +284,14 @@ namespace ParishSystem
         {
             load_Biodata();
 
-            profile_panel.Visible = true;
-            baptism_panel.Visible = false;
-            confirmation_panel.Visible = false;
-            marriage_panel.Visible = false;
-            balance_panel.Visible = false;
-            bloodletting_panel.Visible = false;
+            panelDict["profile_panel"].BringToFront();
+
+            //profile_panel.Visible = true;
+            //baptism_panel.Visible = false;
+            //confirmation_panel.Visible = false;
+            //marriage_panel.Visible = false;
+            //balance_panel.Visible = false;
+            //bloodletting_panel.Visible = false;
 
         }
 
@@ -286,12 +301,13 @@ namespace ParishSystem
             {
 
                 load_Baptism();
-                profile_panel.Visible = false;
-                baptism_panel.Visible = true;
-                confirmation_panel.Visible = false;
-                marriage_panel.Visible = false;
-                balance_panel.Visible = false;
-                bloodletting_panel.Visible = false;
+                panelDict["baptism_panel"].BringToFront();
+                //profile_panel.Visible = false;
+                //baptism_panel.Visible = true;
+                //confirmation_panel.Visible = false;
+                //marriage_panel.Visible = false;
+                //balance_panel.Visible = false;
+                //bloodletting_panel.Visible = false;
             }
             else
             {
@@ -305,12 +321,13 @@ namespace ParishSystem
             if (dh.hasConfirmationApplication(ProfileID))
             {
                 load_Confirmation();
-                profile_panel.Visible = false;
-                baptism_panel.Visible = false;
-                confirmation_panel.Visible = true;
-                marriage_panel.Visible = false;
-                balance_panel.Visible = false;
-                bloodletting_panel.Visible = false;
+                panelDict["confirmation_panel"].BringToFront();
+                //profile_panel.Visible = false;
+                //baptism_panel.Visible = false;
+                //confirmation_panel.Visible = true;
+                //marriage_panel.Visible = false;
+                //balance_panel.Visible = false;
+                //bloodletting_panel.Visible = false;
             }
             else
             {
@@ -323,12 +340,13 @@ namespace ParishSystem
             if (dh.hasMarriageApplication(ProfileID))
             {
                 load_Marriage();
-                profile_panel.Visible = false;
-                baptism_panel.Visible = false;
-                confirmation_panel.Visible = false;
-                marriage_panel.Visible = true;
-                balance_panel.Visible = false;
-                bloodletting_panel.Visible = false;
+                panelDict["marriage_panel"].BringToFront();
+                //profile_panel.Visible = false;
+                //baptism_panel.Visible = false;
+                //confirmation_panel.Visible = false;
+                //marriage_panel.Visible = true;
+                //balance_panel.Visible = false;
+                //bloodletting_panel.Visible = false;
             }
             else
             {
