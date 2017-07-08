@@ -129,14 +129,14 @@ namespace ParishSystem
 
         public DateTime toDateTime(string s, bool timePortion)
         {
-
+           
             string[] components = s.Split(' ');
             string[] date = components[0].Split('/');
 
-            Console.Write(date[0] + " --- " + date[1] + " --- " + date[2]);
+            Console.Write(date[1] + " --- " + date[0] + " --- " + date[2]);
 
-            int day = int.Parse(date[0]);
-            int month = int.Parse(date[1]);
+            int day = int.Parse(date[1]);
+            int month = int.Parse(date[0]);
             int year = int.Parse(date[2]);
             
             

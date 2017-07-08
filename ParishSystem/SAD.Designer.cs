@@ -34,6 +34,7 @@
             this.bloodletting_menu_button = new System.Windows.Forms.Button();
             this.record_menu_button = new System.Windows.Forms.Button();
             this.application_menu_button = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.home_panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.username_label = new System.Windows.Forms.Label();
@@ -62,9 +63,20 @@
             this.application_panel = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.Search = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -75,21 +87,24 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.button6 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.bloodletting_panel = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.firstname_label_baptism = new System.Windows.Forms.Label();
+            this.middlename_label_baptism = new System.Windows.Forms.Label();
+            this.lastname_label_baptism = new System.Windows.Forms.Label();
+            this.suffix_label_baptism = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.home_panel.SuspendLayout();
             this.profile_panel.SuspendLayout();
@@ -103,7 +118,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.bloodletting_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,6 +209,20 @@
             this.application_menu_button.TabIndex = 1;
             this.application_menu_button.UseVisualStyleBackColor = true;
             this.application_menu_button.Click += new System.EventHandler(this.application_menu_button_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = global::ParishSystem.Properties.Resources.FIcon;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(0, 310);
+            this.button7.Margin = new System.Windows.Forms.Padding(0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(146, 62);
+            this.button7.TabIndex = 5;
+            this.button7.UseVisualStyleBackColor = true;
             // 
             // home_panel
             // 
@@ -536,7 +565,7 @@
             this.application_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.application_panel.BackColor = System.Drawing.Color.White;
+            this.application_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.application_panel.Controls.Add(this.tabControl1);
             this.application_panel.Controls.Add(this.label4);
             this.application_panel.Location = new System.Drawing.Point(150, 43);
@@ -550,7 +579,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(13, 82);
+            this.tabControl1.Location = new System.Drawing.Point(8, 72);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(859, 536);
@@ -558,11 +587,26 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.button10);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.textBox8);
+            this.tabPage1.Controls.Add(this.textBox6);
+            this.tabPage1.Controls.Add(this.textBox7);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.checkBox1);
+            this.tabPage1.Controls.Add(this.comboBox3);
+            this.tabPage1.Controls.Add(this.Search);
             this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.ForeColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.suffix_label_baptism);
+            this.tabPage1.Controls.Add(this.lastname_label_baptism);
+            this.tabPage1.Controls.Add(this.middlename_label_baptism);
+            this.tabPage1.Controls.Add(this.firstname_label_baptism);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.ForeColor = System.Drawing.Color.Black;
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -571,39 +615,161 @@
             this.tabPage1.Text = "Baptism Applications";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // button10
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(728, 24);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 33);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(140, 106);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(104, 33);
+            this.button10.TabIndex = 34;
+            this.button10.Text = "Confirm";
+            this.button10.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // label11
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 74);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(845, 425);
-            this.dataGridView1.TabIndex = 0;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(31, 61);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 21);
+            this.label11.TabIndex = 37;
+            this.label11.Text = "Name";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.ForeColor = System.Drawing.Color.Black;
+            this.checkBox1.Location = new System.Drawing.Point(47, 163);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(130, 25);
+            this.checkBox1.TabIndex = 36;
+            this.checkBox1.Text = "New Applicant";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(157, 209);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 21);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Name";
+            // 
+            // textBox8
+            // 
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.ForeColor = System.Drawing.Color.Silver;
+            this.textBox8.Location = new System.Drawing.Point(140, 253);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(94, 16);
+            this.textBox8.TabIndex = 29;
+            this.textBox8.Text = "First Name";
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.ForeColor = System.Drawing.Color.Silver;
+            this.textBox5.Location = new System.Drawing.Point(159, 388);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(54, 16);
+            this.textBox5.TabIndex = 31;
+            this.textBox5.Text = "Suffix";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.ForeColor = System.Drawing.Color.Silver;
+            this.textBox7.Location = new System.Drawing.Point(140, 298);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(94, 16);
+            this.textBox7.TabIndex = 30;
+            this.textBox7.Text = "Middle Name";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.ForeColor = System.Drawing.Color.Silver;
+            this.textBox6.Location = new System.Drawing.Point(140, 343);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(94, 16);
+            this.textBox6.TabIndex = 32;
+            this.textBox6.Text = "Last Name";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(6, 21);
+            this.button1.Location = new System.Drawing.Point(47, 440);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 33);
+            this.button1.Size = new System.Drawing.Size(104, 33);
             this.button1.TabIndex = 0;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(89, 61);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(226, 29);
+            this.comboBox3.TabIndex = 34;
+            // 
+            // Search
+            // 
+            this.Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Search.ForeColor = System.Drawing.Color.White;
+            this.Search.Location = new System.Drawing.Point(373, 20);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(99, 30);
+            this.Search.TabIndex = 12;
+            this.Search.Text = "Search";
+            this.Search.UseVisualStyleBackColor = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(518, 22);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(305, 29);
+            this.comboBox1.TabIndex = 11;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(211, 440);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 33);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(370, 58);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(453, 416);
+            this.dataGridView1.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -710,77 +876,65 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(29, 40);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(17, 32);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(136, 30);
             this.label4.TabIndex = 2;
             this.label4.Text = "Applications";
             // 
-            // comboBox1
+            // bloodletting_panel
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(129, 24);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(262, 29);
-            this.comboBox1.TabIndex = 11;
+            this.bloodletting_panel.BackColor = System.Drawing.Color.White;
+            this.bloodletting_panel.Controls.Add(this.label8);
+            this.bloodletting_panel.Controls.Add(this.label7);
+            this.bloodletting_panel.Controls.Add(this.numericUpDown1);
+            this.bloodletting_panel.Controls.Add(this.comboBox4);
+            this.bloodletting_panel.Controls.Add(this.textBox1);
+            this.bloodletting_panel.Controls.Add(this.textBox2);
+            this.bloodletting_panel.Controls.Add(this.textBox3);
+            this.bloodletting_panel.Controls.Add(this.label5);
+            this.bloodletting_panel.Controls.Add(this.textBox4);
+            this.bloodletting_panel.Controls.Add(this.label6);
+            this.bloodletting_panel.Controls.Add(this.button9);
+            this.bloodletting_panel.Controls.Add(this.button8);
+            this.bloodletting_panel.Location = new System.Drawing.Point(150, 43);
+            this.bloodletting_panel.Name = "bloodletting_panel";
+            this.bloodletting_panel.Size = new System.Drawing.Size(883, 626);
+            this.bloodletting_panel.TabIndex = 4;
             // 
-            // button7
+            // label8
             // 
-            this.button7.BackgroundImage = global::ParishSystem.Properties.Resources.FIcon;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(0, 310);
-            this.button7.Margin = new System.Windows.Forms.Padding(0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(146, 62);
-            this.button7.TabIndex = 5;
-            this.button7.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(151, 103);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 21);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "Quantity";
             // 
-            // panel2
+            // label7
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.numericUpDown1);
-            this.panel2.Controls.Add(this.comboBox4);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Location = new System.Drawing.Point(150, 43);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(883, 626);
-            this.panel2.TabIndex = 4;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(378, 98);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 21);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "Blood Type";
             // 
-            // button8
+            // numericUpDown1
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(23, 91);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(117, 33);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "Add";
-            this.button8.UseVisualStyleBackColor = false;
+            this.numericUpDown1.Location = new System.Drawing.Point(227, 95);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 29);
+            this.numericUpDown1.TabIndex = 35;
             // 
-            // button9
+            // comboBox4
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(755, 7);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(117, 33);
-            this.button9.TabIndex = 2;
-            this.button9.Text = "Add";
-            this.button9.UseVisualStyleBackColor = false;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(470, 95);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(87, 29);
+            this.comboBox4.TabIndex = 34;
             // 
             // textBox1
             // 
@@ -853,38 +1007,74 @@
             this.label6.TabIndex = 28;
             this.label6.Text = "__________________________________________________";
             // 
-            // comboBox4
+            // button9
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(470, 95);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(87, 29);
-            this.comboBox4.TabIndex = 34;
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(755, 7);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(117, 33);
+            this.button9.TabIndex = 2;
+            this.button9.Text = "Add";
+            this.button9.UseVisualStyleBackColor = false;
             // 
-            // numericUpDown1
+            // button8
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(227, 95);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 29);
-            this.numericUpDown1.TabIndex = 35;
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(23, 91);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(117, 33);
+            this.button8.TabIndex = 1;
+            this.button8.Text = "Add";
+            this.button8.UseVisualStyleBackColor = false;
             // 
-            // label7
+            // firstname_label_baptism
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(378, 98);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 21);
-            this.label7.TabIndex = 36;
-            this.label7.Text = "Blood Type";
+            this.firstname_label_baptism.AutoSize = true;
+            this.firstname_label_baptism.Location = new System.Drawing.Point(140, 253);
+            this.firstname_label_baptism.Name = "firstname_label_baptism";
+            this.firstname_label_baptism.Size = new System.Drawing.Size(94, 21);
+            this.firstname_label_baptism.TabIndex = 38;
+            this.firstname_label_baptism.Text = "____________";
             // 
-            // label8
+            // middlename_label_baptism
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(151, 103);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 21);
-            this.label8.TabIndex = 36;
-            this.label8.Text = "Quantity";
+            this.middlename_label_baptism.AutoSize = true;
+            this.middlename_label_baptism.Location = new System.Drawing.Point(140, 297);
+            this.middlename_label_baptism.Name = "middlename_label_baptism";
+            this.middlename_label_baptism.Size = new System.Drawing.Size(94, 21);
+            this.middlename_label_baptism.TabIndex = 38;
+            this.middlename_label_baptism.Text = "____________";
+            // 
+            // lastname_label_baptism
+            // 
+            this.lastname_label_baptism.AutoSize = true;
+            this.lastname_label_baptism.Location = new System.Drawing.Point(139, 343);
+            this.lastname_label_baptism.Name = "lastname_label_baptism";
+            this.lastname_label_baptism.Size = new System.Drawing.Size(94, 21);
+            this.lastname_label_baptism.TabIndex = 38;
+            this.lastname_label_baptism.Text = "____________";
+            // 
+            // suffix_label_baptism
+            // 
+            this.suffix_label_baptism.AutoSize = true;
+            this.suffix_label_baptism.Location = new System.Drawing.Point(137, 389);
+            this.suffix_label_baptism.Name = "suffix_label_baptism";
+            this.suffix_label_baptism.Size = new System.Drawing.Size(94, 21);
+            this.suffix_label_baptism.TabIndex = 38;
+            this.suffix_label_baptism.Text = "____________";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(43, 132);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(290, 21);
+            this.label10.TabIndex = 39;
+            this.label10.Text = "________________________________________";
             // 
             // SAD
             // 
@@ -899,10 +1089,10 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btn_Max);
             this.Controls.Add(this.btn_Close);
-            this.Controls.Add(this.application_panel);
             this.Controls.Add(this.profile_panel);
+            this.Controls.Add(this.application_panel);
             this.Controls.Add(this.home_panel);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.bloodletting_panel);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -920,13 +1110,14 @@
             this.application_panel.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.bloodletting_panel.ResumeLayout(false);
+            this.bloodletting_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -983,8 +1174,7 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel bloodletting_panel;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
@@ -997,5 +1187,21 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button Search;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label suffix_label_baptism;
+        private System.Windows.Forms.Label lastname_label_baptism;
+        private System.Windows.Forms.Label middlename_label_baptism;
+        private System.Windows.Forms.Label firstname_label_baptism;
+        private System.Windows.Forms.Label label10;
     }
 }
