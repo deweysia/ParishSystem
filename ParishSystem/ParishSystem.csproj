@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\packages\Bunifu_UI 1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\Documents\Visual Studio 2015\MySql.Data.dll</HintPath>
     </Reference>
@@ -40,6 +44,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +57,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BloodlettingTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodlettingTest.Designer.cs">
+      <DependentUpon>BloodlettingTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="ComboBoxItem.cs" />
     <Compile Include="DataHandler.cs" />
     <Compile Include="Form1.cs">
@@ -170,6 +181,9 @@
     <Compile Include="tReport.Designer.cs">
       <DependentUpon>tReport.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BloodlettingTest.resx">
+      <DependentUpon>BloodlettingTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,6 +282,14 @@
     <Content Include="obj\Debug\ParishSystem.exe" />
     <Content Include="obj\Debug\ParishSystem.pdb" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\Money_96px.png" />
+    <None Include="Resources\Heart with Pulse_96px.png" />
+    <None Include="Resources\Person Male_96px.png" />
+    <None Include="Resources\Home_96px.png" />
+    <None Include="Resources\Heart with Pulse_100px.png" />
+    <None Include="Resources\Gender Neutral User_96px.png" />
+    <None Include="Resources\Coins_96px.png" />
+    <None Include="Resources\Syringe_96px.png" />
     <None Include="Resources\HIcon.png" />
     <None Include="Resources\FIcon.png" />
     <None Include="Resources\RIcon.png" />

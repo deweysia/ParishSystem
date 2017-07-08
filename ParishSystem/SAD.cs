@@ -14,6 +14,7 @@ namespace ParishSystem
     public partial class SAD : Form
     {
         DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
+        Point lastClick;
         public SAD()
         {
             InitializeComponent();
@@ -53,6 +54,7 @@ namespace ParishSystem
             profile_panel.Hide();
           
         }
+
         private void home_menu_button_Click(object sender, EventArgs e)
         {
             application_panel.Hide();
@@ -194,6 +196,18 @@ namespace ParishSystem
 
         }
 
-        
+        private void panel_controlbox_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastClick.X;
+                this.Top += e.Y - lastClick.Y;
+            }
+        }
+
+        private void panel_controlbox_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastClick = new Point(e.X, e.Y);
+        }
     }
 }
