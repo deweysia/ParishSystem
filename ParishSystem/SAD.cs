@@ -209,5 +209,49 @@ namespace ParishSystem
         {
             lastClick = new Point(e.X, e.Y);
         }
+
+        private void navBarPanel_MouseEnter(object sender, EventArgs e)
+        {
+            Panel p = (Panel)sender;
+
+            p.BackColor = Color.SteelBlue;
+        }
+
+        private void narBar_MouseLeave(object sender, EventArgs e)
+        {
+            Panel p = (Panel)sender;
+
+            p.BackColor = Color.DodgerBlue;
+        }
+
+        private void home_panel_menu_Click(object sender, EventArgs e)
+        {
+            home_panel.BringToFront();
+        }
+
+        private void profile_panel_menu_Click(object sender, EventArgs e)
+        {
+            profile_panel.BringToFront();
+        }
+
+        private void bloodletting_panel_menu_Click(object sender, EventArgs e)
+        {
+            bloodletting_panel.BringToFront();
+        }
+
+        private void income_panel_menu_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void report_panel_menu_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void application_panel_menu_Click(object sender, EventArgs e)
+        {
+            application_panel.BringToFront();
+        }
     }
 }

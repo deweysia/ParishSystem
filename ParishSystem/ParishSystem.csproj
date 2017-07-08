@@ -282,6 +282,14 @@
     <Content Include="obj\Debug\ParishSystem.exe" />
     <Content Include="obj\Debug\ParishSystem.pdb" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\ReportCard.png" />
+    <None Include="Resources\Money.png" />
+    <None Include="Resources\Home.png" />
+    <None Include="Resources\HeartPulse.png" />
+    <None Include="Resources\Gender.png" />
+    <None Include="Resources\Coins.png" />
+    <None Include="Resources\sc-logo.png" />
+    <None Include="Resources\Report Card_96px.png" />
     <None Include="Resources\Money_96px.png" />
     <None Include="Resources\Heart with Pulse_96px.png" />
     <None Include="Resources\Person Male_96px.png" />
