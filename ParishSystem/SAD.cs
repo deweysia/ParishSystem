@@ -375,5 +375,10 @@ namespace ParishSystem
         {
 
         }
+
+        private void home_panel_menu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
