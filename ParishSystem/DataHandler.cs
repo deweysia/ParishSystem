@@ -399,10 +399,10 @@ namespace ParishSystem
 
         #region
 
-        public bool addBloodDonation(int generalProfileID, int donationEventID, int donationAmount, DateTime bloodDonationDateTime)
+        public bool addBloodDonation(int generalProfileID, int bloodDonationEventID, int donationAmount, DateTime bloodDonationDateTime)
         {
-            string q = "INSERT INTO BloodDonation(generalProfileID, donationEventID, donationAmount, bloodDonationDateTime) VALUES ('"
-                + generalProfileID + "', '" + donationEventID + "', '" + donationAmount + "', '"
+            string q = "INSERT INTO BloodDonation(generalProfileID, bloodDonationEventID, donationAmount, bloodDonationDateTime) VALUES ('"
+                + generalProfileID + "', '" + bloodDonationEventID + "', '" + donationAmount + "', '"
                 + bloodDonationDateTime.ToString("yyyy-MM-dd HH:mm:ss") + "')";
 
             bool success = runNonQuery(q);
@@ -412,12 +412,12 @@ namespace ParishSystem
             return success;
         }
 
-        public bool editBloodDonation(int bloodDonationID, int generalProfileID, int donationEventID, int donationAmount, DateTime bloodDonationDateTime)
+        public bool editBloodDonation(int bloodDonationID, int generalProfileID, int bloodDonationEventID, int donationAmount, DateTime bloodDonationDateTime)
         {
             //addBloodDonationLog(bloodDonationID);
 
             string q = "UPDATE BloodDonation SET generalProfileID = '" + generalProfileID
-                + "', donationEventID = '" + donationEventID
+                + "', bloodDonationEventID = '" + bloodDonationEventID
                 + "', donationAmount = '" + donationAmount
                 + "', bloodDonationDateTime = '" + bloodDonationDateTime.ToString("yyyy-MM-dd HH:mm:ss")
                 + "' WHERE bloodDonationID = '" + bloodDonationID + "'";
@@ -521,7 +521,7 @@ namespace ParishSystem
                 + " gender, birthdate, bloodType, donationAmount "
                 + " FROM GeneralProfile JOIN BloodDonation "
                 + " ON GeneralProfile.profileID = BloodDonation.profileID"
-                + " JOIN BloodDonationEvent ON BloodDonationEvent.donationEventID = BloodDonation.donationEventID"
+                + " JOIN BloodDonationEvent ON BloodDonationEvent.bloodbloodDonationEventID = BloodDonation.bloodbloodDonationEventID"
                 + " WHERE eventName = '%" + eventName + "%' ";
 
             DataTable dt = runQuery(q);
@@ -558,43 +558,43 @@ namespace ParishSystem
 
             bool success = runNonQuery(q);
             //if (success)
-            //    updateModificationInfo("BloodDnationEvent", "donationEventID", getLatestID("BloodDonationEvent", "donationEventID"));
+            //    updateModificationInfo("BloodDnationEvent", "bloodbloodDonationEventID", getLatestID("BloodDonationEvent", "bloodbloodDonationEventID"));
 
             return success;
         }
 
-        public bool editBloodDonationEvent(int donationEventID, string eventName, DateTime eventDate, string eventStatus, string eventVenue, string eventDetails)
+        public bool editBloodDonationEvent(int bloodbloodDonationEventID, string eventName, DateTime eventDate, string eventStatus, string eventVenue, string eventDetails)
         {
             string q = "UPDATE TABLE bloodDonationEvent SET eventName = '" + eventName + "', eventDate = '" + eventDate.ToString("yyyy-MM-dd HH:mm:ss.fff") + "', "
                 + "eventStatus = '" + eventStatus + "', eventVenue = '" + eventVenue + "', eventDetails = '" + eventDetails
-                + "' WHERE donationEventID = " + donationEventID;
+                + "' WHERE bloodbloodDonationEventID = " + bloodbloodDonationEventID;
 
             bool success = runNonQuery(q);
             //if (success)
-            //    updateModificationInfo("bloodDonationEvent", "donationEventID", donationEventID);
+            //    updateModificationInfo("bloodDonationEvent", "bloodbloodDonationEventID", bloodbloodDonationEventID);
 
             return success;
         }
 
-        public bool deleteBloodDonationEvent(int donationEventID)
+        public bool deleteBloodDonationEvent(int bloodDonationEventID)
         {
 
-            //if (!idExists("bloodDonationEvent", "donationEventID", donationEventID))
+            //if (!idExists("bloodDonationEvent", "bloodbloodDonationEventID", bloodbloodDonationEventID))
             //    return false;
 
-            //addBloodDonationLog(donationEventID);
-            //updateModificationInfo("bloodDonationEvent", "donationEventID", donationEventID);
-            //addBloodDonationLog(donationEventID);
+            //addBloodDonationLog(bloodDonationEventID);
+            //updateModificationInfo("bloodDonationEvent", "bloodDonationEventID", bloodDonationEventID);
+            //addBloodDonationLog(bloodDonationEventID);
 
-            string q = "DELETE FROM bloodDonationEvent WHERE donationEventID = " + donationEventID;
+            string q = "DELETE FROM bloodDonationEvent WHERE bloodDonationEventID = " + bloodDonationEventID;
 
             return runNonQuery(q);
         }
 
-        public bool addBloodDonationEventLog(int donationEventID)
+        public bool addBloodDonationEventLog(int bloodDonationEventID)
         {
             string q = "INSERT INTO bloodDonationEventLog VALUES (SELECT * FROM bloodDonationEvent "
-                + "WHERE donationEventID = " + donationEventID + ")";
+                + "WHERE bloodDonationEventID = " + bloodDonationEventID + ")";
 
             return runNonQuery(q);
         }
@@ -1371,10 +1371,9 @@ namespace ParishSystem
 
         public DataTable getBaptismOf(int profileID)//COMMENT: ambiguous profile id
         {
-            string q = "SELECT profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix),"
-                + " gender, birthdate, remarks FROM Baptism"
-                + " JOIN Application ON applicationID = applicationID"
-                + " JOIN GeneralProfile ON generalProfile.profileID = Application.profileID WHERE GeneralProfile.profileID = " + profileID;
+            string q = "SELECT * FROM Baptism"
+                + " JOIN Application ON Application.applicationID = Baptism.applicationID"
+                + " WHERE Application.profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 

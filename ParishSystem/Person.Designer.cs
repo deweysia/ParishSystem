@@ -1976,8 +1976,8 @@
             // 
             this.baptism_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.baptism_panel.Controls.Add(this.flowLayoutPanel2);
-            this.baptism_panel.Controls.Add(this.baptism_application_panel);
             this.baptism_panel.Controls.Add(this.baptism_details_panel);
+            this.baptism_panel.Controls.Add(this.baptism_application_panel);
             this.baptism_panel.Location = new System.Drawing.Point(47, 38);
             this.baptism_panel.Name = "baptism_panel";
             this.baptism_panel.Size = new System.Drawing.Size(849, 581);
@@ -2930,11 +2930,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(944, 647);
-            this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.profile_panel);
+            this.Controls.Add(this.baptism_panel);
+            this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.marriage_panel);
-            this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.balance_panel);
             this.Controls.Add(this.biodata_button);
             this.Controls.Add(this.baptism_button);
@@ -2943,7 +2943,7 @@
             this.Controls.Add(this.marriage_button);
             this.Controls.Add(this.confirmation_button);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Person";
             this.Text = "Person";

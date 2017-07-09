@@ -14,6 +14,7 @@ namespace ParishSystem
     public partial class SAD : Form
     {
         DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
+        Point lastClick;
         public SAD()
         {
             InitializeComponent();
@@ -53,6 +54,7 @@ namespace ParishSystem
             profile_panel.Hide();
           
         }
+
         private void home_menu_button_Click(object sender, EventArgs e)
         {
             application_panel.Hide();
@@ -192,6 +194,64 @@ namespace ParishSystem
             openProfile_button.Enabled = false;
             addProfile_button.Enabled = false;
 
+        }
+
+        private void panel_controlbox_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastClick.X;
+                this.Top += e.Y - lastClick.Y;
+            }
+        }
+
+        private void panel_controlbox_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastClick = new Point(e.X, e.Y);
+        }
+
+        private void navBarPanel_MouseEnter(object sender, EventArgs e)
+        {
+            Panel p = (Panel)sender;
+
+            p.BackColor = Color.SteelBlue;
+        }
+
+        private void narBar_MouseLeave(object sender, EventArgs e)
+        {
+            Panel p = (Panel)sender;
+
+            p.BackColor = Color.DodgerBlue;
+        }
+
+        private void home_panel_menu_Click(object sender, EventArgs e)
+        {
+            home_panel.BringToFront();
+        }
+
+        private void profile_panel_menu_Click(object sender, EventArgs e)
+        {
+            profile_panel.BringToFront();
+        }
+
+        private void bloodletting_panel_menu_Click(object sender, EventArgs e)
+        {
+            bloodletting_panel.BringToFront();
+        }
+
+        private void income_panel_menu_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void report_panel_menu_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void application_panel_menu_Click(object sender, EventArgs e)
+        {
+            application_panel.BringToFront();
         }
     }
 }

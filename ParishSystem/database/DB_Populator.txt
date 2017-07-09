@@ -1,0 +1,31 @@
+INSERT INTO `GeneralProfile` (`firstName`,`midName`,`lastName`,`gender`,`birthdate`,`contactNumber`,`address`,`birthplace`, bloodType) VALUES ("Dane","Flynn","Thomas","F","2016-09-21","096-549-4510","P.O. Box 799, 9816 Volutpat Ave","P.O. Box 669, 8281 Suscipit St.", "A");
+INSERT INTO `GeneralProfile` (`firstName`,`midName`,`lastName`,`gender`,`birthdate`,`contactNumber`,`address`,`birthplace`, bloodType) VALUES ("Vladimir","Chan","Mcdowell","M","2017-05-11","095-031-7989","Ap #409-6482 Nec, Street","812-2009 Viverra. Road", "B");
+INSERT INTO `GeneralProfile` (`firstName`,`midName`,`lastName`,`gender`,`birthdate`,`contactNumber`,`address`,`birthplace`, bloodType) VALUES ("Sigourney","Eaton","Thornton","M","2017-07-28","097-352-2071","Ap #222-923 Vestibulum Road","P.O. Box 277, 2688 Lorem Avenue", "O");
+INSERT INTO `GeneralProfile` (`firstName`,`midName`,`lastName`,`gender`,`birthdate`,`contactNumber`,`address`,`birthplace`, bloodType) VALUES ("Upton","Barron","Wise","M","2016-10-20","090-868-7562","322 Vulputate Rd.","2575 Phasellus Ave", "AB");
+INSERT INTO `GeneralProfile` (`firstName`,`midName`,`lastName`,`gender`,`birthdate`,`contactNumber`,`address`,`birthplace`, bloodType) VALUES ("Jermaine","Gonzalez","Rollins","M","2016-09-22","096-301-0412","5389 Placerat, Road","P.O. Box 465, 494 Tincidunt Rd.", "B");
+INSERT INTO `GeneralProfile` (`firstName`,`midName`,`lastName`,`gender`,`birthdate`,`contactNumber`,`address`,`birthplace`, bloodType) VALUES ("Quinn","Sosa","Mann","M","2016-10-21","091-996-8967","466-8180 Ipsum. Street","239-5039 Curabitur Av.", "A");
+INSERT INTO `GeneralProfile` (`firstName`,`midName`,`lastName`,`gender`,`birthdate`,`contactNumber`,`address`,`birthplace`, bloodType) VALUES ("Zahir","Livingston","Jimenez","M","2017-12-06","090-770-2255","7184 Magna, Ave","696-3088 Nibh. Road", "AB");
+
+
+
+/* INSERTING BLOOD DONATION EVENTS TABLE */
+INSERT into BloodDonationEvent(eventName, eventDateTime, eventStatus, eventVenue, eventDetails) VALUES("Blood Donation Event", '2005-12-1 11:11:11', "On Going", "4609 Green Hill Road", "no details");
+INSERT into BloodDonationEvent(eventName, eventDateTime, eventStatus, eventVenue, eventDetails) VALUES("Blood Charity", '2003-05-03 11:11:11', "Finished", "367 Holden Street", "no details");
+INSERT into BloodDonationEvent(eventName, eventDateTime, eventStatus, eventVenue, eventDetails) VALUES("Our Lady of Assumption Blood Donations", '2002-02-14 11:11:11', "Finished", "4166 Jenna Lane", "no details");
+INSERT into BloodDonationEvent(eventName, eventDateTime, eventStatus, eventVenue, eventDetails) VALUES("Red Cross Blood Donation Event", '2001-11-26 11:11:11', "To Be Held", "Hall Place", "no details");
+INSERT into BloodDonationEvent(eventName, eventDateTime, eventStatus, eventVenue, eventDetails) VALUES("Davao Doctors Hospital Blood Donations", '1999-11-30 11:11:11', "On Going", "Southside Lane", "no details");
+
+/* INSERTING BLOOD DONATION */
+INSERT into bloodDonation(profileID, bloodDonationEventID, bloodDonationDateTime) VALUES(1, 1, '2003-05-03 10:23:01');
+INSERT into bloodDonation(profileID, bloodDonationEventID, bloodDonationDateTime) VALUES(2, 2, '2001-11-26 07:32:23');
+INSERT into bloodDonation(profileID, bloodDonationEventID, bloodDonationDateTime) VALUES(3, 3, '2005-02-21 17:28:52');
+INSERT into bloodDonation(profileID, bloodDonationEventID, bloodDonationDateTime) VALUES(4, 4, '2006-01-29 12:21:42');
+INSERT into bloodDonation(profileID, bloodDonationEventID, bloodDonationDateTime) VALUES(5, 5, '1999-02-01 15:58:06');
+
+/* INSERTING BLOOD EVENTS */
+INSERT into BloodDonationRetrieval(bloodDonationID, claimDate, firstName, midName, lastName, suffix, birthdate, gender) VALUES(1, '2011-03-11 11:23:01', "Josh", "Figueroa", "Lintag", "Jr.", "1998-07-02", "M");
+INSERT into BloodDonationRetrieval(bloodDonationID, claimDate, firstName, midName, lastName, suffix, birthdate, gender) VALUES(2, '2015-09-14 08:32:23', "Stephany ", "Eunice", "Arguera", "", "1978-03-12", "M");
+INSERT into BloodDonationRetrieval(bloodDonationID, claimDate, firstName, midName, lastName, suffix, birthdate, gender) VALUES(3, '2014-11-20 14:28:52', "Christopher", "Michaels", "Gardner", "Sr.", "1950-10-11", "M");
+INSERT into BloodDonationRetrieval(bloodDonationID, claimDate, firstName, midName, lastName, suffix, birthdate, gender) VALUES(5, '2008-12-24 12:21:42', "Dexter", "Splatters", "Morgan", "", "1972-08-24", "M");
+INSERT into BloodDonationRetrieval(bloodDonationID, claimDate, firstName, midName, lastName, suffix, birthdate, gender) VALUES(4, '2017-07-06 15:58:06', "Alexander", "Slave", "Hamilton", "", "2002-04-13", "M");
+
