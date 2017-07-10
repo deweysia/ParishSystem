@@ -52,7 +52,7 @@ namespace ParishSystem
             application_panel.Show();
             home_panel.Hide();
             profile_panel.Hide();
-          
+
         }
 
         private void home_menu_button_Click(object sender, EventArgs e)
@@ -113,7 +113,7 @@ namespace ParishSystem
 
         #region Profiles Tab
 
-        int lastGeneralProfile=0;
+        int lastGeneralProfile = 0;
 
         private void refreshGeneralProfileTable()
         {//refresh general profile table
@@ -132,8 +132,8 @@ namespace ParishSystem
             deleteProfile_button.Enabled = true;
 
             lastGeneralProfile = int.Parse(generalprofile_datagridview.CurrentRow.Cells["profileID"].Value.ToString());
-            firstname_textbox.Text=generalprofile_datagridview.CurrentRow.Cells["firstname"].Value.ToString();
-            middlename_textbox.Text=generalprofile_datagridview.CurrentRow.Cells["midname"].Value.ToString();
+            firstname_textbox.Text = generalprofile_datagridview.CurrentRow.Cells["firstname"].Value.ToString();
+            middlename_textbox.Text = generalprofile_datagridview.CurrentRow.Cells["midname"].Value.ToString();
             lastname_textbox.Text = generalprofile_datagridview.CurrentRow.Cells["lastname"].Value.ToString();
             suffix_textbox.Text = generalprofile_datagridview.CurrentRow.Cells["suffix"].Value.ToString();
 
@@ -142,19 +142,19 @@ namespace ParishSystem
 
         private void resetProfilesVariables()
         {//reset variables used by profiles tab
-             lastGeneralProfile = 0;
+            lastGeneralProfile = 0;
         }
- 
+
         private void addProfile_button_Click(object sender, EventArgs e)
         {//adds basic profile with name values only 
-            if (dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, '0',DateTime.MinValue , null, null, null)) { refreshGeneralProfileTable(); }
+            if (dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, '0', DateTime.MinValue, null, null, null)) { refreshGeneralProfileTable(); }
             else { MessageBox.Show("Entry not added"); }
             clearProfile();
         }
 
         private void openProfile_button_Click(object sender, EventArgs e)
         {//open person complete profile
-           
+
             Form person = new Person(lastGeneralProfile, dh);
             person.ShowDialog();
             clearProfile();
@@ -181,10 +181,10 @@ namespace ParishSystem
 
         private void clearProfile()
         {
-            lastname_textbox.Text="Last Name";
-            middlename_textbox.Text="Middle Name";
-            firstname_textbox.Text="First Name";
-            suffix_textbox.Text="Suffix";
+            lastname_textbox.Text = "Last Name";
+            middlename_textbox.Text = "Middle Name";
+            firstname_textbox.Text = "First Name";
+            suffix_textbox.Text = "Suffix";
             lastGeneralProfile = 0;
         }
         private void clear_profile_button_Click(object sender, EventArgs e)
@@ -334,17 +334,19 @@ namespace ParishSystem
 
             }
             //confirmation application
-            else if (A.Equals(newApplicant_checkbox_confirmationApplication)) {
-                if (A.Checked==true) {
+            else if (A.Equals(newApplicant_checkbox_confirmationApplication))
+            {
+                if (A.Checked == true)
+                {
                     existingName_panel_confirmationApplication.Enabled = false;
                     newName_panel_confirmationApplication.Visible = true;
                 }
-                else if(A.Checked == false)
+                else if (A.Checked == false)
                 {
                     existingName_panel_confirmationApplication.Enabled = true;
                     newName_panel_confirmationApplication.Visible = false;
                 }
-                
+
             }
             //marriage application
             //-groom
@@ -385,6 +387,6 @@ namespace ParishSystem
 
         }
 
-      
+
     }
 }

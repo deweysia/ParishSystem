@@ -165,21 +165,9 @@
             this.welcome_Text = new System.Windows.Forms.Label();
             this.username_Welcome_Text = new System.Windows.Forms.Label();
             this.flowLayout_ControlButtons = new System.Windows.Forms.FlowLayoutPanel();
-            this.profile_menu_button = new System.Windows.Forms.Button();
-            this.bloodletting_menu_button = new System.Windows.Forms.Button();
-            this.home_menu_button = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.application_menu_button = new System.Windows.Forms.Button();
+            this.btn_Close = new System.Windows.Forms.Button();
             this.btn_Min = new System.Windows.Forms.Button();
             this.btn_Max = new System.Windows.Forms.Button();
-            this.btn_Close = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_person = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.home_panel_menu.SuspendLayout();
@@ -193,7 +181,7 @@
             this.report_panel_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.application_panel_menu.SuspendLayout();
-            this.home_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.profile_panel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).BeginInit();
@@ -218,13 +206,6 @@
             this.panel_controlbox.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayout_ControlButtons.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_person)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -238,13 +219,24 @@
             this.flowLayoutPanel1.Controls.Add(this.report_panel_menu);
             this.flowLayoutPanel1.Controls.Add(this.application_panel_menu);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("LuzSans-Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 33);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(181, 512);
             this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::ParishSystem.Properties.Resources.sc_logo;
+            this.pictureBox5.Location = new System.Drawing.Point(1, 6);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(1);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(178, 52);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 38;
+            this.pictureBox5.TabStop = false;
             // 
             // home_panel_menu
             // 
@@ -263,11 +255,12 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("LuzSans-Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(68, 20);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 22);
+            this.label8.Size = new System.Drawing.Size(52, 20);
             this.label8.TabIndex = 2;
             this.label8.Text = "Home";
             // 
@@ -301,11 +294,12 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("LuzSans-Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(73, 18);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 22);
+            this.label12.Size = new System.Drawing.Size(61, 20);
             this.label12.TabIndex = 3;
             this.label12.Text = "Profiles";
             // 
@@ -340,11 +334,12 @@
             // bloodletting_label_menu
             // 
             this.bloodletting_label_menu.AutoSize = true;
-            this.bloodletting_label_menu.Font = new System.Drawing.Font("LuzSans-Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodletting_label_menu.BackColor = System.Drawing.Color.Transparent;
+            this.bloodletting_label_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bloodletting_label_menu.ForeColor = System.Drawing.Color.White;
             this.bloodletting_label_menu.Location = new System.Drawing.Point(73, 17);
             this.bloodletting_label_menu.Name = "bloodletting_label_menu";
-            this.bloodletting_label_menu.Size = new System.Drawing.Size(104, 22);
+            this.bloodletting_label_menu.Size = new System.Drawing.Size(93, 20);
             this.bloodletting_label_menu.TabIndex = 3;
             this.bloodletting_label_menu.Text = "Bloodletting";
             // 
@@ -378,11 +373,12 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("LuzSans-Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(68, 20);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 22);
+            this.label15.Size = new System.Drawing.Size(66, 20);
             this.label15.TabIndex = 3;
             this.label15.Text = "Finance";
             // 
@@ -473,7 +469,7 @@
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(68, 17);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 22);
+            this.label13.Size = new System.Drawing.Size(95, 20);
             this.label13.TabIndex = 3;
             this.label13.Text = "Applications";
             // 
@@ -508,7 +504,7 @@
             this.home_panel.Location = new System.Drawing.Point(181, 33);
             this.home_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.home_panel.Name = "home_panel";
-            this.home_panel.Size = new System.Drawing.Size(831, 632);
+            this.home_panel.Size = new System.Drawing.Size(753, 512);
             this.home_panel.TabIndex = 1;
             // 
             // profile_panel
@@ -710,8 +706,8 @@
             // 
             // generalprofile_datagridview
             // 
-            this.generalprofile_datagridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.generalprofile_datagridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.generalprofile_datagridview.BackgroundColor = System.Drawing.Color.White;
             this.generalprofile_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -942,8 +938,8 @@
             // 
             // baptismApplication_DataGridView
             // 
-            this.baptismApplication_DataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.baptismApplication_DataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.baptismApplication_DataGridView.BackgroundColor = System.Drawing.Color.White;
             this.baptismApplication_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1158,8 +1154,8 @@
             // 
             // confirmationApplication_DataGridView
             // 
-            this.confirmationApplication_DataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.confirmationApplication_DataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.confirmationApplication_DataGridView.BackgroundColor = System.Drawing.Color.White;
             this.confirmationApplication_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1245,7 +1241,7 @@
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.Controls.Add(this.groomExisting_panel_marriageApplication);
@@ -1416,12 +1412,12 @@
             // 
             // brideExisting_panel_marriageApplication
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 82);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(801, 425);
-            this.dataGridView2.TabIndex = 7;
+            this.brideExisting_panel_marriageApplication.Controls.Add(this.name_bride_combobox_marriageApplication);
+            this.brideExisting_panel_marriageApplication.Controls.Add(this.label25);
+            this.brideExisting_panel_marriageApplication.Location = new System.Drawing.Point(3, 281);
+            this.brideExisting_panel_marriageApplication.Name = "brideExisting_panel_marriageApplication";
+            this.brideExisting_panel_marriageApplication.Size = new System.Drawing.Size(267, 116);
+            this.brideExisting_panel_marriageApplication.TabIndex = 58;
             // 
             // name_bride_combobox_marriageApplication
             // 
@@ -1444,12 +1440,16 @@
             // 
             // newBride_checkbox_marriageApplication
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 82);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(801, 425);
-            this.dataGridView3.TabIndex = 7;
+            this.newBride_checkbox_marriageApplication.AutoSize = true;
+            this.newBride_checkbox_marriageApplication.Font = new System.Drawing.Font("Calibri", 12F);
+            this.newBride_checkbox_marriageApplication.ForeColor = System.Drawing.Color.Black;
+            this.newBride_checkbox_marriageApplication.Location = new System.Drawing.Point(3, 403);
+            this.newBride_checkbox_marriageApplication.Name = "newBride_checkbox_marriageApplication";
+            this.newBride_checkbox_marriageApplication.Size = new System.Drawing.Size(170, 23);
+            this.newBride_checkbox_marriageApplication.TabIndex = 55;
+            this.newBride_checkbox_marriageApplication.Text = "New Applicant (Bride)";
+            this.newBride_checkbox_marriageApplication.UseVisualStyleBackColor = true;
+            this.newBride_checkbox_marriageApplication.CheckStateChanged += new System.EventHandler(this.newApplicant_checkbox_confirmationApplication_CheckedChanged);
             // 
             // brideNew_panel_marriageApplication
             // 
@@ -1606,8 +1606,8 @@
             // 
             // marriageApplication_dataGridView
             // 
-            this.marriageApplication_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.marriageApplication_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.marriageApplication_dataGridView.BackgroundColor = System.Drawing.Color.White;
             this.marriageApplication_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1645,7 +1645,7 @@
             this.bloodletting_panel.Controls.Add(this.label6);
             this.bloodletting_panel.Controls.Add(this.button8);
             this.bloodletting_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bloodletting_panel.Location = new System.Drawing.Point(1865, 41);
+            this.bloodletting_panel.Location = new System.Drawing.Point(181, 33);
             this.bloodletting_panel.Name = "bloodletting_panel";
             this.bloodletting_panel.Size = new System.Drawing.Size(753, 512);
             this.bloodletting_panel.TabIndex = 4;
@@ -1899,79 +1899,22 @@
             this.flowLayout_ControlButtons.Size = new System.Drawing.Size(110, 33);
             this.flowLayout_ControlButtons.TabIndex = 20;
             // 
-            // profile_menu_button
+            // btn_Close
             // 
-            this.profile_menu_button.BackgroundImage = global::ParishSystem.Properties.Resources.Gender_Neutral_User_96px;
-            this.profile_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.profile_menu_button.FlatAppearance.BorderSize = 0;
-            this.profile_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.profile_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profile_menu_button.Location = new System.Drawing.Point(303, 354);
-            this.profile_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.profile_menu_button.Name = "profile_menu_button";
-            this.profile_menu_button.Size = new System.Drawing.Size(133, 55);
-            this.profile_menu_button.TabIndex = 4;
-            this.profile_menu_button.UseVisualStyleBackColor = true;
-            this.profile_menu_button.Click += new System.EventHandler(this.profile_menu_button_Click);
-            // 
-            // bloodletting_menu_button
-            // 
-            this.bloodletting_menu_button.BackgroundImage = global::ParishSystem.Properties.Resources.Syringe_96px;
-            this.bloodletting_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bloodletting_menu_button.FlatAppearance.BorderSize = 0;
-            this.bloodletting_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bloodletting_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bloodletting_menu_button.Location = new System.Drawing.Point(274, 189);
-            this.bloodletting_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.bloodletting_menu_button.Name = "bloodletting_menu_button";
-            this.bloodletting_menu_button.Size = new System.Drawing.Size(53, 55);
-            this.bloodletting_menu_button.TabIndex = 0;
-            this.bloodletting_menu_button.UseVisualStyleBackColor = true;
-            // 
-            // home_menu_button
-            // 
-            this.home_menu_button.AutoSize = true;
-            this.home_menu_button.BackgroundImage = global::ParishSystem.Properties.Resources.Home_96px;
-            this.home_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.home_menu_button.FlatAppearance.BorderSize = 0;
-            this.home_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.home_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.home_menu_button.Location = new System.Drawing.Point(340, 176);
-            this.home_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.home_menu_button.Name = "home_menu_button";
-            this.home_menu_button.Size = new System.Drawing.Size(96, 56);
-            this.home_menu_button.TabIndex = 0;
-            this.home_menu_button.UseVisualStyleBackColor = true;
-            this.home_menu_button.Click += new System.EventHandler(this.home_menu_button_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImage = global::ParishSystem.Properties.Resources.FIcon;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(85, 401);
-            this.button7.Margin = new System.Windows.Forms.Padding(0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(146, 62);
-            this.button7.TabIndex = 5;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // application_menu_button
-            // 
-            this.application_menu_button.BackgroundImage = global::ParishSystem.Properties.Resources.FIcon;
-            this.application_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.application_menu_button.FlatAppearance.BorderSize = 0;
-            this.application_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.application_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.application_menu_button.Location = new System.Drawing.Point(48, 322);
-            this.application_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.application_menu_button.Name = "application_menu_button";
-            this.application_menu_button.Size = new System.Drawing.Size(146, 62);
-            this.application_menu_button.TabIndex = 1;
-            this.application_menu_button.UseVisualStyleBackColor = true;
-            this.application_menu_button.Click += new System.EventHandler(this.application_menu_button_Click);
+            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Close.BackgroundImage = global::ParishSystem.Properties.Resources.btn_closeImage;
+            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Close.FlatAppearance.BorderSize = 0;
+            this.btn_Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Close.Location = new System.Drawing.Point(79, 4);
+            this.btn_Close.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(27, 25);
+            this.btn_Close.TabIndex = 34;
+            this.btn_Close.UseVisualStyleBackColor = true;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
             // btn_Min
             // 
@@ -2005,112 +1948,6 @@
             this.btn_Max.Size = new System.Drawing.Size(27, 25);
             this.btn_Max.TabIndex = 33;
             this.btn_Max.UseVisualStyleBackColor = true;
-            // 
-            // btn_Close
-            // 
-            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Close.BackgroundImage = global::ParishSystem.Properties.Resources.btn_closeImage;
-            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Close.FlatAppearance.BorderSize = 0;
-            this.btn_Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Close.Location = new System.Drawing.Point(103, 4);
-            this.btn_Close.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(40, 32);
-            this.btn_Close.TabIndex = 34;
-            this.btn_Close.UseVisualStyleBackColor = true;
-            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::ParishSystem.Properties.Resources.sc_logo;
-            this.pictureBox5.Location = new System.Drawing.Point(1, 6);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(1);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(194, 52);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 38;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Image = global::ParishSystem.Properties.Resources.Home;
-            this.pictureBox2.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox_person
-            // 
-            this.pictureBox_person.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox_person.Image = global::ParishSystem.Properties.Resources.Gender;
-            this.pictureBox_person.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox_person.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox_person.Name = "pictureBox_person";
-            this.pictureBox_person.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox_person.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox_person.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_person.TabIndex = 1;
-            this.pictureBox_person.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::ParishSystem.Properties.Resources.HeartPulse;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Image = global::ParishSystem.Properties.Resources.Money;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox4.Image = global::ParishSystem.Properties.Resources.ReportCard;
-            this.pictureBox4.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox6.Image = global::ParishSystem.Properties.Resources.Report_Card_96px;
-            this.pictureBox6.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
             // 
             // SAD
             // 
@@ -2148,8 +1985,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.application_panel_menu.ResumeLayout(false);
             this.application_panel_menu.PerformLayout();
-            this.home_panel.ResumeLayout(false);
-            this.home_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.profile_panel.ResumeLayout(false);
             this.profile_panel.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -2192,13 +2028,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.flowLayout_ControlButtons.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_person)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2208,14 +2037,27 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button bloodletting_menu_button;
         private System.Windows.Forms.Panel home_panel;
+        private System.Windows.Forms.Panel profile_panel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button deleteProfile_button;
+        private System.Windows.Forms.Button addProfile_button;
+        private System.Windows.Forms.TextBox suffix_textbox;
+        private System.Windows.Forms.TextBox lastname_textbox;
+        private System.Windows.Forms.TextBox middlename_textbox;
+        private System.Windows.Forms.TextBox birthplace_textbox_baptist;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox firstname_textbox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox searchBar;
+        private System.Windows.Forms.DataGridView generalprofile_datagridview;
+        private System.Windows.Forms.Button openProfile_button;
         private System.Windows.Forms.Button btn_Min;
         private System.Windows.Forms.Button btn_Max;
         private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.Button application_menu_button;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label username_label;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label time_Text;
+        private System.Windows.Forms.Button clear_profile_button;
         private System.Windows.Forms.Panel application_panel;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel bloodletting_panel;
@@ -2257,5 +2099,80 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label marriageApplication_label;
+        private System.Windows.Forms.Label confirmationApplication_label;
+        private System.Windows.Forms.Label baptismApplication_label;
+        private System.Windows.Forms.Panel baptismApplication_panel;
+        private System.Windows.Forms.Panel newName_panel_baptismApplication;
+        private System.Windows.Forms.TextBox lastname_textbox_baptismApplication;
+        private System.Windows.Forms.Button add_button_baptismApplication;
+        private System.Windows.Forms.TextBox suffix_textbox_baptismApplication;
+        private System.Windows.Forms.TextBox firstname_textbox_baptismApplication;
+        private System.Windows.Forms.TextBox middlename_textbox_baptismApplication;
+        private System.Windows.Forms.Label firstname_label_baptism;
+        private System.Windows.Forms.TextBox search_textbox_baptismApplication;
+        private System.Windows.Forms.Button confirm_button_baptismApplication;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox newApplicant_checkbox_baptismApplication;
+        private System.Windows.Forms.ComboBox name_combobox_baptismApplication;
+        private System.Windows.Forms.Button delete_button_baptismApplication;
+        private System.Windows.Forms.DataGridView baptismApplication_DataGridView;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel confirmationApplication_panel;
+        private System.Windows.Forms.Panel newName_panel_confirmationApplication;
+        private System.Windows.Forms.TextBox lastname_textbox_confirmationApplication;
+        private System.Windows.Forms.Button add_button_confirmationApplication;
+        private System.Windows.Forms.TextBox suffix_textbox_confirmationApplication;
+        private System.Windows.Forms.TextBox firstname_textbox_confirmationApplication;
+        private System.Windows.Forms.TextBox middlename_textbox_confirmationApplication;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox search_textbox_confirmationApplication;
+        private System.Windows.Forms.Button confirm_button_confirmationApplication;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.CheckBox newApplicant_checkbox_confirmationApplication;
+        private System.Windows.Forms.ComboBox name_combobox_confirmationApplication;
+        private System.Windows.Forms.Button delete_button_confirmationApplication;
+        private System.Windows.Forms.DataGridView confirmationApplication_DataGridView;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel marriageApplication_panel;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Panel groomExisting_panel_marriageApplication;
+        private System.Windows.Forms.ComboBox name_groom_combobox_marriageApplication;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.CheckBox newGroom_checkbox_marriageApplication;
+        private System.Windows.Forms.Panel groomNew_panel_marriageApplication;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox lastname_groom_marriageApplication;
+        private System.Windows.Forms.TextBox suffix_groom_marriageApplication;
+        private System.Windows.Forms.TextBox firstname_groom_marriageApplication;
+        private System.Windows.Forms.TextBox middlename_groom_marriageApplication;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Panel brideExisting_panel_marriageApplication;
+        private System.Windows.Forms.ComboBox name_bride_combobox_marriageApplication;
+        private System.Windows.Forms.Button confirm_button_marriageApplication;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.CheckBox newBride_checkbox_marriageApplication;
+        private System.Windows.Forms.Panel brideNew_panel_marriageApplication;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox lastname_textbox_bride_marriageApplication;
+        private System.Windows.Forms.TextBox suffix_textbox_bride_marriageApplication;
+        private System.Windows.Forms.TextBox firstname_textbox_bride_marriageApplication;
+        private System.Windows.Forms.TextBox middlename_textbox_bride_marriageApplication;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox search_textbox_marriageApplication;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView marriageApplication_dataGridView;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Panel existingName_panel_baptismApplication;
+        private System.Windows.Forms.Panel existingName_panel_confirmationApplication;
     }
 }
