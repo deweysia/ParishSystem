@@ -249,7 +249,6 @@
             this.home_panel_menu.Size = new System.Drawing.Size(178, 50);
             this.home_panel_menu.TabIndex = 2;
             this.home_panel_menu.Click += new System.EventHandler(this.home_panel_menu_Click);
-            this.home_panel_menu.Paint += new System.Windows.Forms.PaintEventHandler(this.home_panel_menu_Paint);
             this.home_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
             this.home_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
             // 
