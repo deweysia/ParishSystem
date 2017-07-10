@@ -380,5 +380,46 @@ namespace ParishSystem
         {
 
         }
+
+        private void label_CD_Click(object sender, EventArgs e)
+        {
+            Label A = sender as Label;
+            if (A.Equals(parish_label_CD)) {
+                //label changes
+                parish_label_CD.Font = new Font(baptismApplication_label.Font, FontStyle.Bold);
+                parish_label_CD.ForeColor = Color.DodgerBlue;
+                community_label_CD.Font = new Font(baptismApplication_label.Font, FontStyle.Regular);
+                community_label_CD.ForeColor = Color.Black;
+                postulancy_label_CD.Font = new Font(baptismApplication_label.Font, FontStyle.Regular);
+                postulancy_label_CD.ForeColor = Color.Black;
+
+                //panel changes
+                parish_panel_CD.BringToFront();
+            }
+            else if (A.Equals(community_label_CD)) {
+                //label changes
+                parish_label_CD.Font = new Font(baptismApplication_label.Font, FontStyle.Regular);
+                parish_label_CD.ForeColor = Color.Black;
+                community_label_CD.Font = new Font(baptismApplication_label.Font, FontStyle.Bold);
+                community_label_CD.ForeColor = Color.DodgerBlue;
+                postulancy_label_CD.Font = new Font(baptismApplication_label.Font, FontStyle.Regular);
+                postulancy_label_CD.ForeColor = Color.Black;
+
+                //panel changes
+                community_panel_CD.BringToFront();
+            }
+            else if (A.Equals(postulancy_label_CD)) {
+                //label changes
+                parish_label_CD.Font = new Font(baptismApplication_label.Font, FontStyle.Regular);
+                parish_label_CD.ForeColor = Color.Black;
+                community_label_CD.Font = new Font(baptismApplication_label.Font, FontStyle.Regular);
+                community_label_CD.ForeColor = Color.Black;
+                postulancy_label_CD.Font = new Font(baptismApplication_label.Font, FontStyle.Bold);
+                postulancy_label_CD.ForeColor = Color.DodgerBlue;
+
+                //panel changes
+                postulancy_panel_CD.BringToFront();
+            }
+        }
     }
 }
