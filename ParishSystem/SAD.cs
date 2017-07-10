@@ -49,6 +49,11 @@ namespace ParishSystem
             this.Close();
         }
 
+        private void btn_Max_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
         private void btn_Min_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -58,7 +63,10 @@ namespace ParishSystem
         {
             Panel A = sender as Panel;
             if (A.Equals(home_panel_menu)) { home_panel.BringToFront(); }
-            else if (A.Equals(profile_panel_menu)) { profile_panel.BringToFront(); }
+            else if (A.Equals(profile_panel_menu))
+                    { profile_panel.BringToFront();
+                      refreshGeneralProfileTable();
+            }
             else if (A.Equals(bloodletting_panel_menu)) { bloodletting_panel.BringToFront(); }
             else if (A.Equals(CDB_panel_menu)) { CDB_panel.BringToFront(); }
             else if (A.Equals(report_panel_menu)) { }
@@ -116,6 +124,7 @@ namespace ParishSystem
             generalprofile_datagridview.Columns["midName"].Visible = false;
             generalprofile_datagridview.Columns["lastName"].Visible = false;
             generalprofile_datagridview.Columns["suffix"].Visible = false;
+            generalprofile_datagridview.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void generalprofile_datagridview_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -136,7 +145,7 @@ namespace ParishSystem
         {//adds basic profile with name values only 
             if (dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, '0',DateTime.MinValue , null, null, null)) { refreshGeneralProfileTable(); }
             else { MessageBox.Show("Entry not added"); }
-            clearProfile();
+            AddPNL.Visible = false;
         }
 
         private void openProfile_button_Click(object sender, EventArgs e)
@@ -184,10 +193,7 @@ namespace ParishSystem
 
         private void clear_profile_button_Click(object sender, EventArgs e)
         {
-            clearProfile();
-            deleteProfile_button.Enabled = false;
-            openProfile_button.Enabled = false;
-            addProfile_button.Enabled = false;
+            AddPNL.Visible = false;
 
         }
 
@@ -363,15 +369,23 @@ namespace ParishSystem
                 postulancy_panel_CD.BringToFront();
             }
         }
+
+
+
+
+
+
         #endregion
-    
 
         #region CRB
         //--------------------------CRB----------------------------//
 
         #endregion
 
-      
-
+        private void AddBTN_Click(object sender, EventArgs e)
+        {
+            AddPNL.BringToFront();
+            AddPNL.Visible = true;
+        }
     }
 }
