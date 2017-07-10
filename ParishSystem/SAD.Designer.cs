@@ -166,8 +166,8 @@
             this.username_Welcome_Text = new System.Windows.Forms.Label();
             this.flowLayout_ControlButtons = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_Close = new System.Windows.Forms.Button();
-            this.btn_Min = new System.Windows.Forms.Button();
             this.btn_Max = new System.Windows.Forms.Button();
+            this.btn_Min = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.home_panel_menu.SuspendLayout();
@@ -288,6 +288,7 @@
             this.profile_panel_menu.Size = new System.Drawing.Size(176, 50);
             this.profile_panel_menu.TabIndex = 0;
             this.profile_panel_menu.Click += new System.EventHandler(this.profile_panel_menu_Click);
+            this.profile_panel_menu.Enter += new System.EventHandler(this.profile_panel_menu_Enter);
             this.profile_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
             this.profile_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
             // 
@@ -545,7 +546,7 @@
             this.clear_profile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_profile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clear_profile_button.ForeColor = System.Drawing.Color.White;
-            this.clear_profile_button.Location = new System.Drawing.Point(9, 120);
+            this.clear_profile_button.Location = new System.Drawing.Point(8, 120);
             this.clear_profile_button.Name = "clear_profile_button";
             this.clear_profile_button.Size = new System.Drawing.Size(100, 31);
             this.clear_profile_button.TabIndex = 31;
@@ -560,9 +561,9 @@
             this.deleteProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteProfile_button.ForeColor = System.Drawing.Color.White;
-            this.deleteProfile_button.Location = new System.Drawing.Point(115, 122);
+            this.deleteProfile_button.Location = new System.Drawing.Point(115, 120);
             this.deleteProfile_button.Name = "deleteProfile_button";
-            this.deleteProfile_button.Size = new System.Drawing.Size(100, 29);
+            this.deleteProfile_button.Size = new System.Drawing.Size(100, 31);
             this.deleteProfile_button.TabIndex = 30;
             this.deleteProfile_button.Text = "Delete Profile";
             this.deleteProfile_button.UseVisualStyleBackColor = false;
@@ -575,7 +576,7 @@
             this.openProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.openProfile_button.ForeColor = System.Drawing.Color.White;
-            this.openProfile_button.Location = new System.Drawing.Point(327, 122);
+            this.openProfile_button.Location = new System.Drawing.Point(327, 120);
             this.openProfile_button.Name = "openProfile_button";
             this.openProfile_button.Size = new System.Drawing.Size(100, 31);
             this.openProfile_button.TabIndex = 29;
@@ -590,7 +591,7 @@
             this.addProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addProfile_button.ForeColor = System.Drawing.Color.White;
-            this.addProfile_button.Location = new System.Drawing.Point(221, 122);
+            this.addProfile_button.Location = new System.Drawing.Point(221, 120);
             this.addProfile_button.Name = "addProfile_button";
             this.addProfile_button.Size = new System.Drawing.Size(100, 31);
             this.addProfile_button.TabIndex = 29;
@@ -611,6 +612,8 @@
             this.suffix_textbox.Text = "Suffix";
             this.suffix_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.suffix_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.suffix_textbox_MouseClick);
+            this.suffix_textbox.Enter += new System.EventHandler(this.suffix_textbox_Enter);
+            this.suffix_textbox.Leave += new System.EventHandler(this.suffix_textbox_Leave);
             // 
             // lastname_textbox
             // 
@@ -625,6 +628,8 @@
             this.lastname_textbox.Text = "Last Name";
             this.lastname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.lastname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lastname_textbox_MouseClick);
+            this.lastname_textbox.Enter += new System.EventHandler(this.lastname_textbox_Enter);
+            this.lastname_textbox.Leave += new System.EventHandler(this.lastname_textbox_Leave);
             // 
             // middlename_textbox
             // 
@@ -639,6 +644,8 @@
             this.middlename_textbox.Text = "Middle Name";
             this.middlename_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.middlename_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.middlename_textbox_MouseClick);
+            this.middlename_textbox.Enter += new System.EventHandler(this.middlename_textbox_Enter);
+            this.middlename_textbox.Leave += new System.EventHandler(this.middlename_textbox_Leave);
             // 
             // birthplace_textbox_baptist
             // 
@@ -673,6 +680,8 @@
             this.firstname_textbox.Text = "First Name";
             this.firstname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.firstname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.firstname_textbox_MouseClick);
+            this.firstname_textbox.Enter += new System.EventHandler(this.firstname_textbox_Enter);
+            this.firstname_textbox.Leave += new System.EventHandler(this.firstname_textbox_Leave);
             // 
             // label2
             // 
@@ -1890,8 +1899,8 @@
             // flowLayout_ControlButtons
             // 
             this.flowLayout_ControlButtons.Controls.Add(this.btn_Close);
-            this.flowLayout_ControlButtons.Controls.Add(this.btn_Min);
             this.flowLayout_ControlButtons.Controls.Add(this.btn_Max);
+            this.flowLayout_ControlButtons.Controls.Add(this.btn_Min);
             this.flowLayout_ControlButtons.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayout_ControlButtons.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayout_ControlButtons.Location = new System.Drawing.Point(824, 0);
@@ -1916,23 +1925,6 @@
             this.btn_Close.UseVisualStyleBackColor = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
-            // btn_Min
-            // 
-            this.btn_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Min.BackgroundImage = global::ParishSystem.Properties.Resources.btn_minImage;
-            this.btn_Min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Min.FlatAppearance.BorderSize = 0;
-            this.btn_Min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_Min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Min.Location = new System.Drawing.Point(41, 4);
-            this.btn_Min.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Min.Name = "btn_Min";
-            this.btn_Min.Size = new System.Drawing.Size(30, 25);
-            this.btn_Min.TabIndex = 32;
-            this.btn_Min.UseVisualStyleBackColor = true;
-            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
-            // 
             // btn_Max
             // 
             this.btn_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1942,12 +1934,29 @@
             this.btn_Max.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Max.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Max.Location = new System.Drawing.Point(6, 4);
+            this.btn_Max.Location = new System.Drawing.Point(44, 4);
             this.btn_Max.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Max.Name = "btn_Max";
             this.btn_Max.Size = new System.Drawing.Size(27, 25);
             this.btn_Max.TabIndex = 33;
             this.btn_Max.UseVisualStyleBackColor = true;
+            // 
+            // btn_Min
+            // 
+            this.btn_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Min.BackgroundImage = global::ParishSystem.Properties.Resources.btn_minImage;
+            this.btn_Min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Min.FlatAppearance.BorderSize = 0;
+            this.btn_Min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Min.Location = new System.Drawing.Point(6, 4);
+            this.btn_Min.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Min.Name = "btn_Min";
+            this.btn_Min.Size = new System.Drawing.Size(30, 25);
+            this.btn_Min.TabIndex = 32;
+            this.btn_Min.UseVisualStyleBackColor = true;
+            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
             // 
             // SAD
             // 
@@ -1955,10 +1964,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(934, 545);
+            this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.home_panel);
             this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.application_panel);
-            this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel_controlbox);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

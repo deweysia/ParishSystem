@@ -387,6 +387,58 @@ namespace ParishSystem
 
         }
 
+        private void profile_panel_menu_Enter(object sender, EventArgs e)
+        {
 
+        }
+
+        private void firstname_textbox_Enter(object sender, EventArgs e)
+        {
+            if (firstname_textbox.Text == "First Name")
+                firstname_textbox.Text = "";
+        }
+
+        private void middlename_textbox_Enter(object sender, EventArgs e)
+        {
+            if (middlename_textbox.Text == "First Name")
+                middlename_textbox.Text = "";
+        }
+
+        private void lastname_textbox_Enter(object sender, EventArgs e)
+        {
+            if (lastname_textbox.Text == "Last Name")
+                lastname_textbox.Text = "";
+        }
+
+        private void suffix_textbox_Enter(object sender, EventArgs e)
+        {
+            if (suffix_textbox.Text == "Suffix")
+                suffix_textbox.Text = "";
+        }
+
+        private void middlename_textbox_Leave(object sender, EventArgs e)
+        {
+
+            if (String.IsNullOrWhiteSpace(middlename_textbox.Text))
+                middlename_textbox.Text = "Middle Name";
+        }
+
+        private void firstname_textbox_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(firstname_textbox.Text))
+                firstname_textbox.Text = "First Name";
+        }
+
+        private void lastname_textbox_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(lastname_textbox.Text))
+                lastname_textbox.Text = "Last Name";
+        }
+
+        private void suffix_textbox_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(suffix_textbox.Text))
+                suffix_textbox.Text = "Suffix";
+        }
     }
 }
