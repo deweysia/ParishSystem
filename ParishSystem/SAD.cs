@@ -227,31 +227,40 @@ namespace ParishSystem
         private void home_panel_menu_Click(object sender, EventArgs e)
         {
             home_panel.BringToFront();
+            Console.WriteLine("Home Panel");
         }
 
         private void profile_panel_menu_Click(object sender, EventArgs e)
         {
             profile_panel.BringToFront();
+            Console.WriteLine("Profile Panel");
         }
 
         private void bloodletting_panel_menu_Click(object sender, EventArgs e)
         {
             bloodletting_panel.BringToFront();
+            Console.WriteLine("Bloodletting Panel");
         }
 
         private void income_panel_menu_Click(object sender, EventArgs e)
         {
-            
+            Console.WriteLine("Income Panel");
         }
 
         private void report_panel_menu_Click(object sender, EventArgs e)
         {
-            
+            Console.WriteLine("Report Panel");
         }
 
         private void application_panel_menu_Click(object sender, EventArgs e)
         {
             application_panel.BringToFront();
+            Console.WriteLine("Application Panel");
+        }
+
+        private void home_panel_menu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
