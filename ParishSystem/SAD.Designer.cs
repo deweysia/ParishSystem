@@ -39,30 +39,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SAD));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.home_panel_menu = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.profile_panel_menu = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox_person = new System.Windows.Forms.PictureBox();
-            this.bloodletting_panel_menu = new System.Windows.Forms.Panel();
-            this.bloodletting_label_menu = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.application_panel_menu = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.CRB_panel_menu = new System.Windows.Forms.Panel();
-            this.label62 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.CDB_panel_menu = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.library_panel_menu = new System.Windows.Forms.Panel();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.home_panel = new System.Windows.Forms.Panel();
             this.profile_panel = new System.Windows.Forms.Panel();
             this.AddBTN = new System.Windows.Forms.Button();
@@ -159,14 +135,9 @@
             this.marriageApplication_dataGridView = new System.Windows.Forms.DataGridView();
             this.label27 = new System.Windows.Forms.Label();
             this.bloodletting_panel = new System.Windows.Forms.Panel();
-            this.profile_menu_button = new System.Windows.Forms.Button();
-            this.bloodletting_menu_button = new System.Windows.Forms.Button();
-            this.home_menu_button = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.application_menu_button = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -179,9 +150,6 @@
             this.welcome_Text = new System.Windows.Forms.Label();
             this.username_Welcome_Text = new System.Windows.Forms.Label();
             this.flowLayout_ControlButtons = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_Close = new System.Windows.Forms.Button();
-            this.btn_Min = new System.Windows.Forms.Button();
-            this.btn_Max = new System.Windows.Forms.Button();
             this.CDB_panel = new System.Windows.Forms.Panel();
             this.label51 = new System.Windows.Forms.Label();
             this.parish_panel_CD = new System.Windows.Forms.Panel();
@@ -295,6 +263,7 @@
             this.label71 = new System.Windows.Forms.Label();
             this.baptism_panel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -304,23 +273,24 @@
             this.imageListMenu = new System.Windows.Forms.ImageList(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.profile_menu_button = new System.Windows.Forms.Button();
+            this.bloodletting_menu_button = new System.Windows.Forms.Button();
+            this.home_menu_button = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.application_menu_button = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.home_button_menu = new System.Windows.Forms.Button();
+            this.bloodletting_button_menu = new System.Windows.Forms.Button();
+            this.profile_button_menu = new System.Windows.Forms.Button();
+            this.application_button_menu = new System.Windows.Forms.Button();
+            this.CRB_button_menu = new System.Windows.Forms.Button();
+            this.CDB_button_menu = new System.Windows.Forms.Button();
+            this.library_button_menu = new System.Windows.Forms.Button();
+            this.btn_Close = new System.Windows.Forms.Button();
+            this.btn_Min = new System.Windows.Forms.Button();
+            this.btn_Max = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.home_panel_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.profile_panel_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_person)).BeginInit();
-            this.bloodletting_panel_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.application_panel_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.CRB_panel_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.CDB_panel_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.library_panel_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.profile_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).BeginInit();
             this.AddPNL.SuspendLayout();
@@ -368,19 +338,20 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profiles_dataGridView_baptism)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.flowLayoutPanel1.Controls.Add(this.pictureBox5);
-            this.flowLayoutPanel1.Controls.Add(this.home_panel_menu);
-            this.flowLayoutPanel1.Controls.Add(this.profile_panel_menu);
-            this.flowLayoutPanel1.Controls.Add(this.bloodletting_panel_menu);
-            this.flowLayoutPanel1.Controls.Add(this.application_panel_menu);
-            this.flowLayoutPanel1.Controls.Add(this.CRB_panel_menu);
-            this.flowLayoutPanel1.Controls.Add(this.CDB_panel_menu);
-            this.flowLayoutPanel1.Controls.Add(this.library_panel_menu);
+            this.flowLayoutPanel1.Controls.Add(this.home_button_menu);
+            this.flowLayoutPanel1.Controls.Add(this.profile_button_menu);
+            this.flowLayoutPanel1.Controls.Add(this.library_button_menu);
+            this.flowLayoutPanel1.Controls.Add(this.bloodletting_button_menu);
+            this.flowLayoutPanel1.Controls.Add(this.application_button_menu);
+            this.flowLayoutPanel1.Controls.Add(this.CRB_button_menu);
+            this.flowLayoutPanel1.Controls.Add(this.CDB_button_menu);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 33);
@@ -389,312 +360,6 @@
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(181, 512);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::ParishSystem.Properties.Resources.sc_logo;
-            this.pictureBox5.Location = new System.Drawing.Point(1, 6);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(1);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(178, 10);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 38;
-            this.pictureBox5.TabStop = false;
-            // 
-            // home_panel_menu
-            // 
-            this.home_panel_menu.Controls.Add(this.label8);
-            this.home_panel_menu.Controls.Add(this.pictureBox2);
-            this.home_panel_menu.Location = new System.Drawing.Point(1, 18);
-            this.home_panel_menu.Margin = new System.Windows.Forms.Padding(1);
-            this.home_panel_menu.Name = "home_panel_menu";
-            this.home_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.home_panel_menu.Size = new System.Drawing.Size(178, 50);
-            this.home_panel_menu.TabIndex = 2;
-            this.home_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
-            this.home_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
-            this.home_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(68, 20);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 20);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Home";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Image = global::ParishSystem.Properties.Resources.Home;
-            this.pictureBox2.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // profile_panel_menu
-            // 
-            this.profile_panel_menu.Controls.Add(this.label12);
-            this.profile_panel_menu.Controls.Add(this.pictureBox_person);
-            this.profile_panel_menu.Location = new System.Drawing.Point(1, 70);
-            this.profile_panel_menu.Margin = new System.Windows.Forms.Padding(1);
-            this.profile_panel_menu.Name = "profile_panel_menu";
-            this.profile_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.profile_panel_menu.Size = new System.Drawing.Size(176, 50);
-            this.profile_panel_menu.TabIndex = 0;
-            this.profile_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
-            this.profile_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
-            this.profile_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(73, 18);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 20);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Profiles";
-            // 
-            // pictureBox_person
-            // 
-            this.pictureBox_person.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox_person.Image = global::ParishSystem.Properties.Resources.Gender;
-            this.pictureBox_person.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox_person.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox_person.Name = "pictureBox_person";
-            this.pictureBox_person.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox_person.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox_person.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_person.TabIndex = 1;
-            this.pictureBox_person.TabStop = false;
-            // 
-            // bloodletting_panel_menu
-            // 
-            this.bloodletting_panel_menu.AccessibleDescription = "";
-            this.bloodletting_panel_menu.Controls.Add(this.bloodletting_label_menu);
-            this.bloodletting_panel_menu.Controls.Add(this.pictureBox1);
-            this.bloodletting_panel_menu.Location = new System.Drawing.Point(1, 122);
-            this.bloodletting_panel_menu.Margin = new System.Windows.Forms.Padding(1);
-            this.bloodletting_panel_menu.Name = "bloodletting_panel_menu";
-            this.bloodletting_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.bloodletting_panel_menu.Size = new System.Drawing.Size(176, 50);
-            this.bloodletting_panel_menu.TabIndex = 2;
-            this.bloodletting_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
-            this.bloodletting_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
-            this.bloodletting_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
-            // 
-            // bloodletting_label_menu
-            // 
-            this.bloodletting_label_menu.AutoSize = true;
-            this.bloodletting_label_menu.BackColor = System.Drawing.Color.Transparent;
-            this.bloodletting_label_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bloodletting_label_menu.ForeColor = System.Drawing.Color.White;
-            this.bloodletting_label_menu.Location = new System.Drawing.Point(73, 17);
-            this.bloodletting_label_menu.Name = "bloodletting_label_menu";
-            this.bloodletting_label_menu.Size = new System.Drawing.Size(93, 20);
-            this.bloodletting_label_menu.TabIndex = 3;
-            this.bloodletting_label_menu.Text = "Bloodletting";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::ParishSystem.Properties.Resources.HeartPulse;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // application_panel_menu
-            // 
-            this.application_panel_menu.Controls.Add(this.label13);
-            this.application_panel_menu.Controls.Add(this.label17);
-            this.application_panel_menu.Controls.Add(this.pictureBox6);
-            this.application_panel_menu.Location = new System.Drawing.Point(1, 174);
-            this.application_panel_menu.Margin = new System.Windows.Forms.Padding(1);
-            this.application_panel_menu.Name = "application_panel_menu";
-            this.application_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.application_panel_menu.Size = new System.Drawing.Size(176, 50);
-            this.application_panel_menu.TabIndex = 41;
-            this.application_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
-            this.application_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
-            this.application_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(68, 17);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(95, 20);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Applications";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(73, -41);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(72, 25);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "Home";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox6.Image = global::ParishSystem.Properties.Resources.Report_Card_96px;
-            this.pictureBox6.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
-            // 
-            // CRB_panel_menu
-            // 
-            this.CRB_panel_menu.Controls.Add(this.label62);
-            this.CRB_panel_menu.Controls.Add(this.pictureBox7);
-            this.CRB_panel_menu.Location = new System.Drawing.Point(1, 226);
-            this.CRB_panel_menu.Margin = new System.Windows.Forms.Padding(1);
-            this.CRB_panel_menu.Name = "CRB_panel_menu";
-            this.CRB_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.CRB_panel_menu.Size = new System.Drawing.Size(176, 50);
-            this.CRB_panel_menu.TabIndex = 40;
-            this.CRB_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
-            this.CRB_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
-            this.CRB_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.BackColor = System.Drawing.Color.Transparent;
-            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.ForeColor = System.Drawing.Color.White;
-            this.label62.Location = new System.Drawing.Point(68, 20);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(43, 20);
-            this.label62.TabIndex = 3;
-            this.label62.Text = "CRB";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox7.Image = global::ParishSystem.Properties.Resources.Money;
-            this.pictureBox7.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 1;
-            this.pictureBox7.TabStop = false;
-            // 
-            // CDB_panel_menu
-            // 
-            this.CDB_panel_menu.Controls.Add(this.label15);
-            this.CDB_panel_menu.Controls.Add(this.pictureBox3);
-            this.CDB_panel_menu.Location = new System.Drawing.Point(1, 278);
-            this.CDB_panel_menu.Margin = new System.Windows.Forms.Padding(1);
-            this.CDB_panel_menu.Name = "CDB_panel_menu";
-            this.CDB_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.CDB_panel_menu.Size = new System.Drawing.Size(176, 50);
-            this.CDB_panel_menu.TabIndex = 39;
-            this.CDB_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
-            this.CDB_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
-            this.CDB_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(68, 20);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(43, 20);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "CDB";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Image = global::ParishSystem.Properties.Resources.Money;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // library_panel_menu
-            // 
-            this.library_panel_menu.Controls.Add(this.label63);
-            this.library_panel_menu.Controls.Add(this.label64);
-            this.library_panel_menu.Controls.Add(this.pictureBox8);
-            this.library_panel_menu.Location = new System.Drawing.Point(1, 330);
-            this.library_panel_menu.Margin = new System.Windows.Forms.Padding(1);
-            this.library_panel_menu.Name = "library_panel_menu";
-            this.library_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.library_panel_menu.Size = new System.Drawing.Size(176, 50);
-            this.library_panel_menu.TabIndex = 41;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.BackColor = System.Drawing.Color.Transparent;
-            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.ForeColor = System.Drawing.Color.White;
-            this.label63.Location = new System.Drawing.Point(68, 17);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(60, 20);
-            this.label63.TabIndex = 3;
-            this.label63.Text = "Library ";
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.ForeColor = System.Drawing.Color.White;
-            this.label64.Location = new System.Drawing.Point(73, -41);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(72, 25);
-            this.label64.TabIndex = 3;
-            this.label64.Text = "Home";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox8.Image = global::ParishSystem.Properties.Resources.ReportCard;
-            this.pictureBox8.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox8.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 1;
-            this.pictureBox8.TabStop = false;
             // 
             // home_panel
             // 
@@ -1914,49 +1579,6 @@
             this.bloodletting_panel.Size = new System.Drawing.Size(753, 512);
             this.bloodletting_panel.TabIndex = 4;
             // 
-            // profile_menu_button
-            // 
-            this.profile_menu_button.BackgroundImage = global::ParishSystem.Properties.Resources.Gender_Neutral_User_96px;
-            this.profile_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.profile_menu_button.FlatAppearance.BorderSize = 0;
-            this.profile_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.profile_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profile_menu_button.Location = new System.Drawing.Point(303, 354);
-            this.profile_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.profile_menu_button.Name = "profile_menu_button";
-            this.profile_menu_button.Size = new System.Drawing.Size(133, 55);
-            this.profile_menu_button.TabIndex = 4;
-            this.profile_menu_button.UseVisualStyleBackColor = true;
-            // 
-            // bloodletting_menu_button
-            // 
-            this.bloodletting_menu_button.BackgroundImage = global::ParishSystem.Properties.Resources.Syringe_96px;
-            this.bloodletting_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bloodletting_menu_button.FlatAppearance.BorderSize = 0;
-            this.bloodletting_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bloodletting_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bloodletting_menu_button.Location = new System.Drawing.Point(274, 189);
-            this.bloodletting_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.bloodletting_menu_button.Name = "bloodletting_menu_button";
-            this.bloodletting_menu_button.Size = new System.Drawing.Size(53, 55);
-            this.bloodletting_menu_button.TabIndex = 0;
-            this.bloodletting_menu_button.UseVisualStyleBackColor = true;
-            // 
-            // home_menu_button
-            // 
-            this.home_menu_button.AutoSize = true;
-            this.home_menu_button.BackgroundImage = global::ParishSystem.Properties.Resources.Home_96px;
-            this.home_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.home_menu_button.FlatAppearance.BorderSize = 0;
-            this.home_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.home_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.home_menu_button.Location = new System.Drawing.Point(340, 176);
-            this.home_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.home_menu_button.Name = "home_menu_button";
-            this.home_menu_button.Size = new System.Drawing.Size(96, 56);
-            this.home_menu_button.TabIndex = 0;
-            this.home_menu_button.UseVisualStyleBackColor = true;
-            // 
             // dataGridView4
             // 
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1986,34 +1608,6 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(87, 29);
             this.comboBox4.TabIndex = 34;
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImage = global::ParishSystem.Properties.Resources.FIcon;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(85, 401);
-            this.button7.Margin = new System.Windows.Forms.Padding(0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(146, 62);
-            this.button7.TabIndex = 5;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // application_menu_button
-            // 
-            this.application_menu_button.BackgroundImage = global::ParishSystem.Properties.Resources.FIcon;
-            this.application_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.application_menu_button.FlatAppearance.BorderSize = 0;
-            this.application_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.application_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.application_menu_button.Location = new System.Drawing.Point(48, 322);
-            this.application_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.application_menu_button.Name = "application_menu_button";
-            this.application_menu_button.Size = new System.Drawing.Size(146, 62);
-            this.application_menu_button.TabIndex = 1;
-            this.application_menu_button.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -2109,6 +1703,7 @@
             this.panel_controlbox.Name = "panel_controlbox";
             this.panel_controlbox.Size = new System.Drawing.Size(934, 33);
             this.panel_controlbox.TabIndex = 38;
+            this.panel_controlbox.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_controlbox_Paint);
             this.panel_controlbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseDown);
             this.panel_controlbox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseMove);
             // 
@@ -2159,57 +1754,6 @@
             this.flowLayout_ControlButtons.Name = "flowLayout_ControlButtons";
             this.flowLayout_ControlButtons.Size = new System.Drawing.Size(110, 33);
             this.flowLayout_ControlButtons.TabIndex = 20;
-            // 
-            // btn_Close
-            // 
-            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Close.BackgroundImage = global::ParishSystem.Properties.Resources.btn_closeImage;
-            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Close.FlatAppearance.BorderSize = 0;
-            this.btn_Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Close.Location = new System.Drawing.Point(79, 4);
-            this.btn_Close.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(27, 25);
-            this.btn_Close.TabIndex = 34;
-            this.btn_Close.UseVisualStyleBackColor = true;
-            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
-            // 
-            // btn_Min
-            // 
-            this.btn_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Min.BackgroundImage = global::ParishSystem.Properties.Resources.btn_minImage;
-            this.btn_Min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Min.FlatAppearance.BorderSize = 0;
-            this.btn_Min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_Min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Min.Location = new System.Drawing.Point(41, 4);
-            this.btn_Min.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Min.Name = "btn_Min";
-            this.btn_Min.Size = new System.Drawing.Size(30, 25);
-            this.btn_Min.TabIndex = 32;
-            this.btn_Min.UseVisualStyleBackColor = true;
-            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
-            // 
-            // btn_Max
-            // 
-            this.btn_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Max.BackgroundImage = global::ParishSystem.Properties.Resources.btn_maxImage;
-            this.btn_Max.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Max.FlatAppearance.BorderSize = 0;
-            this.btn_Max.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_Max.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Max.Location = new System.Drawing.Point(6, 4);
-            this.btn_Max.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Max.Name = "btn_Max";
-            this.btn_Max.Size = new System.Drawing.Size(27, 25);
-            this.btn_Max.TabIndex = 33;
-            this.btn_Max.UseVisualStyleBackColor = true;
-            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
             // 
             // CDB_panel
             // 
@@ -3362,6 +2906,16 @@
             this.panel1.Size = new System.Drawing.Size(692, 418);
             this.panel1.TabIndex = 38;
             // 
+            // metroRadioButton1
+            // 
+            this.metroRadioButton1.AutoSize = true;
+            this.metroRadioButton1.Location = new System.Drawing.Point(437, 324);
+            this.metroRadioButton1.Name = "metroRadioButton1";
+            this.metroRadioButton1.Size = new System.Drawing.Size(127, 15);
+            this.metroRadioButton1.TabIndex = 43;
+            this.metroRadioButton1.Text = "metroRadioButton1";
+            this.metroRadioButton1.UseSelectable = true;
+            // 
             // panel7
             // 
             this.panel7.Location = new System.Drawing.Point(410, 177);
@@ -3476,15 +3030,265 @@
             this.metroStyleManager1.Style = MetroFramework.MetroColorStyle.Brown;
             this.metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroRadioButton1
+            // contextMenuStrip1
             // 
-            this.metroRadioButton1.AutoSize = true;
-            this.metroRadioButton1.Location = new System.Drawing.Point(437, 324);
-            this.metroRadioButton1.Name = "metroRadioButton1";
-            this.metroRadioButton1.Size = new System.Drawing.Size(127, 15);
-            this.metroRadioButton1.TabIndex = 43;
-            this.metroRadioButton1.Text = "metroRadioButton1";
-            this.metroRadioButton1.UseSelectable = true;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // profile_menu_button
+            // 
+            this.profile_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("profile_menu_button.BackgroundImage")));
+            this.profile_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.profile_menu_button.FlatAppearance.BorderSize = 0;
+            this.profile_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.profile_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profile_menu_button.Location = new System.Drawing.Point(303, 354);
+            this.profile_menu_button.Margin = new System.Windows.Forms.Padding(0);
+            this.profile_menu_button.Name = "profile_menu_button";
+            this.profile_menu_button.Size = new System.Drawing.Size(133, 55);
+            this.profile_menu_button.TabIndex = 4;
+            this.profile_menu_button.UseVisualStyleBackColor = true;
+            // 
+            // bloodletting_menu_button
+            // 
+            this.bloodletting_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bloodletting_menu_button.BackgroundImage")));
+            this.bloodletting_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bloodletting_menu_button.FlatAppearance.BorderSize = 0;
+            this.bloodletting_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bloodletting_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bloodletting_menu_button.Location = new System.Drawing.Point(274, 189);
+            this.bloodletting_menu_button.Margin = new System.Windows.Forms.Padding(0);
+            this.bloodletting_menu_button.Name = "bloodletting_menu_button";
+            this.bloodletting_menu_button.Size = new System.Drawing.Size(53, 55);
+            this.bloodletting_menu_button.TabIndex = 0;
+            this.bloodletting_menu_button.UseVisualStyleBackColor = true;
+            // 
+            // home_menu_button
+            // 
+            this.home_menu_button.AutoSize = true;
+            this.home_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("home_menu_button.BackgroundImage")));
+            this.home_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.home_menu_button.FlatAppearance.BorderSize = 0;
+            this.home_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.home_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.home_menu_button.Location = new System.Drawing.Point(340, 176);
+            this.home_menu_button.Margin = new System.Windows.Forms.Padding(0);
+            this.home_menu_button.Name = "home_menu_button";
+            this.home_menu_button.Size = new System.Drawing.Size(96, 56);
+            this.home_menu_button.TabIndex = 0;
+            this.home_menu_button.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(85, 401);
+            this.button7.Margin = new System.Windows.Forms.Padding(0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(146, 62);
+            this.button7.TabIndex = 5;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // application_menu_button
+            // 
+            this.application_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("application_menu_button.BackgroundImage")));
+            this.application_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.application_menu_button.FlatAppearance.BorderSize = 0;
+            this.application_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.application_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.application_menu_button.Location = new System.Drawing.Point(48, 322);
+            this.application_menu_button.Margin = new System.Windows.Forms.Padding(0);
+            this.application_menu_button.Name = "application_menu_button";
+            this.application_menu_button.Size = new System.Drawing.Size(146, 62);
+            this.application_menu_button.TabIndex = 1;
+            this.application_menu_button.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::ParishSystem.Properties.Resources.The_Pope_45;
+            this.pictureBox5.Location = new System.Drawing.Point(1, 6);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(1);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(178, 40);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 38;
+            this.pictureBox5.TabStop = false;
+            // 
+            // home_button_menu
+            // 
+            this.home_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.home_button_menu.FlatAppearance.BorderSize = 0;
+            this.home_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.home_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.home_button_menu.ForeColor = System.Drawing.Color.White;
+            this.home_button_menu.Image = global::ParishSystem.Properties.Resources.Home_45;
+            this.home_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.home_button_menu.Location = new System.Drawing.Point(3, 50);
+            this.home_button_menu.Name = "home_button_menu";
+            this.home_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.home_button_menu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.home_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.home_button_menu.TabIndex = 39;
+            this.home_button_menu.Text = "Home";
+            this.home_button_menu.UseVisualStyleBackColor = false;
+            // 
+            // bloodletting_button_menu
+            // 
+            this.bloodletting_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bloodletting_button_menu.FlatAppearance.BorderSize = 0;
+            this.bloodletting_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bloodletting_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodletting_button_menu.ForeColor = System.Drawing.Color.White;
+            this.bloodletting_button_menu.Image = global::ParishSystem.Properties.Resources.Heart_with_Pulse_45px;
+            this.bloodletting_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bloodletting_button_menu.Location = new System.Drawing.Point(3, 233);
+            this.bloodletting_button_menu.Name = "bloodletting_button_menu";
+            this.bloodletting_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.bloodletting_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.bloodletting_button_menu.TabIndex = 42;
+            this.bloodletting_button_menu.Text = "Bloodletting";
+            this.bloodletting_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bloodletting_button_menu.UseVisualStyleBackColor = false;
+            // 
+            // profile_button_menu
+            // 
+            this.profile_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.profile_button_menu.FlatAppearance.BorderSize = 0;
+            this.profile_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profile_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profile_button_menu.ForeColor = System.Drawing.Color.White;
+            this.profile_button_menu.Image = global::ParishSystem.Properties.Resources.customer_45;
+            this.profile_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.profile_button_menu.Location = new System.Drawing.Point(3, 111);
+            this.profile_button_menu.Name = "profile_button_menu";
+            this.profile_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.profile_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.profile_button_menu.TabIndex = 43;
+            this.profile_button_menu.Text = "Profiles";
+            this.profile_button_menu.UseVisualStyleBackColor = false;
+            // 
+            // application_button_menu
+            // 
+            this.application_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.application_button_menu.FlatAppearance.BorderSize = 0;
+            this.application_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.application_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.application_button_menu.ForeColor = System.Drawing.Color.White;
+            this.application_button_menu.Image = global::ParishSystem.Properties.Resources.Resume_45;
+            this.application_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.application_button_menu.Location = new System.Drawing.Point(3, 294);
+            this.application_button_menu.Name = "application_button_menu";
+            this.application_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.application_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.application_button_menu.TabIndex = 43;
+            this.application_button_menu.Text = "Applications";
+            this.application_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.application_button_menu.UseVisualStyleBackColor = false;
+            // 
+            // CRB_button_menu
+            // 
+            this.CRB_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.CRB_button_menu.FlatAppearance.BorderSize = 0;
+            this.CRB_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CRB_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CRB_button_menu.ForeColor = System.Drawing.Color.White;
+            this.CRB_button_menu.Image = global::ParishSystem.Properties.Resources.Money_45;
+            this.CRB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CRB_button_menu.Location = new System.Drawing.Point(3, 355);
+            this.CRB_button_menu.Name = "CRB_button_menu";
+            this.CRB_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CRB_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.CRB_button_menu.TabIndex = 43;
+            this.CRB_button_menu.Text = "CRB";
+            this.CRB_button_menu.UseVisualStyleBackColor = false;
+            // 
+            // CDB_button_menu
+            // 
+            this.CDB_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.CDB_button_menu.FlatAppearance.BorderSize = 0;
+            this.CDB_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CDB_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CDB_button_menu.ForeColor = System.Drawing.Color.White;
+            this.CDB_button_menu.Image = global::ParishSystem.Properties.Resources.Initiate_Money_Transfer_45;
+            this.CDB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CDB_button_menu.Location = new System.Drawing.Point(3, 416);
+            this.CDB_button_menu.Name = "CDB_button_menu";
+            this.CDB_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CDB_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.CDB_button_menu.TabIndex = 43;
+            this.CDB_button_menu.Text = "CDB";
+            this.CDB_button_menu.UseVisualStyleBackColor = false;
+            // 
+            // library_button_menu
+            // 
+            this.library_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.library_button_menu.FlatAppearance.BorderSize = 0;
+            this.library_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.library_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.library_button_menu.ForeColor = System.Drawing.Color.White;
+            this.library_button_menu.Image = global::ParishSystem.Properties.Resources.Holy_Bible_45;
+            this.library_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.library_button_menu.Location = new System.Drawing.Point(3, 172);
+            this.library_button_menu.Name = "library_button_menu";
+            this.library_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.library_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.library_button_menu.TabIndex = 43;
+            this.library_button_menu.Text = "Library";
+            this.library_button_menu.UseVisualStyleBackColor = false;
+            // 
+            // btn_Close
+            // 
+            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Close.BackgroundImage = global::ParishSystem.Properties.Resources.btn_closeImage;
+            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Close.FlatAppearance.BorderSize = 0;
+            this.btn_Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Close.Location = new System.Drawing.Point(79, 4);
+            this.btn_Close.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(27, 25);
+            this.btn_Close.TabIndex = 34;
+            this.btn_Close.UseVisualStyleBackColor = true;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            // 
+            // btn_Min
+            // 
+            this.btn_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Min.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Min.BackgroundImage")));
+            this.btn_Min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Min.FlatAppearance.BorderSize = 0;
+            this.btn_Min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Min.Location = new System.Drawing.Point(41, 4);
+            this.btn_Min.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Min.Name = "btn_Min";
+            this.btn_Min.Size = new System.Drawing.Size(30, 25);
+            this.btn_Min.TabIndex = 32;
+            this.btn_Min.UseVisualStyleBackColor = true;
+            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
+            // 
+            // btn_Max
+            // 
+            this.btn_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Max.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Max.BackgroundImage")));
+            this.btn_Max.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Max.FlatAppearance.BorderSize = 0;
+            this.btn_Max.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Max.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Max.Location = new System.Drawing.Point(6, 4);
+            this.btn_Max.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Max.Name = "btn_Max";
+            this.btn_Max.Size = new System.Drawing.Size(27, 25);
+            this.btn_Max.TabIndex = 33;
+            this.btn_Max.UseVisualStyleBackColor = true;
+            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
             // 
             // SAD
             // 
@@ -3507,28 +3311,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SAD";
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.home_panel_menu.ResumeLayout(false);
-            this.home_panel_menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.profile_panel_menu.ResumeLayout(false);
-            this.profile_panel_menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_person)).EndInit();
-            this.bloodletting_panel_menu.ResumeLayout(false);
-            this.bloodletting_panel_menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.application_panel_menu.ResumeLayout(false);
-            this.application_panel_menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.CRB_panel_menu.ResumeLayout(false);
-            this.CRB_panel_menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.CDB_panel_menu.ResumeLayout(false);
-            this.CDB_panel_menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.library_panel_menu.ResumeLayout(false);
-            this.library_panel_menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.profile_panel.ResumeLayout(false);
             this.profile_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).EndInit();
@@ -3608,6 +3390,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profiles_dataGridView_baptism)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3647,25 +3430,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button profile_menu_button;
         private System.Windows.Forms.Button home_menu_button;
-        private System.Windows.Forms.Panel profile_panel_menu;
-        private System.Windows.Forms.PictureBox pictureBox_person;
-        private System.Windows.Forms.Panel home_panel_menu;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel CDB_panel_menu;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel bloodletting_panel_menu;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label welcome_Text;
         private System.Windows.Forms.Label username_Welcome_Text;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label bloodletting_label_menu;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel application_panel_menu;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label marriageApplication_label;
         private System.Windows.Forms.Label confirmationApplication_label;
@@ -3852,9 +3619,6 @@
         private System.Windows.Forms.Label community_label_CRB;
         private System.Windows.Forms.Label parish_label_CRB;
         private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Panel CRB_panel_menu;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button AddBTN;
         private System.Windows.Forms.Panel AddPNL;
         private System.Windows.Forms.Button clear_profile_button;
@@ -3865,10 +3629,6 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox firstname_textbox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel library_panel_menu;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel baptism_panel;
         private System.Windows.Forms.DataGridView profiles_dataGridView_baptism;
         private System.Windows.Forms.Panel panel1;
@@ -3881,5 +3641,13 @@
         private System.Windows.Forms.ImageList imageListMenu;
         private MetroFramework.Components.MetroStyleManager metroStyleManager1;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
+        private System.Windows.Forms.Button home_button_menu;
+        private System.Windows.Forms.Button bloodletting_button_menu;
+        private System.Windows.Forms.Button profile_button_menu;
+        private System.Windows.Forms.Button application_button_menu;
+        private System.Windows.Forms.Button CRB_button_menu;
+        private System.Windows.Forms.Button CDB_button_menu;
+        private System.Windows.Forms.Button library_button_menu;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

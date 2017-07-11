@@ -62,15 +62,15 @@ namespace ParishSystem
         private void panel_menu_Click(object sender, EventArgs e)
         {
             Panel A = sender as Panel;
-            if (A.Equals(home_panel_menu)) { home_panel.BringToFront(); }
-            else if (A.Equals(profile_panel_menu))
+            if (A.Equals(home_button_menu)) { home_panel.BringToFront(); }
+            else if (A.Equals(profile_button_menu))
                     { profile_panel.BringToFront();
                       refreshGeneralProfileTable();
             }
-            else if (A.Equals(bloodletting_panel_menu)) { bloodletting_panel.BringToFront(); }
-            else if (A.Equals(CDB_panel_menu)) { CDB_panel.BringToFront(); }
-            else if (A.Equals(CRB_panel_menu)) { CRB_panel.BringToFront(); }
-            else if (A.Equals(application_panel_menu)) { application_panel.BringToFront(); }
+            else if (A.Equals(bloodletting_button_menu)) { bloodletting_panel.BringToFront(); }
+            else if (A.Equals(CDB_button_menu)) { CDB_panel.BringToFront(); }
+            else if (A.Equals(CRB_button_menu)) { CRB_panel.BringToFront(); }
+            else if (A.Equals(application_button_menu)) { application_panel.BringToFront(); }
 
         }
 
@@ -387,6 +387,9 @@ namespace ParishSystem
             AddPNL.Visible = true;
         }
 
-       
+        private void panel_controlbox_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
