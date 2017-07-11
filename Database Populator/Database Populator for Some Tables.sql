@@ -52,13 +52,19 @@ INSERT INTO Minister(firstName, midName, lastName, suffix, birthdate, ministryTy
 
 
 /* INSERTING SCHEDULE */
-INSERT INTO Schedule("scheduleType, startDateTime, endDateTime, details, status, priority") VALUES("Appointment", "2017-03-14 08:40:00", "2017-03-14 09:40:00", "NO DETAILS", "TO BE HELD", "URGENT");
-INSERT INTO Schedule("scheduleType, startDateTime, endDateTime, details, status, priority") VALUES("Event Meeting", "2017-08-24 10:30:00", "2017-08-24 12:30:00", "NO DETAILS", "TO BE HELD", "NORMAL");
-INSERT INTO Schedule("scheduleType, startDateTime, endDateTime, details, status, priority") VALUES("Appointment", "2012-01-05 08:40:00", "2012-01-05 09:40:00", "NO DETAILS", "DONE", "NORMAL");
-INSERT INTO Schedule("scheduleType, startDateTime, endDateTime, details, status, priority") VALUES("Sacrament Planning", "2015-05-10 07:40:00", "2015-05-10 10:40:00", "Marriage Sacrament Planning", "DONE", "URGENT");
-INSERT INTO Schedule("scheduleType, startDateTime, endDateTime, details, status, priority") VALUES("Appointment", "2016-12-24 10:40:00", "2016-12-24 11:40:00", "Christmas Event Appointment", "APPOINTMENT CANCELLED", "NORMAL");
+INSERT INTO Schedule(scheduleType, startDateTime, endDateTime, details, status, priority) VALUES("Appointment", "2017-03-14 08:40:00", "2017-03-14 09:40:00", "NO DETAILS", "TO BE HELD", "URGENT");
+INSERT INTO Schedule(scheduleType, startDateTime, endDateTime, details, status, priority) VALUES("Event Meeting", "2017-08-24 10:30:00", "2017-08-24 12:30:00", "NO DETAILS", "TO BE HELD", "NORMAL");
+INSERT INTO Schedule(scheduleType, startDateTime, endDateTime, details, status, priority) VALUES("Appointment", "2012-01-05 08:40:00", "2012-01-05 09:40:00", "NO DETAILS", "DONE", "NORMAL");
+INSERT INTO Schedule(scheduleType, startDateTime, endDateTime, details, status, priority) VALUES("Sacrament Planning", "2015-05-10 07:40:00", "2015-05-10 10:40:00", "Marriage Sacrament Planning", "DONE", "URGENT");
+INSERT INTO Schedule(scheduleType, startDateTime, endDateTime, details, status, priority) VALUES("Appointment", "2016-12-24 10:40:00", "2016-12-24 11:40:00", "Christmas Event Appointment", "CANCELLED", "NORMAL");
 
+/*Inserting APPOINTMENT */
 
+INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(1, 1, 1, "APPOINTMENT TO BE HELD")
+INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(2, 1, 2, "APPOINTMENT TO BE HELD")
+INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(3, 3, 3, "APPOINTMENT FINISHED")
+INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(4, 2, 4, "APPOINTMENT TO BE HELD")
+INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(5, 2, 5, "APPOINTMENT CANCELLED")
 
 
 
