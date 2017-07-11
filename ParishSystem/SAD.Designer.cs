@@ -38,6 +38,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.home_button_menu = new System.Windows.Forms.Button();
@@ -53,18 +62,39 @@
             this.openProfile_button = new System.Windows.Forms.Button();
             this.deleteProfile_button = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.searchBar = new System.Windows.Forms.TextBox();
-            this.generalprofile_datagridview = new System.Windows.Forms.DataGridView();
             this.AddPNL = new System.Windows.Forms.Panel();
             this.clear_profile_button = new System.Windows.Forms.Button();
             this.suffix_textbox = new System.Windows.Forms.TextBox();
             this.lastname_textbox = new System.Windows.Forms.TextBox();
             this.middlename_textbox = new System.Windows.Forms.TextBox();
             this.birthplace_textbox_baptist = new System.Windows.Forms.TextBox();
-            this.addProfile_button = new System.Windows.Forms.Button();
+            this.save_button_profile = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
             this.firstname_textbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.gender_label_profiles = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.contactNumber_label_profile = new System.Windows.Forms.Label();
+            this.address_label_profile = new System.Windows.Forms.Label();
+            this.bloodtype_label_profile = new System.Windows.Forms.Label();
+            this.birthplace_label_profile = new System.Windows.Forms.Label();
+            this.searchBar = new System.Windows.Forms.TextBox();
+            this.birthday_label_profile = new System.Windows.Forms.Label();
+            this.suffix_label_profile = new System.Windows.Forms.Label();
+            this.lastname_label_profile = new System.Windows.Forms.Label();
+            this.middlename_label_profile = new System.Windows.Forms.Label();
+            this.firstname_label_profile = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.generalprofile_datagridview = new System.Windows.Forms.DataGridView();
             this.time_Text = new System.Windows.Forms.Label();
             this.application_panel = new System.Windows.Forms.Panel();
             this.baptismApplication_label = new System.Windows.Forms.Label();
@@ -286,13 +316,17 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.profiles_dataGridView_baptism = new System.Windows.Forms.DataGridView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.firstname_tooltip_profiles = new System.Windows.Forms.ToolTip(this.components);
+            this.lastname_tooltip_profiles = new System.Windows.Forms.ToolTip(this.components);
+            this.middlename_tooltip_profiles = new System.Windows.Forms.ToolTip(this.components);
             this.imageListMenu = new System.Windows.Forms.ImageList(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.profile_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).BeginInit();
             this.AddPNL.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).BeginInit();
             this.application_panel.SuspendLayout();
             this.baptismApplication_panel.SuspendLayout();
             this.newName_panel_baptismApplication.SuspendLayout();
@@ -515,9 +549,8 @@
             this.profile_panel.Controls.Add(this.openProfile_button);
             this.profile_panel.Controls.Add(this.deleteProfile_button);
             this.profile_panel.Controls.Add(this.label3);
-            this.profile_panel.Controls.Add(this.searchBar);
-            this.profile_panel.Controls.Add(this.generalprofile_datagridview);
             this.profile_panel.Controls.Add(this.AddPNL);
+            this.profile_panel.Controls.Add(this.panel9);
             this.profile_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profile_panel.Location = new System.Drawing.Point(181, 33);
             this.profile_panel.Name = "profile_panel";
@@ -532,7 +565,7 @@
             this.AddBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddBTN.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBTN.ForeColor = System.Drawing.Color.White;
-            this.AddBTN.Location = new System.Drawing.Point(20, 62);
+            this.AddBTN.Location = new System.Drawing.Point(614, 56);
             this.AddBTN.Name = "AddBTN";
             this.AddBTN.Size = new System.Drawing.Size(100, 30);
             this.AddBTN.TabIndex = 32;
@@ -657,13 +690,13 @@
             this.AddPNL.Controls.Add(this.lastname_textbox);
             this.AddPNL.Controls.Add(this.middlename_textbox);
             this.AddPNL.Controls.Add(this.birthplace_textbox_baptist);
-            this.AddPNL.Controls.Add(this.addProfile_button);
+            this.AddPNL.Controls.Add(this.save_button_profile);
             this.AddPNL.Controls.Add(this.label33);
             this.AddPNL.Controls.Add(this.firstname_textbox);
             this.AddPNL.Controls.Add(this.label2);
             this.AddPNL.Location = new System.Drawing.Point(24, 96);
             this.AddPNL.Name = "AddPNL";
-            this.AddPNL.Size = new System.Drawing.Size(683, 401);
+            this.AddPNL.Size = new System.Drawing.Size(683, 342);
             this.AddPNL.TabIndex = 27;
             this.AddPNL.Visible = false;
             // 
@@ -692,9 +725,10 @@
             this.suffix_textbox.Name = "suffix_textbox";
             this.suffix_textbox.Size = new System.Drawing.Size(54, 18);
             this.suffix_textbox.TabIndex = 23;
-            this.suffix_textbox.Text = "Suffix";
+            this.suffix_textbox.Text = "suffix";
             this.suffix_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.suffix_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.suffix_textbox_MouseClick);
+            this.suffix_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.suffix_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // lastname_textbox
             // 
@@ -706,9 +740,11 @@
             this.lastname_textbox.Name = "lastname_textbox";
             this.lastname_textbox.Size = new System.Drawing.Size(94, 18);
             this.lastname_textbox.TabIndex = 24;
-            this.lastname_textbox.Text = "Last Name";
+            this.lastname_textbox.Text = "lastname";
             this.lastname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lastname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lastname_textbox_MouseClick);
+            this.lastname_tooltip_profiles.SetToolTip(this.lastname_textbox, "Please fill in last name");
+            this.lastname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.lastname_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // middlename_textbox
             // 
@@ -720,9 +756,11 @@
             this.middlename_textbox.Name = "middlename_textbox";
             this.middlename_textbox.Size = new System.Drawing.Size(94, 18);
             this.middlename_textbox.TabIndex = 22;
-            this.middlename_textbox.Text = "Middle Name";
+            this.middlename_textbox.Text = "middlename";
             this.middlename_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.middlename_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.middlename_textbox_MouseClick);
+            this.middlename_tooltip_profiles.SetToolTip(this.middlename_textbox, "Please fill in middle name");
+            this.middlename_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.middlename_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // birthplace_textbox_baptist
             // 
@@ -734,20 +772,21 @@
             this.birthplace_textbox_baptist.Size = new System.Drawing.Size(133, 16);
             this.birthplace_textbox_baptist.TabIndex = 20;
             // 
-            // addProfile_button
+            // save_button_profile
             // 
-            this.addProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.addProfile_button.FlatAppearance.BorderSize = 0;
-            this.addProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addProfile_button.ForeColor = System.Drawing.Color.White;
-            this.addProfile_button.Location = new System.Drawing.Point(232, 192);
-            this.addProfile_button.Name = "addProfile_button";
-            this.addProfile_button.Size = new System.Drawing.Size(100, 30);
-            this.addProfile_button.TabIndex = 29;
-            this.addProfile_button.Text = "Save";
-            this.addProfile_button.UseVisualStyleBackColor = false;
-            this.addProfile_button.Click += new System.EventHandler(this.addProfile_button_Click);
+            this.save_button_profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.save_button_profile.Enabled = false;
+            this.save_button_profile.FlatAppearance.BorderSize = 0;
+            this.save_button_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.save_button_profile.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_button_profile.ForeColor = System.Drawing.Color.White;
+            this.save_button_profile.Location = new System.Drawing.Point(232, 192);
+            this.save_button_profile.Name = "save_button_profile";
+            this.save_button_profile.Size = new System.Drawing.Size(100, 30);
+            this.save_button_profile.TabIndex = 29;
+            this.save_button_profile.Text = "Save";
+            this.save_button_profile.UseVisualStyleBackColor = false;
+            this.save_button_profile.Click += new System.EventHandler(this.addProfile_button_Click);
             // 
             // label33
             // 
@@ -770,9 +809,13 @@
             this.firstname_textbox.Name = "firstname_textbox";
             this.firstname_textbox.Size = new System.Drawing.Size(94, 18);
             this.firstname_textbox.TabIndex = 13;
-            this.firstname_textbox.Text = "First Name";
+            this.firstname_textbox.Text = "firstname";
             this.firstname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.firstname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.firstname_textbox_MouseClick);
+            this.firstname_tooltip_profiles.SetToolTip(this.firstname_textbox, "Please enter a first name");
+            this.firstname_textbox.Click += new System.EventHandler(this.firstname_textbox_Click);
+            this.firstname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.firstname_textbox.TextChanged += new System.EventHandler(this.firstname_textbox_TextChanged);
+            this.firstname_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // label2
             // 
@@ -784,6 +827,281 @@
             this.label2.Size = new System.Drawing.Size(351, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "______________________________________";
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.gender_label_profiles);
+            this.panel9.Controls.Add(this.label83);
+            this.panel9.Controls.Add(this.contactNumber_label_profile);
+            this.panel9.Controls.Add(this.address_label_profile);
+            this.panel9.Controls.Add(this.bloodtype_label_profile);
+            this.panel9.Controls.Add(this.birthplace_label_profile);
+            this.panel9.Controls.Add(this.searchBar);
+            this.panel9.Controls.Add(this.birthday_label_profile);
+            this.panel9.Controls.Add(this.suffix_label_profile);
+            this.panel9.Controls.Add(this.lastname_label_profile);
+            this.panel9.Controls.Add(this.middlename_label_profile);
+            this.panel9.Controls.Add(this.firstname_label_profile);
+            this.panel9.Controls.Add(this.label81);
+            this.panel9.Controls.Add(this.label80);
+            this.panel9.Controls.Add(this.label79);
+            this.panel9.Controls.Add(this.label78);
+            this.panel9.Controls.Add(this.label77);
+            this.panel9.Controls.Add(this.label76);
+            this.panel9.Controls.Add(this.label75);
+            this.panel9.Controls.Add(this.label16);
+            this.panel9.Controls.Add(this.label14);
+            this.panel9.Controls.Add(this.generalprofile_datagridview);
+            this.panel9.Location = new System.Drawing.Point(20, 93);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(694, 345);
+            this.panel9.TabIndex = 37;
+            // 
+            // gender_label_profiles
+            // 
+            this.gender_label_profiles.AutoSize = true;
+            this.gender_label_profiles.Location = new System.Drawing.Point(537, 181);
+            this.gender_label_profiles.Name = "gender_label_profiles";
+            this.gender_label_profiles.Size = new System.Drawing.Size(61, 21);
+            this.gender_label_profiles.TabIndex = 12;
+            this.gender_label_profiles.Text = "Gender";
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Location = new System.Drawing.Point(442, 181);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(61, 21);
+            this.label83.TabIndex = 11;
+            this.label83.Text = "Gender";
+            // 
+            // contactNumber_label_profile
+            // 
+            this.contactNumber_label_profile.AutoSize = true;
+            this.contactNumber_label_profile.Location = new System.Drawing.Point(537, 317);
+            this.contactNumber_label_profile.Name = "contactNumber_label_profile";
+            this.contactNumber_label_profile.Size = new System.Drawing.Size(125, 21);
+            this.contactNumber_label_profile.TabIndex = 2;
+            this.contactNumber_label_profile.Text = "Contact Number";
+            // 
+            // address_label_profile
+            // 
+            this.address_label_profile.AutoSize = true;
+            this.address_label_profile.Location = new System.Drawing.Point(537, 249);
+            this.address_label_profile.Name = "address_label_profile";
+            this.address_label_profile.Size = new System.Drawing.Size(66, 21);
+            this.address_label_profile.TabIndex = 3;
+            this.address_label_profile.Text = "Address";
+            // 
+            // bloodtype_label_profile
+            // 
+            this.bloodtype_label_profile.AutoSize = true;
+            this.bloodtype_label_profile.Location = new System.Drawing.Point(537, 283);
+            this.bloodtype_label_profile.Name = "bloodtype_label_profile";
+            this.bloodtype_label_profile.Size = new System.Drawing.Size(80, 21);
+            this.bloodtype_label_profile.TabIndex = 4;
+            this.bloodtype_label_profile.Text = "Bloodtype";
+            // 
+            // birthplace_label_profile
+            // 
+            this.birthplace_label_profile.AutoSize = true;
+            this.birthplace_label_profile.Location = new System.Drawing.Point(537, 215);
+            this.birthplace_label_profile.Name = "birthplace_label_profile";
+            this.birthplace_label_profile.Size = new System.Drawing.Size(79, 21);
+            this.birthplace_label_profile.TabIndex = 5;
+            this.birthplace_label_profile.Text = "Birthplace";
+            // 
+            // searchBar
+            // 
+            this.searchBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchBar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBar.Location = new System.Drawing.Point(11, 8);
+            this.searchBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.searchBar.Name = "searchBar";
+            this.searchBar.Size = new System.Drawing.Size(343, 25);
+            this.searchBar.TabIndex = 1;
+            // 
+            // birthday_label_profile
+            // 
+            this.birthday_label_profile.AutoSize = true;
+            this.birthday_label_profile.Location = new System.Drawing.Point(537, 147);
+            this.birthday_label_profile.Name = "birthday_label_profile";
+            this.birthday_label_profile.Size = new System.Drawing.Size(73, 21);
+            this.birthday_label_profile.TabIndex = 6;
+            this.birthday_label_profile.Text = "Birthdate";
+            // 
+            // suffix_label_profile
+            // 
+            this.suffix_label_profile.AutoSize = true;
+            this.suffix_label_profile.Location = new System.Drawing.Point(537, 113);
+            this.suffix_label_profile.Name = "suffix_label_profile";
+            this.suffix_label_profile.Size = new System.Drawing.Size(49, 21);
+            this.suffix_label_profile.TabIndex = 7;
+            this.suffix_label_profile.Text = "Suffix";
+            // 
+            // lastname_label_profile
+            // 
+            this.lastname_label_profile.AutoSize = true;
+            this.lastname_label_profile.Location = new System.Drawing.Point(537, 79);
+            this.lastname_label_profile.Name = "lastname_label_profile";
+            this.lastname_label_profile.Size = new System.Drawing.Size(77, 21);
+            this.lastname_label_profile.TabIndex = 8;
+            this.lastname_label_profile.Text = "Lastname";
+            // 
+            // middlename_label_profile
+            // 
+            this.middlename_label_profile.AutoSize = true;
+            this.middlename_label_profile.Location = new System.Drawing.Point(537, 45);
+            this.middlename_label_profile.Name = "middlename_label_profile";
+            this.middlename_label_profile.Size = new System.Drawing.Size(97, 21);
+            this.middlename_label_profile.TabIndex = 9;
+            this.middlename_label_profile.Text = "Middlename";
+            // 
+            // firstname_label_profile
+            // 
+            this.firstname_label_profile.AutoSize = true;
+            this.firstname_label_profile.Location = new System.Drawing.Point(537, 11);
+            this.firstname_label_profile.Name = "firstname_label_profile";
+            this.firstname_label_profile.Size = new System.Drawing.Size(79, 21);
+            this.firstname_label_profile.TabIndex = 10;
+            this.firstname_label_profile.Text = "Firstname";
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Location = new System.Drawing.Point(378, 317);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(125, 21);
+            this.label81.TabIndex = 1;
+            this.label81.Text = "Contact Number";
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Location = new System.Drawing.Point(437, 249);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(66, 21);
+            this.label80.TabIndex = 1;
+            this.label80.Text = "Address";
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Location = new System.Drawing.Point(423, 283);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(80, 21);
+            this.label79.TabIndex = 1;
+            this.label79.Text = "Bloodtype";
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(424, 215);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(79, 21);
+            this.label78.TabIndex = 1;
+            this.label78.Text = "Birthplace";
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(430, 147);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(73, 21);
+            this.label77.TabIndex = 1;
+            this.label77.Text = "Birthdate";
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(454, 113);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(49, 21);
+            this.label76.TabIndex = 1;
+            this.label76.Text = "Suffix";
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(426, 79);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(77, 21);
+            this.label75.TabIndex = 1;
+            this.label75.Text = "Lastname";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(406, 45);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(97, 21);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Middlename";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(424, 11);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(79, 21);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Firstname";
+            // 
+            // generalprofile_datagridview
+            // 
+            this.generalprofile_datagridview.AllowUserToAddRows = false;
+            this.generalprofile_datagridview.AllowUserToDeleteRows = false;
+            this.generalprofile_datagridview.AllowUserToResizeColumns = false;
+            this.generalprofile_datagridview.AllowUserToResizeRows = false;
+            this.generalprofile_datagridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.generalprofile_datagridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.generalprofile_datagridview.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.generalprofile_datagridview.BackgroundColor = System.Drawing.Color.White;
+            this.generalprofile_datagridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.generalprofile_datagridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.generalprofile_datagridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.generalprofile_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.generalprofile_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.generalprofile_datagridview.DefaultCellStyle = dataGridViewCellStyle18;
+            this.generalprofile_datagridview.EnableHeadersVisualStyles = false;
+            this.generalprofile_datagridview.Location = new System.Drawing.Point(15, 40);
+            this.generalprofile_datagridview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.generalprofile_datagridview.MultiSelect = false;
+            this.generalprofile_datagridview.Name = "generalprofile_datagridview";
+            this.generalprofile_datagridview.ReadOnly = true;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.generalprofile_datagridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.generalprofile_datagridview.RowHeadersVisible = false;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.generalprofile_datagridview.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            this.generalprofile_datagridview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.generalprofile_datagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.generalprofile_datagridview.Size = new System.Drawing.Size(339, 282);
+            this.generalprofile_datagridview.TabIndex = 0;
+            this.generalprofile_datagridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.generalprofile_datagridview_CellClick);
             // 
             // time_Text
             // 
@@ -3160,20 +3478,10 @@
             this.panel1.Controls.Add(this.profiles_dataGridView_baptism);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(33, 70);
+            this.panel1.Location = new System.Drawing.Point(31, 70);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(692, 418);
+            this.panel1.Size = new System.Drawing.Size(694, 418);
             this.panel1.TabIndex = 38;
-            // 
-            // metroRadioButton1
-            // 
-            this.metroRadioButton1.AutoSize = true;
-            this.metroRadioButton1.Location = new System.Drawing.Point(437, 324);
-            this.metroRadioButton1.Name = "metroRadioButton1";
-            this.metroRadioButton1.Size = new System.Drawing.Size(127, 15);
-            this.metroRadioButton1.TabIndex = 43;
-            this.metroRadioButton1.Text = "metroRadioButton1";
-            this.metroRadioButton1.UseSelectable = true;
             // 
             // panel7
             // 
@@ -3227,7 +3535,24 @@
             dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.profiles_dataGridView_baptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.profiles_dataGridView_baptism.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle22.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.profiles_dataGridView_baptism.DefaultCellStyle = dataGridViewCellStyle22;
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3251,12 +3576,20 @@
             dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.profiles_dataGridView_baptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.profiles_dataGridView_baptism.RowHeadersVisible = false;
             dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.profiles_dataGridView_baptism.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.profiles_dataGridView_baptism.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.profiles_dataGridView_baptism.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.profiles_dataGridView_baptism.Size = new System.Drawing.Size(396, 341);
+            this.profiles_dataGridView_baptism.Size = new System.Drawing.Size(398, 341);
             this.profiles_dataGridView_baptism.TabIndex = 37;
             // 
             // dateTimePicker1
@@ -3266,7 +3599,15 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(218, 25);
             this.dateTimePicker1.TabIndex = 40;
             // 
-            // imageListMenu
+            // firstname_tooltip_profiles
+            // 
+            this.firstname_tooltip_profiles.Active = false;
+            this.firstname_tooltip_profiles.IsBalloon = true;
+            this.firstname_tooltip_profiles.ShowAlways = true;
+            this.firstname_tooltip_profiles.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Warning;
+            this.firstname_tooltip_profiles.ToolTipTitle = "Please enter a firstname";
+            // 
+            // lastname_tooltip_profiles
             // 
             this.imageListMenu.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMenu.ImageStream")));
             this.imageListMenu.TransparentColor = System.Drawing.Color.Transparent;
@@ -3277,11 +3618,15 @@
             this.imageListMenu.Images.SetKeyName(4, "Money.png");
             this.imageListMenu.Images.SetKeyName(5, "Resume_96px.png");
             this.imageListMenu.Images.SetKeyName(6, "Holy Bible_96px.png");
+            this.lastname_tooltip_profiles.Active = false;
+            this.lastname_tooltip_profiles.ShowAlways = true;
             // 
-            // bunifuElipse1
+            // middlename_tooltip_profiles
             // 
             this.bunifuElipse1.ElipseRadius = 15;
             this.bunifuElipse1.TargetControl = this;
+            this.middlename_tooltip_profiles.Active = false;
+            this.middlename_tooltip_profiles.ShowAlways = true;
             // 
             // SAD
             // 
@@ -3290,6 +3635,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(934, 545);
             this.ControlBox = false;
+            this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.home_panel);
@@ -3307,9 +3653,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.profile_panel.ResumeLayout(false);
             this.profile_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).EndInit();
             this.AddPNL.ResumeLayout(false);
             this.AddPNL.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).EndInit();
             this.application_panel.ResumeLayout(false);
             this.application_panel.PerformLayout();
             this.baptismApplication_panel.ResumeLayout(false);
@@ -3394,7 +3742,7 @@
         private System.Windows.Forms.Panel home_panel;
         private System.Windows.Forms.Panel profile_panel;
         private System.Windows.Forms.Button deleteProfile_button;
-        private System.Windows.Forms.Button addProfile_button;
+        private System.Windows.Forms.Button save_button_profile;
         private System.Windows.Forms.TextBox searchBar;
         private System.Windows.Forms.DataGridView generalprofile_datagridview;
         private System.Windows.Forms.Button openProfile_button;
@@ -3639,5 +3987,29 @@
         private System.Windows.Forms.Button CRB_button_menu;
         private System.Windows.Forms.Button CDB_button_menu;
         private System.Windows.Forms.Button library_button_menu;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label contactNumber_label_profile;
+        private System.Windows.Forms.Label address_label_profile;
+        private System.Windows.Forms.Label bloodtype_label_profile;
+        private System.Windows.Forms.Label birthplace_label_profile;
+        private System.Windows.Forms.Label birthday_label_profile;
+        private System.Windows.Forms.Label suffix_label_profile;
+        private System.Windows.Forms.Label lastname_label_profile;
+        private System.Windows.Forms.Label middlename_label_profile;
+        private System.Windows.Forms.Label firstname_label_profile;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label gender_label_profiles;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.ToolTip firstname_tooltip_profiles;
+        private System.Windows.Forms.ToolTip lastname_tooltip_profiles;
+        private System.Windows.Forms.ToolTip middlename_tooltip_profiles;
     }
 }
