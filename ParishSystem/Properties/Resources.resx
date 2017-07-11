@@ -118,85 +118,172 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Heart with Pulse_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Heart with Pulse_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Report Card_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Report Card_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BookA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BookA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="UIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\UIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_11273972_orange_leaf_texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\11273972-orange-leaf-texture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Heart with Pulse_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Heart with Pulse_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Coins_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Coins_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_minImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_minImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sc-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sc-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_maxImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_maxImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Home_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Home_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Money_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Money_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_closeImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_closeImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Person Male_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Person Male_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gender Neutral User_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Gender Neutral User_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="RIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BLIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BLIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Syringe_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Syringe_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Coins" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Coins.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gender" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Gender.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HeartPulse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HeartPulse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Plus 2 Math_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Plus 2 Math_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Minus_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Minus_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Water_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Water_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_11273972_orange_leaf_texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\11273972-orange-leaf-texture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dove_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dove_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BookA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BookA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Person Male_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Person Male_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Edit_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Holy Bible_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Holy Bible_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Initiate Money Transfer_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Initiate Money Transfer_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Request Money_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Request Money_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_maxImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_maxImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Home_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Home_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Money" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Money.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Heart with Pulse_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Heart with Pulse_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Minimize Window_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Minimize Window_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Deposit_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Deposit_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Heart with Pulse_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Heart with Pulse_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BLIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BLIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pray_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pray_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_closeImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_closeImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Plus_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Plus_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Coins_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Coins_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="X Coordinate_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\X Coordinate_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Heart with Pulse_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Heart with Pulse_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Trash_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Trash_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shellfish_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shellfish_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gender" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gender.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="customer_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\customer_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Checkmark_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Checkmark_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Newlyweds_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Newlyweds_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The Pope_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Pope_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_minImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_minImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Syringe_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Syringe_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Settings_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Settings_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tax_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tax_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Money_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Money_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cancel_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cancel_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Profit_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Profit_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ReportCard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ReportCard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Remove User Male_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Remove User Male_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Coins" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Coins.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Report Card_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Report Card_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sc-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sc-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Delete_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Delete_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Resume_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Resume_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gender Neutral User_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gender Neutral User_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeartPulse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeartPulse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Heart with Pulse_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Heart with Pulse_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

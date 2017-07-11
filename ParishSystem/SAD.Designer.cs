@@ -28,6 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SAD));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.home_panel_menu = new System.Windows.Forms.Panel();
@@ -39,34 +49,38 @@
             this.bloodletting_panel_menu = new System.Windows.Forms.Panel();
             this.bloodletting_label_menu = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.income_panel_menu = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.report_panel_menu = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.application_panel_menu = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.CRB_panel_menu = new System.Windows.Forms.Panel();
+            this.label62 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.CDB_panel_menu = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.library_panel_menu = new System.Windows.Forms.Panel();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.home_panel = new System.Windows.Forms.Panel();
             this.profile_panel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.clear_profile_button = new System.Windows.Forms.Button();
-            this.deleteProfile_button = new System.Windows.Forms.Button();
+            this.AddBTN = new System.Windows.Forms.Button();
             this.openProfile_button = new System.Windows.Forms.Button();
-            this.addProfile_button = new System.Windows.Forms.Button();
+            this.deleteProfile_button = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.searchBar = new System.Windows.Forms.TextBox();
+            this.generalprofile_datagridview = new System.Windows.Forms.DataGridView();
+            this.AddPNL = new System.Windows.Forms.Panel();
+            this.clear_profile_button = new System.Windows.Forms.Button();
             this.suffix_textbox = new System.Windows.Forms.TextBox();
             this.lastname_textbox = new System.Windows.Forms.TextBox();
             this.middlename_textbox = new System.Windows.Forms.TextBox();
             this.birthplace_textbox_baptist = new System.Windows.Forms.TextBox();
+            this.addProfile_button = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
             this.firstname_textbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.searchBar = new System.Windows.Forms.TextBox();
-            this.generalprofile_datagridview = new System.Windows.Forms.DataGridView();
             this.time_Text = new System.Windows.Forms.Label();
             this.application_panel = new System.Windows.Forms.Panel();
             this.baptismApplication_label = new System.Windows.Forms.Label();
@@ -168,6 +182,129 @@
             this.btn_Close = new System.Windows.Forms.Button();
             this.btn_Min = new System.Windows.Forms.Button();
             this.btn_Max = new System.Windows.Forms.Button();
+            this.CDB_panel = new System.Windows.Forms.Panel();
+            this.label51 = new System.Windows.Forms.Label();
+            this.parish_panel_CD = new System.Windows.Forms.Panel();
+            this.generateReport_button_parish_CD = new System.Windows.Forms.Button();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.today_button_parish_CD = new System.Windows.Forms.Button();
+            this.to_dateTimePicker_parish_CD = new System.Windows.Forms.DateTimePicker();
+            this.from_dateTimePicker_parish_CD = new System.Windows.Forms.DateTimePicker();
+            this.summary_dataGridView_parish_CD = new System.Windows.Forms.DataGridView();
+            this.label50 = new System.Windows.Forms.Label();
+            this.postulancy_panel_CD = new System.Windows.Forms.Panel();
+            this.generateReport_button_postulancy_CD = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.today_button_postulancy_CD = new System.Windows.Forms.Button();
+            this.to_dateTimePicker_postulancy_CD = new System.Windows.Forms.DateTimePicker();
+            this.from_dateTimePicker_postulancy_CD = new System.Windows.Forms.DateTimePicker();
+            this.summary_dataGridView_postulancy_CD = new System.Windows.Forms.DataGridView();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.clear_button_postulancy_CD = new System.Windows.Forms.Button();
+            this.add_button_postulancy_CD = new System.Windows.Forms.Button();
+            this.type_combobox_postulancy_CD = new System.Windows.Forms.ComboBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.remarks_textarea_postulancy_CD = new System.Windows.Forms.TextBox();
+            this.price_textbox_postulancy_CD = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.postulancy_label_CD = new System.Windows.Forms.Label();
+            this.community_label_CD = new System.Windows.Forms.Label();
+            this.parish_label_CD = new System.Windows.Forms.Label();
+            this.community_panel_CD = new System.Windows.Forms.Panel();
+            this.generateReport_button_community_CD = new System.Windows.Forms.Button();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.today_button_community_CD = new System.Windows.Forms.Button();
+            this.to_dateTimePicker_community_CD = new System.Windows.Forms.DateTimePicker();
+            this.from_dataTimePicker_community_CD = new System.Windows.Forms.DateTimePicker();
+            this.summary_dataGridView_community_CD = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.clear_button_community_CD = new System.Windows.Forms.Button();
+            this.add_button_community_CD = new System.Windows.Forms.Button();
+            this.type_combobox_community_CD = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.remarks_textarea_community_CD = new System.Windows.Forms.TextBox();
+            this.price_textbox_community_CD = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.CRB_panel = new System.Windows.Forms.Panel();
+            this.postulancy_panel_CRB = new System.Windows.Forms.Panel();
+            this.generateReport_button_postulancy_CR = new System.Windows.Forms.Button();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.today_button_postulancy_CR = new System.Windows.Forms.Button();
+            this.to_dateTimePicker_postulancy_CR = new System.Windows.Forms.DateTimePicker();
+            this.from_dateTimePicker_postulancy_CR = new System.Windows.Forms.DateTimePicker();
+            this.summary_dataGridView_postulancy_CR = new System.Windows.Forms.DataGridView();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.clear_button_postulancy_CR = new System.Windows.Forms.Button();
+            this.add_button_postulancy_CR = new System.Windows.Forms.Button();
+            this.type_comboBox_postulancy_CR = new System.Windows.Forms.ComboBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.remarks_textArea_postulancy_CR = new System.Windows.Forms.TextBox();
+            this.price_textBox_postulancy_CR = new System.Windows.Forms.TextBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.community_panel_CRB = new System.Windows.Forms.Panel();
+            this.generateReport_button_community_CR = new System.Windows.Forms.Button();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.today_button_community_CR = new System.Windows.Forms.Button();
+            this.to_dateTimePicker_community_CR = new System.Windows.Forms.DateTimePicker();
+            this.from_dateTimePicker_community_CR = new System.Windows.Forms.DateTimePicker();
+            this.summary_dataGridView_community_CR = new System.Windows.Forms.DataGridView();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.clear_button_community_CR = new System.Windows.Forms.Button();
+            this.add_button_community_CR = new System.Windows.Forms.Button();
+            this.type_comboBox_community_CR = new System.Windows.Forms.ComboBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
+            this.remarks_textArea_community_CR = new System.Windows.Forms.TextBox();
+            this.price_textbox_community_CR = new System.Windows.Forms.TextBox();
+            this.label74 = new System.Windows.Forms.Label();
+            this.parish_panel_CRB = new System.Windows.Forms.Panel();
+            this.generateReport_button_parish_CR = new System.Windows.Forms.Button();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.today_button_parish_CR = new System.Windows.Forms.Button();
+            this.to_dateTimePicker_parish_CR = new System.Windows.Forms.DateTimePicker();
+            this.from_dateTimePicker_parish_CR = new System.Windows.Forms.DateTimePicker();
+            this.summary_dataGridView_parish_CR = new System.Windows.Forms.DataGridView();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.clear_button_parish_CR = new System.Windows.Forms.Button();
+            this.add_button_parish_CR = new System.Windows.Forms.Button();
+            this.type_combobox_parish_CR = new System.Windows.Forms.ComboBox();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.remarks_textarea_parish_CR = new System.Windows.Forms.TextBox();
+            this.price_textbox_parish_CR = new System.Windows.Forms.TextBox();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.postulancy_label_CRB = new System.Windows.Forms.Label();
+            this.community_label_CRB = new System.Windows.Forms.Label();
+            this.parish_label_CRB = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.baptism_panel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.profiles_dataGridView_baptism = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.imageListMenu = new System.Windows.Forms.ImageList(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.home_panel_menu.SuspendLayout();
@@ -176,15 +313,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_person)).BeginInit();
             this.bloodletting_panel_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.income_panel_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.report_panel_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.application_panel_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.CRB_panel_menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.CDB_panel_menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.library_panel_menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.profile_panel.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).BeginInit();
+            this.AddPNL.SuspendLayout();
             this.application_panel.SuspendLayout();
             this.baptismApplication_panel.SuspendLayout();
             this.newName_panel_baptismApplication.SuspendLayout();
@@ -206,6 +345,29 @@
             this.panel_controlbox.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayout_ControlButtons.SuspendLayout();
+            this.CDB_panel.SuspendLayout();
+            this.parish_panel_CD.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summary_dataGridView_parish_CD)).BeginInit();
+            this.postulancy_panel_CD.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summary_dataGridView_postulancy_CD)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.community_panel_CD.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summary_dataGridView_community_CD)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.CRB_panel.SuspendLayout();
+            this.postulancy_panel_CRB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summary_dataGridView_postulancy_CR)).BeginInit();
+            this.panel8.SuspendLayout();
+            this.community_panel_CRB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summary_dataGridView_community_CR)).BeginInit();
+            this.panel6.SuspendLayout();
+            this.parish_panel_CRB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summary_dataGridView_parish_CR)).BeginInit();
+            this.panel10.SuspendLayout();
+            this.baptism_panel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.profiles_dataGridView_baptism)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -215,9 +377,10 @@
             this.flowLayoutPanel1.Controls.Add(this.home_panel_menu);
             this.flowLayoutPanel1.Controls.Add(this.profile_panel_menu);
             this.flowLayoutPanel1.Controls.Add(this.bloodletting_panel_menu);
-            this.flowLayoutPanel1.Controls.Add(this.income_panel_menu);
-            this.flowLayoutPanel1.Controls.Add(this.report_panel_menu);
             this.flowLayoutPanel1.Controls.Add(this.application_panel_menu);
+            this.flowLayoutPanel1.Controls.Add(this.CRB_panel_menu);
+            this.flowLayoutPanel1.Controls.Add(this.CDB_panel_menu);
+            this.flowLayoutPanel1.Controls.Add(this.library_panel_menu);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 33);
@@ -233,7 +396,7 @@
             this.pictureBox5.Location = new System.Drawing.Point(1, 6);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(178, 52);
+            this.pictureBox5.Size = new System.Drawing.Size(178, 10);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 38;
             this.pictureBox5.TabStop = false;
@@ -242,14 +405,13 @@
             // 
             this.home_panel_menu.Controls.Add(this.label8);
             this.home_panel_menu.Controls.Add(this.pictureBox2);
-            this.home_panel_menu.Location = new System.Drawing.Point(1, 60);
+            this.home_panel_menu.Location = new System.Drawing.Point(1, 18);
             this.home_panel_menu.Margin = new System.Windows.Forms.Padding(1);
             this.home_panel_menu.Name = "home_panel_menu";
             this.home_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.home_panel_menu.Size = new System.Drawing.Size(178, 50);
             this.home_panel_menu.TabIndex = 2;
-            this.home_panel_menu.Click += new System.EventHandler(this.home_panel_menu_Click);
-            this.home_panel_menu.Paint += new System.Windows.Forms.PaintEventHandler(this.home_panel_menu_Paint);
+            this.home_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
             this.home_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
             this.home_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
             // 
@@ -282,13 +444,13 @@
             // 
             this.profile_panel_menu.Controls.Add(this.label12);
             this.profile_panel_menu.Controls.Add(this.pictureBox_person);
-            this.profile_panel_menu.Location = new System.Drawing.Point(1, 112);
+            this.profile_panel_menu.Location = new System.Drawing.Point(1, 70);
             this.profile_panel_menu.Margin = new System.Windows.Forms.Padding(1);
             this.profile_panel_menu.Name = "profile_panel_menu";
             this.profile_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.profile_panel_menu.Size = new System.Drawing.Size(176, 50);
             this.profile_panel_menu.TabIndex = 0;
-            this.profile_panel_menu.Click += new System.EventHandler(this.profile_panel_menu_Click);
+            this.profile_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
             this.profile_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
             this.profile_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
             // 
@@ -322,13 +484,13 @@
             this.bloodletting_panel_menu.AccessibleDescription = "";
             this.bloodletting_panel_menu.Controls.Add(this.bloodletting_label_menu);
             this.bloodletting_panel_menu.Controls.Add(this.pictureBox1);
-            this.bloodletting_panel_menu.Location = new System.Drawing.Point(1, 164);
+            this.bloodletting_panel_menu.Location = new System.Drawing.Point(1, 122);
             this.bloodletting_panel_menu.Margin = new System.Windows.Forms.Padding(1);
             this.bloodletting_panel_menu.Name = "bloodletting_panel_menu";
             this.bloodletting_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.bloodletting_panel_menu.Size = new System.Drawing.Size(176, 50);
             this.bloodletting_panel_menu.TabIndex = 2;
-            this.bloodletting_panel_menu.Click += new System.EventHandler(this.bloodletting_panel_menu_Click);
+            this.bloodletting_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
             this.bloodletting_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
             this.bloodletting_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
             // 
@@ -357,108 +519,18 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // income_panel_menu
-            // 
-            this.income_panel_menu.Controls.Add(this.label15);
-            this.income_panel_menu.Controls.Add(this.pictureBox3);
-            this.income_panel_menu.Location = new System.Drawing.Point(1, 216);
-            this.income_panel_menu.Margin = new System.Windows.Forms.Padding(1);
-            this.income_panel_menu.Name = "income_panel_menu";
-            this.income_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.income_panel_menu.Size = new System.Drawing.Size(176, 50);
-            this.income_panel_menu.TabIndex = 39;
-            this.income_panel_menu.Click += new System.EventHandler(this.income_panel_menu_Click);
-            this.income_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
-            this.income_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(68, 20);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(66, 20);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Finance";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Image = global::ParishSystem.Properties.Resources.Money;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // report_panel_menu
-            // 
-            this.report_panel_menu.Controls.Add(this.label16);
-            this.report_panel_menu.Controls.Add(this.label14);
-            this.report_panel_menu.Controls.Add(this.pictureBox4);
-            this.report_panel_menu.Location = new System.Drawing.Point(1, 268);
-            this.report_panel_menu.Margin = new System.Windows.Forms.Padding(1);
-            this.report_panel_menu.Name = "report_panel_menu";
-            this.report_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.report_panel_menu.Size = new System.Drawing.Size(176, 50);
-            this.report_panel_menu.TabIndex = 40;
-            this.report_panel_menu.Click += new System.EventHandler(this.report_panel_menu_Click);
-            this.report_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
-            this.report_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(68, 17);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(66, 20);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "Reports";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(73, -41);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(72, 25);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "Home";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox4.Image = global::ParishSystem.Properties.Resources.ReportCard;
-            this.pictureBox4.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
             // application_panel_menu
             // 
             this.application_panel_menu.Controls.Add(this.label13);
             this.application_panel_menu.Controls.Add(this.label17);
             this.application_panel_menu.Controls.Add(this.pictureBox6);
-            this.application_panel_menu.Location = new System.Drawing.Point(1, 320);
+            this.application_panel_menu.Location = new System.Drawing.Point(1, 174);
             this.application_panel_menu.Margin = new System.Windows.Forms.Padding(1);
             this.application_panel_menu.Name = "application_panel_menu";
             this.application_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.application_panel_menu.Size = new System.Drawing.Size(176, 50);
             this.application_panel_menu.TabIndex = 41;
-            this.application_panel_menu.Click += new System.EventHandler(this.application_panel_menu_Click);
+            this.application_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
             this.application_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
             this.application_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
             // 
@@ -498,6 +570,132 @@
             this.pictureBox6.TabIndex = 1;
             this.pictureBox6.TabStop = false;
             // 
+            // CRB_panel_menu
+            // 
+            this.CRB_panel_menu.Controls.Add(this.label62);
+            this.CRB_panel_menu.Controls.Add(this.pictureBox7);
+            this.CRB_panel_menu.Location = new System.Drawing.Point(1, 226);
+            this.CRB_panel_menu.Margin = new System.Windows.Forms.Padding(1);
+            this.CRB_panel_menu.Name = "CRB_panel_menu";
+            this.CRB_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.CRB_panel_menu.Size = new System.Drawing.Size(176, 50);
+            this.CRB_panel_menu.TabIndex = 40;
+            this.CRB_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
+            this.CRB_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
+            this.CRB_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.BackColor = System.Drawing.Color.Transparent;
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.ForeColor = System.Drawing.Color.White;
+            this.label62.Location = new System.Drawing.Point(68, 20);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(43, 20);
+            this.label62.TabIndex = 3;
+            this.label62.Text = "CRB";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox7.Image = global::ParishSystem.Properties.Resources.Money;
+            this.pictureBox7.Location = new System.Drawing.Point(10, 0);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Padding = new System.Windows.Forms.Padding(5);
+            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 1;
+            this.pictureBox7.TabStop = false;
+            // 
+            // CDB_panel_menu
+            // 
+            this.CDB_panel_menu.Controls.Add(this.label15);
+            this.CDB_panel_menu.Controls.Add(this.pictureBox3);
+            this.CDB_panel_menu.Location = new System.Drawing.Point(1, 278);
+            this.CDB_panel_menu.Margin = new System.Windows.Forms.Padding(1);
+            this.CDB_panel_menu.Name = "CDB_panel_menu";
+            this.CDB_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.CDB_panel_menu.Size = new System.Drawing.Size(176, 50);
+            this.CDB_panel_menu.TabIndex = 39;
+            this.CDB_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
+            this.CDB_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
+            this.CDB_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(68, 20);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(43, 20);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "CDB";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox3.Image = global::ParishSystem.Properties.Resources.Money;
+            this.pictureBox3.Location = new System.Drawing.Point(10, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Padding = new System.Windows.Forms.Padding(5);
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // library_panel_menu
+            // 
+            this.library_panel_menu.Controls.Add(this.label63);
+            this.library_panel_menu.Controls.Add(this.label64);
+            this.library_panel_menu.Controls.Add(this.pictureBox8);
+            this.library_panel_menu.Location = new System.Drawing.Point(1, 330);
+            this.library_panel_menu.Margin = new System.Windows.Forms.Padding(1);
+            this.library_panel_menu.Name = "library_panel_menu";
+            this.library_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.library_panel_menu.Size = new System.Drawing.Size(176, 50);
+            this.library_panel_menu.TabIndex = 41;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.BackColor = System.Drawing.Color.Transparent;
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.ForeColor = System.Drawing.Color.White;
+            this.label63.Location = new System.Drawing.Point(68, 17);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(60, 20);
+            this.label63.TabIndex = 3;
+            this.label63.Text = "Library ";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.ForeColor = System.Drawing.Color.White;
+            this.label64.Location = new System.Drawing.Point(73, -41);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(72, 25);
+            this.label64.TabIndex = 3;
+            this.label64.Text = "Home";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox8.Image = global::ParishSystem.Properties.Resources.ReportCard;
+            this.pictureBox8.Location = new System.Drawing.Point(10, 0);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Padding = new System.Windows.Forms.Padding(5);
+            this.pictureBox8.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 1;
+            this.pictureBox8.TabStop = false;
+            // 
             // home_panel
             // 
             this.home_panel.BackColor = System.Drawing.Color.White;
@@ -511,103 +709,186 @@
             // profile_panel
             // 
             this.profile_panel.BackColor = System.Drawing.Color.White;
-            this.profile_panel.Controls.Add(this.panel1);
+            this.profile_panel.Controls.Add(this.AddBTN);
+            this.profile_panel.Controls.Add(this.openProfile_button);
+            this.profile_panel.Controls.Add(this.deleteProfile_button);
             this.profile_panel.Controls.Add(this.label3);
             this.profile_panel.Controls.Add(this.searchBar);
             this.profile_panel.Controls.Add(this.generalprofile_datagridview);
+            this.profile_panel.Controls.Add(this.AddPNL);
             this.profile_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profile_panel.Location = new System.Drawing.Point(181, 33);
             this.profile_panel.Name = "profile_panel";
             this.profile_panel.Size = new System.Drawing.Size(753, 512);
             this.profile_panel.TabIndex = 29;
             // 
-            // panel1
+            // AddBTN
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.clear_profile_button);
-            this.panel1.Controls.Add(this.deleteProfile_button);
-            this.panel1.Controls.Add(this.openProfile_button);
-            this.panel1.Controls.Add(this.addProfile_button);
-            this.panel1.Controls.Add(this.suffix_textbox);
-            this.panel1.Controls.Add(this.lastname_textbox);
-            this.panel1.Controls.Add(this.middlename_textbox);
-            this.panel1.Controls.Add(this.birthplace_textbox_baptist);
-            this.panel1.Controls.Add(this.label33);
-            this.panel1.Controls.Add(this.firstname_textbox);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(18, 68);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(434, 232);
-            this.panel1.TabIndex = 27;
-            // 
-            // clear_profile_button
-            // 
-            this.clear_profile_button.BackColor = System.Drawing.Color.DodgerBlue;
-            this.clear_profile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_profile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear_profile_button.ForeColor = System.Drawing.Color.White;
-            this.clear_profile_button.Location = new System.Drawing.Point(9, 120);
-            this.clear_profile_button.Name = "clear_profile_button";
-            this.clear_profile_button.Size = new System.Drawing.Size(100, 31);
-            this.clear_profile_button.TabIndex = 31;
-            this.clear_profile_button.Text = "Clear";
-            this.clear_profile_button.UseVisualStyleBackColor = false;
-            this.clear_profile_button.Click += new System.EventHandler(this.clear_profile_button_Click);
-            // 
-            // deleteProfile_button
-            // 
-            this.deleteProfile_button.BackColor = System.Drawing.Color.DodgerBlue;
-            this.deleteProfile_button.Enabled = false;
-            this.deleteProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteProfile_button.ForeColor = System.Drawing.Color.White;
-            this.deleteProfile_button.Location = new System.Drawing.Point(115, 122);
-            this.deleteProfile_button.Name = "deleteProfile_button";
-            this.deleteProfile_button.Size = new System.Drawing.Size(100, 29);
-            this.deleteProfile_button.TabIndex = 30;
-            this.deleteProfile_button.Text = "Delete Profile";
-            this.deleteProfile_button.UseVisualStyleBackColor = false;
-            this.deleteProfile_button.Click += new System.EventHandler(this.deleteProfile_button_Click);
+            this.AddBTN.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.AddBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.AddBTN.FlatAppearance.BorderSize = 0;
+            this.AddBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddBTN.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddBTN.ForeColor = System.Drawing.Color.White;
+            this.AddBTN.Location = new System.Drawing.Point(20, 62);
+            this.AddBTN.Name = "AddBTN";
+            this.AddBTN.Size = new System.Drawing.Size(100, 30);
+            this.AddBTN.TabIndex = 32;
+            this.AddBTN.Text = "Add";
+            this.AddBTN.UseVisualStyleBackColor = false;
+            this.AddBTN.Click += new System.EventHandler(this.AddBTN_Click);
             // 
             // openProfile_button
             // 
-            this.openProfile_button.BackColor = System.Drawing.Color.DodgerBlue;
+            this.openProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
             this.openProfile_button.Enabled = false;
+            this.openProfile_button.FlatAppearance.BorderSize = 0;
             this.openProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.openProfile_button.ForeColor = System.Drawing.Color.White;
-            this.openProfile_button.Location = new System.Drawing.Point(327, 122);
+            this.openProfile_button.Location = new System.Drawing.Point(256, 450);
             this.openProfile_button.Name = "openProfile_button";
-            this.openProfile_button.Size = new System.Drawing.Size(100, 31);
+            this.openProfile_button.Size = new System.Drawing.Size(100, 30);
             this.openProfile_button.TabIndex = 29;
             this.openProfile_button.Text = "Open Profile";
             this.openProfile_button.UseVisualStyleBackColor = false;
             this.openProfile_button.Click += new System.EventHandler(this.openProfile_button_Click);
             // 
-            // addProfile_button
+            // deleteProfile_button
             // 
-            this.addProfile_button.BackColor = System.Drawing.Color.DodgerBlue;
-            this.addProfile_button.Enabled = false;
-            this.addProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addProfile_button.ForeColor = System.Drawing.Color.White;
-            this.addProfile_button.Location = new System.Drawing.Point(221, 122);
-            this.addProfile_button.Name = "addProfile_button";
-            this.addProfile_button.Size = new System.Drawing.Size(100, 31);
-            this.addProfile_button.TabIndex = 29;
-            this.addProfile_button.Text = "Add Profile";
-            this.addProfile_button.UseVisualStyleBackColor = false;
-            this.addProfile_button.Click += new System.EventHandler(this.addProfile_button_Click);
+            this.deleteProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.deleteProfile_button.Enabled = false;
+            this.deleteProfile_button.FlatAppearance.BorderSize = 0;
+            this.deleteProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteProfile_button.ForeColor = System.Drawing.Color.White;
+            this.deleteProfile_button.Location = new System.Drawing.Point(362, 450);
+            this.deleteProfile_button.Name = "deleteProfile_button";
+            this.deleteProfile_button.Size = new System.Drawing.Size(100, 30);
+            this.deleteProfile_button.TabIndex = 30;
+            this.deleteProfile_button.Text = "Delete Profile";
+            this.deleteProfile_button.UseVisualStyleBackColor = false;
+            this.deleteProfile_button.Click += new System.EventHandler(this.deleteProfile_button_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.label3.Location = new System.Drawing.Point(20, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 23);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "PROFILES";
+            // 
+            // searchBar
+            // 
+            this.searchBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchBar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBar.Location = new System.Drawing.Point(455, 33);
+            this.searchBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.searchBar.Name = "searchBar";
+            this.searchBar.Size = new System.Drawing.Size(252, 25);
+            this.searchBar.TabIndex = 1;
+            // 
+            // generalprofile_datagridview
+            // 
+            this.generalprofile_datagridview.AllowUserToAddRows = false;
+            this.generalprofile_datagridview.AllowUserToDeleteRows = false;
+            this.generalprofile_datagridview.AllowUserToResizeColumns = false;
+            this.generalprofile_datagridview.AllowUserToResizeRows = false;
+            this.generalprofile_datagridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.generalprofile_datagridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.generalprofile_datagridview.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.generalprofile_datagridview.BackgroundColor = System.Drawing.Color.White;
+            this.generalprofile_datagridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.generalprofile_datagridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.generalprofile_datagridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.generalprofile_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.generalprofile_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.generalprofile_datagridview.DefaultCellStyle = dataGridViewCellStyle2;
+            this.generalprofile_datagridview.EnableHeadersVisualStyles = false;
+            this.generalprofile_datagridview.Location = new System.Drawing.Point(24, 97);
+            this.generalprofile_datagridview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.generalprofile_datagridview.MultiSelect = false;
+            this.generalprofile_datagridview.Name = "generalprofile_datagridview";
+            this.generalprofile_datagridview.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.generalprofile_datagridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.generalprofile_datagridview.RowHeadersVisible = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.generalprofile_datagridview.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.generalprofile_datagridview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.generalprofile_datagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.generalprofile_datagridview.Size = new System.Drawing.Size(683, 300);
+            this.generalprofile_datagridview.TabIndex = 0;
+            this.generalprofile_datagridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.generalprofile_datagridview_CellClick);
+            // 
+            // AddPNL
+            // 
+            this.AddPNL.BackColor = System.Drawing.Color.White;
+            this.AddPNL.Controls.Add(this.clear_profile_button);
+            this.AddPNL.Controls.Add(this.suffix_textbox);
+            this.AddPNL.Controls.Add(this.lastname_textbox);
+            this.AddPNL.Controls.Add(this.middlename_textbox);
+            this.AddPNL.Controls.Add(this.birthplace_textbox_baptist);
+            this.AddPNL.Controls.Add(this.addProfile_button);
+            this.AddPNL.Controls.Add(this.label33);
+            this.AddPNL.Controls.Add(this.firstname_textbox);
+            this.AddPNL.Controls.Add(this.label2);
+            this.AddPNL.Location = new System.Drawing.Point(24, 96);
+            this.AddPNL.Name = "AddPNL";
+            this.AddPNL.Size = new System.Drawing.Size(683, 401);
+            this.AddPNL.TabIndex = 27;
+            this.AddPNL.Visible = false;
+            // 
+            // clear_profile_button
+            // 
+            this.clear_profile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.clear_profile_button.FlatAppearance.BorderSize = 0;
+            this.clear_profile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear_profile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear_profile_button.ForeColor = System.Drawing.Color.White;
+            this.clear_profile_button.Location = new System.Drawing.Point(338, 192);
+            this.clear_profile_button.Name = "clear_profile_button";
+            this.clear_profile_button.Size = new System.Drawing.Size(100, 30);
+            this.clear_profile_button.TabIndex = 31;
+            this.clear_profile_button.Text = "Cancel";
+            this.clear_profile_button.UseVisualStyleBackColor = false;
+            this.clear_profile_button.Click += new System.EventHandler(this.clear_profile_button_Click);
             // 
             // suffix_textbox
             // 
             this.suffix_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.suffix_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suffix_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.suffix_textbox.ForeColor = System.Drawing.Color.Silver;
-            this.suffix_textbox.Location = new System.Drawing.Point(363, 74);
+            this.suffix_textbox.Location = new System.Drawing.Point(474, 113);
             this.suffix_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.suffix_textbox.Name = "suffix_textbox";
-            this.suffix_textbox.Size = new System.Drawing.Size(54, 16);
+            this.suffix_textbox.Size = new System.Drawing.Size(54, 18);
             this.suffix_textbox.TabIndex = 23;
             this.suffix_textbox.Text = "Suffix";
             this.suffix_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -616,12 +897,12 @@
             // lastname_textbox
             // 
             this.lastname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lastname_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastname_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lastname_textbox.ForeColor = System.Drawing.Color.Silver;
-            this.lastname_textbox.Location = new System.Drawing.Point(261, 74);
+            this.lastname_textbox.Location = new System.Drawing.Point(378, 113);
             this.lastname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastname_textbox.Name = "lastname_textbox";
-            this.lastname_textbox.Size = new System.Drawing.Size(94, 16);
+            this.lastname_textbox.Size = new System.Drawing.Size(94, 18);
             this.lastname_textbox.TabIndex = 24;
             this.lastname_textbox.Text = "Last Name";
             this.lastname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -630,12 +911,12 @@
             // middlename_textbox
             // 
             this.middlename_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.middlename_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.middlename_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.middlename_textbox.ForeColor = System.Drawing.Color.Silver;
-            this.middlename_textbox.Location = new System.Drawing.Point(169, 74);
+            this.middlename_textbox.Location = new System.Drawing.Point(281, 113);
             this.middlename_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.middlename_textbox.Name = "middlename_textbox";
-            this.middlename_textbox.Size = new System.Drawing.Size(94, 16);
+            this.middlename_textbox.Size = new System.Drawing.Size(94, 18);
             this.middlename_textbox.TabIndex = 22;
             this.middlename_textbox.Text = "Middle Name";
             this.middlename_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -651,10 +932,26 @@
             this.birthplace_textbox_baptist.Size = new System.Drawing.Size(133, 16);
             this.birthplace_textbox_baptist.TabIndex = 20;
             // 
+            // addProfile_button
+            // 
+            this.addProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.addProfile_button.FlatAppearance.BorderSize = 0;
+            this.addProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addProfile_button.ForeColor = System.Drawing.Color.White;
+            this.addProfile_button.Location = new System.Drawing.Point(232, 192);
+            this.addProfile_button.Name = "addProfile_button";
+            this.addProfile_button.Size = new System.Drawing.Size(100, 30);
+            this.addProfile_button.TabIndex = 29;
+            this.addProfile_button.Text = "Save";
+            this.addProfile_button.UseVisualStyleBackColor = false;
+            this.addProfile_button.Click += new System.EventHandler(this.addProfile_button_Click);
+            // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(5, 70);
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(255)))));
+            this.label33.Location = new System.Drawing.Point(126, 111);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(52, 21);
@@ -664,12 +961,12 @@
             // firstname_textbox
             // 
             this.firstname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstname_textbox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstname_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.firstname_textbox.ForeColor = System.Drawing.Color.Silver;
-            this.firstname_textbox.Location = new System.Drawing.Point(67, 74);
+            this.firstname_textbox.Location = new System.Drawing.Point(184, 113);
             this.firstname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstname_textbox.Name = "firstname_textbox";
-            this.firstname_textbox.Size = new System.Drawing.Size(94, 16);
+            this.firstname_textbox.Size = new System.Drawing.Size(94, 18);
             this.firstname_textbox.TabIndex = 13;
             this.firstname_textbox.Text = "First Name";
             this.firstname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -678,47 +975,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 74);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(181, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(360, 21);
+            this.label2.Size = new System.Drawing.Size(351, 20);
             this.label2.TabIndex = 11;
-            this.label2.Text = "__________________________________________________";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.label3.Location = new System.Drawing.Point(3, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 23);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "PROFILES";
-            // 
-            // searchBar
-            // 
-            this.searchBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBar.Location = new System.Drawing.Point(498, 33);
-            this.searchBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(229, 25);
-            this.searchBar.TabIndex = 1;
-            // 
-            // generalprofile_datagridview
-            // 
-            this.generalprofile_datagridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.generalprofile_datagridview.BackgroundColor = System.Drawing.Color.White;
-            this.generalprofile_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.generalprofile_datagridview.Location = new System.Drawing.Point(459, 68);
-            this.generalprofile_datagridview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.generalprofile_datagridview.Name = "generalprofile_datagridview";
-            this.generalprofile_datagridview.RowHeadersVisible = false;
-            this.generalprofile_datagridview.Size = new System.Drawing.Size(268, 413);
-            this.generalprofile_datagridview.TabIndex = 0;
-            this.generalprofile_datagridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.generalprofile_datagridview_CellClick);
+            this.label2.Text = "______________________________________";
             // 
             // time_Text
             // 
@@ -1664,7 +1927,6 @@
             this.profile_menu_button.Size = new System.Drawing.Size(133, 55);
             this.profile_menu_button.TabIndex = 4;
             this.profile_menu_button.UseVisualStyleBackColor = true;
-            this.profile_menu_button.Click += new System.EventHandler(this.profile_menu_button_Click);
             // 
             // bloodletting_menu_button
             // 
@@ -1694,7 +1956,6 @@
             this.home_menu_button.Size = new System.Drawing.Size(96, 56);
             this.home_menu_button.TabIndex = 0;
             this.home_menu_button.UseVisualStyleBackColor = true;
-            this.home_menu_button.Click += new System.EventHandler(this.home_menu_button_Click);
             // 
             // dataGridView4
             // 
@@ -1753,7 +2014,6 @@
             this.application_menu_button.Size = new System.Drawing.Size(146, 62);
             this.application_menu_button.TabIndex = 1;
             this.application_menu_button.UseVisualStyleBackColor = true;
-            this.application_menu_button.Click += new System.EventHandler(this.application_menu_button_Click);
             // 
             // textBox1
             // 
@@ -1949,6 +2209,1282 @@
             this.btn_Max.Size = new System.Drawing.Size(27, 25);
             this.btn_Max.TabIndex = 33;
             this.btn_Max.UseVisualStyleBackColor = true;
+            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
+            // 
+            // CDB_panel
+            // 
+            this.CDB_panel.BackColor = System.Drawing.Color.White;
+            this.CDB_panel.Controls.Add(this.label51);
+            this.CDB_panel.Controls.Add(this.parish_panel_CD);
+            this.CDB_panel.Controls.Add(this.postulancy_panel_CD);
+            this.CDB_panel.Controls.Add(this.postulancy_label_CD);
+            this.CDB_panel.Controls.Add(this.community_label_CD);
+            this.CDB_panel.Controls.Add(this.parish_label_CD);
+            this.CDB_panel.Controls.Add(this.community_panel_CD);
+            this.CDB_panel.Controls.Add(this.label41);
+            this.CDB_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CDB_panel.Location = new System.Drawing.Point(181, 33);
+            this.CDB_panel.Name = "CDB_panel";
+            this.CDB_panel.Size = new System.Drawing.Size(753, 512);
+            this.CDB_panel.TabIndex = 55;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(3, 3);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(223, 25);
+            this.label51.TabIndex = 47;
+            this.label51.Text = "Cash Disbursment Book";
+            // 
+            // parish_panel_CD
+            // 
+            this.parish_panel_CD.Controls.Add(this.generateReport_button_parish_CD);
+            this.parish_panel_CD.Controls.Add(this.label48);
+            this.parish_panel_CD.Controls.Add(this.label49);
+            this.parish_panel_CD.Controls.Add(this.today_button_parish_CD);
+            this.parish_panel_CD.Controls.Add(this.to_dateTimePicker_parish_CD);
+            this.parish_panel_CD.Controls.Add(this.from_dateTimePicker_parish_CD);
+            this.parish_panel_CD.Controls.Add(this.summary_dataGridView_parish_CD);
+            this.parish_panel_CD.Controls.Add(this.label50);
+            this.parish_panel_CD.Location = new System.Drawing.Point(0, 85);
+            this.parish_panel_CD.Name = "parish_panel_CD";
+            this.parish_panel_CD.Size = new System.Drawing.Size(753, 427);
+            this.parish_panel_CD.TabIndex = 46;
+            // 
+            // generateReport_button_parish_CD
+            // 
+            this.generateReport_button_parish_CD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateReport_button_parish_CD.Location = new System.Drawing.Point(598, 389);
+            this.generateReport_button_parish_CD.Name = "generateReport_button_parish_CD";
+            this.generateReport_button_parish_CD.Size = new System.Drawing.Size(120, 23);
+            this.generateReport_button_parish_CD.TabIndex = 6;
+            this.generateReport_button_parish_CD.Text = "Generate Report";
+            this.generateReport_button_parish_CD.UseVisualStyleBackColor = true;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(68, 17);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(38, 17);
+            this.label48.TabIndex = 5;
+            this.label48.Text = "From";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(352, 17);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(22, 17);
+            this.label49.TabIndex = 5;
+            this.label49.Text = "To";
+            // 
+            // today_button_parish_CD
+            // 
+            this.today_button_parish_CD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.today_button_parish_CD.Location = new System.Drawing.Point(632, 17);
+            this.today_button_parish_CD.Name = "today_button_parish_CD";
+            this.today_button_parish_CD.Size = new System.Drawing.Size(75, 23);
+            this.today_button_parish_CD.TabIndex = 3;
+            this.today_button_parish_CD.Text = "Today";
+            this.today_button_parish_CD.UseVisualStyleBackColor = true;
+            // 
+            // to_dateTimePicker_parish_CD
+            // 
+            this.to_dateTimePicker_parish_CD.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.to_dateTimePicker_parish_CD.Location = new System.Drawing.Point(397, 17);
+            this.to_dateTimePicker_parish_CD.Name = "to_dateTimePicker_parish_CD";
+            this.to_dateTimePicker_parish_CD.Size = new System.Drawing.Size(200, 23);
+            this.to_dateTimePicker_parish_CD.TabIndex = 2;
+            // 
+            // from_dateTimePicker_parish_CD
+            // 
+            this.from_dateTimePicker_parish_CD.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.from_dateTimePicker_parish_CD.Location = new System.Drawing.Point(129, 17);
+            this.from_dateTimePicker_parish_CD.Name = "from_dateTimePicker_parish_CD";
+            this.from_dateTimePicker_parish_CD.Size = new System.Drawing.Size(200, 23);
+            this.from_dateTimePicker_parish_CD.TabIndex = 2;
+            // 
+            // summary_dataGridView_parish_CD
+            // 
+            this.summary_dataGridView_parish_CD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.summary_dataGridView_parish_CD.Location = new System.Drawing.Point(51, 72);
+            this.summary_dataGridView_parish_CD.Name = "summary_dataGridView_parish_CD";
+            this.summary_dataGridView_parish_CD.Size = new System.Drawing.Size(666, 306);
+            this.summary_dataGridView_parish_CD.TabIndex = 1;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(29, 38);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(710, 21);
+            this.label50.TabIndex = 7;
+            this.label50.Text = "_________________________________________________________________________________" +
+    "___________________";
+            // 
+            // postulancy_panel_CD
+            // 
+            this.postulancy_panel_CD.Controls.Add(this.generateReport_button_postulancy_CD);
+            this.postulancy_panel_CD.Controls.Add(this.label9);
+            this.postulancy_panel_CD.Controls.Add(this.label18);
+            this.postulancy_panel_CD.Controls.Add(this.today_button_postulancy_CD);
+            this.postulancy_panel_CD.Controls.Add(this.to_dateTimePicker_postulancy_CD);
+            this.postulancy_panel_CD.Controls.Add(this.from_dateTimePicker_postulancy_CD);
+            this.postulancy_panel_CD.Controls.Add(this.summary_dataGridView_postulancy_CD);
+            this.postulancy_panel_CD.Controls.Add(this.panel5);
+            this.postulancy_panel_CD.Controls.Add(this.label47);
+            this.postulancy_panel_CD.Location = new System.Drawing.Point(0, 85);
+            this.postulancy_panel_CD.Name = "postulancy_panel_CD";
+            this.postulancy_panel_CD.Size = new System.Drawing.Size(753, 427);
+            this.postulancy_panel_CD.TabIndex = 45;
+            // 
+            // generateReport_button_postulancy_CD
+            // 
+            this.generateReport_button_postulancy_CD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateReport_button_postulancy_CD.Location = new System.Drawing.Point(598, 389);
+            this.generateReport_button_postulancy_CD.Name = "generateReport_button_postulancy_CD";
+            this.generateReport_button_postulancy_CD.Size = new System.Drawing.Size(120, 23);
+            this.generateReport_button_postulancy_CD.TabIndex = 6;
+            this.generateReport_button_postulancy_CD.Text = "Generate Report";
+            this.generateReport_button_postulancy_CD.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(75, 130);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(38, 17);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "From";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(359, 130);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(22, 17);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "To";
+            // 
+            // today_button_postulancy_CD
+            // 
+            this.today_button_postulancy_CD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.today_button_postulancy_CD.Location = new System.Drawing.Point(639, 130);
+            this.today_button_postulancy_CD.Name = "today_button_postulancy_CD";
+            this.today_button_postulancy_CD.Size = new System.Drawing.Size(75, 23);
+            this.today_button_postulancy_CD.TabIndex = 3;
+            this.today_button_postulancy_CD.Text = "Today";
+            this.today_button_postulancy_CD.UseVisualStyleBackColor = true;
+            // 
+            // to_dateTimePicker_postulancy_CD
+            // 
+            this.to_dateTimePicker_postulancy_CD.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.to_dateTimePicker_postulancy_CD.Location = new System.Drawing.Point(404, 130);
+            this.to_dateTimePicker_postulancy_CD.Name = "to_dateTimePicker_postulancy_CD";
+            this.to_dateTimePicker_postulancy_CD.Size = new System.Drawing.Size(200, 23);
+            this.to_dateTimePicker_postulancy_CD.TabIndex = 2;
+            // 
+            // from_dateTimePicker_postulancy_CD
+            // 
+            this.from_dateTimePicker_postulancy_CD.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.from_dateTimePicker_postulancy_CD.Location = new System.Drawing.Point(136, 130);
+            this.from_dateTimePicker_postulancy_CD.Name = "from_dateTimePicker_postulancy_CD";
+            this.from_dateTimePicker_postulancy_CD.Size = new System.Drawing.Size(200, 23);
+            this.from_dateTimePicker_postulancy_CD.TabIndex = 2;
+            // 
+            // summary_dataGridView_postulancy_CD
+            // 
+            this.summary_dataGridView_postulancy_CD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.summary_dataGridView_postulancy_CD.Location = new System.Drawing.Point(51, 168);
+            this.summary_dataGridView_postulancy_CD.Name = "summary_dataGridView_postulancy_CD";
+            this.summary_dataGridView_postulancy_CD.Size = new System.Drawing.Size(666, 210);
+            this.summary_dataGridView_postulancy_CD.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.clear_button_postulancy_CD);
+            this.panel5.Controls.Add(this.add_button_postulancy_CD);
+            this.panel5.Controls.Add(this.type_combobox_postulancy_CD);
+            this.panel5.Controls.Add(this.label44);
+            this.panel5.Controls.Add(this.label45);
+            this.panel5.Controls.Add(this.label46);
+            this.panel5.Controls.Add(this.remarks_textarea_postulancy_CD);
+            this.panel5.Controls.Add(this.price_textbox_postulancy_CD);
+            this.panel5.Location = new System.Drawing.Point(30, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(704, 103);
+            this.panel5.TabIndex = 0;
+            // 
+            // clear_button_postulancy_CD
+            // 
+            this.clear_button_postulancy_CD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear_button_postulancy_CD.Location = new System.Drawing.Point(518, 72);
+            this.clear_button_postulancy_CD.Name = "clear_button_postulancy_CD";
+            this.clear_button_postulancy_CD.Size = new System.Drawing.Size(75, 23);
+            this.clear_button_postulancy_CD.TabIndex = 6;
+            this.clear_button_postulancy_CD.Text = "Clear";
+            this.clear_button_postulancy_CD.UseVisualStyleBackColor = true;
+            // 
+            // add_button_postulancy_CD
+            // 
+            this.add_button_postulancy_CD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_button_postulancy_CD.Location = new System.Drawing.Point(609, 72);
+            this.add_button_postulancy_CD.Name = "add_button_postulancy_CD";
+            this.add_button_postulancy_CD.Size = new System.Drawing.Size(75, 23);
+            this.add_button_postulancy_CD.TabIndex = 6;
+            this.add_button_postulancy_CD.Text = "Add";
+            this.add_button_postulancy_CD.UseVisualStyleBackColor = true;
+            // 
+            // type_combobox_postulancy_CD
+            // 
+            this.type_combobox_postulancy_CD.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.type_combobox_postulancy_CD.FormattingEnabled = true;
+            this.type_combobox_postulancy_CD.Location = new System.Drawing.Point(84, 64);
+            this.type_combobox_postulancy_CD.Name = "type_combobox_postulancy_CD";
+            this.type_combobox_postulancy_CD.Size = new System.Drawing.Size(162, 23);
+            this.type_combobox_postulancy_CD.TabIndex = 2;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(280, 13);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(58, 17);
+            this.label44.TabIndex = 1;
+            this.label44.Text = "Remarks";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(31, 64);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(35, 17);
+            this.label45.TabIndex = 1;
+            this.label45.Text = "Type";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(31, 14);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(36, 17);
+            this.label46.TabIndex = 1;
+            this.label46.Text = "Price";
+            // 
+            // remarks_textarea_postulancy_CD
+            // 
+            this.remarks_textarea_postulancy_CD.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remarks_textarea_postulancy_CD.Location = new System.Drawing.Point(344, 12);
+            this.remarks_textarea_postulancy_CD.Multiline = true;
+            this.remarks_textarea_postulancy_CD.Name = "remarks_textarea_postulancy_CD";
+            this.remarks_textarea_postulancy_CD.Size = new System.Drawing.Size(340, 45);
+            this.remarks_textarea_postulancy_CD.TabIndex = 0;
+            // 
+            // price_textbox_postulancy_CD
+            // 
+            this.price_textbox_postulancy_CD.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price_textbox_postulancy_CD.Location = new System.Drawing.Point(84, 13);
+            this.price_textbox_postulancy_CD.Name = "price_textbox_postulancy_CD";
+            this.price_textbox_postulancy_CD.Size = new System.Drawing.Size(162, 23);
+            this.price_textbox_postulancy_CD.TabIndex = 0;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(27, 94);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(710, 21);
+            this.label47.TabIndex = 4;
+            this.label47.Text = "_________________________________________________________________________________" +
+    "___________________";
+            // 
+            // postulancy_label_CD
+            // 
+            this.postulancy_label_CD.AutoSize = true;
+            this.postulancy_label_CD.Location = new System.Drawing.Point(521, 46);
+            this.postulancy_label_CD.Name = "postulancy_label_CD";
+            this.postulancy_label_CD.Size = new System.Drawing.Size(84, 21);
+            this.postulancy_label_CD.TabIndex = 45;
+            this.postulancy_label_CD.Text = "Postulancy";
+            this.postulancy_label_CD.Click += new System.EventHandler(this.label_CD_Click);
+            // 
+            // community_label_CD
+            // 
+            this.community_label_CD.AutoSize = true;
+            this.community_label_CD.Location = new System.Drawing.Point(315, 46);
+            this.community_label_CD.Name = "community_label_CD";
+            this.community_label_CD.Size = new System.Drawing.Size(92, 21);
+            this.community_label_CD.TabIndex = 45;
+            this.community_label_CD.Text = "Community";
+            this.community_label_CD.Click += new System.EventHandler(this.label_CD_Click);
+            // 
+            // parish_label_CD
+            // 
+            this.parish_label_CD.AutoSize = true;
+            this.parish_label_CD.Location = new System.Drawing.Point(150, 46);
+            this.parish_label_CD.Name = "parish_label_CD";
+            this.parish_label_CD.Size = new System.Drawing.Size(52, 21);
+            this.parish_label_CD.TabIndex = 45;
+            this.parish_label_CD.Text = "Parish";
+            this.parish_label_CD.Click += new System.EventHandler(this.label_CD_Click);
+            // 
+            // community_panel_CD
+            // 
+            this.community_panel_CD.Controls.Add(this.generateReport_button_community_CD);
+            this.community_panel_CD.Controls.Add(this.label43);
+            this.community_panel_CD.Controls.Add(this.label42);
+            this.community_panel_CD.Controls.Add(this.today_button_community_CD);
+            this.community_panel_CD.Controls.Add(this.to_dateTimePicker_community_CD);
+            this.community_panel_CD.Controls.Add(this.from_dataTimePicker_community_CD);
+            this.community_panel_CD.Controls.Add(this.summary_dataGridView_community_CD);
+            this.community_panel_CD.Controls.Add(this.panel3);
+            this.community_panel_CD.Controls.Add(this.label40);
+            this.community_panel_CD.Location = new System.Drawing.Point(0, 85);
+            this.community_panel_CD.Name = "community_panel_CD";
+            this.community_panel_CD.Size = new System.Drawing.Size(753, 427);
+            this.community_panel_CD.TabIndex = 44;
+            // 
+            // generateReport_button_community_CD
+            // 
+            this.generateReport_button_community_CD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateReport_button_community_CD.Location = new System.Drawing.Point(598, 389);
+            this.generateReport_button_community_CD.Name = "generateReport_button_community_CD";
+            this.generateReport_button_community_CD.Size = new System.Drawing.Size(120, 23);
+            this.generateReport_button_community_CD.TabIndex = 6;
+            this.generateReport_button_community_CD.Text = "Generate Report";
+            this.generateReport_button_community_CD.UseVisualStyleBackColor = true;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(75, 130);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(38, 17);
+            this.label43.TabIndex = 5;
+            this.label43.Text = "From";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(359, 130);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(22, 17);
+            this.label42.TabIndex = 5;
+            this.label42.Text = "To";
+            // 
+            // today_button_community_CD
+            // 
+            this.today_button_community_CD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.today_button_community_CD.Location = new System.Drawing.Point(639, 130);
+            this.today_button_community_CD.Name = "today_button_community_CD";
+            this.today_button_community_CD.Size = new System.Drawing.Size(75, 23);
+            this.today_button_community_CD.TabIndex = 3;
+            this.today_button_community_CD.Text = "Today";
+            this.today_button_community_CD.UseVisualStyleBackColor = true;
+            // 
+            // to_dateTimePicker_community_CD
+            // 
+            this.to_dateTimePicker_community_CD.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.to_dateTimePicker_community_CD.Location = new System.Drawing.Point(404, 130);
+            this.to_dateTimePicker_community_CD.Name = "to_dateTimePicker_community_CD";
+            this.to_dateTimePicker_community_CD.Size = new System.Drawing.Size(200, 23);
+            this.to_dateTimePicker_community_CD.TabIndex = 2;
+            // 
+            // from_dataTimePicker_community_CD
+            // 
+            this.from_dataTimePicker_community_CD.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.from_dataTimePicker_community_CD.Location = new System.Drawing.Point(136, 130);
+            this.from_dataTimePicker_community_CD.Name = "from_dataTimePicker_community_CD";
+            this.from_dataTimePicker_community_CD.Size = new System.Drawing.Size(200, 23);
+            this.from_dataTimePicker_community_CD.TabIndex = 2;
+            // 
+            // summary_dataGridView_community_CD
+            // 
+            this.summary_dataGridView_community_CD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.summary_dataGridView_community_CD.Location = new System.Drawing.Point(51, 168);
+            this.summary_dataGridView_community_CD.Name = "summary_dataGridView_community_CD";
+            this.summary_dataGridView_community_CD.Size = new System.Drawing.Size(666, 210);
+            this.summary_dataGridView_community_CD.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.clear_button_community_CD);
+            this.panel3.Controls.Add(this.add_button_community_CD);
+            this.panel3.Controls.Add(this.type_combobox_community_CD);
+            this.panel3.Controls.Add(this.label24);
+            this.panel3.Controls.Add(this.label37);
+            this.panel3.Controls.Add(this.label19);
+            this.panel3.Controls.Add(this.remarks_textarea_community_CD);
+            this.panel3.Controls.Add(this.price_textbox_community_CD);
+            this.panel3.Location = new System.Drawing.Point(30, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(704, 103);
+            this.panel3.TabIndex = 0;
+            // 
+            // clear_button_community_CD
+            // 
+            this.clear_button_community_CD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear_button_community_CD.Location = new System.Drawing.Point(518, 72);
+            this.clear_button_community_CD.Name = "clear_button_community_CD";
+            this.clear_button_community_CD.Size = new System.Drawing.Size(75, 23);
+            this.clear_button_community_CD.TabIndex = 6;
+            this.clear_button_community_CD.Text = "Clear";
+            this.clear_button_community_CD.UseVisualStyleBackColor = true;
+            // 
+            // add_button_community_CD
+            // 
+            this.add_button_community_CD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_button_community_CD.Location = new System.Drawing.Point(609, 72);
+            this.add_button_community_CD.Name = "add_button_community_CD";
+            this.add_button_community_CD.Size = new System.Drawing.Size(75, 23);
+            this.add_button_community_CD.TabIndex = 6;
+            this.add_button_community_CD.Text = "Add";
+            this.add_button_community_CD.UseVisualStyleBackColor = true;
+            // 
+            // type_combobox_community_CD
+            // 
+            this.type_combobox_community_CD.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.type_combobox_community_CD.FormattingEnabled = true;
+            this.type_combobox_community_CD.Location = new System.Drawing.Point(84, 64);
+            this.type_combobox_community_CD.Name = "type_combobox_community_CD";
+            this.type_combobox_community_CD.Size = new System.Drawing.Size(162, 23);
+            this.type_combobox_community_CD.TabIndex = 2;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(280, 13);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(58, 17);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "Remarks";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(31, 64);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(35, 17);
+            this.label37.TabIndex = 1;
+            this.label37.Text = "Type";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(31, 14);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(36, 17);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "Price";
+            // 
+            // remarks_textarea_community_CD
+            // 
+            this.remarks_textarea_community_CD.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remarks_textarea_community_CD.Location = new System.Drawing.Point(344, 12);
+            this.remarks_textarea_community_CD.Multiline = true;
+            this.remarks_textarea_community_CD.Name = "remarks_textarea_community_CD";
+            this.remarks_textarea_community_CD.Size = new System.Drawing.Size(340, 45);
+            this.remarks_textarea_community_CD.TabIndex = 0;
+            // 
+            // price_textbox_community_CD
+            // 
+            this.price_textbox_community_CD.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price_textbox_community_CD.Location = new System.Drawing.Point(84, 13);
+            this.price_textbox_community_CD.Name = "price_textbox_community_CD";
+            this.price_textbox_community_CD.Size = new System.Drawing.Size(162, 23);
+            this.price_textbox_community_CD.TabIndex = 0;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(27, 94);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(710, 21);
+            this.label40.TabIndex = 4;
+            this.label40.Text = "_________________________________________________________________________________" +
+    "___________________";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(27, 60);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(710, 21);
+            this.label41.TabIndex = 5;
+            this.label41.Text = "_________________________________________________________________________________" +
+    "___________________";
+            // 
+            // CRB_panel
+            // 
+            this.CRB_panel.BackColor = System.Drawing.Color.White;
+            this.CRB_panel.Controls.Add(this.postulancy_panel_CRB);
+            this.CRB_panel.Controls.Add(this.community_panel_CRB);
+            this.CRB_panel.Controls.Add(this.parish_panel_CRB);
+            this.CRB_panel.Controls.Add(this.label52);
+            this.CRB_panel.Controls.Add(this.postulancy_label_CRB);
+            this.CRB_panel.Controls.Add(this.community_label_CRB);
+            this.CRB_panel.Controls.Add(this.parish_label_CRB);
+            this.CRB_panel.Controls.Add(this.label71);
+            this.CRB_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CRB_panel.Location = new System.Drawing.Point(181, 33);
+            this.CRB_panel.Name = "CRB_panel";
+            this.CRB_panel.Size = new System.Drawing.Size(753, 512);
+            this.CRB_panel.TabIndex = 56;
+            // 
+            // postulancy_panel_CRB
+            // 
+            this.postulancy_panel_CRB.Controls.Add(this.generateReport_button_postulancy_CR);
+            this.postulancy_panel_CRB.Controls.Add(this.label56);
+            this.postulancy_panel_CRB.Controls.Add(this.label57);
+            this.postulancy_panel_CRB.Controls.Add(this.today_button_postulancy_CR);
+            this.postulancy_panel_CRB.Controls.Add(this.to_dateTimePicker_postulancy_CR);
+            this.postulancy_panel_CRB.Controls.Add(this.from_dateTimePicker_postulancy_CR);
+            this.postulancy_panel_CRB.Controls.Add(this.summary_dataGridView_postulancy_CR);
+            this.postulancy_panel_CRB.Controls.Add(this.panel8);
+            this.postulancy_panel_CRB.Controls.Add(this.label61);
+            this.postulancy_panel_CRB.Location = new System.Drawing.Point(0, 85);
+            this.postulancy_panel_CRB.Name = "postulancy_panel_CRB";
+            this.postulancy_panel_CRB.Size = new System.Drawing.Size(753, 427);
+            this.postulancy_panel_CRB.TabIndex = 45;
+            // 
+            // generateReport_button_postulancy_CR
+            // 
+            this.generateReport_button_postulancy_CR.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateReport_button_postulancy_CR.Location = new System.Drawing.Point(598, 389);
+            this.generateReport_button_postulancy_CR.Name = "generateReport_button_postulancy_CR";
+            this.generateReport_button_postulancy_CR.Size = new System.Drawing.Size(120, 23);
+            this.generateReport_button_postulancy_CR.TabIndex = 6;
+            this.generateReport_button_postulancy_CR.Text = "Generate Report";
+            this.generateReport_button_postulancy_CR.UseVisualStyleBackColor = true;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Location = new System.Drawing.Point(75, 130);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(38, 17);
+            this.label56.TabIndex = 5;
+            this.label56.Text = "From";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Location = new System.Drawing.Point(359, 130);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(22, 17);
+            this.label57.TabIndex = 5;
+            this.label57.Text = "To";
+            // 
+            // today_button_postulancy_CR
+            // 
+            this.today_button_postulancy_CR.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.today_button_postulancy_CR.Location = new System.Drawing.Point(639, 130);
+            this.today_button_postulancy_CR.Name = "today_button_postulancy_CR";
+            this.today_button_postulancy_CR.Size = new System.Drawing.Size(75, 23);
+            this.today_button_postulancy_CR.TabIndex = 3;
+            this.today_button_postulancy_CR.Text = "Today";
+            this.today_button_postulancy_CR.UseVisualStyleBackColor = true;
+            // 
+            // to_dateTimePicker_postulancy_CR
+            // 
+            this.to_dateTimePicker_postulancy_CR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.to_dateTimePicker_postulancy_CR.Location = new System.Drawing.Point(404, 130);
+            this.to_dateTimePicker_postulancy_CR.Name = "to_dateTimePicker_postulancy_CR";
+            this.to_dateTimePicker_postulancy_CR.Size = new System.Drawing.Size(200, 23);
+            this.to_dateTimePicker_postulancy_CR.TabIndex = 2;
+            // 
+            // from_dateTimePicker_postulancy_CR
+            // 
+            this.from_dateTimePicker_postulancy_CR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.from_dateTimePicker_postulancy_CR.Location = new System.Drawing.Point(136, 130);
+            this.from_dateTimePicker_postulancy_CR.Name = "from_dateTimePicker_postulancy_CR";
+            this.from_dateTimePicker_postulancy_CR.Size = new System.Drawing.Size(200, 23);
+            this.from_dateTimePicker_postulancy_CR.TabIndex = 2;
+            // 
+            // summary_dataGridView_postulancy_CR
+            // 
+            this.summary_dataGridView_postulancy_CR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.summary_dataGridView_postulancy_CR.Location = new System.Drawing.Point(51, 168);
+            this.summary_dataGridView_postulancy_CR.Name = "summary_dataGridView_postulancy_CR";
+            this.summary_dataGridView_postulancy_CR.Size = new System.Drawing.Size(666, 210);
+            this.summary_dataGridView_postulancy_CR.TabIndex = 1;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.clear_button_postulancy_CR);
+            this.panel8.Controls.Add(this.add_button_postulancy_CR);
+            this.panel8.Controls.Add(this.type_comboBox_postulancy_CR);
+            this.panel8.Controls.Add(this.label58);
+            this.panel8.Controls.Add(this.label59);
+            this.panel8.Controls.Add(this.label60);
+            this.panel8.Controls.Add(this.remarks_textArea_postulancy_CR);
+            this.panel8.Controls.Add(this.price_textBox_postulancy_CR);
+            this.panel8.Location = new System.Drawing.Point(30, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(704, 103);
+            this.panel8.TabIndex = 0;
+            // 
+            // clear_button_postulancy_CR
+            // 
+            this.clear_button_postulancy_CR.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear_button_postulancy_CR.Location = new System.Drawing.Point(518, 72);
+            this.clear_button_postulancy_CR.Name = "clear_button_postulancy_CR";
+            this.clear_button_postulancy_CR.Size = new System.Drawing.Size(75, 23);
+            this.clear_button_postulancy_CR.TabIndex = 6;
+            this.clear_button_postulancy_CR.Text = "Clear";
+            this.clear_button_postulancy_CR.UseVisualStyleBackColor = true;
+            // 
+            // add_button_postulancy_CR
+            // 
+            this.add_button_postulancy_CR.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_button_postulancy_CR.Location = new System.Drawing.Point(609, 72);
+            this.add_button_postulancy_CR.Name = "add_button_postulancy_CR";
+            this.add_button_postulancy_CR.Size = new System.Drawing.Size(75, 23);
+            this.add_button_postulancy_CR.TabIndex = 6;
+            this.add_button_postulancy_CR.Text = "Add";
+            this.add_button_postulancy_CR.UseVisualStyleBackColor = true;
+            // 
+            // type_comboBox_postulancy_CR
+            // 
+            this.type_comboBox_postulancy_CR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.type_comboBox_postulancy_CR.FormattingEnabled = true;
+            this.type_comboBox_postulancy_CR.Location = new System.Drawing.Point(84, 64);
+            this.type_comboBox_postulancy_CR.Name = "type_comboBox_postulancy_CR";
+            this.type_comboBox_postulancy_CR.Size = new System.Drawing.Size(162, 23);
+            this.type_comboBox_postulancy_CR.TabIndex = 2;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Location = new System.Drawing.Point(280, 13);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(58, 17);
+            this.label58.TabIndex = 1;
+            this.label58.Text = "Remarks";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(31, 64);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(35, 17);
+            this.label59.TabIndex = 1;
+            this.label59.Text = "Type";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.Location = new System.Drawing.Point(31, 14);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(36, 17);
+            this.label60.TabIndex = 1;
+            this.label60.Text = "Price";
+            // 
+            // remarks_textArea_postulancy_CR
+            // 
+            this.remarks_textArea_postulancy_CR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remarks_textArea_postulancy_CR.Location = new System.Drawing.Point(344, 12);
+            this.remarks_textArea_postulancy_CR.Multiline = true;
+            this.remarks_textArea_postulancy_CR.Name = "remarks_textArea_postulancy_CR";
+            this.remarks_textArea_postulancy_CR.Size = new System.Drawing.Size(340, 45);
+            this.remarks_textArea_postulancy_CR.TabIndex = 0;
+            // 
+            // price_textBox_postulancy_CR
+            // 
+            this.price_textBox_postulancy_CR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price_textBox_postulancy_CR.Location = new System.Drawing.Point(84, 13);
+            this.price_textBox_postulancy_CR.Name = "price_textBox_postulancy_CR";
+            this.price_textBox_postulancy_CR.Size = new System.Drawing.Size(162, 23);
+            this.price_textBox_postulancy_CR.TabIndex = 0;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(27, 94);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(710, 21);
+            this.label61.TabIndex = 4;
+            this.label61.Text = "_________________________________________________________________________________" +
+    "___________________";
+            // 
+            // community_panel_CRB
+            // 
+            this.community_panel_CRB.Controls.Add(this.generateReport_button_community_CR);
+            this.community_panel_CRB.Controls.Add(this.label53);
+            this.community_panel_CRB.Controls.Add(this.label54);
+            this.community_panel_CRB.Controls.Add(this.today_button_community_CR);
+            this.community_panel_CRB.Controls.Add(this.to_dateTimePicker_community_CR);
+            this.community_panel_CRB.Controls.Add(this.from_dateTimePicker_community_CR);
+            this.community_panel_CRB.Controls.Add(this.summary_dataGridView_community_CR);
+            this.community_panel_CRB.Controls.Add(this.panel6);
+            this.community_panel_CRB.Controls.Add(this.label74);
+            this.community_panel_CRB.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.community_panel_CRB.Location = new System.Drawing.Point(0, 85);
+            this.community_panel_CRB.Name = "community_panel_CRB";
+            this.community_panel_CRB.Size = new System.Drawing.Size(753, 427);
+            this.community_panel_CRB.TabIndex = 46;
+            // 
+            // generateReport_button_community_CR
+            // 
+            this.generateReport_button_community_CR.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateReport_button_community_CR.Location = new System.Drawing.Point(598, 389);
+            this.generateReport_button_community_CR.Name = "generateReport_button_community_CR";
+            this.generateReport_button_community_CR.Size = new System.Drawing.Size(120, 23);
+            this.generateReport_button_community_CR.TabIndex = 6;
+            this.generateReport_button_community_CR.Text = "Generate Report";
+            this.generateReport_button_community_CR.UseVisualStyleBackColor = true;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(75, 130);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(38, 17);
+            this.label53.TabIndex = 5;
+            this.label53.Text = "From";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(359, 130);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(22, 17);
+            this.label54.TabIndex = 5;
+            this.label54.Text = "To";
+            // 
+            // today_button_community_CR
+            // 
+            this.today_button_community_CR.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.today_button_community_CR.Location = new System.Drawing.Point(639, 130);
+            this.today_button_community_CR.Name = "today_button_community_CR";
+            this.today_button_community_CR.Size = new System.Drawing.Size(75, 23);
+            this.today_button_community_CR.TabIndex = 3;
+            this.today_button_community_CR.Text = "Today";
+            this.today_button_community_CR.UseVisualStyleBackColor = true;
+            // 
+            // to_dateTimePicker_community_CR
+            // 
+            this.to_dateTimePicker_community_CR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.to_dateTimePicker_community_CR.Location = new System.Drawing.Point(404, 130);
+            this.to_dateTimePicker_community_CR.Name = "to_dateTimePicker_community_CR";
+            this.to_dateTimePicker_community_CR.Size = new System.Drawing.Size(200, 23);
+            this.to_dateTimePicker_community_CR.TabIndex = 2;
+            // 
+            // from_dateTimePicker_community_CR
+            // 
+            this.from_dateTimePicker_community_CR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.from_dateTimePicker_community_CR.Location = new System.Drawing.Point(136, 130);
+            this.from_dateTimePicker_community_CR.Name = "from_dateTimePicker_community_CR";
+            this.from_dateTimePicker_community_CR.Size = new System.Drawing.Size(200, 23);
+            this.from_dateTimePicker_community_CR.TabIndex = 2;
+            // 
+            // summary_dataGridView_community_CR
+            // 
+            this.summary_dataGridView_community_CR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.summary_dataGridView_community_CR.Location = new System.Drawing.Point(51, 168);
+            this.summary_dataGridView_community_CR.Name = "summary_dataGridView_community_CR";
+            this.summary_dataGridView_community_CR.Size = new System.Drawing.Size(666, 210);
+            this.summary_dataGridView_community_CR.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.clear_button_community_CR);
+            this.panel6.Controls.Add(this.add_button_community_CR);
+            this.panel6.Controls.Add(this.type_comboBox_community_CR);
+            this.panel6.Controls.Add(this.label55);
+            this.panel6.Controls.Add(this.label72);
+            this.panel6.Controls.Add(this.label73);
+            this.panel6.Controls.Add(this.remarks_textArea_community_CR);
+            this.panel6.Controls.Add(this.price_textbox_community_CR);
+            this.panel6.Location = new System.Drawing.Point(30, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(704, 103);
+            this.panel6.TabIndex = 0;
+            // 
+            // clear_button_community_CR
+            // 
+            this.clear_button_community_CR.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear_button_community_CR.Location = new System.Drawing.Point(518, 72);
+            this.clear_button_community_CR.Name = "clear_button_community_CR";
+            this.clear_button_community_CR.Size = new System.Drawing.Size(75, 23);
+            this.clear_button_community_CR.TabIndex = 6;
+            this.clear_button_community_CR.Text = "Clear";
+            this.clear_button_community_CR.UseVisualStyleBackColor = true;
+            // 
+            // add_button_community_CR
+            // 
+            this.add_button_community_CR.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_button_community_CR.Location = new System.Drawing.Point(609, 72);
+            this.add_button_community_CR.Name = "add_button_community_CR";
+            this.add_button_community_CR.Size = new System.Drawing.Size(75, 23);
+            this.add_button_community_CR.TabIndex = 6;
+            this.add_button_community_CR.Text = "Add";
+            this.add_button_community_CR.UseVisualStyleBackColor = true;
+            // 
+            // type_comboBox_community_CR
+            // 
+            this.type_comboBox_community_CR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.type_comboBox_community_CR.FormattingEnabled = true;
+            this.type_comboBox_community_CR.Location = new System.Drawing.Point(84, 64);
+            this.type_comboBox_community_CR.Name = "type_comboBox_community_CR";
+            this.type_comboBox_community_CR.Size = new System.Drawing.Size(162, 23);
+            this.type_comboBox_community_CR.TabIndex = 2;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(280, 13);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(58, 17);
+            this.label55.TabIndex = 1;
+            this.label55.Text = "Remarks";
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.Location = new System.Drawing.Point(31, 64);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(35, 17);
+            this.label72.TabIndex = 1;
+            this.label72.Text = "Type";
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.Location = new System.Drawing.Point(31, 14);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(36, 17);
+            this.label73.TabIndex = 1;
+            this.label73.Text = "Price";
+            // 
+            // remarks_textArea_community_CR
+            // 
+            this.remarks_textArea_community_CR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remarks_textArea_community_CR.Location = new System.Drawing.Point(344, 12);
+            this.remarks_textArea_community_CR.Multiline = true;
+            this.remarks_textArea_community_CR.Name = "remarks_textArea_community_CR";
+            this.remarks_textArea_community_CR.Size = new System.Drawing.Size(340, 45);
+            this.remarks_textArea_community_CR.TabIndex = 0;
+            // 
+            // price_textbox_community_CR
+            // 
+            this.price_textbox_community_CR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price_textbox_community_CR.Location = new System.Drawing.Point(84, 13);
+            this.price_textbox_community_CR.Name = "price_textbox_community_CR";
+            this.price_textbox_community_CR.Size = new System.Drawing.Size(162, 23);
+            this.price_textbox_community_CR.TabIndex = 0;
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(27, 94);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(710, 21);
+            this.label74.TabIndex = 4;
+            this.label74.Text = "_________________________________________________________________________________" +
+    "___________________";
+            // 
+            // parish_panel_CRB
+            // 
+            this.parish_panel_CRB.Controls.Add(this.generateReport_button_parish_CR);
+            this.parish_panel_CRB.Controls.Add(this.label65);
+            this.parish_panel_CRB.Controls.Add(this.label66);
+            this.parish_panel_CRB.Controls.Add(this.today_button_parish_CR);
+            this.parish_panel_CRB.Controls.Add(this.to_dateTimePicker_parish_CR);
+            this.parish_panel_CRB.Controls.Add(this.from_dateTimePicker_parish_CR);
+            this.parish_panel_CRB.Controls.Add(this.summary_dataGridView_parish_CR);
+            this.parish_panel_CRB.Controls.Add(this.panel10);
+            this.parish_panel_CRB.Controls.Add(this.label70);
+            this.parish_panel_CRB.Location = new System.Drawing.Point(0, 85);
+            this.parish_panel_CRB.Name = "parish_panel_CRB";
+            this.parish_panel_CRB.Size = new System.Drawing.Size(753, 427);
+            this.parish_panel_CRB.TabIndex = 44;
+            // 
+            // generateReport_button_parish_CR
+            // 
+            this.generateReport_button_parish_CR.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateReport_button_parish_CR.Location = new System.Drawing.Point(598, 389);
+            this.generateReport_button_parish_CR.Name = "generateReport_button_parish_CR";
+            this.generateReport_button_parish_CR.Size = new System.Drawing.Size(120, 23);
+            this.generateReport_button_parish_CR.TabIndex = 6;
+            this.generateReport_button_parish_CR.Text = "Generate Report";
+            this.generateReport_button_parish_CR.UseVisualStyleBackColor = true;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.Location = new System.Drawing.Point(75, 130);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(38, 17);
+            this.label65.TabIndex = 5;
+            this.label65.Text = "From";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.Location = new System.Drawing.Point(359, 130);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(22, 17);
+            this.label66.TabIndex = 5;
+            this.label66.Text = "To";
+            // 
+            // today_button_parish_CR
+            // 
+            this.today_button_parish_CR.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.today_button_parish_CR.Location = new System.Drawing.Point(639, 130);
+            this.today_button_parish_CR.Name = "today_button_parish_CR";
+            this.today_button_parish_CR.Size = new System.Drawing.Size(75, 23);
+            this.today_button_parish_CR.TabIndex = 3;
+            this.today_button_parish_CR.Text = "Today";
+            this.today_button_parish_CR.UseVisualStyleBackColor = true;
+            // 
+            // to_dateTimePicker_parish_CR
+            // 
+            this.to_dateTimePicker_parish_CR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.to_dateTimePicker_parish_CR.Location = new System.Drawing.Point(404, 130);
+            this.to_dateTimePicker_parish_CR.Name = "to_dateTimePicker_parish_CR";
+            this.to_dateTimePicker_parish_CR.Size = new System.Drawing.Size(200, 23);
+            this.to_dateTimePicker_parish_CR.TabIndex = 2;
+            // 
+            // from_dateTimePicker_parish_CR
+            // 
+            this.from_dateTimePicker_parish_CR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.from_dateTimePicker_parish_CR.Location = new System.Drawing.Point(136, 130);
+            this.from_dateTimePicker_parish_CR.Name = "from_dateTimePicker_parish_CR";
+            this.from_dateTimePicker_parish_CR.Size = new System.Drawing.Size(200, 23);
+            this.from_dateTimePicker_parish_CR.TabIndex = 2;
+            // 
+            // summary_dataGridView_parish_CR
+            // 
+            this.summary_dataGridView_parish_CR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.summary_dataGridView_parish_CR.Location = new System.Drawing.Point(51, 168);
+            this.summary_dataGridView_parish_CR.Name = "summary_dataGridView_parish_CR";
+            this.summary_dataGridView_parish_CR.Size = new System.Drawing.Size(666, 210);
+            this.summary_dataGridView_parish_CR.TabIndex = 1;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.clear_button_parish_CR);
+            this.panel10.Controls.Add(this.add_button_parish_CR);
+            this.panel10.Controls.Add(this.type_combobox_parish_CR);
+            this.panel10.Controls.Add(this.label67);
+            this.panel10.Controls.Add(this.label68);
+            this.panel10.Controls.Add(this.label69);
+            this.panel10.Controls.Add(this.remarks_textarea_parish_CR);
+            this.panel10.Controls.Add(this.price_textbox_parish_CR);
+            this.panel10.Location = new System.Drawing.Point(30, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(704, 103);
+            this.panel10.TabIndex = 0;
+            // 
+            // clear_button_parish_CR
+            // 
+            this.clear_button_parish_CR.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear_button_parish_CR.Location = new System.Drawing.Point(518, 72);
+            this.clear_button_parish_CR.Name = "clear_button_parish_CR";
+            this.clear_button_parish_CR.Size = new System.Drawing.Size(75, 23);
+            this.clear_button_parish_CR.TabIndex = 6;
+            this.clear_button_parish_CR.Text = "Clear";
+            this.clear_button_parish_CR.UseVisualStyleBackColor = true;
+            // 
+            // add_button_parish_CR
+            // 
+            this.add_button_parish_CR.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_button_parish_CR.Location = new System.Drawing.Point(609, 72);
+            this.add_button_parish_CR.Name = "add_button_parish_CR";
+            this.add_button_parish_CR.Size = new System.Drawing.Size(75, 23);
+            this.add_button_parish_CR.TabIndex = 6;
+            this.add_button_parish_CR.Text = "Add";
+            this.add_button_parish_CR.UseVisualStyleBackColor = true;
+            // 
+            // type_combobox_parish_CR
+            // 
+            this.type_combobox_parish_CR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.type_combobox_parish_CR.FormattingEnabled = true;
+            this.type_combobox_parish_CR.Location = new System.Drawing.Point(84, 64);
+            this.type_combobox_parish_CR.Name = "type_combobox_parish_CR";
+            this.type_combobox_parish_CR.Size = new System.Drawing.Size(162, 23);
+            this.type_combobox_parish_CR.TabIndex = 2;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.Location = new System.Drawing.Point(280, 13);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(58, 17);
+            this.label67.TabIndex = 1;
+            this.label67.Text = "Remarks";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.Location = new System.Drawing.Point(31, 64);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(35, 17);
+            this.label68.TabIndex = 1;
+            this.label68.Text = "Type";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Location = new System.Drawing.Point(31, 14);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(36, 17);
+            this.label69.TabIndex = 1;
+            this.label69.Text = "Price";
+            // 
+            // remarks_textarea_parish_CR
+            // 
+            this.remarks_textarea_parish_CR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remarks_textarea_parish_CR.Location = new System.Drawing.Point(344, 12);
+            this.remarks_textarea_parish_CR.Multiline = true;
+            this.remarks_textarea_parish_CR.Name = "remarks_textarea_parish_CR";
+            this.remarks_textarea_parish_CR.Size = new System.Drawing.Size(340, 45);
+            this.remarks_textarea_parish_CR.TabIndex = 0;
+            // 
+            // price_textbox_parish_CR
+            // 
+            this.price_textbox_parish_CR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price_textbox_parish_CR.Location = new System.Drawing.Point(84, 13);
+            this.price_textbox_parish_CR.Name = "price_textbox_parish_CR";
+            this.price_textbox_parish_CR.Size = new System.Drawing.Size(162, 23);
+            this.price_textbox_parish_CR.TabIndex = 0;
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Location = new System.Drawing.Point(27, 94);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(710, 21);
+            this.label70.TabIndex = 4;
+            this.label70.Text = "_________________________________________________________________________________" +
+    "___________________";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(3, 3);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(175, 25);
+            this.label52.TabIndex = 47;
+            this.label52.Text = "Cash Release Book";
+            // 
+            // postulancy_label_CRB
+            // 
+            this.postulancy_label_CRB.AutoSize = true;
+            this.postulancy_label_CRB.Location = new System.Drawing.Point(521, 46);
+            this.postulancy_label_CRB.Name = "postulancy_label_CRB";
+            this.postulancy_label_CRB.Size = new System.Drawing.Size(84, 21);
+            this.postulancy_label_CRB.TabIndex = 45;
+            this.postulancy_label_CRB.Text = "Postulancy";
+            // 
+            // community_label_CRB
+            // 
+            this.community_label_CRB.AutoSize = true;
+            this.community_label_CRB.Location = new System.Drawing.Point(315, 46);
+            this.community_label_CRB.Name = "community_label_CRB";
+            this.community_label_CRB.Size = new System.Drawing.Size(92, 21);
+            this.community_label_CRB.TabIndex = 45;
+            this.community_label_CRB.Text = "Community";
+            // 
+            // parish_label_CRB
+            // 
+            this.parish_label_CRB.AutoSize = true;
+            this.parish_label_CRB.Location = new System.Drawing.Point(150, 46);
+            this.parish_label_CRB.Name = "parish_label_CRB";
+            this.parish_label_CRB.Size = new System.Drawing.Size(52, 21);
+            this.parish_label_CRB.TabIndex = 45;
+            this.parish_label_CRB.Text = "Parish";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(27, 60);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(710, 21);
+            this.label71.TabIndex = 5;
+            this.label71.Text = "_________________________________________________________________________________" +
+    "___________________";
+            // 
+            // baptism_panel
+            // 
+            this.baptism_panel.BackColor = System.Drawing.Color.White;
+            this.baptism_panel.Controls.Add(this.panel1);
+            this.baptism_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.baptism_panel.Location = new System.Drawing.Point(181, 33);
+            this.baptism_panel.Name = "baptism_panel";
+            this.baptism_panel.Size = new System.Drawing.Size(753, 512);
+            this.baptism_panel.TabIndex = 37;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.metroRadioButton1);
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.profiles_dataGridView_baptism);
+            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(33, 70);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(692, 418);
+            this.panel1.TabIndex = 38;
+            // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(410, 177);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(271, 122);
+            this.panel7.TabIndex = 42;
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(410, 46);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(271, 122);
+            this.panel4.TabIndex = 41;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(232, 46);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(165, 25);
+            this.comboBox1.TabIndex = 39;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(4, 47);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(218, 25);
+            this.textBox5.TabIndex = 38;
+            // 
+            // profiles_dataGridView_baptism
+            // 
+            this.profiles_dataGridView_baptism.AllowUserToAddRows = false;
+            this.profiles_dataGridView_baptism.AllowUserToDeleteRows = false;
+            this.profiles_dataGridView_baptism.AllowUserToResizeColumns = false;
+            this.profiles_dataGridView_baptism.AllowUserToResizeRows = false;
+            this.profiles_dataGridView_baptism.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.profiles_dataGridView_baptism.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.profiles_dataGridView_baptism.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.profiles_dataGridView_baptism.BackgroundColor = System.Drawing.Color.Black;
+            this.profiles_dataGridView_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.profiles_dataGridView_baptism.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.profiles_dataGridView_baptism.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.profiles_dataGridView_baptism.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.profiles_dataGridView_baptism.DefaultCellStyle = dataGridViewCellStyle6;
+            this.profiles_dataGridView_baptism.EnableHeadersVisualStyles = false;
+            this.profiles_dataGridView_baptism.Location = new System.Drawing.Point(1, 80);
+            this.profiles_dataGridView_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.profiles_dataGridView_baptism.MultiSelect = false;
+            this.profiles_dataGridView_baptism.Name = "profiles_dataGridView_baptism";
+            this.profiles_dataGridView_baptism.ReadOnly = true;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.profiles_dataGridView_baptism.RowHeadersVisible = false;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.profiles_dataGridView_baptism.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.profiles_dataGridView_baptism.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.profiles_dataGridView_baptism.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.profiles_dataGridView_baptism.Size = new System.Drawing.Size(396, 341);
+            this.profiles_dataGridView_baptism.TabIndex = 37;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(4, 47);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(218, 25);
+            this.dateTimePicker1.TabIndex = 40;
+            // 
+            // imageListMenu
+            // 
+            this.imageListMenu.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMenu.ImageStream")));
+            this.imageListMenu.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListMenu.Images.SetKeyName(0, "Home.png");
+            this.imageListMenu.Images.SetKeyName(1, "Gender.png");
+            this.imageListMenu.Images.SetKeyName(2, "HeartPulse.png");
+            this.imageListMenu.Images.SetKeyName(3, "ReportCard.png");
+            this.imageListMenu.Images.SetKeyName(4, "Money.png");
+            this.imageListMenu.Images.SetKeyName(5, "Resume_96px.png");
+            this.imageListMenu.Images.SetKeyName(6, "Holy Bible_96px.png");
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 15;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // metroStyleManager1
+            // 
+            this.metroStyleManager1.Owner = null;
+            this.metroStyleManager1.Style = MetroFramework.MetroColorStyle.Brown;
+            this.metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroRadioButton1
+            // 
+            this.metroRadioButton1.AutoSize = true;
+            this.metroRadioButton1.Location = new System.Drawing.Point(437, 324);
+            this.metroRadioButton1.Name = "metroRadioButton1";
+            this.metroRadioButton1.Size = new System.Drawing.Size(127, 15);
+            this.metroRadioButton1.TabIndex = 43;
+            this.metroRadioButton1.Text = "metroRadioButton1";
+            this.metroRadioButton1.UseSelectable = true;
             // 
             // SAD
             // 
@@ -1956,17 +3492,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(934, 545);
+            this.ControlBox = false;
+            this.Controls.Add(this.baptism_panel);
+            this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.home_panel);
             this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.application_panel);
-            this.Controls.Add(this.profile_panel);
+            this.Controls.Add(this.CRB_panel);
+            this.Controls.Add(this.CDB_panel);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel_controlbox);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SAD";
-            this.Text = "SAD";
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.home_panel_menu.ResumeLayout(false);
@@ -1978,20 +3517,23 @@
             this.bloodletting_panel_menu.ResumeLayout(false);
             this.bloodletting_panel_menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.income_panel_menu.ResumeLayout(false);
-            this.income_panel_menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.report_panel_menu.ResumeLayout(false);
-            this.report_panel_menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.application_panel_menu.ResumeLayout(false);
             this.application_panel_menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.CRB_panel_menu.ResumeLayout(false);
+            this.CRB_panel_menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.CDB_panel_menu.ResumeLayout(false);
+            this.CDB_panel_menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.library_panel_menu.ResumeLayout(false);
+            this.library_panel_menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.profile_panel.ResumeLayout(false);
             this.profile_panel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).EndInit();
+            this.AddPNL.ResumeLayout(false);
+            this.AddPNL.PerformLayout();
             this.application_panel.ResumeLayout(false);
             this.application_panel.PerformLayout();
             this.baptismApplication_panel.ResumeLayout(false);
@@ -2029,6 +3571,43 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.flowLayout_ControlButtons.ResumeLayout(false);
+            this.CDB_panel.ResumeLayout(false);
+            this.CDB_panel.PerformLayout();
+            this.parish_panel_CD.ResumeLayout(false);
+            this.parish_panel_CD.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summary_dataGridView_parish_CD)).EndInit();
+            this.postulancy_panel_CD.ResumeLayout(false);
+            this.postulancy_panel_CD.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summary_dataGridView_postulancy_CD)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.community_panel_CD.ResumeLayout(false);
+            this.community_panel_CD.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summary_dataGridView_community_CD)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.CRB_panel.ResumeLayout(false);
+            this.CRB_panel.PerformLayout();
+            this.postulancy_panel_CRB.ResumeLayout(false);
+            this.postulancy_panel_CRB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summary_dataGridView_postulancy_CR)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.community_panel_CRB.ResumeLayout(false);
+            this.community_panel_CRB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summary_dataGridView_community_CR)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.parish_panel_CRB.ResumeLayout(false);
+            this.parish_panel_CRB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summary_dataGridView_parish_CR)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.baptism_panel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.profiles_dataGridView_baptism)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2039,16 +3618,8 @@
         private System.Windows.Forms.Button bloodletting_menu_button;
         private System.Windows.Forms.Panel home_panel;
         private System.Windows.Forms.Panel profile_panel;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button deleteProfile_button;
         private System.Windows.Forms.Button addProfile_button;
-        private System.Windows.Forms.TextBox suffix_textbox;
-        private System.Windows.Forms.TextBox lastname_textbox;
-        private System.Windows.Forms.TextBox middlename_textbox;
-        private System.Windows.Forms.TextBox birthplace_textbox_baptist;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox firstname_textbox;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox searchBar;
         private System.Windows.Forms.DataGridView generalprofile_datagridview;
         private System.Windows.Forms.Button openProfile_button;
@@ -2058,7 +3629,6 @@
         private System.Windows.Forms.Button application_menu_button;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label time_Text;
-        private System.Windows.Forms.Button clear_profile_button;
         private System.Windows.Forms.Panel application_panel;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel bloodletting_panel;
@@ -2081,21 +3651,17 @@
         private System.Windows.Forms.PictureBox pictureBox_person;
         private System.Windows.Forms.Panel home_panel_menu;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel income_panel_menu;
+        private System.Windows.Forms.Panel CDB_panel_menu;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel bloodletting_panel_menu;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label welcome_Text;
         private System.Windows.Forms.Label username_Welcome_Text;
-        private System.Windows.Forms.Panel report_panel_menu;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label bloodletting_label_menu;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel application_panel_menu;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label17;
@@ -2175,5 +3741,145 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Panel existingName_panel_baptismApplication;
         private System.Windows.Forms.Panel existingName_panel_confirmationApplication;
+        private System.Windows.Forms.Panel CDB_panel;
+        private System.Windows.Forms.Label postulancy_label_CD;
+        private System.Windows.Forms.Label community_label_CD;
+        private System.Windows.Forms.Label parish_label_CD;
+        private System.Windows.Forms.Panel community_panel_CD;
+        private System.Windows.Forms.Button today_button_community_CD;
+        private System.Windows.Forms.DateTimePicker to_dateTimePicker_community_CD;
+        private System.Windows.Forms.DateTimePicker from_dataTimePicker_community_CD;
+        private System.Windows.Forms.DataGridView summary_dataGridView_community_CD;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox type_combobox_community_CD;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox remarks_textarea_community_CD;
+        private System.Windows.Forms.TextBox price_textbox_community_CD;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Button clear_button_community_CD;
+        private System.Windows.Forms.Button add_button_community_CD;
+        private System.Windows.Forms.Button generateReport_button_community_CD;
+        private System.Windows.Forms.Panel parish_panel_CD;
+        private System.Windows.Forms.Button generateReport_button_parish_CD;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Button today_button_parish_CD;
+        private System.Windows.Forms.DateTimePicker to_dateTimePicker_parish_CD;
+        private System.Windows.Forms.DateTimePicker from_dateTimePicker_parish_CD;
+        private System.Windows.Forms.DataGridView summary_dataGridView_parish_CD;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Panel postulancy_panel_CD;
+        private System.Windows.Forms.Button generateReport_button_postulancy_CD;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button today_button_postulancy_CD;
+        private System.Windows.Forms.DateTimePicker to_dateTimePicker_postulancy_CD;
+        private System.Windows.Forms.DateTimePicker from_dateTimePicker_postulancy_CD;
+        private System.Windows.Forms.DataGridView summary_dataGridView_postulancy_CD;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button clear_button_postulancy_CD;
+        private System.Windows.Forms.Button add_button_postulancy_CD;
+        private System.Windows.Forms.ComboBox type_combobox_postulancy_CD;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.TextBox remarks_textarea_postulancy_CD;
+        private System.Windows.Forms.TextBox price_textbox_postulancy_CD;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Panel CRB_panel;
+        private System.Windows.Forms.Panel parish_panel_CRB;
+        private System.Windows.Forms.Button generateReport_button_parish_CR;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Button today_button_parish_CR;
+        private System.Windows.Forms.DateTimePicker to_dateTimePicker_parish_CR;
+        private System.Windows.Forms.DateTimePicker from_dateTimePicker_parish_CR;
+        private System.Windows.Forms.DataGridView summary_dataGridView_parish_CR;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button clear_button_parish_CR;
+        private System.Windows.Forms.Button add_button_parish_CR;
+        private System.Windows.Forms.ComboBox type_combobox_parish_CR;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.TextBox remarks_textarea_parish_CR;
+        private System.Windows.Forms.TextBox price_textbox_parish_CR;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Panel community_panel_CRB;
+        private System.Windows.Forms.Button generateReport_button_community_CR;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Button today_button_community_CR;
+        private System.Windows.Forms.DateTimePicker to_dateTimePicker_community_CR;
+        private System.Windows.Forms.DateTimePicker from_dateTimePicker_community_CR;
+        private System.Windows.Forms.DataGridView summary_dataGridView_community_CR;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button clear_button_community_CR;
+        private System.Windows.Forms.Button add_button_community_CR;
+        private System.Windows.Forms.ComboBox type_comboBox_community_CR;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.TextBox remarks_textArea_community_CR;
+        private System.Windows.Forms.TextBox price_textbox_community_CR;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.Panel postulancy_panel_CRB;
+        private System.Windows.Forms.Button generateReport_button_postulancy_CR;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Button today_button_postulancy_CR;
+        private System.Windows.Forms.DateTimePicker to_dateTimePicker_postulancy_CR;
+        private System.Windows.Forms.DateTimePicker from_dateTimePicker_postulancy_CR;
+        private System.Windows.Forms.DataGridView summary_dataGridView_postulancy_CR;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button clear_button_postulancy_CR;
+        private System.Windows.Forms.Button add_button_postulancy_CR;
+        private System.Windows.Forms.ComboBox type_comboBox_postulancy_CR;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.TextBox remarks_textArea_postulancy_CR;
+        private System.Windows.Forms.TextBox price_textBox_postulancy_CR;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label postulancy_label_CRB;
+        private System.Windows.Forms.Label community_label_CRB;
+        private System.Windows.Forms.Label parish_label_CRB;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Panel CRB_panel_menu;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button AddBTN;
+        private System.Windows.Forms.Panel AddPNL;
+        private System.Windows.Forms.Button clear_profile_button;
+        private System.Windows.Forms.TextBox suffix_textbox;
+        private System.Windows.Forms.TextBox lastname_textbox;
+        private System.Windows.Forms.TextBox middlename_textbox;
+        private System.Windows.Forms.TextBox birthplace_textbox_baptist;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox firstname_textbox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel library_panel_menu;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Panel baptism_panel;
+        private System.Windows.Forms.DataGridView profiles_dataGridView_baptism;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.ImageList imageListMenu;
+        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
+        private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
     }
 }
