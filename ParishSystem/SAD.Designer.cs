@@ -32,10 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.home_panel_menu = new System.Windows.Forms.Panel();
@@ -358,7 +354,7 @@
             this.parish_panel_CRB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.summary_dataGridView_parish_CR)).BeginInit();
             this.panel10.SuspendLayout();
-            this.AddPNL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.profiles_dataGridView_baptism)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -713,6 +709,22 @@
             this.profile_panel.Size = new System.Drawing.Size(753, 512);
             this.profile_panel.TabIndex = 29;
             // 
+            // AddBTN
+            // 
+            this.AddBTN.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.AddBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.AddBTN.FlatAppearance.BorderSize = 0;
+            this.AddBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddBTN.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddBTN.ForeColor = System.Drawing.Color.White;
+            this.AddBTN.Location = new System.Drawing.Point(128, 17);
+            this.AddBTN.Name = "AddBTN";
+            this.AddBTN.Size = new System.Drawing.Size(100, 30);
+            this.AddBTN.TabIndex = 32;
+            this.AddBTN.Text = "Add";
+            this.AddBTN.UseVisualStyleBackColor = false;
+            this.AddBTN.Click += new System.EventHandler(this.AddBTN_Click);
+            // 
             // openProfile_button
             // 
             this.openProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
@@ -821,6 +833,134 @@
             this.generalprofile_datagridview.Size = new System.Drawing.Size(683, 300);
             this.generalprofile_datagridview.TabIndex = 0;
             this.generalprofile_datagridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.generalprofile_datagridview_CellClick);
+            // 
+            // AddPNL
+            // 
+            this.AddPNL.BackColor = System.Drawing.Color.White;
+            this.AddPNL.Controls.Add(this.clear_profile_button);
+            this.AddPNL.Controls.Add(this.suffix_textbox);
+            this.AddPNL.Controls.Add(this.lastname_textbox);
+            this.AddPNL.Controls.Add(this.middlename_textbox);
+            this.AddPNL.Controls.Add(this.birthplace_textbox_baptist);
+            this.AddPNL.Controls.Add(this.addProfile_button);
+            this.AddPNL.Controls.Add(this.label33);
+            this.AddPNL.Controls.Add(this.firstname_textbox);
+            this.AddPNL.Controls.Add(this.label2);
+            this.AddPNL.Location = new System.Drawing.Point(24, 96);
+            this.AddPNL.Name = "AddPNL";
+            this.AddPNL.Size = new System.Drawing.Size(683, 384);
+            this.AddPNL.TabIndex = 27;
+            this.AddPNL.Visible = false;
+            // 
+            // clear_profile_button
+            // 
+            this.clear_profile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.clear_profile_button.FlatAppearance.BorderSize = 0;
+            this.clear_profile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear_profile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear_profile_button.ForeColor = System.Drawing.Color.White;
+            this.clear_profile_button.Location = new System.Drawing.Point(338, 192);
+            this.clear_profile_button.Name = "clear_profile_button";
+            this.clear_profile_button.Size = new System.Drawing.Size(100, 30);
+            this.clear_profile_button.TabIndex = 31;
+            this.clear_profile_button.Text = "Cancel";
+            this.clear_profile_button.UseVisualStyleBackColor = false;
+            this.clear_profile_button.Click += new System.EventHandler(this.clear_profile_button_Click);
+            // 
+            // suffix_textbox
+            // 
+            this.suffix_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.suffix_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.suffix_textbox.ForeColor = System.Drawing.Color.Silver;
+            this.suffix_textbox.Location = new System.Drawing.Point(474, 113);
+            this.suffix_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.suffix_textbox.Name = "suffix_textbox";
+            this.suffix_textbox.Size = new System.Drawing.Size(54, 18);
+            this.suffix_textbox.TabIndex = 23;
+            this.suffix_textbox.Text = "Suffix";
+            this.suffix_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.suffix_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.suffix_textbox_MouseClick);
+            // 
+            // lastname_textbox
+            // 
+            this.lastname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lastname_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lastname_textbox.ForeColor = System.Drawing.Color.Silver;
+            this.lastname_textbox.Location = new System.Drawing.Point(378, 113);
+            this.lastname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lastname_textbox.Name = "lastname_textbox";
+            this.lastname_textbox.Size = new System.Drawing.Size(94, 18);
+            this.lastname_textbox.TabIndex = 24;
+            this.lastname_textbox.Text = "Last Name";
+            this.lastname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lastname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lastname_textbox_MouseClick);
+            // 
+            // middlename_textbox
+            // 
+            this.middlename_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.middlename_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.middlename_textbox.ForeColor = System.Drawing.Color.Silver;
+            this.middlename_textbox.Location = new System.Drawing.Point(281, 113);
+            this.middlename_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.middlename_textbox.Name = "middlename_textbox";
+            this.middlename_textbox.Size = new System.Drawing.Size(94, 18);
+            this.middlename_textbox.TabIndex = 22;
+            this.middlename_textbox.Text = "Middle Name";
+            this.middlename_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.middlename_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.middlename_textbox_MouseClick);
+            // 
+            // birthplace_textbox_baptist
+            // 
+            this.birthplace_textbox_baptist.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.birthplace_textbox_baptist.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.birthplace_textbox_baptist.Location = new System.Drawing.Point(472, 29);
+            this.birthplace_textbox_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.birthplace_textbox_baptist.Name = "birthplace_textbox_baptist";
+            this.birthplace_textbox_baptist.Size = new System.Drawing.Size(133, 16);
+            this.birthplace_textbox_baptist.TabIndex = 20;
+            // 
+            // addProfile_button
+            // 
+            this.addProfile_button.Location = new System.Drawing.Point(0, 0);
+            this.addProfile_button.Name = "addProfile_button";
+            this.addProfile_button.Size = new System.Drawing.Size(75, 23);
+            this.addProfile_button.TabIndex = 32;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(255)))));
+            this.label33.Location = new System.Drawing.Point(126, 111);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(52, 21);
+            this.label33.TabIndex = 27;
+            this.label33.Text = "Name";
+            // 
+            // firstname_textbox
+            // 
+            this.firstname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.firstname_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.firstname_textbox.ForeColor = System.Drawing.Color.Silver;
+            this.firstname_textbox.Location = new System.Drawing.Point(184, 113);
+            this.firstname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.firstname_textbox.Name = "firstname_textbox";
+            this.firstname_textbox.Size = new System.Drawing.Size(94, 18);
+            this.firstname_textbox.TabIndex = 13;
+            this.firstname_textbox.Text = "First Name";
+            this.firstname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.firstname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.firstname_textbox_MouseClick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(181, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(351, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "______________________________________";
             // 
             // time_Text
             // 
@@ -3176,142 +3316,61 @@
             this.label71.Text = "_________________________________________________________________________________" +
     "___________________";
             // 
-            // label2
+            // baptism_panel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(181, 115);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(351, 20);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "______________________________________";
+            this.baptism_panel.Location = new System.Drawing.Point(0, 0);
+            this.baptism_panel.Name = "baptism_panel";
+            this.baptism_panel.Size = new System.Drawing.Size(200, 100);
+            this.baptism_panel.TabIndex = 0;
             // 
-            // firstname_textbox
+            // panel1
             // 
-            this.firstname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstname_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.firstname_textbox.ForeColor = System.Drawing.Color.Silver;
-            this.firstname_textbox.Location = new System.Drawing.Point(184, 113);
-            this.firstname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.firstname_textbox.Name = "firstname_textbox";
-            this.firstname_textbox.Size = new System.Drawing.Size(94, 18);
-            this.firstname_textbox.TabIndex = 13;
-            this.firstname_textbox.Text = "First Name";
-            this.firstname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.firstname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.firstname_textbox_MouseClick);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 0;
             // 
-            // label33
+            // profiles_dataGridView_baptism
             // 
-            this.label33.AutoSize = true;
-            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(255)))));
-            this.label33.Location = new System.Drawing.Point(126, 111);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(52, 21);
-            this.label33.TabIndex = 27;
-            this.label33.Text = "Name";
+            this.profiles_dataGridView_baptism.Location = new System.Drawing.Point(0, 0);
+            this.profiles_dataGridView_baptism.Name = "profiles_dataGridView_baptism";
+            this.profiles_dataGridView_baptism.Size = new System.Drawing.Size(240, 150);
+            this.profiles_dataGridView_baptism.TabIndex = 0;
             // 
-            // birthplace_textbox_baptist
+            // textBox5
             // 
-            this.birthplace_textbox_baptist.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.birthplace_textbox_baptist.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.birthplace_textbox_baptist.Location = new System.Drawing.Point(472, 29);
-            this.birthplace_textbox_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.birthplace_textbox_baptist.Name = "birthplace_textbox_baptist";
-            this.birthplace_textbox_baptist.Size = new System.Drawing.Size(133, 16);
-            this.birthplace_textbox_baptist.TabIndex = 20;
+            this.textBox5.Location = new System.Drawing.Point(0, 0);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 0;
             // 
-            // middlename_textbox
+            // comboBox1
             // 
-            this.middlename_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.middlename_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.middlename_textbox.ForeColor = System.Drawing.Color.Silver;
-            this.middlename_textbox.Location = new System.Drawing.Point(281, 113);
-            this.middlename_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.middlename_textbox.Name = "middlename_textbox";
-            this.middlename_textbox.Size = new System.Drawing.Size(94, 18);
-            this.middlename_textbox.TabIndex = 22;
-            this.middlename_textbox.Text = "Middle Name";
-            this.middlename_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.middlename_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.middlename_textbox_MouseClick);
+            this.comboBox1.Location = new System.Drawing.Point(0, 0);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 0;
             // 
-            // lastname_textbox
+            // dateTimePicker1
             // 
-            this.lastname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lastname_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lastname_textbox.ForeColor = System.Drawing.Color.Silver;
-            this.lastname_textbox.Location = new System.Drawing.Point(378, 113);
-            this.lastname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.lastname_textbox.Name = "lastname_textbox";
-            this.lastname_textbox.Size = new System.Drawing.Size(94, 18);
-            this.lastname_textbox.TabIndex = 24;
-            this.lastname_textbox.Text = "Last Name";
-            this.lastname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lastname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lastname_textbox_MouseClick);
+            this.dateTimePicker1.Location = new System.Drawing.Point(0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 0;
             // 
-            // suffix_textbox
+            // panel4
             // 
-            this.suffix_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.suffix_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.suffix_textbox.ForeColor = System.Drawing.Color.Silver;
-            this.suffix_textbox.Location = new System.Drawing.Point(474, 113);
-            this.suffix_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.suffix_textbox.Name = "suffix_textbox";
-            this.suffix_textbox.Size = new System.Drawing.Size(54, 18);
-            this.suffix_textbox.TabIndex = 23;
-            this.suffix_textbox.Text = "Suffix";
-            this.suffix_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.suffix_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.suffix_textbox_MouseClick);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 100);
+            this.panel4.TabIndex = 0;
             // 
-            // clear_profile_button
+            // panel7
             // 
-            this.clear_profile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.clear_profile_button.FlatAppearance.BorderSize = 0;
-            this.clear_profile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_profile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear_profile_button.ForeColor = System.Drawing.Color.White;
-            this.clear_profile_button.Location = new System.Drawing.Point(338, 192);
-            this.clear_profile_button.Name = "clear_profile_button";
-            this.clear_profile_button.Size = new System.Drawing.Size(100, 30);
-            this.clear_profile_button.TabIndex = 31;
-            this.clear_profile_button.Text = "Cancel";
-            this.clear_profile_button.UseVisualStyleBackColor = false;
-            this.clear_profile_button.Click += new System.EventHandler(this.clear_profile_button_Click);
-            // 
-            // AddPNL
-            // 
-            this.AddPNL.BackColor = System.Drawing.Color.White;
-            this.AddPNL.Controls.Add(this.clear_profile_button);
-            this.AddPNL.Controls.Add(this.suffix_textbox);
-            this.AddPNL.Controls.Add(this.lastname_textbox);
-            this.AddPNL.Controls.Add(this.middlename_textbox);
-            this.AddPNL.Controls.Add(this.birthplace_textbox_baptist);
-            this.AddPNL.Controls.Add(this.addProfile_button);
-            this.AddPNL.Controls.Add(this.label33);
-            this.AddPNL.Controls.Add(this.firstname_textbox);
-            this.AddPNL.Controls.Add(this.label2);
-            this.AddPNL.Location = new System.Drawing.Point(24, 96);
-            this.AddPNL.Name = "AddPNL";
-            this.AddPNL.Size = new System.Drawing.Size(683, 384);
-            this.AddPNL.TabIndex = 27;
-            this.AddPNL.Visible = false;
-            // 
-            // AddBTN
-            // 
-            this.AddBTN.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
-            this.AddBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.AddBTN.FlatAppearance.BorderSize = 0;
-            this.AddBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddBTN.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddBTN.ForeColor = System.Drawing.Color.White;
-            this.AddBTN.Location = new System.Drawing.Point(128, 17);
-            this.AddBTN.Name = "AddBTN";
-            this.AddBTN.Size = new System.Drawing.Size(100, 30);
-            this.AddBTN.TabIndex = 32;
-            this.AddBTN.Text = "Add";
-            this.AddBTN.UseVisualStyleBackColor = false;
-            this.AddBTN.Click += new System.EventHandler(this.AddBTN_Click);
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(200, 100);
+            this.panel7.TabIndex = 0;
             // 
             // SAD
             // 
@@ -3430,8 +3489,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.summary_dataGridView_parish_CR)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.AddPNL.ResumeLayout(false);
-            this.AddPNL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.profiles_dataGridView_baptism)).EndInit();
             this.ResumeLayout(false);
 
         }
