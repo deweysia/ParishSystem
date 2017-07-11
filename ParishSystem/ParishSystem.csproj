@@ -36,6 +36,18 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\packages\Bunifu_UI 1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\Documents\Visual Studio 2015\MySql.Data.dll</HintPath>
@@ -256,6 +268,7 @@
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\ParishSystem.csproj.GenerateResource.Cache" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -282,6 +295,35 @@
     <Content Include="obj\Debug\ParishSystem.exe" />
     <Content Include="obj\Debug\ParishSystem.pdb" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\Heart with Pulse_64px.png" />
+    <None Include="Resources\Heart with Pulse_32px.png" />
+    <None Include="Resources\Shellfish_96px.png" />
+    <None Include="Resources\Water_96px.png" />
+    <None Include="Resources\X Coordinate_96px.png" />
+    <None Include="Resources\Trash_96px.png" />
+    <None Include="Resources\The Pope_96px.png" />
+    <None Include="Resources\Tax_96px.png" />
+    <None Include="Resources\Settings_96px.png" />
+    <None Include="Resources\Resume_96px.png" />
+    <None Include="Resources\Request Money_96px.png" />
+    <None Include="Resources\Remove User Male_96px.png" />
+    <None Include="Resources\Profit_96px.png" />
+    <None Include="Resources\Pray_96px.png" />
+    <None Include="Resources\Plus_96px.png" />
+    <None Include="Resources\Plus 2 Math_96px.png" />
+    <None Include="Resources\Newlyweds_96px.png" />
+    <None Include="Resources\Minus_96px.png" />
+    <None Include="Resources\Minimize Window_96px.png" />
+    <None Include="Resources\Login_96px.png" />
+    <None Include="Resources\Initiate Money Transfer_96px.png" />
+    <None Include="Resources\Holy Bible_96px.png" />
+    <None Include="Resources\Edit_96px.png" />
+    <None Include="Resources\Dove_96px.png" />
+    <None Include="Resources\Deposit_96px.png" />
+    <None Include="Resources\Delete_96px.png" />
+    <None Include="Resources\customer_96px.png" />
+    <None Include="Resources\Checkmark_96px.png" />
+    <None Include="Resources\Cancel_96px.png" />
     <None Include="Resources\ReportCard.png" />
     <None Include="Resources\Money.png" />
     <None Include="Resources\Home.png" />
