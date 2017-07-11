@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -36,6 +37,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SAD));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.home_panel_menu = new System.Windows.Forms.Panel();
@@ -293,12 +295,16 @@
             this.label71 = new System.Windows.Forms.Label();
             this.baptism_panel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.profiles_dataGridView_baptism = new System.Windows.Forms.DataGridView();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.profiles_dataGridView_baptism = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.imageListMenu = new System.Windows.Forms.ImageList(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.home_panel_menu.SuspendLayout();
@@ -361,6 +367,7 @@
             this.baptism_panel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profiles_dataGridView_baptism)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -3342,6 +3349,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.metroRadioButton1);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.comboBox1);
@@ -3353,6 +3361,35 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(692, 418);
             this.panel1.TabIndex = 38;
+            // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(410, 177);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(271, 122);
+            this.panel7.TabIndex = 42;
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(410, 46);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(271, 122);
+            this.panel4.TabIndex = 41;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(232, 46);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(165, 25);
+            this.comboBox1.TabIndex = 39;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(4, 47);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(218, 25);
+            this.textBox5.TabIndex = 38;
             // 
             // profiles_dataGridView_baptism
             // 
@@ -3409,21 +3446,6 @@
             this.profiles_dataGridView_baptism.Size = new System.Drawing.Size(396, 341);
             this.profiles_dataGridView_baptism.TabIndex = 37;
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(4, 47);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(218, 25);
-            this.textBox5.TabIndex = 38;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(232, 46);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(165, 25);
-            this.comboBox1.TabIndex = 39;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(4, 47);
@@ -3431,19 +3453,38 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(218, 25);
             this.dateTimePicker1.TabIndex = 40;
             // 
-            // panel4
+            // imageListMenu
             // 
-            this.panel4.Location = new System.Drawing.Point(410, 46);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(271, 122);
-            this.panel4.TabIndex = 41;
+            this.imageListMenu.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMenu.ImageStream")));
+            this.imageListMenu.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListMenu.Images.SetKeyName(0, "Home.png");
+            this.imageListMenu.Images.SetKeyName(1, "Gender.png");
+            this.imageListMenu.Images.SetKeyName(2, "HeartPulse.png");
+            this.imageListMenu.Images.SetKeyName(3, "ReportCard.png");
+            this.imageListMenu.Images.SetKeyName(4, "Money.png");
+            this.imageListMenu.Images.SetKeyName(5, "Resume_96px.png");
+            this.imageListMenu.Images.SetKeyName(6, "Holy Bible_96px.png");
             // 
-            // panel7
+            // bunifuElipse1
             // 
-            this.panel7.Location = new System.Drawing.Point(410, 177);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(271, 122);
-            this.panel7.TabIndex = 42;
+            this.bunifuElipse1.ElipseRadius = 15;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // metroStyleManager1
+            // 
+            this.metroStyleManager1.Owner = null;
+            this.metroStyleManager1.Style = MetroFramework.MetroColorStyle.Brown;
+            this.metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroRadioButton1
+            // 
+            this.metroRadioButton1.AutoSize = true;
+            this.metroRadioButton1.Location = new System.Drawing.Point(437, 324);
+            this.metroRadioButton1.Name = "metroRadioButton1";
+            this.metroRadioButton1.Size = new System.Drawing.Size(127, 15);
+            this.metroRadioButton1.TabIndex = 43;
+            this.metroRadioButton1.Text = "metroRadioButton1";
+            this.metroRadioButton1.UseSelectable = true;
             // 
             // SAD
             // 
@@ -3462,7 +3503,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel_controlbox);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SAD";
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -3566,6 +3607,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profiles_dataGridView_baptism)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3835,5 +3877,9 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.ImageList imageListMenu;
+        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
+        private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
     }
 }
