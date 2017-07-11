@@ -536,5 +536,10 @@ namespace ParishSystem
         {
 
         }
+
+        private void godparent_panel_baptism_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
