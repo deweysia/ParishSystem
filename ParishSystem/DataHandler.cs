@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
+    //josh made this comment
     //I changed something
 
     public class DataHandler
@@ -18,7 +19,7 @@ namespace ParishSystem
 
         private int userID=1;
 
-
+    
       //  MySqlConnection connect = new MySqlConnection("server=localhost; database=sad2; user=root; password=root; pooling = false; convert zero datetime=True");
         public DataHandler(string server, string database, string user, string password ,int UserID)
         {
