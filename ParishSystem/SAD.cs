@@ -424,7 +424,7 @@ namespace ParishSystem
             else if (A.Equals(CRB_button_menu)) { CRB_panel.BringToFront(); }
             else if (A.Equals(application_button_menu)) { application_panel.BringToFront(); }
         }
-    }
+    
         private void firstname_textbox_Click(object sender, EventArgs e)
         {
             
