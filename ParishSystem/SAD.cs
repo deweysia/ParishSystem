@@ -69,7 +69,6 @@ namespace ParishSystem
             }
             else if (A.Equals(bloodletting_panel_menu)) { bloodletting_panel.BringToFront(); }
             else if (A.Equals(CDB_panel_menu)) { CDB_panel.BringToFront(); }
-            else if (A.Equals(report_panel_menu)) { }
             else if (A.Equals(CRB_panel_menu)) { CRB_panel.BringToFront(); }
             else if (A.Equals(application_panel_menu)) { application_panel.BringToFront(); }
 
@@ -387,5 +386,7 @@ namespace ParishSystem
             AddPNL.BringToFront();
             AddPNL.Visible = true;
         }
+
+       
     }
 }
