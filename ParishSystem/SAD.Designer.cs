@@ -33,35 +33,29 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SAD));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.home_panel_menu = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.profile_panel_menu = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox_person = new System.Windows.Forms.PictureBox();
-            this.bloodletting_panel_menu = new System.Windows.Forms.Panel();
-            this.bloodletting_label_menu = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.application_panel_menu = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.CRB_panel_menu = new System.Windows.Forms.Panel();
-            this.label62 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.CDB_panel_menu = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.library_panel_menu = new System.Windows.Forms.Panel();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.home_button_menu = new System.Windows.Forms.Button();
+            this.profile_button_menu = new System.Windows.Forms.Button();
+            this.library_button_menu = new System.Windows.Forms.Button();
+            this.bloodletting_button_menu = new System.Windows.Forms.Button();
+            this.application_button_menu = new System.Windows.Forms.Button();
+            this.CRB_button_menu = new System.Windows.Forms.Button();
+            this.CDB_button_menu = new System.Windows.Forms.Button();
             this.home_panel = new System.Windows.Forms.Panel();
             this.profile_panel = new System.Windows.Forms.Panel();
             this.AddBTN = new System.Windows.Forms.Button();
@@ -315,6 +309,7 @@
             this.label71 = new System.Windows.Forms.Label();
             this.baptism_panel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -324,22 +319,10 @@
             this.firstname_tooltip_profiles = new System.Windows.Forms.ToolTip(this.components);
             this.lastname_tooltip_profiles = new System.Windows.Forms.ToolTip(this.components);
             this.middlename_tooltip_profiles = new System.Windows.Forms.ToolTip(this.components);
+            this.imageListMenu = new System.Windows.Forms.ImageList(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.home_panel_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.profile_panel_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_person)).BeginInit();
-            this.bloodletting_panel_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.application_panel_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.CRB_panel_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.CDB_panel_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.library_panel_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.profile_panel.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).BeginInit();
@@ -393,13 +376,13 @@
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.flowLayoutPanel1.Controls.Add(this.pictureBox5);
-            this.flowLayoutPanel1.Controls.Add(this.home_panel_menu);
-            this.flowLayoutPanel1.Controls.Add(this.profile_panel_menu);
-            this.flowLayoutPanel1.Controls.Add(this.bloodletting_panel_menu);
-            this.flowLayoutPanel1.Controls.Add(this.application_panel_menu);
-            this.flowLayoutPanel1.Controls.Add(this.CRB_panel_menu);
-            this.flowLayoutPanel1.Controls.Add(this.CDB_panel_menu);
-            this.flowLayoutPanel1.Controls.Add(this.library_panel_menu);
+            this.flowLayoutPanel1.Controls.Add(this.home_button_menu);
+            this.flowLayoutPanel1.Controls.Add(this.profile_button_menu);
+            this.flowLayoutPanel1.Controls.Add(this.library_button_menu);
+            this.flowLayoutPanel1.Controls.Add(this.bloodletting_button_menu);
+            this.flowLayoutPanel1.Controls.Add(this.application_button_menu);
+            this.flowLayoutPanel1.Controls.Add(this.CRB_button_menu);
+            this.flowLayoutPanel1.Controls.Add(this.CDB_button_menu);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 33);
@@ -411,309 +394,143 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::ParishSystem.Properties.Resources.sc_logo;
+            this.pictureBox5.Image = global::ParishSystem.Properties.Resources.The_Pope_45;
             this.pictureBox5.Location = new System.Drawing.Point(1, 6);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(178, 10);
+            this.pictureBox5.Size = new System.Drawing.Size(178, 40);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 38;
             this.pictureBox5.TabStop = false;
             // 
-            // home_panel_menu
+            // home_button_menu
             // 
-            this.home_panel_menu.Controls.Add(this.label8);
-            this.home_panel_menu.Controls.Add(this.pictureBox2);
-            this.home_panel_menu.Location = new System.Drawing.Point(1, 18);
-            this.home_panel_menu.Margin = new System.Windows.Forms.Padding(1);
-            this.home_panel_menu.Name = "home_panel_menu";
-            this.home_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.home_panel_menu.Size = new System.Drawing.Size(178, 50);
-            this.home_panel_menu.TabIndex = 2;
-            this.home_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
-            this.home_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
-            this.home_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
+            this.home_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.home_button_menu.FlatAppearance.BorderSize = 0;
+            this.home_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.home_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.home_button_menu.ForeColor = System.Drawing.Color.White;
+            this.home_button_menu.Image = global::ParishSystem.Properties.Resources.Home_45;
+            this.home_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.home_button_menu.Location = new System.Drawing.Point(3, 50);
+            this.home_button_menu.Name = "home_button_menu";
+            this.home_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.home_button_menu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.home_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.home_button_menu.TabIndex = 39;
+            this.home_button_menu.Text = "Home";
+            this.home_button_menu.UseVisualStyleBackColor = false;
+            this.home_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
             // 
-            // label8
+            // profile_button_menu
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(68, 20);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 20);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Home";
+            this.profile_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.profile_button_menu.FlatAppearance.BorderSize = 0;
+            this.profile_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profile_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profile_button_menu.ForeColor = System.Drawing.Color.White;
+            this.profile_button_menu.Image = global::ParishSystem.Properties.Resources.customer_45;
+            this.profile_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.profile_button_menu.Location = new System.Drawing.Point(3, 111);
+            this.profile_button_menu.Name = "profile_button_menu";
+            this.profile_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.profile_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.profile_button_menu.TabIndex = 43;
+            this.profile_button_menu.Text = "Profiles";
+            this.profile_button_menu.UseVisualStyleBackColor = false;
+            this.profile_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
             // 
-            // pictureBox2
+            // library_button_menu
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Image = global::ParishSystem.Properties.Resources.Home;
-            this.pictureBox2.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.library_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.library_button_menu.FlatAppearance.BorderSize = 0;
+            this.library_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.library_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.library_button_menu.ForeColor = System.Drawing.Color.White;
+            this.library_button_menu.Image = global::ParishSystem.Properties.Resources.Holy_Bible_45;
+            this.library_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.library_button_menu.Location = new System.Drawing.Point(3, 172);
+            this.library_button_menu.Name = "library_button_menu";
+            this.library_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.library_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.library_button_menu.TabIndex = 43;
+            this.library_button_menu.Text = "Library";
+            this.library_button_menu.UseVisualStyleBackColor = false;
+            this.library_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
             // 
-            // profile_panel_menu
+            // bloodletting_button_menu
             // 
-            this.profile_panel_menu.Controls.Add(this.label12);
-            this.profile_panel_menu.Controls.Add(this.pictureBox_person);
-            this.profile_panel_menu.Location = new System.Drawing.Point(1, 70);
-            this.profile_panel_menu.Margin = new System.Windows.Forms.Padding(1);
-            this.profile_panel_menu.Name = "profile_panel_menu";
-            this.profile_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.profile_panel_menu.Size = new System.Drawing.Size(176, 50);
-            this.profile_panel_menu.TabIndex = 0;
-            this.profile_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
-            this.profile_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
-            this.profile_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
+            this.bloodletting_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bloodletting_button_menu.FlatAppearance.BorderSize = 0;
+            this.bloodletting_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bloodletting_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodletting_button_menu.ForeColor = System.Drawing.Color.White;
+            this.bloodletting_button_menu.Image = global::ParishSystem.Properties.Resources.Heart_with_Pulse_45px;
+            this.bloodletting_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bloodletting_button_menu.Location = new System.Drawing.Point(3, 233);
+            this.bloodletting_button_menu.Name = "bloodletting_button_menu";
+            this.bloodletting_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.bloodletting_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.bloodletting_button_menu.TabIndex = 42;
+            this.bloodletting_button_menu.Text = "Bloodletting";
+            this.bloodletting_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bloodletting_button_menu.UseVisualStyleBackColor = false;
+            this.bloodletting_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
             // 
-            // label12
+            // application_button_menu
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(73, 18);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 20);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Profiles";
+            this.application_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.application_button_menu.FlatAppearance.BorderSize = 0;
+            this.application_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.application_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.application_button_menu.ForeColor = System.Drawing.Color.White;
+            this.application_button_menu.Image = global::ParishSystem.Properties.Resources.Resume_45;
+            this.application_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.application_button_menu.Location = new System.Drawing.Point(3, 294);
+            this.application_button_menu.Name = "application_button_menu";
+            this.application_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.application_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.application_button_menu.TabIndex = 43;
+            this.application_button_menu.Text = "Applications";
+            this.application_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.application_button_menu.UseVisualStyleBackColor = false;
+            this.application_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
             // 
-            // pictureBox_person
+            // CRB_button_menu
             // 
-            this.pictureBox_person.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox_person.Image = global::ParishSystem.Properties.Resources.Gender;
-            this.pictureBox_person.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox_person.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox_person.Name = "pictureBox_person";
-            this.pictureBox_person.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox_person.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox_person.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_person.TabIndex = 1;
-            this.pictureBox_person.TabStop = false;
+            this.CRB_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.CRB_button_menu.FlatAppearance.BorderSize = 0;
+            this.CRB_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CRB_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CRB_button_menu.ForeColor = System.Drawing.Color.White;
+            this.CRB_button_menu.Image = global::ParishSystem.Properties.Resources.Money_45;
+            this.CRB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CRB_button_menu.Location = new System.Drawing.Point(3, 355);
+            this.CRB_button_menu.Name = "CRB_button_menu";
+            this.CRB_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CRB_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.CRB_button_menu.TabIndex = 43;
+            this.CRB_button_menu.Text = "CRB";
+            this.CRB_button_menu.UseVisualStyleBackColor = false;
+            this.CRB_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
             // 
-            // bloodletting_panel_menu
+            // CDB_button_menu
             // 
-            this.bloodletting_panel_menu.AccessibleDescription = "";
-            this.bloodletting_panel_menu.Controls.Add(this.bloodletting_label_menu);
-            this.bloodletting_panel_menu.Controls.Add(this.pictureBox1);
-            this.bloodletting_panel_menu.Location = new System.Drawing.Point(1, 122);
-            this.bloodletting_panel_menu.Margin = new System.Windows.Forms.Padding(1);
-            this.bloodletting_panel_menu.Name = "bloodletting_panel_menu";
-            this.bloodletting_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.bloodletting_panel_menu.Size = new System.Drawing.Size(176, 50);
-            this.bloodletting_panel_menu.TabIndex = 2;
-            this.bloodletting_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
-            this.bloodletting_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
-            this.bloodletting_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
-            // 
-            // bloodletting_label_menu
-            // 
-            this.bloodletting_label_menu.AutoSize = true;
-            this.bloodletting_label_menu.BackColor = System.Drawing.Color.Transparent;
-            this.bloodletting_label_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bloodletting_label_menu.ForeColor = System.Drawing.Color.White;
-            this.bloodletting_label_menu.Location = new System.Drawing.Point(73, 17);
-            this.bloodletting_label_menu.Name = "bloodletting_label_menu";
-            this.bloodletting_label_menu.Size = new System.Drawing.Size(93, 20);
-            this.bloodletting_label_menu.TabIndex = 3;
-            this.bloodletting_label_menu.Text = "Bloodletting";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::ParishSystem.Properties.Resources.HeartPulse;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // application_panel_menu
-            // 
-            this.application_panel_menu.Controls.Add(this.label13);
-            this.application_panel_menu.Controls.Add(this.label17);
-            this.application_panel_menu.Controls.Add(this.pictureBox6);
-            this.application_panel_menu.Location = new System.Drawing.Point(1, 174);
-            this.application_panel_menu.Margin = new System.Windows.Forms.Padding(1);
-            this.application_panel_menu.Name = "application_panel_menu";
-            this.application_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.application_panel_menu.Size = new System.Drawing.Size(176, 50);
-            this.application_panel_menu.TabIndex = 41;
-            this.application_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
-            this.application_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
-            this.application_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(68, 17);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(95, 20);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Applications";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(73, -41);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(72, 25);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "Home";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox6.Image = global::ParishSystem.Properties.Resources.Report_Card_96px;
-            this.pictureBox6.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
-            // 
-            // CRB_panel_menu
-            // 
-            this.CRB_panel_menu.Controls.Add(this.label62);
-            this.CRB_panel_menu.Controls.Add(this.pictureBox7);
-            this.CRB_panel_menu.Location = new System.Drawing.Point(1, 226);
-            this.CRB_panel_menu.Margin = new System.Windows.Forms.Padding(1);
-            this.CRB_panel_menu.Name = "CRB_panel_menu";
-            this.CRB_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.CRB_panel_menu.Size = new System.Drawing.Size(176, 50);
-            this.CRB_panel_menu.TabIndex = 40;
-            this.CRB_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
-            this.CRB_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
-            this.CRB_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.BackColor = System.Drawing.Color.Transparent;
-            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.ForeColor = System.Drawing.Color.White;
-            this.label62.Location = new System.Drawing.Point(68, 20);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(43, 20);
-            this.label62.TabIndex = 3;
-            this.label62.Text = "CRB";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox7.Image = global::ParishSystem.Properties.Resources.Money;
-            this.pictureBox7.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 1;
-            this.pictureBox7.TabStop = false;
-            // 
-            // CDB_panel_menu
-            // 
-            this.CDB_panel_menu.Controls.Add(this.label15);
-            this.CDB_panel_menu.Controls.Add(this.pictureBox3);
-            this.CDB_panel_menu.Location = new System.Drawing.Point(1, 278);
-            this.CDB_panel_menu.Margin = new System.Windows.Forms.Padding(1);
-            this.CDB_panel_menu.Name = "CDB_panel_menu";
-            this.CDB_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.CDB_panel_menu.Size = new System.Drawing.Size(176, 50);
-            this.CDB_panel_menu.TabIndex = 39;
-            this.CDB_panel_menu.Click += new System.EventHandler(this.panel_menu_Click);
-            this.CDB_panel_menu.MouseEnter += new System.EventHandler(this.navBarPanel_MouseEnter);
-            this.CDB_panel_menu.MouseLeave += new System.EventHandler(this.narBar_MouseLeave);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(68, 20);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(43, 20);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "CDB";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Image = global::ParishSystem.Properties.Resources.Money;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // library_panel_menu
-            // 
-            this.library_panel_menu.Controls.Add(this.label63);
-            this.library_panel_menu.Controls.Add(this.label64);
-            this.library_panel_menu.Controls.Add(this.pictureBox8);
-            this.library_panel_menu.Location = new System.Drawing.Point(1, 330);
-            this.library_panel_menu.Margin = new System.Windows.Forms.Padding(1);
-            this.library_panel_menu.Name = "library_panel_menu";
-            this.library_panel_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.library_panel_menu.Size = new System.Drawing.Size(176, 50);
-            this.library_panel_menu.TabIndex = 41;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.BackColor = System.Drawing.Color.Transparent;
-            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.ForeColor = System.Drawing.Color.White;
-            this.label63.Location = new System.Drawing.Point(68, 17);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(60, 20);
-            this.label63.TabIndex = 3;
-            this.label63.Text = "Library ";
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.ForeColor = System.Drawing.Color.White;
-            this.label64.Location = new System.Drawing.Point(73, -41);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(72, 25);
-            this.label64.TabIndex = 3;
-            this.label64.Text = "Home";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox8.Image = global::ParishSystem.Properties.Resources.ReportCard;
-            this.pictureBox8.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox8.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 1;
-            this.pictureBox8.TabStop = false;
+            this.CDB_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.CDB_button_menu.FlatAppearance.BorderSize = 0;
+            this.CDB_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CDB_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CDB_button_menu.ForeColor = System.Drawing.Color.White;
+            this.CDB_button_menu.Image = global::ParishSystem.Properties.Resources.Initiate_Money_Transfer_45;
+            this.CDB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CDB_button_menu.Location = new System.Drawing.Point(3, 416);
+            this.CDB_button_menu.Name = "CDB_button_menu";
+            this.CDB_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CDB_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.CDB_button_menu.TabIndex = 43;
+            this.CDB_button_menu.Text = "CDB";
+            this.CDB_button_menu.UseVisualStyleBackColor = false;
+            this.CDB_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
             // 
             // home_panel
             // 
@@ -764,6 +581,218 @@
             this.label3.Size = new System.Drawing.Size(94, 23);
             this.label3.TabIndex = 36;
             this.label3.Text = "PROFILES";
+            // 
+            // searchBar
+            // 
+            this.searchBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchBar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBar.Location = new System.Drawing.Point(455, 33);
+            this.searchBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.searchBar.Name = "searchBar";
+            this.searchBar.Size = new System.Drawing.Size(252, 25);
+            this.searchBar.TabIndex = 1;
+            // 
+            // generalprofile_datagridview
+            // 
+            this.generalprofile_datagridview.AllowUserToAddRows = false;
+            this.generalprofile_datagridview.AllowUserToDeleteRows = false;
+            this.generalprofile_datagridview.AllowUserToResizeColumns = false;
+            this.generalprofile_datagridview.AllowUserToResizeRows = false;
+            this.generalprofile_datagridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.generalprofile_datagridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.generalprofile_datagridview.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.generalprofile_datagridview.BackgroundColor = System.Drawing.Color.White;
+            this.generalprofile_datagridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.generalprofile_datagridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.generalprofile_datagridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.generalprofile_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.generalprofile_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.generalprofile_datagridview.DefaultCellStyle = dataGridViewCellStyle10;
+            this.generalprofile_datagridview.EnableHeadersVisualStyles = false;
+            this.generalprofile_datagridview.Location = new System.Drawing.Point(24, 97);
+            this.generalprofile_datagridview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.generalprofile_datagridview.MultiSelect = false;
+            this.generalprofile_datagridview.Name = "generalprofile_datagridview";
+            this.generalprofile_datagridview.ReadOnly = true;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.generalprofile_datagridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.generalprofile_datagridview.RowHeadersVisible = false;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.generalprofile_datagridview.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.generalprofile_datagridview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.generalprofile_datagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.generalprofile_datagridview.Size = new System.Drawing.Size(683, 300);
+            this.generalprofile_datagridview.TabIndex = 0;
+            this.generalprofile_datagridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.generalprofile_datagridview_CellClick);
+            // 
+            // AddPNL
+            // 
+            this.AddPNL.BackColor = System.Drawing.Color.White;
+            this.AddPNL.Controls.Add(this.clear_profile_button);
+            this.AddPNL.Controls.Add(this.suffix_textbox);
+            this.AddPNL.Controls.Add(this.lastname_textbox);
+            this.AddPNL.Controls.Add(this.middlename_textbox);
+            this.AddPNL.Controls.Add(this.birthplace_textbox_baptist);
+            this.AddPNL.Controls.Add(this.save_button_profile);
+            this.AddPNL.Controls.Add(this.label33);
+            this.AddPNL.Controls.Add(this.firstname_textbox);
+            this.AddPNL.Controls.Add(this.label2);
+            this.AddPNL.Location = new System.Drawing.Point(24, 96);
+            this.AddPNL.Name = "AddPNL";
+            this.AddPNL.Size = new System.Drawing.Size(683, 342);
+            this.AddPNL.TabIndex = 27;
+            this.AddPNL.Visible = false;
+            // 
+            // clear_profile_button
+            // 
+            this.clear_profile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.clear_profile_button.FlatAppearance.BorderSize = 0;
+            this.clear_profile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear_profile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear_profile_button.ForeColor = System.Drawing.Color.White;
+            this.clear_profile_button.Location = new System.Drawing.Point(338, 192);
+            this.clear_profile_button.Name = "clear_profile_button";
+            this.clear_profile_button.Size = new System.Drawing.Size(100, 30);
+            this.clear_profile_button.TabIndex = 31;
+            this.clear_profile_button.Text = "Cancel";
+            this.clear_profile_button.UseVisualStyleBackColor = false;
+            this.clear_profile_button.Click += new System.EventHandler(this.clear_profile_button_Click);
+            // 
+            // suffix_textbox
+            // 
+            this.suffix_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.suffix_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.suffix_textbox.ForeColor = System.Drawing.Color.Silver;
+            this.suffix_textbox.Location = new System.Drawing.Point(474, 113);
+            this.suffix_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.suffix_textbox.Name = "suffix_textbox";
+            this.suffix_textbox.Size = new System.Drawing.Size(54, 18);
+            this.suffix_textbox.TabIndex = 23;
+            this.suffix_textbox.Text = "suffix";
+            this.suffix_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.suffix_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.suffix_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
+            // 
+            // lastname_textbox
+            // 
+            this.lastname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lastname_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lastname_textbox.ForeColor = System.Drawing.Color.Silver;
+            this.lastname_textbox.Location = new System.Drawing.Point(378, 113);
+            this.lastname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lastname_textbox.Name = "lastname_textbox";
+            this.lastname_textbox.Size = new System.Drawing.Size(94, 18);
+            this.lastname_textbox.TabIndex = 24;
+            this.lastname_textbox.Text = "lastname";
+            this.lastname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lastname_tooltip_profiles.SetToolTip(this.lastname_textbox, "Please fill in last name");
+            this.lastname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.lastname_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
+            // 
+            // middlename_textbox
+            // 
+            this.middlename_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.middlename_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.middlename_textbox.ForeColor = System.Drawing.Color.Silver;
+            this.middlename_textbox.Location = new System.Drawing.Point(281, 113);
+            this.middlename_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.middlename_textbox.Name = "middlename_textbox";
+            this.middlename_textbox.Size = new System.Drawing.Size(94, 18);
+            this.middlename_textbox.TabIndex = 22;
+            this.middlename_textbox.Text = "middlename";
+            this.middlename_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.middlename_tooltip_profiles.SetToolTip(this.middlename_textbox, "Please fill in middle name");
+            this.middlename_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.middlename_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
+            // 
+            // birthplace_textbox_baptist
+            // 
+            this.birthplace_textbox_baptist.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.birthplace_textbox_baptist.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.birthplace_textbox_baptist.Location = new System.Drawing.Point(472, 29);
+            this.birthplace_textbox_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.birthplace_textbox_baptist.Name = "birthplace_textbox_baptist";
+            this.birthplace_textbox_baptist.Size = new System.Drawing.Size(133, 16);
+            this.birthplace_textbox_baptist.TabIndex = 20;
+            // 
+            // save_button_profile
+            // 
+            this.save_button_profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.save_button_profile.Enabled = false;
+            this.save_button_profile.FlatAppearance.BorderSize = 0;
+            this.save_button_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.save_button_profile.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_button_profile.ForeColor = System.Drawing.Color.White;
+            this.save_button_profile.Location = new System.Drawing.Point(232, 192);
+            this.save_button_profile.Name = "save_button_profile";
+            this.save_button_profile.Size = new System.Drawing.Size(100, 30);
+            this.save_button_profile.TabIndex = 29;
+            this.save_button_profile.Text = "Save";
+            this.save_button_profile.UseVisualStyleBackColor = false;
+            this.save_button_profile.Click += new System.EventHandler(this.addProfile_button_Click);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(255)))));
+            this.label33.Location = new System.Drawing.Point(126, 111);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(52, 21);
+            this.label33.TabIndex = 27;
+            this.label33.Text = "Name";
+            // 
+            // firstname_textbox
+            // 
+            this.firstname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.firstname_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.firstname_textbox.ForeColor = System.Drawing.Color.Silver;
+            this.firstname_textbox.Location = new System.Drawing.Point(184, 113);
+            this.firstname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.firstname_textbox.Name = "firstname_textbox";
+            this.firstname_textbox.Size = new System.Drawing.Size(94, 18);
+            this.firstname_textbox.TabIndex = 13;
+            this.firstname_textbox.Text = "firstname";
+            this.firstname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.firstname_tooltip_profiles.SetToolTip(this.firstname_textbox, "Please enter a first name");
+            this.firstname_textbox.Click += new System.EventHandler(this.firstname_textbox_Click);
+            this.firstname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.firstname_textbox.TextChanged += new System.EventHandler(this.firstname_textbox_TextChanged);
+            this.firstname_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(181, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(351, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "______________________________________";
             // 
             // panel9
             // 
@@ -2166,7 +2195,7 @@
             // 
             // profile_menu_button
             // 
-            this.profile_menu_button.BackgroundImage = global::ParishSystem.Properties.Resources.Gender_Neutral_User_96px;
+            this.profile_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("profile_menu_button.BackgroundImage")));
             this.profile_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.profile_menu_button.FlatAppearance.BorderSize = 0;
             this.profile_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -2180,7 +2209,7 @@
             // 
             // bloodletting_menu_button
             // 
-            this.bloodletting_menu_button.BackgroundImage = global::ParishSystem.Properties.Resources.Syringe_96px;
+            this.bloodletting_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bloodletting_menu_button.BackgroundImage")));
             this.bloodletting_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bloodletting_menu_button.FlatAppearance.BorderSize = 0;
             this.bloodletting_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -2195,7 +2224,7 @@
             // home_menu_button
             // 
             this.home_menu_button.AutoSize = true;
-            this.home_menu_button.BackgroundImage = global::ParishSystem.Properties.Resources.Home_96px;
+            this.home_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("home_menu_button.BackgroundImage")));
             this.home_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.home_menu_button.FlatAppearance.BorderSize = 0;
             this.home_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -2239,7 +2268,7 @@
             // 
             // button7
             // 
-            this.button7.BackgroundImage = global::ParishSystem.Properties.Resources.FIcon;
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -2253,7 +2282,7 @@
             // 
             // application_menu_button
             // 
-            this.application_menu_button.BackgroundImage = global::ParishSystem.Properties.Resources.FIcon;
+            this.application_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("application_menu_button.BackgroundImage")));
             this.application_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.application_menu_button.FlatAppearance.BorderSize = 0;
             this.application_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -2359,6 +2388,7 @@
             this.panel_controlbox.Name = "panel_controlbox";
             this.panel_controlbox.Size = new System.Drawing.Size(934, 33);
             this.panel_controlbox.TabIndex = 38;
+            this.panel_controlbox.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_controlbox_Paint);
             this.panel_controlbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseDown);
             this.panel_controlbox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseMove);
             // 
@@ -2430,7 +2460,7 @@
             // btn_Min
             // 
             this.btn_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Min.BackgroundImage = global::ParishSystem.Properties.Resources.btn_minImage;
+            this.btn_Min.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Min.BackgroundImage")));
             this.btn_Min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Min.FlatAppearance.BorderSize = 0;
             this.btn_Min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -2447,7 +2477,7 @@
             // btn_Max
             // 
             this.btn_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Max.BackgroundImage = global::ParishSystem.Properties.Resources.btn_maxImage;
+            this.btn_Max.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Max.BackgroundImage")));
             this.btn_Max.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Max.FlatAppearance.BorderSize = 0;
             this.btn_Max.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -3599,6 +3629,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.metroRadioButton1);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.comboBox1);
@@ -3663,7 +3694,41 @@
             dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.profiles_dataGridView_baptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.profiles_dataGridView_baptism.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle22.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.profiles_dataGridView_baptism.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.profiles_dataGridView_baptism.DefaultCellStyle = dataGridViewCellStyle14;
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3679,6 +3744,22 @@
             this.profiles_dataGridView_baptism.MultiSelect = false;
             this.profiles_dataGridView_baptism.Name = "profiles_dataGridView_baptism";
             this.profiles_dataGridView_baptism.ReadOnly = true;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3712,11 +3793,22 @@
             // 
             // lastname_tooltip_profiles
             // 
+            this.imageListMenu.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMenu.ImageStream")));
+            this.imageListMenu.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListMenu.Images.SetKeyName(0, "Home.png");
+            this.imageListMenu.Images.SetKeyName(1, "Gender.png");
+            this.imageListMenu.Images.SetKeyName(2, "HeartPulse.png");
+            this.imageListMenu.Images.SetKeyName(3, "ReportCard.png");
+            this.imageListMenu.Images.SetKeyName(4, "Money.png");
+            this.imageListMenu.Images.SetKeyName(5, "Resume_96px.png");
+            this.imageListMenu.Images.SetKeyName(6, "Holy Bible_96px.png");
             this.lastname_tooltip_profiles.Active = false;
             this.lastname_tooltip_profiles.ShowAlways = true;
             // 
             // middlename_tooltip_profiles
             // 
+            this.bunifuElipse1.ElipseRadius = 15;
+            this.bunifuElipse1.TargetControl = this;
             this.middlename_tooltip_profiles.Active = false;
             this.middlename_tooltip_profiles.ShowAlways = true;
             // 
@@ -3727,6 +3819,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(934, 545);
             this.ControlBox = false;
+            this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.home_panel);
@@ -3737,32 +3830,11 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel_controlbox);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SAD";
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.home_panel_menu.ResumeLayout(false);
-            this.home_panel_menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.profile_panel_menu.ResumeLayout(false);
-            this.profile_panel_menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_person)).EndInit();
-            this.bloodletting_panel_menu.ResumeLayout(false);
-            this.bloodletting_panel_menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.application_panel_menu.ResumeLayout(false);
-            this.application_panel_menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.CRB_panel_menu.ResumeLayout(false);
-            this.CRB_panel_menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.CDB_panel_menu.ResumeLayout(false);
-            this.CDB_panel_menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.library_panel_menu.ResumeLayout(false);
-            this.library_panel_menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.profile_panel.ResumeLayout(false);
             this.profile_panel.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -3882,25 +3954,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button profile_menu_button;
         private System.Windows.Forms.Button home_menu_button;
-        private System.Windows.Forms.Panel profile_panel_menu;
-        private System.Windows.Forms.PictureBox pictureBox_person;
-        private System.Windows.Forms.Panel home_panel_menu;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel CDB_panel_menu;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel bloodletting_panel_menu;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label welcome_Text;
         private System.Windows.Forms.Label username_Welcome_Text;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label bloodletting_label_menu;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel application_panel_menu;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label marriageApplication_label;
         private System.Windows.Forms.Label confirmationApplication_label;
@@ -4087,9 +4143,6 @@
         private System.Windows.Forms.Label community_label_CRB;
         private System.Windows.Forms.Label parish_label_CRB;
         private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Panel CRB_panel_menu;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button AddBTN;
         private System.Windows.Forms.Panel AddPNL;
         private System.Windows.Forms.Button clear_profile_button;
@@ -4100,10 +4153,6 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox firstname_textbox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel library_panel_menu;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel baptism_panel;
         private System.Windows.Forms.DataGridView profiles_dataGridView_baptism;
         private System.Windows.Forms.Panel panel1;
@@ -4112,6 +4161,16 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.ImageList imageListMenu;
+        private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
+        private System.Windows.Forms.Button home_button_menu;
+        private System.Windows.Forms.Button bloodletting_button_menu;
+        private System.Windows.Forms.Button profile_button_menu;
+        private System.Windows.Forms.Button application_button_menu;
+        private System.Windows.Forms.Button CRB_button_menu;
+        private System.Windows.Forms.Button CDB_button_menu;
+        private System.Windows.Forms.Button library_button_menu;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label contactNumber_label_profile;
         private System.Windows.Forms.Label address_label_profile;

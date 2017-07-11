@@ -83,29 +83,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
-    <Compile Include="login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
-    </Compile>
     <Compile Include="menu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="menu.Designer.cs">
       <DependentUpon>menu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Menu_bar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Menu_bar.Designer.cs">
-      <DependentUpon>Menu_bar.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs">
       <SubType>Form</SubType>
@@ -115,6 +97,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SAD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,15 +186,6 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
-      <DependentUpon>login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menu_bar.resx">
-      <DependentUpon>Menu_bar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\ParishSystem.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\ParishSystem.Properties.Resources.resources" />
     <EmbeddedResource Include="Person.resx">
@@ -215,14 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="SAD.resx">
       <DependentUpon>SAD.cs</DependentUpon>
     </EmbeddedResource>
@@ -295,62 +268,219 @@
     <Content Include="obj\Debug\ParishSystem.exe" />
     <Content Include="obj\Debug\ParishSystem.pdb" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
-    <None Include="Resources\Heart with Pulse_64px.png" />
-    <None Include="Resources\Heart with Pulse_32px.png" />
-    <None Include="Resources\Shellfish_96px.png" />
-    <None Include="Resources\Water_96px.png" />
-    <None Include="Resources\X Coordinate_96px.png" />
-    <None Include="Resources\Trash_96px.png" />
-    <None Include="Resources\The Pope_96px.png" />
-    <None Include="Resources\Tax_96px.png" />
-    <None Include="Resources\Settings_96px.png" />
-    <None Include="Resources\Resume_96px.png" />
-    <None Include="Resources\Request Money_96px.png" />
-    <None Include="Resources\Remove User Male_96px.png" />
-    <None Include="Resources\Profit_96px.png" />
-    <None Include="Resources\Pray_96px.png" />
-    <None Include="Resources\Plus_96px.png" />
-    <None Include="Resources\Plus 2 Math_96px.png" />
-    <None Include="Resources\Newlyweds_96px.png" />
-    <None Include="Resources\Minus_96px.png" />
-    <None Include="Resources\Minimize Window_96px.png" />
-    <None Include="Resources\Login_96px.png" />
-    <None Include="Resources\Initiate Money Transfer_96px.png" />
-    <None Include="Resources\Holy Bible_96px.png" />
-    <None Include="Resources\Edit_96px.png" />
-    <None Include="Resources\Dove_96px.png" />
-    <None Include="Resources\Deposit_96px.png" />
-    <None Include="Resources\Delete_96px.png" />
-    <None Include="Resources\customer_96px.png" />
-    <None Include="Resources\Checkmark_96px.png" />
-    <None Include="Resources\Cancel_96px.png" />
-    <None Include="Resources\ReportCard.png" />
-    <None Include="Resources\Money.png" />
-    <None Include="Resources\Home.png" />
-    <None Include="Resources\HeartPulse.png" />
-    <None Include="Resources\Gender.png" />
-    <None Include="Resources\Coins.png" />
-    <None Include="Resources\sc-logo.png" />
-    <None Include="Resources\Report Card_96px.png" />
-    <None Include="Resources\Money_96px.png" />
-    <None Include="Resources\Heart with Pulse_96px.png" />
-    <None Include="Resources\Person Male_96px.png" />
-    <None Include="Resources\Home_96px.png" />
-    <None Include="Resources\Heart with Pulse_100px.png" />
-    <None Include="Resources\Gender Neutral User_96px.png" />
-    <None Include="Resources\Coins_96px.png" />
-    <None Include="Resources\Syringe_96px.png" />
-    <None Include="Resources\HIcon.png" />
-    <None Include="Resources\FIcon.png" />
-    <None Include="Resources\RIcon.png" />
-    <None Include="Resources\UIcon.png" />
-    <None Include="Resources\user_icon.png" />
-    <None Include="Resources\11273972-orange-leaf-texture.jpg" />
-    <None Include="Resources\BookA.png" />
-    <None Include="Resources\BLIcon.png" />
     <Content Include="Resources\btn_closeImage.png" />
     <Content Include="Resources\btn_maxImage.png" />
     <Content Include="Resources\btn_minImage.png" />
+    <None Include="Resources\The Pope_45.png" />
+    <None Include="Resources\Initiate Money Transfer_45.png" />
+    <None Include="Resources\Money_45.png" />
+    <None Include="Resources\Resume_45.png" />
+    <None Include="Resources\Home_45.png" />
+    <None Include="Resources\Heart with Pulse_45px.png" />
+    <None Include="Resources\customer_45.png" />
+    <None Include="Resources\Holy Bible_45.png" />
+    <Content Include="Resources\icons\32x32\Cancel_32px.png" />
+    <Content Include="Resources\icons\32x32\Checkmark_32px.png" />
+    <Content Include="Resources\icons\32x32\Clock_32px.png" />
+    <Content Include="Resources\icons\32x32\customer_32px.png" />
+    <Content Include="Resources\icons\32x32\Delete_32px.png" />
+    <Content Include="Resources\icons\32x32\Deposit_32px.png" />
+    <Content Include="Resources\icons\32x32\Dove_32px.png" />
+    <Content Include="Resources\icons\32x32\Edit_32px.png" />
+    <Content Include="Resources\icons\32x32\Eye_32px.png" />
+    <Content Include="Resources\icons\32x32\Google Web Search_32px.png" />
+    <Content Include="Resources\icons\32x32\Holy Bible_32px.png" />
+    <Content Include="Resources\icons\32x32\Home_32px.png" />
+    <Content Include="Resources\icons\32x32\Info_32px.png" />
+    <Content Include="Resources\icons\32x32\Initiate Money Transfer_32px.png" />
+    <Content Include="Resources\icons\32x32\Login_32px.png" />
+    <Content Include="Resources\icons\32x32\Minimize Window_32px.png" />
+    <Content Include="Resources\icons\32x32\Minus_32px.png" />
+    <Content Include="Resources\icons\32x32\Money_32px.png" />
+    <Content Include="Resources\icons\32x32\Newlyweds_32px.png" />
+    <Content Include="Resources\icons\32x32\Password_32px.png" />
+    <Content Include="Resources\icons\32x32\Plus 2 Math_32px.png" />
+    <Content Include="Resources\icons\32x32\Plus_32px.png" />
+    <Content Include="Resources\icons\32x32\Pray_32px.png" />
+    <Content Include="Resources\icons\32x32\Printer Door Open_32px.png" />
+    <Content Include="Resources\icons\32x32\Print_32px.png" />
+    <Content Include="Resources\icons\32x32\Profit_32px.png" />
+    <Content Include="Resources\icons\32x32\Remove User Male_32px.png" />
+    <Content Include="Resources\icons\32x32\Report Card_32px.png" />
+    <Content Include="Resources\icons\32x32\Request Money_32px.png" />
+    <Content Include="Resources\icons\32x32\Resume_32px.png" />
+    <Content Include="Resources\icons\32x32\Search_32px.png" />
+    <Content Include="Resources\icons\32x32\Settings_32px.png" />
+    <Content Include="Resources\icons\32x32\Shellfish_32px.png" />
+    <Content Include="Resources\icons\32x32\Tax_32px.png" />
+    <Content Include="Resources\icons\32x32\The Pope_32px.png" />
+    <Content Include="Resources\icons\32x32\Trash_32px.png" />
+    <Content Include="Resources\icons\32x32\User Group Man Man_32px.png" />
+    <Content Include="Resources\icons\32x32\Watch_32px.png" />
+    <Content Include="Resources\icons\32x32\Water_32px.png" />
+    <Content Include="Resources\icons\32x32\X Coordinate_32px.png" />
+    <Content Include="Resources\icons\45x45\Cancel_45px.png" />
+    <Content Include="Resources\icons\45x45\Checkmark_45.png" />
+    <Content Include="Resources\icons\45x45\Clock_45.png" />
+    <Content Include="Resources\icons\45x45\customer_45.png" />
+    <Content Include="Resources\icons\45x45\Delete_45.png" />
+    <Content Include="Resources\icons\45x45\Deposit_45.png" />
+    <Content Include="Resources\icons\45x45\Dove_45.png" />
+    <Content Include="Resources\icons\45x45\Edit_45.png" />
+    <Content Include="Resources\icons\45x45\Eye_45.png" />
+    <Content Include="Resources\icons\45x45\Google Web Search_45.png" />
+    <Content Include="Resources\icons\45x45\Heart with Pulse_45px.png" />
+    <Content Include="Resources\icons\45x45\Holy Bible_45.png" />
+    <Content Include="Resources\icons\45x45\Home_45.png" />
+    <Content Include="Resources\icons\45x45\Info_45.png" />
+    <Content Include="Resources\icons\45x45\Initiate Money Transfer_45.png" />
+    <Content Include="Resources\icons\45x45\Login_45.png" />
+    <Content Include="Resources\icons\45x45\Minimize Window_45.png" />
+    <Content Include="Resources\icons\45x45\Minus_45.png" />
+    <Content Include="Resources\icons\45x45\Money_45.png" />
+    <Content Include="Resources\icons\45x45\Newlyweds_45.png" />
+    <Content Include="Resources\icons\45x45\Password_45.png" />
+    <Content Include="Resources\icons\45x45\Plus 2 Math_45.png" />
+    <Content Include="Resources\icons\45x45\Plus_45.png" />
+    <Content Include="Resources\icons\45x45\Pray_45.png" />
+    <Content Include="Resources\icons\45x45\Printer Door Open_45.png" />
+    <Content Include="Resources\icons\45x45\Print_45.png" />
+    <Content Include="Resources\icons\45x45\Profit_45.png" />
+    <Content Include="Resources\icons\45x45\Remove User Male_45.png" />
+    <Content Include="Resources\icons\45x45\Report Card_45.png" />
+    <Content Include="Resources\icons\45x45\Request Money_45.png" />
+    <Content Include="Resources\icons\45x45\Resume_45.png" />
+    <Content Include="Resources\icons\45x45\Search_45.png" />
+    <Content Include="Resources\icons\45x45\Settings_45.png" />
+    <Content Include="Resources\icons\45x45\Shellfish_45.png" />
+    <Content Include="Resources\icons\45x45\Tax_45.png" />
+    <Content Include="Resources\icons\45x45\The Pope_45.png" />
+    <Content Include="Resources\icons\45x45\Trash_45.png" />
+    <Content Include="Resources\icons\45x45\User Group Man Man_45.png" />
+    <Content Include="Resources\icons\45x45\Watch_45.png" />
+    <Content Include="Resources\icons\45x45\Water_45.png" />
+    <Content Include="Resources\icons\45x45\X Coordinate_45.png" />
+    <Content Include="Resources\icons\50x50\Cancel_50px.png" />
+    <Content Include="Resources\icons\50x50\Checkmark_50px.png" />
+    <Content Include="Resources\icons\50x50\Clock_50px.png" />
+    <Content Include="Resources\icons\50x50\customer_50px.png" />
+    <Content Include="Resources\icons\50x50\Delete_50px.png" />
+    <Content Include="Resources\icons\50x50\Deposit_50px.png" />
+    <Content Include="Resources\icons\50x50\Dove_50px.png" />
+    <Content Include="Resources\icons\50x50\Edit_50px.png" />
+    <Content Include="Resources\icons\50x50\Eye_50px.png" />
+    <Content Include="Resources\icons\50x50\Google Web Search_50px.png" />
+    <Content Include="Resources\icons\50x50\Holy Bible_50px.png" />
+    <Content Include="Resources\icons\50x50\Home_50px.png" />
+    <Content Include="Resources\icons\50x50\Info_50px.png" />
+    <Content Include="Resources\icons\50x50\Initiate Money Transfer_50px.png" />
+    <Content Include="Resources\icons\50x50\Login_50px.png" />
+    <Content Include="Resources\icons\50x50\Minimize Window_50px.png" />
+    <Content Include="Resources\icons\50x50\Minus_50px.png" />
+    <Content Include="Resources\icons\50x50\Money_50px.png" />
+    <Content Include="Resources\icons\50x50\Newlyweds_50px.png" />
+    <Content Include="Resources\icons\50x50\Password_50px.png" />
+    <Content Include="Resources\icons\50x50\Plus 2 Math_50px.png" />
+    <Content Include="Resources\icons\50x50\Plus_50px.png" />
+    <Content Include="Resources\icons\50x50\Pray_50px.png" />
+    <Content Include="Resources\icons\50x50\Printer Door Open_50px.png" />
+    <Content Include="Resources\icons\50x50\Print_50px.png" />
+    <Content Include="Resources\icons\50x50\Profit_50px.png" />
+    <Content Include="Resources\icons\50x50\Remove User Male_50px.png" />
+    <Content Include="Resources\icons\50x50\Report Card_50px.png" />
+    <Content Include="Resources\icons\50x50\Request Money_50px.png" />
+    <Content Include="Resources\icons\50x50\Resume_50px.png" />
+    <Content Include="Resources\icons\50x50\Search_50px.png" />
+    <Content Include="Resources\icons\50x50\Settings_50px.png" />
+    <Content Include="Resources\icons\50x50\Shellfish_50px.png" />
+    <Content Include="Resources\icons\50x50\Tax_50px.png" />
+    <Content Include="Resources\icons\50x50\The Pope_50px.png" />
+    <Content Include="Resources\icons\50x50\Trash_50px.png" />
+    <Content Include="Resources\icons\50x50\User Group Man Man_50px.png" />
+    <Content Include="Resources\icons\50x50\Watch_50px.png" />
+    <Content Include="Resources\icons\50x50\Water_50px.png" />
+    <Content Include="Resources\icons\50x50\X Coordinate_50px.png" />
+    <Content Include="Resources\icons\64x64\Cancel_64px.png" />
+    <Content Include="Resources\icons\64x64\Checkmark_64px.png" />
+    <Content Include="Resources\icons\64x64\Clock_64px.png" />
+    <Content Include="Resources\icons\64x64\customer_64px.png" />
+    <Content Include="Resources\icons\64x64\Delete_64px.png" />
+    <Content Include="Resources\icons\64x64\Deposit_64px.png" />
+    <Content Include="Resources\icons\64x64\Dove_64px.png" />
+    <Content Include="Resources\icons\64x64\Edit_64px.png" />
+    <Content Include="Resources\icons\64x64\Eye_64px.png" />
+    <Content Include="Resources\icons\64x64\Google Web Search_64px.png" />
+    <Content Include="Resources\icons\64x64\Holy Bible_64px.png" />
+    <Content Include="Resources\icons\64x64\Home_64px.png" />
+    <Content Include="Resources\icons\64x64\Info_64px.png" />
+    <Content Include="Resources\icons\64x64\Initiate Money Transfer_64px.png" />
+    <Content Include="Resources\icons\64x64\Login_64px.png" />
+    <Content Include="Resources\icons\64x64\Minimize Window_64px.png" />
+    <Content Include="Resources\icons\64x64\Minus_64px.png" />
+    <Content Include="Resources\icons\64x64\Money_64px.png" />
+    <Content Include="Resources\icons\64x64\Newlyweds_64px.png" />
+    <Content Include="Resources\icons\64x64\Password_64px.png" />
+    <Content Include="Resources\icons\64x64\Plus 2 Math_64px.png" />
+    <Content Include="Resources\icons\64x64\Plus_64px.png" />
+    <Content Include="Resources\icons\64x64\Pray_64px.png" />
+    <Content Include="Resources\icons\64x64\Printer Door Open_64px.png" />
+    <Content Include="Resources\icons\64x64\Print_64px.png" />
+    <Content Include="Resources\icons\64x64\Profit_64px.png" />
+    <Content Include="Resources\icons\64x64\Remove User Male_64px.png" />
+    <Content Include="Resources\icons\64x64\Report Card_64px.png" />
+    <Content Include="Resources\icons\64x64\Request Money_64px.png" />
+    <Content Include="Resources\icons\64x64\Resume_64px.png" />
+    <Content Include="Resources\icons\64x64\Search_64px.png" />
+    <Content Include="Resources\icons\64x64\Settings_64px.png" />
+    <Content Include="Resources\icons\64x64\Shellfish_64px.png" />
+    <Content Include="Resources\icons\64x64\Tax_64px.png" />
+    <Content Include="Resources\icons\64x64\The Pope_64px.png" />
+    <Content Include="Resources\icons\64x64\Trash_64px.png" />
+    <Content Include="Resources\icons\64x64\User Group Man Man_64px.png" />
+    <Content Include="Resources\icons\64x64\Watch_64px.png" />
+    <Content Include="Resources\icons\64x64\Water_64px.png" />
+    <Content Include="Resources\icons\64x64\X Coordinate_64px.png" />
+    <Content Include="Resources\icons\96x96\Cancel_96px.png" />
+    <Content Include="Resources\icons\96x96\Checkmark_96px.png" />
+    <Content Include="Resources\icons\96x96\Clock_96px.png" />
+    <Content Include="Resources\icons\96x96\Customer_96px.png" />
+    <Content Include="Resources\icons\96x96\Delete_96px.png" />
+    <Content Include="Resources\icons\96x96\Deposit_96px.png" />
+    <Content Include="Resources\icons\96x96\Dove_96px.png" />
+    <Content Include="Resources\icons\96x96\Edit_96px.png" />
+    <Content Include="Resources\icons\96x96\Eye_96px.png" />
+    <Content Include="Resources\icons\96x96\Google Web Search_96px.png" />
+    <Content Include="Resources\icons\96x96\Heart with Pulse_96px.png" />
+    <Content Include="Resources\icons\96x96\Holy Bible_96px.png" />
+    <Content Include="Resources\icons\96x96\Home_96px.png" />
+    <Content Include="Resources\icons\96x96\Info_96px.png" />
+    <Content Include="Resources\icons\96x96\Initiate Money Transfer_96px.png" />
+    <Content Include="Resources\icons\96x96\Login_96px.png" />
+    <Content Include="Resources\icons\96x96\Minimize Window_96px.png" />
+    <Content Include="Resources\icons\96x96\Minus_96px.png" />
+    <Content Include="Resources\icons\96x96\Money_96px.png" />
+    <Content Include="Resources\icons\96x96\Newlyweds_96px.png" />
+    <Content Include="Resources\icons\96x96\Password_96px.png" />
+    <Content Include="Resources\icons\96x96\Plus 2 Math_96px.png" />
+    <Content Include="Resources\icons\96x96\Plus_96px.png" />
+    <Content Include="Resources\icons\96x96\Pray_96px.png" />
+    <Content Include="Resources\icons\96x96\Printer Door Open_96px.png" />
+    <Content Include="Resources\icons\96x96\Print_96px.png" />
+    <Content Include="Resources\icons\96x96\Profit_96px.png" />
+    <Content Include="Resources\icons\96x96\Remove User Male_96px.png" />
+    <Content Include="Resources\icons\96x96\Report Card_96px.png" />
+    <Content Include="Resources\icons\96x96\Request Money_96px.png" />
+    <Content Include="Resources\icons\96x96\Resume_96px.png" />
+    <Content Include="Resources\icons\96x96\Search_96px.png" />
+    <Content Include="Resources\icons\96x96\Settings_96px.png" />
+    <Content Include="Resources\icons\96x96\Shellfish_96px.png" />
+    <Content Include="Resources\icons\96x96\Tax_96px.png" />
+    <Content Include="Resources\icons\96x96\The Pope_96px.png" />
+    <Content Include="Resources\icons\96x96\Trash_96px.png" />
+    <Content Include="Resources\icons\96x96\User Group Man Man_96px.png" />
+    <Content Include="Resources\icons\96x96\Watch_96px.png" />
+    <Content Include="Resources\icons\96x96\Water_96px.png" />
+    <Content Include="Resources\icons\96x96\X Coordinate_96px.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
