@@ -20,7 +20,30 @@ namespace ParishSystem
             InitializeComponent();
 
         }
+       
+        #region generic Methods
+        public void Names_textbox_Leave(object sender, EventArgs e)
+        {
+            TextBox A = sender as TextBox;
+            string B = A.Name.Split('_')[0];
+            if (A.Text.Trim().Equals(""))
+            {
+                A.Text = B;
+                A.ForeColor = Color.Silver;
+            }
+        }
 
+        public void Names_textbox_MouseClick(object sender, MouseEventArgs e)
+        {
+            TextBox A = sender as TextBox;
+            if (A.Text.Equals(A.Name.Split('_')[0]))
+            {
+                A.Text = "";
+                A.ForeColor = Color.Black;
+            }
+        }
+
+        #endregion
 
         #region Effects
         protected override void WndProc(ref Message m)
@@ -124,7 +147,7 @@ namespace ParishSystem
             generalprofile_datagridview.Columns["lastName"].Visible = false;
             generalprofile_datagridview.Columns["suffix"].Visible = false;
             generalprofile_datagridview.Columns["gender"].Visible = false;
-           
+            generalprofile_datagridview.Columns["birthdate"].Visible = false;
             generalprofile_datagridview.Columns["contactNumber"].Visible = false;
             generalprofile_datagridview.Columns["address"].Visible = false;
             generalprofile_datagridview.Columns["birthplace"].Visible = false;
@@ -136,14 +159,7 @@ namespace ParishSystem
         {//data grid cell click
             openProfile_button.Enabled = true;
             deleteProfile_button.Enabled = true;
-
             lastGeneralProfile = int.Parse(generalprofile_datagridview.CurrentRow.Cells["profileID"].Value.ToString());
-            firstname_textbox.Text=generalprofile_datagridview.CurrentRow.Cells["firstname"].Value.ToString();
-            middlename_textbox.Text=generalprofile_datagridview.CurrentRow.Cells["midname"].Value.ToString();
-            lastname_textbox.Text = generalprofile_datagridview.CurrentRow.Cells["lastname"].Value.ToString();
-            suffix_textbox.Text = generalprofile_datagridview.CurrentRow.Cells["suffix"].Value.ToString();
-
-
             //label changes
             firstname_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["firstname"].Value.ToString();
             middlename_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["midname"].Value.ToString();
@@ -155,7 +171,15 @@ namespace ParishSystem
             else
                 gender_label_profiles.Text = "";
 
-            birthday_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString();
+            Console.WriteLine(DateTime.MinValue.ToString());
+            Console.WriteLine(generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString());
+            Console.WriteLine(DateTime.MinValue.ToString().Equals(generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString()));
+
+            if (!generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString().Equals(DateTime.MinValue.ToString()))
+                birthday_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString();
+            else
+                birthday_label_profile.Text = "";
+
             contactNumber_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["contactnumber"].Value.ToString();
             address_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["address"].Value.ToString();
             birthplace_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["birthplace"].Value.ToString();
@@ -189,12 +213,17 @@ namespace ParishSystem
             Form person = new Person(lastGeneralProfile, dh);
             person.ShowDialog();
             clearProfile();
+           
+
         }
 
         private void deleteProfile_button_Click(object sender, EventArgs e)
         {
             dh.deleteGeneralProfile(lastGeneralProfile);
             refreshGeneralProfileTable();
+            lastGeneralProfile = 0;
+            deleteProfile_button.Enabled = false;
+            openProfile_button.Enabled = false;
         }
 
 
@@ -410,28 +439,10 @@ namespace ParishSystem
             
         }
 
-        private void Names_textbox_Leave(object sender, EventArgs e)
-        {
-            TextBox A = sender as TextBox;
-            string B = A.Name.Split('_')[0];
-            if (A.Text.Trim().Equals(""))
-            {
-                A.Text = B;
-                A.ForeColor = Color.Silver;
-            }
-        }
 
-        private void Names_textbox_MouseClick(object sender, MouseEventArgs e)
-        {
-            TextBox A = sender as TextBox;
-            if (A.Text.Equals(A.Name.Split('_')[0]))
-            {
-                A.Text = "";
-                A.ForeColor = Color.Black;
-            }
-        }
+     
 
-        private void firstname_textbox_TextChanged(object sender, EventArgs e)
+        private void Name_textbox_Profile_TextChanged(object sender, EventArgs e)
         {
             if (firstname_textbox.Text != "firstname" && firstname_textbox.Text.Trim() != "" &&
                middlename_textbox.Text != "middlename" && middlename_textbox.Text.Trim() != "" &&

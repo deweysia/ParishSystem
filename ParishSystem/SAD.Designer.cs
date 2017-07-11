@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.home_panel_menu = new System.Windows.Forms.Panel();
@@ -65,22 +65,12 @@
             this.home_panel = new System.Windows.Forms.Panel();
             this.profile_panel = new System.Windows.Forms.Panel();
             this.AddBTN = new System.Windows.Forms.Button();
-            this.openProfile_button = new System.Windows.Forms.Button();
-            this.deleteProfile_button = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.AddPNL = new System.Windows.Forms.Panel();
-            this.clear_profile_button = new System.Windows.Forms.Button();
-            this.suffix_textbox = new System.Windows.Forms.TextBox();
-            this.lastname_textbox = new System.Windows.Forms.TextBox();
-            this.middlename_textbox = new System.Windows.Forms.TextBox();
-            this.birthplace_textbox_baptist = new System.Windows.Forms.TextBox();
-            this.save_button_profile = new System.Windows.Forms.Button();
-            this.label33 = new System.Windows.Forms.Label();
-            this.firstname_textbox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.gender_label_profiles = new System.Windows.Forms.Label();
+            this.openProfile_button = new System.Windows.Forms.Button();
             this.label83 = new System.Windows.Forms.Label();
+            this.deleteProfile_button = new System.Windows.Forms.Button();
             this.contactNumber_label_profile = new System.Windows.Forms.Label();
             this.address_label_profile = new System.Windows.Forms.Label();
             this.bloodtype_label_profile = new System.Windows.Forms.Label();
@@ -101,6 +91,16 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.generalprofile_datagridview = new System.Windows.Forms.DataGridView();
+            this.AddPNL = new System.Windows.Forms.Panel();
+            this.clear_profile_button = new System.Windows.Forms.Button();
+            this.suffix_textbox = new System.Windows.Forms.TextBox();
+            this.lastname_textbox = new System.Windows.Forms.TextBox();
+            this.middlename_textbox = new System.Windows.Forms.TextBox();
+            this.birthplace_textbox_baptist = new System.Windows.Forms.TextBox();
+            this.save_button_profile = new System.Windows.Forms.Button();
+            this.label33 = new System.Windows.Forms.Label();
+            this.firstname_textbox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.time_Text = new System.Windows.Forms.Label();
             this.application_panel = new System.Windows.Forms.Panel();
             this.baptismApplication_label = new System.Windows.Forms.Label();
@@ -341,9 +341,9 @@
             this.library_panel_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.profile_panel.SuspendLayout();
-            this.AddPNL.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).BeginInit();
+            this.AddPNL.SuspendLayout();
             this.application_panel.SuspendLayout();
             this.baptismApplication_panel.SuspendLayout();
             this.newName_panel_baptismApplication.SuspendLayout();
@@ -729,11 +729,9 @@
             // 
             this.profile_panel.BackColor = System.Drawing.Color.White;
             this.profile_panel.Controls.Add(this.AddBTN);
-            this.profile_panel.Controls.Add(this.openProfile_button);
-            this.profile_panel.Controls.Add(this.deleteProfile_button);
             this.profile_panel.Controls.Add(this.label3);
-            this.profile_panel.Controls.Add(this.AddPNL);
             this.profile_panel.Controls.Add(this.panel9);
+            this.profile_panel.Controls.Add(this.AddPNL);
             this.profile_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profile_panel.Location = new System.Drawing.Point(181, 33);
             this.profile_panel.Name = "profile_panel";
@@ -756,38 +754,6 @@
             this.AddBTN.UseVisualStyleBackColor = false;
             this.AddBTN.Click += new System.EventHandler(this.AddBTN_Click);
             // 
-            // openProfile_button
-            // 
-            this.openProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.openProfile_button.Enabled = false;
-            this.openProfile_button.FlatAppearance.BorderSize = 0;
-            this.openProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.openProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openProfile_button.ForeColor = System.Drawing.Color.White;
-            this.openProfile_button.Location = new System.Drawing.Point(256, 450);
-            this.openProfile_button.Name = "openProfile_button";
-            this.openProfile_button.Size = new System.Drawing.Size(100, 30);
-            this.openProfile_button.TabIndex = 29;
-            this.openProfile_button.Text = "Open Profile";
-            this.openProfile_button.UseVisualStyleBackColor = false;
-            this.openProfile_button.Click += new System.EventHandler(this.openProfile_button_Click);
-            // 
-            // deleteProfile_button
-            // 
-            this.deleteProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.deleteProfile_button.Enabled = false;
-            this.deleteProfile_button.FlatAppearance.BorderSize = 0;
-            this.deleteProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteProfile_button.ForeColor = System.Drawing.Color.White;
-            this.deleteProfile_button.Location = new System.Drawing.Point(362, 450);
-            this.deleteProfile_button.Name = "deleteProfile_button";
-            this.deleteProfile_button.Size = new System.Drawing.Size(100, 30);
-            this.deleteProfile_button.TabIndex = 30;
-            this.deleteProfile_button.Text = "Delete Profile";
-            this.deleteProfile_button.UseVisualStyleBackColor = false;
-            this.deleteProfile_button.Click += new System.EventHandler(this.deleteProfile_button_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -799,156 +765,12 @@
             this.label3.TabIndex = 36;
             this.label3.Text = "PROFILES";
             // 
-            // AddPNL
-            // 
-            this.AddPNL.BackColor = System.Drawing.Color.White;
-            this.AddPNL.Controls.Add(this.clear_profile_button);
-            this.AddPNL.Controls.Add(this.suffix_textbox);
-            this.AddPNL.Controls.Add(this.lastname_textbox);
-            this.AddPNL.Controls.Add(this.middlename_textbox);
-            this.AddPNL.Controls.Add(this.birthplace_textbox_baptist);
-            this.AddPNL.Controls.Add(this.save_button_profile);
-            this.AddPNL.Controls.Add(this.label33);
-            this.AddPNL.Controls.Add(this.firstname_textbox);
-            this.AddPNL.Controls.Add(this.label2);
-            this.AddPNL.Location = new System.Drawing.Point(24, 96);
-            this.AddPNL.Name = "AddPNL";
-            this.AddPNL.Size = new System.Drawing.Size(683, 342);
-            this.AddPNL.TabIndex = 27;
-            this.AddPNL.Visible = false;
-            // 
-            // clear_profile_button
-            // 
-            this.clear_profile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.clear_profile_button.FlatAppearance.BorderSize = 0;
-            this.clear_profile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_profile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear_profile_button.ForeColor = System.Drawing.Color.White;
-            this.clear_profile_button.Location = new System.Drawing.Point(338, 192);
-            this.clear_profile_button.Name = "clear_profile_button";
-            this.clear_profile_button.Size = new System.Drawing.Size(100, 30);
-            this.clear_profile_button.TabIndex = 31;
-            this.clear_profile_button.Text = "Cancel";
-            this.clear_profile_button.UseVisualStyleBackColor = false;
-            this.clear_profile_button.Click += new System.EventHandler(this.clear_profile_button_Click);
-            // 
-            // suffix_textbox
-            // 
-            this.suffix_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.suffix_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.suffix_textbox.ForeColor = System.Drawing.Color.Silver;
-            this.suffix_textbox.Location = new System.Drawing.Point(474, 113);
-            this.suffix_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.suffix_textbox.Name = "suffix_textbox";
-            this.suffix_textbox.Size = new System.Drawing.Size(54, 18);
-            this.suffix_textbox.TabIndex = 23;
-            this.suffix_textbox.Text = "suffix";
-            this.suffix_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.suffix_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
-            this.suffix_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
-            // lastname_textbox
-            // 
-            this.lastname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lastname_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lastname_textbox.ForeColor = System.Drawing.Color.Silver;
-            this.lastname_textbox.Location = new System.Drawing.Point(378, 113);
-            this.lastname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.lastname_textbox.Name = "lastname_textbox";
-            this.lastname_textbox.Size = new System.Drawing.Size(94, 18);
-            this.lastname_textbox.TabIndex = 24;
-            this.lastname_textbox.Text = "lastname";
-            this.lastname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lastname_tooltip_profiles.SetToolTip(this.lastname_textbox, "Please fill in last name");
-            this.lastname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
-            this.lastname_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
-            // middlename_textbox
-            // 
-            this.middlename_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.middlename_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.middlename_textbox.ForeColor = System.Drawing.Color.Silver;
-            this.middlename_textbox.Location = new System.Drawing.Point(281, 113);
-            this.middlename_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.middlename_textbox.Name = "middlename_textbox";
-            this.middlename_textbox.Size = new System.Drawing.Size(94, 18);
-            this.middlename_textbox.TabIndex = 22;
-            this.middlename_textbox.Text = "middlename";
-            this.middlename_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.middlename_tooltip_profiles.SetToolTip(this.middlename_textbox, "Please fill in middle name");
-            this.middlename_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
-            this.middlename_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
-            // birthplace_textbox_baptist
-            // 
-            this.birthplace_textbox_baptist.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.birthplace_textbox_baptist.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.birthplace_textbox_baptist.Location = new System.Drawing.Point(472, 29);
-            this.birthplace_textbox_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.birthplace_textbox_baptist.Name = "birthplace_textbox_baptist";
-            this.birthplace_textbox_baptist.Size = new System.Drawing.Size(133, 16);
-            this.birthplace_textbox_baptist.TabIndex = 20;
-            // 
-            // save_button_profile
-            // 
-            this.save_button_profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.save_button_profile.Enabled = false;
-            this.save_button_profile.FlatAppearance.BorderSize = 0;
-            this.save_button_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.save_button_profile.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.save_button_profile.ForeColor = System.Drawing.Color.White;
-            this.save_button_profile.Location = new System.Drawing.Point(232, 192);
-            this.save_button_profile.Name = "save_button_profile";
-            this.save_button_profile.Size = new System.Drawing.Size(100, 30);
-            this.save_button_profile.TabIndex = 29;
-            this.save_button_profile.Text = "Save";
-            this.save_button_profile.UseVisualStyleBackColor = false;
-            this.save_button_profile.Click += new System.EventHandler(this.addProfile_button_Click);
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(255)))));
-            this.label33.Location = new System.Drawing.Point(126, 111);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(52, 21);
-            this.label33.TabIndex = 27;
-            this.label33.Text = "Name";
-            // 
-            // firstname_textbox
-            // 
-            this.firstname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstname_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.firstname_textbox.ForeColor = System.Drawing.Color.Silver;
-            this.firstname_textbox.Location = new System.Drawing.Point(184, 113);
-            this.firstname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.firstname_textbox.Name = "firstname_textbox";
-            this.firstname_textbox.Size = new System.Drawing.Size(94, 18);
-            this.firstname_textbox.TabIndex = 13;
-            this.firstname_textbox.Text = "firstname";
-            this.firstname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.firstname_tooltip_profiles.SetToolTip(this.firstname_textbox, "Please enter a first name");
-            this.firstname_textbox.Click += new System.EventHandler(this.firstname_textbox_Click);
-            this.firstname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
-            this.firstname_textbox.TextChanged += new System.EventHandler(this.firstname_textbox_TextChanged);
-            this.firstname_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(181, 115);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(351, 20);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "______________________________________";
-            // 
             // panel9
             // 
             this.panel9.Controls.Add(this.gender_label_profiles);
+            this.panel9.Controls.Add(this.openProfile_button);
             this.panel9.Controls.Add(this.label83);
+            this.panel9.Controls.Add(this.deleteProfile_button);
             this.panel9.Controls.Add(this.contactNumber_label_profile);
             this.panel9.Controls.Add(this.address_label_profile);
             this.panel9.Controls.Add(this.bloodtype_label_profile);
@@ -969,33 +791,66 @@
             this.panel9.Controls.Add(this.label16);
             this.panel9.Controls.Add(this.label14);
             this.panel9.Controls.Add(this.generalprofile_datagridview);
-            this.panel9.Location = new System.Drawing.Point(20, 93);
+            this.panel9.Location = new System.Drawing.Point(34, 93);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(694, 345);
+            this.panel9.Size = new System.Drawing.Size(673, 398);
             this.panel9.TabIndex = 37;
             // 
             // gender_label_profiles
             // 
             this.gender_label_profiles.AutoSize = true;
-            this.gender_label_profiles.Location = new System.Drawing.Point(537, 181);
+            this.gender_label_profiles.Location = new System.Drawing.Point(510, 183);
             this.gender_label_profiles.Name = "gender_label_profiles";
             this.gender_label_profiles.Size = new System.Drawing.Size(61, 21);
             this.gender_label_profiles.TabIndex = 12;
             this.gender_label_profiles.Text = "Gender";
             // 
+            // openProfile_button
+            // 
+            this.openProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.openProfile_button.Enabled = false;
+            this.openProfile_button.FlatAppearance.BorderSize = 0;
+            this.openProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.openProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openProfile_button.ForeColor = System.Drawing.Color.White;
+            this.openProfile_button.Location = new System.Drawing.Point(397, 363);
+            this.openProfile_button.Name = "openProfile_button";
+            this.openProfile_button.Size = new System.Drawing.Size(100, 30);
+            this.openProfile_button.TabIndex = 29;
+            this.openProfile_button.Text = "Open Profile";
+            this.openProfile_button.UseVisualStyleBackColor = false;
+            this.openProfile_button.Click += new System.EventHandler(this.openProfile_button_Click);
+            // 
             // label83
             // 
             this.label83.AutoSize = true;
-            this.label83.Location = new System.Drawing.Point(442, 181);
+            this.label83.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label83.Location = new System.Drawing.Point(451, 184);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(61, 21);
+            this.label83.Size = new System.Drawing.Size(59, 17);
             this.label83.TabIndex = 11;
-            this.label83.Text = "Gender";
+            this.label83.Text = "Gender :";
+            // 
+            // deleteProfile_button
+            // 
+            this.deleteProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.deleteProfile_button.Enabled = false;
+            this.deleteProfile_button.FlatAppearance.BorderSize = 0;
+            this.deleteProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteProfile_button.ForeColor = System.Drawing.Color.White;
+            this.deleteProfile_button.Location = new System.Drawing.Point(535, 362);
+            this.deleteProfile_button.Name = "deleteProfile_button";
+            this.deleteProfile_button.Size = new System.Drawing.Size(100, 30);
+            this.deleteProfile_button.TabIndex = 30;
+            this.deleteProfile_button.Text = "Delete Profile";
+            this.deleteProfile_button.UseVisualStyleBackColor = false;
+            this.deleteProfile_button.Click += new System.EventHandler(this.deleteProfile_button_Click);
             // 
             // contactNumber_label_profile
             // 
             this.contactNumber_label_profile.AutoSize = true;
-            this.contactNumber_label_profile.Location = new System.Drawing.Point(537, 317);
+            this.contactNumber_label_profile.Location = new System.Drawing.Point(510, 319);
             this.contactNumber_label_profile.Name = "contactNumber_label_profile";
             this.contactNumber_label_profile.Size = new System.Drawing.Size(125, 21);
             this.contactNumber_label_profile.TabIndex = 2;
@@ -1004,7 +859,7 @@
             // address_label_profile
             // 
             this.address_label_profile.AutoSize = true;
-            this.address_label_profile.Location = new System.Drawing.Point(537, 249);
+            this.address_label_profile.Location = new System.Drawing.Point(510, 251);
             this.address_label_profile.Name = "address_label_profile";
             this.address_label_profile.Size = new System.Drawing.Size(66, 21);
             this.address_label_profile.TabIndex = 3;
@@ -1013,7 +868,7 @@
             // bloodtype_label_profile
             // 
             this.bloodtype_label_profile.AutoSize = true;
-            this.bloodtype_label_profile.Location = new System.Drawing.Point(537, 283);
+            this.bloodtype_label_profile.Location = new System.Drawing.Point(510, 285);
             this.bloodtype_label_profile.Name = "bloodtype_label_profile";
             this.bloodtype_label_profile.Size = new System.Drawing.Size(80, 21);
             this.bloodtype_label_profile.TabIndex = 4;
@@ -1022,7 +877,7 @@
             // birthplace_label_profile
             // 
             this.birthplace_label_profile.AutoSize = true;
-            this.birthplace_label_profile.Location = new System.Drawing.Point(537, 215);
+            this.birthplace_label_profile.Location = new System.Drawing.Point(510, 217);
             this.birthplace_label_profile.Name = "birthplace_label_profile";
             this.birthplace_label_profile.Size = new System.Drawing.Size(79, 21);
             this.birthplace_label_profile.TabIndex = 5;
@@ -1032,16 +887,16 @@
             // 
             this.searchBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchBar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBar.Location = new System.Drawing.Point(11, 8);
+            this.searchBar.Location = new System.Drawing.Point(7, 11);
             this.searchBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(343, 25);
+            this.searchBar.Size = new System.Drawing.Size(345, 25);
             this.searchBar.TabIndex = 1;
             // 
             // birthday_label_profile
             // 
             this.birthday_label_profile.AutoSize = true;
-            this.birthday_label_profile.Location = new System.Drawing.Point(537, 147);
+            this.birthday_label_profile.Location = new System.Drawing.Point(510, 149);
             this.birthday_label_profile.Name = "birthday_label_profile";
             this.birthday_label_profile.Size = new System.Drawing.Size(73, 21);
             this.birthday_label_profile.TabIndex = 6;
@@ -1050,7 +905,7 @@
             // suffix_label_profile
             // 
             this.suffix_label_profile.AutoSize = true;
-            this.suffix_label_profile.Location = new System.Drawing.Point(537, 113);
+            this.suffix_label_profile.Location = new System.Drawing.Point(510, 115);
             this.suffix_label_profile.Name = "suffix_label_profile";
             this.suffix_label_profile.Size = new System.Drawing.Size(49, 21);
             this.suffix_label_profile.TabIndex = 7;
@@ -1059,7 +914,7 @@
             // lastname_label_profile
             // 
             this.lastname_label_profile.AutoSize = true;
-            this.lastname_label_profile.Location = new System.Drawing.Point(537, 79);
+            this.lastname_label_profile.Location = new System.Drawing.Point(510, 81);
             this.lastname_label_profile.Name = "lastname_label_profile";
             this.lastname_label_profile.Size = new System.Drawing.Size(77, 21);
             this.lastname_label_profile.TabIndex = 8;
@@ -1068,7 +923,7 @@
             // middlename_label_profile
             // 
             this.middlename_label_profile.AutoSize = true;
-            this.middlename_label_profile.Location = new System.Drawing.Point(537, 45);
+            this.middlename_label_profile.Location = new System.Drawing.Point(510, 47);
             this.middlename_label_profile.Name = "middlename_label_profile";
             this.middlename_label_profile.Size = new System.Drawing.Size(97, 21);
             this.middlename_label_profile.TabIndex = 9;
@@ -1077,7 +932,7 @@
             // firstname_label_profile
             // 
             this.firstname_label_profile.AutoSize = true;
-            this.firstname_label_profile.Location = new System.Drawing.Point(537, 11);
+            this.firstname_label_profile.Location = new System.Drawing.Point(510, 13);
             this.firstname_label_profile.Name = "firstname_label_profile";
             this.firstname_label_profile.Size = new System.Drawing.Size(79, 21);
             this.firstname_label_profile.TabIndex = 10;
@@ -1086,83 +941,92 @@
             // label81
             // 
             this.label81.AutoSize = true;
-            this.label81.Location = new System.Drawing.Point(378, 317);
+            this.label81.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label81.Location = new System.Drawing.Point(394, 320);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(125, 21);
+            this.label81.Size = new System.Drawing.Size(116, 17);
             this.label81.TabIndex = 1;
-            this.label81.Text = "Contact Number";
+            this.label81.Text = "Contact Number :";
             // 
             // label80
             // 
             this.label80.AutoSize = true;
-            this.label80.Location = new System.Drawing.Point(437, 249);
+            this.label80.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.Location = new System.Drawing.Point(446, 252);
             this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(66, 21);
+            this.label80.Size = new System.Drawing.Size(64, 17);
             this.label80.TabIndex = 1;
-            this.label80.Text = "Address";
+            this.label80.Text = "Address :";
             // 
             // label79
             // 
             this.label79.AutoSize = true;
-            this.label79.Location = new System.Drawing.Point(423, 283);
+            this.label79.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.Location = new System.Drawing.Point(433, 286);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(80, 21);
+            this.label79.Size = new System.Drawing.Size(77, 17);
             this.label79.TabIndex = 1;
-            this.label79.Text = "Bloodtype";
+            this.label79.Text = "Bloodtype :";
             // 
             // label78
             // 
             this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(424, 215);
+            this.label78.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.Location = new System.Drawing.Point(435, 218);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(79, 21);
+            this.label78.Size = new System.Drawing.Size(75, 17);
             this.label78.TabIndex = 1;
-            this.label78.Text = "Birthplace";
+            this.label78.Text = "Birthplace :";
             // 
             // label77
             // 
             this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(430, 147);
+            this.label77.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label77.Location = new System.Drawing.Point(439, 150);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(73, 21);
+            this.label77.Size = new System.Drawing.Size(71, 17);
             this.label77.TabIndex = 1;
-            this.label77.Text = "Birthdate";
+            this.label77.Text = "Birthdate :";
             // 
             // label76
             // 
             this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(454, 113);
+            this.label76.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label76.Location = new System.Drawing.Point(462, 116);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(49, 21);
+            this.label76.Size = new System.Drawing.Size(48, 17);
             this.label76.TabIndex = 1;
-            this.label76.Text = "Suffix";
+            this.label76.Text = "Suffix :";
             // 
             // label75
             // 
             this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(426, 79);
+            this.label75.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.Location = new System.Drawing.Point(437, 82);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(77, 21);
+            this.label75.Size = new System.Drawing.Size(73, 17);
             this.label75.TabIndex = 1;
-            this.label75.Text = "Lastname";
+            this.label75.Text = "Lastname :";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(406, 45);
+            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(420, 48);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(97, 21);
+            this.label16.Size = new System.Drawing.Size(90, 17);
             this.label16.TabIndex = 1;
-            this.label16.Text = "Middlename";
+            this.label16.Text = "Middlename :";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(424, 11);
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(435, 14);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 21);
+            this.label14.Size = new System.Drawing.Size(75, 17);
             this.label14.TabIndex = 1;
-            this.label14.Text = "Firstname";
+            this.label14.Text = "Firstname :";
             // 
             // generalprofile_datagridview
             // 
@@ -1179,46 +1043,195 @@
             this.generalprofile_datagridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.generalprofile_datagridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.generalprofile_datagridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.generalprofile_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.generalprofile_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.generalprofile_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.generalprofile_datagridview.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.generalprofile_datagridview.DefaultCellStyle = dataGridViewCellStyle10;
             this.generalprofile_datagridview.EnableHeadersVisualStyles = false;
-            this.generalprofile_datagridview.Location = new System.Drawing.Point(15, 40);
+            this.generalprofile_datagridview.Location = new System.Drawing.Point(7, 40);
             this.generalprofile_datagridview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.generalprofile_datagridview.MultiSelect = false;
             this.generalprofile_datagridview.Name = "generalprofile_datagridview";
             this.generalprofile_datagridview.ReadOnly = true;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.generalprofile_datagridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.generalprofile_datagridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.generalprofile_datagridview.RowHeadersVisible = false;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.generalprofile_datagridview.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.generalprofile_datagridview.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.generalprofile_datagridview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.generalprofile_datagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.generalprofile_datagridview.Size = new System.Drawing.Size(339, 282);
+            this.generalprofile_datagridview.Size = new System.Drawing.Size(345, 335);
             this.generalprofile_datagridview.TabIndex = 0;
             this.generalprofile_datagridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.generalprofile_datagridview_CellClick);
+            // 
+            // AddPNL
+            // 
+            this.AddPNL.BackColor = System.Drawing.Color.White;
+            this.AddPNL.Controls.Add(this.clear_profile_button);
+            this.AddPNL.Controls.Add(this.suffix_textbox);
+            this.AddPNL.Controls.Add(this.lastname_textbox);
+            this.AddPNL.Controls.Add(this.middlename_textbox);
+            this.AddPNL.Controls.Add(this.birthplace_textbox_baptist);
+            this.AddPNL.Controls.Add(this.save_button_profile);
+            this.AddPNL.Controls.Add(this.label33);
+            this.AddPNL.Controls.Add(this.firstname_textbox);
+            this.AddPNL.Controls.Add(this.label2);
+            this.AddPNL.Location = new System.Drawing.Point(34, 92);
+            this.AddPNL.Name = "AddPNL";
+            this.AddPNL.Size = new System.Drawing.Size(673, 399);
+            this.AddPNL.TabIndex = 27;
+            this.AddPNL.Visible = false;
+            // 
+            // clear_profile_button
+            // 
+            this.clear_profile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.clear_profile_button.FlatAppearance.BorderSize = 0;
+            this.clear_profile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear_profile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear_profile_button.ForeColor = System.Drawing.Color.White;
+            this.clear_profile_button.Location = new System.Drawing.Point(338, 203);
+            this.clear_profile_button.Name = "clear_profile_button";
+            this.clear_profile_button.Size = new System.Drawing.Size(100, 30);
+            this.clear_profile_button.TabIndex = 31;
+            this.clear_profile_button.Text = "Cancel";
+            this.clear_profile_button.UseVisualStyleBackColor = false;
+            this.clear_profile_button.Click += new System.EventHandler(this.clear_profile_button_Click);
+            // 
+            // suffix_textbox
+            // 
+            this.suffix_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.suffix_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.suffix_textbox.ForeColor = System.Drawing.Color.Silver;
+            this.suffix_textbox.Location = new System.Drawing.Point(474, 124);
+            this.suffix_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.suffix_textbox.Name = "suffix_textbox";
+            this.suffix_textbox.Size = new System.Drawing.Size(54, 18);
+            this.suffix_textbox.TabIndex = 23;
+            this.suffix_textbox.Text = "suffix";
+            this.suffix_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.suffix_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.suffix_textbox.TextChanged += new System.EventHandler(this.Name_textbox_Profile_TextChanged);
+            this.suffix_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
+            // 
+            // lastname_textbox
+            // 
+            this.lastname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lastname_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lastname_textbox.ForeColor = System.Drawing.Color.Silver;
+            this.lastname_textbox.Location = new System.Drawing.Point(378, 124);
+            this.lastname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lastname_textbox.Name = "lastname_textbox";
+            this.lastname_textbox.Size = new System.Drawing.Size(94, 18);
+            this.lastname_textbox.TabIndex = 24;
+            this.lastname_textbox.Text = "lastname";
+            this.lastname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lastname_tooltip_profiles.SetToolTip(this.lastname_textbox, "Please fill in last name");
+            this.lastname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.lastname_textbox.TextChanged += new System.EventHandler(this.Name_textbox_Profile_TextChanged);
+            this.lastname_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
+            // 
+            // middlename_textbox
+            // 
+            this.middlename_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.middlename_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.middlename_textbox.ForeColor = System.Drawing.Color.Silver;
+            this.middlename_textbox.Location = new System.Drawing.Point(281, 124);
+            this.middlename_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.middlename_textbox.Name = "middlename_textbox";
+            this.middlename_textbox.Size = new System.Drawing.Size(94, 18);
+            this.middlename_textbox.TabIndex = 22;
+            this.middlename_textbox.Text = "middlename";
+            this.middlename_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.middlename_tooltip_profiles.SetToolTip(this.middlename_textbox, "Please fill in middle name");
+            this.middlename_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.middlename_textbox.TextChanged += new System.EventHandler(this.Name_textbox_Profile_TextChanged);
+            this.middlename_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
+            // 
+            // birthplace_textbox_baptist
+            // 
+            this.birthplace_textbox_baptist.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.birthplace_textbox_baptist.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.birthplace_textbox_baptist.Location = new System.Drawing.Point(472, 29);
+            this.birthplace_textbox_baptist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.birthplace_textbox_baptist.Name = "birthplace_textbox_baptist";
+            this.birthplace_textbox_baptist.Size = new System.Drawing.Size(133, 16);
+            this.birthplace_textbox_baptist.TabIndex = 20;
+            // 
+            // save_button_profile
+            // 
+            this.save_button_profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.save_button_profile.Enabled = false;
+            this.save_button_profile.FlatAppearance.BorderSize = 0;
+            this.save_button_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.save_button_profile.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_button_profile.ForeColor = System.Drawing.Color.White;
+            this.save_button_profile.Location = new System.Drawing.Point(232, 203);
+            this.save_button_profile.Name = "save_button_profile";
+            this.save_button_profile.Size = new System.Drawing.Size(100, 30);
+            this.save_button_profile.TabIndex = 29;
+            this.save_button_profile.Text = "Save";
+            this.save_button_profile.UseVisualStyleBackColor = false;
+            this.save_button_profile.Click += new System.EventHandler(this.addProfile_button_Click);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(255)))));
+            this.label33.Location = new System.Drawing.Point(126, 122);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(52, 21);
+            this.label33.TabIndex = 27;
+            this.label33.Text = "Name";
+            // 
+            // firstname_textbox
+            // 
+            this.firstname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.firstname_textbox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.firstname_textbox.ForeColor = System.Drawing.Color.Silver;
+            this.firstname_textbox.Location = new System.Drawing.Point(184, 124);
+            this.firstname_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.firstname_textbox.Name = "firstname_textbox";
+            this.firstname_textbox.Size = new System.Drawing.Size(94, 18);
+            this.firstname_textbox.TabIndex = 13;
+            this.firstname_textbox.Text = "firstname";
+            this.firstname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.firstname_tooltip_profiles.SetToolTip(this.firstname_textbox, "Please enter a first name");
+            this.firstname_textbox.Click += new System.EventHandler(this.firstname_textbox_Click);
+            this.firstname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.firstname_textbox.TextChanged += new System.EventHandler(this.Name_textbox_Profile_TextChanged);
+            this.firstname_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(181, 126);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(351, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "______________________________________";
             // 
             // time_Text
             // 
@@ -3642,41 +3655,41 @@
             this.profiles_dataGridView_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.profiles_dataGridView_baptism.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.profiles_dataGridView_baptism.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.profiles_dataGridView_baptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.profiles_dataGridView_baptism.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.profiles_dataGridView_baptism.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.profiles_dataGridView_baptism.DefaultCellStyle = dataGridViewCellStyle14;
             this.profiles_dataGridView_baptism.EnableHeadersVisualStyles = false;
             this.profiles_dataGridView_baptism.Location = new System.Drawing.Point(1, 80);
             this.profiles_dataGridView_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.profiles_dataGridView_baptism.MultiSelect = false;
             this.profiles_dataGridView_baptism.Name = "profiles_dataGridView_baptism";
             this.profiles_dataGridView_baptism.ReadOnly = true;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.profiles_dataGridView_baptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.profiles_dataGridView_baptism.RowHeadersVisible = false;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.profiles_dataGridView_baptism.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.profiles_dataGridView_baptism.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.profiles_dataGridView_baptism.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.profiles_dataGridView_baptism.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.profiles_dataGridView_baptism.Size = new System.Drawing.Size(398, 341);
@@ -3752,11 +3765,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.profile_panel.ResumeLayout(false);
             this.profile_panel.PerformLayout();
-            this.AddPNL.ResumeLayout(false);
-            this.AddPNL.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).EndInit();
+            this.AddPNL.ResumeLayout(false);
+            this.AddPNL.PerformLayout();
             this.application_panel.ResumeLayout(false);
             this.application_panel.PerformLayout();
             this.baptismApplication_panel.ResumeLayout(false);
