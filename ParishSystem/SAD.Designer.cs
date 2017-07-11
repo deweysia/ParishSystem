@@ -29,16 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SAD));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.home_button_menu = new System.Windows.Forms.Button();
+            this.profile_button_menu = new System.Windows.Forms.Button();
+            this.library_button_menu = new System.Windows.Forms.Button();
+            this.bloodletting_button_menu = new System.Windows.Forms.Button();
+            this.application_button_menu = new System.Windows.Forms.Button();
+            this.CRB_button_menu = new System.Windows.Forms.Button();
+            this.CDB_button_menu = new System.Windows.Forms.Button();
             this.home_panel = new System.Windows.Forms.Panel();
             this.profile_panel = new System.Windows.Forms.Panel();
             this.AddBTN = new System.Windows.Forms.Button();
@@ -135,9 +143,14 @@
             this.marriageApplication_dataGridView = new System.Windows.Forms.DataGridView();
             this.label27 = new System.Windows.Forms.Label();
             this.bloodletting_panel = new System.Windows.Forms.Panel();
+            this.profile_menu_button = new System.Windows.Forms.Button();
+            this.bloodletting_menu_button = new System.Windows.Forms.Button();
+            this.home_menu_button = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.application_menu_button = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -150,6 +163,9 @@
             this.welcome_Text = new System.Windows.Forms.Label();
             this.username_Welcome_Text = new System.Windows.Forms.Label();
             this.flowLayout_ControlButtons = new System.Windows.Forms.FlowLayoutPanel();
+            this.btn_Close = new System.Windows.Forms.Button();
+            this.btn_Min = new System.Windows.Forms.Button();
+            this.btn_Max = new System.Windows.Forms.Button();
             this.CDB_panel = new System.Windows.Forms.Panel();
             this.label51 = new System.Windows.Forms.Label();
             this.parish_panel_CD = new System.Windows.Forms.Panel();
@@ -272,25 +288,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.imageListMenu = new System.Windows.Forms.ImageList(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.profile_menu_button = new System.Windows.Forms.Button();
-            this.bloodletting_menu_button = new System.Windows.Forms.Button();
-            this.home_menu_button = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.application_menu_button = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.home_button_menu = new System.Windows.Forms.Button();
-            this.bloodletting_button_menu = new System.Windows.Forms.Button();
-            this.profile_button_menu = new System.Windows.Forms.Button();
-            this.application_button_menu = new System.Windows.Forms.Button();
-            this.CRB_button_menu = new System.Windows.Forms.Button();
-            this.CDB_button_menu = new System.Windows.Forms.Button();
-            this.library_button_menu = new System.Windows.Forms.Button();
-            this.btn_Close = new System.Windows.Forms.Button();
-            this.btn_Min = new System.Windows.Forms.Button();
-            this.btn_Max = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.profile_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).BeginInit();
             this.AddPNL.SuspendLayout();
@@ -337,8 +336,6 @@
             this.baptism_panel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profiles_dataGridView_baptism)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -360,6 +357,146 @@
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(181, 512);
             this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::ParishSystem.Properties.Resources.The_Pope_45;
+            this.pictureBox5.Location = new System.Drawing.Point(1, 6);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(1);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(178, 40);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 38;
+            this.pictureBox5.TabStop = false;
+            // 
+            // home_button_menu
+            // 
+            this.home_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.home_button_menu.FlatAppearance.BorderSize = 0;
+            this.home_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.home_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.home_button_menu.ForeColor = System.Drawing.Color.White;
+            this.home_button_menu.Image = global::ParishSystem.Properties.Resources.Home_45;
+            this.home_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.home_button_menu.Location = new System.Drawing.Point(3, 50);
+            this.home_button_menu.Name = "home_button_menu";
+            this.home_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.home_button_menu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.home_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.home_button_menu.TabIndex = 39;
+            this.home_button_menu.Text = "Home";
+            this.home_button_menu.UseVisualStyleBackColor = false;
+            this.home_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
+            // 
+            // profile_button_menu
+            // 
+            this.profile_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.profile_button_menu.FlatAppearance.BorderSize = 0;
+            this.profile_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profile_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profile_button_menu.ForeColor = System.Drawing.Color.White;
+            this.profile_button_menu.Image = global::ParishSystem.Properties.Resources.customer_45;
+            this.profile_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.profile_button_menu.Location = new System.Drawing.Point(3, 111);
+            this.profile_button_menu.Name = "profile_button_menu";
+            this.profile_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.profile_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.profile_button_menu.TabIndex = 43;
+            this.profile_button_menu.Text = "Profiles";
+            this.profile_button_menu.UseVisualStyleBackColor = false;
+            this.profile_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
+            // 
+            // library_button_menu
+            // 
+            this.library_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.library_button_menu.FlatAppearance.BorderSize = 0;
+            this.library_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.library_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.library_button_menu.ForeColor = System.Drawing.Color.White;
+            this.library_button_menu.Image = global::ParishSystem.Properties.Resources.Holy_Bible_45;
+            this.library_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.library_button_menu.Location = new System.Drawing.Point(3, 172);
+            this.library_button_menu.Name = "library_button_menu";
+            this.library_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.library_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.library_button_menu.TabIndex = 43;
+            this.library_button_menu.Text = "Library";
+            this.library_button_menu.UseVisualStyleBackColor = false;
+            this.library_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
+            // 
+            // bloodletting_button_menu
+            // 
+            this.bloodletting_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bloodletting_button_menu.FlatAppearance.BorderSize = 0;
+            this.bloodletting_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bloodletting_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodletting_button_menu.ForeColor = System.Drawing.Color.White;
+            this.bloodletting_button_menu.Image = global::ParishSystem.Properties.Resources.Heart_with_Pulse_45px;
+            this.bloodletting_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bloodletting_button_menu.Location = new System.Drawing.Point(3, 233);
+            this.bloodletting_button_menu.Name = "bloodletting_button_menu";
+            this.bloodletting_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.bloodletting_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.bloodletting_button_menu.TabIndex = 42;
+            this.bloodletting_button_menu.Text = "Bloodletting";
+            this.bloodletting_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bloodletting_button_menu.UseVisualStyleBackColor = false;
+            this.bloodletting_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
+            // 
+            // application_button_menu
+            // 
+            this.application_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.application_button_menu.FlatAppearance.BorderSize = 0;
+            this.application_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.application_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.application_button_menu.ForeColor = System.Drawing.Color.White;
+            this.application_button_menu.Image = global::ParishSystem.Properties.Resources.Resume_45;
+            this.application_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.application_button_menu.Location = new System.Drawing.Point(3, 294);
+            this.application_button_menu.Name = "application_button_menu";
+            this.application_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.application_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.application_button_menu.TabIndex = 43;
+            this.application_button_menu.Text = "Applications";
+            this.application_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.application_button_menu.UseVisualStyleBackColor = false;
+            this.application_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
+            // 
+            // CRB_button_menu
+            // 
+            this.CRB_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.CRB_button_menu.FlatAppearance.BorderSize = 0;
+            this.CRB_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CRB_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CRB_button_menu.ForeColor = System.Drawing.Color.White;
+            this.CRB_button_menu.Image = global::ParishSystem.Properties.Resources.Money_45;
+            this.CRB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CRB_button_menu.Location = new System.Drawing.Point(3, 355);
+            this.CRB_button_menu.Name = "CRB_button_menu";
+            this.CRB_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CRB_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.CRB_button_menu.TabIndex = 43;
+            this.CRB_button_menu.Text = "CRB";
+            this.CRB_button_menu.UseVisualStyleBackColor = false;
+            this.CRB_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
+            // 
+            // CDB_button_menu
+            // 
+            this.CDB_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.CDB_button_menu.FlatAppearance.BorderSize = 0;
+            this.CDB_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CDB_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CDB_button_menu.ForeColor = System.Drawing.Color.White;
+            this.CDB_button_menu.Image = global::ParishSystem.Properties.Resources.Initiate_Money_Transfer_45;
+            this.CDB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CDB_button_menu.Location = new System.Drawing.Point(3, 416);
+            this.CDB_button_menu.Name = "CDB_button_menu";
+            this.CDB_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CDB_button_menu.Size = new System.Drawing.Size(174, 55);
+            this.CDB_button_menu.TabIndex = 43;
+            this.CDB_button_menu.Text = "CDB";
+            this.CDB_button_menu.UseVisualStyleBackColor = false;
+            this.CDB_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
             // 
             // home_panel
             // 
@@ -471,41 +608,41 @@
             this.generalprofile_datagridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.generalprofile_datagridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.generalprofile_datagridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.generalprofile_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.generalprofile_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.generalprofile_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.generalprofile_datagridview.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.generalprofile_datagridview.DefaultCellStyle = dataGridViewCellStyle10;
             this.generalprofile_datagridview.EnableHeadersVisualStyles = false;
             this.generalprofile_datagridview.Location = new System.Drawing.Point(24, 97);
             this.generalprofile_datagridview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.generalprofile_datagridview.MultiSelect = false;
             this.generalprofile_datagridview.Name = "generalprofile_datagridview";
             this.generalprofile_datagridview.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.generalprofile_datagridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.generalprofile_datagridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.generalprofile_datagridview.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.generalprofile_datagridview.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.generalprofile_datagridview.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.generalprofile_datagridview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.generalprofile_datagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.generalprofile_datagridview.Size = new System.Drawing.Size(683, 300);
@@ -1579,6 +1716,49 @@
             this.bloodletting_panel.Size = new System.Drawing.Size(753, 512);
             this.bloodletting_panel.TabIndex = 4;
             // 
+            // profile_menu_button
+            // 
+            this.profile_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("profile_menu_button.BackgroundImage")));
+            this.profile_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.profile_menu_button.FlatAppearance.BorderSize = 0;
+            this.profile_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.profile_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profile_menu_button.Location = new System.Drawing.Point(303, 354);
+            this.profile_menu_button.Margin = new System.Windows.Forms.Padding(0);
+            this.profile_menu_button.Name = "profile_menu_button";
+            this.profile_menu_button.Size = new System.Drawing.Size(133, 55);
+            this.profile_menu_button.TabIndex = 4;
+            this.profile_menu_button.UseVisualStyleBackColor = true;
+            // 
+            // bloodletting_menu_button
+            // 
+            this.bloodletting_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bloodletting_menu_button.BackgroundImage")));
+            this.bloodletting_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bloodletting_menu_button.FlatAppearance.BorderSize = 0;
+            this.bloodletting_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bloodletting_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bloodletting_menu_button.Location = new System.Drawing.Point(274, 189);
+            this.bloodletting_menu_button.Margin = new System.Windows.Forms.Padding(0);
+            this.bloodletting_menu_button.Name = "bloodletting_menu_button";
+            this.bloodletting_menu_button.Size = new System.Drawing.Size(53, 55);
+            this.bloodletting_menu_button.TabIndex = 0;
+            this.bloodletting_menu_button.UseVisualStyleBackColor = true;
+            // 
+            // home_menu_button
+            // 
+            this.home_menu_button.AutoSize = true;
+            this.home_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("home_menu_button.BackgroundImage")));
+            this.home_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.home_menu_button.FlatAppearance.BorderSize = 0;
+            this.home_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.home_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.home_menu_button.Location = new System.Drawing.Point(340, 176);
+            this.home_menu_button.Margin = new System.Windows.Forms.Padding(0);
+            this.home_menu_button.Name = "home_menu_button";
+            this.home_menu_button.Size = new System.Drawing.Size(96, 56);
+            this.home_menu_button.TabIndex = 0;
+            this.home_menu_button.UseVisualStyleBackColor = true;
+            // 
             // dataGridView4
             // 
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1608,6 +1788,34 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(87, 29);
             this.comboBox4.TabIndex = 34;
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(85, 401);
+            this.button7.Margin = new System.Windows.Forms.Padding(0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(146, 62);
+            this.button7.TabIndex = 5;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // application_menu_button
+            // 
+            this.application_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("application_menu_button.BackgroundImage")));
+            this.application_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.application_menu_button.FlatAppearance.BorderSize = 0;
+            this.application_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.application_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.application_menu_button.Location = new System.Drawing.Point(48, 322);
+            this.application_menu_button.Margin = new System.Windows.Forms.Padding(0);
+            this.application_menu_button.Name = "application_menu_button";
+            this.application_menu_button.Size = new System.Drawing.Size(146, 62);
+            this.application_menu_button.TabIndex = 1;
+            this.application_menu_button.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -1754,6 +1962,57 @@
             this.flowLayout_ControlButtons.Name = "flowLayout_ControlButtons";
             this.flowLayout_ControlButtons.Size = new System.Drawing.Size(110, 33);
             this.flowLayout_ControlButtons.TabIndex = 20;
+            // 
+            // btn_Close
+            // 
+            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Close.BackgroundImage = global::ParishSystem.Properties.Resources.btn_closeImage;
+            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Close.FlatAppearance.BorderSize = 0;
+            this.btn_Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Close.Location = new System.Drawing.Point(79, 4);
+            this.btn_Close.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(27, 25);
+            this.btn_Close.TabIndex = 34;
+            this.btn_Close.UseVisualStyleBackColor = true;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            // 
+            // btn_Min
+            // 
+            this.btn_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Min.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Min.BackgroundImage")));
+            this.btn_Min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Min.FlatAppearance.BorderSize = 0;
+            this.btn_Min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Min.Location = new System.Drawing.Point(41, 4);
+            this.btn_Min.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Min.Name = "btn_Min";
+            this.btn_Min.Size = new System.Drawing.Size(30, 25);
+            this.btn_Min.TabIndex = 32;
+            this.btn_Min.UseVisualStyleBackColor = true;
+            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
+            // 
+            // btn_Max
+            // 
+            this.btn_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Max.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Max.BackgroundImage")));
+            this.btn_Max.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Max.FlatAppearance.BorderSize = 0;
+            this.btn_Max.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Max.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Max.Location = new System.Drawing.Point(6, 4);
+            this.btn_Max.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Max.Name = "btn_Max";
+            this.btn_Max.Size = new System.Drawing.Size(27, 25);
+            this.btn_Max.TabIndex = 33;
+            this.btn_Max.UseVisualStyleBackColor = true;
+            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
             // 
             // CDB_panel
             // 
@@ -2960,41 +3219,41 @@
             this.profiles_dataGridView_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.profiles_dataGridView_baptism.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.profiles_dataGridView_baptism.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.profiles_dataGridView_baptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.profiles_dataGridView_baptism.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.profiles_dataGridView_baptism.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.profiles_dataGridView_baptism.DefaultCellStyle = dataGridViewCellStyle14;
             this.profiles_dataGridView_baptism.EnableHeadersVisualStyles = false;
             this.profiles_dataGridView_baptism.Location = new System.Drawing.Point(1, 80);
             this.profiles_dataGridView_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.profiles_dataGridView_baptism.MultiSelect = false;
             this.profiles_dataGridView_baptism.Name = "profiles_dataGridView_baptism";
             this.profiles_dataGridView_baptism.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.profiles_dataGridView_baptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.profiles_dataGridView_baptism.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.profiles_dataGridView_baptism.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.profiles_dataGridView_baptism.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.profiles_dataGridView_baptism.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.profiles_dataGridView_baptism.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.profiles_dataGridView_baptism.Size = new System.Drawing.Size(396, 341);
@@ -3024,272 +3283,6 @@
             this.bunifuElipse1.ElipseRadius = 15;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // metroStyleManager1
-            // 
-            this.metroStyleManager1.Owner = null;
-            this.metroStyleManager1.Style = MetroFramework.MetroColorStyle.Brown;
-            this.metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // profile_menu_button
-            // 
-            this.profile_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("profile_menu_button.BackgroundImage")));
-            this.profile_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.profile_menu_button.FlatAppearance.BorderSize = 0;
-            this.profile_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.profile_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profile_menu_button.Location = new System.Drawing.Point(303, 354);
-            this.profile_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.profile_menu_button.Name = "profile_menu_button";
-            this.profile_menu_button.Size = new System.Drawing.Size(133, 55);
-            this.profile_menu_button.TabIndex = 4;
-            this.profile_menu_button.UseVisualStyleBackColor = true;
-            // 
-            // bloodletting_menu_button
-            // 
-            this.bloodletting_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bloodletting_menu_button.BackgroundImage")));
-            this.bloodletting_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bloodletting_menu_button.FlatAppearance.BorderSize = 0;
-            this.bloodletting_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bloodletting_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bloodletting_menu_button.Location = new System.Drawing.Point(274, 189);
-            this.bloodletting_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.bloodletting_menu_button.Name = "bloodletting_menu_button";
-            this.bloodletting_menu_button.Size = new System.Drawing.Size(53, 55);
-            this.bloodletting_menu_button.TabIndex = 0;
-            this.bloodletting_menu_button.UseVisualStyleBackColor = true;
-            // 
-            // home_menu_button
-            // 
-            this.home_menu_button.AutoSize = true;
-            this.home_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("home_menu_button.BackgroundImage")));
-            this.home_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.home_menu_button.FlatAppearance.BorderSize = 0;
-            this.home_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.home_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.home_menu_button.Location = new System.Drawing.Point(340, 176);
-            this.home_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.home_menu_button.Name = "home_menu_button";
-            this.home_menu_button.Size = new System.Drawing.Size(96, 56);
-            this.home_menu_button.TabIndex = 0;
-            this.home_menu_button.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(85, 401);
-            this.button7.Margin = new System.Windows.Forms.Padding(0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(146, 62);
-            this.button7.TabIndex = 5;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // application_menu_button
-            // 
-            this.application_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("application_menu_button.BackgroundImage")));
-            this.application_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.application_menu_button.FlatAppearance.BorderSize = 0;
-            this.application_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.application_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.application_menu_button.Location = new System.Drawing.Point(48, 322);
-            this.application_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.application_menu_button.Name = "application_menu_button";
-            this.application_menu_button.Size = new System.Drawing.Size(146, 62);
-            this.application_menu_button.TabIndex = 1;
-            this.application_menu_button.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::ParishSystem.Properties.Resources.The_Pope_45;
-            this.pictureBox5.Location = new System.Drawing.Point(1, 6);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(1);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(178, 40);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 38;
-            this.pictureBox5.TabStop = false;
-            // 
-            // home_button_menu
-            // 
-            this.home_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.home_button_menu.FlatAppearance.BorderSize = 0;
-            this.home_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.home_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.home_button_menu.ForeColor = System.Drawing.Color.White;
-            this.home_button_menu.Image = global::ParishSystem.Properties.Resources.Home_45;
-            this.home_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.home_button_menu.Location = new System.Drawing.Point(3, 50);
-            this.home_button_menu.Name = "home_button_menu";
-            this.home_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.home_button_menu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.home_button_menu.Size = new System.Drawing.Size(174, 55);
-            this.home_button_menu.TabIndex = 39;
-            this.home_button_menu.Text = "Home";
-            this.home_button_menu.UseVisualStyleBackColor = false;
-            // 
-            // bloodletting_button_menu
-            // 
-            this.bloodletting_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bloodletting_button_menu.FlatAppearance.BorderSize = 0;
-            this.bloodletting_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bloodletting_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bloodletting_button_menu.ForeColor = System.Drawing.Color.White;
-            this.bloodletting_button_menu.Image = global::ParishSystem.Properties.Resources.Heart_with_Pulse_45px;
-            this.bloodletting_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bloodletting_button_menu.Location = new System.Drawing.Point(3, 233);
-            this.bloodletting_button_menu.Name = "bloodletting_button_menu";
-            this.bloodletting_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.bloodletting_button_menu.Size = new System.Drawing.Size(174, 55);
-            this.bloodletting_button_menu.TabIndex = 42;
-            this.bloodletting_button_menu.Text = "Bloodletting";
-            this.bloodletting_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bloodletting_button_menu.UseVisualStyleBackColor = false;
-            // 
-            // profile_button_menu
-            // 
-            this.profile_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.profile_button_menu.FlatAppearance.BorderSize = 0;
-            this.profile_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profile_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profile_button_menu.ForeColor = System.Drawing.Color.White;
-            this.profile_button_menu.Image = global::ParishSystem.Properties.Resources.customer_45;
-            this.profile_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.profile_button_menu.Location = new System.Drawing.Point(3, 111);
-            this.profile_button_menu.Name = "profile_button_menu";
-            this.profile_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.profile_button_menu.Size = new System.Drawing.Size(174, 55);
-            this.profile_button_menu.TabIndex = 43;
-            this.profile_button_menu.Text = "Profiles";
-            this.profile_button_menu.UseVisualStyleBackColor = false;
-            // 
-            // application_button_menu
-            // 
-            this.application_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.application_button_menu.FlatAppearance.BorderSize = 0;
-            this.application_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.application_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.application_button_menu.ForeColor = System.Drawing.Color.White;
-            this.application_button_menu.Image = global::ParishSystem.Properties.Resources.Resume_45;
-            this.application_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.application_button_menu.Location = new System.Drawing.Point(3, 294);
-            this.application_button_menu.Name = "application_button_menu";
-            this.application_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.application_button_menu.Size = new System.Drawing.Size(174, 55);
-            this.application_button_menu.TabIndex = 43;
-            this.application_button_menu.Text = "Applications";
-            this.application_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.application_button_menu.UseVisualStyleBackColor = false;
-            // 
-            // CRB_button_menu
-            // 
-            this.CRB_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.CRB_button_menu.FlatAppearance.BorderSize = 0;
-            this.CRB_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CRB_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CRB_button_menu.ForeColor = System.Drawing.Color.White;
-            this.CRB_button_menu.Image = global::ParishSystem.Properties.Resources.Money_45;
-            this.CRB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CRB_button_menu.Location = new System.Drawing.Point(3, 355);
-            this.CRB_button_menu.Name = "CRB_button_menu";
-            this.CRB_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.CRB_button_menu.Size = new System.Drawing.Size(174, 55);
-            this.CRB_button_menu.TabIndex = 43;
-            this.CRB_button_menu.Text = "CRB";
-            this.CRB_button_menu.UseVisualStyleBackColor = false;
-            // 
-            // CDB_button_menu
-            // 
-            this.CDB_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.CDB_button_menu.FlatAppearance.BorderSize = 0;
-            this.CDB_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CDB_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CDB_button_menu.ForeColor = System.Drawing.Color.White;
-            this.CDB_button_menu.Image = global::ParishSystem.Properties.Resources.Initiate_Money_Transfer_45;
-            this.CDB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CDB_button_menu.Location = new System.Drawing.Point(3, 416);
-            this.CDB_button_menu.Name = "CDB_button_menu";
-            this.CDB_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.CDB_button_menu.Size = new System.Drawing.Size(174, 55);
-            this.CDB_button_menu.TabIndex = 43;
-            this.CDB_button_menu.Text = "CDB";
-            this.CDB_button_menu.UseVisualStyleBackColor = false;
-            // 
-            // library_button_menu
-            // 
-            this.library_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.library_button_menu.FlatAppearance.BorderSize = 0;
-            this.library_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.library_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.library_button_menu.ForeColor = System.Drawing.Color.White;
-            this.library_button_menu.Image = global::ParishSystem.Properties.Resources.Holy_Bible_45;
-            this.library_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.library_button_menu.Location = new System.Drawing.Point(3, 172);
-            this.library_button_menu.Name = "library_button_menu";
-            this.library_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.library_button_menu.Size = new System.Drawing.Size(174, 55);
-            this.library_button_menu.TabIndex = 43;
-            this.library_button_menu.Text = "Library";
-            this.library_button_menu.UseVisualStyleBackColor = false;
-            // 
-            // btn_Close
-            // 
-            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Close.BackgroundImage = global::ParishSystem.Properties.Resources.btn_closeImage;
-            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Close.FlatAppearance.BorderSize = 0;
-            this.btn_Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Close.Location = new System.Drawing.Point(79, 4);
-            this.btn_Close.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(27, 25);
-            this.btn_Close.TabIndex = 34;
-            this.btn_Close.UseVisualStyleBackColor = true;
-            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
-            // 
-            // btn_Min
-            // 
-            this.btn_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Min.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Min.BackgroundImage")));
-            this.btn_Min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Min.FlatAppearance.BorderSize = 0;
-            this.btn_Min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_Min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Min.Location = new System.Drawing.Point(41, 4);
-            this.btn_Min.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Min.Name = "btn_Min";
-            this.btn_Min.Size = new System.Drawing.Size(30, 25);
-            this.btn_Min.TabIndex = 32;
-            this.btn_Min.UseVisualStyleBackColor = true;
-            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
-            // 
-            // btn_Max
-            // 
-            this.btn_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Max.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Max.BackgroundImage")));
-            this.btn_Max.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Max.FlatAppearance.BorderSize = 0;
-            this.btn_Max.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_Max.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Max.Location = new System.Drawing.Point(6, 4);
-            this.btn_Max.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Max.Name = "btn_Max";
-            this.btn_Max.Size = new System.Drawing.Size(27, 25);
-            this.btn_Max.TabIndex = 33;
-            this.btn_Max.UseVisualStyleBackColor = true;
-            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
-            // 
             // SAD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -3297,8 +3290,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(934, 545);
             this.ControlBox = false;
-            this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.profile_panel);
+            this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.home_panel);
             this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.application_panel);
@@ -3311,6 +3304,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SAD";
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.profile_panel.ResumeLayout(false);
             this.profile_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).EndInit();
@@ -3389,8 +3383,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profiles_dataGridView_baptism)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3639,7 +3631,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.ImageList imageListMenu;
-        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
         private System.Windows.Forms.Button home_button_menu;
         private System.Windows.Forms.Button bloodletting_button_menu;
@@ -3648,6 +3639,5 @@
         private System.Windows.Forms.Button CRB_button_menu;
         private System.Windows.Forms.Button CDB_button_menu;
         private System.Windows.Forms.Button library_button_menu;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

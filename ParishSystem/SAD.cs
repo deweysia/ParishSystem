@@ -64,8 +64,9 @@ namespace ParishSystem
             Panel A = sender as Panel;
             if (A.Equals(home_button_menu)) { home_panel.BringToFront(); }
             else if (A.Equals(profile_button_menu))
-                    { profile_panel.BringToFront();
-                      refreshGeneralProfileTable();
+            {
+                profile_panel.BringToFront();
+                refreshGeneralProfileTable();
             }
             else if (A.Equals(bloodletting_button_menu)) { bloodletting_panel.BringToFront(); }
             else if (A.Equals(CDB_button_menu)) { CDB_panel.BringToFront(); }
@@ -390,6 +391,21 @@ namespace ParishSystem
         private void panel_controlbox_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void home_button_menu_Click(object sender, EventArgs e)
+        {
+            Button A = sender as Button;
+            if (A.Equals(home_button_menu)) { home_panel.BringToFront(); }
+            else if (A.Equals(profile_button_menu))
+            {
+                profile_panel.BringToFront();
+                refreshGeneralProfileTable();
+            }
+            else if (A.Equals(bloodletting_button_menu)) { bloodletting_panel.BringToFront(); }
+            else if (A.Equals(CDB_button_menu)) { CDB_panel.BringToFront(); }
+            else if (A.Equals(CRB_button_menu)) { CRB_panel.BringToFront(); }
+            else if (A.Equals(application_button_menu)) { application_panel.BringToFront(); }
         }
     }
 }
