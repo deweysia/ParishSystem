@@ -123,6 +123,12 @@ namespace ParishSystem
             generalprofile_datagridview.Columns["midName"].Visible = false;
             generalprofile_datagridview.Columns["lastName"].Visible = false;
             generalprofile_datagridview.Columns["suffix"].Visible = false;
+            generalprofile_datagridview.Columns["gender"].Visible = false;
+           
+            generalprofile_datagridview.Columns["contactNumber"].Visible = false;
+            generalprofile_datagridview.Columns["address"].Visible = false;
+            generalprofile_datagridview.Columns["birthplace"].Visible = false;
+            generalprofile_datagridview.Columns["bloodtype"].Visible = false;
             generalprofile_datagridview.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
@@ -137,15 +143,45 @@ namespace ParishSystem
             lastname_textbox.Text = generalprofile_datagridview.CurrentRow.Cells["lastname"].Value.ToString();
             suffix_textbox.Text = generalprofile_datagridview.CurrentRow.Cells["suffix"].Value.ToString();
 
+
+            //label changes
+            firstname_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["firstname"].Value.ToString();
+            middlename_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["midname"].Value.ToString();
+            lastname_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["lastname"].Value.ToString();
+            suffix_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["suffix"].Value.ToString();
+
+            if (!generalprofile_datagridview.CurrentRow.Cells["gender"].Value.ToString().Equals("0"))
+                gender_label_profiles.Text = generalprofile_datagridview.CurrentRow.Cells["gender"].Value.ToString().ToUpper();
+            else
+                gender_label_profiles.Text = "";
+
+            birthday_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString();
+            contactNumber_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["contactnumber"].Value.ToString();
+            address_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["address"].Value.ToString();
+            birthplace_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["birthplace"].Value.ToString();
+            bloodtype_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["bloodtype"].Value.ToString();
             Console.WriteLine(lastGeneralProfile);
         }
- 
+
         private void addProfile_button_Click(object sender, EventArgs e)
         {//adds basic profile with name values only 
-            if (dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, '0',DateTime.MinValue , null, null, null)) { refreshGeneralProfileTable(); }
-            else { MessageBox.Show("Entry not added"); }
-            AddPNL.Visible = false;
+            if (suffix_textbox.Text.Equals("suffix")) { suffix_textbox.Text = null; }
+            if (firstname_textbox.Text.Equals("firstname")) { firstname_tooltip_profiles.Active = true; suffix_textbox.Text = "suffix"; }
+            if (middlename_textbox.Text.Equals("middlename")) { middlename_tooltip_profiles.Active = true; suffix_textbox.Text = "suffix"; }
+            if (lastname_textbox.Text.Equals("lastname")) { lastname_tooltip_profiles.Active = true; suffix_textbox.Text = "suffix"; }
+            
+
+            if (!firstname_textbox.Text.Equals("firstname") && !middlename_textbox.Text.Equals("middlename") && !lastname_textbox.Text.Equals("lastname")) {
+                dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, '0', DateTime.MinValue, null, null, null);
+                refreshGeneralProfileTable();
+                clearProfile();
+                AddPNL.Visible = false;
+            }
+           
         }
+            
+
+        
 
         private void openProfile_button_Click(object sender, EventArgs e)
         {//open person complete profile
@@ -161,32 +197,13 @@ namespace ParishSystem
             refreshGeneralProfileTable();
         }
 
-        private void firstname_textbox_MouseClick(object sender, MouseEventArgs e)
-        {
-            firstname_textbox.Text = "";
-        }
-
-        private void middlename_textbox_MouseClick(object sender, MouseEventArgs e)
-        {
-            middlename_textbox.Text = "";
-        }
-
-        private void lastname_textbox_MouseClick(object sender, MouseEventArgs e)
-        {
-            lastname_textbox.Text = "";
-        }
-
-        private void suffix_textbox_MouseClick(object sender, MouseEventArgs e)
-        {
-            suffix_textbox.Text = "";
-        }
 
         private void clearProfile()
         {
-            lastname_textbox.Text = "Last Name";
-            middlename_textbox.Text = "Middle Name";
-            firstname_textbox.Text = "First Name";
-            suffix_textbox.Text = "Suffix";
+            lastname_textbox.Text = "lastname";
+            middlename_textbox.Text = "middlename";
+            firstname_textbox.Text = "firstname";
+            suffix_textbox.Text = "suffix";
             lastGeneralProfile = 0;
         }
 
@@ -387,6 +404,45 @@ namespace ParishSystem
             AddPNL.Visible = true;
         }
 
-       
+        private void firstname_textbox_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void Names_textbox_Leave(object sender, EventArgs e)
+        {
+            TextBox A = sender as TextBox;
+            string B = A.Name.Split('_')[0];
+            if (A.Text.Trim().Equals(""))
+            {
+                A.Text = B;
+                A.ForeColor = Color.Silver;
+            }
+        }
+
+        private void Names_textbox_MouseClick(object sender, MouseEventArgs e)
+        {
+            TextBox A = sender as TextBox;
+            if (A.Text.Equals(A.Name.Split('_')[0]))
+            {
+                A.Text = "";
+                A.ForeColor = Color.Black;
+            }
+        }
+
+        private void firstname_textbox_TextChanged(object sender, EventArgs e)
+        {
+            if (firstname_textbox.Text != "firstname" && firstname_textbox.Text.Trim() != "" &&
+               middlename_textbox.Text != "middlename" && middlename_textbox.Text.Trim() != "" &&
+               lastname_textbox.Text != "lastname" && lastname_textbox.Text.Trim() != "")
+            {
+                save_button_profile.Enabled = true;
+            }
+            else
+            {
+                save_button_profile.Enabled = false;
+            }
+        }
     }
 }

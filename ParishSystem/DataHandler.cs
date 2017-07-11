@@ -262,7 +262,7 @@ namespace ParishSystem
 
         public DataTable getGeneralProfiles()
         {
-            string q = "SELECT firstname,midname,lastname,suffix, profileID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix) as Name FROM GeneralProfile";
+            string q = "SELECT *, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix) as Name FROM GeneralProfile";
            
             DataTable dt = runQuery(q);
 
