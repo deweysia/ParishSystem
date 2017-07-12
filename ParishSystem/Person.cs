@@ -50,6 +50,7 @@ namespace ParishSystem
             char gender = '0';
             if (gender_Male_radiobutton_profile.Checked == true) { gender = 'm'; }
             else if (gender_female_radiobutton_profile.Checked == true) { gender = 'f'; }
+        
             dh.editGeneralProfile(
                 ProfileID,
                 firstname_textbox_profile.Text,
@@ -283,7 +284,6 @@ namespace ParishSystem
         private void biodata_button_Click(object sender, EventArgs e)
         {
             load_Biodata();
-
             panelDict["profile_panel"].BringToFront();
 
             //profile_panel.Visible = true;
@@ -424,8 +424,8 @@ namespace ParishSystem
         }
 
         #region MENU COLOR
-        Color BackColorOnClick = Color.FromArgb(255, 255, 255);
-        Color ForeColorOnClick = Color.FromArgb(21, 40, 54);
+        Color BackColorOnClick = Color.FromArgb(229, 106, 61);
+        
 
         private void approve_baptism_button_Click(object sender, EventArgs e)
         {
@@ -436,17 +436,14 @@ namespace ParishSystem
         private void menu_button_Enter(object sender, EventArgs e)
         {
             Button a = sender as Button;
-            a.Font = new Font(biodata_button.Font, FontStyle.Bold);
-            a.ForeColor = ForeColorOnClick;
             a.BackColor = BackColorOnClick;
         }
 
         private void menu_button_Leave(object sender, EventArgs e)
         {
-            Button a = sender as Button;
-            a.Font = new Font(biodata_button.Font, FontStyle.Regular);
-            a.ForeColor = BackColorOnClick;
-            a.BackColor = ForeColorOnClick;
+            Button a = sender as Button; 
+            a.BackColor = Color.FromArgb(24, 115, 204);
+           
         }
         #endregion
         #region CONFIRMATION MENU
@@ -568,5 +565,71 @@ namespace ParishSystem
                 A.ForeColor = Color.Black;
             }
         }
+
+        private void edit_button_profile_Click(object sender, EventArgs e)
+        {
+            firstname_textbox_profile.Enabled = true;
+            middlename_textbox_profile.Enabled = true;
+            lastname_textbox_profile.Enabled = true;
+            suffix_textbox_profile.Enabled = true;
+            gender_Male_radiobutton_profile.Enabled = true;
+            gender_female_radiobutton_profile.Enabled = true;
+            bloodtype_combobox_profile.Enabled = true;
+            birthdate_datetimepicker_profile.Enabled = true;
+            birthplace_textbox_profile.Enabled = true;
+            address_textarea_profile.Enabled = true;
+            contactNumber_textbox_profile.Enabled = true;
+
+            father_panel_profile.Enabled = true;
+            father_checkbox_profile.Enabled = true;
+            firstname_textbox_father_profile.Enabled = true;
+            middlename_textbox_father_profile.Enabled = true;
+            lastname_textbox_father_profile.Enabled = true;
+            suffix_textbox_father_profile.Enabled = true;
+            birthplace_textbox_father_profile.Enabled = true;
+            residence_textbox_father_profile.Enabled = true;
+
+            mother_panel_profile.Enabled = true;
+            firstname_textbox_mother_profile.Enabled = true;
+            middlename_textbox_mother_profile.Enabled = true;
+            lastname_textbox_mother_profile.Enabled = true;
+            suffix_textbox_mother_profile.Enabled = true;
+            birthplace_textbox_mother_profile.Enabled = true;
+            residence_textbox_mother_profile.Enabled = true;
+
+            save_button_profile.Enabled = true;
+            cancel_button_profile.Enabled = true;
+
+        }
+
+        private void profile_checkbox_profile_CheckStateChanged(object sender, EventArgs e)
+        {
+            CheckBox A= sender as CheckBox;
+
+            if (A.Equals(father_checkbox_profile)) {
+                if (father_checkbox_profile.Checked == true)
+                {
+                    father_panel_profile.Visible = true;
+                }
+                else
+                {
+                    father_panel_profile.Visible = false;
+                }
+            }
+
+            else if (mother_checkbox_profile.Checked == true)
+            {
+                if (mother_checkbox_profile.Checked == true)
+                {
+                    mother_checkbox_profile.Visible = true;
+                }
+                else
+                {
+                    mother_checkbox_profile.Visible = false;
+                }
+            }
+        }
+
+       
     }
 }

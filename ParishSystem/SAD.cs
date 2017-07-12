@@ -199,7 +199,6 @@ namespace ParishSystem
             if (!firstname_textbox.Text.Equals("firstname") && !middlename_textbox.Text.Equals("middlename") && !lastname_textbox.Text.Equals("lastname")) {
                 dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, '0', DateTime.MinValue, null, null, null);
                 refreshGeneralProfileTable();
-                clearProfile();
                 AddPNL.Visible = false;
             }
            
@@ -213,7 +212,7 @@ namespace ParishSystem
            
             Form person = new Person(lastGeneralProfile, dh);
             person.ShowDialog();
-            clearProfile();
+          
            
 
         }
@@ -470,11 +469,7 @@ namespace ParishSystem
 
 
 
-        private void firstname_textbox_TextChanged(object sender, EventArgs e)
-        {
-            
-            
-        }
+	   
 
         private void Name_textbox_Profile_TextChanged(object sender, EventArgs e)
         {

@@ -54,7 +54,6 @@
             this.firstname_textbox_profile = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.father_panel_profile = new System.Windows.Forms.Panel();
-            this.father_checkbox_profile = new System.Windows.Forms.CheckBox();
             this.suffix_textbox_father_profile = new System.Windows.Forms.TextBox();
             this.lastname_textbox_father_profile = new System.Windows.Forms.TextBox();
             this.middlename_textbox_father_profile = new System.Windows.Forms.TextBox();
@@ -66,10 +65,8 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.father_checkbox_profile = new System.Windows.Forms.CheckBox();
             this.mother_panel_profile = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.mother_checkbox_profile = new System.Windows.Forms.CheckBox();
             this.suffix_textbox_mother_profile = new System.Windows.Forms.TextBox();
             this.lastname_textbox_mother_profile = new System.Windows.Forms.TextBox();
             this.middlename_textbox_mother_profile = new System.Windows.Forms.TextBox();
@@ -79,6 +76,9 @@
             this.birthplace_textbox_mother_profile = new System.Windows.Forms.TextBox();
             this.firstname_textbox_mother_profile = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.mother_checkbox_profile = new System.Windows.Forms.CheckBox();
             this.cancel_button_profile = new System.Windows.Forms.Button();
             this.save_button_profile = new System.Windows.Forms.Button();
             this.remarks_textbox_baptism = new System.Windows.Forms.TextBox();
@@ -171,6 +171,10 @@
             this.payable_datagridview_balance = new System.Windows.Forms.DataGridView();
             this.paid_datagridview_balance = new System.Windows.Forms.DataGridView();
             this.profile_panel = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.edit_button_profile = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.baptism_panel = new System.Windows.Forms.Panel();
@@ -279,6 +283,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.payable_datagridview_balance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paid_datagridview_balance)).BeginInit();
             this.profile_panel.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.baptism_panel.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.baptism_details_panel.SuspendLayout();
@@ -294,7 +301,7 @@
             // 
             // biodata_button
             // 
-            this.biodata_button.BackColor = System.Drawing.Color.DodgerBlue;
+            this.biodata_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             this.biodata_button.FlatAppearance.BorderSize = 0;
             this.biodata_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.biodata_button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -312,7 +319,7 @@
             // 
             // baptism_button
             // 
-            this.baptism_button.BackColor = System.Drawing.Color.DodgerBlue;
+            this.baptism_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             this.baptism_button.FlatAppearance.BorderSize = 0;
             this.baptism_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.baptism_button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -330,7 +337,7 @@
             // 
             // confirmation_button
             // 
-            this.confirmation_button.BackColor = System.Drawing.Color.DodgerBlue;
+            this.confirmation_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             this.confirmation_button.FlatAppearance.BorderSize = 0;
             this.confirmation_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confirmation_button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -348,7 +355,7 @@
             // 
             // marriage_button
             // 
-            this.marriage_button.BackColor = System.Drawing.Color.DodgerBlue;
+            this.marriage_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             this.marriage_button.FlatAppearance.BorderSize = 0;
             this.marriage_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.marriage_button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -366,7 +373,7 @@
             // 
             // balance_button
             // 
-            this.balance_button.BackColor = System.Drawing.Color.DodgerBlue;
+            this.balance_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             this.balance_button.FlatAppearance.BorderSize = 0;
             this.balance_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.balance_button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -384,7 +391,7 @@
             // 
             // bloodletting_button
             // 
-            this.bloodletting_button.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bloodletting_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             this.bloodletting_button.FlatAppearance.BorderSize = 0;
             this.bloodletting_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bloodletting_button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -402,6 +409,7 @@
             // 
             // bloodtype_combobox_profile
             // 
+            this.bloodtype_combobox_profile.Enabled = false;
             this.bloodtype_combobox_profile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bloodtype_combobox_profile.FormattingEnabled = true;
             this.bloodtype_combobox_profile.Items.AddRange(new object[] {
@@ -414,7 +422,7 @@
             "O-",
             "AB+",
             "AB-"});
-            this.bloodtype_combobox_profile.Location = new System.Drawing.Point(481, 63);
+            this.bloodtype_combobox_profile.Location = new System.Drawing.Point(443, 66);
             this.bloodtype_combobox_profile.Margin = new System.Windows.Forms.Padding(2);
             this.bloodtype_combobox_profile.Name = "bloodtype_combobox_profile";
             this.bloodtype_combobox_profile.Size = new System.Drawing.Size(43, 25);
@@ -423,8 +431,9 @@
             // contactNumber_textbox_profile
             // 
             this.contactNumber_textbox_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contactNumber_textbox_profile.Enabled = false;
             this.contactNumber_textbox_profile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactNumber_textbox_profile.Location = new System.Drawing.Point(482, 161);
+            this.contactNumber_textbox_profile.Location = new System.Drawing.Point(444, 164);
             this.contactNumber_textbox_profile.Margin = new System.Windows.Forms.Padding(2);
             this.contactNumber_textbox_profile.Mask = "(+63) 000-0000";
             this.contactNumber_textbox_profile.Name = "contactNumber_textbox_profile";
@@ -433,8 +442,9 @@
             // 
             // address_textarea_profile
             // 
+            this.address_textarea_profile.Enabled = false;
             this.address_textarea_profile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.address_textarea_profile.Location = new System.Drawing.Point(481, 115);
+            this.address_textarea_profile.Location = new System.Drawing.Point(443, 118);
             this.address_textarea_profile.Margin = new System.Windows.Forms.Padding(2);
             this.address_textarea_profile.Multiline = true;
             this.address_textarea_profile.Name = "address_textarea_profile";
@@ -444,9 +454,10 @@
             // suffix_textbox_profile
             // 
             this.suffix_textbox_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.suffix_textbox_profile.Enabled = false;
             this.suffix_textbox_profile.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.suffix_textbox_profile.ForeColor = System.Drawing.Color.Gray;
-            this.suffix_textbox_profile.Location = new System.Drawing.Point(538, 19);
+            this.suffix_textbox_profile.Location = new System.Drawing.Point(500, 22);
             this.suffix_textbox_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.suffix_textbox_profile.Name = "suffix_textbox_profile";
             this.suffix_textbox_profile.Size = new System.Drawing.Size(40, 18);
@@ -459,9 +470,10 @@
             // lastname_textbox_profile
             // 
             this.lastname_textbox_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lastname_textbox_profile.Enabled = false;
             this.lastname_textbox_profile.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lastname_textbox_profile.ForeColor = System.Drawing.Color.Gray;
-            this.lastname_textbox_profile.Location = new System.Drawing.Point(450, 19);
+            this.lastname_textbox_profile.Location = new System.Drawing.Point(412, 22);
             this.lastname_textbox_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lastname_textbox_profile.Name = "lastname_textbox_profile";
             this.lastname_textbox_profile.Size = new System.Drawing.Size(73, 18);
@@ -474,9 +486,10 @@
             // middlename_textbox_profile
             // 
             this.middlename_textbox_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.middlename_textbox_profile.Enabled = false;
             this.middlename_textbox_profile.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.middlename_textbox_profile.ForeColor = System.Drawing.Color.Gray;
-            this.middlename_textbox_profile.Location = new System.Drawing.Point(362, 19);
+            this.middlename_textbox_profile.Location = new System.Drawing.Point(324, 22);
             this.middlename_textbox_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.middlename_textbox_profile.Name = "middlename_textbox_profile";
             this.middlename_textbox_profile.Size = new System.Drawing.Size(73, 18);
@@ -491,7 +504,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label7.Location = new System.Drawing.Point(90, 162);
+            this.label7.Location = new System.Drawing.Point(52, 165);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 17);
             this.label7.TabIndex = 21;
@@ -500,8 +513,9 @@
             // birthplace_textbox_profile
             // 
             this.birthplace_textbox_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.birthplace_textbox_profile.Enabled = false;
             this.birthplace_textbox_profile.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.birthplace_textbox_profile.Location = new System.Drawing.Point(204, 161);
+            this.birthplace_textbox_profile.Location = new System.Drawing.Point(166, 164);
             this.birthplace_textbox_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.birthplace_textbox_profile.Name = "birthplace_textbox_profile";
             this.birthplace_textbox_profile.Size = new System.Drawing.Size(130, 18);
@@ -513,7 +527,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label6.Location = new System.Drawing.Point(90, 115);
+            this.label6.Location = new System.Drawing.Point(52, 118);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 17);
             this.label6.TabIndex = 19;
@@ -524,7 +538,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label13.Location = new System.Drawing.Point(368, 161);
+            this.label13.Location = new System.Drawing.Point(330, 164);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(101, 17);
             this.label13.TabIndex = 27;
@@ -535,7 +549,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label9.Location = new System.Drawing.Point(367, 113);
+            this.label9.Location = new System.Drawing.Point(329, 116);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 17);
             this.label9.TabIndex = 27;
@@ -546,7 +560,7 @@
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label33.Location = new System.Drawing.Point(93, 22);
+            this.label33.Location = new System.Drawing.Point(55, 25);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(44, 17);
             this.label33.TabIndex = 27;
@@ -555,8 +569,9 @@
             // gender_female_radiobutton_profile
             // 
             this.gender_female_radiobutton_profile.AutoSize = true;
+            this.gender_female_radiobutton_profile.Enabled = false;
             this.gender_female_radiobutton_profile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gender_female_radiobutton_profile.Location = new System.Drawing.Point(273, 64);
+            this.gender_female_radiobutton_profile.Location = new System.Drawing.Point(235, 67);
             this.gender_female_radiobutton_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gender_female_radiobutton_profile.Name = "gender_female_radiobutton_profile";
             this.gender_female_radiobutton_profile.Size = new System.Drawing.Size(67, 21);
@@ -568,20 +583,22 @@
             // birthdate_datetimepicker_profile
             // 
             this.birthdate_datetimepicker_profile.CustomFormat = "_________-_________-_________";
+            this.birthdate_datetimepicker_profile.Enabled = false;
             this.birthdate_datetimepicker_profile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.birthdate_datetimepicker_profile.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.birthdate_datetimepicker_profile.Location = new System.Drawing.Point(203, 114);
+            this.birthdate_datetimepicker_profile.Location = new System.Drawing.Point(143, 118);
             this.birthdate_datetimepicker_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.birthdate_datetimepicker_profile.Name = "birthdate_datetimepicker_profile";
-            this.birthdate_datetimepicker_profile.Size = new System.Drawing.Size(124, 25);
+            this.birthdate_datetimepicker_profile.Size = new System.Drawing.Size(171, 25);
             this.birthdate_datetimepicker_profile.TabIndex = 18;
             this.birthdate_datetimepicker_profile.ValueChanged += new System.EventHandler(this.birthdate_datetimepicker_baptist_ValueChanged);
             // 
             // gender_Male_radiobutton_profile
             // 
             this.gender_Male_radiobutton_profile.AutoSize = true;
+            this.gender_Male_radiobutton_profile.Enabled = false;
             this.gender_Male_radiobutton_profile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gender_Male_radiobutton_profile.Location = new System.Drawing.Point(201, 64);
+            this.gender_Male_radiobutton_profile.Location = new System.Drawing.Point(163, 67);
             this.gender_Male_radiobutton_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gender_Male_radiobutton_profile.Name = "gender_Male_radiobutton_profile";
             this.gender_Male_radiobutton_profile.Size = new System.Drawing.Size(55, 21);
@@ -595,7 +612,7 @@
             this.label109.AutoSize = true;
             this.label109.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label109.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label109.Location = new System.Drawing.Point(367, 66);
+            this.label109.Location = new System.Drawing.Point(329, 69);
             this.label109.Name = "label109";
             this.label109.Size = new System.Drawing.Size(75, 17);
             this.label109.TabIndex = 14;
@@ -606,7 +623,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label4.Location = new System.Drawing.Point(92, 67);
+            this.label4.Location = new System.Drawing.Point(54, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 17);
             this.label4.TabIndex = 14;
@@ -615,9 +632,10 @@
             // firstname_textbox_profile
             // 
             this.firstname_textbox_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.firstname_textbox_profile.Enabled = false;
             this.firstname_textbox_profile.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.firstname_textbox_profile.ForeColor = System.Drawing.Color.Gray;
-            this.firstname_textbox_profile.Location = new System.Drawing.Point(216, 19);
+            this.firstname_textbox_profile.Location = new System.Drawing.Point(178, 22);
             this.firstname_textbox_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.firstname_textbox_profile.Name = "firstname_textbox_profile";
             this.firstname_textbox_profile.Size = new System.Drawing.Size(131, 18);
@@ -630,8 +648,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Enabled = false;
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(196, 24);
+            this.label1.Location = new System.Drawing.Point(158, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(453, 19);
@@ -641,7 +660,6 @@
             // father_panel_profile
             // 
             this.father_panel_profile.BackColor = System.Drawing.Color.White;
-            this.father_panel_profile.Controls.Add(this.father_checkbox_profile);
             this.father_panel_profile.Controls.Add(this.suffix_textbox_father_profile);
             this.father_panel_profile.Controls.Add(this.lastname_textbox_father_profile);
             this.father_panel_profile.Controls.Add(this.middlename_textbox_father_profile);
@@ -653,33 +671,20 @@
             this.father_panel_profile.Controls.Add(this.label27);
             this.father_panel_profile.Controls.Add(this.label15);
             this.father_panel_profile.Controls.Add(this.label14);
+            this.father_panel_profile.Enabled = false;
             this.father_panel_profile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(28)))), ((int)(((byte)(153)))));
-            this.father_panel_profile.Location = new System.Drawing.Point(69, 223);
+            this.father_panel_profile.Location = new System.Drawing.Point(2, 39);
             this.father_panel_profile.Margin = new System.Windows.Forms.Padding(2);
             this.father_panel_profile.Name = "father_panel_profile";
-            this.father_panel_profile.Size = new System.Drawing.Size(509, 107);
+            this.father_panel_profile.Size = new System.Drawing.Size(491, 79);
             this.father_panel_profile.TabIndex = 30;
-            // 
-            // father_checkbox_profile
-            // 
-            this.father_checkbox_profile.AutoSize = true;
-            this.father_checkbox_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.father_checkbox_profile.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.father_checkbox_profile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.father_checkbox_profile.Location = new System.Drawing.Point(14, 4);
-            this.father_checkbox_profile.Margin = new System.Windows.Forms.Padding(2);
-            this.father_checkbox_profile.Name = "father_checkbox_profile";
-            this.father_checkbox_profile.Size = new System.Drawing.Size(83, 29);
-            this.father_checkbox_profile.TabIndex = 30;
-            this.father_checkbox_profile.Text = "Father";
-            this.father_checkbox_profile.UseVisualStyleBackColor = true;
             // 
             // suffix_textbox_father_profile
             // 
             this.suffix_textbox_father_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.suffix_textbox_father_profile.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.suffix_textbox_father_profile.ForeColor = System.Drawing.Color.Gray;
-            this.suffix_textbox_father_profile.Location = new System.Drawing.Point(357, 33);
+            this.suffix_textbox_father_profile.Location = new System.Drawing.Point(357, 11);
             this.suffix_textbox_father_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.suffix_textbox_father_profile.Name = "suffix_textbox_father_profile";
             this.suffix_textbox_father_profile.Size = new System.Drawing.Size(39, 16);
@@ -694,7 +699,7 @@
             this.lastname_textbox_father_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastname_textbox_father_profile.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastname_textbox_father_profile.ForeColor = System.Drawing.Color.Gray;
-            this.lastname_textbox_father_profile.Location = new System.Drawing.Point(284, 34);
+            this.lastname_textbox_father_profile.Location = new System.Drawing.Point(284, 12);
             this.lastname_textbox_father_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lastname_textbox_father_profile.Name = "lastname_textbox_father_profile";
             this.lastname_textbox_father_profile.Size = new System.Drawing.Size(73, 16);
@@ -709,7 +714,7 @@
             this.middlename_textbox_father_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.middlename_textbox_father_profile.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.middlename_textbox_father_profile.ForeColor = System.Drawing.Color.Gray;
-            this.middlename_textbox_father_profile.Location = new System.Drawing.Point(211, 34);
+            this.middlename_textbox_father_profile.Location = new System.Drawing.Point(211, 12);
             this.middlename_textbox_father_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.middlename_textbox_father_profile.Name = "middlename_textbox_father_profile";
             this.middlename_textbox_father_profile.Size = new System.Drawing.Size(73, 16);
@@ -725,7 +730,7 @@
             this.label23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label23.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label23.Location = new System.Drawing.Point(250, 78);
+            this.label23.Location = new System.Drawing.Point(250, 56);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(68, 17);
             this.label23.TabIndex = 21;
@@ -737,7 +742,7 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label5.Location = new System.Drawing.Point(28, 76);
+            this.label5.Location = new System.Drawing.Point(28, 54);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 17);
             this.label5.TabIndex = 21;
@@ -747,7 +752,7 @@
             // 
             this.residence_textbox_father_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.residence_textbox_father_profile.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.residence_textbox_father_profile.Location = new System.Drawing.Point(341, 76);
+            this.residence_textbox_father_profile.Location = new System.Drawing.Point(341, 54);
             this.residence_textbox_father_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.residence_textbox_father_profile.Name = "residence_textbox_father_profile";
             this.residence_textbox_father_profile.Size = new System.Drawing.Size(103, 16);
@@ -758,7 +763,7 @@
             // 
             this.birthplace_textbox_father_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.birthplace_textbox_father_profile.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.birthplace_textbox_father_profile.Location = new System.Drawing.Point(113, 76);
+            this.birthplace_textbox_father_profile.Location = new System.Drawing.Point(113, 54);
             this.birthplace_textbox_father_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.birthplace_textbox_father_profile.Name = "birthplace_textbox_father_profile";
             this.birthplace_textbox_father_profile.Size = new System.Drawing.Size(103, 16);
@@ -770,7 +775,7 @@
             this.firstname_textbox_father_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstname_textbox_father_profile.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstname_textbox_father_profile.ForeColor = System.Drawing.Color.Gray;
-            this.firstname_textbox_father_profile.Location = new System.Drawing.Point(138, 34);
+            this.firstname_textbox_father_profile.Location = new System.Drawing.Point(138, 12);
             this.firstname_textbox_father_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.firstname_textbox_father_profile.Name = "firstname_textbox_father_profile";
             this.firstname_textbox_father_profile.Size = new System.Drawing.Size(73, 16);
@@ -784,7 +789,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.ForeColor = System.Drawing.Color.Gray;
-            this.label27.Location = new System.Drawing.Point(329, 77);
+            this.label27.Location = new System.Drawing.Point(329, 55);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(129, 19);
@@ -795,7 +800,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.Gray;
-            this.label15.Location = new System.Drawing.Point(92, 77);
+            this.label15.Location = new System.Drawing.Point(92, 55);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(147, 19);
@@ -806,19 +811,31 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.Gray;
-            this.label14.Location = new System.Drawing.Point(135, 38);
+            this.label14.Location = new System.Drawing.Point(135, 16);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(273, 19);
             this.label14.TabIndex = 29;
             this.label14.Text = "____________________________________________";
             // 
+            // father_checkbox_profile
+            // 
+            this.father_checkbox_profile.AutoSize = true;
+            this.father_checkbox_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.father_checkbox_profile.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.father_checkbox_profile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.father_checkbox_profile.Location = new System.Drawing.Point(2, 1);
+            this.father_checkbox_profile.Margin = new System.Windows.Forms.Padding(2);
+            this.father_checkbox_profile.Name = "father_checkbox_profile";
+            this.father_checkbox_profile.Size = new System.Drawing.Size(83, 29);
+            this.father_checkbox_profile.TabIndex = 30;
+            this.father_checkbox_profile.Text = "Father";
+            this.father_checkbox_profile.UseVisualStyleBackColor = true;
+            this.father_checkbox_profile.CheckStateChanged += new System.EventHandler(this.profile_checkbox_profile_CheckStateChanged);
+            // 
             // mother_panel_profile
             // 
             this.mother_panel_profile.BackColor = System.Drawing.Color.White;
-            this.mother_panel_profile.Controls.Add(this.label11);
-            this.mother_panel_profile.Controls.Add(this.label10);
-            this.mother_panel_profile.Controls.Add(this.mother_checkbox_profile);
             this.mother_panel_profile.Controls.Add(this.suffix_textbox_mother_profile);
             this.mother_panel_profile.Controls.Add(this.lastname_textbox_mother_profile);
             this.mother_panel_profile.Controls.Add(this.middlename_textbox_mother_profile);
@@ -828,54 +845,21 @@
             this.mother_panel_profile.Controls.Add(this.birthplace_textbox_mother_profile);
             this.mother_panel_profile.Controls.Add(this.firstname_textbox_mother_profile);
             this.mother_panel_profile.Controls.Add(this.label8);
-            this.mother_panel_profile.Location = new System.Drawing.Point(69, 339);
+            this.mother_panel_profile.Controls.Add(this.label11);
+            this.mother_panel_profile.Controls.Add(this.label10);
+            this.mother_panel_profile.Enabled = false;
+            this.mother_panel_profile.Location = new System.Drawing.Point(2, 159);
             this.mother_panel_profile.Margin = new System.Windows.Forms.Padding(2);
             this.mother_panel_profile.Name = "mother_panel_profile";
-            this.mother_panel_profile.Size = new System.Drawing.Size(509, 104);
+            this.mother_panel_profile.Size = new System.Drawing.Size(491, 81);
             this.mother_panel_profile.TabIndex = 31;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(91, 77);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(147, 19);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "_______________________";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(328, 77);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(129, 19);
-            this.label10.TabIndex = 31;
-            this.label10.Text = "____________________";
-            // 
-            // mother_checkbox_profile
-            // 
-            this.mother_checkbox_profile.AutoSize = true;
-            this.mother_checkbox_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mother_checkbox_profile.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mother_checkbox_profile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.mother_checkbox_profile.Location = new System.Drawing.Point(12, 2);
-            this.mother_checkbox_profile.Margin = new System.Windows.Forms.Padding(2);
-            this.mother_checkbox_profile.Name = "mother_checkbox_profile";
-            this.mother_checkbox_profile.Size = new System.Drawing.Size(94, 29);
-            this.mother_checkbox_profile.TabIndex = 30;
-            this.mother_checkbox_profile.Text = "Mother";
-            this.mother_checkbox_profile.UseVisualStyleBackColor = true;
             // 
             // suffix_textbox_mother_profile
             // 
             this.suffix_textbox_mother_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.suffix_textbox_mother_profile.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.suffix_textbox_mother_profile.ForeColor = System.Drawing.Color.Gray;
-            this.suffix_textbox_mother_profile.Location = new System.Drawing.Point(363, 33);
+            this.suffix_textbox_mother_profile.Location = new System.Drawing.Point(363, 9);
             this.suffix_textbox_mother_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.suffix_textbox_mother_profile.Name = "suffix_textbox_mother_profile";
             this.suffix_textbox_mother_profile.Size = new System.Drawing.Size(33, 16);
@@ -890,7 +874,7 @@
             this.lastname_textbox_mother_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastname_textbox_mother_profile.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastname_textbox_mother_profile.ForeColor = System.Drawing.Color.Gray;
-            this.lastname_textbox_mother_profile.Location = new System.Drawing.Point(284, 34);
+            this.lastname_textbox_mother_profile.Location = new System.Drawing.Point(284, 10);
             this.lastname_textbox_mother_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lastname_textbox_mother_profile.Name = "lastname_textbox_mother_profile";
             this.lastname_textbox_mother_profile.Size = new System.Drawing.Size(73, 16);
@@ -905,7 +889,7 @@
             this.middlename_textbox_mother_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.middlename_textbox_mother_profile.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.middlename_textbox_mother_profile.ForeColor = System.Drawing.Color.Gray;
-            this.middlename_textbox_mother_profile.Location = new System.Drawing.Point(211, 34);
+            this.middlename_textbox_mother_profile.Location = new System.Drawing.Point(211, 10);
             this.middlename_textbox_mother_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.middlename_textbox_mother_profile.Name = "middlename_textbox_mother_profile";
             this.middlename_textbox_mother_profile.Size = new System.Drawing.Size(73, 16);
@@ -921,7 +905,7 @@
             this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label20.Location = new System.Drawing.Point(249, 78);
+            this.label20.Location = new System.Drawing.Point(249, 54);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(68, 17);
             this.label20.TabIndex = 21;
@@ -933,7 +917,7 @@
             this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label21.Location = new System.Drawing.Point(27, 76);
+            this.label21.Location = new System.Drawing.Point(27, 52);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(68, 17);
             this.label21.TabIndex = 21;
@@ -943,7 +927,7 @@
             // 
             this.residence_textbox_mother_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.residence_textbox_mother_profile.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.residence_textbox_mother_profile.Location = new System.Drawing.Point(340, 76);
+            this.residence_textbox_mother_profile.Location = new System.Drawing.Point(340, 52);
             this.residence_textbox_mother_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.residence_textbox_mother_profile.Name = "residence_textbox_mother_profile";
             this.residence_textbox_mother_profile.Size = new System.Drawing.Size(103, 16);
@@ -954,7 +938,7 @@
             // 
             this.birthplace_textbox_mother_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.birthplace_textbox_mother_profile.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.birthplace_textbox_mother_profile.Location = new System.Drawing.Point(112, 76);
+            this.birthplace_textbox_mother_profile.Location = new System.Drawing.Point(112, 52);
             this.birthplace_textbox_mother_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.birthplace_textbox_mother_profile.Name = "birthplace_textbox_mother_profile";
             this.birthplace_textbox_mother_profile.Size = new System.Drawing.Size(103, 16);
@@ -966,7 +950,7 @@
             this.firstname_textbox_mother_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstname_textbox_mother_profile.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstname_textbox_mother_profile.ForeColor = System.Drawing.Color.Gray;
-            this.firstname_textbox_mother_profile.Location = new System.Drawing.Point(138, 34);
+            this.firstname_textbox_mother_profile.Location = new System.Drawing.Point(138, 10);
             this.firstname_textbox_mother_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.firstname_textbox_mother_profile.Name = "firstname_textbox_mother_profile";
             this.firstname_textbox_mother_profile.Size = new System.Drawing.Size(73, 16);
@@ -980,20 +964,58 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(135, 38);
+            this.label8.Location = new System.Drawing.Point(135, 14);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(273, 19);
             this.label8.TabIndex = 31;
             this.label8.Text = "____________________________________________";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Gray;
+            this.label11.Location = new System.Drawing.Point(91, 53);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(147, 19);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "_______________________";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Gray;
+            this.label10.Location = new System.Drawing.Point(328, 53);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(129, 19);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "____________________";
+            // 
+            // mother_checkbox_profile
+            // 
+            this.mother_checkbox_profile.AutoSize = true;
+            this.mother_checkbox_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mother_checkbox_profile.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mother_checkbox_profile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.mother_checkbox_profile.Location = new System.Drawing.Point(2, 1);
+            this.mother_checkbox_profile.Margin = new System.Windows.Forms.Padding(2);
+            this.mother_checkbox_profile.Name = "mother_checkbox_profile";
+            this.mother_checkbox_profile.Size = new System.Drawing.Size(94, 29);
+            this.mother_checkbox_profile.TabIndex = 30;
+            this.mother_checkbox_profile.Text = "Mother";
+            this.mother_checkbox_profile.UseVisualStyleBackColor = true;
+            this.mother_checkbox_profile.CheckedChanged += new System.EventHandler(this.profile_checkbox_profile_CheckStateChanged);
+            // 
             // cancel_button_profile
             // 
             this.cancel_button_profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.cancel_button_profile.Enabled = false;
             this.cancel_button_profile.FlatAppearance.BorderSize = 0;
             this.cancel_button_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel_button_profile.ForeColor = System.Drawing.Color.White;
-            this.cancel_button_profile.Location = new System.Drawing.Point(604, 396);
+            this.cancel_button_profile.Location = new System.Drawing.Point(592, 404);
             this.cancel_button_profile.Margin = new System.Windows.Forms.Padding(2);
             this.cancel_button_profile.Name = "cancel_button_profile";
             this.cancel_button_profile.Size = new System.Drawing.Size(119, 32);
@@ -1004,12 +1026,13 @@
             // 
             // save_button_profile
             // 
-            this.save_button_profile.BackColor = System.Drawing.Color.DodgerBlue;
+            this.save_button_profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.save_button_profile.Enabled = false;
             this.save_button_profile.FlatAppearance.BorderSize = 0;
             this.save_button_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save_button_profile.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.save_button_profile.ForeColor = System.Drawing.Color.White;
-            this.save_button_profile.Location = new System.Drawing.Point(604, 360);
+            this.save_button_profile.Location = new System.Drawing.Point(592, 360);
             this.save_button_profile.Margin = new System.Windows.Forms.Padding(2);
             this.save_button_profile.Name = "save_button_profile";
             this.save_button_profile.Size = new System.Drawing.Size(117, 32);
@@ -2051,16 +2074,16 @@
             // profile_panel
             // 
             this.profile_panel.BackColor = System.Drawing.Color.White;
+            this.profile_panel.Controls.Add(this.flowLayoutPanel1);
+            this.profile_panel.Controls.Add(this.edit_button_profile);
             this.profile_panel.Controls.Add(this.cancel_button_profile);
             this.profile_panel.Controls.Add(this.save_button_profile);
             this.profile_panel.Controls.Add(this.bloodtype_combobox_profile);
             this.profile_panel.Controls.Add(this.label109);
             this.profile_panel.Controls.Add(this.contactNumber_textbox_profile);
-            this.profile_panel.Controls.Add(this.mother_panel_profile);
             this.profile_panel.Controls.Add(this.label33);
             this.profile_panel.Controls.Add(this.label13);
             this.profile_panel.Controls.Add(this.address_textarea_profile);
-            this.profile_panel.Controls.Add(this.father_panel_profile);
             this.profile_panel.Controls.Add(this.firstname_textbox_profile);
             this.profile_panel.Controls.Add(this.suffix_textbox_profile);
             this.profile_panel.Controls.Add(this.label9);
@@ -2083,11 +2106,55 @@
             this.profile_panel.Size = new System.Drawing.Size(735, 467);
             this.profile_panel.TabIndex = 32;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.Controls.Add(this.father_panel_profile);
+            this.flowLayoutPanel1.Controls.Add(this.panel2);
+            this.flowLayoutPanel1.Controls.Add(this.mother_panel_profile);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(64, 212);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(496, 245);
+            this.flowLayoutPanel1.TabIndex = 55;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.father_checkbox_profile);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(490, 31);
+            this.panel1.TabIndex = 56;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.mother_checkbox_profile);
+            this.panel2.Location = new System.Drawing.Point(3, 123);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(490, 31);
+            this.panel2.TabIndex = 57;
+            // 
+            // edit_button_profile
+            // 
+            this.edit_button_profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.edit_button_profile.FlatAppearance.BorderSize = 0;
+            this.edit_button_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.edit_button_profile.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.edit_button_profile.ForeColor = System.Drawing.Color.White;
+            this.edit_button_profile.Location = new System.Drawing.Point(592, 172);
+            this.edit_button_profile.Margin = new System.Windows.Forms.Padding(2);
+            this.edit_button_profile.Name = "edit_button_profile";
+            this.edit_button_profile.Size = new System.Drawing.Size(117, 32);
+            this.edit_button_profile.TabIndex = 54;
+            this.edit_button_profile.Text = "Edit";
+            this.edit_button_profile.UseVisualStyleBackColor = false;
+            this.edit_button_profile.Click += new System.EventHandler(this.edit_button_profile_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Enabled = false;
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(199, 165);
+            this.label2.Location = new System.Drawing.Point(161, 168);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 19);
@@ -3171,7 +3238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(734, 524);
             this.ControlBox = false;
             this.Controls.Add(this.btn_Close);
@@ -3219,6 +3286,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.paid_datagridview_balance)).EndInit();
             this.profile_panel.ResumeLayout(false);
             this.profile_panel.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.baptism_panel.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.baptism_details_panel.ResumeLayout(false);
@@ -3473,5 +3545,9 @@
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Button btn_Close;
+        private System.Windows.Forms.Button edit_button_profile;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
