@@ -193,6 +193,16 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Newlyweds_32px {
+            get {
+                object obj = ResourceManager.GetObject("Newlyweds_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Report_Card_50px {
             get {
                 object obj = ResourceManager.GetObject("Report_Card_50px", resourceCulture);
@@ -223,9 +233,39 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Shellfish_32px {
+            get {
+                object obj = ResourceManager.GetObject("Shellfish_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap The_Pope_45 {
             get {
                 object obj = ResourceManager.GetObject("The Pope_45", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Water_32px {
+            get {
+                object obj = ResourceManager.GetObject("Water_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Water_45 {
+            get {
+                object obj = ResourceManager.GetObject("Water_45", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
