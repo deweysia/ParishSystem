@@ -423,6 +423,7 @@ namespace ParishSystem
             else if (A.Equals(CDB_button_menu)) { CDB_panel.BringToFront(); }
             else if (A.Equals(CRB_button_menu)) { CRB_panel.BringToFront(); }
             else if (A.Equals(application_button_menu)) { application_panel.BringToFront(); }
+            else if (A.Equals(library_button_menu)) {}
         }
     
         private void firstname_textbox_Click(object sender, EventArgs e)
