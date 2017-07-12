@@ -29,24 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SAD));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.home_button_menu = new System.Windows.Forms.Button();
@@ -582,72 +573,6 @@
             this.label3.TabIndex = 36;
             this.label3.Text = "PROFILES";
             // 
-            // searchBar
-            // 
-            this.searchBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBar.Location = new System.Drawing.Point(455, 33);
-            this.searchBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(252, 25);
-            this.searchBar.TabIndex = 1;
-            // 
-            // generalprofile_datagridview
-            // 
-            this.generalprofile_datagridview.AllowUserToAddRows = false;
-            this.generalprofile_datagridview.AllowUserToDeleteRows = false;
-            this.generalprofile_datagridview.AllowUserToResizeColumns = false;
-            this.generalprofile_datagridview.AllowUserToResizeRows = false;
-            this.generalprofile_datagridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.generalprofile_datagridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.generalprofile_datagridview.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.generalprofile_datagridview.BackgroundColor = System.Drawing.Color.White;
-            this.generalprofile_datagridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.generalprofile_datagridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.generalprofile_datagridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.generalprofile_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.generalprofile_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.generalprofile_datagridview.DefaultCellStyle = dataGridViewCellStyle10;
-            this.generalprofile_datagridview.EnableHeadersVisualStyles = false;
-            this.generalprofile_datagridview.Location = new System.Drawing.Point(24, 97);
-            this.generalprofile_datagridview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.generalprofile_datagridview.MultiSelect = false;
-            this.generalprofile_datagridview.Name = "generalprofile_datagridview";
-            this.generalprofile_datagridview.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.generalprofile_datagridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.generalprofile_datagridview.RowHeadersVisible = false;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.generalprofile_datagridview.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.generalprofile_datagridview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.generalprofile_datagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.generalprofile_datagridview.Size = new System.Drawing.Size(683, 300);
-            this.generalprofile_datagridview.TabIndex = 0;
-            this.generalprofile_datagridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.generalprofile_datagridview_CellClick);
-            // 
             // AddPNL
             // 
             this.AddPNL.BackColor = System.Drawing.Color.White;
@@ -1080,6 +1005,14 @@
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.generalprofile_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.generalprofile_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.generalprofile_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
@@ -1090,6 +1023,15 @@
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.generalprofile_datagridview.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.generalprofile_datagridview.DefaultCellStyle = dataGridViewCellStyle2;
             this.generalprofile_datagridview.EnableHeadersVisualStyles = false;
             this.generalprofile_datagridview.Location = new System.Drawing.Point(7, 40);
             this.generalprofile_datagridview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1107,6 +1049,8 @@
             this.generalprofile_datagridview.RowHeadersVisible = false;
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.generalprofile_datagridview.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.generalprofile_datagridview.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.generalprofile_datagridview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.generalprofile_datagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.generalprofile_datagridview.Size = new System.Drawing.Size(345, 335);
@@ -3642,6 +3586,14 @@
             this.panel1.Size = new System.Drawing.Size(694, 418);
             this.panel1.TabIndex = 38;
             // 
+            // metroRadioButton1
+            // 
+            this.metroRadioButton1.Location = new System.Drawing.Point(0, 0);
+            this.metroRadioButton1.Name = "metroRadioButton1";
+            this.metroRadioButton1.Size = new System.Drawing.Size(104, 24);
+            this.metroRadioButton1.TabIndex = 0;
+            this.metroRadioButton1.UseSelectable = true;
+            // 
             // panel7
             // 
             this.panel7.Location = new System.Drawing.Point(410, 177);
@@ -3769,8 +3721,8 @@
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.profiles_dataGridView_baptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.profiles_dataGridView_baptism.RowHeadersVisible = false;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.profiles_dataGridView_baptism.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.profiles_dataGridView_baptism.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.profiles_dataGridView_baptism.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.profiles_dataGridView_baptism.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.profiles_dataGridView_baptism.Size = new System.Drawing.Size(398, 341);
@@ -3793,6 +3745,16 @@
             // 
             // lastname_tooltip_profiles
             // 
+            this.lastname_tooltip_profiles.Active = false;
+            this.lastname_tooltip_profiles.ShowAlways = true;
+            // 
+            // middlename_tooltip_profiles
+            // 
+            this.middlename_tooltip_profiles.Active = false;
+            this.middlename_tooltip_profiles.ShowAlways = true;
+            // 
+            // imageListMenu
+            // 
             this.imageListMenu.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMenu.ImageStream")));
             this.imageListMenu.TransparentColor = System.Drawing.Color.Transparent;
             this.imageListMenu.Images.SetKeyName(0, "Home.png");
@@ -3802,15 +3764,11 @@
             this.imageListMenu.Images.SetKeyName(4, "Money.png");
             this.imageListMenu.Images.SetKeyName(5, "Resume_96px.png");
             this.imageListMenu.Images.SetKeyName(6, "Holy Bible_96px.png");
-            this.lastname_tooltip_profiles.Active = false;
-            this.lastname_tooltip_profiles.ShowAlways = true;
             // 
-            // middlename_tooltip_profiles
+            // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 15;
             this.bunifuElipse1.TargetControl = this;
-            this.middlename_tooltip_profiles.Active = false;
-            this.middlename_tooltip_profiles.ShowAlways = true;
             // 
             // SAD
             // 
@@ -3819,7 +3777,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(934, 545);
             this.ControlBox = false;
-            this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.home_panel);
