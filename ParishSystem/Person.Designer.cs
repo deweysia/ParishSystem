@@ -259,6 +259,7 @@
             this.approve_button_marriage = new System.Windows.Forms.Button();
             this.cancel_button_marriage = new System.Windows.Forms.Button();
             this.appointment_button_marriage = new System.Windows.Forms.Button();
+            this.btn_Close = new System.Windows.Forms.Button();
             this.father_panel_profile.SuspendLayout();
             this.mother_panel_profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.requirement_datagridview_baptism)).BeginInit();
@@ -450,8 +451,10 @@
             this.suffix_textbox_profile.Name = "suffix_textbox_profile";
             this.suffix_textbox_profile.Size = new System.Drawing.Size(40, 18);
             this.suffix_textbox_profile.TabIndex = 23;
-            this.suffix_textbox_profile.Text = "Suffix";
+            this.suffix_textbox_profile.Text = "suffix";
             this.suffix_textbox_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.suffix_textbox_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.suffix_textbox_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // lastname_textbox_profile
             // 
@@ -463,8 +466,10 @@
             this.lastname_textbox_profile.Name = "lastname_textbox_profile";
             this.lastname_textbox_profile.Size = new System.Drawing.Size(73, 18);
             this.lastname_textbox_profile.TabIndex = 24;
-            this.lastname_textbox_profile.Text = "Lastname";
+            this.lastname_textbox_profile.Text = "lastname";
             this.lastname_textbox_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lastname_textbox_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.lastname_textbox_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // middlename_textbox_profile
             // 
@@ -476,8 +481,10 @@
             this.middlename_textbox_profile.Name = "middlename_textbox_profile";
             this.middlename_textbox_profile.Size = new System.Drawing.Size(73, 18);
             this.middlename_textbox_profile.TabIndex = 22;
-            this.middlename_textbox_profile.Text = "Middlename";
+            this.middlename_textbox_profile.Text = "middlename";
             this.middlename_textbox_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.middlename_textbox_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.middlename_textbox_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // label7
             // 
@@ -615,8 +622,10 @@
             this.firstname_textbox_profile.Name = "firstname_textbox_profile";
             this.firstname_textbox_profile.Size = new System.Drawing.Size(131, 18);
             this.firstname_textbox_profile.TabIndex = 13;
-            this.firstname_textbox_profile.Text = "Firstname";
+            this.firstname_textbox_profile.Text = "firstname";
             this.firstname_textbox_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.firstname_textbox_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.firstname_textbox_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // label1
             // 
@@ -675,8 +684,10 @@
             this.suffix_textbox_father_profile.Name = "suffix_textbox_father_profile";
             this.suffix_textbox_father_profile.Size = new System.Drawing.Size(39, 16);
             this.suffix_textbox_father_profile.TabIndex = 23;
-            this.suffix_textbox_father_profile.Text = "Suffix";
+            this.suffix_textbox_father_profile.Text = "suffix";
             this.suffix_textbox_father_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.suffix_textbox_father_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.suffix_textbox_father_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // lastname_textbox_father_profile
             // 
@@ -688,8 +699,10 @@
             this.lastname_textbox_father_profile.Name = "lastname_textbox_father_profile";
             this.lastname_textbox_father_profile.Size = new System.Drawing.Size(73, 16);
             this.lastname_textbox_father_profile.TabIndex = 24;
-            this.lastname_textbox_father_profile.Text = "Lastname";
+            this.lastname_textbox_father_profile.Text = "lastname";
             this.lastname_textbox_father_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lastname_textbox_father_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.lastname_textbox_father_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // middlename_textbox_father_profile
             // 
@@ -701,8 +714,10 @@
             this.middlename_textbox_father_profile.Name = "middlename_textbox_father_profile";
             this.middlename_textbox_father_profile.Size = new System.Drawing.Size(73, 16);
             this.middlename_textbox_father_profile.TabIndex = 22;
-            this.middlename_textbox_father_profile.Text = "Middlename";
+            this.middlename_textbox_father_profile.Text = "middlename";
             this.middlename_textbox_father_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.middlename_textbox_father_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.middlename_textbox_father_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // label23
             // 
@@ -760,8 +775,10 @@
             this.firstname_textbox_father_profile.Name = "firstname_textbox_father_profile";
             this.firstname_textbox_father_profile.Size = new System.Drawing.Size(73, 16);
             this.firstname_textbox_father_profile.TabIndex = 13;
-            this.firstname_textbox_father_profile.Text = "Firstname";
+            this.firstname_textbox_father_profile.Text = "firstname";
             this.firstname_textbox_father_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.firstname_textbox_father_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.firstname_textbox_father_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // label27
             // 
@@ -863,8 +880,10 @@
             this.suffix_textbox_mother_profile.Name = "suffix_textbox_mother_profile";
             this.suffix_textbox_mother_profile.Size = new System.Drawing.Size(33, 16);
             this.suffix_textbox_mother_profile.TabIndex = 23;
-            this.suffix_textbox_mother_profile.Text = "Suffix";
+            this.suffix_textbox_mother_profile.Text = "suffix";
             this.suffix_textbox_mother_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.suffix_textbox_mother_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.suffix_textbox_mother_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // lastname_textbox_mother_profile
             // 
@@ -876,8 +895,10 @@
             this.lastname_textbox_mother_profile.Name = "lastname_textbox_mother_profile";
             this.lastname_textbox_mother_profile.Size = new System.Drawing.Size(73, 16);
             this.lastname_textbox_mother_profile.TabIndex = 24;
-            this.lastname_textbox_mother_profile.Text = "Lastname";
+            this.lastname_textbox_mother_profile.Text = "lastname";
             this.lastname_textbox_mother_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lastname_textbox_mother_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.lastname_textbox_mother_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // middlename_textbox_mother_profile
             // 
@@ -889,8 +910,10 @@
             this.middlename_textbox_mother_profile.Name = "middlename_textbox_mother_profile";
             this.middlename_textbox_mother_profile.Size = new System.Drawing.Size(73, 16);
             this.middlename_textbox_mother_profile.TabIndex = 22;
-            this.middlename_textbox_mother_profile.Text = "Middlename";
+            this.middlename_textbox_mother_profile.Text = "middlename";
             this.middlename_textbox_mother_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.middlename_textbox_mother_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.middlename_textbox_mother_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // label20
             // 
@@ -948,12 +971,15 @@
             this.firstname_textbox_mother_profile.Name = "firstname_textbox_mother_profile";
             this.firstname_textbox_mother_profile.Size = new System.Drawing.Size(73, 16);
             this.firstname_textbox_mother_profile.TabIndex = 13;
-            this.firstname_textbox_mother_profile.Text = "Firstname";
+            this.firstname_textbox_mother_profile.Text = "firstname";
             this.firstname_textbox_mother_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.firstname_textbox_mother_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.firstname_textbox_mother_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Gray;
             this.label8.Location = new System.Drawing.Point(135, 38);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
@@ -3124,6 +3150,23 @@
             this.appointment_button_marriage.Text = "Set up Appointment";
             this.appointment_button_marriage.UseVisualStyleBackColor = true;
             // 
+            // btn_Close
+            // 
+            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Close.BackgroundImage = global::ParishSystem.Properties.Resources.btn_closeImage;
+            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Close.FlatAppearance.BorderSize = 0;
+            this.btn_Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Close.Location = new System.Drawing.Point(705, 3);
+            this.btn_Close.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(27, 25);
+            this.btn_Close.TabIndex = 54;
+            this.btn_Close.UseVisualStyleBackColor = true;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            // 
             // Person
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -3131,6 +3174,7 @@
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(734, 524);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.confirmation_panel);
@@ -3428,5 +3472,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Button btn_Close;
     }
 }

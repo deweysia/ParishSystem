@@ -39,7 +39,7 @@ namespace ParishSystem
 
         private void cancel_button_Click(object sender, EventArgs e)
         {
-            this.Close();
+            load_Biodata();
         }
 
         #endregion
@@ -47,7 +47,7 @@ namespace ParishSystem
         #region Saves
         private void saveGeneralProfile(object sender, EventArgs e)
         {
-            char gender = 'z';
+            char gender = '0';
             if (gender_Male_radiobutton_profile.Checked == true) { gender = 'm'; }
             else if (gender_female_radiobutton_profile.Checked == true) { gender = 'f'; }
             dh.editGeneralProfile(
@@ -98,13 +98,13 @@ namespace ParishSystem
         #endregion
 
         #region Loads
-        private void load_Biodata()
+        public void load_Biodata()
         {
 
             DataTable TempDT = dh.getGeneralProfile(ProfileID);
             
             //LOAD PERSON
-            if (!(TempDT.Rows[0]["gender"] == null))
+            if (!(TempDT.Rows[0]["gender"].ToString() == "0"))
             {
                 if (TempDT.Rows[0]["gender"].ToString() == "m")
                     gender_Male_radiobutton_profile.Checked = true;
@@ -170,7 +170,7 @@ namespace ParishSystem
 
             DataTable dt = dh.getBaptismOf(ProfileID);
 
-            int ministerID = int.Parse(dt.Rows[0]["ministerID"].ToString());
+          
             int applicationID = int.Parse(dt.Rows[0]["applicationID"].ToString());
             int baptismID = int.Parse(dt.Rows[0]["baptismID"].ToString());
 
@@ -182,7 +182,7 @@ namespace ParishSystem
             remarks_textbox_baptism.Text = dt.Rows[0]["remarks"].ToString();
 
             //MessageBox.Show("loading");
-            dt = dh.getMinister(ministerID);
+            dt = dh.getMinister(int.Parse(dt.Rows[0]["ministerID"].ToString()));
 
             minister_combobox_baptism.Text = dt.Rows[0]["lastName"].ToString() + ", "
                 + dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["midName"].ToString()
@@ -360,6 +360,7 @@ namespace ParishSystem
 
         private void Person_Load(object sender, EventArgs e)
         {
+            load_Biodata();
             // if (dh.hasBaptismApplication(ProfileID)) { baptism_button.BackColor = Color.Green; } else { baptism_button.BackColor = Color.Red; }
             //if (dh.hasMarriageApplication(ProfileID)) { marriage_button.BackColor = Color.Green; } else { marriage_button.BackColor = Color.Red; }
             //if (dh.hasConfirmationApplication(ProfileID)) { confirmation_button.BackColor = Color.Green; } else { confirmation_button.BackColor = Color.Red; }
@@ -540,6 +541,32 @@ namespace ParishSystem
         private void godparent_panel_baptism_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Names_textbox_Leave(object sender, EventArgs e)
+        {
+            TextBox A = sender as TextBox;
+            string B = A.Name.Split('_')[0];
+            if (A.Text.Trim().Equals(""))
+            {
+                A.Text = B;
+                A.ForeColor = Color.Silver;
+            }
+        }
+
+        private void Names_textbox_MouseClick(object sender, MouseEventArgs e)
+        {
+            TextBox A = sender as TextBox;
+            if (A.Text.Equals(A.Name.Split('_')[0]))
+            {
+                A.Text = "";
+                A.ForeColor = Color.Black;
+            }
         }
     }
 }
