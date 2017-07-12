@@ -461,7 +461,13 @@ namespace ParishSystem
         }
 
 
-     
+
+
+        private void firstname_textbox_TextChanged(object sender, EventArgs e)
+        {
+            
+            
+        }
 
         private void Name_textbox_Profile_TextChanged(object sender, EventArgs e)
         {
