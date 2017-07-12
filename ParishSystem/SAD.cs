@@ -452,7 +452,7 @@ namespace ParishSystem
             else if (A.Equals(CDB_button_menu)) { CDB_panel.BringToFront(); }
             else if (A.Equals(CRB_button_menu)) { CRB_panel.BringToFront(); }
             else if (A.Equals(application_button_menu)) { application_panel.BringToFront(); }
-            else if (A.Equals(library_button_menu)) {}
+            else if (A.Equals(sacrament_button_menu)) { sacrament_panel.BringToFront(); }
         }
     
         private void firstname_textbox_Click(object sender, EventArgs e)
@@ -483,6 +483,28 @@ namespace ParishSystem
             {
                 save_button_profile.Enabled = false;
             }
+        }
+
+        private void libraryConfirmationButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void libraryBaptismButton_Click(object sender, EventArgs e)
+        {
+            DataTable dt = dh.getBaptisms();
+            //dgvSacraments.DataSource = dt;
+            metroGrid1.DataSource = dt;
+        }
+
+        private void generalprofile_datagridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

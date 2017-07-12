@@ -271,6 +271,7 @@
     <Content Include="Resources\btn_closeImage.png" />
     <Content Include="Resources\btn_maxImage.png" />
     <Content Include="Resources\btn_minImage.png" />
+    <None Include="Resources\Water_45.png" />
     <None Include="Resources\The Pope_45.png" />
     <None Include="Resources\Initiate Money Transfer_45.png" />
     <None Include="Resources\Money_45.png" />

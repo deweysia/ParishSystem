@@ -34,7 +34,7 @@ INSERT into BloodDonationRetrieval(bloodDonationID, claimDate, firstName, midNam
 INSERT INTO Sponsor(sacramentID, firstName, midName, lastName, suffix, sacramentType, residence, gender) VALUES(1, "James", "Sine", "Keeler", "Sr.", "Baptism", "Winston Salem, New York", "m");
 INSERT INTO Sponsor(sacramentID, firstName, midName, lastName, suffix, sacramentType, residence, gender) VALUES(1, "Randall ", "Worthy", "Villegas", "", "Marriage", "4976 Nixon Avenue Chattanooga", "m");
 INSERT INTO Sponsor(sacramentID, firstName, midName, lastName, suffix, sacramentType, residence, gender) VALUES(1, "Leah ", "Sancho", "Morales", "", "Confirmation", "Woodbridge Lane Detroit", "f");
-INSERT INTO Sponsor(sacramentID, firstName, midName, lastName, suffix, sacramentType, residence, gende)  VALUES(1, "Alan", "Olson", "Sidney", "Jr.", "Baptism", "Ocala Street Orlando", "m");
+INSERT INTO Sponsor(sacramentID, firstName, midName, lastName, suffix, sacramentType, residence, gender)  VALUES(1, "Alan", "Olson", "Sidney", "Jr.", "Baptism", "Ocala Street Orlando", "m");
 INSERT INTO Sponsor(sacramentID, firstName, midName, lastName, suffix, sacramentType, residence, gender) VALUES(1, "Bobbie ", "Grants", "Thomason", "", "Marriage", "360 Mattson Street", "f");
 
 
@@ -55,8 +55,8 @@ INSERT INTO Schedule(scheduleType, startDateTime, endDateTime, details, status, 
 
 # INSERTING APPOINTMENT 
 
-INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(1, 1, 1, "APPOINTMENT TO BE HELD")
-INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(2, 1, 2, "APPOINTMENT TO BE HELD")
-INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(3, 3, 3, "APPOINTMENT FINISHED")
-INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(4, 2, 4, "APPOINTMENT TO BE HELD")
-INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(5, 2, 5, "APPOINTMENT CANCELLED")
+INSERT INTO Appointment(profileID, ministerID, scheduleID) VALUES(1, 1, 1);
+INSERT INTO Appointment(profileID, ministerID, scheduleID) VALUES(2, 1, 2);
+INSERT INTO Appointment(profileID, ministerID, scheduleID) VALUES(3, 3, 3);
+INSERT INTO Appointment(profileID, ministerID, scheduleID) VALUES(4, 2, 4);
+INSERT INTO Appointment(profileID, ministerID, scheduleID) VALUES(5, 2, 5);
