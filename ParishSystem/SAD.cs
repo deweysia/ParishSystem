@@ -508,9 +508,9 @@ namespace ParishSystem
 
         private void libraryMarriageButton_Click(object sender, EventArgs e)
         {
-            DataTable dt = dh.getMarriage();
+            
             //dgvSacraments.DataSource = dt;
-            metroGrid1.DataSource = dt;
+            
         }
 
         private void generalprofile_datagridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
