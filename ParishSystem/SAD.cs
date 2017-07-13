@@ -485,10 +485,7 @@ namespace ParishSystem
             }
         }
 
-        private void libraryConfirmationButton_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void label8_Click(object sender, EventArgs e)
         {
@@ -502,9 +499,25 @@ namespace ParishSystem
             metroGrid1.DataSource = dt;
         }
 
+        private void libraryConfirmationButton_Click(object sender, EventArgs e)
+        {
+            DataTable dt = dh.getConfirmations();
+            //dgvSacraments.DataSource = dt;
+            metroGrid1.DataSource = dt;
+        }
+
+        private void libraryMarriageButton_Click(object sender, EventArgs e)
+        {
+            DataTable dt = dh.getMarriage();
+            //dgvSacraments.DataSource = dt;
+            metroGrid1.DataSource = dt;
+        }
+
         private void generalprofile_datagridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+        
     }
 }

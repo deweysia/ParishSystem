@@ -1721,6 +1721,7 @@ namespace ParishSystem
                 + "JOIN GeneralProfile ON GeneralProfile.profileID = Application.profileID "
                 + "WHERE YEAR(marriageDate) = '" + date.ToString("yyyy") + "'";
 
+            Console.WriteLine(q);
             DataTable dt = runQuery(q);
 
             return dt;
