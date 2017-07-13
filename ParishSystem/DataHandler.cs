@@ -756,6 +756,68 @@ namespace ParishSystem
                                          =============================================================
         */
         #region
+
+        public bool addSacramentIncome(int applicationID, int itemTypeID, double price, string remarks)
+        {
+            string q = "INSERT INTO SacramentIncome(applicationID, itemTypeID, price, remarks, sacramentIncomeDateTime) VALUES ('" 
+                + applicationID + "', '" + itemTypeID + "', '" + price + "', '" + remarks + "', NOW())";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public DataTable getSacramentIncome(int sacramentIncomeID)
+        {
+            string q = "SELECT * FROM SacramentIncome WHERE = " + sacramentIncomeID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getSacramentIncomePaid(int sacramentIncomeID)
+        {
+            throw new Exception();
+            return new DataTable();
+        }
+
+        public DataTable getSacramentIncomesUnpaid()
+        {
+            throw new Exception();
+            return new DataTable();
+        } 
+
+        public bool addPayment(int sacramentIncomeID, double paymentAmount, int ORnum, string remarks, DateTime paymentDateTime)
+        {
+            string q = "INSERT INTO Payment(sacramentIncomeID, paymentAmount, ORnum, remarks, paymentDateTime) VALUES ('" 
+                + sacramentIncomeID + "', '" + paymentAmount + "', '" + ORnum + "', '" + remarks + "', NOW())";
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public double getTotalPaymentOfSacramentIncome(int sacramentIncomeID)
+        {
+            //AS sum
+            string q = "SELECT SUM(paymentAmount) AS sum FROM Payment WHERE sacramentIncomeID = " + sacramentIncomeID;
+
+            DataTable dt = runQuery(q);
+
+            return double.Parse(dt.Rows[0]["sum"].ToString());
+        }
+
+        public double getBalanceOfSacramentIncome(int sacramentIncomeID)
+        {
+            DataTable dt = getSacramentIncome(sacramentIncomeID);
+            double price = double.Parse(dt.Rows[0]["price"].ToString());
+
+            return price - getTotalPaymentOfSacramentIncome(sacramentIncomeID);
+        }
+
+
+
+
         public bool addIncome(int sourceID, string sourceType, string bookType, string remarks)
         {
             string q = "INSERT INTO Income(sourceID, sourceType, bookType, remarks, incomeDateTime) VALUES ('"
@@ -1116,23 +1178,66 @@ namespace ParishSystem
 
         /*
                                          =============================================================
-                                             ================ APPOINTMENT TABLE =================
+                                             ================ APPLICANT TABLE =================
                                          =============================================================
         */
 
 
-        public bool addApplication(int profileID, string applicationType)
+        public bool addNewApplicant(int profileID, string sacramentType)
         {
-            string q = "INSERT INTO Application(profileID, applicationType) VALUES ('" + profileID + "', '" + applicationType + "')";
+            addApplication(sacramentType);
+            int applicationID = getLatestID("Application", "applicationID");
+            bool success = addApplicant(profileID, applicationID);
+            return success;
+        }
+
+        public bool addApplicant(int profileID, int applicationID)
+        {
+            string q = "INSERT INTO Applicant(profileID, applicationID) VALUES ("+ profileID + ", "+ applicationID + ")";
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public bool deleteApplicant(int applicantID)
+        {
+            string q = "DELETE FROM Applicant WHERE applicantID = " + applicantID;
 
             bool success = runNonQuery(q);
 
             return success;
         }
 
-        public bool editApplication(int applicationID, int profileID, string sacramentType)
+        /*
+                                         =============================================================
+                                             ================ APPLICATION TABLE =================
+                                         =============================================================
+        */
+
+
+
+        public bool addApplication(string sacramentType)
         {
-            string q = "UPDATE Application SET profileID = '" + profileID + "', sacramentType = '" + sacramentType + "' WHERE applicationID = '" + applicationID + "'";
+            string q = "INSERT INTO Application(sacramentType, status) VALUES('" + sacramentType + "', 'Pending')";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public bool addApplication(string sacramentType, string status)
+        {
+            string q = "INSERT INTO Application(sacramentType, status) VALUES('" + sacramentType + "', '" + status + "')";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+
+        public bool editApplication(int applicationID, string status)
+        {
+            string q = "UPDATE Application SET status = '" + status + "' WHERE applicationID = '" + applicationID + "'";
 
             bool success = runNonQuery(q);
 
@@ -1150,7 +1255,7 @@ namespace ParishSystem
 
         public bool isApprovedApplication(int applicationID)
         {
-            return getApplicationStatus(applicationID).ToUpper() == "ACTIVE";
+            return getApplicationStatus(applicationID).ToUpper() == "APPROVED";
 
         }
 
