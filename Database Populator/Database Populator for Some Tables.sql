@@ -31,7 +31,7 @@ INSERT into BloodDonationRetrieval(claimDate, firstName, midName, lastName, suff
 
 
 /* ======================================================================================================= */ 
-/*                                   		  NEW THINGS                                                   */
+/*                                   		  PREVIOUSLY ADDED                                             */
 /* ======================================================================================================= */ 
 
 
@@ -60,22 +60,72 @@ INSERT INTO Schedule(scheduleType, startDateTime, endDateTime, details, status, 
 
 /*Inserting APPOINTMENT */
 
-INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(1, 1, 1, "APPOINTMENT TO BE HELD")
-INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(2, 1, 2, "APPOINTMENT TO BE HELD")
-INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(3, 3, 3, "APPOINTMENT FINISHED")
-INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(4, 2, 4, "APPOINTMENT TO BE HELD")
-INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(5, 2, 5, "APPOINTMENT CANCELLED")
+INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(1, 1, 1, "APPOINTMENT TO BE HELD");
+INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(2, 1, 2, "APPOINTMENT TO BE HELD");
+INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(3, 3, 3, "APPOINTMENT FINISHED");
+INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(4, 2, 4, "APPOINTMENT TO BE HELD");
+INSERT INTO Appointment(profileID, ministerID, scheduleID,) VALUES(5, 2, 5, "APPOINTMENT CANCELLED");
 
 
 
 
 
+/* ======================================================================================================= */ 
+/*                                   		  NEW THINGS     JULY 13th                                     */
+/* ======================================================================================================= */ 
+
+/* INSERTING APPLICATION */
+INSERT INTO Applicant(profileID, applicationID) VALUES(1,2);
+INSERT INTO Applicant(profileID, applicationID) VALUES(2,1);
+INSERT INTO Applicant(profileID, applicationID) VALUES(3,1);
+INSERT INTO Applicant(profileID, applicationID) VALUES(4,3);
+INSERT INTO Applicant(profileID, applicationID) VALUES(3,5);
+INSERT INTO Applicant(profileID, applicationID) VALUES(6,5);
+INSERT INTO Applicant(profileID, applicationID) VALUES(7,4);
+INSERT INTO Applicant(profileID, applicationID) VALUES(2,5);
+INSERT INTO Applicant(profileID, applicationID) VALUES(3,6);
+INSERT INTO Applicant(profileID, applicationID) VALUES(5,10);
+INSERT INTO Applicant(profileID, applicationID) VALUES(1,10);
+INSERT INTO Applicant(profileID, applicationID) VALUES(6,7);
+INSERT INTO Applicant(profileID, applicationID) VALUES(1,8);
+INSERT INTO Applicant(profileID, applicationID) VALUES(4,9);
 
 
 
+/* INSERTING APPLICATION */
+INSERT INTO Application(sacramentType, status) VALUES("M","Approved"); 	
+INSERT INTO Application(sacramentType, status) VALUES("C","Pending");           
+INSERT INTO Application(sacramentType, status) VALUES("C","Pending");           
+INSERT INTO Application(sacramentType, status) VALUES("B","Rejected");          
+INSERT INTO Application(sacramentType, status) VALUES("M","Cancelled");         
+INSERT INTO Application(sacramentType, status) VALUES("B","Pending"); 
+INSERT INTO Application(sacramentType, status) VALUES("B","Approved"); 
+INSERT INTO Application(sacramentType, status) VALUES("C","Approved"); 
+INSERT INTO Application(sacramentType, status) VALUES("B","Cancelled"); 
+INSERT INTO Application(sacramentType, status) VALUES("M","Approved");         
+INSERT INTO Application(sacramentType, status) VALUES("C","Approved"); 
 
 
 
+/* INSERTING BAPTISM */
+INSERT INTO Baptism(applicationID, ministerID, registryNumber, recordNumber, pageNumber, remarks, baptismDate) VALUES(4, 2, "BP31", "B003", "PAGE21", "Incomplete Requirements", "2017-07-16");
+INSERT INTO Baptism(applicationID, ministerID, registryNumber, recordNumber, pageNumber, remarks, baptismDate) VALUES(6, 2, "BP47", "B005", "PAGE30", "Waiting for approval", "2017-12-24");
+INSERT INTO Baptism(applicationID, ministerID, registryNumber, recordNumber, pageNumber, remarks, baptismDate) VALUES(7, 3, "BP120", "B030", "PAGE22", "", "2012-05-10");
+INSERT INTO Baptism(applicationID, ministerID, registryNumber, recordNumber, pageNumber, remarks, baptismDate) VALUES(8, 3, "BP99", "B010", "PAGE21", "", "2017-05-25");
+
+
+/* INSERTING CONFIRMATION */
+
+INSERT INTO Confirmation(applicationID, ministerID, registryNumber, recordNumber, pageNumber, remarks, confirmationDate) VALUES(2, 1, "CM15", "C003", "PAGE2", "", "2017-07-30");
+INSERT INTO Confirmation(applicationID, ministerID, registryNumber, recordNumber, pageNumber, remarks, confirmationDate) VALUES(3, 2, "CM61", "C032", "PAGE51", "Waiting for approval", "207-11-01");
+INSERT INTO Confirmation(applicationID, ministerID, registryNumber, recordNumber, pageNumber, remarks, confirmationDate) VALUES(8, 3, "CM17", "C012", "PAGE22", "", "2017-10-18");
+INSERT INTO Confirmation(applicationID, ministerID, registryNumber, recordNumber, pageNumber, remarks, confirmationDate) VALUES(11, 4, "CM381", "C003", "PAGE10", "", "2006-06-01");
+
+
+/* INSERTING MARRIAGE */ /*yawa this*/
+INSERT INTO Marriage(applicationID, ministerID, registryNumber, recordNumber, pageNumber, licenseDate, remarks, marriageDate, status) VALUES(1, 4, "MR10", "M103", "PAGE90", "2017-08-01", "", "2017-10-18", "active");
+INSERT INTO Marriage(applicationID, ministerID, registryNumber, recordNumber, pageNumber, licenseDate, remarks, marriageDate, status) VALUES(5, 2, "MR31", "M050", "PAGE21", "2004-04-10", "", "2004-04-11", "Groom Widowed");
+INSERT INTO Marriage(applicationID, ministerID, registryNumber, recordNumber, pageNumber, licenseDate, remarks, marriageDate, status) VALUES(10, 3, "MR92", "M006", "PAGE12", "2009-01-12", "", "2009-02-14", "active");
 
 
 
