@@ -22,7 +22,7 @@ USE `sad2` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sad2`.`application` (
   `applicationID` INT(11) NOT NULL AUTO_INCREMENT,
-  `applicationType` VARCHAR(45) NULL DEFAULT NULL,
+  `sacramentType` VARCHAR(45) NULL DEFAULT NULL,
   `status` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`applicationID`))
 ENGINE = InnoDB
