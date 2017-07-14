@@ -2509,6 +2509,35 @@ namespace ParishSystem
             return dt;
         }
         
+        public void addBloodDonation(int profleID, int quantity,string eventName,DateTime addedon)
+        {
+            // name is unique so ok lng
+        }
+        public void editBloodDonation(int profleID, int quantity, string eventName, DateTime addedon)
+        {
+            //edit donation
+        }
+
+        public DataTable getBloodDonations(int profleID)
+        {
+            // add quantity here.. change db and add quantity in query
+
+             string q ="SELECT bloodDonationID, eventName FROM sad2.blooddonation join blooddonationevent on blooddonation.bloodDonationEventID = blooddonationevent.bloodDonationEventID where profileID ="+ profleID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+
+        }
+        public DataTable getBloodlettingEvents()
+        {
+            string q = "SELECT * FROM BloodDonationEvent"; //where status is not finished
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+      
     }
 
 }

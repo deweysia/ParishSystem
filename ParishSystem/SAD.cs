@@ -153,6 +153,7 @@ namespace ParishSystem
             generalprofile_datagridview.Columns["address"].Visible = false;
             generalprofile_datagridview.Columns["birthplace"].Visible = false;
             generalprofile_datagridview.Columns["bloodtype"].Visible = false;
+            generalprofile_datagridview.Columns["Name"].HeaderText = "";
             generalprofile_datagridview.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
@@ -211,6 +212,7 @@ namespace ParishSystem
         {//open person complete profile
            
             Form person = new Person(lastGeneralProfile, dh);
+            person.Location = this.Location;
             person.ShowDialog();
           
            

@@ -527,6 +527,7 @@ namespace ParishSystem
             marriage_panel.Visible = false;
             balance_panel.Visible = false;
             bloodletting_panel.Visible = true;
+            load_bloodletting();
         }
 
         private void baptism_menu_button_Click(object sender, EventArgs e)
@@ -690,5 +691,77 @@ namespace ParishSystem
                 A.ForeColor = Color.Black;
             }
         }
+        #region
+        //--------------bloodletting--------------------//
+       
+        private void reloadBloodlettingDataGridView()
+        {
+            donation_datagridview_bloodletting.DataSource = dh.getBloodDonations(ProfileID);
+            donation_datagridview_bloodletting.Columns["bloodDonationID"].Visible = false;
+            totalDonation_label_bloodletting.Text = dh.getTotalBloodDonationOf(ProfileID).ToString();
+            quantityDonation_numericupdown_bloodletting.Value = 0;
+            bloodDonationEvent_combobox_bloodletting.Text = "";
+        }
+
+        private void load_bloodletting()
+        {
+            reloadBloodlettingDataGridView();
+            bloodDonationEvent_combobox_bloodletting.Items.Clear();
+            foreach (DataRow row in dh.getBloodlettingEvents().Rows)
+            {
+
+                bloodDonationEvent_combobox_bloodletting.Items.Add(row["eventName"].ToString());
+            }
+
+        }
+
+        private void add_button_bloodletting_Click(object sender, EventArgs e)// add edit 
+        {
+            if (add_button_bloodletting.Text.Equals("Add"))
+            {
+                dh.addBloodDonation(ProfileID,
+                                    int.Parse(quantityDonation_numericupdown_bloodletting.Value.ToString()),
+                                    bloodDonationEvent_combobox_bloodletting.Text,DateTime.Now);
+                reloadBloodlettingDataGridView();
+            }
+            else if (add_button_bloodletting.Text.Equals("Edit"))
+            {
+                dh.editBloodDonation(ProfileID,
+                                    int.Parse(quantityDonation_numericupdown_bloodletting.Value.ToString()),
+                                    bloodDonationEvent_combobox_bloodletting.Text, DateTime.Now);
+                reloadBloodlettingDataGridView();
+                add_button_bloodletting.Text = "Add";
+                //add edit in button        
+
+
+            }
+            
+        }
+        
+        
+        private void delete_button_bloodletting_Click(object sender, EventArgs e)// delete
+        {
+            dh.deleteBloodDonation(int.Parse(donation_datagridview_bloodletting.SelectedRows[0].Cells["bloodDonationID"].ToString()));
+            reloadBloodlettingDataGridView();
+            add_button_bloodletting.Text = "Add";
+
+        }
+
+
+        //donation_datagridview_bloodletting
+
+
+
+
+        //donation_datagridview_bloodletting_CellClick
+        #endregion
+
+        private void donation_datagridview_bloodletting_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            quantityDonation_numericupdown_bloodletting.Value = int.Parse(donation_datagridview_bloodletting.SelectedRows[0].Cells["quantity"].ToString());
+            bloodDonationEvent_combobox_bloodletting.Text = donation_datagridview_bloodletting.SelectedRows[0].Cells["eventName"].ToString();
+            add_button_bloodletting.Text="Edit";
+        }
+
     }
 }
