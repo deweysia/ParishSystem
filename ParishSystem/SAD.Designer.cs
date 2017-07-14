@@ -472,7 +472,7 @@
             this.sacrament_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sacrament_button_menu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sacrament_button_menu.ForeColor = System.Drawing.Color.White;
-            this.sacrament_button_menu.Image = global::ParishSystem.Properties.Resources.Holy_Bible_45;
+            this.sacrament_button_menu.Image = global::ParishSystem.Properties.Resources.HolyBible_45;
             this.sacrament_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.sacrament_button_menu.Location = new System.Drawing.Point(3, 172);
             this.sacrament_button_menu.Name = "sacrament_button_menu";
