@@ -419,7 +419,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::ParishSystem.Properties.Resources.The_Pope_45;
+            this.pictureBox5.Image = global::ParishSystem.Properties.Resources.ThePope_45;
             this.pictureBox5.Location = new System.Drawing.Point(1, 6);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox5.Name = "pictureBox5";
@@ -491,7 +491,7 @@
             this.bloodletting_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bloodletting_button_menu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bloodletting_button_menu.ForeColor = System.Drawing.Color.White;
-            this.bloodletting_button_menu.Image = global::ParishSystem.Properties.Resources.Heart_with_Pulse_45px;
+            this.bloodletting_button_menu.Image = global::ParishSystem.Properties.Resources.HeartwithPulse_45px;
             this.bloodletting_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bloodletting_button_menu.Location = new System.Drawing.Point(3, 233);
             this.bloodletting_button_menu.Name = "bloodletting_button_menu";
@@ -547,7 +547,7 @@
             this.CDB_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CDB_button_menu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CDB_button_menu.ForeColor = System.Drawing.Color.White;
-            this.CDB_button_menu.Image = global::ParishSystem.Properties.Resources.Initiate_Money_Transfer_45;
+            this.CDB_button_menu.Image = global::ParishSystem.Properties.Resources.InitiateMoneyTransfer_45;
             this.CDB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CDB_button_menu.Location = new System.Drawing.Point(3, 416);
             this.CDB_button_menu.Name = "CDB_button_menu";

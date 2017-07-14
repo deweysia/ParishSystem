@@ -113,7 +113,7 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Heart_with_Pulse_45px {
+        internal static System.Drawing.Bitmap HeartwithPulse_45px {
             get {
                 object obj = ResourceManager.GetObject("Heart with Pulse_45px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -163,9 +163,9 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Initiate_Money_Transfer_45 {
+        internal static System.Drawing.Bitmap InitiateMoneyTransfer_45 {
             get {
-                object obj = ResourceManager.GetObject("Initiate Money Transfer_45", resourceCulture);
+                object obj = ResourceManager.GetObject("Initiate MoneyTransfer_45", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +243,9 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap The_Pope_45 {
+        internal static System.Drawing.Bitmap ThePope_45 {
             get {
-                object obj = ResourceManager.GetObject("The Pope_45", resourceCulture);
+                object obj = ResourceManager.GetObject("ThePope_45", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
