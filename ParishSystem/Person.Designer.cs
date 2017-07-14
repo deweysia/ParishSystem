@@ -79,7 +79,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.mother_checkbox_profile = new System.Windows.Forms.CheckBox();
-            this.cancel_button_profile = new System.Windows.Forms.Button();
             this.save_button_profile = new System.Windows.Forms.Button();
             this.remarks_textbox_baptism = new System.Windows.Forms.TextBox();
             this.record_textbox_baptism = new System.Windows.Forms.TextBox();
@@ -465,6 +464,7 @@
             this.suffix_textbox_profile.Text = "suffix";
             this.suffix_textbox_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.suffix_textbox_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.suffix_textbox_profile.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
             this.suffix_textbox_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // lastname_textbox_profile
@@ -481,6 +481,7 @@
             this.lastname_textbox_profile.Text = "lastname";
             this.lastname_textbox_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.lastname_textbox_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.lastname_textbox_profile.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
             this.lastname_textbox_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // middlename_textbox_profile
@@ -497,6 +498,7 @@
             this.middlename_textbox_profile.Text = "middlename";
             this.middlename_textbox_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.middlename_textbox_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.middlename_textbox_profile.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
             this.middlename_textbox_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // label7
@@ -643,6 +645,7 @@
             this.firstname_textbox_profile.Text = "firstname";
             this.firstname_textbox_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.firstname_textbox_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.firstname_textbox_profile.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
             this.firstname_textbox_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // label1
@@ -659,7 +662,7 @@
             // 
             // father_panel_profile
             // 
-            this.father_panel_profile.BackColor = System.Drawing.Color.White;
+            this.father_panel_profile.BackColor = System.Drawing.Color.Transparent;
             this.father_panel_profile.Controls.Add(this.suffix_textbox_father_profile);
             this.father_panel_profile.Controls.Add(this.lastname_textbox_father_profile);
             this.father_panel_profile.Controls.Add(this.middlename_textbox_father_profile);
@@ -678,6 +681,7 @@
             this.father_panel_profile.Name = "father_panel_profile";
             this.father_panel_profile.Size = new System.Drawing.Size(491, 79);
             this.father_panel_profile.TabIndex = 30;
+            this.father_panel_profile.Visible = false;
             // 
             // suffix_textbox_father_profile
             // 
@@ -692,6 +696,7 @@
             this.suffix_textbox_father_profile.Text = "suffix";
             this.suffix_textbox_father_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.suffix_textbox_father_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.suffix_textbox_father_profile.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
             this.suffix_textbox_father_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // lastname_textbox_father_profile
@@ -707,6 +712,7 @@
             this.lastname_textbox_father_profile.Text = "lastname";
             this.lastname_textbox_father_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.lastname_textbox_father_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.lastname_textbox_father_profile.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
             this.lastname_textbox_father_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // middlename_textbox_father_profile
@@ -722,6 +728,7 @@
             this.middlename_textbox_father_profile.Text = "middlename";
             this.middlename_textbox_father_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.middlename_textbox_father_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.middlename_textbox_father_profile.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
             this.middlename_textbox_father_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // label23
@@ -783,6 +790,7 @@
             this.firstname_textbox_father_profile.Text = "firstname";
             this.firstname_textbox_father_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.firstname_textbox_father_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.firstname_textbox_father_profile.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
             this.firstname_textbox_father_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // label27
@@ -821,6 +829,7 @@
             // father_checkbox_profile
             // 
             this.father_checkbox_profile.AutoSize = true;
+            this.father_checkbox_profile.Enabled = false;
             this.father_checkbox_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.father_checkbox_profile.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.father_checkbox_profile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
@@ -831,11 +840,11 @@
             this.father_checkbox_profile.TabIndex = 30;
             this.father_checkbox_profile.Text = "Father";
             this.father_checkbox_profile.UseVisualStyleBackColor = true;
-            this.father_checkbox_profile.CheckStateChanged += new System.EventHandler(this.profile_checkbox_profile_CheckStateChanged);
+            this.father_checkbox_profile.CheckedChanged += new System.EventHandler(this.profile_checkbox_profile_CheckStateChanged);
             // 
             // mother_panel_profile
             // 
-            this.mother_panel_profile.BackColor = System.Drawing.Color.White;
+            this.mother_panel_profile.BackColor = System.Drawing.Color.Transparent;
             this.mother_panel_profile.Controls.Add(this.suffix_textbox_mother_profile);
             this.mother_panel_profile.Controls.Add(this.lastname_textbox_mother_profile);
             this.mother_panel_profile.Controls.Add(this.middlename_textbox_mother_profile);
@@ -853,6 +862,7 @@
             this.mother_panel_profile.Name = "mother_panel_profile";
             this.mother_panel_profile.Size = new System.Drawing.Size(491, 81);
             this.mother_panel_profile.TabIndex = 31;
+            this.mother_panel_profile.Visible = false;
             // 
             // suffix_textbox_mother_profile
             // 
@@ -867,6 +877,7 @@
             this.suffix_textbox_mother_profile.Text = "suffix";
             this.suffix_textbox_mother_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.suffix_textbox_mother_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.suffix_textbox_mother_profile.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
             this.suffix_textbox_mother_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // lastname_textbox_mother_profile
@@ -882,6 +893,7 @@
             this.lastname_textbox_mother_profile.Text = "lastname";
             this.lastname_textbox_mother_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.lastname_textbox_mother_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.lastname_textbox_mother_profile.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
             this.lastname_textbox_mother_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // middlename_textbox_mother_profile
@@ -897,6 +909,7 @@
             this.middlename_textbox_mother_profile.Text = "middlename";
             this.middlename_textbox_mother_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.middlename_textbox_mother_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.middlename_textbox_mother_profile.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
             this.middlename_textbox_mother_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // label20
@@ -958,6 +971,7 @@
             this.firstname_textbox_mother_profile.Text = "firstname";
             this.firstname_textbox_mother_profile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.firstname_textbox_mother_profile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
+            this.firstname_textbox_mother_profile.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
             this.firstname_textbox_mother_profile.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // label8
@@ -996,6 +1010,7 @@
             // mother_checkbox_profile
             // 
             this.mother_checkbox_profile.AutoSize = true;
+            this.mother_checkbox_profile.Enabled = false;
             this.mother_checkbox_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mother_checkbox_profile.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mother_checkbox_profile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
@@ -1007,22 +1022,6 @@
             this.mother_checkbox_profile.Text = "Mother";
             this.mother_checkbox_profile.UseVisualStyleBackColor = true;
             this.mother_checkbox_profile.CheckedChanged += new System.EventHandler(this.profile_checkbox_profile_CheckStateChanged);
-            // 
-            // cancel_button_profile
-            // 
-            this.cancel_button_profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.cancel_button_profile.Enabled = false;
-            this.cancel_button_profile.FlatAppearance.BorderSize = 0;
-            this.cancel_button_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel_button_profile.ForeColor = System.Drawing.Color.White;
-            this.cancel_button_profile.Location = new System.Drawing.Point(592, 404);
-            this.cancel_button_profile.Margin = new System.Windows.Forms.Padding(2);
-            this.cancel_button_profile.Name = "cancel_button_profile";
-            this.cancel_button_profile.Size = new System.Drawing.Size(119, 32);
-            this.cancel_button_profile.TabIndex = 53;
-            this.cancel_button_profile.Text = "Cancel";
-            this.cancel_button_profile.UseVisualStyleBackColor = false;
-            this.cancel_button_profile.Click += new System.EventHandler(this.cancel_button_Click);
             // 
             // save_button_profile
             // 
@@ -1353,7 +1352,6 @@
             this.sponsor_panel_confirmation.Name = "sponsor_panel_confirmation";
             this.sponsor_panel_confirmation.Size = new System.Drawing.Size(611, 91);
             this.sponsor_panel_confirmation.TabIndex = 56;
-            this.sponsor_panel_confirmation.Paint += new System.Windows.Forms.PaintEventHandler(this.sponsor_panel_confirmation_Paint);
             // 
             // label19
             // 
@@ -1458,7 +1456,6 @@
             this.label65.Size = new System.Drawing.Size(69, 17);
             this.label65.TabIndex = 27;
             this.label65.Text = "Residence";
-            this.label65.Click += new System.EventHandler(this.label65_Click);
             // 
             // label66
             // 
@@ -2073,10 +2070,9 @@
             // 
             // profile_panel
             // 
-            this.profile_panel.BackColor = System.Drawing.Color.White;
+            this.profile_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.profile_panel.Controls.Add(this.flowLayoutPanel1);
             this.profile_panel.Controls.Add(this.edit_button_profile);
-            this.profile_panel.Controls.Add(this.cancel_button_profile);
             this.profile_panel.Controls.Add(this.save_button_profile);
             this.profile_panel.Controls.Add(this.bloodtype_combobox_profile);
             this.profile_panel.Controls.Add(this.label109);
@@ -2140,7 +2136,7 @@
             this.edit_button_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.edit_button_profile.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.edit_button_profile.ForeColor = System.Drawing.Color.White;
-            this.edit_button_profile.Location = new System.Drawing.Point(592, 172);
+            this.edit_button_profile.Location = new System.Drawing.Point(592, 402);
             this.edit_button_profile.Margin = new System.Windows.Forms.Padding(2);
             this.edit_button_profile.Name = "edit_button_profile";
             this.edit_button_profile.Size = new System.Drawing.Size(117, 32);
@@ -2164,7 +2160,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.DarkGray;
             this.label3.Location = new System.Drawing.Point(22, 188);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2365,7 +2361,6 @@
             this.godparent_panel_baptism.Name = "godparent_panel_baptism";
             this.godparent_panel_baptism.Size = new System.Drawing.Size(620, 115);
             this.godparent_panel_baptism.TabIndex = 56;
-            this.godparent_panel_baptism.Paint += new System.Windows.Forms.PaintEventHandler(this.godparent_panel_baptism_Paint);
             // 
             // button3
             // 
@@ -2466,7 +2461,6 @@
             this.date_textbox_baptism.Name = "date_textbox_baptism";
             this.date_textbox_baptism.Size = new System.Drawing.Size(120, 23);
             this.date_textbox_baptism.TabIndex = 54;
-            this.date_textbox_baptism.TextChanged += new System.EventHandler(this.date_textbox_baptism_TextChanged);
             // 
             // label30
             // 
@@ -3389,7 +3383,6 @@
         private System.Windows.Forms.TextBox remarks_textbox_confirmation;
         private System.Windows.Forms.Label label94;
         private System.Windows.Forms.Button save_button_profile;
-        private System.Windows.Forms.Button cancel_button_profile;
         private System.Windows.Forms.Button balance_button;
         private System.Windows.Forms.Button bloodletting_button;
         private System.Windows.Forms.Panel bloodletting_panel;
