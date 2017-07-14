@@ -340,6 +340,7 @@
             this.libraryMarriageButton = new System.Windows.Forms.Button();
             this.libraryConfirmationButton = new System.Windows.Forms.Button();
             this.libraryBaptismButton = new System.Windows.Forms.Button();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.profile_panel.SuspendLayout();
@@ -3713,36 +3714,40 @@
             // label62
             // 
             this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label62.Location = new System.Drawing.Point(3, 112);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(63, 17);
+            this.label62.Size = new System.Drawing.Size(54, 16);
             this.label62.TabIndex = 1;
             this.label62.Text = "Sponsors";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(3, 87);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(55, 17);
+            this.label17.Size = new System.Drawing.Size(48, 16);
             this.label17.TabIndex = 1;
             this.label17.Text = "Minister";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(3, 60);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(95, 17);
+            this.label15.Size = new System.Drawing.Size(80, 16);
             this.label15.TabIndex = 1;
             this.label15.Text = "Baptism Date";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 33);
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(3, 35);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(48, 17);
+            this.label13.Size = new System.Drawing.Size(41, 16);
             this.label13.TabIndex = 1;
             this.label13.Text = "Name";
             // 
@@ -3779,27 +3784,30 @@
             // label84
             // 
             this.label84.AutoSize = true;
+            this.label84.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label84.Location = new System.Drawing.Point(6, 82);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(77, 17);
+            this.label84.Size = new System.Drawing.Size(65, 16);
             this.label84.TabIndex = 1;
             this.label84.Text = "Registry no";
             // 
             // label64
             // 
             this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label64.Location = new System.Drawing.Point(6, 28);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(77, 17);
+            this.label64.Size = new System.Drawing.Size(65, 16);
             this.label64.TabIndex = 1;
             this.label64.Text = "Registry no";
             // 
             // label82
             // 
             this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label82.Location = new System.Drawing.Point(6, 55);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(75, 17);
+            this.label82.Size = new System.Drawing.Size(64, 16);
             this.label82.TabIndex = 1;
             this.label82.Text = "Record no";
             // 
@@ -3882,6 +3890,7 @@
             this.libraryMarriageButton.TabIndex = 0;
             this.libraryMarriageButton.Text = "Marriage";
             this.libraryMarriageButton.UseVisualStyleBackColor = false;
+            this.libraryMarriageButton.Click += new System.EventHandler(this.libraryMarriageButton_Click);
             // 
             // libraryConfirmationButton
             // 
@@ -3913,6 +3922,10 @@
             this.libraryBaptismButton.UseVisualStyleBackColor = false;
             this.libraryBaptismButton.Click += new System.EventHandler(this.libraryBaptismButton_Click);
             // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
             // SAD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -3934,6 +3947,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SAD";
+            this.Text = "[";
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.profile_panel.ResumeLayout(false);
@@ -4331,5 +4345,6 @@
         private MetroFramework.Controls.MetroGrid metroGrid1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }

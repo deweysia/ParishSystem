@@ -364,7 +364,7 @@ namespace ParishSystem
             }
             else
             {
-                dh.addApplication(ProfileID, "C");
+                //dh.addApplication(ProfileID, "C");
             }
         }
 
@@ -383,7 +383,7 @@ namespace ParishSystem
             }
             else
             {
-                dh.addApplication(ProfileID, "M");
+                //dh.addApplication(ProfileID, "M");
             }
         }
 
