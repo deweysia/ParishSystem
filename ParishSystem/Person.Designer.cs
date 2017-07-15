@@ -2176,7 +2176,7 @@
             this.baptism_panel.Controls.Add(this.flowLayoutPanel2);
             this.baptism_panel.Controls.Add(this.baptism_details_panel);
             this.baptism_panel.Controls.Add(this.baptism_application_panel);
-            this.baptism_panel.Location = new System.Drawing.Point(-1, 31);
+            this.baptism_panel.Location = new System.Drawing.Point(0, 0);
             this.baptism_panel.Margin = new System.Windows.Forms.Padding(2);
             this.baptism_panel.Name = "baptism_panel";
             this.baptism_panel.Size = new System.Drawing.Size(735, 470);
@@ -3235,7 +3235,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(734, 524);
             this.ControlBox = false;
-            this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.confirmation_panel);
@@ -3248,6 +3247,7 @@
             this.Controls.Add(this.balance_button);
             this.Controls.Add(this.marriage_button);
             this.Controls.Add(this.confirmation_button);
+            this.Controls.Add(this.btn_Close);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SAD));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,15 +40,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SAD));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.home_button_menu = new System.Windows.Forms.Button();
-            this.profile_button_menu = new System.Windows.Forms.Button();
-            this.sacrament_button_menu = new System.Windows.Forms.Button();
-            this.bloodletting_button_menu = new System.Windows.Forms.Button();
-            this.application_button_menu = new System.Windows.Forms.Button();
-            this.CRB_button_menu = new System.Windows.Forms.Button();
-            this.CDB_button_menu = new System.Windows.Forms.Button();
             this.home_panel = new System.Windows.Forms.Panel();
             this.profile_panel = new System.Windows.Forms.Panel();
             this.AddBTN = new System.Windows.Forms.Button();
@@ -167,14 +159,9 @@
             this.marriageApplication_dataGridView = new System.Windows.Forms.DataGridView();
             this.label27 = new System.Windows.Forms.Label();
             this.bloodletting_panel = new System.Windows.Forms.Panel();
-            this.profile_menu_button = new System.Windows.Forms.Button();
-            this.bloodletting_menu_button = new System.Windows.Forms.Button();
-            this.home_menu_button = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.application_menu_button = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -187,9 +174,6 @@
             this.welcome_Text = new System.Windows.Forms.Label();
             this.username_Welcome_Text = new System.Windows.Forms.Label();
             this.flowLayout_ControlButtons = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_Close = new System.Windows.Forms.Button();
-            this.btn_Min = new System.Windows.Forms.Button();
-            this.btn_Max = new System.Windows.Forms.Button();
             this.CDB_panel = new System.Windows.Forms.Panel();
             this.label51 = new System.Windows.Forms.Label();
             this.parish_panel_CD = new System.Windows.Forms.Panel();
@@ -340,9 +324,24 @@
             this.libraryMarriageButton = new System.Windows.Forms.Button();
             this.libraryConfirmationButton = new System.Windows.Forms.Button();
             this.libraryBaptismButton = new System.Windows.Forms.Button();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.profile_menu_button = new System.Windows.Forms.Button();
+            this.bloodletting_menu_button = new System.Windows.Forms.Button();
+            this.home_menu_button = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.application_menu_button = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.home_button_menu = new System.Windows.Forms.Button();
+            this.profile_button_menu = new System.Windows.Forms.Button();
+            this.sacrament_button_menu = new System.Windows.Forms.Button();
+            this.bloodletting_button_menu = new System.Windows.Forms.Button();
+            this.application_button_menu = new System.Windows.Forms.Button();
+            this.CRB_button_menu = new System.Windows.Forms.Button();
+            this.CDB_button_menu = new System.Windows.Forms.Button();
+            this.scheduling_button_menu = new System.Windows.Forms.Button();
+            this.btn_Close = new System.Windows.Forms.Button();
+            this.btn_Min = new System.Windows.Forms.Button();
+            this.btn_Max = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.profile_panel.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).BeginInit();
@@ -396,6 +395,7 @@
             this.panel12.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -405,6 +405,7 @@
             this.flowLayoutPanel1.Controls.Add(this.home_button_menu);
             this.flowLayoutPanel1.Controls.Add(this.profile_button_menu);
             this.flowLayoutPanel1.Controls.Add(this.sacrament_button_menu);
+            this.flowLayoutPanel1.Controls.Add(this.scheduling_button_menu);
             this.flowLayoutPanel1.Controls.Add(this.bloodletting_button_menu);
             this.flowLayoutPanel1.Controls.Add(this.application_button_menu);
             this.flowLayoutPanel1.Controls.Add(this.CRB_button_menu);
@@ -417,147 +418,6 @@
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(181, 512);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::ParishSystem.Properties.Resources.The_Pope_45;
-            this.pictureBox5.Location = new System.Drawing.Point(1, 6);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(1);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(178, 40);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 38;
-            this.pictureBox5.TabStop = false;
-            // 
-            // home_button_menu
-            // 
-            this.home_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.home_button_menu.FlatAppearance.BorderSize = 0;
-            this.home_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.home_button_menu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.home_button_menu.ForeColor = System.Drawing.Color.White;
-            this.home_button_menu.Image = global::ParishSystem.Properties.Resources.Home_45;
-            this.home_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.home_button_menu.Location = new System.Drawing.Point(3, 50);
-            this.home_button_menu.Name = "home_button_menu";
-            this.home_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.home_button_menu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.home_button_menu.Size = new System.Drawing.Size(174, 55);
-            this.home_button_menu.TabIndex = 39;
-            this.home_button_menu.Text = "Home";
-            this.home_button_menu.UseVisualStyleBackColor = false;
-            this.home_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
-            // 
-            // profile_button_menu
-            // 
-            this.profile_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.profile_button_menu.FlatAppearance.BorderSize = 0;
-            this.profile_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profile_button_menu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profile_button_menu.ForeColor = System.Drawing.Color.White;
-            this.profile_button_menu.Image = global::ParishSystem.Properties.Resources.customer_45;
-            this.profile_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.profile_button_menu.Location = new System.Drawing.Point(3, 111);
-            this.profile_button_menu.Name = "profile_button_menu";
-            this.profile_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.profile_button_menu.Size = new System.Drawing.Size(174, 55);
-            this.profile_button_menu.TabIndex = 43;
-            this.profile_button_menu.Text = "Profiles";
-            this.profile_button_menu.UseVisualStyleBackColor = false;
-            this.profile_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
-            // 
-            // sacrament_button_menu
-            // 
-            this.sacrament_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.sacrament_button_menu.FlatAppearance.BorderSize = 0;
-            this.sacrament_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sacrament_button_menu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sacrament_button_menu.ForeColor = System.Drawing.Color.White;
-            this.sacrament_button_menu.Image = global::ParishSystem.Properties.Resources.Holy_Bible_45;
-            this.sacrament_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sacrament_button_menu.Location = new System.Drawing.Point(3, 172);
-            this.sacrament_button_menu.Name = "sacrament_button_menu";
-            this.sacrament_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.sacrament_button_menu.Size = new System.Drawing.Size(174, 55);
-            this.sacrament_button_menu.TabIndex = 43;
-            this.sacrament_button_menu.Text = "Sacraments";
-            this.sacrament_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sacrament_button_menu.UseVisualStyleBackColor = false;
-            this.sacrament_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
-            // 
-            // bloodletting_button_menu
-            // 
-            this.bloodletting_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bloodletting_button_menu.FlatAppearance.BorderSize = 0;
-            this.bloodletting_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bloodletting_button_menu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bloodletting_button_menu.ForeColor = System.Drawing.Color.White;
-            this.bloodletting_button_menu.Image = global::ParishSystem.Properties.Resources.Heart_with_Pulse_45px;
-            this.bloodletting_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bloodletting_button_menu.Location = new System.Drawing.Point(3, 233);
-            this.bloodletting_button_menu.Name = "bloodletting_button_menu";
-            this.bloodletting_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.bloodletting_button_menu.Size = new System.Drawing.Size(174, 55);
-            this.bloodletting_button_menu.TabIndex = 42;
-            this.bloodletting_button_menu.Text = "Bloodletting";
-            this.bloodletting_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bloodletting_button_menu.UseVisualStyleBackColor = false;
-            this.bloodletting_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
-            // 
-            // application_button_menu
-            // 
-            this.application_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.application_button_menu.FlatAppearance.BorderSize = 0;
-            this.application_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.application_button_menu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.application_button_menu.ForeColor = System.Drawing.Color.White;
-            this.application_button_menu.Image = global::ParishSystem.Properties.Resources.Resume_45;
-            this.application_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.application_button_menu.Location = new System.Drawing.Point(3, 294);
-            this.application_button_menu.Name = "application_button_menu";
-            this.application_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.application_button_menu.Size = new System.Drawing.Size(174, 55);
-            this.application_button_menu.TabIndex = 43;
-            this.application_button_menu.Text = "Applications";
-            this.application_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.application_button_menu.UseVisualStyleBackColor = false;
-            this.application_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
-            // 
-            // CRB_button_menu
-            // 
-            this.CRB_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.CRB_button_menu.FlatAppearance.BorderSize = 0;
-            this.CRB_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CRB_button_menu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CRB_button_menu.ForeColor = System.Drawing.Color.White;
-            this.CRB_button_menu.Image = global::ParishSystem.Properties.Resources.Money_45;
-            this.CRB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CRB_button_menu.Location = new System.Drawing.Point(3, 355);
-            this.CRB_button_menu.Name = "CRB_button_menu";
-            this.CRB_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.CRB_button_menu.Size = new System.Drawing.Size(174, 55);
-            this.CRB_button_menu.TabIndex = 43;
-            this.CRB_button_menu.Text = "CRB";
-            this.CRB_button_menu.UseVisualStyleBackColor = false;
-            this.CRB_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
-            // 
-            // CDB_button_menu
-            // 
-            this.CDB_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.CDB_button_menu.FlatAppearance.BorderSize = 0;
-            this.CDB_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CDB_button_menu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CDB_button_menu.ForeColor = System.Drawing.Color.White;
-            this.CDB_button_menu.Image = global::ParishSystem.Properties.Resources.Initiate_Money_Transfer_45;
-            this.CDB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CDB_button_menu.Location = new System.Drawing.Point(3, 416);
-            this.CDB_button_menu.Name = "CDB_button_menu";
-            this.CDB_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.CDB_button_menu.Size = new System.Drawing.Size(174, 55);
-            this.CDB_button_menu.TabIndex = 43;
-            this.CDB_button_menu.Text = "CDB";
-            this.CDB_button_menu.UseVisualStyleBackColor = false;
-            this.CDB_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
             // 
             // home_panel
             // 
@@ -2009,49 +1869,6 @@
             this.bloodletting_panel.Size = new System.Drawing.Size(753, 512);
             this.bloodletting_panel.TabIndex = 4;
             // 
-            // profile_menu_button
-            // 
-            this.profile_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("profile_menu_button.BackgroundImage")));
-            this.profile_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.profile_menu_button.FlatAppearance.BorderSize = 0;
-            this.profile_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.profile_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profile_menu_button.Location = new System.Drawing.Point(303, 354);
-            this.profile_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.profile_menu_button.Name = "profile_menu_button";
-            this.profile_menu_button.Size = new System.Drawing.Size(133, 55);
-            this.profile_menu_button.TabIndex = 4;
-            this.profile_menu_button.UseVisualStyleBackColor = true;
-            // 
-            // bloodletting_menu_button
-            // 
-            this.bloodletting_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bloodletting_menu_button.BackgroundImage")));
-            this.bloodletting_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bloodletting_menu_button.FlatAppearance.BorderSize = 0;
-            this.bloodletting_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bloodletting_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bloodletting_menu_button.Location = new System.Drawing.Point(274, 189);
-            this.bloodletting_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.bloodletting_menu_button.Name = "bloodletting_menu_button";
-            this.bloodletting_menu_button.Size = new System.Drawing.Size(53, 55);
-            this.bloodletting_menu_button.TabIndex = 0;
-            this.bloodletting_menu_button.UseVisualStyleBackColor = true;
-            // 
-            // home_menu_button
-            // 
-            this.home_menu_button.AutoSize = true;
-            this.home_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("home_menu_button.BackgroundImage")));
-            this.home_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.home_menu_button.FlatAppearance.BorderSize = 0;
-            this.home_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.home_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.home_menu_button.Location = new System.Drawing.Point(340, 176);
-            this.home_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.home_menu_button.Name = "home_menu_button";
-            this.home_menu_button.Size = new System.Drawing.Size(96, 56);
-            this.home_menu_button.TabIndex = 0;
-            this.home_menu_button.UseVisualStyleBackColor = true;
-            // 
             // dataGridView4
             // 
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -2081,34 +1898,6 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(87, 29);
             this.comboBox4.TabIndex = 34;
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(85, 401);
-            this.button7.Margin = new System.Windows.Forms.Padding(0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(146, 62);
-            this.button7.TabIndex = 5;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // application_menu_button
-            // 
-            this.application_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("application_menu_button.BackgroundImage")));
-            this.application_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.application_menu_button.FlatAppearance.BorderSize = 0;
-            this.application_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.application_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.application_menu_button.Location = new System.Drawing.Point(48, 322);
-            this.application_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.application_menu_button.Name = "application_menu_button";
-            this.application_menu_button.Size = new System.Drawing.Size(146, 62);
-            this.application_menu_button.TabIndex = 1;
-            this.application_menu_button.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -2256,57 +2045,6 @@
             this.flowLayout_ControlButtons.Name = "flowLayout_ControlButtons";
             this.flowLayout_ControlButtons.Size = new System.Drawing.Size(110, 33);
             this.flowLayout_ControlButtons.TabIndex = 20;
-            // 
-            // btn_Close
-            // 
-            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Close.BackgroundImage = global::ParishSystem.Properties.Resources.btn_closeImage;
-            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Close.FlatAppearance.BorderSize = 0;
-            this.btn_Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Close.Location = new System.Drawing.Point(79, 4);
-            this.btn_Close.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(27, 25);
-            this.btn_Close.TabIndex = 34;
-            this.btn_Close.UseVisualStyleBackColor = true;
-            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
-            // 
-            // btn_Min
-            // 
-            this.btn_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Min.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Min.BackgroundImage")));
-            this.btn_Min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Min.FlatAppearance.BorderSize = 0;
-            this.btn_Min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_Min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Min.Location = new System.Drawing.Point(41, 4);
-            this.btn_Min.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Min.Name = "btn_Min";
-            this.btn_Min.Size = new System.Drawing.Size(30, 25);
-            this.btn_Min.TabIndex = 32;
-            this.btn_Min.UseVisualStyleBackColor = true;
-            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
-            // 
-            // btn_Max
-            // 
-            this.btn_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Max.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Max.BackgroundImage")));
-            this.btn_Max.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Max.FlatAppearance.BorderSize = 0;
-            this.btn_Max.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_Max.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Max.Location = new System.Drawing.Point(6, 4);
-            this.btn_Max.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Max.Name = "btn_Max";
-            this.btn_Max.Size = new System.Drawing.Size(27, 25);
-            this.btn_Max.TabIndex = 33;
-            this.btn_Max.UseVisualStyleBackColor = true;
-            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
             // 
             // CDB_panel
             // 
@@ -3714,40 +3452,36 @@
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label62.Location = new System.Drawing.Point(3, 112);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(54, 16);
+            this.label62.Size = new System.Drawing.Size(63, 17);
             this.label62.TabIndex = 1;
             this.label62.Text = "Sponsors";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(3, 87);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(48, 16);
+            this.label17.Size = new System.Drawing.Size(55, 17);
             this.label17.TabIndex = 1;
             this.label17.Text = "Minister";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(3, 60);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(80, 16);
+            this.label15.Size = new System.Drawing.Size(95, 17);
             this.label15.TabIndex = 1;
             this.label15.Text = "Baptism Date";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(3, 35);
+            this.label13.Location = new System.Drawing.Point(3, 33);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 16);
+            this.label13.Size = new System.Drawing.Size(48, 17);
             this.label13.TabIndex = 1;
             this.label13.Text = "Name";
             // 
@@ -3784,30 +3518,27 @@
             // label84
             // 
             this.label84.AutoSize = true;
-            this.label84.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label84.Location = new System.Drawing.Point(6, 82);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(65, 16);
+            this.label84.Size = new System.Drawing.Size(77, 17);
             this.label84.TabIndex = 1;
             this.label84.Text = "Registry no";
             // 
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label64.Location = new System.Drawing.Point(6, 28);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(65, 16);
+            this.label64.Size = new System.Drawing.Size(77, 17);
             this.label64.TabIndex = 1;
             this.label64.Text = "Registry no";
             // 
             // label82
             // 
             this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label82.Location = new System.Drawing.Point(6, 55);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(64, 16);
+            this.label82.Size = new System.Drawing.Size(75, 17);
             this.label82.TabIndex = 1;
             this.label82.Text = "Record no";
             // 
@@ -3890,7 +3621,6 @@
             this.libraryMarriageButton.TabIndex = 0;
             this.libraryMarriageButton.Text = "Marriage";
             this.libraryMarriageButton.UseVisualStyleBackColor = false;
-            this.libraryMarriageButton.Click += new System.EventHandler(this.libraryMarriageButton_Click);
             // 
             // libraryConfirmationButton
             // 
@@ -3922,9 +3652,282 @@
             this.libraryBaptismButton.UseVisualStyleBackColor = false;
             this.libraryBaptismButton.Click += new System.EventHandler(this.libraryBaptismButton_Click);
             // 
-            // printDialog1
+            // profile_menu_button
             // 
-            this.printDialog1.UseEXDialog = true;
+            this.profile_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("profile_menu_button.BackgroundImage")));
+            this.profile_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.profile_menu_button.FlatAppearance.BorderSize = 0;
+            this.profile_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.profile_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profile_menu_button.Location = new System.Drawing.Point(303, 354);
+            this.profile_menu_button.Margin = new System.Windows.Forms.Padding(0);
+            this.profile_menu_button.Name = "profile_menu_button";
+            this.profile_menu_button.Size = new System.Drawing.Size(133, 55);
+            this.profile_menu_button.TabIndex = 4;
+            this.profile_menu_button.UseVisualStyleBackColor = true;
+            // 
+            // bloodletting_menu_button
+            // 
+            this.bloodletting_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bloodletting_menu_button.BackgroundImage")));
+            this.bloodletting_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bloodletting_menu_button.FlatAppearance.BorderSize = 0;
+            this.bloodletting_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bloodletting_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bloodletting_menu_button.Location = new System.Drawing.Point(274, 189);
+            this.bloodletting_menu_button.Margin = new System.Windows.Forms.Padding(0);
+            this.bloodletting_menu_button.Name = "bloodletting_menu_button";
+            this.bloodletting_menu_button.Size = new System.Drawing.Size(53, 55);
+            this.bloodletting_menu_button.TabIndex = 0;
+            this.bloodletting_menu_button.UseVisualStyleBackColor = true;
+            // 
+            // home_menu_button
+            // 
+            this.home_menu_button.AutoSize = true;
+            this.home_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("home_menu_button.BackgroundImage")));
+            this.home_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.home_menu_button.FlatAppearance.BorderSize = 0;
+            this.home_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.home_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.home_menu_button.Location = new System.Drawing.Point(340, 176);
+            this.home_menu_button.Margin = new System.Windows.Forms.Padding(0);
+            this.home_menu_button.Name = "home_menu_button";
+            this.home_menu_button.Size = new System.Drawing.Size(96, 56);
+            this.home_menu_button.TabIndex = 0;
+            this.home_menu_button.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(85, 401);
+            this.button7.Margin = new System.Windows.Forms.Padding(0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(146, 62);
+            this.button7.TabIndex = 5;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // application_menu_button
+            // 
+            this.application_menu_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("application_menu_button.BackgroundImage")));
+            this.application_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.application_menu_button.FlatAppearance.BorderSize = 0;
+            this.application_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.application_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.application_menu_button.Location = new System.Drawing.Point(48, 322);
+            this.application_menu_button.Margin = new System.Windows.Forms.Padding(0);
+            this.application_menu_button.Name = "application_menu_button";
+            this.application_menu_button.Size = new System.Drawing.Size(146, 62);
+            this.application_menu_button.TabIndex = 1;
+            this.application_menu_button.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::ParishSystem.Properties.Resources.The_Pope_45;
+            this.pictureBox5.Location = new System.Drawing.Point(1, 6);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(1);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(178, 40);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 38;
+            this.pictureBox5.TabStop = false;
+            // 
+            // home_button_menu
+            // 
+            this.home_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.home_button_menu.FlatAppearance.BorderSize = 0;
+            this.home_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.home_button_menu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.home_button_menu.ForeColor = System.Drawing.Color.White;
+            this.home_button_menu.Image = global::ParishSystem.Properties.Resources.Home_32px;
+            this.home_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.home_button_menu.Location = new System.Drawing.Point(3, 50);
+            this.home_button_menu.Name = "home_button_menu";
+            this.home_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.home_button_menu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.home_button_menu.Size = new System.Drawing.Size(174, 40);
+            this.home_button_menu.TabIndex = 39;
+            this.home_button_menu.Text = "Home";
+            this.home_button_menu.UseVisualStyleBackColor = false;
+            this.home_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
+            // 
+            // profile_button_menu
+            // 
+            this.profile_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.profile_button_menu.FlatAppearance.BorderSize = 0;
+            this.profile_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profile_button_menu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profile_button_menu.ForeColor = System.Drawing.Color.White;
+            this.profile_button_menu.Image = global::ParishSystem.Properties.Resources.customer_32px;
+            this.profile_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.profile_button_menu.Location = new System.Drawing.Point(3, 96);
+            this.profile_button_menu.Name = "profile_button_menu";
+            this.profile_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.profile_button_menu.Size = new System.Drawing.Size(174, 40);
+            this.profile_button_menu.TabIndex = 43;
+            this.profile_button_menu.Text = "Profiles";
+            this.profile_button_menu.UseVisualStyleBackColor = false;
+            this.profile_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
+            // 
+            // sacrament_button_menu
+            // 
+            this.sacrament_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.sacrament_button_menu.FlatAppearance.BorderSize = 0;
+            this.sacrament_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sacrament_button_menu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sacrament_button_menu.ForeColor = System.Drawing.Color.White;
+            this.sacrament_button_menu.Image = global::ParishSystem.Properties.Resources.Holy_Bible_32px;
+            this.sacrament_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sacrament_button_menu.Location = new System.Drawing.Point(3, 142);
+            this.sacrament_button_menu.Name = "sacrament_button_menu";
+            this.sacrament_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.sacrament_button_menu.Size = new System.Drawing.Size(174, 40);
+            this.sacrament_button_menu.TabIndex = 43;
+            this.sacrament_button_menu.Text = "Sacraments";
+            this.sacrament_button_menu.UseVisualStyleBackColor = false;
+            this.sacrament_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
+            // 
+            // bloodletting_button_menu
+            // 
+            this.bloodletting_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bloodletting_button_menu.FlatAppearance.BorderSize = 0;
+            this.bloodletting_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bloodletting_button_menu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodletting_button_menu.ForeColor = System.Drawing.Color.White;
+            this.bloodletting_button_menu.Image = global::ParishSystem.Properties.Resources.Heart_with_Pulse_32px;
+            this.bloodletting_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bloodletting_button_menu.Location = new System.Drawing.Point(3, 234);
+            this.bloodletting_button_menu.Name = "bloodletting_button_menu";
+            this.bloodletting_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.bloodletting_button_menu.Size = new System.Drawing.Size(174, 40);
+            this.bloodletting_button_menu.TabIndex = 42;
+            this.bloodletting_button_menu.Text = "Bloodletting";
+            this.bloodletting_button_menu.UseVisualStyleBackColor = false;
+            this.bloodletting_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
+            // 
+            // application_button_menu
+            // 
+            this.application_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.application_button_menu.FlatAppearance.BorderSize = 0;
+            this.application_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.application_button_menu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.application_button_menu.ForeColor = System.Drawing.Color.White;
+            this.application_button_menu.Image = global::ParishSystem.Properties.Resources.Resume_32px;
+            this.application_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.application_button_menu.Location = new System.Drawing.Point(3, 280);
+            this.application_button_menu.Name = "application_button_menu";
+            this.application_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.application_button_menu.Size = new System.Drawing.Size(174, 40);
+            this.application_button_menu.TabIndex = 43;
+            this.application_button_menu.Text = "Applications";
+            this.application_button_menu.UseVisualStyleBackColor = false;
+            this.application_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
+            // 
+            // CRB_button_menu
+            // 
+            this.CRB_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.CRB_button_menu.FlatAppearance.BorderSize = 0;
+            this.CRB_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CRB_button_menu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CRB_button_menu.ForeColor = System.Drawing.Color.White;
+            this.CRB_button_menu.Image = global::ParishSystem.Properties.Resources.Money_32px;
+            this.CRB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CRB_button_menu.Location = new System.Drawing.Point(3, 326);
+            this.CRB_button_menu.Name = "CRB_button_menu";
+            this.CRB_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CRB_button_menu.Size = new System.Drawing.Size(174, 40);
+            this.CRB_button_menu.TabIndex = 43;
+            this.CRB_button_menu.Text = "CRB";
+            this.CRB_button_menu.UseVisualStyleBackColor = false;
+            this.CRB_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
+            // 
+            // CDB_button_menu
+            // 
+            this.CDB_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.CDB_button_menu.FlatAppearance.BorderSize = 0;
+            this.CDB_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CDB_button_menu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CDB_button_menu.ForeColor = System.Drawing.Color.White;
+            this.CDB_button_menu.Image = global::ParishSystem.Properties.Resources.Initiate_Money_Transfer_32px;
+            this.CDB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CDB_button_menu.Location = new System.Drawing.Point(3, 372);
+            this.CDB_button_menu.Name = "CDB_button_menu";
+            this.CDB_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CDB_button_menu.Size = new System.Drawing.Size(174, 40);
+            this.CDB_button_menu.TabIndex = 43;
+            this.CDB_button_menu.Text = "CDB";
+            this.CDB_button_menu.UseVisualStyleBackColor = false;
+            this.CDB_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
+            // 
+            // scheduling_button_menu
+            // 
+            this.scheduling_button_menu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.scheduling_button_menu.FlatAppearance.BorderSize = 0;
+            this.scheduling_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.scheduling_button_menu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scheduling_button_menu.ForeColor = System.Drawing.Color.White;
+            this.scheduling_button_menu.Image = global::ParishSystem.Properties.Resources.Clock_32px;
+            this.scheduling_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.scheduling_button_menu.Location = new System.Drawing.Point(3, 188);
+            this.scheduling_button_menu.Name = "scheduling_button_menu";
+            this.scheduling_button_menu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.scheduling_button_menu.Size = new System.Drawing.Size(174, 40);
+            this.scheduling_button_menu.TabIndex = 44;
+            this.scheduling_button_menu.Text = "Scheduling";
+            this.scheduling_button_menu.UseVisualStyleBackColor = false;
+            // 
+            // btn_Close
+            // 
+            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Close.BackgroundImage = global::ParishSystem.Properties.Resources.btn_closeImage;
+            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Close.FlatAppearance.BorderSize = 0;
+            this.btn_Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Close.Location = new System.Drawing.Point(79, 4);
+            this.btn_Close.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(27, 25);
+            this.btn_Close.TabIndex = 34;
+            this.btn_Close.UseVisualStyleBackColor = true;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            // 
+            // btn_Min
+            // 
+            this.btn_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Min.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Min.BackgroundImage")));
+            this.btn_Min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Min.FlatAppearance.BorderSize = 0;
+            this.btn_Min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Min.Location = new System.Drawing.Point(41, 4);
+            this.btn_Min.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Min.Name = "btn_Min";
+            this.btn_Min.Size = new System.Drawing.Size(30, 25);
+            this.btn_Min.TabIndex = 32;
+            this.btn_Min.UseVisualStyleBackColor = true;
+            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
+            // 
+            // btn_Max
+            // 
+            this.btn_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Max.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Max.BackgroundImage")));
+            this.btn_Max.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Max.FlatAppearance.BorderSize = 0;
+            this.btn_Max.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Max.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Max.Location = new System.Drawing.Point(6, 4);
+            this.btn_Max.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Max.Name = "btn_Max";
+            this.btn_Max.Size = new System.Drawing.Size(27, 25);
+            this.btn_Max.TabIndex = 33;
+            this.btn_Max.UseVisualStyleBackColor = true;
+            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
             // 
             // SAD
             // 
@@ -3947,9 +3950,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SAD";
-            this.Text = "[";
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.profile_panel.ResumeLayout(false);
             this.profile_panel.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -4040,6 +4041,7 @@
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4345,6 +4347,6 @@
         private MetroFramework.Controls.MetroGrid metroGrid1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.Button scheduling_button_menu;
     }
 }

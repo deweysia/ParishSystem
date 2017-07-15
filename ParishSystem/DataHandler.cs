@@ -2479,7 +2479,18 @@ namespace ParishSystem
         }
         public int getBaptismID(int profileID)
         {
-            return 1;
+            string q = "SELECT baptismID FROM Baptism "
+                +" JOIN Application ON Baptism.applicationID = Application.applicationID"
+                +" JOIN Applicant ON Applicant.applicantID = Application.applicantID "
+                +" JOIN GeneralProfile ON GeneralProfile.profileID = Applicant.profileID"
+                +" WHERE GeneralProfile.profileID = "+ profileID;
+            DataTable dt = runQuery(q);
+
+            if (dt.Rows.Count == 0)
+                return -1;
+
+            return int.Parse(dt.Rows[0]["profileID"].ToString());
+
         }
 
          public bool addSponsor(int sacramentID, string firstName, string midName, string lastName, string suffix, string sacramentType, string residence, char gender)///////////////------------fix this no sacrament iD
@@ -2500,7 +2511,7 @@ namespace ParishSystem
         //COMMENT: merge names into field "Name"
         public DataTable getMinister(int ministerID)
         {
-            string q = "SELECT * FROM Minister WHERE ministerID = " + ministerID;
+            string q = "SELECT CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix), * FROM Minister WHERE ministerID = " + ministerID;
 
             DataTable dt = runQuery(q);
 
