@@ -399,7 +399,7 @@ namespace ParishSystem
 
         #region
 
-        public bool addBloodDonation(int generalProfileID, int bloodDonationEventID, int donationAmount, DateTime bloodDonationDateTime)
+        /*public bool addBloodDonation(int generalProfileID, int bloodDonationEventID, int donationAmount, DateTime bloodDonationDateTime)
         {
             string q = "INSERT INTO BloodDonation(generalProfileID, bloodDonationEventID, donationAmount, bloodDonationDateTime) VALUES ('"
                 + generalProfileID + "', '" + bloodDonationEventID + "', '" + donationAmount + "', '"
@@ -410,7 +410,7 @@ namespace ParishSystem
             //    updateModificationInfo("BloodDonation", "bloodDonationID", getLatestID("BloodDonation", "bloodDonationID"));
 
             return success;
-        }
+        }*/
 
         public bool editBloodDonation(int bloodDonationID, int generalProfileID, int bloodDonationEventID, int donationAmount, DateTime bloodDonationDateTime)
         {
@@ -2526,20 +2526,38 @@ namespace ParishSystem
             return dt;
         }
         
-        public void addBloodDonation(int profleID, int quantity,string eventName,DateTime addedon)
+        public bool addBloodDonation(int profleID, int quantity, int bloodDonationEventID, DateTime donationDateTime)
         {
-            // name is unique so ok lng
-        }
-        public void editBloodDonation(int profleID, int quantity, string eventName, DateTime addedon)
-        {
-            //edit donation
+            string q = "INSERT INTO BloodDonation(profleID, quantity, bloodDonationEventID, donationDateTime) VALUES ('" 
+                + profleID + "', '" + quantity + "', '" + bloodDonationEventID + "', '" + donationDateTime.ToString("yyyy-MM-dd HH:mm:ss") + "')";
+
+            bool success = runNonQuery(q);
+
+            return success;
         }
 
-        public DataTable getBloodDonations(int profleID)
+        public bool editBloodDonation(int profleID, int quantity, string bloodDonationEventID, DateTime donationDateTime)
+        {
+            //edit donation
+            string q = "UPDATE BloodDonation SET quantity = '" + quantity 
+                + "', bloodDonationEventID = '" + bloodDonationEventID 
+                + "', donationDateTime = '" + donationDateTime.ToString("yyyy-MM-dd HH:mm:ss") 
+                + "' WHERE profleID = '" + profleID + "'";
+
+            bool success = runNonQuery(q);
+            return success;
+        }
+
+        public DataTable getBloodDonations(int profileID)
         {
             // add quantity here.. change db and add quantity in query
 
-             string q = "SELECT bloodDonationID,  eventName, quantity FROM sad2.blooddonation join blooddonationevent on blooddonation.bloodDonationEventID = blooddonationevent.bloodDonationEventID where profileID =" + profleID;
+
+            string q = "SELECT BloodDonation.bloodDonationID, BloodDonationEvent.eventName, quantity"
+                +" FROM GeneralProfile"
+                +" JOIN BloodDonation ON GeneralProfile.profileID = BloodDonation.profileID"
+                +" JOIN BloodDonationEvent ON BloodDonationEvent.bloodDonationEventID = BloodDonation.bloodDonationEventID"
+                +" WHERE GeneralProfile.profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -2548,7 +2566,7 @@ namespace ParishSystem
         }
         public DataTable getBloodlettingEvents()
         {
-            string q = "SELECT * FROM BloodDonationEvent"; //where status is not finished
+            string q = "SELECT * FROM BloodDonationEvent WHERE eventStatus = 'ACTIVE'"; //where status is not finished
 
             DataTable dt = runQuery(q);
 
