@@ -399,18 +399,7 @@ namespace ParishSystem
 
         #region
 
-        /*public bool addBloodDonation(int generalProfileID, int bloodDonationEventID, int donationAmount, DateTime bloodDonationDateTime)
-        {
-            string q = "INSERT INTO BloodDonation(generalProfileID, bloodDonationEventID, donationAmount, bloodDonationDateTime) VALUES ('"
-                + generalProfileID + "', '" + bloodDonationEventID + "', '" + donationAmount + "', '"
-                + bloodDonationDateTime.ToString("yyyy-MM-dd HH:mm:ss") + "')";
-
-            bool success = runNonQuery(q);
-            //if(success)
-            //    updateModificationInfo("BloodDonation", "bloodDonationID", getLatestID("BloodDonation", "bloodDonationID"));
-
-            return success;
-        }*/
+       
 
         public bool editBloodDonation(int bloodDonationID, int generalProfileID, int bloodDonationEventID, int donationAmount, DateTime bloodDonationDateTime)
         {
@@ -2528,7 +2517,7 @@ namespace ParishSystem
         
         public bool addBloodDonation(int profleID, int quantity, int bloodDonationEventID, DateTime donationDateTime)
         {
-            string q = "INSERT INTO BloodDonation(profleID, quantity, bloodDonationEventID, donationDateTime) VALUES ('" 
+            string q = "INSERT INTO BloodDonation(profileID, quantity, bloodDonationEventID, bloodDonationDateTime) VALUES ('"
                 + profleID + "', '" + quantity + "', '" + bloodDonationEventID + "', '" + donationDateTime.ToString("yyyy-MM-dd HH:mm:ss") + "')";
 
             bool success = runNonQuery(q);
@@ -2536,12 +2525,12 @@ namespace ParishSystem
             return success;
         }
 
-        public bool editBloodDonation(int profleID, int quantity, string bloodDonationEventID, DateTime donationDateTime)
+        public bool editBloodDonation(int profleID, int quantity, int bloodDonationEventID, DateTime donationDateTime)
         {
             //edit donation
             string q = "UPDATE BloodDonation SET quantity = '" + quantity 
                 + "', bloodDonationEventID = '" + bloodDonationEventID 
-                + "', donationDateTime = '" + donationDateTime.ToString("yyyy-MM-dd HH:mm:ss") 
+                + "', bloodDonationDateTime = '" + donationDateTime.ToString("yyyy-MM-dd HH:mm:ss") 
                 + "' WHERE profleID = '" + profleID + "'";
 
             bool success = runNonQuery(q);
