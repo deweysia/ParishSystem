@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.biodata_button = new System.Windows.Forms.Button();
             this.baptism_button = new System.Windows.Forms.Button();
             this.confirmation_button = new System.Windows.Forms.Button();
@@ -401,7 +401,6 @@
             // 
             // bloodtype_combobox_profile
             // 
-            this.bloodtype_combobox_profile.Enabled = false;
             this.bloodtype_combobox_profile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bloodtype_combobox_profile.FormattingEnabled = true;
             this.bloodtype_combobox_profile.Items.AddRange(new object[] {
@@ -423,7 +422,6 @@
             // contactNumber_textbox_profile
             // 
             this.contactNumber_textbox_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contactNumber_textbox_profile.Enabled = false;
             this.contactNumber_textbox_profile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactNumber_textbox_profile.Location = new System.Drawing.Point(444, 164);
             this.contactNumber_textbox_profile.Margin = new System.Windows.Forms.Padding(2);
@@ -434,7 +432,6 @@
             // 
             // address_textarea_profile
             // 
-            this.address_textarea_profile.Enabled = false;
             this.address_textarea_profile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.address_textarea_profile.Location = new System.Drawing.Point(443, 118);
             this.address_textarea_profile.Margin = new System.Windows.Forms.Padding(2);
@@ -446,7 +443,6 @@
             // suffix_textbox_profile
             // 
             this.suffix_textbox_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.suffix_textbox_profile.Enabled = false;
             this.suffix_textbox_profile.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.suffix_textbox_profile.ForeColor = System.Drawing.Color.Gray;
             this.suffix_textbox_profile.Location = new System.Drawing.Point(500, 22);
@@ -463,7 +459,6 @@
             // lastname_textbox_profile
             // 
             this.lastname_textbox_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lastname_textbox_profile.Enabled = false;
             this.lastname_textbox_profile.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lastname_textbox_profile.ForeColor = System.Drawing.Color.Gray;
             this.lastname_textbox_profile.Location = new System.Drawing.Point(412, 22);
@@ -480,7 +475,6 @@
             // middlename_textbox_profile
             // 
             this.middlename_textbox_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.middlename_textbox_profile.Enabled = false;
             this.middlename_textbox_profile.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.middlename_textbox_profile.ForeColor = System.Drawing.Color.Gray;
             this.middlename_textbox_profile.Location = new System.Drawing.Point(324, 22);
@@ -508,7 +502,6 @@
             // birthplace_textbox_profile
             // 
             this.birthplace_textbox_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.birthplace_textbox_profile.Enabled = false;
             this.birthplace_textbox_profile.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.birthplace_textbox_profile.Location = new System.Drawing.Point(166, 164);
             this.birthplace_textbox_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -564,7 +557,6 @@
             // gender_female_radiobutton_profile
             // 
             this.gender_female_radiobutton_profile.AutoSize = true;
-            this.gender_female_radiobutton_profile.Enabled = false;
             this.gender_female_radiobutton_profile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gender_female_radiobutton_profile.Location = new System.Drawing.Point(235, 67);
             this.gender_female_radiobutton_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -578,7 +570,6 @@
             // birthdate_datetimepicker_profile
             // 
             this.birthdate_datetimepicker_profile.CustomFormat = "_________-_________-_________";
-            this.birthdate_datetimepicker_profile.Enabled = false;
             this.birthdate_datetimepicker_profile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.birthdate_datetimepicker_profile.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.birthdate_datetimepicker_profile.Location = new System.Drawing.Point(143, 118);
@@ -591,7 +582,6 @@
             // gender_Male_radiobutton_profile
             // 
             this.gender_Male_radiobutton_profile.AutoSize = true;
-            this.gender_Male_radiobutton_profile.Enabled = false;
             this.gender_Male_radiobutton_profile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gender_Male_radiobutton_profile.Location = new System.Drawing.Point(163, 67);
             this.gender_Male_radiobutton_profile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -627,7 +617,6 @@
             // firstname_textbox_profile
             // 
             this.firstname_textbox_profile.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstname_textbox_profile.Enabled = false;
             this.firstname_textbox_profile.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.firstname_textbox_profile.ForeColor = System.Drawing.Color.Gray;
             this.firstname_textbox_profile.Location = new System.Drawing.Point(178, 22);
@@ -644,7 +633,6 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Enabled = false;
             this.label1.ForeColor = System.Drawing.Color.Gray;
             this.label1.Location = new System.Drawing.Point(158, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -667,7 +655,6 @@
             this.father_panel_profile.Controls.Add(this.label27);
             this.father_panel_profile.Controls.Add(this.label15);
             this.father_panel_profile.Controls.Add(this.label14);
-            this.father_panel_profile.Enabled = false;
             this.father_panel_profile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(28)))), ((int)(((byte)(153)))));
             this.father_panel_profile.Location = new System.Drawing.Point(2, 39);
             this.father_panel_profile.Margin = new System.Windows.Forms.Padding(2);
@@ -822,7 +809,6 @@
             // father_checkbox_profile
             // 
             this.father_checkbox_profile.AutoSize = true;
-            this.father_checkbox_profile.Enabled = false;
             this.father_checkbox_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.father_checkbox_profile.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.father_checkbox_profile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
@@ -849,7 +835,6 @@
             this.mother_panel_profile.Controls.Add(this.label8);
             this.mother_panel_profile.Controls.Add(this.label11);
             this.mother_panel_profile.Controls.Add(this.label10);
-            this.mother_panel_profile.Enabled = false;
             this.mother_panel_profile.Location = new System.Drawing.Point(2, 159);
             this.mother_panel_profile.Margin = new System.Windows.Forms.Padding(2);
             this.mother_panel_profile.Name = "mother_panel_profile";
@@ -1003,7 +988,6 @@
             // mother_checkbox_profile
             // 
             this.mother_checkbox_profile.AutoSize = true;
-            this.mother_checkbox_profile.Enabled = false;
             this.mother_checkbox_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mother_checkbox_profile.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mother_checkbox_profile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
@@ -1777,46 +1761,46 @@
             this.donation_datagridview_bloodletting.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.donation_datagridview_bloodletting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.donation_datagridview_bloodletting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(7);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.donation_datagridview_bloodletting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.donation_datagridview_bloodletting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.donation_datagridview_bloodletting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.donation_datagridview_bloodletting.ColumnHeadersVisible = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.donation_datagridview_bloodletting.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.donation_datagridview_bloodletting.DefaultCellStyle = dataGridViewCellStyle10;
             this.donation_datagridview_bloodletting.EnableHeadersVisualStyles = false;
             this.donation_datagridview_bloodletting.Location = new System.Drawing.Point(321, 77);
             this.donation_datagridview_bloodletting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.donation_datagridview_bloodletting.MultiSelect = false;
             this.donation_datagridview_bloodletting.Name = "donation_datagridview_bloodletting";
             this.donation_datagridview_bloodletting.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(7);
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.donation_datagridview_bloodletting.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.donation_datagridview_bloodletting.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.donation_datagridview_bloodletting.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5);
-            this.donation_datagridview_bloodletting.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5);
+            this.donation_datagridview_bloodletting.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.donation_datagridview_bloodletting.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.donation_datagridview_bloodletting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.donation_datagridview_bloodletting.Size = new System.Drawing.Size(386, 307);
@@ -2023,10 +2007,8 @@
             // 
             // profile_panel
             // 
-            this.profile_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.profile_panel.BackColor = System.Drawing.Color.White;
             this.profile_panel.Controls.Add(this.flowLayoutPanel1);
-            this.profile_panel.Controls.Add(this.edit_button_profile);
-            this.profile_panel.Controls.Add(this.save_button_profile);
             this.profile_panel.Controls.Add(this.bloodtype_combobox_profile);
             this.profile_panel.Controls.Add(this.label109);
             this.profile_panel.Controls.Add(this.contactNumber_textbox_profile);
@@ -2048,6 +2030,7 @@
             this.profile_panel.Controls.Add(this.gender_female_radiobutton_profile);
             this.profile_panel.Controls.Add(this.label2);
             this.profile_panel.Controls.Add(this.label3);
+            this.profile_panel.Enabled = false;
             this.profile_panel.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.profile_panel.Location = new System.Drawing.Point(-1, 31);
             this.profile_panel.Margin = new System.Windows.Forms.Padding(2);
@@ -2101,7 +2084,6 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Enabled = false;
             this.label2.ForeColor = System.Drawing.Color.Gray;
             this.label2.Location = new System.Drawing.Point(161, 168);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -3188,19 +3170,21 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(734, 524);
             this.ControlBox = false;
-            this.Controls.Add(this.bloodletting_panel);
+            this.Controls.Add(this.edit_button_profile);
+            this.Controls.Add(this.save_button_profile);
             this.Controls.Add(this.btn_Close);
+            this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.marriage_panel);
             this.Controls.Add(this.balance_panel);
+            this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.biodata_button);
             this.Controls.Add(this.baptism_button);
             this.Controls.Add(this.bloodletting_button);
             this.Controls.Add(this.balance_button);
             this.Controls.Add(this.marriage_button);
             this.Controls.Add(this.confirmation_button);
-            this.Controls.Add(this.profile_panel);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

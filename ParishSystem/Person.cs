@@ -54,7 +54,7 @@ namespace ParishSystem
             if (A.Text.Trim().Equals(""))
             {
                 A.Text = B;
-                A.ForeColor = Color.Silver;
+                A.ForeColor = Color.Gray;
             }
         }
 
@@ -68,57 +68,78 @@ namespace ParishSystem
             }
         }
 
+        private void Names_textbox_profile_TextChanged(object sender, EventArgs e)
+        {
+
+            TextBox A = sender as TextBox;
+            if (A.Text.Equals(A.Name.Split('_')[0]))
+            {
+                A.ForeColor = SystemColors.GrayText;
+            }
+            else
+            {
+                A.ForeColor = Color.Black;
+            }
+        }
         #endregion
 
         #region Saves
         private void saveGeneralProfile(object sender, EventArgs e)
         {
-            char gender = '0';
-            if (gender_Male_radiobutton_profile.Checked == true) { gender = 'm'; }
-            else if (gender_female_radiobutton_profile.Checked == true) { gender = 'f'; }
-
-            dh.editGeneralProfile(
-                ProfileID,
-                firstname_textbox_profile.Text,
-                middlename_textbox_profile.Text,
-                lastname_textbox_profile.Text,
-                suffix_textbox_profile.Text,
-                gender,
-                birthdate_datetimepicker_profile.Value,
-                contactNumber_textbox_profile.Text,
-                address_textarea_profile.Text,
-                birthplace_textbox_profile.Text,
-                bloodtype_combobox_profile.Text
-                );
-
-
-            if (father_checkbox_profile.Checked == true)
+            if (firstname_textbox_profile.Text!="firstname")
             {
-                try
-                {
+                char gender = '0';
+                if (gender_Male_radiobutton_profile.Checked == true) { gender = 'm'; }
+                else if (gender_female_radiobutton_profile.Checked == true) { gender = 'f'; }
 
-                    int fatherID = int.Parse(dh.getFatherOf(ProfileID).Rows[0]["parentID"].ToString());
-                    dh.editParent(fatherID, firstname_textbox_father_profile.Text, middlename_textbox_father_profile.Text, lastname_textbox_father_profile.Text, suffix_textbox_father_profile.Text, 'm', birthplace_textbox_father_profile.Text);
-                }
-                catch
+                dh.editGeneralProfile(
+                    ProfileID,
+                    firstname_textbox_profile.Text,
+                    middlename_textbox_profile.Text,
+                    lastname_textbox_profile.Text,
+                    suffix_textbox_profile.Text,
+                    gender,
+                    birthdate_datetimepicker_profile.Value,
+                    contactNumber_textbox_profile.Text,
+                    address_textarea_profile.Text,
+                    birthplace_textbox_profile.Text,
+                    bloodtype_combobox_profile.Text
+                    );
+
+
+                if (father_checkbox_profile.Checked == true)
                 {
-                    dh.conn.Close();
-                    dh.addParent(ProfileID, firstname_textbox_father_profile.Text, middlename_textbox_father_profile.Text, lastname_textbox_father_profile.Text, suffix_textbox_father_profile.Text, 'm', birthplace_textbox_father_profile.Text);
+                    if (suffix_textbox_father_profile.Text.Equals("suffix")) { suffix_textbox_father_profile.Text = null; }
+                    try
+                    {
+                        int fatherID = int.Parse(dh.getFatherOf(ProfileID).Rows[0]["parentID"].ToString());
+                        dh.editParent(fatherID, firstname_textbox_father_profile.Text, middlename_textbox_father_profile.Text, lastname_textbox_father_profile.Text, suffix_textbox_father_profile.Text, 'm', birthplace_textbox_father_profile.Text);
+                    }
+                    catch
+                    {
+                        dh.conn.Close();
+                        dh.addParent(ProfileID, firstname_textbox_father_profile.Text, middlename_textbox_father_profile.Text, lastname_textbox_father_profile.Text, suffix_textbox_father_profile.Text, 'm', birthplace_textbox_father_profile.Text);
+                    }
+                }
+
+                if (mother_checkbox_profile.Checked == true)
+                {
+                    if (suffix_textbox_mother_profile.Text.Equals("suffix")) { suffix_textbox_father_profile.Text = null; }
+                    try
+                    {
+                        int motherID = int.Parse(dh.getMotherOf(ProfileID).Rows[0]["parentID"].ToString());
+                        dh.editParent(motherID, firstname_textbox_father_profile.Text, middlename_textbox_father_profile.Text, lastname_textbox_father_profile.Text, suffix_textbox_father_profile.Text, 'f', birthplace_textbox_father_profile.Text);
+                    }
+                    catch
+                    {
+                        dh.conn.Close();
+                        dh.addParent(ProfileID, firstname_textbox_father_profile.Text, middlename_textbox_father_profile.Text, lastname_textbox_father_profile.Text, suffix_textbox_father_profile.Text, 'f', birthplace_textbox_father_profile.Text);
+                    }
                 }
             }
-
-            if (mother_checkbox_profile.Checked == true)
+            else
             {
-                try
-                {
-                    int motherID = int.Parse(dh.getMotherOf(ProfileID).Rows[0]["parentID"].ToString());
-                    dh.editParent(motherID, firstname_textbox_father_profile.Text, middlename_textbox_father_profile.Text, lastname_textbox_father_profile.Text, suffix_textbox_father_profile.Text, 'f', birthplace_textbox_father_profile.Text);
-                }
-                catch
-                {
-                    dh.conn.Close();
-                    dh.addParent(ProfileID, firstname_textbox_father_profile.Text, middlename_textbox_father_profile.Text, lastname_textbox_father_profile.Text, suffix_textbox_father_profile.Text, 'f', birthplace_textbox_father_profile.Text);
-                }
+
             }
         }
 
@@ -170,7 +191,7 @@ namespace ParishSystem
                 birthplace_textbox_father_profile.Text = TempFatherDT.Rows[0]["birthplace"].ToString();
                 residence_textbox_father_profile.Text = TempFatherDT.Rows[0]["residence"].ToString();
                 father_checkbox_profile.Checked = true;
-                father_checkbox_profile.Enabled = false;
+                father_checkbox_profile.Enabled = true;
 
             }
             else
@@ -190,7 +211,7 @@ namespace ParishSystem
                 birthplace_textbox_mother_profile.Text = TempMotherDT.Rows[0]["birthplace"].ToString();
                 residence_textbox_mother_profile.Text = TempMotherDT.Rows[0]["residence"].ToString();
                 mother_checkbox_profile.Checked = true;
-                mother_checkbox_profile.Enabled = false;
+                mother_checkbox_profile.Enabled = true;
 
             }
             else
@@ -318,7 +339,9 @@ namespace ParishSystem
         private void biodata_button_Click(object sender, EventArgs e)
         {
             load_Biodata();
-            panelDict["profile_panel"].BringToFront();   
+            panelDict["profile_panel"].BringToFront();
+            save_button_profile.BringToFront();
+            edit_button_profile.BringToFront();
             //profile_panel.Visible = true;
             //baptism_panel.Visible = false;
             //confirmation_panel.Visible = false;
@@ -521,12 +544,7 @@ namespace ParishSystem
 
         private void bloodletting_button_Click(object sender, EventArgs e)
         {
-            profile_panel.Visible = false;
-            baptism_panel.Visible = false;
-            confirmation_panel.Visible = false;
-            marriage_panel.Visible = false;
-            balance_panel.Visible = false;
-            bloodletting_panel.Visible = true;
+            bloodletting_panel.BringToFront();
             load_bloodletting();
         }
 
@@ -556,6 +574,7 @@ namespace ParishSystem
         }
 
 
+
         #region Profiles
 
         private void edit_button_profile_Click(object sender, EventArgs e)
@@ -563,82 +582,15 @@ namespace ParishSystem
             if (edit_button_profile.Text .Equals("Edit"))
             {
                 edit_button_profile.Text = "Cancel";
-                profile_panel.BackColor = Color.White;
-                firstname_textbox_profile.Enabled = true;
-                middlename_textbox_profile.Enabled = true;
-                lastname_textbox_profile.Enabled = true;
-                suffix_textbox_profile.Enabled = true;
-                gender_Male_radiobutton_profile.Enabled = true;
-                gender_female_radiobutton_profile.Enabled = true;
-                bloodtype_combobox_profile.Enabled = true;
-                birthdate_datetimepicker_profile.Enabled = true;
-                birthplace_textbox_profile.Enabled = true;
-                address_textarea_profile.Enabled = true;
-                contactNumber_textbox_profile.Enabled = true;
-
-                father_checkbox_profile.Enabled = true;
-                father_panel_profile.Enabled = true;
-                father_checkbox_profile.Enabled = true;
-                firstname_textbox_father_profile.Enabled = true;
-                middlename_textbox_father_profile.Enabled = true;
-                lastname_textbox_father_profile.Enabled = true;
-                suffix_textbox_father_profile.Enabled = true;
-                birthplace_textbox_father_profile.Enabled = true;
-                residence_textbox_father_profile.Enabled = true;
-
-                mother_checkbox_profile.Enabled = true;
-                mother_panel_profile.Enabled = true;
-                firstname_textbox_mother_profile.Enabled = true;
-                middlename_textbox_mother_profile.Enabled = true;
-                lastname_textbox_mother_profile.Enabled = true;
-                suffix_textbox_mother_profile.Enabled = true;
-                birthplace_textbox_mother_profile.Enabled = true;
-                residence_textbox_mother_profile.Enabled = true;
-
+                profile_panel.Enabled = true;
                 save_button_profile.Enabled = true;
               
             }
             else if (edit_button_profile.Text.Equals("Cancel"))
             {
                 edit_button_profile.Text = "Edit";
-
                 load_Biodata();
-                profile_panel.BackColor = Color.FromArgb(240, 240, 240);
-
-                
-
-
-                firstname_textbox_profile.Enabled = false;
-                middlename_textbox_profile.Enabled = false;
-                lastname_textbox_profile.Enabled = false;
-                suffix_textbox_profile.Enabled = false;
-                gender_Male_radiobutton_profile.Enabled = false;
-                gender_female_radiobutton_profile.Enabled = false;
-                bloodtype_combobox_profile.Enabled = false;
-                birthdate_datetimepicker_profile.Enabled = false;
-                birthplace_textbox_profile.Enabled = false;
-                address_textarea_profile.Enabled = false;
-                contactNumber_textbox_profile.Enabled = false;
-
-                father_checkbox_profile.Enabled = false;
-                father_panel_profile.Enabled = false;
-                father_checkbox_profile.Enabled = false;
-                firstname_textbox_father_profile.Enabled = false;
-                middlename_textbox_father_profile.Enabled = false;
-                lastname_textbox_father_profile.Enabled = false;
-                suffix_textbox_father_profile.Enabled = false;
-                birthplace_textbox_father_profile.Enabled = false;
-                residence_textbox_father_profile.Enabled = false;
-
-                mother_checkbox_profile.Enabled = false;
-                mother_panel_profile.Enabled = false;
-                firstname_textbox_mother_profile.Enabled = false;
-                middlename_textbox_mother_profile.Enabled = false;
-                lastname_textbox_mother_profile.Enabled = false;
-                suffix_textbox_mother_profile.Enabled = false;
-                birthplace_textbox_mother_profile.Enabled = false;
-                residence_textbox_mother_profile.Enabled = false;
-
+                profile_panel.Enabled = false;
                 save_button_profile.Enabled = false;
               
                
@@ -677,21 +629,8 @@ namespace ParishSystem
         }
 
         #endregion
-
-        private void Names_textbox_profile_TextChanged(object sender, EventArgs e)
-        {
-          
-            TextBox A = sender as TextBox;
-            if (A.Text.Equals(A.Name.Split('_')[0]))
-            {
-                A.ForeColor = SystemColors.GrayText;
-            }
-            else
-            {
-                A.ForeColor = Color.Black;
-            }
-        }
-        #region
+        
+        #region bloodletting
         //--------------bloodletting--------------------//
        
         private void reloadBloodlettingDataGridView()
@@ -752,24 +691,15 @@ namespace ParishSystem
 
         }
 
-
-        //donation_datagridview_bloodletting
-
-
-
-
-        //donation_datagridview_bloodletting_CellClick
-        #endregion
-
         private void donation_datagridview_bloodletting_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
             quantityDonation_numericupdown_bloodletting.Value = decimal.Parse(donation_datagridview_bloodletting.SelectedRows[0].Cells["quantity"].Value.ToString());
             bloodDonationEvent_combobox_bloodletting.Text = donation_datagridview_bloodletting.SelectedRows[0].Cells["eventName"].Value.ToString();
             add_button_bloodletting.Enabled = false;
-            add_button_bloodletting.Text="Edit";
+            add_button_bloodletting.Text = "Edit";
             delete_button_bloodletting.Enabled = true;
-           
+
         }
 
         private void quantityDonation_numericupdown_bloodletting_ValueChanged(object sender, EventArgs e)
@@ -786,15 +716,22 @@ namespace ParishSystem
 
         private void bloodDonationEvent_combobox_bloodletting_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (bloodDonationEvent_combobox_bloodletting.Text.Equals("")|| quantityDonation_numericupdown_bloodletting.Value.ToString().Equals("0"))
-            { 
+            if (bloodDonationEvent_combobox_bloodletting.Text.Equals("") || quantityDonation_numericupdown_bloodletting.Value.ToString().Equals("0"))
+            {
                 add_button_bloodletting.Enabled = false;
             }
             else
             {
                 add_button_bloodletting.Enabled = true;
             }
-}
+        }
+
+      
+        #endregion bloodletting
+
+
+
+
 
         private void label104_Click(object sender, EventArgs e)
         {
