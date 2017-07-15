@@ -676,7 +676,7 @@ namespace ParishSystem
 
         public DataTable getParentsOf(int profileID)
         {
-            string q = "SELECT * FROM Parent WHERE profileID = '" + profileID + "'";
+            string q = "SELECT *,concat(firstname,\" \",midname,\" \",lastname,\" \",suffix) as Name FROM Parent WHERE profileID = '" + profileID + "'";
 
             DataTable dt = runQuery(q);
 
@@ -1368,10 +1368,15 @@ namespace ParishSystem
 
         public DataTable getBaptisms()
         {
-            string q = "SELECT * FROM Baptism";
+            string q = "SELECT *,concat(generalprofile.firstName,\" \",generalprofile.midName,\" \",generalprofile.lastName,\" \",generalprofile.suffix,\" \") as profile , " +
+                            "concat(minister.firstName,\" \",minister.midName,\" \",minister.lastName,\" \",minister.suffix,\" \")as minister " +
+                                "FROM generalprofile inner join applicant on applicant.profileID = generalprofile.profileID  " +
+                                "inner join application on applicant.applicationID= application.applicationID  " +
+                                "inner join baptism on baptism.applicationID= application.applicationID  " +
+                                "inner join minister on minister.ministerID=baptism.ministerID";
 
             DataTable dt = runQuery(q);
-
+           
             return dt;
         }
 
@@ -1438,9 +1443,23 @@ namespace ParishSystem
 
         public DataTable getBaptismOf(int profileID)//COMMENT: ambiguous profile id
         {
-            string q = "SELECT * FROM Baptism"
-                + " JOIN Application ON Application.applicationID = Baptism.applicationID"
-                + " WHERE Application.profileID = " + profileID;
+                string q = " SELECT *,concat(generalprofile.firstName,\" \",generalprofile.midName,\" \",generalprofile.lastName,\" \",generalprofile.suffix,\" \") as profile , "+
+                            " concat(minister.firstName, \" \", minister.midName, \" \", minister.lastName, \" \", minister.suffix, \" \") as minister,"+
+                             " generalprofile.firstname as fng," +
+                             " generalprofile.midname as mng," +
+                             " generalprofile.lastName as lng," +
+                             " generalprofile.suffix as sg," +
+                             " generalprofile.birthdate as bdg," +
+                             " generalprofile.gender as gg," +
+                             " minister.firstname as fnm," +
+                             " minister.midname as mnm," +
+                             " minister.lastname as lnm," +
+                             " minister.suffix as sm" +
+                             " FROM generalprofile left outer join applicant on applicant.profileID = generalprofile.profileID" +
+                             " left outer join application on applicant.applicationID = application.applicationID" +
+                             " left outer join baptism on baptism.applicationID = application.applicationID" +
+                             " left outer join minister on minister.ministerID = baptism.ministerID" +
+                             " WHERE generalprofile.profileID =" + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -1577,7 +1596,12 @@ namespace ParishSystem
 
         public DataTable getConfirmations()
         {
-            string q = "SELECT * FROM Confirmation";
+            string q = " SELECT *,concat(generalprofile.firstName,\" \",generalprofile.midName,\" \",generalprofile.lastName,\" \",generalprofile.suffix,\" \") as profile , " +
+                            "concat(minister.firstName,\" \",minister.midName,\" \",minister.lastName,\" \",minister.suffix,\" \")as minister " +
+                                "FROM generalprofile inner join applicant on applicant.profileID = generalprofile.profileID  " +
+                                "inner join application on applicant.applicationID= application.applicationID  " +
+                                "inner join confirmation on confirmation.applicationID= application.applicationID  " +
+                                "inner join minister on minister.ministerID=confirmation.ministerID";
 
             DataTable dt = runQuery(q);
 
@@ -2400,12 +2424,10 @@ namespace ParishSystem
 
         public DataTable getSponsors(int sacramentID, string sacramentType)
         {
-
-            //please add a column to format the names to be fn mn ln sf, but use select * parin
-
+         
             string q = "SELECT *, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix) as Name FROM Sponsor"
                 + " WHERE sacramentType = '" + sacramentType +"' AND sacramentID = " + sacramentID;
-
+            
             DataTable dt = runQuery(q);
 
             return dt;
@@ -2433,7 +2455,7 @@ namespace ParishSystem
 
         public DataTable getMinisters()
         {
-            string q = "SELECT ministerID, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix), birthdate, ministryType, status, licenseNumber, expirationDate FROM Minister";
+            string q = "SELECT ministerID, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix) as Name, birthdate, ministryType, status, licenseNumber, expirationDate FROM Minister";
 
             DataTable dt = runQuery(q);
 
