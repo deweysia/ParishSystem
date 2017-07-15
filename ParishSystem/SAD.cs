@@ -309,7 +309,7 @@ namespace ParishSystem
         {
             CheckBox A = sender as CheckBox;
             //baptism application
-            if (A.Equals(newApplicant_checkbox_baptismApplication))
+            /*if (A.Equals(newApplicant_checkbox_baptismApplication))
             {
                 if (A.Checked == true)
                 {
@@ -322,9 +322,9 @@ namespace ParishSystem
                     newName_panel_baptismApplication.Visible = false;
                 }
 
-            }
+            }*/
             //confirmation application
-            else if (A.Equals(newApplicant_checkbox_confirmationApplication)) {
+            if (A.Equals(newApplicant_checkbox_confirmationApplication)) {
                 if (A.Checked==true) {
                     existingName_panel_confirmationApplication.Enabled = false;
                     newName_panel_confirmationApplication.Visible = true;
