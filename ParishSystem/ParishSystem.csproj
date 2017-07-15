@@ -291,6 +291,7 @@
     <Content Include="Resources\icons\32x32\Edit_32px.png" />
     <Content Include="Resources\icons\32x32\Eye_32px.png" />
     <Content Include="Resources\icons\32x32\Google Web Search_32px.png" />
+    <None Include="Resources\icons\32x32\Heart with Pulse_32px.png" />
     <Content Include="Resources\icons\32x32\Holy Bible_32px.png" />
     <Content Include="Resources\icons\32x32\Home_32px.png" />
     <Content Include="Resources\icons\32x32\Info_32px.png" />
