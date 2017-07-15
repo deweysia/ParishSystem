@@ -401,21 +401,7 @@ namespace ParishSystem
 
        
 
-        public bool editBloodDonation(int bloodDonationID, int generalProfileID, int bloodDonationEventID, int donationAmount, DateTime bloodDonationDateTime)
-        {
-            //addBloodDonationLog(bloodDonationID);
-
-            string q = "UPDATE BloodDonation SET generalProfileID = '" + generalProfileID
-                + "', bloodDonationEventID = '" + bloodDonationEventID
-                + "', donationAmount = '" + donationAmount
-                + "', bloodDonationDateTime = '" + bloodDonationDateTime.ToString("yyyy-MM-dd HH:mm:ss")
-                + "' WHERE bloodDonationID = '" + bloodDonationID + "'";
-
-            //updateModificationInfo("BloodDonation", "bloodDonationID", bloodDonationID);
-
-            return runNonQuery(q);
-        }
-
+       
         public bool deleteBloodDonation(int bloodDonationID)
         {
             if (!idExists("bloodDonation", "bloodDonationID", bloodDonationID))
@@ -430,26 +416,7 @@ namespace ParishSystem
             return runNonQuery(q);
         }
 
-        public DataTable getBloodDonation(int bloodDonationID)
-        {
-            string q = "SELECT * FROM bloodDonation WHERE bloodDonationID = " + bloodDonationID;
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-
-        }
-
-        public bool isRetrieved(int bloodDonationID)
-        {
-            string q = "SELECT * FROM bloodDonationRetrieval WHERE bloodDonationID = " + bloodDonationID;
-
-            DataTable dt = runQuery(q);
-
-            return dt.Rows.Count > 0;
-        }
-
-
+     
         //SPECIAL FUNCTION
         public int getTotalBloodDonationOf(int generalProfileID)
         {
@@ -2531,7 +2498,7 @@ namespace ParishSystem
             string q = "UPDATE BloodDonation SET quantity = '" + quantity 
                 + "', bloodDonationEventID = '" + bloodDonationEventID 
                 + "', bloodDonationDateTime = '" + donationDateTime.ToString("yyyy-MM-dd HH:mm:ss") 
-                + "' WHERE profleID = '" + profleID + "'";
+                + "' WHERE profileID = '" + profleID + "'";
 
             bool success = runNonQuery(q);
             return success;
