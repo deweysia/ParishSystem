@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\Desktop\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
@@ -198,6 +198,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SAD.resx">
       <DependentUpon>SAD.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="sApplicant.resx">
       <DependentUpon>sApplicant.cs</DependentUpon>
@@ -263,7 +264,7 @@
     <Content Include="bin\Debug\ParishSystem.vshost.exe" />
     <Content Include="database\DB_Populator.txt" />
     <Content Include="database\updatedDB.sql" />
-    <Content Include="database\updatedSQLDB2.sql" />
+    <Content Include="database\SQLDB_V6.sql" />
     <Content Include="obj\Debug\ParishSystem.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\ParishSystem.exe" />
     <Content Include="obj\Debug\ParishSystem.pdb" />

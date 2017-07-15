@@ -153,6 +153,7 @@ namespace ParishSystem
             generalprofile_datagridview.Columns["address"].Visible = false;
             generalprofile_datagridview.Columns["birthplace"].Visible = false;
             generalprofile_datagridview.Columns["bloodtype"].Visible = false;
+            generalprofile_datagridview.Columns["Name"].HeaderText = "";
             generalprofile_datagridview.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
@@ -211,6 +212,7 @@ namespace ParishSystem
         {//open person complete profile
            
             Form person = new Person(lastGeneralProfile, dh);
+            person.Location = this.Location;
             person.ShowDialog();
           
            
@@ -486,10 +488,7 @@ namespace ParishSystem
             }
         }
 
-        private void libraryConfirmationButton_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void label8_Click(object sender, EventArgs e)
         {
@@ -503,9 +502,25 @@ namespace ParishSystem
             metroGrid1.DataSource = dt;
         }
 
+        private void libraryConfirmationButton_Click(object sender, EventArgs e)
+        {
+            DataTable dt = dh.getConfirmations();
+            //dgvSacraments.DataSource = dt;
+            metroGrid1.DataSource = dt;
+        }
+
+        private void libraryMarriageButton_Click(object sender, EventArgs e)
+        {
+            
+            //dgvSacraments.DataSource = dt;
+            
+        }
+
         private void generalprofile_datagridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+        
     }
 }

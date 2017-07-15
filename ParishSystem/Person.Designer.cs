@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.biodata_button = new System.Windows.Forms.Button();
             this.baptism_button = new System.Windows.Forms.Button();
             this.confirmation_button = new System.Windows.Forms.Button();
@@ -141,26 +145,16 @@
             this.appointment_button_confirmation = new System.Windows.Forms.Button();
             this.sponsor_datagridview_marriage = new System.Windows.Forms.DataGridView();
             this.bloodletting_panel = new System.Windows.Forms.Panel();
-            this.label108 = new System.Windows.Forms.Label();
+            this.donation_datagridview_bloodletting = new System.Windows.Forms.DataGridView();
+            this.delete_button_bloodletting = new System.Windows.Forms.Button();
+            this.add_button_bloodletting = new System.Windows.Forms.Button();
+            this.totalDonation_label_bloodletting = new System.Windows.Forms.Label();
             this.label107 = new System.Windows.Forms.Label();
-            this.bloodtype_combobox_bloodletting = new System.Windows.Forms.ComboBox();
-            this.bloodDonorClaim_combobox_bloodletting = new System.Windows.Forms.ComboBox();
             this.quantityDonation_numericupdown_bloodletting = new System.Windows.Forms.NumericUpDown();
-            this.totalClaim_textbox_bloodletting = new System.Windows.Forms.TextBox();
-            this.totalDonation_textbox_bloodletting = new System.Windows.Forms.TextBox();
-            this.deleteClaim_button_bloodletting = new System.Windows.Forms.Button();
-            this.deleteDonation_button_bloodletting = new System.Windows.Forms.Button();
-            this.addClaim_button_bloodletting = new System.Windows.Forms.Button();
-            this.addDonation_button_bloodletting = new System.Windows.Forms.Button();
             this.bloodDonationEvent_combobox_bloodletting = new System.Windows.Forms.ComboBox();
-            this.label102 = new System.Windows.Forms.Label();
             this.label104 = new System.Windows.Forms.Label();
-            this.label106 = new System.Windows.Forms.Label();
-            this.label105 = new System.Windows.Forms.Label();
             this.label103 = new System.Windows.Forms.Label();
             this.label101 = new System.Windows.Forms.Label();
-            this.claim_datagridview_bloodletting = new System.Windows.Forms.DataGridView();
-            this.donation_datagridview_bloodletting = new System.Windows.Forms.DataGridView();
             this.balance_panel = new System.Windows.Forms.Panel();
             this.payment_button_balance = new System.Windows.Forms.Button();
             this.label51 = new System.Windows.Forms.Label();
@@ -275,9 +269,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.requirements_datagridview_confirmation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sponsor_datagridview_marriage)).BeginInit();
             this.bloodletting_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.quantityDonation_numericupdown_bloodletting)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.claim_datagridview_bloodletting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.donation_datagridview_bloodletting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quantityDonation_numericupdown_bloodletting)).BeginInit();
             this.balance_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.payable_datagridview_balance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paid_datagridview_balance)).BeginInit();
@@ -1753,200 +1746,171 @@
             // bloodletting_panel
             // 
             this.bloodletting_panel.BackColor = System.Drawing.Color.White;
-            this.bloodletting_panel.Controls.Add(this.label108);
+            this.bloodletting_panel.Controls.Add(this.donation_datagridview_bloodletting);
+            this.bloodletting_panel.Controls.Add(this.delete_button_bloodletting);
+            this.bloodletting_panel.Controls.Add(this.add_button_bloodletting);
+            this.bloodletting_panel.Controls.Add(this.totalDonation_label_bloodletting);
             this.bloodletting_panel.Controls.Add(this.label107);
-            this.bloodletting_panel.Controls.Add(this.bloodtype_combobox_bloodletting);
-            this.bloodletting_panel.Controls.Add(this.bloodDonorClaim_combobox_bloodletting);
             this.bloodletting_panel.Controls.Add(this.quantityDonation_numericupdown_bloodletting);
-            this.bloodletting_panel.Controls.Add(this.totalClaim_textbox_bloodletting);
-            this.bloodletting_panel.Controls.Add(this.totalDonation_textbox_bloodletting);
-            this.bloodletting_panel.Controls.Add(this.deleteClaim_button_bloodletting);
-            this.bloodletting_panel.Controls.Add(this.deleteDonation_button_bloodletting);
-            this.bloodletting_panel.Controls.Add(this.addClaim_button_bloodletting);
-            this.bloodletting_panel.Controls.Add(this.addDonation_button_bloodletting);
             this.bloodletting_panel.Controls.Add(this.bloodDonationEvent_combobox_bloodletting);
-            this.bloodletting_panel.Controls.Add(this.label102);
             this.bloodletting_panel.Controls.Add(this.label104);
-            this.bloodletting_panel.Controls.Add(this.label106);
-            this.bloodletting_panel.Controls.Add(this.label105);
             this.bloodletting_panel.Controls.Add(this.label103);
             this.bloodletting_panel.Controls.Add(this.label101);
-            this.bloodletting_panel.Controls.Add(this.claim_datagridview_bloodletting);
-            this.bloodletting_panel.Controls.Add(this.donation_datagridview_bloodletting);
-            this.bloodletting_panel.Location = new System.Drawing.Point(37, 31);
+            this.bloodletting_panel.Location = new System.Drawing.Point(1, 31);
             this.bloodletting_panel.Margin = new System.Windows.Forms.Padding(2);
             this.bloodletting_panel.Name = "bloodletting_panel";
-            this.bloodletting_panel.Size = new System.Drawing.Size(660, 467);
+            this.bloodletting_panel.Size = new System.Drawing.Size(733, 467);
             this.bloodletting_panel.TabIndex = 54;
             // 
-            // label108
+            // donation_datagridview_bloodletting
             // 
-            this.label108.AutoSize = true;
-            this.label108.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label108.Location = new System.Drawing.Point(361, 66);
-            this.label108.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(77, 30);
-            this.label108.TabIndex = 7;
-            this.label108.Text = "Claims";
+            this.donation_datagridview_bloodletting.AllowUserToAddRows = false;
+            this.donation_datagridview_bloodletting.AllowUserToDeleteRows = false;
+            this.donation_datagridview_bloodletting.AllowUserToResizeColumns = false;
+            this.donation_datagridview_bloodletting.AllowUserToResizeRows = false;
+            this.donation_datagridview_bloodletting.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.donation_datagridview_bloodletting.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.donation_datagridview_bloodletting.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.donation_datagridview_bloodletting.BackgroundColor = System.Drawing.Color.White;
+            this.donation_datagridview_bloodletting.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.donation_datagridview_bloodletting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.donation_datagridview_bloodletting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.donation_datagridview_bloodletting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.donation_datagridview_bloodletting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.donation_datagridview_bloodletting.ColumnHeadersVisible = false;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.donation_datagridview_bloodletting.DefaultCellStyle = dataGridViewCellStyle6;
+            this.donation_datagridview_bloodletting.EnableHeadersVisualStyles = false;
+            this.donation_datagridview_bloodletting.Location = new System.Drawing.Point(391, 77);
+            this.donation_datagridview_bloodletting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.donation_datagridview_bloodletting.MultiSelect = false;
+            this.donation_datagridview_bloodletting.Name = "donation_datagridview_bloodletting";
+            this.donation_datagridview_bloodletting.ReadOnly = true;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.donation_datagridview_bloodletting.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.donation_datagridview_bloodletting.RowHeadersVisible = false;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5);
+            this.donation_datagridview_bloodletting.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.donation_datagridview_bloodletting.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.donation_datagridview_bloodletting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.donation_datagridview_bloodletting.Size = new System.Drawing.Size(316, 307);
+            this.donation_datagridview_bloodletting.TabIndex = 35;
+            this.donation_datagridview_bloodletting.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.donation_datagridview_bloodletting_CellClick);
+            // 
+            // delete_button_bloodletting
+            // 
+            this.delete_button_bloodletting.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.delete_button_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.delete_button_bloodletting.FlatAppearance.BorderSize = 0;
+            this.delete_button_bloodletting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delete_button_bloodletting.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delete_button_bloodletting.ForeColor = System.Drawing.Color.White;
+            this.delete_button_bloodletting.Location = new System.Drawing.Point(89, 330);
+            this.delete_button_bloodletting.Name = "delete_button_bloodletting";
+            this.delete_button_bloodletting.Size = new System.Drawing.Size(100, 30);
+            this.delete_button_bloodletting.TabIndex = 34;
+            this.delete_button_bloodletting.Text = "Delete";
+            this.delete_button_bloodletting.UseVisualStyleBackColor = false;
+            this.delete_button_bloodletting.Click += new System.EventHandler(this.delete_button_bloodletting_Click);
+            // 
+            // add_button_bloodletting
+            // 
+            this.add_button_bloodletting.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.add_button_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.add_button_bloodletting.FlatAppearance.BorderSize = 0;
+            this.add_button_bloodletting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add_button_bloodletting.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_button_bloodletting.ForeColor = System.Drawing.Color.White;
+            this.add_button_bloodletting.Location = new System.Drawing.Point(222, 330);
+            this.add_button_bloodletting.Name = "add_button_bloodletting";
+            this.add_button_bloodletting.Size = new System.Drawing.Size(100, 30);
+            this.add_button_bloodletting.TabIndex = 33;
+            this.add_button_bloodletting.Text = "Add";
+            this.add_button_bloodletting.UseVisualStyleBackColor = false;
+            this.add_button_bloodletting.Click += new System.EventHandler(this.add_button_bloodletting_Click);
+            // 
+            // totalDonation_label_bloodletting
+            // 
+            this.totalDonation_label_bloodletting.AutoSize = true;
+            this.totalDonation_label_bloodletting.Location = new System.Drawing.Point(502, 406);
+            this.totalDonation_label_bloodletting.Name = "totalDonation_label_bloodletting";
+            this.totalDonation_label_bloodletting.Size = new System.Drawing.Size(53, 19);
+            this.totalDonation_label_bloodletting.TabIndex = 8;
+            this.totalDonation_label_bloodletting.Text = "label12";
             // 
             // label107
             // 
             this.label107.AutoSize = true;
             this.label107.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label107.Location = new System.Drawing.Point(42, 66);
+            this.label107.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.label107.Location = new System.Drawing.Point(411, 42);
             this.label107.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label107.Name = "label107";
             this.label107.Size = new System.Drawing.Size(114, 30);
             this.label107.TabIndex = 7;
             this.label107.Text = "Donations";
             // 
-            // bloodtype_combobox_bloodletting
-            // 
-            this.bloodtype_combobox_bloodletting.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bloodtype_combobox_bloodletting.FormattingEnabled = true;
-            this.bloodtype_combobox_bloodletting.Location = new System.Drawing.Point(436, 296);
-            this.bloodtype_combobox_bloodletting.Margin = new System.Windows.Forms.Padding(2);
-            this.bloodtype_combobox_bloodletting.Name = "bloodtype_combobox_bloodletting";
-            this.bloodtype_combobox_bloodletting.Size = new System.Drawing.Size(191, 25);
-            this.bloodtype_combobox_bloodletting.TabIndex = 6;
-            // 
-            // bloodDonorClaim_combobox_bloodletting
-            // 
-            this.bloodDonorClaim_combobox_bloodletting.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bloodDonorClaim_combobox_bloodletting.FormattingEnabled = true;
-            this.bloodDonorClaim_combobox_bloodletting.Location = new System.Drawing.Point(436, 336);
-            this.bloodDonorClaim_combobox_bloodletting.Margin = new System.Windows.Forms.Padding(2);
-            this.bloodDonorClaim_combobox_bloodletting.Name = "bloodDonorClaim_combobox_bloodletting";
-            this.bloodDonorClaim_combobox_bloodletting.Size = new System.Drawing.Size(191, 25);
-            this.bloodDonorClaim_combobox_bloodletting.TabIndex = 6;
-            // 
             // quantityDonation_numericupdown_bloodletting
             // 
             this.quantityDonation_numericupdown_bloodletting.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityDonation_numericupdown_bloodletting.Location = new System.Drawing.Point(138, 334);
+            this.quantityDonation_numericupdown_bloodletting.Location = new System.Drawing.Point(123, 225);
             this.quantityDonation_numericupdown_bloodletting.Margin = new System.Windows.Forms.Padding(2);
             this.quantityDonation_numericupdown_bloodletting.Name = "quantityDonation_numericupdown_bloodletting";
             this.quantityDonation_numericupdown_bloodletting.Size = new System.Drawing.Size(165, 25);
             this.quantityDonation_numericupdown_bloodletting.TabIndex = 5;
             // 
-            // totalClaim_textbox_bloodletting
-            // 
-            this.totalClaim_textbox_bloodletting.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalClaim_textbox_bloodletting.Location = new System.Drawing.Point(436, 255);
-            this.totalClaim_textbox_bloodletting.Margin = new System.Windows.Forms.Padding(2);
-            this.totalClaim_textbox_bloodletting.Name = "totalClaim_textbox_bloodletting";
-            this.totalClaim_textbox_bloodletting.Size = new System.Drawing.Size(106, 25);
-            this.totalClaim_textbox_bloodletting.TabIndex = 4;
-            // 
-            // totalDonation_textbox_bloodletting
-            // 
-            this.totalDonation_textbox_bloodletting.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalDonation_textbox_bloodletting.Location = new System.Drawing.Point(141, 254);
-            this.totalDonation_textbox_bloodletting.Margin = new System.Windows.Forms.Padding(2);
-            this.totalDonation_textbox_bloodletting.Name = "totalDonation_textbox_bloodletting";
-            this.totalDonation_textbox_bloodletting.Size = new System.Drawing.Size(95, 25);
-            this.totalDonation_textbox_bloodletting.TabIndex = 4;
-            // 
-            // deleteClaim_button_bloodletting
-            // 
-            this.deleteClaim_button_bloodletting.Location = new System.Drawing.Point(461, 373);
-            this.deleteClaim_button_bloodletting.Margin = new System.Windows.Forms.Padding(2);
-            this.deleteClaim_button_bloodletting.Name = "deleteClaim_button_bloodletting";
-            this.deleteClaim_button_bloodletting.Size = new System.Drawing.Size(65, 23);
-            this.deleteClaim_button_bloodletting.TabIndex = 3;
-            this.deleteClaim_button_bloodletting.Text = "Delete";
-            this.deleteClaim_button_bloodletting.UseVisualStyleBackColor = true;
-            // 
-            // deleteDonation_button_bloodletting
-            // 
-            this.deleteDonation_button_bloodletting.Location = new System.Drawing.Point(138, 373);
-            this.deleteDonation_button_bloodletting.Margin = new System.Windows.Forms.Padding(2);
-            this.deleteDonation_button_bloodletting.Name = "deleteDonation_button_bloodletting";
-            this.deleteDonation_button_bloodletting.Size = new System.Drawing.Size(65, 23);
-            this.deleteDonation_button_bloodletting.TabIndex = 3;
-            this.deleteDonation_button_bloodletting.Text = "Delete";
-            this.deleteDonation_button_bloodletting.UseVisualStyleBackColor = true;
-            // 
-            // addClaim_button_bloodletting
-            // 
-            this.addClaim_button_bloodletting.Location = new System.Drawing.Point(562, 372);
-            this.addClaim_button_bloodletting.Margin = new System.Windows.Forms.Padding(2);
-            this.addClaim_button_bloodletting.Name = "addClaim_button_bloodletting";
-            this.addClaim_button_bloodletting.Size = new System.Drawing.Size(65, 23);
-            this.addClaim_button_bloodletting.TabIndex = 3;
-            this.addClaim_button_bloodletting.Text = "Add";
-            this.addClaim_button_bloodletting.UseVisualStyleBackColor = true;
-            // 
-            // addDonation_button_bloodletting
-            // 
-            this.addDonation_button_bloodletting.Location = new System.Drawing.Point(239, 372);
-            this.addDonation_button_bloodletting.Margin = new System.Windows.Forms.Padding(2);
-            this.addDonation_button_bloodletting.Name = "addDonation_button_bloodletting";
-            this.addDonation_button_bloodletting.Size = new System.Drawing.Size(65, 23);
-            this.addDonation_button_bloodletting.TabIndex = 3;
-            this.addDonation_button_bloodletting.Text = "Add";
-            this.addDonation_button_bloodletting.UseVisualStyleBackColor = true;
-            // 
             // bloodDonationEvent_combobox_bloodletting
             // 
             this.bloodDonationEvent_combobox_bloodletting.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bloodDonationEvent_combobox_bloodletting.FormattingEnabled = true;
-            this.bloodDonationEvent_combobox_bloodletting.Location = new System.Drawing.Point(138, 300);
+            this.bloodDonationEvent_combobox_bloodletting.Location = new System.Drawing.Point(28, 119);
             this.bloodDonationEvent_combobox_bloodletting.Margin = new System.Windows.Forms.Padding(2);
             this.bloodDonationEvent_combobox_bloodletting.Name = "bloodDonationEvent_combobox_bloodletting";
-            this.bloodDonationEvent_combobox_bloodletting.Size = new System.Drawing.Size(166, 25);
+            this.bloodDonationEvent_combobox_bloodletting.Size = new System.Drawing.Size(354, 25);
             this.bloodDonationEvent_combobox_bloodletting.TabIndex = 2;
-            // 
-            // label102
-            // 
-            this.label102.AutoSize = true;
-            this.label102.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label102.Location = new System.Drawing.Point(351, 257);
-            this.label102.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(103, 21);
-            this.label102.TabIndex = 1;
-            this.label102.Text = "Total Claims";
             // 
             // label104
             // 
             this.label104.AutoSize = true;
             this.label104.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label104.Location = new System.Drawing.Point(74, 336);
+            this.label104.Location = new System.Drawing.Point(167, 252);
             this.label104.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label104.Name = "label104";
             this.label104.Size = new System.Drawing.Size(77, 21);
             this.label104.TabIndex = 1;
             this.label104.Text = "Quantity";
             // 
-            // label106
-            // 
-            this.label106.AutoSize = true;
-            this.label106.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label106.Location = new System.Drawing.Point(351, 298);
-            this.label106.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(95, 21);
-            this.label106.TabIndex = 1;
-            this.label106.Text = "Blood Type";
-            // 
-            // label105
-            // 
-            this.label105.AutoSize = true;
-            this.label105.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label105.Location = new System.Drawing.Point(348, 336);
-            this.label105.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(107, 21);
-            this.label105.TabIndex = 1;
-            this.label105.Text = "Blood Donor";
-            // 
             // label103
             // 
             this.label103.AutoSize = true;
             this.label103.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label103.Location = new System.Drawing.Point(5, 300);
+            this.label103.Location = new System.Drawing.Point(124, 150);
             this.label103.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label103.Name = "label103";
             this.label103.Size = new System.Drawing.Size(168, 21);
@@ -1957,30 +1921,12 @@
             // 
             this.label101.AutoSize = true;
             this.label101.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label101.Location = new System.Drawing.Point(33, 254);
+            this.label101.Location = new System.Drawing.Point(306, 404);
             this.label101.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label101.Name = "label101";
             this.label101.Size = new System.Drawing.Size(131, 21);
             this.label101.TabIndex = 1;
             this.label101.Text = "Total Donations";
-            // 
-            // claim_datagridview_bloodletting
-            // 
-            this.claim_datagridview_bloodletting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.claim_datagridview_bloodletting.Location = new System.Drawing.Point(352, 97);
-            this.claim_datagridview_bloodletting.Margin = new System.Windows.Forms.Padding(2);
-            this.claim_datagridview_bloodletting.Name = "claim_datagridview_bloodletting";
-            this.claim_datagridview_bloodletting.Size = new System.Drawing.Size(275, 153);
-            this.claim_datagridview_bloodletting.TabIndex = 0;
-            // 
-            // donation_datagridview_bloodletting
-            // 
-            this.donation_datagridview_bloodletting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.donation_datagridview_bloodletting.Location = new System.Drawing.Point(44, 97);
-            this.donation_datagridview_bloodletting.Margin = new System.Windows.Forms.Padding(2);
-            this.donation_datagridview_bloodletting.Name = "donation_datagridview_bloodletting";
-            this.donation_datagridview_bloodletting.Size = new System.Drawing.Size(259, 149);
-            this.donation_datagridview_bloodletting.TabIndex = 0;
             // 
             // balance_panel
             // 
@@ -3235,11 +3181,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(734, 524);
             this.ControlBox = false;
+            this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.btn_Close);
-            this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.confirmation_panel);
-            this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.marriage_panel);
             this.Controls.Add(this.balance_panel);
             this.Controls.Add(this.biodata_button);
@@ -3248,10 +3193,12 @@
             this.Controls.Add(this.balance_button);
             this.Controls.Add(this.marriage_button);
             this.Controls.Add(this.confirmation_button);
+            this.Controls.Add(this.profile_panel);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Person";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.Person_Load);
             this.father_panel_profile.ResumeLayout(false);
             this.father_panel_profile.PerformLayout();
@@ -3271,9 +3218,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.sponsor_datagridview_marriage)).EndInit();
             this.bloodletting_panel.ResumeLayout(false);
             this.bloodletting_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.quantityDonation_numericupdown_bloodletting)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.claim_datagridview_bloodletting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.donation_datagridview_bloodletting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quantityDonation_numericupdown_bloodletting)).EndInit();
             this.balance_panel.ResumeLayout(false);
             this.balance_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.payable_datagridview_balance)).EndInit();
@@ -3387,26 +3333,12 @@
         private System.Windows.Forms.Button bloodletting_button;
         private System.Windows.Forms.Panel bloodletting_panel;
         private System.Windows.Forms.Label label101;
-        private System.Windows.Forms.DataGridView claim_datagridview_bloodletting;
-        private System.Windows.Forms.DataGridView donation_datagridview_bloodletting;
-        private System.Windows.Forms.TextBox totalDonation_textbox_bloodletting;
-        private System.Windows.Forms.Button deleteDonation_button_bloodletting;
-        private System.Windows.Forms.Button addDonation_button_bloodletting;
         private System.Windows.Forms.ComboBox bloodDonationEvent_combobox_bloodletting;
-        private System.Windows.Forms.Label label102;
         private System.Windows.Forms.ComboBox bloodtype_combobox_profile;
         private System.Windows.Forms.Label label109;
-        private System.Windows.Forms.Label label108;
         private System.Windows.Forms.Label label107;
-        private System.Windows.Forms.ComboBox bloodtype_combobox_bloodletting;
-        private System.Windows.Forms.ComboBox bloodDonorClaim_combobox_bloodletting;
         private System.Windows.Forms.NumericUpDown quantityDonation_numericupdown_bloodletting;
-        private System.Windows.Forms.TextBox totalClaim_textbox_bloodletting;
-        private System.Windows.Forms.Button deleteClaim_button_bloodletting;
-        private System.Windows.Forms.Button addClaim_button_bloodletting;
         private System.Windows.Forms.Label label104;
-        private System.Windows.Forms.Label label106;
-        private System.Windows.Forms.Label label105;
         private System.Windows.Forms.Label label103;
         private System.Windows.Forms.Panel balance_panel;
         private System.Windows.Forms.Button payment_button_balance;
@@ -3542,5 +3474,9 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label totalDonation_label_bloodletting;
+        private System.Windows.Forms.Button delete_button_bloodletting;
+        private System.Windows.Forms.Button add_button_bloodletting;
+        private System.Windows.Forms.DataGridView donation_datagridview_bloodletting;
     }
 }
