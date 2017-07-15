@@ -97,25 +97,26 @@
             this.application_panel = new System.Windows.Forms.Panel();
             this.baptismApplication_panel = new System.Windows.Forms.Panel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.requirement_cb_baptismApplication4 = new MetroFramework.Controls.MetroCheckBox();
-            this.requirement_cb_baptismApplication1 = new MetroFramework.Controls.MetroCheckBox();
-            this.requirement_cb_baptismApplication3 = new MetroFramework.Controls.MetroCheckBox();
-            this.requirement_cb_baptismApplication2 = new MetroFramework.Controls.MetroCheckBox();
-            this.requirement_cb_baptismApplication5 = new MetroFramework.Controls.MetroCheckBox();
-            this.requirement_cb_baptismApplication6 = new MetroFramework.Controls.MetroCheckBox();
-            this.checkAll_cb_baptismApplication = new MetroFramework.Controls.MetroCheckBox();
-            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
+            this.BaptismApplication_Requirements_tablePanel = new System.Windows.Forms.TableLayoutPanel();
+            this.baptismApplication_requirement_comboBox4 = new MetroFramework.Controls.MetroCheckBox();
+            this.baptismApplication_requirement_comboBox1 = new MetroFramework.Controls.MetroCheckBox();
+            this.baptismApplication_requirement_comboBox3 = new MetroFramework.Controls.MetroCheckBox();
+            this.baptismApplication_requirement_comboBox2 = new MetroFramework.Controls.MetroCheckBox();
+            this.baptismApplication_requirement_comboBox5 = new MetroFramework.Controls.MetroCheckBox();
+            this.baptismApplication_requirement_comboBox6 = new MetroFramework.Controls.MetroCheckBox();
+            this.baptismApplication_checkAll_comboBox = new MetroFramework.Controls.MetroCheckBox();
+            this.BaptismApplication_birthDate = new MetroFramework.Controls.MetroDateTime();
             this.label86 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.metroRadioButton2 = new MetroFramework.Controls.MetroRadioButton();
             this.metroRadioButton3 = new MetroFramework.Controls.MetroRadioButton();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.baptismApplication_suffix_textbox = new System.Windows.Forms.TextBox();
+            this.baptismApplication_lastName_textbox = new System.Windows.Forms.TextBox();
+            this.baptismApplication_midName_textbox = new System.Windows.Forms.TextBox();
+            this.baptismApplication_firstName_textbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
@@ -363,7 +364,7 @@
             this.baptismApplication_panel.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.BaptismApplication_Requirements_tablePanel.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.baptismApplication_DataGridView)).BeginInit();
             this.panel15.SuspendLayout();
@@ -1148,18 +1149,20 @@
             this.baptismApplication_panel.Padding = new System.Windows.Forms.Padding(5);
             this.baptismApplication_panel.Size = new System.Drawing.Size(753, 449);
             this.baptismApplication_panel.TabIndex = 43;
+            this.baptismApplication_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.baptismApplication_panel_Paint);
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.metroButton1);
             this.metroPanel1.Controls.Add(this.groupBox1);
-            this.metroPanel1.Controls.Add(this.metroDateTime1);
+            this.metroPanel1.Controls.Add(this.BaptismApplication_birthDate);
             this.metroPanel1.Controls.Add(this.label86);
             this.metroPanel1.Controls.Add(this.label11);
             this.metroPanel1.Controls.Add(this.flowLayoutPanel3);
-            this.metroPanel1.Controls.Add(this.textBox10);
-            this.metroPanel1.Controls.Add(this.textBox9);
-            this.metroPanel1.Controls.Add(this.textBox8);
-            this.metroPanel1.Controls.Add(this.textBox7);
+            this.metroPanel1.Controls.Add(this.baptismApplication_suffix_textbox);
+            this.metroPanel1.Controls.Add(this.baptismApplication_lastName_textbox);
+            this.metroPanel1.Controls.Add(this.baptismApplication_midName_textbox);
+            this.metroPanel1.Controls.Add(this.baptismApplication_firstName_textbox);
             this.metroPanel1.Controls.Add(this.label4);
             this.metroPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroPanel1.HorizontalScrollbarBarColor = true;
@@ -1173,121 +1176,138 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(179, 291);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(116, 23);
+            this.metroButton1.TabIndex = 10;
+            this.metroButton1.Text = "metroButton1";
+            this.metroButton1.UseSelectable = true;
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox1.Controls.Add(this.checkAll_cb_baptismApplication);
-            this.groupBox1.Location = new System.Drawing.Point(11, 192);
+            this.groupBox1.Controls.Add(this.BaptismApplication_Requirements_tablePanel);
+            this.groupBox1.Controls.Add(this.baptismApplication_checkAll_comboBox);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(11, 126);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(284, 150);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Requirements";
             // 
-            // tableLayoutPanel1
+            // BaptismApplication_Requirements_tablePanel
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.requirement_cb_baptismApplication4, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.requirement_cb_baptismApplication1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.requirement_cb_baptismApplication3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.requirement_cb_baptismApplication2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.requirement_cb_baptismApplication5, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.requirement_cb_baptismApplication6, 1, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 42);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(268, 100);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.BaptismApplication_Requirements_tablePanel.ColumnCount = 2;
+            this.BaptismApplication_Requirements_tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.BaptismApplication_Requirements_tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox4, 1, 1);
+            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox1, 0, 0);
+            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox3, 0, 1);
+            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox2, 1, 0);
+            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox5, 0, 2);
+            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox6, 1, 2);
+            this.BaptismApplication_Requirements_tablePanel.Location = new System.Drawing.Point(6, 42);
+            this.BaptismApplication_Requirements_tablePanel.Name = "BaptismApplication_Requirements_tablePanel";
+            this.BaptismApplication_Requirements_tablePanel.RowCount = 4;
+            this.BaptismApplication_Requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.BaptismApplication_Requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.BaptismApplication_Requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.BaptismApplication_Requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.BaptismApplication_Requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.BaptismApplication_Requirements_tablePanel.Size = new System.Drawing.Size(268, 64);
+            this.BaptismApplication_Requirements_tablePanel.TabIndex = 1;
             // 
-            // requirement_cb_baptismApplication4
+            // baptismApplication_requirement_comboBox4
             // 
-            this.requirement_cb_baptismApplication4.AutoSize = true;
-            this.requirement_cb_baptismApplication4.Location = new System.Drawing.Point(137, 23);
-            this.requirement_cb_baptismApplication4.Name = "requirement_cb_baptismApplication4";
-            this.requirement_cb_baptismApplication4.Size = new System.Drawing.Size(100, 14);
-            this.requirement_cb_baptismApplication4.TabIndex = 1;
-            this.requirement_cb_baptismApplication4.Text = "Requirement 4";
-            this.requirement_cb_baptismApplication4.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox4.AutoSize = true;
+            this.baptismApplication_requirement_comboBox4.Location = new System.Drawing.Point(137, 23);
+            this.baptismApplication_requirement_comboBox4.Name = "baptismApplication_requirement_comboBox4";
+            this.baptismApplication_requirement_comboBox4.Size = new System.Drawing.Size(100, 14);
+            this.baptismApplication_requirement_comboBox4.TabIndex = 1;
+            this.baptismApplication_requirement_comboBox4.Text = "Requirement 4";
+            this.baptismApplication_requirement_comboBox4.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox4.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
             // 
-            // requirement_cb_baptismApplication1
+            // baptismApplication_requirement_comboBox1
             // 
-            this.requirement_cb_baptismApplication1.AutoSize = true;
-            this.requirement_cb_baptismApplication1.Location = new System.Drawing.Point(3, 3);
-            this.requirement_cb_baptismApplication1.Name = "requirement_cb_baptismApplication1";
-            this.requirement_cb_baptismApplication1.Size = new System.Drawing.Size(100, 14);
-            this.requirement_cb_baptismApplication1.TabIndex = 0;
-            this.requirement_cb_baptismApplication1.Text = "Requirement 1";
-            this.requirement_cb_baptismApplication1.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox1.AutoSize = true;
+            this.baptismApplication_requirement_comboBox1.Location = new System.Drawing.Point(3, 3);
+            this.baptismApplication_requirement_comboBox1.Name = "baptismApplication_requirement_comboBox1";
+            this.baptismApplication_requirement_comboBox1.Size = new System.Drawing.Size(100, 14);
+            this.baptismApplication_requirement_comboBox1.TabIndex = 0;
+            this.baptismApplication_requirement_comboBox1.Text = "Requirement 1";
+            this.baptismApplication_requirement_comboBox1.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox1.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
             // 
-            // requirement_cb_baptismApplication3
+            // baptismApplication_requirement_comboBox3
             // 
-            this.requirement_cb_baptismApplication3.AutoSize = true;
-            this.requirement_cb_baptismApplication3.Location = new System.Drawing.Point(3, 23);
-            this.requirement_cb_baptismApplication3.Name = "requirement_cb_baptismApplication3";
-            this.requirement_cb_baptismApplication3.Size = new System.Drawing.Size(100, 14);
-            this.requirement_cb_baptismApplication3.TabIndex = 0;
-            this.requirement_cb_baptismApplication3.Text = "Requirement 3";
-            this.requirement_cb_baptismApplication3.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox3.AutoSize = true;
+            this.baptismApplication_requirement_comboBox3.Location = new System.Drawing.Point(3, 23);
+            this.baptismApplication_requirement_comboBox3.Name = "baptismApplication_requirement_comboBox3";
+            this.baptismApplication_requirement_comboBox3.Size = new System.Drawing.Size(100, 14);
+            this.baptismApplication_requirement_comboBox3.TabIndex = 0;
+            this.baptismApplication_requirement_comboBox3.Text = "Requirement 3";
+            this.baptismApplication_requirement_comboBox3.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox3.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
             // 
-            // requirement_cb_baptismApplication2
+            // baptismApplication_requirement_comboBox2
             // 
-            this.requirement_cb_baptismApplication2.AutoSize = true;
-            this.requirement_cb_baptismApplication2.Location = new System.Drawing.Point(137, 3);
-            this.requirement_cb_baptismApplication2.Name = "requirement_cb_baptismApplication2";
-            this.requirement_cb_baptismApplication2.Size = new System.Drawing.Size(100, 14);
-            this.requirement_cb_baptismApplication2.TabIndex = 0;
-            this.requirement_cb_baptismApplication2.Text = "Requirement 2";
-            this.requirement_cb_baptismApplication2.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox2.AutoSize = true;
+            this.baptismApplication_requirement_comboBox2.Location = new System.Drawing.Point(137, 3);
+            this.baptismApplication_requirement_comboBox2.Name = "baptismApplication_requirement_comboBox2";
+            this.baptismApplication_requirement_comboBox2.Size = new System.Drawing.Size(100, 14);
+            this.baptismApplication_requirement_comboBox2.TabIndex = 0;
+            this.baptismApplication_requirement_comboBox2.Text = "Requirement 2";
+            this.baptismApplication_requirement_comboBox2.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox2.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
             // 
-            // requirement_cb_baptismApplication5
+            // baptismApplication_requirement_comboBox5
             // 
-            this.requirement_cb_baptismApplication5.AutoSize = true;
-            this.requirement_cb_baptismApplication5.Location = new System.Drawing.Point(3, 43);
-            this.requirement_cb_baptismApplication5.Name = "requirement_cb_baptismApplication5";
-            this.requirement_cb_baptismApplication5.Size = new System.Drawing.Size(100, 14);
-            this.requirement_cb_baptismApplication5.TabIndex = 2;
-            this.requirement_cb_baptismApplication5.Text = "Requirement 5";
-            this.requirement_cb_baptismApplication5.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox5.AutoSize = true;
+            this.baptismApplication_requirement_comboBox5.Location = new System.Drawing.Point(3, 43);
+            this.baptismApplication_requirement_comboBox5.Name = "baptismApplication_requirement_comboBox5";
+            this.baptismApplication_requirement_comboBox5.Size = new System.Drawing.Size(100, 14);
+            this.baptismApplication_requirement_comboBox5.TabIndex = 2;
+            this.baptismApplication_requirement_comboBox5.Text = "Requirement 5";
+            this.baptismApplication_requirement_comboBox5.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox5.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
             // 
-            // requirement_cb_baptismApplication6
+            // baptismApplication_requirement_comboBox6
             // 
-            this.requirement_cb_baptismApplication6.AutoSize = true;
-            this.requirement_cb_baptismApplication6.Location = new System.Drawing.Point(137, 43);
-            this.requirement_cb_baptismApplication6.Name = "requirement_cb_baptismApplication6";
-            this.requirement_cb_baptismApplication6.Size = new System.Drawing.Size(100, 14);
-            this.requirement_cb_baptismApplication6.TabIndex = 3;
-            this.requirement_cb_baptismApplication6.Text = "Requirement 6";
-            this.requirement_cb_baptismApplication6.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox6.AutoSize = true;
+            this.baptismApplication_requirement_comboBox6.Location = new System.Drawing.Point(137, 43);
+            this.baptismApplication_requirement_comboBox6.Name = "baptismApplication_requirement_comboBox6";
+            this.baptismApplication_requirement_comboBox6.Size = new System.Drawing.Size(100, 14);
+            this.baptismApplication_requirement_comboBox6.TabIndex = 3;
+            this.baptismApplication_requirement_comboBox6.Text = "Requirement 6";
+            this.baptismApplication_requirement_comboBox6.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox6.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
             // 
-            // checkAll_cb_baptismApplication
+            // baptismApplication_checkAll_comboBox
             // 
-            this.checkAll_cb_baptismApplication.AutoSize = true;
-            this.checkAll_cb_baptismApplication.Location = new System.Drawing.Point(9, 21);
-            this.checkAll_cb_baptismApplication.Name = "checkAll_cb_baptismApplication";
-            this.checkAll_cb_baptismApplication.Size = new System.Drawing.Size(73, 15);
-            this.checkAll_cb_baptismApplication.TabIndex = 0;
-            this.checkAll_cb_baptismApplication.Text = "Check All";
-            this.checkAll_cb_baptismApplication.UseSelectable = true;
+            this.baptismApplication_checkAll_comboBox.AutoSize = true;
+            this.baptismApplication_checkAll_comboBox.Location = new System.Drawing.Point(9, 21);
+            this.baptismApplication_checkAll_comboBox.Name = "baptismApplication_checkAll_comboBox";
+            this.baptismApplication_checkAll_comboBox.Size = new System.Drawing.Size(73, 15);
+            this.baptismApplication_checkAll_comboBox.TabIndex = 0;
+            this.baptismApplication_checkAll_comboBox.Text = "Check All";
+            this.baptismApplication_checkAll_comboBox.UseSelectable = true;
+            this.baptismApplication_checkAll_comboBox.CheckedChanged += new System.EventHandler(this.checkAll_cb_baptismApplication_CheckedChanged);
             // 
-            // metroDateTime1
+            // BaptismApplication_birthDate
             // 
-            this.metroDateTime1.Location = new System.Drawing.Point(81, 106);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
-            this.metroDateTime1.TabIndex = 8;
+            this.BaptismApplication_birthDate.Location = new System.Drawing.Point(81, 91);
+            this.BaptismApplication_birthDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.BaptismApplication_birthDate.Name = "BaptismApplication_birthDate";
+            this.BaptismApplication_birthDate.Size = new System.Drawing.Size(200, 29);
+            this.BaptismApplication_birthDate.TabIndex = 8;
             // 
             // label86
             // 
             this.label86.AutoSize = true;
-            this.label86.Location = new System.Drawing.Point(10, 112);
+            this.label86.Location = new System.Drawing.Point(10, 96);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(61, 16);
             this.label86.TabIndex = 7;
@@ -1296,7 +1316,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(10, 75);
+            this.label11.Location = new System.Drawing.Point(10, 67);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 16);
             this.label11.TabIndex = 7;
@@ -1306,9 +1326,9 @@
             // 
             this.flowLayoutPanel3.Controls.Add(this.metroRadioButton2);
             this.flowLayoutPanel3.Controls.Add(this.metroRadioButton3);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(81, 68);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(81, 64);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(135, 28);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(135, 20);
             this.flowLayoutPanel3.TabIndex = 6;
             // 
             // metroRadioButton2
@@ -1331,33 +1351,33 @@
             this.metroRadioButton3.Text = "Female";
             this.metroRadioButton3.UseSelectable = true;
             // 
-            // textBox10
+            // baptismApplication_suffix_textbox
             // 
-            this.textBox10.Location = new System.Drawing.Point(273, 35);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(25, 22);
-            this.textBox10.TabIndex = 4;
+            this.baptismApplication_suffix_textbox.Location = new System.Drawing.Point(273, 35);
+            this.baptismApplication_suffix_textbox.Name = "baptismApplication_suffix_textbox";
+            this.baptismApplication_suffix_textbox.Size = new System.Drawing.Size(25, 22);
+            this.baptismApplication_suffix_textbox.TabIndex = 4;
             // 
-            // textBox9
+            // baptismApplication_lastName_textbox
             // 
-            this.textBox9.Location = new System.Drawing.Point(186, 35);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(81, 22);
-            this.textBox9.TabIndex = 4;
+            this.baptismApplication_lastName_textbox.Location = new System.Drawing.Point(186, 35);
+            this.baptismApplication_lastName_textbox.Name = "baptismApplication_lastName_textbox";
+            this.baptismApplication_lastName_textbox.Size = new System.Drawing.Size(81, 22);
+            this.baptismApplication_lastName_textbox.TabIndex = 4;
             // 
-            // textBox8
+            // baptismApplication_midName_textbox
             // 
-            this.textBox8.Location = new System.Drawing.Point(155, 35);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(25, 22);
-            this.textBox8.TabIndex = 4;
+            this.baptismApplication_midName_textbox.Location = new System.Drawing.Point(155, 35);
+            this.baptismApplication_midName_textbox.Name = "baptismApplication_midName_textbox";
+            this.baptismApplication_midName_textbox.Size = new System.Drawing.Size(25, 22);
+            this.baptismApplication_midName_textbox.TabIndex = 4;
             // 
-            // textBox7
+            // baptismApplication_firstName_textbox
             // 
-            this.textBox7.Location = new System.Drawing.Point(81, 35);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(68, 22);
-            this.textBox7.TabIndex = 4;
+            this.baptismApplication_firstName_textbox.Location = new System.Drawing.Point(81, 35);
+            this.baptismApplication_firstName_textbox.Name = "baptismApplication_firstName_textbox";
+            this.baptismApplication_firstName_textbox.Size = new System.Drawing.Size(68, 22);
+            this.baptismApplication_firstName_textbox.TabIndex = 4;
             // 
             // label4
             // 
@@ -4089,8 +4109,8 @@
             this.metroPanel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.BaptismApplication_Requirements_tablePanel.ResumeLayout(false);
+            this.BaptismApplication_Requirements_tablePanel.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.baptismApplication_DataGridView)).EndInit();
@@ -4466,24 +4486,25 @@
         private System.Windows.Forms.Label label10;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private MetroFramework.Controls.MetroCheckBox requirement_cb_baptismApplication4;
-        private MetroFramework.Controls.MetroCheckBox requirement_cb_baptismApplication1;
-        private MetroFramework.Controls.MetroCheckBox requirement_cb_baptismApplication3;
-        private MetroFramework.Controls.MetroCheckBox requirement_cb_baptismApplication2;
-        private MetroFramework.Controls.MetroCheckBox checkAll_cb_baptismApplication;
-        private MetroFramework.Controls.MetroDateTime metroDateTime1;
+        private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_comboBox4;
+        private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_comboBox1;
+        private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_comboBox3;
+        private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_comboBox2;
+        private MetroFramework.Controls.MetroCheckBox baptismApplication_checkAll_comboBox;
+        private MetroFramework.Controls.MetroDateTime BaptismApplication_birthDate;
         private System.Windows.Forms.Label label86;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton2;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton3;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox baptismApplication_suffix_textbox;
+        private System.Windows.Forms.TextBox baptismApplication_lastName_textbox;
+        private System.Windows.Forms.TextBox baptismApplication_midName_textbox;
+        private System.Windows.Forms.TextBox baptismApplication_firstName_textbox;
         private System.Windows.Forms.Label label4;
-        private MetroFramework.Controls.MetroCheckBox requirement_cb_baptismApplication5;
-        private MetroFramework.Controls.MetroCheckBox requirement_cb_baptismApplication6;
+        private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_comboBox5;
+        private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_comboBox6;
+        private System.Windows.Forms.TableLayoutPanel BaptismApplication_Requirements_tablePanel;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

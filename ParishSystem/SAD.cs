@@ -15,10 +15,13 @@ namespace ParishSystem
     {
         DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
         Point lastClick;
+        
         public SAD()
         {
             InitializeComponent();
-
+            BaptismApplication_birthDate.MaxDate = DateTime.Now;
+            
+            
         }
        
         #region generic Methods
@@ -456,7 +459,7 @@ namespace ParishSystem
     
         private void firstname_textbox_Click(object sender, EventArgs e)
         {
-            
+           
             
         }
 
@@ -519,6 +522,35 @@ namespace ParishSystem
 
         }
 
-        
+        private void baptismApplication_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void checkAll_cb_baptismApplication_CheckedChanged(object sender, EventArgs e)
+        {
+            int uniform = 0;
+            int nCheckboxes = BaptismApplication_Requirements_tablePanel.Controls.Count;
+
+            foreach (CheckBox c in BaptismApplication_Requirements_tablePanel.Controls)
+            {
+                uniform += c.Checked ? 1 : 0;
+                Console.WriteLine(uniform);
+            }
+
+            if (uniform != nCheckboxes || uniform != 0)
+                return;
+
+            foreach(CheckBox c in BaptismApplication_Requirements_tablePanel.Controls)
+            {
+                c.Checked = baptismApplication_checkAll_comboBox.Checked;
+            }
+        }
+
+        private void baptismApplication_requirement_comboBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+            baptismApplication_checkAll_comboBox.Checked = !(sender as CheckBox).Checked;
+        }
     }
 }

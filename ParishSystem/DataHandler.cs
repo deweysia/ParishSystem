@@ -269,6 +269,7 @@ namespace ParishSystem
 
             return dt;
         }
+
         public bool addGeneralProfileLog(int profileID)
         {
             string q = "INSERT INTO generalProfileLog VALUES (SELECT * from generalProfile WHERE profileID = " + profileID + ");";
@@ -2410,7 +2411,7 @@ namespace ParishSystem
 
         public bool hasBaptismApplication(int profileID)
         {
-            string q = "SELECT * FROM Application WHERE applicationType = 'B' AND profileID = " + profileID;
+            string q = "SELECT * FROM Application WHERE sacramentType = 'B' AND profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -2419,7 +2420,7 @@ namespace ParishSystem
 
         public bool hasConfirmationApplication(int profileID)
         {
-            string q = "SELECT * FROM Application WHERE applicationType = 'C' AND profileID = " + profileID;
+            string q = "SELECT * FROM Application WHERE sacramentType = 'C' AND profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -2428,7 +2429,7 @@ namespace ParishSystem
 
         public bool hasMarriageApplication(int profileID)
         {
-            string q = "SELECT * FROM Application WHERE applicationType = 'M' AND profileID = " + profileID;
+            string q = "SELECT * FROM Application WHERE sacramentType = 'M' AND profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
