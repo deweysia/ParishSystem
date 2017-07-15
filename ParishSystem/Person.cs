@@ -698,9 +698,13 @@ namespace ParishSystem
         {
             donation_datagridview_bloodletting.DataSource = dh.getBloodDonations(ProfileID);
             donation_datagridview_bloodletting.Columns["bloodDonationID"].Visible = false;
-            totalDonation_label_bloodletting.Text = dh.getTotalBloodDonationOf(ProfileID).ToString();
             quantityDonation_numericupdown_bloodletting.Value = 0;
             bloodDonationEvent_combobox_bloodletting.Text = "";
+            delete_button_bloodletting.Enabled = false;
+            add_button_bloodletting.Text = "Add";
+            add_button_bloodletting.Enabled = false;
+            try { totalDonation_label_bloodletting.Text = dh.getTotalBloodDonationOf(ProfileID).ToString(); }
+            catch { }
         }
 
         private void load_bloodletting()
@@ -723,6 +727,7 @@ namespace ParishSystem
                                     int.Parse(quantityDonation_numericupdown_bloodletting.Value.ToString()),
                                     bloodDonationEvent_combobox_bloodletting.Text,DateTime.Now);
                 reloadBloodlettingDataGridView();
+               
             }
             else if (add_button_bloodletting.Text.Equals("Edit"))
             {
@@ -732,7 +737,7 @@ namespace ParishSystem
                 reloadBloodlettingDataGridView();
                 add_button_bloodletting.Text = "Add";
                 //add edit in button        
-
+               
 
             }
             
@@ -741,7 +746,7 @@ namespace ParishSystem
         
         private void delete_button_bloodletting_Click(object sender, EventArgs e)// delete
         {
-            dh.deleteBloodDonation(int.Parse(donation_datagridview_bloodletting.SelectedRows[0].Cells["bloodDonationID"].ToString()));
+            dh.deleteBloodDonation(int.Parse(donation_datagridview_bloodletting.SelectedRows[0].Cells["bloodDonationID"].Value.ToString()));
             reloadBloodlettingDataGridView();
             add_button_bloodletting.Text = "Add";
 
@@ -758,10 +763,47 @@ namespace ParishSystem
 
         private void donation_datagridview_bloodletting_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            quantityDonation_numericupdown_bloodletting.Value = int.Parse(donation_datagridview_bloodletting.SelectedRows[0].Cells["quantity"].ToString());
-            bloodDonationEvent_combobox_bloodletting.Text = donation_datagridview_bloodletting.SelectedRows[0].Cells["eventName"].ToString();
+
+            quantityDonation_numericupdown_bloodletting.Value = decimal.Parse(donation_datagridview_bloodletting.SelectedRows[0].Cells["quantity"].Value.ToString());
+            bloodDonationEvent_combobox_bloodletting.Text = donation_datagridview_bloodletting.SelectedRows[0].Cells["eventName"].Value.ToString();
+            add_button_bloodletting.Enabled = false;
             add_button_bloodletting.Text="Edit";
+            delete_button_bloodletting.Enabled = true;
+           
         }
 
+        private void quantityDonation_numericupdown_bloodletting_ValueChanged(object sender, EventArgs e)
+        {
+            if (bloodDonationEvent_combobox_bloodletting.Text.Equals("") || quantityDonation_numericupdown_bloodletting.Value.ToString().Equals("0"))
+            {
+                add_button_bloodletting.Enabled = false;
+            }
+            else
+            {
+                add_button_bloodletting.Enabled = true;
+            }
+        }
+
+        private void bloodDonationEvent_combobox_bloodletting_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (bloodDonationEvent_combobox_bloodletting.Text.Equals("")|| quantityDonation_numericupdown_bloodletting.Value.ToString().Equals("0"))
+            { 
+                add_button_bloodletting.Enabled = false;
+            }
+            else
+            {
+                add_button_bloodletting.Enabled = true;
+            }
+}
+
+        private void label104_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label103_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

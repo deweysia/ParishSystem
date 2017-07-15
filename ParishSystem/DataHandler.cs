@@ -464,11 +464,17 @@ namespace ParishSystem
         //SPECIAL FUNCTION
         public int getTotalBloodDonationOf(int generalProfileID)
         {
-            string q = "SELECT SUM(donationAmount) FROM BloodDonation WHERE generalProfileID =  " + generalProfileID;
+            string q = "SELECT SUM(quantity) FROM BloodDonation WHERE profileID = " + generalProfileID;
 
             DataTable dt = runQuery(q);
-
-            return int.Parse(dt.Rows[0][0].ToString());
+            try
+            {
+                return int.Parse(dt.Rows[0][0].ToString());
+            }
+            catch
+            {
+                return 0;
+            }
         }
 
 
@@ -2522,7 +2528,7 @@ namespace ParishSystem
         {
             // add quantity here.. change db and add quantity in query
 
-             string q ="SELECT bloodDonationID, eventName FROM sad2.blooddonation join blooddonationevent on blooddonation.bloodDonationEventID = blooddonationevent.bloodDonationEventID where profileID ="+ profleID;
+             string q = "SELECT bloodDonationID,  eventName, quantity FROM sad2.blooddonation join blooddonationevent on blooddonation.bloodDonationEventID = blooddonationevent.bloodDonationEventID where profileID =" + profleID;
 
             DataTable dt = runQuery(q);
 

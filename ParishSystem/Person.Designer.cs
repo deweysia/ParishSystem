@@ -1798,7 +1798,7 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.donation_datagridview_bloodletting.DefaultCellStyle = dataGridViewCellStyle6;
             this.donation_datagridview_bloodletting.EnableHeadersVisualStyles = false;
-            this.donation_datagridview_bloodletting.Location = new System.Drawing.Point(391, 77);
+            this.donation_datagridview_bloodletting.Location = new System.Drawing.Point(321, 77);
             this.donation_datagridview_bloodletting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.donation_datagridview_bloodletting.MultiSelect = false;
             this.donation_datagridview_bloodletting.Name = "donation_datagridview_bloodletting";
@@ -1819,7 +1819,7 @@
             this.donation_datagridview_bloodletting.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.donation_datagridview_bloodletting.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.donation_datagridview_bloodletting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.donation_datagridview_bloodletting.Size = new System.Drawing.Size(316, 307);
+            this.donation_datagridview_bloodletting.Size = new System.Drawing.Size(386, 307);
             this.donation_datagridview_bloodletting.TabIndex = 35;
             this.donation_datagridview_bloodletting.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.donation_datagridview_bloodletting_CellClick);
             // 
@@ -1827,11 +1827,12 @@
             // 
             this.delete_button_bloodletting.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
             this.delete_button_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.delete_button_bloodletting.Enabled = false;
             this.delete_button_bloodletting.FlatAppearance.BorderSize = 0;
             this.delete_button_bloodletting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete_button_bloodletting.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delete_button_bloodletting.ForeColor = System.Drawing.Color.White;
-            this.delete_button_bloodletting.Location = new System.Drawing.Point(89, 330);
+            this.delete_button_bloodletting.Location = new System.Drawing.Point(48, 323);
             this.delete_button_bloodletting.Name = "delete_button_bloodletting";
             this.delete_button_bloodletting.Size = new System.Drawing.Size(100, 30);
             this.delete_button_bloodletting.TabIndex = 34;
@@ -1847,7 +1848,7 @@
             this.add_button_bloodletting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_button_bloodletting.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_button_bloodletting.ForeColor = System.Drawing.Color.White;
-            this.add_button_bloodletting.Location = new System.Drawing.Point(222, 330);
+            this.add_button_bloodletting.Location = new System.Drawing.Point(166, 323);
             this.add_button_bloodletting.Name = "add_button_bloodletting";
             this.add_button_bloodletting.Size = new System.Drawing.Size(100, 30);
             this.add_button_bloodletting.TabIndex = 33;
@@ -1858,18 +1859,20 @@
             // totalDonation_label_bloodletting
             // 
             this.totalDonation_label_bloodletting.AutoSize = true;
-            this.totalDonation_label_bloodletting.Location = new System.Drawing.Point(502, 406);
+            this.totalDonation_label_bloodletting.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalDonation_label_bloodletting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.totalDonation_label_bloodletting.Location = new System.Drawing.Point(458, 396);
             this.totalDonation_label_bloodletting.Name = "totalDonation_label_bloodletting";
-            this.totalDonation_label_bloodletting.Size = new System.Drawing.Size(53, 19);
+            this.totalDonation_label_bloodletting.Size = new System.Drawing.Size(33, 37);
             this.totalDonation_label_bloodletting.TabIndex = 8;
-            this.totalDonation_label_bloodletting.Text = "label12";
+            this.totalDonation_label_bloodletting.Text = "0";
             // 
             // label107
             // 
             this.label107.AutoSize = true;
             this.label107.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label107.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.label107.Location = new System.Drawing.Point(411, 42);
+            this.label107.Location = new System.Drawing.Point(325, 42);
             this.label107.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label107.Name = "label107";
             this.label107.Size = new System.Drawing.Size(114, 30);
@@ -1879,11 +1882,12 @@
             // quantityDonation_numericupdown_bloodletting
             // 
             this.quantityDonation_numericupdown_bloodletting.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityDonation_numericupdown_bloodletting.Location = new System.Drawing.Point(123, 225);
+            this.quantityDonation_numericupdown_bloodletting.Location = new System.Drawing.Point(83, 223);
             this.quantityDonation_numericupdown_bloodletting.Margin = new System.Windows.Forms.Padding(2);
             this.quantityDonation_numericupdown_bloodletting.Name = "quantityDonation_numericupdown_bloodletting";
             this.quantityDonation_numericupdown_bloodletting.Size = new System.Drawing.Size(165, 25);
             this.quantityDonation_numericupdown_bloodletting.TabIndex = 5;
+            this.quantityDonation_numericupdown_bloodletting.ValueChanged += new System.EventHandler(this.quantityDonation_numericupdown_bloodletting_ValueChanged);
             // 
             // bloodDonationEvent_combobox_bloodletting
             // 
@@ -1892,39 +1896,42 @@
             this.bloodDonationEvent_combobox_bloodletting.Location = new System.Drawing.Point(28, 119);
             this.bloodDonationEvent_combobox_bloodletting.Margin = new System.Windows.Forms.Padding(2);
             this.bloodDonationEvent_combobox_bloodletting.Name = "bloodDonationEvent_combobox_bloodletting";
-            this.bloodDonationEvent_combobox_bloodletting.Size = new System.Drawing.Size(354, 25);
+            this.bloodDonationEvent_combobox_bloodletting.Size = new System.Drawing.Size(275, 25);
             this.bloodDonationEvent_combobox_bloodletting.TabIndex = 2;
+            this.bloodDonationEvent_combobox_bloodletting.SelectedIndexChanged += new System.EventHandler(this.bloodDonationEvent_combobox_bloodletting_SelectedIndexChanged);
             // 
             // label104
             // 
             this.label104.AutoSize = true;
-            this.label104.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label104.Location = new System.Drawing.Point(167, 252);
+            this.label104.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label104.Location = new System.Drawing.Point(127, 252);
             this.label104.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(77, 21);
+            this.label104.Size = new System.Drawing.Size(70, 21);
             this.label104.TabIndex = 1;
             this.label104.Text = "Quantity";
+            this.label104.Click += new System.EventHandler(this.label104_Click);
             // 
             // label103
             // 
             this.label103.AutoSize = true;
-            this.label103.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label103.Location = new System.Drawing.Point(124, 150);
+            this.label103.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label103.Location = new System.Drawing.Point(81, 150);
             this.label103.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(168, 21);
+            this.label103.Size = new System.Drawing.Size(160, 21);
             this.label103.TabIndex = 1;
-            this.label103.Text = "Blood Donatin Event";
+            this.label103.Text = "Blood Donation Event";
+            this.label103.Click += new System.EventHandler(this.label103_Click);
             // 
             // label101
             // 
             this.label101.AutoSize = true;
-            this.label101.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label101.Location = new System.Drawing.Point(306, 404);
+            this.label101.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label101.Location = new System.Drawing.Point(346, 404);
             this.label101.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(131, 21);
+            this.label101.Size = new System.Drawing.Size(117, 21);
             this.label101.TabIndex = 1;
             this.label101.Text = "Total Donations";
             // 

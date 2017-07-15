@@ -518,7 +518,7 @@ namespace ParishSystem
 
         private void generalprofile_datagridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+         
         }
 
         
