@@ -652,8 +652,7 @@ namespace ParishSystem
             bloodDonationEvent_combobox_bloodletting.Items.Clear();
             foreach (DataRow row in dh.getBloodlettingEvents().Rows)
             {
-
-                bloodDonationEvent_combobox_bloodletting.Items.Add(row["eventName"].ToString());
+                bloodDonationEvent_combobox_bloodletting.Items.Add(new ComboboxContent(int.Parse(row["bloodDonationEventID"].ToString()), row["eventName"].ToString()));
             }
 
         }
@@ -664,7 +663,7 @@ namespace ParishSystem
             {
                 dh.addBloodDonation(ProfileID,
                                     int.Parse(quantityDonation_numericupdown_bloodletting.Value.ToString()),
-                                    bloodDonationEvent_combobox_bloodletting.Text,DateTime.Now);
+                                    ((ComboboxContent)bloodDonationEvent_combobox_bloodletting.SelectedItem).ID, DateTime.Now);
                 reloadBloodlettingDataGridView();
                
             }
@@ -672,7 +671,7 @@ namespace ParishSystem
             {
                 dh.editBloodDonation(ProfileID,
                                     int.Parse(quantityDonation_numericupdown_bloodletting.Value.ToString()),
-                                    bloodDonationEvent_combobox_bloodletting.Text, DateTime.Now);
+                                    ((ComboboxContent)bloodDonationEvent_combobox_bloodletting.SelectedItem).ID, DateTime.Now);
                 reloadBloodlettingDataGridView();
                 add_button_bloodletting.Text = "Add";
                 //add edit in button        
@@ -741,6 +740,11 @@ namespace ParishSystem
         private void label103_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void clear_button_bloodletting_Click(object sender, EventArgs e)
+        {
+            load_bloodletting();
         }
     }
 }

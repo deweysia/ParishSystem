@@ -2526,11 +2526,8 @@ namespace ParishSystem
             return dt;
         }
         
-        public void addBloodDonation(int profleID, int quantity,string eventName,DateTime addedon)
-        {
-            // name is unique so ok lng
-        }
-        public void editBloodDonation(int profleID, int quantity, string eventName, DateTime addedon)
+       
+        public void editBloodDonation(int profleID, int quantity, int eventNameID, DateTime addedon)
         {
             //edit donation
         }

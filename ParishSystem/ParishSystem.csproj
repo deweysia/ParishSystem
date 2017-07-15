@@ -75,6 +75,7 @@
     <Compile Include="BloodlettingTest.Designer.cs">
       <DependentUpon>BloodlettingTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComboboxContent.cs" />
     <Compile Include="ComboBoxItem.cs" />
     <Compile Include="DataHandler.cs" />
     <Compile Include="Form1.cs">
