@@ -327,7 +327,7 @@ namespace ParishSystem
 
             }*/
             //confirmation application
-            if (A.Equals(newApplicant_checkbox_confirmationApplication)) {
+            /*if (A.Equals(newApplicant_checkbox_confirmationApplication)) {
                 if (A.Checked==true) {
                     existingName_panel_confirmationApplication.Enabled = false;
                     newName_panel_confirmationApplication.Visible = true;
@@ -341,7 +341,7 @@ namespace ParishSystem
             }
             //marriage application
             //-groom
-            else if (A.Equals(newGroom_checkbox_marriageApplication))
+            else */if (A.Equals(newGroom_checkbox_marriageApplication))
             {
                 if (A.Checked == true)
                 {
@@ -529,28 +529,47 @@ namespace ParishSystem
 
         private void checkAll_cb_baptismApplication_CheckedChanged(object sender, EventArgs e)
         {
-            int uniform = 0;
-            int nCheckboxes = BaptismApplication_Requirements_tablePanel.Controls.Count;
+            bool allChecked = true;
+
+            if (!baptismApplication_checkAll_comboBox.Checked)
+            {
+                
+                foreach (CheckBox c in BaptismApplication_Requirements_tablePanel.Controls)
+                    allChecked = allChecked && c.Checked;
+            }
+
+            if (!allChecked) return;
 
             foreach (CheckBox c in BaptismApplication_Requirements_tablePanel.Controls)
             {
-                uniform += c.Checked ? 1 : 0;
-                Console.WriteLine(uniform);
-            }
-
-            if (uniform != nCheckboxes || uniform != 0)
-                return;
-
-            foreach(CheckBox c in BaptismApplication_Requirements_tablePanel.Controls)
-            {
                 c.Checked = baptismApplication_checkAll_comboBox.Checked;
+                Console.WriteLine("ENTERED");
             }
         }
 
         private void baptismApplication_requirement_comboBox_CheckedChanged(object sender, EventArgs e)
         {
+            //baptismApplication_checkAll_comboBox.Checked = !(sender as CheckBox).Checked;
 
-            baptismApplication_checkAll_comboBox.Checked = !(sender as CheckBox).Checked;
+            CheckBox temp = sender as CheckBox;
+            if (!temp.Checked && baptismApplication_checkAll_comboBox.Checked)
+                baptismApplication_checkAll_comboBox.Checked = false;
+
+            
+        }
+
+        private void baptismApplication_add_button_Click(object sender, EventArgs e)
+        {
+            AddApplication aa = new AddApplication(SacramentType.Baptism);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AddApplication aa = new AddApplication(SacramentType.Confirmation);
+            DialogResult dr = aa.ShowDialog();
+            MessageBox.Show("Bitch done");
+            
+
         }
     }
 }

@@ -93,6 +93,16 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cancel_32px {
+            get {
+                object obj = ResourceManager.GetObject("Cancel_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Clock_32px {
             get {
                 object obj = ResourceManager.GetObject("Clock_32px", resourceCulture);
@@ -133,9 +143,9 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Heart_with_Pulse_32px {
+        internal static System.Drawing.Bitmap Delete_32px {
             get {
-                object obj = ResourceManager.GetObject("Heart with Pulse_32px", resourceCulture);
+                object obj = ResourceManager.GetObject("Delete_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +153,49 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Heart_with_Pulse_45px {
+        internal static System.Drawing.Bitmap Delete_32px_Gray {
             get {
-                object obj = ResourceManager.GetObject("Heart with Pulse_45px", resourceCulture);
+                object obj = ResourceManager.GetObject("Delete_32px_Gray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Delete_32px_Light {
+            get {
+                object obj = ResourceManager.GetObject("Delete_32px_Light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Delete_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("Delete_32px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Error_32px {
+            get {
+                object obj = ResourceManager.GetObject("Error_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Heart_with_Pulse_32px {
+            get {
+                object obj = ResourceManager.GetObject("Heart_with_Pulse_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -155,27 +205,7 @@ namespace ParishSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Holy_Bible_32px {
             get {
-                object obj = ResourceManager.GetObject("Holy Bible_32px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Holy_Bible_45 {
-            get {
-                object obj = ResourceManager.GetObject("Holy Bible_45", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Holy_Bible_50px {
-            get {
-                object obj = ResourceManager.GetObject("Holy_Bible_50px", resourceCulture);
+                object obj = ResourceManager.GetObject("Holy_Bible_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +243,9 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Initiate_Money_Transfer_32px {
+        internal static System.Drawing.Bitmap Info_32px {
             get {
-                object obj = ResourceManager.GetObject("Initiate Money Transfer_32px", resourceCulture);
+                object obj = ResourceManager.GetObject("Info_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +253,9 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Initiate_Money_Transfer_45 {
+        internal static System.Drawing.Bitmap Initiate_Money_Transfer_32px {
             get {
-                object obj = ResourceManager.GetObject("Initiate Money Transfer_45", resourceCulture);
+                object obj = ResourceManager.GetObject("Initiate_Money_Transfer_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +296,16 @@ namespace ParishSystem.Properties {
         internal static System.Drawing.Bitmap Newlyweds_32px {
             get {
                 object obj = ResourceManager.GetObject("Newlyweds_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ok_32px {
+            get {
+                object obj = ResourceManager.GetObject("Ok_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,9 +363,9 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap The_Pope_45 {
+        internal static System.Drawing.Bitmap The_Pope_32px {
             get {
-                object obj = ResourceManager.GetObject("The Pope_45", resourceCulture);
+                object obj = ResourceManager.GetObject("The_Pope_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -223,7 +223,7 @@ namespace ParishSystem
                 + dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["midName"].ToString()
                 + " " + dt.Rows[0]["suffix"].ToString();
 
-            dt = dh.getSponsors(baptismID, "B");
+            dt = dh.getSponsors(baptismID, 'B');
 
             firstname_textbox_sponsor_baptism.Text = dt.Rows[0]["firstName"].ToString();
             middlename_textbox_sponsor_baptism.Text = dt.Rows[0]["midName"].ToString();
@@ -263,7 +263,7 @@ namespace ParishSystem
                 + dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["midName"].ToString()
                 + " " + dt.Rows[0]["suffix"].ToString();
 
-            dt = dh.getSponsors(confirmationID, "C");
+            dt = dh.getSponsors(confirmationID, 'C');
 
             firstname_textbox_sponsor_confirmation.Text = dt.Rows[0]["firstName"].ToString();
             middlename_textbox_sponsor_confirmation.Text = dt.Rows[0]["midName"].ToString();
@@ -427,7 +427,7 @@ namespace ParishSystem
                 {
                     gender = 'f';
                 }
-                dh.addSponsor(firstname_textbox_sponsor_baptism.Text, middlename_textbox_sponsor_baptism.Text, lastname_textbox_sponsor_baptism.Text, suffix_textbox_sponsor_baptism.Text, "B", residence_textbox_sponsor_baptism.Text, gender);
+                dh.addSponsor(firstname_textbox_sponsor_baptism.Text, middlename_textbox_sponsor_baptism.Text, lastname_textbox_sponsor_baptism.Text, suffix_textbox_sponsor_baptism.Text, 'B', residence_textbox_sponsor_baptism.Text, gender);
             }
             else
             {
@@ -441,7 +441,7 @@ namespace ParishSystem
                 {
                     gender = 'f';
                 }
-                dh.editSponsor(sponsorBaptismLastClick, firstname_textbox_sponsor_baptism.Text, middlename_textbox_sponsor_baptism.Text, lastname_textbox_sponsor_baptism.Text, suffix_textbox_sponsor_baptism.Text, "bap", residence_textbox_sponsor_baptism.Text, gender);
+                dh.editSponsor(sponsorBaptismLastClick, firstname_textbox_sponsor_baptism.Text, middlename_textbox_sponsor_baptism.Text, lastname_textbox_sponsor_baptism.Text, suffix_textbox_sponsor_baptism.Text, 'B', residence_textbox_sponsor_baptism.Text, gender);
             }
 
         }
