@@ -74,53 +74,6 @@ namespace ParishSystem
         }
         #endregion
 
-        /*
-        public void load_Confirmation()
-        {
-            DataTable dt = dh.getConfirmationOf(ProfileID);
-
-            int ministerID = int.Parse(dt.Rows[0]["ministerID"].ToString());
-            int applicationID = int.Parse(dt.Rows[0]["applicationID"].ToString());
-            int confirmationID = int.Parse(dt.Rows[0]["confirmationID"].ToString());
-
-            registryNumber_textbox_confirmation.Text = dt.Rows[0]["registryNumber"].ToString();
-            pageNumber_textbox_confirmation.Text = dt.Rows[0]["pageNumber"].ToString();
-            recordNumber_textbox_confirmation.Text = dt.Rows[0]["recordNumber"].ToString();
-            Console.WriteLine("Date: " + dt.Rows[0]["confirmationDate"].ToString());
-            date_datetimepicker_baptism.Value = dh.toDateTime(dt.Rows[0]["confirmationDate"].ToString(), false);
-            remarks_textbox_confirmation.Text = dt.Rows[0]["remarks"].ToString();
-
-            MessageBox.Show("loading");
-            dt = dh.getMinister(ministerID);
-
-            minister_combobox_confirmation.Text = dt.Rows[0]["lastName"].ToString() + ", "
-                + dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["midName"].ToString()
-                + " " + dt.Rows[0]["suffix"].ToString();
-
-            dt = dh.getSponsors(confirmationID, "C");
-
-            firstname_textbox_sponsor_confirmation.Text = dt.Rows[0]["firstName"].ToString();
-            middlename_textbox_sponsor_confirmation.Text = dt.Rows[0]["midName"].ToString();
-            lastname_textbox_sponsor_confirmation.Text = dt.Rows[0]["lastName"].ToString();
-            suffix_textbox_sponsor_confirmation.Text = dt.Rows[0]["suffix"].ToString();
-            residence_textbox_sponsor_confirmation_textbox.Text = dt.Rows[0]["residence"].ToString();
-
-
-            string gender = dt.Rows[0]["gender"].ToString();
-
-            gender_male_radiobutton_confirmation.Checked = gender == "M";
-            gender_female_radiobutton_confirmation.Checked = gender == "F";
-        }
-        */
-        public void load_Marriage()
-        {
-
-        }
-
-
-
-     
-
         #region Profiles
 
        
@@ -228,20 +181,22 @@ namespace ParishSystem
 
 
 
-        #endregion bloodletting
+        #endregion bloodletting   
 
-
+        #region baptism
         private void baptism_button_Click(object sender, EventArgs e)
         {
-            baptism_details_panel.BringToFront();
+            baptism_panel.BringToFront();
             refreshBaptismPage();
             float_panel_baptism.BringToFront();
         }
+
         private void details_button_baptism_Click(object sender, EventArgs e)
         {
             baptism_details_panel.BringToFront();
             refreshBaptismPage();
         }
+
         private void refreshBaptismPage()
         {
             //profile
@@ -353,20 +308,22 @@ namespace ParishSystem
                 minister_combobox_baptism.Text = "";
                 date_datetimepicker_baptism.Format =DateTimePickerFormat.Custom;
             }
-            try
-            {
+            
                 registry_textbox_baptism.Text= dt.Rows[0]["registryNumber"].ToString();
                 page_textbox_baptism.Text= dt.Rows[0]["pageNumber"].ToString();
                 record_textbox_baptism.Text= dt.Rows[0]["recordNumber"].ToString();
                 remarks_textbox_baptism.Text= dt.Rows[0]["remarks"].ToString();
+            try
+            {
+                date_datetimepicker_baptism.Format = DateTimePickerFormat.Long;
+                date_datetimepicker_baptism.Value = dh.toDateTime(dt.Rows[0]["baptismDate"].ToString(),false);
             }
             catch
             {
-                registry_textbox_baptism.Text = "";
-                page_textbox_baptism.Text = "";
-                record_textbox_baptism.Text = "";
-                remarks_textbox_baptism.Text = "";
+                date_datetimepicker_baptism.Format = DateTimePickerFormat.Custom;
             }
+
+            minister_combobox_baptism.Items.Clear();
             DataTable ministers= dh.getMinisters();
             foreach(DataRow row in ministers.Rows)
             {
@@ -407,6 +364,162 @@ namespace ParishSystem
                 mother_panel_baptism.Visible = false;
         }
 
-       
+
+        #endregion
+
+        #region confirmation
+        private void confirmation_button_Click(object sender, EventArgs e)
+        {
+            refreshConfirmation();
+            confirmation_panel.BringToFront();
+        }
+
+        private void details_confirmation_button_Click(object sender, EventArgs e)
+        {
+            refreshConfirmation();
+            confirmation_panel.BringToFront();
+        }
+
+        private void refreshConfirmation()
+        {
+            //profile
+            DataTable dt= dh.getConfirmationOf(ProfileID);
+            firstname_textbox_profile_confirmation.Text= dt.Rows[0]["fng"].ToString();
+            middlename_textbox_profile_confirmation.Text = dt.Rows[0]["mng"].ToString();
+            lastname_textbox_profile_confirmation.Text = dt.Rows[0]["lng"].ToString();
+            suffix_textbox_profile_confirmation.Text = dt.Rows[0]["sg"].ToString();
+            //father
+            try
+            {
+                DataTable fdt = dh.getFatherOf(ProfileID);
+                father_checkbox_confirmation.Checked = true;
+                firstname_textbox_father_confirmation.Text = fdt.Rows[0]["firstname"].ToString();
+                middlename_textbox_father_confirmation.Text = fdt.Rows[0]["midname"].ToString();
+                lastname_textbox_father_confirmation.Text = fdt.Rows[0]["lastname"].ToString();
+                suffix_textbox_father_confirmation.Text = fdt.Rows[0]["suffix"].ToString();
+            }
+            catch
+            {
+                dh.conn.Close();
+                father_checkbox_confirmation.Checked = false;
+            }
+            //mother
+            try
+            {
+                DataTable mdt = dh.getMotherOf(ProfileID);
+                mother_checkbox_confirmation.Checked = true;
+                firstname_textbox_mother_confirmation.Text = mdt.Rows[0]["firstname"].ToString();
+                middlename_textbox_mother_confirmation.Text = mdt.Rows[0]["midname"].ToString();
+                lastname_textbox_mother_confirmation.Text = mdt.Rows[0]["lastname"].ToString();
+                suffix_textbox_mother_confirmation.Text = mdt.Rows[0]["suffix"].ToString();
+            }
+            catch
+            {
+                dh.conn.Close();
+                mother_checkbox_confirmation.Checked = false;
+            }
+            //godFather
+            try
+            {
+                DataTable gfdt = dh.getFatherOf(ProfileID);
+                godfather_checkbox_confirmation.Checked = true;
+                firstname_textbox_godFather_confirmation.Text = gfdt.Rows[0]["firstname"].ToString();
+                middlename_textbox_godFather_confirmation.Text = gfdt.Rows[0]["midname"].ToString();
+                lastname_textbox_godFather_confirmation.Text = gfdt.Rows[0]["lastname"].ToString();
+                suffix_textbox_godFather_confirmation.Text = gfdt.Rows[0]["suffix"].ToString();
+            }
+            catch
+            {
+                dh.conn.Close();
+                godfather_checkbox_confirmation.Checked = false;
+            }
+            //godMother
+            try
+            {
+                DataTable gmdt = dh.getFatherOf(ProfileID);
+                godMother_checkbox_confirmation.Checked = true;
+                firstname_textbox_godMother_confirmation.Text = gmdt.Rows[0]["firstname"].ToString();
+                middlename_textbox_godMother_confirmation.Text = gmdt.Rows[0]["midname"].ToString();
+                lastname_textbox_godMother_confirmation.Text = gmdt.Rows[0]["lastname"].ToString();
+                suffix_textbox_godMother_confirmation.Text = gmdt.Rows[0]["suffix"].ToString();
+            }
+            catch
+            {
+                dh.conn.Close();
+                godMother_checkbox_confirmation.Checked = false;
+            }
+            minister_combobox_confirmation.Text= dt.Rows[0]["minister"].ToString();
+            registry_textbox_confirmation.Text = dt.Rows[0]["registryNumber"].ToString();   
+            page_textbox_confirmation.Text= dt.Rows[0]["pageNumber"].ToString();
+            record_textbox_confirmation.Text=dt.Rows[0]["recordNumber"].ToString();
+
+            try
+            {
+                date_datetimepicker_confirmation.Format = DateTimePickerFormat.Long;
+                date_datetimepicker_confirmation.Value = dh.toDateTime(dt.Rows[0]["confirmationDate"].ToString(), false);
+            }
+            catch
+            {
+                date_datetimepicker_confirmation.Format = DateTimePickerFormat.Custom;
+            }
+
+            DataTable ministers = dh.getMinisters();
+            minister_combobox_confirmation.Items.Clear();
+            foreach (DataRow row in ministers.Rows)
+            {
+                minister_combobox_confirmation.Items.Add(new ComboboxContent(int.Parse(row["ministerID"].ToString()), row["Name"].ToString()));
+            }
+        }
+
+        private void father_checkbox_confirmation_CheckedChanged(object sender, EventArgs e)
+        {
+            if (father_checkbox_confirmation.Checked)
+            {
+                father_panel_confirmation.Visible = true;
+            }
+            else
+            {
+                father_panel_confirmation.Visible = false;
+            }
+        }
+
+        private void mother_checkbox_confirmation_CheckedChanged(object sender, EventArgs e)
+        {
+            if (mother_checkbox_confirmation.Checked)
+            {
+                mother_panel_confirmation.Visible = true;
+            }
+            else
+            {
+                mother_panel_confirmation.Visible = false;
+            }
+        }
+
+        private void godfather_checkbox_confirmation_CheckedChanged(object sender, EventArgs e)
+        {
+            if (godfather_checkbox_confirmation.Checked)
+            {
+                godFather_panel_confirmation.Visible = true;
+            }
+            else
+            {
+                godFather_panel_confirmation.Visible = false;
+            }
+        }
+
+        private void godMother_checkbox_confirmation_CheckedChanged(object sender, EventArgs e)
+        {
+            if (godMother_checkbox_confirmation.Checked)
+            {
+                godMother_panel_confirmation.Visible = true;
+            }
+            else
+            {
+                godMother_panel_confirmation.Visible = false;
+            }
+        }
+        #endregion
+
+
     }
 }
