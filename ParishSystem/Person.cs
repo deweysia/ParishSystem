@@ -67,6 +67,7 @@ namespace ParishSystem
                 A.ForeColor = Color.Black;
             }
         }
+
         private void dateTimePicker_profile_ValueChanged(object sender, EventArgs e)
         {
             DateTimePicker dtp = sender as DateTimePicker;
@@ -202,9 +203,9 @@ namespace ParishSystem
             //profile
             DataTable dt = dh.getBaptismOf(ProfileID);
             firstname_textbox_profile_baptism.Text = dt.Rows[0]["fng"].ToString();
-            middlename_textbox_profile_baptism.Text = dt.Rows[0]["mng"].ToString();
+            mi_textbox_profile_baptism.Text = dt.Rows[0]["mng"].ToString();
             lastname_textbox_profile_baptism.Text =  dt.Rows[0]["lng"].ToString();
-            suffix_textbox_father_baptism.Text =  dt.Rows[0]["sg"].ToString();
+            suffix_textbox_mother_baptism.Text =  dt.Rows[0]["sg"].ToString();
             address_textarea_profile_baptism.Text = dt.Rows[0]["address"].ToString();
             contactNumber_textbox_profile_baptism.Text = dt.Rows[0]["contactNumber"].ToString();
             if (dt.Rows[0]["gg"].ToString()=="M")
@@ -238,7 +239,7 @@ namespace ParishSystem
                 DataTable fdt = dh.getFatherOf(ProfileID);
                 father_checbox.Checked = true;
                 firstname_textbox_father_baptism.Text= fdt.Rows[0]["firstname"].ToString();
-                middlename_textbox_father_baptism.Text = fdt.Rows[0]["midname"].ToString();
+                mi_textbox_father_baptism.Text = fdt.Rows[0]["midname"].ToString();
                 lastname_textbox_father_baptism.Text = fdt.Rows[0]["lastname"].ToString();
                 suffix_textbox_father_baptism.Text = fdt.Rows[0]["suffix"].ToString();
                 residence_textbox_father_baptism.Text = fdt.Rows[0]["residence"].ToString();
@@ -253,7 +254,7 @@ namespace ParishSystem
                 DataTable mdt = dh.getMotherOf(ProfileID);
                 mother_checkbox.Checked = true;
                 firstname_textbox_mother_baptism.Text = mdt.Rows[0]["firstname"].ToString();
-                middlename_textbox_mother_baptism.Text = mdt.Rows[0]["midname"].ToString();
+                mi_textbox_mother_baptism.Text = mdt.Rows[0]["midname"].ToString();
                 lastname_textbox_mother_baptism.Text = mdt.Rows[0]["lastname"].ToString();
                 suffix_textbox_mother_baptism.Text = mdt.Rows[0]["suffix"].ToString();
                 residence_textbox_mother_baptism.Text = mdt.Rows[0]["residence"].ToString();
@@ -269,7 +270,7 @@ namespace ParishSystem
                 DataTable gfdt = dh.getFatherOf(ProfileID);
                 godfather_checkbox.Checked = true;
                 firstname_textbox_godFather_baptism.Text = gfdt.Rows[0]["firstname"].ToString();
-                middlename_textbox_godFather_baptism.Text = gfdt.Rows[0]["midname"].ToString();
+                mi_textbox_godFather_baptism.Text = gfdt.Rows[0]["midname"].ToString();
                 lastname_textbox_godFather_baptism.Text = gfdt.Rows[0]["lastname"].ToString();
                 suffix_textbox_godFather_baptism.Text = gfdt.Rows[0]["suffix"].ToString();
                 residence_textbox_godFather_baptism.Text = gfdt.Rows[0]["residence"].ToString();
@@ -287,7 +288,7 @@ namespace ParishSystem
                 DataTable gmdt = dh.getFatherOf(ProfileID);
                 godMother_checkbox.Checked = true;
                 firstname_textbox_godMother_baptism.Text = gmdt.Rows[0]["firstname"].ToString();
-                middlename_textbox_godMother_baptism.Text = gmdt.Rows[0]["midname"].ToString();
+                mi_textbox_godMother_baptism.Text = gmdt.Rows[0]["midname"].ToString();
                 lastname_textbox_godMother_baptism.Text = gmdt.Rows[0]["lastname"].ToString();
                 suffix_textbox_godMother_baptism.Text = gmdt.Rows[0]["suffix"].ToString();
                 residence_textbox_godMother_baptism.Text = gmdt.Rows[0]["residence"].ToString();
@@ -364,7 +365,67 @@ namespace ParishSystem
                 mother_panel_baptism.Visible = false;
         }
 
+        public bool isNameEmpty(TextBox A)
+        {
+            return A.Name.Split('_')[0] == A.Text;
+        }
 
+        private void save_button_baptism_Click(object sender, EventArgs e)
+        {
+            if (isNameEmpty(firstname_textbox_profile_baptism) ||
+                isNameEmpty(mi_textbox_profile_baptism) ||
+                isNameEmpty(lastname_textbox_profile_baptism) ||
+                !(legitimate_radiobutton_baptism.Checked || civil_radiobutton_baptism.Checked || natural_radiobutton_baptism.Checked) ||
+                birthdate_dateTimePicker_profile_baptism.Format.Equals(DateTimePickerFormat.Custom) ||
+                !(genderMale_radiobutton_profile_baptism.Checked || genderFemale_radiobutton_profile_baptism.Checked))
+            {
+
+            }
+
+            if (father_checbox.Checked && (isNameEmpty(firstname_textbox_father_baptism) ||
+                isNameEmpty(mi_textbox_father_baptism) ||
+                isNameEmpty(lastname_textbox_father_baptism) ||
+                residence_textbox_father_baptism.Text == ""))
+            {
+
+            }
+
+
+            if (
+                mother_checkbox.Checked ||
+                isNameEmpty(firstname_textbox_mother_baptism) ||
+                isNameEmpty(mi_textbox_mother_baptism) ||
+                isNameEmpty(lastname_textbox_mother_baptism) ||
+                residence_textbox_mother_baptism.Text == "")
+            {
+
+            }
+            if (
+                godfather_checkbox.Checked ||
+                isNameEmpty(firstname_textbox_godFather_baptism) ||
+                isNameEmpty(mi_textbox_godFather_baptism) ||
+                isNameEmpty(lastname_textbox_godFather_baptism) ||
+                residence_textbox_godFather_baptism.Text == "")
+            {
+
+            }
+            if (
+                godMother_checkbox.Checked ||
+                isNameEmpty(firstname_textbox_godMother_baptism) ||
+                isNameEmpty(mi_textbox_godMother_baptism) ||
+                isNameEmpty(lastname_textbox_godMother_baptism) ||
+                residence_textbox_godMother_baptism.Text == "")
+            {
+                
+            }
+            
+
+        }
+
+        private void close_button_baptism_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         #endregion
 
         #region confirmation
@@ -385,7 +446,7 @@ namespace ParishSystem
             //profile
             DataTable dt= dh.getConfirmationOf(ProfileID);
             firstname_textbox_profile_confirmation.Text= dt.Rows[0]["fng"].ToString();
-            middlename_textbox_profile_confirmation.Text = dt.Rows[0]["mng"].ToString();
+            mi_textbox_profile_confirmation.Text = dt.Rows[0]["mng"].ToString();
             lastname_textbox_profile_confirmation.Text = dt.Rows[0]["lng"].ToString();
             suffix_textbox_profile_confirmation.Text = dt.Rows[0]["sg"].ToString();
             //father
@@ -394,7 +455,7 @@ namespace ParishSystem
                 DataTable fdt = dh.getFatherOf(ProfileID);
                 father_checkbox_confirmation.Checked = true;
                 firstname_textbox_father_confirmation.Text = fdt.Rows[0]["firstname"].ToString();
-                middlename_textbox_father_confirmation.Text = fdt.Rows[0]["midname"].ToString();
+                mi_textbox_father_confirmation.Text = fdt.Rows[0]["midname"].ToString();
                 lastname_textbox_father_confirmation.Text = fdt.Rows[0]["lastname"].ToString();
                 suffix_textbox_father_confirmation.Text = fdt.Rows[0]["suffix"].ToString();
             }
@@ -409,7 +470,7 @@ namespace ParishSystem
                 DataTable mdt = dh.getMotherOf(ProfileID);
                 mother_checkbox_confirmation.Checked = true;
                 firstname_textbox_mother_confirmation.Text = mdt.Rows[0]["firstname"].ToString();
-                middlename_textbox_mother_confirmation.Text = mdt.Rows[0]["midname"].ToString();
+                mi_textbox_mother_confirmation.Text = mdt.Rows[0]["midname"].ToString();
                 lastname_textbox_mother_confirmation.Text = mdt.Rows[0]["lastname"].ToString();
                 suffix_textbox_mother_confirmation.Text = mdt.Rows[0]["suffix"].ToString();
             }
@@ -424,7 +485,7 @@ namespace ParishSystem
                 DataTable gfdt = dh.getFatherOf(ProfileID);
                 godfather_checkbox_confirmation.Checked = true;
                 firstname_textbox_godFather_confirmation.Text = gfdt.Rows[0]["firstname"].ToString();
-                middlename_textbox_godFather_confirmation.Text = gfdt.Rows[0]["midname"].ToString();
+                mi_textbox_godFather_confirmation.Text = gfdt.Rows[0]["midname"].ToString();
                 lastname_textbox_godFather_confirmation.Text = gfdt.Rows[0]["lastname"].ToString();
                 suffix_textbox_godFather_confirmation.Text = gfdt.Rows[0]["suffix"].ToString();
             }
@@ -439,7 +500,7 @@ namespace ParishSystem
                 DataTable gmdt = dh.getFatherOf(ProfileID);
                 godMother_checkbox_confirmation.Checked = true;
                 firstname_textbox_godMother_confirmation.Text = gmdt.Rows[0]["firstname"].ToString();
-                middlename_textbox_godMother_confirmation.Text = gmdt.Rows[0]["midname"].ToString();
+                mi_textbox_godMother_confirmation.Text = gmdt.Rows[0]["midname"].ToString();
                 lastname_textbox_godMother_confirmation.Text = gmdt.Rows[0]["lastname"].ToString();
                 suffix_textbox_godMother_confirmation.Text = gmdt.Rows[0]["suffix"].ToString();
             }
@@ -518,8 +579,10 @@ namespace ParishSystem
                 godMother_panel_confirmation.Visible = false;
             }
         }
+
+
         #endregion
 
-
+       
     }
 }
