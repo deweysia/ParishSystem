@@ -113,7 +113,6 @@
             this.float_panel_confirmation = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.sponsor_datagridview_marriage = new System.Windows.Forms.DataGridView();
             this.bloodletting_panel = new System.Windows.Forms.Panel();
             this.clear_button_bloodletting = new System.Windows.Forms.Button();
             this.donation_datagridview_bloodletting = new System.Windows.Forms.DataGridView();
@@ -219,58 +218,98 @@
             this.mi_textbox_mother_baptism = new System.Windows.Forms.TextBox();
             this.firstname_textbox_mother_baptism = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.marriage_panel = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.application_button_marriage = new System.Windows.Forms.Button();
-            this.details_button_marriage = new System.Windows.Forms.Button();
-            this.viewCertificate_button_marriage = new System.Windows.Forms.Button();
-            this.printCertificate_button_marriage = new System.Windows.Forms.Button();
+            this.btn_Close = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.partner_combobox_marriage = new System.Windows.Forms.ComboBox();
-            this.remarks_textbox_marriage = new System.Windows.Forms.TextBox();
-            this.delete_button_marriage = new System.Windows.Forms.Button();
-            this.recordNumber_textbox_marriage = new System.Windows.Forms.TextBox();
-            this.add_button_marriage = new System.Windows.Forms.Button();
-            this.label32 = new System.Windows.Forms.Label();
-            this.pageNumber_textbox_marriage = new System.Windows.Forms.TextBox();
-            this.minister_combobox_marriage = new System.Windows.Forms.ComboBox();
-            this.registryNumber_textbox_marriage = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.gender_female_radiobutton_sponsor_marriage = new System.Windows.Forms.RadioButton();
-            this.gender_male_radiobutton_sponsor_marriage = new System.Windows.Forms.RadioButton();
-            this.suffix_textbox_sponsor_marriage = new System.Windows.Forms.TextBox();
-            this.residence_textbox_sponsor_marriage = new System.Windows.Forms.TextBox();
-            this.lastname_textbox_sponsor_marriage = new System.Windows.Forms.TextBox();
-            this.middlename_textbox_sponsor_marriage = new System.Windows.Forms.TextBox();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.firstname_textbox_sponsor_marriage = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
+            this.panel25 = new System.Windows.Forms.Panel();
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.minister_textbox_marriage = new System.Windows.Forms.TextBox();
-            this.date_textbox_marriage = new System.Windows.Forms.TextBox();
-            this.date_datetimepicker_marriage = new System.Windows.Forms.DateTimePicker();
-            this.textBox36 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label40 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.textBox18 = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.textBox22 = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
+            this.textBox23 = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.textBox25 = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.textBox27 = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
-            this.requirements_datagridview_marriage = new System.Windows.Forms.DataGridView();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.approve_button_marriage = new System.Windows.Forms.Button();
-            this.cancel_button_marriage = new System.Windows.Forms.Button();
-            this.appointment_button_marriage = new System.Windows.Forms.Button();
-            this.btn_Close = new System.Windows.Forms.Button();
+            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.textBox29 = new System.Windows.Forms.TextBox();
+            this.textBox30 = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.confirmation_panel.SuspendLayout();
             this.menu_panel_confirmation.SuspendLayout();
             this.confirmation_details_panel.SuspendLayout();
@@ -287,7 +326,6 @@
             this.panel23.SuspendLayout();
             this.mother_panel_confirmation.SuspendLayout();
             this.float_panel_confirmation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sponsor_datagridview_marriage)).BeginInit();
             this.bloodletting_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.donation_datagridview_bloodletting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityDonation_numericupdown_bloodletting)).BeginInit();
@@ -312,12 +350,24 @@
             this.father_panel_baptism.SuspendLayout();
             this.panel10.SuspendLayout();
             this.mother_panel_baptism.SuspendLayout();
-            this.marriage_panel.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.requirements_datagridview_marriage)).BeginInit();
+            this.panel9.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.flowLayoutPanel7.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel19.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.panel25.SuspendLayout();
+            this.flowLayoutPanel8.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.panel27.SuspendLayout();
+            this.panel28.SuspendLayout();
+            this.panel29.SuspendLayout();
+            this.panel30.SuspendLayout();
             this.SuspendLayout();
             // 
             // baptism_button
@@ -1419,15 +1469,6 @@
             this.button4.TabIndex = 59;
             this.button4.Text = "Cancel";
             this.button4.UseVisualStyleBackColor = false;
-            // 
-            // sponsor_datagridview_marriage
-            // 
-            this.sponsor_datagridview_marriage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sponsor_datagridview_marriage.Location = new System.Drawing.Point(96, 302);
-            this.sponsor_datagridview_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.sponsor_datagridview_marriage.Name = "sponsor_datagridview_marriage";
-            this.sponsor_datagridview_marriage.Size = new System.Drawing.Size(231, 62);
-            this.sponsor_datagridview_marriage.TabIndex = 44;
             // 
             // bloodletting_panel
             // 
@@ -2801,601 +2842,6 @@
             this.label9.Text = "_________________________________________________________________________________" +
     "___________________";
             // 
-            // marriage_panel
-            // 
-            this.marriage_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.marriage_panel.Controls.Add(this.flowLayoutPanel3);
-            this.marriage_panel.Controls.Add(this.panel4);
-            this.marriage_panel.Controls.Add(this.panel7);
-            this.marriage_panel.Location = new System.Drawing.Point(37, 31);
-            this.marriage_panel.Margin = new System.Windows.Forms.Padding(2);
-            this.marriage_panel.Name = "marriage_panel";
-            this.marriage_panel.Size = new System.Drawing.Size(660, 470);
-            this.marriage_panel.TabIndex = 57;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel3.Controls.Add(this.application_button_marriage);
-            this.flowLayoutPanel3.Controls.Add(this.details_button_marriage);
-            this.flowLayoutPanel3.Controls.Add(this.viewCertificate_button_marriage);
-            this.flowLayoutPanel3.Controls.Add(this.printCertificate_button_marriage);
-            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(660, 32);
-            this.flowLayoutPanel3.TabIndex = 56;
-            // 
-            // application_button_marriage
-            // 
-            this.application_button_marriage.BackColor = System.Drawing.Color.White;
-            this.application_button_marriage.FlatAppearance.BorderSize = 0;
-            this.application_button_marriage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.application_button_marriage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
-            this.application_button_marriage.Location = new System.Drawing.Point(563, 2);
-            this.application_button_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.application_button_marriage.Name = "application_button_marriage";
-            this.application_button_marriage.Size = new System.Drawing.Size(95, 32);
-            this.application_button_marriage.TabIndex = 57;
-            this.application_button_marriage.Text = "Application";
-            this.application_button_marriage.UseVisualStyleBackColor = false;
-            // 
-            // details_button_marriage
-            // 
-            this.details_button_marriage.BackColor = System.Drawing.Color.White;
-            this.details_button_marriage.FlatAppearance.BorderSize = 0;
-            this.details_button_marriage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.details_button_marriage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
-            this.details_button_marriage.Location = new System.Drawing.Point(450, 2);
-            this.details_button_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.details_button_marriage.Name = "details_button_marriage";
-            this.details_button_marriage.Size = new System.Drawing.Size(109, 32);
-            this.details_button_marriage.TabIndex = 60;
-            this.details_button_marriage.Text = "Details";
-            this.details_button_marriage.UseVisualStyleBackColor = false;
-            // 
-            // viewCertificate_button_marriage
-            // 
-            this.viewCertificate_button_marriage.FlatAppearance.BorderSize = 0;
-            this.viewCertificate_button_marriage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewCertificate_button_marriage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
-            this.viewCertificate_button_marriage.Location = new System.Drawing.Point(322, 2);
-            this.viewCertificate_button_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.viewCertificate_button_marriage.Name = "viewCertificate_button_marriage";
-            this.viewCertificate_button_marriage.Size = new System.Drawing.Size(124, 32);
-            this.viewCertificate_button_marriage.TabIndex = 61;
-            this.viewCertificate_button_marriage.Text = "View Certificate";
-            this.viewCertificate_button_marriage.UseVisualStyleBackColor = false;
-            // 
-            // printCertificate_button_marriage
-            // 
-            this.printCertificate_button_marriage.FlatAppearance.BorderSize = 0;
-            this.printCertificate_button_marriage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.printCertificate_button_marriage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
-            this.printCertificate_button_marriage.Location = new System.Drawing.Point(157, 2);
-            this.printCertificate_button_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.printCertificate_button_marriage.Name = "printCertificate_button_marriage";
-            this.printCertificate_button_marriage.Size = new System.Drawing.Size(161, 32);
-            this.printCertificate_button_marriage.TabIndex = 59;
-            this.printCertificate_button_marriage.Text = "Print Certificate";
-            this.printCertificate_button_marriage.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.partner_combobox_marriage);
-            this.panel4.Controls.Add(this.remarks_textbox_marriage);
-            this.panel4.Controls.Add(this.delete_button_marriage);
-            this.panel4.Controls.Add(this.recordNumber_textbox_marriage);
-            this.panel4.Controls.Add(this.add_button_marriage);
-            this.panel4.Controls.Add(this.label32);
-            this.panel4.Controls.Add(this.pageNumber_textbox_marriage);
-            this.panel4.Controls.Add(this.minister_combobox_marriage);
-            this.panel4.Controls.Add(this.registryNumber_textbox_marriage);
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.minister_textbox_marriage);
-            this.panel4.Controls.Add(this.date_textbox_marriage);
-            this.panel4.Controls.Add(this.date_datetimepicker_marriage);
-            this.panel4.Controls.Add(this.textBox36);
-            this.panel4.Controls.Add(this.label40);
-            this.panel4.Controls.Add(this.label41);
-            this.panel4.Controls.Add(this.label50);
-            this.panel4.Controls.Add(this.label42);
-            this.panel4.Controls.Add(this.sponsor_datagridview_marriage);
-            this.panel4.Controls.Add(this.label43);
-            this.panel4.Controls.Add(this.label44);
-            this.panel4.Controls.Add(this.label45);
-            this.panel4.Controls.Add(this.label46);
-            this.panel4.Controls.Add(this.label47);
-            this.panel4.Controls.Add(this.label48);
-            this.panel4.Location = new System.Drawing.Point(0, 32);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(661, 437);
-            this.panel4.TabIndex = 56;
-            // 
-            // partner_combobox_marriage
-            // 
-            this.partner_combobox_marriage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.partner_combobox_marriage.FormattingEnabled = true;
-            this.partner_combobox_marriage.Location = new System.Drawing.Point(289, 19);
-            this.partner_combobox_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.partner_combobox_marriage.Name = "partner_combobox_marriage";
-            this.partner_combobox_marriage.Size = new System.Drawing.Size(116, 23);
-            this.partner_combobox_marriage.TabIndex = 59;
-            // 
-            // remarks_textbox_marriage
-            // 
-            this.remarks_textbox_marriage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.remarks_textbox_marriage.Location = new System.Drawing.Point(406, 306);
-            this.remarks_textbox_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.remarks_textbox_marriage.Multiline = true;
-            this.remarks_textbox_marriage.Name = "remarks_textbox_marriage";
-            this.remarks_textbox_marriage.Size = new System.Drawing.Size(219, 57);
-            this.remarks_textbox_marriage.TabIndex = 51;
-            // 
-            // delete_button_marriage
-            // 
-            this.delete_button_marriage.Location = new System.Drawing.Point(170, 376);
-            this.delete_button_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.delete_button_marriage.Name = "delete_button_marriage";
-            this.delete_button_marriage.Size = new System.Drawing.Size(68, 22);
-            this.delete_button_marriage.TabIndex = 46;
-            this.delete_button_marriage.Text = "Delete";
-            this.delete_button_marriage.UseVisualStyleBackColor = true;
-            // 
-            // recordNumber_textbox_marriage
-            // 
-            this.recordNumber_textbox_marriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.recordNumber_textbox_marriage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.recordNumber_textbox_marriage.Location = new System.Drawing.Point(306, 190);
-            this.recordNumber_textbox_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.recordNumber_textbox_marriage.Name = "recordNumber_textbox_marriage";
-            this.recordNumber_textbox_marriage.Size = new System.Drawing.Size(84, 23);
-            this.recordNumber_textbox_marriage.TabIndex = 35;
-            this.recordNumber_textbox_marriage.Text = "Record Number";
-            this.recordNumber_textbox_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // add_button_marriage
-            // 
-            this.add_button_marriage.Location = new System.Drawing.Point(259, 375);
-            this.add_button_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.add_button_marriage.Name = "add_button_marriage";
-            this.add_button_marriage.Size = new System.Drawing.Size(68, 22);
-            this.add_button_marriage.TabIndex = 45;
-            this.add_button_marriage.Text = "Add";
-            this.add_button_marriage.UseVisualStyleBackColor = true;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(12, 307);
-            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(95, 25);
-            this.label32.TabIndex = 58;
-            this.label32.Text = "Sponsors";
-            // 
-            // pageNumber_textbox_marriage
-            // 
-            this.pageNumber_textbox_marriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pageNumber_textbox_marriage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pageNumber_textbox_marriage.Location = new System.Drawing.Point(305, 155);
-            this.pageNumber_textbox_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pageNumber_textbox_marriage.Name = "pageNumber_textbox_marriage";
-            this.pageNumber_textbox_marriage.Size = new System.Drawing.Size(86, 23);
-            this.pageNumber_textbox_marriage.TabIndex = 34;
-            this.pageNumber_textbox_marriage.Text = "Page Number";
-            this.pageNumber_textbox_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // minister_combobox_marriage
-            // 
-            this.minister_combobox_marriage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minister_combobox_marriage.FormattingEnabled = true;
-            this.minister_combobox_marriage.Location = new System.Drawing.Point(286, 86);
-            this.minister_combobox_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.minister_combobox_marriage.Name = "minister_combobox_marriage";
-            this.minister_combobox_marriage.Size = new System.Drawing.Size(116, 23);
-            this.minister_combobox_marriage.TabIndex = 30;
-            // 
-            // registryNumber_textbox_marriage
-            // 
-            this.registryNumber_textbox_marriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.registryNumber_textbox_marriage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registryNumber_textbox_marriage.Location = new System.Drawing.Point(305, 121);
-            this.registryNumber_textbox_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.registryNumber_textbox_marriage.Name = "registryNumber_textbox_marriage";
-            this.registryNumber_textbox_marriage.Size = new System.Drawing.Size(84, 23);
-            this.registryNumber_textbox_marriage.TabIndex = 29;
-            this.registryNumber_textbox_marriage.Text = "Registry Number";
-            this.registryNumber_textbox_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.label34);
-            this.panel6.Controls.Add(this.gender_female_radiobutton_sponsor_marriage);
-            this.panel6.Controls.Add(this.gender_male_radiobutton_sponsor_marriage);
-            this.panel6.Controls.Add(this.suffix_textbox_sponsor_marriage);
-            this.panel6.Controls.Add(this.residence_textbox_sponsor_marriage);
-            this.panel6.Controls.Add(this.lastname_textbox_sponsor_marriage);
-            this.panel6.Controls.Add(this.middlename_textbox_sponsor_marriage);
-            this.panel6.Controls.Add(this.label35);
-            this.panel6.Controls.Add(this.label36);
-            this.panel6.Controls.Add(this.firstname_textbox_sponsor_marriage);
-            this.panel6.Controls.Add(this.label37);
-            this.panel6.Controls.Add(this.label38);
-            this.panel6.Controls.Add(this.label39);
-            this.panel6.Location = new System.Drawing.Point(25, 218);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(611, 69);
-            this.panel6.TabIndex = 56;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(2, 2);
-            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(72, 21);
-            this.label34.TabIndex = 57;
-            this.label34.Text = "Sponsor";
-            // 
-            // gender_female_radiobutton_sponsor_marriage
-            // 
-            this.gender_female_radiobutton_sponsor_marriage.AutoSize = true;
-            this.gender_female_radiobutton_sponsor_marriage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gender_female_radiobutton_sponsor_marriage.Location = new System.Drawing.Point(546, 45);
-            this.gender_female_radiobutton_sponsor_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.gender_female_radiobutton_sponsor_marriage.Name = "gender_female_radiobutton_sponsor_marriage";
-            this.gender_female_radiobutton_sponsor_marriage.Size = new System.Drawing.Size(67, 21);
-            this.gender_female_radiobutton_sponsor_marriage.TabIndex = 49;
-            this.gender_female_radiobutton_sponsor_marriage.TabStop = true;
-            this.gender_female_radiobutton_sponsor_marriage.Text = "Female";
-            this.gender_female_radiobutton_sponsor_marriage.UseVisualStyleBackColor = true;
-            // 
-            // gender_male_radiobutton_sponsor_marriage
-            // 
-            this.gender_male_radiobutton_sponsor_marriage.AutoSize = true;
-            this.gender_male_radiobutton_sponsor_marriage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gender_male_radiobutton_sponsor_marriage.Location = new System.Drawing.Point(546, 23);
-            this.gender_male_radiobutton_sponsor_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.gender_male_radiobutton_sponsor_marriage.Name = "gender_male_radiobutton_sponsor_marriage";
-            this.gender_male_radiobutton_sponsor_marriage.Size = new System.Drawing.Size(55, 21);
-            this.gender_male_radiobutton_sponsor_marriage.TabIndex = 49;
-            this.gender_male_radiobutton_sponsor_marriage.TabStop = true;
-            this.gender_male_radiobutton_sponsor_marriage.Text = "Male";
-            this.gender_male_radiobutton_sponsor_marriage.UseVisualStyleBackColor = true;
-            // 
-            // suffix_textbox_sponsor_marriage
-            // 
-            this.suffix_textbox_sponsor_marriage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.suffix_textbox_sponsor_marriage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suffix_textbox_sponsor_marriage.Location = new System.Drawing.Point(284, 40);
-            this.suffix_textbox_sponsor_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.suffix_textbox_sponsor_marriage.Name = "suffix_textbox_sponsor_marriage";
-            this.suffix_textbox_sponsor_marriage.Size = new System.Drawing.Size(42, 16);
-            this.suffix_textbox_sponsor_marriage.TabIndex = 23;
-            this.suffix_textbox_sponsor_marriage.Text = "Suffix";
-            this.suffix_textbox_sponsor_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // residence_textbox_sponsor_marriage
-            // 
-            this.residence_textbox_sponsor_marriage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.residence_textbox_sponsor_marriage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.residence_textbox_sponsor_marriage.Location = new System.Drawing.Point(408, 44);
-            this.residence_textbox_sponsor_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.residence_textbox_sponsor_marriage.Name = "residence_textbox_sponsor_marriage";
-            this.residence_textbox_sponsor_marriage.Size = new System.Drawing.Size(73, 16);
-            this.residence_textbox_sponsor_marriage.TabIndex = 47;
-            this.residence_textbox_sponsor_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lastname_textbox_sponsor_marriage
-            // 
-            this.lastname_textbox_sponsor_marriage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lastname_textbox_sponsor_marriage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastname_textbox_sponsor_marriage.Location = new System.Drawing.Point(213, 44);
-            this.lastname_textbox_sponsor_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lastname_textbox_sponsor_marriage.Name = "lastname_textbox_sponsor_marriage";
-            this.lastname_textbox_sponsor_marriage.Size = new System.Drawing.Size(73, 16);
-            this.lastname_textbox_sponsor_marriage.TabIndex = 24;
-            this.lastname_textbox_sponsor_marriage.Text = "Lastname";
-            this.lastname_textbox_sponsor_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // middlename_textbox_sponsor_marriage
-            // 
-            this.middlename_textbox_sponsor_marriage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.middlename_textbox_sponsor_marriage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.middlename_textbox_sponsor_marriage.Location = new System.Drawing.Point(145, 43);
-            this.middlename_textbox_sponsor_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.middlename_textbox_sponsor_marriage.Name = "middlename_textbox_sponsor_marriage";
-            this.middlename_textbox_sponsor_marriage.Size = new System.Drawing.Size(73, 16);
-            this.middlename_textbox_sponsor_marriage.TabIndex = 22;
-            this.middlename_textbox_sponsor_marriage.Text = "Middlename";
-            this.middlename_textbox_sponsor_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(493, 40);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(52, 17);
-            this.label35.TabIndex = 27;
-            this.label35.Text = "Gender";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(348, 45);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(69, 17);
-            this.label36.TabIndex = 27;
-            this.label36.Text = "Residence";
-            // 
-            // firstname_textbox_sponsor_marriage
-            // 
-            this.firstname_textbox_sponsor_marriage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstname_textbox_sponsor_marriage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstname_textbox_sponsor_marriage.Location = new System.Drawing.Point(68, 45);
-            this.firstname_textbox_sponsor_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.firstname_textbox_sponsor_marriage.Name = "firstname_textbox_sponsor_marriage";
-            this.firstname_textbox_sponsor_marriage.Size = new System.Drawing.Size(73, 16);
-            this.firstname_textbox_sponsor_marriage.TabIndex = 13;
-            this.firstname_textbox_sponsor_marriage.Text = "Firstname";
-            this.firstname_textbox_sponsor_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(28, 45);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(44, 17);
-            this.label37.TabIndex = 27;
-            this.label37.Text = "Name";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(401, 45);
-            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(99, 19);
-            this.label38.TabIndex = 48;
-            this.label38.Text = "_______________";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(63, 45);
-            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(297, 19);
-            this.label39.TabIndex = 11;
-            this.label39.Text = "________________________________________________";
-            // 
-            // minister_textbox_marriage
-            // 
-            this.minister_textbox_marriage.Location = new System.Drawing.Point(411, 84);
-            this.minister_textbox_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.minister_textbox_marriage.Name = "minister_textbox_marriage";
-            this.minister_textbox_marriage.Size = new System.Drawing.Size(120, 25);
-            this.minister_textbox_marriage.TabIndex = 55;
-            // 
-            // date_textbox_marriage
-            // 
-            this.date_textbox_marriage.Location = new System.Drawing.Point(411, 45);
-            this.date_textbox_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.date_textbox_marriage.Name = "date_textbox_marriage";
-            this.date_textbox_marriage.Size = new System.Drawing.Size(120, 25);
-            this.date_textbox_marriage.TabIndex = 54;
-            // 
-            // date_datetimepicker_marriage
-            // 
-            this.date_datetimepicker_marriage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_datetimepicker_marriage.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.date_datetimepicker_marriage.Location = new System.Drawing.Point(287, 48);
-            this.date_datetimepicker_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.date_datetimepicker_marriage.Name = "date_datetimepicker_marriage";
-            this.date_datetimepicker_marriage.Size = new System.Drawing.Size(120, 25);
-            this.date_datetimepicker_marriage.TabIndex = 29;
-            // 
-            // textBox36
-            // 
-            this.textBox36.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox36.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox36.Location = new System.Drawing.Point(293, 117);
-            this.textBox36.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(93, 16);
-            this.textBox36.TabIndex = 29;
-            this.textBox36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(332, 307);
-            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(88, 25);
-            this.label40.TabIndex = 46;
-            this.label40.Text = "Remarks";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(240, 195);
-            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(50, 17);
-            this.label41.TabIndex = 33;
-            this.label41.Text = "Record";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(223, 18);
-            this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(66, 21);
-            this.label50.TabIndex = 0;
-            this.label50.Text = "Partner";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(194, 49);
-            this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(113, 21);
-            this.label42.TabIndex = 0;
-            this.label42.Text = "Mariage Date";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(241, 164);
-            this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(38, 17);
-            this.label43.TabIndex = 32;
-            this.label43.Text = "Page";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(233, 125);
-            this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(59, 17);
-            this.label44.TabIndex = 31;
-            this.label44.Text = "Registry";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(225, 86);
-            this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(73, 21);
-            this.label45.TabIndex = 0;
-            this.label45.Text = "Minister";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(275, 127);
-            this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(147, 19);
-            this.label46.TabIndex = 29;
-            this.label46.Text = "_______________________";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(275, 161);
-            this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(147, 19);
-            this.label47.TabIndex = 52;
-            this.label47.Text = "_______________________";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(275, 198);
-            this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(147, 19);
-            this.label48.TabIndex = 53;
-            this.label48.Text = "_______________________";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.label49);
-            this.panel7.Controls.Add(this.requirements_datagridview_marriage);
-            this.panel7.Controls.Add(this.approve_button_marriage);
-            this.panel7.Controls.Add(this.cancel_button_marriage);
-            this.panel7.Controls.Add(this.appointment_button_marriage);
-            this.panel7.Location = new System.Drawing.Point(0, 32);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(661, 437);
-            this.panel7.TabIndex = 55;
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(25, 15);
-            this.label49.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(140, 30);
-            this.label49.TabIndex = 46;
-            this.label49.Text = "Requirements";
-            // 
-            // requirements_datagridview_marriage
-            // 
-            this.requirements_datagridview_marriage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.requirements_datagridview_marriage.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewCheckBoxColumn1});
-            this.requirements_datagridview_marriage.Location = new System.Drawing.Point(25, 49);
-            this.requirements_datagridview_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.requirements_datagridview_marriage.Name = "requirements_datagridview_marriage";
-            this.requirements_datagridview_marriage.Size = new System.Drawing.Size(599, 328);
-            this.requirements_datagridview_marriage.TabIndex = 47;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.HeaderText = "";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            // 
-            // approve_button_marriage
-            // 
-            this.approve_button_marriage.Location = new System.Drawing.Point(125, 393);
-            this.approve_button_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.approve_button_marriage.Name = "approve_button_marriage";
-            this.approve_button_marriage.Size = new System.Drawing.Size(114, 25);
-            this.approve_button_marriage.TabIndex = 49;
-            this.approve_button_marriage.Text = "Approve Application";
-            this.approve_button_marriage.UseVisualStyleBackColor = true;
-            // 
-            // cancel_button_marriage
-            // 
-            this.cancel_button_marriage.Location = new System.Drawing.Point(443, 393);
-            this.cancel_button_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.cancel_button_marriage.Name = "cancel_button_marriage";
-            this.cancel_button_marriage.Size = new System.Drawing.Size(114, 25);
-            this.cancel_button_marriage.TabIndex = 49;
-            this.cancel_button_marriage.Text = "Cancel Application";
-            this.cancel_button_marriage.UseVisualStyleBackColor = true;
-            // 
-            // appointment_button_marriage
-            // 
-            this.appointment_button_marriage.Location = new System.Drawing.Point(250, 393);
-            this.appointment_button_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.appointment_button_marriage.Name = "appointment_button_marriage";
-            this.appointment_button_marriage.Size = new System.Drawing.Size(174, 25);
-            this.appointment_button_marriage.TabIndex = 49;
-            this.appointment_button_marriage.Text = "Set up Appointment";
-            this.appointment_button_marriage.UseVisualStyleBackColor = true;
-            // 
             // btn_Close
             // 
             this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -3413,6 +2859,1116 @@
             this.btn_Close.UseVisualStyleBackColor = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.flowLayoutPanel3);
+            this.panel4.Controls.Add(this.panel7);
+            this.panel4.Controls.Add(this.panel30);
+            this.panel4.Location = new System.Drawing.Point(-1, 31);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(735, 470);
+            this.panel4.TabIndex = 85;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.panel6.Controls.Add(this.button1);
+            this.panel6.Controls.Add(this.button2);
+            this.panel6.Location = new System.Drawing.Point(0, 420);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(735, 54);
+            this.panel6.TabIndex = 83;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(420, 10);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 32);
+            this.button1.TabIndex = 60;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(192, 10);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(119, 32);
+            this.button2.TabIndex = 59;
+            this.button2.Text = "Cancel";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.flowLayoutPanel3.Controls.Add(this.button5);
+            this.flowLayoutPanel3.Controls.Add(this.button6);
+            this.flowLayoutPanel3.Controls.Add(this.button7);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(735, 32);
+            this.flowLayoutPanel3.TabIndex = 56;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(574, 0);
+            this.button5.Margin = new System.Windows.Forms.Padding(0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(161, 32);
+            this.button5.TabIndex = 60;
+            this.button5.Text = "Details";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(413, 0);
+            this.button6.Margin = new System.Windows.Forms.Padding(0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(161, 32);
+            this.button6.TabIndex = 61;
+            this.button6.Text = "View Certificate";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(252, 0);
+            this.button7.Margin = new System.Windows.Forms.Padding(0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(161, 32);
+            this.button7.TabIndex = 59;
+            this.button7.Text = "Print Certificate";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // panel7
+            // 
+            this.panel7.AutoScroll = true;
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Controls.Add(this.panel9);
+            this.panel7.Controls.Add(this.textBox7);
+            this.panel7.Controls.Add(this.label27);
+            this.panel7.Controls.Add(this.flowLayoutPanel7);
+            this.panel7.Controls.Add(this.panel25);
+            this.panel7.Controls.Add(this.flowLayoutPanel8);
+            this.panel7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel7.Location = new System.Drawing.Point(0, 32);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(735, 389);
+            this.panel7.TabIndex = 56;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.maskedTextBox2);
+            this.panel9.Controls.Add(this.textBox2);
+            this.panel9.Controls.Add(this.textBox3);
+            this.panel9.Controls.Add(this.textBox4);
+            this.panel9.Controls.Add(this.textBox5);
+            this.panel9.Controls.Add(this.panel15);
+            this.panel9.Controls.Add(this.textBox6);
+            this.panel9.Controls.Add(this.label17);
+            this.panel9.Controls.Add(this.label18);
+            this.panel9.Controls.Add(this.dateTimePicker1);
+            this.panel9.Controls.Add(this.label20);
+            this.panel9.Controls.Add(this.label21);
+            this.panel9.Controls.Add(this.label23);
+            this.panel9.Location = new System.Drawing.Point(49, 21);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(622, 304);
+            this.panel9.TabIndex = 82;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(212, 264);
+            this.maskedTextBox2.Mask = "(+63) 999 - 999 - 9999";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(128, 23);
+            this.maskedTextBox2.TabIndex = 83;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(212, 186);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(247, 68);
+            this.textBox2.TabIndex = 82;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.Gray;
+            this.textBox3.Location = new System.Drawing.Point(250, 23);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(44, 16);
+            this.textBox3.TabIndex = 51;
+            this.textBox3.Text = "mi";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.Color.Gray;
+            this.textBox4.Location = new System.Drawing.Point(441, 23);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(47, 16);
+            this.textBox4.TabIndex = 52;
+            this.textBox4.Text = "suffix";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.ForeColor = System.Drawing.Color.Gray;
+            this.textBox5.Location = new System.Drawing.Point(109, 23);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(135, 16);
+            this.textBox5.TabIndex = 50;
+            this.textBox5.Text = "firstname";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.radioButton3);
+            this.panel15.Controls.Add(this.radioButton4);
+            this.panel15.Controls.Add(this.radioButton5);
+            this.panel15.Location = new System.Drawing.Point(212, 143);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(217, 31);
+            this.panel15.TabIndex = 80;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(91, 6);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(64, 19);
+            this.radioButton3.TabIndex = 0;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Natural";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(164, 4);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(48, 19);
+            this.radioButton4.TabIndex = 0;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Civil";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(4, 4);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(81, 19);
+            this.radioButton5.TabIndex = 0;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Legitimate";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.ForeColor = System.Drawing.Color.Gray;
+            this.textBox6.Location = new System.Drawing.Point(300, 23);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(135, 16);
+            this.textBox6.TabIndex = 53;
+            this.textBox6.Text = "lastname";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.label17.Location = new System.Drawing.Point(77, 266);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(131, 21);
+            this.label17.TabIndex = 79;
+            this.label17.Text = "Contact Number";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.label18.Location = new System.Drawing.Point(136, 187);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(70, 21);
+            this.label18.TabIndex = 79;
+            this.label18.Text = "Address";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "________-________-________";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(212, 56);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(219, 23);
+            this.dateTimePicker1.TabIndex = 78;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.label20.Location = new System.Drawing.Point(129, 55);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(78, 21);
+            this.label20.TabIndex = 79;
+            this.label20.Text = "Birthdate";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.label21.Location = new System.Drawing.Point(117, 145);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(89, 21);
+            this.label21.TabIndex = 79;
+            this.label21.Text = "Legitimacy";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.ForeColor = System.Drawing.Color.Black;
+            this.label23.Location = new System.Drawing.Point(62, 29);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(507, 15);
+            this.label23.TabIndex = 49;
+            this.label23.Text = "_________________________________________________________________________________" +
+    "___________________";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(96, 1097);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(533, 109);
+            this.textBox7.TabIndex = 69;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.label27.Location = new System.Drawing.Point(89, 1067);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(72, 21);
+            this.label27.TabIndex = 68;
+            this.label27.Text = "Remarks";
+            // 
+            // flowLayoutPanel7
+            // 
+            this.flowLayoutPanel7.Controls.Add(this.panel17);
+            this.flowLayoutPanel7.Controls.Add(this.panel19);
+            this.flowLayoutPanel7.Controls.Add(this.panel22);
+            this.flowLayoutPanel7.Controls.Add(this.panel24);
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(82, 586);
+            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(554, 254);
+            this.flowLayoutPanel7.TabIndex = 64;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.checkBox1);
+            this.panel17.Location = new System.Drawing.Point(3, 3);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(548, 33);
+            this.panel17.TabIndex = 65;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.checkBox1.Location = new System.Drawing.Point(0, 0);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(120, 29);
+            this.checkBox1.TabIndex = 59;
+            this.checkBox1.Text = "GodFather";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.White;
+            this.panel19.Controls.Add(this.textBox8);
+            this.panel19.Controls.Add(this.textBox9);
+            this.panel19.Controls.Add(this.label32);
+            this.panel19.Controls.Add(this.textBox10);
+            this.panel19.Controls.Add(this.label33);
+            this.panel19.Controls.Add(this.textBox11);
+            this.panel19.Controls.Add(this.textBox12);
+            this.panel19.Controls.Add(this.label34);
+            this.panel19.Location = new System.Drawing.Point(2, 41);
+            this.panel19.Margin = new System.Windows.Forms.Padding(2);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(552, 80);
+            this.panel19.TabIndex = 56;
+            this.panel19.Visible = false;
+            // 
+            // textBox8
+            // 
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.ForeColor = System.Drawing.Color.Gray;
+            this.textBox8.Location = new System.Drawing.Point(405, 7);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(47, 16);
+            this.textBox8.TabIndex = 23;
+            this.textBox8.Text = "suffix";
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox9
+            // 
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(249, 39);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(138, 16);
+            this.textBox9.TabIndex = 47;
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(176, 42);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(67, 17);
+            this.label32.TabIndex = 27;
+            this.label32.Text = "Residence";
+            // 
+            // textBox10
+            // 
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.ForeColor = System.Drawing.Color.Gray;
+            this.textBox10.Location = new System.Drawing.Point(264, 7);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(135, 16);
+            this.textBox10.TabIndex = 24;
+            this.textBox10.Text = "lastname";
+            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(245, 46);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(147, 15);
+            this.label33.TabIndex = 48;
+            this.label33.Text = "____________________________";
+            // 
+            // textBox11
+            // 
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.ForeColor = System.Drawing.Color.Gray;
+            this.textBox11.Location = new System.Drawing.Point(214, 7);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(44, 16);
+            this.textBox11.TabIndex = 22;
+            this.textBox11.Text = "mi";
+            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox12
+            // 
+            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox12.ForeColor = System.Drawing.Color.Gray;
+            this.textBox12.Location = new System.Drawing.Point(73, 7);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(135, 16);
+            this.textBox12.TabIndex = 13;
+            this.textBox12.Text = "firstname";
+            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(22, 12);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(507, 15);
+            this.label34.TabIndex = 11;
+            this.label34.Text = "_________________________________________________________________________________" +
+    "___________________";
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.checkBox2);
+            this.panel22.Location = new System.Drawing.Point(3, 126);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(548, 33);
+            this.panel22.TabIndex = 66;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.checkBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.checkBox2.Location = new System.Drawing.Point(0, 0);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(130, 29);
+            this.checkBox2.TabIndex = 58;
+            this.checkBox2.Text = "GodMother";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.White;
+            this.panel24.Controls.Add(this.textBox13);
+            this.panel24.Controls.Add(this.textBox14);
+            this.panel24.Controls.Add(this.label35);
+            this.panel24.Controls.Add(this.textBox15);
+            this.panel24.Controls.Add(this.label36);
+            this.panel24.Controls.Add(this.textBox16);
+            this.panel24.Controls.Add(this.textBox17);
+            this.panel24.Controls.Add(this.label37);
+            this.panel24.Location = new System.Drawing.Point(2, 164);
+            this.panel24.Margin = new System.Windows.Forms.Padding(2);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(552, 80);
+            this.panel24.TabIndex = 57;
+            this.panel24.Visible = false;
+            // 
+            // textBox13
+            // 
+            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.ForeColor = System.Drawing.Color.Gray;
+            this.textBox13.Location = new System.Drawing.Point(405, 7);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(47, 16);
+            this.textBox13.TabIndex = 23;
+            this.textBox13.Text = "suffix";
+            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox14
+            // 
+            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.Location = new System.Drawing.Point(249, 39);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(138, 16);
+            this.textBox14.TabIndex = 47;
+            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(176, 42);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(67, 17);
+            this.label35.TabIndex = 27;
+            this.label35.Text = "Residence";
+            // 
+            // textBox15
+            // 
+            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox15.ForeColor = System.Drawing.Color.Gray;
+            this.textBox15.Location = new System.Drawing.Point(264, 7);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(135, 16);
+            this.textBox15.TabIndex = 24;
+            this.textBox15.Text = "lastname";
+            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(245, 46);
+            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(147, 15);
+            this.label36.TabIndex = 48;
+            this.label36.Text = "____________________________";
+            // 
+            // textBox16
+            // 
+            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox16.ForeColor = System.Drawing.Color.Gray;
+            this.textBox16.Location = new System.Drawing.Point(214, 7);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(44, 16);
+            this.textBox16.TabIndex = 22;
+            this.textBox16.Text = "mi";
+            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox17
+            // 
+            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox17.ForeColor = System.Drawing.Color.Gray;
+            this.textBox17.Location = new System.Drawing.Point(73, 7);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(135, 16);
+            this.textBox17.TabIndex = 13;
+            this.textBox17.Text = "firstname";
+            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(22, 12);
+            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(507, 15);
+            this.label37.TabIndex = 11;
+            this.label37.Text = "_________________________________________________________________________________" +
+    "___________________";
+            // 
+            // panel25
+            // 
+            this.panel25.Controls.Add(this.label38);
+            this.panel25.Controls.Add(this.label39);
+            this.panel25.Controls.Add(this.comboBox1);
+            this.panel25.Controls.Add(this.label40);
+            this.panel25.Controls.Add(this.dateTimePicker2);
+            this.panel25.Controls.Add(this.textBox18);
+            this.panel25.Controls.Add(this.label41);
+            this.panel25.Controls.Add(this.label42);
+            this.panel25.Controls.Add(this.textBox19);
+            this.panel25.Controls.Add(this.textBox20);
+            this.panel25.Controls.Add(this.label43);
+            this.panel25.Controls.Add(this.label44);
+            this.panel25.Controls.Add(this.label45);
+            this.panel25.Location = new System.Drawing.Point(188, 848);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(345, 226);
+            this.panel25.TabIndex = 63;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(78, 108);
+            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(55, 17);
+            this.label38.TabIndex = 31;
+            this.label38.Text = "Registry";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(99, 146);
+            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(37, 17);
+            this.label39.TabIndex = 32;
+            this.label39.Text = "Page";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(144, 23);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(186, 23);
+            this.comboBox1.TabIndex = 73;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(87, 178);
+            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(50, 17);
+            this.label40.TabIndex = 33;
+            this.label40.Text = "Record";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "________-________-________";
+            this.dateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(143, 62);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(187, 25);
+            this.dateTimePicker2.TabIndex = 72;
+            // 
+            // textBox18
+            // 
+            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox18.ForeColor = System.Drawing.Color.Gray;
+            this.textBox18.Location = new System.Drawing.Point(157, 109);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(99, 16);
+            this.textBox18.TabIndex = 29;
+            this.textBox18.Text = "Registry Number";
+            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.label41.Location = new System.Drawing.Point(21, 65);
+            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(107, 21);
+            this.label41.TabIndex = 70;
+            this.label41.Text = "Baptism Date";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.label42.Location = new System.Drawing.Point(24, 27);
+            this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(70, 21);
+            this.label42.TabIndex = 71;
+            this.label42.Text = "Minister";
+            // 
+            // textBox19
+            // 
+            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox19.ForeColor = System.Drawing.Color.Gray;
+            this.textBox19.Location = new System.Drawing.Point(157, 181);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(99, 16);
+            this.textBox19.TabIndex = 35;
+            this.textBox19.Text = "Record Number";
+            this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox20
+            // 
+            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox20.ForeColor = System.Drawing.Color.Gray;
+            this.textBox20.Location = new System.Drawing.Point(157, 145);
+            this.textBox20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(99, 16);
+            this.textBox20.TabIndex = 34;
+            this.textBox20.Text = "Page Number";
+            this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.ForeColor = System.Drawing.Color.Gray;
+            this.label43.Location = new System.Drawing.Point(145, 116);
+            this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(122, 15);
+            this.label43.TabIndex = 29;
+            this.label43.Text = "_______________________";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.ForeColor = System.Drawing.Color.Gray;
+            this.label44.Location = new System.Drawing.Point(145, 152);
+            this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(122, 15);
+            this.label44.TabIndex = 52;
+            this.label44.Text = "_______________________";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.ForeColor = System.Drawing.Color.Gray;
+            this.label45.Location = new System.Drawing.Point(145, 188);
+            this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(122, 15);
+            this.label45.TabIndex = 53;
+            this.label45.Text = "_______________________";
+            // 
+            // flowLayoutPanel8
+            // 
+            this.flowLayoutPanel8.Controls.Add(this.panel26);
+            this.flowLayoutPanel8.Controls.Add(this.panel27);
+            this.flowLayoutPanel8.Controls.Add(this.panel28);
+            this.flowLayoutPanel8.Controls.Add(this.panel29);
+            this.flowLayoutPanel8.Location = new System.Drawing.Point(83, 328);
+            this.flowLayoutPanel8.Name = "flowLayoutPanel8";
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(554, 251);
+            this.flowLayoutPanel8.TabIndex = 67;
+            // 
+            // panel26
+            // 
+            this.panel26.Controls.Add(this.checkBox3);
+            this.panel26.Location = new System.Drawing.Point(3, 3);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(548, 33);
+            this.panel26.TabIndex = 65;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.checkBox3.Location = new System.Drawing.Point(0, 0);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(85, 29);
+            this.checkBox3.TabIndex = 59;
+            this.checkBox3.Text = "Father";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.White;
+            this.panel27.Controls.Add(this.textBox21);
+            this.panel27.Controls.Add(this.textBox22);
+            this.panel27.Controls.Add(this.label46);
+            this.panel27.Controls.Add(this.textBox23);
+            this.panel27.Controls.Add(this.label47);
+            this.panel27.Controls.Add(this.textBox24);
+            this.panel27.Controls.Add(this.textBox25);
+            this.panel27.Controls.Add(this.label48);
+            this.panel27.Location = new System.Drawing.Point(2, 41);
+            this.panel27.Margin = new System.Windows.Forms.Padding(2);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(552, 80);
+            this.panel27.TabIndex = 56;
+            this.panel27.Visible = false;
+            // 
+            // textBox21
+            // 
+            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox21.ForeColor = System.Drawing.Color.Gray;
+            this.textBox21.Location = new System.Drawing.Point(405, 7);
+            this.textBox21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(47, 16);
+            this.textBox21.TabIndex = 23;
+            this.textBox21.Text = "suffix";
+            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox22
+            // 
+            this.textBox22.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox22.Location = new System.Drawing.Point(249, 39);
+            this.textBox22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(138, 16);
+            this.textBox22.TabIndex = 47;
+            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(176, 42);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(67, 17);
+            this.label46.TabIndex = 27;
+            this.label46.Text = "Residence";
+            // 
+            // textBox23
+            // 
+            this.textBox23.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox23.ForeColor = System.Drawing.Color.Gray;
+            this.textBox23.Location = new System.Drawing.Point(264, 7);
+            this.textBox23.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(135, 16);
+            this.textBox23.TabIndex = 24;
+            this.textBox23.Text = "lastname";
+            this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(245, 46);
+            this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(147, 15);
+            this.label47.TabIndex = 48;
+            this.label47.Text = "____________________________";
+            // 
+            // textBox24
+            // 
+            this.textBox24.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox24.ForeColor = System.Drawing.Color.Gray;
+            this.textBox24.Location = new System.Drawing.Point(214, 7);
+            this.textBox24.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(44, 16);
+            this.textBox24.TabIndex = 22;
+            this.textBox24.Text = "mi";
+            this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox25
+            // 
+            this.textBox25.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox25.ForeColor = System.Drawing.Color.Gray;
+            this.textBox25.Location = new System.Drawing.Point(73, 7);
+            this.textBox25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(135, 16);
+            this.textBox25.TabIndex = 13;
+            this.textBox25.Text = "firstname";
+            this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(22, 12);
+            this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(507, 15);
+            this.label48.TabIndex = 11;
+            this.label48.Text = "_________________________________________________________________________________" +
+    "___________________";
+            // 
+            // panel28
+            // 
+            this.panel28.Controls.Add(this.checkBox4);
+            this.panel28.Location = new System.Drawing.Point(3, 126);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(548, 33);
+            this.panel28.TabIndex = 66;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.checkBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.checkBox4.Location = new System.Drawing.Point(0, 0);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(95, 29);
+            this.checkBox4.TabIndex = 58;
+            this.checkBox4.Text = "Mother";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.White;
+            this.panel29.Controls.Add(this.textBox26);
+            this.panel29.Controls.Add(this.textBox27);
+            this.panel29.Controls.Add(this.label49);
+            this.panel29.Controls.Add(this.textBox28);
+            this.panel29.Controls.Add(this.label50);
+            this.panel29.Controls.Add(this.textBox29);
+            this.panel29.Controls.Add(this.textBox30);
+            this.panel29.Controls.Add(this.label54);
+            this.panel29.Location = new System.Drawing.Point(2, 164);
+            this.panel29.Margin = new System.Windows.Forms.Padding(2);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(552, 80);
+            this.panel29.TabIndex = 57;
+            this.panel29.Visible = false;
+            // 
+            // textBox26
+            // 
+            this.textBox26.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox26.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox26.ForeColor = System.Drawing.Color.Gray;
+            this.textBox26.Location = new System.Drawing.Point(405, 7);
+            this.textBox26.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox26.Name = "textBox26";
+            this.textBox26.Size = new System.Drawing.Size(47, 16);
+            this.textBox26.TabIndex = 23;
+            this.textBox26.Text = "suffix";
+            this.textBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox27
+            // 
+            this.textBox27.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox27.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox27.Location = new System.Drawing.Point(249, 39);
+            this.textBox27.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(138, 16);
+            this.textBox27.TabIndex = 47;
+            this.textBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(176, 42);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(67, 17);
+            this.label49.TabIndex = 27;
+            this.label49.Text = "Residence";
+            // 
+            // textBox28
+            // 
+            this.textBox28.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox28.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox28.ForeColor = System.Drawing.Color.Gray;
+            this.textBox28.Location = new System.Drawing.Point(264, 7);
+            this.textBox28.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox28.Name = "textBox28";
+            this.textBox28.Size = new System.Drawing.Size(135, 16);
+            this.textBox28.TabIndex = 24;
+            this.textBox28.Text = "lastname";
+            this.textBox28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(245, 46);
+            this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(147, 15);
+            this.label50.TabIndex = 48;
+            this.label50.Text = "____________________________";
+            // 
+            // textBox29
+            // 
+            this.textBox29.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox29.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox29.ForeColor = System.Drawing.Color.Gray;
+            this.textBox29.Location = new System.Drawing.Point(214, 7);
+            this.textBox29.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox29.Name = "textBox29";
+            this.textBox29.Size = new System.Drawing.Size(44, 16);
+            this.textBox29.TabIndex = 22;
+            this.textBox29.Text = "mi";
+            this.textBox29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox30
+            // 
+            this.textBox30.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox30.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox30.ForeColor = System.Drawing.Color.Gray;
+            this.textBox30.Location = new System.Drawing.Point(73, 7);
+            this.textBox30.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox30.Name = "textBox30";
+            this.textBox30.Size = new System.Drawing.Size(135, 16);
+            this.textBox30.TabIndex = 13;
+            this.textBox30.Text = "firstname";
+            this.textBox30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(22, 12);
+            this.label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(507, 15);
+            this.label54.TabIndex = 11;
+            this.label54.Text = "_________________________________________________________________________________" +
+    "___________________";
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.panel30.Controls.Add(this.button8);
+            this.panel30.Controls.Add(this.button9);
+            this.panel30.Location = new System.Drawing.Point(0, 419);
+            this.panel30.Margin = new System.Windows.Forms.Padding(0);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(735, 48);
+            this.panel30.TabIndex = 84;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.button8.ForeColor = System.Drawing.Color.Black;
+            this.button8.Location = new System.Drawing.Point(420, 10);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(117, 32);
+            this.button8.TabIndex = 60;
+            this.button8.Text = "Save";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.Color.Black;
+            this.button9.Location = new System.Drawing.Point(192, 10);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(119, 32);
+            this.button9.TabIndex = 59;
+            this.button9.Text = "Cancel";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
             // Person
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -3420,10 +3976,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(734, 524);
             this.ControlBox = false;
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.bloodletting_panel);
-            this.Controls.Add(this.marriage_panel);
             this.Controls.Add(this.balance_panel);
             this.Controls.Add(this.baptism_button);
             this.Controls.Add(this.balance_button);
@@ -3463,7 +4019,6 @@
             this.mother_panel_confirmation.ResumeLayout(false);
             this.mother_panel_confirmation.PerformLayout();
             this.float_panel_confirmation.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sponsor_datagridview_marriage)).EndInit();
             this.bloodletting_panel.ResumeLayout(false);
             this.bloodletting_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.donation_datagridview_bloodletting)).EndInit();
@@ -3503,15 +4058,36 @@
             this.panel10.PerformLayout();
             this.mother_panel_baptism.ResumeLayout(false);
             this.mother_panel_baptism.PerformLayout();
-            this.marriage_panel.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.flowLayoutPanel3.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.requirements_datagridview_marriage)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.flowLayoutPanel7.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
+            this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
+            this.panel24.ResumeLayout(false);
+            this.panel24.PerformLayout();
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
+            this.flowLayoutPanel8.ResumeLayout(false);
+            this.panel26.ResumeLayout(false);
+            this.panel26.PerformLayout();
+            this.panel27.ResumeLayout(false);
+            this.panel27.PerformLayout();
+            this.panel28.ResumeLayout(false);
+            this.panel28.PerformLayout();
+            this.panel29.ResumeLayout(false);
+            this.panel29.PerformLayout();
+            this.panel30.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3528,7 +4104,6 @@
         private System.Windows.Forms.TextBox page_textbox_baptism;
         private System.Windows.Forms.TextBox registry_textbox_baptism;
         private System.Windows.Forms.Panel confirmation_panel;
-        private System.Windows.Forms.DataGridView sponsor_datagridview_marriage;
         private System.Windows.Forms.Button balance_button;
         private System.Windows.Forms.Button bloodletting_button;
         private System.Windows.Forms.Panel bloodletting_panel;
@@ -3564,57 +4139,6 @@
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Panel marriage_panel;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.Button application_button_marriage;
-        private System.Windows.Forms.Button details_button_marriage;
-        private System.Windows.Forms.Button viewCertificate_button_marriage;
-        private System.Windows.Forms.Button printCertificate_button_marriage;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox partner_combobox_marriage;
-        private System.Windows.Forms.TextBox remarks_textbox_marriage;
-        private System.Windows.Forms.Button delete_button_marriage;
-        private System.Windows.Forms.TextBox recordNumber_textbox_marriage;
-        private System.Windows.Forms.Button add_button_marriage;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox pageNumber_textbox_marriage;
-        private System.Windows.Forms.ComboBox minister_combobox_marriage;
-        private System.Windows.Forms.TextBox registryNumber_textbox_marriage;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.RadioButton gender_female_radiobutton_sponsor_marriage;
-        private System.Windows.Forms.RadioButton gender_male_radiobutton_sponsor_marriage;
-        private System.Windows.Forms.TextBox suffix_textbox_sponsor_marriage;
-        private System.Windows.Forms.TextBox residence_textbox_sponsor_marriage;
-        private System.Windows.Forms.TextBox lastname_textbox_sponsor_marriage;
-        private System.Windows.Forms.TextBox middlename_textbox_sponsor_marriage;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox firstname_textbox_sponsor_marriage;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox minister_textbox_marriage;
-        private System.Windows.Forms.TextBox date_textbox_marriage;
-        private System.Windows.Forms.DateTimePicker date_datetimepicker_marriage;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.DataGridView requirements_datagridview_marriage;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.Button approve_button_marriage;
-        private System.Windows.Forms.Button cancel_button_marriage;
-        private System.Windows.Forms.Button appointment_button_marriage;
         private System.Windows.Forms.Button close_button_baptism;
         private System.Windows.Forms.Button save_button_baptism;
         private System.Windows.Forms.Label label31;
@@ -3756,5 +4280,96 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.TextBox textBox27;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.TextBox textBox28;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox textBox29;
+        private System.Windows.Forms.TextBox textBox30;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
     }
 }

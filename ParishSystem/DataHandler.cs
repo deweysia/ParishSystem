@@ -118,10 +118,11 @@ namespace ParishSystem
 
         }
 
-        public bool addSponsor(int sacramentID, int sponsorID, string sacramentType)
+        public bool addSponsor(int sacramentID, string fn,string mn,string ln,string sf,char gender,string residence ,string sacramentType)
         {
-            string q = "INSERT INTO Sponsor(sacramentID, sponsorID, sacramentType) VALUES ('"
-                        + sacramentID + "', '" + sponsorID + "', '" + sacramentType + "')";
+            string q = "INSERT INTO `sad2`.`sponsor` (`sacramentID`, `firstName`, `midName`, `lastName`, `suffix`, `gender`, `sacramentType`, `residence`) "+
+                      " VALUES ('"+ sacramentID + "', '"+fn+"', '"+mn+"', '"+ln+"', '"+sf+"', '"+gender+"', '"+residence+"', '"+sacramentType+"')";
+
 
             // *Still record changes to log or nah?
             return runNonQuery(q);

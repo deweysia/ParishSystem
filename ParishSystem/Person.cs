@@ -423,6 +423,7 @@ namespace ParishSystem
                 MessageBox.Show("Hello");
                 return;
             }
+         
             //inserting
             if (father_checbox.Checked)
             {
@@ -432,6 +433,15 @@ namespace ParishSystem
             {
                 dh.addParent(ProfileID, firstname_textbox_mother_baptism.Text, mi_textbox_mother_baptism.Text, lastname_textbox_mother_baptism.Text, suffix_textbox_mother_baptism.Text, 'F', residence_textbox_mother_baptism.Text);
             }
+            if (godfather_checkbox.Checked)
+            {
+               // dh.addSponsor();
+            }
+            if (godMother_checkbox.Checked)
+            {
+                // dh.addSponsor();
+            }
+
 
         }
 
