@@ -379,7 +379,8 @@ namespace ParishSystem
                 birthdate_dateTimePicker_profile_baptism.Format.Equals(DateTimePickerFormat.Custom) ||
                 !(genderMale_radiobutton_profile_baptism.Checked || genderFemale_radiobutton_profile_baptism.Checked))
             {
-
+                MessageBox.Show("Hello");
+                return;
             }
 
             if (father_checbox.Checked && (isNameEmpty(firstname_textbox_father_baptism) ||
@@ -387,7 +388,8 @@ namespace ParishSystem
                 isNameEmpty(lastname_textbox_father_baptism) ||
                 residence_textbox_father_baptism.Text == ""))
             {
-
+                MessageBox.Show("Hello");
+                return;
             }
 
 
@@ -398,7 +400,8 @@ namespace ParishSystem
                 isNameEmpty(lastname_textbox_mother_baptism) ||
                 residence_textbox_mother_baptism.Text == "")
             {
-
+                MessageBox.Show("Hello");
+                return;
             }
             if (
                 godfather_checkbox.Checked ||
@@ -407,7 +410,8 @@ namespace ParishSystem
                 isNameEmpty(lastname_textbox_godFather_baptism) ||
                 residence_textbox_godFather_baptism.Text == "")
             {
-
+                MessageBox.Show("Hello");
+                return;
             }
             if (
                 godMother_checkbox.Checked ||
@@ -416,9 +420,18 @@ namespace ParishSystem
                 isNameEmpty(lastname_textbox_godMother_baptism) ||
                 residence_textbox_godMother_baptism.Text == "")
             {
-                
+                MessageBox.Show("Hello");
+                return;
             }
-            
+            //inserting
+            if (father_checbox.Checked)
+            {
+                dh.addParent(ProfileID, firstname_textbox_father_baptism.Text, mi_textbox_father_baptism.Text, lastname_textbox_father_baptism.Text, suffix_textbox_father_baptism.Text, 'M', residence_textbox_father_baptism.Text);
+            }
+            if(mother_checkbox.Checked)
+            {
+                dh.addParent(ProfileID, firstname_textbox_mother_baptism.Text, mi_textbox_mother_baptism.Text, lastname_textbox_mother_baptism.Text, suffix_textbox_mother_baptism.Text, 'F', residence_textbox_mother_baptism.Text);
+            }
 
         }
 
