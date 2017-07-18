@@ -391,8 +391,6 @@ namespace ParishSystem
                 MessageBox.Show("Hello");
                 return;
             }
-
-
             if (
                 mother_checkbox.Checked ||
                 isNameEmpty(firstname_textbox_mother_baptism) ||
@@ -423,7 +421,7 @@ namespace ParishSystem
                 MessageBox.Show("Hello");
                 return;
             }
-         
+            
             //inserting
             if (father_checbox.Checked)
             {
@@ -604,8 +602,19 @@ namespace ParishSystem
         }
 
 
+
         #endregion
 
-       
+     
+
+        private void marriage_button_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void save_button_marriage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
