@@ -1149,7 +1149,7 @@ namespace ParishSystem
 
         public bool addNewApplicant(int profileID, char sacramentType)
         {
-            addApplication(sacramentType.ToString());
+            addApplication(sacramentType);
             int applicationID = getLatestID("Application", "applicationID");
             bool success = addApplicant(profileID, applicationID);
             return success;
@@ -2447,7 +2447,7 @@ namespace ParishSystem
 
         public DataTable getMinisters()
         {
-            string q = "SELECT ministerID, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix), birthdate, ministryType, status, licenseNumber, expirationDate FROM Minister";
+            string q = "SELECT ministerID, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix)as Name, birthdate, ministryType, status, licenseNumber, expirationDate FROM Minister";
 
             DataTable dt = runQuery(q);
 
