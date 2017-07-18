@@ -276,7 +276,7 @@ namespace ParishSystem
                 marriageApplication_label.ForeColor = Color.Black;
 
                 //panel changes
-                baptismApplication_panel.BringToFront();
+                sacramentApplication_panel.BringToFront();
 
             }
             else if (A.Equals(confirmationApplication_label))
@@ -290,7 +290,7 @@ namespace ParishSystem
                 marriageApplication_label.ForeColor = Color.Black;
 
                 //panel changes
-                confirmationApplication_panel.BringToFront();
+                sacramentApplication_panel.BringToFront();
 
             }
             else if (A.Equals(marriageApplication_label))

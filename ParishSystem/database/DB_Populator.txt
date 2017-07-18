@@ -7,20 +7,20 @@ INSERT INTO `GeneralProfile` (`firstName`,`midName`,`lastName`,`gender`,`birthda
 INSERT INTO `GeneralProfile` (`firstName`,`midName`,`lastName`,`gender`,`birthdate`,`contactNumber`,`address`,`birthplace`, bloodType) VALUES ("Zahir","L","Jimenez","M","2017-12-06","090-770-2255","7184 Magna, Ave","696-3088 Nibh. Road", "AB");
 
 
-
 # INSERTING BLOOD DONATION EVENTS TABLE 
-INSERT into BloodDonationEvent(eventName, eventDateTime, eventStatus, eventVenue, eventDetails) VALUES("Blood Donation Event", '2005-12-1 11:11:11', "On Going", "4609 Green Hill Road", "no details");
-INSERT into BloodDonationEvent(eventName, eventDateTime, eventStatus, eventVenue, eventDetails) VALUES("Blood Charity", '2003-05-03 11:11:11', "Finished", "367 Holden Street", "no details");
-INSERT into BloodDonationEvent(eventName, eventDateTime, eventStatus, eventVenue, eventDetails) VALUES("Our Lady of Assumption Blood Donations", '2002-02-14 11:11:11', "Finished", "4166 Jenna Lane", "no details");
-INSERT into BloodDonationEvent(eventName, eventDateTime, eventStatus, eventVenue, eventDetails) VALUES("Red Cross Blood Donation Event", '2001-11-26 11:11:11', "To Be Held", "Hall Place", "no details");
-INSERT into BloodDonationEvent(eventName, eventDateTime, eventStatus, eventVenue, eventDetails) VALUES("Davao Doctors Hospital Blood Donations", '1999-11-30 11:11:11', "On Going", "Southside Lane", "no details");
+INSERT into BloodDonationEvent(eventName, startDateTime, endDateTime, eventVenue, eventDetails) VALUES("Blood Donation Event", "2017-12-01 08:40:00", "2017-12-04 08:40:00",  "4609 Green Hill Road", "");
+INSERT into BloodDonationEvent(eventName, startDateTime, endDateTime, eventVenue, eventDetails) VALUES("Blood Charity", "2013-05-03 10:40:00", "2013-05-05 10:30:00", "367 Holden Street", "");
+INSERT into BloodDonationEvent(eventName, startDateTime, endDateTime, eventVenue, eventDetails) VALUES("Our Lady of Assumption Blood Donations", "2011-02-14 08:40:00", "2011-02-16 08:30:00", "4166 Jenna Lane", "Changed Venue");
+INSERT into BloodDonationEvent(eventName, startDateTime, endDateTime, eventVenue, eventDetails) VALUES("Red Cross Blood Donation Event", "2017-11-26 09:00:00", "2017-11-28 10:10:00", "Hall Place", "");
+INSERT into BloodDonationEvent(eventName, startDateTime, endDateTime, eventVenue, eventDetails) VALUES("Davao Doctors Hospital Blood Donations", "2012-11-30 09:40:00", "2012-11-31 08:30:00", "Southside Lane", "");
 
 # INSERTING BLOOD DONATION 
-INSERT into bloodDonation(profileID, bloodDonationEventID, bloodDonationDateTime) VALUES(1, 1, '2003-05-03 10:23:01');
-INSERT into bloodDonation(profileID, bloodDonationEventID, bloodDonationDateTime) VALUES(2, 2, '2001-11-26 07:32:23');
-INSERT into bloodDonation(profileID, bloodDonationEventID, bloodDonationDateTime) VALUES(3, 3, '2005-02-21 17:28:52');
-INSERT into bloodDonation(profileID, bloodDonationEventID, bloodDonationDateTime) VALUES(4, 4, '2006-01-29 12:21:42');
-INSERT into bloodDonation(profileID, bloodDonationEventID, bloodDonationDateTime) VALUES(5, 5, '1999-02-01 15:58:06');
+INSERT into bloodDonation(generalProfile, donationEventID, donationDateTime) VALUES(1, 1, "2017-12-02 09:00:00");
+INSERT into bloodDonation(generalProfile, donationEventID, donationDateTime) VALUES(2, 2, "2013-05-04 08:10:00");
+INSERT into bloodDonation(generalProfile, donationEventID, donationDateTime) VALUES(3, 3, "2011-02-15  10:15:00");
+INSERT into bloodDonation(generalProfile, donationEventID, donationDateTime) VALUES(4, 4, "2017-11-27 12:30:00");
+INSERT into bloodDonation(generalProfile, donationEventID, donationDateTime) VALUES(5, 4, "2017-11-26 12:15:00");
+
 
 # INSERTING BLOOD EVENTS 
 INSERT into BloodDonationRetrieval(bloodDonationID, claimDate, firstName, midName, lastName, suffix, birthdate, gender) VALUES(1, '2011-03-11 11:23:01', "Josh", "Figueroa", "Lintag", "Jr.", "1998-07-02", "M");

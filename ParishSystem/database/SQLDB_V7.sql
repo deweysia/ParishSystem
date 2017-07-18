@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `sad2`.`generalprofile` (
   PRIMARY KEY (`profileID`),
   UNIQUE INDEX `personName` (`firstName` ASC, `midName` ASC, `lastName` ASC, `suffix` ASC, `birthdate` ASC, `gender` ASC))
 ENGINE = InnoDB
-AUTO_INCREMENT = 22
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -92,55 +92,7 @@ CREATE TABLE IF NOT EXISTS `sad2`.`minister` (
   `expirationDate` DATE NULL DEFAULT NULL,
   PRIMARY KEY (`ministerID`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 11
-DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
--- Table `sad2`.`schedule`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `sad2`.`schedule` (
-  `scheduleID` INT(11) NOT NULL AUTO_INCREMENT,
-  `scheduleType` VARCHAR(45) NULL DEFAULT NULL,
-  `startDateTime` DATETIME NULL DEFAULT NULL,
-  `endDateTime` DATETIME NULL DEFAULT NULL,
-  `details` VARCHAR(45) NULL DEFAULT NULL,
-  `status` VARCHAR(45) NULL DEFAULT NULL,
-  PRIMARY KEY (`scheduleID`))
-ENGINE = InnoDB
-AUTO_INCREMENT = 11
-DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
--- Table `sad2`.`appointment`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `sad2`.`appointment` (
-  `appointmentID` INT(11) NOT NULL AUTO_INCREMENT,
-  `profileID` INT(11) NOT NULL,
-  `ministerID` INT(11) NULL DEFAULT NULL,
-  `scheduleID` INT(11) NULL DEFAULT NULL,
-  PRIMARY KEY (`appointmentID`),
-  INDEX `app_gen_idx` (`profileID` ASC),
-  INDEX `app_sched_idx` (`scheduleID` ASC),
-  INDEX `app_min_idx` (`ministerID` ASC),
-  CONSTRAINT `app_gen`
-    FOREIGN KEY (`profileID`)
-    REFERENCES `sad2`.`generalprofile` (`profileID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `app_min`
-    FOREIGN KEY (`ministerID`)
-    REFERENCES `sad2`.`minister` (`ministerID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `app_sched`
-    FOREIGN KEY (`scheduleID`)
-    REFERENCES `sad2`.`schedule` (`scheduleID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
-AUTO_INCREMENT = 13
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -185,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `sad2`.`blooddonationevent` (
   `eventDetails` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`bloodDonationEventID`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 16
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -211,7 +163,7 @@ CREATE TABLE IF NOT EXISTS `sad2`.`blooddonation` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
-AUTO_INCREMENT = 18
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -442,21 +394,47 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
+-- Table `sad2`.`ministerschedule`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `sad2`.`ministerschedule` (
+  `ministerScheduleID` INT(11) NOT NULL AUTO_INCREMENT,
+  `ministerID` INT(11) NULL,
+  `title` VARCHAR(45) NULL,
+  `details` VARCHAR(45) NULL DEFAULT NULL,
+  `startDateTime` DATETIME NULL DEFAULT NULL,
+  `endDateTime` DATETIME NULL DEFAULT NULL,
+  PRIMARY KEY (`ministerScheduleID`),
+  INDEX `ministerschedule_minister_idx` (`ministerID` ASC),
+  CONSTRAINT `ministerschedule_minister`
+    FOREIGN KEY (`ministerID`)
+    REFERENCES `sad2`.`minister` (`ministerID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 1
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
 -- Table `sad2`.`sponsor`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sad2`.`sponsor` (
   `sponsorID` INT(11) NOT NULL AUTO_INCREMENT,
-  `sacramentID` INT(11) NULL DEFAULT NULL,
+  `applicationID` INT(11) NULL DEFAULT NULL,
   `firstName` VARCHAR(45) NULL DEFAULT NULL,
   `midName` VARCHAR(45) NULL DEFAULT NULL,
   `lastName` VARCHAR(45) NULL DEFAULT NULL,
   `suffix` VARCHAR(10) NULL DEFAULT NULL,
   `gender` CHAR(1) NULL DEFAULT NULL,
-  `sacramentType` VARCHAR(45) NULL DEFAULT NULL,
   `residence` VARCHAR(45) NULL DEFAULT NULL,
-  PRIMARY KEY (`sponsorID`))
+  PRIMARY KEY (`sponsorID`),
+  CONSTRAINT `sponsor_application`
+    FOREIGN KEY ()
+    REFERENCES `sad2`.`application` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB
-AUTO_INCREMENT = 14
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -474,6 +452,22 @@ CREATE TABLE IF NOT EXISTS `sad2`.`user` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COMMENT = '				';
+
+
+-- -----------------------------------------------------
+-- Table `sad2`.`schedule`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `sad2`.`schedule` (
+  `scheduleID` INT(11) NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(45) NULL,
+  `details` VARCHAR(45) NULL DEFAULT NULL,
+  `startDateTime` DATETIME NULL DEFAULT NULL,
+  `endDateTime` DATETIME NULL DEFAULT NULL,
+  `status` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`scheduleID`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 1
+DEFAULT CHARACTER SET = utf8;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
