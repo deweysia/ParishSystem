@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -81,6 +82,7 @@
     <Compile Include="BloodlettingTest.Designer.cs">
       <DependentUpon>BloodlettingTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComboboxContent.cs" />
     <Compile Include="ComboBoxItem.cs" />
     <Compile Include="CustomNotification.Designer.cs">
       <DependentUpon>CustomNotification.cs</DependentUpon>
@@ -217,6 +219,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SAD.resx">
       <DependentUpon>SAD.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="sApplicant.resx">
       <DependentUpon>sApplicant.cs</DependentUpon>
