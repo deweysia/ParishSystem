@@ -121,14 +121,14 @@
   <data name="customer_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons\50x50\customer_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Resume_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons\50x50\Resume_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Water_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Water_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Holy_Bible_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons\50x50\Holy Bible_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Heart with Pulse_45px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Heart with Pulse_45px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ThePope_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Pope_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_maxImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_maxImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,31 +142,43 @@
   <data name="btn_minImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_minImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Holy Bible_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Holy Bible_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="customer_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\customer_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Resume_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\50x50\Resume_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Home_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_closeImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_closeImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HolyBible_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Holy Bible_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Water_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Water_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Money_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Money_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Initiate Money Transfer_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="HeartwithPulse_45px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Heart with Pulse_45px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_closeImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_closeImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InitiateMoneyTransfer_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Initiate Money Transfer_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Resume_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Resume_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Shellfish_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Shellfish_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Money_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons\50x50\Money_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="The Pope_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The Pope_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Newlyweds_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Newlyweds_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
