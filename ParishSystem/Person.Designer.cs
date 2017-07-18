@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.baptism_button = new System.Windows.Forms.Button();
             this.confirmation_button = new System.Windows.Forms.Button();
             this.marriage_button = new System.Windows.Forms.Button();
@@ -46,9 +46,6 @@
             this.firstname_textbox_godFather_baptism = new System.Windows.Forms.TextBox();
             this.confirmation_panel = new System.Windows.Forms.Panel();
             this.menu_panel_confirmation = new System.Windows.Forms.FlowLayoutPanel();
-            this.details_confirmation_button = new System.Windows.Forms.Button();
-            this.viewCertificate_confirmation_button = new System.Windows.Forms.Button();
-            this.printCertificiate_confirmation_button = new System.Windows.Forms.Button();
             this.confirmation_details_panel = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
@@ -345,7 +342,6 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.confirmation_panel.SuspendLayout();
-            this.menu_panel_confirmation.SuspendLayout();
             this.confirmation_details_panel.SuspendLayout();
             this.panel11.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
@@ -604,9 +600,6 @@
             // menu_panel_confirmation
             // 
             this.menu_panel_confirmation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.menu_panel_confirmation.Controls.Add(this.details_confirmation_button);
-            this.menu_panel_confirmation.Controls.Add(this.viewCertificate_confirmation_button);
-            this.menu_panel_confirmation.Controls.Add(this.printCertificiate_confirmation_button);
             this.menu_panel_confirmation.Dock = System.Windows.Forms.DockStyle.Top;
             this.menu_panel_confirmation.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.menu_panel_confirmation.Location = new System.Drawing.Point(0, 0);
@@ -614,56 +607,6 @@
             this.menu_panel_confirmation.Name = "menu_panel_confirmation";
             this.menu_panel_confirmation.Size = new System.Drawing.Size(735, 32);
             this.menu_panel_confirmation.TabIndex = 56;
-            // 
-            // details_confirmation_button
-            // 
-            this.details_confirmation_button.BackColor = System.Drawing.Color.Transparent;
-            this.details_confirmation_button.FlatAppearance.BorderSize = 0;
-            this.details_confirmation_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.details_confirmation_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.details_confirmation_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.details_confirmation_button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.details_confirmation_button.ForeColor = System.Drawing.Color.White;
-            this.details_confirmation_button.Location = new System.Drawing.Point(574, 0);
-            this.details_confirmation_button.Margin = new System.Windows.Forms.Padding(0);
-            this.details_confirmation_button.Name = "details_confirmation_button";
-            this.details_confirmation_button.Size = new System.Drawing.Size(161, 32);
-            this.details_confirmation_button.TabIndex = 60;
-            this.details_confirmation_button.Text = "Details";
-            this.details_confirmation_button.UseVisualStyleBackColor = false;
-            this.details_confirmation_button.Click += new System.EventHandler(this.details_confirmation_button_Click);
-            // 
-            // viewCertificate_confirmation_button
-            // 
-            this.viewCertificate_confirmation_button.FlatAppearance.BorderSize = 0;
-            this.viewCertificate_confirmation_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.viewCertificate_confirmation_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.viewCertificate_confirmation_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewCertificate_confirmation_button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewCertificate_confirmation_button.ForeColor = System.Drawing.Color.White;
-            this.viewCertificate_confirmation_button.Location = new System.Drawing.Point(413, 0);
-            this.viewCertificate_confirmation_button.Margin = new System.Windows.Forms.Padding(0);
-            this.viewCertificate_confirmation_button.Name = "viewCertificate_confirmation_button";
-            this.viewCertificate_confirmation_button.Size = new System.Drawing.Size(161, 32);
-            this.viewCertificate_confirmation_button.TabIndex = 61;
-            this.viewCertificate_confirmation_button.Text = "View Certificate";
-            this.viewCertificate_confirmation_button.UseVisualStyleBackColor = false;
-            // 
-            // printCertificiate_confirmation_button
-            // 
-            this.printCertificiate_confirmation_button.FlatAppearance.BorderSize = 0;
-            this.printCertificiate_confirmation_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.printCertificiate_confirmation_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.printCertificiate_confirmation_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.printCertificiate_confirmation_button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printCertificiate_confirmation_button.ForeColor = System.Drawing.Color.White;
-            this.printCertificiate_confirmation_button.Location = new System.Drawing.Point(252, 0);
-            this.printCertificiate_confirmation_button.Margin = new System.Windows.Forms.Padding(0);
-            this.printCertificiate_confirmation_button.Name = "printCertificiate_confirmation_button";
-            this.printCertificiate_confirmation_button.Size = new System.Drawing.Size(161, 32);
-            this.printCertificiate_confirmation_button.TabIndex = 59;
-            this.printCertificiate_confirmation_button.Text = "Print Certificate";
-            this.printCertificiate_confirmation_button.UseVisualStyleBackColor = false;
             // 
             // confirmation_details_panel
             // 
@@ -1560,46 +1503,46 @@
             this.donation_datagridview_bloodletting.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.donation_datagridview_bloodletting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.donation_datagridview_bloodletting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(7);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.donation_datagridview_bloodletting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.donation_datagridview_bloodletting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.donation_datagridview_bloodletting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.donation_datagridview_bloodletting.ColumnHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.donation_datagridview_bloodletting.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.donation_datagridview_bloodletting.DefaultCellStyle = dataGridViewCellStyle6;
             this.donation_datagridview_bloodletting.EnableHeadersVisualStyles = false;
             this.donation_datagridview_bloodletting.Location = new System.Drawing.Point(321, 77);
             this.donation_datagridview_bloodletting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.donation_datagridview_bloodletting.MultiSelect = false;
             this.donation_datagridview_bloodletting.Name = "donation_datagridview_bloodletting";
             this.donation_datagridview_bloodletting.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(7);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.donation_datagridview_bloodletting.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.donation_datagridview_bloodletting.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.donation_datagridview_bloodletting.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
-            this.donation_datagridview_bloodletting.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5);
+            this.donation_datagridview_bloodletting.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.donation_datagridview_bloodletting.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.donation_datagridview_bloodletting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.donation_datagridview_bloodletting.Size = new System.Drawing.Size(386, 307);
@@ -4481,9 +4424,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(734, 524);
             this.ControlBox = false;
-            this.Controls.Add(this.marriage_panel);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.confirmation_panel);
+            this.Controls.Add(this.marriage_panel);
             this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.balance_panel);
             this.Controls.Add(this.baptism_button);
@@ -4498,7 +4441,6 @@
             this.Name = "Person";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.confirmation_panel.ResumeLayout(false);
-            this.menu_panel_confirmation.ResumeLayout(false);
             this.confirmation_details_panel.ResumeLayout(false);
             this.confirmation_details_panel.PerformLayout();
             this.panel11.ResumeLayout(false);
@@ -4636,9 +4578,6 @@
         private System.Windows.Forms.DataGridView payable_datagridview_balance;
         private System.Windows.Forms.DataGridView paid_datagridview_balance;
         private System.Windows.Forms.Label label110;
-        private System.Windows.Forms.Button viewCertificate_confirmation_button;
-        private System.Windows.Forms.Button details_confirmation_button;
-        private System.Windows.Forms.Button printCertificiate_confirmation_button;
         private System.Windows.Forms.FlowLayoutPanel menu_panel_confirmation;
         private System.Windows.Forms.Panel baptism_panel;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;

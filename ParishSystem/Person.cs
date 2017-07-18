@@ -609,7 +609,7 @@ namespace ParishSystem
 
         private void marriage_button_Click(object sender, EventArgs e)
         {
-           
+            marriage_panel.BringToFront();
         }
 
         private void save_button_marriage_Click(object sender, EventArgs e)

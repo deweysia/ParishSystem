@@ -1671,9 +1671,22 @@ namespace ParishSystem
 
         public DataTable getConfirmationOf(int profileID)
         {
-            string q = "SELECT * FROM Confirmation JOIN Application "
-                + "ON Confirmation.applicationID = Application.applicationID "
-                + "WHERE Application.profileID = " + profileID;
+            string q = " SELECT *,concat(generalprofile.firstName,\" \",generalprofile.midName,\" \",generalprofile.lastName,\" \",generalprofile.suffix,\" \") as profile , " +
+                        "concat(minister.firstName, \" \", minister.midName, \" \", minister.lastName, \" \", minister.suffix, \" \") as minister, " +
+                       " generalprofile.firstname as fng, " +
+                       " generalprofile.midname as mng, " +
+                       " generalprofile.lastName as lng, " +
+                       " generalprofile.suffix as sg,  " +
+                       " generalprofile.birthdate as bdg," +
+                       " generalprofile.gender as gg," +
+                       " minister.firstname as fnm, " +
+                       " minister.midname as mnm, " +
+                       " minister.lastname as lnm, " +
+                       " minister.suffix as sm " +
+                       " FROM generalprofile left outer join applicant on applicant.profileID = generalprofile.profileID " +
+                       " left outer join application on applicant.applicationID = application.applicationID " +
+                       " left outer join confirmation on confirmation.applicationID = application.applicationID " +
+                       " left outer join minister on minister.ministerID = confirmation.ministerID WHERE generalprofile.profileID =" + profileID;
 
             DataTable dt = runQuery(q);
 
