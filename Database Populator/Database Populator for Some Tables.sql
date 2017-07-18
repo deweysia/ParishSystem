@@ -1,25 +1,21 @@
-/*  INSERTING BLOOD DONOR PROFILE 
-INSERT into bloodDonor(profileID, bloodType) VALUES(1, "O");
-INSERT into bloodDonor(profileID, bloodType) VALUES(2, "A");
-INSERT into bloodDonor(profileID, bloodType) VALUES(3, "B");
-INSERT into bloodDonor(profileID, bloodType) VALUES(4, "O");
-INSERT into bloodDonor(profileID, bloodType) VALUES(5, "AB");
-*/
+/* ======================================================================================================= */ 
+/*                                   		  BLOOD DONATION TABLES YO                                     */
+/* ======================================================================================================= */ 
 
-/* INSERTING BLOOD DONATION EVENTS TABLE 
-INSERT into BloodDonationEvent(eventName, eventDate, eventStatus, eventVenue, eventDetails) VALUES("Blood Donation Event", "2017-12-1", "On Going", "4609 Green Hill Road", "no details");
-INSERT into BloodDonationEvent(eventName, eventDate, eventStatus, eventVenue, eventDetails) VALUES("Blood Charity", "2013-05-03", "Finished", "367 Holden Street", "no details");
-INSERT into BloodDonationEvent(eventName, eventDate, eventStatus, eventVenue, eventDetails) VALUES("Our Lady of Assumption Blood Donations", "2011-02-14", "Finished", "4166 Jenna Lane", "no details");
-INSERT into BloodDonationEvent(eventName, eventDate, eventStatus, eventVenue, eventDetails) VALUES("Red Cross Blood Donation Event", "2017-11-26", "To Be Held", "Hall Place", "no details");
-INSERT into BloodDonationEvent(eventName, eventDate, eventStatus, eventVenue, eventDetails) VALUES("Davao Doctors Hospital Blood Donations", "2012-11-30", "On Going", "Southside Lane", "no details");
-*/
-/* INSERTING BLOOD DONATION 
-INSERT into bloodDonation(bloodDonorID, donationEventID, donationAmount) VALUES(1, 1, 1);
-INSERT into bloodDonation(bloodDonorID, donationEventID, donationAmount) VALUES(2, 2, 1);
-INSERT into bloodDonation(bloodDonorID, donationEventID, donationAmount) VALUES(3, 3, 1);
-INSERT into bloodDonation(bloodDonorID, donationEventID, donationAmount) VALUES(4, 4, 1);
-INSERT into bloodDonation(bloodDonorID, donationEventID, donationAmount) VALUES(5, 5, 1);
-*/
+ INSERTING BLOOD DONATION EVENTS TABLE 
+INSERT into BloodDonationEvent(eventName, startDateTime, endDateTime, eventVenue, eventDetails) VALUES("Blood Donation Event", "2017-12-01 08:40:00", "2017-12-04 08:40:00",  "4609 Green Hill Road", "");
+INSERT into BloodDonationEvent(eventName, startDateTime, endDateTime, eventVenue, eventDetails) VALUES("Blood Charity", "2013-05-03 10:40:00", "2013-05-05 10:30:00", "367 Holden Street", "");
+INSERT into BloodDonationEvent(eventName, startDateTime, endDateTime, eventVenue, eventDetails) VALUES("Our Lady of Assumption Blood Donations", "2011-02-14 08:40:00", "2011-02-16 08:30:00", "4166 Jenna Lane", "Changed Venue");
+INSERT into BloodDonationEvent(eventName, startDateTime, endDateTime, eventVenue, eventDetails) VALUES("Red Cross Blood Donation Event", "2017-11-26 09:00:00", "2017-11-28 10:10:00", "Hall Place", "");
+INSERT into BloodDonationEvent(eventName, startDateTime, endDateTime, eventVenue, eventDetails) VALUES("Davao Doctors Hospital Blood Donations", "2012-11-30 09:40:00", "2012-11-31 08:30:00", "Southside Lane", "");
+
+ INSERTING BLOOD DONATION 
+INSERT into bloodDonation(generalProfile, donationEventID, donationDateTime) VALUES(1, 1, "2017-12-02 09:00:00");
+INSERT into bloodDonation(generalProfile, donationEventID, donationDateTime) VALUES(2, 2, "2013-05-04 08:10:00");
+INSERT into bloodDonation(generalProfile, donationEventID, donationDateTime) VALUES(3, 3, "2011-02-15  10:15:00");
+INSERT into bloodDonation(generalProfile, donationEventID, donationDateTime) VALUES(4, 4, "2017-11-27 12:30:00");
+INSERT into bloodDonation(generalProfile, donationEventID, donationDateTime) VALUES(5, 4, "2017-11-26 12:15:00");
+
 /* INSERTING BLOOD EVENTS
 INSERT into BloodDonationRetrieval(claimDate, firstName, midName, lastName, suffix, birthdate, gender) VALUES("2011-03-11", "Josh", "Figueroa", "Lintag", "Jr.", "1998-07-02", 0);
 INSERT into BloodDonationRetrieval(claimDate, firstName, midName, lastName, suffix, birthdate, gender) VALUES("2015-09-14", "Trent ", "Jacobs", "Evans", "", "1978-03-12", 0);
