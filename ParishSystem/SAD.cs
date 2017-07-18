@@ -15,12 +15,15 @@ namespace ParishSystem
     {
         DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
         Point lastClick;
+
         public SAD()
         {
             InitializeComponent();
+            BaptismApplication_birthDate.MaxDate = DateTime.Now;
+
 
         }
-       
+
         #region generic Methods
         public void Names_textbox_Leave(object sender, EventArgs e)
         {
@@ -29,7 +32,7 @@ namespace ParishSystem
             if (A.Text.Trim().Equals(""))
             {
                 A.Text = B;
-                A.ForeColor = Color.Gray;
+                A.ForeColor = Color.Silver;
             }
         }
 
@@ -131,7 +134,13 @@ namespace ParishSystem
 
         #region Profiles
 
- 
+        private void resetProfilesVariables()
+        {//reset variables used by profiles tab
+            lastGeneralProfile = 0;
+        }
+
+        int lastGeneralProfile = 0;
+
         private void refreshGeneralProfileTable()
         {//refresh general profile table
             DataTable dt = dh.getGeneralProfiles();
@@ -147,8 +156,6 @@ namespace ParishSystem
             generalprofile_datagridview.Columns["address"].Visible = false;
             generalprofile_datagridview.Columns["birthplace"].Visible = false;
             generalprofile_datagridview.Columns["bloodtype"].Visible = false;
-            generalprofile_datagridview.Columns["legitimacy"].Visible = false;
-            generalprofile_datagridview.Columns["Name"].HeaderText = "";
             generalprofile_datagridview.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
@@ -156,6 +163,7 @@ namespace ParishSystem
         {//data grid cell click
             openProfile_button.Enabled = true;
             deleteProfile_button.Enabled = true;
+            lastGeneralProfile = int.Parse(generalprofile_datagridview.CurrentRow.Cells["profileID"].Value.ToString());
             //label changes
             firstname_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["firstname"].Value.ToString();
             middlename_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["midname"].Value.ToString();
@@ -167,6 +175,10 @@ namespace ParishSystem
             else
                 gender_label_profiles.Text = "";
 
+            Console.WriteLine(DateTime.MinValue.ToString());
+            Console.WriteLine(generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString());
+            Console.WriteLine(DateTime.MinValue.ToString().Equals(generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString()));
+
             if (!generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString().Equals(DateTime.MinValue.ToString()))
                 birthday_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString();
             else
@@ -176,83 +188,75 @@ namespace ParishSystem
             address_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["address"].Value.ToString();
             birthplace_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["birthplace"].Value.ToString();
             bloodtype_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["bloodtype"].Value.ToString();
-           
+            Console.WriteLine(lastGeneralProfile);
         }
 
         private void addProfile_button_Click(object sender, EventArgs e)
         {//adds basic profile with name values only 
             if (suffix_textbox.Text.Equals("suffix")) { suffix_textbox.Text = null; }
-            if (firstname_textbox.Text.Equals("firstname")) { msg.Show("Empty",firstname_textbox); }
-            if (middlename_textbox.Text.Equals("middlename")) { msg.Show("Empty", middlename_textbox); }
-            if (lastname_textbox.Text.Equals("lastname")) { msg.Show("Empty", lastname_textbox); }
-            
+            if (firstname_textbox.Text.Equals("firstname")) { firstname_tooltip_profiles.Active = true; suffix_textbox.Text = "suffix"; }
+            if (middlename_textbox.Text.Equals("middlename")) { middlename_tooltip_profiles.Active = true; suffix_textbox.Text = "suffix"; }
+            if (lastname_textbox.Text.Equals("lastname")) { lastname_tooltip_profiles.Active = true; suffix_textbox.Text = "suffix"; }
 
-            if (!firstname_textbox.Text.Equals("firstname") && !middlename_textbox.Text.Equals("middlename") && !lastname_textbox.Text.Equals("lastname")) {
+
+            if (!firstname_textbox.Text.Equals("firstname") && !middlename_textbox.Text.Equals("middlename") && !lastname_textbox.Text.Equals("lastname"))
+            {
                 dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, '0', DateTime.MinValue, null, null, null);
                 refreshGeneralProfileTable();
                 AddPNL.Visible = false;
             }
-            firstname_textbox.Text = "firstname";
-            middlename_textbox.Text = "middlename";
-            lastname_textbox.Text = "lastname";
-            suffix_textbox.Text = "suffix";
-            firstname_textbox.ForeColor = Color.Gray;
-            middlename_textbox.ForeColor = Color.Gray;
-            lastname_textbox.ForeColor = Color.Gray;
-            suffix_textbox.ForeColor = Color.Gray;
-        }
-            
 
-        
+        }
+
+
+
 
         private void openProfile_button_Click(object sender, EventArgs e)
         {//open person complete profile
-           
-            Form person = new Person(int.Parse(generalprofile_datagridview.SelectedRows[0].Cells["profileID"].Value.ToString()), dh);
-            person.Location = this.Location;
+
+            Form person = new Person(lastGeneralProfile, dh);
             person.ShowDialog();
-          
-           
+
+
 
         }
 
         private void deleteProfile_button_Click(object sender, EventArgs e)
         {
-            
-            dh.deleteGeneralProfile(int.Parse(generalprofile_datagridview.SelectedRows[0].Cells["profileID"].Value.ToString()));
+            dh.deleteGeneralProfile(lastGeneralProfile);
             refreshGeneralProfileTable();
+            lastGeneralProfile = 0;
             deleteProfile_button.Enabled = false;
             openProfile_button.Enabled = false;
-
-            firstname_label_profile.Text = "";
-            middlename_label_profile.Text = "";
-            lastname_label_profile.Text = "";
-            suffix_label_profile.Text = "";
-            gender_label_profiles.Text = "";
-            birthday_label_profile.Text = "";
-            contactNumber_label_profile.Text = "";
-            address_label_profile.Text = "";
-            birthplace_label_profile.Text = "";
-            bloodtype_label_profile.Text = "";
-            generalprofile_datagridview.ClearSelection();
-
         }
 
+
+        private void clearProfile()
+        {
+            lastname_textbox.Text = "lastname";
+            middlename_textbox.Text = "middlename";
+            firstname_textbox.Text = "firstname";
+            suffix_textbox.Text = "suffix";
+            lastGeneralProfile = 0;
+        }
 
         private void clear_profile_button_Click(object sender, EventArgs e)
         {
             AddPNL.Visible = false;
-            firstname_textbox.Text = "firstname";
-            middlename_textbox.Text = "middlename";
-            lastname_textbox.Text = "lastname";
-            suffix_textbox.Text = "suffix";
-            firstname_textbox.ForeColor = Color.Gray;
-            middlename_textbox.ForeColor = Color.Gray;
-            lastname_textbox.ForeColor = Color.Gray;
-            suffix_textbox.ForeColor = Color.Gray;
-
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
         #endregion
 
 
@@ -309,7 +313,7 @@ namespace ParishSystem
         {
             CheckBox A = sender as CheckBox;
             //baptism application
-            if (A.Equals(newApplicant_checkbox_baptismApplication))
+            /*if (A.Equals(newApplicant_checkbox_baptismApplication))
             {
                 if (A.Checked == true)
                 {
@@ -322,9 +326,9 @@ namespace ParishSystem
                     newName_panel_baptismApplication.Visible = false;
                 }
 
-            }
+            }*/
             //confirmation application
-            else if (A.Equals(newApplicant_checkbox_confirmationApplication)) {
+            /*if (A.Equals(newApplicant_checkbox_confirmationApplication)) {
                 if (A.Checked==true) {
                     existingName_panel_confirmationApplication.Enabled = false;
                     newName_panel_confirmationApplication.Visible = true;
@@ -338,7 +342,8 @@ namespace ParishSystem
             }
             //marriage application
             //-groom
-            else if (A.Equals(newGroom_checkbox_marriageApplication))
+            else */
+            if (A.Equals(newGroom_checkbox_marriageApplication))
             {
                 if (A.Checked == true)
                 {
@@ -377,7 +382,8 @@ namespace ParishSystem
         private void label_CD_Click(object sender, EventArgs e)
         {
             Label A = sender as Label;
-            if (A.Equals(parish_label_CD)) {
+            if (A.Equals(parish_label_CD))
+            {
                 //label changes
                 parish_label_CD.Font = new Font(baptismApplication_label.Font, FontStyle.Bold);
                 parish_label_CD.ForeColor = Color.DodgerBlue;
@@ -389,7 +395,8 @@ namespace ParishSystem
                 //panel changes
                 parish_panel_CD.BringToFront();
             }
-            else if (A.Equals(community_label_CD)) {
+            else if (A.Equals(community_label_CD))
+            {
                 //label changes
                 parish_label_CD.Font = new Font(baptismApplication_label.Font, FontStyle.Regular);
                 parish_label_CD.ForeColor = Color.Black;
@@ -401,7 +408,8 @@ namespace ParishSystem
                 //panel changes
                 community_panel_CD.BringToFront();
             }
-            else if (A.Equals(postulancy_label_CD)) {
+            else if (A.Equals(postulancy_label_CD))
+            {
                 //label changes
                 parish_label_CD.Font = new Font(baptismApplication_label.Font, FontStyle.Regular);
                 parish_label_CD.ForeColor = Color.Black;
@@ -433,7 +441,11 @@ namespace ParishSystem
             AddPNL.Visible = true;
         }
 
-       
+        private void panel_controlbox_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void home_button_menu_Click(object sender, EventArgs e)
         {
             Button A = sender as Button;
@@ -442,26 +454,34 @@ namespace ParishSystem
             {
                 profile_panel.BringToFront();
                 refreshGeneralProfileTable();
-                generalprofile_datagridview.ClearSelection();
             }
             else if (A.Equals(bloodletting_button_menu)) { bloodletting_panel.BringToFront(); }
             else if (A.Equals(CDB_button_menu)) { CDB_panel.BringToFront(); }
             else if (A.Equals(CRB_button_menu)) { CRB_panel.BringToFront(); }
             else if (A.Equals(application_button_menu)) { application_panel.BringToFront(); }
             else if (A.Equals(sacrament_button_menu)) { sacrament_panel.BringToFront(); }
-
-           
         }
-    
-       
+
+        private void firstname_textbox_Click(object sender, EventArgs e)
+        {
+
+
+        }
 
 
 
-	   
+        private void firstname_textbox_TextChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+
+
+
 
         private void Name_textbox_Profile_TextChanged(object sender, EventArgs e)
         {
-            
             if (firstname_textbox.Text != "firstname" && firstname_textbox.Text.Trim() != "" &&
                middlename_textbox.Text != "middlename" && middlename_textbox.Text.Trim() != "" &&
                lastname_textbox.Text != "lastname" && lastname_textbox.Text.Trim() != "")
@@ -472,179 +492,89 @@ namespace ParishSystem
             {
                 save_button_profile.Enabled = false;
             }
-            
         }
 
 
 
-        #region confirmation
-        private void confirmation_metroGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void label8_Click(object sender, EventArgs e)
         {
 
-            DataTable dtS = dh.getSponsors(int.Parse(confirmation_metroGrid.SelectedRows[0].Cells["applicationID"].Value.ToString()), "C");
-            DataTable dtP = dh.getParentsOf(int.Parse(confirmation_metroGrid.SelectedRows[0].Cells["profileID"].Value.ToString()));
-
-            name_label_confirmation_sacraments.Text = confirmation_metroGrid.SelectedRows[0].Cells["profile"].Value.ToString();
-            confirmationDate_label_confirmation_sacraments.Text = confirmation_metroGrid.SelectedRows[0].Cells["baptismDate"].Value.ToString();
-            minister_label_confirmation_sacraments.Text = confirmation_metroGrid.SelectedRows[0].Cells["minister"].Value.ToString();
-            try { confirmation_metroGrid.Text = dtP.Rows[0]["Name"].ToString(); } catch { parentA_label_confirmation_sacraments.Text = ""; }
-            try { confirmation_metroGrid.Text = dtP.Rows[1]["Name"].ToString(); } catch { parentB_label_confirmation_sacraments.Text = ""; }
-            try { confirmation_metroGrid.Text = dtS.Rows[0]["Name"].ToString(); } catch { sponsorA_label_confirmation_sacraments.Text = ""; }
-            try { confirmation_metroGrid.Text = dtS.Rows[1]["Name"].ToString(); } catch { sponsorB_label_confirmation_sacraments.Text = ""; }
-            registryNo_label_confirmation_sacraments.Text = confirmation_metroGrid.SelectedRows[0].Cells["registryNumber"].Value.ToString();
-            parentB_label_confirmation_sacraments.Text = confirmation_metroGrid.SelectedRows[0].Cells["pageNumber"].Value.ToString();
-            recordNo_label_confirmation_sacraments.Text = confirmation_metroGrid.SelectedRows[0].Cells["recordNumber"].Value.ToString();
-            remarks_label_confirmation_sacraments.Text = confirmation_metroGrid.SelectedRows[0].Cells["remarks"].Value.ToString();
         }
-        private void refreshConfirmationSacrament()
+
+        private void libraryBaptismButton_Click(object sender, EventArgs e)
         {
-            DataTable dt = dh.getConfirmations();
-            confirmation_metroGrid.DataSource = dt;
-            confirmation_metroGrid.Columns["profileID"].Visible = false;
-            confirmation_metroGrid.Columns["firstname"].Visible = false;
-            confirmation_metroGrid.Columns["midname"].Visible = false;
-            confirmation_metroGrid.Columns["lastname"].Visible = false;
-            confirmation_metroGrid.Columns["suffix"].Visible = false;
-            confirmation_metroGrid.Columns["birthdate"].Visible = false;
-            confirmation_metroGrid.Columns["gender"].Visible = false;
-            confirmation_metroGrid.Columns["address"].Visible = false;
-            confirmation_metroGrid.Columns["birthplace"].Visible = false;
-            confirmation_metroGrid.Columns["contactNumber"].Visible = false;
-            confirmation_metroGrid.Columns["bloodType"].Visible = false;
-            confirmation_metroGrid.Columns["applicationID"].Visible = false;
-            confirmation_metroGrid.Columns["sacramentType"].Visible = false;
-            confirmation_metroGrid.Columns["status"].Visible = false;
-            confirmation_metroGrid.Columns["confirmationID"].Visible = false;
-            confirmation_metroGrid.Columns["applicationID"].Visible = false;
-            confirmation_metroGrid.Columns["ministerID"].Visible = false;
-            confirmation_metroGrid.Columns["recordNumber"].Visible = false;
-            confirmation_metroGrid.Columns["pageNumber"].Visible = false;
-            confirmation_metroGrid.Columns["registryNumber"].Visible = false;
-            confirmation_metroGrid.Columns["confirmationDate"].Visible = false;
-            confirmation_metroGrid.Columns["remarks"].Visible = false;
-            confirmation_metroGrid.Columns["applicationID1"].Visible = false;
-            confirmation_metroGrid.Columns["applicantID"].Visible = false;
-            confirmation_metroGrid.Columns["applicationID2"].Visible = false;
-            confirmation_metroGrid.Columns["profileID1"].Visible = false;
-            confirmation_metroGrid.Columns["ministerID1"].Visible = false;
-            confirmation_metroGrid.Columns["firstname1"].Visible = false;
-            confirmation_metroGrid.Columns["midname1"].Visible = false;
-            confirmation_metroGrid.Columns["lastname1"].Visible = false;
-            confirmation_metroGrid.Columns["birthdate1"].Visible = false;
-            confirmation_metroGrid.Columns["ministryType"].Visible = false;
-            confirmation_metroGrid.Columns["status1"].Visible = false;
-            confirmation_metroGrid.Columns["licenseNumber"].Visible = false;
-            confirmation_metroGrid.Columns["expirationDate"].Visible = false;
-            confirmation_metroGrid.Columns["minister"].Visible = false;
-            confirmation_metroGrid.Columns["suffix1"].Visible = false;
+            DataTable dt = dh.getBaptisms();
+            //dgvSacraments.DataSource = dt;
+            metroGrid1.DataSource = dt;
         }
 
         private void libraryConfirmationButton_Click(object sender, EventArgs e)
         {
-            confirmation_panel_sacraments.BringToFront();
-            refreshConfirmationSacrament();
+            DataTable dt = dh.getConfirmations();
+            //dgvSacraments.DataSource = dt;
+            metroGrid1.DataSource = dt;
         }
-        #endregion
+
         private void libraryMarriageButton_Click(object sender, EventArgs e)
         {
-            
+
             //dgvSacraments.DataSource = dt;
-            
+
         }
 
         private void generalprofile_datagridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-         
+
         }
 
-
-
-
-
-        #region baptism
-        private void baptism_metroGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void baptismApplication_panel_Paint(object sender, PaintEventArgs e)
         {
-           
-            DataTable dtS = dh.getSponsors(int.Parse(baptism_metroGrid.SelectedRows[0].Cells["applicationID"].Value.ToString()), "B");
-            DataTable dtP = dh.getParentsOf(int.Parse(baptism_metroGrid.SelectedRows[0].Cells["profileID"].Value.ToString()));
 
-            name_label_baptism_sacraments.Text = baptism_metroGrid.SelectedRows[0].Cells["profile"].Value.ToString();
-            baptismDate_label_baptism_sacraments.Text = baptism_metroGrid.SelectedRows[0].Cells["baptismDate"].Value.ToString();
-            minister_label_baptism_sacraments.Text = baptism_metroGrid.SelectedRows[0].Cells["minister"].Value.ToString();
-            try { parentA_label_baptism_sacraments.Text = dtP.Rows[0]["Name"].ToString(); } catch { parentA_label_baptism_sacraments.Text = ""; }
-            try { parentB_label_baptism_sacraments.Text = dtP.Rows[1]["Name"].ToString(); } catch { parentB_label_baptism_sacraments.Text = ""; }
-            try { sponsorA_label_baptism_sacraments.Text = dtS.Rows[0]["Name"].ToString(); } catch { sponsorA_label_baptism_sacraments.Text = ""; }
-            try { sponsorB_label_baptism_sacraments.Text = dtS.Rows[1]["Name"].ToString(); } catch { sponsorB_label_baptism_sacraments.Text = ""; }
-            registryNo_label_baptism_sacraments.Text = baptism_metroGrid.SelectedRows[0].Cells["registryNumber"].Value.ToString();
-            pageNo_label_baptism_sacraments.Text = baptism_metroGrid.SelectedRows[0].Cells["pageNumber"].Value.ToString();
-            recordNo_label_baptism_sacraments.Text = baptism_metroGrid.SelectedRows[0].Cells["recordNumber"].Value.ToString();
-            remarks_textArea_baptism_sacraments.Text = baptism_metroGrid.SelectedRows[0].Cells["remarks"].Value.ToString();
         }
-        private void refreshBaptismSacrament()
+
+        private void checkAll_cb_baptismApplication_CheckedChanged(object sender, EventArgs e)
         {
-            DataTable dt = dh.getBaptisms();
-            baptism_metroGrid.DataSource = dt;
-            baptism_metroGrid.Columns["profileID"].Visible = false;
-            baptism_metroGrid.Columns["firstname"].Visible = false;
-            baptism_metroGrid.Columns["midname"].Visible = false;
-            baptism_metroGrid.Columns["lastname"].Visible = false;
-            baptism_metroGrid.Columns["suffix"].Visible = false;
-            baptism_metroGrid.Columns["birthdate"].Visible = false;
-            baptism_metroGrid.Columns["gender"].Visible = false;
-            baptism_metroGrid.Columns["address"].Visible = false;
-            baptism_metroGrid.Columns["birthplace"].Visible = false;
-            baptism_metroGrid.Columns["contactNumber"].Visible = false;
-            baptism_metroGrid.Columns["bloodType"].Visible = false;
-            baptism_metroGrid.Columns["applicationID"].Visible = false;
-            baptism_metroGrid.Columns["sacramentType"].Visible = false;
-            baptism_metroGrid.Columns["status"].Visible = false;
-            baptism_metroGrid.Columns["baptismID"].Visible = false;
-            baptism_metroGrid.Columns["applicationID"].Visible = false;
-            baptism_metroGrid.Columns["ministerID"].Visible = false;
-            baptism_metroGrid.Columns["recordNumber"].Visible = false;
-            baptism_metroGrid.Columns["pageNumber"].Visible = false;
-            baptism_metroGrid.Columns["registryNumber"].Visible = false;
-            baptism_metroGrid.Columns["baptismDate"].Visible = false;
-            baptism_metroGrid.Columns["remarks"].Visible = false;
-            baptism_metroGrid.Columns["applicationID1"].Visible = false;
-            baptism_metroGrid.Columns["applicantID"].Visible = false;
-            baptism_metroGrid.Columns["applicationID2"].Visible = false;
-            baptism_metroGrid.Columns["profileID1"].Visible = false;
-            baptism_metroGrid.Columns["ministerID1"].Visible = false;
-            baptism_metroGrid.Columns["firstname1"].Visible = false;
-            baptism_metroGrid.Columns["midname1"].Visible = false;
-            baptism_metroGrid.Columns["lastname1"].Visible = false;
-            baptism_metroGrid.Columns["birthdate1"].Visible = false;
-            baptism_metroGrid.Columns["ministryType"].Visible = false;
-            baptism_metroGrid.Columns["status1"].Visible = false;
-            baptism_metroGrid.Columns["licenseNumber"].Visible = false;
-            baptism_metroGrid.Columns["expirationDate"].Visible = false;
-            baptism_metroGrid.Columns["minister"].Visible = false;
-            baptism_metroGrid.Columns["suffix1"].Visible = false;
+            bool allChecked = true;
+
+            if (!baptismApplication_checkAll_comboBox.Checked)
+            {
+
+                foreach (CheckBox c in BaptismApplication_Requirements_tablePanel.Controls)
+                    allChecked = allChecked && c.Checked;
+            }
+
+            if (!allChecked) return;
+
+            foreach (CheckBox c in BaptismApplication_Requirements_tablePanel.Controls)
+            {
+                c.Checked = baptismApplication_checkAll_comboBox.Checked;
+                Console.WriteLine("ENTERED");
+            }
         }
-        private void libraryBaptismButton_Click(object sender, EventArgs e)
+
+        private void baptismApplication_requirement_comboBox_CheckedChanged(object sender, EventArgs e)
         {
-            refreshBaptismSacrament();
-            baptism_panel_sacraments.BringToFront();
+            //baptismApplication_checkAll_comboBox.Checked = !(sender as CheckBox).Checked;
 
+            CheckBox temp = sender as CheckBox;
+            if (!temp.Checked && baptismApplication_checkAll_comboBox.Checked)
+                baptismApplication_checkAll_comboBox.Checked = false;
 
 
         }
 
-        private void edit_baptism_sacraments_Click_1(object sender, EventArgs e)
+        private void baptismApplication_add_button_Click(object sender, EventArgs e)
         {
-            Person p = new Person(int.Parse(baptism_metroGrid.SelectedRows[0].Cells["profileID"].Value.ToString()), dh);
-            p.ShowDialog();
+            AddApplication aa = new AddApplication(SacramentType.Baptism);
         }
 
-        private void delete_baptism_sacraments_Click_1(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            dh.deleteBaptism(int.Parse(baptism_metroGrid.SelectedRows[0].Cells["profile"].Value.ToString()));
-            refreshBaptismSacrament();
+            AddApplication aa = new AddApplication(SacramentType.Confirmation);
+            DialogResult dr = aa.ShowDialog();
+            MessageBox.Show("Bitch done");
+
+
         }
-
-        #endregion
-
-       
     }
 }
