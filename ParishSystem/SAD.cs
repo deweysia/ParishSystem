@@ -15,13 +15,10 @@ namespace ParishSystem
     {
         DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
         Point lastClick;
-        
         public SAD()
         {
             InitializeComponent();
-            BaptismApplication_birthDate.MaxDate = DateTime.Now;
-            
-            
+
         }
        
         #region generic Methods
@@ -312,7 +309,7 @@ namespace ParishSystem
         {
             CheckBox A = sender as CheckBox;
             //baptism application
-            /*if (A.Equals(newApplicant_checkbox_baptismApplication))
+            if (A.Equals(newApplicant_checkbox_baptismApplication))
             {
                 if (A.Checked == true)
                 {
@@ -325,9 +322,9 @@ namespace ParishSystem
                     newName_panel_baptismApplication.Visible = false;
                 }
 
-            }*/
+            }
             //confirmation application
-            /*if (A.Equals(newApplicant_checkbox_confirmationApplication)) {
+            else if (A.Equals(newApplicant_checkbox_confirmationApplication)) {
                 if (A.Checked==true) {
                     existingName_panel_confirmationApplication.Enabled = false;
                     newName_panel_confirmationApplication.Visible = true;
@@ -341,7 +338,7 @@ namespace ParishSystem
             }
             //marriage application
             //-groom
-            else */if (A.Equals(newGroom_checkbox_marriageApplication))
+            else if (A.Equals(newGroom_checkbox_marriageApplication))
             {
                 if (A.Checked == true)
                 {
@@ -452,12 +449,8 @@ namespace ParishSystem
             else if (A.Equals(CRB_button_menu)) { CRB_panel.BringToFront(); }
             else if (A.Equals(application_button_menu)) { application_panel.BringToFront(); }
             else if (A.Equals(sacrament_button_menu)) { sacrament_panel.BringToFront(); }
-        }
-    
-        private void firstname_textbox_Click(object sender, EventArgs e)
-        {
+
            
-            
         }
     
        
@@ -638,72 +631,11 @@ namespace ParishSystem
 
         }
 
-        private void libraryConfirmationButton_Click(object sender, EventArgs e)
+        private void edit_baptism_sacraments_Click_1(object sender, EventArgs e)
         {
-            DataTable dt = dh.getConfirmations();
-            //dgvSacraments.DataSource = dt;
-            metroGrid1.DataSource = dt;
+            Person p = new Person(int.Parse(baptism_metroGrid.SelectedRows[0].Cells["profileID"].Value.ToString()), dh);
+            p.ShowDialog();
         }
-
-        private void libraryMarriageButton_Click(object sender, EventArgs e)
-        {
-            
-            //dgvSacraments.DataSource = dt;
-            
-        }
-
-        private void generalprofile_datagridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void baptismApplication_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void checkAll_cb_baptismApplication_CheckedChanged(object sender, EventArgs e)
-        {
-            bool allChecked = true;
-
-            if (!baptismApplication_checkAll_comboBox.Checked)
-            {
-                
-                foreach (CheckBox c in BaptismApplication_Requirements_tablePanel.Controls)
-                    allChecked = allChecked && c.Checked;
-            }
-
-            if (!allChecked) return;
-
-            foreach (CheckBox c in BaptismApplication_Requirements_tablePanel.Controls)
-            {
-                c.Checked = baptismApplication_checkAll_comboBox.Checked;
-                Console.WriteLine("ENTERED");
-            }
-        }
-
-        private void baptismApplication_requirement_comboBox_CheckedChanged(object sender, EventArgs e)
-        {
-            //baptismApplication_checkAll_comboBox.Checked = !(sender as CheckBox).Checked;
-
-            CheckBox temp = sender as CheckBox;
-            if (!temp.Checked && baptismApplication_checkAll_comboBox.Checked)
-                baptismApplication_checkAll_comboBox.Checked = false;
-
-            
-        }
-
-        private void baptismApplication_add_button_Click(object sender, EventArgs e)
-        {
-            AddApplication aa = new AddApplication(SacramentType.Baptism);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            AddApplication aa = new AddApplication(SacramentType.Confirmation);
-            DialogResult dr = aa.ShowDialog();
-            MessageBox.Show("Bitch done");
-            
 
         private void delete_baptism_sacraments_Click_1(object sender, EventArgs e)
         {
