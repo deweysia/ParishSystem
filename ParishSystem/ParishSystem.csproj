@@ -69,24 +69,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddApplication.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddApplication.Designer.cs">
-      <DependentUpon>AddApplication.cs</DependentUpon>
-    </Compile>
     <Compile Include="BloodlettingTest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BloodlettingTest.Designer.cs">
       <DependentUpon>BloodlettingTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComboboxContent.cs" />
     <Compile Include="ComboBoxItem.cs" />
-    <Compile Include="CustomNotification.Designer.cs">
-      <DependentUpon>CustomNotification.cs</DependentUpon>
-    </Compile>
     <Compile Include="DataHandler.cs" />
-    <Compile Include="Draggable.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,9 +89,6 @@
     </Compile>
     <Compile Include="menu.Designer.cs">
       <DependentUpon>menu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomNotification.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Person.cs">
       <SubType>Form</SubType>
@@ -193,14 +181,8 @@
     <Compile Include="tReport.Designer.cs">
       <DependentUpon>tReport.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddApplication.resx">
-      <DependentUpon>AddApplication.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BloodlettingTest.resx">
       <DependentUpon>BloodlettingTest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomNotification.resx">
-      <DependentUpon>CustomNotification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -217,6 +199,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SAD.resx">
       <DependentUpon>SAD.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="sApplicant.resx">
       <DependentUpon>sApplicant.cs</DependentUpon>
@@ -257,7 +240,6 @@
     <None Include="bin\Debug\ParishSystem.exe.config" />
     <None Include="bin\Debug\ParishSystem.vshost.exe.config" />
     <None Include="bin\Debug\ParishSystem.vshost.exe.manifest" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\ParishSystem.csproj.GenerateResource.Cache" />
@@ -282,7 +264,7 @@
     <Content Include="bin\Debug\ParishSystem.pdb" />
     <Content Include="bin\Debug\ParishSystem.vshost.exe" />
     <Content Include="database\DB_Populator.txt" />
-    <Content Include="database\SQLDB_V7.sql" />
+    <Content Include="database\updatedDB.sql" />
     <Content Include="database\SQLDB_V6.sql" />
     <Content Include="obj\Debug\ParishSystem.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\ParishSystem.exe" />
@@ -300,14 +282,11 @@
     <None Include="Resources\Heart with Pulse_45px.png" />
     <None Include="Resources\customer_45.png" />
     <None Include="Resources\Holy Bible_45.png" />
-    <None Include="Resources\Error_32px.png" />
     <Content Include="Resources\icons\32x32\Cancel_32px.png" />
     <Content Include="Resources\icons\32x32\Checkmark_32px.png" />
     <Content Include="Resources\icons\32x32\Clock_32px.png" />
     <Content Include="Resources\icons\32x32\customer_32px.png" />
     <Content Include="Resources\icons\32x32\Delete_32px.png" />
-    <Content Include="Resources\icons\32x32\Delete_32px_Gray.png" />
-    <Content Include="Resources\icons\32x32\Delete_32px_Light.png" />
     <Content Include="Resources\icons\32x32\Deposit_32px.png" />
     <Content Include="Resources\icons\32x32\Dove_32px.png" />
     <Content Include="Resources\icons\32x32\Edit_32px.png" />
@@ -323,7 +302,6 @@
     <Content Include="Resources\icons\32x32\Minus_32px.png" />
     <Content Include="Resources\icons\32x32\Money_32px.png" />
     <Content Include="Resources\icons\32x32\Newlyweds_32px.png" />
-    <None Include="Resources\icons\32x32\Ok_32px.png" />
     <Content Include="Resources\icons\32x32\Password_32px.png" />
     <Content Include="Resources\icons\32x32\Plus 2 Math_32px.png" />
     <Content Include="Resources\icons\32x32\Plus_32px.png" />
