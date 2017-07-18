@@ -561,6 +561,7 @@
             this.mi_textbox_godFather_baptism.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_godFather_baptism.Location = new System.Drawing.Point(214, 7);
             this.mi_textbox_godFather_baptism.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_godFather_baptism.MaxLength = 1;
             this.mi_textbox_godFather_baptism.Name = "mi_textbox_godFather_baptism";
             this.mi_textbox_godFather_baptism.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_godFather_baptism.TabIndex = 22;
@@ -686,6 +687,7 @@
             this.mi_textbox_profile_confirmation.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_profile_confirmation.Location = new System.Drawing.Point(250, 23);
             this.mi_textbox_profile_confirmation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_profile_confirmation.MaxLength = 1;
             this.mi_textbox_profile_confirmation.Name = "mi_textbox_profile_confirmation";
             this.mi_textbox_profile_confirmation.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_profile_confirmation.TabIndex = 51;
@@ -863,6 +865,7 @@
             this.mi_textbox_godFather_confirmation.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_godFather_confirmation.Location = new System.Drawing.Point(213, 7);
             this.mi_textbox_godFather_confirmation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_godFather_confirmation.MaxLength = 1;
             this.mi_textbox_godFather_confirmation.Name = "mi_textbox_godFather_confirmation";
             this.mi_textbox_godFather_confirmation.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_godFather_confirmation.TabIndex = 22;
@@ -974,6 +977,7 @@
             this.mi_textbox_godMother_confirmation.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_godMother_confirmation.Location = new System.Drawing.Point(213, 7);
             this.mi_textbox_godMother_confirmation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_godMother_confirmation.MaxLength = 1;
             this.mi_textbox_godMother_confirmation.Name = "mi_textbox_godMother_confirmation";
             this.mi_textbox_godMother_confirmation.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_godMother_confirmation.TabIndex = 22;
@@ -1266,6 +1270,7 @@
             this.mi_textbox_father_confirmation.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_father_confirmation.Location = new System.Drawing.Point(213, 7);
             this.mi_textbox_father_confirmation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_father_confirmation.MaxLength = 1;
             this.mi_textbox_father_confirmation.Name = "mi_textbox_father_confirmation";
             this.mi_textbox_father_confirmation.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_father_confirmation.TabIndex = 22;
@@ -1377,6 +1382,7 @@
             this.mi_textbox_mother_confirmation.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_mother_confirmation.Location = new System.Drawing.Point(213, 7);
             this.mi_textbox_mother_confirmation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_mother_confirmation.MaxLength = 1;
             this.mi_textbox_mother_confirmation.Name = "mi_textbox_mother_confirmation";
             this.mi_textbox_mother_confirmation.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_mother_confirmation.TabIndex = 22;
@@ -1872,6 +1878,7 @@
             this.mi_textbox_profile_baptism.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_profile_baptism.Location = new System.Drawing.Point(250, 23);
             this.mi_textbox_profile_baptism.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_profile_baptism.MaxLength = 1;
             this.mi_textbox_profile_baptism.Name = "mi_textbox_profile_baptism";
             this.mi_textbox_profile_baptism.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_profile_baptism.TabIndex = 51;
@@ -2303,6 +2310,7 @@
             this.mi_textbox_godMother_baptism.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_godMother_baptism.Location = new System.Drawing.Point(214, 7);
             this.mi_textbox_godMother_baptism.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_godMother_baptism.MaxLength = 1;
             this.mi_textbox_godMother_baptism.Name = "mi_textbox_godMother_baptism";
             this.mi_textbox_godMother_baptism.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_godMother_baptism.TabIndex = 22;
@@ -2591,6 +2599,7 @@
             this.mi_textbox_father_baptism.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_father_baptism.Location = new System.Drawing.Point(214, 7);
             this.mi_textbox_father_baptism.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_father_baptism.MaxLength = 1;
             this.mi_textbox_father_baptism.Name = "mi_textbox_father_baptism";
             this.mi_textbox_father_baptism.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_father_baptism.TabIndex = 22;
@@ -2736,6 +2745,7 @@
             this.mi_textbox_mother_baptism.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_mother_baptism.Location = new System.Drawing.Point(214, 7);
             this.mi_textbox_mother_baptism.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_mother_baptism.MaxLength = 1;
             this.mi_textbox_mother_baptism.Name = "mi_textbox_mother_baptism";
             this.mi_textbox_mother_baptism.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_mother_baptism.TabIndex = 22;
@@ -2951,6 +2961,7 @@
             this.mi_textbox_bride_marriage.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_bride_marriage.Location = new System.Drawing.Point(250, 23);
             this.mi_textbox_bride_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_bride_marriage.MaxLength = 1;
             this.mi_textbox_bride_marriage.Name = "mi_textbox_bride_marriage";
             this.mi_textbox_bride_marriage.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_bride_marriage.TabIndex = 51;
@@ -3147,6 +3158,7 @@
             this.mi_textbox_groom_marriage.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_groom_marriage.Location = new System.Drawing.Point(250, 23);
             this.mi_textbox_groom_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_groom_marriage.MaxLength = 1;
             this.mi_textbox_groom_marriage.Name = "mi_textbox_groom_marriage";
             this.mi_textbox_groom_marriage.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_groom_marriage.TabIndex = 51;
@@ -3419,6 +3431,7 @@
             this.mi_textbox_father_bride_marriage.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_father_bride_marriage.Location = new System.Drawing.Point(214, 7);
             this.mi_textbox_father_bride_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_father_bride_marriage.MaxLength = 1;
             this.mi_textbox_father_bride_marriage.Name = "mi_textbox_father_bride_marriage";
             this.mi_textbox_father_bride_marriage.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_father_bride_marriage.TabIndex = 22;
@@ -3563,6 +3576,7 @@
             this.mi_textbox_mother_bride_marriage.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_mother_bride_marriage.Location = new System.Drawing.Point(214, 7);
             this.mi_textbox_mother_bride_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_mother_bride_marriage.MaxLength = 1;
             this.mi_textbox_mother_bride_marriage.Name = "mi_textbox_mother_bride_marriage";
             this.mi_textbox_mother_bride_marriage.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_mother_bride_marriage.TabIndex = 22;
@@ -3728,6 +3742,7 @@
             this.mi_textbox_godFather_marriage.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_godFather_marriage.Location = new System.Drawing.Point(214, 7);
             this.mi_textbox_godFather_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_godFather_marriage.MaxLength = 1;
             this.mi_textbox_godFather_marriage.Name = "mi_textbox_godFather_marriage";
             this.mi_textbox_godFather_marriage.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_godFather_marriage.TabIndex = 22;
@@ -3872,6 +3887,7 @@
             this.mi_textbox_godMother_marriage.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_godMother_marriage.Location = new System.Drawing.Point(214, 7);
             this.mi_textbox_godMother_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_godMother_marriage.MaxLength = 1;
             this.mi_textbox_godMother_marriage.Name = "mi_textbox_godMother_marriage";
             this.mi_textbox_godMother_marriage.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_godMother_marriage.TabIndex = 22;
@@ -4197,6 +4213,7 @@
             this.mi_textbox_father_groom_marriage.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_father_groom_marriage.Location = new System.Drawing.Point(214, 7);
             this.mi_textbox_father_groom_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_father_groom_marriage.MaxLength = 1;
             this.mi_textbox_father_groom_marriage.Name = "mi_textbox_father_groom_marriage";
             this.mi_textbox_father_groom_marriage.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_father_groom_marriage.TabIndex = 22;
@@ -4341,6 +4358,7 @@
             this.mi_textbox_mother_groom_marriage.ForeColor = System.Drawing.Color.Gray;
             this.mi_textbox_mother_groom_marriage.Location = new System.Drawing.Point(214, 7);
             this.mi_textbox_mother_groom_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mi_textbox_mother_groom_marriage.MaxLength = 1;
             this.mi_textbox_mother_groom_marriage.Name = "mi_textbox_mother_groom_marriage";
             this.mi_textbox_mother_groom_marriage.Size = new System.Drawing.Size(44, 16);
             this.mi_textbox_mother_groom_marriage.TabIndex = 22;
@@ -4424,9 +4442,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(734, 524);
             this.ControlBox = false;
-            this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.marriage_panel);
+            this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.balance_panel);
             this.Controls.Add(this.baptism_button);

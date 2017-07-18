@@ -56,7 +56,6 @@ namespace ParishSystem
 
         private void Names_textbox_profile_TextChanged(object sender, EventArgs e)
         {
-
             TextBox A = sender as TextBox;
             if (A.Text.Equals(A.Name.Split('_')[0]))
             {
@@ -66,6 +65,7 @@ namespace ParishSystem
             {
                 A.ForeColor = Color.Black;
             }
+
         }
 
         private void dateTimePicker_profile_ValueChanged(object sender, EventArgs e)
@@ -189,7 +189,7 @@ namespace ParishSystem
         {
             baptism_panel.BringToFront();
             refreshBaptismPage();
-            float_panel_baptism.BringToFront();
+          
         }
 
         private void details_button_baptism_Click(object sender, EventArgs e)
@@ -611,6 +611,13 @@ namespace ParishSystem
         {
             marriage_panel.BringToFront();
         }
+
+        private void refreshMarriage()
+        {
+
+        }
+
+
 
         private void save_button_marriage_Click(object sender, EventArgs e)
         {
