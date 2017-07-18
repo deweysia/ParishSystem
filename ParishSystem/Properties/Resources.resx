@@ -181,4 +181,58 @@
   <data name="Newlyweds_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons\32x32\Newlyweds_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Cancel_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Cancel_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Clock_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Clock_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="customer_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\customer_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Delete_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Delete_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Delete_32px_Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Delete_32px_Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Delete_32px_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Delete_32px_Light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Error_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Error_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Heart_with_Pulse_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Heart with Pulse_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Holy_Bible_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Holy Bible_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Home_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Home_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Info_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Info_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Initiate_Money_Transfer_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Initiate Money Transfer_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Money_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Money_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ok_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Ok_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Report_Card_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Report Card_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Resume_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Resume_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The_Pope_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\The Pope_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Watch_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Watch_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

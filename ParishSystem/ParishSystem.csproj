@@ -70,6 +70,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddApplication.Designer.cs">
+      <DependentUpon>AddApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="BloodlettingTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,12 @@
     </Compile>
     <Compile Include="ComboboxContent.cs" />
     <Compile Include="ComboBoxItem.cs" />
+    <Compile Include="CustomNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomNotification.Designer.cs">
+      <DependentUpon>CustomNotification.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataHandler.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -182,8 +194,14 @@
     <Compile Include="tReport.Designer.cs">
       <DependentUpon>tReport.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddApplication.resx">
+      <DependentUpon>AddApplication.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BloodlettingTest.resx">
       <DependentUpon>BloodlettingTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomNotification.resx">
+      <DependentUpon>CustomNotification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -265,6 +283,7 @@
     <Content Include="bin\Debug\ParishSystem.pdb" />
     <Content Include="bin\Debug\ParishSystem.vshost.exe" />
     <Content Include="database\DB_Populator.txt" />
+    <Content Include="database\SQLDB_V7.sql" />
     <Content Include="database\updatedDB.sql" />
     <Content Include="database\SQLDB_V6.sql" />
     <Content Include="obj\Debug\ParishSystem.csproj.FileListAbsolute.txt" />
@@ -288,9 +307,12 @@
     <Content Include="Resources\icons\32x32\Clock_32px.png" />
     <Content Include="Resources\icons\32x32\customer_32px.png" />
     <Content Include="Resources\icons\32x32\Delete_32px.png" />
+    <None Include="Resources\icons\32x32\Delete_32px_Light.png" />
+    <None Include="Resources\icons\32x32\Delete_32px_Gray.png" />
     <Content Include="Resources\icons\32x32\Deposit_32px.png" />
     <Content Include="Resources\icons\32x32\Dove_32px.png" />
     <Content Include="Resources\icons\32x32\Edit_32px.png" />
+    <None Include="Resources\icons\32x32\Error_32px.png" />
     <Content Include="Resources\icons\32x32\Eye_32px.png" />
     <Content Include="Resources\icons\32x32\Google Web Search_32px.png" />
     <None Include="Resources\icons\32x32\Heart with Pulse_32px.png" />
@@ -303,6 +325,7 @@
     <Content Include="Resources\icons\32x32\Minus_32px.png" />
     <Content Include="Resources\icons\32x32\Money_32px.png" />
     <Content Include="Resources\icons\32x32\Newlyweds_32px.png" />
+    <None Include="Resources\icons\32x32\Ok_32px.png" />
     <Content Include="Resources\icons\32x32\Password_32px.png" />
     <Content Include="Resources\icons\32x32\Plus 2 Math_32px.png" />
     <Content Include="Resources\icons\32x32\Plus_32px.png" />
