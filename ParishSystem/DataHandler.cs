@@ -2567,7 +2567,7 @@ namespace ParishSystem
             string q = "select *,concat(firstname,\" \",midName,\" \",lastName) as Name from generalprofile " +
 " inner join applicant on applicant.profileID = generalprofile.profileID " +
 " inner join application on application.applicationID = application.applicationID " +
-" where application.sacramentType = 'M' and application.applicationID = " +applicationID+ " and generalprofile.profileID != "+profileID;
+" where application.sacramentType = 'M' and application.applicationID = " +applicationID+ " and application.applicationID = "+ applicationID + " and generalprofile.profileID != " + profileID;
             DataTable dt = runQuery(q);
 
             return dt;

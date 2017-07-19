@@ -756,6 +756,7 @@ namespace ParishSystem
 
         private void spouse_combobox_marriage_SelectedIndexChanged(object sender, EventArgs e)
         {
+            spouse_combobox_marriage.Items.Clear();
             DataTable dt = dh.getGeneralProfile((spouse_combobox_marriage.SelectedItem as ComboboxContent).ID);
             int spouseID = (spouse_combobox_marriage.SelectedItem as ComboboxContent).ID;
             firstname_textbox_spouse_marriage.Text = dt.Rows[0]["firstname"].ToString();
