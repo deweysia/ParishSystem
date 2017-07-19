@@ -2555,6 +2555,23 @@ namespace ParishSystem
 
             return dt;
         }
+        public DataTable getMarriageApplications(int profileID)
+        {
+            string q = "select * from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 'M' and generalprofile.profileID =" + profileID;
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+        public DataTable getPartners(int applicationID,int profileID)//yung sino yung maraming asawa na profile ID
+        {
+            string q = "select *,concat(firstname,\" \",midName,\" \",lastName) as Name from generalprofile " +
+" inner join applicant on applicant.profileID = generalprofile.profileID " +
+" inner join application on application.applicationID = application.applicationID " +
+" where application.sacramentType = 'M' and application.applicationID = " +applicationID+ " and generalprofile.profileID != "+profileID;
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
 
     }
 
