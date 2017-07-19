@@ -1188,6 +1188,7 @@
             this.metroButton1.TabIndex = 10;
             this.metroButton1.Text = "Approve";
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // groupBox1
             // 
@@ -1419,7 +1420,7 @@
             // sacramentApplication_dgv
             // 
             this.sacramentApplication_dgv.AllowUserToResizeRows = false;
-            this.sacramentApplication_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.sacramentApplication_dgv.BackgroundColor = System.Drawing.Color.White;
             this.sacramentApplication_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sacramentApplication_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.sacramentApplication_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;

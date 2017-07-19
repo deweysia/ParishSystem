@@ -458,8 +458,15 @@ namespace ParishSystem
             else if (A.Equals(bloodletting_button_menu)) { bloodletting_panel.BringToFront(); }
             else if (A.Equals(CDB_button_menu)) { CDB_panel.BringToFront(); }
             else if (A.Equals(CRB_button_menu)) { CRB_panel.BringToFront(); }
-            else if (A.Equals(application_button_menu)) { application_panel.BringToFront(); }
+            else if (A.Equals(application_button_menu)) {
+                application_panel.BringToFront();
+                refreshApplicationProfile();
+            }
             else if (A.Equals(sacrament_button_menu)) { sacrament_panel.BringToFront(); }
+        }
+        private void refreshApplicationProfile()
+        {
+            sacramentApplication_dgv.DataSource = dh.getApplications();
         }
 
         private void firstname_textbox_Click(object sender, EventArgs e)
@@ -476,7 +483,7 @@ namespace ParishSystem
 
         }
 
-
+       
 
 
 
@@ -575,6 +582,12 @@ namespace ParishSystem
             MessageBox.Show("Bitch done");
 
 
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            Form A = new Person(int.Parse(sacramentApplication_dgv.SelectedRows[0].Cells["profileID"].Value.ToString()),dh);
+            A.ShowDialog();
         }
     }
 }

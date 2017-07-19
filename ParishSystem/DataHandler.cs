@@ -2449,14 +2449,7 @@ namespace ParishSystem
             return dt;
         }
 
-        public DataTable getApplications(int groomID, int brideID)
-        {
-            string q = "SELECT * FROM Application WHERE groomID = " + groomID + " AND brideID = " + brideID;
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
+     
 
         public DataTable getMinisters()
         {
@@ -2571,6 +2564,12 @@ namespace ParishSystem
             DataTable dt = runQuery(q);
 
             return dt;
+        }
+        public DataTable getApplications()
+        {
+            string q = "select * from application inner join applicant on application.applicationID = applicant.applicationID inner join generalprofile on generalprofile.profileID = applicant.profileID where status = \"pending\"";
+
+            return runQuery(q);
         }
 
     }
