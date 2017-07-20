@@ -939,7 +939,7 @@
             this.generalprofile_datagridview.Size = new System.Drawing.Size(345, 335);
             this.generalprofile_datagridview.TabIndex = 0;
             this.generalprofile_datagridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.generalprofile_datagridview_CellClick);
-            this.generalprofile_datagridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.generalprofile_datagridview_CellContentClick);
+          
             // 
             // AddPNL
             // 
@@ -1074,7 +1074,7 @@
             this.firstname_textbox.Text = "firstname";
             this.firstname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.firstname_tooltip_profiles.SetToolTip(this.firstname_textbox, "Please enter a first name");
-            this.firstname_textbox.Click += new System.EventHandler(this.firstname_textbox_Click);
+           
             this.firstname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
             this.firstname_textbox.TextChanged += new System.EventHandler(this.Name_textbox_Profile_TextChanged);
             this.firstname_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
@@ -1131,7 +1131,7 @@
             this.sacramentApplication_panel.Padding = new System.Windows.Forms.Padding(5);
             this.sacramentApplication_panel.Size = new System.Drawing.Size(753, 449);
             this.sacramentApplication_panel.TabIndex = 43;
-            this.sacramentApplication_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.baptismApplication_panel_Paint);
+          
             // 
             // textBox11
             // 
@@ -2167,7 +2167,7 @@
             this.panel_controlbox.Name = "panel_controlbox";
             this.panel_controlbox.Size = new System.Drawing.Size(753, 33);
             this.panel_controlbox.TabIndex = 38;
-            this.panel_controlbox.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_controlbox_Paint);
+           
             this.panel_controlbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseDown);
             this.panel_controlbox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseMove);
             // 
@@ -3803,7 +3803,7 @@
             this.label8.Size = new System.Drawing.Size(45, 21);
             this.label8.TabIndex = 3;
             this.label8.Text = "Filter";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+      
             // 
             // comboBoxFilter
             // 
@@ -3898,6 +3898,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SAD";
+        
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.profile_panel.ResumeLayout(false);

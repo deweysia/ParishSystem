@@ -441,10 +441,6 @@ namespace ParishSystem
             AddPNL.Visible = true;
         }
 
-        private void panel_controlbox_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void home_button_menu_Click(object sender, EventArgs e)
         {
@@ -469,19 +465,7 @@ namespace ParishSystem
             sacramentApplication_dgv.DataSource = dh.getApplications();
         }
 
-        private void firstname_textbox_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-
-
-        private void firstname_textbox_TextChanged(object sender, EventArgs e)
-        {
-
-
-        }
+  
 
        
 
@@ -503,10 +487,7 @@ namespace ParishSystem
 
 
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void libraryBaptismButton_Click(object sender, EventArgs e)
         {
@@ -529,15 +510,7 @@ namespace ParishSystem
 
         }
 
-        private void generalprofile_datagridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void baptismApplication_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void checkAll_cb_baptismApplication_CheckedChanged(object sender, EventArgs e)
         {
@@ -589,5 +562,7 @@ namespace ParishSystem
             Form A = new Person(int.Parse(sacramentApplication_dgv.SelectedRows[0].Cells["profileID"].Value.ToString()),dh);
             A.ShowDialog();
         }
+
+     
     }
 }

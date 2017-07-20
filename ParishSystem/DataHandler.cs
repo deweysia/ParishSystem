@@ -1686,7 +1686,7 @@ namespace ParishSystem
                        " FROM generalprofile left outer join applicant on applicant.profileID = generalprofile.profileID " +
                        " left outer join application on applicant.applicationID = application.applicationID " +
                        " left outer join confirmation on confirmation.applicationID = application.applicationID " +
-                       " left outer join minister on minister.ministerID = confirmation.ministerID WHERE generalprofile.profileID =" + profileID;
+                       " left outer join minister on minister.ministerID = confirmation.ministerID WHERE sacramentType='C' and generalprofile.profileID =" + profileID;
 
             DataTable dt = runQuery(q);
 
