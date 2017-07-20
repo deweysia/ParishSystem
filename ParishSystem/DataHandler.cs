@@ -1686,7 +1686,7 @@ namespace ParishSystem
                        " FROM generalprofile left outer join applicant on applicant.profileID = generalprofile.profileID " +
                        " left outer join application on applicant.applicationID = application.applicationID " +
                        " left outer join confirmation on confirmation.applicationID = application.applicationID " +
-                       " left outer join minister on minister.ministerID = confirmation.ministerID WHERE sacramentType='C' and generalprofile.profileID =" + profileID;
+                       " left outer join minister on minister.ministerID = confirmation.ministerID WHERE sacramentType=2 and generalprofile.profileID =" + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -1779,9 +1779,9 @@ namespace ParishSystem
 
         }
 
-        public DataTable getMarriage(int marriageID)
+        public DataTable getMarriage(int applicationID)
         {
-            string q = "SELECT * FROM Marriage WHERE marriageID = " + marriageID;
+            string q = "SELECT *,concat(firstName,\" \",midname,\" \",lastname,\"\",suffix)as ministerName  FROM Marriage inner join minister on marriage.ministerID=minister.ministerID where  applicationID =" + applicationID;
             DataTable dt = runQuery(q);
 
             return dt;
@@ -2382,7 +2382,7 @@ namespace ParishSystem
 
         public DataTable getMotherOf(int profileID)
         {
-            string q = "SELECT * FROM Parent WHERE gender = 'F' AND profileID = '" + profileID + "'";
+            string q = "SELECT * FROM Parent WHERE gender = '2' AND profileID = '" + profileID + "'";
 
             DataTable dt = runQuery(q);
 
@@ -2391,7 +2391,7 @@ namespace ParishSystem
 
         public DataTable getFatherOf(int profileID)
         {
-            string q = "SELECT * FROM Parent WHERE gender = 'M' AND profileID = '" + profileID + "'";
+            string q = "SELECT * FROM Parent WHERE gender = '1' AND profileID = '" + profileID + "'";
 
             DataTable dt = runQuery(q);
 
@@ -2401,7 +2401,7 @@ namespace ParishSystem
 
         public bool hasBaptismApplication(int profileID)
         {
-            string q = "SELECT * FROM Application WHERE applicationType = 'B' AND profileID = " + profileID;
+            string q = "SELECT * FROM Application WHERE applicationType = '1' AND profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -2410,7 +2410,7 @@ namespace ParishSystem
 
         public bool hasConfirmationApplication(int profileID)
         {
-            string q = "SELECT * FROM Application WHERE applicationType = 'C' AND profileID = " + profileID;
+            string q = "SELECT * FROM Application WHERE applicationType = '2' AND profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -2419,7 +2419,7 @@ namespace ParishSystem
 
         public bool hasMarriageApplication(int profileID)
         {
-            string q = "SELECT * FROM Application WHERE applicationType = 'M' AND profileID = " + profileID;
+            string q = "SELECT * FROM Application WHERE applicationType = '3' AND profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -2542,7 +2542,7 @@ namespace ParishSystem
         }
         public DataTable getBloodlettingEvents()
         {
-            string q = "SELECT * FROM BloodDonationEvent WHERE eventStatus = 'ACTIVE'"; //where status is not finished
+            string q = "SELECT * FROM BloodDonationEvent WHERE eventStatus = 1"; //where status is not finished
 
             DataTable dt = runQuery(q);
 
@@ -2550,17 +2550,15 @@ namespace ParishSystem
         }
         public DataTable getMarriageApplications(int profileID)
         {
-            string q = "select * from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 'M' and generalprofile.profileID =" + profileID;
+            string q = "select * from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID =" + profileID;
             DataTable dt = runQuery(q);
 
             return dt;
         }
         public DataTable getPartners(int applicationID,int profileID)//yung sino yung maraming asawa na profile ID
         {
-            string q = "select *,concat(firstname,\" \",midName,\" \",lastName) as Name from generalprofile " +
-" inner join applicant on applicant.profileID = generalprofile.profileID " +
-" inner join application on application.applicationID = application.applicationID " +
-" where application.sacramentType = 'M' and application.applicationID = " +applicationID+ " and application.applicationID = "+ applicationID + " and generalprofile.profileID != " + profileID;
+            string q = "select *,concat(firstname,\" \",midName,\" \",lastName) as Name from generalprofile  inner join applicant on applicant.profileID = generalprofile.profileID  inner join application on application.applicationID = applicant.applicationID  where application.applicationID= "+applicationID+" and generalprofile.profileID!= "+profileID+"";
+
             DataTable dt = runQuery(q);
 
             return dt;

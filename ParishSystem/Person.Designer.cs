@@ -201,7 +201,7 @@
             this.firstname_textbox_godFather_marriage = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.godMother_checkbox_marriage = new System.Windows.Forms.CheckBox();
             this.panel24 = new System.Windows.Forms.Panel();
             this.suffix_textbox_godMother_marriage = new System.Windows.Forms.TextBox();
             this.residence_textbox_godMother_marriage = new System.Windows.Forms.TextBox();
@@ -244,7 +244,7 @@
             this.label92 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.widower_radiobutton_self_marriage = new System.Windows.Forms.RadioButton();
+            this.widow_radiobutton_self_marriage = new System.Windows.Forms.RadioButton();
             this.single_radiobutton_self_marriage = new System.Windows.Forms.RadioButton();
             this.label21 = new System.Windows.Forms.Label();
             this.spouse_combobox_marriage = new System.Windows.Forms.ComboBox();
@@ -320,7 +320,7 @@
             this.label84 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.save_button_baptism = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.close_button_confirmation = new System.Windows.Forms.Button();
             this.cancel_button_marriage = new System.Windows.Forms.Button();
             this.close_button_baptism = new System.Windows.Forms.Button();
             this.save_button_marriage = new System.Windows.Forms.Button();
@@ -2610,23 +2610,23 @@
             // 
             // panel22
             // 
-            this.panel22.Controls.Add(this.checkBox2);
+            this.panel22.Controls.Add(this.godMother_checkbox_marriage);
             this.panel22.Location = new System.Drawing.Point(3, 126);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(619, 33);
             this.panel22.TabIndex = 66;
             // 
-            // checkBox2
+            // godMother_checkbox_marriage
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.checkBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.checkBox2.Location = new System.Drawing.Point(0, 0);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(130, 29);
-            this.checkBox2.TabIndex = 58;
-            this.checkBox2.Text = "GodMother";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.godMother_checkbox_marriage.AutoSize = true;
+            this.godMother_checkbox_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.godMother_checkbox_marriage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.godMother_checkbox_marriage.Location = new System.Drawing.Point(0, 0);
+            this.godMother_checkbox_marriage.Name = "godMother_checkbox_marriage";
+            this.godMother_checkbox_marriage.Size = new System.Drawing.Size(130, 29);
+            this.godMother_checkbox_marriage.TabIndex = 58;
+            this.godMother_checkbox_marriage.Text = "GodMother";
+            this.godMother_checkbox_marriage.UseVisualStyleBackColor = true;
             // 
             // panel24
             // 
@@ -3153,23 +3153,23 @@
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.widower_radiobutton_self_marriage);
+            this.panel15.Controls.Add(this.widow_radiobutton_self_marriage);
             this.panel15.Controls.Add(this.single_radiobutton_self_marriage);
             this.panel15.Location = new System.Drawing.Point(554, 37);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(177, 31);
             this.panel15.TabIndex = 80;
             // 
-            // widower_radiobutton_self_marriage
+            // widow_radiobutton_self_marriage
             // 
-            this.widower_radiobutton_self_marriage.AutoSize = true;
-            this.widower_radiobutton_self_marriage.Location = new System.Drawing.Point(91, 6);
-            this.widower_radiobutton_self_marriage.Name = "widower_radiobutton_self_marriage";
-            this.widower_radiobutton_self_marriage.Size = new System.Drawing.Size(72, 19);
-            this.widower_radiobutton_self_marriage.TabIndex = 0;
-            this.widower_radiobutton_self_marriage.TabStop = true;
-            this.widower_radiobutton_self_marriage.Text = "Widower";
-            this.widower_radiobutton_self_marriage.UseVisualStyleBackColor = true;
+            this.widow_radiobutton_self_marriage.AutoSize = true;
+            this.widow_radiobutton_self_marriage.Location = new System.Drawing.Point(91, 6);
+            this.widow_radiobutton_self_marriage.Name = "widow_radiobutton_self_marriage";
+            this.widow_radiobutton_self_marriage.Size = new System.Drawing.Size(72, 19);
+            this.widow_radiobutton_self_marriage.TabIndex = 0;
+            this.widow_radiobutton_self_marriage.TabStop = true;
+            this.widow_radiobutton_self_marriage.Text = "Widower";
+            this.widow_radiobutton_self_marriage.UseVisualStyleBackColor = true;
             // 
             // single_radiobutton_self_marriage
             // 
@@ -3201,7 +3201,8 @@
             this.spouse_combobox_marriage.Name = "spouse_combobox_marriage";
             this.spouse_combobox_marriage.Size = new System.Drawing.Size(292, 29);
             this.spouse_combobox_marriage.TabIndex = 88;
-            this.spouse_combobox_marriage.SelectedIndexChanged += new System.EventHandler(this.spouse_combobox_marriage_SelectedIndexChanged);
+            
+            this.spouse_combobox_marriage.TextChanged += new System.EventHandler(this.spouse_combobox_marriage_TextChanged);
             // 
             // label72
             // 
@@ -4126,20 +4127,22 @@
             this.save_button_baptism.TabIndex = 93;
             this.save_button_baptism.Text = "Save";
             this.save_button_baptism.UseVisualStyleBackColor = false;
+            this.save_button_baptism.Click += new System.EventHandler(this.save_button_baptism_Click);
             // 
-            // button4
+            // close_button_confirmation
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(394, 11);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 32);
-            this.button4.TabIndex = 89;
-            this.button4.Text = "Cancel";
-            this.button4.UseVisualStyleBackColor = false;
+            this.close_button_confirmation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.close_button_confirmation.FlatAppearance.BorderSize = 0;
+            this.close_button_confirmation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close_button_confirmation.ForeColor = System.Drawing.Color.Black;
+            this.close_button_confirmation.Location = new System.Drawing.Point(394, 11);
+            this.close_button_confirmation.Margin = new System.Windows.Forms.Padding(2);
+            this.close_button_confirmation.Name = "close_button_confirmation";
+            this.close_button_confirmation.Size = new System.Drawing.Size(119, 32);
+            this.close_button_confirmation.TabIndex = 89;
+            this.close_button_confirmation.Text = "Cancel";
+            this.close_button_confirmation.UseVisualStyleBackColor = false;
+            this.close_button_confirmation.Click += new System.EventHandler(this.close_button_confirmation_Click);
             // 
             // cancel_button_marriage
             // 
@@ -4155,6 +4158,7 @@
             this.cancel_button_marriage.TabIndex = 91;
             this.cancel_button_marriage.Text = "Cancel";
             this.cancel_button_marriage.UseVisualStyleBackColor = false;
+            this.cancel_button_marriage.Click += new System.EventHandler(this.cancel_button_marriage_Click);
             // 
             // close_button_baptism
             // 
@@ -4170,6 +4174,7 @@
             this.close_button_baptism.TabIndex = 92;
             this.close_button_baptism.Text = "Cancel";
             this.close_button_baptism.UseVisualStyleBackColor = false;
+            this.close_button_baptism.Click += new System.EventHandler(this.close_button_baptism_Click_1);
             // 
             // save_button_marriage
             // 
@@ -4190,7 +4195,7 @@
             // 
             this.panel6.Controls.Add(this.save_button_baptism);
             this.panel6.Controls.Add(this.cancel_button_marriage);
-            this.panel6.Controls.Add(this.button4);
+            this.panel6.Controls.Add(this.close_button_confirmation);
             this.panel6.Controls.Add(this.save_button_marriage);
             this.panel6.Controls.Add(this.button3);
             this.panel6.Controls.Add(this.close_button_baptism);
@@ -4224,8 +4229,8 @@
             this.Controls.Add(this.label73);
             this.Controls.Add(this.label83);
             this.Controls.Add(this.label84);
-            this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.marriage_panel);
+            this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.balance_panel);
@@ -4506,7 +4511,7 @@
         private System.Windows.Forms.TextBox suffix_textbox;
         private System.Windows.Forms.TextBox firstname_textbox;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.RadioButton widower_radiobutton_self_marriage;
+        private System.Windows.Forms.RadioButton widow_radiobutton_self_marriage;
         private System.Windows.Forms.RadioButton single_radiobutton_self_marriage;
         private System.Windows.Forms.TextBox lastname_textbox;
         private System.Windows.Forms.Label label17;
@@ -4527,7 +4532,7 @@
         private System.Windows.Forms.TextBox firstname_textbox_godFather_marriage;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox godMother_checkbox_marriage;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.TextBox suffix_textbox_godMother_marriage;
         private System.Windows.Forms.TextBox residence_textbox_godMother_marriage;
@@ -4633,7 +4638,7 @@
         private System.Windows.Forms.Label label93;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button save_button_baptism;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button close_button_confirmation;
         private System.Windows.Forms.Button cancel_button_marriage;
         private System.Windows.Forms.Button close_button_baptism;
         private System.Windows.Forms.Button save_button_marriage;

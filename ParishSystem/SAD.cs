@@ -148,17 +148,11 @@ namespace ParishSystem
         {//refresh general profile table
             DataTable dt = dh.getGeneralProfiles();
             generalprofile_datagridview.DataSource = dt;
-            generalprofile_datagridview.Columns["profileID"].Visible = false;
-            generalprofile_datagridview.Columns["firstName"].Visible = false;
-            generalprofile_datagridview.Columns["midName"].Visible = false;
-            generalprofile_datagridview.Columns["lastName"].Visible = false;
-            generalprofile_datagridview.Columns["suffix"].Visible = false;
-            generalprofile_datagridview.Columns["gender"].Visible = false;
-            generalprofile_datagridview.Columns["birthdate"].Visible = false;
-            generalprofile_datagridview.Columns["contactNumber"].Visible = false;
-            generalprofile_datagridview.Columns["address"].Visible = false;
-            generalprofile_datagridview.Columns["birthplace"].Visible = false;
-            generalprofile_datagridview.Columns["bloodtype"].Visible = false;
+            foreach(DataGridViewColumn dc in generalprofile_datagridview.Columns)
+            {
+                dc.Visible = false;
+            }
+            generalprofile_datagridview.Columns["name"].Visible = true;
             generalprofile_datagridview.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 

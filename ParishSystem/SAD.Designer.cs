@@ -1481,7 +1481,7 @@
             // BaptismApplication_birthDate
             // 
             this.BaptismApplication_birthDate.Location = new System.Drawing.Point(81, 91);
-            this.BaptismApplication_birthDate.MinimumSize = new System.Drawing.Size(4, 29);
+            this.BaptismApplication_birthDate.MinimumSize = new System.Drawing.Size(0, 29);
             this.BaptismApplication_birthDate.Name = "BaptismApplication_birthDate";
             this.BaptismApplication_birthDate.Size = new System.Drawing.Size(200, 29);
             this.BaptismApplication_birthDate.TabIndex = 8;
