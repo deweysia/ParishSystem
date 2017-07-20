@@ -20,6 +20,9 @@ namespace ParishSystem
         {
             InitializeComponent();
             BaptismApplication_birthDate.MaxDate = DateTime.Now;
+            baptismApplication_add_button.Tag = SacramentType.Baptism;
+            confirmationApplication_add_button.Tag = SacramentType.Confirmation;
+            marriageApplication_add_button.Tag = SacramentType.Marriage;
 
 
         }
@@ -579,8 +582,17 @@ namespace ParishSystem
 
         private void sacramentApplication_add_button_Click(object sender, EventArgs e)
         {
-            AddApplication aa = new AddApplication(SacramentType.Baptism);
+            SacramentType type = (SacramentType)((Button)sender).Tag;
+            AddApplication aa = new AddApplication(type);
             DialogResult dr = aa.ShowDialog();
+
+            if(dr == DialogResult.OK)
+            {
+                if (type == SacramentType.Baptism)
+                    sacramentApplication_dgv.DataSource = dh.getBaptisms();
+                else if (type == SacramentType.Confirmation)
+                    sacramentApplication_dgv.DataSource = dh.getConfirmations();
+            }
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
@@ -599,5 +611,6 @@ namespace ParishSystem
             MarriageApplication ma = new MarriageApplication();
             DialogResult dr = ma.ShowDialog();
         }
+        
     }
 }

@@ -66,7 +66,7 @@ namespace ParishSystem
 
                 bool success = dh.addNewApplicant(id, sacramentType);
                 displayMessage(success);
-
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
