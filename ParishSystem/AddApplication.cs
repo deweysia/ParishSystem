@@ -66,7 +66,7 @@ namespace ParishSystem
 
                 bool success = dh.addNewApplicant(id, sacramentType);
                 displayMessage(success);
-
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
@@ -174,13 +174,18 @@ namespace ParishSystem
         {
             Notification.Show("HEEEEEEEEEEEEEEEELOOOOO MY BITCHESSSS");
         }
+
+        private void application_apply_button_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
-    public enum SacramentType
-    {
-        Baptism,
-        Confirmation,
-        Marriage
-    }
+    
 
 }

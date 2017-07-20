@@ -20,6 +20,9 @@ namespace ParishSystem
         {
             InitializeComponent();
             BaptismApplication_birthDate.MaxDate = DateTime.Now;
+            baptismApplication_add_button.Tag = SacramentType.Baptism;
+            confirmationApplication_add_button.Tag = SacramentType.Confirmation;
+            marriageApplication_add_button.Tag = SacramentType.Marriage;
 
 
         }
@@ -276,7 +279,10 @@ namespace ParishSystem
                 marriageApplication_label.ForeColor = Color.Black;
 
                 //panel changes
-                sacramentApplication_panel.BringToFront();
+                // sacramentApplication_panel.BringToFront();
+                Console.WriteLine("BA)P");
+                applicationsHiddenTabControl.SelectedIndex = 0;
+                
 
             }
             else if (A.Equals(confirmationApplication_label))
@@ -290,7 +296,9 @@ namespace ParishSystem
                 marriageApplication_label.ForeColor = Color.Black;
 
                 //panel changes
-                sacramentApplication_panel.BringToFront();
+                //sacramentApplication_panel.BringToFront();
+                applicationsHiddenTabControl.SelectedIndex = 1;
+                
 
             }
             else if (A.Equals(marriageApplication_label))
@@ -304,7 +312,9 @@ namespace ParishSystem
                 marriageApplication_label.ForeColor = Color.DodgerBlue;
 
                 //panel changes
-                marriageApplication_panel.BringToFront();
+                //marriageApplication_panel.BringToFront();
+                applicationsHiddenTabControl.SelectedIndex = 2;
+                
 
             }
         }
@@ -570,18 +580,19 @@ namespace ParishSystem
 
         }
 
-        private void baptismApplication_add_button_Click(object sender, EventArgs e)
+        private void sacramentApplication_add_button_Click(object sender, EventArgs e)
         {
-            AddApplication aa = new AddApplication(SacramentType.Baptism);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            AddApplication aa = new AddApplication(SacramentType.Confirmation);
+            SacramentType type = (SacramentType)((Button)sender).Tag;
+            AddApplication aa = new AddApplication(type);
             DialogResult dr = aa.ShowDialog();
-            MessageBox.Show("Bitch done");
 
-
+            if(dr == DialogResult.OK)
+            {
+                if (type == SacramentType.Baptism)
+                    sacramentApplication_dgv.DataSource = dh.getBaptisms();
+                else if (type == SacramentType.Confirmation)
+                    sacramentApplication_dgv.DataSource = dh.getConfirmations();
+            }
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
@@ -589,5 +600,17 @@ namespace ParishSystem
             Form A = new Person(int.Parse(sacramentApplication_dgv.SelectedRows[0].Cells["profileID"].Value.ToString()),dh);
             A.ShowDialog();
         }
+
+        private void label87_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void marriageApplication_add_button_Click(object sender, EventArgs e)
+        {
+            MarriageApplication ma = new MarriageApplication();
+            DialogResult dr = ma.ShowDialog();
+        }
+        
     }
 }
