@@ -92,12 +92,17 @@ namespace ParishSystem
             mi_textbox.Text = DT.Rows[0]["midname"].ToString();
             lastname_textbox.Text = DT.Rows[0]["lastname"].ToString();
             suffix_textbox.Text = DT.Rows[0]["suffix"].ToString();
+            try
+            {
+                if (int.Parse(DT.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Single)
+                    single_radiobutton_self_marriage.Checked = true;
+                else if (int.Parse(DT.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Widowed)
+                    widower_radiobutton_self_marriage.Checked = true;
+            }
+            catch
+            {
 
-            if (int.Parse(DT.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Single)
-                single_radiobutton_self_marriage.Checked = true;
-            else if (int.Parse(DT.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Widowed)
-                widower_radiobutton_self_marriage.Checked = true;
-
+            }
             try
             {
                 birthdate_dateTimePicker.Value = dh.toDateTime(DT.Rows[0]["birthdate"].ToString(), false);
@@ -109,14 +114,21 @@ namespace ParishSystem
             }
             contactNumber_textbox.Text = DT.Rows[0]["contactNumber"].ToString();
             address_textbox.Text = DT.Rows[0]["address"].ToString();
-            if (int.Parse(DT.Rows[0]["gender"].ToString()) == (int)Enums.Gender.Male)
-            { genderMale_radiobutton.Checked = true; }
-            else if (int.Parse(DT.Rows[0]["gender"].ToString()) == (int)Enums.Gender.Female)
-            { genderFemale_radiobutton.Checked = true; }
-            else
+            try
             {
-                genderMale_radiobutton.Checked = false;
-                genderFemale_radiobutton.Checked = false;
+                if (int.Parse(DT.Rows[0]["gender"].ToString()) == (int)Enums.Gender.Male)
+                { genderMale_radiobutton.Checked = true; }
+                else if (int.Parse(DT.Rows[0]["gender"].ToString()) == (int)Enums.Gender.Female)
+                { genderFemale_radiobutton.Checked = true; }
+                else
+                {
+                    genderMale_radiobutton.Checked = false;
+                    genderFemale_radiobutton.Checked = false;
+                }
+            }
+            catch
+            {
+
             }
 
         }
