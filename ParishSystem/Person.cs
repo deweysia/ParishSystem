@@ -17,6 +17,7 @@ namespace ParishSystem
         public DataHandler dh;
         private List<Panel> panelList = new List<Panel>();
         private Dictionary<string, Panel> panelDict = new Dictionary<string, Panel>();
+       
 
       
         public Person(int a, DataHandler b)
@@ -77,15 +78,53 @@ namespace ParishSystem
 
         #region Profiles
 
-       
 
-       
+
+
         #endregion
-        
+
+        #region person
+
+        private void Person_Load(object sender, EventArgs e)
+        {
+            DataTable DT = dh.getGeneralProfile(ProfileID);
+            firstname_textbox.Text = DT.Rows[0]["firstname"].ToString();
+            mi_textbox.Text = DT.Rows[0]["midname"].ToString();
+            lastname_textbox.Text = DT.Rows[0]["lastname"].ToString();
+            suffix_textbox.Text = DT.Rows[0]["suffix"].ToString();
+
+            if (int.Parse(DT.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Single)
+                single_radiobutton_self_marriage.Checked = true;
+            else if (int.Parse(DT.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Widowed)
+                widower_radiobutton_self_marriage.Checked = true;
+
+            try
+            {
+                birthdate_dateTimePicker.Value = dh.toDateTime(DT.Rows[0]["birthdate"].ToString(), false);
+                birthdate_dateTimePicker.Format = DateTimePickerFormat.Long;
+            }
+            catch
+            {
+                birthdate_dateTimePicker.Format = DateTimePickerFormat.Custom;
+            }
+            contactNumber_textbox.Text = DT.Rows[0]["contactNumber"].ToString();
+            address_textbox.Text = DT.Rows[0]["address"].ToString();
+            if (int.Parse(DT.Rows[0]["gender"].ToString()) == (int)Enums.Gender.Male)
+            { genderMale_radiobutton.Checked = true; }
+            else if (int.Parse(DT.Rows[0]["gender"].ToString()) == (int)Enums.Gender.Female)
+            { genderFemale_radiobutton.Checked = true; }
+            else
+            {
+                genderMale_radiobutton.Checked = false;
+                genderFemale_radiobutton.Checked = false;
+            }
+
+        }
+
+        #endregion
+
         #region bloodletting
         //--------------bloodletting--------------------//
-       
-       
 
         private void load_bloodletting()
         {
@@ -108,7 +147,6 @@ namespace ParishSystem
 
         private void add_button_bloodletting_Click(object sender, EventArgs e)// add edit 
         {
-            Console.WriteLine("_--------------------------------------------" + ((ComboboxContent)bloodDonationEvent_combobox_bloodletting.SelectedItem).ID);
            
             if (add_button_bloodletting.Text.Equals("Add"))
             {
@@ -132,8 +170,6 @@ namespace ParishSystem
             
         }
             
-        
-        
         
         private void delete_button_bloodletting_Click(object sender, EventArgs e)// delete
         {
@@ -178,10 +214,6 @@ namespace ParishSystem
             }
         }
 
-
-
-
-
         #endregion bloodletting   
 
         #region baptism
@@ -192,22 +224,15 @@ namespace ParishSystem
           
         }
 
-        private void details_button_baptism_Click(object sender, EventArgs e)
-        {
-            baptism_details_panel.BringToFront();
-            refreshBaptismPage();
-        }
-
         private void refreshBaptismPage()
         {
             //profile
             DataTable dt = dh.getBaptismOf(ProfileID);
-           
-            if (dt.Rows[0]["legitimacy"].ToString() == "L")
+            if (int.Parse(dt.Rows[0]["legitimacy"].ToString()) == (int)Enums.Legitimacy.Legal)
                 { legitimate_radiobutton_baptism.Checked = true; }
-            else if (dt.Rows[0]["legitimacy"].ToString() == "C")
+            else if (int.Parse(dt.Rows[0]["legitimacy"].ToString()) == (int)Enums.Legitimacy.Civil)
                 { civil_radiobutton_baptism.Checked = true; }
-            else if (dt.Rows[0]["legitimacy"].ToString() == "N")
+            else if (int.Parse(dt.Rows[0]["legitimacy"].ToString()) == (int)Enums.Legitimacy.Natural)
                 { natural_radiobutton_baptism.Checked = true; }
             else
                 { legitimate_radiobutton_baptism.Checked = false;
@@ -577,11 +602,9 @@ namespace ParishSystem
             }
         }
 
-
-
         #endregion
 
-     
+        #region marriage
 
         private void marriage_button_Click(object sender, EventArgs e)
         {
@@ -593,6 +616,7 @@ namespace ParishSystem
         {
             DataTable temp = dh.getMarriageApplications(ProfileID);
             DataTable Partners= dh.getPartners(int.Parse(temp.Rows[0]["applicationID"].ToString()),ProfileID);
+           
             spouse_combobox_marriage.Items.Clear();
             foreach (DataRow dr in Partners.Rows)
             {
@@ -626,133 +650,6 @@ namespace ParishSystem
                 dh.conn.Close();
             }
             }
-
-
-
-        private void save_button_marriage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label46_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void residence_textbox_mother_groom_marriage_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel28_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel29_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel15_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label54_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void balance_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Person_Load(object sender, EventArgs e)
-        {
-            DataTable DT =dh.getGeneralProfile(ProfileID);
-            firstname_textbox.Text = DT.Rows[0]["firstname"].ToString();
-            mi_textbox.Text = DT.Rows[0]["midname"].ToString();
-            lastname_textbox.Text = DT.Rows[0]["lastname"].ToString();
-            suffix_textbox.Text = DT.Rows[0]["suffix"].ToString();
-            try
-            {
-                birthdate_dateTimePicker.Value = dh.toDateTime(DT.Rows[0]["birthdate"].ToString(), false);
-                birthdate_dateTimePicker.Format = DateTimePickerFormat.Long;
-            }
-            catch
-            {
-                birthdate_dateTimePicker.Format = DateTimePickerFormat.Custom;
-            }
-            contactNumber_textbox.Text= DT.Rows[0]["contactNumber"].ToString();
-            address_textbox.Text = DT.Rows[0]["address"].ToString();
-            if (DT.Rows[0]["gender"].ToString() == "M")
-            { genderMale_radiobutton.Checked = true; }
-            else if (DT.Rows[0]["gender"].ToString() == "F")
-            { genderFemale_radiobutton.Checked = true; }
-            else
-            {
-                genderMale_radiobutton.Checked = false;
-                genderFemale_radiobutton.Checked = false;
-            }
-
-        }
-
-        private void flowLayoutPanel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel16_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void cancel_button_marriage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void float_panel_confirmation_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void baptism_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void bloodletting_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void confirmation_details_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void spouse_combobox_marriage_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -806,24 +703,7 @@ namespace ParishSystem
             }
         }
 
-        private void minister_combobox_baptism_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        #endregion
 
-        }
-
-        private void save_button_baptism_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void save_button_marriage_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

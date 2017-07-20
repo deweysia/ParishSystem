@@ -91,6 +91,7 @@
       <DependentUpon>CustomNotification.cs</DependentUpon>
     </Compile>
     <Compile Include="DataHandler.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

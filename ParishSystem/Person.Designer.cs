@@ -119,15 +119,10 @@
             this.baptism_panel = new System.Windows.Forms.Panel();
             this.baptism_details_panel = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.genderFemale_radiobutton = new System.Windows.Forms.RadioButton();
-            this.genderMale_radiobutton = new System.Windows.Forms.RadioButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.natural_radiobutton_baptism = new System.Windows.Forms.RadioButton();
             this.civil_radiobutton_baptism = new System.Windows.Forms.RadioButton();
             this.legitimate_radiobutton_baptism = new System.Windows.Forms.RadioButton();
-            this.birthdate_dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.remarks_textbox_baptism = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -184,6 +179,11 @@
             this.mi_textbox_mother_baptism = new System.Windows.Forms.TextBox();
             this.firstname_textbox_mother_baptism = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.genderFemale_radiobutton = new System.Windows.Forms.RadioButton();
+            this.genderMale_radiobutton = new System.Windows.Forms.RadioButton();
+            this.birthdate_dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
             this.btn_Close = new System.Windows.Forms.Button();
             this.marriage_panel = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -347,7 +347,6 @@
             this.baptism_panel.SuspendLayout();
             this.baptism_details_panel.SuspendLayout();
             this.panel13.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.panel5.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -360,6 +359,7 @@
             this.father_panel_baptism.SuspendLayout();
             this.panel10.SuspendLayout();
             this.mother_panel_baptism.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.marriage_panel.SuspendLayout();
             this.panel7.SuspendLayout();
             this.flowLayoutPanel12.SuspendLayout();
@@ -595,7 +595,6 @@
             this.confirmation_details_panel.Name = "confirmation_details_panel";
             this.confirmation_details_panel.Size = new System.Drawing.Size(801, 366);
             this.confirmation_details_panel.TabIndex = 57;
-            this.confirmation_details_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.confirmation_details_panel_Paint);
             // 
             // remarks_textbox_confirmation
             // 
@@ -637,7 +636,6 @@
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(548, 33);
             this.panel16.TabIndex = 65;
-            this.panel16.Paint += new System.Windows.Forms.PaintEventHandler(this.panel16_Paint);
             // 
             // godfather_checkbox_confirmation
             // 
@@ -1279,7 +1277,6 @@
             this.bloodletting_panel.Name = "bloodletting_panel";
             this.bloodletting_panel.Size = new System.Drawing.Size(801, 361);
             this.bloodletting_panel.TabIndex = 54;
-            this.bloodletting_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.bloodletting_panel_Paint);
             // 
             // clear_button_bloodletting
             // 
@@ -1482,7 +1479,6 @@
             this.balance_panel.Name = "balance_panel";
             this.balance_panel.Size = new System.Drawing.Size(801, 357);
             this.balance_panel.TabIndex = 55;
-            this.balance_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.balance_panel_Paint);
             // 
             // payment_button_balance
             // 
@@ -1558,12 +1554,11 @@
             // 
             this.baptism_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.baptism_panel.Controls.Add(this.baptism_details_panel);
-            this.baptism_panel.Location = new System.Drawing.Point(-1, 186);
+            this.baptism_panel.Location = new System.Drawing.Point(-1, 185);
             this.baptism_panel.Margin = new System.Windows.Forms.Padding(2);
             this.baptism_panel.Name = "baptism_panel";
-            this.baptism_panel.Size = new System.Drawing.Size(801, 361);
+            this.baptism_panel.Size = new System.Drawing.Size(801, 362);
             this.baptism_panel.TabIndex = 56;
-            this.baptism_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.baptism_panel_Paint);
             // 
             // baptism_details_panel
             // 
@@ -1576,10 +1571,10 @@
             this.baptism_details_panel.Controls.Add(this.panel1);
             this.baptism_details_panel.Controls.Add(this.flowLayoutPanel4);
             this.baptism_details_panel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.baptism_details_panel.Location = new System.Drawing.Point(0, -1);
+            this.baptism_details_panel.Location = new System.Drawing.Point(0, 0);
             this.baptism_details_panel.Margin = new System.Windows.Forms.Padding(2);
             this.baptism_details_panel.Name = "baptism_details_panel";
-            this.baptism_details_panel.Size = new System.Drawing.Size(801, 367);
+            this.baptism_details_panel.Size = new System.Drawing.Size(801, 366);
             this.baptism_details_panel.TabIndex = 56;
             // 
             // panel13
@@ -1590,39 +1585,6 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(622, 51);
             this.panel13.TabIndex = 82;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.genderFemale_radiobutton);
-            this.panel12.Controls.Add(this.genderMale_radiobutton);
-            this.panel12.Location = new System.Drawing.Point(69, 114);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(165, 31);
-            this.panel12.TabIndex = 81;
-            // 
-            // genderFemale_radiobutton
-            // 
-            this.genderFemale_radiobutton.AutoSize = true;
-            this.genderFemale_radiobutton.ForeColor = System.Drawing.Color.White;
-            this.genderFemale_radiobutton.Location = new System.Drawing.Point(84, 6);
-            this.genderFemale_radiobutton.Name = "genderFemale_radiobutton";
-            this.genderFemale_radiobutton.Size = new System.Drawing.Size(70, 23);
-            this.genderFemale_radiobutton.TabIndex = 0;
-            this.genderFemale_radiobutton.TabStop = true;
-            this.genderFemale_radiobutton.Text = "Female";
-            this.genderFemale_radiobutton.UseVisualStyleBackColor = true;
-            // 
-            // genderMale_radiobutton
-            // 
-            this.genderMale_radiobutton.AutoSize = true;
-            this.genderMale_radiobutton.ForeColor = System.Drawing.Color.White;
-            this.genderMale_radiobutton.Location = new System.Drawing.Point(4, 6);
-            this.genderMale_radiobutton.Name = "genderMale_radiobutton";
-            this.genderMale_radiobutton.Size = new System.Drawing.Size(57, 23);
-            this.genderMale_radiobutton.TabIndex = 0;
-            this.genderMale_radiobutton.TabStop = true;
-            this.genderMale_radiobutton.Text = "Male";
-            this.genderMale_radiobutton.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
@@ -1666,27 +1628,6 @@
             this.legitimate_radiobutton_baptism.TabStop = true;
             this.legitimate_radiobutton_baptism.Text = "Legitimate";
             this.legitimate_radiobutton_baptism.UseVisualStyleBackColor = true;
-            // 
-            // birthdate_dateTimePicker
-            // 
-            this.birthdate_dateTimePicker.CustomFormat = "________-________-________";
-            this.birthdate_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.birthdate_dateTimePicker.Location = new System.Drawing.Point(434, 33);
-            this.birthdate_dateTimePicker.Name = "birthdate_dateTimePicker";
-            this.birthdate_dateTimePicker.Size = new System.Drawing.Size(277, 25);
-            this.birthdate_dateTimePicker.TabIndex = 78;
-            this.birthdate_dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_profile_ValueChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(340, 37);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 21);
-            this.label10.TabIndex = 79;
-            this.label10.Text = "Birthdate";
             // 
             // label12
             // 
@@ -2010,7 +1951,6 @@
             this.minister_combobox_baptism.Name = "minister_combobox_baptism";
             this.minister_combobox_baptism.Size = new System.Drawing.Size(186, 23);
             this.minister_combobox_baptism.TabIndex = 73;
-            this.minister_combobox_baptism.SelectedIndexChanged += new System.EventHandler(this.minister_combobox_baptism_SelectedIndexChanged);
             // 
             // label31
             // 
@@ -2395,6 +2335,60 @@
             this.label9.Text = "_________________________________________________________________________________" +
     "___________________";
             // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.genderFemale_radiobutton);
+            this.panel12.Controls.Add(this.genderMale_radiobutton);
+            this.panel12.Location = new System.Drawing.Point(69, 114);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(165, 31);
+            this.panel12.TabIndex = 81;
+            // 
+            // genderFemale_radiobutton
+            // 
+            this.genderFemale_radiobutton.AutoSize = true;
+            this.genderFemale_radiobutton.ForeColor = System.Drawing.Color.White;
+            this.genderFemale_radiobutton.Location = new System.Drawing.Point(84, 6);
+            this.genderFemale_radiobutton.Name = "genderFemale_radiobutton";
+            this.genderFemale_radiobutton.Size = new System.Drawing.Size(70, 23);
+            this.genderFemale_radiobutton.TabIndex = 0;
+            this.genderFemale_radiobutton.TabStop = true;
+            this.genderFemale_radiobutton.Text = "Female";
+            this.genderFemale_radiobutton.UseVisualStyleBackColor = true;
+            // 
+            // genderMale_radiobutton
+            // 
+            this.genderMale_radiobutton.AutoSize = true;
+            this.genderMale_radiobutton.ForeColor = System.Drawing.Color.White;
+            this.genderMale_radiobutton.Location = new System.Drawing.Point(4, 6);
+            this.genderMale_radiobutton.Name = "genderMale_radiobutton";
+            this.genderMale_radiobutton.Size = new System.Drawing.Size(57, 23);
+            this.genderMale_radiobutton.TabIndex = 0;
+            this.genderMale_radiobutton.TabStop = true;
+            this.genderMale_radiobutton.Text = "Male";
+            this.genderMale_radiobutton.UseVisualStyleBackColor = true;
+            // 
+            // birthdate_dateTimePicker
+            // 
+            this.birthdate_dateTimePicker.CustomFormat = "________-________-________";
+            this.birthdate_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.birthdate_dateTimePicker.Location = new System.Drawing.Point(434, 33);
+            this.birthdate_dateTimePicker.Name = "birthdate_dateTimePicker";
+            this.birthdate_dateTimePicker.Size = new System.Drawing.Size(277, 25);
+            this.birthdate_dateTimePicker.TabIndex = 78;
+            this.birthdate_dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_profile_ValueChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(340, 37);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 21);
+            this.label10.TabIndex = 79;
+            this.label10.Text = "Birthdate";
+            // 
             // btn_Close
             // 
             this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -2442,7 +2436,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(801, 394);
             this.panel7.TabIndex = 56;
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // flowLayoutPanel12
             // 
@@ -2467,7 +2460,6 @@
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
             this.flowLayoutPanel7.Size = new System.Drawing.Size(622, 254);
             this.flowLayoutPanel7.TabIndex = 64;
-            this.flowLayoutPanel7.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel7_Paint);
             // 
             // panel17
             // 
@@ -2972,7 +2964,6 @@
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(321, 33);
             this.panel28.TabIndex = 66;
-            this.panel28.Paint += new System.Windows.Forms.PaintEventHandler(this.panel28_Paint);
             // 
             // mother_checkbox_self_marriage
             // 
@@ -3005,7 +2996,6 @@
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(322, 199);
             this.panel29.TabIndex = 57;
-            this.panel29.Paint += new System.Windows.Forms.PaintEventHandler(this.panel29_Paint);
             // 
             // suffix_textbox_mother_self_marriage
             // 
@@ -3035,7 +3025,6 @@
             this.residence_textbox_mother_self_marriage.Size = new System.Drawing.Size(196, 25);
             this.residence_textbox_mother_self_marriage.TabIndex = 47;
             this.residence_textbox_mother_self_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.residence_textbox_mother_self_marriage.TextChanged += new System.EventHandler(this.residence_textbox_mother_groom_marriage_TextChanged);
             // 
             // label49
             // 
@@ -3170,7 +3159,6 @@
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(177, 31);
             this.panel15.TabIndex = 80;
-            this.panel15.Paint += new System.Windows.Forms.PaintEventHandler(this.panel15_Paint);
             // 
             // widower_radiobutton_self_marriage
             // 
@@ -3204,7 +3192,6 @@
             this.label21.Size = new System.Drawing.Size(89, 21);
             this.label21.TabIndex = 79;
             this.label21.Text = "Civil Status";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // spouse_combobox_marriage
             // 
@@ -3327,7 +3314,6 @@
             this.label46.Size = new System.Drawing.Size(72, 19);
             this.label46.TabIndex = 27;
             this.label46.Text = "Residence";
-            this.label46.Click += new System.EventHandler(this.label46_Click);
             // 
             // lastname_textbox_father_self_marriage
             // 
@@ -3432,7 +3418,6 @@
             this.label54.Size = new System.Drawing.Size(147, 15);
             this.label54.TabIndex = 51;
             this.label54.Text = "____________________________";
-            this.label54.Click += new System.EventHandler(this.label54_Click);
             // 
             // flowLayoutPanel11
             // 
@@ -4078,7 +4063,6 @@
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(799, 32);
             this.flowLayoutPanel3.TabIndex = 56;
-            this.flowLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel3_Paint);
             // 
             // label73
             // 
@@ -4127,7 +4111,6 @@
             this.button3.TabIndex = 90;
             this.button3.Text = "Save";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // save_button_baptism
             // 
@@ -4143,7 +4126,6 @@
             this.save_button_baptism.TabIndex = 93;
             this.save_button_baptism.Text = "Save";
             this.save_button_baptism.UseVisualStyleBackColor = false;
-            this.save_button_baptism.Click += new System.EventHandler(this.save_button_baptism_Click_1);
             // 
             // button4
             // 
@@ -4203,7 +4185,6 @@
             this.save_button_marriage.TabIndex = 94;
             this.save_button_marriage.Text = "Save";
             this.save_button_marriage.UseVisualStyleBackColor = false;
-            this.save_button_marriage.Click += new System.EventHandler(this.save_button_marriage_Click_1);
             // 
             // panel6
             // 
@@ -4213,7 +4194,7 @@
             this.panel6.Controls.Add(this.save_button_marriage);
             this.panel6.Controls.Add(this.button3);
             this.panel6.Controls.Add(this.close_button_baptism);
-            this.panel6.Location = new System.Drawing.Point(12, 554);
+            this.panel6.Location = new System.Drawing.Point(16, 549);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(747, 55);
             this.panel6.TabIndex = 95;
@@ -4243,8 +4224,8 @@
             this.Controls.Add(this.label73);
             this.Controls.Add(this.label83);
             this.Controls.Add(this.label84);
-            this.Controls.Add(this.marriage_panel);
             this.Controls.Add(this.baptism_panel);
+            this.Controls.Add(this.marriage_panel);
             this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.balance_panel);
@@ -4290,8 +4271,6 @@
             this.baptism_details_panel.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -4314,6 +4293,8 @@
             this.panel10.PerformLayout();
             this.mother_panel_baptism.ResumeLayout(false);
             this.mother_panel_baptism.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.marriage_panel.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
