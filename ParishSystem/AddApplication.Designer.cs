@@ -41,16 +41,22 @@
             this.application_midName_textBox = new System.Windows.Forms.TextBox();
             this.application_lastName_textBox = new System.Windows.Forms.TextBox();
             this.application_suffix_textBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.hiddenTabControl1 = new ParishSystem.HiddenTabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.application_apply_button = new MetroFramework.Controls.MetroButton();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.applicationNotice_label = new System.Windows.Forms.Label();
             this.application_createNewProfile_button = new MetroFramework.Controls.MetroButton();
             this.application_cancel_button = new MetroFramework.Controls.MetroButton();
             this.application_yes_button = new MetroFramework.Controls.MetroButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.hiddenTabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -173,82 +179,9 @@
             this.application_suffix_textBox.Size = new System.Drawing.Size(39, 20);
             this.application_suffix_textBox.TabIndex = 4;
             // 
-            // application_apply_button
-            // 
-            this.application_apply_button.Location = new System.Drawing.Point(112, 324);
-            this.application_apply_button.Name = "application_apply_button";
-            this.application_apply_button.Size = new System.Drawing.Size(75, 23);
-            this.application_apply_button.Style = MetroFramework.MetroColorStyle.Orange;
-            this.application_apply_button.TabIndex = 9;
-            this.application_apply_button.Text = "Apply";
-            this.application_apply_button.UseSelectable = true;
-            this.application_apply_button.UseStyleColors = true;
-            this.application_apply_button.Click += new System.EventHandler(this.application_apply_button_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.applicationNotice_label);
-            this.panel1.Controls.Add(this.application_createNewProfile_button);
-            this.panel1.Controls.Add(this.application_cancel_button);
-            this.panel1.Controls.Add(this.application_yes_button);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(20, 270);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(292, 100);
-            this.panel1.TabIndex = 14;
-            this.panel1.Visible = false;
-            // 
-            // applicationNotice_label
-            // 
-            this.applicationNotice_label.AutoSize = true;
-            this.applicationNotice_label.Location = new System.Drawing.Point(6, 4);
-            this.applicationNotice_label.Name = "applicationNotice_label";
-            this.applicationNotice_label.Size = new System.Drawing.Size(415, 13);
-            this.applicationNotice_label.TabIndex = 1;
-            this.applicationNotice_label.Text = "A profile with the same name, gender, and birthdate already exists. Use existing " +
-    "profile?";
-            // 
-            // application_createNewProfile_button
-            // 
-            this.application_createNewProfile_button.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.application_createNewProfile_button.Location = new System.Drawing.Point(173, 54);
-            this.application_createNewProfile_button.Name = "application_createNewProfile_button";
-            this.application_createNewProfile_button.Size = new System.Drawing.Size(111, 23);
-            this.application_createNewProfile_button.Style = MetroFramework.MetroColorStyle.Orange;
-            this.application_createNewProfile_button.TabIndex = 0;
-            this.application_createNewProfile_button.Text = "Create New Profile";
-            this.application_createNewProfile_button.UseSelectable = true;
-            this.application_createNewProfile_button.UseStyleColors = true;
-            this.application_createNewProfile_button.Click += new System.EventHandler(this.application_createNewProfile_button_Click);
-            // 
-            // application_cancel_button
-            // 
-            this.application_cancel_button.Location = new System.Drawing.Point(11, 54);
-            this.application_cancel_button.Name = "application_cancel_button";
-            this.application_cancel_button.Size = new System.Drawing.Size(75, 23);
-            this.application_cancel_button.Style = MetroFramework.MetroColorStyle.Orange;
-            this.application_cancel_button.TabIndex = 0;
-            this.application_cancel_button.Text = "Cancel";
-            this.application_cancel_button.UseSelectable = true;
-            this.application_cancel_button.UseStyleColors = true;
-            this.application_cancel_button.Click += new System.EventHandler(this.application_cancel_button_Click);
-            // 
-            // application_yes_button
-            // 
-            this.application_yes_button.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.application_yes_button.Location = new System.Drawing.Point(92, 54);
-            this.application_yes_button.Name = "application_yes_button";
-            this.application_yes_button.Size = new System.Drawing.Size(75, 23);
-            this.application_yes_button.Style = MetroFramework.MetroColorStyle.Orange;
-            this.application_yes_button.TabIndex = 0;
-            this.application_yes_button.Text = "Yes";
-            this.application_yes_button.UseSelectable = true;
-            this.application_yes_button.UseStyleColors = true;
-            this.application_yes_button.Click += new System.EventHandler(this.application_yes_button_Click);
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(237, 230);
+            this.button1.Location = new System.Drawing.Point(207, 97);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 15;
@@ -270,16 +203,121 @@
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             // 
+            // hiddenTabControl1
+            // 
+            this.hiddenTabControl1.Controls.Add(this.tabPage1);
+            this.hiddenTabControl1.Controls.Add(this.tabPage2);
+            this.hiddenTabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.hiddenTabControl1.Location = new System.Drawing.Point(20, 208);
+            this.hiddenTabControl1.Name = "hiddenTabControl1";
+            this.hiddenTabControl1.SelectedIndex = 0;
+            this.hiddenTabControl1.Size = new System.Drawing.Size(292, 120);
+            this.hiddenTabControl1.TabIndex = 16;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.tabPage1.Controls.Add(this.application_apply_button);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(284, 94);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            // 
+            // application_apply_button
+            // 
+            this.application_apply_button.Location = new System.Drawing.Point(84, 62);
+            this.application_apply_button.Name = "application_apply_button";
+            this.application_apply_button.Size = new System.Drawing.Size(75, 23);
+            this.application_apply_button.Style = MetroFramework.MetroColorStyle.Orange;
+            this.application_apply_button.TabIndex = 10;
+            this.application_apply_button.Text = "Apply";
+            this.application_apply_button.UseSelectable = true;
+            this.application_apply_button.UseStyleColors = true;
+            this.application_apply_button.Click += new System.EventHandler(this.application_apply_button_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.tabPage2.Controls.Add(this.panel1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(284, 94);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.applicationNotice_label);
+            this.panel1.Controls.Add(this.application_createNewProfile_button);
+            this.panel1.Controls.Add(this.application_cancel_button);
+            this.panel1.Controls.Add(this.application_yes_button);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(278, 88);
+            this.panel1.TabIndex = 15;
+            this.panel1.Visible = false;
+            // 
+            // applicationNotice_label
+            // 
+            this.applicationNotice_label.AutoSize = true;
+            this.applicationNotice_label.Location = new System.Drawing.Point(3, 20);
+            this.applicationNotice_label.Name = "applicationNotice_label";
+            this.applicationNotice_label.Size = new System.Drawing.Size(415, 13);
+            this.applicationNotice_label.TabIndex = 1;
+            this.applicationNotice_label.Text = "A profile with the same name, gender, and birthdate already exists. Use existing " +
+    "profile?";
+            // 
+            // application_createNewProfile_button
+            // 
+            this.application_createNewProfile_button.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.application_createNewProfile_button.DialogResult = System.Windows.Forms.DialogResult.Yes;
+            this.application_createNewProfile_button.Location = new System.Drawing.Point(165, 62);
+            this.application_createNewProfile_button.Name = "application_createNewProfile_button";
+            this.application_createNewProfile_button.Size = new System.Drawing.Size(111, 23);
+            this.application_createNewProfile_button.Style = MetroFramework.MetroColorStyle.Orange;
+            this.application_createNewProfile_button.TabIndex = 0;
+            this.application_createNewProfile_button.Text = "Create New Profile";
+            this.application_createNewProfile_button.UseSelectable = true;
+            this.application_createNewProfile_button.UseStyleColors = true;
+            this.application_createNewProfile_button.Click += new System.EventHandler(this.application_createNewProfile_button_Click);
+            // 
+            // application_cancel_button
+            // 
+            this.application_cancel_button.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.application_cancel_button.Location = new System.Drawing.Point(3, 62);
+            this.application_cancel_button.Name = "application_cancel_button";
+            this.application_cancel_button.Size = new System.Drawing.Size(75, 23);
+            this.application_cancel_button.Style = MetroFramework.MetroColorStyle.Orange;
+            this.application_cancel_button.TabIndex = 0;
+            this.application_cancel_button.Text = "Cancel";
+            this.application_cancel_button.UseSelectable = true;
+            this.application_cancel_button.UseStyleColors = true;
+            // 
+            // application_yes_button
+            // 
+            this.application_yes_button.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.application_yes_button.DialogResult = System.Windows.Forms.DialogResult.Yes;
+            this.application_yes_button.Location = new System.Drawing.Point(84, 62);
+            this.application_yes_button.Name = "application_yes_button";
+            this.application_yes_button.Size = new System.Drawing.Size(75, 23);
+            this.application_yes_button.Style = MetroFramework.MetroColorStyle.Orange;
+            this.application_yes_button.TabIndex = 0;
+            this.application_yes_button.Text = "Yes";
+            this.application_yes_button.UseSelectable = true;
+            this.application_yes_button.UseStyleColors = true;
+            // 
             // AddApplication
             // 
-            this.AcceptButton = this.application_apply_button;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(332, 370);
+            this.ClientSize = new System.Drawing.Size(332, 328);
+            this.Controls.Add(this.hiddenTabControl1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.application_apply_button);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.application_lastName_textBox);
             this.Controls.Add(this.application_suffix_textBox);
@@ -300,9 +338,12 @@
             this.Load += new System.EventHandler(this.AddApplication_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddApplication_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddApplication_MouseMove);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.hiddenTabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,13 +363,16 @@
         private System.Windows.Forms.TextBox application_suffix_textBox;
         private System.Windows.Forms.TextBox application_midName_textBox;
         private System.Windows.Forms.TextBox application_firstName_textBox;
-        private MetroFramework.Controls.MetroButton application_apply_button;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private HiddenTabControl hiddenTabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private MetroFramework.Controls.MetroButton application_apply_button;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label applicationNotice_label;
         private MetroFramework.Controls.MetroButton application_createNewProfile_button;
-        private MetroFramework.Controls.MetroButton application_yes_button;
         private MetroFramework.Controls.MetroButton application_cancel_button;
-        private System.Windows.Forms.Button button1;
+        private MetroFramework.Controls.MetroButton application_yes_button;
     }
 }

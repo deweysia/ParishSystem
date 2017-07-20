@@ -276,7 +276,10 @@ namespace ParishSystem
                 marriageApplication_label.ForeColor = Color.Black;
 
                 //panel changes
-                sacramentApplication_panel.BringToFront();
+                // sacramentApplication_panel.BringToFront();
+                Console.WriteLine("BA)P");
+                applicationsHiddenTabControl.se
+                baptismApplicationTab.Focus();
 
             }
             else if (A.Equals(confirmationApplication_label))
@@ -290,7 +293,8 @@ namespace ParishSystem
                 marriageApplication_label.ForeColor = Color.Black;
 
                 //panel changes
-                sacramentApplication_panel.BringToFront();
+                //sacramentApplication_panel.BringToFront();
+                confirmationApplicationTab.Focus();
 
             }
             else if (A.Equals(marriageApplication_label))
@@ -304,7 +308,8 @@ namespace ParishSystem
                 marriageApplication_label.ForeColor = Color.DodgerBlue;
 
                 //panel changes
-                marriageApplication_panel.BringToFront();
+                //marriageApplication_panel.BringToFront();
+                marriageApplicationTab.Focus();
 
             }
         }
@@ -570,9 +575,10 @@ namespace ParishSystem
 
         }
 
-        private void baptismApplication_add_button_Click(object sender, EventArgs e)
+        private void sacramentApplication_add_button_Click(object sender, EventArgs e)
         {
             AddApplication aa = new AddApplication(SacramentType.Baptism);
+            DialogResult dr = aa.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)

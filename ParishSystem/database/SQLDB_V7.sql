@@ -429,8 +429,8 @@ CREATE TABLE IF NOT EXISTS `sad2`.`sponsor` (
   `residence` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`sponsorID`),
   CONSTRAINT `sponsor_application`
-    FOREIGN KEY ()
-    REFERENCES `sad2`.`application` ()
+    FOREIGN KEY (`applicationID`)
+    REFERENCES `sad2`.`application` (`applicationID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
