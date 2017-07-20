@@ -16,5 +16,10 @@ namespace ParishSystem
         {
             InitializeComponent();
         }
+
+        private void application_apply_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

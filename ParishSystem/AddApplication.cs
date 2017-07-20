@@ -179,13 +179,13 @@ namespace ParishSystem
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
-    public enum SacramentType
-    {
-        Baptism,
-        Confirmation,
-        Marriage
-    }
+    
 
 }

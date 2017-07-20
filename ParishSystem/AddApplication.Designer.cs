@@ -198,6 +198,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
@@ -227,7 +228,7 @@
             // 
             // application_apply_button
             // 
-            this.application_apply_button.Location = new System.Drawing.Point(84, 62);
+            this.application_apply_button.Location = new System.Drawing.Point(103, 65);
             this.application_apply_button.Name = "application_apply_button";
             this.application_apply_button.Size = new System.Drawing.Size(75, 23);
             this.application_apply_button.Style = MetroFramework.MetroColorStyle.Orange;

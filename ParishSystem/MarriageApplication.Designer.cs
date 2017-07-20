@@ -49,7 +49,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.hiddenTabControl1 = new ParishSystem.HiddenTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.applicationNotice_label = new System.Windows.Forms.Label();
@@ -65,7 +64,7 @@
             // 
             // application_apply_button
             // 
-            this.application_apply_button.Location = new System.Drawing.Point(228, 165);
+            this.application_apply_button.Location = new System.Drawing.Point(101, 63);
             this.application_apply_button.Name = "application_apply_button";
             this.application_apply_button.Size = new System.Drawing.Size(75, 23);
             this.application_apply_button.Style = MetroFramework.MetroColorStyle.Orange;
@@ -73,6 +72,7 @@
             this.application_apply_button.Text = "Apply";
             this.application_apply_button.UseSelectable = true;
             this.application_apply_button.UseStyleColors = true;
+            this.application_apply_button.Click += new System.EventHandler(this.application_apply_button_Click);
             // 
             // pictureBox1
             // 
@@ -253,24 +253,13 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.tabPage1.Controls.Add(this.metroButton1);
+            this.tabPage1.Controls.Add(this.application_apply_button);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(319, 94);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(101, 62);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroButton1.TabIndex = 10;
-            this.metroButton1.Text = "Apply";
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.UseStyleColors = true;
             // 
             // tabPage2
             // 
@@ -353,7 +342,6 @@
             this.Controls.Add(this.hiddenTabControl1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.application_apply_button);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.application_lastName_textBox);
@@ -405,7 +393,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private HiddenTabControl hiddenTabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private MetroFramework.Controls.MetroButton metroButton1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label applicationNotice_label;

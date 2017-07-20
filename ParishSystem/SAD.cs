@@ -278,8 +278,8 @@ namespace ParishSystem
                 //panel changes
                 // sacramentApplication_panel.BringToFront();
                 Console.WriteLine("BA)P");
-                applicationsHiddenTabControl.se
-                baptismApplicationTab.Focus();
+                applicationsHiddenTabControl.SelectedIndex = 0;
+                
 
             }
             else if (A.Equals(confirmationApplication_label))
@@ -294,7 +294,8 @@ namespace ParishSystem
 
                 //panel changes
                 //sacramentApplication_panel.BringToFront();
-                confirmationApplicationTab.Focus();
+                applicationsHiddenTabControl.SelectedIndex = 1;
+                
 
             }
             else if (A.Equals(marriageApplication_label))
@@ -309,7 +310,8 @@ namespace ParishSystem
 
                 //panel changes
                 //marriageApplication_panel.BringToFront();
-                marriageApplicationTab.Focus();
+                applicationsHiddenTabControl.SelectedIndex = 2;
+                
 
             }
         }
@@ -581,19 +583,21 @@ namespace ParishSystem
             DialogResult dr = aa.ShowDialog();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            AddApplication aa = new AddApplication(SacramentType.Confirmation);
-            DialogResult dr = aa.ShowDialog();
-            MessageBox.Show("Bitch done");
-
-
-        }
-
         private void metroButton1_Click(object sender, EventArgs e)
         {
             Form A = new Person(int.Parse(sacramentApplication_dgv.SelectedRows[0].Cells["profileID"].Value.ToString()),dh);
             A.ShowDialog();
+        }
+
+        private void label87_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void marriageApplication_add_button_Click(object sender, EventArgs e)
+        {
+            MarriageApplication ma = new MarriageApplication();
+            DialogResult dr = ma.ShowDialog();
         }
     }
 }
