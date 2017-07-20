@@ -325,8 +325,6 @@
             this.close_button_baptism = new System.Windows.Forms.Button();
             this.save_button_marriage = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.applicationID_label_baptism = new System.Windows.Forms.Label();
-            this.applicationID_label_confirmation = new System.Windows.Forms.Label();
             this.confirmation_panel.SuspendLayout();
             this.confirmation_details_panel.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
@@ -586,7 +584,6 @@
             // 
             this.confirmation_details_panel.AutoScroll = true;
             this.confirmation_details_panel.BackColor = System.Drawing.Color.White;
-            this.confirmation_details_panel.Controls.Add(this.applicationID_label_confirmation);
             this.confirmation_details_panel.Controls.Add(this.remarks_textbox_confirmation);
             this.confirmation_details_panel.Controls.Add(this.label26);
             this.confirmation_details_panel.Controls.Add(this.flowLayoutPanel5);
@@ -1557,17 +1554,16 @@
             // 
             this.baptism_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.baptism_panel.Controls.Add(this.baptism_details_panel);
-            this.baptism_panel.Location = new System.Drawing.Point(-1, 186);
+            this.baptism_panel.Location = new System.Drawing.Point(-1, 185);
             this.baptism_panel.Margin = new System.Windows.Forms.Padding(2);
             this.baptism_panel.Name = "baptism_panel";
-            this.baptism_panel.Size = new System.Drawing.Size(801, 361);
+            this.baptism_panel.Size = new System.Drawing.Size(801, 362);
             this.baptism_panel.TabIndex = 56;
             // 
             // baptism_details_panel
             // 
             this.baptism_details_panel.AutoScroll = true;
             this.baptism_details_panel.BackColor = System.Drawing.Color.White;
-            this.baptism_details_panel.Controls.Add(this.applicationID_label_baptism);
             this.baptism_details_panel.Controls.Add(this.panel13);
             this.baptism_details_panel.Controls.Add(this.remarks_textbox_baptism);
             this.baptism_details_panel.Controls.Add(this.label30);
@@ -1575,10 +1571,10 @@
             this.baptism_details_panel.Controls.Add(this.panel1);
             this.baptism_details_panel.Controls.Add(this.flowLayoutPanel4);
             this.baptism_details_panel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.baptism_details_panel.Location = new System.Drawing.Point(0, -1);
+            this.baptism_details_panel.Location = new System.Drawing.Point(0, 0);
             this.baptism_details_panel.Margin = new System.Windows.Forms.Padding(2);
             this.baptism_details_panel.Name = "baptism_details_panel";
-            this.baptism_details_panel.Size = new System.Drawing.Size(801, 367);
+            this.baptism_details_panel.Size = new System.Drawing.Size(801, 366);
             this.baptism_details_panel.TabIndex = 56;
             // 
             // panel13
@@ -4130,7 +4126,6 @@
             this.save_button_baptism.TabIndex = 93;
             this.save_button_baptism.Text = "Save";
             this.save_button_baptism.UseVisualStyleBackColor = false;
-            this.save_button_baptism.Click += new System.EventHandler(this.save_button_baptism_Click);
             // 
             // button4
             // 
@@ -4175,7 +4170,6 @@
             this.close_button_baptism.TabIndex = 92;
             this.close_button_baptism.Text = "Cancel";
             this.close_button_baptism.UseVisualStyleBackColor = false;
-            this.close_button_baptism.Click += new System.EventHandler(this.close_button_baptism_Click);
             // 
             // save_button_marriage
             // 
@@ -4200,28 +4194,10 @@
             this.panel6.Controls.Add(this.save_button_marriage);
             this.panel6.Controls.Add(this.button3);
             this.panel6.Controls.Add(this.close_button_baptism);
-            this.panel6.Location = new System.Drawing.Point(12, 554);
+            this.panel6.Location = new System.Drawing.Point(16, 549);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(747, 55);
             this.panel6.TabIndex = 95;
-            // 
-            // applicationID_label_baptism
-            // 
-            this.applicationID_label_baptism.AutoSize = true;
-            this.applicationID_label_baptism.Location = new System.Drawing.Point(3, 4);
-            this.applicationID_label_baptism.Name = "applicationID_label_baptism";
-            this.applicationID_label_baptism.Size = new System.Drawing.Size(36, 15);
-            this.applicationID_label_baptism.TabIndex = 95;
-            this.applicationID_label_baptism.Text = "NULL";
-            // 
-            // applicationID_label_confirmation
-            // 
-            this.applicationID_label_confirmation.AutoSize = true;
-            this.applicationID_label_confirmation.Location = new System.Drawing.Point(3, 4);
-            this.applicationID_label_confirmation.Name = "applicationID_label_confirmation";
-            this.applicationID_label_confirmation.Size = new System.Drawing.Size(36, 15);
-            this.applicationID_label_confirmation.TabIndex = 96;
-            this.applicationID_label_confirmation.Text = "NULL";
             // 
             // Person
             // 
@@ -4248,9 +4224,9 @@
             this.Controls.Add(this.label73);
             this.Controls.Add(this.label83);
             this.Controls.Add(this.label84);
-            this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.marriage_panel);
+            this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.balance_panel);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4662,7 +4638,5 @@
         private System.Windows.Forms.Button close_button_baptism;
         private System.Windows.Forms.Button save_button_marriage;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label applicationID_label_confirmation;
-        private System.Windows.Forms.Label applicationID_label_baptism;
     }
 }
