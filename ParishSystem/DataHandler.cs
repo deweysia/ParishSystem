@@ -899,64 +899,6 @@ namespace ParishSystem
 
         #endregion
 
-        /*
-                                         =============================================================
-                                                  ================= Invoice =================
-                                         =============================================================
-        */
-
-
-        #region
-
-        public bool addInvoice(int incomeID, int ORnum, double paymentAmount, DateTime invoiceDateTime)
-        {
-            string q = "INSERT INTO Invoice(incomeID, ORnum, paymentAmount, invoiceDateTime) VALUES ('" + incomeID + "', '" + ORnum + "', '" + paymentAmount + "', '" + invoiceDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff") + "')";
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public bool editInvoice(int invoiceID, int ORnum, double paymentAmount)
-        {
-            string q = "UPDATE Invoice SET ORnum = '" + ORnum + "', paymentAmount = '" + paymentAmount + "' WHERE invoiceID = '" + invoiceID + "'";
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public bool deleteInvoice(int invoiceID)
-        {
-            string q = "DELETE FROM Invoice WHERE invoiceID = " + invoiceID;
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public DataTable getInvoice(int invoiceID)
-        {
-            string q = "SELECT * FROM Invoice WHERE invoiceID = " + invoiceID;
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
-        public DataTable getInvoicesOfIncome(int incomeID)
-        {
-            string q = "SELECT invoiceID, ORnum, paymentAmount, invoiceDateTime FROM Invoice WHERE incomeID = " + incomeID;
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
-
-        #endregion
-
-
 
         /*
                                         =============================================================
@@ -1208,28 +1150,6 @@ namespace ParishSystem
             return success;
         }
 
-        public DataTable getRequirement(char sacramentType)
-        {
-            string q = "SELECT requirementName FROM Requirement WHERE sacramentType = '" + sacramentType + "'";
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
-        public bool isApprovedApplication(int applicationID)
-        {
-            return getApplicationStatus(applicationID).ToUpper() == "APPROVED";
-
-        }
-
-        public bool isActiveApplication(int applicationID)
-        {
-            string status = getApplicationStatus(applicationID).ToUpper();
-
-            return status == "ACTIVE" || status == "PENDING";
-        }
-
         public string getApplicationStatus(int applicationID)
         {
             string q = "SELECT status FROM Application WHERE applicationID = '" + applicationID + "'";
@@ -1238,6 +1158,34 @@ namespace ParishSystem
 
             return dt.Rows[0][0].ToString();
         }
+
+        public DataTable getBaptismApplications(ApplicationStatus s = ApplicationStatus.Pending)
+        {
+            string q = "SELECT lastName, firstName, midName, suffix, gender, birthdate FROM GeneralProfile"
+                + " JOIN Applicant ON  GeneralProfile.profileID = Applicant.profileID "
+                + " JOIN Application ON Application.applicationID = Applicant.applicationID"
+                + " WHERE Application.sacramentType = "+ (int)SacramentType.Baptism
+                + " AND Application.status = " + (int)s;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getConfirmationApplications(ApplicationStatus s = ApplicationStatus.Pending)
+        {
+            string q = "SELECT lastName, firstName, midName, suffix, gender, birthdate FROM GeneralProfile"
+                + " JOIN Applicant ON  GeneralProfile.profileID = Applicant.profileID "
+                + " JOIN Application ON Application.applicationID = Applicant.applicationID"
+                + " WHERE Application.sacramentType = " + SacramentType.Confirmation
+                + " AND Application.status = " + s;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+
 
 
         /*
@@ -1349,7 +1297,6 @@ namespace ParishSystem
             bool success = runNonQuery(q);
 
             return success;
-
         }
 
         public bool editBaptismReference(int baptismID, string registryNumber, string recordNumber, string pageNumber)

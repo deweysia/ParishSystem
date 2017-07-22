@@ -280,6 +280,7 @@
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\ParishSystem.csproj.GenerateResource.Cache" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DataHandler.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

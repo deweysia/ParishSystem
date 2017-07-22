@@ -19,7 +19,7 @@ namespace ParishSystem
         public SAD()
         {
             InitializeComponent();
-            BaptismApplication_birthDate.MaxDate = DateTime.Now;
+            birthDate_baptismApplication_dtp.MaxDate = DateTime.Now;
             baptismApplication_add_button.Tag = SacramentType.Baptism;
             confirmationApplication_add_button.Tag = SacramentType.Confirmation;
             marriageApplication_add_button.Tag = SacramentType.Marriage;
@@ -276,6 +276,8 @@ namespace ParishSystem
                 // sacramentApplication_panel.BringToFront();
                 Console.WriteLine("BA)P");
                 applicationsHiddenTabControl.SelectedIndex = 0;
+
+                baptismApplications_dgv.DataSource = dh.getBaptismApplications();
                 
 
             }
@@ -470,7 +472,7 @@ namespace ParishSystem
         }
         private void refreshApplicationProfile()
         {
-            sacramentApplication_dgv.DataSource = dh.getApplications();
+            baptismApplications_dgv.DataSource = dh.getApplications();
         }
 
         private void firstname_textbox_Click(object sender, EventArgs e)
@@ -583,15 +585,15 @@ namespace ParishSystem
             if(dr == DialogResult.OK)
             {
                 if (type == SacramentType.Baptism)
-                    sacramentApplication_dgv.DataSource = dh.getBaptisms();
+                    baptismApplications_dgv.DataSource = dh.getBaptisms();
                 else if (type == SacramentType.Confirmation)
-                    sacramentApplication_dgv.DataSource = dh.getConfirmations();
+                    baptismApplications_dgv.DataSource = dh.getConfirmations();
             }
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            Form A = new Person(int.Parse(sacramentApplication_dgv.SelectedRows[0].Cells["profileID"].Value.ToString()),dh);
+            Form A = new Person(int.Parse(baptismApplications_dgv.SelectedRows[0].Cells["profileID"].Value.ToString()),dh);
             A.ShowDialog();
         }
 

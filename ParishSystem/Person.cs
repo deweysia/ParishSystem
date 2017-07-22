@@ -88,9 +88,9 @@ namespace ParishSystem
             suffix_textbox.Text = DT.Rows[0]["suffix"].ToString();
             try
             {
-                if (int.Parse(DT.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Single)
+                if (int.Parse(DT.Rows[0]["civilStatus"].ToString()) == (int)CivilStatus.Single)
                     single_radiobutton_self_marriage.Checked = true;
-                else if (int.Parse(DT.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Widowed)
+                else if (int.Parse(DT.Rows[0]["civilStatus"].ToString()) == (int)CivilStatus.Widowed)
                     widow_radiobutton_self_marriage.Checked = true;
             }
             catch
@@ -108,9 +108,9 @@ namespace ParishSystem
             address_textbox.Text = DT.Rows[0]["address"].ToString();
             try
             {
-                if (int.Parse(DT.Rows[0]["gender"].ToString()) == (int)Enums.Gender.Male)
+                if (int.Parse(DT.Rows[0]["gender"].ToString()) == (int)Gender.Male)
                 { genderMale_radiobutton.Checked = true; }
-                else if (int.Parse(DT.Rows[0]["gender"].ToString()) == (int)Enums.Gender.Female)
+                else if (int.Parse(DT.Rows[0]["gender"].ToString()) == (int)Gender.Female)
                 { genderFemale_radiobutton.Checked = true; }
                 else
                 {
@@ -230,11 +230,11 @@ namespace ParishSystem
         {
             //profile
             DataTable dt = dh.getBaptismOf(ProfileID);
-            if (int.Parse(dt.Rows[0]["legitimacy"].ToString()) == (int)Enums.Legitimacy.Legal)
+            if (int.Parse(dt.Rows[0]["legitimacy"].ToString()) == (int)Legitimacy.Legal)
                 { legitimate_radiobutton_baptism.Checked = true; }
-                else if (int.Parse(dt.Rows[0]["legitimacy"].ToString()) == (int)Enums.Legitimacy.Civil)
+                else if (int.Parse(dt.Rows[0]["legitimacy"].ToString()) == (int)Legitimacy.Civil)
                 { civil_radiobutton_baptism.Checked = true; }
-                else if (int.Parse(dt.Rows[0]["legitimacy"].ToString()) == (int)Enums.Legitimacy.Natural)
+                else if (int.Parse(dt.Rows[0]["legitimacy"].ToString()) == (int)Legitimacy.Natural)
                 { natural_radiobutton_baptism.Checked = true; }
                 else
                 {
@@ -641,9 +641,9 @@ namespace ParishSystem
                 mi_textbox_spouse_marriage.Text = dt.Rows[0]["midname"].ToString();
                 lastname_textbox_spouse_marriage.Text = dt.Rows[0]["lastname"].ToString();
                 suffix_textbox_spouse_marriage.Text = dt.Rows[0]["suffix"].ToString();
-                if (int.Parse(dt.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Single)
+                if (int.Parse(dt.Rows[0]["civilStatus"].ToString()) == (int)CivilStatus.Single)
                     single_radiobutton_spouse_marriage.Checked = true;
-                else if (int.Parse(dt.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Widowed)
+                else if (int.Parse(dt.Rows[0]["civilStatus"].ToString()) == (int)CivilStatus.Widowed)
                     widowed_radiobutton_spouse_marriage.Checked = true;
                 try
                 {
