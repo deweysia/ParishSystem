@@ -20,9 +20,6 @@ namespace ParishSystem
         {
             InitializeComponent();
             BaptismApplication_birthDate.MaxDate = DateTime.Now;
-            baptismApplication_add_button.Tag = SacramentType.Baptism;
-            confirmationApplication_add_button.Tag = SacramentType.Confirmation;
-            marriageApplication_add_button.Tag = SacramentType.Marriage;
 
 
         }
@@ -136,15 +133,29 @@ namespace ParishSystem
 
 
         #region Profiles
+
+        private void resetProfilesVariables()
+        {//reset variables used by profiles tab
+            lastGeneralProfile = 0;
+        }
+
+        int lastGeneralProfile = 0;
+
         private void refreshGeneralProfileTable()
         {//refresh general profile table
             DataTable dt = dh.getGeneralProfiles();
             generalprofile_datagridview.DataSource = dt;
-            foreach(DataGridViewColumn dc in generalprofile_datagridview.Columns)
-            {
-                dc.Visible = false;
-            }
-            generalprofile_datagridview.Columns["name"].Visible = true;
+            generalprofile_datagridview.Columns["profileID"].Visible = false;
+            generalprofile_datagridview.Columns["firstName"].Visible = false;
+            generalprofile_datagridview.Columns["midName"].Visible = false;
+            generalprofile_datagridview.Columns["lastName"].Visible = false;
+            generalprofile_datagridview.Columns["suffix"].Visible = false;
+            generalprofile_datagridview.Columns["gender"].Visible = false;
+            generalprofile_datagridview.Columns["birthdate"].Visible = false;
+            generalprofile_datagridview.Columns["contactNumber"].Visible = false;
+            generalprofile_datagridview.Columns["address"].Visible = false;
+            generalprofile_datagridview.Columns["birthplace"].Visible = false;
+            generalprofile_datagridview.Columns["bloodtype"].Visible = false;
             generalprofile_datagridview.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
@@ -152,6 +163,7 @@ namespace ParishSystem
         {//data grid cell click
             openProfile_button.Enabled = true;
             deleteProfile_button.Enabled = true;
+            lastGeneralProfile = int.Parse(generalprofile_datagridview.CurrentRow.Cells["profileID"].Value.ToString());
             //label changes
             firstname_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["firstname"].Value.ToString();
             middlename_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["midname"].Value.ToString();
@@ -162,6 +174,11 @@ namespace ParishSystem
                 gender_label_profiles.Text = generalprofile_datagridview.CurrentRow.Cells["gender"].Value.ToString().ToUpper();
             else
                 gender_label_profiles.Text = "";
+
+            Console.WriteLine(DateTime.MinValue.ToString());
+            Console.WriteLine(generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString());
+            Console.WriteLine(DateTime.MinValue.ToString().Equals(generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString()));
+
             if (!generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString().Equals(DateTime.MinValue.ToString()))
                 birthday_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString();
             else
@@ -171,6 +188,7 @@ namespace ParishSystem
             address_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["address"].Value.ToString();
             birthplace_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["birthplace"].Value.ToString();
             bloodtype_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["bloodtype"].Value.ToString();
+            Console.WriteLine(lastGeneralProfile);
         }
 
         private void addProfile_button_Click(object sender, EventArgs e)
@@ -196,14 +214,18 @@ namespace ParishSystem
         private void openProfile_button_Click(object sender, EventArgs e)
         {//open person complete profile
 
-            Form person = new Person(int.Parse(generalprofile_datagridview.SelectedRows[0].Cells[0].Value.ToString()), dh,(int)Enums.Mode.GeneralProfile);
+            Form person = new Person(lastGeneralProfile, dh);
             person.ShowDialog();
+
+
+
         }
 
         private void deleteProfile_button_Click(object sender, EventArgs e)
         {
-            dh.deleteGeneralProfile(int.Parse(generalprofile_datagridview.SelectedRows[0].Cells[0].Value.ToString()));
+            dh.deleteGeneralProfile(lastGeneralProfile);
             refreshGeneralProfileTable();
+            lastGeneralProfile = 0;
             deleteProfile_button.Enabled = false;
             openProfile_button.Enabled = false;
         }
@@ -215,7 +237,9 @@ namespace ParishSystem
             middlename_textbox.Text = "middlename";
             firstname_textbox.Text = "firstname";
             suffix_textbox.Text = "suffix";
+            lastGeneralProfile = 0;
         }
+
         private void clear_profile_button_Click(object sender, EventArgs e)
         {
             AddPNL.Visible = false;
@@ -240,6 +264,7 @@ namespace ParishSystem
         //----------------------APPLICATION------------------------//
         private void applicationMenu_labelClick(object sender, EventArgs e)
         {
+            
             Label A = sender as Label;
             if (A.Equals(baptismApplication_label))
             {
@@ -252,11 +277,8 @@ namespace ParishSystem
                 marriageApplication_label.ForeColor = Color.Black;
 
                 //panel changes
-                // sacramentApplication_panel.BringToFront();
-                Console.WriteLine("BA)P");
-                applicationsHiddenTabControl.SelectedIndex = 0;
-                
-
+                baptismApplication_panel.BringToFront();
+                baptismApplication_add_button.Tag = SacramentType.Baptism;
             }
             else if (A.Equals(confirmationApplication_label))
             {
@@ -269,9 +291,8 @@ namespace ParishSystem
                 marriageApplication_label.ForeColor = Color.Black;
 
                 //panel changes
-                //sacramentApplication_panel.BringToFront();
-                applicationsHiddenTabControl.SelectedIndex = 1;
-                
+                baptismApplication_panel.BringToFront();
+                baptismApplication_add_button.Tag = SacramentType.Confirmation;
 
             }
             else if (A.Equals(marriageApplication_label))
@@ -285,9 +306,7 @@ namespace ParishSystem
                 marriageApplication_label.ForeColor = Color.DodgerBlue;
 
                 //panel changes
-                //marriageApplication_panel.BringToFront();
-                applicationsHiddenTabControl.SelectedIndex = 2;
-                
+                marriageApplication_panel.BringToFront();
 
             }
         }
@@ -441,15 +460,8 @@ namespace ParishSystem
             else if (A.Equals(bloodletting_button_menu)) { bloodletting_panel.BringToFront(); }
             else if (A.Equals(CDB_button_menu)) { CDB_panel.BringToFront(); }
             else if (A.Equals(CRB_button_menu)) { CRB_panel.BringToFront(); }
-            else if (A.Equals(application_button_menu)) {
-                application_panel.BringToFront();
-                refreshApplicationProfile();
-            }
+            else if (A.Equals(application_button_menu)) { application_panel.BringToFront(); }
             else if (A.Equals(sacrament_button_menu)) { sacrament_panel.BringToFront(); }
-        }
-        private void refreshApplicationProfile()
-        {
-            sacramentApplication_dgv.DataSource = dh.getApplications();
         }
 
         private void firstname_textbox_Click(object sender, EventArgs e)
@@ -466,7 +478,7 @@ namespace ParishSystem
 
         }
 
-       
+
 
 
 
@@ -553,38 +565,18 @@ namespace ParishSystem
 
         }
 
-        private void sacramentApplication_add_button_Click(object sender, EventArgs e)
+        private void baptismApplication_add_button_Click(object sender, EventArgs e)
         {
-            SacramentType type = (SacramentType)((Button)sender).Tag;
-            AddApplication aa = new AddApplication(type);
+            AddApplication aa = new AddApplication(SacramentType.Baptism);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AddApplication aa = new AddApplication(SacramentType.Confirmation);
             DialogResult dr = aa.ShowDialog();
+            MessageBox.Show("Bitch done");
 
-            if(dr == DialogResult.OK)
-            {
-                if (type == SacramentType.Baptism)
-                    sacramentApplication_dgv.DataSource = dh.getBaptisms();
-                else if (type == SacramentType.Confirmation)
-                    sacramentApplication_dgv.DataSource = dh.getConfirmations();
-            }
-        }
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-           
-            Form A = new Person(int.Parse(sacramentApplication_dgv.SelectedRows[0].Cells["profileID"].Value.ToString()),dh,(int)Enums.Mode.Applications);
-            A.ShowDialog();
-        }
-
-        private void label87_Click(object sender, EventArgs e)
-        {
 
         }
-
-        private void marriageApplication_add_button_Click(object sender, EventArgs e)
-        {
-            MarriageApplication ma = new MarriageApplication();
-            DialogResult dr = ma.ShowDialog();
-        }
-        
     }
 }
