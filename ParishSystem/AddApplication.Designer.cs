@@ -52,6 +52,8 @@
             this.application_createNewProfile_button = new MetroFramework.Controls.MetroButton();
             this.application_cancel_button = new MetroFramework.Controls.MetroButton();
             this.application_yes_button = new MetroFramework.Controls.MetroButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.application_price_textBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.hiddenTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -209,7 +211,7 @@
             this.hiddenTabControl1.Controls.Add(this.tabPage1);
             this.hiddenTabControl1.Controls.Add(this.tabPage2);
             this.hiddenTabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.hiddenTabControl1.Location = new System.Drawing.Point(20, 208);
+            this.hiddenTabControl1.Location = new System.Drawing.Point(20, 219);
             this.hiddenTabControl1.Name = "hiddenTabControl1";
             this.hiddenTabControl1.SelectedIndex = 0;
             this.hiddenTabControl1.Size = new System.Drawing.Size(292, 120);
@@ -311,12 +313,30 @@
             this.application_yes_button.UseSelectable = true;
             this.application_yes_button.UseStyleColors = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(23, 201);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 15);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Price";
+            // 
+            // application_price_textBox
+            // 
+            this.application_price_textBox.Location = new System.Drawing.Point(26, 219);
+            this.application_price_textBox.Name = "application_price_textBox";
+            this.application_price_textBox.Size = new System.Drawing.Size(100, 20);
+            this.application_price_textBox.TabIndex = 17;
+            // 
             // AddApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(332, 328);
+            this.ClientSize = new System.Drawing.Size(332, 339);
+            this.Controls.Add(this.application_price_textBox);
             this.Controls.Add(this.hiddenTabControl1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
@@ -328,6 +348,7 @@
             this.Controls.Add(this.application_male_radio);
             this.Controls.Add(this.application_birthdate_dtp);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -375,5 +396,7 @@
         private MetroFramework.Controls.MetroButton application_createNewProfile_button;
         private MetroFramework.Controls.MetroButton application_cancel_button;
         private MetroFramework.Controls.MetroButton application_yes_button;
+        private System.Windows.Forms.TextBox application_price_textBox;
+        private System.Windows.Forms.Label label5;
     }
 }

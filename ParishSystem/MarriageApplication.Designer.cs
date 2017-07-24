@@ -55,6 +55,8 @@
             this.application_createNewProfile_button = new MetroFramework.Controls.MetroButton();
             this.application_cancel_button = new MetroFramework.Controls.MetroButton();
             this.application_yes_button = new MetroFramework.Controls.MetroButton();
+            this.application_price_textBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.hiddenTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -170,7 +172,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(126, 198);
+            this.label5.Location = new System.Drawing.Point(126, 182);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(31, 13);
             this.label5.TabIndex = 30;
@@ -180,7 +182,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(22, 263);
+            this.label6.Location = new System.Drawing.Point(22, 237);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 15);
             this.label6.TabIndex = 18;
@@ -190,7 +192,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(22, 222);
+            this.label7.Location = new System.Drawing.Point(22, 196);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 15);
             this.label7.TabIndex = 21;
@@ -199,7 +201,7 @@
             // metroDateTime1
             // 
             this.metroDateTime1.FontSize = MetroFramework.MetroDateTimeSize.Small;
-            this.metroDateTime1.Location = new System.Drawing.Point(25, 281);
+            this.metroDateTime1.Location = new System.Drawing.Point(25, 255);
             this.metroDateTime1.MaxDate = new System.DateTime(2017, 7, 16, 0, 0, 0, 0);
             this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 25);
             this.metroDateTime1.Name = "metroDateTime1";
@@ -209,7 +211,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(25, 240);
+            this.textBox1.Location = new System.Drawing.Point(25, 214);
             this.textBox1.MaxLength = 50;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(95, 20);
@@ -217,7 +219,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(126, 240);
+            this.textBox2.Location = new System.Drawing.Point(126, 214);
             this.textBox2.MaxLength = 1;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(31, 20);
@@ -225,7 +227,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(264, 240);
+            this.textBox3.Location = new System.Drawing.Point(264, 214);
             this.textBox3.MaxLength = 5;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(39, 20);
@@ -233,7 +235,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(163, 240);
+            this.textBox4.Location = new System.Drawing.Point(163, 214);
             this.textBox4.MaxLength = 50;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(95, 20);
@@ -333,12 +335,31 @@
             this.application_yes_button.UseSelectable = true;
             this.application_yes_button.UseStyleColors = true;
             // 
+            // application_price_textBox
+            // 
+            this.application_price_textBox.Location = new System.Drawing.Point(25, 313);
+            this.application_price_textBox.Name = "application_price_textBox";
+            this.application_price_textBox.Size = new System.Drawing.Size(100, 20);
+            this.application_price_textBox.TabIndex = 33;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(22, 295);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 15);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "Price";
+            // 
             // MarriageApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(327, 437);
+            this.Controls.Add(this.application_price_textBox);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.hiddenTabControl1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
@@ -399,5 +420,7 @@
         private MetroFramework.Controls.MetroButton application_createNewProfile_button;
         private MetroFramework.Controls.MetroButton application_cancel_button;
         private MetroFramework.Controls.MetroButton application_yes_button;
+        private System.Windows.Forms.TextBox application_price_textBox;
+        private System.Windows.Forms.Label label8;
     }
 }
