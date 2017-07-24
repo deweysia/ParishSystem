@@ -2088,6 +2088,7 @@
             // 
             // suffix_textbox_father_baptism
             // 
+            this.suffix_textbox_father_baptism.BackColor = System.Drawing.Color.White;
             this.suffix_textbox_father_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.suffix_textbox_father_baptism.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.suffix_textbox_father_baptism.ForeColor = System.Drawing.Color.Gray;
@@ -2125,6 +2126,7 @@
             // 
             // lastname_textbox_father_baptism
             // 
+            this.lastname_textbox_father_baptism.BackColor = System.Drawing.Color.White;
             this.lastname_textbox_father_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastname_textbox_father_baptism.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastname_textbox_father_baptism.ForeColor = System.Drawing.Color.Gray;
@@ -2151,6 +2153,7 @@
             // 
             // mi_textbox_father_baptism
             // 
+            this.mi_textbox_father_baptism.BackColor = System.Drawing.Color.White;
             this.mi_textbox_father_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mi_textbox_father_baptism.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mi_textbox_father_baptism.ForeColor = System.Drawing.Color.Gray;
@@ -2168,6 +2171,7 @@
             // 
             // firstname_textbox_father_baptism
             // 
+            this.firstname_textbox_father_baptism.BackColor = System.Drawing.Color.White;
             this.firstname_textbox_father_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstname_textbox_father_baptism.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstname_textbox_father_baptism.ForeColor = System.Drawing.Color.Gray;
@@ -4234,6 +4238,7 @@
             this.Controls.Add(this.label17);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.birthdate_dateTimePicker);
+            this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.address_textbox);
             this.Controls.Add(this.contactNumber_textbox);
             this.Controls.Add(this.flowLayoutPanel3);
@@ -4245,11 +4250,10 @@
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label73);
             this.Controls.Add(this.label83);
-            this.Controls.Add(this.label84);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.marriage_panel);
+            this.Controls.Add(this.label84);
             this.Controls.Add(this.bloodletting_panel);
-            this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.balance_panel);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

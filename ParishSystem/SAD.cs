@@ -145,17 +145,11 @@ namespace ParishSystem
         {//refresh general profile table
             DataTable dt = dh.getGeneralProfiles();
             generalprofile_datagridview.DataSource = dt;
-            generalprofile_datagridview.Columns["profileID"].Visible = false;
-            generalprofile_datagridview.Columns["firstName"].Visible = false;
-            generalprofile_datagridview.Columns["midName"].Visible = false;
-            generalprofile_datagridview.Columns["lastName"].Visible = false;
-            generalprofile_datagridview.Columns["suffix"].Visible = false;
-            generalprofile_datagridview.Columns["gender"].Visible = false;
-            generalprofile_datagridview.Columns["birthdate"].Visible = false;
-            generalprofile_datagridview.Columns["contactNumber"].Visible = false;
-            generalprofile_datagridview.Columns["address"].Visible = false;
-            generalprofile_datagridview.Columns["birthplace"].Visible = false;
-            generalprofile_datagridview.Columns["bloodtype"].Visible = false;
+            foreach(DataGridViewColumn dr in generalprofile_datagridview.Columns)
+            {
+                dr.Visible = false;
+            }
+            generalprofile_datagridview.Columns["Name"].Visible = true;
             generalprofile_datagridview.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
@@ -214,7 +208,7 @@ namespace ParishSystem
         private void openProfile_button_Click(object sender, EventArgs e)
         {//open person complete profile
 
-            Form person = new Person(lastGeneralProfile, dh);
+            Form person = new Person(lastGeneralProfile, dh,(int)Enums.Mode.GeneralProfile);
             person.ShowDialog();
 
 
@@ -576,6 +570,11 @@ namespace ParishSystem
             DialogResult dr = aa.ShowDialog();
             MessageBox.Show("Bitch done");
 
+
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
 
         }
     }
