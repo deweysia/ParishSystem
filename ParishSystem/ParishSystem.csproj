@@ -82,6 +82,7 @@
     <Compile Include="BloodlettingTest.Designer.cs">
       <DependentUpon>BloodlettingTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classifications.cs" />
     <Compile Include="ComboboxContent.cs" />
     <Compile Include="ComboBoxItem.cs" />
     <Compile Include="CustomNotification.cs">
@@ -91,6 +92,7 @@
       <DependentUpon>CustomNotification.cs</DependentUpon>
     </Compile>
     <Compile Include="DataHandler.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +104,12 @@
     </Compile>
     <Compile Include="HiddenTabControl.Designer.cs">
       <DependentUpon>HiddenTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarriageApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarriageApplication.Designer.cs">
+      <DependentUpon>MarriageApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="menu.cs">
       <SubType>UserControl</SubType>
@@ -212,8 +220,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HiddenTabControl.resx">
-      <DependentUpon>HiddenTabControl.cs</DependentUpon>
+    <EmbeddedResource Include="MarriageApplication.resx">
+      <DependentUpon>MarriageApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\ParishSystem.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\ParishSystem.Properties.Resources.resources" />
@@ -272,6 +280,7 @@
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\ParishSystem.csproj.GenerateResource.Cache" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DataHandler.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

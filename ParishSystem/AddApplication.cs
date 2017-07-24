@@ -15,9 +15,8 @@ namespace ParishSystem
         DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
         Point lastClick;
         char sacramentType;
-        
         public AddApplication(SacramentType type)
-        {   
+        {
             InitializeComponent();
             application_birthdate_dtp.MaxDate = DateTime.Now;
             label1.MouseDown += AddApplication_MouseDown;
@@ -27,8 +26,8 @@ namespace ParishSystem
             
             applicationNotice_label.MaximumSize = panel1.Size - panel1.Padding.Size;
 
-            this.label1.Text = type.ToString();
-            sacramentType = type.ToString()[0];
+            this.sacramentType = type == SacramentType.Baptism ? 'B' : 'C';
+            this.label1.Text = type == SacramentType.Baptism ? "Baptism Application" : "Confirmation Application";
             
         }
 
@@ -65,9 +64,9 @@ namespace ParishSystem
                 dh.addGeneralProfile(fn, mn, ln, suffix, gender, birthDate, null, null, null);
                 id = dh.getLatestID("GeneralProfile", "profileID");
 
-                bool success = dh.addNewApplicant(id, sacramentType.ToString()[0]);
+                bool success = dh.addNewApplicant(id, sacramentType);
                 displayMessage(success);
-
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
@@ -176,17 +175,17 @@ namespace ParishSystem
             Notification.Show("HEEEEEEEEEEEEEEEELOOOOO MY BITCHESSSS");
         }
 
+        private void application_apply_button_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
     }
 
-    public enum SacramentType
-    {
-        Baptism,
-        Confirmation,
-        Marriage
-    }
+    
 
 }

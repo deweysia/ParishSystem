@@ -10,17 +10,12 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class HiddenTabControl: TabControl
+    public partial class HiddenTabControl : TabControl
     {
-        /*public HiddenTabControl()
+        public HiddenTabControl()
         {
             InitializeComponent();
         }
-
-        protected override void OnPaint(PaintEventArgs pe)
-        {
-            base.OnPaint(pe);
-        }*/
 
         protected override void WndProc(ref Message m)
         {

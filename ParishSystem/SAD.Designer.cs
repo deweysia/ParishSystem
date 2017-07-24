@@ -33,17 +33,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SAD));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SAD));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.home_button_menu = new System.Windows.Forms.Button();
@@ -95,36 +101,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.time_Text = new System.Windows.Forms.Label();
             this.application_panel = new System.Windows.Forms.Panel();
-            this.baptismApplication_panel = new System.Windows.Forms.Panel();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.baptismApplicationDetailsPanel = new MetroFramework.Controls.MetroPanel();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.BaptismApplication_Requirements_tablePanel = new System.Windows.Forms.TableLayoutPanel();
-            this.baptismApplication_requirement_comboBox4 = new MetroFramework.Controls.MetroCheckBox();
-            this.baptismApplication_requirement_comboBox1 = new MetroFramework.Controls.MetroCheckBox();
-            this.baptismApplication_requirement_comboBox3 = new MetroFramework.Controls.MetroCheckBox();
-            this.baptismApplication_requirement_comboBox2 = new MetroFramework.Controls.MetroCheckBox();
-            this.baptismApplication_requirement_comboBox5 = new MetroFramework.Controls.MetroCheckBox();
-            this.baptismApplication_requirement_comboBox6 = new MetroFramework.Controls.MetroCheckBox();
-            this.baptismApplication_checkAll_comboBox = new MetroFramework.Controls.MetroCheckBox();
-            this.BaptismApplication_birthDate = new MetroFramework.Controls.MetroDateTime();
-            this.label86 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.metroRadioButton2 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton3 = new MetroFramework.Controls.MetroRadioButton();
-            this.baptismApplication_suffix_textbox = new System.Windows.Forms.TextBox();
-            this.baptismApplication_lastName_textbox = new System.Windows.Forms.TextBox();
-            this.baptismApplication_midName_textbox = new System.Windows.Forms.TextBox();
-            this.baptismApplication_firstName_textbox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.baptismApplication_dgv = new MetroFramework.Controls.MetroGrid();
-            this.baptismApplication_add_button = new System.Windows.Forms.Button();
-            this.baptismApplication_delete_button = new System.Windows.Forms.Button();
+            this.sacramentApplication_panel = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.baptismApplication_label = new System.Windows.Forms.Label();
@@ -339,6 +316,101 @@
             this.libraryMarriageButton = new System.Windows.Forms.Button();
             this.libraryConfirmationButton = new System.Windows.Forms.Button();
             this.libraryBaptismButton = new System.Windows.Forms.Button();
+            this.applicationsHiddenTabControl = new ParishSystem.HiddenTabControl();
+            this.baptismApplicationTab = new System.Windows.Forms.TabPage();
+            this.baptismApplication_add_button = new System.Windows.Forms.Button();
+            this.baptismApplication_delete_button = new System.Windows.Forms.Button();
+            this.baptismApplications_dgv = new MetroFramework.Controls.MetroGrid();
+            this.applicationDetailsPanel_BaptismConfirmation = new MetroFramework.Controls.MetroPanel();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.reject_baptismApplication_btn = new MetroFramework.Controls.MetroButton();
+            this.approve_baptismApplication_btn = new MetroFramework.Controls.MetroButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BaptismApplication_Requirements_tablePanel = new System.Windows.Forms.TableLayoutPanel();
+            this.baptismApplication_requirement_comboBox4 = new MetroFramework.Controls.MetroCheckBox();
+            this.baptismApplication_requirement_comboBox1 = new MetroFramework.Controls.MetroCheckBox();
+            this.baptismApplication_requirement_comboBox3 = new MetroFramework.Controls.MetroCheckBox();
+            this.baptismApplication_requirement_comboBox2 = new MetroFramework.Controls.MetroCheckBox();
+            this.baptismApplication_requirement_comboBox5 = new MetroFramework.Controls.MetroCheckBox();
+            this.baptismApplication_requirement_comboBox6 = new MetroFramework.Controls.MetroCheckBox();
+            this.baptismApplication_checkAll_comboBox = new MetroFramework.Controls.MetroCheckBox();
+            this.birthDate_baptismApplication_dtp = new MetroFramework.Controls.MetroDateTime();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.male_baptismApplication_radio = new MetroFramework.Controls.MetroRadioButton();
+            this.female_baptismApplication_radio = new MetroFramework.Controls.MetroRadioButton();
+            this.suffix_baptismApplication_textBox = new System.Windows.Forms.TextBox();
+            this.lastName_baptismApplication_textBox = new System.Windows.Forms.TextBox();
+            this.midName_baptismApplication_textBox = new System.Windows.Forms.TextBox();
+            this.firstName_baptismApplication_textBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.status_baptismApplication_textBox = new MetroFramework.Controls.MetroComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.confirmationApplicationTab = new System.Windows.Forms.TabPage();
+            this.confirmationApplication_add_button = new System.Windows.Forms.Button();
+            this.confirmationApplication_deletebutton = new System.Windows.Forms.Button();
+            this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox2 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox3 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox4 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox5 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox6 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox7 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.metroRadioButton4 = new MetroFramework.Controls.MetroRadioButton();
+            this.metroRadioButton5 = new MetroFramework.Controls.MetroRadioButton();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.confirmationApplication_status_comboBox = new MetroFramework.Controls.MetroComboBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.marriageApplicationTab = new System.Windows.Forms.TabPage();
+            this.marriageApplication_add_button = new System.Windows.Forms.Button();
+            this.metroGrid3 = new MetroFramework.Controls.MetroGrid();
+            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
+            this.label93 = new System.Windows.Forms.Label();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.metroButton5 = new MetroFramework.Controls.MetroButton();
+            this.metroButton6 = new MetroFramework.Controls.MetroButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.metroCheckBox8 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox9 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox10 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox11 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox12 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox13 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox14 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroDateTime3 = new MetroFramework.Controls.MetroDateTime();
+            this.metroDateTime2 = new MetroFramework.Controls.MetroDateTime();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label91 = new System.Windows.Forms.Label();
+            this.label90 = new System.Windows.Forms.Label();
+            this.label88 = new System.Windows.Forms.Label();
+            this.label89 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.profile_panel.SuspendLayout();
@@ -346,12 +418,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).BeginInit();
             this.AddPNL.SuspendLayout();
             this.application_panel.SuspendLayout();
-            this.baptismApplication_panel.SuspendLayout();
-            this.baptismApplicationDetailsPanel.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.BaptismApplication_Requirements_tablePanel.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.baptismApplication_dgv)).BeginInit();
+            this.sacramentApplication_panel.SuspendLayout();
             this.panel15.SuspendLayout();
             this.marriageApplication_panel.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -393,6 +460,24 @@
             this.panel12.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.applicationsHiddenTabControl.SuspendLayout();
+            this.baptismApplicationTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.baptismApplications_dgv)).BeginInit();
+            this.applicationDetailsPanel_BaptismConfirmation.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.BaptismApplication_Requirements_tablePanel.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.confirmationApplicationTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).BeginInit();
+            this.metroPanel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
+            this.marriageApplicationTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid3)).BeginInit();
+            this.metroPanel2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -939,7 +1024,6 @@
             this.generalprofile_datagridview.Size = new System.Drawing.Size(345, 335);
             this.generalprofile_datagridview.TabIndex = 0;
             this.generalprofile_datagridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.generalprofile_datagridview_CellClick);
-            this.generalprofile_datagridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.generalprofile_datagridview_CellContentClick);
             // 
             // AddPNL
             // 
@@ -1074,7 +1158,6 @@
             this.firstname_textbox.Text = "firstname";
             this.firstname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.firstname_tooltip_profiles.SetToolTip(this.firstname_textbox, "Please enter a first name");
-            this.firstname_textbox.Click += new System.EventHandler(this.firstname_textbox_Click);
             this.firstname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
             this.firstname_textbox.TextChanged += new System.EventHandler(this.Name_textbox_Profile_TextChanged);
             this.firstname_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
@@ -1106,7 +1189,7 @@
             // application_panel
             // 
             this.application_panel.BackColor = System.Drawing.Color.White;
-            this.application_panel.Controls.Add(this.baptismApplication_panel);
+            this.application_panel.Controls.Add(this.sacramentApplication_panel);
             this.application_panel.Controls.Add(this.panel15);
             this.application_panel.Controls.Add(this.marriageApplication_panel);
             this.application_panel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1116,377 +1199,15 @@
             this.application_panel.Size = new System.Drawing.Size(753, 512);
             this.application_panel.TabIndex = 34;
             // 
-            // baptismApplication_panel
+            // sacramentApplication_panel
             // 
-            this.baptismApplication_panel.Controls.Add(this.textBox11);
-            this.baptismApplication_panel.Controls.Add(this.baptismApplicationDetailsPanel);
-            this.baptismApplication_panel.Controls.Add(this.label10);
-            this.baptismApplication_panel.Controls.Add(this.metroComboBox1);
-            this.baptismApplication_panel.Controls.Add(this.baptismApplication_dgv);
-            this.baptismApplication_panel.Controls.Add(this.baptismApplication_add_button);
-            this.baptismApplication_panel.Controls.Add(this.baptismApplication_delete_button);
-            this.baptismApplication_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.baptismApplication_panel.Location = new System.Drawing.Point(0, 63);
-            this.baptismApplication_panel.Name = "baptismApplication_panel";
-            this.baptismApplication_panel.Padding = new System.Windows.Forms.Padding(5);
-            this.baptismApplication_panel.Size = new System.Drawing.Size(753, 449);
-            this.baptismApplication_panel.TabIndex = 43;
-            this.baptismApplication_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.baptismApplication_panel_Paint);
-            // 
-            // textBox11
-            // 
-            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(8, 38);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(198, 16);
-            this.textBox11.TabIndex = 59;
-            this.textBox11.Text = "Type Name Here";
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // baptismApplicationDetailsPanel
-            // 
-            this.baptismApplicationDetailsPanel.Controls.Add(this.metroButton2);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.metroButton1);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.groupBox1);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.BaptismApplication_birthDate);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.label86);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.label11);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.flowLayoutPanel3);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_suffix_textbox);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_lastName_textbox);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_midName_textbox);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_firstName_textbox);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.label4);
-            this.baptismApplicationDetailsPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.baptismApplicationDetailsPanel.HorizontalScrollbarBarColor = true;
-            this.baptismApplicationDetailsPanel.HorizontalScrollbarHighlightOnWheel = false;
-            this.baptismApplicationDetailsPanel.HorizontalScrollbarSize = 10;
-            this.baptismApplicationDetailsPanel.Location = new System.Drawing.Point(431, 34);
-            this.baptismApplicationDetailsPanel.Name = "baptismApplicationDetailsPanel";
-            this.baptismApplicationDetailsPanel.Size = new System.Drawing.Size(309, 350);
-            this.baptismApplicationDetailsPanel.TabIndex = 58;
-            this.baptismApplicationDetailsPanel.VerticalScrollbarBarColor = true;
-            this.baptismApplicationDetailsPanel.VerticalScrollbarHighlightOnWheel = false;
-            this.baptismApplicationDetailsPanel.VerticalScrollbarSize = 10;
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.Location = new System.Drawing.Point(167, 292);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(60, 23);
-            this.metroButton2.TabIndex = 10;
-            this.metroButton2.Text = "Reject";
-            this.metroButton2.UseSelectable = true;
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(232, 292);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(60, 23);
-            this.metroButton1.TabIndex = 10;
-            this.metroButton1.Text = "Approve";
-            this.metroButton1.UseSelectable = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.BaptismApplication_Requirements_tablePanel);
-            this.groupBox1.Controls.Add(this.baptismApplication_checkAll_comboBox);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(11, 126);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(284, 150);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Requirements";
-            // 
-            // BaptismApplication_Requirements_tablePanel
-            // 
-            this.BaptismApplication_Requirements_tablePanel.ColumnCount = 2;
-            this.BaptismApplication_Requirements_tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.BaptismApplication_Requirements_tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox4, 1, 1);
-            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox1, 0, 0);
-            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox3, 0, 1);
-            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox2, 1, 0);
-            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox5, 0, 2);
-            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox6, 1, 2);
-            this.BaptismApplication_Requirements_tablePanel.Location = new System.Drawing.Point(6, 42);
-            this.BaptismApplication_Requirements_tablePanel.Name = "BaptismApplication_Requirements_tablePanel";
-            this.BaptismApplication_Requirements_tablePanel.RowCount = 4;
-            this.BaptismApplication_Requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.BaptismApplication_Requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.BaptismApplication_Requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.BaptismApplication_Requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.BaptismApplication_Requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.BaptismApplication_Requirements_tablePanel.Size = new System.Drawing.Size(268, 64);
-            this.BaptismApplication_Requirements_tablePanel.TabIndex = 1;
-            // 
-            // baptismApplication_requirement_comboBox4
-            // 
-            this.baptismApplication_requirement_comboBox4.AutoSize = true;
-            this.baptismApplication_requirement_comboBox4.Location = new System.Drawing.Point(137, 23);
-            this.baptismApplication_requirement_comboBox4.Name = "baptismApplication_requirement_comboBox4";
-            this.baptismApplication_requirement_comboBox4.Size = new System.Drawing.Size(100, 14);
-            this.baptismApplication_requirement_comboBox4.TabIndex = 1;
-            this.baptismApplication_requirement_comboBox4.Text = "Requirement 4";
-            this.baptismApplication_requirement_comboBox4.UseSelectable = true;
-            this.baptismApplication_requirement_comboBox4.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
-            // 
-            // baptismApplication_requirement_comboBox1
-            // 
-            this.baptismApplication_requirement_comboBox1.AutoSize = true;
-            this.baptismApplication_requirement_comboBox1.Location = new System.Drawing.Point(3, 3);
-            this.baptismApplication_requirement_comboBox1.Name = "baptismApplication_requirement_comboBox1";
-            this.baptismApplication_requirement_comboBox1.Size = new System.Drawing.Size(100, 14);
-            this.baptismApplication_requirement_comboBox1.TabIndex = 0;
-            this.baptismApplication_requirement_comboBox1.Text = "Requirement 1";
-            this.baptismApplication_requirement_comboBox1.UseSelectable = true;
-            this.baptismApplication_requirement_comboBox1.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
-            // 
-            // baptismApplication_requirement_comboBox3
-            // 
-            this.baptismApplication_requirement_comboBox3.AutoSize = true;
-            this.baptismApplication_requirement_comboBox3.Location = new System.Drawing.Point(3, 23);
-            this.baptismApplication_requirement_comboBox3.Name = "baptismApplication_requirement_comboBox3";
-            this.baptismApplication_requirement_comboBox3.Size = new System.Drawing.Size(100, 14);
-            this.baptismApplication_requirement_comboBox3.TabIndex = 0;
-            this.baptismApplication_requirement_comboBox3.Text = "Requirement 3";
-            this.baptismApplication_requirement_comboBox3.UseSelectable = true;
-            this.baptismApplication_requirement_comboBox3.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
-            // 
-            // baptismApplication_requirement_comboBox2
-            // 
-            this.baptismApplication_requirement_comboBox2.AutoSize = true;
-            this.baptismApplication_requirement_comboBox2.Location = new System.Drawing.Point(137, 3);
-            this.baptismApplication_requirement_comboBox2.Name = "baptismApplication_requirement_comboBox2";
-            this.baptismApplication_requirement_comboBox2.Size = new System.Drawing.Size(100, 14);
-            this.baptismApplication_requirement_comboBox2.TabIndex = 0;
-            this.baptismApplication_requirement_comboBox2.Text = "Requirement 2";
-            this.baptismApplication_requirement_comboBox2.UseSelectable = true;
-            this.baptismApplication_requirement_comboBox2.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
-            // 
-            // baptismApplication_requirement_comboBox5
-            // 
-            this.baptismApplication_requirement_comboBox5.AutoSize = true;
-            this.baptismApplication_requirement_comboBox5.Location = new System.Drawing.Point(3, 43);
-            this.baptismApplication_requirement_comboBox5.Name = "baptismApplication_requirement_comboBox5";
-            this.baptismApplication_requirement_comboBox5.Size = new System.Drawing.Size(100, 14);
-            this.baptismApplication_requirement_comboBox5.TabIndex = 2;
-            this.baptismApplication_requirement_comboBox5.Text = "Requirement 5";
-            this.baptismApplication_requirement_comboBox5.UseSelectable = true;
-            this.baptismApplication_requirement_comboBox5.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
-            // 
-            // baptismApplication_requirement_comboBox6
-            // 
-            this.baptismApplication_requirement_comboBox6.AutoSize = true;
-            this.baptismApplication_requirement_comboBox6.Location = new System.Drawing.Point(137, 43);
-            this.baptismApplication_requirement_comboBox6.Name = "baptismApplication_requirement_comboBox6";
-            this.baptismApplication_requirement_comboBox6.Size = new System.Drawing.Size(100, 14);
-            this.baptismApplication_requirement_comboBox6.TabIndex = 3;
-            this.baptismApplication_requirement_comboBox6.Text = "Requirement 6";
-            this.baptismApplication_requirement_comboBox6.UseSelectable = true;
-            this.baptismApplication_requirement_comboBox6.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
-            // 
-            // baptismApplication_checkAll_comboBox
-            // 
-            this.baptismApplication_checkAll_comboBox.AutoSize = true;
-            this.baptismApplication_checkAll_comboBox.Location = new System.Drawing.Point(9, 21);
-            this.baptismApplication_checkAll_comboBox.Name = "baptismApplication_checkAll_comboBox";
-            this.baptismApplication_checkAll_comboBox.Size = new System.Drawing.Size(73, 15);
-            this.baptismApplication_checkAll_comboBox.TabIndex = 0;
-            this.baptismApplication_checkAll_comboBox.Text = "Check All";
-            this.baptismApplication_checkAll_comboBox.UseSelectable = true;
-            this.baptismApplication_checkAll_comboBox.CheckedChanged += new System.EventHandler(this.checkAll_cb_baptismApplication_CheckedChanged);
-            // 
-            // BaptismApplication_birthDate
-            // 
-            this.BaptismApplication_birthDate.Location = new System.Drawing.Point(81, 91);
-            this.BaptismApplication_birthDate.MinimumSize = new System.Drawing.Size(0, 29);
-            this.BaptismApplication_birthDate.Name = "BaptismApplication_birthDate";
-            this.BaptismApplication_birthDate.Size = new System.Drawing.Size(200, 29);
-            this.BaptismApplication_birthDate.TabIndex = 8;
-            // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.Location = new System.Drawing.Point(10, 96);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(61, 16);
-            this.label86.TabIndex = 7;
-            this.label86.Text = "Birthdate";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(10, 67);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 16);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Gender";
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Controls.Add(this.metroRadioButton2);
-            this.flowLayoutPanel3.Controls.Add(this.metroRadioButton3);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(81, 64);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(135, 20);
-            this.flowLayoutPanel3.TabIndex = 6;
-            // 
-            // metroRadioButton2
-            // 
-            this.metroRadioButton2.AutoSize = true;
-            this.metroRadioButton2.Location = new System.Drawing.Point(3, 3);
-            this.metroRadioButton2.Name = "metroRadioButton2";
-            this.metroRadioButton2.Size = new System.Drawing.Size(49, 15);
-            this.metroRadioButton2.TabIndex = 5;
-            this.metroRadioButton2.Text = "Male";
-            this.metroRadioButton2.UseSelectable = true;
-            // 
-            // metroRadioButton3
-            // 
-            this.metroRadioButton3.AutoSize = true;
-            this.metroRadioButton3.Location = new System.Drawing.Point(58, 3);
-            this.metroRadioButton3.Name = "metroRadioButton3";
-            this.metroRadioButton3.Size = new System.Drawing.Size(61, 15);
-            this.metroRadioButton3.TabIndex = 5;
-            this.metroRadioButton3.Text = "Female";
-            this.metroRadioButton3.UseSelectable = true;
-            // 
-            // baptismApplication_suffix_textbox
-            // 
-            this.baptismApplication_suffix_textbox.Location = new System.Drawing.Point(273, 35);
-            this.baptismApplication_suffix_textbox.Name = "baptismApplication_suffix_textbox";
-            this.baptismApplication_suffix_textbox.Size = new System.Drawing.Size(25, 22);
-            this.baptismApplication_suffix_textbox.TabIndex = 4;
-            // 
-            // baptismApplication_lastName_textbox
-            // 
-            this.baptismApplication_lastName_textbox.Location = new System.Drawing.Point(186, 35);
-            this.baptismApplication_lastName_textbox.Name = "baptismApplication_lastName_textbox";
-            this.baptismApplication_lastName_textbox.Size = new System.Drawing.Size(81, 22);
-            this.baptismApplication_lastName_textbox.TabIndex = 4;
-            // 
-            // baptismApplication_midName_textbox
-            // 
-            this.baptismApplication_midName_textbox.Location = new System.Drawing.Point(155, 35);
-            this.baptismApplication_midName_textbox.Name = "baptismApplication_midName_textbox";
-            this.baptismApplication_midName_textbox.Size = new System.Drawing.Size(25, 22);
-            this.baptismApplication_midName_textbox.TabIndex = 4;
-            // 
-            // baptismApplication_firstName_textbox
-            // 
-            this.baptismApplication_firstName_textbox.Location = new System.Drawing.Point(81, 35);
-            this.baptismApplication_firstName_textbox.Name = "baptismApplication_firstName_textbox";
-            this.baptismApplication_firstName_textbox.Size = new System.Drawing.Size(68, 22);
-            this.baptismApplication_firstName_textbox.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Name";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(239, 36);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 21);
-            this.label10.TabIndex = 56;
-            this.label10.Text = "Status";
-            // 
-            // metroComboBox1
-            // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Items.AddRange(new object[] {
-            "Pending",
-            "Approved",
-            "Cancelled",
-            "Rejected"});
-            this.metroComboBox1.Location = new System.Drawing.Point(297, 33);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
-            this.metroComboBox1.TabIndex = 55;
-            this.metroComboBox1.UseSelectable = true;
-            // 
-            // baptismApplication_dgv
-            // 
-            this.baptismApplication_dgv.AllowUserToResizeRows = false;
-            this.baptismApplication_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.baptismApplication_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.baptismApplication_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.baptismApplication_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.baptismApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.baptismApplication_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.baptismApplication_dgv.DefaultCellStyle = dataGridViewCellStyle6;
-            this.baptismApplication_dgv.EnableHeadersVisualStyles = false;
-            this.baptismApplication_dgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.baptismApplication_dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.baptismApplication_dgv.Location = new System.Drawing.Point(8, 83);
-            this.baptismApplication_dgv.Name = "baptismApplication_dgv";
-            this.baptismApplication_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.baptismApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.baptismApplication_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.baptismApplication_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.baptismApplication_dgv.Size = new System.Drawing.Size(412, 301);
-            this.baptismApplication_dgv.TabIndex = 54;
-            // 
-            // baptismApplication_add_button
-            // 
-            this.baptismApplication_add_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.baptismApplication_add_button.BackColor = System.Drawing.Color.DodgerBlue;
-            this.baptismApplication_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.baptismApplication_add_button.Font = new System.Drawing.Font("Calibri", 12F);
-            this.baptismApplication_add_button.ForeColor = System.Drawing.Color.White;
-            this.baptismApplication_add_button.Location = new System.Drawing.Point(320, 387);
-            this.baptismApplication_add_button.Name = "baptismApplication_add_button";
-            this.baptismApplication_add_button.Size = new System.Drawing.Size(100, 31);
-            this.baptismApplication_add_button.TabIndex = 43;
-            this.baptismApplication_add_button.Text = "Add";
-            this.baptismApplication_add_button.UseVisualStyleBackColor = false;
-            this.baptismApplication_add_button.Click += new System.EventHandler(this.baptismApplication_add_button_Click);
-            // 
-            // baptismApplication_delete_button
-            // 
-            this.baptismApplication_delete_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.baptismApplication_delete_button.BackColor = System.Drawing.Color.DodgerBlue;
-            this.baptismApplication_delete_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.baptismApplication_delete_button.Font = new System.Drawing.Font("Calibri", 12F);
-            this.baptismApplication_delete_button.ForeColor = System.Drawing.Color.White;
-            this.baptismApplication_delete_button.Location = new System.Drawing.Point(213, 387);
-            this.baptismApplication_delete_button.Name = "baptismApplication_delete_button";
-            this.baptismApplication_delete_button.Size = new System.Drawing.Size(100, 31);
-            this.baptismApplication_delete_button.TabIndex = 43;
-            this.baptismApplication_delete_button.Text = "Delete";
-            this.baptismApplication_delete_button.UseVisualStyleBackColor = false;
+            this.sacramentApplication_panel.Controls.Add(this.applicationsHiddenTabControl);
+            this.sacramentApplication_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sacramentApplication_panel.Location = new System.Drawing.Point(0, 63);
+            this.sacramentApplication_panel.Name = "sacramentApplication_panel";
+            this.sacramentApplication_panel.Padding = new System.Windows.Forms.Padding(5);
+            this.sacramentApplication_panel.Size = new System.Drawing.Size(753, 449);
+            this.sacramentApplication_panel.TabIndex = 43;
             // 
             // panel15
             // 
@@ -2166,7 +1887,6 @@
             this.panel_controlbox.Name = "panel_controlbox";
             this.panel_controlbox.Size = new System.Drawing.Size(753, 33);
             this.panel_controlbox.TabIndex = 38;
-            this.panel_controlbox.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_controlbox_Paint);
             this.panel_controlbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseDown);
             this.panel_controlbox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseMove);
             // 
@@ -3473,41 +3193,41 @@
             this.profiles_dataGridView_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.profiles_dataGridView_baptism.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.profiles_dataGridView_baptism.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.profiles_dataGridView_baptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.profiles_dataGridView_baptism.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.profiles_dataGridView_baptism.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.profiles_dataGridView_baptism.DefaultCellStyle = dataGridViewCellStyle15;
             this.profiles_dataGridView_baptism.EnableHeadersVisualStyles = false;
             this.profiles_dataGridView_baptism.Location = new System.Drawing.Point(1, 80);
             this.profiles_dataGridView_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.profiles_dataGridView_baptism.MultiSelect = false;
             this.profiles_dataGridView_baptism.Name = "profiles_dataGridView_baptism";
             this.profiles_dataGridView_baptism.ReadOnly = true;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.profiles_dataGridView_baptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.profiles_dataGridView_baptism.RowHeadersVisible = false;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.profiles_dataGridView_baptism.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.profiles_dataGridView_baptism.RowsDefaultCellStyle = dataGridViewCellStyle17;
             this.profiles_dataGridView_baptism.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.profiles_dataGridView_baptism.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.profiles_dataGridView_baptism.Size = new System.Drawing.Size(398, 341);
@@ -3581,23 +3301,23 @@
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle19;
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -3605,14 +3325,14 @@
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.ReadOnly = true;
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid1.Size = new System.Drawing.Size(493, 426);
@@ -3802,7 +3522,6 @@
             this.label8.Size = new System.Drawing.Size(45, 21);
             this.label8.TabIndex = 3;
             this.label8.Text = "Filter";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // comboBoxFilter
             // 
@@ -3876,6 +3595,1152 @@
             this.libraryBaptismButton.UseVisualStyleBackColor = false;
             this.libraryBaptismButton.Click += new System.EventHandler(this.libraryBaptismButton_Click);
             // 
+            // applicationsHiddenTabControl
+            // 
+            this.applicationsHiddenTabControl.Controls.Add(this.baptismApplicationTab);
+            this.applicationsHiddenTabControl.Controls.Add(this.confirmationApplicationTab);
+            this.applicationsHiddenTabControl.Controls.Add(this.marriageApplicationTab);
+            this.applicationsHiddenTabControl.Location = new System.Drawing.Point(5, 3);
+            this.applicationsHiddenTabControl.Name = "applicationsHiddenTabControl";
+            this.applicationsHiddenTabControl.SelectedIndex = 0;
+            this.applicationsHiddenTabControl.Size = new System.Drawing.Size(745, 442);
+            this.applicationsHiddenTabControl.TabIndex = 60;
+            // 
+            // baptismApplicationTab
+            // 
+            this.baptismApplicationTab.Controls.Add(this.baptismApplication_add_button);
+            this.baptismApplicationTab.Controls.Add(this.baptismApplication_delete_button);
+            this.baptismApplicationTab.Controls.Add(this.baptismApplications_dgv);
+            this.baptismApplicationTab.Controls.Add(this.applicationDetailsPanel_BaptismConfirmation);
+            this.baptismApplicationTab.Controls.Add(this.status_baptismApplication_textBox);
+            this.baptismApplicationTab.Controls.Add(this.label10);
+            this.baptismApplicationTab.Location = new System.Drawing.Point(4, 30);
+            this.baptismApplicationTab.Margin = new System.Windows.Forms.Padding(1);
+            this.baptismApplicationTab.Name = "baptismApplicationTab";
+            this.baptismApplicationTab.Padding = new System.Windows.Forms.Padding(3);
+            this.baptismApplicationTab.Size = new System.Drawing.Size(737, 408);
+            this.baptismApplicationTab.TabIndex = 0;
+            this.baptismApplicationTab.Text = "baptismApplicationTab";
+            this.baptismApplicationTab.UseVisualStyleBackColor = true;
+            // 
+            // baptismApplication_add_button
+            // 
+            this.baptismApplication_add_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.baptismApplication_add_button.BackColor = System.Drawing.Color.DodgerBlue;
+            this.baptismApplication_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.baptismApplication_add_button.Font = new System.Drawing.Font("Calibri", 12F);
+            this.baptismApplication_add_button.ForeColor = System.Drawing.Color.White;
+            this.baptismApplication_add_button.Location = new System.Drawing.Point(321, 364);
+            this.baptismApplication_add_button.Name = "baptismApplication_add_button";
+            this.baptismApplication_add_button.Size = new System.Drawing.Size(100, 31);
+            this.baptismApplication_add_button.TabIndex = 43;
+            this.baptismApplication_add_button.Text = "Add";
+            this.baptismApplication_add_button.UseVisualStyleBackColor = false;
+            this.baptismApplication_add_button.Click += new System.EventHandler(this.sacramentApplication_add_button_Click);
+            // 
+            // baptismApplication_delete_button
+            // 
+            this.baptismApplication_delete_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.baptismApplication_delete_button.BackColor = System.Drawing.Color.DodgerBlue;
+            this.baptismApplication_delete_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.baptismApplication_delete_button.Font = new System.Drawing.Font("Calibri", 12F);
+            this.baptismApplication_delete_button.ForeColor = System.Drawing.Color.White;
+            this.baptismApplication_delete_button.Location = new System.Drawing.Point(216, 364);
+            this.baptismApplication_delete_button.Name = "baptismApplication_delete_button";
+            this.baptismApplication_delete_button.Size = new System.Drawing.Size(100, 31);
+            this.baptismApplication_delete_button.TabIndex = 43;
+            this.baptismApplication_delete_button.Text = "Delete";
+            this.baptismApplication_delete_button.UseVisualStyleBackColor = false;
+            // 
+            // baptismApplications_dgv
+            // 
+            this.baptismApplications_dgv.AllowUserToResizeRows = false;
+            this.baptismApplications_dgv.BackgroundColor = System.Drawing.Color.White;
+            this.baptismApplications_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.baptismApplications_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.baptismApplications_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.baptismApplications_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.baptismApplications_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.baptismApplications_dgv.DefaultCellStyle = dataGridViewCellStyle6;
+            this.baptismApplications_dgv.EnableHeadersVisualStyles = false;
+            this.baptismApplications_dgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.baptismApplications_dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.baptismApplications_dgv.Location = new System.Drawing.Point(6, 51);
+            this.baptismApplications_dgv.Name = "baptismApplications_dgv";
+            this.baptismApplications_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.baptismApplications_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.baptismApplications_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.baptismApplications_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.baptismApplications_dgv.Size = new System.Drawing.Size(412, 301);
+            this.baptismApplications_dgv.TabIndex = 54;
+            // 
+            // applicationDetailsPanel_BaptismConfirmation
+            // 
+            this.applicationDetailsPanel_BaptismConfirmation.Controls.Add(this.textBox11);
+            this.applicationDetailsPanel_BaptismConfirmation.Controls.Add(this.reject_baptismApplication_btn);
+            this.applicationDetailsPanel_BaptismConfirmation.Controls.Add(this.approve_baptismApplication_btn);
+            this.applicationDetailsPanel_BaptismConfirmation.Controls.Add(this.groupBox1);
+            this.applicationDetailsPanel_BaptismConfirmation.Controls.Add(this.birthDate_baptismApplication_dtp);
+            this.applicationDetailsPanel_BaptismConfirmation.Controls.Add(this.label86);
+            this.applicationDetailsPanel_BaptismConfirmation.Controls.Add(this.label11);
+            this.applicationDetailsPanel_BaptismConfirmation.Controls.Add(this.flowLayoutPanel3);
+            this.applicationDetailsPanel_BaptismConfirmation.Controls.Add(this.suffix_baptismApplication_textBox);
+            this.applicationDetailsPanel_BaptismConfirmation.Controls.Add(this.lastName_baptismApplication_textBox);
+            this.applicationDetailsPanel_BaptismConfirmation.Controls.Add(this.midName_baptismApplication_textBox);
+            this.applicationDetailsPanel_BaptismConfirmation.Controls.Add(this.firstName_baptismApplication_textBox);
+            this.applicationDetailsPanel_BaptismConfirmation.Controls.Add(this.label4);
+            this.applicationDetailsPanel_BaptismConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applicationDetailsPanel_BaptismConfirmation.HorizontalScrollbarBarColor = true;
+            this.applicationDetailsPanel_BaptismConfirmation.HorizontalScrollbarHighlightOnWheel = false;
+            this.applicationDetailsPanel_BaptismConfirmation.HorizontalScrollbarSize = 10;
+            this.applicationDetailsPanel_BaptismConfirmation.Location = new System.Drawing.Point(426, 2);
+            this.applicationDetailsPanel_BaptismConfirmation.Name = "applicationDetailsPanel_BaptismConfirmation";
+            this.applicationDetailsPanel_BaptismConfirmation.Size = new System.Drawing.Size(309, 350);
+            this.applicationDetailsPanel_BaptismConfirmation.TabIndex = 58;
+            this.applicationDetailsPanel_BaptismConfirmation.VerticalScrollbarBarColor = true;
+            this.applicationDetailsPanel_BaptismConfirmation.VerticalScrollbarHighlightOnWheel = false;
+            this.applicationDetailsPanel_BaptismConfirmation.VerticalScrollbarSize = 10;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Location = new System.Drawing.Point(56, 7);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(198, 16);
+            this.textBox11.TabIndex = 59;
+            this.textBox11.Text = "Baptism";
+            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // reject_baptismApplication_btn
+            // 
+            this.reject_baptismApplication_btn.Location = new System.Drawing.Point(167, 292);
+            this.reject_baptismApplication_btn.Name = "reject_baptismApplication_btn";
+            this.reject_baptismApplication_btn.Size = new System.Drawing.Size(60, 23);
+            this.reject_baptismApplication_btn.TabIndex = 10;
+            this.reject_baptismApplication_btn.Text = "Reject";
+            this.reject_baptismApplication_btn.UseSelectable = true;
+            // 
+            // approve_baptismApplication_btn
+            // 
+            this.approve_baptismApplication_btn.Location = new System.Drawing.Point(232, 292);
+            this.approve_baptismApplication_btn.Name = "approve_baptismApplication_btn";
+            this.approve_baptismApplication_btn.Size = new System.Drawing.Size(60, 23);
+            this.approve_baptismApplication_btn.TabIndex = 10;
+            this.approve_baptismApplication_btn.Text = "Approve";
+            this.approve_baptismApplication_btn.UseSelectable = true;
+            this.approve_baptismApplication_btn.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.BaptismApplication_Requirements_tablePanel);
+            this.groupBox1.Controls.Add(this.baptismApplication_checkAll_comboBox);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(11, 126);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(284, 150);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Requirements";
+            // 
+            // BaptismApplication_Requirements_tablePanel
+            // 
+            this.BaptismApplication_Requirements_tablePanel.ColumnCount = 2;
+            this.BaptismApplication_Requirements_tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.BaptismApplication_Requirements_tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox4, 1, 1);
+            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox1, 0, 0);
+            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox3, 0, 1);
+            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox2, 1, 0);
+            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox5, 0, 2);
+            this.BaptismApplication_Requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_comboBox6, 1, 2);
+            this.BaptismApplication_Requirements_tablePanel.Location = new System.Drawing.Point(6, 42);
+            this.BaptismApplication_Requirements_tablePanel.Name = "BaptismApplication_Requirements_tablePanel";
+            this.BaptismApplication_Requirements_tablePanel.RowCount = 4;
+            this.BaptismApplication_Requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.BaptismApplication_Requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.BaptismApplication_Requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.BaptismApplication_Requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.BaptismApplication_Requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.BaptismApplication_Requirements_tablePanel.Size = new System.Drawing.Size(268, 64);
+            this.BaptismApplication_Requirements_tablePanel.TabIndex = 1;
+            // 
+            // baptismApplication_requirement_comboBox4
+            // 
+            this.baptismApplication_requirement_comboBox4.AutoSize = true;
+            this.baptismApplication_requirement_comboBox4.Location = new System.Drawing.Point(137, 23);
+            this.baptismApplication_requirement_comboBox4.Name = "baptismApplication_requirement_comboBox4";
+            this.baptismApplication_requirement_comboBox4.Size = new System.Drawing.Size(100, 14);
+            this.baptismApplication_requirement_comboBox4.TabIndex = 1;
+            this.baptismApplication_requirement_comboBox4.Text = "Requirement 4";
+            this.baptismApplication_requirement_comboBox4.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox4.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
+            // 
+            // baptismApplication_requirement_comboBox1
+            // 
+            this.baptismApplication_requirement_comboBox1.AutoSize = true;
+            this.baptismApplication_requirement_comboBox1.Location = new System.Drawing.Point(3, 3);
+            this.baptismApplication_requirement_comboBox1.Name = "baptismApplication_requirement_comboBox1";
+            this.baptismApplication_requirement_comboBox1.Size = new System.Drawing.Size(100, 14);
+            this.baptismApplication_requirement_comboBox1.TabIndex = 0;
+            this.baptismApplication_requirement_comboBox1.Text = "Requirement 1";
+            this.baptismApplication_requirement_comboBox1.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox1.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
+            // 
+            // baptismApplication_requirement_comboBox3
+            // 
+            this.baptismApplication_requirement_comboBox3.AutoSize = true;
+            this.baptismApplication_requirement_comboBox3.Location = new System.Drawing.Point(3, 23);
+            this.baptismApplication_requirement_comboBox3.Name = "baptismApplication_requirement_comboBox3";
+            this.baptismApplication_requirement_comboBox3.Size = new System.Drawing.Size(100, 14);
+            this.baptismApplication_requirement_comboBox3.TabIndex = 0;
+            this.baptismApplication_requirement_comboBox3.Text = "Requirement 3";
+            this.baptismApplication_requirement_comboBox3.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox3.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
+            // 
+            // baptismApplication_requirement_comboBox2
+            // 
+            this.baptismApplication_requirement_comboBox2.AutoSize = true;
+            this.baptismApplication_requirement_comboBox2.Location = new System.Drawing.Point(137, 3);
+            this.baptismApplication_requirement_comboBox2.Name = "baptismApplication_requirement_comboBox2";
+            this.baptismApplication_requirement_comboBox2.Size = new System.Drawing.Size(100, 14);
+            this.baptismApplication_requirement_comboBox2.TabIndex = 0;
+            this.baptismApplication_requirement_comboBox2.Text = "Requirement 2";
+            this.baptismApplication_requirement_comboBox2.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox2.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
+            // 
+            // baptismApplication_requirement_comboBox5
+            // 
+            this.baptismApplication_requirement_comboBox5.AutoSize = true;
+            this.baptismApplication_requirement_comboBox5.Location = new System.Drawing.Point(3, 43);
+            this.baptismApplication_requirement_comboBox5.Name = "baptismApplication_requirement_comboBox5";
+            this.baptismApplication_requirement_comboBox5.Size = new System.Drawing.Size(100, 14);
+            this.baptismApplication_requirement_comboBox5.TabIndex = 2;
+            this.baptismApplication_requirement_comboBox5.Text = "Requirement 5";
+            this.baptismApplication_requirement_comboBox5.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox5.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
+            // 
+            // baptismApplication_requirement_comboBox6
+            // 
+            this.baptismApplication_requirement_comboBox6.AutoSize = true;
+            this.baptismApplication_requirement_comboBox6.Location = new System.Drawing.Point(137, 43);
+            this.baptismApplication_requirement_comboBox6.Name = "baptismApplication_requirement_comboBox6";
+            this.baptismApplication_requirement_comboBox6.Size = new System.Drawing.Size(100, 14);
+            this.baptismApplication_requirement_comboBox6.TabIndex = 3;
+            this.baptismApplication_requirement_comboBox6.Text = "Requirement 6";
+            this.baptismApplication_requirement_comboBox6.UseSelectable = true;
+            this.baptismApplication_requirement_comboBox6.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_comboBox_CheckedChanged);
+            // 
+            // baptismApplication_checkAll_comboBox
+            // 
+            this.baptismApplication_checkAll_comboBox.AutoSize = true;
+            this.baptismApplication_checkAll_comboBox.Location = new System.Drawing.Point(9, 21);
+            this.baptismApplication_checkAll_comboBox.Name = "baptismApplication_checkAll_comboBox";
+            this.baptismApplication_checkAll_comboBox.Size = new System.Drawing.Size(73, 15);
+            this.baptismApplication_checkAll_comboBox.TabIndex = 0;
+            this.baptismApplication_checkAll_comboBox.Text = "Check All";
+            this.baptismApplication_checkAll_comboBox.UseSelectable = true;
+            this.baptismApplication_checkAll_comboBox.CheckedChanged += new System.EventHandler(this.checkAll_cb_baptismApplication_CheckedChanged);
+            // 
+            // birthDate_baptismApplication_dtp
+            // 
+            this.birthDate_baptismApplication_dtp.Location = new System.Drawing.Point(81, 91);
+            this.birthDate_baptismApplication_dtp.MinimumSize = new System.Drawing.Size(0, 29);
+            this.birthDate_baptismApplication_dtp.Name = "birthDate_baptismApplication_dtp";
+            this.birthDate_baptismApplication_dtp.Size = new System.Drawing.Size(200, 29);
+            this.birthDate_baptismApplication_dtp.TabIndex = 8;
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Location = new System.Drawing.Point(10, 96);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(61, 16);
+            this.label86.TabIndex = 7;
+            this.label86.Text = "Birthdate";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(10, 67);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 16);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Gender";
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.male_baptismApplication_radio);
+            this.flowLayoutPanel3.Controls.Add(this.female_baptismApplication_radio);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(81, 64);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(135, 20);
+            this.flowLayoutPanel3.TabIndex = 6;
+            // 
+            // male_baptismApplication_radio
+            // 
+            this.male_baptismApplication_radio.AutoSize = true;
+            this.male_baptismApplication_radio.Location = new System.Drawing.Point(3, 3);
+            this.male_baptismApplication_radio.Name = "male_baptismApplication_radio";
+            this.male_baptismApplication_radio.Size = new System.Drawing.Size(49, 15);
+            this.male_baptismApplication_radio.TabIndex = 5;
+            this.male_baptismApplication_radio.Text = "Male";
+            this.male_baptismApplication_radio.UseSelectable = true;
+            // 
+            // female_baptismApplication_radio
+            // 
+            this.female_baptismApplication_radio.AutoSize = true;
+            this.female_baptismApplication_radio.Location = new System.Drawing.Point(58, 3);
+            this.female_baptismApplication_radio.Name = "female_baptismApplication_radio";
+            this.female_baptismApplication_radio.Size = new System.Drawing.Size(61, 15);
+            this.female_baptismApplication_radio.TabIndex = 5;
+            this.female_baptismApplication_radio.Text = "Female";
+            this.female_baptismApplication_radio.UseSelectable = true;
+            // 
+            // suffix_baptismApplication_textBox
+            // 
+            this.suffix_baptismApplication_textBox.Location = new System.Drawing.Point(273, 35);
+            this.suffix_baptismApplication_textBox.Name = "suffix_baptismApplication_textBox";
+            this.suffix_baptismApplication_textBox.Size = new System.Drawing.Size(25, 22);
+            this.suffix_baptismApplication_textBox.TabIndex = 4;
+            // 
+            // lastName_baptismApplication_textBox
+            // 
+            this.lastName_baptismApplication_textBox.Location = new System.Drawing.Point(186, 35);
+            this.lastName_baptismApplication_textBox.Name = "lastName_baptismApplication_textBox";
+            this.lastName_baptismApplication_textBox.Size = new System.Drawing.Size(81, 22);
+            this.lastName_baptismApplication_textBox.TabIndex = 4;
+            // 
+            // midName_baptismApplication_textBox
+            // 
+            this.midName_baptismApplication_textBox.Location = new System.Drawing.Point(155, 35);
+            this.midName_baptismApplication_textBox.Name = "midName_baptismApplication_textBox";
+            this.midName_baptismApplication_textBox.Size = new System.Drawing.Size(25, 22);
+            this.midName_baptismApplication_textBox.TabIndex = 4;
+            // 
+            // firstName_baptismApplication_textBox
+            // 
+            this.firstName_baptismApplication_textBox.Location = new System.Drawing.Point(81, 35);
+            this.firstName_baptismApplication_textBox.Name = "firstName_baptismApplication_textBox";
+            this.firstName_baptismApplication_textBox.Size = new System.Drawing.Size(68, 22);
+            this.firstName_baptismApplication_textBox.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(11, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Name";
+            // 
+            // status_baptismApplication_textBox
+            // 
+            this.status_baptismApplication_textBox.FormattingEnabled = true;
+            this.status_baptismApplication_textBox.ItemHeight = 23;
+            this.status_baptismApplication_textBox.Items.AddRange(new object[] {
+            "All",
+            "Pending",
+            "Approved",
+            "Cancelled",
+            "Rejected"});
+            this.status_baptismApplication_textBox.Location = new System.Drawing.Point(295, 14);
+            this.status_baptismApplication_textBox.Name = "status_baptismApplication_textBox";
+            this.status_baptismApplication_textBox.Size = new System.Drawing.Size(121, 29);
+            this.status_baptismApplication_textBox.TabIndex = 55;
+            this.status_baptismApplication_textBox.UseSelectable = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(237, 17);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 21);
+            this.label10.TabIndex = 56;
+            this.label10.Text = "Status";
+            // 
+            // confirmationApplicationTab
+            // 
+            this.confirmationApplicationTab.Controls.Add(this.confirmationApplication_add_button);
+            this.confirmationApplicationTab.Controls.Add(this.confirmationApplication_deletebutton);
+            this.confirmationApplicationTab.Controls.Add(this.metroGrid2);
+            this.confirmationApplicationTab.Controls.Add(this.metroPanel1);
+            this.confirmationApplicationTab.Controls.Add(this.confirmationApplication_status_comboBox);
+            this.confirmationApplicationTab.Controls.Add(this.label23);
+            this.confirmationApplicationTab.Location = new System.Drawing.Point(4, 22);
+            this.confirmationApplicationTab.Name = "confirmationApplicationTab";
+            this.confirmationApplicationTab.Padding = new System.Windows.Forms.Padding(3);
+            this.confirmationApplicationTab.Size = new System.Drawing.Size(737, 416);
+            this.confirmationApplicationTab.TabIndex = 1;
+            this.confirmationApplicationTab.Text = "confirmationApplicationTab";
+            this.confirmationApplicationTab.UseVisualStyleBackColor = true;
+            // 
+            // confirmationApplication_add_button
+            // 
+            this.confirmationApplication_add_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.confirmationApplication_add_button.BackColor = System.Drawing.Color.DodgerBlue;
+            this.confirmationApplication_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmationApplication_add_button.Font = new System.Drawing.Font("Calibri", 12F);
+            this.confirmationApplication_add_button.ForeColor = System.Drawing.Color.White;
+            this.confirmationApplication_add_button.Location = new System.Drawing.Point(321, 372);
+            this.confirmationApplication_add_button.Name = "confirmationApplication_add_button";
+            this.confirmationApplication_add_button.Size = new System.Drawing.Size(100, 31);
+            this.confirmationApplication_add_button.TabIndex = 60;
+            this.confirmationApplication_add_button.Text = "Add";
+            this.confirmationApplication_add_button.UseVisualStyleBackColor = false;
+            this.confirmationApplication_add_button.Click += new System.EventHandler(this.sacramentApplication_add_button_Click);
+            // 
+            // confirmationApplication_deletebutton
+            // 
+            this.confirmationApplication_deletebutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.confirmationApplication_deletebutton.BackColor = System.Drawing.Color.DodgerBlue;
+            this.confirmationApplication_deletebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmationApplication_deletebutton.Font = new System.Drawing.Font("Calibri", 12F);
+            this.confirmationApplication_deletebutton.ForeColor = System.Drawing.Color.White;
+            this.confirmationApplication_deletebutton.Location = new System.Drawing.Point(218, 372);
+            this.confirmationApplication_deletebutton.Name = "confirmationApplication_deletebutton";
+            this.confirmationApplication_deletebutton.Size = new System.Drawing.Size(100, 31);
+            this.confirmationApplication_deletebutton.TabIndex = 61;
+            this.confirmationApplication_deletebutton.Text = "Delete";
+            this.confirmationApplication_deletebutton.UseVisualStyleBackColor = false;
+            // 
+            // metroGrid2
+            // 
+            this.metroGrid2.AllowUserToResizeRows = false;
+            this.metroGrid2.BackgroundColor = System.Drawing.Color.White;
+            this.metroGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metroGrid2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.metroGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.metroGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid2.DefaultCellStyle = dataGridViewCellStyle9;
+            this.metroGrid2.EnableHeadersVisualStyles = false;
+            this.metroGrid2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.metroGrid2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid2.Location = new System.Drawing.Point(3, 58);
+            this.metroGrid2.Name = "metroGrid2";
+            this.metroGrid2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid2.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.metroGrid2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.metroGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.metroGrid2.Size = new System.Drawing.Size(412, 301);
+            this.metroGrid2.TabIndex = 62;
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.Controls.Add(this.textBox7);
+            this.metroPanel1.Controls.Add(this.metroButton3);
+            this.metroPanel1.Controls.Add(this.metroButton4);
+            this.metroPanel1.Controls.Add(this.groupBox2);
+            this.metroPanel1.Controls.Add(this.metroDateTime1);
+            this.metroPanel1.Controls.Add(this.label20);
+            this.metroPanel1.Controls.Add(this.label21);
+            this.metroPanel1.Controls.Add(this.flowLayoutPanel4);
+            this.metroPanel1.Controls.Add(this.textBox8);
+            this.metroPanel1.Controls.Add(this.textBox9);
+            this.metroPanel1.Controls.Add(this.textBox10);
+            this.metroPanel1.Controls.Add(this.textBox12);
+            this.metroPanel1.Controls.Add(this.label22);
+            this.metroPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(426, 2);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(309, 350);
+            this.metroPanel1.TabIndex = 65;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(69, 7);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(198, 16);
+            this.textBox7.TabIndex = 66;
+            this.textBox7.Text = "Confirmation";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // metroButton3
+            // 
+            this.metroButton3.Location = new System.Drawing.Point(167, 292);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(60, 23);
+            this.metroButton3.TabIndex = 10;
+            this.metroButton3.Text = "Reject";
+            this.metroButton3.UseSelectable = true;
+            // 
+            // metroButton4
+            // 
+            this.metroButton4.Location = new System.Drawing.Point(232, 292);
+            this.metroButton4.Name = "metroButton4";
+            this.metroButton4.Size = new System.Drawing.Size(60, 23);
+            this.metroButton4.TabIndex = 10;
+            this.metroButton4.Text = "Approve";
+            this.metroButton4.UseSelectable = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox2.Controls.Add(this.metroCheckBox7);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.Location = new System.Drawing.Point(11, 126);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(284, 150);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Requirements";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.metroCheckBox1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.metroCheckBox2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.metroCheckBox3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.metroCheckBox4, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.metroCheckBox5, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.metroCheckBox6, 1, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 42);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(268, 64);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // metroCheckBox1
+            // 
+            this.metroCheckBox1.AutoSize = true;
+            this.metroCheckBox1.Location = new System.Drawing.Point(137, 23);
+            this.metroCheckBox1.Name = "metroCheckBox1";
+            this.metroCheckBox1.Size = new System.Drawing.Size(100, 14);
+            this.metroCheckBox1.TabIndex = 1;
+            this.metroCheckBox1.Text = "Requirement 4";
+            this.metroCheckBox1.UseSelectable = true;
+            // 
+            // metroCheckBox2
+            // 
+            this.metroCheckBox2.AutoSize = true;
+            this.metroCheckBox2.Location = new System.Drawing.Point(3, 3);
+            this.metroCheckBox2.Name = "metroCheckBox2";
+            this.metroCheckBox2.Size = new System.Drawing.Size(100, 14);
+            this.metroCheckBox2.TabIndex = 0;
+            this.metroCheckBox2.Text = "Requirement 1";
+            this.metroCheckBox2.UseSelectable = true;
+            // 
+            // metroCheckBox3
+            // 
+            this.metroCheckBox3.AutoSize = true;
+            this.metroCheckBox3.Location = new System.Drawing.Point(3, 23);
+            this.metroCheckBox3.Name = "metroCheckBox3";
+            this.metroCheckBox3.Size = new System.Drawing.Size(100, 14);
+            this.metroCheckBox3.TabIndex = 0;
+            this.metroCheckBox3.Text = "Requirement 3";
+            this.metroCheckBox3.UseSelectable = true;
+            // 
+            // metroCheckBox4
+            // 
+            this.metroCheckBox4.AutoSize = true;
+            this.metroCheckBox4.Location = new System.Drawing.Point(137, 3);
+            this.metroCheckBox4.Name = "metroCheckBox4";
+            this.metroCheckBox4.Size = new System.Drawing.Size(100, 14);
+            this.metroCheckBox4.TabIndex = 0;
+            this.metroCheckBox4.Text = "Requirement 2";
+            this.metroCheckBox4.UseSelectable = true;
+            // 
+            // metroCheckBox5
+            // 
+            this.metroCheckBox5.AutoSize = true;
+            this.metroCheckBox5.Location = new System.Drawing.Point(3, 43);
+            this.metroCheckBox5.Name = "metroCheckBox5";
+            this.metroCheckBox5.Size = new System.Drawing.Size(100, 14);
+            this.metroCheckBox5.TabIndex = 2;
+            this.metroCheckBox5.Text = "Requirement 5";
+            this.metroCheckBox5.UseSelectable = true;
+            // 
+            // metroCheckBox6
+            // 
+            this.metroCheckBox6.AutoSize = true;
+            this.metroCheckBox6.Location = new System.Drawing.Point(137, 43);
+            this.metroCheckBox6.Name = "metroCheckBox6";
+            this.metroCheckBox6.Size = new System.Drawing.Size(100, 14);
+            this.metroCheckBox6.TabIndex = 3;
+            this.metroCheckBox6.Text = "Requirement 6";
+            this.metroCheckBox6.UseSelectable = true;
+            // 
+            // metroCheckBox7
+            // 
+            this.metroCheckBox7.AutoSize = true;
+            this.metroCheckBox7.Location = new System.Drawing.Point(9, 21);
+            this.metroCheckBox7.Name = "metroCheckBox7";
+            this.metroCheckBox7.Size = new System.Drawing.Size(73, 15);
+            this.metroCheckBox7.TabIndex = 0;
+            this.metroCheckBox7.Text = "Check All";
+            this.metroCheckBox7.UseSelectable = true;
+            // 
+            // metroDateTime1
+            // 
+            this.metroDateTime1.Location = new System.Drawing.Point(81, 91);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(4, 29);
+            this.metroDateTime1.Name = "metroDateTime1";
+            this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
+            this.metroDateTime1.TabIndex = 8;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(10, 96);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(61, 16);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "Birthdate";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(10, 67);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(53, 16);
+            this.label21.TabIndex = 7;
+            this.label21.Text = "Gender";
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Controls.Add(this.metroRadioButton4);
+            this.flowLayoutPanel4.Controls.Add(this.metroRadioButton5);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(81, 64);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(135, 20);
+            this.flowLayoutPanel4.TabIndex = 6;
+            // 
+            // metroRadioButton4
+            // 
+            this.metroRadioButton4.AutoSize = true;
+            this.metroRadioButton4.Location = new System.Drawing.Point(3, 3);
+            this.metroRadioButton4.Name = "metroRadioButton4";
+            this.metroRadioButton4.Size = new System.Drawing.Size(49, 15);
+            this.metroRadioButton4.TabIndex = 5;
+            this.metroRadioButton4.Text = "Male";
+            this.metroRadioButton4.UseSelectable = true;
+            // 
+            // metroRadioButton5
+            // 
+            this.metroRadioButton5.AutoSize = true;
+            this.metroRadioButton5.Location = new System.Drawing.Point(58, 3);
+            this.metroRadioButton5.Name = "metroRadioButton5";
+            this.metroRadioButton5.Size = new System.Drawing.Size(61, 15);
+            this.metroRadioButton5.TabIndex = 5;
+            this.metroRadioButton5.Text = "Female";
+            this.metroRadioButton5.UseSelectable = true;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(273, 35);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(25, 22);
+            this.textBox8.TabIndex = 4;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(186, 35);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(81, 22);
+            this.textBox9.TabIndex = 4;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(155, 35);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(25, 22);
+            this.textBox10.TabIndex = 4;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(81, 35);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(68, 22);
+            this.textBox12.TabIndex = 4;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(11, 37);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(45, 16);
+            this.label22.TabIndex = 3;
+            this.label22.Text = "Name";
+            // 
+            // confirmationApplication_status_comboBox
+            // 
+            this.confirmationApplication_status_comboBox.FormattingEnabled = true;
+            this.confirmationApplication_status_comboBox.ItemHeight = 23;
+            this.confirmationApplication_status_comboBox.Items.AddRange(new object[] {
+            "All",
+            "Pending",
+            "Approved",
+            "Cancelled",
+            "Rejected"});
+            this.confirmationApplication_status_comboBox.Location = new System.Drawing.Point(295, 14);
+            this.confirmationApplication_status_comboBox.Name = "confirmationApplication_status_comboBox";
+            this.confirmationApplication_status_comboBox.Size = new System.Drawing.Size(121, 29);
+            this.confirmationApplication_status_comboBox.TabIndex = 63;
+            this.confirmationApplication_status_comboBox.UseSelectable = true;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(237, 17);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(52, 21);
+            this.label23.TabIndex = 64;
+            this.label23.Text = "Status";
+            // 
+            // marriageApplicationTab
+            // 
+            this.marriageApplicationTab.Controls.Add(this.marriageApplication_add_button);
+            this.marriageApplicationTab.Controls.Add(this.metroGrid3);
+            this.marriageApplicationTab.Controls.Add(this.metroComboBox3);
+            this.marriageApplicationTab.Controls.Add(this.label93);
+            this.marriageApplicationTab.Controls.Add(this.metroPanel2);
+            this.marriageApplicationTab.Location = new System.Drawing.Point(4, 22);
+            this.marriageApplicationTab.Name = "marriageApplicationTab";
+            this.marriageApplicationTab.Padding = new System.Windows.Forms.Padding(3);
+            this.marriageApplicationTab.Size = new System.Drawing.Size(737, 416);
+            this.marriageApplicationTab.TabIndex = 2;
+            this.marriageApplicationTab.Text = "marriageApplicationTab";
+            this.marriageApplicationTab.UseVisualStyleBackColor = true;
+            // 
+            // marriageApplication_add_button
+            // 
+            this.marriageApplication_add_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.marriageApplication_add_button.BackColor = System.Drawing.Color.DodgerBlue;
+            this.marriageApplication_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.marriageApplication_add_button.Font = new System.Drawing.Font("Calibri", 12F);
+            this.marriageApplication_add_button.ForeColor = System.Drawing.Color.White;
+            this.marriageApplication_add_button.Location = new System.Drawing.Point(315, 384);
+            this.marriageApplication_add_button.Name = "marriageApplication_add_button";
+            this.marriageApplication_add_button.Size = new System.Drawing.Size(100, 31);
+            this.marriageApplication_add_button.TabIndex = 70;
+            this.marriageApplication_add_button.Text = "Add";
+            this.marriageApplication_add_button.UseVisualStyleBackColor = false;
+            this.marriageApplication_add_button.Click += new System.EventHandler(this.marriageApplication_add_button_Click);
+            // 
+            // metroGrid3
+            // 
+            this.metroGrid3.AllowUserToResizeRows = false;
+            this.metroGrid3.BackgroundColor = System.Drawing.Color.White;
+            this.metroGrid3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metroGrid3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.metroGrid3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.metroGrid3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid3.DefaultCellStyle = dataGridViewCellStyle12;
+            this.metroGrid3.EnableHeadersVisualStyles = false;
+            this.metroGrid3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.metroGrid3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid3.Location = new System.Drawing.Point(3, 62);
+            this.metroGrid3.Name = "metroGrid3";
+            this.metroGrid3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid3.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.metroGrid3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.metroGrid3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.metroGrid3.Size = new System.Drawing.Size(412, 301);
+            this.metroGrid3.TabIndex = 67;
+            // 
+            // metroComboBox3
+            // 
+            this.metroComboBox3.FormattingEnabled = true;
+            this.metroComboBox3.ItemHeight = 23;
+            this.metroComboBox3.Items.AddRange(new object[] {
+            "All",
+            "Pending",
+            "Approved",
+            "Cancelled",
+            "Rejected"});
+            this.metroComboBox3.Location = new System.Drawing.Point(295, 18);
+            this.metroComboBox3.Name = "metroComboBox3";
+            this.metroComboBox3.Size = new System.Drawing.Size(121, 29);
+            this.metroComboBox3.TabIndex = 68;
+            this.metroComboBox3.UseSelectable = true;
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Location = new System.Drawing.Point(237, 21);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(52, 21);
+            this.label93.TabIndex = 69;
+            this.label93.Text = "Status";
+            // 
+            // metroPanel2
+            // 
+            this.metroPanel2.Controls.Add(this.textBox13);
+            this.metroPanel2.Controls.Add(this.metroButton5);
+            this.metroPanel2.Controls.Add(this.metroButton6);
+            this.metroPanel2.Controls.Add(this.groupBox3);
+            this.metroPanel2.Controls.Add(this.metroDateTime3);
+            this.metroPanel2.Controls.Add(this.metroDateTime2);
+            this.metroPanel2.Controls.Add(this.label92);
+            this.metroPanel2.Controls.Add(this.label87);
+            this.metroPanel2.Controls.Add(this.textBox21);
+            this.metroPanel2.Controls.Add(this.textBox14);
+            this.metroPanel2.Controls.Add(this.textBox20);
+            this.metroPanel2.Controls.Add(this.textBox15);
+            this.metroPanel2.Controls.Add(this.textBox19);
+            this.metroPanel2.Controls.Add(this.textBox16);
+            this.metroPanel2.Controls.Add(this.textBox18);
+            this.metroPanel2.Controls.Add(this.textBox17);
+            this.metroPanel2.Controls.Add(this.label91);
+            this.metroPanel2.Controls.Add(this.label90);
+            this.metroPanel2.Controls.Add(this.label88);
+            this.metroPanel2.Controls.Add(this.label89);
+            this.metroPanel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(423, 4);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(309, 396);
+            this.metroPanel2.TabIndex = 66;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.Location = new System.Drawing.Point(69, 7);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(198, 16);
+            this.textBox13.TabIndex = 66;
+            this.textBox13.Text = "Marriage";
+            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // metroButton5
+            // 
+            this.metroButton5.Location = new System.Drawing.Point(171, 367);
+            this.metroButton5.Name = "metroButton5";
+            this.metroButton5.Size = new System.Drawing.Size(60, 23);
+            this.metroButton5.TabIndex = 10;
+            this.metroButton5.Text = "Reject";
+            this.metroButton5.UseSelectable = true;
+            // 
+            // metroButton6
+            // 
+            this.metroButton6.Location = new System.Drawing.Point(236, 367);
+            this.metroButton6.Name = "metroButton6";
+            this.metroButton6.Size = new System.Drawing.Size(60, 23);
+            this.metroButton6.TabIndex = 10;
+            this.metroButton6.Text = "Approve";
+            this.metroButton6.UseSelectable = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.tableLayoutPanel2);
+            this.groupBox3.Controls.Add(this.metroCheckBox14);
+            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox3.Location = new System.Drawing.Point(15, 211);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(284, 150);
+            this.groupBox3.TabIndex = 9;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Requirements";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.metroCheckBox8, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.metroCheckBox9, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.metroCheckBox10, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.metroCheckBox11, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.metroCheckBox12, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.metroCheckBox13, 1, 2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 42);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(268, 64);
+            this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // metroCheckBox8
+            // 
+            this.metroCheckBox8.AutoSize = true;
+            this.metroCheckBox8.Location = new System.Drawing.Point(137, 23);
+            this.metroCheckBox8.Name = "metroCheckBox8";
+            this.metroCheckBox8.Size = new System.Drawing.Size(100, 14);
+            this.metroCheckBox8.TabIndex = 1;
+            this.metroCheckBox8.Text = "Requirement 4";
+            this.metroCheckBox8.UseSelectable = true;
+            // 
+            // metroCheckBox9
+            // 
+            this.metroCheckBox9.AutoSize = true;
+            this.metroCheckBox9.Location = new System.Drawing.Point(3, 3);
+            this.metroCheckBox9.Name = "metroCheckBox9";
+            this.metroCheckBox9.Size = new System.Drawing.Size(100, 14);
+            this.metroCheckBox9.TabIndex = 0;
+            this.metroCheckBox9.Text = "Requirement 1";
+            this.metroCheckBox9.UseSelectable = true;
+            // 
+            // metroCheckBox10
+            // 
+            this.metroCheckBox10.AutoSize = true;
+            this.metroCheckBox10.Location = new System.Drawing.Point(3, 23);
+            this.metroCheckBox10.Name = "metroCheckBox10";
+            this.metroCheckBox10.Size = new System.Drawing.Size(100, 14);
+            this.metroCheckBox10.TabIndex = 0;
+            this.metroCheckBox10.Text = "Requirement 3";
+            this.metroCheckBox10.UseSelectable = true;
+            // 
+            // metroCheckBox11
+            // 
+            this.metroCheckBox11.AutoSize = true;
+            this.metroCheckBox11.Location = new System.Drawing.Point(137, 3);
+            this.metroCheckBox11.Name = "metroCheckBox11";
+            this.metroCheckBox11.Size = new System.Drawing.Size(100, 14);
+            this.metroCheckBox11.TabIndex = 0;
+            this.metroCheckBox11.Text = "Requirement 2";
+            this.metroCheckBox11.UseSelectable = true;
+            // 
+            // metroCheckBox12
+            // 
+            this.metroCheckBox12.AutoSize = true;
+            this.metroCheckBox12.Location = new System.Drawing.Point(3, 43);
+            this.metroCheckBox12.Name = "metroCheckBox12";
+            this.metroCheckBox12.Size = new System.Drawing.Size(100, 14);
+            this.metroCheckBox12.TabIndex = 2;
+            this.metroCheckBox12.Text = "Requirement 5";
+            this.metroCheckBox12.UseSelectable = true;
+            // 
+            // metroCheckBox13
+            // 
+            this.metroCheckBox13.AutoSize = true;
+            this.metroCheckBox13.Location = new System.Drawing.Point(137, 43);
+            this.metroCheckBox13.Name = "metroCheckBox13";
+            this.metroCheckBox13.Size = new System.Drawing.Size(100, 14);
+            this.metroCheckBox13.TabIndex = 3;
+            this.metroCheckBox13.Text = "Requirement 6";
+            this.metroCheckBox13.UseSelectable = true;
+            // 
+            // metroCheckBox14
+            // 
+            this.metroCheckBox14.AutoSize = true;
+            this.metroCheckBox14.Location = new System.Drawing.Point(9, 21);
+            this.metroCheckBox14.Name = "metroCheckBox14";
+            this.metroCheckBox14.Size = new System.Drawing.Size(73, 15);
+            this.metroCheckBox14.TabIndex = 0;
+            this.metroCheckBox14.Text = "Check All";
+            this.metroCheckBox14.UseSelectable = true;
+            // 
+            // metroDateTime3
+            // 
+            this.metroDateTime3.Location = new System.Drawing.Point(79, 171);
+            this.metroDateTime3.MinimumSize = new System.Drawing.Size(4, 29);
+            this.metroDateTime3.Name = "metroDateTime3";
+            this.metroDateTime3.Size = new System.Drawing.Size(200, 29);
+            this.metroDateTime3.TabIndex = 8;
+            // 
+            // metroDateTime2
+            // 
+            this.metroDateTime2.Location = new System.Drawing.Point(79, 77);
+            this.metroDateTime2.MinimumSize = new System.Drawing.Size(4, 29);
+            this.metroDateTime2.Name = "metroDateTime2";
+            this.metroDateTime2.Size = new System.Drawing.Size(200, 29);
+            this.metroDateTime2.TabIndex = 8;
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Location = new System.Drawing.Point(12, 177);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(61, 16);
+            this.label92.TabIndex = 7;
+            this.label92.Text = "Birthdate";
+            this.label92.Click += new System.EventHandler(this.label87_Click);
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Location = new System.Drawing.Point(12, 83);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(61, 16);
+            this.label87.TabIndex = 7;
+            this.label87.Text = "Birthdate";
+            this.label87.Click += new System.EventHandler(this.label87_Click);
+            // 
+            // textBox21
+            // 
+            this.textBox21.Location = new System.Drawing.Point(272, 141);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(25, 22);
+            this.textBox21.TabIndex = 4;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(272, 47);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(25, 22);
+            this.textBox14.TabIndex = 4;
+            // 
+            // textBox20
+            // 
+            this.textBox20.Location = new System.Drawing.Point(185, 141);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(81, 22);
+            this.textBox20.TabIndex = 4;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(185, 47);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(81, 22);
+            this.textBox15.TabIndex = 4;
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(154, 141);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(25, 22);
+            this.textBox19.TabIndex = 4;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(154, 47);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(25, 22);
+            this.textBox16.TabIndex = 4;
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(80, 141);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(68, 22);
+            this.textBox18.TabIndex = 4;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(80, 47);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(68, 22);
+            this.textBox17.TabIndex = 4;
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Location = new System.Drawing.Point(13, 144);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(45, 16);
+            this.label91.TabIndex = 3;
+            this.label91.Text = "Name";
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Location = new System.Drawing.Point(13, 50);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(45, 16);
+            this.label90.TabIndex = 3;
+            this.label90.Text = "Name";
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Location = new System.Drawing.Point(12, 120);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(40, 16);
+            this.label88.TabIndex = 3;
+            this.label88.Text = "Bride";
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Location = new System.Drawing.Point(12, 26);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(49, 16);
+            this.label89.TabIndex = 3;
+            this.label89.Text = "Groom";
+            // 
             // SAD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -3907,17 +4772,7 @@
             this.AddPNL.ResumeLayout(false);
             this.AddPNL.PerformLayout();
             this.application_panel.ResumeLayout(false);
-            this.baptismApplication_panel.ResumeLayout(false);
-            this.baptismApplication_panel.PerformLayout();
-            this.baptismApplicationDetailsPanel.ResumeLayout(false);
-            this.baptismApplicationDetailsPanel.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.BaptismApplication_Requirements_tablePanel.ResumeLayout(false);
-            this.BaptismApplication_Requirements_tablePanel.PerformLayout();
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.baptismApplication_dgv)).EndInit();
+            this.sacramentApplication_panel.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             this.marriageApplication_panel.ResumeLayout(false);
@@ -3987,6 +4842,38 @@
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel11.ResumeLayout(false);
+            this.applicationsHiddenTabControl.ResumeLayout(false);
+            this.baptismApplicationTab.ResumeLayout(false);
+            this.baptismApplicationTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.baptismApplications_dgv)).EndInit();
+            this.applicationDetailsPanel_BaptismConfirmation.ResumeLayout(false);
+            this.applicationDetailsPanel_BaptismConfirmation.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.BaptismApplication_Requirements_tablePanel.ResumeLayout(false);
+            this.BaptismApplication_Requirements_tablePanel.PerformLayout();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
+            this.confirmationApplicationTab.ResumeLayout(false);
+            this.confirmationApplicationTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).EndInit();
+            this.metroPanel1.ResumeLayout(false);
+            this.metroPanel1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.flowLayoutPanel4.PerformLayout();
+            this.marriageApplicationTab.ResumeLayout(false);
+            this.marriageApplicationTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid3)).EndInit();
+            this.metroPanel2.ResumeLayout(false);
+            this.metroPanel2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4033,8 +4920,6 @@
         private System.Windows.Forms.Label marriageApplication_label;
         private System.Windows.Forms.Label confirmationApplication_label;
         private System.Windows.Forms.Label baptismApplication_label;
-        private System.Windows.Forms.Panel baptismApplication_panel;
-        private System.Windows.Forms.Button baptismApplication_delete_button;
         private System.Windows.Forms.Panel marriageApplication_panel;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Panel groomExisting_panel_marriageApplication;
@@ -4260,33 +5145,101 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button scheduling_button_menu;
         private System.Windows.Forms.Panel panel15;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
-        private MetroFramework.Controls.MetroGrid baptismApplication_dgv;
-        private System.Windows.Forms.Label label10;
-        private MetroFramework.Controls.MetroPanel baptismApplicationDetailsPanel;
+        private System.Windows.Forms.Panel sacramentApplication_panel;
+        private HiddenTabControl applicationsHiddenTabControl;
+        private System.Windows.Forms.TabPage baptismApplicationTab;
+        private System.Windows.Forms.Button baptismApplication_add_button;
+        private System.Windows.Forms.Button baptismApplication_delete_button;
+        private System.Windows.Forms.TextBox textBox11;
+        private MetroFramework.Controls.MetroGrid baptismApplications_dgv;
+        private MetroFramework.Controls.MetroPanel applicationDetailsPanel_BaptismConfirmation;
+        private MetroFramework.Controls.MetroButton reject_baptismApplication_btn;
+        private MetroFramework.Controls.MetroButton approve_baptismApplication_btn;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TableLayoutPanel BaptismApplication_Requirements_tablePanel;
         private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_comboBox4;
         private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_comboBox1;
         private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_comboBox3;
         private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_comboBox2;
+        private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_comboBox5;
+        private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_comboBox6;
         private MetroFramework.Controls.MetroCheckBox baptismApplication_checkAll_comboBox;
-        private MetroFramework.Controls.MetroDateTime BaptismApplication_birthDate;
+        private MetroFramework.Controls.MetroDateTime birthDate_baptismApplication_dtp;
         private System.Windows.Forms.Label label86;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton2;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton3;
-        private System.Windows.Forms.TextBox baptismApplication_suffix_textbox;
-        private System.Windows.Forms.TextBox baptismApplication_lastName_textbox;
-        private System.Windows.Forms.TextBox baptismApplication_midName_textbox;
-        private System.Windows.Forms.TextBox baptismApplication_firstName_textbox;
+        private MetroFramework.Controls.MetroRadioButton male_baptismApplication_radio;
+        private MetroFramework.Controls.MetroRadioButton female_baptismApplication_radio;
+        private System.Windows.Forms.TextBox suffix_baptismApplication_textBox;
+        private System.Windows.Forms.TextBox lastName_baptismApplication_textBox;
+        private System.Windows.Forms.TextBox midName_baptismApplication_textBox;
+        private System.Windows.Forms.TextBox firstName_baptismApplication_textBox;
         private System.Windows.Forms.Label label4;
-        private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_comboBox5;
-        private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_comboBox6;
-        private System.Windows.Forms.TableLayoutPanel BaptismApplication_Requirements_tablePanel;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private System.Windows.Forms.Button baptismApplication_add_button;
-        private System.Windows.Forms.TextBox textBox11;
+        private MetroFramework.Controls.MetroComboBox status_baptismApplication_textBox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TabPage confirmationApplicationTab;
+        private System.Windows.Forms.TabPage marriageApplicationTab;
+        private System.Windows.Forms.Button confirmationApplication_add_button;
+        private System.Windows.Forms.Button confirmationApplication_deletebutton;
+        private MetroFramework.Controls.MetroGrid metroGrid2;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private System.Windows.Forms.TextBox textBox7;
+        private MetroFramework.Controls.MetroButton metroButton3;
+        private MetroFramework.Controls.MetroButton metroButton4;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox1;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox2;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox3;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox4;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox5;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox6;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox7;
+        private MetroFramework.Controls.MetroDateTime metroDateTime1;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private MetroFramework.Controls.MetroRadioButton metroRadioButton4;
+        private MetroFramework.Controls.MetroRadioButton metroRadioButton5;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label22;
+        private MetroFramework.Controls.MetroComboBox confirmationApplication_status_comboBox;
+        private System.Windows.Forms.Label label23;
+        private MetroFramework.Controls.MetroPanel metroPanel2;
+        private System.Windows.Forms.TextBox textBox13;
+        private MetroFramework.Controls.MetroButton metroButton5;
+        private MetroFramework.Controls.MetroButton metroButton6;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox8;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox9;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox10;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox11;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox12;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox13;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox14;
+        private MetroFramework.Controls.MetroDateTime metroDateTime2;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.Label label89;
+        private MetroFramework.Controls.MetroGrid metroGrid3;
+        private MetroFramework.Controls.MetroComboBox metroComboBox3;
+        private System.Windows.Forms.Label label93;
+        private MetroFramework.Controls.MetroDateTime metroDateTime3;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.Button marriageApplication_add_button;
     }
 }
