@@ -197,11 +197,6 @@
             this.label90 = new System.Windows.Forms.Label();
             this.label88 = new System.Windows.Forms.Label();
             this.label89 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.baptismApplication_label = new System.Windows.Forms.Label();
-            this.marriageApplication_label = new System.Windows.Forms.Label();
-            this.confirmationApplication_label = new System.Windows.Forms.Label();
             this.marriageApplication_panel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.groomExisting_panel_marriageApplication = new System.Windows.Forms.Panel();
@@ -237,6 +232,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.marriageApplication_dataGridView = new System.Windows.Forms.DataGridView();
             this.label27 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.baptismApplication_label = new System.Windows.Forms.Label();
+            this.marriageApplication_label = new System.Windows.Forms.Label();
+            this.confirmationApplication_label = new System.Windows.Forms.Label();
             this.bloodletting_panel = new System.Windows.Forms.Panel();
             this.profile_menu_button = new System.Windows.Forms.Button();
             this.bloodletting_menu_button = new System.Windows.Forms.Button();
@@ -437,7 +437,6 @@
             this.metroPanel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.panel15.SuspendLayout();
             this.marriageApplication_panel.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.groomExisting_panel_marriageApplication.SuspendLayout();
@@ -445,6 +444,7 @@
             this.brideExisting_panel_marriageApplication.SuspendLayout();
             this.brideNew_panel_marriageApplication.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.marriageApplication_dataGridView)).BeginInit();
+            this.panel15.SuspendLayout();
             this.bloodletting_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.panel_controlbox.SuspendLayout();
@@ -674,9 +674,9 @@
             this.profile_panel.Controls.Add(this.panel9);
             this.profile_panel.Controls.Add(this.AddPNL);
             this.profile_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profile_panel.Location = new System.Drawing.Point(0, 0);
+            this.profile_panel.Location = new System.Drawing.Point(181, 33);
             this.profile_panel.Name = "profile_panel";
-            this.profile_panel.Size = new System.Drawing.Size(934, 545);
+            this.profile_panel.Size = new System.Drawing.Size(753, 512);
             this.profile_panel.TabIndex = 29;
             // 
             // AddBTN
@@ -1023,7 +1023,7 @@
             this.generalprofile_datagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.generalprofile_datagridview.Size = new System.Drawing.Size(345, 335);
             this.generalprofile_datagridview.TabIndex = 0;
-            this.generalprofile_datagridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.generalprofile_datagridview_CellClick);
+            this.generalprofile_datagridview.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.generalprofile_datagridview_CellClick);
             // 
             // AddPNL
             // 
@@ -1190,8 +1190,8 @@
             // 
             this.application_panel.BackColor = System.Drawing.Color.White;
             this.application_panel.Controls.Add(this.sacramentApplication_panel);
-            this.application_panel.Controls.Add(this.panel15);
             this.application_panel.Controls.Add(this.marriageApplication_panel);
+            this.application_panel.Controls.Add(this.panel15);
             this.application_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.application_panel.Location = new System.Drawing.Point(181, 33);
             this.application_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1481,7 +1481,7 @@
             // BaptismApplication_birthDate
             // 
             this.BaptismApplication_birthDate.Location = new System.Drawing.Point(81, 91);
-            this.BaptismApplication_birthDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.BaptismApplication_birthDate.MinimumSize = new System.Drawing.Size(4, 29);
             this.BaptismApplication_birthDate.Name = "BaptismApplication_birthDate";
             this.BaptismApplication_birthDate.Size = new System.Drawing.Size(200, 29);
             this.BaptismApplication_birthDate.TabIndex = 8;
@@ -2355,63 +2355,6 @@
             this.label89.TabIndex = 3;
             this.label89.Text = "Groom";
             // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.label1);
-            this.panel15.Controls.Add(this.baptismApplication_label);
-            this.panel15.Controls.Add(this.marriageApplication_label);
-            this.panel15.Controls.Add(this.confirmationApplication_label);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(0, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(753, 63);
-            this.panel15.TabIndex = 55;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.label1.Location = new System.Drawing.Point(4, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 23);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "APPLICATIONS";
-            // 
-            // baptismApplication_label
-            // 
-            this.baptismApplication_label.AutoSize = true;
-            this.baptismApplication_label.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.baptismApplication_label.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.baptismApplication_label.Location = new System.Drawing.Point(144, 31);
-            this.baptismApplication_label.Name = "baptismApplication_label";
-            this.baptismApplication_label.Size = new System.Drawing.Size(70, 19);
-            this.baptismApplication_label.TabIndex = 44;
-            this.baptismApplication_label.Text = "Baptism ";
-            this.baptismApplication_label.Click += new System.EventHandler(this.applicationMenu_labelClick);
-            // 
-            // marriageApplication_label
-            // 
-            this.marriageApplication_label.AutoSize = true;
-            this.marriageApplication_label.Font = new System.Drawing.Font("Corbel", 12F);
-            this.marriageApplication_label.Location = new System.Drawing.Point(521, 31);
-            this.marriageApplication_label.Name = "marriageApplication_label";
-            this.marriageApplication_label.Size = new System.Drawing.Size(69, 19);
-            this.marriageApplication_label.TabIndex = 44;
-            this.marriageApplication_label.Text = "Marriage";
-            this.marriageApplication_label.Click += new System.EventHandler(this.applicationMenu_labelClick);
-            // 
-            // confirmationApplication_label
-            // 
-            this.confirmationApplication_label.AutoSize = true;
-            this.confirmationApplication_label.Font = new System.Drawing.Font("Corbel", 12F);
-            this.confirmationApplication_label.Location = new System.Drawing.Point(318, 31);
-            this.confirmationApplication_label.Name = "confirmationApplication_label";
-            this.confirmationApplication_label.Size = new System.Drawing.Size(97, 19);
-            this.confirmationApplication_label.TabIndex = 44;
-            this.confirmationApplication_label.Text = "Confirmation";
-            this.confirmationApplication_label.Click += new System.EventHandler(this.applicationMenu_labelClick);
-            // 
             // marriageApplication_panel
             // 
             this.marriageApplication_panel.BackColor = System.Drawing.Color.White;
@@ -2422,9 +2365,9 @@
             this.marriageApplication_panel.Controls.Add(this.marriageApplication_dataGridView);
             this.marriageApplication_panel.Controls.Add(this.label27);
             this.marriageApplication_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.marriageApplication_panel.Location = new System.Drawing.Point(0, 0);
+            this.marriageApplication_panel.Location = new System.Drawing.Point(0, 63);
             this.marriageApplication_panel.Name = "marriageApplication_panel";
-            this.marriageApplication_panel.Size = new System.Drawing.Size(753, 512);
+            this.marriageApplication_panel.Size = new System.Drawing.Size(753, 449);
             this.marriageApplication_panel.TabIndex = 54;
             // 
             // flowLayoutPanel2
@@ -2440,7 +2383,7 @@
             this.flowLayoutPanel2.Controls.Add(this.brideNew_panel_marriageApplication);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(20, 45);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(299, 400);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(299, 337);
             this.flowLayoutPanel2.TabIndex = 52;
             // 
             // groomExisting_panel_marriageApplication
@@ -2785,7 +2728,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Calibri", 12F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(633, 465);
+            this.button3.Location = new System.Drawing.Point(633, 402);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 31);
             this.button3.TabIndex = 43;
@@ -2801,7 +2744,7 @@
             this.marriageApplication_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.marriageApplication_dataGridView.Location = new System.Drawing.Point(325, 55);
             this.marriageApplication_dataGridView.Name = "marriageApplication_dataGridView";
-            this.marriageApplication_dataGridView.Size = new System.Drawing.Size(411, 390);
+            this.marriageApplication_dataGridView.Size = new System.Drawing.Size(411, 327);
             this.marriageApplication_dataGridView.TabIndex = 44;
             // 
             // label27
@@ -2813,6 +2756,63 @@
             this.label27.Size = new System.Drawing.Size(213, 21);
             this.label27.TabIndex = 51;
             this.label27.Text = "_____________________________";
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.label1);
+            this.panel15.Controls.Add(this.baptismApplication_label);
+            this.panel15.Controls.Add(this.marriageApplication_label);
+            this.panel15.Controls.Add(this.confirmationApplication_label);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(0, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(753, 63);
+            this.panel15.TabIndex = 55;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.label1.Location = new System.Drawing.Point(4, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 23);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "APPLICATIONS";
+            // 
+            // baptismApplication_label
+            // 
+            this.baptismApplication_label.AutoSize = true;
+            this.baptismApplication_label.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.baptismApplication_label.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.baptismApplication_label.Location = new System.Drawing.Point(144, 31);
+            this.baptismApplication_label.Name = "baptismApplication_label";
+            this.baptismApplication_label.Size = new System.Drawing.Size(70, 19);
+            this.baptismApplication_label.TabIndex = 44;
+            this.baptismApplication_label.Text = "Baptism ";
+            this.baptismApplication_label.Click += new System.EventHandler(this.applicationMenu_labelClick);
+            // 
+            // marriageApplication_label
+            // 
+            this.marriageApplication_label.AutoSize = true;
+            this.marriageApplication_label.Font = new System.Drawing.Font("Corbel", 12F);
+            this.marriageApplication_label.Location = new System.Drawing.Point(521, 31);
+            this.marriageApplication_label.Name = "marriageApplication_label";
+            this.marriageApplication_label.Size = new System.Drawing.Size(69, 19);
+            this.marriageApplication_label.TabIndex = 44;
+            this.marriageApplication_label.Text = "Marriage";
+            this.marriageApplication_label.Click += new System.EventHandler(this.applicationMenu_labelClick);
+            // 
+            // confirmationApplication_label
+            // 
+            this.confirmationApplication_label.AutoSize = true;
+            this.confirmationApplication_label.Font = new System.Drawing.Font("Corbel", 12F);
+            this.confirmationApplication_label.Location = new System.Drawing.Point(318, 31);
+            this.confirmationApplication_label.Name = "confirmationApplication_label";
+            this.confirmationApplication_label.Size = new System.Drawing.Size(97, 19);
+            this.confirmationApplication_label.TabIndex = 44;
+            this.confirmationApplication_label.Text = "Confirmation";
+            this.confirmationApplication_label.Click += new System.EventHandler(this.applicationMenu_labelClick);
             // 
             // bloodletting_panel
             // 
@@ -4748,16 +4748,16 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(934, 545);
             this.ControlBox = false;
+            this.Controls.Add(this.profile_panel);
+            this.Controls.Add(this.sacrament_panel);
             this.Controls.Add(this.application_panel);
             this.Controls.Add(this.bloodletting_panel);
-            this.Controls.Add(this.sacrament_panel);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.home_panel);
             this.Controls.Add(this.CRB_panel);
             this.Controls.Add(this.CDB_panel);
             this.Controls.Add(this.panel_controlbox);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.profile_panel);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -4805,8 +4805,6 @@
             this.groupBox3.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
             this.marriageApplication_panel.ResumeLayout(false);
             this.marriageApplication_panel.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -4820,6 +4818,8 @@
             this.brideNew_panel_marriageApplication.ResumeLayout(false);
             this.brideNew_panel_marriageApplication.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.marriageApplication_dataGridView)).EndInit();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
             this.bloodletting_panel.ResumeLayout(false);
             this.bloodletting_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();

@@ -136,14 +136,6 @@ namespace ParishSystem
 
 
         #region Profiles
-
-        private void resetProfilesVariables()
-        {//reset variables used by profiles tab
-            lastGeneralProfile = 0;
-        }
-
-        int lastGeneralProfile = 0;
-
         private void refreshGeneralProfileTable()
         {//refresh general profile table
             DataTable dt = dh.getGeneralProfiles();
@@ -160,7 +152,6 @@ namespace ParishSystem
         {//data grid cell click
             openProfile_button.Enabled = true;
             deleteProfile_button.Enabled = true;
-            lastGeneralProfile = int.Parse(generalprofile_datagridview.CurrentRow.Cells["profileID"].Value.ToString());
             //label changes
             firstname_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["firstname"].Value.ToString();
             middlename_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["midname"].Value.ToString();
@@ -171,11 +162,6 @@ namespace ParishSystem
                 gender_label_profiles.Text = generalprofile_datagridview.CurrentRow.Cells["gender"].Value.ToString().ToUpper();
             else
                 gender_label_profiles.Text = "";
-
-            Console.WriteLine(DateTime.MinValue.ToString());
-            Console.WriteLine(generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString());
-            Console.WriteLine(DateTime.MinValue.ToString().Equals(generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString()));
-
             if (!generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString().Equals(DateTime.MinValue.ToString()))
                 birthday_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString();
             else
@@ -185,7 +171,6 @@ namespace ParishSystem
             address_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["address"].Value.ToString();
             birthplace_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["birthplace"].Value.ToString();
             bloodtype_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["bloodtype"].Value.ToString();
-            Console.WriteLine(lastGeneralProfile);
         }
 
         private void addProfile_button_Click(object sender, EventArgs e)
@@ -211,18 +196,14 @@ namespace ParishSystem
         private void openProfile_button_Click(object sender, EventArgs e)
         {//open person complete profile
 
-            Form person = new Person(lastGeneralProfile, dh);
+            Form person = new Person(int.Parse(generalprofile_datagridview.SelectedRows[0].Cells[0].Value.ToString()), dh,(int)Enums.Mode.GeneralProfile);
             person.ShowDialog();
-
-
-
         }
 
         private void deleteProfile_button_Click(object sender, EventArgs e)
         {
-            dh.deleteGeneralProfile(lastGeneralProfile);
+            dh.deleteGeneralProfile(int.Parse(generalprofile_datagridview.SelectedRows[0].Cells[0].Value.ToString()));
             refreshGeneralProfileTable();
-            lastGeneralProfile = 0;
             deleteProfile_button.Enabled = false;
             openProfile_button.Enabled = false;
         }
@@ -234,9 +215,7 @@ namespace ParishSystem
             middlename_textbox.Text = "middlename";
             firstname_textbox.Text = "firstname";
             suffix_textbox.Text = "suffix";
-            lastGeneralProfile = 0;
         }
-
         private void clear_profile_button_Click(object sender, EventArgs e)
         {
             AddPNL.Visible = false;
@@ -591,7 +570,8 @@ namespace ParishSystem
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            Form A = new Person(int.Parse(sacramentApplication_dgv.SelectedRows[0].Cells["profileID"].Value.ToString()),dh);
+           
+            Form A = new Person(int.Parse(sacramentApplication_dgv.SelectedRows[0].Cells["profileID"].Value.ToString()),dh,(int)Enums.Mode.Applications);
             A.ShowDialog();
         }
 
