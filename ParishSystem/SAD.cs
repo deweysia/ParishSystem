@@ -264,6 +264,7 @@ namespace ParishSystem
         //----------------------APPLICATION------------------------//
         private void applicationMenu_labelClick(object sender, EventArgs e)
         {
+            
             Label A = sender as Label;
             if (A.Equals(baptismApplication_label))
             {
@@ -276,8 +277,8 @@ namespace ParishSystem
                 marriageApplication_label.ForeColor = Color.Black;
 
                 //panel changes
-                sacramentApplication_panel.BringToFront();
-
+                baptismApplication_panel.BringToFront();
+                baptismApplication_add_button.Tag = SacramentType.Baptism;
             }
             else if (A.Equals(confirmationApplication_label))
             {
@@ -290,7 +291,8 @@ namespace ParishSystem
                 marriageApplication_label.ForeColor = Color.Black;
 
                 //panel changes
-                sacramentApplication_panel.BringToFront();
+                baptismApplication_panel.BringToFront();
+                baptismApplication_add_button.Tag = SacramentType.Confirmation;
 
             }
             else if (A.Equals(marriageApplication_label))

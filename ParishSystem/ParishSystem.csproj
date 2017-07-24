@@ -97,6 +97,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HiddenTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HiddenTabControl.Designer.cs">
+      <DependentUpon>HiddenTabControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="menu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HiddenTabControl.resx">
+      <DependentUpon>HiddenTabControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\ParishSystem.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\ParishSystem.Properties.Resources.resources" />
