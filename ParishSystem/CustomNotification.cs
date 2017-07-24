@@ -65,7 +65,7 @@ namespace ParishSystem
         int interval = 0;
         private void startTimer_Tick(object sender, EventArgs e)
         {
-            Console.WriteLine(this.Top);
+            //Console.WriteLine(this.Top);
             if (this.Top >= 60)
             {
                 startTimer.Stop();
@@ -79,7 +79,7 @@ namespace ParishSystem
 
         private void stopTimer_Tick(object sender, EventArgs e)
         {
-            Console.WriteLine("STOP TICK");
+            //Console.WriteLine("STOP TICK");
             if (this.Opacity == 0)
                 this.Close();
 
@@ -90,7 +90,7 @@ namespace ParishSystem
         {
             waitTimer.Stop();
             stopTimer.Start();
-            Console.WriteLine("WAIT TICK");
+            //Console.WriteLine("WAIT TICK");
         }
 
         private void CustomNotification_MouseEnter(object sender, EventArgs e)

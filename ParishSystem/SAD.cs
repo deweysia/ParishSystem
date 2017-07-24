@@ -201,7 +201,7 @@ namespace ParishSystem
 
             if (!firstname_textbox.Text.Equals("firstname") && !middlename_textbox.Text.Equals("middlename") && !lastname_textbox.Text.Equals("lastname"))
             {
-                dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, '0', DateTime.MinValue, null, null, null);
+                //dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, '0', DateTime.MinValue, null, null, null);
                 refreshGeneralProfileTable();
                 AddPNL.Visible = false;
             }
@@ -260,8 +260,30 @@ namespace ParishSystem
         #endregion
 
 
+        /*
+                                         =============================================================
+                                                ================ APPLICATION TAB =================
+                                         =============================================================
+        */
+
         #region Application
-        //----------------------APPLICATION------------------------//
+
+
+        public void loadBaptismApplications()
+        {
+            baptismApplication_dgv.DataSource = dh.getApplications(SacramentType.Baptism);
+            baptismApplication_dgv.Columns["profileID"].Visible = false;
+            baptismApplication_dgv.Columns["applicationID"].Visible = false;
+        }
+
+        public void loadConfirmationApplications()
+        {
+            baptismApplication_dgv.DataSource = dh.getApplications(SacramentType.Confirmation);
+            baptismApplication_dgv.Columns["profileID"].Visible = false;
+            baptismApplication_dgv.Columns["applicationID"].Visible = false;
+        }
+
+
         private void applicationMenu_labelClick(object sender, EventArgs e)
         {
             
@@ -277,8 +299,9 @@ namespace ParishSystem
                 marriageApplication_label.ForeColor = Color.Black;
 
                 //panel changes
-                baptismApplication_panel.BringToFront();
-                baptismApplication_add_button.Tag = SacramentType.Baptism;
+                applicationHiddenTabControl.SelectedIndex = 0;
+
+                loadBaptismApplications();
             }
             else if (A.Equals(confirmationApplication_label))
             {
@@ -291,8 +314,9 @@ namespace ParishSystem
                 marriageApplication_label.ForeColor = Color.Black;
 
                 //panel changes
-                baptismApplication_panel.BringToFront();
+                applicationHiddenTabControl.SelectedIndex = 1; 
                 baptismApplication_add_button.Tag = SacramentType.Confirmation;
+                baptismApplication_dgv.DataSource = dh.getApplications(SacramentType.Confirmation);
 
             }
             else if (A.Equals(marriageApplication_label))
@@ -568,15 +592,15 @@ namespace ParishSystem
         private void baptismApplication_add_button_Click(object sender, EventArgs e)
         {
             AddApplication aa = new AddApplication(SacramentType.Baptism);
+            aa.ShowDialog();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void confirmationApplication_add_button_Click(object sender, EventArgs e)
         {
             AddApplication aa = new AddApplication(SacramentType.Confirmation);
             DialogResult dr = aa.ShowDialog();
             MessageBox.Show("Bitch done");
-
-
         }
+
     }
 }

@@ -34,26 +34,29 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.application_birthdate_dtp = new MetroFramework.Controls.MetroDateTime();
-            this.application_male_radio = new MetroFramework.Controls.MetroRadioButton();
-            this.application_female_radio = new MetroFramework.Controls.MetroRadioButton();
-            this.application_firstName_textBox = new System.Windows.Forms.TextBox();
-            this.application_midName_textBox = new System.Windows.Forms.TextBox();
-            this.application_lastName_textBox = new System.Windows.Forms.TextBox();
-            this.application_suffix_textBox = new System.Windows.Forms.TextBox();
+            this.birthdate_dtp = new MetroFramework.Controls.MetroDateTime();
+            this.male_radio = new MetroFramework.Controls.MetroRadioButton();
+            this.female_radio = new MetroFramework.Controls.MetroRadioButton();
+            this.firstName_textBox = new System.Windows.Forms.TextBox();
+            this.midName_textBox = new System.Windows.Forms.TextBox();
+            this.lastName_textBox = new System.Windows.Forms.TextBox();
+            this.suffix_textBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.hiddenTabControl1 = new ParishSystem.HiddenTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.application_apply_button = new MetroFramework.Controls.MetroButton();
+            this.apply_button = new MetroFramework.Controls.MetroButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.applicationNotice_label = new System.Windows.Forms.Label();
-            this.application_createNewProfile_button = new MetroFramework.Controls.MetroButton();
-            this.application_cancel_button = new MetroFramework.Controls.MetroButton();
-            this.application_yes_button = new MetroFramework.Controls.MetroButton();
+            this.createNewProfile_button = new MetroFramework.Controls.MetroButton();
+            this.cancel_button = new MetroFramework.Controls.MetroButton();
+            this.yes_button = new MetroFramework.Controls.MetroButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.application_price_textBox = new System.Windows.Forms.TextBox();
+            this.price_textBox = new System.Windows.Forms.TextBox();
+            this.remarks_textBox = new System.Windows.Forms.TextBox();
+            this.application_remarks_textBox = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.hiddenTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -107,79 +110,79 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Birthdate";
             // 
-            // application_birthdate_dtp
+            // birthdate_dtp
             // 
-            this.application_birthdate_dtp.FontSize = MetroFramework.MetroDateTimeSize.Small;
-            this.application_birthdate_dtp.Location = new System.Drawing.Point(26, 163);
-            this.application_birthdate_dtp.MaxDate = new System.DateTime(2017, 7, 16, 0, 0, 0, 0);
-            this.application_birthdate_dtp.MinimumSize = new System.Drawing.Size(0, 25);
-            this.application_birthdate_dtp.Name = "application_birthdate_dtp";
-            this.application_birthdate_dtp.Size = new System.Drawing.Size(200, 25);
-            this.application_birthdate_dtp.TabIndex = 7;
-            this.application_birthdate_dtp.Value = new System.DateTime(2017, 7, 16, 0, 0, 0, 0);
+            this.birthdate_dtp.FontSize = MetroFramework.MetroDateTimeSize.Small;
+            this.birthdate_dtp.Location = new System.Drawing.Point(26, 163);
+            this.birthdate_dtp.MaxDate = new System.DateTime(2017, 7, 16, 0, 0, 0, 0);
+            this.birthdate_dtp.MinimumSize = new System.Drawing.Size(0, 25);
+            this.birthdate_dtp.Name = "birthdate_dtp";
+            this.birthdate_dtp.Size = new System.Drawing.Size(200, 25);
+            this.birthdate_dtp.TabIndex = 7;
+            this.birthdate_dtp.Value = new System.DateTime(2017, 7, 16, 0, 0, 0, 0);
             // 
-            // application_male_radio
+            // male_radio
             // 
-            this.application_male_radio.AutoSize = true;
-            this.application_male_radio.Checked = true;
-            this.application_male_radio.Location = new System.Drawing.Point(26, 115);
-            this.application_male_radio.Name = "application_male_radio";
-            this.application_male_radio.Size = new System.Drawing.Size(49, 15);
-            this.application_male_radio.Style = MetroFramework.MetroColorStyle.Orange;
-            this.application_male_radio.TabIndex = 5;
-            this.application_male_radio.TabStop = true;
-            this.application_male_radio.Text = "Male";
-            this.application_male_radio.UseCustomBackColor = true;
-            this.application_male_radio.UseCustomForeColor = true;
-            this.application_male_radio.UseSelectable = true;
-            this.application_male_radio.UseStyleColors = true;
+            this.male_radio.AutoSize = true;
+            this.male_radio.Checked = true;
+            this.male_radio.Location = new System.Drawing.Point(26, 115);
+            this.male_radio.Name = "male_radio";
+            this.male_radio.Size = new System.Drawing.Size(49, 15);
+            this.male_radio.Style = MetroFramework.MetroColorStyle.Orange;
+            this.male_radio.TabIndex = 5;
+            this.male_radio.TabStop = true;
+            this.male_radio.Text = "Male";
+            this.male_radio.UseCustomBackColor = true;
+            this.male_radio.UseCustomForeColor = true;
+            this.male_radio.UseSelectable = true;
+            this.male_radio.UseStyleColors = true;
             // 
-            // application_female_radio
+            // female_radio
             // 
-            this.application_female_radio.AutoSize = true;
-            this.application_female_radio.BackColor = System.Drawing.Color.Transparent;
-            this.application_female_radio.Location = new System.Drawing.Point(82, 115);
-            this.application_female_radio.Name = "application_female_radio";
-            this.application_female_radio.Size = new System.Drawing.Size(61, 15);
-            this.application_female_radio.Style = MetroFramework.MetroColorStyle.Orange;
-            this.application_female_radio.TabIndex = 6;
-            this.application_female_radio.Text = "Female";
-            this.application_female_radio.UseCustomBackColor = true;
-            this.application_female_radio.UseCustomForeColor = true;
-            this.application_female_radio.UseSelectable = true;
-            this.application_female_radio.UseStyleColors = true;
+            this.female_radio.AutoSize = true;
+            this.female_radio.BackColor = System.Drawing.Color.Transparent;
+            this.female_radio.Location = new System.Drawing.Point(82, 115);
+            this.female_radio.Name = "female_radio";
+            this.female_radio.Size = new System.Drawing.Size(61, 15);
+            this.female_radio.Style = MetroFramework.MetroColorStyle.Orange;
+            this.female_radio.TabIndex = 6;
+            this.female_radio.Text = "Female";
+            this.female_radio.UseCustomBackColor = true;
+            this.female_radio.UseCustomForeColor = true;
+            this.female_radio.UseSelectable = true;
+            this.female_radio.UseStyleColors = true;
             // 
-            // application_firstName_textBox
+            // firstName_textBox
             // 
-            this.application_firstName_textBox.Location = new System.Drawing.Point(26, 65);
-            this.application_firstName_textBox.MaxLength = 50;
-            this.application_firstName_textBox.Name = "application_firstName_textBox";
-            this.application_firstName_textBox.Size = new System.Drawing.Size(95, 20);
-            this.application_firstName_textBox.TabIndex = 1;
+            this.firstName_textBox.Location = new System.Drawing.Point(26, 65);
+            this.firstName_textBox.MaxLength = 50;
+            this.firstName_textBox.Name = "firstName_textBox";
+            this.firstName_textBox.Size = new System.Drawing.Size(95, 20);
+            this.firstName_textBox.TabIndex = 1;
             // 
-            // application_midName_textBox
+            // midName_textBox
             // 
-            this.application_midName_textBox.Location = new System.Drawing.Point(127, 65);
-            this.application_midName_textBox.MaxLength = 1;
-            this.application_midName_textBox.Name = "application_midName_textBox";
-            this.application_midName_textBox.Size = new System.Drawing.Size(31, 20);
-            this.application_midName_textBox.TabIndex = 2;
+            this.midName_textBox.Location = new System.Drawing.Point(127, 65);
+            this.midName_textBox.MaxLength = 1;
+            this.midName_textBox.Name = "midName_textBox";
+            this.midName_textBox.Size = new System.Drawing.Size(31, 20);
+            this.midName_textBox.TabIndex = 2;
             // 
-            // application_lastName_textBox
+            // lastName_textBox
             // 
-            this.application_lastName_textBox.Location = new System.Drawing.Point(164, 65);
-            this.application_lastName_textBox.MaxLength = 50;
-            this.application_lastName_textBox.Name = "application_lastName_textBox";
-            this.application_lastName_textBox.Size = new System.Drawing.Size(95, 20);
-            this.application_lastName_textBox.TabIndex = 3;
+            this.lastName_textBox.Location = new System.Drawing.Point(164, 65);
+            this.lastName_textBox.MaxLength = 50;
+            this.lastName_textBox.Name = "lastName_textBox";
+            this.lastName_textBox.Size = new System.Drawing.Size(95, 20);
+            this.lastName_textBox.TabIndex = 3;
             // 
-            // application_suffix_textBox
+            // suffix_textBox
             // 
-            this.application_suffix_textBox.Location = new System.Drawing.Point(265, 65);
-            this.application_suffix_textBox.MaxLength = 5;
-            this.application_suffix_textBox.Name = "application_suffix_textBox";
-            this.application_suffix_textBox.Size = new System.Drawing.Size(39, 20);
-            this.application_suffix_textBox.TabIndex = 4;
+            this.suffix_textBox.Location = new System.Drawing.Point(265, 65);
+            this.suffix_textBox.MaxLength = 5;
+            this.suffix_textBox.Name = "suffix_textBox";
+            this.suffix_textBox.Size = new System.Drawing.Size(39, 20);
+            this.suffix_textBox.TabIndex = 4;
             // 
             // button1
             // 
@@ -201,7 +204,7 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
+            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
@@ -211,7 +214,7 @@
             this.hiddenTabControl1.Controls.Add(this.tabPage1);
             this.hiddenTabControl1.Controls.Add(this.tabPage2);
             this.hiddenTabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.hiddenTabControl1.Location = new System.Drawing.Point(20, 219);
+            this.hiddenTabControl1.Location = new System.Drawing.Point(20, 293);
             this.hiddenTabControl1.Name = "hiddenTabControl1";
             this.hiddenTabControl1.SelectedIndex = 0;
             this.hiddenTabControl1.Size = new System.Drawing.Size(292, 120);
@@ -220,7 +223,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.tabPage1.Controls.Add(this.application_apply_button);
+            this.tabPage1.Controls.Add(this.apply_button);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -228,17 +231,17 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
-            // application_apply_button
+            // apply_button
             // 
-            this.application_apply_button.Location = new System.Drawing.Point(103, 65);
-            this.application_apply_button.Name = "application_apply_button";
-            this.application_apply_button.Size = new System.Drawing.Size(75, 23);
-            this.application_apply_button.Style = MetroFramework.MetroColorStyle.Orange;
-            this.application_apply_button.TabIndex = 10;
-            this.application_apply_button.Text = "Apply";
-            this.application_apply_button.UseSelectable = true;
-            this.application_apply_button.UseStyleColors = true;
-            this.application_apply_button.Click += new System.EventHandler(this.application_apply_button_Click);
+            this.apply_button.Location = new System.Drawing.Point(103, 65);
+            this.apply_button.Name = "apply_button";
+            this.apply_button.Size = new System.Drawing.Size(75, 23);
+            this.apply_button.Style = MetroFramework.MetroColorStyle.Orange;
+            this.apply_button.TabIndex = 10;
+            this.apply_button.Text = "Apply";
+            this.apply_button.UseSelectable = true;
+            this.apply_button.UseStyleColors = true;
+            this.apply_button.Click += new System.EventHandler(this.application_apply_button_Click);
             // 
             // tabPage2
             // 
@@ -254,9 +257,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.applicationNotice_label);
-            this.panel1.Controls.Add(this.application_createNewProfile_button);
-            this.panel1.Controls.Add(this.application_cancel_button);
-            this.panel1.Controls.Add(this.application_yes_button);
+            this.panel1.Controls.Add(this.createNewProfile_button);
+            this.panel1.Controls.Add(this.cancel_button);
+            this.panel1.Controls.Add(this.yes_button);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
@@ -274,44 +277,44 @@
             this.applicationNotice_label.Text = "A profile with the same name, gender, and birthdate already exists. Use existing " +
     "profile?";
             // 
-            // application_createNewProfile_button
+            // createNewProfile_button
             // 
-            this.application_createNewProfile_button.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.application_createNewProfile_button.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.application_createNewProfile_button.Location = new System.Drawing.Point(165, 62);
-            this.application_createNewProfile_button.Name = "application_createNewProfile_button";
-            this.application_createNewProfile_button.Size = new System.Drawing.Size(111, 23);
-            this.application_createNewProfile_button.Style = MetroFramework.MetroColorStyle.Orange;
-            this.application_createNewProfile_button.TabIndex = 0;
-            this.application_createNewProfile_button.Text = "Create New Profile";
-            this.application_createNewProfile_button.UseSelectable = true;
-            this.application_createNewProfile_button.UseStyleColors = true;
-            this.application_createNewProfile_button.Click += new System.EventHandler(this.application_createNewProfile_button_Click);
+            this.createNewProfile_button.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.createNewProfile_button.DialogResult = System.Windows.Forms.DialogResult.Yes;
+            this.createNewProfile_button.Location = new System.Drawing.Point(165, 62);
+            this.createNewProfile_button.Name = "createNewProfile_button";
+            this.createNewProfile_button.Size = new System.Drawing.Size(111, 23);
+            this.createNewProfile_button.Style = MetroFramework.MetroColorStyle.Orange;
+            this.createNewProfile_button.TabIndex = 0;
+            this.createNewProfile_button.Text = "Create New Profile";
+            this.createNewProfile_button.UseSelectable = true;
+            this.createNewProfile_button.UseStyleColors = true;
+            this.createNewProfile_button.Click += new System.EventHandler(this.application_createNewProfile_button_Click);
             // 
-            // application_cancel_button
+            // cancel_button
             // 
-            this.application_cancel_button.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.application_cancel_button.Location = new System.Drawing.Point(3, 62);
-            this.application_cancel_button.Name = "application_cancel_button";
-            this.application_cancel_button.Size = new System.Drawing.Size(75, 23);
-            this.application_cancel_button.Style = MetroFramework.MetroColorStyle.Orange;
-            this.application_cancel_button.TabIndex = 0;
-            this.application_cancel_button.Text = "Cancel";
-            this.application_cancel_button.UseSelectable = true;
-            this.application_cancel_button.UseStyleColors = true;
+            this.cancel_button.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.cancel_button.Location = new System.Drawing.Point(3, 62);
+            this.cancel_button.Name = "cancel_button";
+            this.cancel_button.Size = new System.Drawing.Size(75, 23);
+            this.cancel_button.Style = MetroFramework.MetroColorStyle.Orange;
+            this.cancel_button.TabIndex = 0;
+            this.cancel_button.Text = "Cancel";
+            this.cancel_button.UseSelectable = true;
+            this.cancel_button.UseStyleColors = true;
             // 
-            // application_yes_button
+            // yes_button
             // 
-            this.application_yes_button.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.application_yes_button.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.application_yes_button.Location = new System.Drawing.Point(84, 62);
-            this.application_yes_button.Name = "application_yes_button";
-            this.application_yes_button.Size = new System.Drawing.Size(75, 23);
-            this.application_yes_button.Style = MetroFramework.MetroColorStyle.Orange;
-            this.application_yes_button.TabIndex = 0;
-            this.application_yes_button.Text = "Yes";
-            this.application_yes_button.UseSelectable = true;
-            this.application_yes_button.UseStyleColors = true;
+            this.yes_button.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.yes_button.DialogResult = System.Windows.Forms.DialogResult.Yes;
+            this.yes_button.Location = new System.Drawing.Point(84, 62);
+            this.yes_button.Name = "yes_button";
+            this.yes_button.Size = new System.Drawing.Size(75, 23);
+            this.yes_button.Style = MetroFramework.MetroColorStyle.Orange;
+            this.yes_button.TabIndex = 0;
+            this.yes_button.Text = "Yes";
+            this.yes_button.UseSelectable = true;
+            this.yes_button.UseStyleColors = true;
             // 
             // label5
             // 
@@ -323,30 +326,60 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Price";
             // 
-            // application_price_textBox
+            // price_textBox
             // 
-            this.application_price_textBox.Location = new System.Drawing.Point(26, 219);
-            this.application_price_textBox.Name = "application_price_textBox";
-            this.application_price_textBox.Size = new System.Drawing.Size(100, 20);
-            this.application_price_textBox.TabIndex = 17;
+            this.price_textBox.Location = new System.Drawing.Point(26, 219);
+            this.price_textBox.Name = "price_textBox";
+            this.price_textBox.Size = new System.Drawing.Size(100, 20);
+            this.price_textBox.TabIndex = 17;
+            // 
+            // remarks_textBox
+            // 
+            this.remarks_textBox.Location = new System.Drawing.Point(26, 260);
+            this.remarks_textBox.Multiline = true;
+            this.remarks_textBox.Name = "remarks_textBox";
+            this.remarks_textBox.Size = new System.Drawing.Size(278, 49);
+            this.remarks_textBox.TabIndex = 19;
+            // 
+            // application_remarks_textBox
+            // 
+            this.application_remarks_textBox.AutoSize = true;
+            this.application_remarks_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.application_remarks_textBox.Location = new System.Drawing.Point(23, 242);
+            this.application_remarks_textBox.Name = "application_remarks_textBox";
+            this.application_remarks_textBox.Size = new System.Drawing.Size(57, 15);
+            this.application_remarks_textBox.TabIndex = 18;
+            this.application_remarks_textBox.Text = "Remarks";
+            // 
+            // label6
+            // 
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.Location = new System.Drawing.Point(21, 196);
+            this.label6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(283, 2);
+            this.label6.TabIndex = 20;
             // 
             // AddApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(332, 339);
-            this.Controls.Add(this.application_price_textBox);
+            this.ClientSize = new System.Drawing.Size(332, 413);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.remarks_textBox);
+            this.Controls.Add(this.application_remarks_textBox);
+            this.Controls.Add(this.price_textBox);
             this.Controls.Add(this.hiddenTabControl1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.application_lastName_textBox);
-            this.Controls.Add(this.application_suffix_textBox);
-            this.Controls.Add(this.application_midName_textBox);
-            this.Controls.Add(this.application_firstName_textBox);
-            this.Controls.Add(this.application_female_radio);
-            this.Controls.Add(this.application_male_radio);
-            this.Controls.Add(this.application_birthdate_dtp);
+            this.Controls.Add(this.lastName_textBox);
+            this.Controls.Add(this.suffix_textBox);
+            this.Controls.Add(this.midName_textBox);
+            this.Controls.Add(this.firstName_textBox);
+            this.Controls.Add(this.female_radio);
+            this.Controls.Add(this.male_radio);
+            this.Controls.Add(this.birthdate_dtp);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -374,29 +407,32 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private MetroFramework.Controls.MetroRadioButton application_female_radio;
-        private MetroFramework.Controls.MetroRadioButton application_male_radio;
-        private MetroFramework.Controls.MetroDateTime application_birthdate_dtp;
+        private MetroFramework.Controls.MetroRadioButton female_radio;
+        private MetroFramework.Controls.MetroRadioButton male_radio;
+        private MetroFramework.Controls.MetroDateTime birthdate_dtp;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox application_lastName_textBox;
-        private System.Windows.Forms.TextBox application_suffix_textBox;
-        private System.Windows.Forms.TextBox application_midName_textBox;
-        private System.Windows.Forms.TextBox application_firstName_textBox;
+        private System.Windows.Forms.TextBox lastName_textBox;
+        private System.Windows.Forms.TextBox suffix_textBox;
+        private System.Windows.Forms.TextBox midName_textBox;
+        private System.Windows.Forms.TextBox firstName_textBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private HiddenTabControl hiddenTabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private MetroFramework.Controls.MetroButton application_apply_button;
+        private MetroFramework.Controls.MetroButton apply_button;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label applicationNotice_label;
-        private MetroFramework.Controls.MetroButton application_createNewProfile_button;
-        private MetroFramework.Controls.MetroButton application_cancel_button;
-        private MetroFramework.Controls.MetroButton application_yes_button;
-        private System.Windows.Forms.TextBox application_price_textBox;
+        private MetroFramework.Controls.MetroButton createNewProfile_button;
+        private MetroFramework.Controls.MetroButton cancel_button;
+        private MetroFramework.Controls.MetroButton yes_button;
+        private System.Windows.Forms.TextBox price_textBox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox remarks_textBox;
+        private System.Windows.Forms.Label application_remarks_textBox;
     }
 }
