@@ -26,20 +26,32 @@ namespace ParishSystem
             if(status == "s")
             {
                 iconDisplay.Image = ParishSystem.Properties.Resources.messageBox_success;
+                no_button.Visible = false;
+                yes_button.Text = "Ok"
             }
             else if(status == "e")
             {
                 iconDisplay.Image = ParishSystem.Properties.Resources.messageBox_error;
+                no_button.Visible = true;
+                yes_button.Visible = true;
+
             }
             else if (status == "w")
             {
                 iconDisplay.Image = ParishSystem.Properties.Resources.messageBox_warning;
+                no_button.Visible = false;
+                yes_button.Text = "Ok"
             }
 
             messageText.Text = message;
         }
 
         private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void no_button_Click(object sender, EventArgs e)
         {
             this.Close();
         }
