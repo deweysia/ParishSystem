@@ -117,6 +117,12 @@
     <Compile Include="menu.Designer.cs">
       <DependentUpon>menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="messageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="messageBox.Designer.cs">
+      <DependentUpon>messageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Person.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     <EmbeddedResource Include="MarriageApplication.resx">
       <DependentUpon>MarriageApplication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="messageBox.resx">
+      <DependentUpon>messageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\ParishSystem.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\ParishSystem.Properties.Resources.resources" />
     <EmbeddedResource Include="Person.resx">
@@ -312,6 +321,9 @@
     <Content Include="Resources\btn_closeImage.png" />
     <Content Include="Resources\btn_maxImage.png" />
     <Content Include="Resources\btn_minImage.png" />
+    <None Include="Resources\messageBox_cancel.png" />
+    <None Include="Resources\messageBox_success.png" />
+    <None Include="Resources\messageBox_warning.png" />
     <None Include="Resources\Water_45.png" />
     <None Include="Resources\The Pope_45.png" />
     <None Include="Resources\Initiate Money Transfer_45.png" />
