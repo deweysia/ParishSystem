@@ -2501,7 +2501,7 @@ namespace ParishSystem
         public DataTable getApplications(SacramentType type)
         {
             string q = "SELECT applicationID, profileID, firstName, midName, lastName, suffix,"
-                + " gender, DATE_FORMAT(birthdate,'%m-%d-%Y') sacramentType, status "
+                + " gender, DATE_FORMAT(birthdate,'%m-%d-%Y') AS birthDate, status "
                 + "FROM GeneralProfile"
                 + " NATURAL JOIN Applicant "
                 + "NATURAL JOIN Application "

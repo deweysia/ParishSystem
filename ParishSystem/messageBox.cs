@@ -27,7 +27,7 @@ namespace ParishSystem
             {
                 iconDisplay.Image = ParishSystem.Properties.Resources.messageBox_success;
                 no_button.Visible = false;
-                yes_button.Text = "Ok"
+                yes_button.Text = "Ok";
             }
             else if(status == "e")
             {
@@ -40,7 +40,7 @@ namespace ParishSystem
             {
                 iconDisplay.Image = ParishSystem.Properties.Resources.messageBox_warning;
                 no_button.Visible = false;
-                yes_button.Text = "Ok"
+                yes_button.Text = "Ok";
             }
 
             messageText.Text = message;

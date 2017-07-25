@@ -376,12 +376,13 @@
             this.label23 = new System.Windows.Forms.Label();
             this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
             this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.suffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.profile_panel.SuspendLayout();
@@ -3921,12 +3922,13 @@
             this.baptismApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.baptismApplication_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.baptismApplication_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
+            this.firstName,
+            this.mi,
+            this.lastName,
+            this.suffix,
+            this.gender,
+            this.birthdate,
+            this.status});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -3957,6 +3959,7 @@
             this.baptismApplication_dgv.Size = new System.Drawing.Size(412, 301);
             this.baptismApplication_dgv.TabIndex = 62;
             this.baptismApplication_dgv.TabStop = false;
+            this.baptismApplication_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.baptismApplication_dgv_CellClick);
             // 
             // baptismApplication_filter_comboBox
             // 
@@ -3999,7 +4002,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Calibri", 12F);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(320, 382);
+            this.button4.Location = new System.Drawing.Point(320, 398);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 31);
             this.button4.TabIndex = 75;
@@ -4013,7 +4016,7 @@
             this.confirmationApplication_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confirmationApplication_add_button.Font = new System.Drawing.Font("Calibri", 12F);
             this.confirmationApplication_add_button.ForeColor = System.Drawing.Color.White;
-            this.confirmationApplication_add_button.Location = new System.Drawing.Point(214, 382);
+            this.confirmationApplication_add_button.Location = new System.Drawing.Point(214, 398);
             this.confirmationApplication_add_button.Name = "confirmationApplication_add_button";
             this.confirmationApplication_add_button.Size = new System.Drawing.Size(100, 31);
             this.confirmationApplication_add_button.TabIndex = 74;
@@ -4340,41 +4343,54 @@
             this.metroComboBox2.TabIndex = 70;
             this.metroComboBox2.UseSelectable = true;
             // 
-            // Column1
+            // firstName
             // 
-            this.Column1.HeaderText = "First Name";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.firstName.DataPropertyName = "firstName";
+            this.firstName.HeaderText = "First Name";
+            this.firstName.Name = "firstName";
+            this.firstName.ReadOnly = true;
             // 
-            // Column2
+            // mi
             // 
-            this.Column2.HeaderText = "M.I.";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.mi.DataPropertyName = "midName";
+            this.mi.HeaderText = "M.I.";
+            this.mi.Name = "mi";
+            this.mi.ReadOnly = true;
             // 
-            // Column3
+            // lastName
             // 
-            this.Column3.HeaderText = "Last Name";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.lastName.DataPropertyName = "lastName";
+            this.lastName.HeaderText = "Last Name";
+            this.lastName.Name = "lastName";
+            this.lastName.ReadOnly = true;
             // 
-            // Column4
+            // suffix
             // 
-            this.Column4.HeaderText = "Suffix";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.suffix.DataPropertyName = "suffix";
+            this.suffix.HeaderText = "Suffix";
+            this.suffix.Name = "suffix";
+            this.suffix.ReadOnly = true;
             // 
-            // Column5
+            // gender
             // 
-            this.Column5.HeaderText = "Gender";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.gender.DataPropertyName = "gender";
+            this.gender.HeaderText = "Gender";
+            this.gender.Name = "gender";
+            this.gender.ReadOnly = true;
             // 
-            // Column6
+            // birthdate
             // 
-            this.Column6.HeaderText = "Birth Date";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
+            this.birthdate.DataPropertyName = "birthdate";
+            this.birthdate.HeaderText = "Birth Date";
+            this.birthdate.Name = "birthdate";
+            this.birthdate.ReadOnly = true;
+            // 
+            // status
+            // 
+            this.status.DataPropertyName = "status";
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
             // 
             // SAD
             // 
@@ -4834,11 +4850,12 @@
         private MetroFramework.Controls.MetroButton baptismApplication_addPayment_button;
         private System.Windows.Forms.Label baptismApplication_payment_label;
         private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn suffix;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn birthdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
     }
 }

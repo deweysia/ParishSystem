@@ -282,8 +282,8 @@ namespace ParishSystem
         public void loadConfirmationApplications()
         {
             baptismApplication_dgv.DataSource = dh.getApplications(SacramentType.Confirmation);
-            baptismApplication_dgv.Columns["profileID"].Visible = false;
-            baptismApplication_dgv.Columns["applicationID"].Visible = false;
+            //baptismApplication_dgv.Columns["profileID"].Visible = false;
+            //baptismApplication_dgv.Columns["applicationID"].Visible = false;
 
         }
 
@@ -615,6 +615,12 @@ namespace ParishSystem
                 dt.DefaultView.RowFilter = "";
             else
                 dt.DefaultView.RowFilter = "status = " + baptismApplication_filter_comboBox.SelectedIndex;
+        }
+
+
+        private void baptismApplication_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Console.WriteLine(baptismApplication_dgv.SelectedRows[0].Cells[0].Value);
         }
     }
 }
