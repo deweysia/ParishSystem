@@ -318,6 +318,9 @@
             this.baptismApplication_add_button = new System.Windows.Forms.Button();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.baptismApplicationDetailsPanel = new MetroFramework.Controls.MetroPanel();
+            this.baptismApplication_addPayment_button = new MetroFramework.Controls.MetroButton();
+            this.baptismApplication_payment_label = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -342,7 +345,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.baptismApplication_dgv = new MetroFramework.Controls.MetroGrid();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.baptismApplication_filter_comboBox = new MetroFramework.Controls.MetroComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button4 = new System.Windows.Forms.Button();
             this.confirmationApplication_add_button = new System.Windows.Forms.Button();
@@ -373,6 +376,12 @@
             this.label23 = new System.Windows.Forms.Label();
             this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
             this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.profile_panel.SuspendLayout();
@@ -3564,7 +3573,7 @@
             this.tabPage1.Controls.Add(this.baptismApplicationDetailsPanel);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.baptismApplication_dgv);
-            this.tabPage1.Controls.Add(this.metroComboBox1);
+            this.tabPage1.Controls.Add(this.baptismApplication_filter_comboBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -3616,6 +3625,9 @@
             // 
             // baptismApplicationDetailsPanel
             // 
+            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_addPayment_button);
+            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_payment_label);
+            this.baptismApplicationDetailsPanel.Controls.Add(this.label87);
             this.baptismApplicationDetailsPanel.Controls.Add(this.metroButton2);
             this.baptismApplicationDetailsPanel.Controls.Add(this.metroButton1);
             this.baptismApplicationDetailsPanel.Controls.Add(this.groupBox1);
@@ -3640,9 +3652,36 @@
             this.baptismApplicationDetailsPanel.VerticalScrollbarHighlightOnWheel = false;
             this.baptismApplicationDetailsPanel.VerticalScrollbarSize = 10;
             // 
+            // baptismApplication_addPayment_button
+            // 
+            this.baptismApplication_addPayment_button.Location = new System.Drawing.Point(203, 126);
+            this.baptismApplication_addPayment_button.Name = "baptismApplication_addPayment_button";
+            this.baptismApplication_addPayment_button.Size = new System.Drawing.Size(95, 23);
+            this.baptismApplication_addPayment_button.TabIndex = 2;
+            this.baptismApplication_addPayment_button.Text = "Add Payment";
+            this.baptismApplication_addPayment_button.UseSelectable = true;
+            // 
+            // baptismApplication_payment_label
+            // 
+            this.baptismApplication_payment_label.AutoSize = true;
+            this.baptismApplication_payment_label.Location = new System.Drawing.Point(81, 132);
+            this.baptismApplication_payment_label.Name = "baptismApplication_payment_label";
+            this.baptismApplication_payment_label.Size = new System.Drawing.Size(39, 16);
+            this.baptismApplication_payment_label.TabIndex = 12;
+            this.baptismApplication_payment_label.Text = "Price";
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Location = new System.Drawing.Point(11, 132);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(61, 16);
+            this.label87.TabIndex = 11;
+            this.label87.Text = "Payment";
+            // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(167, 292);
+            this.metroButton2.Location = new System.Drawing.Point(167, 317);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(60, 23);
             this.metroButton2.TabIndex = 10;
@@ -3651,7 +3690,7 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(232, 292);
+            this.metroButton1.Location = new System.Drawing.Point(238, 317);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(60, 23);
             this.metroButton1.TabIndex = 10;
@@ -3663,9 +3702,9 @@
             this.groupBox1.Controls.Add(this.BaptismApplication_Requirements_tablePanel);
             this.groupBox1.Controls.Add(this.baptismApplication_checkAll_comboBox);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(11, 126);
+            this.groupBox1.Location = new System.Drawing.Point(11, 161);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(284, 150);
+            this.groupBox1.Size = new System.Drawing.Size(289, 150);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Requirements";
@@ -3857,11 +3896,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(241, 22);
+            this.label10.Location = new System.Drawing.Point(240, 22);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 21);
+            this.label10.Size = new System.Drawing.Size(45, 21);
             this.label10.TabIndex = 64;
-            this.label10.Text = "Status";
+            this.label10.Text = "Filter";
             // 
             // baptismApplication_dgv
             // 
@@ -3872,7 +3911,7 @@
             this.baptismApplication_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.baptismApplication_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.baptismApplication_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -3881,7 +3920,14 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.baptismApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.baptismApplication_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.baptismApplication_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
@@ -3893,7 +3939,9 @@
             this.baptismApplication_dgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.baptismApplication_dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.baptismApplication_dgv.Location = new System.Drawing.Point(7, 57);
+            this.baptismApplication_dgv.MultiSelect = false;
             this.baptismApplication_dgv.Name = "baptismApplication_dgv";
+            this.baptismApplication_dgv.ReadOnly = true;
             this.baptismApplication_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
@@ -3908,21 +3956,24 @@
             this.baptismApplication_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.baptismApplication_dgv.Size = new System.Drawing.Size(412, 301);
             this.baptismApplication_dgv.TabIndex = 62;
+            this.baptismApplication_dgv.TabStop = false;
             // 
-            // metroComboBox1
+            // baptismApplication_filter_comboBox
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Items.AddRange(new object[] {
+            this.baptismApplication_filter_comboBox.FormattingEnabled = true;
+            this.baptismApplication_filter_comboBox.ItemHeight = 23;
+            this.baptismApplication_filter_comboBox.Items.AddRange(new object[] {
+            "None",
             "Pending",
             "Approved",
             "Cancelled",
             "Rejected"});
-            this.metroComboBox1.Location = new System.Drawing.Point(299, 19);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
-            this.metroComboBox1.TabIndex = 63;
-            this.metroComboBox1.UseSelectable = true;
+            this.baptismApplication_filter_comboBox.Location = new System.Drawing.Point(298, 19);
+            this.baptismApplication_filter_comboBox.Name = "baptismApplication_filter_comboBox";
+            this.baptismApplication_filter_comboBox.Size = new System.Drawing.Size(121, 29);
+            this.baptismApplication_filter_comboBox.TabIndex = 63;
+            this.baptismApplication_filter_comboBox.UseSelectable = true;
+            this.baptismApplication_filter_comboBox.SelectedIndexChanged += new System.EventHandler(this.baptismApplication_filter_comboBox_SelectedIndexChanged);
             // 
             // tabPage2
             // 
@@ -3948,7 +3999,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Calibri", 12F);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(320, 374);
+            this.button4.Location = new System.Drawing.Point(320, 382);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 31);
             this.button4.TabIndex = 75;
@@ -3962,7 +4013,7 @@
             this.confirmationApplication_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confirmationApplication_add_button.Font = new System.Drawing.Font("Calibri", 12F);
             this.confirmationApplication_add_button.ForeColor = System.Drawing.Color.White;
-            this.confirmationApplication_add_button.Location = new System.Drawing.Point(214, 374);
+            this.confirmationApplication_add_button.Location = new System.Drawing.Point(214, 382);
             this.confirmationApplication_add_button.Name = "confirmationApplication_add_button";
             this.confirmationApplication_add_button.Size = new System.Drawing.Size(100, 31);
             this.confirmationApplication_add_button.TabIndex = 74;
@@ -4234,7 +4285,7 @@
             // metroGrid2
             // 
             this.metroGrid2.AllowUserToResizeRows = false;
-            this.metroGrid2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.metroGrid2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.metroGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGrid2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -4288,6 +4339,42 @@
             this.metroComboBox2.Size = new System.Drawing.Size(121, 29);
             this.metroComboBox2.TabIndex = 70;
             this.metroComboBox2.UseSelectable = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "First Name";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "M.I.";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Last Name";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Suffix";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Gender";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Birth Date";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // SAD
             // 
@@ -4714,7 +4801,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
         private MetroFramework.Controls.MetroGrid baptismApplication_dgv;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox baptismApplication_filter_comboBox;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button confirmationApplication_add_button;
         private System.Windows.Forms.TextBox textBox7;
@@ -4744,5 +4831,14 @@
         private System.Windows.Forms.Label label23;
         private MetroFramework.Controls.MetroGrid metroGrid2;
         private MetroFramework.Controls.MetroComboBox metroComboBox2;
+        private MetroFramework.Controls.MetroButton baptismApplication_addPayment_button;
+        private System.Windows.Forms.Label baptismApplication_payment_label;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

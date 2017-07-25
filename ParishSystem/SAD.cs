@@ -20,6 +20,7 @@ namespace ParishSystem
         {
             InitializeComponent();
             BaptismApplication_birthDate.MaxDate = DateTime.Now;
+            
 
 
         }
@@ -271,9 +272,11 @@ namespace ParishSystem
 
         public void loadBaptismApplications()
         {
+            baptismApplication_dgv.AutoGenerateColumns = false;
             baptismApplication_dgv.DataSource = dh.getApplications(SacramentType.Baptism);
-            baptismApplication_dgv.Columns["profileID"].Visible = false;
-            baptismApplication_dgv.Columns["applicationID"].Visible = false;
+            
+            //baptismApplication_dgv.Columns["profileID"].Visible = false;
+            //baptismApplication_dgv.Columns["applicationID"].Visible = false;
         }
 
         public void loadConfirmationApplications()
@@ -281,6 +284,7 @@ namespace ParishSystem
             baptismApplication_dgv.DataSource = dh.getApplications(SacramentType.Confirmation);
             baptismApplication_dgv.Columns["profileID"].Visible = false;
             baptismApplication_dgv.Columns["applicationID"].Visible = false;
+
         }
 
 
@@ -297,7 +301,7 @@ namespace ParishSystem
                 confirmationApplication_label.ForeColor = Color.Black;
                 marriageApplication_label.Font = new Font(baptismApplication_label.Font, FontStyle.Regular);
                 marriageApplication_label.ForeColor = Color.Black;
-
+                
                 //panel changes
                 applicationHiddenTabControl.SelectedIndex = 0;
 
@@ -602,5 +606,15 @@ namespace ParishSystem
             MessageBox.Show("Bitch done");
         }
 
+        private void baptismApplication_filter_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+            DataTable dt = baptismApplication_dgv.DataSource as DataTable;
+            if (baptismApplication_filter_comboBox.SelectedIndex == 0)
+                dt.DefaultView.RowFilter = "";
+            else
+                dt.DefaultView.RowFilter = "status = " + baptismApplication_filter_comboBox.SelectedIndex;
+        }
     }
 }

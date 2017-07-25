@@ -154,35 +154,51 @@
             // 
             // firstName_textBox
             // 
+            this.firstName_textBox.ForeColor = System.Drawing.Color.Gray;
             this.firstName_textBox.Location = new System.Drawing.Point(26, 65);
             this.firstName_textBox.MaxLength = 50;
             this.firstName_textBox.Name = "firstName_textBox";
             this.firstName_textBox.Size = new System.Drawing.Size(95, 20);
             this.firstName_textBox.TabIndex = 1;
+            this.firstName_textBox.Tag = "First Name";
+            this.firstName_textBox.Enter += new System.EventHandler(this.name_textBox_Enter);
+            this.firstName_textBox.Leave += new System.EventHandler(this.name_textBox_Leave);
             // 
             // midName_textBox
             // 
+            this.midName_textBox.ForeColor = System.Drawing.Color.Gray;
             this.midName_textBox.Location = new System.Drawing.Point(127, 65);
             this.midName_textBox.MaxLength = 1;
             this.midName_textBox.Name = "midName_textBox";
             this.midName_textBox.Size = new System.Drawing.Size(31, 20);
             this.midName_textBox.TabIndex = 2;
+            this.midName_textBox.Tag = "M.I.";
+            this.midName_textBox.Enter += new System.EventHandler(this.name_textBox_Enter);
+            this.midName_textBox.Leave += new System.EventHandler(this.name_textBox_Leave);
             // 
             // lastName_textBox
             // 
+            this.lastName_textBox.ForeColor = System.Drawing.Color.Gray;
             this.lastName_textBox.Location = new System.Drawing.Point(164, 65);
             this.lastName_textBox.MaxLength = 50;
             this.lastName_textBox.Name = "lastName_textBox";
             this.lastName_textBox.Size = new System.Drawing.Size(95, 20);
             this.lastName_textBox.TabIndex = 3;
+            this.lastName_textBox.Tag = "Last Name";
+            this.lastName_textBox.Enter += new System.EventHandler(this.name_textBox_Enter);
+            this.lastName_textBox.Leave += new System.EventHandler(this.name_textBox_Leave);
             // 
             // suffix_textBox
             // 
+            this.suffix_textBox.ForeColor = System.Drawing.Color.Gray;
             this.suffix_textBox.Location = new System.Drawing.Point(265, 65);
             this.suffix_textBox.MaxLength = 5;
             this.suffix_textBox.Name = "suffix_textBox";
-            this.suffix_textBox.Size = new System.Drawing.Size(39, 20);
+            this.suffix_textBox.Size = new System.Drawing.Size(47, 20);
             this.suffix_textBox.TabIndex = 4;
+            this.suffix_textBox.Tag = "Suffix";
+            this.suffix_textBox.Enter += new System.EventHandler(this.name_textBox_Enter);
+            this.suffix_textBox.Leave += new System.EventHandler(this.name_textBox_Leave);
             // 
             // button1
             // 
@@ -338,7 +354,7 @@
             this.remarks_textBox.Location = new System.Drawing.Point(26, 260);
             this.remarks_textBox.Multiline = true;
             this.remarks_textBox.Name = "remarks_textBox";
-            this.remarks_textBox.Size = new System.Drawing.Size(278, 49);
+            this.remarks_textBox.Size = new System.Drawing.Size(286, 49);
             this.remarks_textBox.TabIndex = 19;
             // 
             // application_remarks_textBox
@@ -357,7 +373,7 @@
             this.label6.Location = new System.Drawing.Point(21, 196);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(283, 2);
+            this.label6.Size = new System.Drawing.Size(290, 2);
             this.label6.TabIndex = 20;
             // 
             // AddApplication

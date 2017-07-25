@@ -16,6 +16,11 @@ namespace ParishSystem
         Point lastClick;
         SacramentType sacramentType;
         DataTable sacramentItem;
+
+        Dictionary<TextBox, string> placeHolderText = new Dictionary<TextBox, string>();
+        
+
+
         public AddApplication(SacramentType type)
         {
             InitializeComponent();
@@ -24,6 +29,21 @@ namespace ParishSystem
             label1.MouseMove += AddApplication_MouseMove;
             panel1.MouseDown += AddApplication_MouseDown;
             panel1.MouseMove += AddApplication_MouseMove;
+
+
+            //Input up filler text
+            placeHolderText.Add(firstName_textBox, "First Name");
+            placeHolderText.Add(midName_textBox, "M.I.");
+            placeHolderText.Add(lastName_textBox, "Last Name");
+            placeHolderText.Add(suffix_textBox, "Suffix");
+
+            //Load filler text
+            firstName_textBox.Text = placeHolderText[firstName_textBox];
+            midName_textBox.Text = placeHolderText[midName_textBox];
+            lastName_textBox.Text = placeHolderText[lastName_textBox];
+            suffix_textBox.Text = placeHolderText[suffix_textBox];
+
+            Console.WriteLine("firstName_textBox.Text = placeHolderText[firstName_textBox]; NOT SAME {0}", Object.ReferenceEquals(firstName_textBox.Text, placeHolderText[firstName_textBox]));
             
             applicationNotice_label.MaximumSize = panel1.Size - panel1.Padding.Size;
 
@@ -31,6 +51,8 @@ namespace ParishSystem
             label1.Text = sacramentType + " Application";
             sacramentItem = dh.getItem(sacramentType.ToString());
             price_textBox.Text = sacramentItem.Rows[0]["suggestedPrice"].ToString();
+
+
             
         }
 
@@ -184,9 +206,25 @@ namespace ParishSystem
             Notification.Show("HEEEEEEEEEEEEEEEELOOOOO MY BITCHESSSS");
         }
 
-        
+        private void name_textBox_Leave(object sender, EventArgs e)
+        {
+            TextBox t = sender as TextBox;
+            if (t.Text.Trim().Length == 0)
+            {
+                t.Text = placeHolderText[t];
+                t.ForeColor = Color.Gray;
+            }
+        }
 
-
+        private void name_textBox_Enter(object sender, EventArgs e)
+        {
+            TextBox t = sender as TextBox;
+            if (t.ForeColor == Color.Gray)
+            {
+                t.Text = "";
+                t.ForeColor = Color.Black;
+            }
+        }
     }
 
     
