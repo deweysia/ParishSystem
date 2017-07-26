@@ -61,7 +61,7 @@ namespace ParishSystem
 
             if (id == -1) //-1 indicates no such profile exists in the database
             {
-                dh.addGeneralProfile(fn, mn, ln, suffix, gender, birthDate, null, null, null);
+                dh.addGeneralProfile(fn, mn ,ln ,suffix ,gender ,birthDate,null,null,null,-1,-1,-1);
                 id = dh.getLatestID("GeneralProfile", "profileID");
 
                 bool success = dh.addNewApplicant(id, sacramentType);
@@ -133,7 +133,7 @@ namespace ParishSystem
             char gender = application_male_radio.Checked ? 'M' : 'F';
             DateTime birthDate = application_birthdate_dtp.Value;
 
-            dh.addGeneralProfile(fn, mn, ln, suffix, gender, birthDate, null, null, null);
+            dh.addGeneralProfile(fn, mn, ln, suffix, gender, birthDate, null, null, null,-1,-1,-1);
             bool success = dh.addNewApplicant(dh.getLatestID("GeneralProfile", "profileID"), sacramentType);
 
             displayMessage(success);
