@@ -145,16 +145,16 @@ namespace ParishSystem
         */
         #region
         //ADD
-        public bool addGeneralProfile(string firstName, string midName, string lastName, string suffix, char gender, DateTime birthDate, string contactNumber, string address, string birthplace)
+        public bool addGeneralProfile(string firstName, string midName, string lastName, string suffix, int gender, DateTime birthDate, string contactNumber, string address, string birthplace,int  bloodtype, int legitimacy, int civilstatus)
         {
             if (generalProfileExists(firstName, midName, lastName, suffix, gender, birthDate))
                 throw new Exception("DataHandler: Duplicate in GeneralProfile");
 
-            string q = "INSERT INTO GeneralProfile(firstName, midName, lastName, suffix, gender, birthDate, contactNumber, address, birthplace) VALUES ('" + firstName + "', '" + midName + "', '" + lastName + "', '" + suffix + "', '" + gender + "', '" + birthDate.ToString("yyyy-mm-dd") + "', '" + contactNumber + "', '" + address + "', '" + birthplace + "')";
+            string q = "INSERT INTO `sad2`.`generalprofile` (`firstName`, `midName`, `lastName`, `suffix`, `birthdate`, `gender`, `address`, `birthplace`, `contactNumber`, `bloodType`, `civilStatus`, `legitimacy`) VALUES "+
+              "  ('" + firstName + "', '" + midName + "', '" +lastName +"', '"+suffix+"', '"+birthDate+"', '"+gender+"', '"+address+"', '"+birthplace+"', '"+contactNumber+"', '"+bloodtype+"', '"+civilstatus+"', '"+legitimacy+"')";
 
             bool success = runNonQuery(q);
-
-            //updateModificationInfo("generalProfile", "profileID", getLatestID("generalProfile", "profileID"));
+            
 
             return success;
         }
@@ -200,7 +200,7 @@ namespace ParishSystem
         }
 
 
-        public bool generalProfileExists(string firstName, string midName, string lastName, string suffix, char gender, DateTime birthDate)
+        public bool generalProfileExists(string firstName, string midName, string lastName, string suffix, int gender, DateTime birthDate)
         {
             string q = "SELECT COUNT(*) FROM generalProfile WHERE firstName = '" + firstName + "' AND midName = '" + midName + "' " +
                 " AND lastName = '" + lastName + "' AND suffix = '" + suffix + "' AND gender = '" + gender + "' AND DATE(birthDate) = '" + birthDate.ToString("yyyy-MM-dd") + "'";
@@ -259,11 +259,7 @@ namespace ParishSystem
 
             return dt;
         }
-        public bool addGeneralProfileLog(int profileID)
-        {
-            string q = "INSERT INTO generalProfileLog VALUES (SELECT * from generalProfile WHERE profileID = " + profileID + ");";
-            return runNonQuery(q);
-        }
+     
 
 
 
@@ -2484,7 +2480,17 @@ namespace ParishSystem
             string q = "select * from generalprofile inner join applicant on applicant.profileID=generalprofile.profileID inner join application on applicant.applicationID=application.applicationID where generalProfile.profileID="+profileID;
             return runQuery(q);
         }
-        
+        public void editFather(int profileID,string fn,string mi,string ln,string sf,string residence,string birthplace)
+        {
+            string q = "UPDATE `sad2`.`parent` SET `firstName`='"+fn+"', `midName`='"+mi+"', `lastName`='"+ln+"', `suffix`='"+sf+"', `birthplace`='"+ birthplace + "', `residence`='"+residence+"' WHERE gender='1' and profileID=+"+profileID;
+            runNonQuery(q);
+        }
+        public void editMother(int profileID, string fn, string mi, string ln, string sf, string residence, string birthplace)
+        {
+            string q = "UPDATE `sad2`.`parent` SET `firstName`='" + fn + "', `midName`='" + mi + "', `lastName`='" + ln + "', `suffix`='" + sf + "', `birthplace`='" + birthplace + "', `residence`='" + residence + "' WHERE gender='2' and profileID=+" + profileID;
+            runNonQuery(q);
+        }
+
     }
 
 }

@@ -195,7 +195,7 @@ namespace ParishSystem
 
             if (!firstname_textbox.Text.Equals("firstname") && !middlename_textbox.Text.Equals("middlename") && !lastname_textbox.Text.Equals("lastname"))
             {
-                dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, '0', DateTime.MinValue, null, null, null);
+                dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, -1, DateTime.MinValue, null, null, null, -1,-1,-1);
                 refreshGeneralProfileTable();
                 AddPNL.Visible = false;
             }
