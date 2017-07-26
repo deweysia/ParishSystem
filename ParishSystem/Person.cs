@@ -1055,34 +1055,53 @@ namespace ParishSystem
 
         }
 
+        //here justin <<<
         private void father_checkbox_self_marriage_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (father_checbox.Checked == true)
+                father_panel_baptism.Visible = true;
+            else
+                father_panel_baptism.Visible = false;
         }
 
         private void mother_checkbox_self_marriage_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (father_checbox.Checked == true)
+                father_panel_baptism.Visible = true;
+            else
+                father_panel_baptism.Visible = false;
         }
 
         private void father_checkbox_spouse_marriage_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (father_checbox.Checked == true)
+                father_panel_baptism.Visible = true;
+            else
+                father_panel_baptism.Visible = false;
         }
 
         private void mother_checkbox_spouse_marriage_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (father_checbox.Checked == true)
+                father_panel_baptism.Visible = true;
+            else
+                father_panel_baptism.Visible = false;
         }
 
         private void godFather_checkbox_marriage_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (father_checbox.Checked == true)
+                father_panel_baptism.Visible = true;
+            else
+                father_panel_baptism.Visible = false;
         }
 
         private void godMother_checkbox_marriage_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (father_checbox.Checked == true)
+                father_panel_baptism.Visible = true;
+            else
+                father_panel_baptism.Visible = false;
         }
     }
 }
