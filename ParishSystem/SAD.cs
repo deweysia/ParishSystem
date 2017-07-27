@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using MetroFramework.Controls;
 
 namespace ParishSystem
 {
@@ -19,7 +20,7 @@ namespace ParishSystem
         public SAD()
         {
             InitializeComponent();
-            BaptismApplication_birthDate.MaxDate = DateTime.Now;
+            baptismApplication_birthDate.MaxDate = DateTime.Now;
             
 
 
@@ -274,7 +275,9 @@ namespace ParishSystem
         {
             baptismApplication_dgv.AutoGenerateColumns = false;
             baptismApplication_dgv.DataSource = dh.getApplications(SacramentType.Baptism);
-            
+            baptismApplication_filter_comboBox.SelectedIndex = 0;
+
+
             //baptismApplication_dgv.Columns["profileID"].Visible = false;
             //baptismApplication_dgv.Columns["applicationID"].Visible = false;
         }
@@ -294,6 +297,8 @@ namespace ParishSystem
             Label A = sender as Label;
             if (A.Equals(baptismApplication_label))
             {
+                
+
                 //label changes
                 baptismApplication_label.Font = new Font(baptismApplication_label.Font, FontStyle.Bold);
                 baptismApplication_label.ForeColor = Color.DodgerBlue;
@@ -304,7 +309,6 @@ namespace ParishSystem
                 
                 //panel changes
                 applicationHiddenTabControl.SelectedIndex = 0;
-
                 loadBaptismApplications();
             }
             else if (A.Equals(confirmationApplication_label))
@@ -478,6 +482,7 @@ namespace ParishSystem
 
         private void home_button_menu_Click(object sender, EventArgs e)
         {
+            
             Button A = sender as Button;
             if (A.Equals(home_button_menu)) { home_panel.BringToFront(); }
             else if (A.Equals(profile_button_menu))
@@ -566,7 +571,7 @@ namespace ParishSystem
         {
             bool allChecked = true;
 
-            if (!baptismApplication_checkAll_comboBox.Checked)
+            if (!baptismApplication_checkAll_checkBox.Checked)
             {
 
                 foreach (CheckBox c in BaptismApplication_Requirements_tablePanel.Controls)
@@ -577,7 +582,7 @@ namespace ParishSystem
 
             foreach (CheckBox c in BaptismApplication_Requirements_tablePanel.Controls)
             {
-                c.Checked = baptismApplication_checkAll_comboBox.Checked;
+                c.Checked = baptismApplication_checkAll_checkBox.Checked;
                 Console.WriteLine("ENTERED");
             }
         }
@@ -587,8 +592,8 @@ namespace ParishSystem
             //baptismApplication_checkAll_comboBox.Checked = !(sender as CheckBox).Checked;
 
             CheckBox temp = sender as CheckBox;
-            if (!temp.Checked && baptismApplication_checkAll_comboBox.Checked)
-                baptismApplication_checkAll_comboBox.Checked = false;
+            if (!temp.Checked && baptismApplication_checkAll_checkBox.Checked)
+                baptismApplication_checkAll_checkBox.Checked = false;
 
 
         }
@@ -608,8 +613,6 @@ namespace ParishSystem
 
         private void baptismApplication_filter_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-
             DataTable dt = baptismApplication_dgv.DataSource as DataTable;
             if (baptismApplication_filter_comboBox.SelectedIndex == 0)
                 dt.DefaultView.RowFilter = "";
@@ -618,9 +621,60 @@ namespace ParishSystem
         }
 
 
-        private void baptismApplication_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void baptismApplication_dgv_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            Console.WriteLine(baptismApplication_dgv.SelectedRows[0].Cells[0].Value);
+            //This condition is true when initially loading dgv
+            if (baptismApplication_dgv.SelectedRows.Count == 0)
+                return;
+
+            string fn = baptismApplication_dgv.SelectedRows[0].Cells["firstName"].Value.ToString();
+            string mn = baptismApplication_dgv.SelectedRows[0].Cells["midName"].Value.ToString();
+            string ln = baptismApplication_dgv.SelectedRows[0].Cells["lastName"].Value.ToString();
+            string suffix = baptismApplication_dgv.SelectedRows[0].Cells["suffix"].Value.ToString();
+            DateTime birthdate = DateTime.ParseExact(baptismApplication_dgv.SelectedRows[0].Cells["birthDate"].Value.ToString(), "MM-dd-yyyy", null);
+            string gender = baptismApplication_dgv.SelectedRows[0].Cells["gender"].Value.ToString();
+
+            baptismApplication_firstName_textbox.Text = fn;
+            baptismApplication_midName_textbox.Text = mn;
+            baptismApplication_lastName_textbox.Text = ln;
+            baptismApplication_suffix_textbox.Text = suffix;
+            //MessageBox.Show(baptismApplication_dgv.SelectedRows[0].Cells["birthDate"].Value.ToString());
+            //MessageBox.Show(birthdate.ToShortDateString());
+            baptismApplication_birthDate.Value = birthdate;
+
+            baptismApplication_male_radio.Checked = gender == "1";
+            baptismApplication_female_radio.Checked = gender == "2";
+
+            ApplicationStatus status = (ApplicationStatus)int.Parse(baptismApplication_dgv.SelectedRows[0].Cells["status"].Value.ToString());
+
+            baptismApplication_status_label.Text = status.ToString();
+
+        }
+
+        private void baptismApplication_dgv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {//Might be really slow!
+            if (e.ColumnIndex == 4)//Gender
+                e.Value = e.Value.ToString() == "1" ? "M" : "F";
+            else
+            {
+                switch (e.Value.ToString())
+                {
+                    case "1":
+                        e.Value = "P";
+                        break;
+                    case "2":
+                        e.Value = "A";
+                        break;
+                    case "3":
+                        e.Value = "F";
+                        break;
+                    case "4":
+                        e.Value = "R";
+                        break;
+                }
+            }
+                
+
         }
     }
 }

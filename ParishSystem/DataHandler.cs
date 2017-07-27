@@ -1102,8 +1102,22 @@ namespace ParishSystem
 
         public bool addApplication(SacramentType type)
         {
-            
-            string q = "INSERT INTO Application(sacramentType, status) VALUES('" + ((int)type) + "', '"+ (int)ApplicationStatus.Pending +"')";
+            string requirements = "";
+            switch (type)
+            {
+                case SacramentType.Baptism:
+                    requirements = "000000";
+                    break;
+                case SacramentType.Confirmation:
+                    requirements = "00000";
+                    break;
+                case SacramentType.Marriage:
+                    requirements = "00000000";
+                    break;
+            }
+
+            string q = "INSERT INTO Application(sacramentType, status, requirements) VALUES('" 
+                + ((int)type) + "', '"+ (int)ApplicationStatus.Pending + "', '" + requirements + "')";
 
             bool success = runNonQuery(q);
 

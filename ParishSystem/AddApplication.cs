@@ -78,7 +78,7 @@ namespace ParishSystem
             string fn = firstName_textBox.Text;
             string mn = midName_textBox.Text;
             string ln = lastName_textBox.Text;
-            string suffix = suffix_textBox.Text;
+            string suffix = suffix_textBox.Text == "Suffix" ? null : suffix_textBox.Text;
             Gender gender = male_radio.Checked ? Gender.Male : Gender.Female;
             DateTime birthDate = birthdate_dtp.Value;
 

@@ -30,9 +30,8 @@ namespace ParishSystem
     {
         Pending = 1,
         Approved,
-        Cancelled,
-        Rejected,
-        Final
+        Final,
+        Revoked
     }
 
     public enum MinistryType

@@ -342,6 +342,10 @@
     <None Include="Resources\icons\32x32\Delete_32px_Gray.png" />
     <Content Include="Resources\icons\32x32\Deposit_32px.png" />
     <Content Include="Resources\icons\32x32\Dove_32px.png" />
+    <None Include="Resources\icons\32x32\Edit_32.png" />
+    <None Include="Resources\icons\32x32\Edit.ico" />
+    <None Include="Resources\icons\32x32\EditDown.ico" />
+    <None Include="Resources\icons\32x32\EditHover.ico" />
     <Content Include="Resources\icons\32x32\Edit_32px.png" />
     <None Include="Resources\icons\32x32\Error_32px.png" />
     <Content Include="Resources\icons\32x32\Eye_32px.png" />
@@ -373,6 +377,9 @@
     <Content Include="Resources\icons\32x32\Shellfish_32px.png" />
     <Content Include="Resources\icons\32x32\Tax_32px.png" />
     <Content Include="Resources\icons\32x32\The Pope_32px.png" />
+    <None Include="Resources\icons\32x32\Trash.ico" />
+    <None Include="Resources\icons\32x32\TrashDown.ico" />
+    <None Include="Resources\icons\32x32\TrashHover.ico" />
     <Content Include="Resources\icons\32x32\Trash_32px.png" />
     <Content Include="Resources\icons\32x32\User Group Man Man_32px.png" />
     <Content Include="Resources\icons\32x32\Watch_32px.png" />
