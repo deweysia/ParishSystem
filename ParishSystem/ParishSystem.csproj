@@ -123,11 +123,11 @@
     <Compile Include="menu.Designer.cs">
       <DependentUpon>menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Person.cs">
+    <Compile Include="PersonView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Person.Designer.cs">
-      <DependentUpon>Person.cs</DependentUpon>
+    <Compile Include="PersonView.Designer.cs">
+      <DependentUpon>PersonView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -234,8 +234,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\ParishSystem.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\ParishSystem.Properties.Resources.resources" />
-    <EmbeddedResource Include="Person.resx">
-      <DependentUpon>Person.cs</DependentUpon>
+    <EmbeddedResource Include="PersonView.resx">
+      <DependentUpon>PersonView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

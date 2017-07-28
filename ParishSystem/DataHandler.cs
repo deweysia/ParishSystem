@@ -1239,9 +1239,9 @@ namespace ParishSystem
             return success;
         }
 
-        public DataTable getBaptism(int baptismID)
+        public DataTable getBaptism(int applicationID)
         {
-            string q = "SELECT * FROM Baptism WHERE baptismID = " + baptismID;
+            string q = "SELECT * FROM Baptism WHERE applicationID = " + applicationID;
 
             DataTable dt = runQuery(q);
 
@@ -1493,9 +1493,9 @@ namespace ParishSystem
         }
 
 
-        public DataTable getConfirmation(int confirmationID)
+        public DataTable getConfirmation(int applicationID)
         {
-            string q = "SELECT * FROM Confirmation WHERE confirmationID = " + confirmationID;
+            string q = "SELECT * FROM Confirmation WHERE applicationID = " + applicationID;
 
             DataTable dt = runQuery(q);
 
@@ -2304,7 +2304,7 @@ namespace ParishSystem
 
         public DataTable getMotherOf(int profileID)
         {
-            string q = "SELECT * FROM Parent WHERE gender = '2' AND profileID = '" + profileID + "'";
+            string q = "SELECT *,concat(lastname,\" \",coalesce(suffix,\" \"),\"\",firstName,\" \",midname,\".\")as name FROM sad2.parent where gender =2 and profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -2313,7 +2313,7 @@ namespace ParishSystem
 
         public DataTable getFatherOf(int profileID)
         {
-            string q = "SELECT * FROM Parent WHERE gender = '1' AND profileID = '" + profileID + "'";
+            string q = "SELECT *,concat(lastname,\" \",coalesce(suffix,\" \"),\"\",firstName,\" \",midname,\".\")as name FROM sad2.parent where gender =1 and profileID = "+profileID;
 
             DataTable dt = runQuery(q);
 
@@ -2392,7 +2392,7 @@ namespace ParishSystem
         //COMMENT: merge names into field "Name"
         public DataTable getMinister(int ministerID)
         {
-            string q = "SELECT CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix), * FROM Minister WHERE ministerID = " + ministerID;
+            string q = "SELECT *,CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix) as name FROM Minister WHERE ministerID = " + ministerID;
 
             DataTable dt = runQuery(q);
 
@@ -2490,7 +2490,21 @@ namespace ParishSystem
             string q = "UPDATE `sad2`.`parent` SET `firstName`='" + fn + "', `midName`='" + mi + "', `lastName`='" + ln + "', `suffix`='" + sf + "', `birthplace`='" + birthplace + "', `residence`='" + residence + "' WHERE gender='2' and profileID=+" + profileID;
             runNonQuery(q);
         }
-
+        public DataTable getGodFatherOn(int applicationID)
+        {
+            string q = "select * ,concat(lastname,\" \",coalesce(suffix,\" \"),\"\",firstName,\" \",midname,\".\")as name  from sponsor inner join application on application.applicationID = sponsor.applicationID where gender=1 and application.applicationID =" + applicationID ;
+            return runQuery(q);
+        }
+        public DataTable getGodMotherOn(int applicationID)
+        {
+            string q = "select * ,concat(lastname,\" \",coalesce(suffix,\" \"),\"\",firstName,\" \",midname,\".\")as name  from sponsor inner join application on application.applicationID = sponsor.applicationID where gender=2 and application.applicationID =" + applicationID ;
+            return runQuery(q);
+        }
+        public DataTable getPartner(int profileID)
+        {
+            string q= "select * from (select application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID = "+ profileID + ") as A left outer join (select concat(lastname, \" \", coalesce(suffix, \" \"), \"\", firstName, \" \", midname, \".\") as name, generalprofile.profileID, address, contactNumber, gender, civilstatus, birthplace, birthdate, residence, application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID != "+ profileID + ") as B on A.applicationID = B.applicationID";
+            return runQuery(q);
+        }
     }
 
 }

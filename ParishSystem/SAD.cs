@@ -208,8 +208,8 @@ namespace ParishSystem
         private void openProfile_button_Click(object sender, EventArgs e)
         {//open person complete profile
 
-            Form person = new Person(lastGeneralProfile, dh,(int)Enums.Mode.GeneralProfile);
-            person.ShowDialog();
+            Form view = new PersonView(lastGeneralProfile, dh);
+            view.ShowDialog();
 
 
 
