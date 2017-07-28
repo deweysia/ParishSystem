@@ -20,7 +20,8 @@ namespace ParishSystem
     }
 
 
-  
+    public enum Gender { Male = 1, Female = 2 };
+
     public enum SacramentType { Baptism = 1, Confirmation = 2, Marriage = 3 };
 
     public enum BookType
