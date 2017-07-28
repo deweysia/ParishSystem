@@ -117,6 +117,12 @@
     <Compile Include="menu.Designer.cs">
       <DependentUpon>menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="messageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="messageBox.Designer.cs">
+      <DependentUpon>messageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Person.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     <EmbeddedResource Include="MarriageApplication.resx">
       <DependentUpon>MarriageApplication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="messageBox.resx">
+      <DependentUpon>messageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\ParishSystem.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\ParishSystem.Properties.Resources.resources" />
     <EmbeddedResource Include="Person.resx">
@@ -302,6 +311,7 @@
     <Content Include="bin\Debug\ParishSystem.vshost.exe" />
     <Content Include="database\DB_Populator.txt" />
     <Content Include="database\SQLDB_V7.sql" />
+    <Content Include="database\SQLDB_V9.sql" />
     <Content Include="database\updatedDB.sql" />
     <Content Include="database\SQLDB_V6.sql" />
     <Content Include="obj\Debug\ParishSystem.csproj.FileListAbsolute.txt" />
@@ -311,6 +321,9 @@
     <Content Include="Resources\btn_closeImage.png" />
     <Content Include="Resources\btn_maxImage.png" />
     <Content Include="Resources\btn_minImage.png" />
+    <None Include="Resources\messageBox_cancel.png" />
+    <None Include="Resources\messageBox_success.png" />
+    <None Include="Resources\messageBox_warning.png" />
     <None Include="Resources\Water_45.png" />
     <None Include="Resources\The Pope_45.png" />
     <None Include="Resources\Initiate Money Transfer_45.png" />
@@ -329,6 +342,10 @@
     <None Include="Resources\icons\32x32\Delete_32px_Gray.png" />
     <Content Include="Resources\icons\32x32\Deposit_32px.png" />
     <Content Include="Resources\icons\32x32\Dove_32px.png" />
+    <None Include="Resources\icons\32x32\Edit_32.png" />
+    <None Include="Resources\icons\32x32\Edit.ico" />
+    <None Include="Resources\icons\32x32\EditDown.ico" />
+    <None Include="Resources\icons\32x32\EditHover.ico" />
     <Content Include="Resources\icons\32x32\Edit_32px.png" />
     <None Include="Resources\icons\32x32\Error_32px.png" />
     <Content Include="Resources\icons\32x32\Eye_32px.png" />
@@ -360,6 +377,9 @@
     <Content Include="Resources\icons\32x32\Shellfish_32px.png" />
     <Content Include="Resources\icons\32x32\Tax_32px.png" />
     <Content Include="Resources\icons\32x32\The Pope_32px.png" />
+    <None Include="Resources\icons\32x32\Trash.ico" />
+    <None Include="Resources\icons\32x32\TrashDown.ico" />
+    <None Include="Resources\icons\32x32\TrashHover.ico" />
     <Content Include="Resources\icons\32x32\Trash_32px.png" />
     <Content Include="Resources\icons\32x32\User Group Man Man_32px.png" />
     <Content Include="Resources\icons\32x32\Watch_32px.png" />

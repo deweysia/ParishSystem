@@ -19,13 +19,19 @@ namespace ParishSystem
     public enum MinisterStatus { Active = 1, Inactive = 2 };
     public enum Gender { Male = 1, Female = 2 };
 
+    public enum BookType
+    {
+        Parish = 1,
+        Community,
+        Postulency
+    }
+
     public enum ApplicationStatus
     {
         Pending = 1,
         Approved,
-        Cancelled,
-        Rejected,
-        Final
+        Final,
+        Revoked
     }
 
     public enum MinistryType
@@ -36,7 +42,7 @@ namespace ParishSystem
 
     public enum ItemTypeStatus
     {
-        IDK_ANO_MERON_DITO
+        Active = 1, Inactive
     }
 
     public enum CivilStatus

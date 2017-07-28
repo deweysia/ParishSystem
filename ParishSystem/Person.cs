@@ -411,11 +411,11 @@ namespace ParishSystem
             //inserting
             if (father_checbox.Checked)
             {
-                dh.addParent(ProfileID, firstname_textbox_father_baptism.Text, mi_textbox_father_baptism.Text, lastname_textbox_father_baptism.Text, suffix_textbox_father_baptism.Text, 'M', residence_textbox_father_baptism.Text);
+                dh.addParent(ProfileID, firstname_textbox_father_baptism.Text, mi_textbox_father_baptism.Text, lastname_textbox_father_baptism.Text, suffix_textbox_father_baptism.Text, Gender.Male, residence_textbox_father_baptism.Text);
             }
             if(mother_checkbox.Checked)
             {
-                dh.addParent(ProfileID, firstname_textbox_mother_baptism.Text, mi_textbox_mother_baptism.Text, lastname_textbox_mother_baptism.Text, suffix_textbox_mother_baptism.Text, 'F', residence_textbox_mother_baptism.Text);
+                dh.addParent(ProfileID, firstname_textbox_mother_baptism.Text, mi_textbox_mother_baptism.Text, lastname_textbox_mother_baptism.Text, suffix_textbox_mother_baptism.Text, Gender.Female, residence_textbox_mother_baptism.Text);
             }
             if (godfather_checkbox.Checked)
             {
