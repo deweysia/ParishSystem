@@ -23,15 +23,37 @@ namespace ParishSystem
   
     public enum SacramentType { Baptism = 1, Confirmation = 2, Marriage = 3 };
 
+    public enum BookType
+    {
+        Parish = 1,
+        Community,
+        Postulency
+    }
+
     public enum ApplicationStatus
     {
         Pending = 1,
         Approved,
-        Cancelled,
-        Rejected,
-        Final
+        Final,
+        Revoked
     }
 
-   
+    public enum MinistryType
+    {
+        Priest = 1,
+        Bishop
+    }
+
+    public enum ItemTypeStatus
+    {
+        Active = 1, Inactive
+    }
+
+    public enum CivilStatus
+    {
+        Single = 1,
+        Divorced,
+        Widowed
+    }
 
 }

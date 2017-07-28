@@ -9,10 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ParishSystem</RootNamespace>
     <AssemblyName>ParishSystem</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -93,12 +92,6 @@
       <DependentUpon>CustomNotification.cs</DependentUpon>
     </Compile>
     <Compile Include="DataHandler.cs" />
-    <Compile Include="Dummy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dummy.Designer.cs">
-      <DependentUpon>Dummy.cs</DependentUpon>
-    </Compile>
     <Compile Include="Enums.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -112,12 +105,6 @@
     <Compile Include="HiddenTabControl.Designer.cs">
       <DependentUpon>HiddenTabControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MarriageApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,11 +117,17 @@
     <Compile Include="menu.Designer.cs">
       <DependentUpon>menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="PersonView.cs">
+    <Compile Include="messageBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PersonView.Designer.cs">
-      <DependentUpon>PersonView.cs</DependentUpon>
+    <Compile Include="messageBox.Designer.cs">
+      <DependentUpon>messageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person.Designer.cs">
+      <DependentUpon>Person.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -230,22 +223,19 @@
     <EmbeddedResource Include="CustomNotification.resx">
       <DependentUpon>CustomNotification.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dummy.resx">
-      <DependentUpon>Dummy.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MarriageApplication.resx">
       <DependentUpon>MarriageApplication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="messageBox.resx">
+      <DependentUpon>messageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\ParishSystem.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\ParishSystem.Properties.Resources.resources" />
-    <EmbeddedResource Include="PersonView.resx">
-      <DependentUpon>PersonView.cs</DependentUpon>
+    <EmbeddedResource Include="Person.resx">
+      <DependentUpon>Person.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -321,6 +311,7 @@
     <Content Include="bin\Debug\ParishSystem.vshost.exe" />
     <Content Include="database\DB_Populator.txt" />
     <Content Include="database\SQLDB_V7.sql" />
+    <Content Include="database\SQLDB_V9.sql" />
     <Content Include="database\updatedDB.sql" />
     <Content Include="database\SQLDB_V6.sql" />
     <Content Include="obj\Debug\ParishSystem.csproj.FileListAbsolute.txt" />
@@ -330,9 +321,9 @@
     <Content Include="Resources\btn_closeImage.png" />
     <Content Include="Resources\btn_maxImage.png" />
     <Content Include="Resources\btn_minImage.png" />
-    <None Include="Resources\LoginFormPanelBackground2.png" />
-    <None Include="Resources\LoginFormPanelBackground.png" />
-    <None Include="Resources\LoginFormBackground.jpg" />
+    <None Include="Resources\messageBox_cancel.png" />
+    <None Include="Resources\messageBox_success.png" />
+    <None Include="Resources\messageBox_warning.png" />
     <None Include="Resources\Water_45.png" />
     <None Include="Resources\The Pope_45.png" />
     <None Include="Resources\Initiate Money Transfer_45.png" />
@@ -351,6 +342,10 @@
     <None Include="Resources\icons\32x32\Delete_32px_Gray.png" />
     <Content Include="Resources\icons\32x32\Deposit_32px.png" />
     <Content Include="Resources\icons\32x32\Dove_32px.png" />
+    <None Include="Resources\icons\32x32\Edit_32.png" />
+    <None Include="Resources\icons\32x32\Edit.ico" />
+    <None Include="Resources\icons\32x32\EditDown.ico" />
+    <None Include="Resources\icons\32x32\EditHover.ico" />
     <Content Include="Resources\icons\32x32\Edit_32px.png" />
     <None Include="Resources\icons\32x32\Error_32px.png" />
     <Content Include="Resources\icons\32x32\Eye_32px.png" />
@@ -382,6 +377,9 @@
     <Content Include="Resources\icons\32x32\Shellfish_32px.png" />
     <Content Include="Resources\icons\32x32\Tax_32px.png" />
     <Content Include="Resources\icons\32x32\The Pope_32px.png" />
+    <None Include="Resources\icons\32x32\Trash.ico" />
+    <None Include="Resources\icons\32x32\TrashDown.ico" />
+    <None Include="Resources\icons\32x32\TrashHover.ico" />
     <Content Include="Resources\icons\32x32\Trash_32px.png" />
     <Content Include="Resources\icons\32x32\User Group Man Man_32px.png" />
     <Content Include="Resources\icons\32x32\Watch_32px.png" />
