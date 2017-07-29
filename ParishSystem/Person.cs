@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
+//button.performclick()
 namespace ParishSystem
 {
     public partial class Person : Form
@@ -17,15 +17,26 @@ namespace ParishSystem
         public DataHandler dh;
         private List<Panel> panelList = new List<Panel>();
         private Dictionary<string, Panel> panelDict = new Dictionary<string, Panel>();
-       
-
-      
-        public Person(int a, DataHandler b)
+        public int mode;
+        public int initialPageOpened = 0;
+        public int ApplicationID = 0;
+        public Person(int a, DataHandler b, int mode)
         {
             InitializeComponent();
             dh = b;
             ProfileID = a;
+            this.mode = mode;
         }
+
+        public Person(int applicationID, DataHandler dh, int mode,int initialPageOpened)//for those with initial opened pages
+        {
+            InitializeComponent();
+            this.dh = dh;
+            this.ApplicationID = applicationID;
+            this.initialPageOpened = initialPageOpened;
+            this.mode = mode;
+        }
+
 
         #region GUI basic
 
@@ -38,10 +49,11 @@ namespace ParishSystem
         {
             TextBox A = sender as TextBox;
             string B = A.Name.Split('_')[0];
-            if (A.Text.Trim().Equals(""))
+            if (A.Text.Trim().Equals("")&&A.ReadOnly==false)
             {
+              
                 A.Text = B;
-
+             
             }
         }
 
@@ -52,6 +64,7 @@ namespace ParishSystem
             {
                 A.Text = "";
               
+
             }
         }
 
@@ -60,11 +73,11 @@ namespace ParishSystem
             TextBox A = sender as TextBox;
             if (A.Text.Equals(A.Name.Split('_')[0]))
             {
-               
+
             }
             else
             {
-               
+
             }
 
         }
@@ -76,165 +89,102 @@ namespace ParishSystem
         }
         #endregion
 
+        private void DisableControlsInParent(Control control)
+        {
+            foreach (Control ctl in control.Controls)
+            {
+                   if(ctl is TextBox)
+                {
+                    TextBox a = ctl as TextBox;
+                    a.ForeColor = Color.Black;
+                    a.ReadOnly = true;
+                }
+                   else if(ctl is ComboBox|| ctl is CheckBox || ctl is DateTimePicker || ctl is RadioButton)
+                {
+                    ctl.Enabled = false;
+                   
+                }          
+                DisableControlsInParent(ctl);
+                }
+        }
+        
+
         #region Profiles
+
+
 
         private void Person_Load(object sender, EventArgs e)
         {
 
+            load_parents();
+            if (mode == (int)Enums.Mode.GeneralProfile)
+            {
+                DisableControlsInParent(baptism_panel);
+                DisableControlsInParent(confirmation_panel);
+                DisableControlsInParent(marriage_panel);
+
+                Applications_datagridview.DataSource = dh.getApplicationsOf(ProfileID);
+                foreach (DataGridViewRow dgvr in Applications_datagridview.Rows)
+                {
+                    if (dgvr.Cells["sacramentType"].Value.ToString().Equals(Enums.SacramentType.Baptism.ToString()))
+                    {
+                        baptism_button.Visible = false;
+                        baptism_panel.Visible = false;
+                    }
+                    if (dgvr.Cells["sacramentType"].Value.ToString().Equals(Enums.SacramentType.Confirmation.ToString()))
+                    {
+                        confirmation_button.Visible = false;
+                        confirmation_panel.Visible = false;
+                    }
+                    if (dgvr.Cells["sacramentType"].Value.ToString().Equals(Enums.SacramentType.Marriage.ToString()))
+                    {
+                        marriage_button.Visible = false;
+                        marriage_panel.Visible = false;
+                    }
+                }
+               
+            }
+
+            else if (mode == (int)Enums.Mode.Applications)
+            {
+                if (initialPageOpened == 1)
+                {
+                    baptism_button.PerformClick();
+                }
+                else if (initialPageOpened == 2)
+                {
+                    confirmation_button.PerformClick();
+                }
+                else if (initialPageOpened == 3)
+                {
+                    marriage_button.PerformClick();
+                }
+            }
             DataTable DT = dh.getGeneralProfile(ProfileID);
+
             firstname_textbox.Text = DT.Rows[0]["firstname"].ToString();
             mi_textbox.Text = DT.Rows[0]["midname"].ToString();
             lastname_textbox.Text = DT.Rows[0]["lastname"].ToString();
             suffix_textbox.Text = DT.Rows[0]["suffix"].ToString();
-            try
-            {
-                if (int.Parse(DT.Rows[0]["civilStatus"].ToString()) == (int)CivilStatus.Single)
-                    single_radiobutton_self_marriage.Checked = true;
-                else if (int.Parse(DT.Rows[0]["civilStatus"].ToString()) == (int)CivilStatus.Widowed)
-                    widow_radiobutton_self_marriage.Checked = true;
-            }
-            catch
-            {}
-            try
-            {
-                birthdate_dateTimePicker.Value = dh.toDateTime(DT.Rows[0]["birthdate"].ToString(), false);
-                birthdate_dateTimePicker.Format = DateTimePickerFormat.Long;
-            }
-            catch
-            {
-                birthdate_dateTimePicker.Format = DateTimePickerFormat.Custom;
-            }
             contactNumber_textbox.Text = DT.Rows[0]["contactNumber"].ToString();
             address_textbox.Text = DT.Rows[0]["address"].ToString();
+            //   .Text = DT.Rows[0]["birthplace"].ToString();
             try
             {
-                if (int.Parse(DT.Rows[0]["gender"].ToString()) == (int)Gender.Male)
-                { genderMale_radiobutton.Checked = true; }
-                else if (int.Parse(DT.Rows[0]["gender"].ToString()) == (int)Gender.Female)
-                { genderFemale_radiobutton.Checked = true; }
-                else
-                {
-                    genderMale_radiobutton.Checked = false;
-                    genderFemale_radiobutton.Checked = false;
-                }
+                if (int.Parse(DT.Rows[0]["gender"].ToString()) == (int)Enums.Gender.Male)
+                { gender_label.Text = "Male"; }
+                else if (int.Parse(DT.Rows[0]["gender"].ToString()) == (int)Enums.Gender.Female)
+                { gender_label.Text = "Female"; }
+              
             }
             catch { }
-
-        }
-
-
-        #endregion
-
-        #region bloodletting
-        //--------------bloodletting--------------------//
-
-        private void load_bloodletting()
-        {
-            donation_datagridview_bloodletting.DataSource = dh.getBloodDonations(ProfileID);
-            donation_datagridview_bloodletting.Columns["bloodDonationID"].Visible = false;
-            quantityDonation_numericupdown_bloodletting.Value = 0;
-            bloodDonationEvent_combobox_bloodletting.Text = "";
-            delete_button_bloodletting.Enabled = false;
-            add_button_bloodletting.Text = "Add";
-            add_button_bloodletting.Enabled = false;
-            totalDonation_label_bloodletting.Text = dh.getTotalBloodDonationOf(ProfileID).ToString();
-            bloodDonationEvent_combobox_bloodletting.Items.Clear();
-            foreach (DataRow row in dh.getBloodlettingEvents().Rows)
+            try
             {
-                bloodDonationEvent_combobox_bloodletting.Items.Add(new ComboboxContent(int.Parse(row["bloodDonationEventID"].ToString()), row["eventName"].ToString()));
-                
-            }
-
-        }
-
-        private void add_button_bloodletting_Click(object sender, EventArgs e)// add edit 
-        {
-           
-            if (add_button_bloodletting.Text.Equals("Add"))
-            {
-                dh.addBloodDonation(ProfileID,
-                                    int.Parse(quantityDonation_numericupdown_bloodletting.Value.ToString()),
-                                    ((ComboboxContent)bloodDonationEvent_combobox_bloodletting.SelectedItem).ID, DateTime.Now);
-                load_bloodletting();
-
-            }
-            else if (add_button_bloodletting.Text.Equals("Edit"))
-            {
-                int A = ((ComboboxContent)bloodDonationEvent_combobox_bloodletting.SelectedItem).ID;
-                dh.editBloodDonation(ProfileID,
-                                    int.Parse(quantityDonation_numericupdown_bloodletting.Value.ToString()),
-                                    A,
-                                    DateTime.Now);
-                load_bloodletting();
-                add_button_bloodletting.Text = "Add";
-                 
-            }
-            
-        }
-            
-        
-        private void delete_button_bloodletting_Click(object sender, EventArgs e)// delete
-        {
-            dh.deleteBloodDonation(int.Parse(donation_datagridview_bloodletting.SelectedRows[0].Cells["bloodDonationID"].Value.ToString()));
-            load_bloodletting();
-            add_button_bloodletting.Text = "Add";
-
-        }
-
-        private void donation_datagridview_bloodletting_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            quantityDonation_numericupdown_bloodletting.Value = decimal.Parse(donation_datagridview_bloodletting.SelectedRows[0].Cells["quantity"].Value.ToString());
-            bloodDonationEvent_combobox_bloodletting.Text = donation_datagridview_bloodletting.SelectedRows[0].Cells["eventName"].Value.ToString();
-            add_button_bloodletting.Enabled = false;
-            add_button_bloodletting.Text = "Edit";
-            delete_button_bloodletting.Enabled = true;
-
-        }
-
-        private void quantityDonation_numericupdown_bloodletting_ValueChanged(object sender, EventArgs e)
-        {
-            if (bloodDonationEvent_combobox_bloodletting.Text.Equals("") || quantityDonation_numericupdown_bloodletting.Value.ToString().Equals("0"))
-            {
-                add_button_bloodletting.Enabled = false;
-            }
-            else
-            {
-                add_button_bloodletting.Enabled = true;
-            }
-        }
-
-        private void bloodDonationEvent_combobox_bloodletting_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (bloodDonationEvent_combobox_bloodletting.Text.Equals("") || quantityDonation_numericupdown_bloodletting.Value.ToString().Equals("0"))
-            {
-                add_button_bloodletting.Enabled = false;
-            }
-            else
-            {
-                add_button_bloodletting.Enabled = true;
-            }
-        }
-
-        #endregion bloodletting   
-
-        #region baptism
-        private void baptism_button_Click(object sender, EventArgs e)
-        {
-            baptism_panel.BringToFront();
-            refreshBaptismPage();
-          
-        }
-
-        private void refreshBaptismPage()
-        {
-            //profile
-            DataTable dt = dh.getBaptismOf(ProfileID);
-            if (int.Parse(dt.Rows[0]["legitimacy"].ToString()) == (int)Legitimacy.Legal)
+                if (int.Parse(DT.Rows[0]["legitimacy"].ToString()) == (int)Enums.Legitimacy.Legal)
                 { legitimate_radiobutton_baptism.Checked = true; }
-                else if (int.Parse(dt.Rows[0]["legitimacy"].ToString()) == (int)Legitimacy.Civil)
+                else if (int.Parse(DT.Rows[0]["legitimacy"].ToString()) == (int)Enums.Legitimacy.Civil)
                 { civil_radiobutton_baptism.Checked = true; }
-                else if (int.Parse(dt.Rows[0]["legitimacy"].ToString()) == (int)Legitimacy.Natural)
+                else if (int.Parse(DT.Rows[0]["legitimacy"].ToString()) == (int)Enums.Legitimacy.Natural)
                 { natural_radiobutton_baptism.Checked = true; }
                 else
                 {
@@ -242,79 +192,166 @@ namespace ParishSystem
                     civil_radiobutton_baptism.Checked = false;
                     natural_radiobutton_baptism.Checked = false;
                 }
-            registry_textbox_baptism.Text = dt.Rows[0]["registryNumber"].ToString();
-            page_textbox_baptism.Text = dt.Rows[0]["pageNumber"].ToString();
-            record_textbox_baptism.Text = dt.Rows[0]["recordNumber"].ToString();
-            remarks_textbox_baptism.Text = dt.Rows[0]["remarks"].ToString();
+            }
+            catch { }
+            try
+            {
+                if (int.Parse(DT.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Single)
+                    civilStatus_label.Text = "Single";
+                else if (int.Parse(DT.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Widowed)
+                    civilStatus_label.Text = "Widowed";
+            }
+            catch { }
+            try
+            { birthdate_dateTimePicker.Text = (DateTimePickerFormat.Long).ToString("MMMM, dd, yyyy");}
+            catch
+            {}
+            
+             
+        }
+
+
+        private void load_parents()
+        {
             //father
-            try {
-                DataTable fdt = dh.getFatherOf(ProfileID);
-                father_checbox.Checked = true;
-                firstname_textbox_father_baptism.Text= fdt.Rows[0]["firstname"].ToString();
+            DataTable fdt = dh.getFatherOf(ProfileID);
+            try
+            {
+                
+                firstname_textbox_father_baptism.Text = fdt.Rows[0]["firstname"].ToString();
                 mi_textbox_father_baptism.Text = fdt.Rows[0]["midname"].ToString();
                 lastname_textbox_father_baptism.Text = fdt.Rows[0]["lastname"].ToString();
                 suffix_textbox_father_baptism.Text = fdt.Rows[0]["suffix"].ToString();
                 residence_textbox_father_baptism.Text = fdt.Rows[0]["residence"].ToString();
+                father_checbox.Checked = true;
+
             }
-            catch
-                { dh.conn.Close();
-                  father_checbox.Checked = false;
-                }
-            //mother
+            catch { }
             try
             {
+                
+                firstname_textbox_father_confirmation.Text = fdt.Rows[0]["firstname"].ToString();
+                mi_textbox_father_confirmation.Text = fdt.Rows[0]["midname"].ToString();
+                lastname_textbox_father_confirmation.Text = fdt.Rows[0]["lastname"].ToString();
+                suffix_textbox_father_confirmation.Text = fdt.Rows[0]["suffix"].ToString();
+                father_checkbox_confirmation.Checked = true;
+               
+            }
+            catch { }
+            try
+            {
+                
+                firstname_textbox_father_self_marriage.Text = fdt.Rows[0]["firstname"].ToString();
+                mi_textbox_father_self_marriage.Text = fdt.Rows[0]["midname"].ToString();
+                lastname_textbox_father_self_marriage.Text = fdt.Rows[0]["lastname"].ToString();
+                suffix_textbox_father_self_marriage.Text = fdt.Rows[0]["suffix"].ToString();
+                residence_textbox_father_self_marriage.Text = fdt.Rows[0]["residence"].ToString();
+                father_checkbox_self_marriage.Checked = true;
+               
+            }
+            catch { }
+
+
+            //mother
+       
                 DataTable mdt = dh.getMotherOf(ProfileID);
-                mother_checkbox.Checked = true;
+                try
+                {
+                   
                 firstname_textbox_mother_baptism.Text = mdt.Rows[0]["firstname"].ToString();
                 mi_textbox_mother_baptism.Text = mdt.Rows[0]["midname"].ToString();
                 lastname_textbox_mother_baptism.Text = mdt.Rows[0]["lastname"].ToString();
                 suffix_textbox_mother_baptism.Text = mdt.Rows[0]["suffix"].ToString();
                 residence_textbox_mother_baptism.Text = mdt.Rows[0]["residence"].ToString();
+                mother_checkbox.Checked = true;
             }
-            catch
-            {
-                dh.conn.Close();
-                mother_checkbox.Checked = false;
+                catch { }
+                try
+                {
+                
+                firstname_textbox_mother_confirmation.Text = mdt.Rows[0]["firstname"].ToString();
+                mi_textbox_mother_confirmation.Text = mdt.Rows[0]["midname"].ToString();
+                lastname_textbox_mother_confirmation.Text = mdt.Rows[0]["lastname"].ToString();
+                suffix_textbox_mother_confirmation.Text = mdt.Rows[0]["suffix"].ToString();
+                mother_checkbox_confirmation.Checked = true;
             }
+                catch { }
+                try
+                {
+                
+                firstname_textbox_mother_self_marriage.Text = mdt.Rows[0]["firstname"].ToString();
+                mi_textbox_mother_self_marriage.Text = mdt.Rows[0]["midname"].ToString();
+                lastname_textbox_mother_self_marriage.Text = mdt.Rows[0]["lastname"].ToString();
+                suffix_textbox_mother_self_marriage.Text = mdt.Rows[0]["suffix"].ToString();
+                residence_textbox_mother_self_marriage.Text = mdt.Rows[0]["residence"].ToString();
+                mother_checkbox_self_marriage.Checked = true;
+            }
+                catch { }
+            
+            }
+            
+        
+
+
+        #endregion
+
+       
+
+        #region baptism
+        private void baptism_button_Click(object sender, EventArgs e)
+        {
+            baptism_panel.BringToFront();
+            refreshBaptism();
+        }
+
+        private void refreshBaptism()
+        {
+            
+            //profile
+            DataTable dt = dh.getBaptismOf(ProfileID);
+
+           
+            registry_textbox_baptism.Text = dt.Rows[0]["registryNumber"].ToString();
+            page_textbox_baptism.Text = dt.Rows[0]["pageNumber"].ToString();
+            record_textbox_baptism.Text = dt.Rows[0]["recordNumber"].ToString();
+            remarks_textbox_baptism.Text = dt.Rows[0]["remarks"].ToString();
+
+           
+            DataTable sponsors = dh.getSponsors(int.Parse(dt.Rows[0]["applicationID"].ToString()));
             //godFather
             try
             {
-                DataTable gfdt = dh.getFatherOf(ProfileID);
                 godfather_checkbox.Checked = true;
-                firstname_textbox_godFather_baptism.Text = gfdt.Rows[0]["firstname"].ToString();
-                mi_textbox_godFather_baptism.Text = gfdt.Rows[0]["midname"].ToString();
-                lastname_textbox_godFather_baptism.Text = gfdt.Rows[0]["lastname"].ToString();
-                suffix_textbox_godFather_baptism.Text = gfdt.Rows[0]["suffix"].ToString();
-                residence_textbox_godFather_baptism.Text = gfdt.Rows[0]["residence"].ToString();
+                firstname_textbox_godFather_baptism.Text = sponsors.Rows[0]["firstname"].ToString();
+                mi_textbox_godFather_baptism.Text = sponsors.Rows[0]["midname"].ToString();
+                lastname_textbox_godFather_baptism.Text = sponsors.Rows[0]["lastname"].ToString();
+                suffix_textbox_godFather_baptism.Text = sponsors.Rows[0]["suffix"].ToString();
+                residence_textbox_godFather_baptism.Text = sponsors.Rows[0]["residence"].ToString();
             }
             catch
             {
-                dh.conn.Close();
                 godfather_checkbox.Checked = false;
-                
             }
 
             //godMother
             try
             {
-                DataTable gmdt = dh.getFatherOf(ProfileID);
                 godMother_checkbox.Checked = true;
-                firstname_textbox_godMother_baptism.Text = gmdt.Rows[0]["firstname"].ToString();
-                mi_textbox_godMother_baptism.Text = gmdt.Rows[0]["midname"].ToString();
-                lastname_textbox_godMother_baptism.Text = gmdt.Rows[0]["lastname"].ToString();
-                suffix_textbox_godMother_baptism.Text = gmdt.Rows[0]["suffix"].ToString();
-                residence_textbox_godMother_baptism.Text = gmdt.Rows[0]["residence"].ToString();
+                firstname_textbox_godMother_baptism.Text = sponsors.Rows[1]["firstname"].ToString();
+                mi_textbox_godMother_baptism.Text = sponsors.Rows[1]["midname"].ToString();
+                lastname_textbox_godMother_baptism.Text = sponsors.Rows[1]["lastname"].ToString();
+                suffix_textbox_godMother_baptism.Text = sponsors.Rows[1]["suffix"].ToString();
+                residence_textbox_godMother_baptism.Text = sponsors.Rows[1]["residence"].ToString();
             }
             catch
             {
-                dh.conn.Close();
                 godMother_checkbox.Checked = false;
             }
-           
-              
-                date_datetimepicker_baptism.Value =dh.toDateTime(dt.Rows[0]["baptismDate"].ToString(),false);
-                date_datetimepicker_baptism.Format = DateTimePickerFormat.Long;
-                minister_combobox_baptism.Text = dt.Rows[0]["minister"].ToString();
+
+
+            date_datetimepicker_baptism.Value = dh.toDateTime(dt.Rows[0]["baptismDate"].ToString(), false);
+            date_datetimepicker_baptism.Format = DateTimePickerFormat.Long;
+            minister_combobox_baptism.Text = dt.Rows[0]["minister"].ToString();
 
 
         }
@@ -351,177 +388,63 @@ namespace ParishSystem
                 mother_panel_baptism.Visible = false;
         }
 
-        public bool isNameEmpty(TextBox A)
-        {
-            return A.Name.Split('_')[0] == A.Text;
-        }
 
-        private void save_button_baptism_Click(object sender, EventArgs e)
-        {
-            if (isNameEmpty(firstname_textbox) ||
-                isNameEmpty(mi_textbox) ||
-                isNameEmpty(lastname_textbox) ||
-                !(legitimate_radiobutton_baptism.Checked || civil_radiobutton_baptism.Checked || natural_radiobutton_baptism.Checked) ||
-                birthdate_dateTimePicker.Format.Equals(DateTimePickerFormat.Custom) ||
-                !(genderMale_radiobutton.Checked || genderFemale_radiobutton.Checked))
-            {
-                MessageBox.Show("Hello");
-                return;
-            }
-
-            if (father_checbox.Checked && (isNameEmpty(firstname_textbox_father_baptism) ||
-                isNameEmpty(mi_textbox_father_baptism) ||
-                isNameEmpty(lastname_textbox_father_baptism) ||
-                residence_textbox_father_baptism.Text == ""))
-            {
-                MessageBox.Show("Hello");
-                return;
-            }
-            if (
-                mother_checkbox.Checked ||
-                isNameEmpty(firstname_textbox_mother_baptism) ||
-                isNameEmpty(mi_textbox_mother_baptism) ||
-                isNameEmpty(lastname_textbox_mother_baptism) ||
-                residence_textbox_mother_baptism.Text == "")
-            {
-                MessageBox.Show("Hello");
-                return;
-            }
-            if (
-                godfather_checkbox.Checked ||
-                isNameEmpty(firstname_textbox_godFather_baptism) ||
-                isNameEmpty(mi_textbox_godFather_baptism) ||
-                isNameEmpty(lastname_textbox_godFather_baptism) ||
-                residence_textbox_godFather_baptism.Text == "")
-            {
-                MessageBox.Show("Hello");
-                return;
-            }
-            if (
-                godMother_checkbox.Checked ||
-                isNameEmpty(firstname_textbox_godMother_baptism) ||
-                isNameEmpty(mi_textbox_godMother_baptism) ||
-                isNameEmpty(lastname_textbox_godMother_baptism) ||
-                residence_textbox_godMother_baptism.Text == "")
-            {
-                MessageBox.Show("Hello");
-                return;
-            }
-            
-            //inserting
-            if (father_checbox.Checked)
-            {
-                dh.addParent(ProfileID, firstname_textbox_father_baptism.Text, mi_textbox_father_baptism.Text, lastname_textbox_father_baptism.Text, suffix_textbox_father_baptism.Text, Gender.Male, residence_textbox_father_baptism.Text);
-            }
-            if(mother_checkbox.Checked)
-            {
-                dh.addParent(ProfileID, firstname_textbox_mother_baptism.Text, mi_textbox_mother_baptism.Text, lastname_textbox_mother_baptism.Text, suffix_textbox_mother_baptism.Text, Gender.Female, residence_textbox_mother_baptism.Text);
-            }
-            if (godfather_checkbox.Checked)
-            {
-               // dh.addSponsor();
-            }
-            if (godMother_checkbox.Checked)
-            {
-                // dh.addSponsor();
-            }
-
-
-        }
-
-        private void close_button_baptism_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
         #endregion
 
         #region confirmation
         private void confirmation_button_Click(object sender, EventArgs e)
         {
-            refreshConfirmation();
             confirmation_panel.BringToFront();
+            refreshConfirmation();
         }
 
-        private void details_confirmation_button_Click(object sender, EventArgs e)
-        {
-            refreshConfirmation();
-            confirmation_panel.BringToFront();
-        }
 
         private void refreshConfirmation()
         {
+         
             //profile
-            DataTable dt= dh.getConfirmationOf(ProfileID);
-            
-            //fathe
-            try
-            {
-                DataTable fdt = dh.getFatherOf(ProfileID);
-                father_checkbox_confirmation.Checked = true;
-                firstname_textbox_father_confirmation.Text = fdt.Rows[0]["firstname"].ToString();
-                mi_textbox_father_confirmation.Text = fdt.Rows[0]["midname"].ToString();
-                lastname_textbox_father_confirmation.Text = fdt.Rows[0]["lastname"].ToString();
-                suffix_textbox_father_confirmation.Text = fdt.Rows[0]["suffix"].ToString();
-            }
-            catch
-            {
-                dh.conn.Close();
-                father_checkbox_confirmation.Checked = false;
-            }
-            //mother
-            try
-            {
-                DataTable mdt = dh.getMotherOf(ProfileID);
-                mother_checkbox_confirmation.Checked = true;
-                firstname_textbox_mother_confirmation.Text = mdt.Rows[0]["firstname"].ToString();
-                mi_textbox_mother_confirmation.Text = mdt.Rows[0]["midname"].ToString();
-                lastname_textbox_mother_confirmation.Text = mdt.Rows[0]["lastname"].ToString();
-                suffix_textbox_mother_confirmation.Text = mdt.Rows[0]["suffix"].ToString();
-            }
-            catch
-            {
-                dh.conn.Close();
-                mother_checkbox_confirmation.Checked = false;
-            }
+            DataTable dt = dh.getConfirmationOf(ProfileID);
+
+
+
+          
+            DataTable sponsors = dh.getSponsors(int.Parse(dt.Rows[0]["applicationID"].ToString()));
             //godFather
             try
             {
-                DataTable gfdt = dh.getFatherOf(ProfileID);
                 godfather_checkbox_confirmation.Checked = true;
-                firstname_textbox_godFather_confirmation.Text = gfdt.Rows[0]["firstname"].ToString();
-                mi_textbox_godFather_confirmation.Text = gfdt.Rows[0]["midname"].ToString();
-                lastname_textbox_godFather_confirmation.Text = gfdt.Rows[0]["lastname"].ToString();
-                suffix_textbox_godFather_confirmation.Text = gfdt.Rows[0]["suffix"].ToString();
+                firstname_textbox_godFather_confirmation.Text = sponsors.Rows[0]["firstname"].ToString();
+                mi_textbox_godFather_confirmation.Text = sponsors.Rows[0]["midname"].ToString();
+                lastname_textbox_godFather_confirmation.Text = sponsors.Rows[0]["lastname"].ToString();
+                suffix_textbox_godFather_confirmation.Text = sponsors.Rows[0]["suffix"].ToString();
             }
             catch
             {
-                dh.conn.Close();
                 godfather_checkbox_confirmation.Checked = false;
             }
             //godMother
             try
             {
-                DataTable gmdt = dh.getFatherOf(ProfileID);
                 godMother_checkbox_confirmation.Checked = true;
-                firstname_textbox_godMother_confirmation.Text = gmdt.Rows[0]["firstname"].ToString();
-                mi_textbox_godMother_confirmation.Text = gmdt.Rows[0]["midname"].ToString();
-                lastname_textbox_godMother_confirmation.Text = gmdt.Rows[0]["lastname"].ToString();
-                suffix_textbox_godMother_confirmation.Text = gmdt.Rows[0]["suffix"].ToString();
+                firstname_textbox_godMother_confirmation.Text = sponsors.Rows[0]["firstname"].ToString();
+                mi_textbox_godMother_confirmation.Text = sponsors.Rows[0]["midname"].ToString();
+                lastname_textbox_godMother_confirmation.Text = sponsors.Rows[0]["lastname"].ToString();
+                suffix_textbox_godMother_confirmation.Text = sponsors.Rows[0]["suffix"].ToString();
             }
             catch
             {
                 dh.conn.Close();
                 godMother_checkbox_confirmation.Checked = false;
             }
-            minister_combobox_confirmation.Text= dt.Rows[0]["minister"].ToString();
-            registry_textbox_confirmation.Text = dt.Rows[0]["registryNumber"].ToString();   
-            page_textbox_confirmation.Text= dt.Rows[0]["pageNumber"].ToString();
-            record_textbox_confirmation.Text=dt.Rows[0]["recordNumber"].ToString();
+            minister_combobox_confirmation.Text = dt.Rows[0]["minister"].ToString();
+            registry_textbox_confirmation.Text = dt.Rows[0]["registryNumber"].ToString();
+            page_textbox_confirmation.Text = dt.Rows[0]["pageNumber"].ToString();
+            record_textbox_confirmation.Text = dt.Rows[0]["recordNumber"].ToString();
 
-           
-                date_datetimepicker_confirmation.Format = DateTimePickerFormat.Long;
-                date_datetimepicker_confirmation.Value = dh.toDateTime(dt.Rows[0]["confirmationDate"].ToString(), false);
- 
+
+            date_datetimepicker_confirmation.Format = DateTimePickerFormat.Long;
+            date_datetimepicker_confirmation.Value = dh.toDateTime(dt.Rows[0]["confirmationDate"].ToString(), false);
+
         }
 
         private void father_checkbox_confirmation_CheckedChanged(object sender, EventArgs e)
@@ -578,6 +501,10 @@ namespace ParishSystem
 
         private void marriage_button_Click(object sender, EventArgs e)
         {
+            if (mode ==(int) Enums.Mode.GeneralProfile)
+            {
+                spouse_combobox_marriage.Enabled = true;
+            }
             marriage_panel.BringToFront();
             refreshMarriage();
         }
@@ -585,49 +512,21 @@ namespace ParishSystem
         private void refreshMarriage()
         {
             DataTable temp = dh.getMarriageApplications(ProfileID);
-            
 
-            DataTable Partners = dh.getPartners(int.Parse(temp.Rows[0]["applicationID"].ToString()),ProfileID);
+
+            DataTable Partners = dh.getPartners(int.Parse(temp.Rows[0]["applicationID"].ToString()), ProfileID);
             spouse_combobox_marriage.Items.Clear();
             foreach (DataRow dr in Partners.Rows)
             {
                 spouse_combobox_marriage.Items.Add(new ComboboxContent(int.Parse(dr["profileID"].ToString()), dr["Name"].ToString(), dr["applicationID"].ToString()));
             }
-            try
-            {
-                DataTable dt = dh.getFatherOf(ProfileID);
-                father_checkbox_self_marriage.Checked = true;
-                firstname_textbox_father_self_marriage.Text = dt.Rows[0]["firstname"].ToString();
-                mi_textbox_father_self_marriage.Text = dt.Rows[0]["midname"].ToString();
-                lastname_textbox_father_self_marriage.Text = dt.Rows[0]["lastname"].ToString();
-                suffix_textbox_father_self_marriage.Text = dt.Rows[0]["suffix"].ToString();
-                residence_textbox_father_self_marriage.Text= dt.Rows[0]["residence"].ToString();
-            }
-            catch
-            {
-                dh.conn.Close();
-            }
-            try
-            {
-                DataTable dt = dh.getMotherOf(ProfileID);
-                mother_checkbox_self_marriage.Checked = true;
-                firstname_textbox_mother_self_marriage.Text = dt.Rows[0]["firstname"].ToString();
-                mi_textbox_mother_self_marriage.Text = dt.Rows[0]["midname"].ToString();
-                lastname_textbox_mother_self_marriage.Text = dt.Rows[0]["lastname"].ToString();
-                suffix_textbox_mother_self_marriage.Text = dt.Rows[0]["suffix"].ToString();
-                residence_textbox_mother_self_marriage.Text = dt.Rows[0]["residence"].ToString();
-            }
-            catch
-            {
-                dh.conn.Close();
-            }
-
             spouse_combobox_marriage.Text = "";
-           
+
         }
 
         private void cancel_button_marriage_Click(object sender, EventArgs e)
         {
+            load_parents();
             refreshMarriage();
         }
 
@@ -635,15 +534,11 @@ namespace ParishSystem
         {
             if (spouse_combobox_marriage.Text != "")
             {
-                DataTable dt = dh.getGeneralProfile((spouse_combobox_marriage.SelectedItem as ComboboxContent).ID);
+                DataTable dt = dh.getGeneralProfile((spouse_combobox_marriage.SelectedItem as ComboboxContent).ID, (int)Enums.SacramentType.Marriage);
                 int spouseID = (spouse_combobox_marriage.SelectedItem as ComboboxContent).ID;
-                firstname_textbox_spouse_marriage.Text = dt.Rows[0]["firstname"].ToString();
-                mi_textbox_spouse_marriage.Text = dt.Rows[0]["midname"].ToString();
-                lastname_textbox_spouse_marriage.Text = dt.Rows[0]["lastname"].ToString();
-                suffix_textbox_spouse_marriage.Text = dt.Rows[0]["suffix"].ToString();
-                if (int.Parse(dt.Rows[0]["civilStatus"].ToString()) == (int)CivilStatus.Single)
+                if (int.Parse(dt.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Single)
                     single_radiobutton_spouse_marriage.Checked = true;
-                else if (int.Parse(dt.Rows[0]["civilStatus"].ToString()) == (int)CivilStatus.Widowed)
+                else if (int.Parse(dt.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Widowed)
                     widowed_radiobutton_spouse_marriage.Checked = true;
                 try
                 {
@@ -660,33 +555,28 @@ namespace ParishSystem
                 try
                 {
                     DataTable df = dh.getFatherOf(spouseID);
-                    father_checkbox_spouse_marriage.Checked = true;
                     firstname_textbox_father_spouse_marriage.Text = df.Rows[0]["firstname"].ToString();
                     mi_textbox_father_spouse_marriage.Text = df.Rows[0]["midname"].ToString();
                     lastname_textbox_father_spouse_marriage.Text = df.Rows[0]["lastname"].ToString();
                     suffix_textbox_father_spouse_marriage.Text = df.Rows[0]["suffix"].ToString();
                     residence_textbox_father_spouse_marriage.Text = df.Rows[0]["residence"].ToString();
+                    father_checkbox_spouse_marriage.Checked = true;
                 }
                 catch
-                {
-                    dh.conn.Close();
-                    father_checkbox_spouse_marriage.Checked = false;
-                }
+                {}
                 try
                 {
                     DataTable dm = dh.getMotherOf(spouseID);
-                    mother_checkbox_spouse_marriage.Checked = true;
+                    
                     firstname_textbox_mother_spouse_marriage.Text = dm.Rows[0]["firstname"].ToString();
                     mi_textbox_mother_spouse_marriage.Text = dm.Rows[0]["midname"].ToString();
                     lastname_textbox_mother_spouse_marriage.Text = dm.Rows[0]["lastname"].ToString();
                     suffix_textbox_mother_spouse_marriage.Text = dm.Rows[0]["suffix"].ToString();
                     residence_textbox_mother_spouse_marriage.Text = dm.Rows[0]["residence"].ToString();
+                    mother_checkbox_spouse_marriage.Checked = true;
                 }
                 catch
-                {
-                    dh.conn.Close();
-                    mother_checkbox_spouse_marriage.Checked = false;
-                }// DataTable dt = dh.getGeneralProfile((spouse_combobox_marriage.SelectedItem as ComboboxContent).ID);
+                {}// DataTable dt = dh.getGeneralProfile((spouse_combobox_marriage.SelectedItem as ComboboxContent).ID);
                 DataTable a = dh.getMarriage(int.Parse((spouse_combobox_marriage.SelectedItem as ComboboxContent).Content2));
                 recordNumber_textbox_marriage.Text = a.Rows[0]["recordNumber"].ToString();
                 pageNumber_textbox_marriage.Text = a.Rows[0]["pageNumber"].ToString();
@@ -697,85 +587,41 @@ namespace ParishSystem
                 date_dateTimePicker_marriage.Format = DateTimePickerFormat.Long;
                 date_dateTimePicker_marriage.Value = dh.toDateTime(a.Rows[0]["marriageDate"].ToString(), false);
 
+
+                DataTable sponsors = dh.getSponsors(int.Parse(dt.Rows[0]["applicationID"].ToString()));
                 try
                 {
-                    DataTable gf = dh.getMotherOf(ProfileID);
+                   
+                    firstname_textbox_godMother_marriage.Text = sponsors.Rows[1]["firstname"].ToString();
+                    mi_textbox_godMother_marriage.Text = sponsors.Rows[1]["midname"].ToString();
+                    lastname_textbox_godMother_marriage.Text = sponsors.Rows[1]["lastname"].ToString();
+                    suffix_textbox_godMother_marriage.Text = sponsors.Rows[1]["suffix"].ToString();
+                    residence_textbox_godMother_marriage.Text = sponsors.Rows[1]["residence"].ToString();
                     godFather_checkbox_marriage.Checked = true;
-                    firstname_textbox_godMother_marriage.Text = gf.Rows[0]["firstname"].ToString();
-                    mi_textbox_godMother_marriage.Text = gf.Rows[0]["midname"].ToString();
-                    lastname_textbox_godMother_marriage.Text = gf.Rows[0]["lastname"].ToString();
-                    suffix_textbox_godMother_marriage.Text = gf.Rows[0]["suffix"].ToString();
-                    residence_textbox_godMother_marriage.Text = gf.Rows[0]["residence"].ToString();
                 }
                 catch
                 {
-                    dh.conn.Close();
+
                 }
                 try
                 {
-                    DataTable gm = dh.getMotherOf(ProfileID);
+                   
+                    firstname_textbox_godFather_marriage.Text = sponsors.Rows[0]["firstname"].ToString();
+                    mi_textbox_godFather_marriage.Text = sponsors.Rows[0]["midname"].ToString();
+                    lastname_textbox_godFather_marriage.Text = sponsors.Rows[0]["lastname"].ToString();
+                    suffix_textbox_godFather_marriage.Text = sponsors.Rows[0]["suffix"].ToString();
+                    residence_textbox_godFather_marriage.Text = sponsors.Rows[0]["residence"].ToString();
                     godMother_checkbox_marriage.Checked = true;
-                    firstname_textbox_godFather_marriage.Text = gm.Rows[0]["firstname"].ToString();
-                    mi_textbox_godFather_marriage.Text = gm.Rows[0]["midname"].ToString();
-                    lastname_textbox_godFather_marriage.Text = gm.Rows[0]["lastname"].ToString();
-                    suffix_textbox_godFather_marriage.Text = gm.Rows[0]["suffix"].ToString();
-                    residence_textbox_godFather_marriage.Text = gm.Rows[0]["residence"].ToString();
                 }
                 catch
                 {
-                    dh.conn.Close();
+
                 }
             }
             else
             {
-                firstname_textbox_spouse_marriage.Text = "";
-                mi_textbox_spouse_marriage.Text = "";
-                lastname_textbox_spouse_marriage.Text = "";
-                suffix_textbox_spouse_marriage.Text = "";
-                single_radiobutton_spouse_marriage.Checked = false;
-                widowed_radiobutton_spouse_marriage.Checked = false;
-                birthdate_datetimepicker_spouse_marriage.Format = DateTimePickerFormat.Custom;
-                contactNumber_textbox_spouse_marriage.Text = "";
-                address_textbox_spouse_marriage.Text = "";
-
-                father_checkbox_spouse_marriage.Checked = false;
-                firstname_textbox_father_spouse_marriage.Text = "";
-                mi_textbox_father_spouse_marriage.Text = "";
-                lastname_textbox_father_spouse_marriage.Text = "";
-                suffix_textbox_father_spouse_marriage.Text = "";
-                residence_textbox_father_spouse_marriage.Text = "";
-
-
-                mother_checkbox_spouse_marriage.Checked = false;
-                firstname_textbox_mother_spouse_marriage.Text = "";
-                mi_textbox_mother_spouse_marriage.Text = "";
-                lastname_textbox_mother_spouse_marriage.Text = "";
-                suffix_textbox_mother_spouse_marriage.Text = "";
-                residence_textbox_mother_spouse_marriage.Text = "";
-
-                recordNumber_textbox_marriage.Text = "";
-                pageNumber_textbox_marriage.Text = "";
-                registryNumber_textbox_marriage.Text = "";
-                pageNumber_textbox_marriage.Text = "";
-                recordNumber_textbox_marriage.Text = "";
-                minister_combobox_marriage.Text = "";
-                date_dateTimePicker_marriage.Format = DateTimePickerFormat.Custom;
-
-                godFather_checkbox_marriage.Checked = false;
-                firstname_textbox_godMother_marriage.Text = "";
-                mi_textbox_godMother_marriage.Text = "";
-                lastname_textbox_godMother_marriage.Text = "";
-                suffix_textbox_godMother_marriage.Text = "";
-                residence_textbox_godMother_marriage.Text = "";
-
-                godMother_checkbox_marriage.Checked = false;
-                firstname_textbox_godFather_marriage.Text = "";
-                mi_textbox_godFather_marriage.Text = "";
-                lastname_textbox_godFather_marriage.Text = "";
-                suffix_textbox_godFather_marriage.Text = "";
-                residence_textbox_godFather_marriage.Text = "";
-
-
+               
+               
             }
         }
 
@@ -783,16 +629,65 @@ namespace ParishSystem
 
         #endregion
 
-        private void close_button_baptism_Click_1(object sender, EventArgs e)
-        {
-            refreshBaptismPage();
-        }
 
-        private void close_button_confirmation_Click(object sender, EventArgs e)
-        {
-            refreshConfirmation();
-        }
 
+        private void father_panel_baptism_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
        
+        private void label67_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //here justin <<<
+        private void father_checkbox_self_marriage_CheckedChanged(object sender, EventArgs e)
+        {
+            if (father_checbox.Checked == true)
+                father_panel_baptism.Visible = true;
+            else
+                father_panel_baptism.Visible = false;
+        }
+
+        private void mother_checkbox_self_marriage_CheckedChanged(object sender, EventArgs e)
+        {
+            if (father_checbox.Checked == true)
+                father_panel_baptism.Visible = true;
+            else
+                father_panel_baptism.Visible = false;
+        }
+
+        private void father_checkbox_spouse_marriage_CheckedChanged(object sender, EventArgs e)
+        {
+            if (father_checbox.Checked == true)
+                father_panel_baptism.Visible = true;
+            else
+                father_panel_baptism.Visible = false;
+        }
+
+        private void mother_checkbox_spouse_marriage_CheckedChanged(object sender, EventArgs e)
+        {
+            if (father_checbox.Checked == true)
+                father_panel_baptism.Visible = true;
+            else
+                father_panel_baptism.Visible = false;
+        }
+
+        private void godFather_checkbox_marriage_CheckedChanged(object sender, EventArgs e)
+        {
+            if (father_checbox.Checked == true)
+                father_panel_baptism.Visible = true;
+            else
+                father_panel_baptism.Visible = false;
+        }
+
+        private void godMother_checkbox_marriage_CheckedChanged(object sender, EventArgs e)
+        {
+            if (father_checbox.Checked == true)
+                father_panel_baptism.Visible = true;
+            else
+                father_panel_baptism.Visible = false;
+        }
     }
 }
