@@ -145,14 +145,13 @@ namespace ParishSystem
         */
         #region
         //ADD
-        public bool addGeneralProfile(string firstName, string midName, string lastName, string suffix, Gender gender, DateTime birthDate, string contactNumber, string address, string birthplace)
+        public bool addGeneralProfile(string firstName, string midName, string lastName, string suffix, Gender gender, DateTime birthDate, string contactNumber, string address, string birthplace,int contactnumber, string residence,int civilStatus,int legitimacy,int bloodtype)
         {
             if (generalProfileExists(firstName, midName, lastName, suffix, gender, birthDate))
                 throw new Exception("DataHandler: Duplicate in GeneralProfile");
 
-            string q = "INSERT INTO GeneralProfile(firstName, midName, lastName, suffix, gender, birthDate, contactNumber, address, birthplace) VALUES ('" 
-                + firstName + "', '" + midName + "', '" + lastName + "', '" + suffix + "', '" + (int)gender 
-                + "', '" + birthDate.ToString("yyyy-MM-dd") + "', '" + contactNumber + "', '" + address + "', '" + birthplace + "')";
+            string q = "INSERT INTO `sad2`.`generalprofile` (`firstName`, `midName`, `lastName`, `suffix`, `birthdate`, `gender`, `address`, `birthplace`, `contactNumber`, `bloodType`, `civilStatus`, `legitimacy`, `residence`) VALUES "+
+             " ('"+ firstName + "', '"+ midName + "', '"+ lastName + "', '"+ suffix + "', '"+ birthDate + "', '"+ gender + "', '"+ address + "', '"+ birthplace + "', '"+ contactnumber + "', '"+ bloodtype + "', '"+ civilStatus + "', '"+ legitimacy + "', '"+ residence + "');";
 
             bool success = runNonQuery(q);
             
