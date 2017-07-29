@@ -133,9 +133,6 @@
   <data name="Report_Card_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons\50x50\Report Card_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Holy_Bible_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons\50x50\Holy Bible_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Home_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -155,10 +152,13 @@
     <value>..\Resources\icons\32x32\Newlyweds_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons\32x32\Trash.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\icons\32x32\Trash.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EditDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons\32x32\EditDown.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cancel_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Cancel_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ThePope_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\The Pope_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,9 +202,6 @@
   <data name="customer_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons\32x32\customer_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="customer_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\customer_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Resume_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Resume_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -229,8 +226,11 @@
   <data name="TrashHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons\32x32\TrashHover.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cancel_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons\32x32\Cancel_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Clock_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Clock_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="customer_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\customer_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="messageBox_error" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\messageBox_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,10 +259,10 @@
   <data name="HolyBible_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Holy Bible_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Clock_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons\32x32\Clock_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Holy_Bible_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\50x50\Holy Bible_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons\32x32\Trash.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Delete_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\32x32\Delete_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -134,6 +134,16 @@
             this.baptismApplication_firstName_textbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.baptismApplication_dgv = new MetroFramework.Controls.MetroGrid();
+            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.suffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.applicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.requirements = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -346,16 +356,6 @@
             this.libraryMarriageButton = new System.Windows.Forms.Button();
             this.libraryConfirmationButton = new System.Windows.Forms.Button();
             this.libraryBaptismButton = new System.Windows.Forms.Button();
-            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.midName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.suffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.profileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.applicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.requirements = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.profile_panel.SuspendLayout();
@@ -1676,6 +1676,88 @@
             this.baptismApplication_dgv.TabStop = false;
             this.baptismApplication_dgv.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.baptismApplication_dgv_CellEnter);
             this.baptismApplication_dgv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.baptismApplication_dgv_CellFormatting);
+            // 
+            // lastName
+            // 
+            this.lastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lastName.DataPropertyName = "lastName";
+            this.lastName.HeaderText = "Last Name";
+            this.lastName.Name = "lastName";
+            this.lastName.ReadOnly = true;
+            // 
+            // firstName
+            // 
+            this.firstName.DataPropertyName = "firstName";
+            this.firstName.HeaderText = "First Name";
+            this.firstName.Name = "firstName";
+            this.firstName.ReadOnly = true;
+            this.firstName.Width = 85;
+            // 
+            // midName
+            // 
+            this.midName.DataPropertyName = "midName";
+            this.midName.HeaderText = "M.I.";
+            this.midName.Name = "midName";
+            this.midName.ReadOnly = true;
+            this.midName.Width = 50;
+            // 
+            // suffix
+            // 
+            this.suffix.DataPropertyName = "suffix";
+            this.suffix.HeaderText = "Suffix";
+            this.suffix.Name = "suffix";
+            this.suffix.ReadOnly = true;
+            this.suffix.Width = 60;
+            // 
+            // gender
+            // 
+            this.gender.DataPropertyName = "gender";
+            this.gender.HeaderText = "Gender";
+            this.gender.Name = "gender";
+            this.gender.ReadOnly = true;
+            this.gender.Width = 69;
+            // 
+            // birthdate
+            // 
+            this.birthdate.DataPropertyName = "birthdate";
+            this.birthdate.HeaderText = "Birth Date";
+            this.birthdate.Name = "birthdate";
+            this.birthdate.ReadOnly = true;
+            this.birthdate.Width = 83;
+            // 
+            // status
+            // 
+            this.status.DataPropertyName = "status";
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            this.status.Width = 63;
+            // 
+            // profileID
+            // 
+            this.profileID.DataPropertyName = "profileID";
+            this.profileID.HeaderText = "profileID";
+            this.profileID.Name = "profileID";
+            this.profileID.ReadOnly = true;
+            this.profileID.Visible = false;
+            this.profileID.Width = 76;
+            // 
+            // applicationID
+            // 
+            this.applicationID.DataPropertyName = "applicationID";
+            this.applicationID.HeaderText = "applicationID";
+            this.applicationID.Name = "applicationID";
+            this.applicationID.ReadOnly = true;
+            this.applicationID.Visible = false;
+            // 
+            // requirements
+            // 
+            this.requirements.DataPropertyName = "requirements";
+            this.requirements.HeaderText = "requirements";
+            this.requirements.Name = "requirements";
+            this.requirements.ReadOnly = true;
+            this.requirements.Visible = false;
+            this.requirements.Width = 99;
             // 
             // metroTabPage2
             // 
@@ -4037,88 +4119,6 @@
             this.libraryBaptismButton.Text = "Baptism";
             this.libraryBaptismButton.UseVisualStyleBackColor = false;
             this.libraryBaptismButton.Click += new System.EventHandler(this.libraryBaptismButton_Click);
-            // 
-            // lastName
-            // 
-            this.lastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.lastName.DataPropertyName = "lastName";
-            this.lastName.HeaderText = "Last Name";
-            this.lastName.Name = "lastName";
-            this.lastName.ReadOnly = true;
-            // 
-            // firstName
-            // 
-            this.firstName.DataPropertyName = "firstName";
-            this.firstName.HeaderText = "First Name";
-            this.firstName.Name = "firstName";
-            this.firstName.ReadOnly = true;
-            this.firstName.Width = 85;
-            // 
-            // midName
-            // 
-            this.midName.DataPropertyName = "midName";
-            this.midName.HeaderText = "M.I.";
-            this.midName.Name = "midName";
-            this.midName.ReadOnly = true;
-            this.midName.Width = 50;
-            // 
-            // suffix
-            // 
-            this.suffix.DataPropertyName = "suffix";
-            this.suffix.HeaderText = "Suffix";
-            this.suffix.Name = "suffix";
-            this.suffix.ReadOnly = true;
-            this.suffix.Width = 60;
-            // 
-            // gender
-            // 
-            this.gender.DataPropertyName = "gender";
-            this.gender.HeaderText = "Gender";
-            this.gender.Name = "gender";
-            this.gender.ReadOnly = true;
-            this.gender.Width = 69;
-            // 
-            // birthdate
-            // 
-            this.birthdate.DataPropertyName = "birthdate";
-            this.birthdate.HeaderText = "Birth Date";
-            this.birthdate.Name = "birthdate";
-            this.birthdate.ReadOnly = true;
-            this.birthdate.Width = 83;
-            // 
-            // status
-            // 
-            this.status.DataPropertyName = "status";
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            this.status.Width = 63;
-            // 
-            // profileID
-            // 
-            this.profileID.DataPropertyName = "profileID";
-            this.profileID.HeaderText = "profileID";
-            this.profileID.Name = "profileID";
-            this.profileID.ReadOnly = true;
-            this.profileID.Visible = false;
-            this.profileID.Width = 76;
-            // 
-            // applicationID
-            // 
-            this.applicationID.DataPropertyName = "applicationID";
-            this.applicationID.HeaderText = "applicationID";
-            this.applicationID.Name = "applicationID";
-            this.applicationID.ReadOnly = true;
-            this.applicationID.Visible = false;
-            // 
-            // requirements
-            // 
-            this.requirements.DataPropertyName = "requirements";
-            this.requirements.HeaderText = "requirements";
-            this.requirements.Name = "requirements";
-            this.requirements.ReadOnly = true;
-            this.requirements.Visible = false;
-            this.requirements.Width = 99;
             // 
             // SAD
             // 

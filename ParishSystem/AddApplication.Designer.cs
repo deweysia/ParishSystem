@@ -43,6 +43,11 @@
             this.suffix_textBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.price_textBox = new System.Windows.Forms.TextBox();
+            this.remarks_textBox = new System.Windows.Forms.TextBox();
+            this.application_remarks_textBox = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.hiddenTabControl1 = new ParishSystem.HiddenTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.apply_button = new MetroFramework.Controls.MetroButton();
@@ -52,11 +57,6 @@
             this.createNewProfile_button = new MetroFramework.Controls.MetroButton();
             this.cancel_button = new MetroFramework.Controls.MetroButton();
             this.yes_button = new MetroFramework.Controls.MetroButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.price_textBox = new System.Windows.Forms.TextBox();
-            this.remarks_textBox = new System.Windows.Forms.TextBox();
-            this.application_remarks_textBox = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.hiddenTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -225,6 +225,50 @@
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(23, 201);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 15);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Price";
+            // 
+            // price_textBox
+            // 
+            this.price_textBox.Location = new System.Drawing.Point(26, 219);
+            this.price_textBox.Name = "price_textBox";
+            this.price_textBox.Size = new System.Drawing.Size(100, 20);
+            this.price_textBox.TabIndex = 17;
+            // 
+            // remarks_textBox
+            // 
+            this.remarks_textBox.Location = new System.Drawing.Point(26, 260);
+            this.remarks_textBox.Multiline = true;
+            this.remarks_textBox.Name = "remarks_textBox";
+            this.remarks_textBox.Size = new System.Drawing.Size(286, 49);
+            this.remarks_textBox.TabIndex = 19;
+            // 
+            // application_remarks_textBox
+            // 
+            this.application_remarks_textBox.AutoSize = true;
+            this.application_remarks_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.application_remarks_textBox.Location = new System.Drawing.Point(23, 242);
+            this.application_remarks_textBox.Name = "application_remarks_textBox";
+            this.application_remarks_textBox.Size = new System.Drawing.Size(57, 15);
+            this.application_remarks_textBox.TabIndex = 18;
+            this.application_remarks_textBox.Text = "Remarks";
+            // 
+            // label6
+            // 
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.Location = new System.Drawing.Point(21, 196);
+            this.label6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(290, 2);
+            this.label6.TabIndex = 20;
+            // 
             // hiddenTabControl1
             // 
             this.hiddenTabControl1.Controls.Add(this.tabPage1);
@@ -331,50 +375,6 @@
             this.yes_button.Text = "Yes";
             this.yes_button.UseSelectable = true;
             this.yes_button.UseStyleColors = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 201);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 15);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Price";
-            // 
-            // price_textBox
-            // 
-            this.price_textBox.Location = new System.Drawing.Point(26, 219);
-            this.price_textBox.Name = "price_textBox";
-            this.price_textBox.Size = new System.Drawing.Size(100, 20);
-            this.price_textBox.TabIndex = 17;
-            // 
-            // remarks_textBox
-            // 
-            this.remarks_textBox.Location = new System.Drawing.Point(26, 260);
-            this.remarks_textBox.Multiline = true;
-            this.remarks_textBox.Name = "remarks_textBox";
-            this.remarks_textBox.Size = new System.Drawing.Size(286, 49);
-            this.remarks_textBox.TabIndex = 19;
-            // 
-            // application_remarks_textBox
-            // 
-            this.application_remarks_textBox.AutoSize = true;
-            this.application_remarks_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.application_remarks_textBox.Location = new System.Drawing.Point(23, 242);
-            this.application_remarks_textBox.Name = "application_remarks_textBox";
-            this.application_remarks_textBox.Size = new System.Drawing.Size(57, 15);
-            this.application_remarks_textBox.TabIndex = 18;
-            this.application_remarks_textBox.Text = "Remarks";
-            // 
-            // label6
-            // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(21, 196);
-            this.label6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(290, 2);
-            this.label6.TabIndex = 20;
             // 
             // AddApplication
             // 

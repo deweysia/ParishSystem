@@ -1842,13 +1842,13 @@ namespace ParishSystem
         */
         #region
 
-        public bool addMinister(string firstName, string midName, string lastName, string suffix, DateTime birthDate, string ministryType, string status, string licenseNumber, DateTime expirationDate)
+        public bool addMinister(string firstName, string midName, string lastName, string suffix, DateTime birthDate, MinistryType ministryType, MinisterStatus status, string licenseNumber, DateTime expirationDate)
         {
             string q = "INSERT INTO Minister(firstName, midName, lastName, suffix, birthDate, ministryType, status, licenseNumber, expirationDate) VALUES ('"
                 + firstName + "', '" + midName + "', '"
                 + lastName + "', '" + suffix + "', '"
                 + birthDate.ToString("yyyy-MM-dd") + "', '"
-                + ministryType + "', '" + status + "', '"
+                + (int)ministryType + "', '" + (int)status + "', '"
                 + licenseNumber + "', '"
                 + expirationDate.ToString("yyyy-MM-dd") + "')";
 

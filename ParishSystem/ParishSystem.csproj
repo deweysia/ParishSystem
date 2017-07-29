@@ -76,6 +76,12 @@
     <Compile Include="AddApplication.Designer.cs">
       <DependentUpon>AddApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaptismForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaptismForm.Designer.cs">
+      <DependentUpon>BaptismForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BloodlettingTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,12 @@
     <Compile Include="Classifications.cs" />
     <Compile Include="ComboboxContent.cs" />
     <Compile Include="ComboBoxItem.cs" />
+    <Compile Include="CustomControlBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControlBar.Designer.cs">
+      <DependentUpon>CustomControlBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomNotification.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +134,12 @@
     </Compile>
     <Compile Include="messageBox.Designer.cs">
       <DependentUpon>messageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinisterForm.Designer.cs">
+      <DependentUpon>MinisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs">
       <SubType>Form</SubType>
@@ -217,8 +235,14 @@
     <EmbeddedResource Include="AddApplication.resx">
       <DependentUpon>AddApplication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaptismForm.resx">
+      <DependentUpon>BaptismForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BloodlettingTest.resx">
       <DependentUpon>BloodlettingTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControlBar.resx">
+      <DependentUpon>CustomControlBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomNotification.resx">
       <DependentUpon>CustomNotification.cs</DependentUpon>
@@ -231,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="messageBox.resx">
       <DependentUpon>messageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinisterForm.resx">
+      <DependentUpon>MinisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\ParishSystem.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\ParishSystem.Properties.Resources.resources" />
