@@ -76,11 +76,29 @@
     <Compile Include="AddApplication.Designer.cs">
       <DependentUpon>AddApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bloodletting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bloodletting.Designer.cs">
+      <DependentUpon>Bloodletting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodlettingEventPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodlettingEventPopUp.Designer.cs">
+      <DependentUpon>BloodlettingEventPopUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="BloodlettingTest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BloodlettingTest.Designer.cs">
       <DependentUpon>BloodlettingTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bloodletting_Profile_Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bloodletting_Profile_Popup.Designer.cs">
+      <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
     </Compile>
     <Compile Include="Classifications.cs" />
     <Compile Include="ComboboxContent.cs" />
@@ -223,8 +241,17 @@
     <EmbeddedResource Include="AddApplication.resx">
       <DependentUpon>AddApplication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Bloodletting.resx">
+      <DependentUpon>Bloodletting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodlettingEventPopUp.resx">
+      <DependentUpon>BloodlettingEventPopUp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BloodlettingTest.resx">
       <DependentUpon>BloodlettingTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bloodletting_Profile_Popup.resx">
+      <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomNotification.resx">
       <DependentUpon>CustomNotification.cs</DependentUpon>

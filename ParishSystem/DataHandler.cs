@@ -160,14 +160,14 @@ namespace ParishSystem
         }
 
         //EDIT
-        public bool editGeneralProfile(int profileID, string firstName, string midName, string lastName, string suffix, Gender gender, DateTime birthDate, string contactNumber, string address, string birthplace, string bloodtype)
+        public bool editGeneralProfile(int profileID, string firstName, string midName, string lastName, string suffix, Gender gender, DateTime birthDate, string contactNumber, string address, string birthplace, int bloodtype)
         {
             if (!idExists("generalProfile", "profileID", profileID))
                 return false;
 
             //addGeneralProfileLog(profileID);
 
-            string q = "UPDATE GeneralProfile SET midName = '" + midName + "', lastName = '" + lastName
+            string q = "UPDATE GeneralProfile SET firstname ='"+firstName+"',midName = '" + midName + "', lastName = '" + lastName
                 + "', suffix = '" + suffix + "', gender = '" + (int) gender
                 + "', birthDate = '" + birthDate.ToString("yyyy-MM-dd HH:mm:ss.fff")
                 + "', contactNumber = '" + contactNumber + "', address = '" + address
@@ -428,9 +428,7 @@ namespace ParishSystem
 
         public DataTable getBloodDonors()
         {
-            string q = "SELECT DISTINCT GeneralProfile.profileID, firstName, midName, lastName, suffix, gender, "
-                + "DATE_FORMAT(birthdate, '%m-%d-%Y %H:%i'), contactNumber, address, birthplace, bloodType  "
-                + "FROM GeneralProfile JOIN bloodDonation ON GeneralProfile.profileID = BloodDonation.profileID";
+            string q = "select distinct concat(lastname,\" \",coalesce(suffix,\" \"),\",\",firstName,\" \",midName,\".\") as name, generalprofile.profileID,bloodtype from generalprofile  inner join blooddonation on blooddonation.profileID = generalprofile.profileID";
 
             DataTable dt = runQuery(q);
 
@@ -2401,23 +2399,21 @@ namespace ParishSystem
             return dt;
         }
 
-        public bool addBloodDonation(int profleID, int quantity, int bloodDonationEventID, DateTime donationDateTime)
+        public bool addBloodDonation(int profleID, int quantity, int bloodDonationEventID)
         {
-            string q = "INSERT INTO BloodDonation(profileID, quantity, bloodDonationEventID, bloodDonationDateTime) VALUES ('"
-                + profleID + "', '" + quantity + "', '" + bloodDonationEventID + "', '" + donationDateTime.ToString("yyyy-MM-dd HH:mm:ss") + "')";
+            string q = "INSERT INTO BloodDonation(profileID, quantity, bloodDonationEventID) VALUES ('"
+                + profleID + "', '" + quantity + "', '" + bloodDonationEventID + "')";
 
             bool success = runNonQuery(q);
 
             return success;
         }
 
-        public bool editBloodDonation(int profleID, int quantity, int bloodDonationEventID, DateTime donationDateTime)
+        public bool editBloodDonation( int blooddonationID, int quantity, int eventID)
         {
             //edit donation
-            string q = "UPDATE BloodDonation SET quantity = '" + quantity 
-                + "', bloodDonationEventID = '" + bloodDonationEventID 
-                + "', bloodDonationDateTime = '" + donationDateTime.ToString("yyyy-MM-dd HH:mm:ss") 
-                + "' WHERE profileID = '" + profleID + "'";
+            string q = " UPDATE `sad2`.`blooddonation` SET `bloodDonationEventID`= '"+ eventID + "', `quantity`= '"+ quantity + "' WHERE `bloodDonationID`= '"+ blooddonationID + "'";
+
 
             bool success = runNonQuery(q);
             return success;
