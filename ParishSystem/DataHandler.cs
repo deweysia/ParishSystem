@@ -205,6 +205,24 @@ namespace ParishSystem
             return success;
         }
 
+        public bool editGeneralProfile(int profileID, string firstName, string midName, string lastName, string suffix, Gender gender, DateTime birthDate)
+        {
+            if (!idExists("generalProfile", "profileID", profileID))
+                return false;
+
+            string q = "UPDATE GeneralProfile SET firstName = '" + firstName 
+                + "', midName = '" + midName + "', lastName = '" + lastName 
+                + "', suffix = '" + suffix + "', gender = '" + (int)gender 
+                + "', birthDate = '" + birthDate.ToString("yyyy-MM-dd") 
+                + "' WHERE profileID = '" + profileID + "'";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+
+
         //DELETE
         public bool deleteGeneralProfile(int profileID)
         {
@@ -1134,9 +1152,27 @@ namespace ParishSystem
         }
 
 
+        public bool editApplication(int applicationID, ApplicationStatus status, string requirements)
+        {
+            string q = "UPDATE Application SET status = '" + ((int)status) + "', requirements = '" + requirements + "' WHERE applicationID = '" + applicationID + "'";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
         public bool editApplication(int applicationID, ApplicationStatus status)
         {
-            string q = "UPDATE Application SET status = '" + ((int)status) + "' WHERE applicationID = '" + applicationID + "'";
+            string q = "UPDATE Application SET status = '" + (int)status + "' WHERE applicationID = '" + applicationID + "'";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
+        public bool editApplication(int applicationID, string requirements)
+        {
+            string q = "UPDATE Application SET requirements = '" + requirements + "' WHERE applicationID = '" + applicationID + "'";
 
             bool success = runNonQuery(q);
 
@@ -2514,7 +2550,7 @@ namespace ParishSystem
         }
         public DataTable getApplications(SacramentType type)
         {
-            string q = "SELECT applicationID, profileID, firstName, midName, lastName, suffix,"
+            string q = "SELECT applicationID, profileID, requirements, firstName, midName, lastName, suffix,"
                 + " gender, DATE_FORMAT(birthdate,'%m-%d-%Y') AS birthDate, status "
                 + "FROM GeneralProfile"
                 + " NATURAL JOIN Applicant "

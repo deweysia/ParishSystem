@@ -17,13 +17,21 @@ namespace ParishSystem
         DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
         Point lastClick;
 
+        Dictionary<Button, Panel> navigation = new Dictionary<Button, Panel>();
+
         public SAD()
         {
             InitializeComponent();
             baptismApplication_birthDate.MaxDate = DateTime.Now;
-            
 
-
+            //Add dictionary for navigation buttons
+            navigation.Add(home_button_menu, profile_panel);
+            navigation.Add(profile_menu_button, profile_panel);
+            navigation.Add(bloodletting_button_menu, bloodletting_panel);
+            navigation.Add(CDB_button_menu, CDB_panel);
+            navigation.Add(CRB_button_menu, CRB_panel);
+            navigation.Add(application_button_menu, application_panel);
+            navigation.Add(sacrament_button_menu, sacrament_panel);
         }
 
         #region generic Methods
@@ -85,22 +93,6 @@ namespace ParishSystem
         private void btn_Min_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void panel_menu_Click(object sender, EventArgs e)
-        {
-            Panel A = sender as Panel;
-            if (A.Equals(home_button_menu)) { home_panel.BringToFront(); }
-            else if (A.Equals(profile_button_menu))
-            {
-                profile_panel.BringToFront();
-                refreshGeneralProfileTable();
-            }
-            else if (A.Equals(bloodletting_button_menu)) { bloodletting_panel.BringToFront(); }
-            else if (A.Equals(CDB_button_menu)) { CDB_panel.BringToFront(); }
-            else if (A.Equals(CRB_button_menu)) { CRB_panel.BringToFront(); }
-            else if (A.Equals(application_button_menu)) { application_panel.BringToFront(); }
-
         }
 
         private void panel_controlbox_MouseMove(object sender, MouseEventArgs e)
@@ -290,7 +282,7 @@ namespace ParishSystem
 
         }
 
-
+        /*
         private void applicationMenu_labelClick(object sender, EventArgs e)
         {
             
@@ -341,7 +333,7 @@ namespace ParishSystem
                 marriageApplication_panel.BringToFront();
 
             }
-        }
+        }*/
 
         private void newApplicant_checkbox_confirmationApplication_CheckedChanged(object sender, EventArgs e)
         {
@@ -413,7 +405,7 @@ namespace ParishSystem
 
         #region CDB
         //--------------------------CDB----------------------------//
-        private void label_CD_Click(object sender, EventArgs e)
+        /*private void label_CD_Click(object sender, EventArgs e)
         {
             Label A = sender as Label;
             if (A.Equals(parish_label_CD))
@@ -455,7 +447,7 @@ namespace ParishSystem
                 //panel changes
                 postulancy_panel_CD.BringToFront();
             }
-        }
+        }*/
 
 
 
@@ -482,19 +474,9 @@ namespace ParishSystem
 
         private void home_button_menu_Click(object sender, EventArgs e)
         {
-            
             Button A = sender as Button;
-            if (A.Equals(home_button_menu)) { home_panel.BringToFront(); }
-            else if (A.Equals(profile_button_menu))
-            {
-                profile_panel.BringToFront();
-                refreshGeneralProfileTable();
-            }
-            else if (A.Equals(bloodletting_button_menu)) { bloodletting_panel.BringToFront(); }
-            else if (A.Equals(CDB_button_menu)) { CDB_panel.BringToFront(); }
-            else if (A.Equals(CRB_button_menu)) { CRB_panel.BringToFront(); }
-            else if (A.Equals(application_button_menu)) { application_panel.BringToFront(); }
-            else if (A.Equals(sacrament_button_menu)) { sacrament_panel.BringToFront(); }
+
+            navigation[A].BringToFront();
         }
 
         private void firstname_textbox_Click(object sender, EventArgs e)
@@ -574,13 +556,13 @@ namespace ParishSystem
             if (!baptismApplication_checkAll_checkBox.Checked)
             {
 
-                foreach (CheckBox c in BaptismApplication_Requirements_tablePanel.Controls)
+                foreach (CheckBox c in baptismApplication_requirements_tablePanel.Controls)
                     allChecked = allChecked && c.Checked;
             }
 
             if (!allChecked) return;
 
-            foreach (CheckBox c in BaptismApplication_Requirements_tablePanel.Controls)
+            foreach (CheckBox c in baptismApplication_requirements_tablePanel.Controls)
             {
                 c.Checked = baptismApplication_checkAll_checkBox.Checked;
                 Console.WriteLine("ENTERED");
@@ -623,37 +605,83 @@ namespace ParishSystem
 
         private void baptismApplication_dgv_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            //This condition is true when initially loading dgv
-            if (baptismApplication_dgv.SelectedRows.Count == 0)
+
+            
+            DataGridView dgv = (DataGridView)sender;
+            if (!dgv.Focused || dgv.CurrentRow == null)
                 return;
 
+            
+            baptismApplicationDetailsPanel.Enabled = true;
+            baptismApplication_buttons_panel.Enabled = true;
+            baptismApplication_payment_groupbox.Enabled = true;
+
+            Console.WriteLine("CellEntered");
+
+            MessageBox.Show(dgv.CurrentRow + " " + e.ToString());
             string fn = baptismApplication_dgv.SelectedRows[0].Cells["firstName"].Value.ToString();
             string mn = baptismApplication_dgv.SelectedRows[0].Cells["midName"].Value.ToString();
             string ln = baptismApplication_dgv.SelectedRows[0].Cells["lastName"].Value.ToString();
             string suffix = baptismApplication_dgv.SelectedRows[0].Cells["suffix"].Value.ToString();
             DateTime birthdate = DateTime.ParseExact(baptismApplication_dgv.SelectedRows[0].Cells["birthDate"].Value.ToString(), "MM-dd-yyyy", null);
             string gender = baptismApplication_dgv.SelectedRows[0].Cells["gender"].Value.ToString();
+            ApplicationStatus status = (ApplicationStatus)int.Parse(baptismApplication_dgv.SelectedRows[0].Cells["status"].Value.ToString());
+            string requirements = baptismApplication_dgv.SelectedRows[0].Cells["requirements"].Value.ToString();
 
             baptismApplication_firstName_textbox.Text = fn;
             baptismApplication_midName_textbox.Text = mn;
             baptismApplication_lastName_textbox.Text = ln;
             baptismApplication_suffix_textbox.Text = suffix;
-            //MessageBox.Show(baptismApplication_dgv.SelectedRows[0].Cells["birthDate"].Value.ToString());
-            //MessageBox.Show(birthdate.ToShortDateString());
             baptismApplication_birthDate.Value = birthdate;
-
             baptismApplication_male_radio.Checked = gender == "1";
             baptismApplication_female_radio.Checked = gender == "2";
-
-            ApplicationStatus status = (ApplicationStatus)int.Parse(baptismApplication_dgv.SelectedRows[0].Cells["status"].Value.ToString());
-
             baptismApplication_status_label.Text = status.ToString();
+
+
+
+            tickRequirements(baptismApplication_requirements_tablePanel, requirements);
+        }
+
+        /// <summary>
+        /// Loads the 1 and 0's of requirements into their respective CheckBox objects.
+        /// </summary>
+        /// <param name="p"></param>
+        /// <param name="requirements"></param>
+        private void tickRequirements(Panel p, string requirements)
+        {
+            bool allChecked = true;
+            foreach (CheckBox c in p.Controls)
+            {
+                int i = p.Controls.GetChildIndex(c);
+                c.Checked = requirements[i] == '1';
+                allChecked &= c.Checked;
+            }
+
+            baptismApplication_checkAll_checkBox.Checked = allChecked;
+        }
+
+        /// <summary>
+        /// Returns the requirement Check Box objects in the Panel as a series of 1 and 0's
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        private string getRequirements(Panel p)
+        {
+            string r = "";
+            foreach(CheckBox c in p.Controls)
+                r += c.Checked ? "1" : "0";
+
+            return r;
+        }
+
+        private void enableForm(bool b)
+        {
 
         }
 
         private void baptismApplication_dgv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {//Might be really slow!
-            if (e.ColumnIndex == 4)//Gender
+            if (e.ColumnIndex == 7)//Gender
                 e.Value = e.Value.ToString() == "1" ? "M" : "F";
             else
             {
@@ -675,6 +703,122 @@ namespace ParishSystem
             }
                 
 
+        }
+
+        private void SAD_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void baptismApplication_edit_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton5_Click(object sender, EventArgs e)
+        {
+            bool enabled = baptismApplication_requirements_groupbox.Enabled;
+            
+
+            baptismApplication_requirements_groupbox.Enabled = !enabled;
+            if (!enabled)
+            {
+                metroButton5.Text = "Save Changes";
+                
+                
+            }else
+            {
+                metroButton5.Text = "Edit Requirements";
+                bool success = applyApplicationEdits_Baptism();
+
+                if (success)
+                    Notification.Show("Successfully Applied Edits!", NotificationType.success);
+                else
+                    Notification.Show("Something went wrong!", NotificationType.error);
+            }
+        }
+
+        private bool applyApplicationEdits_Baptism()
+        {
+            int applicationID = int.Parse(baptismApplication_dgv.SelectedRows[0].Cells["applicationID"].Value.ToString());
+            int profileID = int.Parse(baptismApplication_dgv.SelectedRows[0].Cells["profileID"].Value.ToString());
+            string r = getRequirements(baptismApplication_requirements_tablePanel);
+            bool a = dh.editApplication(applicationID, r);
+            Gender g = baptismApplication_male_radio.Checked ? Gender.Male : Gender.Female;
+            bool b = dh.editGeneralProfile(profileID, baptismApplication_firstName_textbox.Text, baptismApplication_midName_textbox.Text, baptismApplication_lastName_textbox.Text, baptismApplication_suffix_textbox.Text, g, baptismApplication_birthDate.Value);
+
+            return a && b;
+        }
+
+        private void baptismApplication_checkAll_checkBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+            CheckBox cb = (CheckBox)sender;
+
+            if (!cb.Focused)
+                return;
+            
+            foreach(CheckBox c in baptismApplication_requirements_tablePanel.Controls)
+            {
+                c.Checked = cb.Checked;
+            }
+        }
+
+        private void baptismApplication_requirement_checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            CheckBox cb = (CheckBox)sender;
+
+            if (!cb.Focused)
+                return;
+
+            bool allChecked = true;
+            foreach(CheckBox c in baptismApplication_requirements_tablePanel.Controls)
+            {
+                allChecked = allChecked && c.Checked;
+            }
+
+            baptismApplication_checkAll_checkBox.Checked = allChecked;
+                
+        }
+
+        private void loadMarriageApplications()
+        {
+
+        }
+
+        private void metroTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TabControl t = (TabControl)sender;
+            if (t.SelectedIndex == 0)
+                loadBaptismApplications();
+            else if (t.SelectedIndex == 1)
+                loadConfirmationApplications();
+            else if (t.SelectedIndex == 2)
+                loadMarriageApplications();
+        }
+
+        private void baptismApplication_addPayment_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void baptismApplication_payment_label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            int applicationID = int.Parse(baptismApplication_dgv.SelectedRows[0].Cells["applicationID"].Value.ToString());
+            bool success = dh.editApplication(applicationID, ApplicationStatus.Revoked);
+
+            if (success)
+                Notification.Show("Successfully Revoked Application.", NotificationType.success);
+            else
+                Notification.Show("Something went wrong!.", NotificationType.error);
+
+            baptismApplication_dgv.Refresh();
         }
     }
 }
