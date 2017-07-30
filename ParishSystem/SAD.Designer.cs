@@ -111,7 +111,7 @@
             this.label87 = new System.Windows.Forms.Label();
             this.baptismApplication_payment_label = new System.Windows.Forms.Label();
             this.baptismApplication_addPayment_button = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.baptismApplication_payment_remarks = new MetroFramework.Controls.MetroTextBox();
             this.baptismApplication_status_label = new System.Windows.Forms.Label();
             this.baptismApplication_requirements_groupbox = new System.Windows.Forms.GroupBox();
             this.baptismApplication_requirements_tablePanel = new System.Windows.Forms.TableLayoutPanel();
@@ -967,7 +967,6 @@
             this.generalprofile_datagridview.Size = new System.Drawing.Size(345, 335);
             this.generalprofile_datagridview.TabIndex = 0;
             this.generalprofile_datagridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.generalprofile_datagridview_CellClick);
-            this.generalprofile_datagridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.generalprofile_datagridview_CellContentClick);
             // 
             // AddPNL
             // 
@@ -1102,7 +1101,6 @@
             this.firstname_textbox.Text = "firstname";
             this.firstname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.firstname_tooltip_profiles.SetToolTip(this.firstname_textbox, "Please enter a first name");
-            this.firstname_textbox.Click += new System.EventHandler(this.firstname_textbox_Click);
             this.firstname_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Names_textbox_MouseClick);
             this.firstname_textbox.TextChanged += new System.EventHandler(this.Name_textbox_Profile_TextChanged);
             this.firstname_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
@@ -1295,6 +1293,7 @@
             this.metroButton1.TabIndex = 10;
             this.metroButton1.Text = "Approve";
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroButton2
             // 
@@ -1311,7 +1310,7 @@
             this.baptismApplication_payment_groupbox.Controls.Add(this.label87);
             this.baptismApplication_payment_groupbox.Controls.Add(this.baptismApplication_payment_label);
             this.baptismApplication_payment_groupbox.Controls.Add(this.baptismApplication_addPayment_button);
-            this.baptismApplication_payment_groupbox.Controls.Add(this.metroTextBox1);
+            this.baptismApplication_payment_groupbox.Controls.Add(this.baptismApplication_payment_remarks);
             this.baptismApplication_payment_groupbox.Enabled = false;
             this.baptismApplication_payment_groupbox.Location = new System.Drawing.Point(6, 291);
             this.baptismApplication_payment_groupbox.Name = "baptismApplication_payment_groupbox";
@@ -1351,37 +1350,37 @@
             this.baptismApplication_addPayment_button.UseSelectable = true;
             this.baptismApplication_addPayment_button.Click += new System.EventHandler(this.baptismApplication_addPayment_button_Click);
             // 
-            // metroTextBox1
+            // baptismApplication_payment_remarks
             // 
-            this.metroTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.baptismApplication_payment_remarks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(214, 2);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(39, 39);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(14, 50);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Multiline = true;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(256, 44);
-            this.metroTextBox1.TabIndex = 16;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.baptismApplication_payment_remarks.CustomButton.Image = null;
+            this.baptismApplication_payment_remarks.CustomButton.Location = new System.Drawing.Point(214, 2);
+            this.baptismApplication_payment_remarks.CustomButton.Name = "";
+            this.baptismApplication_payment_remarks.CustomButton.Size = new System.Drawing.Size(39, 39);
+            this.baptismApplication_payment_remarks.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.baptismApplication_payment_remarks.CustomButton.TabIndex = 1;
+            this.baptismApplication_payment_remarks.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.baptismApplication_payment_remarks.CustomButton.UseSelectable = true;
+            this.baptismApplication_payment_remarks.CustomButton.Visible = false;
+            this.baptismApplication_payment_remarks.Lines = new string[0];
+            this.baptismApplication_payment_remarks.Location = new System.Drawing.Point(14, 50);
+            this.baptismApplication_payment_remarks.MaxLength = 32767;
+            this.baptismApplication_payment_remarks.Multiline = true;
+            this.baptismApplication_payment_remarks.Name = "baptismApplication_payment_remarks";
+            this.baptismApplication_payment_remarks.PasswordChar = '\0';
+            this.baptismApplication_payment_remarks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.baptismApplication_payment_remarks.SelectedText = "";
+            this.baptismApplication_payment_remarks.SelectionLength = 0;
+            this.baptismApplication_payment_remarks.SelectionStart = 0;
+            this.baptismApplication_payment_remarks.ShortcutsEnabled = true;
+            this.baptismApplication_payment_remarks.Size = new System.Drawing.Size(256, 44);
+            this.baptismApplication_payment_remarks.TabIndex = 16;
+            this.baptismApplication_payment_remarks.UseSelectable = true;
+            this.baptismApplication_payment_remarks.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.baptismApplication_payment_remarks.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // baptismApplication_status_label
             // 
@@ -1877,7 +1876,6 @@
             this.newGroom_checkbox_marriageApplication.TabIndex = 55;
             this.newGroom_checkbox_marriageApplication.Text = "New Applicant (Groom)";
             this.newGroom_checkbox_marriageApplication.UseVisualStyleBackColor = true;
-            this.newGroom_checkbox_marriageApplication.CheckStateChanged += new System.EventHandler(this.newApplicant_checkbox_confirmationApplication_CheckedChanged);
             // 
             // groomNew_panel_marriageApplication
             // 
@@ -2032,7 +2030,6 @@
             this.newBride_checkbox_marriageApplication.TabIndex = 55;
             this.newBride_checkbox_marriageApplication.Text = "New Applicant (Bride)";
             this.newBride_checkbox_marriageApplication.UseVisualStyleBackColor = true;
-            this.newBride_checkbox_marriageApplication.CheckStateChanged += new System.EventHandler(this.newApplicant_checkbox_confirmationApplication_CheckedChanged);
             // 
             // brideNew_panel_marriageApplication
             // 
@@ -2413,7 +2410,6 @@
             this.panel_controlbox.Name = "panel_controlbox";
             this.panel_controlbox.Size = new System.Drawing.Size(802, 33);
             this.panel_controlbox.TabIndex = 38;
-            this.panel_controlbox.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_controlbox_Paint);
             this.panel_controlbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseDown);
             this.panel_controlbox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseMove);
             // 
@@ -4046,7 +4042,6 @@
             this.label8.Size = new System.Drawing.Size(45, 21);
             this.label8.TabIndex = 3;
             this.label8.Text = "Filter";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // comboBoxFilter
             // 
@@ -4141,7 +4136,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SAD";
-            this.Load += new System.EventHandler(this.SAD_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.profile_panel.ResumeLayout(false);
@@ -4535,7 +4529,7 @@
         private MetroFramework.Controls.MetroButton baptismApplication_addPayment_button;
         private System.Windows.Forms.Label baptismApplication_payment_label;
         private System.Windows.Forms.Label baptismApplication_status_label;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox baptismApplication_payment_remarks;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.GroupBox baptismApplication_payment_groupbox;
         private System.Windows.Forms.Label label87;

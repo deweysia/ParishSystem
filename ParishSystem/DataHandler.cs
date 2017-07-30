@@ -309,6 +309,38 @@ namespace ParishSystem
             return double.Parse(dt.Rows[0][0].ToString());
         }
 
+        /// <summary>
+        /// Gets total price of Application and remarks
+        /// </summary>
+        /// <param name="applicationID"></param>
+        /// <returns></returns>
+        public double getApplicationPrice(int applicationID)
+        {
+            string q = "SELECT price, remarks FROM Application NATURAL JOIN SacramentIncome WHERE applicationID = " + applicationID;
+
+            DataTable dt = runQuery(q);
+
+            return double.Parse(dt.Rows[0].ToString());
+        }
+
+        /// <summary>
+        /// Returns sacramentIncomeID, price, sacramentIncome.remarks, totalPayment
+        /// </summary>
+        /// <param name="applicationID"></param>
+        /// <returns></returns>
+        public DataTable getApplicationIncomeDetails(int applicationID)
+        {
+            string q = "SELECT sacramentIncome.sacramentIncomeID, price, sacramentincome.remarks, "
+                +"COALESCE(SUM(paymentAmount),0) AS 'totalPayment' "
+                +"FROM Application NATURAL JOIN SacramentIncome "
+                +"LEFT JOIN Payment ON Payment.sacramentIncomeID = sacramentIncome.sacramentIncomeID"
+                +" WHERE applicationID = " + applicationID;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
         public DataTable getGeneralProfilesByName(string firstName, string midName, string lastName)
         {
             string q = "SELECT * FROM GeneralProfile WHERE firstName LIKE '%" + firstName
@@ -2433,8 +2465,15 @@ namespace ParishSystem
 
             DataTable dt = runQuery(q);
 
-            if (dt.Rows.Count == 0)
-                return null;
+            return dt;
+        }
+
+        public DataTable getMinisterWithStatus(MinisterStatus status)
+        {
+            string q = "SELECT CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix) as name FROM Minister WHERE status = " + (int)status;
+
+            DataTable dt = runQuery(q);
+
             return dt;
         }
 
