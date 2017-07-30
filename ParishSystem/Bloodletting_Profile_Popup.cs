@@ -17,12 +17,20 @@ namespace ParishSystem
 
         int ProfileID;
         DataHandler dh;
+        bool hasProfile;
         public Bloodletting_Profile_Popup(int profileID, DataHandler dh)
         {
             InitializeComponent();
             ProfileID = profileID;
             this.dh = dh;
-
+            hasProfile = true;
+        }
+        public Bloodletting_Profile_Popup(DataHandler dh)
+        {
+            InitializeComponent();
+            this.dh = dh;
+            ProfileID = dh.getNextProfileID();
+            hasProfile = false;
         }
         private void refreshBloodlettingInfo()
         {
@@ -31,8 +39,13 @@ namespace ParishSystem
             mi_label_bloodletting.Text = dt.Rows[0]["midname"].ToString();
             lastname_label_bloodletting.Text = dt.Rows[0]["lastname"].ToString();
             suffix_label_bloodletting.Text = dt.Rows[0]["suffix"].ToString();
-            bloodtype_label.Text = bloodType[int.Parse(dt.Rows[0]["bloodtype"].ToString())-1];
-            
+            try
+            {
+                bloodtype_label.Text = bloodType[int.Parse(dt.Rows[0]["bloodtype"].ToString()) - 1];
+            }
+            catch { }
+            address_textbox.Text = dt.Rows[0]["address"].ToString();
+            contactNumber_textbox.Text = dt.Rows[0]["contactNumber"].ToString();
         }
         private void refreshBloodDonation()
         {
@@ -51,8 +64,15 @@ namespace ParishSystem
 
         private void Bloodletting_Details_Popup_Load(object sender, EventArgs e)
         {
-            refreshBloodlettingInfo();
-            refreshBloodDonation();
+            if (hasProfile == true)
+            {
+                refreshBloodlettingInfo();
+                refreshBloodDonation();
+            }
+            else
+            {
+                edit_button.PerformClick();
+            }
             DataTable dt = dh.getBloodlettingEvents();
             foreach (DataRow dr in dt.Rows)
             {
@@ -78,32 +98,93 @@ namespace ParishSystem
                 lastname_textbox_bloodletting.Visible = true;
                 suffix_textbox_bloodletting.Visible = true;
                 bloodtype_combobox.SelectedItem = bloodtype_label.Text;
+                address_textbox.ReadOnly = false;
+                contactNumber_textbox.ReadOnly = false;
 
-                firstname_textbox_bloodletting.Text = firstname_label_bloodletting.Text;
-                mi_textbox_bloodletting.Text = mi_label_bloodletting.Text;
-                lastname_textbox_bloodletting.Text = lastname_label_bloodletting.Text;
-                suffix_textbox_bloodletting.Text = suffix_label_bloodletting.Text;
+                if (hasProfile == true)
+                {
+                    firstname_textbox_bloodletting.Text = firstname_label_bloodletting.Text;
+                    mi_textbox_bloodletting.Text = mi_label_bloodletting.Text;
+                    lastname_textbox_bloodletting.Text = lastname_label_bloodletting.Text;
+                    suffix_textbox_bloodletting.Text = suffix_label_bloodletting.Text;
+                }
+                else
+                {
+                    firstname_textbox_bloodletting.Text = "Firstname";
+                    mi_textbox_bloodletting.Text = "MI";
+                    lastname_textbox_bloodletting.Text = "Lastname";
+                    suffix_textbox_bloodletting.Text = "Suffix";
+                }
             }
             else if (edit_button.Text == "S")
             {
-                bloodtype_combobox.Visible = false;
-                edit_button.Text = "E";
-                cancel_button.Visible = false;
-                dh.editGeneralProfile(ProfileID, firstname_textbox_bloodletting.Text, mi_textbox_bloodletting.Text, lastname_textbox_bloodletting.Text, suffix_textbox_bloodletting.Text, 0, DateTime.MinValue, null, null, null, bloodtype_combobox.SelectedIndex+1);
-                refreshBloodlettingInfo();
+                if ((firstname_textbox_bloodletting.Text != "" &&
+                    mi_textbox_bloodletting.Text != "" &&
+                    lastname_textbox_bloodletting.Text !=""&&
+                    bloodtype_combobox.Text!="")&&(
+                    firstname_textbox_bloodletting.Text != "Firstname" &&
+                    mi_textbox_bloodletting.Text != "MI" &&
+                    lastname_textbox_bloodletting.Text != "Lastname" 
+                    )) { 
+                    string suff;
+                    if(suffix_textbox_bloodletting.Text == "Suffix")
+                    {
+                        suff = null;
+                    }
+                    else
+                    {
+                        suff = suffix_textbox_bloodletting.Text;
+                    }
+                    string add;
+                    if (address_textbox.Text.Trim() == "")
+                    {
+                        add = null;
+                    } else
+                    {
+                        add = address_textbox.Text;
+                    }
+                    string count;
+                    if (!contactNumber_textbox.MaskFull && !string.IsNullOrEmpty(contactNumber_textbox.Text.Trim()))
+                    {
+                        MessageBox.Show("shungaII");
+                         count = "";
+                    }
+                    else
+                    {
+                        count = (contactNumber_textbox.Text.Trim());
+                    }
+                    bloodtype_combobox.Visible = false;
+                    edit_button.Text = "E";
+                    cancel_button.Visible = false;
 
-                firstname_label_bloodletting.Visible = true;
-                mi_label_bloodletting.Visible = true;
-                lastname_label_bloodletting.Visible = true;
-                suffix_label_bloodletting.Visible = true;
+                    
 
-                firstname_textbox_bloodletting.Visible = false;
-                mi_textbox_bloodletting.Visible = false;
-                lastname_textbox_bloodletting.Visible = false;
-                suffix_textbox_bloodletting.Visible = false;
+                    if (hasProfile == true)
+                    { dh.editBloodDonor(ProfileID, firstname_textbox_bloodletting.Text, mi_textbox_bloodletting.Text, lastname_textbox_bloodletting.Text, suff,add,count, bloodtype_combobox.SelectedIndex + 1); }
+                    else
+                    {
+                      dh.addBloodDonor(firstname_textbox_bloodletting.Text, mi_textbox_bloodletting.Text, lastname_textbox_bloodletting.Text, suff, add, count, bloodtype_combobox.SelectedIndex + 1);
+                      hasProfile = true;
+                    }
+                    firstname_label_bloodletting.Visible = true;
+                    mi_label_bloodletting.Visible = true;
+                    lastname_label_bloodletting.Visible = true;
+                    suffix_label_bloodletting.Visible = true;
 
-
+                    firstname_textbox_bloodletting.Visible = false;
+                    mi_textbox_bloodletting.Visible = false;
+                    lastname_textbox_bloodletting.Visible = false;
+                    suffix_textbox_bloodletting.Visible = false;
+                    address_textbox.ReadOnly = true;
+                    contactNumber_textbox.ReadOnly = true;
+                    refreshBloodlettingInfo();
+                }
+                else
+                {
+                    MessageBox.Show("Shunga");
+                }
             }
+            
 
         }
 
@@ -116,6 +197,8 @@ namespace ParishSystem
             mi_label_bloodletting.Visible = true;
             lastname_label_bloodletting.Visible = true;
             suffix_label_bloodletting.Visible = true;
+            address_textbox.ReadOnly = true;
+            contactNumber_textbox.ReadOnly = true;
 
             firstname_textbox_bloodletting.Visible = false;
             mi_textbox_bloodletting.Visible = false;
@@ -204,6 +287,17 @@ namespace ParishSystem
         private void close_button_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+     
+
+        private void textbox_bloodletting_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (hasProfile == false)
+            {
+                TextBox A = sender as TextBox;
+                A.Text = "";
+            }   
         }
     }
 }

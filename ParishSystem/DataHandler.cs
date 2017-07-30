@@ -145,13 +145,13 @@ namespace ParishSystem
         */
         #region
         //ADD
-        public bool addGeneralProfile(string firstName, string midName, string lastName, string suffix, Gender gender, DateTime birthDate, string contactNumber, string address, string birthplace,int contactnumber, string residence,int civilStatus,int legitimacy,int bloodtype)
+        public bool addGeneralProfile(string firstName, string midName, string lastName, string suffix, Gender gender, DateTime birthDate, string contactNumber, string address, string birthplace, string residence,int civilStatus,int legitimacy,int bloodtype)
         {
             if (generalProfileExists(firstName, midName, lastName, suffix, gender, birthDate))
                 throw new Exception("DataHandler: Duplicate in GeneralProfile");
 
             string q = "INSERT INTO `sad2`.`generalprofile` (`firstName`, `midName`, `lastName`, `suffix`, `birthdate`, `gender`, `address`, `birthplace`, `contactNumber`, `bloodType`, `civilStatus`, `legitimacy`, `residence`) VALUES "+
-             " ('"+ firstName + "', '"+ midName + "', '"+ lastName + "', '"+ suffix + "', '"+ birthDate + "', '"+ gender + "', '"+ address + "', '"+ birthplace + "', '"+ contactnumber + "', '"+ bloodtype + "', '"+ civilStatus + "', '"+ legitimacy + "', '"+ residence + "');";
+             " ('"+ firstName + "', '"+ midName + "', '"+ lastName + "', '"+ suffix + "', '"+ birthDate + "', '"+ gender + "', '"+ address + "', '"+ birthplace + "', '"+ contactNumber + "', '"+ bloodtype + "', '"+ civilStatus + "', '"+ legitimacy + "', '"+ residence + "');";
 
             bool success = runNonQuery(q);
             
@@ -227,7 +227,7 @@ namespace ParishSystem
 
         public DataTable getGeneralProfile(int profileID)
         {
-            string q = "SELECT firstName, midName, lastName, suffix, gender, DATE(birthdate), address, birthplace, contactNumber, bloodType, civilStatus FROM generalProfile WHERE profileID = " + profileID;
+            string q = "SELECT *, DATE(birthdate) FROM generalProfile WHERE profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -334,24 +334,6 @@ namespace ParishSystem
         #region
 
         //EDIT AND ADD have same processes
-        public bool addBloodDonor(int profileID, string bloodType)
-        {
-            string q = "INSERT INTO BloodDonor(profileID, bloodType) VALUES ('" + profileID + "', '" + bloodType + "')";
-
-            //updateModificationInfo("bloodDonorID", bloodDonor);
-
-            return runNonQuery(q);
-        }
-
-        public bool editBloodDonor(int bloodDonorID, string bloodType)
-        {
-            string q = "UPDATE BloodDonor SET bloodType = '" + bloodType + "' WHERE bloodDonorID = '" + bloodDonorID + "'";
-
-            //updateModificationInfo("bloodDonorID", bloodDonor);
-
-            return runNonQuery(q);
-
-        }
 
         public bool deleteBloodDonor(int bloodDonorID)
         {
@@ -2519,6 +2501,21 @@ namespace ParishSystem
         {
             string q= "select * from (select application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID = "+ profileID + ") as A left outer join (select concat(lastname, \" \", coalesce(suffix, \" \"), \"\", firstName, \" \", midname, \".\") as name, generalprofile.profileID, address, contactNumber, gender, civilstatus, birthplace, birthdate, residence, application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID != "+ profileID + ") as B on A.applicationID = B.applicationID";
             return runQuery(q);
+        }
+        public int getNextProfileID()
+        {
+            string q = "SELECT max(profileID)+1 as max FROM sad2.generalprofile;";
+            return int.Parse(runQuery(q).Rows[0]["max"].ToString());
+        }
+        public void editBloodDonor(int profileID,string fn,string mn,string ln, string sf, string add, string contact,int blood)
+        {
+            string q = "UPDATE `sad2`.`generalprofile` SET `firstName`='"+ fn + "', `midName`='"+mn+"', `lastName`='"+ln+"', `suffix`='"+sf+"', `address`='"+add+"', `contactNumber`='"+contact+ "',`bloodtype`='" + blood + "' WHERE `profileID`='" + profileID + "';";
+            runNonQuery(q);
+        }
+        public void addBloodDonor( string fn, string mn, string ln, string sf, string add, string contact, int blood)
+        {
+            string q = "INSERT INTO `sad2`.`generalprofile` (`firstName`, `midName`, `lastName`, `suffix`, `address`, `contactNumber`, `bloodType`) VALUES ('"+fn+"', '"+mn+"', '"+ln+"', '"+sf+"', '"+add+"', '"+ contact + "', '"+blood+"');";
+            runNonQuery(q);
         }
     }
 
