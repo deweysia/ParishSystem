@@ -17,7 +17,7 @@ namespace ParishSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MinisterForm());
+            Application.Run(new SAD());
         }
     }
 }

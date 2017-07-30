@@ -89,7 +89,7 @@ namespace ParishSystem
 
             if (id == -1) //-1 indicates no such profile exists in the database
             {
-                dh.addGeneralProfile(fn, mn ,ln ,suffix ,gender ,birthDate,null,null,null,-1,-1,-1);
+                dh.addGeneralProfile(fn, mn ,ln ,suffix ,gender ,birthDate,null,null,null);
                 id = dh.getLatestID("GeneralProfile", "profileID");
 
                 bool success = dh.addNewApplicant(id, sacramentType);
@@ -164,7 +164,7 @@ namespace ParishSystem
             DateTime birthDate = birthdate_dtp.Value;
             MessageBox.Show(birthDate.ToString());
 
-            dh.addGeneralProfile(fn, mn, ln, suffix, gender, birthDate, null, null, null,-1,-1,-1);
+            dh.addGeneralProfile(fn, mn, ln, suffix, gender, birthDate, null, null, null);
             bool success = dh.addNewApplicant(dh.getLatestID("GeneralProfile", "profileID"), sacramentType);
 
             displayMessage(success);

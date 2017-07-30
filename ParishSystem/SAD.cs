@@ -608,7 +608,7 @@ namespace ParishSystem
 
             
             DataGridView dgv = (DataGridView)sender;
-            if (!dgv.Focused || dgv.CurrentRow == null)
+            if (!dgv.Focused || dgv.SelectedRows.Count == 0)
                 return;
 
             
@@ -616,17 +616,17 @@ namespace ParishSystem
             baptismApplication_buttons_panel.Enabled = true;
             baptismApplication_payment_groupbox.Enabled = true;
 
-            Console.WriteLine("CellEntered");
+            Console.WriteLine("CellEntered " + e.ToString());
 
             MessageBox.Show(dgv.CurrentRow + " " + e.ToString());
-            string fn = baptismApplication_dgv.SelectedRows[0].Cells["firstName"].Value.ToString();
-            string mn = baptismApplication_dgv.SelectedRows[0].Cells["midName"].Value.ToString();
-            string ln = baptismApplication_dgv.SelectedRows[0].Cells["lastName"].Value.ToString();
-            string suffix = baptismApplication_dgv.SelectedRows[0].Cells["suffix"].Value.ToString();
-            DateTime birthdate = DateTime.ParseExact(baptismApplication_dgv.SelectedRows[0].Cells["birthDate"].Value.ToString(), "MM-dd-yyyy", null);
-            string gender = baptismApplication_dgv.SelectedRows[0].Cells["gender"].Value.ToString();
-            ApplicationStatus status = (ApplicationStatus)int.Parse(baptismApplication_dgv.SelectedRows[0].Cells["status"].Value.ToString());
-            string requirements = baptismApplication_dgv.SelectedRows[0].Cells["requirements"].Value.ToString();
+            string fn = dgv.SelectedRows[0].Cells["firstName"].Value.ToString();
+            string mn = dgv.SelectedRows[0].Cells["midName"].Value.ToString();
+            string ln = dgv.SelectedRows[0].Cells["lastName"].Value.ToString();
+            string suffix = dgv.SelectedRows[0].Cells["suffix"].Value.ToString();
+            DateTime birthdate = DateTime.ParseExact(dgv.SelectedRows[0].Cells["birthDate"].Value.ToString(), "MM-dd-yyyy", null);
+            string gender = dgv.SelectedRows[0].Cells["gender"].Value.ToString();
+            ApplicationStatus status = (ApplicationStatus)int.Parse(dgv.SelectedRows[0].Cells["status"].Value.ToString());
+            string requirements = dgv.SelectedRows[0].Cells["requirements"].Value.ToString();
 
             baptismApplication_firstName_textbox.Text = fn;
             baptismApplication_midName_textbox.Text = mn;
