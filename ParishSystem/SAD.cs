@@ -284,15 +284,26 @@ namespace ParishSystem
 
         public void loadBaptismApplicationDetails(DataGridView dgv)
         {
+
+            
+
+
             string fn = dgv.SelectedRows[0].Cells["firstName"].Value.ToString();
             string mn = dgv.SelectedRows[0].Cells["midName"].Value.ToString();
             string ln = dgv.SelectedRows[0].Cells["lastName"].Value.ToString();
             string suffix = dgv.SelectedRows[0].Cells["suffix"].Value.ToString();
-            DateTime birthdate = DateTime.ParseExact(dgv.SelectedRows[0].Cells["birthDate"].Value.ToString(), "MM-dd-yyyy", null);
+            DateTime birthdate = DateTime.ParseExact(dgv.SelectedRows[0].Cells["birthDate"].Value.ToString(), "yyyy-MM-dd", null);
             string gender = dgv.SelectedRows[0].Cells["gender"].Value.ToString();
             ApplicationStatus status = (ApplicationStatus)int.Parse(dgv.SelectedRows[0].Cells["status"].Value.ToString());
             string requirements = dgv.SelectedRows[0].Cells["requirements"].Value.ToString();
             int applicationID = int.Parse(dgv.SelectedRows[0].Cells["applicationID"].Value.ToString());
+
+            bool isPending = status == ApplicationStatus.Pending;
+
+
+            baptismApplicationDetailsPanel.Enabled = isPending;
+            baptismApplication_buttons_panel.Enabled = isPending;
+            baptismApplication_payment_groupbox.Enabled = isPending;
 
             baptismApplication_firstName_textbox.Text = fn;
             baptismApplication_midName_textbox.Text = mn;
@@ -335,10 +346,8 @@ namespace ParishSystem
             DataGridView dgv = (DataGridView)sender;
             if (!dgv.Focused || dgv.SelectedRows.Count == 0)
                 return;
-
-            baptismApplicationDetailsPanel.Enabled = true;
-            baptismApplication_buttons_panel.Enabled = true;
-            baptismApplication_payment_groupbox.Enabled = true;
+            
+            
 
             loadBaptismApplicationDetails(dgv);
         }
@@ -375,6 +384,17 @@ namespace ParishSystem
             return r;
         }
 
+        private bool allRequirementsFulfilled(Panel p)
+        {
+            bool fulfilled = true;
+            foreach(CheckBox c in p.Controls)
+            {
+                fulfilled = fulfilled && c.Checked;
+            }
+
+            return fulfilled;
+        }
+
         private void baptismApplication_dgv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {//Might be really slow!
             if (e.ColumnIndex == 7)//Gender
@@ -409,14 +429,12 @@ namespace ParishSystem
             baptismApplication_requirements_groupbox.Enabled = !enabled;
             if (!enabled)
             {
-                metroButton5.Text = "Save Changes";
-
-
+                baptismApplication_editReq_button.Text = "Save Changes";
             }
             else
             {
-                metroButton5.Text = "Edit Requirements";
-                bool success = applyApplicationEdits_Baptism();
+                baptismApplication_editReq_button.Text = "Edit Requirements";
+                bool success = editRequirements_Baptism();
 
                 if (success)
                     Notification.Show("Successfully Applied Edits!", NotificationType.success);
@@ -425,16 +443,14 @@ namespace ParishSystem
             }
         }
 
-        private bool applyApplicationEdits_Baptism()
+        private bool editRequirements_Baptism()
         {
             int applicationID = int.Parse(baptismApplication_dgv.SelectedRows[0].Cells["applicationID"].Value.ToString());
             int profileID = int.Parse(baptismApplication_dgv.SelectedRows[0].Cells["profileID"].Value.ToString());
             string r = getRequirements(baptismApplication_requirements_tablePanel);
             bool a = dh.editApplication(applicationID, r);
-            Gender g = baptismApplication_male_radio.Checked ? Gender.Male : Gender.Female;
-            bool b = dh.editGeneralProfile(profileID, baptismApplication_firstName_textbox.Text, baptismApplication_midName_textbox.Text, baptismApplication_lastName_textbox.Text, baptismApplication_suffix_textbox.Text, g, baptismApplication_birthDate.Value);
 
-            return a && b;
+            return a;
         }
 
         private void baptismApplication_checkAll_checkBox_CheckedChanged(object sender, EventArgs e)
@@ -485,7 +501,7 @@ namespace ParishSystem
                 loadMarriageApplications();
         }
 
-        private void metroButton2_Click(object sender, EventArgs e)
+        private void baptismApplication_revoke_button_Click(object sender, EventArgs e)
         {
             int applicationID = int.Parse(baptismApplication_dgv.SelectedRows[0].Cells["applicationID"].Value.ToString());
             bool success = dh.editApplication(applicationID, ApplicationStatus.Revoked);
@@ -566,7 +582,6 @@ namespace ParishSystem
         private void home_button_menu_Click(object sender, EventArgs e)
         {
             Button A = sender as Button;
-
             navigation[A].BringToFront();
         }
 
@@ -650,9 +665,59 @@ namespace ParishSystem
 
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
+        private void baptismApplication_approve_button_Click(object sender, EventArgs e)
+        {
+            int applicationID = int.Parse(baptismApplication_dgv.SelectedRows[0].Cells["applicationID"].Value.ToString());
+            DataGridViewRow dgvr = baptismApplication_dgv.SelectedRows[0];
+            DialogResult d = DialogResult.None;
+            if (allRequirementsFulfilled(baptismApplication_requirements_tablePanel))
+            {
+                BaptismForm bf = new BaptismForm(dgvr, dh);
+                d = bf.ShowDialog();
+            }else
+            {
+                DialogResult dr = MessageDialog.Show("Not all requirements were fulfilled. Proceed anyway?", "Warning", MessageDialogButtons.YesNo, MessageDialogIcon.Warning);
+                if(dr == DialogResult.Yes)
+                {
+                    BaptismForm bf = new BaptismForm(dgvr, dh);
+                    d = bf.ShowDialog();
+                }
+            }
+            
+            if (d == DialogResult.OK)
+                Notification.Show("Successfully Added Baptism!", NotificationType.success);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(null, "Hello", "MSG", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            MessageBox.Show(MessageDialog.Show("Hello", "Titleeee", MessageDialogButtons.OKCancel, MessageDialogIcon.Information) + "");
+
+        }
+
+        private void customControlBar1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void baptismApplication_dgv_AllowUserToOrderColumnsChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void baptismApplication_dgv_Paint(object sender, PaintEventArgs e)
+        {
+            //loadBaptismApplications();
+        }
+
+        private void baptismApplication_dgv_VisibleChanged(object sender, EventArgs e)
+        {
+            loadBaptismApplications();
+        }
+
+        private void baptismApplication_dgv_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            baptismApplication_dgv.ClearSelection();
         }
     }
 }

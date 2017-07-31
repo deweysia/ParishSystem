@@ -1249,11 +1249,11 @@ namespace ParishSystem
             return int.Parse(dt.Rows[0][0].ToString()) > 0;
         }
 
-        public bool addBaptism(int applicationID, int ministerID, string legitimacy, DateTime baptismDate)
+        public bool addBaptism(int applicationID, int ministerID, Legitimacy legitimacy, DateTime baptismDate, string remarks)
         {
-            string q = "INSERT INTO Baptism(applicationID, ministerID, legitimacy, baptismDate) VALUES ('"
+            string q = "INSERT INTO Baptism(applicationID, ministerID, legitimacy, baptismDate, remarks) VALUES ('"
                 + applicationID + "', '" + ministerID + "', '"
-                + legitimacy + "', '" + baptismDate.ToString("yyyy-MM-dd") + "')";
+                + (int)legitimacy + "', '" + baptismDate.ToString("yyyy-MM-dd") + "', '" + remarks + "')";
 
             bool success = runNonQuery(q);
 
@@ -2470,7 +2470,7 @@ namespace ParishSystem
 
         public DataTable getMinisterWithStatus(MinisterStatus status)
         {
-            string q = "SELECT CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix) as name FROM Minister WHERE status = " + (int)status;
+            string q = "SELECT ministerID, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix) as name FROM Minister WHERE status = " + (int)status;
 
             DataTable dt = runQuery(q);
 
@@ -2537,7 +2537,7 @@ namespace ParishSystem
         public DataTable getApplications(SacramentType type)
         {
             string q = "SELECT applicationID, profileID, requirements, firstName, midName, lastName, suffix,"
-                + " gender, DATE_FORMAT(birthdate,'%m-%d-%Y') AS birthDate, status "
+                + " gender, DATE_FORMAT(birthdate,'%Y-%m-%d') AS birthDate, status "
                 + "FROM GeneralProfile"
                 + " NATURAL JOIN Applicant "
                 + "NATURAL JOIN Application "
@@ -2559,10 +2559,12 @@ namespace ParishSystem
             DataTable dt = runQuery(q);
             return dt;
         }
-        public void addSponsor(string firstname, string midname, string lastname, string suffix, int gender, string residence,int applicationID)
+        public bool addSponsor(int applicationID, string firstname, string midname, string lastname, string suffix, Gender gender, string residence)
         {
-            string q = "INSERT INTO `sad2`.`sponsor` (`ApplicationID`, `firstname`, `midname`, `lastname`, `suffix`, `gender`, `residence`) VALUES ("+applicationID+", "+firstname+", "+midname+ ", "+lastname+ ", "+suffix+ ", "+gender+ ", "+residence+")";
-            runNonQuery(q);
+            string q = "INSERT INTO Sponsor(applicationID, firstname, midname, lastname, suffix, gender, residence) VALUES ('" + applicationID + "', '" + firstname + "', '" + midname + "', '" + lastname + "', '" + suffix + "', '" + (int)gender + "', '" + residence + "')";
+            bool success = runNonQuery(q);
+
+            return success;
 
         }
         public DataTable getSponsors(int applicationID)

@@ -21,6 +21,21 @@ namespace ParishSystem
             
         }
 
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
+
+            base.WndProc(ref m);
+        }
+
+
         public void ShowNotif(string message, NotificationType type)
         {
             switch (type)
@@ -56,12 +71,11 @@ namespace ParishSystem
             this.Top = -60;
             this.Left = Screen.PrimaryScreen.Bounds.Width - this.Width - 60;
             interval = 0;
+            //MessageBox.Show("Huzzah!");
             startTimer.Start();
         }
 
         
-
-
         int interval = 0;
         private void startTimer_Tick(object sender, EventArgs e)
         {

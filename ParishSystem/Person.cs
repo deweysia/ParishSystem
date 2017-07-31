@@ -180,11 +180,11 @@ namespace ParishSystem
             catch { }
             try
             {
-                if (int.Parse(DT.Rows[0]["legitimacy"].ToString()) == (int)Enums.Legitimacy.Legal)
+                if (int.Parse(DT.Rows[0]["legitimacy"].ToString()) == (int)Legitimacy.Legal)
                 { legitimate_radiobutton_baptism.Checked = true; }
-                else if (int.Parse(DT.Rows[0]["legitimacy"].ToString()) == (int)Enums.Legitimacy.Civil)
+                else if (int.Parse(DT.Rows[0]["legitimacy"].ToString()) == (int)Legitimacy.Civil)
                 { civil_radiobutton_baptism.Checked = true; }
-                else if (int.Parse(DT.Rows[0]["legitimacy"].ToString()) == (int)Enums.Legitimacy.Natural)
+                else if (int.Parse(DT.Rows[0]["legitimacy"].ToString()) == (int)Legitimacy.Natural)
                 { natural_radiobutton_baptism.Checked = true; }
                 else
                 {

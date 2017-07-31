@@ -104,9 +104,9 @@
             this.baptismApplication_add_button = new System.Windows.Forms.Button();
             this.baptismApplicationDetailsPanel = new MetroFramework.Controls.MetroPanel();
             this.baptismApplication_buttons_panel = new System.Windows.Forms.Panel();
-            this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.baptismApplication_editReq_button = new MetroFramework.Controls.MetroButton();
+            this.baptismApplication_approve_button = new MetroFramework.Controls.MetroButton();
+            this.baptismApplication_revoke_button = new MetroFramework.Controls.MetroButton();
             this.baptismApplication_payment_groupbox = new System.Windows.Forms.GroupBox();
             this.label87 = new System.Windows.Forms.Label();
             this.baptismApplication_payment_label = new System.Windows.Forms.Label();
@@ -134,16 +134,6 @@
             this.baptismApplication_firstName_textbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.baptismApplication_dgv = new MetroFramework.Controls.MetroGrid();
-            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.midName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.suffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.profileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.applicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.requirements = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -356,6 +346,16 @@
             this.libraryMarriageButton = new System.Windows.Forms.Button();
             this.libraryConfirmationButton = new System.Windows.Forms.Button();
             this.libraryBaptismButton = new System.Windows.Forms.Button();
+            this.profileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.applicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.requirements = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.suffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.profile_panel.SuspendLayout();
@@ -1266,44 +1266,44 @@
             // 
             // baptismApplication_buttons_panel
             // 
-            this.baptismApplication_buttons_panel.Controls.Add(this.metroButton5);
-            this.baptismApplication_buttons_panel.Controls.Add(this.metroButton1);
-            this.baptismApplication_buttons_panel.Controls.Add(this.metroButton2);
+            this.baptismApplication_buttons_panel.Controls.Add(this.baptismApplication_editReq_button);
+            this.baptismApplication_buttons_panel.Controls.Add(this.baptismApplication_approve_button);
+            this.baptismApplication_buttons_panel.Controls.Add(this.baptismApplication_revoke_button);
             this.baptismApplication_buttons_panel.Enabled = false;
             this.baptismApplication_buttons_panel.Location = new System.Drawing.Point(6, 399);
             this.baptismApplication_buttons_panel.Name = "baptismApplication_buttons_panel";
             this.baptismApplication_buttons_panel.Size = new System.Drawing.Size(281, 32);
             this.baptismApplication_buttons_panel.TabIndex = 18;
             // 
-            // metroButton5
+            // baptismApplication_editReq_button
             // 
-            this.metroButton5.Location = new System.Drawing.Point(4, 3);
-            this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(108, 23);
-            this.metroButton5.TabIndex = 10;
-            this.metroButton5.Text = "Edit Requirements";
-            this.metroButton5.UseSelectable = true;
-            this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
+            this.baptismApplication_editReq_button.Location = new System.Drawing.Point(4, 3);
+            this.baptismApplication_editReq_button.Name = "baptismApplication_editReq_button";
+            this.baptismApplication_editReq_button.Size = new System.Drawing.Size(108, 23);
+            this.baptismApplication_editReq_button.TabIndex = 10;
+            this.baptismApplication_editReq_button.Text = "Edit Requirements";
+            this.baptismApplication_editReq_button.UseSelectable = true;
+            this.baptismApplication_editReq_button.Click += new System.EventHandler(this.metroButton5_Click);
             // 
-            // metroButton1
+            // baptismApplication_approve_button
             // 
-            this.metroButton1.Location = new System.Drawing.Point(217, 3);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(60, 23);
-            this.metroButton1.TabIndex = 10;
-            this.metroButton1.Text = "Approve";
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.baptismApplication_approve_button.Location = new System.Drawing.Point(217, 3);
+            this.baptismApplication_approve_button.Name = "baptismApplication_approve_button";
+            this.baptismApplication_approve_button.Size = new System.Drawing.Size(60, 23);
+            this.baptismApplication_approve_button.TabIndex = 10;
+            this.baptismApplication_approve_button.Text = "Approve";
+            this.baptismApplication_approve_button.UseSelectable = true;
+            this.baptismApplication_approve_button.Click += new System.EventHandler(this.baptismApplication_approve_button_Click);
             // 
-            // metroButton2
+            // baptismApplication_revoke_button
             // 
-            this.metroButton2.Location = new System.Drawing.Point(151, 3);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(60, 23);
-            this.metroButton2.TabIndex = 10;
-            this.metroButton2.Text = "Revoke";
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            this.baptismApplication_revoke_button.Location = new System.Drawing.Point(151, 3);
+            this.baptismApplication_revoke_button.Name = "baptismApplication_revoke_button";
+            this.baptismApplication_revoke_button.Size = new System.Drawing.Size(60, 23);
+            this.baptismApplication_revoke_button.TabIndex = 10;
+            this.baptismApplication_revoke_button.Text = "Revoke";
+            this.baptismApplication_revoke_button.UseSelectable = true;
+            this.baptismApplication_revoke_button.Click += new System.EventHandler(this.baptismApplication_revoke_button_Click);
             // 
             // baptismApplication_payment_groupbox
             // 
@@ -1633,16 +1633,16 @@
             this.baptismApplication_dgv.ColumnHeadersHeight = 25;
             this.baptismApplication_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.baptismApplication_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.profileID,
+            this.applicationID,
+            this.requirements,
             this.lastName,
             this.firstName,
             this.midName,
             this.suffix,
             this.gender,
             this.birthdate,
-            this.status,
-            this.profileID,
-            this.applicationID,
-            this.requirements});
+            this.status});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -1675,88 +1675,9 @@
             this.baptismApplication_dgv.TabStop = false;
             this.baptismApplication_dgv.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.baptismApplication_dgv_CellEnter);
             this.baptismApplication_dgv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.baptismApplication_dgv_CellFormatting);
-            // 
-            // lastName
-            // 
-            this.lastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.lastName.DataPropertyName = "lastName";
-            this.lastName.HeaderText = "Last Name";
-            this.lastName.Name = "lastName";
-            this.lastName.ReadOnly = true;
-            // 
-            // firstName
-            // 
-            this.firstName.DataPropertyName = "firstName";
-            this.firstName.HeaderText = "First Name";
-            this.firstName.Name = "firstName";
-            this.firstName.ReadOnly = true;
-            this.firstName.Width = 85;
-            // 
-            // midName
-            // 
-            this.midName.DataPropertyName = "midName";
-            this.midName.HeaderText = "M.I.";
-            this.midName.Name = "midName";
-            this.midName.ReadOnly = true;
-            this.midName.Width = 50;
-            // 
-            // suffix
-            // 
-            this.suffix.DataPropertyName = "suffix";
-            this.suffix.HeaderText = "Suffix";
-            this.suffix.Name = "suffix";
-            this.suffix.ReadOnly = true;
-            this.suffix.Width = 60;
-            // 
-            // gender
-            // 
-            this.gender.DataPropertyName = "gender";
-            this.gender.HeaderText = "Gender";
-            this.gender.Name = "gender";
-            this.gender.ReadOnly = true;
-            this.gender.Width = 69;
-            // 
-            // birthdate
-            // 
-            this.birthdate.DataPropertyName = "birthdate";
-            this.birthdate.HeaderText = "Birth Date";
-            this.birthdate.Name = "birthdate";
-            this.birthdate.ReadOnly = true;
-            this.birthdate.Width = 83;
-            // 
-            // status
-            // 
-            this.status.DataPropertyName = "status";
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            this.status.Width = 63;
-            // 
-            // profileID
-            // 
-            this.profileID.DataPropertyName = "profileID";
-            this.profileID.HeaderText = "profileID";
-            this.profileID.Name = "profileID";
-            this.profileID.ReadOnly = true;
-            this.profileID.Visible = false;
-            this.profileID.Width = 76;
-            // 
-            // applicationID
-            // 
-            this.applicationID.DataPropertyName = "applicationID";
-            this.applicationID.HeaderText = "applicationID";
-            this.applicationID.Name = "applicationID";
-            this.applicationID.ReadOnly = true;
-            this.applicationID.Visible = false;
-            // 
-            // requirements
-            // 
-            this.requirements.DataPropertyName = "requirements";
-            this.requirements.HeaderText = "requirements";
-            this.requirements.Name = "requirements";
-            this.requirements.ReadOnly = true;
-            this.requirements.Visible = false;
-            this.requirements.Width = 99;
+            this.baptismApplication_dgv.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.baptismApplication_dgv_DataBindingComplete);
+            this.baptismApplication_dgv.VisibleChanged += new System.EventHandler(this.baptismApplication_dgv_VisibleChanged);
+            this.baptismApplication_dgv.Paint += new System.Windows.Forms.PaintEventHandler(this.baptismApplication_dgv_Paint);
             // 
             // metroTabPage2
             // 
@@ -4115,6 +4036,88 @@
             this.libraryBaptismButton.UseVisualStyleBackColor = false;
             this.libraryBaptismButton.Click += new System.EventHandler(this.libraryBaptismButton_Click);
             // 
+            // profileID
+            // 
+            this.profileID.DataPropertyName = "profileID";
+            this.profileID.HeaderText = "profileID";
+            this.profileID.Name = "profileID";
+            this.profileID.ReadOnly = true;
+            this.profileID.Visible = false;
+            this.profileID.Width = 76;
+            // 
+            // applicationID
+            // 
+            this.applicationID.DataPropertyName = "applicationID";
+            this.applicationID.HeaderText = "applicationID";
+            this.applicationID.Name = "applicationID";
+            this.applicationID.ReadOnly = true;
+            this.applicationID.Visible = false;
+            // 
+            // requirements
+            // 
+            this.requirements.DataPropertyName = "requirements";
+            this.requirements.HeaderText = "requirements";
+            this.requirements.Name = "requirements";
+            this.requirements.ReadOnly = true;
+            this.requirements.Visible = false;
+            this.requirements.Width = 99;
+            // 
+            // lastName
+            // 
+            this.lastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lastName.DataPropertyName = "lastName";
+            this.lastName.HeaderText = "Last Name";
+            this.lastName.Name = "lastName";
+            this.lastName.ReadOnly = true;
+            // 
+            // firstName
+            // 
+            this.firstName.DataPropertyName = "firstName";
+            this.firstName.HeaderText = "First Name";
+            this.firstName.Name = "firstName";
+            this.firstName.ReadOnly = true;
+            this.firstName.Width = 85;
+            // 
+            // midName
+            // 
+            this.midName.DataPropertyName = "midName";
+            this.midName.HeaderText = "M.I.";
+            this.midName.Name = "midName";
+            this.midName.ReadOnly = true;
+            this.midName.Width = 50;
+            // 
+            // suffix
+            // 
+            this.suffix.DataPropertyName = "suffix";
+            this.suffix.HeaderText = "Suffix";
+            this.suffix.Name = "suffix";
+            this.suffix.ReadOnly = true;
+            this.suffix.Width = 60;
+            // 
+            // gender
+            // 
+            this.gender.DataPropertyName = "gender";
+            this.gender.HeaderText = "Gender";
+            this.gender.Name = "gender";
+            this.gender.ReadOnly = true;
+            this.gender.Width = 69;
+            // 
+            // birthdate
+            // 
+            this.birthdate.DataPropertyName = "birthdate";
+            this.birthdate.HeaderText = "Birth Date";
+            this.birthdate.Name = "birthdate";
+            this.birthdate.ReadOnly = true;
+            this.birthdate.Width = 83;
+            // 
+            // status
+            // 
+            this.status.DataPropertyName = "status";
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            this.status.Width = 63;
+            // 
             // SAD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -4501,8 +4504,8 @@
         private System.Windows.Forms.Button baptismApplication_add_button;
         private System.Windows.Forms.TextBox textBox11;
         private MetroFramework.Controls.MetroPanel baptismApplicationDetailsPanel;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton baptismApplication_revoke_button;
+        private MetroFramework.Controls.MetroButton baptismApplication_approve_button;
         private System.Windows.Forms.GroupBox baptismApplication_requirements_groupbox;
         private System.Windows.Forms.TableLayoutPanel baptismApplication_requirements_tablePanel;
         private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_checkBox4;
@@ -4533,12 +4536,15 @@
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.GroupBox baptismApplication_payment_groupbox;
         private System.Windows.Forms.Label label87;
-        private MetroFramework.Controls.MetroButton metroButton5;
+        private MetroFramework.Controls.MetroButton baptismApplication_editReq_button;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private MetroFramework.Controls.MetroTabPage metroTabPage3;
         private System.Windows.Forms.Panel baptismApplication_buttons_panel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn profileID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn applicationID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn requirements;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn midName;
@@ -4546,8 +4552,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn birthdate;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn profileID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn applicationID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn requirements;
     }
 }

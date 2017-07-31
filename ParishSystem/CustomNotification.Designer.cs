@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomNotification));
             this.messageLabel = new System.Windows.Forms.Label();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.stopTimer = new System.Windows.Forms.Timer(this.components);
             this.startTimer = new System.Windows.Forms.Timer(this.components);
             this.waitTimer = new System.Windows.Forms.Timer(this.components);
@@ -55,13 +54,6 @@
             this.messageLabel.TabIndex = 1;
             this.messageLabel.Text = "label1";
             this.messageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this;
-            this.bunifuDragControl1.Vertical = true;
             // 
             // stopTimer
             // 
@@ -160,7 +152,6 @@
 
         private System.Windows.Forms.Label messageLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Timer stopTimer;
         private System.Windows.Forms.Timer startTimer;
         private System.Windows.Forms.Timer waitTimer;

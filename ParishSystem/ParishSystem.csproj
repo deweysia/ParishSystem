@@ -97,6 +97,12 @@
     <Compile Include="CustomControlBar.Designer.cs">
       <DependentUpon>CustomControlBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMessage.Designer.cs">
+      <DependentUpon>CustomMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomNotification.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,12 @@
     </Compile>
     <Compile Include="DataHandler.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="ExButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExButton.Designer.cs">
+      <DependentUpon>ExButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,8 +262,14 @@
     <EmbeddedResource Include="CustomControlBar.resx">
       <DependentUpon>CustomControlBar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomMessage.resx">
+      <DependentUpon>CustomMessage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomNotification.resx">
       <DependentUpon>CustomNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExButton.resx">
+      <DependentUpon>ExButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

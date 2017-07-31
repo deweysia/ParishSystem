@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class CustomControlBar : UserControl
+    public partial class ExButton : Button
     {
-        public CustomControlBar()
+        public ExButton()
         {
             InitializeComponent();
+        }
+
+        protected override void OnPaint(PaintEventArgs pe)
+        {
+            base.OnPaint(pe);
         }
 
         private void button1_MouseEnter(object sender, EventArgs e)
@@ -34,7 +39,7 @@ namespace ParishSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

@@ -72,9 +72,9 @@ namespace ParishSystem
             }
             if (temp.Rows[0]["legitimacy"].ToString() != "")
             {
-                if (int.Parse(temp.Rows[0]["legitimacy"].ToString()) == (int)Enums.Legitimacy.Legal) legitimacy_label.Text = "Legal";
-                else if (int.Parse(temp.Rows[0]["legitimacy"].ToString()) == (int)Enums.Legitimacy.Civil) legitimacy_label.Text = "Civil";
-                else if (int.Parse(temp.Rows[0]["legitimacy"].ToString()) == (int)Enums.Legitimacy.Natural) legitimacy_label.Text = "Natural";
+                if (int.Parse(temp.Rows[0]["legitimacy"].ToString()) == (int)Legitimacy.Legal) legitimacy_label.Text = "Legal";
+                else if (int.Parse(temp.Rows[0]["legitimacy"].ToString()) == (int)Legitimacy.Civil) legitimacy_label.Text = "Civil";
+                else if (int.Parse(temp.Rows[0]["legitimacy"].ToString()) == (int)Legitimacy.Natural) legitimacy_label.Text = "Natural";
             }
             else
             {
