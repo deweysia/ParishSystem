@@ -28,14 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             this.baptism_button = new System.Windows.Forms.Button();
             this.confirmation_button = new System.Windows.Forms.Button();
             this.marriage_button = new System.Windows.Forms.Button();
-            this.bloodletting_button = new System.Windows.Forms.Button();
             this.record_textbox_baptism = new System.Windows.Forms.TextBox();
             this.page_textbox_baptism = new System.Windows.Forms.TextBox();
             this.registry_textbox_baptism = new System.Windows.Forms.TextBox();
@@ -85,22 +80,7 @@
             this.label80 = new System.Windows.Forms.Label();
             this.label81 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
-            this.cancel_button_confirmation = new System.Windows.Forms.Button();
-            this.save_button_confirmation = new System.Windows.Forms.Button();
-            this.bloodletting_panel = new System.Windows.Forms.Panel();
-            this.clear_button_bloodletting = new System.Windows.Forms.Button();
-            this.donation_datagridview_bloodletting = new System.Windows.Forms.DataGridView();
-            this.delete_button_bloodletting = new System.Windows.Forms.Button();
-            this.add_button_bloodletting = new System.Windows.Forms.Button();
-            this.totalDonation_label_bloodletting = new System.Windows.Forms.Label();
-            this.label107 = new System.Windows.Forms.Label();
-            this.quantityDonation_numericupdown_bloodletting = new System.Windows.Forms.NumericUpDown();
-            this.bloodDonationEvent_combobox_bloodletting = new System.Windows.Forms.ComboBox();
-            this.label104 = new System.Windows.Forms.Label();
-            this.label103 = new System.Windows.Forms.Label();
-            this.label101 = new System.Windows.Forms.Label();
             this.baptism_panel = new System.Windows.Forms.Panel();
-            this.save_button_baptism = new System.Windows.Forms.Button();
             this.baptism_details_panel = new System.Windows.Forms.Panel();
             this.godMother_panel_baptism = new System.Windows.Forms.Panel();
             this.firstname_textbox_godMother_baptism = new System.Windows.Forms.TextBox();
@@ -144,14 +124,8 @@
             this.label71 = new System.Windows.Forms.Label();
             this.godFather_panel_baptism = new System.Windows.Forms.Panel();
             this.residence_textbox_godFather_baptism = new System.Windows.Forms.TextBox();
-            this.cancel_button_baptism = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.genderFemale_radiobutton = new System.Windows.Forms.RadioButton();
-            this.genderMale_radiobutton = new System.Windows.Forms.RadioButton();
-            this.birthdate_dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
             this.btn_Close = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.birthdate_dateTimePicker = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel25 = new System.Windows.Forms.Panel();
             this.label38 = new System.Windows.Forms.Label();
@@ -204,51 +178,53 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.suffix_textbox_mother_self_marriage = new System.Windows.Forms.TextBox();
-            this.residence_textbox_mother_self_marriage = new System.Windows.Forms.TextBox();
-            this.lastname_textbox_mother_self_marriage = new System.Windows.Forms.TextBox();
-            this.mi_textbox_mother_self_marriage = new System.Windows.Forms.TextBox();
-            this.firstname_textbox_mother_self_marriage = new System.Windows.Forms.TextBox();
             this.mother_checkbox_self_marriage = new System.Windows.Forms.CheckBox();
-            this.mi_textbox_spouse_marriage = new System.Windows.Forms.TextBox();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.suffix_textbox_father_self_marriage = new System.Windows.Forms.TextBox();
-            this.residence_textbox_father_self_marriage = new System.Windows.Forms.TextBox();
-            this.lastname_textbox_father_self_marriage = new System.Windows.Forms.TextBox();
-            this.mi_textbox_father_self_marriage = new System.Windows.Forms.TextBox();
-            this.firstname_textbox_father_self_marriage = new System.Windows.Forms.TextBox();
-            this.suffix_textbox_spouse_marriage = new System.Windows.Forms.TextBox();
+            this.father_panel_self_marriage = new System.Windows.Forms.Panel();
             this.birthdate_datetimepicker_spouse_marriage = new System.Windows.Forms.DateTimePicker();
             this.label56 = new System.Windows.Forms.Label();
             this.father_checkbox_self_marriage = new System.Windows.Forms.CheckBox();
-            this.firstname_textbox_spouse_marriage = new System.Windows.Forms.TextBox();
-            this.lastname_textbox_spouse_marriage = new System.Windows.Forms.TextBox();
             this.label93 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.widow_radiobutton_self_marriage = new System.Windows.Forms.RadioButton();
-            this.single_radiobutton_self_marriage = new System.Windows.Forms.RadioButton();
             this.label21 = new System.Windows.Forms.Label();
             this.spouse_combobox_marriage = new System.Windows.Forms.ComboBox();
             this.label72 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.contactNumber_textbox = new System.Windows.Forms.MaskedTextBox();
             this.address_textbox = new System.Windows.Forms.TextBox();
-            this.mi_textbox = new System.Windows.Forms.TextBox();
-            this.suffix_textbox = new System.Windows.Forms.TextBox();
-            this.firstname_textbox = new System.Windows.Forms.TextBox();
-            this.lastname_textbox = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label73 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
-            this.cancel_button_marriage = new System.Windows.Forms.Button();
-            this.save_button_marriage = new System.Windows.Forms.Button();
             this.Applications_datagridview = new System.Windows.Forms.DataGridView();
             this.marriage_panel = new System.Windows.Forms.Panel();
+            this.lastname_textbox = new System.Windows.Forms.Label();
+            this.suffix_textbox = new System.Windows.Forms.Label();
+            this.firstname_textbox = new System.Windows.Forms.Label();
+            this.mi_textbox = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.gender_label = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.civilStatus_label = new System.Windows.Forms.Label();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lastname_textbox_father_self_marriage = new System.Windows.Forms.Label();
+            this.firstname_textbox_father_self_marriage = new System.Windows.Forms.Label();
+            this.suffix_textbox_father_self_marriage = new System.Windows.Forms.Label();
+            this.mi_textbox_father_self_marriage = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.po_textbox_father_self_marriage = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.residence_textbox_father_self_marriage = new System.Windows.Forms.Label();
+            this.mother_panel_self_marriage = new System.Windows.Forms.Panel();
+            this.residence_textbox_mother_self_marriage = new System.Windows.Forms.Label();
+            this.po_textbox_mother_self_marriage = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lastname_textbox_mother_self_marriage = new System.Windows.Forms.Label();
+            this.suffix_textbox_mother_self_marriage = new System.Windows.Forms.Label();
+            this.firstname_textbox_mother_self_marriage = new System.Windows.Forms.Label();
+            this.mi_textbox_mother_self_marriage = new System.Windows.Forms.Label();
             this.confirmation_panel.SuspendLayout();
             this.confirmation_details_panel.SuspendLayout();
             this.godMother_panel_confirmation.SuspendLayout();
@@ -256,9 +232,6 @@
             this.mother_panel_confirmation.SuspendLayout();
             this.father_panel_confirmation.SuspendLayout();
             this.panel20.SuspendLayout();
-            this.bloodletting_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.donation_datagridview_bloodletting)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quantityDonation_numericupdown_bloodletting)).BeginInit();
             this.baptism_panel.SuspendLayout();
             this.baptism_details_panel.SuspendLayout();
             this.godMother_panel_baptism.SuspendLayout();
@@ -267,20 +240,22 @@
             this.father_panel_baptism.SuspendLayout();
             this.panel1.SuspendLayout();
             this.godFather_panel_baptism.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.birthdate_dateTimePicker.SuspendLayout();
             this.panel25.SuspendLayout();
             this.panel24.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel34.SuspendLayout();
             this.panel32.SuspendLayout();
             this.panel14.SuspendLayout();
-            this.panel29.SuspendLayout();
-            this.panel27.SuspendLayout();
-            this.panel15.SuspendLayout();
+            this.father_panel_self_marriage.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Applications_datagridview)).BeginInit();
             this.marriage_panel.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
+            this.mother_panel_self_marriage.SuspendLayout();
+            this.flowLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // baptism_button
@@ -306,7 +281,7 @@
             this.confirmation_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confirmation_button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmation_button.ForeColor = System.Drawing.Color.White;
-            this.confirmation_button.Location = new System.Drawing.Point(157, 0);
+            this.confirmation_button.Location = new System.Drawing.Point(0, 32);
             this.confirmation_button.Margin = new System.Windows.Forms.Padding(0);
             this.confirmation_button.Name = "confirmation_button";
             this.confirmation_button.Size = new System.Drawing.Size(157, 32);
@@ -322,7 +297,7 @@
             this.marriage_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.marriage_button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.marriage_button.ForeColor = System.Drawing.Color.White;
-            this.marriage_button.Location = new System.Drawing.Point(314, 0);
+            this.marriage_button.Location = new System.Drawing.Point(0, 64);
             this.marriage_button.Margin = new System.Windows.Forms.Padding(0);
             this.marriage_button.Name = "marriage_button";
             this.marriage_button.Size = new System.Drawing.Size(157, 32);
@@ -330,22 +305,6 @@
             this.marriage_button.Text = "Marriage";
             this.marriage_button.UseVisualStyleBackColor = false;
             this.marriage_button.Click += new System.EventHandler(this.marriage_button_Click);
-            // 
-            // bloodletting_button
-            // 
-            this.bloodletting_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.bloodletting_button.FlatAppearance.BorderSize = 0;
-            this.bloodletting_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bloodletting_button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bloodletting_button.ForeColor = System.Drawing.Color.White;
-            this.bloodletting_button.Location = new System.Drawing.Point(471, 0);
-            this.bloodletting_button.Margin = new System.Windows.Forms.Padding(0);
-            this.bloodletting_button.Name = "bloodletting_button";
-            this.bloodletting_button.Size = new System.Drawing.Size(120, 32);
-            this.bloodletting_button.TabIndex = 5;
-            this.bloodletting_button.Text = "Blood";
-            this.bloodletting_button.UseVisualStyleBackColor = false;
-            this.bloodletting_button.Click += new System.EventHandler(this.bloodletting_button_Click);
             // 
             // record_textbox_baptism
             // 
@@ -462,9 +421,7 @@
             // 
             this.confirmation_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.confirmation_panel.Controls.Add(this.confirmation_details_panel);
-            this.confirmation_panel.Controls.Add(this.cancel_button_confirmation);
-            this.confirmation_panel.Controls.Add(this.save_button_confirmation);
-            this.confirmation_panel.Location = new System.Drawing.Point(0, 222);
+            this.confirmation_panel.Location = new System.Drawing.Point(1020, 81);
             this.confirmation_panel.Margin = new System.Windows.Forms.Padding(2);
             this.confirmation_panel.Name = "confirmation_panel";
             this.confirmation_panel.Size = new System.Drawing.Size(734, 382);
@@ -1079,271 +1036,15 @@
             this.label82.TabIndex = 53;
             this.label82.Text = "_______________________";
             // 
-            // cancel_button_confirmation
-            // 
-            this.cancel_button_confirmation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.cancel_button_confirmation.FlatAppearance.BorderSize = 0;
-            this.cancel_button_confirmation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel_button_confirmation.ForeColor = System.Drawing.Color.Black;
-            this.cancel_button_confirmation.Location = new System.Drawing.Point(375, 343);
-            this.cancel_button_confirmation.Margin = new System.Windows.Forms.Padding(2);
-            this.cancel_button_confirmation.Name = "cancel_button_confirmation";
-            this.cancel_button_confirmation.Size = new System.Drawing.Size(119, 32);
-            this.cancel_button_confirmation.TabIndex = 89;
-            this.cancel_button_confirmation.Text = "Cancel";
-            this.cancel_button_confirmation.UseVisualStyleBackColor = false;
-            this.cancel_button_confirmation.Click += new System.EventHandler(this.close_button_confirmation_Click);
-            // 
-            // save_button_confirmation
-            // 
-            this.save_button_confirmation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.save_button_confirmation.FlatAppearance.BorderSize = 0;
-            this.save_button_confirmation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.save_button_confirmation.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.save_button_confirmation.ForeColor = System.Drawing.Color.Black;
-            this.save_button_confirmation.Location = new System.Drawing.Point(229, 346);
-            this.save_button_confirmation.Margin = new System.Windows.Forms.Padding(2);
-            this.save_button_confirmation.Name = "save_button_confirmation";
-            this.save_button_confirmation.Size = new System.Drawing.Size(117, 32);
-            this.save_button_confirmation.TabIndex = 90;
-            this.save_button_confirmation.Text = "Save";
-            this.save_button_confirmation.UseVisualStyleBackColor = false;
-            this.save_button_confirmation.Click += new System.EventHandler(this.save_button_confirmation_Click);
-            // 
-            // bloodletting_panel
-            // 
-            this.bloodletting_panel.BackColor = System.Drawing.Color.White;
-            this.bloodletting_panel.Controls.Add(this.clear_button_bloodletting);
-            this.bloodletting_panel.Controls.Add(this.donation_datagridview_bloodletting);
-            this.bloodletting_panel.Controls.Add(this.delete_button_bloodletting);
-            this.bloodletting_panel.Controls.Add(this.add_button_bloodletting);
-            this.bloodletting_panel.Controls.Add(this.totalDonation_label_bloodletting);
-            this.bloodletting_panel.Controls.Add(this.label107);
-            this.bloodletting_panel.Controls.Add(this.quantityDonation_numericupdown_bloodletting);
-            this.bloodletting_panel.Controls.Add(this.bloodDonationEvent_combobox_bloodletting);
-            this.bloodletting_panel.Controls.Add(this.label104);
-            this.bloodletting_panel.Controls.Add(this.label103);
-            this.bloodletting_panel.Controls.Add(this.label101);
-            this.bloodletting_panel.Location = new System.Drawing.Point(634, 145);
-            this.bloodletting_panel.Margin = new System.Windows.Forms.Padding(2);
-            this.bloodletting_panel.Name = "bloodletting_panel";
-            this.bloodletting_panel.Size = new System.Drawing.Size(98, 41);
-            this.bloodletting_panel.TabIndex = 54;
-            // 
-            // clear_button_bloodletting
-            // 
-            this.clear_button_bloodletting.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
-            this.clear_button_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.clear_button_bloodletting.FlatAppearance.BorderSize = 0;
-            this.clear_button_bloodletting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_button_bloodletting.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear_button_bloodletting.ForeColor = System.Drawing.Color.White;
-            this.clear_button_bloodletting.Location = new System.Drawing.Point(110, 332);
-            this.clear_button_bloodletting.Name = "clear_button_bloodletting";
-            this.clear_button_bloodletting.Size = new System.Drawing.Size(100, 30);
-            this.clear_button_bloodletting.TabIndex = 36;
-            this.clear_button_bloodletting.Text = "Clear";
-            this.clear_button_bloodletting.UseVisualStyleBackColor = false;
-            this.clear_button_bloodletting.Click += new System.EventHandler(this.clear_button_bloodletting_Click);
-            // 
-            // donation_datagridview_bloodletting
-            // 
-            this.donation_datagridview_bloodletting.AllowUserToAddRows = false;
-            this.donation_datagridview_bloodletting.AllowUserToDeleteRows = false;
-            this.donation_datagridview_bloodletting.AllowUserToResizeColumns = false;
-            this.donation_datagridview_bloodletting.AllowUserToResizeRows = false;
-            this.donation_datagridview_bloodletting.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.donation_datagridview_bloodletting.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.donation_datagridview_bloodletting.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.donation_datagridview_bloodletting.BackgroundColor = System.Drawing.Color.White;
-            this.donation_datagridview_bloodletting.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.donation_datagridview_bloodletting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.donation_datagridview_bloodletting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.Padding = new System.Windows.Forms.Padding(7);
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.donation_datagridview_bloodletting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
-            this.donation_datagridview_bloodletting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.donation_datagridview_bloodletting.ColumnHeadersVisible = false;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle26.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.donation_datagridview_bloodletting.DefaultCellStyle = dataGridViewCellStyle26;
-            this.donation_datagridview_bloodletting.EnableHeadersVisualStyles = false;
-            this.donation_datagridview_bloodletting.Location = new System.Drawing.Point(321, 77);
-            this.donation_datagridview_bloodletting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.donation_datagridview_bloodletting.MultiSelect = false;
-            this.donation_datagridview_bloodletting.Name = "donation_datagridview_bloodletting";
-            this.donation_datagridview_bloodletting.ReadOnly = true;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle27.Padding = new System.Windows.Forms.Padding(7);
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.donation_datagridview_bloodletting.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
-            this.donation_datagridview_bloodletting.RowHeadersVisible = false;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.Padding = new System.Windows.Forms.Padding(5);
-            this.donation_datagridview_bloodletting.RowsDefaultCellStyle = dataGridViewCellStyle28;
-            this.donation_datagridview_bloodletting.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.donation_datagridview_bloodletting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.donation_datagridview_bloodletting.Size = new System.Drawing.Size(0, 0);
-            this.donation_datagridview_bloodletting.TabIndex = 35;
-            this.donation_datagridview_bloodletting.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.donation_datagridview_bloodletting_CellClick);
-            // 
-            // delete_button_bloodletting
-            // 
-            this.delete_button_bloodletting.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
-            this.delete_button_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.delete_button_bloodletting.Enabled = false;
-            this.delete_button_bloodletting.FlatAppearance.BorderSize = 0;
-            this.delete_button_bloodletting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete_button_bloodletting.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delete_button_bloodletting.ForeColor = System.Drawing.Color.White;
-            this.delete_button_bloodletting.Location = new System.Drawing.Point(228, 323);
-            this.delete_button_bloodletting.Name = "delete_button_bloodletting";
-            this.delete_button_bloodletting.Size = new System.Drawing.Size(100, 30);
-            this.delete_button_bloodletting.TabIndex = 34;
-            this.delete_button_bloodletting.Text = "Delete";
-            this.delete_button_bloodletting.UseVisualStyleBackColor = false;
-            this.delete_button_bloodletting.Click += new System.EventHandler(this.delete_button_bloodletting_Click);
-            // 
-            // add_button_bloodletting
-            // 
-            this.add_button_bloodletting.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
-            this.add_button_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.add_button_bloodletting.FlatAppearance.BorderSize = 0;
-            this.add_button_bloodletting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add_button_bloodletting.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add_button_bloodletting.ForeColor = System.Drawing.Color.White;
-            this.add_button_bloodletting.Location = new System.Drawing.Point(45, 297);
-            this.add_button_bloodletting.Name = "add_button_bloodletting";
-            this.add_button_bloodletting.Size = new System.Drawing.Size(100, 30);
-            this.add_button_bloodletting.TabIndex = 33;
-            this.add_button_bloodletting.Text = "Add";
-            this.add_button_bloodletting.UseVisualStyleBackColor = false;
-            this.add_button_bloodletting.Click += new System.EventHandler(this.add_button_bloodletting_Click);
-            // 
-            // totalDonation_label_bloodletting
-            // 
-            this.totalDonation_label_bloodletting.AutoSize = true;
-            this.totalDonation_label_bloodletting.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalDonation_label_bloodletting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.totalDonation_label_bloodletting.Location = new System.Drawing.Point(610, 319);
-            this.totalDonation_label_bloodletting.Name = "totalDonation_label_bloodletting";
-            this.totalDonation_label_bloodletting.Size = new System.Drawing.Size(33, 37);
-            this.totalDonation_label_bloodletting.TabIndex = 8;
-            this.totalDonation_label_bloodletting.Text = "0";
-            // 
-            // label107
-            // 
-            this.label107.AutoSize = true;
-            this.label107.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label107.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.label107.Location = new System.Drawing.Point(325, 42);
-            this.label107.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(114, 30);
-            this.label107.TabIndex = 7;
-            this.label107.Text = "Donations";
-            // 
-            // quantityDonation_numericupdown_bloodletting
-            // 
-            this.quantityDonation_numericupdown_bloodletting.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityDonation_numericupdown_bloodletting.Location = new System.Drawing.Point(83, 223);
-            this.quantityDonation_numericupdown_bloodletting.Margin = new System.Windows.Forms.Padding(2);
-            this.quantityDonation_numericupdown_bloodletting.Name = "quantityDonation_numericupdown_bloodletting";
-            this.quantityDonation_numericupdown_bloodletting.Size = new System.Drawing.Size(165, 25);
-            this.quantityDonation_numericupdown_bloodletting.TabIndex = 5;
-            this.quantityDonation_numericupdown_bloodletting.ValueChanged += new System.EventHandler(this.quantityDonation_numericupdown_bloodletting_ValueChanged);
-            // 
-            // bloodDonationEvent_combobox_bloodletting
-            // 
-            this.bloodDonationEvent_combobox_bloodletting.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bloodDonationEvent_combobox_bloodletting.FormattingEnabled = true;
-            this.bloodDonationEvent_combobox_bloodletting.Location = new System.Drawing.Point(28, 119);
-            this.bloodDonationEvent_combobox_bloodletting.Margin = new System.Windows.Forms.Padding(2);
-            this.bloodDonationEvent_combobox_bloodletting.Name = "bloodDonationEvent_combobox_bloodletting";
-            this.bloodDonationEvent_combobox_bloodletting.Size = new System.Drawing.Size(275, 25);
-            this.bloodDonationEvent_combobox_bloodletting.TabIndex = 2;
-            this.bloodDonationEvent_combobox_bloodletting.SelectedIndexChanged += new System.EventHandler(this.bloodDonationEvent_combobox_bloodletting_SelectedIndexChanged);
-            // 
-            // label104
-            // 
-            this.label104.AutoSize = true;
-            this.label104.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label104.Location = new System.Drawing.Point(127, 252);
-            this.label104.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(70, 21);
-            this.label104.TabIndex = 1;
-            this.label104.Text = "Quantity";
-            // 
-            // label103
-            // 
-            this.label103.AutoSize = true;
-            this.label103.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label103.Location = new System.Drawing.Point(81, 150);
-            this.label103.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(160, 21);
-            this.label103.TabIndex = 1;
-            this.label103.Text = "Blood Donation Event";
-            // 
-            // label101
-            // 
-            this.label101.AutoSize = true;
-            this.label101.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label101.Location = new System.Drawing.Point(498, 327);
-            this.label101.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(117, 21);
-            this.label101.TabIndex = 1;
-            this.label101.Text = "Total Donations";
-            // 
             // baptism_panel
             // 
             this.baptism_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.baptism_panel.Controls.Add(this.save_button_baptism);
             this.baptism_panel.Controls.Add(this.baptism_details_panel);
-            this.baptism_panel.Controls.Add(this.cancel_button_baptism);
-            this.baptism_panel.Location = new System.Drawing.Point(0, 222);
+            this.baptism_panel.Location = new System.Drawing.Point(1104, 39);
             this.baptism_panel.Margin = new System.Windows.Forms.Padding(2);
             this.baptism_panel.Name = "baptism_panel";
             this.baptism_panel.Size = new System.Drawing.Size(734, 384);
             this.baptism_panel.TabIndex = 56;
-            // 
-            // save_button_baptism
-            // 
-            this.save_button_baptism.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.save_button_baptism.FlatAppearance.BorderSize = 0;
-            this.save_button_baptism.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.save_button_baptism.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.save_button_baptism.ForeColor = System.Drawing.Color.White;
-            this.save_button_baptism.Location = new System.Drawing.Point(227, 344);
-            this.save_button_baptism.Margin = new System.Windows.Forms.Padding(2);
-            this.save_button_baptism.Name = "save_button_baptism";
-            this.save_button_baptism.Size = new System.Drawing.Size(117, 32);
-            this.save_button_baptism.TabIndex = 93;
-            this.save_button_baptism.Text = "Save";
-            this.save_button_baptism.UseVisualStyleBackColor = false;
-            this.save_button_baptism.Click += new System.EventHandler(this.save_button_baptism_Click);
             // 
             // baptism_details_panel
             // 
@@ -1954,76 +1655,6 @@
             this.residence_textbox_godFather_baptism.TabIndex = 47;
             this.residence_textbox_godFather_baptism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // cancel_button_baptism
-            // 
-            this.cancel_button_baptism.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.cancel_button_baptism.FlatAppearance.BorderSize = 0;
-            this.cancel_button_baptism.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel_button_baptism.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.cancel_button_baptism.ForeColor = System.Drawing.Color.White;
-            this.cancel_button_baptism.Location = new System.Drawing.Point(383, 344);
-            this.cancel_button_baptism.Margin = new System.Windows.Forms.Padding(2);
-            this.cancel_button_baptism.Name = "cancel_button_baptism";
-            this.cancel_button_baptism.Size = new System.Drawing.Size(117, 32);
-            this.cancel_button_baptism.TabIndex = 92;
-            this.cancel_button_baptism.Text = "Cancel";
-            this.cancel_button_baptism.UseVisualStyleBackColor = false;
-            this.cancel_button_baptism.Click += new System.EventHandler(this.close_button_baptism_Click_1);
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.genderFemale_radiobutton);
-            this.panel12.Controls.Add(this.genderMale_radiobutton);
-            this.panel12.Location = new System.Drawing.Point(69, 95);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(165, 31);
-            this.panel12.TabIndex = 81;
-            // 
-            // genderFemale_radiobutton
-            // 
-            this.genderFemale_radiobutton.AutoSize = true;
-            this.genderFemale_radiobutton.ForeColor = System.Drawing.Color.White;
-            this.genderFemale_radiobutton.Location = new System.Drawing.Point(84, 6);
-            this.genderFemale_radiobutton.Name = "genderFemale_radiobutton";
-            this.genderFemale_radiobutton.Size = new System.Drawing.Size(70, 23);
-            this.genderFemale_radiobutton.TabIndex = 0;
-            this.genderFemale_radiobutton.TabStop = true;
-            this.genderFemale_radiobutton.Text = "Female";
-            this.genderFemale_radiobutton.UseVisualStyleBackColor = true;
-            // 
-            // genderMale_radiobutton
-            // 
-            this.genderMale_radiobutton.AutoSize = true;
-            this.genderMale_radiobutton.ForeColor = System.Drawing.Color.White;
-            this.genderMale_radiobutton.Location = new System.Drawing.Point(4, 6);
-            this.genderMale_radiobutton.Name = "genderMale_radiobutton";
-            this.genderMale_radiobutton.Size = new System.Drawing.Size(57, 23);
-            this.genderMale_radiobutton.TabIndex = 0;
-            this.genderMale_radiobutton.TabStop = true;
-            this.genderMale_radiobutton.Text = "Male";
-            this.genderMale_radiobutton.UseVisualStyleBackColor = true;
-            // 
-            // birthdate_dateTimePicker
-            // 
-            this.birthdate_dateTimePicker.CustomFormat = "________-________-________";
-            this.birthdate_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.birthdate_dateTimePicker.Location = new System.Drawing.Point(434, 25);
-            this.birthdate_dateTimePicker.Name = "birthdate_dateTimePicker";
-            this.birthdate_dateTimePicker.Size = new System.Drawing.Size(277, 25);
-            this.birthdate_dateTimePicker.TabIndex = 78;
-            this.birthdate_dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_profile_ValueChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(340, 29);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 21);
-            this.label10.TabIndex = 79;
-            this.label10.Text = "Birthdate";
-            // 
             // btn_Close
             // 
             this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -2033,7 +1664,7 @@
             this.btn_Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Close.Location = new System.Drawing.Point(706, 3);
+            this.btn_Close.Location = new System.Drawing.Point(1141, 3);
             this.btn_Close.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(27, 25);
@@ -2041,50 +1672,44 @@
             this.btn_Close.UseVisualStyleBackColor = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
-            // panel7
+            // birthdate_dateTimePicker
             // 
-            this.panel7.AutoScroll = true;
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.label1);
-            this.panel7.Controls.Add(this.panel25);
-            this.panel7.Controls.Add(this.remarks_textbox_marriage);
-            this.panel7.Controls.Add(this.godMother_checkbox_marriage);
-            this.panel7.Controls.Add(this.godFather_checkbox_marriage);
-            this.panel7.Controls.Add(this.panel24);
-            this.panel7.Controls.Add(this.panel19);
-            this.panel7.Controls.Add(this.mother_checkbox_spouse_marriage);
-            this.panel7.Controls.Add(this.panel34);
-            this.panel7.Controls.Add(this.panel32);
-            this.panel7.Controls.Add(this.father_checkbox_spouse_marriage);
-            this.panel7.Controls.Add(this.contactNumber_textbox_spouse_marriage);
-            this.panel7.Controls.Add(this.address_textbox_spouse_marriage);
-            this.panel7.Controls.Add(this.panel14);
-            this.panel7.Controls.Add(this.label19);
-            this.panel7.Controls.Add(this.label55);
-            this.panel7.Controls.Add(this.label57);
-            this.panel7.Controls.Add(this.panel29);
-            this.panel7.Controls.Add(this.mother_checkbox_self_marriage);
-            this.panel7.Controls.Add(this.mi_textbox_spouse_marriage);
-            this.panel7.Controls.Add(this.panel27);
-            this.panel7.Controls.Add(this.suffix_textbox_spouse_marriage);
-            this.panel7.Controls.Add(this.birthdate_datetimepicker_spouse_marriage);
-            this.panel7.Controls.Add(this.label56);
-            this.panel7.Controls.Add(this.father_checkbox_self_marriage);
-            this.panel7.Controls.Add(this.firstname_textbox_spouse_marriage);
-            this.panel7.Controls.Add(this.lastname_textbox_spouse_marriage);
-            this.panel7.Controls.Add(this.label93);
-            this.panel7.Controls.Add(this.panel15);
-            this.panel7.Controls.Add(this.label21);
-            this.panel7.Controls.Add(this.spouse_combobox_marriage);
-            this.panel7.Controls.Add(this.label72);
-            this.panel7.Controls.Add(this.label27);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(734, 339);
-            this.panel7.TabIndex = 56;
+            this.birthdate_dateTimePicker.AutoScroll = true;
+            this.birthdate_dateTimePicker.BackColor = System.Drawing.Color.White;
+            this.birthdate_dateTimePicker.Controls.Add(this.mother_panel_self_marriage);
+            this.birthdate_dateTimePicker.Controls.Add(this.label1);
+            this.birthdate_dateTimePicker.Controls.Add(this.panel25);
+            this.birthdate_dateTimePicker.Controls.Add(this.remarks_textbox_marriage);
+            this.birthdate_dateTimePicker.Controls.Add(this.godMother_checkbox_marriage);
+            this.birthdate_dateTimePicker.Controls.Add(this.godFather_checkbox_marriage);
+            this.birthdate_dateTimePicker.Controls.Add(this.panel24);
+            this.birthdate_dateTimePicker.Controls.Add(this.panel19);
+            this.birthdate_dateTimePicker.Controls.Add(this.mother_checkbox_spouse_marriage);
+            this.birthdate_dateTimePicker.Controls.Add(this.panel34);
+            this.birthdate_dateTimePicker.Controls.Add(this.panel32);
+            this.birthdate_dateTimePicker.Controls.Add(this.father_checkbox_spouse_marriage);
+            this.birthdate_dateTimePicker.Controls.Add(this.contactNumber_textbox_spouse_marriage);
+            this.birthdate_dateTimePicker.Controls.Add(this.address_textbox_spouse_marriage);
+            this.birthdate_dateTimePicker.Controls.Add(this.panel14);
+            this.birthdate_dateTimePicker.Controls.Add(this.label19);
+            this.birthdate_dateTimePicker.Controls.Add(this.label55);
+            this.birthdate_dateTimePicker.Controls.Add(this.label57);
+            this.birthdate_dateTimePicker.Controls.Add(this.father_panel_self_marriage);
+            this.birthdate_dateTimePicker.Controls.Add(this.father_checkbox_self_marriage);
+            this.birthdate_dateTimePicker.Controls.Add(this.mother_checkbox_self_marriage);
+            this.birthdate_dateTimePicker.Controls.Add(this.birthdate_datetimepicker_spouse_marriage);
+            this.birthdate_dateTimePicker.Controls.Add(this.label56);
+            this.birthdate_dateTimePicker.Controls.Add(this.label93);
+            this.birthdate_dateTimePicker.Controls.Add(this.spouse_combobox_marriage);
+            this.birthdate_dateTimePicker.Controls.Add(this.label72);
+            this.birthdate_dateTimePicker.Controls.Add(this.label27);
+            this.birthdate_dateTimePicker.Dock = System.Windows.Forms.DockStyle.Top;
+            this.birthdate_dateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.birthdate_dateTimePicker.Location = new System.Drawing.Point(0, 0);
+            this.birthdate_dateTimePicker.Margin = new System.Windows.Forms.Padding(2);
+            this.birthdate_dateTimePicker.Name = "birthdate_dateTimePicker";
+            this.birthdate_dateTimePicker.Size = new System.Drawing.Size(734, 339);
+            this.birthdate_dateTimePicker.TabIndex = 56;
             // 
             // label1
             // 
@@ -2804,109 +2429,12 @@
             this.label57.TabIndex = 96;
             this.label57.Text = "Legitimacy";
             // 
-            // panel29
-            // 
-            this.panel29.BackColor = System.Drawing.Color.White;
-            this.panel29.Controls.Add(this.suffix_textbox_mother_self_marriage);
-            this.panel29.Controls.Add(this.residence_textbox_mother_self_marriage);
-            this.panel29.Controls.Add(this.lastname_textbox_mother_self_marriage);
-            this.panel29.Controls.Add(this.mi_textbox_mother_self_marriage);
-            this.panel29.Controls.Add(this.firstname_textbox_mother_self_marriage);
-            this.panel29.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel29.Location = new System.Drawing.Point(383, 103);
-            this.panel29.Margin = new System.Windows.Forms.Padding(2);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(267, 136);
-            this.panel29.TabIndex = 57;
-            // 
-            // suffix_textbox_mother_self_marriage
-            // 
-            this.suffix_textbox_mother_self_marriage.BackColor = System.Drawing.Color.White;
-            this.suffix_textbox_mother_self_marriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.suffix_textbox_mother_self_marriage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suffix_textbox_mother_self_marriage.ForeColor = System.Drawing.Color.Gray;
-            this.suffix_textbox_mother_self_marriage.Location = new System.Drawing.Point(212, 9);
-            this.suffix_textbox_mother_self_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.suffix_textbox_mother_self_marriage.Name = "suffix_textbox_mother_self_marriage";
-            this.suffix_textbox_mother_self_marriage.Size = new System.Drawing.Size(47, 29);
-            this.suffix_textbox_mother_self_marriage.TabIndex = 23;
-            this.suffix_textbox_mother_self_marriage.Text = "suffix";
-            this.suffix_textbox_mother_self_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.suffix_textbox_mother_self_marriage.Click += new System.EventHandler(this.Names_textbox_MouseClick);
-            this.suffix_textbox_mother_self_marriage.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
-            this.suffix_textbox_mother_self_marriage.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
-            // residence_textbox_mother_self_marriage
-            // 
-            this.residence_textbox_mother_self_marriage.BackColor = System.Drawing.Color.White;
-            this.residence_textbox_mother_self_marriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.residence_textbox_mother_self_marriage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.residence_textbox_mother_self_marriage.Location = new System.Drawing.Point(9, 86);
-            this.residence_textbox_mother_self_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.residence_textbox_mother_self_marriage.Multiline = true;
-            this.residence_textbox_mother_self_marriage.Name = "residence_textbox_mother_self_marriage";
-            this.residence_textbox_mother_self_marriage.Size = new System.Drawing.Size(250, 29);
-            this.residence_textbox_mother_self_marriage.TabIndex = 47;
-            this.residence_textbox_mother_self_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lastname_textbox_mother_self_marriage
-            // 
-            this.lastname_textbox_mother_self_marriage.BackColor = System.Drawing.Color.White;
-            this.lastname_textbox_mother_self_marriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lastname_textbox_mother_self_marriage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastname_textbox_mother_self_marriage.ForeColor = System.Drawing.Color.Gray;
-            this.lastname_textbox_mother_self_marriage.Location = new System.Drawing.Point(9, 9);
-            this.lastname_textbox_mother_self_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lastname_textbox_mother_self_marriage.Name = "lastname_textbox_mother_self_marriage";
-            this.lastname_textbox_mother_self_marriage.Size = new System.Drawing.Size(197, 29);
-            this.lastname_textbox_mother_self_marriage.TabIndex = 24;
-            this.lastname_textbox_mother_self_marriage.Text = "lastname";
-            this.lastname_textbox_mother_self_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lastname_textbox_mother_self_marriage.Click += new System.EventHandler(this.Names_textbox_MouseClick);
-            this.lastname_textbox_mother_self_marriage.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
-            this.lastname_textbox_mother_self_marriage.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
-            // mi_textbox_mother_self_marriage
-            // 
-            this.mi_textbox_mother_self_marriage.BackColor = System.Drawing.Color.White;
-            this.mi_textbox_mother_self_marriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mi_textbox_mother_self_marriage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mi_textbox_mother_self_marriage.ForeColor = System.Drawing.Color.Gray;
-            this.mi_textbox_mother_self_marriage.Location = new System.Drawing.Point(215, 47);
-            this.mi_textbox_mother_self_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.mi_textbox_mother_self_marriage.MaxLength = 1;
-            this.mi_textbox_mother_self_marriage.Name = "mi_textbox_mother_self_marriage";
-            this.mi_textbox_mother_self_marriage.Size = new System.Drawing.Size(44, 29);
-            this.mi_textbox_mother_self_marriage.TabIndex = 22;
-            this.mi_textbox_mother_self_marriage.Text = "mi";
-            this.mi_textbox_mother_self_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mi_textbox_mother_self_marriage.Click += new System.EventHandler(this.Names_textbox_MouseClick);
-            this.mi_textbox_mother_self_marriage.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
-            this.mi_textbox_mother_self_marriage.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
-            // firstname_textbox_mother_self_marriage
-            // 
-            this.firstname_textbox_mother_self_marriage.BackColor = System.Drawing.Color.White;
-            this.firstname_textbox_mother_self_marriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.firstname_textbox_mother_self_marriage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstname_textbox_mother_self_marriage.ForeColor = System.Drawing.Color.Gray;
-            this.firstname_textbox_mother_self_marriage.Location = new System.Drawing.Point(9, 47);
-            this.firstname_textbox_mother_self_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.firstname_textbox_mother_self_marriage.Name = "firstname_textbox_mother_self_marriage";
-            this.firstname_textbox_mother_self_marriage.Size = new System.Drawing.Size(197, 29);
-            this.firstname_textbox_mother_self_marriage.TabIndex = 13;
-            this.firstname_textbox_mother_self_marriage.Text = "firstname";
-            this.firstname_textbox_mother_self_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.firstname_textbox_mother_self_marriage.Click += new System.EventHandler(this.Names_textbox_MouseClick);
-            this.firstname_textbox_mother_self_marriage.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
-            this.firstname_textbox_mother_self_marriage.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
             // mother_checkbox_self_marriage
             // 
             this.mother_checkbox_self_marriage.AutoSize = true;
             this.mother_checkbox_self_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.mother_checkbox_self_marriage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.mother_checkbox_self_marriage.Location = new System.Drawing.Point(341, 74);
+            this.mother_checkbox_self_marriage.Location = new System.Drawing.Point(13, 177);
             this.mother_checkbox_self_marriage.Name = "mother_checkbox_self_marriage";
             this.mother_checkbox_self_marriage.Size = new System.Drawing.Size(95, 29);
             this.mother_checkbox_self_marriage.TabIndex = 58;
@@ -2914,137 +2442,20 @@
             this.mother_checkbox_self_marriage.UseVisualStyleBackColor = true;
             this.mother_checkbox_self_marriage.CheckedChanged += new System.EventHandler(this.mother_checkbox_self_marriage_CheckedChanged);
             // 
-            // mi_textbox_spouse_marriage
+            // father_panel_self_marriage
             // 
-            this.mi_textbox_spouse_marriage.BackColor = System.Drawing.Color.White;
-            this.mi_textbox_spouse_marriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mi_textbox_spouse_marriage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mi_textbox_spouse_marriage.ForeColor = System.Drawing.Color.Gray;
-            this.mi_textbox_spouse_marriage.Location = new System.Drawing.Point(282, 358);
-            this.mi_textbox_spouse_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.mi_textbox_spouse_marriage.MaxLength = 1;
-            this.mi_textbox_spouse_marriage.Name = "mi_textbox_spouse_marriage";
-            this.mi_textbox_spouse_marriage.Size = new System.Drawing.Size(44, 29);
-            this.mi_textbox_spouse_marriage.TabIndex = 51;
-            this.mi_textbox_spouse_marriage.Text = "mi";
-            this.mi_textbox_spouse_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mi_textbox_spouse_marriage.Click += new System.EventHandler(this.Names_textbox_MouseClick);
-            this.mi_textbox_spouse_marriage.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
-            this.mi_textbox_spouse_marriage.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
-            // panel27
-            // 
-            this.panel27.BackColor = System.Drawing.Color.White;
-            this.panel27.Controls.Add(this.suffix_textbox_father_self_marriage);
-            this.panel27.Controls.Add(this.residence_textbox_father_self_marriage);
-            this.panel27.Controls.Add(this.lastname_textbox_father_self_marriage);
-            this.panel27.Controls.Add(this.mi_textbox_father_self_marriage);
-            this.panel27.Controls.Add(this.firstname_textbox_father_self_marriage);
-            this.panel27.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel27.Location = new System.Drawing.Point(69, 105);
-            this.panel27.Margin = new System.Windows.Forms.Padding(2);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(276, 136);
-            this.panel27.TabIndex = 56;
-            // 
-            // suffix_textbox_father_self_marriage
-            // 
-            this.suffix_textbox_father_self_marriage.BackColor = System.Drawing.Color.White;
-            this.suffix_textbox_father_self_marriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.suffix_textbox_father_self_marriage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suffix_textbox_father_self_marriage.ForeColor = System.Drawing.Color.Gray;
-            this.suffix_textbox_father_self_marriage.Location = new System.Drawing.Point(212, 9);
-            this.suffix_textbox_father_self_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.suffix_textbox_father_self_marriage.Name = "suffix_textbox_father_self_marriage";
-            this.suffix_textbox_father_self_marriage.Size = new System.Drawing.Size(47, 29);
-            this.suffix_textbox_father_self_marriage.TabIndex = 23;
-            this.suffix_textbox_father_self_marriage.Text = "suffix";
-            this.suffix_textbox_father_self_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.suffix_textbox_father_self_marriage.Click += new System.EventHandler(this.Names_textbox_MouseClick);
-            this.suffix_textbox_father_self_marriage.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
-            this.suffix_textbox_father_self_marriage.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
-            // residence_textbox_father_self_marriage
-            // 
-            this.residence_textbox_father_self_marriage.BackColor = System.Drawing.Color.White;
-            this.residence_textbox_father_self_marriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.residence_textbox_father_self_marriage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.residence_textbox_father_self_marriage.Location = new System.Drawing.Point(7, 86);
-            this.residence_textbox_father_self_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.residence_textbox_father_self_marriage.Multiline = true;
-            this.residence_textbox_father_self_marriage.Name = "residence_textbox_father_self_marriage";
-            this.residence_textbox_father_self_marriage.Size = new System.Drawing.Size(250, 29);
-            this.residence_textbox_father_self_marriage.TabIndex = 47;
-            this.residence_textbox_father_self_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lastname_textbox_father_self_marriage
-            // 
-            this.lastname_textbox_father_self_marriage.BackColor = System.Drawing.Color.White;
-            this.lastname_textbox_father_self_marriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lastname_textbox_father_self_marriage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastname_textbox_father_self_marriage.ForeColor = System.Drawing.Color.Gray;
-            this.lastname_textbox_father_self_marriage.Location = new System.Drawing.Point(9, 9);
-            this.lastname_textbox_father_self_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lastname_textbox_father_self_marriage.Name = "lastname_textbox_father_self_marriage";
-            this.lastname_textbox_father_self_marriage.Size = new System.Drawing.Size(197, 29);
-            this.lastname_textbox_father_self_marriage.TabIndex = 24;
-            this.lastname_textbox_father_self_marriage.Text = "lastname";
-            this.lastname_textbox_father_self_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lastname_textbox_father_self_marriage.Click += new System.EventHandler(this.Names_textbox_MouseClick);
-            this.lastname_textbox_father_self_marriage.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
-            this.lastname_textbox_father_self_marriage.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
-            // mi_textbox_father_self_marriage
-            // 
-            this.mi_textbox_father_self_marriage.BackColor = System.Drawing.Color.White;
-            this.mi_textbox_father_self_marriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mi_textbox_father_self_marriage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mi_textbox_father_self_marriage.ForeColor = System.Drawing.Color.Gray;
-            this.mi_textbox_father_self_marriage.Location = new System.Drawing.Point(212, 47);
-            this.mi_textbox_father_self_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.mi_textbox_father_self_marriage.MaxLength = 1;
-            this.mi_textbox_father_self_marriage.Name = "mi_textbox_father_self_marriage";
-            this.mi_textbox_father_self_marriage.Size = new System.Drawing.Size(47, 29);
-            this.mi_textbox_father_self_marriage.TabIndex = 22;
-            this.mi_textbox_father_self_marriage.Text = "mi";
-            this.mi_textbox_father_self_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mi_textbox_father_self_marriage.Click += new System.EventHandler(this.Names_textbox_MouseClick);
-            this.mi_textbox_father_self_marriage.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
-            this.mi_textbox_father_self_marriage.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
-            // firstname_textbox_father_self_marriage
-            // 
-            this.firstname_textbox_father_self_marriage.BackColor = System.Drawing.Color.White;
-            this.firstname_textbox_father_self_marriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.firstname_textbox_father_self_marriage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstname_textbox_father_self_marriage.ForeColor = System.Drawing.Color.Gray;
-            this.firstname_textbox_father_self_marriage.Location = new System.Drawing.Point(9, 46);
-            this.firstname_textbox_father_self_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.firstname_textbox_father_self_marriage.Name = "firstname_textbox_father_self_marriage";
-            this.firstname_textbox_father_self_marriage.Size = new System.Drawing.Size(197, 29);
-            this.firstname_textbox_father_self_marriage.TabIndex = 13;
-            this.firstname_textbox_father_self_marriage.Text = "firstname";
-            this.firstname_textbox_father_self_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.firstname_textbox_father_self_marriage.Click += new System.EventHandler(this.Names_textbox_MouseClick);
-            this.firstname_textbox_father_self_marriage.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
-            this.firstname_textbox_father_self_marriage.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
-            // suffix_textbox_spouse_marriage
-            // 
-            this.suffix_textbox_spouse_marriage.BackColor = System.Drawing.Color.White;
-            this.suffix_textbox_spouse_marriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.suffix_textbox_spouse_marriage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suffix_textbox_spouse_marriage.ForeColor = System.Drawing.Color.Gray;
-            this.suffix_textbox_spouse_marriage.Location = new System.Drawing.Point(535, 358);
-            this.suffix_textbox_spouse_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.suffix_textbox_spouse_marriage.Name = "suffix_textbox_spouse_marriage";
-            this.suffix_textbox_spouse_marriage.Size = new System.Drawing.Size(47, 29);
-            this.suffix_textbox_spouse_marriage.TabIndex = 52;
-            this.suffix_textbox_spouse_marriage.Text = "suffix";
-            this.suffix_textbox_spouse_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.suffix_textbox_spouse_marriage.Click += new System.EventHandler(this.Names_textbox_MouseClick);
-            this.suffix_textbox_spouse_marriage.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
-            this.suffix_textbox_spouse_marriage.Leave += new System.EventHandler(this.Names_textbox_Leave);
+            this.father_panel_self_marriage.BackColor = System.Drawing.Color.White;
+            this.father_panel_self_marriage.Controls.Add(this.residence_textbox_father_self_marriage);
+            this.father_panel_self_marriage.Controls.Add(this.po_textbox_father_self_marriage);
+            this.father_panel_self_marriage.Controls.Add(this.label9);
+            this.father_panel_self_marriage.Controls.Add(this.label7);
+            this.father_panel_self_marriage.Controls.Add(this.flowLayoutPanel4);
+            this.father_panel_self_marriage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.father_panel_self_marriage.Location = new System.Drawing.Point(108, 74);
+            this.father_panel_self_marriage.Margin = new System.Windows.Forms.Padding(2);
+            this.father_panel_self_marriage.Name = "father_panel_self_marriage";
+            this.father_panel_self_marriage.Size = new System.Drawing.Size(297, 93);
+            this.father_panel_self_marriage.TabIndex = 56;
             // 
             // birthdate_datetimepicker_spouse_marriage
             // 
@@ -3071,48 +2482,14 @@
             // 
             this.father_checkbox_self_marriage.AutoSize = true;
             this.father_checkbox_self_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.father_checkbox_self_marriage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.father_checkbox_self_marriage.Location = new System.Drawing.Point(55, 75);
+            this.father_checkbox_self_marriage.ForeColor = System.Drawing.Color.DimGray;
+            this.father_checkbox_self_marriage.Location = new System.Drawing.Point(23, 74);
             this.father_checkbox_self_marriage.Name = "father_checkbox_self_marriage";
             this.father_checkbox_self_marriage.Size = new System.Drawing.Size(85, 29);
             this.father_checkbox_self_marriage.TabIndex = 59;
             this.father_checkbox_self_marriage.Text = "Father";
             this.father_checkbox_self_marriage.UseVisualStyleBackColor = true;
             this.father_checkbox_self_marriage.CheckedChanged += new System.EventHandler(this.father_checkbox_self_marriage_CheckedChanged);
-            // 
-            // firstname_textbox_spouse_marriage
-            // 
-            this.firstname_textbox_spouse_marriage.BackColor = System.Drawing.Color.White;
-            this.firstname_textbox_spouse_marriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.firstname_textbox_spouse_marriage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstname_textbox_spouse_marriage.ForeColor = System.Drawing.Color.Gray;
-            this.firstname_textbox_spouse_marriage.Location = new System.Drawing.Point(77, 358);
-            this.firstname_textbox_spouse_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.firstname_textbox_spouse_marriage.Name = "firstname_textbox_spouse_marriage";
-            this.firstname_textbox_spouse_marriage.Size = new System.Drawing.Size(197, 29);
-            this.firstname_textbox_spouse_marriage.TabIndex = 50;
-            this.firstname_textbox_spouse_marriage.Text = "firstname";
-            this.firstname_textbox_spouse_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.firstname_textbox_spouse_marriage.Click += new System.EventHandler(this.Names_textbox_MouseClick);
-            this.firstname_textbox_spouse_marriage.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
-            this.firstname_textbox_spouse_marriage.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
-            // lastname_textbox_spouse_marriage
-            // 
-            this.lastname_textbox_spouse_marriage.BackColor = System.Drawing.Color.White;
-            this.lastname_textbox_spouse_marriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lastname_textbox_spouse_marriage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastname_textbox_spouse_marriage.ForeColor = System.Drawing.Color.Gray;
-            this.lastname_textbox_spouse_marriage.Location = new System.Drawing.Point(332, 358);
-            this.lastname_textbox_spouse_marriage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lastname_textbox_spouse_marriage.Name = "lastname_textbox_spouse_marriage";
-            this.lastname_textbox_spouse_marriage.Size = new System.Drawing.Size(197, 29);
-            this.lastname_textbox_spouse_marriage.TabIndex = 53;
-            this.lastname_textbox_spouse_marriage.Text = "lastname";
-            this.lastname_textbox_spouse_marriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lastname_textbox_spouse_marriage.Click += new System.EventHandler(this.Names_textbox_MouseClick);
-            this.lastname_textbox_spouse_marriage.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
-            this.lastname_textbox_spouse_marriage.Leave += new System.EventHandler(this.Names_textbox_Leave);
             // 
             // label93
             // 
@@ -3125,45 +2502,14 @@
             this.label93.TabIndex = 92;
             this.label93.Text = "Marriage Details";
             // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.widow_radiobutton_self_marriage);
-            this.panel15.Controls.Add(this.single_radiobutton_self_marriage);
-            this.panel15.Location = new System.Drawing.Point(409, 22);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(177, 31);
-            this.panel15.TabIndex = 80;
-            // 
-            // widow_radiobutton_self_marriage
-            // 
-            this.widow_radiobutton_self_marriage.AutoSize = true;
-            this.widow_radiobutton_self_marriage.Location = new System.Drawing.Point(91, 6);
-            this.widow_radiobutton_self_marriage.Name = "widow_radiobutton_self_marriage";
-            this.widow_radiobutton_self_marriage.Size = new System.Drawing.Size(72, 19);
-            this.widow_radiobutton_self_marriage.TabIndex = 0;
-            this.widow_radiobutton_self_marriage.TabStop = true;
-            this.widow_radiobutton_self_marriage.Text = "Widower";
-            this.widow_radiobutton_self_marriage.UseVisualStyleBackColor = true;
-            // 
-            // single_radiobutton_self_marriage
-            // 
-            this.single_radiobutton_self_marriage.AutoSize = true;
-            this.single_radiobutton_self_marriage.Location = new System.Drawing.Point(4, 6);
-            this.single_radiobutton_self_marriage.Name = "single_radiobutton_self_marriage";
-            this.single_radiobutton_self_marriage.Size = new System.Drawing.Size(57, 19);
-            this.single_radiobutton_self_marriage.TabIndex = 0;
-            this.single_radiobutton_self_marriage.TabStop = true;
-            this.single_radiobutton_self_marriage.Text = "Single";
-            this.single_radiobutton_self_marriage.UseVisualStyleBackColor = true;
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.label21.Location = new System.Drawing.Point(318, 25);
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.DimGray;
+            this.label21.Location = new System.Drawing.Point(12, 176);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(89, 21);
+            this.label21.Size = new System.Drawing.Size(86, 21);
             this.label21.TabIndex = 79;
             this.label21.Text = "Civil Status";
             // 
@@ -3171,9 +2517,9 @@
             // 
             this.spouse_combobox_marriage.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.spouse_combobox_marriage.FormattingEnabled = true;
-            this.spouse_combobox_marriage.Location = new System.Drawing.Point(193, 269);
+            this.spouse_combobox_marriage.Location = new System.Drawing.Point(108, 275);
             this.spouse_combobox_marriage.Name = "spouse_combobox_marriage";
-            this.spouse_combobox_marriage.Size = new System.Drawing.Size(292, 29);
+            this.spouse_combobox_marriage.Size = new System.Drawing.Size(297, 29);
             this.spouse_combobox_marriage.TabIndex = 88;
             this.spouse_combobox_marriage.TextChanged += new System.EventHandler(this.spouse_combobox_marriage_TextChanged);
             // 
@@ -3192,7 +2538,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            this.label27.ForeColor = System.Drawing.Color.DimGray;
             this.label27.Location = new System.Drawing.Point(28, 22);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(162, 40);
@@ -3201,123 +2547,26 @@
             // 
             // contactNumber_textbox
             // 
-            this.contactNumber_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.contactNumber_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.contactNumber_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contactNumber_textbox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactNumber_textbox.ForeColor = System.Drawing.Color.White;
-            this.contactNumber_textbox.Location = new System.Drawing.Point(434, 98);
+            this.contactNumber_textbox.Location = new System.Drawing.Point(149, 216);
             this.contactNumber_textbox.Mask = "(+63) 999 - 999 - 9999";
             this.contactNumber_textbox.Name = "contactNumber_textbox";
-            this.contactNumber_textbox.Size = new System.Drawing.Size(142, 25);
+            this.contactNumber_textbox.Size = new System.Drawing.Size(149, 22);
             this.contactNumber_textbox.TabIndex = 83;
             // 
             // address_textbox
             // 
-            this.address_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.address_textbox.BackColor = System.Drawing.Color.White;
+            this.address_textbox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.address_textbox.ForeColor = System.Drawing.Color.White;
-            this.address_textbox.Location = new System.Drawing.Point(434, 56);
+            this.address_textbox.Location = new System.Drawing.Point(149, 252);
             this.address_textbox.Multiline = true;
             this.address_textbox.Name = "address_textbox";
-            this.address_textbox.Size = new System.Drawing.Size(277, 37);
+            this.address_textbox.Size = new System.Drawing.Size(149, 37);
             this.address_textbox.TabIndex = 82;
-            // 
-            // mi_textbox
-            // 
-            this.mi_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.mi_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mi_textbox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.mi_textbox.ForeColor = System.Drawing.Color.White;
-            this.mi_textbox.Location = new System.Drawing.Point(179, 60);
-            this.mi_textbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.mi_textbox.MaxLength = 1;
-            this.mi_textbox.Name = "mi_textbox";
-            this.mi_textbox.Size = new System.Drawing.Size(44, 18);
-            this.mi_textbox.TabIndex = 51;
-            this.mi_textbox.Text = "mi";
-            this.mi_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mi_textbox.Click += new System.EventHandler(this.Names_textbox_MouseClick);
-            this.mi_textbox.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
-            this.mi_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
-            // suffix_textbox
-            // 
-            this.suffix_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.suffix_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.suffix_textbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suffix_textbox.ForeColor = System.Drawing.Color.White;
-            this.suffix_textbox.Location = new System.Drawing.Point(231, 28);
-            this.suffix_textbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.suffix_textbox.Name = "suffix_textbox";
-            this.suffix_textbox.Size = new System.Drawing.Size(47, 22);
-            this.suffix_textbox.TabIndex = 52;
-            this.suffix_textbox.Text = "suffix";
-            this.suffix_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.suffix_textbox.Click += new System.EventHandler(this.Names_textbox_MouseClick);
-            this.suffix_textbox.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
-            this.suffix_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
-            // firstname_textbox
-            // 
-            this.firstname_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.firstname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstname_textbox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.firstname_textbox.ForeColor = System.Drawing.Color.White;
-            this.firstname_textbox.Location = new System.Drawing.Point(66, 60);
-            this.firstname_textbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.firstname_textbox.Name = "firstname_textbox";
-            this.firstname_textbox.Size = new System.Drawing.Size(135, 18);
-            this.firstname_textbox.TabIndex = 50;
-            this.firstname_textbox.Text = "firstname";
-            this.firstname_textbox.Click += new System.EventHandler(this.Names_textbox_MouseClick);
-            this.firstname_textbox.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
-            this.firstname_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
-            // lastname_textbox
-            // 
-            this.lastname_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.lastname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lastname_textbox.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.lastname_textbox.ForeColor = System.Drawing.Color.White;
-            this.lastname_textbox.Location = new System.Drawing.Point(66, 25);
-            this.lastname_textbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lastname_textbox.Name = "lastname_textbox";
-            this.lastname_textbox.Size = new System.Drawing.Size(135, 25);
-            this.lastname_textbox.TabIndex = 53;
-            this.lastname_textbox.Text = "lastname";
-            this.lastname_textbox.Click += new System.EventHandler(this.Names_textbox_MouseClick);
-            this.lastname_textbox.TextChanged += new System.EventHandler(this.Names_textbox_profile_TextChanged);
-            this.lastname_textbox.Leave += new System.EventHandler(this.Names_textbox_Leave);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(305, 101);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(113, 19);
-            this.label17.TabIndex = 79;
-            this.label17.Text = "Contact Number";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(355, 66);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(58, 19);
-            this.label18.TabIndex = 79;
-            this.label18.Text = "Address";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(60, 35);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(153, 19);
-            this.label23.TabIndex = 49;
-            this.label23.Text = "________________________";
             // 
             // flowLayoutPanel3
             // 
@@ -3325,77 +2574,11 @@
             this.flowLayoutPanel3.Controls.Add(this.baptism_button);
             this.flowLayoutPanel3.Controls.Add(this.confirmation_button);
             this.flowLayoutPanel3.Controls.Add(this.marriage_button);
-            this.flowLayoutPanel3.Controls.Add(this.bloodletting_button);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 190);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(784, 11);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(734, 32);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(54, 32);
             this.flowLayoutPanel3.TabIndex = 56;
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.ForeColor = System.Drawing.Color.White;
-            this.label73.Location = new System.Drawing.Point(227, 35);
-            this.label73.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(57, 19);
-            this.label73.TabIndex = 86;
-            this.label73.Text = "________";
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.ForeColor = System.Drawing.Color.White;
-            this.label83.Location = new System.Drawing.Point(59, 65);
-            this.label83.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(105, 19);
-            this.label83.TabIndex = 87;
-            this.label83.Text = "________________";
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.ForeColor = System.Drawing.Color.White;
-            this.label84.Location = new System.Drawing.Point(182, 65);
-            this.label84.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(39, 19);
-            this.label84.TabIndex = 88;
-            this.label84.Text = "_____";
-            // 
-            // cancel_button_marriage
-            // 
-            this.cancel_button_marriage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.cancel_button_marriage.FlatAppearance.BorderSize = 0;
-            this.cancel_button_marriage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel_button_marriage.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancel_button_marriage.ForeColor = System.Drawing.Color.White;
-            this.cancel_button_marriage.Location = new System.Drawing.Point(407, 344);
-            this.cancel_button_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.cancel_button_marriage.Name = "cancel_button_marriage";
-            this.cancel_button_marriage.Size = new System.Drawing.Size(117, 32);
-            this.cancel_button_marriage.TabIndex = 91;
-            this.cancel_button_marriage.Text = "Cancel";
-            this.cancel_button_marriage.UseVisualStyleBackColor = false;
-            this.cancel_button_marriage.Click += new System.EventHandler(this.cancel_button_marriage_Click);
-            // 
-            // save_button_marriage
-            // 
-            this.save_button_marriage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.save_button_marriage.FlatAppearance.BorderSize = 0;
-            this.save_button_marriage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.save_button_marriage.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.save_button_marriage.ForeColor = System.Drawing.Color.White;
-            this.save_button_marriage.Location = new System.Drawing.Point(182, 344);
-            this.save_button_marriage.Margin = new System.Windows.Forms.Padding(2);
-            this.save_button_marriage.Name = "save_button_marriage";
-            this.save_button_marriage.Size = new System.Drawing.Size(117, 32);
-            this.save_button_marriage.TabIndex = 94;
-            this.save_button_marriage.Text = "Save";
-            this.save_button_marriage.UseVisualStyleBackColor = false;
-            this.save_button_marriage.Click += new System.EventHandler(this.save_button_marriage_Click);
             // 
             // Applications_datagridview
             // 
@@ -3405,50 +2588,382 @@
             this.Applications_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Applications_datagridview.Location = new System.Drawing.Point(0, -2);
             this.Applications_datagridview.Name = "Applications_datagridview";
-            this.Applications_datagridview.Size = new System.Drawing.Size(54, 52);
+            this.Applications_datagridview.Size = new System.Drawing.Size(10, 52);
             this.Applications_datagridview.TabIndex = 96;
             this.Applications_datagridview.Visible = false;
             // 
             // marriage_panel
             // 
             this.marriage_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.marriage_panel.Controls.Add(this.cancel_button_marriage);
-            this.marriage_panel.Controls.Add(this.panel7);
-            this.marriage_panel.Controls.Add(this.save_button_marriage);
-            this.marriage_panel.Location = new System.Drawing.Point(0, 222);
+            this.marriage_panel.Controls.Add(this.birthdate_dateTimePicker);
+            this.marriage_panel.Location = new System.Drawing.Point(401, 238);
             this.marriage_panel.Name = "marriage_panel";
             this.marriage_panel.Size = new System.Drawing.Size(734, 384);
             this.marriage_panel.TabIndex = 97;
+            // 
+            // lastname_textbox
+            // 
+            this.lastname_textbox.AutoSize = true;
+            this.lastname_textbox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastname_textbox.ForeColor = System.Drawing.Color.White;
+            this.lastname_textbox.Location = new System.Drawing.Point(3, -3);
+            this.lastname_textbox.Name = "lastname_textbox";
+            this.lastname_textbox.Size = new System.Drawing.Size(134, 32);
+            this.lastname_textbox.TabIndex = 98;
+            this.lastname_textbox.Text = "BALTAZAR";
+            // 
+            // suffix_textbox
+            // 
+            this.suffix_textbox.AutoSize = true;
+            this.suffix_textbox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suffix_textbox.ForeColor = System.Drawing.Color.White;
+            this.suffix_textbox.Location = new System.Drawing.Point(143, 12);
+            this.suffix_textbox.Name = "suffix_textbox";
+            this.suffix_textbox.Size = new System.Drawing.Size(16, 17);
+            this.suffix_textbox.TabIndex = 99;
+            this.suffix_textbox.Text = "jr";
+            // 
+            // firstname_textbox
+            // 
+            this.firstname_textbox.AutoSize = true;
+            this.firstname_textbox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstname_textbox.ForeColor = System.Drawing.Color.White;
+            this.firstname_textbox.Location = new System.Drawing.Point(3, 1);
+            this.firstname_textbox.Name = "firstname_textbox";
+            this.firstname_textbox.Size = new System.Drawing.Size(56, 21);
+            this.firstname_textbox.TabIndex = 100;
+            this.firstname_textbox.Text = "Simon";
+            // 
+            // mi_textbox
+            // 
+            this.mi_textbox.AutoSize = true;
+            this.mi_textbox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.mi_textbox.ForeColor = System.Drawing.Color.White;
+            this.mi_textbox.Location = new System.Drawing.Point(65, 1);
+            this.mi_textbox.Name = "mi_textbox";
+            this.mi_textbox.Size = new System.Drawing.Size(20, 21);
+            this.mi_textbox.TabIndex = 101;
+            this.mi_textbox.Text = "C";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.lastname_textbox);
+            this.flowLayoutPanel1.Controls.Add(this.suffix_textbox);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 29);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(284, 29);
+            this.flowLayoutPanel1.TabIndex = 102;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.firstname_textbox);
+            this.flowLayoutPanel2.Controls.Add(this.mi_textbox);
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(16, 71);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(284, 22);
+            this.flowLayoutPanel2.TabIndex = 103;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(14, 103);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 21);
+            this.label2.TabIndex = 104;
+            this.label2.Text = "Gender";
+            // 
+            // gender_label
+            // 
+            this.gender_label.AutoSize = true;
+            this.gender_label.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.gender_label.ForeColor = System.Drawing.Color.White;
+            this.gender_label.Location = new System.Drawing.Point(147, 106);
+            this.gender_label.Name = "gender_label";
+            this.gender_label.Size = new System.Drawing.Size(46, 21);
+            this.gender_label.TabIndex = 104;
+            this.gender_label.Text = "Male";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(12, 218);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 21);
+            this.label3.TabIndex = 105;
+            this.label3.Text = "Contract Number";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(11, 259);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 21);
+            this.label4.TabIndex = 106;
+            this.label4.Text = "Address";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(12, 135);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 21);
+            this.label5.TabIndex = 107;
+            this.label5.Text = "Birthdate";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(147, 138);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 21);
+            this.label6.TabIndex = 108;
+            this.label6.Text = "label6";
+            // 
+            // civilStatus_label
+            // 
+            this.civilStatus_label.AutoSize = true;
+            this.civilStatus_label.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.civilStatus_label.ForeColor = System.Drawing.Color.White;
+            this.civilStatus_label.Location = new System.Drawing.Point(147, 176);
+            this.civilStatus_label.Name = "civilStatus_label";
+            this.civilStatus_label.Size = new System.Drawing.Size(54, 21);
+            this.civilStatus_label.TabIndex = 109;
+            this.civilStatus_label.Text = "label7";
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Controls.Add(this.lastname_textbox_father_self_marriage);
+            this.flowLayoutPanel4.Controls.Add(this.suffix_textbox_father_self_marriage);
+            this.flowLayoutPanel4.Controls.Add(this.firstname_textbox_father_self_marriage);
+            this.flowLayoutPanel4.Controls.Add(this.mi_textbox_father_self_marriage);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(290, 29);
+            this.flowLayoutPanel4.TabIndex = 100;
+            // 
+            // lastname_textbox_father_self_marriage
+            // 
+            this.lastname_textbox_father_self_marriage.AutoSize = true;
+            this.lastname_textbox_father_self_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastname_textbox_father_self_marriage.Location = new System.Drawing.Point(3, 0);
+            this.lastname_textbox_father_self_marriage.Name = "lastname_textbox_father_self_marriage";
+            this.lastname_textbox_father_self_marriage.Size = new System.Drawing.Size(81, 21);
+            this.lastname_textbox_father_self_marriage.TabIndex = 0;
+            this.lastname_textbox_father_self_marriage.Text = "Baltimore";
+            // 
+            // firstname_textbox_father_self_marriage
+            // 
+            this.firstname_textbox_father_self_marriage.AutoSize = true;
+            this.firstname_textbox_father_self_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstname_textbox_father_self_marriage.Location = new System.Drawing.Point(116, 0);
+            this.firstname_textbox_father_self_marriage.Name = "firstname_textbox_father_self_marriage";
+            this.firstname_textbox_father_self_marriage.Size = new System.Drawing.Size(90, 21);
+            this.firstname_textbox_father_self_marriage.TabIndex = 1;
+            this.firstname_textbox_father_self_marriage.Text = "Mongoose";
+            // 
+            // suffix_textbox_father_self_marriage
+            // 
+            this.suffix_textbox_father_self_marriage.AutoSize = true;
+            this.suffix_textbox_father_self_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suffix_textbox_father_self_marriage.Location = new System.Drawing.Point(90, 0);
+            this.suffix_textbox_father_self_marriage.Name = "suffix_textbox_father_self_marriage";
+            this.suffix_textbox_father_self_marriage.Size = new System.Drawing.Size(20, 21);
+            this.suffix_textbox_father_self_marriage.TabIndex = 110;
+            this.suffix_textbox_father_self_marriage.Text = "jr";
+            // 
+            // mi_textbox_father_self_marriage
+            // 
+            this.mi_textbox_father_self_marriage.AutoSize = true;
+            this.mi_textbox_father_self_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mi_textbox_father_self_marriage.Location = new System.Drawing.Point(212, 0);
+            this.mi_textbox_father_self_marriage.Name = "mi_textbox_father_self_marriage";
+            this.mi_textbox_father_self_marriage.Size = new System.Drawing.Size(21, 21);
+            this.mi_textbox_father_self_marriage.TabIndex = 111;
+            this.mi_textbox_father_self_marriage.Text = "D";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(6, 35);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(94, 17);
+            this.label7.TabIndex = 101;
+            this.label7.Text = "Place of Origin";
+            // 
+            // po_textbox_father_self_marriage
+            // 
+            this.po_textbox_father_self_marriage.AutoSize = true;
+            this.po_textbox_father_self_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.po_textbox_father_self_marriage.Location = new System.Drawing.Point(116, 35);
+            this.po_textbox_father_self_marriage.Name = "po_textbox_father_self_marriage";
+            this.po_textbox_father_self_marriage.Size = new System.Drawing.Size(87, 21);
+            this.po_textbox_father_self_marriage.TabIndex = 101;
+            this.po_textbox_father_self_marriage.Text = "Davao City";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(7, 64);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 17);
+            this.label9.TabIndex = 101;
+            this.label9.Text = "Residence";
+            // 
+            // residence_textbox_father_self_marriage
+            // 
+            this.residence_textbox_father_self_marriage.AutoSize = true;
+            this.residence_textbox_father_self_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.residence_textbox_father_self_marriage.Location = new System.Drawing.Point(116, 64);
+            this.residence_textbox_father_self_marriage.Name = "residence_textbox_father_self_marriage";
+            this.residence_textbox_father_self_marriage.Size = new System.Drawing.Size(80, 21);
+            this.residence_textbox_father_self_marriage.TabIndex = 101;
+            this.residence_textbox_father_self_marriage.Text = "Cebu City";
+            // 
+            // mother_panel_self_marriage
+            // 
+            this.mother_panel_self_marriage.BackColor = System.Drawing.Color.White;
+            this.mother_panel_self_marriage.Controls.Add(this.residence_textbox_mother_self_marriage);
+            this.mother_panel_self_marriage.Controls.Add(this.po_textbox_mother_self_marriage);
+            this.mother_panel_self_marriage.Controls.Add(this.label11);
+            this.mother_panel_self_marriage.Controls.Add(this.label13);
+            this.mother_panel_self_marriage.Controls.Add(this.flowLayoutPanel5);
+            this.mother_panel_self_marriage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mother_panel_self_marriage.Location = new System.Drawing.Point(108, 171);
+            this.mother_panel_self_marriage.Margin = new System.Windows.Forms.Padding(2);
+            this.mother_panel_self_marriage.Name = "mother_panel_self_marriage";
+            this.mother_panel_self_marriage.Size = new System.Drawing.Size(297, 93);
+            this.mother_panel_self_marriage.TabIndex = 102;
+            // 
+            // residence_textbox_mother_self_marriage
+            // 
+            this.residence_textbox_mother_self_marriage.AutoSize = true;
+            this.residence_textbox_mother_self_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.residence_textbox_mother_self_marriage.Location = new System.Drawing.Point(116, 64);
+            this.residence_textbox_mother_self_marriage.Name = "residence_textbox_mother_self_marriage";
+            this.residence_textbox_mother_self_marriage.Size = new System.Drawing.Size(80, 21);
+            this.residence_textbox_mother_self_marriage.TabIndex = 101;
+            this.residence_textbox_mother_self_marriage.Text = "Cebu City";
+            // 
+            // po_textbox_mother_self_marriage
+            // 
+            this.po_textbox_mother_self_marriage.AutoSize = true;
+            this.po_textbox_mother_self_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.po_textbox_mother_self_marriage.Location = new System.Drawing.Point(116, 35);
+            this.po_textbox_mother_self_marriage.Name = "po_textbox_mother_self_marriage";
+            this.po_textbox_mother_self_marriage.Size = new System.Drawing.Size(87, 21);
+            this.po_textbox_mother_self_marriage.TabIndex = 101;
+            this.po_textbox_mother_self_marriage.Text = "Davao City";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(7, 64);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(67, 17);
+            this.label11.TabIndex = 101;
+            this.label11.Text = "Residence";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(6, 35);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(94, 17);
+            this.label13.TabIndex = 101;
+            this.label13.Text = "Place of Origin";
+            // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.Controls.Add(this.lastname_textbox_mother_self_marriage);
+            this.flowLayoutPanel5.Controls.Add(this.suffix_textbox_mother_self_marriage);
+            this.flowLayoutPanel5.Controls.Add(this.firstname_textbox_mother_self_marriage);
+            this.flowLayoutPanel5.Controls.Add(this.mi_textbox_mother_self_marriage);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(290, 29);
+            this.flowLayoutPanel5.TabIndex = 100;
+            // 
+            // lastname_textbox_mother_self_marriage
+            // 
+            this.lastname_textbox_mother_self_marriage.AutoSize = true;
+            this.lastname_textbox_mother_self_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastname_textbox_mother_self_marriage.Location = new System.Drawing.Point(3, 0);
+            this.lastname_textbox_mother_self_marriage.Name = "lastname_textbox_mother_self_marriage";
+            this.lastname_textbox_mother_self_marriage.Size = new System.Drawing.Size(81, 21);
+            this.lastname_textbox_mother_self_marriage.TabIndex = 0;
+            this.lastname_textbox_mother_self_marriage.Text = "Baltimore";
+            // 
+            // suffix_textbox_mother_self_marriage
+            // 
+            this.suffix_textbox_mother_self_marriage.AutoSize = true;
+            this.suffix_textbox_mother_self_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suffix_textbox_mother_self_marriage.Location = new System.Drawing.Point(90, 0);
+            this.suffix_textbox_mother_self_marriage.Name = "suffix_textbox_mother_self_marriage";
+            this.suffix_textbox_mother_self_marriage.Size = new System.Drawing.Size(20, 21);
+            this.suffix_textbox_mother_self_marriage.TabIndex = 110;
+            this.suffix_textbox_mother_self_marriage.Text = "jr";
+            // 
+            // firstname_textbox_mother_self_marriage
+            // 
+            this.firstname_textbox_mother_self_marriage.AutoSize = true;
+            this.firstname_textbox_mother_self_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstname_textbox_mother_self_marriage.Location = new System.Drawing.Point(116, 0);
+            this.firstname_textbox_mother_self_marriage.Name = "firstname_textbox_mother_self_marriage";
+            this.firstname_textbox_mother_self_marriage.Size = new System.Drawing.Size(90, 21);
+            this.firstname_textbox_mother_self_marriage.TabIndex = 1;
+            this.firstname_textbox_mother_self_marriage.Text = "Mongoose";
+            // 
+            // mi_textbox_mother_self_marriage
+            // 
+            this.mi_textbox_mother_self_marriage.AutoSize = true;
+            this.mi_textbox_mother_self_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mi_textbox_mother_self_marriage.Location = new System.Drawing.Point(212, 0);
+            this.mi_textbox_mother_self_marriage.Name = "mi_textbox_mother_self_marriage";
+            this.mi_textbox_mother_self_marriage.Size = new System.Drawing.Size(21, 21);
+            this.mi_textbox_mother_self_marriage.TabIndex = 111;
+            this.mi_textbox_mother_self_marriage.Text = "D";
             // 
             // Person
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.ClientSize = new System.Drawing.Size(735, 605);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.ClientSize = new System.Drawing.Size(1170, 605);
             this.ControlBox = false;
+            this.Controls.Add(this.civilStatus_label);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.gender_label);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.flowLayoutPanel2);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.marriage_panel);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.Applications_datagridview);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.panel12);
-            this.Controls.Add(this.birthdate_dateTimePicker);
             this.Controls.Add(this.address_textbox);
             this.Controls.Add(this.contactNumber_textbox);
             this.Controls.Add(this.flowLayoutPanel3);
-            this.Controls.Add(this.mi_textbox);
-            this.Controls.Add(this.suffix_textbox);
-            this.Controls.Add(this.firstname_textbox);
-            this.Controls.Add(this.lastname_textbox);
             this.Controls.Add(this.btn_Close);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.label73);
-            this.Controls.Add(this.label83);
-            this.Controls.Add(this.label84);
-            this.Controls.Add(this.bloodletting_panel);
+            this.Controls.Add(this.label21);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -3468,10 +2983,6 @@
             this.father_panel_confirmation.PerformLayout();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
-            this.bloodletting_panel.ResumeLayout(false);
-            this.bloodletting_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.donation_datagridview_bloodletting)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quantityDonation_numericupdown_bloodletting)).EndInit();
             this.baptism_panel.ResumeLayout(false);
             this.baptism_details_panel.ResumeLayout(false);
             this.baptism_details_panel.PerformLayout();
@@ -3487,10 +2998,8 @@
             this.panel1.PerformLayout();
             this.godFather_panel_baptism.ResumeLayout(false);
             this.godFather_panel_baptism.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.birthdate_dateTimePicker.ResumeLayout(false);
+            this.birthdate_dateTimePicker.PerformLayout();
             this.panel25.ResumeLayout(false);
             this.panel25.PerformLayout();
             this.panel24.ResumeLayout(false);
@@ -3503,15 +3012,21 @@
             this.panel32.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.panel29.ResumeLayout(false);
-            this.panel29.PerformLayout();
-            this.panel27.ResumeLayout(false);
-            this.panel27.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
+            this.father_panel_self_marriage.ResumeLayout(false);
+            this.father_panel_self_marriage.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Applications_datagridview)).EndInit();
             this.marriage_panel.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.flowLayoutPanel4.PerformLayout();
+            this.mother_panel_self_marriage.ResumeLayout(false);
+            this.mother_panel_self_marriage.PerformLayout();
+            this.flowLayoutPanel5.ResumeLayout(false);
+            this.flowLayoutPanel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3529,14 +3044,6 @@
         private System.Windows.Forms.TextBox page_textbox_baptism;
         private System.Windows.Forms.TextBox registry_textbox_baptism;
         private System.Windows.Forms.Panel confirmation_panel;
-        private System.Windows.Forms.Button bloodletting_button;
-        private System.Windows.Forms.Panel bloodletting_panel;
-        private System.Windows.Forms.Label label101;
-        private System.Windows.Forms.ComboBox bloodDonationEvent_combobox_bloodletting;
-        private System.Windows.Forms.Label label107;
-        private System.Windows.Forms.NumericUpDown quantityDonation_numericupdown_bloodletting;
-        private System.Windows.Forms.Label label104;
-        private System.Windows.Forms.Label label103;
         private System.Windows.Forms.Panel baptism_panel;
         private System.Windows.Forms.Panel baptism_details_panel;
         private System.Windows.Forms.Panel godFather_panel_baptism;
@@ -3548,11 +3055,6 @@
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Button btn_Close;
-        private System.Windows.Forms.Label totalDonation_label_bloodletting;
-        private System.Windows.Forms.Button delete_button_bloodletting;
-        private System.Windows.Forms.Button add_button_bloodletting;
-        private System.Windows.Forms.DataGridView donation_datagridview_bloodletting;
-        private System.Windows.Forms.Button clear_button_bloodletting;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox godfather_checkbox;
         private System.Windows.Forms.CheckBox godMother_checkbox;
@@ -3562,15 +3064,10 @@
         private System.Windows.Forms.TextBox lastname_textbox_godMother_baptism;
         private System.Windows.Forms.TextBox mi_textbox_godMother_baptism;
         private System.Windows.Forms.TextBox firstname_textbox_godMother_baptism;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.RadioButton genderFemale_radiobutton;
-        private System.Windows.Forms.RadioButton genderMale_radiobutton;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.RadioButton natural_radiobutton_baptism;
         private System.Windows.Forms.RadioButton civil_radiobutton_baptism;
         private System.Windows.Forms.RadioButton legitimate_radiobutton_baptism;
-        private System.Windows.Forms.DateTimePicker birthdate_dateTimePicker;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox remarks_textbox_baptism;
         private System.Windows.Forms.Label label30;
@@ -3632,20 +3129,10 @@
         private System.Windows.Forms.TextBox lastname_textbox_mother_confirmation;
         private System.Windows.Forms.TextBox mi_textbox_mother_confirmation;
         private System.Windows.Forms.TextBox firstname_textbox_mother_confirmation;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel birthdate_dateTimePicker;
         private System.Windows.Forms.MaskedTextBox contactNumber_textbox;
         private System.Windows.Forms.TextBox address_textbox;
-        private System.Windows.Forms.TextBox mi_textbox;
-        private System.Windows.Forms.TextBox suffix_textbox;
-        private System.Windows.Forms.TextBox firstname_textbox;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.RadioButton widow_radiobutton_self_marriage;
-        private System.Windows.Forms.RadioButton single_radiobutton_self_marriage;
-        private System.Windows.Forms.TextBox lastname_textbox;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox remarks_textbox_marriage;
         private System.Windows.Forms.CheckBox godFather_checkbox_marriage;
         private System.Windows.Forms.Panel panel19;
@@ -3676,24 +3163,9 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.CheckBox father_checkbox_self_marriage;
-        private System.Windows.Forms.Panel panel27;
-        private System.Windows.Forms.TextBox suffix_textbox_father_self_marriage;
-        private System.Windows.Forms.TextBox residence_textbox_father_self_marriage;
-        private System.Windows.Forms.TextBox lastname_textbox_father_self_marriage;
-        private System.Windows.Forms.TextBox mi_textbox_father_self_marriage;
-        private System.Windows.Forms.TextBox firstname_textbox_father_self_marriage;
+        private System.Windows.Forms.Panel father_panel_self_marriage;
         private System.Windows.Forms.CheckBox mother_checkbox_self_marriage;
-        private System.Windows.Forms.Panel panel29;
-        private System.Windows.Forms.TextBox suffix_textbox_mother_self_marriage;
-        private System.Windows.Forms.TextBox residence_textbox_mother_self_marriage;
-        private System.Windows.Forms.TextBox lastname_textbox_mother_self_marriage;
-        private System.Windows.Forms.TextBox mi_textbox_mother_self_marriage;
-        private System.Windows.Forms.TextBox firstname_textbox_mother_self_marriage;
         private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.TextBox mi_textbox_spouse_marriage;
-        private System.Windows.Forms.TextBox suffix_textbox_spouse_marriage;
-        private System.Windows.Forms.TextBox firstname_textbox_spouse_marriage;
-        private System.Windows.Forms.TextBox lastname_textbox_spouse_marriage;
         private System.Windows.Forms.DateTimePicker birthdate_datetimepicker_spouse_marriage;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.CheckBox father_checkbox_spouse_marriage;
@@ -3713,16 +3185,7 @@
         private System.Windows.Forms.ComboBox spouse_combobox_marriage;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.Label label84;
         private System.Windows.Forms.Label label93;
-        private System.Windows.Forms.Button save_button_confirmation;
-        private System.Windows.Forms.Button save_button_baptism;
-        private System.Windows.Forms.Button cancel_button_confirmation;
-        private System.Windows.Forms.Button cancel_button_marriage;
-        private System.Windows.Forms.Button cancel_button_baptism;
-        private System.Windows.Forms.Button save_button_marriage;
         private System.Windows.Forms.DataGridView Applications_datagridview;
         private System.Windows.Forms.Panel mother_panel_baptism;
         private System.Windows.Forms.MaskedTextBox contactNumber_textbox_spouse_marriage;
@@ -3735,5 +3198,37 @@
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel marriage_panel;
+        private System.Windows.Forms.Label lastname_textbox;
+        private System.Windows.Forms.Label suffix_textbox;
+        private System.Windows.Forms.Label firstname_textbox;
+        private System.Windows.Forms.Label mi_textbox;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label gender_label;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label civilStatus_label;
+        private System.Windows.Forms.Label residence_textbox_father_self_marriage;
+        private System.Windows.Forms.Label po_textbox_father_self_marriage;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.Label lastname_textbox_father_self_marriage;
+        private System.Windows.Forms.Label suffix_textbox_father_self_marriage;
+        private System.Windows.Forms.Label firstname_textbox_father_self_marriage;
+        private System.Windows.Forms.Label mi_textbox_father_self_marriage;
+        private System.Windows.Forms.Panel mother_panel_self_marriage;
+        private System.Windows.Forms.Label residence_textbox_mother_self_marriage;
+        private System.Windows.Forms.Label po_textbox_mother_self_marriage;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
+        private System.Windows.Forms.Label lastname_textbox_mother_self_marriage;
+        private System.Windows.Forms.Label suffix_textbox_mother_self_marriage;
+        private System.Windows.Forms.Label firstname_textbox_mother_self_marriage;
+        private System.Windows.Forms.Label mi_textbox_mother_self_marriage;
     }
 }

@@ -14,20 +14,45 @@ namespace ParishSystem
     {
         DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
         Point lastClick;
-        char sacramentType;
+        SacramentType sacramentType;
+        DataTable sacramentItem;
+
+        Dictionary<TextBox, string> placeHolderText = new Dictionary<TextBox, string>();
+        
+
+
         public AddApplication(SacramentType type)
         {
             InitializeComponent();
-            application_birthdate_dtp.MaxDate = DateTime.Now;
+            birthdate_dtp.MaxDate = DateTime.Now;
             label1.MouseDown += AddApplication_MouseDown;
             label1.MouseMove += AddApplication_MouseMove;
             panel1.MouseDown += AddApplication_MouseDown;
             panel1.MouseMove += AddApplication_MouseMove;
+
+
+            //Input up filler text
+            placeHolderText.Add(firstName_textBox, "First Name");
+            placeHolderText.Add(midName_textBox, "M.I.");
+            placeHolderText.Add(lastName_textBox, "Last Name");
+            placeHolderText.Add(suffix_textBox, "Suffix");
+
+            //Load filler text
+            firstName_textBox.Text = placeHolderText[firstName_textBox];
+            midName_textBox.Text = placeHolderText[midName_textBox];
+            lastName_textBox.Text = placeHolderText[lastName_textBox];
+            suffix_textBox.Text = placeHolderText[suffix_textBox];
+
+            Console.WriteLine("firstName_textBox.Text = placeHolderText[firstName_textBox]; NOT SAME {0}", Object.ReferenceEquals(firstName_textBox.Text, placeHolderText[firstName_textBox]));
             
             applicationNotice_label.MaximumSize = panel1.Size - panel1.Padding.Size;
 
-            this.sacramentType = type == SacramentType.Baptism ? 'B' : 'C';
-            this.label1.Text = type == SacramentType.Baptism ? "Baptism Application" : "Confirmation Application";
+            this.sacramentType = type;
+            label1.Text = sacramentType + " Application";
+            sacramentItem = dh.getItem(sacramentType.ToString());
+            price_textBox.Text = sacramentItem.Rows[0]["suggestedPrice"].ToString();
+
+
             
         }
 
@@ -38,40 +63,45 @@ namespace ParishSystem
 
         private void setFormEditable(bool editable)
         {
-            application_firstName_textBox.ReadOnly = editable;
-            application_midName_textBox.ReadOnly = editable;
-            application_lastName_textBox.ReadOnly = editable;
-            application_suffix_textBox.ReadOnly = editable;
-            application_male_radio.Enabled = editable;
-            application_female_radio.Enabled = editable;
-            application_birthdate_dtp.Enabled = editable;
+            firstName_textBox.ReadOnly = editable;
+            midName_textBox.ReadOnly = editable;
+            lastName_textBox.ReadOnly = editable;
+            suffix_textBox.ReadOnly = editable;
+            male_radio.Enabled = editable;
+            female_radio.Enabled = editable;
+            birthdate_dtp.Enabled = editable;
         }
 
 
         private void application_apply_button_Click(object sender, EventArgs e)
         {
-            string fn = application_firstName_textBox.Text;
-            string mn = application_midName_textBox.Text;
-            string ln = application_lastName_textBox.Text;
-            string suffix = application_suffix_textBox.Text;
-            char gender = application_male_radio.Checked ? 'M' : 'F';
-            DateTime birthDate = application_birthdate_dtp.Value;
+            string fn = firstName_textBox.Text;
+            string mn = midName_textBox.Text;
+            string ln = lastName_textBox.Text;
+            string suffix = suffix_textBox.Text == "Suffix" ? null : suffix_textBox.Text;
+            Gender gender = male_radio.Checked ? Gender.Male : Gender.Female;
+            DateTime birthDate = birthdate_dtp.Value;
+
+            int itemTypeID = int.Parse(sacramentItem.Rows[0]["itemTypeID"].ToString());
+            double price = double.Parse(sacramentItem.Rows[0]["suggestedPrice"].ToString());
 
             int id = dh.getGeneralProfileID(fn, mn, ln, suffix, gender, birthDate);
 
             if (id == -1) //-1 indicates no such profile exists in the database
             {
-                dh.addGeneralProfile(fn, mn ,ln ,suffix ,gender ,birthDate,null,null,null,-1,-1,-1);
+               // dh.addGeneralProfile(fn, mn ,ln ,suffix ,gender ,birthDate,null,null,null,-1,-1,-1); update this dewey
                 id = dh.getLatestID("GeneralProfile", "profileID");
 
                 bool success = dh.addNewApplicant(id, sacramentType);
+                id = dh.getLatestID("Application", "applicationID");
+                dh.addSacramentIncome(id, itemTypeID, price, remarks_textBox.Text);
                 displayMessage(success);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
             {
-                this.AcceptButton = application_yes_button;
+                this.AcceptButton = yes_button;
                 panel1.Show();
             }
         }
@@ -114,7 +144,7 @@ namespace ParishSystem
             pictureBox1.Image = ParishSystem.Properties.Resources.Delete_32px_Gray;
         }
 
-        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -126,14 +156,15 @@ namespace ParishSystem
 
         private void application_createNewProfile_button_Click(object sender, EventArgs e)
         {
-            string fn = application_firstName_textBox.Text;
-            string mn = application_midName_textBox.Text;
-            string ln = application_lastName_textBox.Text;
-            string suffix = application_suffix_textBox.Text;
-            char gender = application_male_radio.Checked ? 'M' : 'F';
-            DateTime birthDate = application_birthdate_dtp.Value;
+            string fn = firstName_textBox.Text;
+            string mn = midName_textBox.Text;
+            string ln = lastName_textBox.Text;
+            string suffix = suffix_textBox.Text;
+            Gender gender = male_radio.Checked ? Gender.Male : Gender.Female;
+            DateTime birthDate = birthdate_dtp.Value;
+            MessageBox.Show(birthDate.ToString());
 
-            dh.addGeneralProfile(fn, mn, ln, suffix, gender, birthDate, null, null, null,-1,-1,-1);
+           // dh.addGeneralProfile(fn, mn, ln, suffix, gender, birthDate, null, null, null,-1,-1,-1); update this dewey
             bool success = dh.addNewApplicant(dh.getLatestID("GeneralProfile", "profileID"), sacramentType);
 
             displayMessage(success);
@@ -143,17 +174,17 @@ namespace ParishSystem
 
         private void application_yes_button_Click(object sender, EventArgs e)
         {
-            string fn = application_firstName_textBox.Text;
-            string mn = application_midName_textBox.Text;
-            string ln = application_lastName_textBox.Text;
-            string suffix = application_suffix_textBox.Text;
-            char gender = application_male_radio.Checked ? 'M' : 'F';
-            DateTime birthDate = application_birthdate_dtp.Value;
+            string fn = firstName_textBox.Text;
+            string mn = midName_textBox.Text;
+            string ln = lastName_textBox.Text;
+            string suffix = suffix_textBox.Text;
+            Gender gender = male_radio.Checked ? Gender.Male : Gender.Female;
+            DateTime birthDate = birthdate_dtp.Value;
 
             int id = dh.getGeneralProfileID(fn, mn, ln, suffix, gender, birthDate);
             MessageBox.Show("WELCOME");
             bool hasApplication = true;
-            if (sacramentType == 'B')
+            if (sacramentType == SacramentType.Baptism)
                 hasApplication =  dh.hasBaptismApplication(id);
             else
                 hasApplication = dh.hasConfirmationApplication(id);
@@ -175,14 +206,24 @@ namespace ParishSystem
             Notification.Show("HEEEEEEEEEEEEEEEELOOOOO MY BITCHESSSS");
         }
 
-        private void application_apply_button_Click_1(object sender, EventArgs e)
+        private void name_textBox_Leave(object sender, EventArgs e)
         {
-
+            TextBox t = sender as TextBox;
+            if (t.Text.Trim().Length == 0)
+            {
+                t.Text = placeHolderText[t];
+                t.ForeColor = Color.Gray;
+            }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void name_textBox_Enter(object sender, EventArgs e)
         {
-
+            TextBox t = sender as TextBox;
+            if (t.ForeColor == Color.Gray)
+            {
+                t.Text = "";
+                t.ForeColor = Color.Black;
+            }
         }
     }
 

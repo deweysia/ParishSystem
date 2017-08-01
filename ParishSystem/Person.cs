@@ -142,14 +142,7 @@ namespace ParishSystem
                         marriage_panel.Visible = false;
                     }
                 }
-                save_button_baptism.Visible = false;
-                save_button_confirmation.Visible = false;
-                save_button_marriage.Visible = false;
-
-                cancel_button_baptism.Visible = false;
-                cancel_button_confirmation.Visible = false;
-                cancel_button_marriage.Visible = false;
-
+               
             }
 
             else if (mode == (int)Enums.Mode.Applications)
@@ -179,14 +172,10 @@ namespace ParishSystem
             try
             {
                 if (int.Parse(DT.Rows[0]["gender"].ToString()) == (int)Enums.Gender.Male)
-                { genderMale_radiobutton.Checked = true; }
+                { gender_label.Text = "Male"; }
                 else if (int.Parse(DT.Rows[0]["gender"].ToString()) == (int)Enums.Gender.Female)
-                { genderFemale_radiobutton.Checked = true; }
-                else
-                {
-                    genderMale_radiobutton.Checked = false;
-                    genderFemale_radiobutton.Checked = false;
-                }
+                { gender_label.Text = "Female"; }
+              
             }
             catch { }
             try
@@ -208,16 +197,15 @@ namespace ParishSystem
             try
             {
                 if (int.Parse(DT.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Single)
-                    single_radiobutton_self_marriage.Checked = true;
+                    civilStatus_label.Text = "Single";
                 else if (int.Parse(DT.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Widowed)
-                    widow_radiobutton_self_marriage.Checked = true;
+                    civilStatus_label.Text = "Widowed";
             }
             catch { }
             try
-            { birthdate_dateTimePicker.Value = dh.toDateTime(DT.Rows[0]["birthdate"].ToString(), false);
-             birthdate_dateTimePicker.Format = DateTimePickerFormat.Long;}
+            { birthdate_dateTimePicker.Text = (DateTimePickerFormat.Long).ToString("MMMM, dd, yyyy");}
             catch
-            {birthdate_dateTimePicker.Format = DateTimePickerFormat.Custom;}
+            {}
             
              
         }
@@ -307,104 +295,7 @@ namespace ParishSystem
 
         #endregion
 
-        #region bloodletting
-        //--------------bloodletting--------------------//
-
-        private void load_bloodletting()
-        {//@#@#
-            donation_datagridview_bloodletting.DataSource = dh.getBloodDonations(ProfileID);
-            foreach (DataGridViewColumn row in donation_datagridview_bloodletting.Columns)
-            {
-                row.Visible = false;
-            }
-            donation_datagridview_bloodletting.Columns["quantity"].Visible = true;
-            donation_datagridview_bloodletting.Columns["eventName"].Visible = true;
-
-            quantityDonation_numericupdown_bloodletting.Value = 0;
-            bloodDonationEvent_combobox_bloodletting.Text = "";
-            delete_button_bloodletting.Enabled = false;
-            add_button_bloodletting.Text = "Add";
-            add_button_bloodletting.Enabled = false;
-            totalDonation_label_bloodletting.Text = dh.getTotalBloodDonationOf(ProfileID).ToString();
-            bloodDonationEvent_combobox_bloodletting.Items.Clear();
-            foreach (DataRow row in dh.getBloodlettingEvents().Rows)
-            {
-                bloodDonationEvent_combobox_bloodletting.Items.Add(new ComboboxContent(int.Parse(row["bloodDonationEventID"].ToString()), row["eventName"].ToString()));
-
-            }
-
-        }
-
-        private void add_button_bloodletting_Click(object sender, EventArgs e)// add edit 
-        {
-
-            if (add_button_bloodletting.Text.Equals("Add"))
-            {
-                dh.addBloodDonation(ProfileID,
-                                    int.Parse(quantityDonation_numericupdown_bloodletting.Value.ToString()),
-                                    ((ComboboxContent)bloodDonationEvent_combobox_bloodletting.SelectedItem).ID, DateTime.Now);
-                load_bloodletting();
-
-            }
-            else if (add_button_bloodletting.Text.Equals("Edit"))
-            {
-                int A = ((ComboboxContent)bloodDonationEvent_combobox_bloodletting.SelectedItem).ID;
-                dh.editBloodDonation(ProfileID,
-                                    int.Parse(quantityDonation_numericupdown_bloodletting.Value.ToString()),
-                                    A,
-                                    DateTime.Now);
-                load_bloodletting();
-                add_button_bloodletting.Text = "Add";
-
-            }
-
-        }
-
-
-        private void delete_button_bloodletting_Click(object sender, EventArgs e)// delete
-        {
-            dh.deleteBloodDonation(int.Parse(donation_datagridview_bloodletting.SelectedRows[0].Cells["bloodDonationID"].Value.ToString()));
-            load_bloodletting();
-            add_button_bloodletting.Text = "Add";
-
-        }
-
-        private void donation_datagridview_bloodletting_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            quantityDonation_numericupdown_bloodletting.Value = decimal.Parse(donation_datagridview_bloodletting.SelectedRows[0].Cells["quantity"].Value.ToString());
-            bloodDonationEvent_combobox_bloodletting.Text = donation_datagridview_bloodletting.SelectedRows[0].Cells["eventName"].Value.ToString();
-            add_button_bloodletting.Enabled = false;
-            add_button_bloodletting.Text = "Edit";
-            delete_button_bloodletting.Enabled = true;
-
-        }
-
-        private void quantityDonation_numericupdown_bloodletting_ValueChanged(object sender, EventArgs e)
-        {
-            if (bloodDonationEvent_combobox_bloodletting.Text.Equals("") || quantityDonation_numericupdown_bloodletting.Value.ToString().Equals("0"))
-            {
-                add_button_bloodletting.Enabled = false;
-            }
-            else
-            {
-                add_button_bloodletting.Enabled = true;
-            }
-        }
-
-        private void bloodDonationEvent_combobox_bloodletting_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (bloodDonationEvent_combobox_bloodletting.Text.Equals("") || quantityDonation_numericupdown_bloodletting.Value.ToString().Equals("0"))
-            {
-                add_button_bloodletting.Enabled = false;
-            }
-            else
-            {
-                add_button_bloodletting.Enabled = true;
-            }
-        }
-
-        #endregion bloodletting   
+       
 
         #region baptism
         private void baptism_button_Click(object sender, EventArgs e)
@@ -497,92 +388,7 @@ namespace ParishSystem
                 mother_panel_baptism.Visible = false;
         }
 
-        public bool isNameEmpty(TextBox A)
-        {
-            return A.Name.Split('_')[0] == A.Text;
-        }
 
-        private void save_button_baptism_Click(object sender, EventArgs e)
-        {
-            if (isNameEmpty(firstname_textbox) ||
-                isNameEmpty(mi_textbox) ||
-                isNameEmpty(lastname_textbox) ||
-                !(legitimate_radiobutton_baptism.Checked || civil_radiobutton_baptism.Checked || natural_radiobutton_baptism.Checked) ||
-                birthdate_dateTimePicker.Format.Equals(DateTimePickerFormat.Custom) ||
-                !(genderMale_radiobutton.Checked || genderFemale_radiobutton.Checked))
-            {
-                MessageBox.Show("Person Missing");
-                return;
-            }
-            if (father_checbox.Checked &&
-                ((isNameEmpty(firstname_textbox_father_baptism) ||
-                isNameEmpty(mi_textbox_father_baptism) ||
-                isNameEmpty(lastname_textbox_father_baptism) ||
-                residence_textbox_father_baptism.Text == "")))
-            {
-                MessageBox.Show("Father Missing Fields");
-                return;
-            }
-            if (
-                mother_checkbox.Checked &&
-                ((isNameEmpty(firstname_textbox_mother_baptism) ||
-                isNameEmpty(mi_textbox_mother_baptism) ||
-                isNameEmpty(lastname_textbox_mother_baptism) ||
-                residence_textbox_mother_baptism.Text == "")))
-            {
-                MessageBox.Show("Mother Missing Fields");
-                return;
-            }
-            if (
-                godfather_checkbox.Checked &&
-                ((isNameEmpty(firstname_textbox_godFather_baptism) ||
-                isNameEmpty(mi_textbox_godFather_baptism) ||
-                isNameEmpty(lastname_textbox_godFather_baptism) ||
-                residence_textbox_godFather_baptism.Text == "")))
-            {
-                MessageBox.Show("God Father Missing Fields");
-                return;
-            }
-            if (
-                godMother_checkbox.Checked &&
-                ((isNameEmpty(firstname_textbox_godMother_baptism) ||
-                isNameEmpty(mi_textbox_godMother_baptism) ||
-                isNameEmpty(lastname_textbox_godMother_baptism) ||
-                residence_textbox_godMother_baptism.Text == "")))
-            {
-                MessageBox.Show("God Mother Missing Fields");
-                return;
-            }
-            
-            //inserting
-            int gender = genderMale_radiobutton.Checked ? 1 : 2;
-            dh.editGeneralProfile(ProfileID, firstname_textbox.Text, mi_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, gender, dh.toDateTime(birthdate_dateTimePicker.Value.ToString(), false), contactNumber_textbox.Text, address_textbox.Text, null, null);
-            if (father_checbox.Checked)//if enabled==false meaning preloaded data, if enabled==true meaning not saved data
-            {
-                try { dh.editFather(ProfileID,firstname_textbox_father_baptism.Text,mi_textbox_father_baptism.Text,lastname_textbox_father_baptism.Text,suffix_textbox_father_baptism.Text,residence_textbox_father_baptism.Text,null); }
-                catch { dh.addParent(ProfileID, firstname_textbox_father_baptism.Text, mi_textbox_father_baptism.Text, lastname_textbox_father_baptism.Text, suffix_textbox_father_baptism.Text, 'M', residence_textbox_father_baptism.Text); }
-            }
-            if (mother_checkbox.Checked)
-            {
-                try { dh.editMother(ProfileID,firstname_textbox_mother_baptism.Text, mi_textbox_mother_baptism.Text, lastname_textbox_mother_baptism.Text, suffix_textbox_mother_baptism.Text, residence_textbox_mother_baptism.Text,null); }
-                catch { dh.addParent(ProfileID, firstname_textbox_mother_baptism.Text, mi_textbox_mother_baptism.Text, lastname_textbox_mother_baptism.Text, suffix_textbox_mother_baptism.Text, 'F', residence_textbox_mother_baptism.Text); }
-            }
-            if (godfather_checkbox.Checked)
-            {
-                 dh.addSponsor(firstname_textbox_godFather_baptism.Text, mi_textbox_godFather_baptism.Text, lastname_textbox_godFather_baptism.Text, suffix_textbox_father_baptism.Text, (int)Enums.Gender.Male, residence_textbox_father_baptism.Text, ApplicationID); 
-            }
-            if (godMother_checkbox.Checked)
-            {
-                 dh.addSponsor(firstname_textbox_godMother_baptism.Text, mi_textbox_godMother_baptism.Text, lastname_textbox_godMother_baptism.Text, suffix_textbox_godMother_baptism.Text, (int)Enums.Gender.Female, residence_textbox_godMother_baptism.Text, ApplicationID); 
-            }
-            
-
-        }
-
-        private void close_button_baptism_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
         #endregion
 
         #region confirmation
@@ -730,10 +536,6 @@ namespace ParishSystem
             {
                 DataTable dt = dh.getGeneralProfile((spouse_combobox_marriage.SelectedItem as ComboboxContent).ID, (int)Enums.SacramentType.Marriage);
                 int spouseID = (spouse_combobox_marriage.SelectedItem as ComboboxContent).ID;
-                firstname_textbox_spouse_marriage.Text = dt.Rows[0]["firstname"].ToString();
-                mi_textbox_spouse_marriage.Text = dt.Rows[0]["midname"].ToString();
-                lastname_textbox_spouse_marriage.Text = dt.Rows[0]["lastname"].ToString();
-                suffix_textbox_spouse_marriage.Text = dt.Rows[0]["suffix"].ToString();
                 if (int.Parse(dt.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Single)
                     single_radiobutton_spouse_marriage.Checked = true;
                 else if (int.Parse(dt.Rows[0]["civilStatus"].ToString()) == (int)Enums.CivilStatus.Widowed)
@@ -818,54 +620,8 @@ namespace ParishSystem
             }
             else
             {
-                firstname_textbox_spouse_marriage.Text = "";
-                mi_textbox_spouse_marriage.Text = "";
-                lastname_textbox_spouse_marriage.Text = "";
-                suffix_textbox_spouse_marriage.Text = "";
-                single_radiobutton_spouse_marriage.Checked = false;
-                widowed_radiobutton_spouse_marriage.Checked = false;
-                birthdate_datetimepicker_spouse_marriage.Format = DateTimePickerFormat.Custom;
-                contactNumber_textbox_spouse_marriage.Text = "";
-                address_textbox_spouse_marriage.Text = "";
-
-                father_checkbox_spouse_marriage.Checked = false;
-                firstname_textbox_father_spouse_marriage.Text = "";
-                mi_textbox_father_spouse_marriage.Text = "";
-                lastname_textbox_father_spouse_marriage.Text = "";
-                suffix_textbox_father_spouse_marriage.Text = "";
-                residence_textbox_father_spouse_marriage.Text = "";
-
-
-                mother_checkbox_spouse_marriage.Checked = false;
-                firstname_textbox_mother_spouse_marriage.Text = "";
-                mi_textbox_mother_spouse_marriage.Text = "";
-                lastname_textbox_mother_spouse_marriage.Text = "";
-                suffix_textbox_mother_spouse_marriage.Text = "";
-                residence_textbox_mother_spouse_marriage.Text = "";
-
-                recordNumber_textbox_marriage.Text = "";
-                pageNumber_textbox_marriage.Text = "";
-                registryNumber_textbox_marriage.Text = "";
-                pageNumber_textbox_marriage.Text = "";
-                recordNumber_textbox_marriage.Text = "";
-                minister_combobox_marriage.Text = "";
-                date_dateTimePicker_marriage.Format = DateTimePickerFormat.Custom;
-
-                godFather_checkbox_marriage.Checked = false;
-                firstname_textbox_godMother_marriage.Text = "";
-                mi_textbox_godMother_marriage.Text = "";
-                lastname_textbox_godMother_marriage.Text = "";
-                suffix_textbox_godMother_marriage.Text = "";
-                residence_textbox_godMother_marriage.Text = "";
-
-                godMother_checkbox_marriage.Checked = false;
-                firstname_textbox_godFather_marriage.Text = "";
-                mi_textbox_godFather_marriage.Text = "";
-                lastname_textbox_godFather_marriage.Text = "";
-                suffix_textbox_godFather_marriage.Text = "";
-                residence_textbox_godFather_marriage.Text = "";
-
-
+               
+               
             }
         }
 
@@ -874,182 +630,12 @@ namespace ParishSystem
         #endregion
 
 
-        private void close_button_baptism_Click_1(object sender, EventArgs e)
-        {
-            load_parents();
-            refreshBaptism();
-        }
-
-        private void close_button_confirmation_Click(object sender, EventArgs e)
-        {
-            load_parents();
-            refreshConfirmation();
-        }
-
-        private void bloodletting_button_Click(object sender, EventArgs e)
-        {
-            bloodletting_panel.BringToFront();
-            load_bloodletting();
-        }
-
-        private void clear_button_bloodletting_Click(object sender, EventArgs e)
-        {
-            quantityDonation_numericupdown_bloodletting.Value = 0;
-            bloodDonationEvent_combobox_bloodletting.Text = "";
-        }
-
-        private void save_button_confirmation_Click(object sender, EventArgs e)
-        {
-            if (isNameEmpty(firstname_textbox) ||
-               isNameEmpty(mi_textbox) ||
-               isNameEmpty(lastname_textbox) ||
-               birthdate_dateTimePicker.Format.Equals(DateTimePickerFormat.Custom) ||
-               !(genderMale_radiobutton.Checked || genderFemale_radiobutton.Checked))
-            {
-                MessageBox.Show("Person Missing");
-                return;
-            }
-
-            if (father_checkbox_confirmation.Checked && (isNameEmpty(firstname_textbox_father_confirmation) ||
-                isNameEmpty(mi_textbox_father_confirmation) ||
-                isNameEmpty(lastname_textbox_father_confirmation)))
-            {
-                MessageBox.Show("Father Missing Fields");
-                return;
-            }
-
-            if (
-                mother_checkbox_confirmation.Checked ||
-                isNameEmpty(firstname_textbox_mother_confirmation) ||
-                isNameEmpty(mi_textbox_mother_confirmation) ||
-                isNameEmpty(lastname_textbox_mother_confirmation))
-            {
-                MessageBox.Show("Mother Missing Fields");
-                return;
-            }
-            if (
-                godfather_checkbox_confirmation.Checked ||
-                isNameEmpty(firstname_textbox_godFather_confirmation) ||
-                isNameEmpty(mi_textbox_godFather_confirmation) ||
-                isNameEmpty(lastname_textbox_godFather_confirmation))
-            {
-                MessageBox.Show("God Father Missing Fields");
-                return;
-            }
-            if (
-                godMother_checkbox.Checked ||
-                isNameEmpty(firstname_textbox_godMother_confirmation) ||
-                isNameEmpty(mi_textbox_godMother_confirmation) ||
-                isNameEmpty(lastname_textbox_godMother_confirmation))
-            {
-                MessageBox.Show("God Mother Missing Fields");
-                return;
-            }
-
-            //inserting
-            int gender = genderMale_radiobutton.Checked ? 1 : 2;
-            dh.editGeneralProfile(ProfileID, firstname_textbox.Text, mi_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, gender, dh.toDateTime(birthdate_dateTimePicker.Value.ToString(), false), contactNumber_textbox.Text, address_textbox.Text, null, null);
-            if (father_checkbox_confirmation.Checked)//if enabled==false meaning preloaded data, if enabled==true meaning not saved data
-            {
-                try { dh.editFather(ProfileID, firstname_textbox_father_confirmation.Text, mi_textbox_father_confirmation.Text, lastname_textbox_father_confirmation.Text, suffix_textbox_father_confirmation.Text, null, null); }
-                catch { dh.addParent(ProfileID, firstname_textbox_father_confirmation.Text, mi_textbox_father_confirmation.Text, lastname_textbox_father_confirmation.Text, suffix_textbox_father_confirmation.Text, 'M', null); }
-            }
-            if (mother_checkbox_confirmation.Checked)
-            {
-                try { dh.editMother(ProfileID, firstname_textbox_mother_confirmation.Text, mi_textbox_mother_confirmation.Text, lastname_textbox_mother_confirmation.Text, suffix_textbox_mother_confirmation.Text, null, null); }
-                catch { dh.addParent(ProfileID, firstname_textbox_mother_confirmation.Text, mi_textbox_mother_confirmation.Text, lastname_textbox_mother_confirmation.Text, suffix_textbox_mother_confirmation.Text, 'F', null); }
-            }
-            if (godfather_checkbox.Checked)
-            {
-                dh.addSponsor(firstname_textbox_godFather_confirmation.Text, mi_textbox_godFather_confirmation.Text, lastname_textbox_godFather_confirmation.Text, suffix_textbox_father_confirmation.Text, (int)Enums.Gender.Male, null, ApplicationID);
-            }
-            if (godMother_checkbox.Checked)
-            {
-                dh.addSponsor(firstname_textbox_godMother_confirmation.Text, mi_textbox_godMother_confirmation.Text, lastname_textbox_godMother_confirmation.Text, suffix_textbox_godMother_confirmation.Text, (int)Enums.Gender.Female ,null,  ApplicationID);
-            }
-        }
-
-        private void save_button_marriage_Click(object sender, EventArgs e)
-        {
-            if (isNameEmpty(firstname_textbox) ||
-               isNameEmpty(mi_textbox) ||
-               isNameEmpty(lastname_textbox) ||
-               birthdate_dateTimePicker.Format.Equals(DateTimePickerFormat.Custom) ||
-               !(genderMale_radiobutton.Checked || genderFemale_radiobutton.Checked)||
-               (single_radiobutton_self_marriage.Checked||widow_radiobutton_self_marriage.Checked))
-            {
-                MessageBox.Show("Person Missing");
-                return;
-            }
-
-            if (father_checkbox_self_marriage.Checked && 
-                (isNameEmpty(firstname_textbox_father_self_marriage) ||
-                isNameEmpty(mi_textbox_father_self_marriage) ||
-                isNameEmpty(lastname_textbox_father_self_marriage) ||
-                isNameEmpty(residence_textbox_father_self_marriage)))
-
-            {
-                MessageBox.Show("Father Missing Fields");
-                return;
-            }
-
-            if (mother_checkbox_self_marriage.Checked &&
-                (isNameEmpty(firstname_textbox_mother_self_marriage) ||
-                isNameEmpty(mi_textbox_mother_self_marriage) ||
-                isNameEmpty(lastname_textbox_mother_self_marriage)||
-                isNameEmpty(residence_textbox_mother_self_marriage)))
-
-            {
-                MessageBox.Show("Mother Missing Fields");
-                return;
-            }
-            if (godFather_checkbox_marriage.Checked &&
-                (isNameEmpty(firstname_textbox_godFather_confirmation) ||
-                isNameEmpty(mi_textbox_godFather_confirmation) ||
-                isNameEmpty(lastname_textbox_godFather_confirmation)||
-                isNameEmpty(residence_textbox_godFather_marriage)))
-            {
-                MessageBox.Show("God Father Missing Fields");
-                return;
-            }
-            if (godMother_checkbox_marriage.Checked &&
-                (isNameEmpty(firstname_textbox_godMother_confirmation) ||
-                isNameEmpty(mi_textbox_godMother_confirmation) ||
-                isNameEmpty(lastname_textbox_godMother_confirmation)||
-                isNameEmpty(residence_textbox_godMother_marriage)))
-            {
-                MessageBox.Show("God Mother Missing Fields");
-                return;
-            }
-
-            //inserting
-            int gender = genderMale_radiobutton.Checked ? 1 : 2;
-            dh.editGeneralProfile(ProfileID, firstname_textbox.Text, mi_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, gender, dh.toDateTime(birthdate_dateTimePicker.Value.ToString(), false), contactNumber_textbox.Text, address_textbox.Text, null, null);
-            if (father_checkbox_confirmation.Checked)//if enabled==false meaning preloaded data, if enabled==true meaning not saved data
-            {
-                try { dh.editFather(ProfileID, firstname_textbox_father_baptism.Text, mi_textbox_father_baptism.Text, lastname_textbox_father_baptism.Text, suffix_textbox_father_baptism.Text, residence_textbox_father_baptism.Text, null); }
-                catch { dh.addParent(ProfileID, firstname_textbox_father_baptism.Text, mi_textbox_father_baptism.Text, lastname_textbox_father_baptism.Text, suffix_textbox_father_baptism.Text, 'M', residence_textbox_father_baptism.Text); }
-            }
-            if (mother_checkbox.Checked)
-            {
-                try { dh.editMother(ProfileID, firstname_textbox_mother_baptism.Text, mi_textbox_mother_baptism.Text, lastname_textbox_mother_baptism.Text, suffix_textbox_mother_baptism.Text, residence_textbox_mother_baptism.Text, null); }
-                catch { dh.addParent(ProfileID, firstname_textbox_mother_baptism.Text, mi_textbox_mother_baptism.Text, lastname_textbox_mother_baptism.Text, suffix_textbox_mother_baptism.Text, 'F', residence_textbox_mother_baptism.Text); }
-            }
-            if (godfather_checkbox.Checked)
-            {
-                dh.addSponsor(firstname_textbox_godFather_baptism.Text, mi_textbox_godFather_baptism.Text, lastname_textbox_godFather_baptism.Text, suffix_textbox_father_baptism.Text, (int)Enums.Gender.Male, residence_textbox_father_baptism.Text, ApplicationID);
-            }
-            if (godMother_checkbox.Checked)
-            {
-                dh.addSponsor(firstname_textbox_godMother_baptism.Text, mi_textbox_godMother_baptism.Text, lastname_textbox_godMother_baptism.Text, suffix_textbox_godMother_baptism.Text, (int)Enums.Gender.Female, residence_textbox_godMother_baptism.Text, ApplicationID);
-            }
-        }
 
         private void father_panel_baptism_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
+       
         private void label67_Click(object sender, EventArgs e)
         {
 
