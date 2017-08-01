@@ -63,7 +63,7 @@
             this.usernameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.usernameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.usernameBox.Font = new System.Drawing.Font("Segoe UI Light", 14F);
-            this.usernameBox.Location = new System.Drawing.Point(160, 86);
+            this.usernameBox.Location = new System.Drawing.Point(161, 86);
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(281, 32);
             this.usernameBox.TabIndex = 2;
@@ -74,7 +74,7 @@
             this.passwordBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.passwordBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordBox.Font = new System.Drawing.Font("Segoe UI Light", 14F);
-            this.passwordBox.Location = new System.Drawing.Point(160, 159);
+            this.passwordBox.Location = new System.Drawing.Point(161, 159);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
             this.passwordBox.Size = new System.Drawing.Size(281, 32);
