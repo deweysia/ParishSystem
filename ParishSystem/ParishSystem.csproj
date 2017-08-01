@@ -363,7 +363,9 @@
     <Content Include="obj\Debug\ParishSystem.exe" />
     <Content Include="obj\Debug\ParishSystem.pdb" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\btn_CANCEL.png" />
     <Content Include="Resources\btn_closeImage.png" />
+    <None Include="Resources\btn_EDIT.png" />
     <Content Include="Resources\btn_maxImage.png" />
     <Content Include="Resources\btn_minImage.png" />
     <None Include="Resources\messageBox_cancel.png" />
@@ -381,6 +383,7 @@
     <None Include="Resources\btn_NEWminimize1.png" />
     <None Include="Resources\btn_NEWmaximize1.png" />
     <None Include="Resources\btn_NEWclose1.png" />
+    <None Include="Resources\btn_SAVE.png" />
     <Content Include="Resources\icons\32x32\Cancel_32px.png" />
     <Content Include="Resources\icons\32x32\Checkmark_32px.png" />
     <Content Include="Resources\icons\32x32\Clock_32px.png" />

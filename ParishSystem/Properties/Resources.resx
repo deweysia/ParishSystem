@@ -271,4 +271,13 @@
   <data name="btn_NEWclose" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_NEWclose1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btn_CANCEL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_CANCEL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_EDIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_EDIT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_SAVE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_SAVE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
