@@ -123,6 +123,12 @@
     <Compile Include="HiddenTabControl.Designer.cs">
       <DependentUpon>HiddenTabControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="MarriageApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MarriageApplication.resx">
       <DependentUpon>MarriageApplication.cs</DependentUpon>
     </EmbeddedResource>
@@ -369,6 +378,9 @@
     <None Include="Resources\Heart with Pulse_45px.png" />
     <None Include="Resources\customer_45.png" />
     <None Include="Resources\Holy Bible_45.png" />
+    <None Include="Resources\btn_NEWminimize1.png" />
+    <None Include="Resources\btn_NEWmaximize1.png" />
+    <None Include="Resources\btn_NEWclose1.png" />
     <Content Include="Resources\icons\32x32\Cancel_32px.png" />
     <Content Include="Resources\icons\32x32\Checkmark_32px.png" />
     <Content Include="Resources\icons\32x32\Clock_32px.png" />
