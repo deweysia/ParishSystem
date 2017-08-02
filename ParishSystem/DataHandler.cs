@@ -160,6 +160,19 @@ namespace ParishSystem
             return success;
         }
 
+        public bool addGeneralProfile(string firstName, string midName, string lastName, string suffix, Gender gender, DateTime birthDate)
+        {
+            if (generalProfileExists(firstName, midName, lastName, suffix, gender, birthDate))
+                throw new Exception("DataHandler: Duplicate in GeneralProfile");
+
+            string q = "INSERT INTO GeneralProfile(firstName, midName, lastName, suffix, gender, birthDate) VALUES ('" 
+                + firstName + "', '" + midName + "', '" + lastName + "', '" + suffix + "', '" + (int)gender + "', '" + birthDate.ToString("yyyy-MM-dd") + "')";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
         //EDIT
         public bool editGeneralProfile(int profileID, string firstName, string midName, string lastName, string suffix, Gender gender, DateTime birthDate, string contactNumber, string address, string birthplace, string bloodtype)
         {
@@ -998,7 +1011,7 @@ namespace ParishSystem
         public DataTable getItem(string itemType)
         {
             string q = "SELECT * FROM ItemType WHERE itemType = '" + itemType + "'";
-
+            
             DataTable dt = runQuery(q);
 
             return dt;
@@ -1109,6 +1122,17 @@ namespace ParishSystem
             return success;
         }
 
+        public bool addNewMarriageApplicants(int groomID, int brideID)
+        {
+            addApplication(SacramentType.Marriage);
+            int applicationID = getLatestID("Application", "applicationID");
+            bool success = true;
+            success &= addApplicant(groomID, applicationID);
+            success &= addApplicant(brideID, applicationID);
+
+            return success;
+        }
+
         public bool addApplicant(int profileID, int applicationID)
         {
             string q = "INSERT INTO Applicant(profileID, applicationID) VALUES (" + profileID + ", " + applicationID + ")";
@@ -1143,10 +1167,10 @@ namespace ParishSystem
                     requirements = "000000";
                     break;
                 case SacramentType.Confirmation:
-                    requirements = "00000";
+                    requirements = "000";
                     break;
                 case SacramentType.Marriage:
-                    requirements = "00000000";
+                    requirements = "0000000";
                     break;
             }
 
@@ -2392,7 +2416,7 @@ namespace ParishSystem
 
         public bool hasBaptismApplication(int profileID)
         {
-            string q = "select * from generalprofile inner join applicant on generalprofile.profileID = applicant.profileID inner join application on applicant.applicantID = application.applicationID where sacramentType = 1 and generalprofile.profileID ="+profileID ;
+            string q = "select * from generalprofile natural join applicant natural join application where (status != " + (int)ApplicationStatus.Revoked + ") AND sacramentType = 1 and generalprofile.profileID =" + profileID ;
 
             DataTable dt = runQuery(q);
 
@@ -2401,7 +2425,7 @@ namespace ParishSystem
 
         public bool hasConfirmationApplication(int profileID)
         {
-            string q = "select * from generalprofile inner join applicant on generalprofile.profileID = applicant.profileID inner join application on applicant.applicantID = application.applicationID where sacramentType = 2 and generalprofile.profileID ="+profileID;
+            string q = "select * from generalprofile natural join applicant natural join application where (status != " + (int)ApplicationStatus.Revoked + ") AND sacramentType = 2 and generalprofile.profileID =" + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -2410,27 +2434,12 @@ namespace ParishSystem
         
         public bool hasMarriageApplication(int profileID)
         {
-            string q = "select * from generalprofile inner join applicant on generalprofile.profileID = applicant.profileID inner join application on applicant.applicantID = application.applicationID where sacramentType = 3 and generalprofile.profileID = "+profileID;
+            string q = "select * from generalprofile natural join applicant natural join application where (Application.status != " + ApplicationStatus.Revoked + ") AND sacramentType = 3 and generalprofile.profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
             return dt.Rows.Count > 0;
         }
-
-
-        
-
-        public DataTable getApplications(int profileID, string applicationType)//comment: wrong query, input> (1 , "b") output (application table *)
-        {
-            string q = "SELECT * from application where applicationType='" + applicationType + "' and profileID= " + profileID;
-
-            DataTable dt = runQuery(q);
-
-            //this is only for baptism and conf
-            return dt;
-        }
-
-     
 
         public DataTable getMinisters()
         {
@@ -2536,15 +2545,35 @@ namespace ParishSystem
         }
         public DataTable getApplications(SacramentType type)
         {
-            string q = "SELECT applicationID, profileID, requirements, firstName, midName, lastName, suffix,"
-                + " gender, DATE_FORMAT(birthdate,'%Y-%m-%d') AS birthDate, status "
-                + "FROM GeneralProfile"
-                + " NATURAL JOIN Applicant "
-                + "NATURAL JOIN Application "
-                + "WHERE sacramentType = " + (int)type;
+            string q;
+            if(type == SacramentType.Marriage)
+            {
+                q = "SELECT application.applicationID, a.profileID AS groomProfileID, b.profileID AS brideProfileID, requirements, "
+                    + "CONCAT_WS(' ', a.firstName, a.midName, a.lastName, a.suffix) AS groomName, DATE_FORMAT(a.birthdate, '%Y-%m-%d') AS groomBirthDate, "
+                    + "CONCAT_WS(' ', b.firstName, b.midName, b.lastName, b.suffix) AS brideName, DATE_FORMAT(b.birthdate, '%Y-%m-%d') AS brideBirthDate, "
+                    + "application.status FROM GeneralProfile AS a "
+                    + "JOIN Applicant AS aa ON aa.profileID = a.profileID "
+                    + "JOIN(SELECT profileID, firstName, midName, lastName, suffix, birthdate FROM GeneralProfile) AS b "
+                    + "JOIN Applicant AS bb ON bb.profileID = b.profileID "
+                    + "JOIN Application ON(Application.applicationID = aa.applicationID AND Application.applicationID = bb.applicationID) "
+                    + "WHERE sacramentType = "+ (int)type +" AND a.profileID != b.profileID AND a.gender = 1";
+
+            }
+            else
+            {
+                q = "SELECT applicationID, profileID, requirements, firstName, midName, lastName, suffix,"
+                    + " gender, DATE_FORMAT(birthdate,'%Y-%m-%d') AS birthDate, status "
+                    + "FROM GeneralProfile"
+                    + " NATURAL JOIN Applicant "
+                    + "NATURAL JOIN Application "
+                    + "WHERE sacramentType = " + (int)type;
+
+                
+            }
 
             DataTable dt = runQuery(q);
             return dt;
+
         }
 
         public DataTable getApplications(SacramentType type, ApplicationStatus status)

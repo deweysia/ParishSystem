@@ -32,6 +32,7 @@ namespace ParishSystem
             navigation.Add(CRB_button_menu, CRB_panel);
             navigation.Add(application_button_menu, application_panel);
             navigation.Add(sacrament_button_menu, sacrament_panel);
+
         }
 
         #region generic Methods
@@ -208,7 +209,7 @@ namespace ParishSystem
         private void openProfile_button_Click(object sender, EventArgs e)
         {//open person complete profile
 
-            Form person = new PersonView(lastGeneralProfile,dh);
+            Form person = new PersonView(lastGeneralProfile, dh);
             person.ShowDialog();
 
 
@@ -276,27 +277,34 @@ namespace ParishSystem
 
         public void loadConfirmationApplications()
         {
-            baptismApplication_dgv.DataSource = dh.getApplications(SacramentType.Confirmation);
+            confirmationApplication_dgv.AutoGenerateColumns = false;
+            confirmationApplication_dgv.DataSource = dh.getApplications(SacramentType.Confirmation);
+            confirmationApplication_filter.SelectedIndex = 0;
             //baptismApplication_dgv.Columns["profileID"].Visible = false;
             //baptismApplication_dgv.Columns["applicationID"].Visible = false;
 
         }
 
+        private void loadMarriageApplications()
+        {
+            marriageApplication_dgv.AutoGenerateColumns = false;
+            marriageApplication_dgv.DataSource = dh.getApplications(SacramentType.Marriage);
+            marriageApplication_filter.SelectedIndex = 0;
+        }
+
         public void loadBaptismApplicationDetails(DataGridView dgv)
         {
-
             
-
-
-            string fn = dgv.SelectedRows[0].Cells["firstName"].Value.ToString();
-            string mn = dgv.SelectedRows[0].Cells["midName"].Value.ToString();
-            string ln = dgv.SelectedRows[0].Cells["lastName"].Value.ToString();
-            string suffix = dgv.SelectedRows[0].Cells["suffix"].Value.ToString();
-            DateTime birthdate = DateTime.ParseExact(dgv.SelectedRows[0].Cells["birthDate"].Value.ToString(), "yyyy-MM-dd", null);
-            string gender = dgv.SelectedRows[0].Cells["gender"].Value.ToString();
-            ApplicationStatus status = (ApplicationStatus)int.Parse(dgv.SelectedRows[0].Cells["status"].Value.ToString());
-            string requirements = dgv.SelectedRows[0].Cells["requirements"].Value.ToString();
-            int applicationID = int.Parse(dgv.SelectedRows[0].Cells["applicationID"].Value.ToString());
+            int applicationID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
+            string requirements = dgv.SelectedRows[0].Cells[2].Value.ToString();
+            string fn = dgv.SelectedRows[0].Cells[4].Value.ToString();
+            string mn = dgv.SelectedRows[0].Cells[5].Value.ToString();
+            string ln = dgv.SelectedRows[0].Cells[3].Value.ToString();
+            string suffix = dgv.SelectedRows[0].Cells[6].Value.ToString();
+            string gender = dgv.SelectedRows[0].Cells[7].Value.ToString();
+            DateTime birthdate = DateTime.ParseExact(dgv.SelectedRows[0].Cells[8].Value.ToString(), "yyyy-MM-dd", null);
+            ApplicationStatus status = (ApplicationStatus)int.Parse(dgv.SelectedRows[0].Cells[9].Value.ToString());
+            
 
             bool isPending = status == ApplicationStatus.Pending;
 
@@ -320,24 +328,140 @@ namespace ParishSystem
 
             //MessageBox.Show(dt.Rows[0]["price"].ToString());
             double price = double.Parse(dt.Rows[0]["price"].ToString());
-            
+
             double totalPayment = double.Parse(dt.Rows[0]["totalPayment"].ToString());
             baptismApplication_payment_label.Text = (price - totalPayment).ToString("C");
             baptismApplication_payment_remarks.Text = dt.Rows[0]["remarks"].ToString();
         }
 
-        public void loadConfirmationApplicationDetails(int applicationID)
+        private void loadConfirmationApplicationDetails(DataGridView dgv)
+        {
+            int applicationID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
+            string requirements = dgv.SelectedRows[0].Cells[2].Value.ToString();
+            string fn = dgv.SelectedRows[0].Cells[4].Value.ToString();
+            string mn = dgv.SelectedRows[0].Cells[5].Value.ToString();
+            string ln = dgv.SelectedRows[0].Cells[3].Value.ToString();
+            string suffix = dgv.SelectedRows[0].Cells[6].Value.ToString();
+            string gender = dgv.SelectedRows[0].Cells[7].Value.ToString();
+            DateTime birthdate = DateTime.ParseExact(dgv.SelectedRows[0].Cells[8].Value.ToString(), "yyyy-MM-dd", null);
+            ApplicationStatus status = (ApplicationStatus)int.Parse(dgv.SelectedRows[0].Cells[9].Value.ToString());
+
+            bool isPending = status == ApplicationStatus.Pending;
+
+
+            confirmationApplicationDetailsPanel.Enabled = isPending;
+            confirmationApplication_buttons_panel.Enabled = isPending;
+            confirmationApplication_payment_groupbox.Enabled = isPending;
+
+
+            confirmationApplication_firstname_text.Text = fn;
+            confirmationApplication_mi_text.Text = mn;
+            confirmationApplication_lastname_text.Text = ln;
+            confirmationApplication_suffix_text.Text = suffix;
+            confirmationApplication_birthdate_dtp.Value = birthdate;
+            confirmationApplication_male_radio.Checked = gender == "1";
+            confirmationApplication_female_radio.Checked = gender == "2";
+            confirmationApplication_status_label.Text = status.ToString();
+
+            tickRequirements(confirmationApplication_requirements_tablePanel, requirements);
+
+            DataTable dt = dh.getApplicationIncomeDetails(applicationID);
+
+            //MessageBox.Show(dt.Rows[0]["price"].ToString());
+            double price = double.Parse(dt.Rows[0]["price"].ToString());
+
+            double totalPayment = double.Parse(dt.Rows[0]["totalPayment"].ToString());
+            confirmationApplication_payment_label.Text = (price - totalPayment).ToString("C");
+            confirmationApplication_payment_remarks.Text = dt.Rows[0]["remarks"].ToString();
+        }
+
+        /// <summary>
+        /// Opens a certain application based on the SacramentType
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="dgv"></param>
+        /// <param name="tlp"></param>
+        private void applicationApprove(SacramentType type, DataGridView dgv, TableLayoutPanel tlp)
         {
 
+            int applicationID = int.Parse(dgv.SelectedRows[0].Cells[2].Value.ToString());
+            DataGridViewRow dgvr = dgv.SelectedRows[0];
+            DialogResult d = DialogResult.None;
+
+
+            Form f;
+
+            if (type == SacramentType.Baptism)
+                f = new BaptismForm(dgvr, dh);
+            else if (type == SacramentType.Confirmation)
+                f = new ConfirmationForm(dgvr, dh);
+            else
+                f = new MarriageForm(dgvr, dh);
+
+            if (allRequirementsFulfilled(tlp))
+            {
+                d = f.ShowDialog();
+            }
+            else
+            {
+                DialogResult dr = MessageDialog.Show("Not all requirements were fulfilled. Proceed anyway?", "Warning", MessageDialogButtons.YesNo, MessageDialogIcon.Warning);
+                if (dr == DialogResult.Yes)
+                {
+                    f.ShowDialog();
+                }
+            }
+
+            if (d == DialogResult.OK)
+                Notification.Show("Successfully Added Baptism!", NotificationType.success);
         }
-        
-        private void baptismApplication_filter_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void applicationRevoke(SacramentType type, DataGridView dgv)
         {
-            DataTable dt = baptismApplication_dgv.DataSource as DataTable;
-            if (baptismApplication_filter_comboBox.SelectedIndex == 0)
+            int applicationID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
+            bool success = dh.editApplication(applicationID, ApplicationStatus.Revoked);
+
+            if (success)
+                Notification.Show("Successfully revoked application.", NotificationType.success);
+            else
+                Notification.Show("Something went wrong!.", NotificationType.error);
+
+            switch (type)
+            {
+                case SacramentType.Baptism:
+                    loadBaptismApplications();
+                    return;
+                case SacramentType.Confirmation:
+                    loadConfirmationApplications();
+                    return;
+                case SacramentType.Marriage:
+                    loadMarriageApplications();
+                    return;
+            }
+        }
+
+        private void checkAllCheckChanged(CheckBox checkAll, TableLayoutPanel tlp)
+        {
+            if (!checkAll.Focused)
+                return;
+
+            foreach (CheckBox c in tlp.Controls)
+            {
+                c.Checked = checkAll.Checked;
+            }
+        }
+
+        private void applicationFilter(DataGridView dgv, ComboBox cb)
+        {
+            DataTable dt = dgv.DataSource as DataTable;
+            if(cb.SelectedIndex == 0)
                 dt.DefaultView.RowFilter = "";
             else
-                dt.DefaultView.RowFilter = "status = " + baptismApplication_filter_comboBox.SelectedIndex;
+                dt.DefaultView.RowFilter = "status = " + cb.SelectedIndex;
+        }
+
+        private void baptismApplication_filter_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            applicationFilter(baptismApplication_dgv, baptismApplication_filter_comboBox);
         }
 
 
@@ -346,8 +470,6 @@ namespace ParishSystem
             DataGridView dgv = (DataGridView)sender;
             if (!dgv.Focused || dgv.SelectedRows.Count == 0)
                 return;
-            
-            
 
             loadBaptismApplicationDetails(dgv);
         }
@@ -387,12 +509,26 @@ namespace ParishSystem
         private bool allRequirementsFulfilled(Panel p)
         {
             bool fulfilled = true;
-            foreach(CheckBox c in p.Controls)
+            foreach (CheckBox c in p.Controls)
             {
                 fulfilled = fulfilled && c.Checked;
             }
 
             return fulfilled;
+        }
+
+        private void requirementCheckChanged(CheckBox sender, CheckBox checkAll, TableLayoutPanel tlp)
+        {
+            if (!sender.Focused)
+                return;
+
+            bool allChecked = true;
+            foreach (CheckBox c in tlp.Controls)
+            {
+                allChecked = allChecked && c.Checked;
+            }
+
+            checkAll.Checked = allChecked;
         }
 
         private void baptismApplication_dgv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -421,7 +557,7 @@ namespace ParishSystem
 
         }
 
-        private void metroButton5_Click(object sender, EventArgs e)
+        private void baptismApplication_editReq_button_Click(object sender, EventArgs e)
         {
             bool enabled = baptismApplication_requirements_groupbox.Enabled;
 
@@ -434,7 +570,7 @@ namespace ParishSystem
             else
             {
                 baptismApplication_editReq_button.Text = "Edit Requirements";
-                bool success = editRequirements_Baptism();
+                bool success = editRequirements(baptismApplication_dgv, baptismApplication_requirements_tablePanel);
 
                 if (success)
                     Notification.Show("Successfully Applied Edits!", NotificationType.success);
@@ -443,75 +579,35 @@ namespace ParishSystem
             }
         }
 
-        private bool editRequirements_Baptism()
+        private bool editRequirements(DataGridView dgv, TableLayoutPanel tb)
         {
-            int applicationID = int.Parse(baptismApplication_dgv.SelectedRows[0].Cells["applicationID"].Value.ToString());
-            int profileID = int.Parse(baptismApplication_dgv.SelectedRows[0].Cells["profileID"].Value.ToString());
-            string r = getRequirements(baptismApplication_requirements_tablePanel);
+            int applicationID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
+            int profileID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
+            string r = getRequirements(tb);
             bool a = dh.editApplication(applicationID, r);
 
             return a;
         }
 
+
         private void baptismApplication_checkAll_checkBox_CheckedChanged(object sender, EventArgs e)
         {
-
-            CheckBox cb = (CheckBox)sender;
-
-            if (!cb.Focused)
-                return;
-
-            foreach (CheckBox c in baptismApplication_requirements_tablePanel.Controls)
-            {
-                c.Checked = cb.Checked;
-            }
+            checkAllCheckChanged(baptismApplication_checkAll_checkBox, baptismApplication_requirements_tablePanel);
         }
 
+        
         private void baptismApplication_requirement_checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
-            CheckBox cb = (CheckBox)sender;
-
-            if (!cb.Focused)
-                return;
-
-            bool allChecked = true;
-            foreach (CheckBox c in baptismApplication_requirements_tablePanel.Controls)
-            {
-                allChecked = allChecked && c.Checked;
-            }
-
-            baptismApplication_checkAll_checkBox.Checked = allChecked;
+            requirementCheckChanged((CheckBox)sender, baptismApplication_checkAll_checkBox, baptismApplication_requirements_tablePanel);
 
         }
 
-        private void loadMarriageApplications()
-        {
-
-        }
-
-        private void metroTabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            TabControl t = (TabControl)sender;
-            if (t.SelectedIndex == 0)
-                loadBaptismApplications();
-            else if (t.SelectedIndex == 1)
-                loadConfirmationApplications();
-            else if (t.SelectedIndex == 2)
-                loadMarriageApplications();
-        }
+        
 
         private void baptismApplication_revoke_button_Click(object sender, EventArgs e)
         {
-            int applicationID = int.Parse(baptismApplication_dgv.SelectedRows[0].Cells["applicationID"].Value.ToString());
-            bool success = dh.editApplication(applicationID, ApplicationStatus.Revoked);
-
-            if (success)
-                Notification.Show("Successfully Revoked Application.", NotificationType.success);
-            else
-                Notification.Show("Something went wrong!.", NotificationType.error);
-
-            loadBaptismApplications();
+            applicationRevoke(SacramentType.Baptism, baptismApplication_dgv);
         }
         #endregion
 
@@ -620,26 +716,6 @@ namespace ParishSystem
         }
 
 
-        private void checkAll_cb_baptismApplication_CheckedChanged(object sender, EventArgs e)
-        {
-            bool allChecked = true;
-
-            if (!baptismApplication_checkAll_checkBox.Checked)
-            {
-
-                foreach (CheckBox c in baptismApplication_requirements_tablePanel.Controls)
-                    allChecked = allChecked && c.Checked;
-            }
-
-            if (!allChecked) return;
-
-            foreach (CheckBox c in baptismApplication_requirements_tablePanel.Controls)
-            {
-                c.Checked = baptismApplication_checkAll_checkBox.Checked;
-                Console.WriteLine("ENTERED");
-            }
-        }
-
         private void baptismApplication_requirement_comboBox_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox temp = sender as CheckBox;
@@ -649,15 +725,16 @@ namespace ParishSystem
 
         private void baptismApplication_add_button_Click(object sender, EventArgs e)
         {
-            AddApplication aa = new AddApplication(SacramentType.Baptism);
+            AddApplication aa = new AddApplication(SacramentType.Baptism, dh);
             aa.ShowDialog();
+            loadBaptismApplications();
         }
 
         private void confirmationApplication_add_button_Click(object sender, EventArgs e)
         {
-            AddApplication aa = new AddApplication(SacramentType.Confirmation);
+            AddApplication aa = new AddApplication(SacramentType.Confirmation, dh);
             DialogResult dr = aa.ShowDialog();
-            
+
         }
 
         private void baptismApplication_addPayment_button_Click(object sender, EventArgs e)
@@ -665,44 +742,11 @@ namespace ParishSystem
 
         }
 
+        
+
         private void baptismApplication_approve_button_Click(object sender, EventArgs e)
         {
-            int applicationID = int.Parse(baptismApplication_dgv.SelectedRows[0].Cells["applicationID"].Value.ToString());
-            DataGridViewRow dgvr = baptismApplication_dgv.SelectedRows[0];
-            DialogResult d = DialogResult.None;
-            if (allRequirementsFulfilled(baptismApplication_requirements_tablePanel))
-            {
-                BaptismForm bf = new BaptismForm(dgvr, dh);
-                d = bf.ShowDialog();
-            }else
-            {
-                DialogResult dr = MessageDialog.Show("Not all requirements were fulfilled. Proceed anyway?", "Warning", MessageDialogButtons.YesNo, MessageDialogIcon.Warning);
-                if(dr == DialogResult.Yes)
-                {
-                    BaptismForm bf = new BaptismForm(dgvr, dh);
-                    d = bf.ShowDialog();
-                }
-            }
-            
-            if (d == DialogResult.OK)
-                Notification.Show("Successfully Added Baptism!", NotificationType.success);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(null, "Hello", "MSG", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            MessageBox.Show(MessageDialog.Show("Hello", "Titleeee", MessageDialogButtons.OKCancel, MessageDialogIcon.Information) + "");
-
-        }
-
-        private void customControlBar1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void baptismApplication_dgv_AllowUserToOrderColumnsChanged(object sender, EventArgs e)
-        {
-
+            applicationApprove(SacramentType.Baptism, baptismApplication_dgv, baptismApplication_requirements_tablePanel);
         }
 
         private void baptismApplication_dgv_Paint(object sender, PaintEventArgs e)
@@ -713,11 +757,113 @@ namespace ParishSystem
         private void baptismApplication_dgv_VisibleChanged(object sender, EventArgs e)
         {
             loadBaptismApplications();
+            baptismApplication_dgv.ClearSelection();
         }
 
         private void baptismApplication_dgv_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             baptismApplication_dgv.ClearSelection();
+        }
+
+        private void confirmationApplication_add_btn_Click(object sender, EventArgs e)
+        {
+            AddApplication aa = new AddApplication(SacramentType.Confirmation, dh);
+            aa.ShowDialog();
+            loadConfirmationApplications();
+        }
+
+        private void confirmationApplication_filter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            applicationFilter(confirmationApplication_dgv, confirmationApplication_filter);
+        }
+
+        private void confirmationApplication_dgv_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            if (!dgv.Focused || dgv.SelectedRows.Count == 0)
+                return;
+
+            loadConfirmationApplicationDetails(dgv);
+        }
+
+        
+
+        private void confirmationApplication_dgv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            baptismApplication_dgv_CellFormatting(sender, e);
+        }
+
+        private void confirmationApplication_editReq_btn_Click(object sender, EventArgs e)
+        {
+            bool enabled = confirmationApplication_requirements_groupbox.Enabled;
+
+
+            confirmationApplication_requirements_groupbox.Enabled = !enabled;
+            if (!enabled)
+            {
+                confirmationApplication_editReq_btn.Text = "Save Changes";
+            }
+            else
+            {
+                confirmationApplication_editReq_btn.Text = "Edit Requirements";
+                bool success = editRequirements(confirmationApplication_dgv, confirmationApplication_requirements_tablePanel);
+
+                if (success)
+                    Notification.Show("Successfully Applied Edits!", NotificationType.success);
+                else
+                    Notification.Show("Something went wrong!", NotificationType.error);
+            }
+        }
+
+        private void confirmationApplication_revoke_btn_Click(object sender, EventArgs e)
+        {
+            applicationRevoke(SacramentType.Confirmation, confirmationApplication_dgv);
+        }
+
+        private void confirmationApplication_dgv_VisibleChanged(object sender, EventArgs e)
+        {
+            loadConfirmationApplications();
+            confirmationApplication_dgv.ClearSelection();
+        }
+
+        private void confirmationApplication_checkAll_checkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkAllCheckChanged(confirmationApplication_checkAll_checkBox, confirmationApplication_requirements_tablePanel);
+        }
+
+        
+
+        private void confirmationApplication_approve_btn_Click(object sender, EventArgs e)
+        {
+            applicationApprove(SacramentType.Confirmation, confirmationApplication_dgv, confirmationApplication_requirements_tablePanel);
+        }
+
+        private void confirmationRequirements_CheckChanged(object sender, EventArgs e)
+        {
+            requirementCheckChanged((CheckBox)sender, confirmationApplication_checkAll_checkBox, confirmationApplication_requirements_tablePanel);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AddMarriageApplication ama = new AddMarriageApplication(dh);
+            ama.ShowDialog();
+            loadMarriageApplications();
+        }
+
+        private void marriageApplication_dgv_VisibleChanged(object sender, EventArgs e)
+        {
+            loadMarriageApplications();
+            marriageApplication_dgv.ClearSelection();
+        }
+
+        private void marriageApplication_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void confirmationApplication_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

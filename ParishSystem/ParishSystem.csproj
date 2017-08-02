@@ -76,6 +76,12 @@
     <Compile Include="AddApplication.Designer.cs">
       <DependentUpon>AddApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddMarriageApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMarriageApplication.Designer.cs">
+      <DependentUpon>AddMarriageApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaptismForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,12 @@
     <Compile Include="Classifications.cs" />
     <Compile Include="ComboboxContent.cs" />
     <Compile Include="ComboBoxItem.cs" />
+    <Compile Include="ConfirmationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmationForm.Designer.cs">
+      <DependentUpon>ConfirmationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControlBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -134,6 +146,12 @@
     </Compile>
     <Compile Include="MarriageApplication.Designer.cs">
       <DependentUpon>MarriageApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarriageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarriageForm.Designer.cs">
+      <DependentUpon>MarriageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="menu.cs">
       <SubType>UserControl</SubType>
@@ -253,11 +271,17 @@
     <EmbeddedResource Include="AddApplication.resx">
       <DependentUpon>AddApplication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddMarriageApplication.resx">
+      <DependentUpon>AddMarriageApplication.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaptismForm.resx">
       <DependentUpon>BaptismForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BloodlettingTest.resx">
       <DependentUpon>BloodlettingTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmationForm.resx">
+      <DependentUpon>ConfirmationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControlBar.resx">
       <DependentUpon>CustomControlBar.cs</DependentUpon>
@@ -276,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MarriageApplication.resx">
       <DependentUpon>MarriageApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarriageForm.resx">
+      <DependentUpon>MarriageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="messageBox.resx">
       <DependentUpon>messageBox.cs</DependentUpon>

@@ -29,21 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SAD));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.home_button_menu = new System.Windows.Forms.Button();
@@ -95,12 +101,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.time_Text = new System.Windows.Forms.Label();
             this.application_panel = new System.Windows.Forms.Panel();
-            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.applicationTabControl = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.panel16 = new System.Windows.Forms.Panel();
             this.baptismApplication_filter_comboBox = new MetroFramework.Controls.MetroComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
             this.baptismApplication_add_button = new System.Windows.Forms.Button();
             this.baptismApplicationDetailsPanel = new MetroFramework.Controls.MetroPanel();
             this.baptismApplication_buttons_panel = new System.Windows.Forms.Panel();
@@ -115,12 +120,9 @@
             this.baptismApplication_status_label = new System.Windows.Forms.Label();
             this.baptismApplication_requirements_groupbox = new System.Windows.Forms.GroupBox();
             this.baptismApplication_requirements_tablePanel = new System.Windows.Forms.TableLayoutPanel();
-            this.baptismApplication_requirement_checkBox4 = new MetroFramework.Controls.MetroCheckBox();
             this.baptismApplication_requirement_checkBox1 = new MetroFramework.Controls.MetroCheckBox();
             this.baptismApplication_requirement_checkBox3 = new MetroFramework.Controls.MetroCheckBox();
             this.baptismApplication_requirement_checkBox2 = new MetroFramework.Controls.MetroCheckBox();
-            this.baptismApplication_requirement_checkBox5 = new MetroFramework.Controls.MetroCheckBox();
-            this.baptismApplication_requirement_checkBox6 = new MetroFramework.Controls.MetroCheckBox();
             this.baptismApplication_checkAll_checkBox = new MetroFramework.Controls.MetroCheckBox();
             this.baptismApplication_birthDate = new MetroFramework.Controls.MetroDateTime();
             this.label86 = new System.Windows.Forms.Label();
@@ -134,8 +136,100 @@
             this.baptismApplication_firstName_textbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.baptismApplication_dgv = new MetroFramework.Controls.MetroGrid();
+            this.BprofileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BapplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Brequirements = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BlastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BfirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BmidName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bsuffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bgender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bbirthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.confirmationApplication_filter = new MetroFramework.Controls.MetroComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.confirmationApplication_add_btn = new System.Windows.Forms.Button();
+            this.confirmationApplicationDetailsPanel = new MetroFramework.Controls.MetroPanel();
+            this.confirmationApplication_buttons_panel = new System.Windows.Forms.Panel();
+            this.confirmationApplication_editReq_btn = new MetroFramework.Controls.MetroButton();
+            this.confirmationApplication_approve_btn = new MetroFramework.Controls.MetroButton();
+            this.confirmationApplication_revoke_btn = new MetroFramework.Controls.MetroButton();
+            this.confirmationApplication_payment_groupbox = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.confirmationApplication_payment_label = new System.Windows.Forms.Label();
+            this.confirmationApplication_addPayment_btn = new MetroFramework.Controls.MetroButton();
+            this.confirmationApplication_payment_remarks = new MetroFramework.Controls.MetroTextBox();
+            this.confirmationApplication_status_label = new System.Windows.Forms.Label();
+            this.confirmationApplication_requirements_groupbox = new System.Windows.Forms.GroupBox();
+            this.confirmationApplication_requirements_tablePanel = new System.Windows.Forms.TableLayoutPanel();
+            this.metroCheckBox2 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox3 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox4 = new MetroFramework.Controls.MetroCheckBox();
+            this.confirmationApplication_checkAll_checkBox = new MetroFramework.Controls.MetroCheckBox();
+            this.confirmationApplication_birthdate_dtp = new MetroFramework.Controls.MetroDateTime();
+            this.label88 = new System.Windows.Forms.Label();
+            this.label89 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.confirmationApplication_male_radio = new MetroFramework.Controls.MetroRadioButton();
+            this.confirmationApplication_female_radio = new MetroFramework.Controls.MetroRadioButton();
+            this.confirmationApplication_suffix_text = new System.Windows.Forms.TextBox();
+            this.confirmationApplication_lastname_text = new System.Windows.Forms.TextBox();
+            this.confirmationApplication_mi_text = new System.Windows.Forms.TextBox();
+            this.confirmationApplication_firstname_text = new System.Windows.Forms.TextBox();
+            this.label90 = new System.Windows.Forms.Label();
+            this.confirmationApplication_dgv = new MetroFramework.Controls.MetroGrid();
+            this.CprofileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CapplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Crequirements = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CfirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CmidName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Csuffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cgender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cbirthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.marriageApplication_filter = new MetroFramework.Controls.MetroComboBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.marriageApplication_add_button = new System.Windows.Forms.Button();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.dtpBBirthDate = new MetroFramework.Controls.MetroDateTime();
+            this.label94 = new System.Windows.Forms.Label();
+            this.txtBSuffix = new System.Windows.Forms.TextBox();
+            this.txtBLN = new System.Windows.Forms.TextBox();
+            this.txtBMI = new System.Windows.Forms.TextBox();
+            this.txtBFN = new System.Windows.Forms.TextBox();
+            this.label96 = new System.Windows.Forms.Label();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.marriageApplication_editReq_btn = new MetroFramework.Controls.MetroButton();
+            this.marriageApplication_approve_btn = new MetroFramework.Controls.MetroButton();
+            this.marriageApplication_revoke_btn = new MetroFramework.Controls.MetroButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.marriageApplication_price_label = new System.Windows.Forms.Label();
+            this.marriageApplication_add_btn = new MetroFramework.Controls.MetroButton();
+            this.marriageApplication_remarks = new MetroFramework.Controls.MetroTextBox();
+            this.label92 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox5 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox6 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox8 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox9 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox10 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox7 = new MetroFramework.Controls.MetroCheckBox();
+            this.dtpGBirthDate = new MetroFramework.Controls.MetroDateTime();
+            this.label93 = new System.Windows.Forms.Label();
+            this.txtGSuffix = new System.Windows.Forms.TextBox();
+            this.txtGLN = new System.Windows.Forms.TextBox();
+            this.txtGMI = new System.Windows.Forms.TextBox();
+            this.txtGFN = new System.Windows.Forms.TextBox();
+            this.label95 = new System.Windows.Forms.Label();
+            this.marriageApplication_dgv = new MetroFramework.Controls.MetroGrid();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.marriageApplication_panel = new System.Windows.Forms.Panel();
@@ -346,16 +440,15 @@
             this.libraryMarriageButton = new System.Windows.Forms.Button();
             this.libraryConfirmationButton = new System.Windows.Forms.Button();
             this.libraryBaptismButton = new System.Windows.Forms.Button();
-            this.profileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.applicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.requirements = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.midName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.suffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.profile_panel.SuspendLayout();
@@ -363,7 +456,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.generalprofile_datagridview)).BeginInit();
             this.AddPNL.SuspendLayout();
             this.application_panel.SuspendLayout();
-            this.metroTabControl1.SuspendLayout();
+            this.applicationTabControl.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.panel16.SuspendLayout();
             this.baptismApplicationDetailsPanel.SuspendLayout();
@@ -373,6 +466,23 @@
             this.baptismApplication_requirements_tablePanel.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.baptismApplication_dgv)).BeginInit();
+            this.metroTabPage2.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.confirmationApplicationDetailsPanel.SuspendLayout();
+            this.confirmationApplication_buttons_panel.SuspendLayout();
+            this.confirmationApplication_payment_groupbox.SuspendLayout();
+            this.confirmationApplication_requirements_groupbox.SuspendLayout();
+            this.confirmationApplication_requirements_tablePanel.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.confirmationApplication_dgv)).BeginInit();
+            this.metroTabPage3.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.metroPanel1.SuspendLayout();
+            this.panel19.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.marriageApplication_dgv)).BeginInit();
             this.panel15.SuspendLayout();
             this.marriageApplication_panel.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -927,41 +1037,41 @@
             this.generalprofile_datagridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.generalprofile_datagridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.generalprofile_datagridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.generalprofile_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.generalprofile_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.generalprofile_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.generalprofile_datagridview.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle22.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.generalprofile_datagridview.DefaultCellStyle = dataGridViewCellStyle22;
             this.generalprofile_datagridview.EnableHeadersVisualStyles = false;
             this.generalprofile_datagridview.Location = new System.Drawing.Point(7, 40);
             this.generalprofile_datagridview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.generalprofile_datagridview.MultiSelect = false;
             this.generalprofile_datagridview.Name = "generalprofile_datagridview";
             this.generalprofile_datagridview.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.generalprofile_datagridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.generalprofile_datagridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.generalprofile_datagridview.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.generalprofile_datagridview.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.generalprofile_datagridview.RowsDefaultCellStyle = dataGridViewCellStyle24;
             this.generalprofile_datagridview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.generalprofile_datagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.generalprofile_datagridview.Size = new System.Drawing.Size(345, 335);
@@ -1132,7 +1242,7 @@
             // application_panel
             // 
             this.application_panel.BackColor = System.Drawing.Color.White;
-            this.application_panel.Controls.Add(this.metroTabControl1);
+            this.application_panel.Controls.Add(this.applicationTabControl);
             this.application_panel.Controls.Add(this.panel15);
             this.application_panel.Controls.Add(this.marriageApplication_panel);
             this.application_panel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1142,19 +1252,18 @@
             this.application_panel.Size = new System.Drawing.Size(802, 542);
             this.application_panel.TabIndex = 34;
             // 
-            // metroTabControl1
+            // applicationTabControl
             // 
-            this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage2);
-            this.metroTabControl1.Controls.Add(this.metroTabPage3);
-            this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTabControl1.Location = new System.Drawing.Point(0, 41);
-            this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(802, 501);
-            this.metroTabControl1.TabIndex = 69;
-            this.metroTabControl1.UseSelectable = true;
-            this.metroTabControl1.SelectedIndexChanged += new System.EventHandler(this.metroTabControl1_SelectedIndexChanged);
+            this.applicationTabControl.Controls.Add(this.metroTabPage1);
+            this.applicationTabControl.Controls.Add(this.metroTabPage2);
+            this.applicationTabControl.Controls.Add(this.metroTabPage3);
+            this.applicationTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.applicationTabControl.Location = new System.Drawing.Point(0, 41);
+            this.applicationTabControl.Name = "applicationTabControl";
+            this.applicationTabControl.SelectedIndex = 1;
+            this.applicationTabControl.Size = new System.Drawing.Size(802, 501);
+            this.applicationTabControl.TabIndex = 69;
+            this.applicationTabControl.UseSelectable = true;
             // 
             // metroTabPage1
             // 
@@ -1177,7 +1286,6 @@
             // 
             this.panel16.Controls.Add(this.baptismApplication_filter_comboBox);
             this.panel16.Controls.Add(this.label10);
-            this.panel16.Controls.Add(this.textBox11);
             this.panel16.Controls.Add(this.baptismApplication_add_button);
             this.panel16.Location = new System.Drawing.Point(3, 3);
             this.panel16.Name = "panel16";
@@ -1210,18 +1318,6 @@
             this.label10.Size = new System.Drawing.Size(45, 21);
             this.label10.TabIndex = 64;
             this.label10.Text = "Filter";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(209, 18);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(145, 16);
-            this.textBox11.TabIndex = 66;
-            this.textBox11.Text = "Type Name Here";
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // baptismApplication_add_button
             // 
@@ -1283,7 +1379,7 @@
             this.baptismApplication_editReq_button.TabIndex = 10;
             this.baptismApplication_editReq_button.Text = "Edit Requirements";
             this.baptismApplication_editReq_button.UseSelectable = true;
-            this.baptismApplication_editReq_button.Click += new System.EventHandler(this.metroButton5_Click);
+            this.baptismApplication_editReq_button.Click += new System.EventHandler(this.baptismApplication_editReq_button_Click);
             // 
             // baptismApplication_approve_button
             // 
@@ -1411,12 +1507,9 @@
             this.baptismApplication_requirements_tablePanel.ColumnCount = 2;
             this.baptismApplication_requirements_tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.baptismApplication_requirements_tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.baptismApplication_requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_checkBox4, 1, 1);
             this.baptismApplication_requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_checkBox1, 0, 0);
             this.baptismApplication_requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_checkBox3, 0, 1);
             this.baptismApplication_requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_checkBox2, 1, 0);
-            this.baptismApplication_requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_checkBox5, 0, 2);
-            this.baptismApplication_requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_checkBox6, 1, 2);
             this.baptismApplication_requirements_tablePanel.Location = new System.Drawing.Point(6, 42);
             this.baptismApplication_requirements_tablePanel.Name = "baptismApplication_requirements_tablePanel";
             this.baptismApplication_requirements_tablePanel.RowCount = 4;
@@ -1428,25 +1521,14 @@
             this.baptismApplication_requirements_tablePanel.Size = new System.Drawing.Size(268, 64);
             this.baptismApplication_requirements_tablePanel.TabIndex = 1;
             // 
-            // baptismApplication_requirement_checkBox4
-            // 
-            this.baptismApplication_requirement_checkBox4.AutoSize = true;
-            this.baptismApplication_requirement_checkBox4.Location = new System.Drawing.Point(137, 23);
-            this.baptismApplication_requirement_checkBox4.Name = "baptismApplication_requirement_checkBox4";
-            this.baptismApplication_requirement_checkBox4.Size = new System.Drawing.Size(100, 14);
-            this.baptismApplication_requirement_checkBox4.TabIndex = 1;
-            this.baptismApplication_requirement_checkBox4.Text = "Requirement 4";
-            this.baptismApplication_requirement_checkBox4.UseSelectable = true;
-            this.baptismApplication_requirement_checkBox4.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox1_CheckedChanged);
-            // 
             // baptismApplication_requirement_checkBox1
             // 
             this.baptismApplication_requirement_checkBox1.AutoSize = true;
             this.baptismApplication_requirement_checkBox1.Location = new System.Drawing.Point(3, 3);
             this.baptismApplication_requirement_checkBox1.Name = "baptismApplication_requirement_checkBox1";
-            this.baptismApplication_requirement_checkBox1.Size = new System.Drawing.Size(100, 14);
+            this.baptismApplication_requirement_checkBox1.Size = new System.Drawing.Size(93, 14);
             this.baptismApplication_requirement_checkBox1.TabIndex = 0;
-            this.baptismApplication_requirement_checkBox1.Text = "Requirement 1";
+            this.baptismApplication_requirement_checkBox1.Text = "Parish Permit";
             this.baptismApplication_requirement_checkBox1.UseSelectable = true;
             this.baptismApplication_requirement_checkBox1.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox1_CheckedChanged);
             // 
@@ -1455,9 +1537,9 @@
             this.baptismApplication_requirement_checkBox3.AutoSize = true;
             this.baptismApplication_requirement_checkBox3.Location = new System.Drawing.Point(3, 23);
             this.baptismApplication_requirement_checkBox3.Name = "baptismApplication_requirement_checkBox3";
-            this.baptismApplication_requirement_checkBox3.Size = new System.Drawing.Size(100, 14);
+            this.baptismApplication_requirement_checkBox3.Size = new System.Drawing.Size(119, 14);
             this.baptismApplication_requirement_checkBox3.TabIndex = 0;
-            this.baptismApplication_requirement_checkBox3.Text = "Requirement 3";
+            this.baptismApplication_requirement_checkBox3.Text = "Marriage Contract";
             this.baptismApplication_requirement_checkBox3.UseSelectable = true;
             this.baptismApplication_requirement_checkBox3.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox1_CheckedChanged);
             // 
@@ -1466,33 +1548,11 @@
             this.baptismApplication_requirement_checkBox2.AutoSize = true;
             this.baptismApplication_requirement_checkBox2.Location = new System.Drawing.Point(137, 3);
             this.baptismApplication_requirement_checkBox2.Name = "baptismApplication_requirement_checkBox2";
-            this.baptismApplication_requirement_checkBox2.Size = new System.Drawing.Size(100, 14);
+            this.baptismApplication_requirement_checkBox2.Size = new System.Drawing.Size(105, 14);
             this.baptismApplication_requirement_checkBox2.TabIndex = 0;
-            this.baptismApplication_requirement_checkBox2.Text = "Requirement 2";
+            this.baptismApplication_requirement_checkBox2.Text = "Birth Certificate";
             this.baptismApplication_requirement_checkBox2.UseSelectable = true;
             this.baptismApplication_requirement_checkBox2.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox1_CheckedChanged);
-            // 
-            // baptismApplication_requirement_checkBox5
-            // 
-            this.baptismApplication_requirement_checkBox5.AutoSize = true;
-            this.baptismApplication_requirement_checkBox5.Location = new System.Drawing.Point(3, 43);
-            this.baptismApplication_requirement_checkBox5.Name = "baptismApplication_requirement_checkBox5";
-            this.baptismApplication_requirement_checkBox5.Size = new System.Drawing.Size(100, 14);
-            this.baptismApplication_requirement_checkBox5.TabIndex = 2;
-            this.baptismApplication_requirement_checkBox5.Text = "Requirement 5";
-            this.baptismApplication_requirement_checkBox5.UseSelectable = true;
-            this.baptismApplication_requirement_checkBox5.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox1_CheckedChanged);
-            // 
-            // baptismApplication_requirement_checkBox6
-            // 
-            this.baptismApplication_requirement_checkBox6.AutoSize = true;
-            this.baptismApplication_requirement_checkBox6.Location = new System.Drawing.Point(137, 43);
-            this.baptismApplication_requirement_checkBox6.Name = "baptismApplication_requirement_checkBox6";
-            this.baptismApplication_requirement_checkBox6.Size = new System.Drawing.Size(100, 14);
-            this.baptismApplication_requirement_checkBox6.TabIndex = 3;
-            this.baptismApplication_requirement_checkBox6.Text = "Requirement 6";
-            this.baptismApplication_requirement_checkBox6.UseSelectable = true;
-            this.baptismApplication_requirement_checkBox6.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox1_CheckedChanged);
             // 
             // baptismApplication_checkAll_checkBox
             // 
@@ -1622,51 +1682,51 @@
             this.baptismApplication_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.baptismApplication_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.baptismApplication_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.baptismApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.baptismApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.baptismApplication_dgv.ColumnHeadersHeight = 25;
             this.baptismApplication_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.baptismApplication_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.profileID,
-            this.applicationID,
-            this.requirements,
-            this.lastName,
-            this.firstName,
-            this.midName,
-            this.suffix,
-            this.gender,
-            this.birthdate,
-            this.status});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.baptismApplication_dgv.DefaultCellStyle = dataGridViewCellStyle6;
+            this.BprofileID,
+            this.BapplicationID,
+            this.Brequirements,
+            this.BlastName,
+            this.BfirstName,
+            this.BmidName,
+            this.Bsuffix,
+            this.Bgender,
+            this.Bbirthdate,
+            this.Bstatus});
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.baptismApplication_dgv.DefaultCellStyle = dataGridViewCellStyle26;
             this.baptismApplication_dgv.EnableHeadersVisualStyles = false;
             this.baptismApplication_dgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.baptismApplication_dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.baptismApplication_dgv.Location = new System.Drawing.Point(4, 56);
+            this.baptismApplication_dgv.Location = new System.Drawing.Point(3, 56);
             this.baptismApplication_dgv.MultiSelect = false;
             this.baptismApplication_dgv.Name = "baptismApplication_dgv";
             this.baptismApplication_dgv.ReadOnly = true;
             this.baptismApplication_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.baptismApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.baptismApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.baptismApplication_dgv.RowHeadersVisible = false;
             this.baptismApplication_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.baptismApplication_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1675,12 +1735,96 @@
             this.baptismApplication_dgv.TabStop = false;
             this.baptismApplication_dgv.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.baptismApplication_dgv_CellEnter);
             this.baptismApplication_dgv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.baptismApplication_dgv_CellFormatting);
-            this.baptismApplication_dgv.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.baptismApplication_dgv_DataBindingComplete);
             this.baptismApplication_dgv.VisibleChanged += new System.EventHandler(this.baptismApplication_dgv_VisibleChanged);
             this.baptismApplication_dgv.Paint += new System.Windows.Forms.PaintEventHandler(this.baptismApplication_dgv_Paint);
             // 
+            // BprofileID
+            // 
+            this.BprofileID.DataPropertyName = "profileID";
+            this.BprofileID.HeaderText = "profileID";
+            this.BprofileID.Name = "BprofileID";
+            this.BprofileID.ReadOnly = true;
+            this.BprofileID.Visible = false;
+            this.BprofileID.Width = 76;
+            // 
+            // BapplicationID
+            // 
+            this.BapplicationID.DataPropertyName = "applicationID";
+            this.BapplicationID.HeaderText = "applicationID";
+            this.BapplicationID.Name = "BapplicationID";
+            this.BapplicationID.ReadOnly = true;
+            this.BapplicationID.Visible = false;
+            // 
+            // Brequirements
+            // 
+            this.Brequirements.DataPropertyName = "requirements";
+            this.Brequirements.HeaderText = "requirements";
+            this.Brequirements.Name = "Brequirements";
+            this.Brequirements.ReadOnly = true;
+            this.Brequirements.Visible = false;
+            this.Brequirements.Width = 99;
+            // 
+            // BlastName
+            // 
+            this.BlastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BlastName.DataPropertyName = "lastName";
+            this.BlastName.HeaderText = "Last Name";
+            this.BlastName.Name = "BlastName";
+            this.BlastName.ReadOnly = true;
+            // 
+            // BfirstName
+            // 
+            this.BfirstName.DataPropertyName = "firstName";
+            this.BfirstName.HeaderText = "First Name";
+            this.BfirstName.Name = "BfirstName";
+            this.BfirstName.ReadOnly = true;
+            this.BfirstName.Width = 85;
+            // 
+            // BmidName
+            // 
+            this.BmidName.DataPropertyName = "midName";
+            this.BmidName.HeaderText = "M.I.";
+            this.BmidName.Name = "BmidName";
+            this.BmidName.ReadOnly = true;
+            this.BmidName.Width = 50;
+            // 
+            // Bsuffix
+            // 
+            this.Bsuffix.DataPropertyName = "suffix";
+            this.Bsuffix.HeaderText = "Suffix";
+            this.Bsuffix.Name = "Bsuffix";
+            this.Bsuffix.ReadOnly = true;
+            this.Bsuffix.Width = 60;
+            // 
+            // Bgender
+            // 
+            this.Bgender.DataPropertyName = "gender";
+            this.Bgender.HeaderText = "Gender";
+            this.Bgender.Name = "Bgender";
+            this.Bgender.ReadOnly = true;
+            this.Bgender.Width = 69;
+            // 
+            // Bbirthdate
+            // 
+            this.Bbirthdate.DataPropertyName = "birthdate";
+            this.Bbirthdate.HeaderText = "Birth Date";
+            this.Bbirthdate.Name = "Bbirthdate";
+            this.Bbirthdate.ReadOnly = true;
+            this.Bbirthdate.Width = 83;
+            // 
+            // Bstatus
+            // 
+            this.Bstatus.DataPropertyName = "status";
+            this.Bstatus.HeaderText = "Status";
+            this.Bstatus.Name = "Bstatus";
+            this.Bstatus.ReadOnly = true;
+            this.Bstatus.Width = 63;
+            // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.panel17);
+            this.metroTabPage2.Controls.Add(this.confirmationApplicationDetailsPanel);
+            this.metroTabPage2.Controls.Add(this.confirmationApplication_dgv);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.HorizontalScrollbarSize = 1;
@@ -1693,8 +1837,548 @@
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 1;
             // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.confirmationApplication_filter);
+            this.panel17.Controls.Add(this.label20);
+            this.panel17.Controls.Add(this.confirmationApplication_add_btn);
+            this.panel17.Location = new System.Drawing.Point(3, 3);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(494, 49);
+            this.panel17.TabIndex = 71;
+            // 
+            // confirmationApplication_filter
+            // 
+            this.confirmationApplication_filter.FormattingEnabled = true;
+            this.confirmationApplication_filter.ItemHeight = 23;
+            this.confirmationApplication_filter.Items.AddRange(new object[] {
+            "Show All",
+            "Pending",
+            "Approved",
+            "Final",
+            "Revoked"});
+            this.confirmationApplication_filter.Location = new System.Drawing.Point(69, 7);
+            this.confirmationApplication_filter.Name = "confirmationApplication_filter";
+            this.confirmationApplication_filter.Size = new System.Drawing.Size(121, 29);
+            this.confirmationApplication_filter.TabIndex = 63;
+            this.confirmationApplication_filter.TabStop = false;
+            this.confirmationApplication_filter.UseSelectable = true;
+            this.confirmationApplication_filter.SelectedIndexChanged += new System.EventHandler(this.confirmationApplication_filter_SelectedIndexChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(11, 10);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(45, 21);
+            this.label20.TabIndex = 64;
+            this.label20.Text = "Filter";
+            // 
+            // confirmationApplication_add_btn
+            // 
+            this.confirmationApplication_add_btn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.confirmationApplication_add_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmationApplication_add_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmationApplication_add_btn.ForeColor = System.Drawing.Color.White;
+            this.confirmationApplication_add_btn.Location = new System.Drawing.Point(427, 14);
+            this.confirmationApplication_add_btn.Name = "confirmationApplication_add_btn";
+            this.confirmationApplication_add_btn.Size = new System.Drawing.Size(60, 26);
+            this.confirmationApplication_add_btn.TabIndex = 67;
+            this.confirmationApplication_add_btn.Text = "Add";
+            this.confirmationApplication_add_btn.UseVisualStyleBackColor = false;
+            this.confirmationApplication_add_btn.Click += new System.EventHandler(this.confirmationApplication_add_btn_Click);
+            // 
+            // confirmationApplicationDetailsPanel
+            // 
+            this.confirmationApplicationDetailsPanel.Controls.Add(this.confirmationApplication_buttons_panel);
+            this.confirmationApplicationDetailsPanel.Controls.Add(this.confirmationApplication_payment_groupbox);
+            this.confirmationApplicationDetailsPanel.Controls.Add(this.confirmationApplication_status_label);
+            this.confirmationApplicationDetailsPanel.Controls.Add(this.confirmationApplication_requirements_groupbox);
+            this.confirmationApplicationDetailsPanel.Controls.Add(this.confirmationApplication_birthdate_dtp);
+            this.confirmationApplicationDetailsPanel.Controls.Add(this.label88);
+            this.confirmationApplicationDetailsPanel.Controls.Add(this.label89);
+            this.confirmationApplicationDetailsPanel.Controls.Add(this.flowLayoutPanel4);
+            this.confirmationApplicationDetailsPanel.Controls.Add(this.confirmationApplication_suffix_text);
+            this.confirmationApplicationDetailsPanel.Controls.Add(this.confirmationApplication_lastname_text);
+            this.confirmationApplicationDetailsPanel.Controls.Add(this.confirmationApplication_mi_text);
+            this.confirmationApplicationDetailsPanel.Controls.Add(this.confirmationApplication_firstname_text);
+            this.confirmationApplicationDetailsPanel.Controls.Add(this.label90);
+            this.confirmationApplicationDetailsPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmationApplicationDetailsPanel.HorizontalScrollbarBarColor = true;
+            this.confirmationApplicationDetailsPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.confirmationApplicationDetailsPanel.HorizontalScrollbarSize = 10;
+            this.confirmationApplicationDetailsPanel.Location = new System.Drawing.Point(504, 3);
+            this.confirmationApplicationDetailsPanel.Name = "confirmationApplicationDetailsPanel";
+            this.confirmationApplicationDetailsPanel.Size = new System.Drawing.Size(287, 435);
+            this.confirmationApplicationDetailsPanel.TabIndex = 70;
+            this.confirmationApplicationDetailsPanel.VerticalScrollbarBarColor = true;
+            this.confirmationApplicationDetailsPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.confirmationApplicationDetailsPanel.VerticalScrollbarSize = 10;
+            // 
+            // confirmationApplication_buttons_panel
+            // 
+            this.confirmationApplication_buttons_panel.Controls.Add(this.confirmationApplication_editReq_btn);
+            this.confirmationApplication_buttons_panel.Controls.Add(this.confirmationApplication_approve_btn);
+            this.confirmationApplication_buttons_panel.Controls.Add(this.confirmationApplication_revoke_btn);
+            this.confirmationApplication_buttons_panel.Enabled = false;
+            this.confirmationApplication_buttons_panel.Location = new System.Drawing.Point(6, 399);
+            this.confirmationApplication_buttons_panel.Name = "confirmationApplication_buttons_panel";
+            this.confirmationApplication_buttons_panel.Size = new System.Drawing.Size(281, 32);
+            this.confirmationApplication_buttons_panel.TabIndex = 18;
+            // 
+            // confirmationApplication_editReq_btn
+            // 
+            this.confirmationApplication_editReq_btn.Location = new System.Drawing.Point(4, 3);
+            this.confirmationApplication_editReq_btn.Name = "confirmationApplication_editReq_btn";
+            this.confirmationApplication_editReq_btn.Size = new System.Drawing.Size(108, 23);
+            this.confirmationApplication_editReq_btn.TabIndex = 10;
+            this.confirmationApplication_editReq_btn.Text = "Edit Requirements";
+            this.confirmationApplication_editReq_btn.UseSelectable = true;
+            this.confirmationApplication_editReq_btn.Click += new System.EventHandler(this.confirmationApplication_editReq_btn_Click);
+            // 
+            // confirmationApplication_approve_btn
+            // 
+            this.confirmationApplication_approve_btn.Location = new System.Drawing.Point(217, 3);
+            this.confirmationApplication_approve_btn.Name = "confirmationApplication_approve_btn";
+            this.confirmationApplication_approve_btn.Size = new System.Drawing.Size(60, 23);
+            this.confirmationApplication_approve_btn.TabIndex = 10;
+            this.confirmationApplication_approve_btn.Text = "Approve";
+            this.confirmationApplication_approve_btn.UseSelectable = true;
+            this.confirmationApplication_approve_btn.Click += new System.EventHandler(this.confirmationApplication_approve_btn_Click);
+            // 
+            // confirmationApplication_revoke_btn
+            // 
+            this.confirmationApplication_revoke_btn.Location = new System.Drawing.Point(151, 3);
+            this.confirmationApplication_revoke_btn.Name = "confirmationApplication_revoke_btn";
+            this.confirmationApplication_revoke_btn.Size = new System.Drawing.Size(60, 23);
+            this.confirmationApplication_revoke_btn.TabIndex = 10;
+            this.confirmationApplication_revoke_btn.Text = "Revoke";
+            this.confirmationApplication_revoke_btn.UseSelectable = true;
+            this.confirmationApplication_revoke_btn.Click += new System.EventHandler(this.confirmationApplication_revoke_btn_Click);
+            // 
+            // confirmationApplication_payment_groupbox
+            // 
+            this.confirmationApplication_payment_groupbox.Controls.Add(this.label21);
+            this.confirmationApplication_payment_groupbox.Controls.Add(this.confirmationApplication_payment_label);
+            this.confirmationApplication_payment_groupbox.Controls.Add(this.confirmationApplication_addPayment_btn);
+            this.confirmationApplication_payment_groupbox.Controls.Add(this.confirmationApplication_payment_remarks);
+            this.confirmationApplication_payment_groupbox.Enabled = false;
+            this.confirmationApplication_payment_groupbox.Location = new System.Drawing.Point(6, 291);
+            this.confirmationApplication_payment_groupbox.Name = "confirmationApplication_payment_groupbox";
+            this.confirmationApplication_payment_groupbox.Size = new System.Drawing.Size(278, 100);
+            this.confirmationApplication_payment_groupbox.TabIndex = 17;
+            this.confirmationApplication_payment_groupbox.TabStop = false;
+            this.confirmationApplication_payment_groupbox.Text = "Payments";
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(17, 27);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(68, 15);
+            this.label21.TabIndex = 11;
+            this.label21.Text = "Remaining";
+            // 
+            // confirmationApplication_payment_label
+            // 
+            this.confirmationApplication_payment_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.confirmationApplication_payment_label.AutoSize = true;
+            this.confirmationApplication_payment_label.Location = new System.Drawing.Point(103, 28);
+            this.confirmationApplication_payment_label.Name = "confirmationApplication_payment_label";
+            this.confirmationApplication_payment_label.Size = new System.Drawing.Size(35, 15);
+            this.confirmationApplication_payment_label.TabIndex = 12;
+            this.confirmationApplication_payment_label.Text = "Price";
+            // 
+            // confirmationApplication_addPayment_btn
+            // 
+            this.confirmationApplication_addPayment_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.confirmationApplication_addPayment_btn.Location = new System.Drawing.Point(226, 21);
+            this.confirmationApplication_addPayment_btn.Name = "confirmationApplication_addPayment_btn";
+            this.confirmationApplication_addPayment_btn.Size = new System.Drawing.Size(44, 23);
+            this.confirmationApplication_addPayment_btn.TabIndex = 2;
+            this.confirmationApplication_addPayment_btn.Text = "Add";
+            this.confirmationApplication_addPayment_btn.UseSelectable = true;
+            // 
+            // confirmationApplication_payment_remarks
+            // 
+            this.confirmationApplication_payment_remarks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.confirmationApplication_payment_remarks.CustomButton.Image = null;
+            this.confirmationApplication_payment_remarks.CustomButton.Location = new System.Drawing.Point(214, 2);
+            this.confirmationApplication_payment_remarks.CustomButton.Name = "";
+            this.confirmationApplication_payment_remarks.CustomButton.Size = new System.Drawing.Size(39, 39);
+            this.confirmationApplication_payment_remarks.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.confirmationApplication_payment_remarks.CustomButton.TabIndex = 1;
+            this.confirmationApplication_payment_remarks.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.confirmationApplication_payment_remarks.CustomButton.UseSelectable = true;
+            this.confirmationApplication_payment_remarks.CustomButton.Visible = false;
+            this.confirmationApplication_payment_remarks.Lines = new string[0];
+            this.confirmationApplication_payment_remarks.Location = new System.Drawing.Point(14, 50);
+            this.confirmationApplication_payment_remarks.MaxLength = 32767;
+            this.confirmationApplication_payment_remarks.Multiline = true;
+            this.confirmationApplication_payment_remarks.Name = "confirmationApplication_payment_remarks";
+            this.confirmationApplication_payment_remarks.PasswordChar = '\0';
+            this.confirmationApplication_payment_remarks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.confirmationApplication_payment_remarks.SelectedText = "";
+            this.confirmationApplication_payment_remarks.SelectionLength = 0;
+            this.confirmationApplication_payment_remarks.SelectionStart = 0;
+            this.confirmationApplication_payment_remarks.ShortcutsEnabled = true;
+            this.confirmationApplication_payment_remarks.Size = new System.Drawing.Size(256, 44);
+            this.confirmationApplication_payment_remarks.TabIndex = 16;
+            this.confirmationApplication_payment_remarks.UseSelectable = true;
+            this.confirmationApplication_payment_remarks.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.confirmationApplication_payment_remarks.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // confirmationApplication_status_label
+            // 
+            this.confirmationApplication_status_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.confirmationApplication_status_label.AutoSize = true;
+            this.confirmationApplication_status_label.Location = new System.Drawing.Point(10, 13);
+            this.confirmationApplication_status_label.Name = "confirmationApplication_status_label";
+            this.confirmationApplication_status_label.Size = new System.Drawing.Size(41, 15);
+            this.confirmationApplication_status_label.TabIndex = 13;
+            this.confirmationApplication_status_label.Text = "Status";
+            // 
+            // confirmationApplication_requirements_groupbox
+            // 
+            this.confirmationApplication_requirements_groupbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.confirmationApplication_requirements_groupbox.Controls.Add(this.confirmationApplication_requirements_tablePanel);
+            this.confirmationApplication_requirements_groupbox.Controls.Add(this.confirmationApplication_checkAll_checkBox);
+            this.confirmationApplication_requirements_groupbox.Enabled = false;
+            this.confirmationApplication_requirements_groupbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmationApplication_requirements_groupbox.Location = new System.Drawing.Point(6, 136);
+            this.confirmationApplication_requirements_groupbox.Name = "confirmationApplication_requirements_groupbox";
+            this.confirmationApplication_requirements_groupbox.Size = new System.Drawing.Size(278, 150);
+            this.confirmationApplication_requirements_groupbox.TabIndex = 9;
+            this.confirmationApplication_requirements_groupbox.TabStop = false;
+            this.confirmationApplication_requirements_groupbox.Text = "Requirements";
+            // 
+            // confirmationApplication_requirements_tablePanel
+            // 
+            this.confirmationApplication_requirements_tablePanel.ColumnCount = 2;
+            this.confirmationApplication_requirements_tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.confirmationApplication_requirements_tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.confirmationApplication_requirements_tablePanel.Controls.Add(this.metroCheckBox2, 0, 0);
+            this.confirmationApplication_requirements_tablePanel.Controls.Add(this.metroCheckBox3, 0, 1);
+            this.confirmationApplication_requirements_tablePanel.Controls.Add(this.metroCheckBox4, 1, 0);
+            this.confirmationApplication_requirements_tablePanel.Location = new System.Drawing.Point(6, 42);
+            this.confirmationApplication_requirements_tablePanel.Name = "confirmationApplication_requirements_tablePanel";
+            this.confirmationApplication_requirements_tablePanel.RowCount = 4;
+            this.confirmationApplication_requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.confirmationApplication_requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.confirmationApplication_requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.confirmationApplication_requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.confirmationApplication_requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.confirmationApplication_requirements_tablePanel.Size = new System.Drawing.Size(268, 64);
+            this.confirmationApplication_requirements_tablePanel.TabIndex = 1;
+            // 
+            // metroCheckBox2
+            // 
+            this.metroCheckBox2.AutoSize = true;
+            this.metroCheckBox2.Location = new System.Drawing.Point(3, 3);
+            this.metroCheckBox2.Name = "metroCheckBox2";
+            this.metroCheckBox2.Size = new System.Drawing.Size(93, 14);
+            this.metroCheckBox2.TabIndex = 0;
+            this.metroCheckBox2.Text = "Parish Permit";
+            this.metroCheckBox2.UseSelectable = true;
+            this.metroCheckBox2.CheckedChanged += new System.EventHandler(this.confirmationRequirements_CheckChanged);
+            // 
+            // metroCheckBox3
+            // 
+            this.metroCheckBox3.AutoSize = true;
+            this.metroCheckBox3.Location = new System.Drawing.Point(3, 23);
+            this.metroCheckBox3.Name = "metroCheckBox3";
+            this.metroCheckBox3.Size = new System.Drawing.Size(105, 14);
+            this.metroCheckBox3.TabIndex = 0;
+            this.metroCheckBox3.Text = "Birth Certificate";
+            this.metroCheckBox3.UseSelectable = true;
+            this.metroCheckBox3.CheckedChanged += new System.EventHandler(this.confirmationRequirements_CheckChanged);
+            // 
+            // metroCheckBox4
+            // 
+            this.metroCheckBox4.AutoSize = true;
+            this.metroCheckBox4.Location = new System.Drawing.Point(137, 3);
+            this.metroCheckBox4.Name = "metroCheckBox4";
+            this.metroCheckBox4.Size = new System.Drawing.Size(123, 14);
+            this.metroCheckBox4.TabIndex = 0;
+            this.metroCheckBox4.Text = "Baptism Certificate";
+            this.metroCheckBox4.UseSelectable = true;
+            this.metroCheckBox4.CheckedChanged += new System.EventHandler(this.confirmationRequirements_CheckChanged);
+            // 
+            // confirmationApplication_checkAll_checkBox
+            // 
+            this.confirmationApplication_checkAll_checkBox.AutoSize = true;
+            this.confirmationApplication_checkAll_checkBox.Location = new System.Drawing.Point(9, 21);
+            this.confirmationApplication_checkAll_checkBox.Name = "confirmationApplication_checkAll_checkBox";
+            this.confirmationApplication_checkAll_checkBox.Size = new System.Drawing.Size(73, 15);
+            this.confirmationApplication_checkAll_checkBox.TabIndex = 0;
+            this.confirmationApplication_checkAll_checkBox.Text = "Check All";
+            this.confirmationApplication_checkAll_checkBox.UseSelectable = true;
+            this.confirmationApplication_checkAll_checkBox.CheckedChanged += new System.EventHandler(this.confirmationApplication_checkAll_checkBox_CheckedChanged);
+            // 
+            // confirmationApplication_birthdate_dtp
+            // 
+            this.confirmationApplication_birthdate_dtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.confirmationApplication_birthdate_dtp.Enabled = false;
+            this.confirmationApplication_birthdate_dtp.Location = new System.Drawing.Point(69, 104);
+            this.confirmationApplication_birthdate_dtp.MinimumSize = new System.Drawing.Size(0, 29);
+            this.confirmationApplication_birthdate_dtp.Name = "confirmationApplication_birthdate_dtp";
+            this.confirmationApplication_birthdate_dtp.Size = new System.Drawing.Size(200, 29);
+            this.confirmationApplication_birthdate_dtp.TabIndex = 8;
+            // 
+            // label88
+            // 
+            this.label88.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label88.AutoSize = true;
+            this.label88.Location = new System.Drawing.Point(7, 110);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(56, 15);
+            this.label88.TabIndex = 7;
+            this.label88.Text = "Birthdate";
+            // 
+            // label89
+            // 
+            this.label89.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label89.AutoSize = true;
+            this.label89.Location = new System.Drawing.Point(7, 81);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(48, 15);
+            this.label89.TabIndex = 7;
+            this.label89.Text = "Gender";
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel4.Controls.Add(this.confirmationApplication_male_radio);
+            this.flowLayoutPanel4.Controls.Add(this.confirmationApplication_female_radio);
+            this.flowLayoutPanel4.Enabled = false;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(69, 77);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(135, 20);
+            this.flowLayoutPanel4.TabIndex = 6;
+            // 
+            // confirmationApplication_male_radio
+            // 
+            this.confirmationApplication_male_radio.AutoSize = true;
+            this.confirmationApplication_male_radio.Location = new System.Drawing.Point(3, 3);
+            this.confirmationApplication_male_radio.Name = "confirmationApplication_male_radio";
+            this.confirmationApplication_male_radio.Size = new System.Drawing.Size(49, 15);
+            this.confirmationApplication_male_radio.TabIndex = 5;
+            this.confirmationApplication_male_radio.Text = "Male";
+            this.confirmationApplication_male_radio.UseSelectable = true;
+            // 
+            // confirmationApplication_female_radio
+            // 
+            this.confirmationApplication_female_radio.AutoSize = true;
+            this.confirmationApplication_female_radio.Location = new System.Drawing.Point(58, 3);
+            this.confirmationApplication_female_radio.Name = "confirmationApplication_female_radio";
+            this.confirmationApplication_female_radio.Size = new System.Drawing.Size(61, 15);
+            this.confirmationApplication_female_radio.TabIndex = 5;
+            this.confirmationApplication_female_radio.Text = "Female";
+            this.confirmationApplication_female_radio.UseSelectable = true;
+            // 
+            // confirmationApplication_suffix_text
+            // 
+            this.confirmationApplication_suffix_text.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.confirmationApplication_suffix_text.Location = new System.Drawing.Point(261, 48);
+            this.confirmationApplication_suffix_text.Name = "confirmationApplication_suffix_text";
+            this.confirmationApplication_suffix_text.ReadOnly = true;
+            this.confirmationApplication_suffix_text.Size = new System.Drawing.Size(25, 21);
+            this.confirmationApplication_suffix_text.TabIndex = 4;
+            // 
+            // confirmationApplication_lastname_text
+            // 
+            this.confirmationApplication_lastname_text.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.confirmationApplication_lastname_text.Location = new System.Drawing.Point(174, 48);
+            this.confirmationApplication_lastname_text.Name = "confirmationApplication_lastname_text";
+            this.confirmationApplication_lastname_text.ReadOnly = true;
+            this.confirmationApplication_lastname_text.Size = new System.Drawing.Size(81, 21);
+            this.confirmationApplication_lastname_text.TabIndex = 4;
+            // 
+            // confirmationApplication_mi_text
+            // 
+            this.confirmationApplication_mi_text.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.confirmationApplication_mi_text.Location = new System.Drawing.Point(143, 48);
+            this.confirmationApplication_mi_text.Name = "confirmationApplication_mi_text";
+            this.confirmationApplication_mi_text.ReadOnly = true;
+            this.confirmationApplication_mi_text.Size = new System.Drawing.Size(25, 21);
+            this.confirmationApplication_mi_text.TabIndex = 4;
+            // 
+            // confirmationApplication_firstname_text
+            // 
+            this.confirmationApplication_firstname_text.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.confirmationApplication_firstname_text.Location = new System.Drawing.Point(69, 48);
+            this.confirmationApplication_firstname_text.Name = "confirmationApplication_firstname_text";
+            this.confirmationApplication_firstname_text.ReadOnly = true;
+            this.confirmationApplication_firstname_text.Size = new System.Drawing.Size(68, 21);
+            this.confirmationApplication_firstname_text.TabIndex = 4;
+            // 
+            // label90
+            // 
+            this.label90.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label90.AutoSize = true;
+            this.label90.Location = new System.Drawing.Point(8, 51);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(41, 15);
+            this.label90.TabIndex = 3;
+            this.label90.Text = "Name";
+            // 
+            // confirmationApplication_dgv
+            // 
+            this.confirmationApplication_dgv.AllowUserToAddRows = false;
+            this.confirmationApplication_dgv.AllowUserToDeleteRows = false;
+            this.confirmationApplication_dgv.AllowUserToResizeRows = false;
+            this.confirmationApplication_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.confirmationApplication_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.confirmationApplication_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.confirmationApplication_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.confirmationApplication_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.confirmationApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            this.confirmationApplication_dgv.ColumnHeadersHeight = 25;
+            this.confirmationApplication_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.confirmationApplication_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CprofileID,
+            this.CapplicationID,
+            this.Crequirements,
+            this.ClastName,
+            this.CfirstName,
+            this.CmidName,
+            this.Csuffix,
+            this.Cgender,
+            this.Cbirthdate,
+            this.Cstatus});
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.confirmationApplication_dgv.DefaultCellStyle = dataGridViewCellStyle29;
+            this.confirmationApplication_dgv.EnableHeadersVisualStyles = false;
+            this.confirmationApplication_dgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.confirmationApplication_dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.confirmationApplication_dgv.Location = new System.Drawing.Point(3, 56);
+            this.confirmationApplication_dgv.MultiSelect = false;
+            this.confirmationApplication_dgv.Name = "confirmationApplication_dgv";
+            this.confirmationApplication_dgv.ReadOnly = true;
+            this.confirmationApplication_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.confirmationApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            this.confirmationApplication_dgv.RowHeadersVisible = false;
+            this.confirmationApplication_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.confirmationApplication_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.confirmationApplication_dgv.Size = new System.Drawing.Size(493, 380);
+            this.confirmationApplication_dgv.TabIndex = 69;
+            this.confirmationApplication_dgv.TabStop = false;
+            this.confirmationApplication_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.confirmationApplication_dgv_CellContentClick);
+            this.confirmationApplication_dgv.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.confirmationApplication_dgv_CellEnter);
+            this.confirmationApplication_dgv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.confirmationApplication_dgv_CellFormatting);
+            this.confirmationApplication_dgv.VisibleChanged += new System.EventHandler(this.confirmationApplication_dgv_VisibleChanged);
+            // 
+            // CprofileID
+            // 
+            this.CprofileID.DataPropertyName = "profileID";
+            this.CprofileID.HeaderText = "profileID";
+            this.CprofileID.Name = "CprofileID";
+            this.CprofileID.ReadOnly = true;
+            this.CprofileID.Visible = false;
+            this.CprofileID.Width = 76;
+            // 
+            // CapplicationID
+            // 
+            this.CapplicationID.DataPropertyName = "applicationID";
+            this.CapplicationID.HeaderText = "applicationID";
+            this.CapplicationID.Name = "CapplicationID";
+            this.CapplicationID.ReadOnly = true;
+            this.CapplicationID.Visible = false;
+            // 
+            // Crequirements
+            // 
+            this.Crequirements.DataPropertyName = "requirements";
+            this.Crequirements.HeaderText = "requirements";
+            this.Crequirements.Name = "Crequirements";
+            this.Crequirements.ReadOnly = true;
+            this.Crequirements.Visible = false;
+            this.Crequirements.Width = 99;
+            // 
+            // ClastName
+            // 
+            this.ClastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ClastName.DataPropertyName = "lastName";
+            this.ClastName.HeaderText = "Last Name";
+            this.ClastName.Name = "ClastName";
+            this.ClastName.ReadOnly = true;
+            // 
+            // CfirstName
+            // 
+            this.CfirstName.DataPropertyName = "firstName";
+            this.CfirstName.HeaderText = "First Name";
+            this.CfirstName.Name = "CfirstName";
+            this.CfirstName.ReadOnly = true;
+            this.CfirstName.Width = 85;
+            // 
+            // CmidName
+            // 
+            this.CmidName.DataPropertyName = "midName";
+            this.CmidName.HeaderText = "M.I.";
+            this.CmidName.Name = "CmidName";
+            this.CmidName.ReadOnly = true;
+            this.CmidName.Width = 50;
+            // 
+            // Csuffix
+            // 
+            this.Csuffix.DataPropertyName = "suffix";
+            this.Csuffix.HeaderText = "Suffix";
+            this.Csuffix.Name = "Csuffix";
+            this.Csuffix.ReadOnly = true;
+            this.Csuffix.Width = 60;
+            // 
+            // Cgender
+            // 
+            this.Cgender.DataPropertyName = "gender";
+            this.Cgender.HeaderText = "Gender";
+            this.Cgender.Name = "Cgender";
+            this.Cgender.ReadOnly = true;
+            this.Cgender.Width = 69;
+            // 
+            // Cbirthdate
+            // 
+            this.Cbirthdate.DataPropertyName = "birthdate";
+            this.Cbirthdate.HeaderText = "Birth Date";
+            this.Cbirthdate.Name = "Cbirthdate";
+            this.Cbirthdate.ReadOnly = true;
+            this.Cbirthdate.Width = 83;
+            // 
+            // Cstatus
+            // 
+            this.Cstatus.DataPropertyName = "status";
+            this.Cstatus.HeaderText = "Status";
+            this.Cstatus.Name = "Cstatus";
+            this.Cstatus.ReadOnly = true;
+            this.Cstatus.Width = 63;
+            // 
             // metroTabPage3
             // 
+            this.metroTabPage3.Controls.Add(this.panel18);
+            this.metroTabPage3.Controls.Add(this.metroPanel1);
+            this.metroTabPage3.Controls.Add(this.marriageApplication_dgv);
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.HorizontalScrollbarSize = 1;
@@ -1706,6 +2390,513 @@
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 1;
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.marriageApplication_filter);
+            this.panel18.Controls.Add(this.label22);
+            this.panel18.Controls.Add(this.marriageApplication_add_button);
+            this.panel18.Location = new System.Drawing.Point(3, 3);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(494, 49);
+            this.panel18.TabIndex = 74;
+            // 
+            // marriageApplication_filter
+            // 
+            this.marriageApplication_filter.FormattingEnabled = true;
+            this.marriageApplication_filter.ItemHeight = 23;
+            this.marriageApplication_filter.Items.AddRange(new object[] {
+            "Show All",
+            "Pending",
+            "Approved",
+            "Final",
+            "Revoked"});
+            this.marriageApplication_filter.Location = new System.Drawing.Point(69, 7);
+            this.marriageApplication_filter.Name = "marriageApplication_filter";
+            this.marriageApplication_filter.Size = new System.Drawing.Size(121, 29);
+            this.marriageApplication_filter.TabIndex = 63;
+            this.marriageApplication_filter.TabStop = false;
+            this.marriageApplication_filter.UseSelectable = true;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(11, 10);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(45, 21);
+            this.label22.TabIndex = 64;
+            this.label22.Text = "Filter";
+            // 
+            // marriageApplication_add_button
+            // 
+            this.marriageApplication_add_button.BackColor = System.Drawing.Color.DodgerBlue;
+            this.marriageApplication_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.marriageApplication_add_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.marriageApplication_add_button.ForeColor = System.Drawing.Color.White;
+            this.marriageApplication_add_button.Location = new System.Drawing.Point(427, 14);
+            this.marriageApplication_add_button.Name = "marriageApplication_add_button";
+            this.marriageApplication_add_button.Size = new System.Drawing.Size(60, 26);
+            this.marriageApplication_add_button.TabIndex = 67;
+            this.marriageApplication_add_button.Text = "Add";
+            this.marriageApplication_add_button.UseVisualStyleBackColor = false;
+            this.marriageApplication_add_button.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.Controls.Add(this.dtpBBirthDate);
+            this.metroPanel1.Controls.Add(this.label94);
+            this.metroPanel1.Controls.Add(this.txtBSuffix);
+            this.metroPanel1.Controls.Add(this.txtBLN);
+            this.metroPanel1.Controls.Add(this.txtBMI);
+            this.metroPanel1.Controls.Add(this.txtBFN);
+            this.metroPanel1.Controls.Add(this.label96);
+            this.metroPanel1.Controls.Add(this.panel19);
+            this.metroPanel1.Controls.Add(this.groupBox1);
+            this.metroPanel1.Controls.Add(this.label92);
+            this.metroPanel1.Controls.Add(this.groupBox2);
+            this.metroPanel1.Controls.Add(this.dtpGBirthDate);
+            this.metroPanel1.Controls.Add(this.label93);
+            this.metroPanel1.Controls.Add(this.txtGSuffix);
+            this.metroPanel1.Controls.Add(this.txtGLN);
+            this.metroPanel1.Controls.Add(this.txtGMI);
+            this.metroPanel1.Controls.Add(this.txtGFN);
+            this.metroPanel1.Controls.Add(this.label95);
+            this.metroPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(504, 3);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(290, 435);
+            this.metroPanel1.TabIndex = 73;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // dtpBBirthDate
+            // 
+            this.dtpBBirthDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpBBirthDate.Enabled = false;
+            this.dtpBBirthDate.Location = new System.Drawing.Point(69, 136);
+            this.dtpBBirthDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpBBirthDate.Name = "dtpBBirthDate";
+            this.dtpBBirthDate.Size = new System.Drawing.Size(200, 29);
+            this.dtpBBirthDate.TabIndex = 25;
+            // 
+            // label94
+            // 
+            this.label94.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label94.AutoSize = true;
+            this.label94.Location = new System.Drawing.Point(7, 142);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(56, 15);
+            this.label94.TabIndex = 24;
+            this.label94.Text = "Birthdate";
+            // 
+            // txtBSuffix
+            // 
+            this.txtBSuffix.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBSuffix.Location = new System.Drawing.Point(262, 109);
+            this.txtBSuffix.Name = "txtBSuffix";
+            this.txtBSuffix.ReadOnly = true;
+            this.txtBSuffix.Size = new System.Drawing.Size(25, 21);
+            this.txtBSuffix.TabIndex = 20;
+            // 
+            // txtBLN
+            // 
+            this.txtBLN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBLN.Location = new System.Drawing.Point(175, 109);
+            this.txtBLN.Name = "txtBLN";
+            this.txtBLN.ReadOnly = true;
+            this.txtBLN.Size = new System.Drawing.Size(81, 21);
+            this.txtBLN.TabIndex = 21;
+            // 
+            // txtBMI
+            // 
+            this.txtBMI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBMI.Location = new System.Drawing.Point(144, 109);
+            this.txtBMI.Name = "txtBMI";
+            this.txtBMI.ReadOnly = true;
+            this.txtBMI.Size = new System.Drawing.Size(25, 21);
+            this.txtBMI.TabIndex = 22;
+            // 
+            // txtBFN
+            // 
+            this.txtBFN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBFN.Location = new System.Drawing.Point(70, 109);
+            this.txtBFN.Name = "txtBFN";
+            this.txtBFN.ReadOnly = true;
+            this.txtBFN.Size = new System.Drawing.Size(68, 21);
+            this.txtBFN.TabIndex = 23;
+            // 
+            // label96
+            // 
+            this.label96.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label96.AutoSize = true;
+            this.label96.Location = new System.Drawing.Point(9, 112);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(36, 15);
+            this.label96.TabIndex = 19;
+            this.label96.Text = "Bride";
+            // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.marriageApplication_editReq_btn);
+            this.panel19.Controls.Add(this.marriageApplication_approve_btn);
+            this.panel19.Controls.Add(this.marriageApplication_revoke_btn);
+            this.panel19.Enabled = false;
+            this.panel19.Location = new System.Drawing.Point(6, 399);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(281, 32);
+            this.panel19.TabIndex = 18;
+            // 
+            // marriageApplication_editReq_btn
+            // 
+            this.marriageApplication_editReq_btn.Location = new System.Drawing.Point(4, 3);
+            this.marriageApplication_editReq_btn.Name = "marriageApplication_editReq_btn";
+            this.marriageApplication_editReq_btn.Size = new System.Drawing.Size(108, 23);
+            this.marriageApplication_editReq_btn.TabIndex = 10;
+            this.marriageApplication_editReq_btn.Text = "Edit Requirements";
+            this.marriageApplication_editReq_btn.UseSelectable = true;
+            // 
+            // marriageApplication_approve_btn
+            // 
+            this.marriageApplication_approve_btn.Location = new System.Drawing.Point(217, 3);
+            this.marriageApplication_approve_btn.Name = "marriageApplication_approve_btn";
+            this.marriageApplication_approve_btn.Size = new System.Drawing.Size(60, 23);
+            this.marriageApplication_approve_btn.TabIndex = 10;
+            this.marriageApplication_approve_btn.Text = "Approve";
+            this.marriageApplication_approve_btn.UseSelectable = true;
+            // 
+            // marriageApplication_revoke_btn
+            // 
+            this.marriageApplication_revoke_btn.Location = new System.Drawing.Point(151, 3);
+            this.marriageApplication_revoke_btn.Name = "marriageApplication_revoke_btn";
+            this.marriageApplication_revoke_btn.Size = new System.Drawing.Size(60, 23);
+            this.marriageApplication_revoke_btn.TabIndex = 10;
+            this.marriageApplication_revoke_btn.Text = "Revoke";
+            this.marriageApplication_revoke_btn.UseSelectable = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label23);
+            this.groupBox1.Controls.Add(this.marriageApplication_price_label);
+            this.groupBox1.Controls.Add(this.marriageApplication_add_btn);
+            this.groupBox1.Controls.Add(this.marriageApplication_remarks);
+            this.groupBox1.Enabled = false;
+            this.groupBox1.Location = new System.Drawing.Point(6, 291);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(278, 100);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Payments";
+            // 
+            // label23
+            // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(17, 27);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(68, 15);
+            this.label23.TabIndex = 11;
+            this.label23.Text = "Remaining";
+            // 
+            // marriageApplication_price_label
+            // 
+            this.marriageApplication_price_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.marriageApplication_price_label.AutoSize = true;
+            this.marriageApplication_price_label.Location = new System.Drawing.Point(103, 28);
+            this.marriageApplication_price_label.Name = "marriageApplication_price_label";
+            this.marriageApplication_price_label.Size = new System.Drawing.Size(35, 15);
+            this.marriageApplication_price_label.TabIndex = 12;
+            this.marriageApplication_price_label.Text = "Price";
+            // 
+            // marriageApplication_add_btn
+            // 
+            this.marriageApplication_add_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.marriageApplication_add_btn.Location = new System.Drawing.Point(226, 21);
+            this.marriageApplication_add_btn.Name = "marriageApplication_add_btn";
+            this.marriageApplication_add_btn.Size = new System.Drawing.Size(44, 23);
+            this.marriageApplication_add_btn.TabIndex = 2;
+            this.marriageApplication_add_btn.Text = "Add";
+            this.marriageApplication_add_btn.UseSelectable = true;
+            // 
+            // marriageApplication_remarks
+            // 
+            this.marriageApplication_remarks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.marriageApplication_remarks.CustomButton.Image = null;
+            this.marriageApplication_remarks.CustomButton.Location = new System.Drawing.Point(214, 2);
+            this.marriageApplication_remarks.CustomButton.Name = "";
+            this.marriageApplication_remarks.CustomButton.Size = new System.Drawing.Size(39, 39);
+            this.marriageApplication_remarks.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.marriageApplication_remarks.CustomButton.TabIndex = 1;
+            this.marriageApplication_remarks.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.marriageApplication_remarks.CustomButton.UseSelectable = true;
+            this.marriageApplication_remarks.CustomButton.Visible = false;
+            this.marriageApplication_remarks.Lines = new string[0];
+            this.marriageApplication_remarks.Location = new System.Drawing.Point(14, 50);
+            this.marriageApplication_remarks.MaxLength = 32767;
+            this.marriageApplication_remarks.Multiline = true;
+            this.marriageApplication_remarks.Name = "marriageApplication_remarks";
+            this.marriageApplication_remarks.PasswordChar = '\0';
+            this.marriageApplication_remarks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.marriageApplication_remarks.SelectedText = "";
+            this.marriageApplication_remarks.SelectionLength = 0;
+            this.marriageApplication_remarks.SelectionStart = 0;
+            this.marriageApplication_remarks.ShortcutsEnabled = true;
+            this.marriageApplication_remarks.Size = new System.Drawing.Size(256, 44);
+            this.marriageApplication_remarks.TabIndex = 16;
+            this.marriageApplication_remarks.UseSelectable = true;
+            this.marriageApplication_remarks.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.marriageApplication_remarks.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // label92
+            // 
+            this.label92.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label92.AutoSize = true;
+            this.label92.Location = new System.Drawing.Point(13, 13);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(41, 15);
+            this.label92.TabIndex = 13;
+            this.label92.Text = "Status";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox2.Controls.Add(this.metroCheckBox7);
+            this.groupBox2.Enabled = false;
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.Location = new System.Drawing.Point(9, 171);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(278, 115);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Requirements";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.metroCheckBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.metroCheckBox5, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.metroCheckBox6, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.metroCheckBox8, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.metroCheckBox9, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.metroCheckBox10, 1, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 42);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(268, 64);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // metroCheckBox1
+            // 
+            this.metroCheckBox1.AutoSize = true;
+            this.metroCheckBox1.Location = new System.Drawing.Point(3, 3);
+            this.metroCheckBox1.Name = "metroCheckBox1";
+            this.metroCheckBox1.Size = new System.Drawing.Size(93, 14);
+            this.metroCheckBox1.TabIndex = 0;
+            this.metroCheckBox1.Text = "Parish Permit";
+            this.metroCheckBox1.UseSelectable = true;
+            // 
+            // metroCheckBox5
+            // 
+            this.metroCheckBox5.AutoSize = true;
+            this.metroCheckBox5.Location = new System.Drawing.Point(3, 23);
+            this.metroCheckBox5.Name = "metroCheckBox5";
+            this.metroCheckBox5.Size = new System.Drawing.Size(112, 14);
+            this.metroCheckBox5.TabIndex = 0;
+            this.metroCheckBox5.Text = "Marriage License";
+            this.metroCheckBox5.UseSelectable = true;
+            // 
+            // metroCheckBox6
+            // 
+            this.metroCheckBox6.AutoSize = true;
+            this.metroCheckBox6.Location = new System.Drawing.Point(137, 3);
+            this.metroCheckBox6.Name = "metroCheckBox6";
+            this.metroCheckBox6.Size = new System.Drawing.Size(110, 14);
+            this.metroCheckBox6.TabIndex = 0;
+            this.metroCheckBox6.Text = "Birth Certificates";
+            this.metroCheckBox6.UseSelectable = true;
+            // 
+            // metroCheckBox8
+            // 
+            this.metroCheckBox8.AutoSize = true;
+            this.metroCheckBox8.Location = new System.Drawing.Point(137, 23);
+            this.metroCheckBox8.Name = "metroCheckBox8";
+            this.metroCheckBox8.Size = new System.Drawing.Size(128, 14);
+            this.metroCheckBox8.TabIndex = 0;
+            this.metroCheckBox8.Text = "Baptism Certificates";
+            this.metroCheckBox8.UseSelectable = true;
+            // 
+            // metroCheckBox9
+            // 
+            this.metroCheckBox9.AutoSize = true;
+            this.metroCheckBox9.Location = new System.Drawing.Point(3, 43);
+            this.metroCheckBox9.Name = "metroCheckBox9";
+            this.metroCheckBox9.Size = new System.Drawing.Size(128, 14);
+            this.metroCheckBox9.TabIndex = 0;
+            this.metroCheckBox9.Text = "Confirmation Certificates";
+            this.metroCheckBox9.UseSelectable = true;
+            // 
+            // metroCheckBox10
+            // 
+            this.metroCheckBox10.AutoSize = true;
+            this.metroCheckBox10.Location = new System.Drawing.Point(137, 43);
+            this.metroCheckBox10.Name = "metroCheckBox10";
+            this.metroCheckBox10.Size = new System.Drawing.Size(100, 14);
+            this.metroCheckBox10.TabIndex = 0;
+            this.metroCheckBox10.Text = "Requirement 3";
+            this.metroCheckBox10.UseSelectable = true;
+            // 
+            // metroCheckBox7
+            // 
+            this.metroCheckBox7.AutoSize = true;
+            this.metroCheckBox7.Location = new System.Drawing.Point(9, 21);
+            this.metroCheckBox7.Name = "metroCheckBox7";
+            this.metroCheckBox7.Size = new System.Drawing.Size(73, 15);
+            this.metroCheckBox7.TabIndex = 0;
+            this.metroCheckBox7.Text = "Check All";
+            this.metroCheckBox7.UseSelectable = true;
+            // 
+            // dtpGBirthDate
+            // 
+            this.dtpGBirthDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpGBirthDate.Enabled = false;
+            this.dtpGBirthDate.Location = new System.Drawing.Point(71, 75);
+            this.dtpGBirthDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpGBirthDate.Name = "dtpGBirthDate";
+            this.dtpGBirthDate.Size = new System.Drawing.Size(200, 29);
+            this.dtpGBirthDate.TabIndex = 8;
+            // 
+            // label93
+            // 
+            this.label93.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label93.AutoSize = true;
+            this.label93.Location = new System.Drawing.Point(9, 81);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(56, 15);
+            this.label93.TabIndex = 7;
+            this.label93.Text = "Birthdate";
+            // 
+            // txtGSuffix
+            // 
+            this.txtGSuffix.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGSuffix.Location = new System.Drawing.Point(264, 48);
+            this.txtGSuffix.Name = "txtGSuffix";
+            this.txtGSuffix.ReadOnly = true;
+            this.txtGSuffix.Size = new System.Drawing.Size(25, 21);
+            this.txtGSuffix.TabIndex = 4;
+            // 
+            // txtGLN
+            // 
+            this.txtGLN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGLN.Location = new System.Drawing.Point(177, 48);
+            this.txtGLN.Name = "txtGLN";
+            this.txtGLN.ReadOnly = true;
+            this.txtGLN.Size = new System.Drawing.Size(81, 21);
+            this.txtGLN.TabIndex = 4;
+            // 
+            // txtGMI
+            // 
+            this.txtGMI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGMI.Location = new System.Drawing.Point(146, 48);
+            this.txtGMI.Name = "txtGMI";
+            this.txtGMI.ReadOnly = true;
+            this.txtGMI.Size = new System.Drawing.Size(25, 21);
+            this.txtGMI.TabIndex = 4;
+            // 
+            // txtGFN
+            // 
+            this.txtGFN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGFN.Location = new System.Drawing.Point(72, 48);
+            this.txtGFN.Name = "txtGFN";
+            this.txtGFN.ReadOnly = true;
+            this.txtGFN.Size = new System.Drawing.Size(68, 21);
+            this.txtGFN.TabIndex = 4;
+            // 
+            // label95
+            // 
+            this.label95.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label95.AutoSize = true;
+            this.label95.Location = new System.Drawing.Point(11, 51);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(45, 15);
+            this.label95.TabIndex = 3;
+            this.label95.Text = "Groom";
+            // 
+            // marriageApplication_dgv
+            // 
+            this.marriageApplication_dgv.AllowUserToAddRows = false;
+            this.marriageApplication_dgv.AllowUserToDeleteRows = false;
+            this.marriageApplication_dgv.AllowUserToResizeRows = false;
+            this.marriageApplication_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.marriageApplication_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.marriageApplication_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.marriageApplication_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.marriageApplication_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.marriageApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            this.marriageApplication_dgv.ColumnHeadersHeight = 25;
+            this.marriageApplication_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.marriageApplication_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn1,
+            this.Column1,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn5,
+            this.Column2,
+            this.dataGridViewTextBoxColumn10});
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.marriageApplication_dgv.DefaultCellStyle = dataGridViewCellStyle32;
+            this.marriageApplication_dgv.EnableHeadersVisualStyles = false;
+            this.marriageApplication_dgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.marriageApplication_dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.marriageApplication_dgv.Location = new System.Drawing.Point(3, 56);
+            this.marriageApplication_dgv.MultiSelect = false;
+            this.marriageApplication_dgv.Name = "marriageApplication_dgv";
+            this.marriageApplication_dgv.ReadOnly = true;
+            this.marriageApplication_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.marriageApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            this.marriageApplication_dgv.RowHeadersVisible = false;
+            this.marriageApplication_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.marriageApplication_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.marriageApplication_dgv.Size = new System.Drawing.Size(493, 380);
+            this.marriageApplication_dgv.TabIndex = 72;
+            this.marriageApplication_dgv.TabStop = false;
+            this.marriageApplication_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.marriageApplication_dgv_CellContentClick);
+            this.marriageApplication_dgv.VisibleChanged += new System.EventHandler(this.marriageApplication_dgv_VisibleChanged);
             // 
             // panel15
             // 
@@ -1755,7 +2946,7 @@
             this.flowLayoutPanel2.Controls.Add(this.brideNew_panel_marriageApplication);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(20, 45);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(299, 430);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(299, 424);
             this.flowLayoutPanel2.TabIndex = 52;
             // 
             // groomExisting_panel_marriageApplication
@@ -2084,7 +3275,7 @@
             this.search_textbox_marriageApplication.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.search_textbox_marriageApplication.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.search_textbox_marriageApplication.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search_textbox_marriageApplication.Location = new System.Drawing.Point(584, 10);
+            this.search_textbox_marriageApplication.Location = new System.Drawing.Point(568, 10);
             this.search_textbox_marriageApplication.Name = "search_textbox_marriageApplication";
             this.search_textbox_marriageApplication.Size = new System.Drawing.Size(198, 16);
             this.search_textbox_marriageApplication.TabIndex = 50;
@@ -2098,7 +3289,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Calibri", 12F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(682, 495);
+            this.button3.Location = new System.Drawing.Point(666, 489);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 31);
             this.button3.TabIndex = 43;
@@ -2114,14 +3305,14 @@
             this.marriageApplication_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.marriageApplication_dataGridView.Location = new System.Drawing.Point(325, 55);
             this.marriageApplication_dataGridView.Name = "marriageApplication_dataGridView";
-            this.marriageApplication_dataGridView.Size = new System.Drawing.Size(460, 420);
+            this.marriageApplication_dataGridView.Size = new System.Drawing.Size(444, 414);
             this.marriageApplication_dataGridView.TabIndex = 44;
             // 
             // label27
             // 
             this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(578, 13);
+            this.label27.Location = new System.Drawing.Point(562, 13);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(213, 21);
             this.label27.TabIndex = 51;
@@ -3634,41 +4825,41 @@
             this.profiles_dataGridView_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.profiles_dataGridView_baptism.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.profiles_dataGridView_baptism.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.profiles_dataGridView_baptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.profiles_dataGridView_baptism.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.profiles_dataGridView_baptism.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle35.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.profiles_dataGridView_baptism.DefaultCellStyle = dataGridViewCellStyle35;
             this.profiles_dataGridView_baptism.EnableHeadersVisualStyles = false;
             this.profiles_dataGridView_baptism.Location = new System.Drawing.Point(1, 80);
             this.profiles_dataGridView_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.profiles_dataGridView_baptism.MultiSelect = false;
             this.profiles_dataGridView_baptism.Name = "profiles_dataGridView_baptism";
             this.profiles_dataGridView_baptism.ReadOnly = true;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.profiles_dataGridView_baptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
             this.profiles_dataGridView_baptism.RowHeadersVisible = false;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.profiles_dataGridView_baptism.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.profiles_dataGridView_baptism.RowsDefaultCellStyle = dataGridViewCellStyle37;
             this.profiles_dataGridView_baptism.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.profiles_dataGridView_baptism.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.profiles_dataGridView_baptism.Size = new System.Drawing.Size(398, 341);
@@ -3742,23 +4933,23 @@
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
             this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle39;
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -3766,14 +4957,14 @@
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.ReadOnly = true;
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle40;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid1.Size = new System.Drawing.Size(493, 426);
@@ -4036,87 +5227,80 @@
             this.libraryBaptismButton.UseVisualStyleBackColor = false;
             this.libraryBaptismButton.Click += new System.EventHandler(this.libraryBaptismButton_Click);
             // 
-            // profileID
+            // dataGridViewTextBoxColumn2
             // 
-            this.profileID.DataPropertyName = "profileID";
-            this.profileID.HeaderText = "profileID";
-            this.profileID.Name = "profileID";
-            this.profileID.ReadOnly = true;
-            this.profileID.Visible = false;
-            this.profileID.Width = 76;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "applicationID";
+            this.dataGridViewTextBoxColumn2.HeaderText = "applicationID";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Visible = false;
             // 
-            // applicationID
+            // dataGridViewTextBoxColumn1
             // 
-            this.applicationID.DataPropertyName = "applicationID";
-            this.applicationID.HeaderText = "applicationID";
-            this.applicationID.Name = "applicationID";
-            this.applicationID.ReadOnly = true;
-            this.applicationID.Visible = false;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "groomProfileID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Groom ProfileID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn1.Width = 113;
             // 
-            // requirements
+            // Column1
             // 
-            this.requirements.DataPropertyName = "requirements";
-            this.requirements.HeaderText = "requirements";
-            this.requirements.Name = "requirements";
-            this.requirements.ReadOnly = true;
-            this.requirements.Visible = false;
-            this.requirements.Width = 99;
+            this.Column1.DataPropertyName = "brideProfileID";
+            this.Column1.HeaderText = "Bride ProfileID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            this.Column1.Width = 105;
             // 
-            // lastName
+            // dataGridViewTextBoxColumn3
             // 
-            this.lastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.lastName.DataPropertyName = "lastName";
-            this.lastName.HeaderText = "Last Name";
-            this.lastName.Name = "lastName";
-            this.lastName.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "requirements";
+            this.dataGridViewTextBoxColumn3.HeaderText = "requirements";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            this.dataGridViewTextBoxColumn3.Width = 99;
             // 
-            // firstName
+            // dataGridViewTextBoxColumn4
             // 
-            this.firstName.DataPropertyName = "firstName";
-            this.firstName.HeaderText = "First Name";
-            this.firstName.Name = "firstName";
-            this.firstName.ReadOnly = true;
-            this.firstName.Width = 85;
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "groomName";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Groom Name";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // midName
+            // dataGridViewTextBoxColumn9
             // 
-            this.midName.DataPropertyName = "midName";
-            this.midName.HeaderText = "M.I.";
-            this.midName.Name = "midName";
-            this.midName.ReadOnly = true;
-            this.midName.Width = 50;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "groomBirthDate";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Groom Birth Date";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 121;
             // 
-            // suffix
+            // dataGridViewTextBoxColumn5
             // 
-            this.suffix.DataPropertyName = "suffix";
-            this.suffix.HeaderText = "Suffix";
-            this.suffix.Name = "suffix";
-            this.suffix.ReadOnly = true;
-            this.suffix.Width = 60;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "brideName";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Bride Name";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 90;
             // 
-            // gender
+            // Column2
             // 
-            this.gender.DataPropertyName = "gender";
-            this.gender.HeaderText = "Gender";
-            this.gender.Name = "gender";
-            this.gender.ReadOnly = true;
-            this.gender.Width = 69;
+            this.Column2.DataPropertyName = "brideBirthDate";
+            this.Column2.HeaderText = "Bride Birth Date";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 113;
             // 
-            // birthdate
+            // dataGridViewTextBoxColumn10
             // 
-            this.birthdate.DataPropertyName = "birthdate";
-            this.birthdate.HeaderText = "Birth Date";
-            this.birthdate.Name = "birthdate";
-            this.birthdate.ReadOnly = true;
-            this.birthdate.Width = 83;
-            // 
-            // status
-            // 
-            this.status.DataPropertyName = "status";
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            this.status.Width = 63;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "status";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Status";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 63;
             // 
             // SAD
             // 
@@ -4149,7 +5333,7 @@
             this.AddPNL.ResumeLayout(false);
             this.AddPNL.PerformLayout();
             this.application_panel.ResumeLayout(false);
-            this.metroTabControl1.ResumeLayout(false);
+            this.applicationTabControl.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
@@ -4165,6 +5349,34 @@
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.baptismApplication_dgv)).EndInit();
+            this.metroTabPage2.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.confirmationApplicationDetailsPanel.ResumeLayout(false);
+            this.confirmationApplicationDetailsPanel.PerformLayout();
+            this.confirmationApplication_buttons_panel.ResumeLayout(false);
+            this.confirmationApplication_payment_groupbox.ResumeLayout(false);
+            this.confirmationApplication_payment_groupbox.PerformLayout();
+            this.confirmationApplication_requirements_groupbox.ResumeLayout(false);
+            this.confirmationApplication_requirements_groupbox.PerformLayout();
+            this.confirmationApplication_requirements_tablePanel.ResumeLayout(false);
+            this.confirmationApplication_requirements_tablePanel.PerformLayout();
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.flowLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.confirmationApplication_dgv)).EndInit();
+            this.metroTabPage3.ResumeLayout(false);
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
+            this.metroPanel1.ResumeLayout(false);
+            this.metroPanel1.PerformLayout();
+            this.panel19.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.marriageApplication_dgv)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             this.marriageApplication_panel.ResumeLayout(false);
@@ -4502,18 +5714,14 @@
         private System.Windows.Forms.Button scheduling_button_menu;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Button baptismApplication_add_button;
-        private System.Windows.Forms.TextBox textBox11;
         private MetroFramework.Controls.MetroPanel baptismApplicationDetailsPanel;
         private MetroFramework.Controls.MetroButton baptismApplication_revoke_button;
         private MetroFramework.Controls.MetroButton baptismApplication_approve_button;
         private System.Windows.Forms.GroupBox baptismApplication_requirements_groupbox;
         private System.Windows.Forms.TableLayoutPanel baptismApplication_requirements_tablePanel;
-        private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_checkBox4;
         private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_checkBox1;
         private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_checkBox3;
         private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_checkBox2;
-        private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_checkBox5;
-        private MetroFramework.Controls.MetroCheckBox baptismApplication_requirement_checkBox6;
         private MetroFramework.Controls.MetroCheckBox baptismApplication_checkAll_checkBox;
         private MetroFramework.Controls.MetroDateTime baptismApplication_birthDate;
         private System.Windows.Forms.Label label86;
@@ -4537,20 +5745,111 @@
         private System.Windows.Forms.GroupBox baptismApplication_payment_groupbox;
         private System.Windows.Forms.Label label87;
         private MetroFramework.Controls.MetroButton baptismApplication_editReq_button;
-        private MetroFramework.Controls.MetroTabControl metroTabControl1;
+        private MetroFramework.Controls.MetroTabControl applicationTabControl;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private MetroFramework.Controls.MetroTabPage metroTabPage3;
         private System.Windows.Forms.Panel baptismApplication_buttons_panel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn profileID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn applicationID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn requirements;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn midName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn suffix;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn birthdate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.Panel panel17;
+        private MetroFramework.Controls.MetroComboBox confirmationApplication_filter;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button confirmationApplication_add_btn;
+        private MetroFramework.Controls.MetroPanel confirmationApplicationDetailsPanel;
+        private System.Windows.Forms.Panel confirmationApplication_buttons_panel;
+        private MetroFramework.Controls.MetroButton confirmationApplication_editReq_btn;
+        private MetroFramework.Controls.MetroButton confirmationApplication_approve_btn;
+        private MetroFramework.Controls.MetroButton confirmationApplication_revoke_btn;
+        private System.Windows.Forms.GroupBox confirmationApplication_payment_groupbox;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label confirmationApplication_payment_label;
+        private MetroFramework.Controls.MetroButton confirmationApplication_addPayment_btn;
+        private MetroFramework.Controls.MetroTextBox confirmationApplication_payment_remarks;
+        private System.Windows.Forms.Label confirmationApplication_status_label;
+        private System.Windows.Forms.GroupBox confirmationApplication_requirements_groupbox;
+        private System.Windows.Forms.TableLayoutPanel confirmationApplication_requirements_tablePanel;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox2;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox3;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox4;
+        private MetroFramework.Controls.MetroCheckBox confirmationApplication_checkAll_checkBox;
+        private MetroFramework.Controls.MetroDateTime confirmationApplication_birthdate_dtp;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private MetroFramework.Controls.MetroRadioButton confirmationApplication_male_radio;
+        private MetroFramework.Controls.MetroRadioButton confirmationApplication_female_radio;
+        private System.Windows.Forms.TextBox confirmationApplication_suffix_text;
+        private System.Windows.Forms.TextBox confirmationApplication_lastname_text;
+        private System.Windows.Forms.TextBox confirmationApplication_mi_text;
+        private System.Windows.Forms.TextBox confirmationApplication_firstname_text;
+        private System.Windows.Forms.Label label90;
+        private MetroFramework.Controls.MetroGrid confirmationApplication_dgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BprofileID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BapplicationID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Brequirements;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BlastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BfirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BmidName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bsuffix;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bgender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bbirthdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bstatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CprofileID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CapplicationID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Crequirements;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CfirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CmidName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Csuffix;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cgender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cbirthdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cstatus;
+        private System.Windows.Forms.Panel panel18;
+        private MetroFramework.Controls.MetroComboBox marriageApplication_filter;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button marriageApplication_add_button;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroDateTime dtpBBirthDate;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.TextBox txtBSuffix;
+        private System.Windows.Forms.TextBox txtBLN;
+        private System.Windows.Forms.TextBox txtBMI;
+        private System.Windows.Forms.TextBox txtBFN;
+        private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.Panel panel19;
+        private MetroFramework.Controls.MetroButton marriageApplication_editReq_btn;
+        private MetroFramework.Controls.MetroButton marriageApplication_approve_btn;
+        private MetroFramework.Controls.MetroButton marriageApplication_revoke_btn;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label marriageApplication_price_label;
+        private MetroFramework.Controls.MetroButton marriageApplication_add_btn;
+        private MetroFramework.Controls.MetroTextBox marriageApplication_remarks;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox1;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox5;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox6;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox8;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox9;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox10;
+        private MetroFramework.Controls.MetroCheckBox metroCheckBox7;
+        private MetroFramework.Controls.MetroDateTime dtpGBirthDate;
+        private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.TextBox txtGSuffix;
+        private System.Windows.Forms.TextBox txtGLN;
+        private System.Windows.Forms.TextBox txtGMI;
+        private System.Windows.Forms.TextBox txtGFN;
+        private System.Windows.Forms.Label label95;
+        private MetroFramework.Controls.MetroGrid marriageApplication_dgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
     }
 }
