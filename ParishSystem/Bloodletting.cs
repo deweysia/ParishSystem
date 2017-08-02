@@ -22,14 +22,14 @@ namespace ParishSystem
 
         private void Bloodletting_Load(object sender, EventArgs e)
         {
-            donors_datagridview_bloodletting.DataSource = dh.getBloodDonors();
-            donors_datagridview_bloodletting.Columns["profileID"].Visible = false;
+            donors_datagridview_bloodletting.DataSource = dh.getCashReleaseTypes();
+            //donors_datagridview_bloodletting.Columns["bloodDonationEventID"].Visible = false;
             
         }
 
         private void donors_datagridview_bloodletting_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Form A = new Bloodletting_Profile_Popup(int.Parse(donors_datagridview_bloodletting.CurrentRow.Cells["profileID"].Value.ToString()),dh);
+            Form A = new CashRelease(1,dh);
             A.ShowDialog();
         }
 
@@ -42,6 +42,24 @@ namespace ParishSystem
         private void button2_Click(object sender, EventArgs e)
         {
             Form A = new Bloodletting_Profile_Popup(2, dh);
+            A.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form A = new BloodlettingEventPopUp(dh);
+            A.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form A = new CashRelease(dh);
+            A.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form A = new CashRelease(dh);
             A.ShowDialog();
         }
     }

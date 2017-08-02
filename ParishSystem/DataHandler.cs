@@ -480,10 +480,8 @@ namespace ParishSystem
 
         public bool addBloodDonationEvent(string eventName, DateTime startTime, DateTime endTime, string eventVenue, string eventDetails)
         {
-            string q = "UPDATE BloodDonationEvent SET startTime = '" + startTime.ToString("yyyy-MM-dd HH:mm:ss") 
-                + "', endTime = '" + endTime.ToString("yyyy-MM-dd HH:mm:ss") 
-                + "', eventVenue = '" + eventVenue + "', eventDetails = '" + eventDetails 
-                + "' WHERE eventName = '" + eventName + "'";
+            string q = "INSERT INTO `sad2`.`blooddonationevent` (`eventName`, `startDateTime`, `endDateTime`, `eventVenue`, `eventDetails`) "+
+                        "VALUES ('"+ eventName + "', '"+ startTime.ToString("yyyy-MM-dd HH:mm:ss") + "', '"+ endTime.ToString("yyyy-MM-dd HH:mm:ss") + "', '"+ eventVenue + "', '"+ eventDetails + "')";
 
             bool success = runNonQuery(q);
             //if (success)
@@ -495,10 +493,10 @@ namespace ParishSystem
         public bool editBloodDonationEvent(int bloodDonationEventID, string eventName, DateTime startTime, DateTime endTime, string eventVenue, string eventDetails)
         {
             string q = "UPDATE BloodDonationEvent SET eventName = '" + eventName 
-                + "', startTime = '" + startTime.ToString("yyyy-MM-dd HH:mm:ss") 
-                + "', endTime = '" + endTime.ToString("yyyy-MM-dd HH:mm:ss") 
+                + "', startDateTime = '" + startTime.ToString("yyyy-MM-dd HH:mm:ss") 
+                + "', endDateTime = '" + endTime.ToString("yyyy-MM-dd HH:mm:ss") 
                 + "', eventVenue = '" + eventVenue + "', eventDetails = '" + eventDetails 
-                + "' WHERE bloodDonationEventID = '" + bloodDonationEventID;
+                + "' WHERE bloodDonationEventID = '" + bloodDonationEventID +"'";
 
             bool success = runNonQuery(q);
             //if (success)
@@ -2150,37 +2148,9 @@ namespace ParishSystem
                                             ================= CASH RELEASE TABLE =================
                                          =============================================================
         */
-        public bool addCashRelease(int cashReleaseTypeID, DateTime cashReleaseDateTime, string remark, double releaseAmount, int checkNum, int CVnum)
-        {
-            string q = "INSERT INTO CashRelease(cashReleaseTypeID, cashReleaseDateTime, remark, releaseAmount, checkNum, CVnum) VALUES ('"
-                + cashReleaseTypeID + "', '" + cashReleaseDateTime.ToString("yyyy-MM-dd HH:mm:ss") + "', '" + remark + "', '" + releaseAmount + "', '" + checkNum + "', '" + CVnum + "')";
+      
 
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public bool editCashRelease(int cashReleaseID, int cashReleaseTypeID, DateTime cashReleaseDateTime, string remark, double releaseAmount, int checkNum, int CVnum)
-        {
-            string q = "UPDATE CashRelease SET cashReleaseTypeID = '" + cashReleaseTypeID
-                + "', cashReleaseDateTime = '" + cashReleaseDateTime.ToString("yyyy-MM-dd HH:mm:ss")
-                + "', remark = '" + remark + "', releaseAmount = '" + releaseAmount
-                + "', checkNum = '" + checkNum + "', CVnum = '" + CVnum
-                + "' WHERE cashReleaseID = '" + cashReleaseID + "'";
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public bool deleteCashRelease(int cashReleaseID)
-        {
-            string q = "DELETE FROM CashRelease WHERE cashReleaseID = " + cashReleaseID;
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
+     
 
         public DataTable getCashReleaseBetweenDates(DateTime start, DateTime end)
         {
@@ -2218,40 +2188,8 @@ namespace ParishSystem
                                          =============================================================
         */
 
-        public bool addCashReleaseType(string cashReleaseType, string description, int active)
-        {
-            string q = "INSERT INTO CashReleaseType(cashReleaseType, description, active) VALUES ('"
-                + cashReleaseType + "', '" + description + "', '" + active + "')";
 
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-
-        public bool addCashReleaseType(string cashReleaseType, string description)
-        {
-            string q = "INSERT INTO CashReleaseType(cashReleaseType, description) VALUES ('"
-                + cashReleaseType + "', '" + description + "')";
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-
-        public bool editCashReleaseType(int cashReleaseTypeID, string cashReleaseType, string description, int active)
-        {
-            string q = "UPDATE CashReleaseType SET cashReleaseType = '" + cashReleaseType
-                + "', description = '" + description
-                + "', active = '" + active
-                + "' WHERE cashReleaseTypeID = '" + cashReleaseTypeID + "'";
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
+       
         public bool cashReleaseTypeIsActive(int cashReleaseTypeID)
         {
             string q = "SELECT * FROM CashReleaseType WHERE cashReleaseTypeID = " + cashReleaseTypeID + " AND active = 1";
@@ -2499,7 +2437,7 @@ namespace ParishSystem
         }
         public DataTable getPartner(int profileID)
         {
-            string q= "select * from (select application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID = "+ profileID + ") as A left outer join (select concat(lastname, \" \", coalesce(suffix, \" \"), \"\", firstName, \" \", midname, \".\") as name, generalprofile.profileID, address, contactNumber, gender, civilstatus, birthplace, birthdate, residence, application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID != "+ profileID + ") as B on A.applicationID = B.applicationID";
+            string q= "select * from (select application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID = "+ profileID + ") as A left outer join (select concat(lastname, \" \", coalesce(suffix, \" \"), \"\", firstName, \" \", midname, \".\") as name, generalprofile.profileID, address, contactNumber, gender, birthplace, birthdate, residence, application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID != "+ profileID + ") as B on A.applicationID = B.applicationID";
             return runQuery(q);
         }
         public int getNextProfileID()
@@ -2517,6 +2455,44 @@ namespace ParishSystem
             string q = "INSERT INTO `sad2`.`generalprofile` (`firstName`, `midName`, `lastName`, `suffix`, `address`, `contactNumber`, `bloodType`) VALUES ('"+fn+"', '"+mn+"', '"+ln+"', '"+sf+"', '"+add+"', '"+ contact + "', '"+blood+"');";
             runNonQuery(q);
         }
+        public DataTable getbloodlettingEvent(int EventID)
+        {
+            string q = "select * from blooddonationevent where bloodDonationEventID= "+ EventID;
+            return runQuery(q);
+        }
+        public int getMaxBloodEvent()
+        {
+            string q = " select max(bloodDonationEventID) from blooddonationevent";
+            return int.Parse(runQuery(q).Rows[0][0].ToString());
+        }
+        public DataTable getCashRelease(int cashRelreaseID)
+        {
+            string q = "select * from cashreleasetype where cashReleaseTypeID =" + cashRelreaseID;
+            return runQuery(q);
+        }
+        public void addCashReleaseType(string cashReleaseType,string description,bool active)
+        {
+            int A;
+            if (active) A = 1;
+            else A = 2; 
+            string q = "INSERT INTO `sad2`.`cashreleasetype` (`cashReleaseType`, `description`, `active`) VALUES ('"+ cashReleaseType + "', '"+ description + "', '"+A+"')";
+            runNonQuery(q);
+        }
+        public int getMaxCashReleaseType()
+            {
+                string q = " select max(cashReleaseTypeID) from cashreleasetype";
+            return int.Parse(runQuery(q).Rows[0][0].ToString());
+            }
+        public void editCashReleaseType(int cashReleaseID, string cashReleaseType, string description, bool active)
+        {
+            int A;
+            if (active) A = 1;
+            else A = 2;
+            string q = "UPDATE `sad2`.`cashreleasetype` SET `cashReleaseType`='"+ cashReleaseType + "', `description`='"+ description + "', `active`='"+A+"' WHERE `cashReleaseTypeID`='"+ cashReleaseID + "'";
+            runNonQuery(q);
+        }
+       
+
     }
 
 }

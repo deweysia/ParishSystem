@@ -636,9 +636,9 @@
             this.profile_panel.Controls.Add(this.panel9);
             this.profile_panel.Controls.Add(this.AddPNL);
             this.profile_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profile_panel.Location = new System.Drawing.Point(0, 0);
+            this.profile_panel.Location = new System.Drawing.Point(156, 33);
             this.profile_panel.Name = "profile_panel";
-            this.profile_panel.Size = new System.Drawing.Size(958, 575);
+            this.profile_panel.Size = new System.Drawing.Size(802, 542);
             this.profile_panel.TabIndex = 29;
             // 
             // AddBTN
@@ -4498,6 +4498,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(958, 575);
             this.ControlBox = false;
+            this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.application_panel);
             this.Controls.Add(this.bloodletting_panel);
             this.Controls.Add(this.sacrament_panel);
@@ -4507,7 +4508,6 @@
             this.Controls.Add(this.CDB_panel);
             this.Controls.Add(this.panel_controlbox);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.profile_panel);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

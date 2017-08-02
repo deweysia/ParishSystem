@@ -100,6 +100,12 @@
     <Compile Include="Bloodletting_Profile_Popup.Designer.cs">
       <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
     </Compile>
+    <Compile Include="CashRelease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashRelease.Designer.cs">
+      <DependentUpon>CashRelease.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classifications.cs" />
     <Compile Include="ComboboxContent.cs" />
     <Compile Include="ComboBoxItem.cs" />
@@ -252,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bloodletting_Profile_Popup.resx">
       <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashRelease.resx">
+      <DependentUpon>CashRelease.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomNotification.resx">
       <DependentUpon>CustomNotification.cs</DependentUpon>
