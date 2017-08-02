@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -357,11 +356,11 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.profiles_dataGridView_baptism = new System.Windows.Forms.DataGridView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.firstname_tooltip_profiles = new System.Windows.Forms.ToolTip(this.components);
-            this.lastname_tooltip_profiles = new System.Windows.Forms.ToolTip(this.components);
-            this.middlename_tooltip_profiles = new System.Windows.Forms.ToolTip(this.components);
-            this.imageListMenu = new System.Windows.Forms.ImageList(this.components);
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.firstname_tooltip_profiles = new System.Windows.Forms.ToolTip();
+            this.lastname_tooltip_profiles = new System.Windows.Forms.ToolTip();
+            this.middlename_tooltip_profiles = new System.Windows.Forms.ToolTip();
+            this.imageListMenu = new System.Windows.Forms.ImageList();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse();
             this.sacrament_panel = new System.Windows.Forms.Panel();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -1519,7 +1518,7 @@
             this.baptismApplication_birthDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.baptismApplication_birthDate.Enabled = false;
             this.baptismApplication_birthDate.Location = new System.Drawing.Point(67, 104);
-            this.baptismApplication_birthDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.baptismApplication_birthDate.MinimumSize = new System.Drawing.Size(4, 29);
             this.baptismApplication_birthDate.Name = "baptismApplication_birthDate";
             this.baptismApplication_birthDate.Size = new System.Drawing.Size(200, 29);
             this.baptismApplication_birthDate.TabIndex = 8;
