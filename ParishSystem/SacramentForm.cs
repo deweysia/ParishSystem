@@ -10,23 +10,32 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class BaptismForm : Form
+    public partial class SacramentForm : Form
     {
 
         DataHandler dh;
         DataGridViewCellCollection row;
-        public BaptismForm(DataGridViewRow dr, DataHandler dh)
+        SacramentType type;
+        public SacramentForm(SacramentType type, DataGridViewRow dr, DataHandler dh)
         {
-            this.dh = dh;
-            this.row = dr.Cells;
-
-            
-
             InitializeComponent();
 
-            nameLabel.Text = string.Format("{0} {1}. {2} {3}", row["firstName"].Value, row["midName"].Value, row["lastName"].Value, row["suffix"].Value);
-            birthdateLabel.Text = row["birthdate"].Value.ToString();
-            genderLabel.Text = row["gender"].ToString() == "1" ? "Male" : "Female";
+            this.dh = dh;
+            this.row = dr.Cells;
+            this.type = type;
+
+            if (type == SacramentType.Confirmation)
+            {
+                legitimacyCBox.Hide();
+                label3.Hide();
+                sacramentDateLabel.Text = "Confirmation Date";
+                this.Text = "Confirmation Fill-up Form";
+            }
+
+            //3 - Last Name    4 - First Name   5 - MI  6 - Suffix
+            nameLabel.Text = string.Format("{0} {1}. {2} {3}", row[4].Value, row[5].Value, row[3].Value, row[6].Value);
+            birthdateLabel.Text = row[8].Value.ToString();
+            genderLabel.Text = row[7].ToString() == "1" ? "Male" : "Female";
         }
 
         private void BaptismForm_Load(object sender, EventArgs e)
@@ -43,11 +52,6 @@ namespace ParishSystem
             }
         }
 
-        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void submitBtn_Click(object sender, EventArgs e)
         {
             if (!allFilled())
@@ -56,8 +60,8 @@ namespace ParishSystem
                 return;
             }
 
-            int applicationID = int.Parse(row["applicationID"].Value.ToString());
-            int profileID = int.Parse(row["profileID"].Value.ToString());
+            int applicationID = int.Parse(row[0].Value.ToString());
+            int profileID = int.Parse(row[1].Value.ToString());
 
             int ministerID = ((ComboboxContent)MinisterCBox.SelectedItem).ID;
             Legitimacy l = (Legitimacy)legitimacyCBox.SelectedItem;
@@ -66,7 +70,11 @@ namespace ParishSystem
 
 
             bool success = true;
-            success &= dh.addBaptism(applicationID, ministerID, l, dt, remarks);
+            if (type == SacramentType.Baptism)
+                success &= dh.addBaptism(applicationID, ministerID, l, dt, remarks);
+            else
+                success &= dh.addConfirmation(applicationID, ministerID, dt, remarks);
+
 
             //Add Mother
             success &= dh.addParent(profileID, motherFirstNameText.Text, motherMiText.Text, motherLastNameText.Text, motherSuffixText.Text, Gender.Female, motherBirthPlaceText.Text);
@@ -78,9 +86,8 @@ namespace ParishSystem
             //Add God Father
             success &= dh.addSponsor(applicationID, gFatherFirstNameText.Text, gFatherMiText.Text, gFatherLastNameText.Text, gFatherSuffixText.Text, Gender.Male, gFatherResidenceText.Text);
 
+            dh.editApplication(applicationID, ApplicationStatus.Approved);
             this.DialogResult = success ? DialogResult.OK : DialogResult.None;
-
-
         }
 
         private bool allFilled()
@@ -105,7 +112,5 @@ namespace ParishSystem
 
             return allFilled;
         }
-
-        
     }
 }

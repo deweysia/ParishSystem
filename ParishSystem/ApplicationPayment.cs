@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class ConfirmationForm : Form
+    public partial class ApplicationPayment : Form
     {
-
-        DataHandler dh;
-        DataGridViewCellCollection row;
-        public ConfirmationForm(DataGridViewRow dgvr, DataHandler dh)
+        public ApplicationPayment()
         {
             InitializeComponent();
-            this.dh = dh;
-            this.row = dgvr.Cells;
         }
 
-        private void ConfirmationForm_Load(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

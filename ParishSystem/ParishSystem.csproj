@@ -82,11 +82,17 @@
     <Compile Include="AddMarriageApplication.Designer.cs">
       <DependentUpon>AddMarriageApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaptismForm.cs">
+    <Compile Include="ApplicationPayment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaptismForm.Designer.cs">
-      <DependentUpon>BaptismForm.cs</DependentUpon>
+    <Compile Include="ApplicationPayment.Designer.cs">
+      <DependentUpon>ApplicationPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SacramentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SacramentForm.Designer.cs">
+      <DependentUpon>SacramentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BloodlettingTest.cs">
       <SubType>Form</SubType>
@@ -97,11 +103,11 @@
     <Compile Include="Classifications.cs" />
     <Compile Include="ComboboxContent.cs" />
     <Compile Include="ComboBoxItem.cs" />
-    <Compile Include="ConfirmationForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="CueTextBox.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ConfirmationForm.Designer.cs">
-      <DependentUpon>ConfirmationForm.cs</DependentUpon>
+    <Compile Include="CueTextBox.Designer.cs">
+      <DependentUpon>CueTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomControlBar.cs">
       <SubType>UserControl</SubType>
@@ -274,14 +280,17 @@
     <EmbeddedResource Include="AddMarriageApplication.resx">
       <DependentUpon>AddMarriageApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaptismForm.resx">
-      <DependentUpon>BaptismForm.cs</DependentUpon>
+    <EmbeddedResource Include="ApplicationPayment.resx">
+      <DependentUpon>ApplicationPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SacramentForm.resx">
+      <DependentUpon>SacramentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BloodlettingTest.resx">
       <DependentUpon>BloodlettingTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConfirmationForm.resx">
-      <DependentUpon>ConfirmationForm.cs</DependentUpon>
+    <EmbeddedResource Include="CueTextBox.resx">
+      <DependentUpon>CueTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControlBar.resx">
       <DependentUpon>CustomControlBar.cs</DependentUpon>

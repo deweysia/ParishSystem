@@ -1491,11 +1491,12 @@ namespace ParishSystem
                                          =============================================================
         */
         #region
-        public bool addConfirmation(int applicationID, int ministerID, DateTime confirmationDate)
+        public bool addConfirmation(int applicationID, int ministerID, DateTime confirmationDate, string remarks)
         {
-            string q = "INSERT INTO Confirmation(applicationID, ministerID, confirmationDate) VALUES ('"
-                + applicationID + "', '" + ministerID
-                + "', '" + confirmationDate.ToString("yyyy-MM-dd") + "')";
+            string q = "INSERT INTO Confirmation(applicationID, ministerID, confirmationDate, remarks) VALUES ('" 
+                + applicationID + "', '" + ministerID + "', '" 
+                + confirmationDate.ToString("yyyy-MM-dd") 
+                + "', '" + remarks + "')";
 
 
             bool success = runNonQuery(q);

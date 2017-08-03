@@ -59,8 +59,8 @@ namespace ParishSystem
             int gID = dh.getGeneralProfileID(gFN, gMI, gLN, gSuffix, gG, gBD);
             int bID = dh.getGeneralProfileID(bFN, bMI, bLN, bSuffix, bG, bBD);
 
-            dh.addApplication(SacramentType.Marriage);
-            int applicationID = dh.getLatestID("Application", "applicationID");
+            
+            
 
             bool success;
             if (gID != -1 && bID != -1)
@@ -91,6 +91,8 @@ namespace ParishSystem
 
                 success = dh.addNewMarriageApplicants(gID, bID);
             }
+
+            int applicationID = dh.getLatestID("Application", "applicationID");
 
             int itemTypeID = int.Parse(sacramentItem.Rows[0]["itemTypeID"].ToString());
             double price = double.Parse(txtPrice.Text.ToString());

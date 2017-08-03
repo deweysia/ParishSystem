@@ -1,6 +1,6 @@
 ﻿namespace ParishSystem
 {
-    partial class ConfirmationForm
+    partial class CueTextBox
     {
         /// <summary>
         /// Required designer variable.
@@ -20,24 +20,20 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             this.SuspendLayout();
             // 
-            // ConfirmationForm
+            // CueTextBox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "ConfirmationForm";
-            this.Text = "ConfirmationForm";
-            this.Load += new System.EventHandler(this.ConfirmationForm_Load);
+            this.Enter += new System.EventHandler(this.CueTextBox_Enter);
+            this.Leave += new System.EventHandler(this.CueTextBox_Leave);
             this.ResumeLayout(false);
 
         }
