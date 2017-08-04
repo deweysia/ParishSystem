@@ -299,17 +299,15 @@ namespace ParishSystem
             
             int applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
             string requirements = dgv.SelectedRows[0].Cells[2].Value.ToString();
-            string fn = dgv.SelectedRows[0].Cells[4].Value.ToString();
-            string mn = dgv.SelectedRows[0].Cells[5].Value.ToString();
-            string ln = dgv.SelectedRows[0].Cells[3].Value.ToString();
+            string fn = dgv.SelectedRows[0].Cells[3].Value.ToString();
+            string mn = dgv.SelectedRows[0].Cells[4].Value.ToString();
+            string ln = dgv.SelectedRows[0].Cells[5].Value.ToString();
             string suffix = dgv.SelectedRows[0].Cells[6].Value.ToString();
             string gender = dgv.SelectedRows[0].Cells[7].Value.ToString();
             DateTime birthdate = DateTime.ParseExact(dgv.SelectedRows[0].Cells[8].Value.ToString(), "yyyy-MM-dd", null);
             ApplicationStatus status = (ApplicationStatus)int.Parse(dgv.SelectedRows[0].Cells[9].Value.ToString());
-            
 
             bool isPending = status == ApplicationStatus.Pending;
-
 
             baptismApplicationDetailsPanel.Enabled = isPending;
             baptismApplication_buttons_panel.Enabled = isPending;
@@ -325,7 +323,7 @@ namespace ParishSystem
             baptismApplication_status_label.Text = status.ToString();
 
             tickRequirements(baptismApplication_requirements_tablePanel, requirements);
-
+            //MessageBox.Show("AppID " + applicationID);
             DataTable dt = dh.getApplicationIncomeDetails(applicationID);
 
             //MessageBox.Show(dt.Rows[0]["price"].ToString());
@@ -340,9 +338,9 @@ namespace ParishSystem
         {
             int applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
             string requirements = dgv.SelectedRows[0].Cells[2].Value.ToString();
-            string fn = dgv.SelectedRows[0].Cells[4].Value.ToString();
-            string mn = dgv.SelectedRows[0].Cells[5].Value.ToString();
-            string ln = dgv.SelectedRows[0].Cells[3].Value.ToString();
+            string fn = dgv.SelectedRows[0].Cells[3].Value.ToString();
+            string mn = dgv.SelectedRows[0].Cells[4].Value.ToString();
+            string ln = dgv.SelectedRows[0].Cells[5].Value.ToString();
             string suffix = dgv.SelectedRows[0].Cells[6].Value.ToString();
             string gender = dgv.SelectedRows[0].Cells[7].Value.ToString();
             DateTime birthdate = DateTime.ParseExact(dgv.SelectedRows[0].Cells[8].Value.ToString(), "yyyy-MM-dd", null);
@@ -367,6 +365,7 @@ namespace ParishSystem
 
             tickRequirements(confirmationApplication_requirements_tablePanel, requirements);
 
+            
             DataTable dt = dh.getApplicationIncomeDetails(applicationID);
 
             //MessageBox.Show(dt.Rows[0]["price"].ToString());
@@ -389,7 +388,7 @@ namespace ParishSystem
             txtGLN.Text = GName[2];
             txtGSuffix.Text = GName[3];
 
-            DateTime GBD = DateTime.ParseExact(dgv.SelectedRows[0].Cells[5].Value.ToString(), "yyyy-MM-dd", null);
+            dtpGBirthDate.Value = DateTime.ParseExact(dgv.SelectedRows[0].Cells[5].Value.ToString(), "yyyy-MM-dd", null);
 
             string[] BName = dgv.SelectedRows[0].Cells[6].Value.ToString().Split(new char[] { ' ' });
             txtBFN.Text = BName[0];
@@ -397,7 +396,7 @@ namespace ParishSystem
             txtBLN.Text = BName[2];
             txtBSuffix.Text = BName[3];
 
-            DateTime BBD = DateTime.ParseExact(dgv.SelectedRows[0].Cells[7].Value.ToString(), "yyyy-MM-dd", null);
+            dtpBBirthDate.Value = DateTime.ParseExact(dgv.SelectedRows[0].Cells[7].Value.ToString(), "yyyy-MM-dd", null);
 
             ApplicationStatus status = (ApplicationStatus)int.Parse(dgv.SelectedRows[0].Cells[8].Value.ToString());
 
@@ -454,7 +453,7 @@ namespace ParishSystem
                 DialogResult dr = MessageDialog.Show("Not all requirements were fulfilled. Proceed anyway?", "Warning", MessageDialogButtons.YesNo, MessageDialogIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
-                    f.ShowDialog();
+                    d = f.ShowDialog();
                 }
             }
 
@@ -804,7 +803,20 @@ namespace ParishSystem
 
         private void baptismApplication_addPayment_button_Click(object sender, EventArgs e)
         {
+            payApplication(SacramentType.Baptism, baptismApplication_dgv);
 
+        }
+
+        private void payApplication(SacramentType type, DataGridView dgv)
+        {
+            DataGridViewRow dgvr = dgv.SelectedRows[0];
+            ApplicationPayment ap = new ApplicationPayment(type, dgvr, dh);
+            DialogResult dr = ap.ShowDialog();
+
+            if (dr == DialogResult.OK)
+                Notification.Show("Successfully added payment!", NotificationType.success);
+            else
+                Notification.Show("Something went wrong!", NotificationType.warning);
         }
 
         
@@ -980,6 +992,16 @@ namespace ParishSystem
         private void metroCheckBox1_CheckedChanged(object sender, EventArgs e)
         {
             requirementCheckChanged((CheckBox)sender, marriageApplication_checkAll_checkBox, marriageApplication_requirements_tablePanel);
+        }
+
+        private void confirmationApplication_addPayment_btn_Click(object sender, EventArgs e)
+        {
+            payApplication(SacramentType.Confirmation, confirmationApplication_dgv);
+        }
+
+        private void marriageApplication_add_btn_Click(object sender, EventArgs e)
+        {
+            payApplication(SacramentType.Marriage, marriageApplication_dgv);
         }
     }
 }

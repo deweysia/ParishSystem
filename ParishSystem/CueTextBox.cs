@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 
 namespace ParishSystem
 {
-    partial class CueTextBox : TextBox
+    public partial class CueTextBox : TextBox
     {
         public string Cue
         {

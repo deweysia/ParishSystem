@@ -88,6 +88,24 @@
     <Compile Include="ApplicationPayment.Designer.cs">
       <DependentUpon>ApplicationPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="CurrencyTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CurrencyTextBox.Designer.cs">
+      <DependentUpon>CurrencyTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HiddenNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HiddenNumericUpDown.Designer.cs">
+      <DependentUpon>HiddenNumericUpDown.cs</DependentUpon>
+    </Compile>
     <Compile Include="SacramentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,12 +152,6 @@
     </Compile>
     <Compile Include="ExButton.Designer.cs">
       <DependentUpon>ExButton.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="HiddenTabControl.cs">
       <SubType>Component</SubType>
@@ -283,6 +295,12 @@
     <EmbeddedResource Include="ApplicationPayment.resx">
       <DependentUpon>ApplicationPayment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CurrencyTextBox.resx">
+      <DependentUpon>CurrencyTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SacramentForm.resx">
       <DependentUpon>SacramentForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -303,9 +321,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExButton.resx">
       <DependentUpon>ExButton.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MarriageApplication.resx">
       <DependentUpon>MarriageApplication.cs</DependentUpon>

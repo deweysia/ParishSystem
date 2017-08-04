@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,24 +40,27 @@
             this.lblOR = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
-            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
+            this.dgvPaymentHistory = new MetroFramework.Controls.MetroGrid();
             this.OR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paymentAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paymentDateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnPay = new MetroFramework.Controls.MetroButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtPayment = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblBalance = new System.Windows.Forms.Label();
+            this.txtRemarks = new ParishSystem.CueTextBox();
+            this.currencyTextBox1 = new ParishSystem.CurrencyTextBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPaymentHistory)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 13);
+            this.label1.Location = new System.Drawing.Point(3, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 0;
@@ -77,7 +80,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 26);
+            this.label3.Location = new System.Drawing.Point(3, 28);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 1;
@@ -122,7 +125,7 @@
             // 
             this.lblPaymentFor.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblPaymentFor.AutoSize = true;
-            this.lblPaymentFor.Location = new System.Drawing.Point(105, 13);
+            this.lblPaymentFor.Location = new System.Drawing.Point(105, 14);
             this.lblPaymentFor.Name = "lblPaymentFor";
             this.lblPaymentFor.Size = new System.Drawing.Size(73, 13);
             this.lblPaymentFor.TabIndex = 0;
@@ -132,7 +135,7 @@
             // 
             this.lblOR.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblOR.AutoSize = true;
-            this.lblOR.Location = new System.Drawing.Point(105, 26);
+            this.lblOR.Location = new System.Drawing.Point(105, 28);
             this.lblOR.Name = "lblOR";
             this.lblOR.Size = new System.Drawing.Size(63, 13);
             this.lblOR.TabIndex = 1;
@@ -143,7 +146,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 44);
+            this.label4.Location = new System.Drawing.Point(3, 45);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 13);
             this.label4.TabIndex = 1;
@@ -154,71 +157,77 @@
             // 
             this.lblDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(105, 44);
+            this.lblDate.Location = new System.Drawing.Point(105, 45);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(63, 13);
+            this.lblDate.Size = new System.Drawing.Size(30, 13);
             this.lblDate.TabIndex = 1;
-            this.lblDate.Text = "OR Number";
+            this.lblDate.Text = "Date";
             this.lblDate.Click += new System.EventHandler(this.label3_Click);
             // 
-            // metroGrid1
+            // dgvPaymentHistory
             // 
-            this.metroGrid1.AllowUserToAddRows = false;
-            this.metroGrid1.AllowUserToDeleteRows = false;
-            this.metroGrid1.AllowUserToResizeRows = false;
-            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.metroGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvPaymentHistory.AllowUserToAddRows = false;
+            this.dgvPaymentHistory.AllowUserToDeleteRows = false;
+            this.dgvPaymentHistory.AllowUserToResizeRows = false;
+            this.dgvPaymentHistory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvPaymentHistory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPaymentHistory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvPaymentHistory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPaymentHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvPaymentHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPaymentHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.OR,
             this.paymentAmount,
             this.paymentDateTime});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.metroGrid1.EnableHeadersVisualStyles = false;
-            this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.Location = new System.Drawing.Point(8, 125);
-            this.metroGrid1.Name = "metroGrid1";
-            this.metroGrid1.ReadOnly = true;
-            this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(349, 137);
-            this.metroGrid1.TabIndex = 3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPaymentHistory.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvPaymentHistory.EnableHeadersVisualStyles = false;
+            this.dgvPaymentHistory.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dgvPaymentHistory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvPaymentHistory.Location = new System.Drawing.Point(8, 125);
+            this.dgvPaymentHistory.Name = "dgvPaymentHistory";
+            this.dgvPaymentHistory.ReadOnly = true;
+            this.dgvPaymentHistory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPaymentHistory.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvPaymentHistory.RowHeadersVisible = false;
+            this.dgvPaymentHistory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvPaymentHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPaymentHistory.Size = new System.Drawing.Size(349, 137);
+            this.dgvPaymentHistory.TabIndex = 3;
+            this.dgvPaymentHistory.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPaymentHistory_CellFormatting);
+            this.dgvPaymentHistory.VisibleChanged += new System.EventHandler(this.dgvPaymentHistory_VisibleChanged);
             // 
             // OR
             // 
+            this.OR.DataPropertyName = "ORnum";
             this.OR.HeaderText = "OR";
             this.OR.Name = "OR";
             this.OR.ReadOnly = true;
             // 
             // paymentAmount
             // 
+            this.paymentAmount.DataPropertyName = "paymentAmount";
+            this.paymentAmount.FillWeight = 80F;
             this.paymentAmount.HeaderText = "Amount Paid";
             this.paymentAmount.Name = "paymentAmount";
             this.paymentAmount.ReadOnly = true;
@@ -226,18 +235,20 @@
             // paymentDateTime
             // 
             this.paymentDateTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.paymentDateTime.DataPropertyName = "paymentDateTime";
             this.paymentDateTime.HeaderText = "Payment Date";
             this.paymentDateTime.Name = "paymentDateTime";
             this.paymentDateTime.ReadOnly = true;
             // 
             // btnPay
             // 
-            this.btnPay.Location = new System.Drawing.Point(129, 332);
+            this.btnPay.Location = new System.Drawing.Point(129, 383);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(75, 23);
             this.btnPay.TabIndex = 4;
             this.btnPay.Text = "Pay";
             this.btnPay.UseSelectable = true;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // label5
             // 
@@ -248,49 +259,83 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Payment History";
             // 
-            // txtPayment
-            // 
-            this.txtPayment.Location = new System.Drawing.Point(116, 306);
-            this.txtPayment.Name = "txtPayment";
-            this.txtPayment.Size = new System.Drawing.Size(100, 20);
-            this.txtPayment.TabIndex = 7;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(14, 269);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 13);
+            this.label6.Size = new System.Drawing.Size(31, 13);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Balance";
+            this.label6.Text = "Price";
             // 
-            // label7
+            // lblPrice
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(66, 269);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(23, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "P n";
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Location = new System.Drawing.Point(66, 269);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(23, 13);
+            this.lblPrice.TabIndex = 8;
+            this.lblPrice.Text = "P n";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(14, 282);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Balance";
+            // 
+            // lblBalance
+            // 
+            this.lblBalance.AutoSize = true;
+            this.lblBalance.Location = new System.Drawing.Point(66, 282);
+            this.lblBalance.Name = "lblBalance";
+            this.lblBalance.Size = new System.Drawing.Size(23, 13);
+            this.lblBalance.TabIndex = 8;
+            this.lblBalance.Text = "P n";
+            // 
+            // txtRemarks
+            // 
+            this.txtRemarks.Cue = null;
+            this.txtRemarks.CueColor = System.Drawing.Color.Empty;
+            this.txtRemarks.Location = new System.Drawing.Point(92, 326);
+            this.txtRemarks.Multiline = true;
+            this.txtRemarks.Name = "txtRemarks";
+            this.txtRemarks.Size = new System.Drawing.Size(150, 51);
+            this.txtRemarks.TabIndex = 10;
+            // 
+            // currencyTextBox1
+            // 
+            this.currencyTextBox1.Cue = null;
+            this.currencyTextBox1.CueColor = System.Drawing.Color.Empty;
+            this.currencyTextBox1.Location = new System.Drawing.Point(257, 295);
+            this.currencyTextBox1.Name = "currencyTextBox1";
+            this.currencyTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.currencyTextBox1.TabIndex = 11;
             // 
             // ApplicationPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(365, 414);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.currencyTextBox1);
+            this.Controls.Add(this.txtRemarks);
+            this.Controls.Add(this.lblBalance);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtPayment);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnPay);
-            this.Controls.Add(this.metroGrid1);
+            this.Controls.Add(this.dgvPaymentHistory);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ApplicationPayment";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Text = "ApplicationPayment";
+            this.Load += new System.EventHandler(this.ApplicationPayment_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPaymentHistory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,14 +352,17 @@
         private System.Windows.Forms.Label lblOR;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblDate;
-        private MetroFramework.Controls.MetroGrid metroGrid1;
+        private MetroFramework.Controls.MetroGrid dgvPaymentHistory;
+        private MetroFramework.Controls.MetroButton btnPay;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblBalance;
+        private CueTextBox txtRemarks;
         private System.Windows.Forms.DataGridViewTextBoxColumn OR;
         private System.Windows.Forms.DataGridViewTextBoxColumn paymentAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn paymentDateTime;
-        private MetroFramework.Controls.MetroButton btnPay;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtPayment;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private CurrencyTextBox currencyTextBox1;
     }
 }

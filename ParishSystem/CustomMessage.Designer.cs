@@ -441,6 +441,7 @@
             this.customControlBar1.Name = "customControlBar1";
             this.customControlBar1.Size = new System.Drawing.Size(26, 26);
             this.customControlBar1.TabIndex = 0;
+            this.customControlBar1.Load += new System.EventHandler(this.customControlBar1_Load_1);
             this.customControlBar1.Click += new System.EventHandler(this.customControlBar1_Click);
             // 
             // CustomMessage

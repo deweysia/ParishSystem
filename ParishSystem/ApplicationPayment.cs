@@ -12,14 +12,80 @@ namespace ParishSystem
 {
     public partial class ApplicationPayment : Form
     {
-        public ApplicationPayment()
+        DataHandler dh;
+        DataGridViewCellCollection row;
+        SacramentType type;
+        int sacramentIncomeID;
+        public ApplicationPayment(SacramentType type, DataGridViewRow dr, DataHandler dh)
         {
             InitializeComponent();
+            this.dh = dh;
+            this.type = type;
+            this.row = dr.Cells;
+
+
+            int applicationID = int.Parse(row[0].Value.ToString());
+            sacramentIncomeID = dh.getSacramentIncomeID(applicationID);
+
+            if (type == SacramentType.Marriage)
+            {
+                lblName.Text = row[4].Value + " & " + row[6].Value;
+
+            }
+            else
+                lblName.Text = string.Join(" ", row[3].Value, row[4].Value, row[5].Value, row[6].Value);
+
+
+
+            
+            DataTable sacramentIncome = dh.getSacramentIncome(sacramentIncomeID);
+
+            lblPaymentFor.Text = type.ToString();
+            lblOR.Text = dh.getNextOR(BookType.Parish).ToString();
+            lblDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            
+            lblPrice.Text = string.Format("{0:C}", double.Parse(sacramentIncome.Rows[0]["price"].ToString()));
+            double bal = dh.getBalanceOfSacramentIncome(sacramentIncomeID);
+            lblBalance.Text = string.Format("{0:C}", bal);
+            
+
+            dgvPaymentHistory.AutoGenerateColumns = false;
+            dgvPaymentHistory.DataSource = dh.getPaymentHistory(sacramentIncomeID);
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ApplicationPayment_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvPaymentHistory_VisibleChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            //double payment = Convert.ToDouble();
+            //uint ORnum = uint.Parse(lblOR.Text);
+            //string remarks = txtRemarks.Text;
+            //DateTime dt = DateTime.ParseExact(lblDate.Text, "yyyy-MM-dd", null);
+            //bool success = dh.addPayment(sacramentIncomeID, payment, int.Parse(lblOR.Text), txtRemarks.Text, dt);
+
+            //this.DialogResult = DialogResult.OK;
+            //this.Close();
+        }
+
+        private void dgvPaymentHistory_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if(e.ColumnIndex == 1)
+            {
+                e.Value = Convert.ToDouble(e.Value).ToString("C");
+            }
         }
     }
 }

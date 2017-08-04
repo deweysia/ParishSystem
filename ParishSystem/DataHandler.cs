@@ -210,6 +210,17 @@ namespace ParishSystem
             return success;
         }
 
+        public bool editGeneralProfile(int profileID, string address, string birthplace)
+        {
+            string q = "UPDATE GeneralProfile SET address = '" + address 
+                + "', birthplace = '" + birthplace 
+                + "' WHERE profileID = '" + profileID + "'";
+
+            bool success = runNonQuery(q);
+
+            return success;
+        }
+
 
 
         //DELETE
@@ -634,7 +645,7 @@ namespace ParishSystem
         #region
 
 
-        public bool addParent(int profileID, string firstName, string midName, string lastName, string suffix, Gender gender, string birthPlace)
+        public bool addParent(int profileID, string firstName, string midName, string lastName, string suffix, Gender gender, string birthPlace = null)
         {
             string q = "INSERT INTO Parent(profileID, firstName, midName, lastName, suffix, gender, birthPlace) VALUES ('"
                 + profileID + "', '" + firstName + "', '" + midName
@@ -646,7 +657,7 @@ namespace ParishSystem
 
         public bool editParent(int parentID, string firstName, string midName, string lastName, string suffix, Gender gender, string birthPlace)
         {
-            string q = "UPDATE TABLE Parent SET  firstName = '" + firstName
+            string q = "UPDATE Parent SET  firstName = '" + firstName
                 + "',  midName = '" + midName + "',  lastName = '" + lastName
                 + "',  suffix = '" + suffix + "' , gender = '" + (int)gender + "',  birthPlace = '" + birthPlace
                 + "' WHERE parentID = '" + parentID + "' ";
@@ -654,6 +665,80 @@ namespace ParishSystem
             return runNonQuery(q);
         }
 
+        public bool editParent(int parentID, string firstName, string midName, string lastName, string suffix, Gender gender)
+        {
+            string q = "UPDATE Parent SET  firstName = '" + firstName
+                + "',  midName = '" + midName + "',  lastName = '" + lastName
+                + "',  suffix = '" + suffix + "' , gender = '" + (int)gender
+                + "' WHERE parentID = '" + parentID + "' ";
+
+            return runNonQuery(q);
+        }
+
+
+        public bool addEditParent(int profileID, string PfirstName, string PmidName, string PlastName, string Psuffix, Gender Pgender, string PbirthPlace)
+        {
+            DataTable dt = getParentsOf(profileID);
+
+            bool success = true;
+            if (dt.Rows.Count == 0)
+            {
+                //add parents
+                success &= addParent(profileID, PfirstName, PmidName, PlastName, Psuffix, Pgender, PbirthPlace);
+
+            }else
+            {
+                //update parent
+                int pID = int.Parse(dt.Rows[0][0].ToString());
+                success &= editParent(pID, PfirstName, PmidName, PlastName, Psuffix, Pgender, PbirthPlace);
+            }
+
+            return success;
+        }
+
+        public bool addEditParent(int profileID, string PfirstName, string PmidName, string PlastName, string Psuffix, Gender Pgender)
+        {
+            DataTable dt = getParentsOf(profileID);
+
+            bool success = true;
+            if (dt.Rows.Count == 0)
+            {
+                //add parents
+                success &= addParent(profileID, PfirstName, PmidName, PlastName, Psuffix, Pgender);
+
+            }
+            else
+            {
+                //update parent
+                int pID = int.Parse(dt.Rows[0][0].ToString());
+                success &= editParent(pID, PfirstName, PmidName, PlastName, Psuffix, Pgender);
+            }
+
+            return success;
+        }
+
+        /// <summary>
+        /// Gets the parents of a profile. Ordered by gender, thus, father is in index 0
+        /// </summary>
+        /// <param name="profileID"></param>
+        /// <returns></returns>
+        public DataTable getParentsOf(int profileID)
+        {
+            string q = "SELECT * FROM Parent WHERE profileID = '" + profileID + "' ORDER BY gender";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getParentOf(int profileID, Gender g)
+        {
+            string q = "SELECT * FROM Parent WHERE profileID = '" + profileID + "' AND gender = " + (int)g;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
         public DataTable getParent(int parentID)
         {
             string q = "SELECT * FROM Parent WHERE parentID = " + parentID;
@@ -673,24 +758,6 @@ namespace ParishSystem
             DataTable dt = runQuery(q);
 
             return dt.Rows.Count == 2;
-        }
-
-        public bool isValidParent(int profileID, char gender)
-        {
-            string q = "SELECT * FROM Parent WHERE profileID = '" + profileID + "' AND gender = '" + gender + "'";
-
-            DataTable dt = runQuery(q);
-
-            return dt.Rows.Count == 0;
-        }
-
-        public DataTable getParentsOf(int profileID)
-        {
-            string q = "SELECT * FROM Parent WHERE profileID = '" + profileID + "'";
-
-            DataTable dt = runQuery(q);
-
-            return dt;
         }
 
         public int getParentID(string firstName, string midName, string lastName, string suffix, char gender, string birthPlace)
@@ -749,12 +816,23 @@ namespace ParishSystem
 
         public DataTable getSacramentIncome(int sacramentIncomeID)
         {
-            string q = "SELECT * FROM SacramentIncome WHERE = " + sacramentIncomeID;
+            string q = "SELECT * FROM SacramentIncome WHERE sacramentIncomeID = " + sacramentIncomeID;
 
             DataTable dt = runQuery(q);
 
             return dt;
         }
+
+        public int getSacramentIncomeID(int applicationID)
+        {
+            string q = "SELECT sacramentIncomeID FROM SacramentIncome WHERE applicationID = " + applicationID;
+
+            DataTable dt = runQuery(q);
+
+            int id = int.Parse(dt.Rows[0]["sacramentIncomeID"].ToString());
+            return id;
+        }
+
 
         public DataTable getSacramentIncomePaid(int sacramentIncomeID)
         {
@@ -780,19 +858,21 @@ namespace ParishSystem
         public double getTotalPaymentOfSacramentIncome(int sacramentIncomeID)
         {
             //AS sum
-            string q = "SELECT SUM(paymentAmount) AS sum FROM Payment WHERE sacramentIncomeID = " + sacramentIncomeID;
+            string q = "SELECT COALESCE(SUM(paymentAmount), 0) AS sum FROM Payment WHERE sacramentIncomeID = " + sacramentIncomeID;
 
             DataTable dt = runQuery(q);
 
-            return double.Parse(dt.Rows[0]["sum"].ToString());
+            //MessageBox.Show(dt.Rows[0]["sum"].ToString());
+            double sum = double.Parse(dt.Rows[0]["sum"].ToString());
+            return sum;
         }
 
         public double getBalanceOfSacramentIncome(int sacramentIncomeID)
         {
             DataTable dt = getSacramentIncome(sacramentIncomeID);
             double price = double.Parse(dt.Rows[0]["price"].ToString());
-
-            return price - getTotalPaymentOfSacramentIncome(sacramentIncomeID);
+            double totalPayment = getTotalPaymentOfSacramentIncome(sacramentIncomeID); //chec
+            return price - totalPayment;
         }
 
 
@@ -836,13 +916,6 @@ namespace ParishSystem
 
         public bool deleteIncome(int incomeID)
         {
-            //if (!idExists("income", "incomeID", incomeID))
-            //    return false;
-
-            //addIncomeLog(incomeID);
-            //updateModificationInfo("income", "incomeID", incomeID);
-            //addIncomeLog(incomeID);
-
             string q = "DELETE FROM income WHERE incomeID = " + incomeID;
 
             bool success = runNonQuery(q);
@@ -890,7 +963,7 @@ namespace ParishSystem
 
         public double getTotalPayment(int incomeID)
         {
-            string q = "SELECT SUM(paymentAmount) FROM Income JOIN Invoice ON Income.incomeID = Invoice.invoiceID WHERE Income.incomeID = " + incomeID;
+            string q = "SELECT SUM(paymentAmount) FROM SacramentIncome JOIN Payment ON SacramentIncome.SacramentIncomeID = Invoice.invoiceID WHERE Income.incomeID = " + incomeID;
 
             DataTable dt = runQuery(q);
 
@@ -912,46 +985,20 @@ namespace ParishSystem
 
         }
 
-
-        #endregion
-
-
-        /*
-                                        =============================================================
-                                           ================= INCOME SOURCE TABLE =================
-                                        =============================================================
-       */
-
-        #region
-        public bool addIncomeSource(string name)
+        public int getNextOR(BookType type)
         {
-            string q = "INSERT INTO IncomeSource(name) VALUES ('" + name + "')";
+            string q = "SELECT COALESCE(MAX(ORnum), 0) + 1 FROM SacramentIncome NATURAL JOIN ItemType JOIN Payment ON SacramentIncome.SacramentIncomeID = Payment.SacramentIncomeID WHERE bookType = " + (int)type;
+            DataTable dt = runQuery(q);
 
-            bool success = runNonQuery(q);
-
-            return success;
+            return int.Parse(dt.Rows[0][0].ToString());
         }
 
-        public bool editIncomeSource(int incomeSourceID, string name)
+        public DataTable getPaymentHistory(int sacramentIncomeID)
         {
-            string q = "UPDATE IncomeSource SET name = '" + name + "'";
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public bool deleteIncomeSource(int incomeSourceID)
-        {
-            string q = "DELETE FROM IncomeSource WHERE incomeSourceID = " + incomeSourceID;
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public DataTable getIncomeSource(int incomeSourceID)
-        {
-            string q = "SELECT * FROM Income WHERE incomeSourceID = " + incomeSourceID;
+            string q = "SELECT paymentAmount, ORnum, Payment.remarks, paymentDateTime "
+                + "FROM Payment JOIN SacramentIncome ON SacramentIncome.SacramentIncomeID = Payment.SacramentIncomeID "
+                +" NATURAL JOIN Application "
+                +"WHERE SacramentIncome.sacramentIncomeID = " + sacramentIncomeID;
 
             DataTable dt = runQuery(q);
 

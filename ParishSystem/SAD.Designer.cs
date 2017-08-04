@@ -136,12 +136,12 @@
             this.baptismApplication_firstName_textbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.baptismApplication_dgv = new MetroFramework.Controls.MetroGrid();
-            this.BprofileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BapplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BprofileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Brequirements = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BlastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BfirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BmidName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BlastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bsuffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bgender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bbirthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -180,6 +180,16 @@
             this.confirmationApplication_firstname_text = new System.Windows.Forms.TextBox();
             this.label90 = new System.Windows.Forms.Label();
             this.confirmationApplication_dgv = new MetroFramework.Controls.MetroGrid();
+            this.CapplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CprofileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Crequirements = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CfirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CmidName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Csuffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cgender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cbirthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.panel18 = new System.Windows.Forms.Panel();
             this.marriageApplication_filter = new MetroFramework.Controls.MetroComboBox();
@@ -439,16 +449,6 @@
             this.libraryMarriageButton = new System.Windows.Forms.Button();
             this.libraryConfirmationButton = new System.Windows.Forms.Button();
             this.libraryBaptismButton = new System.Windows.Forms.Button();
-            this.CapplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CprofileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Crequirements = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CfirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CmidName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Csuffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cgender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cbirthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.profile_panel.SuspendLayout();
@@ -1693,12 +1693,12 @@
             this.baptismApplication_dgv.ColumnHeadersHeight = 25;
             this.baptismApplication_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.baptismApplication_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.BprofileID,
             this.BapplicationID,
+            this.BprofileID,
             this.Brequirements,
-            this.BlastName,
             this.BfirstName,
             this.BmidName,
+            this.BlastName,
             this.Bsuffix,
             this.Bgender,
             this.Bbirthdate,
@@ -1738,6 +1738,13 @@
             this.baptismApplication_dgv.VisibleChanged += new System.EventHandler(this.baptismApplication_dgv_VisibleChanged);
             this.baptismApplication_dgv.Paint += new System.Windows.Forms.PaintEventHandler(this.baptismApplication_dgv_Paint);
             // 
+            // BapplicationID
+            // 
+            this.BapplicationID.DataPropertyName = "applicationID";
+            this.BapplicationID.HeaderText = "applicationID";
+            this.BapplicationID.Name = "BapplicationID";
+            this.BapplicationID.ReadOnly = true;
+            // 
             // BprofileID
             // 
             this.BprofileID.DataPropertyName = "profileID";
@@ -1747,14 +1754,6 @@
             this.BprofileID.Visible = false;
             this.BprofileID.Width = 76;
             // 
-            // BapplicationID
-            // 
-            this.BapplicationID.DataPropertyName = "applicationID";
-            this.BapplicationID.HeaderText = "applicationID";
-            this.BapplicationID.Name = "BapplicationID";
-            this.BapplicationID.ReadOnly = true;
-            this.BapplicationID.Visible = false;
-            // 
             // Brequirements
             // 
             this.Brequirements.DataPropertyName = "requirements";
@@ -1763,14 +1762,6 @@
             this.Brequirements.ReadOnly = true;
             this.Brequirements.Visible = false;
             this.Brequirements.Width = 99;
-            // 
-            // BlastName
-            // 
-            this.BlastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BlastName.DataPropertyName = "lastName";
-            this.BlastName.HeaderText = "Last Name";
-            this.BlastName.Name = "BlastName";
-            this.BlastName.ReadOnly = true;
             // 
             // BfirstName
             // 
@@ -1787,6 +1778,14 @@
             this.BmidName.Name = "BmidName";
             this.BmidName.ReadOnly = true;
             this.BmidName.Width = 50;
+            // 
+            // BlastName
+            // 
+            this.BlastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BlastName.DataPropertyName = "lastName";
+            this.BlastName.HeaderText = "Last Name";
+            this.BlastName.Name = "BlastName";
+            this.BlastName.ReadOnly = true;
             // 
             // Bsuffix
             // 
@@ -1999,6 +1998,7 @@
             this.confirmationApplication_addPayment_btn.TabIndex = 2;
             this.confirmationApplication_addPayment_btn.Text = "Add";
             this.confirmationApplication_addPayment_btn.UseSelectable = true;
+            this.confirmationApplication_addPayment_btn.Click += new System.EventHandler(this.confirmationApplication_addPayment_btn_Click);
             // 
             // confirmationApplication_payment_remarks
             // 
@@ -2250,9 +2250,9 @@
             this.CapplicationID,
             this.CprofileID,
             this.Crequirements,
-            this.ClastName,
             this.CfirstName,
             this.CmidName,
+            this.ClastName,
             this.Csuffix,
             this.Cgender,
             this.Cbirthdate,
@@ -2291,6 +2291,88 @@
             this.confirmationApplication_dgv.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.confirmationApplication_dgv_CellEnter);
             this.confirmationApplication_dgv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.confirmationApplication_dgv_CellFormatting);
             this.confirmationApplication_dgv.VisibleChanged += new System.EventHandler(this.confirmationApplication_dgv_VisibleChanged);
+            // 
+            // CapplicationID
+            // 
+            this.CapplicationID.DataPropertyName = "applicationID";
+            this.CapplicationID.HeaderText = "applicationID";
+            this.CapplicationID.Name = "CapplicationID";
+            this.CapplicationID.ReadOnly = true;
+            this.CapplicationID.Visible = false;
+            // 
+            // CprofileID
+            // 
+            this.CprofileID.DataPropertyName = "profileID";
+            this.CprofileID.HeaderText = "profileID";
+            this.CprofileID.Name = "CprofileID";
+            this.CprofileID.ReadOnly = true;
+            this.CprofileID.Visible = false;
+            this.CprofileID.Width = 76;
+            // 
+            // Crequirements
+            // 
+            this.Crequirements.DataPropertyName = "requirements";
+            this.Crequirements.HeaderText = "requirements";
+            this.Crequirements.Name = "Crequirements";
+            this.Crequirements.ReadOnly = true;
+            this.Crequirements.Visible = false;
+            this.Crequirements.Width = 99;
+            // 
+            // CfirstName
+            // 
+            this.CfirstName.DataPropertyName = "firstName";
+            this.CfirstName.HeaderText = "First Name";
+            this.CfirstName.Name = "CfirstName";
+            this.CfirstName.ReadOnly = true;
+            this.CfirstName.Width = 85;
+            // 
+            // CmidName
+            // 
+            this.CmidName.DataPropertyName = "midName";
+            this.CmidName.HeaderText = "M.I.";
+            this.CmidName.Name = "CmidName";
+            this.CmidName.ReadOnly = true;
+            this.CmidName.Width = 50;
+            // 
+            // ClastName
+            // 
+            this.ClastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ClastName.DataPropertyName = "lastName";
+            this.ClastName.HeaderText = "Last Name";
+            this.ClastName.Name = "ClastName";
+            this.ClastName.ReadOnly = true;
+            // 
+            // Csuffix
+            // 
+            this.Csuffix.DataPropertyName = "suffix";
+            this.Csuffix.HeaderText = "Suffix";
+            this.Csuffix.Name = "Csuffix";
+            this.Csuffix.ReadOnly = true;
+            this.Csuffix.Width = 60;
+            // 
+            // Cgender
+            // 
+            this.Cgender.DataPropertyName = "gender";
+            this.Cgender.HeaderText = "Gender";
+            this.Cgender.Name = "Cgender";
+            this.Cgender.ReadOnly = true;
+            this.Cgender.Width = 69;
+            // 
+            // Cbirthdate
+            // 
+            this.Cbirthdate.DataPropertyName = "birthdate";
+            this.Cbirthdate.HeaderText = "Birth Date";
+            this.Cbirthdate.Name = "Cbirthdate";
+            this.Cbirthdate.ReadOnly = true;
+            this.Cbirthdate.Width = 83;
+            // 
+            // Cstatus
+            // 
+            this.Cstatus.DataPropertyName = "status";
+            this.Cstatus.HeaderText = "Status";
+            this.Cstatus.Name = "Cstatus";
+            this.Cstatus.ReadOnly = true;
+            this.Cstatus.Width = 63;
             // 
             // metroTabPage3
             // 
@@ -2397,7 +2479,7 @@
             this.dtpBBirthDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpBBirthDate.Enabled = false;
             this.dtpBBirthDate.Location = new System.Drawing.Point(69, 136);
-            this.dtpBBirthDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpBBirthDate.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtpBBirthDate.Name = "dtpBBirthDate";
             this.dtpBBirthDate.Size = new System.Drawing.Size(200, 29);
             this.dtpBBirthDate.TabIndex = 25;
@@ -2542,6 +2624,7 @@
             this.marriageApplication_add_btn.TabIndex = 2;
             this.marriageApplication_add_btn.Text = "Add";
             this.marriageApplication_add_btn.UseSelectable = true;
+            this.marriageApplication_add_btn.Click += new System.EventHandler(this.marriageApplication_add_btn_Click);
             // 
             // marriageApplication_payment_remarks
             // 
@@ -2703,7 +2786,7 @@
             this.dtpGBirthDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpGBirthDate.Enabled = false;
             this.dtpGBirthDate.Location = new System.Drawing.Point(71, 75);
-            this.dtpGBirthDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpGBirthDate.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtpGBirthDate.Name = "dtpGBirthDate";
             this.dtpGBirthDate.Size = new System.Drawing.Size(200, 29);
             this.dtpGBirthDate.TabIndex = 8;
@@ -5233,88 +5316,6 @@
             this.libraryBaptismButton.UseVisualStyleBackColor = false;
             this.libraryBaptismButton.Click += new System.EventHandler(this.libraryBaptismButton_Click);
             // 
-            // CapplicationID
-            // 
-            this.CapplicationID.DataPropertyName = "applicationID";
-            this.CapplicationID.HeaderText = "applicationID";
-            this.CapplicationID.Name = "CapplicationID";
-            this.CapplicationID.ReadOnly = true;
-            this.CapplicationID.Visible = false;
-            // 
-            // CprofileID
-            // 
-            this.CprofileID.DataPropertyName = "profileID";
-            this.CprofileID.HeaderText = "profileID";
-            this.CprofileID.Name = "CprofileID";
-            this.CprofileID.ReadOnly = true;
-            this.CprofileID.Visible = false;
-            this.CprofileID.Width = 76;
-            // 
-            // Crequirements
-            // 
-            this.Crequirements.DataPropertyName = "requirements";
-            this.Crequirements.HeaderText = "requirements";
-            this.Crequirements.Name = "Crequirements";
-            this.Crequirements.ReadOnly = true;
-            this.Crequirements.Visible = false;
-            this.Crequirements.Width = 99;
-            // 
-            // ClastName
-            // 
-            this.ClastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ClastName.DataPropertyName = "lastName";
-            this.ClastName.HeaderText = "Last Name";
-            this.ClastName.Name = "ClastName";
-            this.ClastName.ReadOnly = true;
-            // 
-            // CfirstName
-            // 
-            this.CfirstName.DataPropertyName = "firstName";
-            this.CfirstName.HeaderText = "First Name";
-            this.CfirstName.Name = "CfirstName";
-            this.CfirstName.ReadOnly = true;
-            this.CfirstName.Width = 85;
-            // 
-            // CmidName
-            // 
-            this.CmidName.DataPropertyName = "midName";
-            this.CmidName.HeaderText = "M.I.";
-            this.CmidName.Name = "CmidName";
-            this.CmidName.ReadOnly = true;
-            this.CmidName.Width = 50;
-            // 
-            // Csuffix
-            // 
-            this.Csuffix.DataPropertyName = "suffix";
-            this.Csuffix.HeaderText = "Suffix";
-            this.Csuffix.Name = "Csuffix";
-            this.Csuffix.ReadOnly = true;
-            this.Csuffix.Width = 60;
-            // 
-            // Cgender
-            // 
-            this.Cgender.DataPropertyName = "gender";
-            this.Cgender.HeaderText = "Gender";
-            this.Cgender.Name = "Cgender";
-            this.Cgender.ReadOnly = true;
-            this.Cgender.Width = 69;
-            // 
-            // Cbirthdate
-            // 
-            this.Cbirthdate.DataPropertyName = "birthdate";
-            this.Cbirthdate.HeaderText = "Birth Date";
-            this.Cbirthdate.Name = "Cbirthdate";
-            this.Cbirthdate.ReadOnly = true;
-            this.Cbirthdate.Width = 83;
-            // 
-            // Cstatus
-            // 
-            this.Cstatus.DataPropertyName = "status";
-            this.Cstatus.HeaderText = "Status";
-            this.Cstatus.Name = "Cstatus";
-            this.Cstatus.ReadOnly = true;
-            this.Cstatus.Width = 63;
-            // 
             // SAD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -5796,16 +5797,6 @@
         private System.Windows.Forms.TextBox confirmationApplication_firstname_text;
         private System.Windows.Forms.Label label90;
         private MetroFramework.Controls.MetroGrid confirmationApplication_dgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BprofileID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BapplicationID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Brequirements;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BlastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BfirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BmidName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bsuffix;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bgender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bbirthdate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bstatus;
         private System.Windows.Forms.Panel panel18;
         private MetroFramework.Controls.MetroComboBox marriageApplication_filter;
         private System.Windows.Forms.Label label22;
@@ -5857,12 +5848,22 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CapplicationID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CprofileID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Crequirements;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CfirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CmidName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Csuffix;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cgender;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cbirthdate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cstatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BapplicationID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BprofileID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Brequirements;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BfirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BmidName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BlastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bsuffix;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bgender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bbirthdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bstatus;
     }
 }

@@ -68,6 +68,11 @@ namespace ParishSystem
         {
             //this.DialogResult = DialogResult.Cancel;
         }
+
+        private void customControlBar1_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public static class MessageDialog

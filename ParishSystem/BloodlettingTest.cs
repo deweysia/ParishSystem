@@ -16,5 +16,10 @@ namespace ParishSystem
         {
             InitializeComponent();
         }
+
+        private void BloodlettingTest_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
