@@ -812,11 +812,6 @@ namespace ParishSystem
             DataGridViewRow dgvr = dgv.SelectedRows[0];
             ApplicationPayment ap = new ApplicationPayment(type, dgvr, dh);
             DialogResult dr = ap.ShowDialog();
-
-            if (dr == DialogResult.OK)
-                Notification.Show("Successfully added payment!", NotificationType.success);
-            else
-                Notification.Show("Something went wrong!", NotificationType.warning);
         }
 
         
@@ -1002,6 +997,16 @@ namespace ParishSystem
         private void marriageApplication_add_btn_Click(object sender, EventArgs e)
         {
             payApplication(SacramentType.Marriage, marriageApplication_dgv);
+        }
+
+        private void panel_controlbox_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void middlename_tooltip_profiles_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }

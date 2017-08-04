@@ -33,6 +33,7 @@ namespace ParishSystem
             label1.MouseMove += AddApplication_MouseMove;
             panel1.MouseDown += AddApplication_MouseDown;
             panel1.MouseMove += AddApplication_MouseMove;
+            
 
 
             //Input up filler text

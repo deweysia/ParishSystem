@@ -35,22 +35,20 @@ namespace ParishSystem
             else
                 lblName.Text = string.Join(" ", row[3].Value, row[4].Value, row[5].Value, row[6].Value);
 
-
-
-            
             DataTable sacramentIncome = dh.getSacramentIncome(sacramentIncomeID);
 
             lblPaymentFor.Text = type.ToString();
             lblOR.Text = dh.getNextOR(BookType.Parish).ToString();
             lblDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
-            
+
             lblPrice.Text = string.Format("{0:C}", double.Parse(sacramentIncome.Rows[0]["price"].ToString()));
             double bal = dh.getBalanceOfSacramentIncome(sacramentIncomeID);
             lblBalance.Text = string.Format("{0:C}", bal);
-            
 
             dgvPaymentHistory.AutoGenerateColumns = false;
             dgvPaymentHistory.DataSource = dh.getPaymentHistory(sacramentIncomeID);
+
+            nudPayment.Maximum = decimal.MaxValue;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -65,24 +63,28 @@ namespace ParishSystem
 
         private void dgvPaymentHistory_VisibleChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            //double payment = Convert.ToDouble();
-            //uint ORnum = uint.Parse(lblOR.Text);
-            //string remarks = txtRemarks.Text;
-            //DateTime dt = DateTime.ParseExact(lblDate.Text, "yyyy-MM-dd", null);
-            //bool success = dh.addPayment(sacramentIncomeID, payment, int.Parse(lblOR.Text), txtRemarks.Text, dt);
+            double payment = Convert.ToDouble(nudPayment.Value);
+            uint ORnum = uint.Parse(lblOR.Text);
+            string remarks = txtRemarks.Text;
+            DateTime dt = DateTime.ParseExact(lblDate.Text, "yyyy-MM-dd", null);
+            bool success = dh.addPayment(sacramentIncomeID, payment, int.Parse(lblOR.Text), txtRemarks.Text, dt);
 
-            //this.DialogResult = DialogResult.OK;
-            //this.Close();
+            if(success)
+                Notification.Show("Successfully added payment!", NotificationType.success);
+            else
+                Notification.Show("Something went wrong!", NotificationType.warning);
+
+            this.Close();
         }
 
         private void dgvPaymentHistory_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if(e.ColumnIndex == 1)
+            if (e.ColumnIndex == 1)
             {
                 e.Value = Convert.ToDouble(e.Value).ToString("C");
             }
