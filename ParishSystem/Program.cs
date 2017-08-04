@@ -17,7 +17,7 @@ namespace ParishSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Bloodletting(new DataHandler("localhost", "sad2", "root", "root")));
+            Application.Run(new Treasurer());
         }
     }
 }

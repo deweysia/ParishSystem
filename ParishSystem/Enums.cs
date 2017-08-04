@@ -17,6 +17,7 @@ namespace ParishSystem
         public enum Gender { Male=1 , Female=2  };
         public enum CivilStatus { Single=1, Widowed=2 };
         public enum Mode { GeneralProfile = 1, Applications = 2 };
+        public enum BookType { Parish=1, Community=2, Postulancy=3 };
     }
 
 
@@ -28,7 +29,7 @@ namespace ParishSystem
     {
         Parish = 1,
         Community,
-        Postulency
+        Postulancy
     }
 
     public enum ApplicationStatus

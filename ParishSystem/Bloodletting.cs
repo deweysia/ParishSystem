@@ -29,13 +29,13 @@ namespace ParishSystem
 
         private void donors_datagridview_bloodletting_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Form A = new CashRelease(1,dh);
+            Form A = new CashReleaseType(int.Parse(donors_datagridview_bloodletting.CurrentRow.Cells["cashReleaseTypeID"].Value.ToString()), dh);
             A.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form A = new Bloodletting_Profile_Popup(dh);
+            Form A = new CashReleaseType(dh);
             A.ShowDialog();
         }
 
@@ -53,13 +53,13 @@ namespace ParishSystem
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form A = new CashRelease(dh);
+            Form A = new CashReleaseType(dh);
             A.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form A = new CashRelease(dh);
+            Form A = new CashReleaseType(dh);
             A.ShowDialog();
         }
     }

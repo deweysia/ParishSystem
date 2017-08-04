@@ -100,11 +100,9 @@
     <Compile Include="Bloodletting_Profile_Popup.Designer.cs">
       <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
     </Compile>
-    <Compile Include="CashReleaseType.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CashReleaseType.Designer.cs">
-      <DependentUpon>CashReleaseType.cs</DependentUpon>
+    <Compile Include="CashRelease.cs" />
+    <Compile Include="CashRelease.Designer.cs">
+      <DependentUpon>CashRelease.cs</DependentUpon>
     </Compile>
     <Compile Include="Classifications.cs" />
     <Compile Include="ComboboxContent.cs" />
@@ -244,11 +242,13 @@
     <Compile Include="topBarControl.Designer.cs">
       <DependentUpon>topBarControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Treasurer.cs">
+    <Compile Include="..\..\..\..\Desktop\Treasurer.cs">
       <SubType>Form</SubType>
+      <Link>Treasurer.cs</Link>
     </Compile>
-    <Compile Include="Treasurer.Designer.cs">
+    <Compile Include="..\..\..\..\Desktop\Treasurer.Designer.cs">
       <DependentUpon>Treasurer.cs</DependentUpon>
+      <Link>Treasurer.Designer.cs</Link>
     </Compile>
     <Compile Include="tReport.cs">
       <SubType>Form</SubType>
@@ -271,8 +271,8 @@
     <EmbeddedResource Include="Bloodletting_Profile_Popup.resx">
       <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CashReleaseType.resx">
-      <DependentUpon>CashReleaseType.cs</DependentUpon>
+    <EmbeddedResource Include="CashRelease.resx">
+      <DependentUpon>CashRelease.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomNotification.resx">
       <DependentUpon>CustomNotification.cs</DependentUpon>
@@ -339,8 +339,9 @@
     <EmbeddedResource Include="topBarControl.resx">
       <DependentUpon>topBarControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Treasurer.resx">
+    <EmbeddedResource Include="..\..\..\..\Desktop\Treasurer.resx">
       <DependentUpon>Treasurer.cs</DependentUpon>
+      <Link>Treasurer.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="tReport.resx">
       <DependentUpon>tReport.cs</DependentUpon>

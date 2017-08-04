@@ -94,7 +94,7 @@ namespace ParishSystem
 
                 bool success = dh.addNewApplicant(id, sacramentType);
                 id = dh.getLatestID("Application", "applicationID");
-                dh.addSacramentIncome(id, itemTypeID, price, remarks_textBox.Text);
+                //dh.addSacramentIncome(id, itemTypeID, price, remarks_textBox.Text);
                 displayMessage(success);
                 this.DialogResult = DialogResult.OK;
                 this.Close();

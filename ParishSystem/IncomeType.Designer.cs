@@ -38,13 +38,13 @@
             this.cancel_button = new System.Windows.Forms.Button();
             this.save_button = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.suggestedPrice_nud = new System.Windows.Forms.NumericUpDown();
             this.book_combobox = new System.Windows.Forms.ComboBox();
             this.active_button = new System.Windows.Forms.CheckBox();
             this.details_textbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.controlBar_panel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -116,6 +116,7 @@
             this.close_button.TabIndex = 0;
             this.close_button.Text = "x";
             this.close_button.UseVisualStyleBackColor = true;
+            this.close_button.Click += new System.EventHandler(this.close_button_Click);
             // 
             // panel2
             // 
@@ -135,6 +136,7 @@
             this.cancel_button.TabIndex = 1;
             this.cancel_button.Text = "C";
             this.cancel_button.UseVisualStyleBackColor = true;
+            this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
             // 
             // save_button
             // 
@@ -144,6 +146,7 @@
             this.save_button.TabIndex = 0;
             this.save_button.Text = "S";
             this.save_button.UseVisualStyleBackColor = true;
+            this.save_button.Click += new System.EventHandler(this.save_button_Click);
             // 
             // panel3
             // 
@@ -158,8 +161,31 @@
             this.panel3.Size = new System.Drawing.Size(362, 129);
             this.panel3.TabIndex = 24;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(19, 64);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Suggested Price";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(12, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Accounting Book";
+            // 
             // suggestedPrice_nud
             // 
+            this.suggestedPrice_nud.DecimalPlaces = 2;
             this.suggestedPrice_nud.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.suggestedPrice_nud.Location = new System.Drawing.Point(114, 59);
             this.suggestedPrice_nud.Name = "suggestedPrice_nud";
@@ -173,6 +199,7 @@
             this.book_combobox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.book_combobox.FormattingEnabled = true;
             this.book_combobox.Items.AddRange(new object[] {
+            "",
             "Parish",
             "Community",
             "Postulancy"});
@@ -213,28 +240,6 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "Details";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Accounting Book";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(19, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Suggested Price";
-            // 
             // IncomeType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,6 +255,7 @@
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "IncomeType";
+            this.Load += new System.EventHandler(this.IncomeType_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.controlBar_panel.ResumeLayout(false);

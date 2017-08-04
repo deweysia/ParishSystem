@@ -651,16 +651,7 @@ namespace ParishSystem
         /// <param name="price"></param>
         /// <param name="remarks"></param>
         /// <returns></returns>
-        public bool addSacramentIncome(int applicationID, int itemTypeID, double price, string remarks)
-        {
-            string q = "INSERT INTO SacramentIncome(itemTypeID, applicationID, price, remarks, sacramentIncomeDateTime) VALUES ('"
-                + itemTypeID + "', '" + applicationID + "', '" + price + "', '" + remarks + "', NOW())";
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
+      
         public DataTable getSacramentIncome(int sacramentIncomeID)
         {
             string q = "SELECT * FROM SacramentIncome WHERE = " + sacramentIncomeID;
@@ -710,20 +701,6 @@ namespace ParishSystem
         }
 
 
-
-
-        public bool addIncome(int sourceID, string sourceType, string bookType, string remarks)
-        {
-            string q = "INSERT INTO Income(sourceID, sourceType, bookType, remarks, incomeDateTime) VALUES ('"
-                + sourceID + "', '" + sourceType + "', '" + bookType + "', '"
-                + remarks + "', NOW())";
-
-            bool success = runNonQuery(q);
-            //if(success)
-            //    updateModificationInfo("income", "incomeID", getLatestID("income", "incomeID"));
-
-            return success;
-        }
 
         public bool editIncome(int incomeID, int sourceID, string sourceType, string bookType, string remarks)
         {
@@ -837,14 +814,7 @@ namespace ParishSystem
        */
 
         #region
-        public bool addIncomeSource(string name)
-        {
-            string q = "INSERT INTO IncomeSource(name) VALUES ('" + name + "')";
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
+      
 
         public bool editIncomeSource(int incomeSourceID, string name)
         {
@@ -880,37 +850,8 @@ namespace ParishSystem
                                        =============================================================
       */
 
-        public bool addItem(int itemType, int incomeID, double price, int quantity)
-        {
-            string q = "INSERT INTO Item(itemType, incomeID, price, quantity) VALUES ('"
-                + itemType + "', '" + incomeID + "', '" + price + "', '" + quantity + "')";
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public bool editItem(int itemID, int itemType, int incomeID, double price, int quantity)
-        {
-            string q = "UPDATE Item SET itemType = '" + itemType
-                + "', incomeID = '" + incomeID
-                + "', price = '" + price
-                + "', quantity = '" + quantity
-                + "' WHERE itemID = '" + itemID + "'";
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public bool deleteItem(int itemID)
-        {
-            string q = "DELETE FROM Income WHERE itemID = " + itemID;
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
+      
+      
 
         public DataTable getItem(int itemID)
         {
@@ -946,79 +887,9 @@ namespace ParishSystem
                                         =============================================================
        */
 
-        public bool addItemType(string itemType, string bookType, double suggestedPrice, ItemTypeStatus status)
-        {
-            string q = "INSERT INTO ItemType(itemType, bookType, suggestedPrice, status) VALUES ('"
-                + itemType + "', '" + bookType + "', '" + suggestedPrice + "', '" + (int)status + "')";
+      
 
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public bool editItemType(int itemTypeID, string itemType, string bookType, double suggestedPrice, ItemTypeStatus status)
-        {
-            string q = "UPDATE ItemType SET itemType = '" + itemType
-                + "', bookType = '" + bookType
-                + "', suggestedPrice = '" + suggestedPrice
-                + "', status = '" + (int)status
-                + "' WHERE itemTypeID = '" + itemTypeID + "'";
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public bool deleteItemType(int itemTypeID)
-        {
-            string q = "DELETE FROM ItemType WHERE itemTypeID = " + itemTypeID;
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public int getItemTypeID(string itemType, BookType bookType)
-        {
-            string q = "SELECT itemTypeID FROM ItemType WHERE itemType = '" + itemType + "' AND bookType = '" + (int)bookType + "'";
-
-            DataTable dt = runQuery(q);
-
-
-            if (dt.Rows.Count == 0)
-                return -1;
-            else if (dt.Rows.Count > 1)
-                throw new DuplicateNameException("DUPLICATE NAME FOR ITEM TYPE in ItemType! btch");
-
-            return int.Parse(dt.Rows[0][0].ToString());
-        }
-
-        public DataTable getItemType(int itemTypeID)
-        {
-            string q = "SELECT * FROM ItemType WHERE itemTypeID = " + itemTypeID;
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
-        public DataTable getItemTypesOfBook(BookType bookType)
-        {
-            string q = "SELECT * FROM ItemType WHERE bookType = '" + (int)bookType + "' AND status = " + ItemTypeStatus.Active;
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
-        public bool setItemTypeStatus(int itemTypeID, ItemTypeStatus status)
-        {
-            string q = "UPDATE ItemType SET status = '" + (int)status + "'";
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
+    
 
 
         /*
@@ -2190,18 +2061,11 @@ namespace ParishSystem
 
 
        
-        public bool cashReleaseTypeIsActive(int cashReleaseTypeID)
-        {
-            string q = "SELECT * FROM CashReleaseType WHERE cashReleaseTypeID = " + cashReleaseTypeID + " AND active = 1";
-
-            DataTable dt = runQuery(q);
-
-            return dt.Rows.Count > 0;
-        }
-
+    
         public DataTable getCashReleaseTypes()
         {
-            string q = "SELECT * FROM CashReleaseType WHERE active = 1";
+            string q = @"SELECT  cashReleaseTypeID  ,cashReleaseType, case when bookType=1 then 'Parish' when bookType=2 then 'Community' when bookType=3 then 'Postulancy' end as Book,
+                        case when status = 1 then 'Active' when status = 2 then 'Inactive' end as Status FROM sad2.cashreleasetype; ";
 
             DataTable dt = runQuery(q);
 
@@ -2470,12 +2334,12 @@ namespace ParishSystem
             string q = "select * from cashreleasetype where cashReleaseTypeID =" + cashRelreaseID;
             return runQuery(q);
         }
-        public void addCashReleaseType(string cashReleaseType,string description,bool active)
+        public void addCashReleaseType(string cashReleaseType,string description,bool active,int bookType)
         {
             int A;
             if (active) A = 1;
             else A = 2; 
-            string q = "INSERT INTO `sad2`.`cashreleasetype` (`cashReleaseType`, `description`, `active`) VALUES ('"+ cashReleaseType + "', '"+ description + "', '"+A+"')";
+            string q = "INSERT INTO `sad2`.`cashreleasetype` (`cashReleaseType`, `description`, `status`, `bookType`) VALUES ('"+ cashReleaseType + "', '"+ description + "', '"+A+"','"+bookType+"')";
             runNonQuery(q);
         }
         public int getMaxCashReleaseType()
@@ -2483,16 +2347,83 @@ namespace ParishSystem
                 string q = " select max(cashReleaseTypeID) from cashreleasetype";
             return int.Parse(runQuery(q).Rows[0][0].ToString());
             }
-        public void editCashReleaseType(int cashReleaseID, string cashReleaseType, string description, bool active)
+        public void editCashReleaseType(int cashReleaseID, string cashReleaseType, string description, bool active,int bookType)
         {
             int A;
             if (active) A = 1;
             else A = 2;
-            string q = "UPDATE `sad2`.`cashreleasetype` SET `cashReleaseType`='"+ cashReleaseType + "', `description`='"+ description + "', `active`='"+A+"' WHERE `cashReleaseTypeID`='"+ cashReleaseID + "'";
+            string q = "UPDATE `sad2`.`cashreleasetype` SET `cashReleaseType`='"+ cashReleaseType + "', `description`='"+ description + "', `status`='"+A+"', `bookType`='"+ bookType +"' WHERE `cashReleaseTypeID`='"+ cashReleaseID + "'";
             runNonQuery(q);
         }
-       
-
+       public void addIncomeType(string itemType,int bookType,Decimal suggestedPrice,int status,string details)
+        {
+            string q = "INSERT INTO `sad2`.`itemtype` (`itemType`, `bookType`, `suggestedPrice`, `status`,`details`) VALUES ('"+itemType+"', '"+bookType+"', '"+suggestedPrice+"', '" +status+"','"+details+"')";
+            runNonQuery(q);
+        }
+        public void editIncomeType(int incomeTypeID, string itemType, int bookType, Decimal suggestedPrice, int status, string details)
+        {
+            string q = "UPDATE `sad2`.`itemtype` SET `itemType`='"+ itemType + "', `bookType`='"+ bookType + "', `suggestedPrice`='"+ suggestedPrice+ "', `status`='"+ status + "',details='"+details+"' WHERE `itemTypeID`='"+ incomeTypeID + "'";
+            runNonQuery(q);
+        }
+        public int getMaxIncomeType()
+        {
+            string q = "SELECT max(itemTypeID) FROM sad2.itemtype;";
+            return int.Parse(runQuery(q).Rows[0][0].ToString());
+        }
+        public DataTable getIncomeType(int IncomeTypeID)
+        {
+            string q = "select * from itemType where itemTypeID= "+IncomeTypeID+";";
+            return runQuery(q);
+        }
+        public DataTable getIncomeTypes()
+        {
+            string q = @"SELECT itemType, itemTypeID  ,case when bookType=1 then 'Parish' when bookType=2 then 'Community' when bookType=3 then 'Postulancy' end as Book,
+                     case when status=1 then 'Active' when status=2 then 'Inactive' end as Status , concat('₱',' ',suggestedprice)as SuggestedPrice FROM sad2.itemtype;";
+            return runQuery(q);
+        }
+        public void disableIncomeType(int IncomeTypeID)
+        {
+            string q = $"UPDATE `sad2`.`itemtype` SET `status`='2' WHERE `itemTypeID`='{IncomeTypeID}'";
+            runNonQuery(q);
+        }
+        public DataTable getIncomeTypesOf(int bookType)
+        {
+            string q = @"SELECT itemType, itemTypeID  ,case when bookType=1 then 'Parish' when bookType=2 then 'Community' when bookType=3 then 'Postulancy' end as Book,
+                     case when status=1 then 'Active' when status=2 then 'Inactive' end as Status , suggestedprice as SuggestedPrice FROM sad2.itemtype where status=1 and bookType='"+bookType+"';";
+            return runQuery(q);
+        }
+        public void enableIncomeType(int IncomeTypeID)
+        {
+            string q = $"UPDATE `sad2`.`itemtype` SET `status`='1' WHERE `itemTypeID`='{IncomeTypeID}'";
+            runNonQuery(q);
+        }
+        public void disableCashReleaseType(int CashReleaseTypeID)
+        {
+            string q = $"UPDATE `sad2`.`cashreleasetype` SET `status`='2' WHERE `cashreleasetypeID`='{CashReleaseTypeID}'";
+            runNonQuery(q);
+        }
+        public void enableCashReleaseType(int CashReleaseTypeID)
+        {
+            string q = $"UPDATE `sad2`.`cashreleasetype` SET `status`='1' WHERE `cashreleasetypeID`='{CashReleaseTypeID}'";
+            runNonQuery(q);
+        }
+        public int getnextORof(int bookType)
+        {
+            string q = $"select max(ORnum)+1 as max from primaryincome where bookType={bookType};";
+          
+            try
+            {
+                return int.Parse(runQuery(q).Rows[0]["max"].ToString())+1;
+            }
+            catch
+            {
+                return 1;
+            }
+            }
+        public void addPrimaryIncome(string sourceName,int bookType,int ORnum,string remarks)
+        {
+            //string q = $"INSERT INTO `sad2`.`primaryincome` ( `sourceName`, `bookType`, `ORnum`, `remarks`, `primaryIncomeDateTime`) VALUES ('{}', '{}', '{}', '{}', '{}')";
+        }
     }
 
 }

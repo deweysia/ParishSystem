@@ -1,6 +1,6 @@
 ﻿namespace ParishSystem
 {
-    partial class CashRelease
+    partial class CashReleaseType
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,8 @@
             this.active_button = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.details_textbox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.book_combobox = new System.Windows.Forms.ComboBox();
             this.controlBar_panel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -146,10 +148,12 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.book_combobox);
             this.panel3.Controls.Add(this.active_button);
             this.panel3.Location = new System.Drawing.Point(0, 132);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(362, 56);
+            this.panel3.Size = new System.Drawing.Size(362, 85);
             this.panel3.TabIndex = 18;
             // 
             // active_button
@@ -157,7 +161,7 @@
             this.active_button.AutoSize = true;
             this.active_button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.active_button.ForeColor = System.Drawing.Color.White;
-            this.active_button.Location = new System.Drawing.Point(136, 17);
+            this.active_button.Location = new System.Drawing.Point(115, 53);
             this.active_button.Name = "active_button";
             this.active_button.Size = new System.Drawing.Size(75, 25);
             this.active_button.TabIndex = 4;
@@ -169,7 +173,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(33, 195);
+            this.label4.Location = new System.Drawing.Point(29, 220);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 4;
@@ -178,11 +182,38 @@
             // details_textbox
             // 
             this.details_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.details_textbox.Location = new System.Drawing.Point(32, 211);
+            this.details_textbox.Location = new System.Drawing.Point(32, 236);
             this.details_textbox.Multiline = true;
             this.details_textbox.Name = "details_textbox";
-            this.details_textbox.Size = new System.Drawing.Size(299, 125);
+            this.details_textbox.Size = new System.Drawing.Size(299, 100);
             this.details_textbox.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(13, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Accounting Book";
+            // 
+            // book_combobox
+            // 
+            this.book_combobox.BackColor = System.Drawing.Color.White;
+            this.book_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.book_combobox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.book_combobox.FormattingEnabled = true;
+            this.book_combobox.Items.AddRange(new object[] {
+            "",
+            "Parish",
+            "Community",
+            "Postulancy"});
+            this.book_combobox.Location = new System.Drawing.Point(115, 17);
+            this.book_combobox.Name = "book_combobox";
+            this.book_combobox.Size = new System.Drawing.Size(235, 25);
+            this.book_combobox.TabIndex = 7;
             // 
             // CashRelease
             // 
@@ -226,5 +257,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox details_textbox;
         private System.Windows.Forms.CheckBox active_button;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox book_combobox;
     }
 }
