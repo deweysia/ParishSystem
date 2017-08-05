@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SAD));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.home_button_menu = new System.Windows.Forms.Button();
@@ -109,13 +109,14 @@
             this.baptismApplication_add_button = new System.Windows.Forms.Button();
             this.baptismApplicationDetailsPanel = new MetroFramework.Controls.MetroPanel();
             this.baptismApplication_buttons_panel = new System.Windows.Forms.Panel();
-            this.baptismApplication_editReq_button = new MetroFramework.Controls.MetroButton();
+            this.baptismApplication_approveRevoke_panel = new System.Windows.Forms.FlowLayoutPanel();
             this.baptismApplication_approve_button = new MetroFramework.Controls.MetroButton();
             this.baptismApplication_revoke_button = new MetroFramework.Controls.MetroButton();
+            this.baptismApplication_editReq_button = new MetroFramework.Controls.MetroButton();
             this.baptismApplication_payment_groupbox = new System.Windows.Forms.GroupBox();
             this.label87 = new System.Windows.Forms.Label();
             this.baptismApplication_payment_label = new System.Windows.Forms.Label();
-            this.baptismApplication_addPayment_button = new MetroFramework.Controls.MetroButton();
+            this.baptismApplication_addPayment_btn = new MetroFramework.Controls.MetroButton();
             this.baptismApplication_payment_remarks = new MetroFramework.Controls.MetroTextBox();
             this.baptismApplication_status_label = new System.Windows.Forms.Label();
             this.baptismApplication_requirements_groupbox = new System.Windows.Forms.GroupBox();
@@ -153,9 +154,10 @@
             this.confirmationApplication_add_btn = new System.Windows.Forms.Button();
             this.confirmationApplicationDetailsPanel = new MetroFramework.Controls.MetroPanel();
             this.confirmationApplication_buttons_panel = new System.Windows.Forms.Panel();
-            this.confirmationApplication_editReq_btn = new MetroFramework.Controls.MetroButton();
+            this.confirmationApplication_approveRevoke_panel = new System.Windows.Forms.FlowLayoutPanel();
             this.confirmationApplication_approve_btn = new MetroFramework.Controls.MetroButton();
             this.confirmationApplication_revoke_btn = new MetroFramework.Controls.MetroButton();
+            this.confirmationApplication_editReq_btn = new MetroFramework.Controls.MetroButton();
             this.confirmationApplication_payment_groupbox = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
             this.confirmationApplication_payment_label = new System.Windows.Forms.Label();
@@ -204,13 +206,14 @@
             this.txtBFN = new System.Windows.Forms.TextBox();
             this.label96 = new System.Windows.Forms.Label();
             this.marriageApplication_buttons_panel = new System.Windows.Forms.Panel();
-            this.marriageApplication_editReq_btn = new MetroFramework.Controls.MetroButton();
+            this.marriageApplication_approveRevoke_panel = new System.Windows.Forms.FlowLayoutPanel();
             this.marriageApplication_approve_btn = new MetroFramework.Controls.MetroButton();
             this.marriageApplication_revoke_btn = new MetroFramework.Controls.MetroButton();
+            this.marriageApplication_editReq_btn = new MetroFramework.Controls.MetroButton();
             this.marriageApplication_payment_groupbox = new System.Windows.Forms.GroupBox();
             this.label23 = new System.Windows.Forms.Label();
             this.marriageApplication_price_label = new System.Windows.Forms.Label();
-            this.marriageApplication_add_btn = new MetroFramework.Controls.MetroButton();
+            this.marriageApplication_addPayment_btn = new MetroFramework.Controls.MetroButton();
             this.marriageApplication_payment_remarks = new MetroFramework.Controls.MetroTextBox();
             this.label92 = new System.Windows.Forms.Label();
             this.marriageApplication_requirements_groupbox = new System.Windows.Forms.GroupBox();
@@ -462,6 +465,7 @@
             this.panel16.SuspendLayout();
             this.baptismApplicationDetailsPanel.SuspendLayout();
             this.baptismApplication_buttons_panel.SuspendLayout();
+            this.baptismApplication_approveRevoke_panel.SuspendLayout();
             this.baptismApplication_payment_groupbox.SuspendLayout();
             this.baptismApplication_requirements_groupbox.SuspendLayout();
             this.baptismApplication_requirements_tablePanel.SuspendLayout();
@@ -471,6 +475,7 @@
             this.panel17.SuspendLayout();
             this.confirmationApplicationDetailsPanel.SuspendLayout();
             this.confirmationApplication_buttons_panel.SuspendLayout();
+            this.confirmationApplication_approveRevoke_panel.SuspendLayout();
             this.confirmationApplication_payment_groupbox.SuspendLayout();
             this.confirmationApplication_requirements_groupbox.SuspendLayout();
             this.confirmationApplication_requirements_tablePanel.SuspendLayout();
@@ -480,6 +485,7 @@
             this.panel18.SuspendLayout();
             this.marriageApplicationDetailsPanel.SuspendLayout();
             this.marriageApplication_buttons_panel.SuspendLayout();
+            this.marriageApplication_approveRevoke_panel.SuspendLayout();
             this.marriageApplication_payment_groupbox.SuspendLayout();
             this.marriageApplication_requirements_groupbox.SuspendLayout();
             this.marriageApplication_requirements_tablePanel.SuspendLayout();
@@ -1038,41 +1044,41 @@
             this.generalprofile_datagridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.generalprofile_datagridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.generalprofile_datagridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.generalprofile_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.generalprofile_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.generalprofile_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.generalprofile_datagridview.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.generalprofile_datagridview.DefaultCellStyle = dataGridViewCellStyle2;
             this.generalprofile_datagridview.EnableHeadersVisualStyles = false;
             this.generalprofile_datagridview.Location = new System.Drawing.Point(7, 40);
             this.generalprofile_datagridview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.generalprofile_datagridview.MultiSelect = false;
             this.generalprofile_datagridview.Name = "generalprofile_datagridview";
             this.generalprofile_datagridview.ReadOnly = true;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.generalprofile_datagridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.generalprofile_datagridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.generalprofile_datagridview.RowHeadersVisible = false;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.generalprofile_datagridview.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.generalprofile_datagridview.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.generalprofile_datagridview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.generalprofile_datagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.generalprofile_datagridview.Size = new System.Drawing.Size(345, 335);
@@ -1261,7 +1267,7 @@
             this.applicationTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicationTabControl.Location = new System.Drawing.Point(0, 41);
             this.applicationTabControl.Name = "applicationTabControl";
-            this.applicationTabControl.SelectedIndex = 0;
+            this.applicationTabControl.SelectedIndex = 2;
             this.applicationTabControl.Size = new System.Drawing.Size(802, 501);
             this.applicationTabControl.TabIndex = 69;
             this.applicationTabControl.UseSelectable = true;
@@ -1363,14 +1369,42 @@
             // 
             // baptismApplication_buttons_panel
             // 
+            this.baptismApplication_buttons_panel.Controls.Add(this.baptismApplication_approveRevoke_panel);
             this.baptismApplication_buttons_panel.Controls.Add(this.baptismApplication_editReq_button);
-            this.baptismApplication_buttons_panel.Controls.Add(this.baptismApplication_approve_button);
-            this.baptismApplication_buttons_panel.Controls.Add(this.baptismApplication_revoke_button);
             this.baptismApplication_buttons_panel.Enabled = false;
             this.baptismApplication_buttons_panel.Location = new System.Drawing.Point(6, 399);
             this.baptismApplication_buttons_panel.Name = "baptismApplication_buttons_panel";
             this.baptismApplication_buttons_panel.Size = new System.Drawing.Size(281, 32);
             this.baptismApplication_buttons_panel.TabIndex = 18;
+            // 
+            // baptismApplication_approveRevoke_panel
+            // 
+            this.baptismApplication_approveRevoke_panel.Controls.Add(this.baptismApplication_approve_button);
+            this.baptismApplication_approveRevoke_panel.Controls.Add(this.baptismApplication_revoke_button);
+            this.baptismApplication_approveRevoke_panel.Location = new System.Drawing.Point(140, 0);
+            this.baptismApplication_approveRevoke_panel.Name = "baptismApplication_approveRevoke_panel";
+            this.baptismApplication_approveRevoke_panel.Size = new System.Drawing.Size(134, 30);
+            this.baptismApplication_approveRevoke_panel.TabIndex = 3;
+            // 
+            // baptismApplication_approve_button
+            // 
+            this.baptismApplication_approve_button.Location = new System.Drawing.Point(3, 3);
+            this.baptismApplication_approve_button.Name = "baptismApplication_approve_button";
+            this.baptismApplication_approve_button.Size = new System.Drawing.Size(60, 23);
+            this.baptismApplication_approve_button.TabIndex = 10;
+            this.baptismApplication_approve_button.Text = "Approve";
+            this.baptismApplication_approve_button.UseSelectable = true;
+            this.baptismApplication_approve_button.Click += new System.EventHandler(this.baptismApplication_approve_button_Click);
+            // 
+            // baptismApplication_revoke_button
+            // 
+            this.baptismApplication_revoke_button.Location = new System.Drawing.Point(69, 3);
+            this.baptismApplication_revoke_button.Name = "baptismApplication_revoke_button";
+            this.baptismApplication_revoke_button.Size = new System.Drawing.Size(60, 23);
+            this.baptismApplication_revoke_button.TabIndex = 10;
+            this.baptismApplication_revoke_button.Text = "Revoke";
+            this.baptismApplication_revoke_button.UseSelectable = true;
+            this.baptismApplication_revoke_button.Click += new System.EventHandler(this.baptismApplication_revoke_button_Click);
             // 
             // baptismApplication_editReq_button
             // 
@@ -1382,31 +1416,11 @@
             this.baptismApplication_editReq_button.UseSelectable = true;
             this.baptismApplication_editReq_button.Click += new System.EventHandler(this.baptismApplication_editReq_button_Click);
             // 
-            // baptismApplication_approve_button
-            // 
-            this.baptismApplication_approve_button.Location = new System.Drawing.Point(217, 3);
-            this.baptismApplication_approve_button.Name = "baptismApplication_approve_button";
-            this.baptismApplication_approve_button.Size = new System.Drawing.Size(60, 23);
-            this.baptismApplication_approve_button.TabIndex = 10;
-            this.baptismApplication_approve_button.Text = "Approve";
-            this.baptismApplication_approve_button.UseSelectable = true;
-            this.baptismApplication_approve_button.Click += new System.EventHandler(this.baptismApplication_approve_button_Click);
-            // 
-            // baptismApplication_revoke_button
-            // 
-            this.baptismApplication_revoke_button.Location = new System.Drawing.Point(151, 3);
-            this.baptismApplication_revoke_button.Name = "baptismApplication_revoke_button";
-            this.baptismApplication_revoke_button.Size = new System.Drawing.Size(60, 23);
-            this.baptismApplication_revoke_button.TabIndex = 10;
-            this.baptismApplication_revoke_button.Text = "Revoke";
-            this.baptismApplication_revoke_button.UseSelectable = true;
-            this.baptismApplication_revoke_button.Click += new System.EventHandler(this.baptismApplication_revoke_button_Click);
-            // 
             // baptismApplication_payment_groupbox
             // 
             this.baptismApplication_payment_groupbox.Controls.Add(this.label87);
             this.baptismApplication_payment_groupbox.Controls.Add(this.baptismApplication_payment_label);
-            this.baptismApplication_payment_groupbox.Controls.Add(this.baptismApplication_addPayment_button);
+            this.baptismApplication_payment_groupbox.Controls.Add(this.baptismApplication_addPayment_btn);
             this.baptismApplication_payment_groupbox.Controls.Add(this.baptismApplication_payment_remarks);
             this.baptismApplication_payment_groupbox.Enabled = false;
             this.baptismApplication_payment_groupbox.Location = new System.Drawing.Point(6, 291);
@@ -1436,16 +1450,16 @@
             this.baptismApplication_payment_label.TabIndex = 12;
             this.baptismApplication_payment_label.Text = "Price";
             // 
-            // baptismApplication_addPayment_button
+            // baptismApplication_addPayment_btn
             // 
-            this.baptismApplication_addPayment_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.baptismApplication_addPayment_button.Location = new System.Drawing.Point(226, 21);
-            this.baptismApplication_addPayment_button.Name = "baptismApplication_addPayment_button";
-            this.baptismApplication_addPayment_button.Size = new System.Drawing.Size(44, 23);
-            this.baptismApplication_addPayment_button.TabIndex = 2;
-            this.baptismApplication_addPayment_button.Text = "Add";
-            this.baptismApplication_addPayment_button.UseSelectable = true;
-            this.baptismApplication_addPayment_button.Click += new System.EventHandler(this.baptismApplication_addPayment_button_Click);
+            this.baptismApplication_addPayment_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.baptismApplication_addPayment_btn.Location = new System.Drawing.Point(226, 21);
+            this.baptismApplication_addPayment_btn.Name = "baptismApplication_addPayment_btn";
+            this.baptismApplication_addPayment_btn.Size = new System.Drawing.Size(44, 23);
+            this.baptismApplication_addPayment_btn.TabIndex = 2;
+            this.baptismApplication_addPayment_btn.Text = "Add";
+            this.baptismApplication_addPayment_btn.UseSelectable = true;
+            this.baptismApplication_addPayment_btn.Click += new System.EventHandler(this.baptismApplication_addPayment_button_Click);
             // 
             // baptismApplication_payment_remarks
             // 
@@ -1531,7 +1545,7 @@
             this.baptismApplication_requirement_checkBox1.TabIndex = 0;
             this.baptismApplication_requirement_checkBox1.Text = "Parish Permit";
             this.baptismApplication_requirement_checkBox1.UseSelectable = true;
-            this.baptismApplication_requirement_checkBox1.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox1_CheckedChanged);
+            this.baptismApplication_requirement_checkBox1.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox_CheckedChanged);
             // 
             // baptismApplication_requirement_checkBox3
             // 
@@ -1542,7 +1556,7 @@
             this.baptismApplication_requirement_checkBox3.TabIndex = 0;
             this.baptismApplication_requirement_checkBox3.Text = "Marriage Contract";
             this.baptismApplication_requirement_checkBox3.UseSelectable = true;
-            this.baptismApplication_requirement_checkBox3.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox1_CheckedChanged);
+            this.baptismApplication_requirement_checkBox3.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox_CheckedChanged);
             // 
             // baptismApplication_requirement_checkBox2
             // 
@@ -1553,7 +1567,7 @@
             this.baptismApplication_requirement_checkBox2.TabIndex = 0;
             this.baptismApplication_requirement_checkBox2.Text = "Birth Certificate";
             this.baptismApplication_requirement_checkBox2.UseSelectable = true;
-            this.baptismApplication_requirement_checkBox2.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox1_CheckedChanged);
+            this.baptismApplication_requirement_checkBox2.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox_CheckedChanged);
             // 
             // baptismApplication_checkAll_checkBox
             // 
@@ -1571,7 +1585,7 @@
             this.baptismApplication_birthDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.baptismApplication_birthDate.Enabled = false;
             this.baptismApplication_birthDate.Location = new System.Drawing.Point(69, 104);
-            this.baptismApplication_birthDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.baptismApplication_birthDate.MinimumSize = new System.Drawing.Size(4, 29);
             this.baptismApplication_birthDate.Name = "baptismApplication_birthDate";
             this.baptismApplication_birthDate.Size = new System.Drawing.Size(200, 29);
             this.baptismApplication_birthDate.TabIndex = 8;
@@ -1683,14 +1697,14 @@
             this.baptismApplication_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.baptismApplication_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.baptismApplication_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.baptismApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.baptismApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.baptismApplication_dgv.ColumnHeadersHeight = 25;
             this.baptismApplication_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.baptismApplication_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1704,14 +1718,14 @@
             this.Bgender,
             this.Bbirthdate,
             this.Bstatus});
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.baptismApplication_dgv.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.baptismApplication_dgv.DefaultCellStyle = dataGridViewCellStyle6;
             this.baptismApplication_dgv.EnableHeadersVisualStyles = false;
             this.baptismApplication_dgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.baptismApplication_dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -1720,14 +1734,14 @@
             this.baptismApplication_dgv.Name = "baptismApplication_dgv";
             this.baptismApplication_dgv.ReadOnly = true;
             this.baptismApplication_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.baptismApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.baptismApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.baptismApplication_dgv.RowHeadersVisible = false;
             this.baptismApplication_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.baptismApplication_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1737,7 +1751,6 @@
             this.baptismApplication_dgv.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.baptismApplication_dgv_CellEnter);
             this.baptismApplication_dgv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.baptismApplication_dgv_CellFormatting);
             this.baptismApplication_dgv.VisibleChanged += new System.EventHandler(this.baptismApplication_dgv_VisibleChanged);
-            this.baptismApplication_dgv.Paint += new System.Windows.Forms.PaintEventHandler(this.baptismApplication_dgv_Paint);
             // 
             // BapplicationID
             // 
@@ -1918,14 +1931,42 @@
             // 
             // confirmationApplication_buttons_panel
             // 
+            this.confirmationApplication_buttons_panel.Controls.Add(this.confirmationApplication_approveRevoke_panel);
             this.confirmationApplication_buttons_panel.Controls.Add(this.confirmationApplication_editReq_btn);
-            this.confirmationApplication_buttons_panel.Controls.Add(this.confirmationApplication_approve_btn);
-            this.confirmationApplication_buttons_panel.Controls.Add(this.confirmationApplication_revoke_btn);
             this.confirmationApplication_buttons_panel.Enabled = false;
             this.confirmationApplication_buttons_panel.Location = new System.Drawing.Point(6, 399);
             this.confirmationApplication_buttons_panel.Name = "confirmationApplication_buttons_panel";
             this.confirmationApplication_buttons_panel.Size = new System.Drawing.Size(281, 32);
             this.confirmationApplication_buttons_panel.TabIndex = 18;
+            // 
+            // confirmationApplication_approveRevoke_panel
+            // 
+            this.confirmationApplication_approveRevoke_panel.Controls.Add(this.confirmationApplication_approve_btn);
+            this.confirmationApplication_approveRevoke_panel.Controls.Add(this.confirmationApplication_revoke_btn);
+            this.confirmationApplication_approveRevoke_panel.Location = new System.Drawing.Point(140, 0);
+            this.confirmationApplication_approveRevoke_panel.Name = "confirmationApplication_approveRevoke_panel";
+            this.confirmationApplication_approveRevoke_panel.Size = new System.Drawing.Size(132, 30);
+            this.confirmationApplication_approveRevoke_panel.TabIndex = 2;
+            // 
+            // confirmationApplication_approve_btn
+            // 
+            this.confirmationApplication_approve_btn.Location = new System.Drawing.Point(3, 3);
+            this.confirmationApplication_approve_btn.Name = "confirmationApplication_approve_btn";
+            this.confirmationApplication_approve_btn.Size = new System.Drawing.Size(60, 23);
+            this.confirmationApplication_approve_btn.TabIndex = 10;
+            this.confirmationApplication_approve_btn.Text = "Approve";
+            this.confirmationApplication_approve_btn.UseSelectable = true;
+            this.confirmationApplication_approve_btn.Click += new System.EventHandler(this.confirmationApplication_approve_btn_Click);
+            // 
+            // confirmationApplication_revoke_btn
+            // 
+            this.confirmationApplication_revoke_btn.Location = new System.Drawing.Point(69, 3);
+            this.confirmationApplication_revoke_btn.Name = "confirmationApplication_revoke_btn";
+            this.confirmationApplication_revoke_btn.Size = new System.Drawing.Size(60, 23);
+            this.confirmationApplication_revoke_btn.TabIndex = 10;
+            this.confirmationApplication_revoke_btn.Text = "Revoke";
+            this.confirmationApplication_revoke_btn.UseSelectable = true;
+            this.confirmationApplication_revoke_btn.Click += new System.EventHandler(this.confirmationApplication_revoke_btn_Click);
             // 
             // confirmationApplication_editReq_btn
             // 
@@ -1936,26 +1977,6 @@
             this.confirmationApplication_editReq_btn.Text = "Edit Requirements";
             this.confirmationApplication_editReq_btn.UseSelectable = true;
             this.confirmationApplication_editReq_btn.Click += new System.EventHandler(this.confirmationApplication_editReq_btn_Click);
-            // 
-            // confirmationApplication_approve_btn
-            // 
-            this.confirmationApplication_approve_btn.Location = new System.Drawing.Point(217, 3);
-            this.confirmationApplication_approve_btn.Name = "confirmationApplication_approve_btn";
-            this.confirmationApplication_approve_btn.Size = new System.Drawing.Size(60, 23);
-            this.confirmationApplication_approve_btn.TabIndex = 10;
-            this.confirmationApplication_approve_btn.Text = "Approve";
-            this.confirmationApplication_approve_btn.UseSelectable = true;
-            this.confirmationApplication_approve_btn.Click += new System.EventHandler(this.confirmationApplication_approve_btn_Click);
-            // 
-            // confirmationApplication_revoke_btn
-            // 
-            this.confirmationApplication_revoke_btn.Location = new System.Drawing.Point(151, 3);
-            this.confirmationApplication_revoke_btn.Name = "confirmationApplication_revoke_btn";
-            this.confirmationApplication_revoke_btn.Size = new System.Drawing.Size(60, 23);
-            this.confirmationApplication_revoke_btn.TabIndex = 10;
-            this.confirmationApplication_revoke_btn.Text = "Revoke";
-            this.confirmationApplication_revoke_btn.UseSelectable = true;
-            this.confirmationApplication_revoke_btn.Click += new System.EventHandler(this.confirmationApplication_revoke_btn_Click);
             // 
             // confirmationApplication_payment_groupbox
             // 
@@ -2086,7 +2107,7 @@
             this.metroCheckBox2.TabIndex = 0;
             this.metroCheckBox2.Text = "Parish Permit";
             this.metroCheckBox2.UseSelectable = true;
-            this.metroCheckBox2.CheckedChanged += new System.EventHandler(this.confirmationRequirements_CheckChanged);
+            this.metroCheckBox2.CheckedChanged += new System.EventHandler(this.confirmationApplication_requirement_checkBox_CheckChanged);
             // 
             // metroCheckBox3
             // 
@@ -2097,7 +2118,7 @@
             this.metroCheckBox3.TabIndex = 0;
             this.metroCheckBox3.Text = "Birth Certificate";
             this.metroCheckBox3.UseSelectable = true;
-            this.metroCheckBox3.CheckedChanged += new System.EventHandler(this.confirmationRequirements_CheckChanged);
+            this.metroCheckBox3.CheckedChanged += new System.EventHandler(this.confirmationApplication_requirement_checkBox_CheckChanged);
             // 
             // metroCheckBox4
             // 
@@ -2108,7 +2129,7 @@
             this.metroCheckBox4.TabIndex = 0;
             this.metroCheckBox4.Text = "Baptism Certificate";
             this.metroCheckBox4.UseSelectable = true;
-            this.metroCheckBox4.CheckedChanged += new System.EventHandler(this.confirmationRequirements_CheckChanged);
+            this.metroCheckBox4.CheckedChanged += new System.EventHandler(this.confirmationApplication_requirement_checkBox_CheckChanged);
             // 
             // confirmationApplication_checkAll_checkBox
             // 
@@ -2238,14 +2259,14 @@
             this.confirmationApplication_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.confirmationApplication_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.confirmationApplication_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.confirmationApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.confirmationApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.confirmationApplication_dgv.ColumnHeadersHeight = 25;
             this.confirmationApplication_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.confirmationApplication_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -2259,14 +2280,14 @@
             this.Cgender,
             this.Cbirthdate,
             this.Cstatus});
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.confirmationApplication_dgv.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.confirmationApplication_dgv.DefaultCellStyle = dataGridViewCellStyle9;
             this.confirmationApplication_dgv.EnableHeadersVisualStyles = false;
             this.confirmationApplication_dgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.confirmationApplication_dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -2275,21 +2296,20 @@
             this.confirmationApplication_dgv.Name = "confirmationApplication_dgv";
             this.confirmationApplication_dgv.ReadOnly = true;
             this.confirmationApplication_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.confirmationApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.confirmationApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.confirmationApplication_dgv.RowHeadersVisible = false;
             this.confirmationApplication_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.confirmationApplication_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.confirmationApplication_dgv.Size = new System.Drawing.Size(493, 380);
             this.confirmationApplication_dgv.TabIndex = 69;
             this.confirmationApplication_dgv.TabStop = false;
-            this.confirmationApplication_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.confirmationApplication_dgv_CellContentClick);
             this.confirmationApplication_dgv.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.confirmationApplication_dgv_CellEnter);
             this.confirmationApplication_dgv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.confirmationApplication_dgv_CellFormatting);
             this.confirmationApplication_dgv.VisibleChanged += new System.EventHandler(this.confirmationApplication_dgv_VisibleChanged);
@@ -2442,7 +2462,7 @@
             this.marriageApplication_add_button.TabIndex = 67;
             this.marriageApplication_add_button.Text = "Add";
             this.marriageApplication_add_button.UseVisualStyleBackColor = false;
-            this.marriageApplication_add_button.Click += new System.EventHandler(this.button4_Click);
+            this.marriageApplication_add_button.Click += new System.EventHandler(this.marriageApplication_add_btn_Click);
             // 
             // marriageApplicationDetailsPanel
             // 
@@ -2481,7 +2501,7 @@
             this.dtpBBirthDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpBBirthDate.Enabled = false;
             this.dtpBBirthDate.Location = new System.Drawing.Point(69, 136);
-            this.dtpBBirthDate.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpBBirthDate.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpBBirthDate.Name = "dtpBBirthDate";
             this.dtpBBirthDate.Size = new System.Drawing.Size(200, 29);
             this.dtpBBirthDate.TabIndex = 25;
@@ -2544,14 +2564,42 @@
             // 
             // marriageApplication_buttons_panel
             // 
+            this.marriageApplication_buttons_panel.Controls.Add(this.marriageApplication_approveRevoke_panel);
             this.marriageApplication_buttons_panel.Controls.Add(this.marriageApplication_editReq_btn);
-            this.marriageApplication_buttons_panel.Controls.Add(this.marriageApplication_approve_btn);
-            this.marriageApplication_buttons_panel.Controls.Add(this.marriageApplication_revoke_btn);
             this.marriageApplication_buttons_panel.Enabled = false;
             this.marriageApplication_buttons_panel.Location = new System.Drawing.Point(6, 399);
             this.marriageApplication_buttons_panel.Name = "marriageApplication_buttons_panel";
             this.marriageApplication_buttons_panel.Size = new System.Drawing.Size(281, 32);
             this.marriageApplication_buttons_panel.TabIndex = 18;
+            // 
+            // marriageApplication_approveRevoke_panel
+            // 
+            this.marriageApplication_approveRevoke_panel.Controls.Add(this.marriageApplication_approve_btn);
+            this.marriageApplication_approveRevoke_panel.Controls.Add(this.marriageApplication_revoke_btn);
+            this.marriageApplication_approveRevoke_panel.Location = new System.Drawing.Point(140, 0);
+            this.marriageApplication_approveRevoke_panel.Name = "marriageApplication_approveRevoke_panel";
+            this.marriageApplication_approveRevoke_panel.Size = new System.Drawing.Size(133, 32);
+            this.marriageApplication_approveRevoke_panel.TabIndex = 17;
+            // 
+            // marriageApplication_approve_btn
+            // 
+            this.marriageApplication_approve_btn.Location = new System.Drawing.Point(3, 3);
+            this.marriageApplication_approve_btn.Name = "marriageApplication_approve_btn";
+            this.marriageApplication_approve_btn.Size = new System.Drawing.Size(60, 23);
+            this.marriageApplication_approve_btn.TabIndex = 10;
+            this.marriageApplication_approve_btn.Text = "Approve";
+            this.marriageApplication_approve_btn.UseSelectable = true;
+            this.marriageApplication_approve_btn.Click += new System.EventHandler(this.marriageApplication_approve_btn_Click);
+            // 
+            // marriageApplication_revoke_btn
+            // 
+            this.marriageApplication_revoke_btn.Location = new System.Drawing.Point(69, 3);
+            this.marriageApplication_revoke_btn.Name = "marriageApplication_revoke_btn";
+            this.marriageApplication_revoke_btn.Size = new System.Drawing.Size(60, 23);
+            this.marriageApplication_revoke_btn.TabIndex = 10;
+            this.marriageApplication_revoke_btn.Text = "Revoke";
+            this.marriageApplication_revoke_btn.UseSelectable = true;
+            this.marriageApplication_revoke_btn.Click += new System.EventHandler(this.marriageApplication_revoke_btn_Click);
             // 
             // marriageApplication_editReq_btn
             // 
@@ -2563,31 +2611,11 @@
             this.marriageApplication_editReq_btn.UseSelectable = true;
             this.marriageApplication_editReq_btn.Click += new System.EventHandler(this.marriageApplication_editReq_btn_Click);
             // 
-            // marriageApplication_approve_btn
-            // 
-            this.marriageApplication_approve_btn.Location = new System.Drawing.Point(217, 3);
-            this.marriageApplication_approve_btn.Name = "marriageApplication_approve_btn";
-            this.marriageApplication_approve_btn.Size = new System.Drawing.Size(60, 23);
-            this.marriageApplication_approve_btn.TabIndex = 10;
-            this.marriageApplication_approve_btn.Text = "Approve";
-            this.marriageApplication_approve_btn.UseSelectable = true;
-            this.marriageApplication_approve_btn.Click += new System.EventHandler(this.marriageApplication_approve_btn_Click);
-            // 
-            // marriageApplication_revoke_btn
-            // 
-            this.marriageApplication_revoke_btn.Location = new System.Drawing.Point(151, 3);
-            this.marriageApplication_revoke_btn.Name = "marriageApplication_revoke_btn";
-            this.marriageApplication_revoke_btn.Size = new System.Drawing.Size(60, 23);
-            this.marriageApplication_revoke_btn.TabIndex = 10;
-            this.marriageApplication_revoke_btn.Text = "Revoke";
-            this.marriageApplication_revoke_btn.UseSelectable = true;
-            this.marriageApplication_revoke_btn.Click += new System.EventHandler(this.marriageApplication_revoke_btn_Click);
-            // 
             // marriageApplication_payment_groupbox
             // 
             this.marriageApplication_payment_groupbox.Controls.Add(this.label23);
             this.marriageApplication_payment_groupbox.Controls.Add(this.marriageApplication_price_label);
-            this.marriageApplication_payment_groupbox.Controls.Add(this.marriageApplication_add_btn);
+            this.marriageApplication_payment_groupbox.Controls.Add(this.marriageApplication_addPayment_btn);
             this.marriageApplication_payment_groupbox.Controls.Add(this.marriageApplication_payment_remarks);
             this.marriageApplication_payment_groupbox.Enabled = false;
             this.marriageApplication_payment_groupbox.Location = new System.Drawing.Point(6, 291);
@@ -2617,16 +2645,16 @@
             this.marriageApplication_price_label.TabIndex = 12;
             this.marriageApplication_price_label.Text = "Price";
             // 
-            // marriageApplication_add_btn
+            // marriageApplication_addPayment_btn
             // 
-            this.marriageApplication_add_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.marriageApplication_add_btn.Location = new System.Drawing.Point(226, 21);
-            this.marriageApplication_add_btn.Name = "marriageApplication_add_btn";
-            this.marriageApplication_add_btn.Size = new System.Drawing.Size(44, 23);
-            this.marriageApplication_add_btn.TabIndex = 2;
-            this.marriageApplication_add_btn.Text = "Add";
-            this.marriageApplication_add_btn.UseSelectable = true;
-            this.marriageApplication_add_btn.Click += new System.EventHandler(this.marriageApplication_add_btn_Click);
+            this.marriageApplication_addPayment_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.marriageApplication_addPayment_btn.Location = new System.Drawing.Point(226, 21);
+            this.marriageApplication_addPayment_btn.Name = "marriageApplication_addPayment_btn";
+            this.marriageApplication_addPayment_btn.Size = new System.Drawing.Size(44, 23);
+            this.marriageApplication_addPayment_btn.TabIndex = 2;
+            this.marriageApplication_addPayment_btn.Text = "Add";
+            this.marriageApplication_addPayment_btn.UseSelectable = true;
+            this.marriageApplication_addPayment_btn.Click += new System.EventHandler(this.marriageApplication_addPayment_btn_Click);
             // 
             // marriageApplication_payment_remarks
             // 
@@ -2715,7 +2743,7 @@
             this.metroCheckBox1.TabIndex = 0;
             this.metroCheckBox1.Text = "Parish Permit";
             this.metroCheckBox1.UseSelectable = true;
-            this.metroCheckBox1.CheckedChanged += new System.EventHandler(this.metroCheckBox1_CheckedChanged);
+            this.metroCheckBox1.CheckedChanged += new System.EventHandler(this.marriage_requirement_checkBox_CheckedChanged);
             // 
             // metroCheckBox5
             // 
@@ -2726,7 +2754,7 @@
             this.metroCheckBox5.TabIndex = 0;
             this.metroCheckBox5.Text = "Marriage License";
             this.metroCheckBox5.UseSelectable = true;
-            this.metroCheckBox5.CheckedChanged += new System.EventHandler(this.metroCheckBox1_CheckedChanged);
+            this.metroCheckBox5.CheckedChanged += new System.EventHandler(this.marriage_requirement_checkBox_CheckedChanged);
             // 
             // metroCheckBox6
             // 
@@ -2737,7 +2765,7 @@
             this.metroCheckBox6.TabIndex = 0;
             this.metroCheckBox6.Text = "Birth Certificates";
             this.metroCheckBox6.UseSelectable = true;
-            this.metroCheckBox6.CheckedChanged += new System.EventHandler(this.metroCheckBox1_CheckedChanged);
+            this.metroCheckBox6.CheckedChanged += new System.EventHandler(this.marriage_requirement_checkBox_CheckedChanged);
             // 
             // metroCheckBox8
             // 
@@ -2748,7 +2776,7 @@
             this.metroCheckBox8.TabIndex = 0;
             this.metroCheckBox8.Text = "Baptism Certificates";
             this.metroCheckBox8.UseSelectable = true;
-            this.metroCheckBox8.CheckedChanged += new System.EventHandler(this.metroCheckBox1_CheckedChanged);
+            this.metroCheckBox8.CheckedChanged += new System.EventHandler(this.marriage_requirement_checkBox_CheckedChanged);
             // 
             // metroCheckBox9
             // 
@@ -2759,7 +2787,7 @@
             this.metroCheckBox9.TabIndex = 0;
             this.metroCheckBox9.Text = "Confirmation Certificates";
             this.metroCheckBox9.UseSelectable = true;
-            this.metroCheckBox9.CheckedChanged += new System.EventHandler(this.metroCheckBox1_CheckedChanged);
+            this.metroCheckBox9.CheckedChanged += new System.EventHandler(this.marriage_requirement_checkBox_CheckedChanged);
             // 
             // metroCheckBox10
             // 
@@ -2770,7 +2798,7 @@
             this.metroCheckBox10.TabIndex = 0;
             this.metroCheckBox10.Text = "Requirement 3";
             this.metroCheckBox10.UseSelectable = true;
-            this.metroCheckBox10.CheckedChanged += new System.EventHandler(this.metroCheckBox1_CheckedChanged);
+            this.metroCheckBox10.CheckedChanged += new System.EventHandler(this.marriage_requirement_checkBox_CheckedChanged);
             // 
             // marriageApplication_checkAll_checkBox
             // 
@@ -2788,7 +2816,7 @@
             this.dtpGBirthDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpGBirthDate.Enabled = false;
             this.dtpGBirthDate.Location = new System.Drawing.Point(71, 75);
-            this.dtpGBirthDate.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpGBirthDate.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpGBirthDate.Name = "dtpGBirthDate";
             this.dtpGBirthDate.Size = new System.Drawing.Size(200, 29);
             this.dtpGBirthDate.TabIndex = 8;
@@ -2859,14 +2887,14 @@
             this.marriageApplication_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.marriageApplication_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.marriageApplication_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.marriageApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.marriageApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.marriageApplication_dgv.ColumnHeadersHeight = 25;
             this.marriageApplication_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.marriageApplication_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -2879,14 +2907,14 @@
             this.dataGridViewTextBoxColumn5,
             this.Column2,
             this.dataGridViewTextBoxColumn10});
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.marriageApplication_dgv.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.marriageApplication_dgv.DefaultCellStyle = dataGridViewCellStyle12;
             this.marriageApplication_dgv.EnableHeadersVisualStyles = false;
             this.marriageApplication_dgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.marriageApplication_dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -2895,21 +2923,20 @@
             this.marriageApplication_dgv.Name = "marriageApplication_dgv";
             this.marriageApplication_dgv.ReadOnly = true;
             this.marriageApplication_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.marriageApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.marriageApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.marriageApplication_dgv.RowHeadersVisible = false;
             this.marriageApplication_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.marriageApplication_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.marriageApplication_dgv.Size = new System.Drawing.Size(493, 380);
             this.marriageApplication_dgv.TabIndex = 72;
             this.marriageApplication_dgv.TabStop = false;
-            this.marriageApplication_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.marriageApplication_dgv_CellContentClick);
             this.marriageApplication_dgv.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.marriageApplication_dgv_CellEnter);
             this.marriageApplication_dgv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.marriageApplication_dgv_CellFormatting);
             this.marriageApplication_dgv.VisibleChanged += new System.EventHandler(this.marriageApplication_dgv_VisibleChanged);
@@ -3613,7 +3640,6 @@
             this.panel_controlbox.Name = "panel_controlbox";
             this.panel_controlbox.Size = new System.Drawing.Size(802, 33);
             this.panel_controlbox.TabIndex = 38;
-            this.panel_controlbox.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_controlbox_Paint);
             this.panel_controlbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseDown);
             this.panel_controlbox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseMove);
             // 
@@ -4917,41 +4943,41 @@
             this.profiles_dataGridView_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.profiles_dataGridView_baptism.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.profiles_dataGridView_baptism.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.profiles_dataGridView_baptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.profiles_dataGridView_baptism.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle35.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.profiles_dataGridView_baptism.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.profiles_dataGridView_baptism.DefaultCellStyle = dataGridViewCellStyle15;
             this.profiles_dataGridView_baptism.EnableHeadersVisualStyles = false;
             this.profiles_dataGridView_baptism.Location = new System.Drawing.Point(1, 80);
             this.profiles_dataGridView_baptism.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.profiles_dataGridView_baptism.MultiSelect = false;
             this.profiles_dataGridView_baptism.Name = "profiles_dataGridView_baptism";
             this.profiles_dataGridView_baptism.ReadOnly = true;
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.profiles_dataGridView_baptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profiles_dataGridView_baptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.profiles_dataGridView_baptism.RowHeadersVisible = false;
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.profiles_dataGridView_baptism.RowsDefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.profiles_dataGridView_baptism.RowsDefaultCellStyle = dataGridViewCellStyle17;
             this.profiles_dataGridView_baptism.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.profiles_dataGridView_baptism.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.profiles_dataGridView_baptism.Size = new System.Drawing.Size(398, 341);
@@ -4981,7 +5007,6 @@
             // 
             this.middlename_tooltip_profiles.Active = false;
             this.middlename_tooltip_profiles.ShowAlways = true;
-            this.middlename_tooltip_profiles.Popup += new System.Windows.Forms.PopupEventHandler(this.middlename_tooltip_profiles_Popup);
             // 
             // imageListMenu
             // 
@@ -5026,23 +5051,23 @@
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle19;
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -5050,14 +5075,14 @@
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.ReadOnly = true;
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid1.Size = new System.Drawing.Size(493, 426);
@@ -5303,7 +5328,6 @@
             this.libraryConfirmationButton.TabIndex = 0;
             this.libraryConfirmationButton.Text = "Confirmation";
             this.libraryConfirmationButton.UseVisualStyleBackColor = false;
-            this.libraryConfirmationButton.Click += new System.EventHandler(this.libraryConfirmationButton_Click);
             // 
             // libraryBaptismButton
             // 
@@ -5318,7 +5342,6 @@
             this.libraryBaptismButton.TabIndex = 0;
             this.libraryBaptismButton.Text = "Baptism";
             this.libraryBaptismButton.UseVisualStyleBackColor = false;
-            this.libraryBaptismButton.Click += new System.EventHandler(this.libraryBaptismButton_Click);
             // 
             // bunifuDragControl1
             // 
@@ -5365,6 +5388,7 @@
             this.baptismApplicationDetailsPanel.ResumeLayout(false);
             this.baptismApplicationDetailsPanel.PerformLayout();
             this.baptismApplication_buttons_panel.ResumeLayout(false);
+            this.baptismApplication_approveRevoke_panel.ResumeLayout(false);
             this.baptismApplication_payment_groupbox.ResumeLayout(false);
             this.baptismApplication_payment_groupbox.PerformLayout();
             this.baptismApplication_requirements_groupbox.ResumeLayout(false);
@@ -5380,6 +5404,7 @@
             this.confirmationApplicationDetailsPanel.ResumeLayout(false);
             this.confirmationApplicationDetailsPanel.PerformLayout();
             this.confirmationApplication_buttons_panel.ResumeLayout(false);
+            this.confirmationApplication_approveRevoke_panel.ResumeLayout(false);
             this.confirmationApplication_payment_groupbox.ResumeLayout(false);
             this.confirmationApplication_payment_groupbox.PerformLayout();
             this.confirmationApplication_requirements_groupbox.ResumeLayout(false);
@@ -5395,6 +5420,7 @@
             this.marriageApplicationDetailsPanel.ResumeLayout(false);
             this.marriageApplicationDetailsPanel.PerformLayout();
             this.marriageApplication_buttons_panel.ResumeLayout(false);
+            this.marriageApplication_approveRevoke_panel.ResumeLayout(false);
             this.marriageApplication_payment_groupbox.ResumeLayout(false);
             this.marriageApplication_payment_groupbox.PerformLayout();
             this.marriageApplication_requirements_groupbox.ResumeLayout(false);
@@ -5762,7 +5788,7 @@
         private System.Windows.Forms.Label label10;
         private MetroFramework.Controls.MetroGrid baptismApplication_dgv;
         private MetroFramework.Controls.MetroComboBox baptismApplication_filter_comboBox;
-        private MetroFramework.Controls.MetroButton baptismApplication_addPayment_button;
+        private MetroFramework.Controls.MetroButton baptismApplication_addPayment_btn;
         private System.Windows.Forms.Label baptismApplication_payment_label;
         private System.Windows.Forms.Label baptismApplication_status_label;
         private MetroFramework.Controls.MetroTextBox baptismApplication_payment_remarks;
@@ -5827,7 +5853,7 @@
         private System.Windows.Forms.GroupBox marriageApplication_payment_groupbox;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label marriageApplication_price_label;
-        private MetroFramework.Controls.MetroButton marriageApplication_add_btn;
+        private MetroFramework.Controls.MetroButton marriageApplication_addPayment_btn;
         private MetroFramework.Controls.MetroTextBox marriageApplication_payment_remarks;
         private System.Windows.Forms.Label label92;
         private System.Windows.Forms.GroupBox marriageApplication_requirements_groupbox;
@@ -5877,5 +5903,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Bbirthdate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bstatus;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.FlowLayoutPanel baptismApplication_approveRevoke_panel;
+        private System.Windows.Forms.FlowLayoutPanel confirmationApplication_approveRevoke_panel;
+        private System.Windows.Forms.FlowLayoutPanel marriageApplication_approveRevoke_panel;
     }
 }

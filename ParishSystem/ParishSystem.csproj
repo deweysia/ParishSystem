@@ -94,6 +94,12 @@
     <Compile Include="ApplicationPayment.Designer.cs">
       <DependentUpon>ApplicationPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="CDemo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CDemo.Designer.cs">
+      <DependentUpon>CDemo.cs</DependentUpon>
+    </Compile>
     <Compile Include="CurrencyTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
