@@ -116,6 +116,12 @@
       <DependentUpon>CustomNotification.cs</DependentUpon>
     </Compile>
     <Compile Include="DataHandler.cs" />
+    <Compile Include="DownPaymentProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DownPaymentProfile.Designer.cs">
+      <DependentUpon>DownPaymentProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Enums.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -153,6 +159,9 @@
     <Compile Include="messageBox.Designer.cs">
       <DependentUpon>messageBox.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="HiddenTabControl.resx">
+      <DependentUpon>HiddenTabControl.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Person.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomNotification.resx">
       <DependentUpon>CustomNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownPaymentProfile.resx">
+      <DependentUpon>DownPaymentProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

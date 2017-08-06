@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ParishSystem
 {
-    class ComboboxContent
+    public class ComboboxContent
     {
-          int id;
-          string content;
-          string content2;
-          string content3;
-          string content4;
+        public int id;
+        public string content;
+        public string content2;
+        public string content3;
+        public string content4;
         public ComboboxContent(int id, string content)
         {
             this.id = id;
