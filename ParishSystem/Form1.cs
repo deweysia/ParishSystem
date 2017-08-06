@@ -20,7 +20,7 @@ namespace ParishSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            panel1.Controls.Add(metroScrollBar1);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

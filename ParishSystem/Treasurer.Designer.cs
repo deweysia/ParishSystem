@@ -28,14 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.time_Text = new System.Windows.Forms.Label();
             this.home_button_menu = new System.Windows.Forms.Button();
             this.CRB_button_menu = new System.Windows.Forms.Button();
@@ -49,10 +53,16 @@
             this.panel_controlbox = new System.Windows.Forms.Panel();
             this.flowLayout_ControlButtons = new System.Windows.Forms.FlowLayoutPanel();
             this.CDB_parish_panel = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.hiddenTabControl1 = new ParishSystem.HiddenTabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.sacramentPayment_label = new System.Windows.Forms.Label();
+            this.postulancy_label_fullpay = new System.Windows.Forms.Label();
+            this.community_label_fullpay = new System.Windows.Forms.Label();
+            this.parish_label_fullpay = new System.Windows.Forms.Label();
+            this.fullpay_label = new System.Windows.Forms.Label();
+            this.IncomeCashReleaseType_panel = new System.Windows.Forms.Panel();
+            this.cashReleaseType_label = new System.Windows.Forms.Label();
+            this.incomeType_label = new System.Windows.Forms.Label();
+            this.CashDisbursment = new ParishSystem.HiddenTabControl();
+            this.fullpay = new System.Windows.Forms.TabPage();
             this.total_label_fullpay = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -88,27 +98,40 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.sacramentpay = new System.Windows.Forms.TabPage();
+            this.profile_panel_sacramentpay = new System.Windows.Forms.Panel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.ornumber_label_sacramentpayment = new System.Windows.Forms.Label();
+            this.paid_nud_sacramentpayment = new System.Windows.Forms.NumericUpDown();
+            this.add_button_sacramentpayment = new System.Windows.Forms.Button();
+            this.paid_datagridview_sacramentpayment = new System.Windows.Forms.DataGridView();
+            this.label30 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.applicant_datagridview_sacramentpay = new System.Windows.Forms.DataGridView();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.firstname_label_sacramentpayment = new System.Windows.Forms.Label();
+            this.middleinitiall_label_sacramentpayment = new System.Windows.Forms.Label();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lastname_label_sacramentpayment = new System.Windows.Forms.Label();
+            this.suffix_label_sacramentpayment = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.totalprice_label_sacramentpayment = new System.Windows.Forms.Label();
+            this.totalpaid_label_sacramentpayment = new System.Windows.Forms.Label();
+            this.balance_label_sacramentpayment = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.totalprice_nud_sacramentpayment = new System.Windows.Forms.NumericUpDown();
             this.label17 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.address_textarea_sacramentpayment = new System.Windows.Forms.TextBox();
+            this.contactnumber_textbox_sacramentpayment = new System.Windows.Forms.MaskedTextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.postulancy_label_fullpay = new System.Windows.Forms.Label();
-            this.community_label_fullpay = new System.Windows.Forms.Label();
-            this.parish_label_fullpay = new System.Windows.Forms.Label();
-            this.fullpay_label = new System.Windows.Forms.Label();
-            this.IncomeCashReleaseType_panel = new System.Windows.Forms.Panel();
-            this.cashReleaseType_label = new System.Windows.Forms.Label();
-            this.incomeType_label = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.IncomeCashReleaseType_TabControl = new ParishSystem.HiddenTabControl();
             this.IncomeTypeTab = new System.Windows.Forms.TabPage();
             this.enable_button_itemType = new System.Windows.Forms.Button();
@@ -125,20 +148,24 @@
             this.panel2.SuspendLayout();
             this.panel_controlbox.SuspendLayout();
             this.CDB_parish_panel.SuspendLayout();
-            this.hiddenTabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.IncomeCashReleaseType_panel.SuspendLayout();
+            this.CashDisbursment.SuspendLayout();
+            this.fullpay.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.item_dgv_fullpay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantity_nud_fullpay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suggestedPrice_nud_fullpay)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.sacramentpay.SuspendLayout();
+            this.profile_panel_sacramentpay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.paid_nud_sacramentpayment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paid_datagridview_sacramentpayment)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.IncomeCashReleaseType_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.applicant_datagridview_sacramentpay)).BeginInit();
+            this.flowLayoutPanel4.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.totalprice_nud_sacramentpayment)).BeginInit();
             this.IncomeCashReleaseType_TabControl.SuspendLayout();
             this.IncomeTypeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemType_dgv)).BeginInit();
@@ -314,8 +341,8 @@
             // CDB_parish_panel
             // 
             this.CDB_parish_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.CDB_parish_panel.Controls.Add(this.label15);
-            this.CDB_parish_panel.Controls.Add(this.hiddenTabControl1);
+            this.CDB_parish_panel.Controls.Add(this.sacramentPayment_label);
+            this.CDB_parish_panel.Controls.Add(this.CashDisbursment);
             this.CDB_parish_panel.Controls.Add(this.postulancy_label_fullpay);
             this.CDB_parish_panel.Controls.Add(this.community_label_fullpay);
             this.CDB_parish_panel.Controls.Add(this.parish_label_fullpay);
@@ -327,84 +354,158 @@
             this.CDB_parish_panel.Size = new System.Drawing.Size(775, 542);
             this.CDB_parish_panel.TabIndex = 65;
             // 
-            // label15
+            // sacramentPayment_label
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(353, 16);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(310, 45);
-            this.label15.TabIndex = 11;
-            this.label15.Text = "Sacrament Payment";
+            this.sacramentPayment_label.AutoSize = true;
+            this.sacramentPayment_label.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sacramentPayment_label.ForeColor = System.Drawing.Color.White;
+            this.sacramentPayment_label.Location = new System.Drawing.Point(353, 16);
+            this.sacramentPayment_label.Name = "sacramentPayment_label";
+            this.sacramentPayment_label.Size = new System.Drawing.Size(395, 45);
+            this.sacramentPayment_label.TabIndex = 11;
+            this.sacramentPayment_label.Text = "Sacrament DownPayment";
+            this.sacramentPayment_label.Click += new System.EventHandler(this.sacramentPayment_label_Click);
             // 
-            // hiddenTabControl1
+            // postulancy_label_fullpay
             // 
-            this.hiddenTabControl1.Controls.Add(this.tabPage1);
-            this.hiddenTabControl1.Controls.Add(this.tabPage2);
-            this.hiddenTabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.hiddenTabControl1.Location = new System.Drawing.Point(0, 100);
-            this.hiddenTabControl1.Name = "hiddenTabControl1";
-            this.hiddenTabControl1.SelectedIndex = 0;
-            this.hiddenTabControl1.Size = new System.Drawing.Size(775, 442);
-            this.hiddenTabControl1.TabIndex = 10;
+            this.postulancy_label_fullpay.AutoSize = true;
+            this.postulancy_label_fullpay.ForeColor = System.Drawing.Color.White;
+            this.postulancy_label_fullpay.Location = new System.Drawing.Point(489, 76);
+            this.postulancy_label_fullpay.Name = "postulancy_label_fullpay";
+            this.postulancy_label_fullpay.Size = new System.Drawing.Size(84, 21);
+            this.postulancy_label_fullpay.TabIndex = 8;
+            this.postulancy_label_fullpay.Text = "Postulancy";
+            this.postulancy_label_fullpay.Click += new System.EventHandler(this.postulancy_label_fullpay_Click);
             // 
-            // tabPage1
+            // community_label_fullpay
             // 
-            this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Controls.Add(this.panel3);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.delete_button_fullpay);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.quantity_nud_fullpay);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.cancel_button_fullpay);
-            this.tabPage1.Controls.Add(this.add_button_fullpay);
-            this.tabPage1.Controls.Add(this.suggestedPrice_nud_fullpay);
-            this.tabPage1.Controls.Add(this.itemType_combobox_fullpay);
-            this.tabPage1.Controls.Add(this.subTotal_label_fullpay);
-            this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Location = new System.Drawing.Point(4, 30);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(767, 408);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.community_label_fullpay.AutoSize = true;
+            this.community_label_fullpay.ForeColor = System.Drawing.Color.White;
+            this.community_label_fullpay.Location = new System.Drawing.Point(317, 76);
+            this.community_label_fullpay.Name = "community_label_fullpay";
+            this.community_label_fullpay.Size = new System.Drawing.Size(92, 21);
+            this.community_label_fullpay.TabIndex = 7;
+            this.community_label_fullpay.Text = "Community";
+            this.community_label_fullpay.Click += new System.EventHandler(this.community_label_fullpay_Click);
             // 
-            // panel1
+            // parish_label_fullpay
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.panel1.Controls.Add(this.total_label_fullpay);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(462, 321);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(305, 87);
-            this.panel1.TabIndex = 52;
+            this.parish_label_fullpay.AutoSize = true;
+            this.parish_label_fullpay.ForeColor = System.Drawing.Color.White;
+            this.parish_label_fullpay.Location = new System.Drawing.Point(173, 76);
+            this.parish_label_fullpay.Name = "parish_label_fullpay";
+            this.parish_label_fullpay.Size = new System.Drawing.Size(52, 21);
+            this.parish_label_fullpay.TabIndex = 6;
+            this.parish_label_fullpay.Text = "Parish";
+            this.parish_label_fullpay.Click += new System.EventHandler(this.parish_label_fullpay_Click);
+            // 
+            // fullpay_label
+            // 
+            this.fullpay_label.AutoSize = true;
+            this.fullpay_label.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullpay_label.ForeColor = System.Drawing.Color.White;
+            this.fullpay_label.Location = new System.Drawing.Point(93, 16);
+            this.fullpay_label.Name = "fullpay_label";
+            this.fullpay_label.Size = new System.Drawing.Size(132, 45);
+            this.fullpay_label.TabIndex = 5;
+            this.fullpay_label.Text = "Full pay";
+            this.fullpay_label.Click += new System.EventHandler(this.fullpay_label_Click);
+            // 
+            // IncomeCashReleaseType_panel
+            // 
+            this.IncomeCashReleaseType_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.IncomeCashReleaseType_panel.Controls.Add(this.cashReleaseType_label);
+            this.IncomeCashReleaseType_panel.Controls.Add(this.incomeType_label);
+            this.IncomeCashReleaseType_panel.Controls.Add(this.IncomeCashReleaseType_TabControl);
+            this.IncomeCashReleaseType_panel.Location = new System.Drawing.Point(184, 33);
+            this.IncomeCashReleaseType_panel.Margin = new System.Windows.Forms.Padding(0);
+            this.IncomeCashReleaseType_panel.Name = "IncomeCashReleaseType_panel";
+            this.IncomeCashReleaseType_panel.Size = new System.Drawing.Size(775, 542);
+            this.IncomeCashReleaseType_panel.TabIndex = 0;
+            // 
+            // cashReleaseType_label
+            // 
+            this.cashReleaseType_label.AutoSize = true;
+            this.cashReleaseType_label.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cashReleaseType_label.ForeColor = System.Drawing.Color.White;
+            this.cashReleaseType_label.Location = new System.Drawing.Point(254, 11);
+            this.cashReleaseType_label.Name = "cashReleaseType_label";
+            this.cashReleaseType_label.Size = new System.Drawing.Size(285, 45);
+            this.cashReleaseType_label.TabIndex = 2;
+            this.cashReleaseType_label.Text = "Cash Release Type";
+            this.cashReleaseType_label.Click += new System.EventHandler(this.cashReleaseType_label_Click);
+            // 
+            // incomeType_label
+            // 
+            this.incomeType_label.AutoSize = true;
+            this.incomeType_label.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.incomeType_label.ForeColor = System.Drawing.Color.White;
+            this.incomeType_label.Location = new System.Drawing.Point(21, 11);
+            this.incomeType_label.Name = "incomeType_label";
+            this.incomeType_label.Size = new System.Drawing.Size(204, 45);
+            this.incomeType_label.TabIndex = 1;
+            this.incomeType_label.Text = "Income Type";
+            this.incomeType_label.Click += new System.EventHandler(this.incomeType_label_Click);
+            // 
+            // CashDisbursment
+            // 
+            this.CashDisbursment.Controls.Add(this.fullpay);
+            this.CashDisbursment.Controls.Add(this.sacramentpay);
+            this.CashDisbursment.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.CashDisbursment.Location = new System.Drawing.Point(0, 100);
+            this.CashDisbursment.Name = "CashDisbursment";
+            this.CashDisbursment.SelectedIndex = 0;
+            this.CashDisbursment.Size = new System.Drawing.Size(775, 442);
+            this.CashDisbursment.TabIndex = 10;
+            // 
+            // fullpay
+            // 
+            this.fullpay.Controls.Add(this.total_label_fullpay);
+            this.fullpay.Controls.Add(this.label12);
+            this.fullpay.Controls.Add(this.panel3);
+            this.fullpay.Controls.Add(this.label4);
+            this.fullpay.Controls.Add(this.delete_button_fullpay);
+            this.fullpay.Controls.Add(this.label5);
+            this.fullpay.Controls.Add(this.quantity_nud_fullpay);
+            this.fullpay.Controls.Add(this.label3);
+            this.fullpay.Controls.Add(this.label1);
+            this.fullpay.Controls.Add(this.cancel_button_fullpay);
+            this.fullpay.Controls.Add(this.add_button_fullpay);
+            this.fullpay.Controls.Add(this.suggestedPrice_nud_fullpay);
+            this.fullpay.Controls.Add(this.itemType_combobox_fullpay);
+            this.fullpay.Controls.Add(this.subTotal_label_fullpay);
+            this.fullpay.Controls.Add(this.label13);
+            this.fullpay.Controls.Add(this.label11);
+            this.fullpay.Controls.Add(this.label10);
+            this.fullpay.Location = new System.Drawing.Point(4, 30);
+            this.fullpay.Margin = new System.Windows.Forms.Padding(0);
+            this.fullpay.Name = "fullpay";
+            this.fullpay.Size = new System.Drawing.Size(767, 408);
+            this.fullpay.TabIndex = 0;
+            this.fullpay.Text = "tabPage1";
+            this.fullpay.UseVisualStyleBackColor = true;
             // 
             // total_label_fullpay
             // 
+            this.total_label_fullpay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.total_label_fullpay.AutoSize = true;
             this.total_label_fullpay.Font = new System.Drawing.Font("Segoe UI Semibold", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.total_label_fullpay.ForeColor = System.Drawing.Color.White;
-            this.total_label_fullpay.Location = new System.Drawing.Point(90, 20);
+            this.total_label_fullpay.ForeColor = System.Drawing.Color.Black;
+            this.total_label_fullpay.Location = new System.Drawing.Point(567, 343);
             this.total_label_fullpay.Name = "total_label_fullpay";
             this.total_label_fullpay.Size = new System.Drawing.Size(0, 50);
-            this.total_label_fullpay.TabIndex = 50;
+            this.total_label_fullpay.TabIndex = 52;
             // 
             // label12
             // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(47, 39);
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(524, 362);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(45, 21);
-            this.label12.TabIndex = 51;
+            this.label12.TabIndex = 53;
             this.label12.Text = "Total";
             // 
             // panel3
@@ -513,14 +614,14 @@
             this.item_dgv_fullpay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.item_dgv_fullpay.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.item_dgv_fullpay.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.item_dgv_fullpay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.item_dgv_fullpay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.item_dgv_fullpay.ColumnHeadersHeight = 40;
             this.item_dgv_fullpay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.item_dgv_fullpay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -529,41 +630,41 @@
             this.QuantityDataGridViewColumn,
             this.TotalDataGridViewColumn,
             this.ItemIDcomboboxcolumn});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.item_dgv_fullpay.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.item_dgv_fullpay.DefaultCellStyle = dataGridViewCellStyle2;
             this.item_dgv_fullpay.EnableHeadersVisualStyles = false;
             this.item_dgv_fullpay.GridColor = System.Drawing.Color.White;
             this.item_dgv_fullpay.Location = new System.Drawing.Point(0, 72);
             this.item_dgv_fullpay.MultiSelect = false;
             this.item_dgv_fullpay.Name = "item_dgv_fullpay";
             this.item_dgv_fullpay.ReadOnly = true;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Magenta;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.item_dgv_fullpay.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Magenta;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.item_dgv_fullpay.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.item_dgv_fullpay.RowHeadersVisible = false;
             this.item_dgv_fullpay.RowHeadersWidth = 50;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.DarkRed;
-            this.item_dgv_fullpay.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DarkRed;
+            this.item_dgv_fullpay.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.item_dgv_fullpay.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.item_dgv_fullpay.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.item_dgv_fullpay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.item_dgv_fullpay.Size = new System.Drawing.Size(464, 172);
             this.item_dgv_fullpay.TabIndex = 3;
@@ -794,235 +895,444 @@
             this.label10.TabIndex = 47;
             this.label10.Text = "__________________________";
             // 
-            // tabPage2
+            // sacramentpay
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.tabPage2.Controls.Add(this.panel5);
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 30);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(767, 408);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.sacramentpay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.sacramentpay.Controls.Add(this.profile_panel_sacramentpay);
+            this.sacramentpay.Controls.Add(this.panel6);
+            this.sacramentpay.Location = new System.Drawing.Point(4, 30);
+            this.sacramentpay.Margin = new System.Windows.Forms.Padding(0);
+            this.sacramentpay.Name = "sacramentpay";
+            this.sacramentpay.Size = new System.Drawing.Size(767, 408);
+            this.sacramentpay.TabIndex = 1;
+            this.sacramentpay.Text = "tabPage2";
             // 
-            // panel5
+            // profile_panel_sacramentpay
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.panel5.Controls.Add(this.tabControl1);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(235, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(533, 412);
-            this.panel5.TabIndex = 2;
+            this.profile_panel_sacramentpay.BackColor = System.Drawing.Color.White;
+            this.profile_panel_sacramentpay.Controls.Add(this.label31);
+            this.profile_panel_sacramentpay.Controls.Add(this.label29);
+            this.profile_panel_sacramentpay.Controls.Add(this.ornumber_label_sacramentpayment);
+            this.profile_panel_sacramentpay.Controls.Add(this.paid_nud_sacramentpayment);
+            this.profile_panel_sacramentpay.Controls.Add(this.add_button_sacramentpayment);
+            this.profile_panel_sacramentpay.Controls.Add(this.paid_datagridview_sacramentpayment);
+            this.profile_panel_sacramentpay.Controls.Add(this.label30);
+            this.profile_panel_sacramentpay.Dock = System.Windows.Forms.DockStyle.Right;
+            this.profile_panel_sacramentpay.Location = new System.Drawing.Point(299, 0);
+            this.profile_panel_sacramentpay.Margin = new System.Windows.Forms.Padding(0);
+            this.profile_panel_sacramentpay.Name = "profile_panel_sacramentpay";
+            this.profile_panel_sacramentpay.Size = new System.Drawing.Size(468, 408);
+            this.profile_panel_sacramentpay.TabIndex = 2;
             // 
-            // tabControl1
+            // label31
             // 
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tabControl1.Location = new System.Drawing.Point(0, 62);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(533, 274);
-            this.tabControl1.TabIndex = 1;
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(81, 131);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(39, 21);
+            this.label31.TabIndex = 7;
+            this.label31.Text = "Paid";
             // 
-            // tabPage3
+            // label29
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 30);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(525, 240);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(83, 70);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(94, 21);
+            this.label29.TabIndex = 5;
+            this.label29.Text = "OR Number";
             // 
-            // tabPage4
+            // ornumber_label_sacramentpayment
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 30);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(525, 240);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.ornumber_label_sacramentpayment.AutoSize = true;
+            this.ornumber_label_sacramentpayment.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ornumber_label_sacramentpayment.Location = new System.Drawing.Point(206, 51);
+            this.ornumber_label_sacramentpayment.Name = "ornumber_label_sacramentpayment";
+            this.ornumber_label_sacramentpayment.Size = new System.Drawing.Size(119, 37);
+            this.ornumber_label_sacramentpayment.TabIndex = 4;
+            this.ornumber_label_sacramentpayment.Text = "1328904";
+            // 
+            // paid_nud_sacramentpayment
+            // 
+            this.paid_nud_sacramentpayment.DecimalPlaces = 2;
+            this.paid_nud_sacramentpayment.Location = new System.Drawing.Point(135, 127);
+            this.paid_nud_sacramentpayment.Name = "paid_nud_sacramentpayment";
+            this.paid_nud_sacramentpayment.Size = new System.Drawing.Size(188, 29);
+            this.paid_nud_sacramentpayment.TabIndex = 3;
+            // 
+            // add_button_sacramentpayment
+            // 
+            this.add_button_sacramentpayment.Location = new System.Drawing.Point(346, 121);
+            this.add_button_sacramentpayment.Name = "add_button_sacramentpayment";
+            this.add_button_sacramentpayment.Size = new System.Drawing.Size(44, 40);
+            this.add_button_sacramentpayment.TabIndex = 1;
+            this.add_button_sacramentpayment.Text = "+";
+            this.add_button_sacramentpayment.UseVisualStyleBackColor = true;
+            this.add_button_sacramentpayment.Click += new System.EventHandler(this.add_button_sacramentpayment_Click);
+            // 
+            // paid_datagridview_sacramentpayment
+            // 
+            this.paid_datagridview_sacramentpayment.BackgroundColor = System.Drawing.Color.White;
+            this.paid_datagridview_sacramentpayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.paid_datagridview_sacramentpayment.Location = new System.Drawing.Point(50, 186);
+            this.paid_datagridview_sacramentpayment.Name = "paid_datagridview_sacramentpayment";
+            this.paid_datagridview_sacramentpayment.Size = new System.Drawing.Size(365, 171);
+            this.paid_datagridview_sacramentpayment.TabIndex = 0;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(46, 74);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(369, 20);
+            this.label30.TabIndex = 6;
+            this.label30.Text = "________________________________________";
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.panel6.Controls.Add(this.textBox1);
-            this.panel6.Controls.Add(this.maskedTextBox1);
-            this.panel6.Controls.Add(this.label19);
-            this.panel6.Controls.Add(this.label18);
-            this.panel6.Controls.Add(this.label17);
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.panel6.Controls.Add(this.applicant_datagridview_sacramentpay);
+            this.panel6.Controls.Add(this.flowLayoutPanel4);
+            this.panel6.Controls.Add(this.flowLayoutPanel3);
+            this.panel6.Controls.Add(this.panel5);
+            this.panel6.Controls.Add(this.label20);
+            this.panel6.Controls.Add(this.label15);
+            this.panel6.Controls.Add(this.address_textarea_sacramentpayment);
+            this.panel6.Controls.Add(this.contactnumber_textbox_sacramentpayment);
             this.panel6.Controls.Add(this.label16);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Controls.Add(this.label24);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(533, 62);
+            this.panel6.Size = new System.Drawing.Size(308, 408);
             this.panel6.TabIndex = 0;
             // 
-            // textBox1
+            // applicant_datagridview_sacramentpay
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(266, 27);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 33);
-            this.textBox1.TabIndex = 5;
+            this.applicant_datagridview_sacramentpay.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.applicant_datagridview_sacramentpay.AllowUserToAddRows = false;
+            this.applicant_datagridview_sacramentpay.AllowUserToDeleteRows = false;
+            this.applicant_datagridview_sacramentpay.AllowUserToOrderColumns = true;
+            this.applicant_datagridview_sacramentpay.AllowUserToResizeRows = false;
+            this.applicant_datagridview_sacramentpay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.applicant_datagridview_sacramentpay.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.applicant_datagridview_sacramentpay.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.applicant_datagridview_sacramentpay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.applicant_datagridview_sacramentpay.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.applicant_datagridview_sacramentpay.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.applicant_datagridview_sacramentpay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.applicant_datagridview_sacramentpay.ColumnHeadersHeight = 40;
+            this.applicant_datagridview_sacramentpay.ColumnHeadersVisible = false;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.applicant_datagridview_sacramentpay.DefaultCellStyle = dataGridViewCellStyle6;
+            this.applicant_datagridview_sacramentpay.EnableHeadersVisualStyles = false;
+            this.applicant_datagridview_sacramentpay.GridColor = System.Drawing.Color.White;
+            this.applicant_datagridview_sacramentpay.Location = new System.Drawing.Point(6, 6);
+            this.applicant_datagridview_sacramentpay.MultiSelect = false;
+            this.applicant_datagridview_sacramentpay.Name = "applicant_datagridview_sacramentpay";
+            this.applicant_datagridview_sacramentpay.ReadOnly = true;
+            this.applicant_datagridview_sacramentpay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Magenta;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.applicant_datagridview_sacramentpay.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.applicant_datagridview_sacramentpay.RowHeadersVisible = false;
+            this.applicant_datagridview_sacramentpay.RowHeadersWidth = 50;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.DarkRed;
+            this.applicant_datagridview_sacramentpay.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.applicant_datagridview_sacramentpay.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.applicant_datagridview_sacramentpay.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.applicant_datagridview_sacramentpay.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.applicant_datagridview_sacramentpay.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
+            this.applicant_datagridview_sacramentpay.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.applicant_datagridview_sacramentpay.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.applicant_datagridview_sacramentpay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.applicant_datagridview_sacramentpay.Size = new System.Drawing.Size(272, 30);
+            this.applicant_datagridview_sacramentpay.TabIndex = 4;
+            this.applicant_datagridview_sacramentpay.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.applicant_datagridview_sacramentpay_CellContentDoubleClick);
             // 
-            // maskedTextBox1
+            // flowLayoutPanel4
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(266, 3);
-            this.maskedTextBox1.Mask = "(+63) 999 999 9999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(106, 22);
-            this.maskedTextBox1.TabIndex = 4;
+            this.flowLayoutPanel4.Controls.Add(this.firstname_label_sacramentpayment);
+            this.flowLayoutPanel4.Controls.Add(this.middleinitiall_label_sacramentpayment);
+            this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(17, 80);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(258, 29);
+            this.flowLayoutPanel4.TabIndex = 12;
             // 
-            // label19
+            // firstname_label_sacramentpayment
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(222, 19);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(20, 21);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "C";
+            this.firstname_label_sacramentpayment.AutoSize = true;
+            this.firstname_label_sacramentpayment.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstname_label_sacramentpayment.ForeColor = System.Drawing.Color.White;
+            this.firstname_label_sacramentpayment.Location = new System.Drawing.Point(3, 8);
+            this.firstname_label_sacramentpayment.Name = "firstname_label_sacramentpayment";
+            this.firstname_label_sacramentpayment.Size = new System.Drawing.Size(109, 21);
+            this.firstname_label_sacramentpayment.TabIndex = 2;
+            this.firstname_label_sacramentpayment.Text = "Justin Hennry";
             // 
-            // label18
+            // middleinitiall_label_sacramentpayment
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(149, 19);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(67, 21);
-            this.label18.TabIndex = 2;
-            this.label18.Text = "Antigua";
+            this.middleinitiall_label_sacramentpayment.AutoSize = true;
+            this.middleinitiall_label_sacramentpayment.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.middleinitiall_label_sacramentpayment.ForeColor = System.Drawing.Color.White;
+            this.middleinitiall_label_sacramentpayment.Location = new System.Drawing.Point(118, 8);
+            this.middleinitiall_label_sacramentpayment.Name = "middleinitiall_label_sacramentpayment";
+            this.middleinitiall_label_sacramentpayment.Size = new System.Drawing.Size(20, 21);
+            this.middleinitiall_label_sacramentpayment.TabIndex = 3;
+            this.middleinitiall_label_sacramentpayment.Text = "C";
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.lastname_label_sacramentpayment);
+            this.flowLayoutPanel3.Controls.Add(this.suffix_label_sacramentpayment);
+            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(17, 50);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(258, 29);
+            this.flowLayoutPanel3.TabIndex = 11;
+            // 
+            // lastname_label_sacramentpayment
+            // 
+            this.lastname_label_sacramentpayment.AutoSize = true;
+            this.lastname_label_sacramentpayment.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastname_label_sacramentpayment.ForeColor = System.Drawing.Color.White;
+            this.lastname_label_sacramentpayment.Location = new System.Drawing.Point(3, -1);
+            this.lastname_label_sacramentpayment.Name = "lastname_label_sacramentpayment";
+            this.lastname_label_sacramentpayment.Size = new System.Drawing.Size(96, 30);
+            this.lastname_label_sacramentpayment.TabIndex = 0;
+            this.lastname_label_sacramentpayment.Text = "Melchoir";
+            // 
+            // suffix_label_sacramentpayment
+            // 
+            this.suffix_label_sacramentpayment.AutoSize = true;
+            this.suffix_label_sacramentpayment.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suffix_label_sacramentpayment.ForeColor = System.Drawing.Color.White;
+            this.suffix_label_sacramentpayment.Location = new System.Drawing.Point(105, 8);
+            this.suffix_label_sacramentpayment.Name = "suffix_label_sacramentpayment";
+            this.suffix_label_sacramentpayment.Size = new System.Drawing.Size(28, 21);
+            this.suffix_label_sacramentpayment.TabIndex = 1;
+            this.suffix_label_sacramentpayment.Text = "Sr.";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.panel5.Controls.Add(this.totalprice_label_sacramentpayment);
+            this.panel5.Controls.Add(this.totalpaid_label_sacramentpayment);
+            this.panel5.Controls.Add(this.balance_label_sacramentpayment);
+            this.panel5.Controls.Add(this.label22);
+            this.panel5.Controls.Add(this.totalprice_nud_sacramentpayment);
+            this.panel5.Controls.Add(this.label17);
+            this.panel5.Controls.Add(this.label19);
+            this.panel5.Controls.Add(this.label21);
+            this.panel5.Controls.Add(this.label18);
+            this.panel5.Controls.Add(this.label23);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 232);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(308, 176);
+            this.panel5.TabIndex = 0;
+            // 
+            // totalprice_label_sacramentpayment
+            // 
+            this.totalprice_label_sacramentpayment.AutoSize = true;
+            this.totalprice_label_sacramentpayment.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalprice_label_sacramentpayment.ForeColor = System.Drawing.Color.White;
+            this.totalprice_label_sacramentpayment.Location = new System.Drawing.Point(146, 14);
+            this.totalprice_label_sacramentpayment.Name = "totalprice_label_sacramentpayment";
+            this.totalprice_label_sacramentpayment.Size = new System.Drawing.Size(95, 37);
+            this.totalprice_label_sacramentpayment.TabIndex = 70;
+            this.totalprice_label_sacramentpayment.Text = "100.00";
+            // 
+            // totalpaid_label_sacramentpayment
+            // 
+            this.totalpaid_label_sacramentpayment.AutoSize = true;
+            this.totalpaid_label_sacramentpayment.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalpaid_label_sacramentpayment.ForeColor = System.Drawing.Color.White;
+            this.totalpaid_label_sacramentpayment.Location = new System.Drawing.Point(146, 59);
+            this.totalpaid_label_sacramentpayment.Name = "totalpaid_label_sacramentpayment";
+            this.totalpaid_label_sacramentpayment.Size = new System.Drawing.Size(95, 37);
+            this.totalpaid_label_sacramentpayment.TabIndex = 69;
+            this.totalpaid_label_sacramentpayment.Text = "100.00";
+            // 
+            // balance_label_sacramentpayment
+            // 
+            this.balance_label_sacramentpayment.AutoSize = true;
+            this.balance_label_sacramentpayment.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.balance_label_sacramentpayment.ForeColor = System.Drawing.Color.White;
+            this.balance_label_sacramentpayment.Location = new System.Drawing.Point(145, 107);
+            this.balance_label_sacramentpayment.Name = "balance_label_sacramentpayment";
+            this.balance_label_sacramentpayment.Size = new System.Drawing.Size(95, 37);
+            this.balance_label_sacramentpayment.TabIndex = 68;
+            this.balance_label_sacramentpayment.Text = "100.00";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Location = new System.Drawing.Point(43, 123);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(63, 21);
+            this.label22.TabIndex = 65;
+            this.label22.Text = "Balance";
+            // 
+            // totalprice_nud_sacramentpayment
+            // 
+            this.totalprice_nud_sacramentpayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.totalprice_nud_sacramentpayment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.totalprice_nud_sacramentpayment.DecimalPlaces = 2;
+            this.totalprice_nud_sacramentpayment.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalprice_nud_sacramentpayment.ForeColor = System.Drawing.Color.White;
+            this.totalprice_nud_sacramentpayment.Location = new System.Drawing.Point(139, 16);
+            this.totalprice_nud_sacramentpayment.Name = "totalprice_nud_sacramentpayment";
+            this.totalprice_nud_sacramentpayment.Size = new System.Drawing.Size(124, 35);
+            this.totalprice_nud_sacramentpayment.TabIndex = 50;
+            this.totalprice_nud_sacramentpayment.ThousandsSeparator = true;
+            this.totalprice_nud_sacramentpayment.Visible = false;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(115, 20);
+            this.label17.Location = new System.Drawing.Point(43, 75);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(28, 21);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Sr.";
+            this.label17.Size = new System.Drawing.Size(75, 21);
+            this.label17.TabIndex = 62;
+            this.label17.Text = "Total Paid";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(43, 30);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(80, 21);
+            this.label19.TabIndex = 51;
+            this.label19.Text = "Total Price";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(29, 34);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(234, 20);
+            this.label21.TabIndex = 60;
+            this.label21.Text = "_________________________";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(29, 81);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(234, 20);
+            this.label18.TabIndex = 66;
+            this.label18.Text = "_________________________";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(29, 127);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(234, 20);
+            this.label23.TabIndex = 67;
+            this.label23.Text = "_________________________";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(14, 140);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(91, 13);
+            this.label20.TabIndex = 8;
+            this.label20.Text = "Contact Number";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(57, 172);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(48, 13);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "Address";
+            // 
+            // address_textarea_sacramentpayment
+            // 
+            this.address_textarea_sacramentpayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.address_textarea_sacramentpayment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.address_textarea_sacramentpayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.address_textarea_sacramentpayment.ForeColor = System.Drawing.Color.White;
+            this.address_textarea_sacramentpayment.Location = new System.Drawing.Point(115, 170);
+            this.address_textarea_sacramentpayment.Multiline = true;
+            this.address_textarea_sacramentpayment.Name = "address_textarea_sacramentpayment";
+            this.address_textarea_sacramentpayment.Size = new System.Drawing.Size(160, 45);
+            this.address_textarea_sacramentpayment.TabIndex = 5;
+            this.address_textarea_sacramentpayment.Text = "555 San Miguel St. Phase 2 Matina Davao City";
+            // 
+            // contactnumber_textbox_sacramentpayment
+            // 
+            this.contactnumber_textbox_sacramentpayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.contactnumber_textbox_sacramentpayment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contactnumber_textbox_sacramentpayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactnumber_textbox_sacramentpayment.ForeColor = System.Drawing.Color.White;
+            this.contactnumber_textbox_sacramentpayment.Location = new System.Drawing.Point(115, 131);
+            this.contactnumber_textbox_sacramentpayment.Mask = "(+63) 999 999 9999";
+            this.contactnumber_textbox_sacramentpayment.Name = "contactnumber_textbox_sacramentpayment";
+            this.contactnumber_textbox_sacramentpayment.Size = new System.Drawing.Size(160, 22);
+            this.contactnumber_textbox_sacramentpayment.TabIndex = 4;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(17, 14);
+            this.label16.Location = new System.Drawing.Point(4, 97);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(96, 30);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Melchoir";
+            this.label16.Size = new System.Drawing.Size(288, 20);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "_______________________________";
             // 
-            // button1
+            // label24
             // 
-            this.button1.Location = new System.Drawing.Point(18, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 27);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 81);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(237, 302);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // postulancy_label_fullpay
-            // 
-            this.postulancy_label_fullpay.AutoSize = true;
-            this.postulancy_label_fullpay.ForeColor = System.Drawing.Color.White;
-            this.postulancy_label_fullpay.Location = new System.Drawing.Point(489, 76);
-            this.postulancy_label_fullpay.Name = "postulancy_label_fullpay";
-            this.postulancy_label_fullpay.Size = new System.Drawing.Size(84, 21);
-            this.postulancy_label_fullpay.TabIndex = 8;
-            this.postulancy_label_fullpay.Text = "Postulancy";
-            this.postulancy_label_fullpay.Click += new System.EventHandler(this.postulancy_label_fullpay_Click);
-            // 
-            // community_label_fullpay
-            // 
-            this.community_label_fullpay.AutoSize = true;
-            this.community_label_fullpay.ForeColor = System.Drawing.Color.White;
-            this.community_label_fullpay.Location = new System.Drawing.Point(317, 76);
-            this.community_label_fullpay.Name = "community_label_fullpay";
-            this.community_label_fullpay.Size = new System.Drawing.Size(92, 21);
-            this.community_label_fullpay.TabIndex = 7;
-            this.community_label_fullpay.Text = "Community";
-            this.community_label_fullpay.Click += new System.EventHandler(this.community_label_fullpay_Click);
-            // 
-            // parish_label_fullpay
-            // 
-            this.parish_label_fullpay.AutoSize = true;
-            this.parish_label_fullpay.ForeColor = System.Drawing.Color.White;
-            this.parish_label_fullpay.Location = new System.Drawing.Point(173, 76);
-            this.parish_label_fullpay.Name = "parish_label_fullpay";
-            this.parish_label_fullpay.Size = new System.Drawing.Size(52, 21);
-            this.parish_label_fullpay.TabIndex = 6;
-            this.parish_label_fullpay.Text = "Parish";
-            this.parish_label_fullpay.Click += new System.EventHandler(this.parish_label_fullpay_Click);
-            // 
-            // fullpay_label
-            // 
-            this.fullpay_label.AutoSize = true;
-            this.fullpay_label.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fullpay_label.ForeColor = System.Drawing.Color.White;
-            this.fullpay_label.Location = new System.Drawing.Point(93, 16);
-            this.fullpay_label.Name = "fullpay_label";
-            this.fullpay_label.Size = new System.Drawing.Size(132, 45);
-            this.fullpay_label.TabIndex = 5;
-            this.fullpay_label.Text = "Full pay";
-            this.fullpay_label.Click += new System.EventHandler(this.fullpay_label_Click);
-            // 
-            // IncomeCashReleaseType_panel
-            // 
-            this.IncomeCashReleaseType_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.IncomeCashReleaseType_panel.Controls.Add(this.cashReleaseType_label);
-            this.IncomeCashReleaseType_panel.Controls.Add(this.incomeType_label);
-            this.IncomeCashReleaseType_panel.Controls.Add(this.IncomeCashReleaseType_TabControl);
-            this.IncomeCashReleaseType_panel.Location = new System.Drawing.Point(184, 33);
-            this.IncomeCashReleaseType_panel.Margin = new System.Windows.Forms.Padding(0);
-            this.IncomeCashReleaseType_panel.Name = "IncomeCashReleaseType_panel";
-            this.IncomeCashReleaseType_panel.Size = new System.Drawing.Size(775, 542);
-            this.IncomeCashReleaseType_panel.TabIndex = 0;
-            // 
-            // cashReleaseType_label
-            // 
-            this.cashReleaseType_label.AutoSize = true;
-            this.cashReleaseType_label.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cashReleaseType_label.ForeColor = System.Drawing.Color.White;
-            this.cashReleaseType_label.Location = new System.Drawing.Point(254, 11);
-            this.cashReleaseType_label.Name = "cashReleaseType_label";
-            this.cashReleaseType_label.Size = new System.Drawing.Size(285, 45);
-            this.cashReleaseType_label.TabIndex = 2;
-            this.cashReleaseType_label.Text = "Cash Release Type";
-            this.cashReleaseType_label.Click += new System.EventHandler(this.cashReleaseType_label_Click);
-            // 
-            // incomeType_label
-            // 
-            this.incomeType_label.AutoSize = true;
-            this.incomeType_label.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.incomeType_label.ForeColor = System.Drawing.Color.White;
-            this.incomeType_label.Location = new System.Drawing.Point(21, 11);
-            this.incomeType_label.Name = "incomeType_label";
-            this.incomeType_label.Size = new System.Drawing.Size(204, 45);
-            this.incomeType_label.TabIndex = 1;
-            this.incomeType_label.Text = "Income Type";
-            this.incomeType_label.Click += new System.EventHandler(this.incomeType_label_Click);
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(2, 25);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(288, 20);
+            this.label24.TabIndex = 10;
+            this.label24.Text = "_______________________________";
             // 
             // IncomeCashReleaseType_TabControl
             // 
@@ -1113,14 +1423,14 @@
             this.itemType_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.itemType_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.itemType_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.itemType_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.itemType_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.itemType_dgv.ColumnHeadersHeight = 40;
             this.itemType_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.itemType_dgv.EnableHeadersVisualStyles = false;
@@ -1130,9 +1440,9 @@
             this.itemType_dgv.Name = "itemType_dgv";
             this.itemType_dgv.ReadOnly = true;
             this.itemType_dgv.RowHeadersVisible = false;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.itemType_dgv.RowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.itemType_dgv.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.itemType_dgv.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.itemType_dgv.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.itemType_dgv.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
@@ -1221,14 +1531,14 @@
             this.cashRelease_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cashRelease_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.cashRelease_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.cashRelease_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cashRelease_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.cashRelease_dgv.ColumnHeadersHeight = 40;
             this.cashRelease_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.cashRelease_dgv.EnableHeadersVisualStyles = false;
@@ -1238,9 +1548,9 @@
             this.cashRelease_dgv.Name = "cashRelease_dgv";
             this.cashRelease_dgv.ReadOnly = true;
             this.cashRelease_dgv.RowHeadersVisible = false;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cashRelease_dgv.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cashRelease_dgv.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.cashRelease_dgv.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.cashRelease_dgv.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.cashRelease_dgv.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
@@ -1273,11 +1583,11 @@
             this.panel_controlbox.PerformLayout();
             this.CDB_parish_panel.ResumeLayout(false);
             this.CDB_parish_panel.PerformLayout();
-            this.hiddenTabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.IncomeCashReleaseType_panel.ResumeLayout(false);
+            this.IncomeCashReleaseType_panel.PerformLayout();
+            this.CashDisbursment.ResumeLayout(false);
+            this.fullpay.ResumeLayout(false);
+            this.fullpay.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -1285,14 +1595,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.item_dgv_fullpay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantity_nud_fullpay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suggestedPrice_nud_fullpay)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.sacramentpay.ResumeLayout(false);
+            this.profile_panel_sacramentpay.ResumeLayout(false);
+            this.profile_panel_sacramentpay.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.paid_nud_sacramentpayment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paid_datagridview_sacramentpayment)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.IncomeCashReleaseType_panel.ResumeLayout(false);
-            this.IncomeCashReleaseType_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.applicant_datagridview_sacramentpay)).EndInit();
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.flowLayoutPanel4.PerformLayout();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.totalprice_nud_sacramentpayment)).EndInit();
             this.IncomeCashReleaseType_TabControl.ResumeLayout(false);
             this.IncomeTypeTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.itemType_dgv)).EndInit();
@@ -1335,9 +1652,9 @@
         private System.Windows.Forms.Label parish_label_fullpay;
         private System.Windows.Forms.Label postulancy_label_fullpay;
         private System.Windows.Forms.Label community_label_fullpay;
-        private HiddenTabControl hiddenTabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private HiddenTabControl CashDisbursment;
+        private System.Windows.Forms.TabPage fullpay;
+        private System.Windows.Forms.TabPage sacramentpay;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox remarks_textbox_fullpay;
@@ -1369,24 +1686,43 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label total_label_fullpay;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label sacramentPayment_label;
+        private System.Windows.Forms.Panel profile_panel_sacramentpay;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox address_textarea_sacramentpayment;
+        private System.Windows.Forms.MaskedTextBox contactnumber_textbox_sacramentpayment;
+        private System.Windows.Forms.Label middleinitiall_label_sacramentpayment;
+        private System.Windows.Forms.Label firstname_label_sacramentpayment;
+        private System.Windows.Forms.Label suffix_label_sacramentpayment;
+        private System.Windows.Forms.Label lastname_label_sacramentpayment;
+        private System.Windows.Forms.DataGridView applicant_datagridview_sacramentpay;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.NumericUpDown totalprice_nud_sacramentpayment;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label totalprice_label_sacramentpayment;
+        private System.Windows.Forms.Label totalpaid_label_sacramentpayment;
+        private System.Windows.Forms.Label balance_label_sacramentpayment;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.DataGridView paid_datagridview_sacramentpayment;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label ornumber_label_sacramentpayment;
+        private System.Windows.Forms.NumericUpDown paid_nud_sacramentpayment;
+        private System.Windows.Forms.Button add_button_sacramentpayment;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label total_label_fullpay;
+        private System.Windows.Forms.Label label12;
     }
 }

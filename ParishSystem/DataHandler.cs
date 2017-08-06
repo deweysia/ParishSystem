@@ -2433,6 +2433,7 @@ namespace ParishSystem
         }
         public DataTable getApplicationsWhereNameLike(string name, SacramentType sacrament, ApplicationStatus applicationStatus)
         {
+           
             string q = "SELECT generalprofile.profileid, concat(lastname,\" \",coalesce(suffix,\" \"),\",\",firstName,\" \",midName,\".\") as name,  gender, birthdate FROM GeneralProfile"
                 + " JOIN Applicant ON  GeneralProfile.profileID = Applicant.profileID "
                 + " JOIN Application ON Application.applicationID = Applicant.applicationID"
@@ -2444,7 +2445,15 @@ namespace ParishSystem
 
             return dt;
         }
+        public DataTable getPendingApplications()
+        {
+            string q = @"SELECT generalprofile.profileid,address,contactnumber,firstname,midname,lastname,suffix,application.applicationID,concat(lastname,"" "",coalesce(suffix,"" ""),"","",firstName,"" "",midName,""."") as name,  gender, birthdate
+                        FROM GeneralProfile JOIN Applicant ON  GeneralProfile.profileID = Applicant.profileID  JOIN Application ON Application.applicationID = Applicant.applicationID WHERE  Application.status = 1";
 
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
         public void addDownPaymentProfile(string firstname, string middlename, string lastname, string suffix, string address, string contactnumber)
         {
             string q = $@"INSERT INTO `sad2`.`downpaymentprofile` (`firstname`, `middlename`, `lastname`, `suffix`, `address`, `contactnumber`) 
@@ -2456,6 +2465,11 @@ namespace ParishSystem
         {        
             string q = $"SELECT generalprofile.profileid, concat(lastname,\"\",coalesce(suffix,\" \"),\",\",firstName,\"\",midName,\".\") as name from generalprofile where firstname like \"%"+a+ "%\" or lastname like \"%" + a + "%\"";
             return runQuery(q);
+        }
+        public bool hasSacramentIncome(int applicationID,SacramentType type)
+        {
+            string q = $"select* from application inner join sacramentincome on sacramentincome.applicationID = application.applicationID where application.applicationid = {applicationID} and application.status={ApplicationStatus.Pending}";
+            return (runQuery(q).Rows.Count > 0 ? true : false);
         }
     }
 
