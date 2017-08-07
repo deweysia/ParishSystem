@@ -22,7 +22,7 @@ namespace ParishSystem
         public SAD()
         {
             InitializeComponent();
-            baptismApplication_birthDate.MaxDate = DateTime.Now;
+            baptismApplication_birthDate.MaxDate = DateTime.Now.Date;
 
             //Add dictionary for navigation buttons
             navigation.Add(home_button_menu, profile_panel);
@@ -280,7 +280,9 @@ namespace ParishSystem
         public void loadBaptismApplications()
         {
             baptismApplication_dgv.AutoGenerateColumns = false;
-            baptismApplication_dgv.DataSource = dh.getApplications(SacramentType.Baptism);
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dh.getApplications(SacramentType.Baptism);
+            baptismApplication_dgv.DataSource = bs;
             baptismApplication_filter_comboBox.SelectedIndex = 0;
         }
         /// <summary>
@@ -289,9 +291,10 @@ namespace ParishSystem
         public void loadConfirmationApplications()
         {
             confirmationApplication_dgv.AutoGenerateColumns = false;
-            confirmationApplication_dgv.DataSource = dh.getApplications(SacramentType.Confirmation);
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dh.getApplications(SacramentType.Confirmation);
+            confirmationApplication_dgv.DataSource = bs;
             confirmationApplication_filter.SelectedIndex = 0;
-
         }
 
         /// <summary>
@@ -300,7 +303,9 @@ namespace ParishSystem
         private void loadMarriageApplications()
         {
             marriageApplication_dgv.AutoGenerateColumns = false;
-            marriageApplication_dgv.DataSource = dh.getApplications(SacramentType.Marriage);
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dh.getApplications(SacramentType.Marriage);
+            marriageApplication_dgv.DataSource = bs;
             marriageApplication_filter.SelectedIndex = 0;
         }
         /// <summary>
@@ -312,6 +317,7 @@ namespace ParishSystem
             
             int applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
             string requirements = dgv.SelectedRows[0].Cells[2].Value.ToString();
+            MessageBox.Show(requirements);
             string fn = dgv.SelectedRows[0].Cells[3].Value.ToString();
             string mn = dgv.SelectedRows[0].Cells[4].Value.ToString();
             string ln = dgv.SelectedRows[0].Cells[5].Value.ToString();
@@ -522,6 +528,7 @@ namespace ParishSystem
                 c.Checked = checkAll.Checked;
             }
         }
+
         /// <summary>
         /// Filters DataGridView on based on ComboBox SelectedIndex
         /// </summary>
@@ -529,11 +536,25 @@ namespace ParishSystem
         /// <param name="cb"></param>
         private void applicationFilter(DataGridView dgv, ComboBox cb)
         {
-            DataTable dt = dgv.DataSource as DataTable;
+            BindingSource bs = dgv.DataSource as BindingSource;
+            DataTable dt = bs.DataSource as DataTable;
+            
             if(cb.SelectedIndex == 0)
                 dt.DefaultView.RowFilter = "";
             else
                 dt.DefaultView.RowFilter = "status = " + cb.SelectedIndex;
+
+            Control parent = dgv.Parent;
+            foreach(Control c in parent.Controls)
+            {
+                if(c.Tag != null && c.Tag.ToString() == "Details")
+                {
+                    RecursiveClearControl(c);
+                    break;
+                }
+            }
+
+
         }
 
         /// <summary>
@@ -633,6 +654,17 @@ namespace ParishSystem
             DataGridViewRow dgvr = dgv.SelectedRows[0];
             ApplicationPayment ap = new ApplicationPayment(type, dgvr, dh);
             DialogResult dr = ap.ShowDialog();
+            Control parent = dgv.Parent;
+
+            foreach(Control c in parent.Controls)
+            {
+                if(c.Tag != null && c.Tag.ToString() == "Details")
+                {
+                    RecursiveClearControl(c);
+                    break;
+                }
+            }
+            
         }
 
 
@@ -648,6 +680,7 @@ namespace ParishSystem
             DataGridView dgv;
             GroupBox gb;
             TableLayoutPanel tlp;
+            FlowLayoutPanel flp;
             switch (type)
             {
                 case SacramentType.Baptism:
@@ -655,23 +688,27 @@ namespace ParishSystem
                     dgv = baptismApplication_dgv;
                     gb = baptismApplication_requirements_groupbox;
                     tlp = baptismApplication_requirements_tablePanel;
+                    flp = baptismApplication_approveRevoke_panel;
                     break;
                 case SacramentType.Confirmation:
                     editBtn = confirmationApplication_editReq_btn;
                     dgv = confirmationApplication_dgv;
                     gb = confirmationApplication_requirements_groupbox;
                     tlp = confirmationApplication_requirements_tablePanel;
+                    flp = confirmationApplication_approveRevoke_panel;
                     break;
                 default:
                     editBtn = marriageApplication_editReq_btn;
                     dgv = marriageApplication_dgv;
                     gb = marriageApplication_requirements_groupbox;
                     tlp = marriageApplication_requirements_tablePanel;
+                    flp = marriageApplication_approveRevoke_panel;
                     break;
             }
 
             bool enabled = gb.Enabled;
             gb.Enabled = !enabled;
+            flp.Enabled = enabled;
 
             if (!enabled)
             {
@@ -894,6 +931,7 @@ namespace ParishSystem
         {
             AddApplication aa = new AddApplication(SacramentType.Baptism, dh);
             aa.ShowDialog();
+            
             loadBaptismApplications();
         }
 
@@ -921,6 +959,7 @@ namespace ParishSystem
         private void baptismApplication_addPayment_button_Click(object sender, EventArgs e)
         {
             payApplication(SacramentType.Baptism, baptismApplication_dgv);
+            
         }
 
         private void confirmationApplication_addPayment_btn_Click(object sender, EventArgs e)
@@ -994,7 +1033,6 @@ namespace ParishSystem
             DataGridView dgv = (DataGridView)sender;
             if (!dgv.Focused || dgv.SelectedRows.Count == 0)
                 return;
-
             loadConfirmationApplicationDetails(dgv);
         }
 
@@ -1003,8 +1041,91 @@ namespace ParishSystem
             DataGridView dgv = (DataGridView)sender;
             if (!dgv.Focused || dgv.SelectedRows.Count == 0)
                 return;
-
             loadMarriageApplicationDetails(dgv);
+        }
+
+        /// <summary>
+        /// Recursively clears the Controls inside a Control
+        /// </summary>
+        /// <param name="c"></param>
+        private void RecursiveClearControl(Control c)
+        {
+            if (c.Controls.Count == 0)
+                return;
+            else
+            {
+                foreach (Control con in c.Controls)
+                {
+                    
+                    if (con is TextBox)
+                    {
+                        TextBox a = con as TextBox;
+                        a.Enabled = false;
+                        a.Text = "";
+                    }
+                    else if (con is ComboBox)
+                    {
+                        ComboBox a = con as ComboBox;
+                        a.SelectedIndex = 0;
+                    }
+                    else if (con is DateTimePicker)
+                    {
+                        DateTimePicker a = con as DateTimePicker;
+                        a.Value = DateTime.Now.Date;
+                    }
+                    else if (con is Button)
+                    {
+                        Button a = con as Button;
+                        
+                    }
+                    else if (con is RadioButton)
+                    {
+                        RadioButton a = con as RadioButton;
+                        a.Checked = false;
+                    }
+                    else if (con is CheckBox)
+                    {
+                        CheckBox a = con as CheckBox;
+                        a.Checked = false;
+                    }
+                    else if (con.Controls.Count > 0)
+                    {
+                        RecursiveClearControl(con);
+                    }
+                }
+            }
+        }
+
+        private void baptismApplication_editReq_button_EnabledChanged(object sender, EventArgs e)
+        {
+            Button b = sender as Button;
+            b.Text = "Edit Requirements";
+        }
+
+        private void applicationTabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (applicationTabControl.SelectedIndex == 0)
+                RecursiveClearControl(baptismApplicationDetailsPanel);
+            else if (applicationTabControl.SelectedIndex == 0)
+                RecursiveClearControl(confirmationApplicationDetailsPanel);
+            else
+                RecursiveClearControl(marriageApplicationDetailsPanel);
+        }
+
+        private void baptismApplication_dgv_Resize(object sender, EventArgs e)
+        {
+            //MessageBox.Show(sender.ToString());
+            Control c = sender as Control;
+            //if(c.Width != 493)
+            //{
+            //    c.Width = 493;
+            //    c.Height = 380;
+            //}
+        }
+
+        private void applicationTabControl_Enter(object sender, EventArgs e)
+        {
+
         }
         //========================================================================================================================
     }

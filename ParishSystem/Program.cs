@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
+using System.Data;
+using System.Reflection;
 
 namespace ParishSystem
 {
@@ -20,4 +23,5 @@ namespace ParishSystem
             Application.Run(new SAD());
         }
     }
+
 }

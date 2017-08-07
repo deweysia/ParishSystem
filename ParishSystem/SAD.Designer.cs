@@ -107,6 +107,17 @@
             this.baptismApplication_filter_comboBox = new MetroFramework.Controls.MetroComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.baptismApplication_add_button = new System.Windows.Forms.Button();
+            this.baptismApplication_dgv = new MetroFramework.Controls.MetroGrid();
+            this.BapplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BprofileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Brequirements = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BfirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BmidName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BlastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bsuffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bgender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bbirthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.baptismApplicationDetailsPanel = new MetroFramework.Controls.MetroPanel();
             this.baptismApplication_buttons_panel = new System.Windows.Forms.Panel();
             this.baptismApplication_approveRevoke_panel = new System.Windows.Forms.FlowLayoutPanel();
@@ -136,22 +147,22 @@
             this.baptismApplication_midName_textbox = new System.Windows.Forms.TextBox();
             this.baptismApplication_firstName_textbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.baptismApplication_dgv = new MetroFramework.Controls.MetroGrid();
-            this.BapplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BprofileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Brequirements = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BfirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BmidName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BlastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bsuffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bgender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bbirthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.panel17 = new System.Windows.Forms.Panel();
             this.confirmationApplication_filter = new MetroFramework.Controls.MetroComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.confirmationApplication_add_btn = new System.Windows.Forms.Button();
+            this.confirmationApplication_dgv = new MetroFramework.Controls.MetroGrid();
+            this.CapplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CprofileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Crequirements = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CfirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CmidName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Csuffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cgender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cbirthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.confirmationApplicationDetailsPanel = new MetroFramework.Controls.MetroPanel();
             this.confirmationApplication_buttons_panel = new System.Windows.Forms.Panel();
             this.confirmationApplication_approveRevoke_panel = new System.Windows.Forms.FlowLayoutPanel();
@@ -181,17 +192,6 @@
             this.confirmationApplication_mi_text = new System.Windows.Forms.TextBox();
             this.confirmationApplication_firstname_text = new System.Windows.Forms.TextBox();
             this.label90 = new System.Windows.Forms.Label();
-            this.confirmationApplication_dgv = new MetroFramework.Controls.MetroGrid();
-            this.CapplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CprofileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Crequirements = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CfirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CmidName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Csuffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cgender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cbirthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.panel18 = new System.Windows.Forms.Panel();
             this.marriageApplication_filter = new MetroFramework.Controls.MetroComboBox();
@@ -429,7 +429,6 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.sacrament_panel = new System.Windows.Forms.Panel();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -446,13 +445,11 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label85 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBoxFilter = new MetroFramework.Controls.MetroComboBox();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.libraryMarriageButton = new System.Windows.Forms.Button();
-            this.libraryConfirmationButton = new System.Windows.Forms.Button();
-            this.libraryBaptismButton = new System.Windows.Forms.Button();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.applicationBS = new System.Windows.Forms.BindingSource(this.components);
+            this.baptismApplication_edit_btn = new MetroFramework.Controls.MetroButton();
+            this.confirmationApplication_edit_btn = new MetroFramework.Controls.MetroButton();
+            this.marriageApplication_edit_btn = new MetroFramework.Controls.MetroButton();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.profile_panel.SuspendLayout();
@@ -463,6 +460,7 @@
             this.applicationTabControl.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.baptismApplication_dgv)).BeginInit();
             this.baptismApplicationDetailsPanel.SuspendLayout();
             this.baptismApplication_buttons_panel.SuspendLayout();
             this.baptismApplication_approveRevoke_panel.SuspendLayout();
@@ -470,9 +468,9 @@
             this.baptismApplication_requirements_groupbox.SuspendLayout();
             this.baptismApplication_requirements_tablePanel.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.baptismApplication_dgv)).BeginInit();
             this.metroTabPage2.SuspendLayout();
             this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.confirmationApplication_dgv)).BeginInit();
             this.confirmationApplicationDetailsPanel.SuspendLayout();
             this.confirmationApplication_buttons_panel.SuspendLayout();
             this.confirmationApplication_approveRevoke_panel.SuspendLayout();
@@ -480,7 +478,6 @@
             this.confirmationApplication_requirements_groupbox.SuspendLayout();
             this.confirmationApplication_requirements_tablePanel.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.confirmationApplication_dgv)).BeginInit();
             this.metroTabPage3.SuspendLayout();
             this.panel18.SuspendLayout();
             this.marriageApplicationDetailsPanel.SuspendLayout();
@@ -530,7 +527,7 @@
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel14.SuspendLayout();
-            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.applicationBS)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -1267,16 +1264,19 @@
             this.applicationTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicationTabControl.Location = new System.Drawing.Point(0, 41);
             this.applicationTabControl.Name = "applicationTabControl";
-            this.applicationTabControl.SelectedIndex = 2;
+            this.applicationTabControl.SelectedIndex = 0;
             this.applicationTabControl.Size = new System.Drawing.Size(802, 501);
             this.applicationTabControl.TabIndex = 69;
+            this.applicationTabControl.Tag = "";
             this.applicationTabControl.UseSelectable = true;
+            this.applicationTabControl.SelectedIndexChanged += new System.EventHandler(this.applicationTabControl_SelectedIndexChanged);
+            this.applicationTabControl.Enter += new System.EventHandler(this.applicationTabControl_Enter);
             // 
             // metroTabPage1
             // 
             this.metroTabPage1.Controls.Add(this.panel16);
-            this.metroTabPage1.Controls.Add(this.baptismApplicationDetailsPanel);
             this.metroTabPage1.Controls.Add(this.baptismApplication_dgv);
+            this.metroTabPage1.Controls.Add(this.baptismApplicationDetailsPanel);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.HorizontalScrollbarSize = 1;
@@ -1297,7 +1297,7 @@
             this.panel16.Location = new System.Drawing.Point(3, 3);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(494, 49);
-            this.panel16.TabIndex = 68;
+            this.panel16.TabIndex = 0;
             // 
             // baptismApplication_filter_comboBox
             // 
@@ -1339,353 +1339,6 @@
             this.baptismApplication_add_button.Text = "Add";
             this.baptismApplication_add_button.UseVisualStyleBackColor = false;
             this.baptismApplication_add_button.Click += new System.EventHandler(this.baptismApplication_add_button_Click);
-            // 
-            // baptismApplicationDetailsPanel
-            // 
-            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_buttons_panel);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_payment_groupbox);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_status_label);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_requirements_groupbox);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_birthDate);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.label86);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.label11);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.flowLayoutPanel3);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_suffix_textbox);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_lastName_textbox);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_midName_textbox);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_firstName_textbox);
-            this.baptismApplicationDetailsPanel.Controls.Add(this.label4);
-            this.baptismApplicationDetailsPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.baptismApplicationDetailsPanel.HorizontalScrollbarBarColor = true;
-            this.baptismApplicationDetailsPanel.HorizontalScrollbarHighlightOnWheel = false;
-            this.baptismApplicationDetailsPanel.HorizontalScrollbarSize = 10;
-            this.baptismApplicationDetailsPanel.Location = new System.Drawing.Point(504, 3);
-            this.baptismApplicationDetailsPanel.Name = "baptismApplicationDetailsPanel";
-            this.baptismApplicationDetailsPanel.Size = new System.Drawing.Size(287, 435);
-            this.baptismApplicationDetailsPanel.TabIndex = 65;
-            this.baptismApplicationDetailsPanel.VerticalScrollbarBarColor = true;
-            this.baptismApplicationDetailsPanel.VerticalScrollbarHighlightOnWheel = false;
-            this.baptismApplicationDetailsPanel.VerticalScrollbarSize = 10;
-            // 
-            // baptismApplication_buttons_panel
-            // 
-            this.baptismApplication_buttons_panel.Controls.Add(this.baptismApplication_approveRevoke_panel);
-            this.baptismApplication_buttons_panel.Controls.Add(this.baptismApplication_editReq_button);
-            this.baptismApplication_buttons_panel.Enabled = false;
-            this.baptismApplication_buttons_panel.Location = new System.Drawing.Point(6, 399);
-            this.baptismApplication_buttons_panel.Name = "baptismApplication_buttons_panel";
-            this.baptismApplication_buttons_panel.Size = new System.Drawing.Size(281, 32);
-            this.baptismApplication_buttons_panel.TabIndex = 18;
-            // 
-            // baptismApplication_approveRevoke_panel
-            // 
-            this.baptismApplication_approveRevoke_panel.Controls.Add(this.baptismApplication_approve_button);
-            this.baptismApplication_approveRevoke_panel.Controls.Add(this.baptismApplication_revoke_button);
-            this.baptismApplication_approveRevoke_panel.Location = new System.Drawing.Point(140, 0);
-            this.baptismApplication_approveRevoke_panel.Name = "baptismApplication_approveRevoke_panel";
-            this.baptismApplication_approveRevoke_panel.Size = new System.Drawing.Size(134, 30);
-            this.baptismApplication_approveRevoke_panel.TabIndex = 3;
-            // 
-            // baptismApplication_approve_button
-            // 
-            this.baptismApplication_approve_button.Location = new System.Drawing.Point(3, 3);
-            this.baptismApplication_approve_button.Name = "baptismApplication_approve_button";
-            this.baptismApplication_approve_button.Size = new System.Drawing.Size(60, 23);
-            this.baptismApplication_approve_button.TabIndex = 10;
-            this.baptismApplication_approve_button.Text = "Approve";
-            this.baptismApplication_approve_button.UseSelectable = true;
-            this.baptismApplication_approve_button.Click += new System.EventHandler(this.baptismApplication_approve_button_Click);
-            // 
-            // baptismApplication_revoke_button
-            // 
-            this.baptismApplication_revoke_button.Location = new System.Drawing.Point(69, 3);
-            this.baptismApplication_revoke_button.Name = "baptismApplication_revoke_button";
-            this.baptismApplication_revoke_button.Size = new System.Drawing.Size(60, 23);
-            this.baptismApplication_revoke_button.TabIndex = 10;
-            this.baptismApplication_revoke_button.Text = "Revoke";
-            this.baptismApplication_revoke_button.UseSelectable = true;
-            this.baptismApplication_revoke_button.Click += new System.EventHandler(this.baptismApplication_revoke_button_Click);
-            // 
-            // baptismApplication_editReq_button
-            // 
-            this.baptismApplication_editReq_button.Location = new System.Drawing.Point(4, 3);
-            this.baptismApplication_editReq_button.Name = "baptismApplication_editReq_button";
-            this.baptismApplication_editReq_button.Size = new System.Drawing.Size(108, 23);
-            this.baptismApplication_editReq_button.TabIndex = 10;
-            this.baptismApplication_editReq_button.Text = "Edit Requirements";
-            this.baptismApplication_editReq_button.UseSelectable = true;
-            this.baptismApplication_editReq_button.Click += new System.EventHandler(this.baptismApplication_editReq_button_Click);
-            // 
-            // baptismApplication_payment_groupbox
-            // 
-            this.baptismApplication_payment_groupbox.Controls.Add(this.label87);
-            this.baptismApplication_payment_groupbox.Controls.Add(this.baptismApplication_payment_label);
-            this.baptismApplication_payment_groupbox.Controls.Add(this.baptismApplication_addPayment_btn);
-            this.baptismApplication_payment_groupbox.Controls.Add(this.baptismApplication_payment_remarks);
-            this.baptismApplication_payment_groupbox.Enabled = false;
-            this.baptismApplication_payment_groupbox.Location = new System.Drawing.Point(6, 291);
-            this.baptismApplication_payment_groupbox.Name = "baptismApplication_payment_groupbox";
-            this.baptismApplication_payment_groupbox.Size = new System.Drawing.Size(278, 100);
-            this.baptismApplication_payment_groupbox.TabIndex = 17;
-            this.baptismApplication_payment_groupbox.TabStop = false;
-            this.baptismApplication_payment_groupbox.Text = "Payments";
-            // 
-            // label87
-            // 
-            this.label87.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label87.AutoSize = true;
-            this.label87.Location = new System.Drawing.Point(17, 27);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(68, 15);
-            this.label87.TabIndex = 11;
-            this.label87.Text = "Remaining";
-            // 
-            // baptismApplication_payment_label
-            // 
-            this.baptismApplication_payment_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.baptismApplication_payment_label.AutoSize = true;
-            this.baptismApplication_payment_label.Location = new System.Drawing.Point(103, 28);
-            this.baptismApplication_payment_label.Name = "baptismApplication_payment_label";
-            this.baptismApplication_payment_label.Size = new System.Drawing.Size(35, 15);
-            this.baptismApplication_payment_label.TabIndex = 12;
-            this.baptismApplication_payment_label.Text = "Price";
-            // 
-            // baptismApplication_addPayment_btn
-            // 
-            this.baptismApplication_addPayment_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.baptismApplication_addPayment_btn.Location = new System.Drawing.Point(226, 21);
-            this.baptismApplication_addPayment_btn.Name = "baptismApplication_addPayment_btn";
-            this.baptismApplication_addPayment_btn.Size = new System.Drawing.Size(44, 23);
-            this.baptismApplication_addPayment_btn.TabIndex = 2;
-            this.baptismApplication_addPayment_btn.Text = "Add";
-            this.baptismApplication_addPayment_btn.UseSelectable = true;
-            this.baptismApplication_addPayment_btn.Click += new System.EventHandler(this.baptismApplication_addPayment_button_Click);
-            // 
-            // baptismApplication_payment_remarks
-            // 
-            this.baptismApplication_payment_remarks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.baptismApplication_payment_remarks.CustomButton.Image = null;
-            this.baptismApplication_payment_remarks.CustomButton.Location = new System.Drawing.Point(214, 2);
-            this.baptismApplication_payment_remarks.CustomButton.Name = "";
-            this.baptismApplication_payment_remarks.CustomButton.Size = new System.Drawing.Size(39, 39);
-            this.baptismApplication_payment_remarks.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.baptismApplication_payment_remarks.CustomButton.TabIndex = 1;
-            this.baptismApplication_payment_remarks.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.baptismApplication_payment_remarks.CustomButton.UseSelectable = true;
-            this.baptismApplication_payment_remarks.CustomButton.Visible = false;
-            this.baptismApplication_payment_remarks.Lines = new string[0];
-            this.baptismApplication_payment_remarks.Location = new System.Drawing.Point(14, 50);
-            this.baptismApplication_payment_remarks.MaxLength = 32767;
-            this.baptismApplication_payment_remarks.Multiline = true;
-            this.baptismApplication_payment_remarks.Name = "baptismApplication_payment_remarks";
-            this.baptismApplication_payment_remarks.PasswordChar = '\0';
-            this.baptismApplication_payment_remarks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.baptismApplication_payment_remarks.SelectedText = "";
-            this.baptismApplication_payment_remarks.SelectionLength = 0;
-            this.baptismApplication_payment_remarks.SelectionStart = 0;
-            this.baptismApplication_payment_remarks.ShortcutsEnabled = true;
-            this.baptismApplication_payment_remarks.Size = new System.Drawing.Size(256, 44);
-            this.baptismApplication_payment_remarks.TabIndex = 16;
-            this.baptismApplication_payment_remarks.UseSelectable = true;
-            this.baptismApplication_payment_remarks.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.baptismApplication_payment_remarks.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // baptismApplication_status_label
-            // 
-            this.baptismApplication_status_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.baptismApplication_status_label.AutoSize = true;
-            this.baptismApplication_status_label.Location = new System.Drawing.Point(10, 13);
-            this.baptismApplication_status_label.Name = "baptismApplication_status_label";
-            this.baptismApplication_status_label.Size = new System.Drawing.Size(41, 15);
-            this.baptismApplication_status_label.TabIndex = 13;
-            this.baptismApplication_status_label.Text = "Status";
-            // 
-            // baptismApplication_requirements_groupbox
-            // 
-            this.baptismApplication_requirements_groupbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.baptismApplication_requirements_groupbox.Controls.Add(this.baptismApplication_requirements_tablePanel);
-            this.baptismApplication_requirements_groupbox.Controls.Add(this.baptismApplication_checkAll_checkBox);
-            this.baptismApplication_requirements_groupbox.Enabled = false;
-            this.baptismApplication_requirements_groupbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.baptismApplication_requirements_groupbox.Location = new System.Drawing.Point(6, 136);
-            this.baptismApplication_requirements_groupbox.Name = "baptismApplication_requirements_groupbox";
-            this.baptismApplication_requirements_groupbox.Size = new System.Drawing.Size(278, 150);
-            this.baptismApplication_requirements_groupbox.TabIndex = 9;
-            this.baptismApplication_requirements_groupbox.TabStop = false;
-            this.baptismApplication_requirements_groupbox.Text = "Requirements";
-            // 
-            // baptismApplication_requirements_tablePanel
-            // 
-            this.baptismApplication_requirements_tablePanel.ColumnCount = 2;
-            this.baptismApplication_requirements_tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.baptismApplication_requirements_tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.baptismApplication_requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_checkBox1, 0, 0);
-            this.baptismApplication_requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_checkBox3, 0, 1);
-            this.baptismApplication_requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_checkBox2, 1, 0);
-            this.baptismApplication_requirements_tablePanel.Location = new System.Drawing.Point(6, 42);
-            this.baptismApplication_requirements_tablePanel.Name = "baptismApplication_requirements_tablePanel";
-            this.baptismApplication_requirements_tablePanel.RowCount = 4;
-            this.baptismApplication_requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.baptismApplication_requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.baptismApplication_requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.baptismApplication_requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.baptismApplication_requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.baptismApplication_requirements_tablePanel.Size = new System.Drawing.Size(268, 64);
-            this.baptismApplication_requirements_tablePanel.TabIndex = 1;
-            // 
-            // baptismApplication_requirement_checkBox1
-            // 
-            this.baptismApplication_requirement_checkBox1.AutoSize = true;
-            this.baptismApplication_requirement_checkBox1.Location = new System.Drawing.Point(3, 3);
-            this.baptismApplication_requirement_checkBox1.Name = "baptismApplication_requirement_checkBox1";
-            this.baptismApplication_requirement_checkBox1.Size = new System.Drawing.Size(93, 14);
-            this.baptismApplication_requirement_checkBox1.TabIndex = 0;
-            this.baptismApplication_requirement_checkBox1.Text = "Parish Permit";
-            this.baptismApplication_requirement_checkBox1.UseSelectable = true;
-            this.baptismApplication_requirement_checkBox1.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox_CheckedChanged);
-            // 
-            // baptismApplication_requirement_checkBox3
-            // 
-            this.baptismApplication_requirement_checkBox3.AutoSize = true;
-            this.baptismApplication_requirement_checkBox3.Location = new System.Drawing.Point(3, 23);
-            this.baptismApplication_requirement_checkBox3.Name = "baptismApplication_requirement_checkBox3";
-            this.baptismApplication_requirement_checkBox3.Size = new System.Drawing.Size(119, 14);
-            this.baptismApplication_requirement_checkBox3.TabIndex = 0;
-            this.baptismApplication_requirement_checkBox3.Text = "Marriage Contract";
-            this.baptismApplication_requirement_checkBox3.UseSelectable = true;
-            this.baptismApplication_requirement_checkBox3.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox_CheckedChanged);
-            // 
-            // baptismApplication_requirement_checkBox2
-            // 
-            this.baptismApplication_requirement_checkBox2.AutoSize = true;
-            this.baptismApplication_requirement_checkBox2.Location = new System.Drawing.Point(137, 3);
-            this.baptismApplication_requirement_checkBox2.Name = "baptismApplication_requirement_checkBox2";
-            this.baptismApplication_requirement_checkBox2.Size = new System.Drawing.Size(105, 14);
-            this.baptismApplication_requirement_checkBox2.TabIndex = 0;
-            this.baptismApplication_requirement_checkBox2.Text = "Birth Certificate";
-            this.baptismApplication_requirement_checkBox2.UseSelectable = true;
-            this.baptismApplication_requirement_checkBox2.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox_CheckedChanged);
-            // 
-            // baptismApplication_checkAll_checkBox
-            // 
-            this.baptismApplication_checkAll_checkBox.AutoSize = true;
-            this.baptismApplication_checkAll_checkBox.Location = new System.Drawing.Point(9, 21);
-            this.baptismApplication_checkAll_checkBox.Name = "baptismApplication_checkAll_checkBox";
-            this.baptismApplication_checkAll_checkBox.Size = new System.Drawing.Size(73, 15);
-            this.baptismApplication_checkAll_checkBox.TabIndex = 0;
-            this.baptismApplication_checkAll_checkBox.Text = "Check All";
-            this.baptismApplication_checkAll_checkBox.UseSelectable = true;
-            this.baptismApplication_checkAll_checkBox.CheckedChanged += new System.EventHandler(this.baptismApplication_checkAll_checkBox_CheckedChanged);
-            // 
-            // baptismApplication_birthDate
-            // 
-            this.baptismApplication_birthDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.baptismApplication_birthDate.Enabled = false;
-            this.baptismApplication_birthDate.Location = new System.Drawing.Point(69, 104);
-            this.baptismApplication_birthDate.MinimumSize = new System.Drawing.Size(4, 29);
-            this.baptismApplication_birthDate.Name = "baptismApplication_birthDate";
-            this.baptismApplication_birthDate.Size = new System.Drawing.Size(200, 29);
-            this.baptismApplication_birthDate.TabIndex = 8;
-            // 
-            // label86
-            // 
-            this.label86.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label86.AutoSize = true;
-            this.label86.Location = new System.Drawing.Point(7, 110);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(56, 15);
-            this.label86.TabIndex = 7;
-            this.label86.Text = "Birthdate";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(7, 81);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 15);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Gender";
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel3.Controls.Add(this.baptismApplication_male_radio);
-            this.flowLayoutPanel3.Controls.Add(this.baptismApplication_female_radio);
-            this.flowLayoutPanel3.Enabled = false;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(69, 77);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(135, 20);
-            this.flowLayoutPanel3.TabIndex = 6;
-            // 
-            // baptismApplication_male_radio
-            // 
-            this.baptismApplication_male_radio.AutoSize = true;
-            this.baptismApplication_male_radio.Location = new System.Drawing.Point(3, 3);
-            this.baptismApplication_male_radio.Name = "baptismApplication_male_radio";
-            this.baptismApplication_male_radio.Size = new System.Drawing.Size(49, 15);
-            this.baptismApplication_male_radio.TabIndex = 5;
-            this.baptismApplication_male_radio.Text = "Male";
-            this.baptismApplication_male_radio.UseSelectable = true;
-            // 
-            // baptismApplication_female_radio
-            // 
-            this.baptismApplication_female_radio.AutoSize = true;
-            this.baptismApplication_female_radio.Location = new System.Drawing.Point(58, 3);
-            this.baptismApplication_female_radio.Name = "baptismApplication_female_radio";
-            this.baptismApplication_female_radio.Size = new System.Drawing.Size(61, 15);
-            this.baptismApplication_female_radio.TabIndex = 5;
-            this.baptismApplication_female_radio.Text = "Female";
-            this.baptismApplication_female_radio.UseSelectable = true;
-            // 
-            // baptismApplication_suffix_textbox
-            // 
-            this.baptismApplication_suffix_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.baptismApplication_suffix_textbox.Location = new System.Drawing.Point(261, 48);
-            this.baptismApplication_suffix_textbox.Name = "baptismApplication_suffix_textbox";
-            this.baptismApplication_suffix_textbox.ReadOnly = true;
-            this.baptismApplication_suffix_textbox.Size = new System.Drawing.Size(25, 21);
-            this.baptismApplication_suffix_textbox.TabIndex = 4;
-            // 
-            // baptismApplication_lastName_textbox
-            // 
-            this.baptismApplication_lastName_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.baptismApplication_lastName_textbox.Location = new System.Drawing.Point(174, 48);
-            this.baptismApplication_lastName_textbox.Name = "baptismApplication_lastName_textbox";
-            this.baptismApplication_lastName_textbox.ReadOnly = true;
-            this.baptismApplication_lastName_textbox.Size = new System.Drawing.Size(81, 21);
-            this.baptismApplication_lastName_textbox.TabIndex = 4;
-            // 
-            // baptismApplication_midName_textbox
-            // 
-            this.baptismApplication_midName_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.baptismApplication_midName_textbox.Location = new System.Drawing.Point(143, 48);
-            this.baptismApplication_midName_textbox.Name = "baptismApplication_midName_textbox";
-            this.baptismApplication_midName_textbox.ReadOnly = true;
-            this.baptismApplication_midName_textbox.Size = new System.Drawing.Size(25, 21);
-            this.baptismApplication_midName_textbox.TabIndex = 4;
-            // 
-            // baptismApplication_firstName_textbox
-            // 
-            this.baptismApplication_firstName_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.baptismApplication_firstName_textbox.Location = new System.Drawing.Point(69, 48);
-            this.baptismApplication_firstName_textbox.Name = "baptismApplication_firstName_textbox";
-            this.baptismApplication_firstName_textbox.ReadOnly = true;
-            this.baptismApplication_firstName_textbox.Size = new System.Drawing.Size(68, 21);
-            this.baptismApplication_firstName_textbox.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 51);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Name";
             // 
             // baptismApplication_dgv
             // 
@@ -1746,11 +1399,12 @@
             this.baptismApplication_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.baptismApplication_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.baptismApplication_dgv.Size = new System.Drawing.Size(493, 380);
-            this.baptismApplication_dgv.TabIndex = 62;
+            this.baptismApplication_dgv.TabIndex = 1;
             this.baptismApplication_dgv.TabStop = false;
             this.baptismApplication_dgv.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.baptismApplication_dgv_CellEnter);
             this.baptismApplication_dgv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.baptismApplication_dgv_CellFormatting);
             this.baptismApplication_dgv.VisibleChanged += new System.EventHandler(this.baptismApplication_dgv_VisibleChanged);
+            this.baptismApplication_dgv.Resize += new System.EventHandler(this.baptismApplication_dgv_Resize);
             // 
             // BapplicationID
             // 
@@ -1834,11 +1488,373 @@
             this.Bstatus.ReadOnly = true;
             this.Bstatus.Width = 63;
             // 
+            // baptismApplicationDetailsPanel
+            // 
+            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_edit_btn);
+            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_buttons_panel);
+            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_payment_groupbox);
+            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_status_label);
+            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_requirements_groupbox);
+            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_birthDate);
+            this.baptismApplicationDetailsPanel.Controls.Add(this.label86);
+            this.baptismApplicationDetailsPanel.Controls.Add(this.label11);
+            this.baptismApplicationDetailsPanel.Controls.Add(this.flowLayoutPanel3);
+            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_suffix_textbox);
+            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_lastName_textbox);
+            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_midName_textbox);
+            this.baptismApplicationDetailsPanel.Controls.Add(this.baptismApplication_firstName_textbox);
+            this.baptismApplicationDetailsPanel.Controls.Add(this.label4);
+            this.baptismApplicationDetailsPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.baptismApplicationDetailsPanel.HorizontalScrollbarBarColor = true;
+            this.baptismApplicationDetailsPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.baptismApplicationDetailsPanel.HorizontalScrollbarSize = 10;
+            this.baptismApplicationDetailsPanel.Location = new System.Drawing.Point(504, 3);
+            this.baptismApplicationDetailsPanel.Name = "baptismApplicationDetailsPanel";
+            this.baptismApplicationDetailsPanel.Size = new System.Drawing.Size(287, 435);
+            this.baptismApplicationDetailsPanel.TabIndex = 2;
+            this.baptismApplicationDetailsPanel.Tag = "Details";
+            this.baptismApplicationDetailsPanel.VerticalScrollbarBarColor = true;
+            this.baptismApplicationDetailsPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.baptismApplicationDetailsPanel.VerticalScrollbarSize = 10;
+            // 
+            // baptismApplication_buttons_panel
+            // 
+            this.baptismApplication_buttons_panel.BackColor = System.Drawing.Color.White;
+            this.baptismApplication_buttons_panel.Controls.Add(this.baptismApplication_approveRevoke_panel);
+            this.baptismApplication_buttons_panel.Controls.Add(this.baptismApplication_editReq_button);
+            this.baptismApplication_buttons_panel.Enabled = false;
+            this.baptismApplication_buttons_panel.Location = new System.Drawing.Point(6, 399);
+            this.baptismApplication_buttons_panel.Name = "baptismApplication_buttons_panel";
+            this.baptismApplication_buttons_panel.Size = new System.Drawing.Size(281, 32);
+            this.baptismApplication_buttons_panel.TabIndex = 18;
+            // 
+            // baptismApplication_approveRevoke_panel
+            // 
+            this.baptismApplication_approveRevoke_panel.Controls.Add(this.baptismApplication_approve_button);
+            this.baptismApplication_approveRevoke_panel.Controls.Add(this.baptismApplication_revoke_button);
+            this.baptismApplication_approveRevoke_panel.Location = new System.Drawing.Point(140, 0);
+            this.baptismApplication_approveRevoke_panel.Name = "baptismApplication_approveRevoke_panel";
+            this.baptismApplication_approveRevoke_panel.Size = new System.Drawing.Size(134, 30);
+            this.baptismApplication_approveRevoke_panel.TabIndex = 3;
+            // 
+            // baptismApplication_approve_button
+            // 
+            this.baptismApplication_approve_button.Location = new System.Drawing.Point(3, 3);
+            this.baptismApplication_approve_button.Name = "baptismApplication_approve_button";
+            this.baptismApplication_approve_button.Size = new System.Drawing.Size(60, 23);
+            this.baptismApplication_approve_button.TabIndex = 10;
+            this.baptismApplication_approve_button.Text = "Approve";
+            this.baptismApplication_approve_button.UseSelectable = true;
+            this.baptismApplication_approve_button.Click += new System.EventHandler(this.baptismApplication_approve_button_Click);
+            // 
+            // baptismApplication_revoke_button
+            // 
+            this.baptismApplication_revoke_button.Location = new System.Drawing.Point(69, 3);
+            this.baptismApplication_revoke_button.Name = "baptismApplication_revoke_button";
+            this.baptismApplication_revoke_button.Size = new System.Drawing.Size(60, 23);
+            this.baptismApplication_revoke_button.TabIndex = 10;
+            this.baptismApplication_revoke_button.Text = "Revoke";
+            this.baptismApplication_revoke_button.UseSelectable = true;
+            this.baptismApplication_revoke_button.Click += new System.EventHandler(this.baptismApplication_revoke_button_Click);
+            // 
+            // baptismApplication_editReq_button
+            // 
+            this.baptismApplication_editReq_button.Location = new System.Drawing.Point(4, 3);
+            this.baptismApplication_editReq_button.Name = "baptismApplication_editReq_button";
+            this.baptismApplication_editReq_button.Size = new System.Drawing.Size(108, 23);
+            this.baptismApplication_editReq_button.TabIndex = 10;
+            this.baptismApplication_editReq_button.Text = "Edit Requirements";
+            this.baptismApplication_editReq_button.UseSelectable = true;
+            this.baptismApplication_editReq_button.EnabledChanged += new System.EventHandler(this.baptismApplication_editReq_button_EnabledChanged);
+            this.baptismApplication_editReq_button.Click += new System.EventHandler(this.baptismApplication_editReq_button_Click);
+            // 
+            // baptismApplication_payment_groupbox
+            // 
+            this.baptismApplication_payment_groupbox.BackColor = System.Drawing.Color.White;
+            this.baptismApplication_payment_groupbox.Controls.Add(this.label87);
+            this.baptismApplication_payment_groupbox.Controls.Add(this.baptismApplication_payment_label);
+            this.baptismApplication_payment_groupbox.Controls.Add(this.baptismApplication_addPayment_btn);
+            this.baptismApplication_payment_groupbox.Controls.Add(this.baptismApplication_payment_remarks);
+            this.baptismApplication_payment_groupbox.Enabled = false;
+            this.baptismApplication_payment_groupbox.Location = new System.Drawing.Point(6, 291);
+            this.baptismApplication_payment_groupbox.Name = "baptismApplication_payment_groupbox";
+            this.baptismApplication_payment_groupbox.Size = new System.Drawing.Size(278, 100);
+            this.baptismApplication_payment_groupbox.TabIndex = 17;
+            this.baptismApplication_payment_groupbox.TabStop = false;
+            this.baptismApplication_payment_groupbox.Text = "Payments";
+            // 
+            // label87
+            // 
+            this.label87.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label87.AutoSize = true;
+            this.label87.Location = new System.Drawing.Point(17, 27);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(68, 15);
+            this.label87.TabIndex = 11;
+            this.label87.Text = "Remaining";
+            // 
+            // baptismApplication_payment_label
+            // 
+            this.baptismApplication_payment_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.baptismApplication_payment_label.AutoSize = true;
+            this.baptismApplication_payment_label.Location = new System.Drawing.Point(103, 28);
+            this.baptismApplication_payment_label.Name = "baptismApplication_payment_label";
+            this.baptismApplication_payment_label.Size = new System.Drawing.Size(35, 15);
+            this.baptismApplication_payment_label.TabIndex = 12;
+            this.baptismApplication_payment_label.Text = "Price";
+            // 
+            // baptismApplication_addPayment_btn
+            // 
+            this.baptismApplication_addPayment_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.baptismApplication_addPayment_btn.Location = new System.Drawing.Point(226, 21);
+            this.baptismApplication_addPayment_btn.Name = "baptismApplication_addPayment_btn";
+            this.baptismApplication_addPayment_btn.Size = new System.Drawing.Size(44, 23);
+            this.baptismApplication_addPayment_btn.TabIndex = 2;
+            this.baptismApplication_addPayment_btn.Text = "Add";
+            this.baptismApplication_addPayment_btn.UseSelectable = true;
+            this.baptismApplication_addPayment_btn.Click += new System.EventHandler(this.baptismApplication_addPayment_button_Click);
+            // 
+            // baptismApplication_payment_remarks
+            // 
+            this.baptismApplication_payment_remarks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.baptismApplication_payment_remarks.CustomButton.Image = null;
+            this.baptismApplication_payment_remarks.CustomButton.Location = new System.Drawing.Point(214, 2);
+            this.baptismApplication_payment_remarks.CustomButton.Name = "";
+            this.baptismApplication_payment_remarks.CustomButton.Size = new System.Drawing.Size(39, 39);
+            this.baptismApplication_payment_remarks.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.baptismApplication_payment_remarks.CustomButton.TabIndex = 1;
+            this.baptismApplication_payment_remarks.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.baptismApplication_payment_remarks.CustomButton.UseSelectable = true;
+            this.baptismApplication_payment_remarks.CustomButton.Visible = false;
+            this.baptismApplication_payment_remarks.Lines = new string[0];
+            this.baptismApplication_payment_remarks.Location = new System.Drawing.Point(14, 50);
+            this.baptismApplication_payment_remarks.MaxLength = 32767;
+            this.baptismApplication_payment_remarks.Multiline = true;
+            this.baptismApplication_payment_remarks.Name = "baptismApplication_payment_remarks";
+            this.baptismApplication_payment_remarks.PasswordChar = '\0';
+            this.baptismApplication_payment_remarks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.baptismApplication_payment_remarks.SelectedText = "";
+            this.baptismApplication_payment_remarks.SelectionLength = 0;
+            this.baptismApplication_payment_remarks.SelectionStart = 0;
+            this.baptismApplication_payment_remarks.ShortcutsEnabled = true;
+            this.baptismApplication_payment_remarks.Size = new System.Drawing.Size(256, 44);
+            this.baptismApplication_payment_remarks.TabIndex = 16;
+            this.baptismApplication_payment_remarks.UseSelectable = true;
+            this.baptismApplication_payment_remarks.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.baptismApplication_payment_remarks.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // baptismApplication_status_label
+            // 
+            this.baptismApplication_status_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.baptismApplication_status_label.AutoSize = true;
+            this.baptismApplication_status_label.BackColor = System.Drawing.Color.White;
+            this.baptismApplication_status_label.Location = new System.Drawing.Point(10, 13);
+            this.baptismApplication_status_label.Name = "baptismApplication_status_label";
+            this.baptismApplication_status_label.Size = new System.Drawing.Size(41, 15);
+            this.baptismApplication_status_label.TabIndex = 13;
+            this.baptismApplication_status_label.Text = "Status";
+            // 
+            // baptismApplication_requirements_groupbox
+            // 
+            this.baptismApplication_requirements_groupbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.baptismApplication_requirements_groupbox.BackColor = System.Drawing.Color.White;
+            this.baptismApplication_requirements_groupbox.Controls.Add(this.baptismApplication_requirements_tablePanel);
+            this.baptismApplication_requirements_groupbox.Controls.Add(this.baptismApplication_checkAll_checkBox);
+            this.baptismApplication_requirements_groupbox.Enabled = false;
+            this.baptismApplication_requirements_groupbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.baptismApplication_requirements_groupbox.Location = new System.Drawing.Point(6, 136);
+            this.baptismApplication_requirements_groupbox.Name = "baptismApplication_requirements_groupbox";
+            this.baptismApplication_requirements_groupbox.Size = new System.Drawing.Size(278, 150);
+            this.baptismApplication_requirements_groupbox.TabIndex = 9;
+            this.baptismApplication_requirements_groupbox.TabStop = false;
+            this.baptismApplication_requirements_groupbox.Text = "Requirements";
+            // 
+            // baptismApplication_requirements_tablePanel
+            // 
+            this.baptismApplication_requirements_tablePanel.ColumnCount = 2;
+            this.baptismApplication_requirements_tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.baptismApplication_requirements_tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.baptismApplication_requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_checkBox1, 0, 0);
+            this.baptismApplication_requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_checkBox3, 0, 1);
+            this.baptismApplication_requirements_tablePanel.Controls.Add(this.baptismApplication_requirement_checkBox2, 1, 0);
+            this.baptismApplication_requirements_tablePanel.Location = new System.Drawing.Point(6, 42);
+            this.baptismApplication_requirements_tablePanel.Name = "baptismApplication_requirements_tablePanel";
+            this.baptismApplication_requirements_tablePanel.RowCount = 4;
+            this.baptismApplication_requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.baptismApplication_requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.baptismApplication_requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.baptismApplication_requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.baptismApplication_requirements_tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.baptismApplication_requirements_tablePanel.Size = new System.Drawing.Size(268, 64);
+            this.baptismApplication_requirements_tablePanel.TabIndex = 1;
+            // 
+            // baptismApplication_requirement_checkBox1
+            // 
+            this.baptismApplication_requirement_checkBox1.AutoSize = true;
+            this.baptismApplication_requirement_checkBox1.Location = new System.Drawing.Point(3, 3);
+            this.baptismApplication_requirement_checkBox1.Name = "baptismApplication_requirement_checkBox1";
+            this.baptismApplication_requirement_checkBox1.Size = new System.Drawing.Size(93, 14);
+            this.baptismApplication_requirement_checkBox1.TabIndex = 0;
+            this.baptismApplication_requirement_checkBox1.Text = "Parish Permit";
+            this.baptismApplication_requirement_checkBox1.UseSelectable = true;
+            this.baptismApplication_requirement_checkBox1.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox_CheckedChanged);
+            // 
+            // baptismApplication_requirement_checkBox3
+            // 
+            this.baptismApplication_requirement_checkBox3.AutoSize = true;
+            this.baptismApplication_requirement_checkBox3.Location = new System.Drawing.Point(3, 23);
+            this.baptismApplication_requirement_checkBox3.Name = "baptismApplication_requirement_checkBox3";
+            this.baptismApplication_requirement_checkBox3.Size = new System.Drawing.Size(119, 14);
+            this.baptismApplication_requirement_checkBox3.TabIndex = 0;
+            this.baptismApplication_requirement_checkBox3.Text = "Marriage Contract";
+            this.baptismApplication_requirement_checkBox3.UseSelectable = true;
+            this.baptismApplication_requirement_checkBox3.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox_CheckedChanged);
+            // 
+            // baptismApplication_requirement_checkBox2
+            // 
+            this.baptismApplication_requirement_checkBox2.AutoSize = true;
+            this.baptismApplication_requirement_checkBox2.Location = new System.Drawing.Point(137, 3);
+            this.baptismApplication_requirement_checkBox2.Name = "baptismApplication_requirement_checkBox2";
+            this.baptismApplication_requirement_checkBox2.Size = new System.Drawing.Size(105, 14);
+            this.baptismApplication_requirement_checkBox2.TabIndex = 0;
+            this.baptismApplication_requirement_checkBox2.Text = "Birth Certificate";
+            this.baptismApplication_requirement_checkBox2.UseSelectable = true;
+            this.baptismApplication_requirement_checkBox2.CheckedChanged += new System.EventHandler(this.baptismApplication_requirement_checkBox_CheckedChanged);
+            // 
+            // baptismApplication_checkAll_checkBox
+            // 
+            this.baptismApplication_checkAll_checkBox.AutoSize = true;
+            this.baptismApplication_checkAll_checkBox.Location = new System.Drawing.Point(9, 21);
+            this.baptismApplication_checkAll_checkBox.Name = "baptismApplication_checkAll_checkBox";
+            this.baptismApplication_checkAll_checkBox.Size = new System.Drawing.Size(73, 15);
+            this.baptismApplication_checkAll_checkBox.TabIndex = 0;
+            this.baptismApplication_checkAll_checkBox.Text = "Check All";
+            this.baptismApplication_checkAll_checkBox.UseSelectable = true;
+            this.baptismApplication_checkAll_checkBox.CheckedChanged += new System.EventHandler(this.baptismApplication_checkAll_checkBox_CheckedChanged);
+            // 
+            // baptismApplication_birthDate
+            // 
+            this.baptismApplication_birthDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.baptismApplication_birthDate.Enabled = false;
+            this.baptismApplication_birthDate.Location = new System.Drawing.Point(69, 104);
+            this.baptismApplication_birthDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.baptismApplication_birthDate.Name = "baptismApplication_birthDate";
+            this.baptismApplication_birthDate.Size = new System.Drawing.Size(200, 29);
+            this.baptismApplication_birthDate.TabIndex = 8;
+            // 
+            // label86
+            // 
+            this.label86.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label86.AutoSize = true;
+            this.label86.BackColor = System.Drawing.Color.White;
+            this.label86.Location = new System.Drawing.Point(7, 110);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(56, 15);
+            this.label86.TabIndex = 7;
+            this.label86.Text = "Birthdate";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(7, 81);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(48, 15);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Gender";
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel3.Controls.Add(this.baptismApplication_male_radio);
+            this.flowLayoutPanel3.Controls.Add(this.baptismApplication_female_radio);
+            this.flowLayoutPanel3.Enabled = false;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(69, 77);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(135, 20);
+            this.flowLayoutPanel3.TabIndex = 6;
+            // 
+            // baptismApplication_male_radio
+            // 
+            this.baptismApplication_male_radio.AutoSize = true;
+            this.baptismApplication_male_radio.Location = new System.Drawing.Point(3, 3);
+            this.baptismApplication_male_radio.Name = "baptismApplication_male_radio";
+            this.baptismApplication_male_radio.Size = new System.Drawing.Size(49, 15);
+            this.baptismApplication_male_radio.TabIndex = 5;
+            this.baptismApplication_male_radio.Text = "Male";
+            this.baptismApplication_male_radio.UseSelectable = true;
+            // 
+            // baptismApplication_female_radio
+            // 
+            this.baptismApplication_female_radio.AutoSize = true;
+            this.baptismApplication_female_radio.Location = new System.Drawing.Point(58, 3);
+            this.baptismApplication_female_radio.Name = "baptismApplication_female_radio";
+            this.baptismApplication_female_radio.Size = new System.Drawing.Size(61, 15);
+            this.baptismApplication_female_radio.TabIndex = 5;
+            this.baptismApplication_female_radio.Text = "Female";
+            this.baptismApplication_female_radio.UseSelectable = true;
+            // 
+            // baptismApplication_suffix_textbox
+            // 
+            this.baptismApplication_suffix_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.baptismApplication_suffix_textbox.BackColor = System.Drawing.Color.White;
+            this.baptismApplication_suffix_textbox.Location = new System.Drawing.Point(261, 48);
+            this.baptismApplication_suffix_textbox.Name = "baptismApplication_suffix_textbox";
+            this.baptismApplication_suffix_textbox.ReadOnly = true;
+            this.baptismApplication_suffix_textbox.Size = new System.Drawing.Size(25, 21);
+            this.baptismApplication_suffix_textbox.TabIndex = 4;
+            // 
+            // baptismApplication_lastName_textbox
+            // 
+            this.baptismApplication_lastName_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.baptismApplication_lastName_textbox.BackColor = System.Drawing.Color.White;
+            this.baptismApplication_lastName_textbox.Location = new System.Drawing.Point(174, 48);
+            this.baptismApplication_lastName_textbox.Name = "baptismApplication_lastName_textbox";
+            this.baptismApplication_lastName_textbox.ReadOnly = true;
+            this.baptismApplication_lastName_textbox.Size = new System.Drawing.Size(81, 21);
+            this.baptismApplication_lastName_textbox.TabIndex = 4;
+            // 
+            // baptismApplication_midName_textbox
+            // 
+            this.baptismApplication_midName_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.baptismApplication_midName_textbox.BackColor = System.Drawing.Color.White;
+            this.baptismApplication_midName_textbox.Location = new System.Drawing.Point(143, 48);
+            this.baptismApplication_midName_textbox.Name = "baptismApplication_midName_textbox";
+            this.baptismApplication_midName_textbox.ReadOnly = true;
+            this.baptismApplication_midName_textbox.Size = new System.Drawing.Size(25, 21);
+            this.baptismApplication_midName_textbox.TabIndex = 4;
+            // 
+            // baptismApplication_firstName_textbox
+            // 
+            this.baptismApplication_firstName_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.baptismApplication_firstName_textbox.BackColor = System.Drawing.Color.White;
+            this.baptismApplication_firstName_textbox.Location = new System.Drawing.Point(69, 48);
+            this.baptismApplication_firstName_textbox.Name = "baptismApplication_firstName_textbox";
+            this.baptismApplication_firstName_textbox.ReadOnly = true;
+            this.baptismApplication_firstName_textbox.Size = new System.Drawing.Size(68, 21);
+            this.baptismApplication_firstName_textbox.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(8, 51);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 15);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Name";
+            // 
             // metroTabPage2
             // 
             this.metroTabPage2.Controls.Add(this.panel17);
-            this.metroTabPage2.Controls.Add(this.confirmationApplicationDetailsPanel);
             this.metroTabPage2.Controls.Add(this.confirmationApplication_dgv);
+            this.metroTabPage2.Controls.Add(this.confirmationApplicationDetailsPanel);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.HorizontalScrollbarSize = 1;
@@ -1859,7 +1875,7 @@
             this.panel17.Location = new System.Drawing.Point(3, 3);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(494, 49);
-            this.panel17.TabIndex = 71;
+            this.panel17.TabIndex = 1;
             // 
             // confirmationApplication_filter
             // 
@@ -1902,8 +1918,157 @@
             this.confirmationApplication_add_btn.UseVisualStyleBackColor = false;
             this.confirmationApplication_add_btn.Click += new System.EventHandler(this.confirmationApplication_add_btn_Click);
             // 
+            // confirmationApplication_dgv
+            // 
+            this.confirmationApplication_dgv.AllowUserToAddRows = false;
+            this.confirmationApplication_dgv.AllowUserToDeleteRows = false;
+            this.confirmationApplication_dgv.AllowUserToResizeRows = false;
+            this.confirmationApplication_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.confirmationApplication_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.confirmationApplication_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.confirmationApplication_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.confirmationApplication_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.confirmationApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.confirmationApplication_dgv.ColumnHeadersHeight = 25;
+            this.confirmationApplication_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.confirmationApplication_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CapplicationID,
+            this.CprofileID,
+            this.Crequirements,
+            this.CfirstName,
+            this.CmidName,
+            this.ClastName,
+            this.Csuffix,
+            this.Cgender,
+            this.Cbirthdate,
+            this.Cstatus});
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.confirmationApplication_dgv.DefaultCellStyle = dataGridViewCellStyle9;
+            this.confirmationApplication_dgv.EnableHeadersVisualStyles = false;
+            this.confirmationApplication_dgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.confirmationApplication_dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.confirmationApplication_dgv.Location = new System.Drawing.Point(3, 56);
+            this.confirmationApplication_dgv.MultiSelect = false;
+            this.confirmationApplication_dgv.Name = "confirmationApplication_dgv";
+            this.confirmationApplication_dgv.ReadOnly = true;
+            this.confirmationApplication_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.confirmationApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.confirmationApplication_dgv.RowHeadersVisible = false;
+            this.confirmationApplication_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.confirmationApplication_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.confirmationApplication_dgv.Size = new System.Drawing.Size(493, 380);
+            this.confirmationApplication_dgv.TabIndex = 2;
+            this.confirmationApplication_dgv.TabStop = false;
+            this.confirmationApplication_dgv.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.confirmationApplication_dgv_CellEnter);
+            this.confirmationApplication_dgv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.confirmationApplication_dgv_CellFormatting);
+            this.confirmationApplication_dgv.VisibleChanged += new System.EventHandler(this.confirmationApplication_dgv_VisibleChanged);
+            // 
+            // CapplicationID
+            // 
+            this.CapplicationID.DataPropertyName = "applicationID";
+            this.CapplicationID.HeaderText = "applicationID";
+            this.CapplicationID.Name = "CapplicationID";
+            this.CapplicationID.ReadOnly = true;
+            this.CapplicationID.Visible = false;
+            // 
+            // CprofileID
+            // 
+            this.CprofileID.DataPropertyName = "profileID";
+            this.CprofileID.HeaderText = "profileID";
+            this.CprofileID.Name = "CprofileID";
+            this.CprofileID.ReadOnly = true;
+            this.CprofileID.Visible = false;
+            this.CprofileID.Width = 76;
+            // 
+            // Crequirements
+            // 
+            this.Crequirements.DataPropertyName = "requirements";
+            this.Crequirements.HeaderText = "requirements";
+            this.Crequirements.Name = "Crequirements";
+            this.Crequirements.ReadOnly = true;
+            this.Crequirements.Visible = false;
+            this.Crequirements.Width = 99;
+            // 
+            // CfirstName
+            // 
+            this.CfirstName.DataPropertyName = "firstName";
+            this.CfirstName.HeaderText = "First Name";
+            this.CfirstName.Name = "CfirstName";
+            this.CfirstName.ReadOnly = true;
+            this.CfirstName.Width = 85;
+            // 
+            // CmidName
+            // 
+            this.CmidName.DataPropertyName = "midName";
+            this.CmidName.HeaderText = "M.I.";
+            this.CmidName.Name = "CmidName";
+            this.CmidName.ReadOnly = true;
+            this.CmidName.Width = 50;
+            // 
+            // ClastName
+            // 
+            this.ClastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ClastName.DataPropertyName = "lastName";
+            this.ClastName.HeaderText = "Last Name";
+            this.ClastName.Name = "ClastName";
+            this.ClastName.ReadOnly = true;
+            // 
+            // Csuffix
+            // 
+            this.Csuffix.DataPropertyName = "suffix";
+            this.Csuffix.HeaderText = "Suffix";
+            this.Csuffix.Name = "Csuffix";
+            this.Csuffix.ReadOnly = true;
+            this.Csuffix.Width = 60;
+            // 
+            // Cgender
+            // 
+            this.Cgender.DataPropertyName = "gender";
+            this.Cgender.HeaderText = "Gender";
+            this.Cgender.Name = "Cgender";
+            this.Cgender.ReadOnly = true;
+            this.Cgender.Width = 69;
+            // 
+            // Cbirthdate
+            // 
+            this.Cbirthdate.DataPropertyName = "birthdate";
+            this.Cbirthdate.HeaderText = "Birth Date";
+            this.Cbirthdate.Name = "Cbirthdate";
+            this.Cbirthdate.ReadOnly = true;
+            this.Cbirthdate.Width = 83;
+            // 
+            // Cstatus
+            // 
+            this.Cstatus.DataPropertyName = "status";
+            this.Cstatus.HeaderText = "Status";
+            this.Cstatus.Name = "Cstatus";
+            this.Cstatus.ReadOnly = true;
+            this.Cstatus.Width = 63;
+            // 
             // confirmationApplicationDetailsPanel
             // 
+            this.confirmationApplicationDetailsPanel.BackColor = System.Drawing.Color.White;
+            this.confirmationApplicationDetailsPanel.Controls.Add(this.confirmationApplication_edit_btn);
             this.confirmationApplicationDetailsPanel.Controls.Add(this.confirmationApplication_buttons_panel);
             this.confirmationApplicationDetailsPanel.Controls.Add(this.confirmationApplication_payment_groupbox);
             this.confirmationApplicationDetailsPanel.Controls.Add(this.confirmationApplication_status_label);
@@ -1924,7 +2089,8 @@
             this.confirmationApplicationDetailsPanel.Location = new System.Drawing.Point(504, 3);
             this.confirmationApplicationDetailsPanel.Name = "confirmationApplicationDetailsPanel";
             this.confirmationApplicationDetailsPanel.Size = new System.Drawing.Size(287, 435);
-            this.confirmationApplicationDetailsPanel.TabIndex = 70;
+            this.confirmationApplicationDetailsPanel.TabIndex = 3;
+            this.confirmationApplicationDetailsPanel.Tag = "Details";
             this.confirmationApplicationDetailsPanel.VerticalScrollbarBarColor = true;
             this.confirmationApplicationDetailsPanel.VerticalScrollbarHighlightOnWheel = false;
             this.confirmationApplicationDetailsPanel.VerticalScrollbarSize = 10;
@@ -1976,6 +2142,7 @@
             this.confirmationApplication_editReq_btn.TabIndex = 10;
             this.confirmationApplication_editReq_btn.Text = "Edit Requirements";
             this.confirmationApplication_editReq_btn.UseSelectable = true;
+            this.confirmationApplication_editReq_btn.EnabledChanged += new System.EventHandler(this.baptismApplication_editReq_button_EnabledChanged);
             this.confirmationApplication_editReq_btn.Click += new System.EventHandler(this.confirmationApplication_editReq_btn_Click);
             // 
             // confirmationApplication_payment_groupbox
@@ -2147,7 +2314,7 @@
             this.confirmationApplication_birthdate_dtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.confirmationApplication_birthdate_dtp.Enabled = false;
             this.confirmationApplication_birthdate_dtp.Location = new System.Drawing.Point(69, 104);
-            this.confirmationApplication_birthdate_dtp.MinimumSize = new System.Drawing.Size(4, 29);
+            this.confirmationApplication_birthdate_dtp.MinimumSize = new System.Drawing.Size(0, 29);
             this.confirmationApplication_birthdate_dtp.Name = "confirmationApplication_birthdate_dtp";
             this.confirmationApplication_birthdate_dtp.Size = new System.Drawing.Size(200, 29);
             this.confirmationApplication_birthdate_dtp.TabIndex = 8;
@@ -2249,153 +2416,6 @@
             this.label90.TabIndex = 3;
             this.label90.Text = "Name";
             // 
-            // confirmationApplication_dgv
-            // 
-            this.confirmationApplication_dgv.AllowUserToAddRows = false;
-            this.confirmationApplication_dgv.AllowUserToDeleteRows = false;
-            this.confirmationApplication_dgv.AllowUserToResizeRows = false;
-            this.confirmationApplication_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.confirmationApplication_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.confirmationApplication_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.confirmationApplication_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.confirmationApplication_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.confirmationApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.confirmationApplication_dgv.ColumnHeadersHeight = 25;
-            this.confirmationApplication_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.confirmationApplication_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CapplicationID,
-            this.CprofileID,
-            this.Crequirements,
-            this.CfirstName,
-            this.CmidName,
-            this.ClastName,
-            this.Csuffix,
-            this.Cgender,
-            this.Cbirthdate,
-            this.Cstatus});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.confirmationApplication_dgv.DefaultCellStyle = dataGridViewCellStyle9;
-            this.confirmationApplication_dgv.EnableHeadersVisualStyles = false;
-            this.confirmationApplication_dgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.confirmationApplication_dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.confirmationApplication_dgv.Location = new System.Drawing.Point(3, 56);
-            this.confirmationApplication_dgv.MultiSelect = false;
-            this.confirmationApplication_dgv.Name = "confirmationApplication_dgv";
-            this.confirmationApplication_dgv.ReadOnly = true;
-            this.confirmationApplication_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.confirmationApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.confirmationApplication_dgv.RowHeadersVisible = false;
-            this.confirmationApplication_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.confirmationApplication_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.confirmationApplication_dgv.Size = new System.Drawing.Size(493, 380);
-            this.confirmationApplication_dgv.TabIndex = 69;
-            this.confirmationApplication_dgv.TabStop = false;
-            this.confirmationApplication_dgv.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.confirmationApplication_dgv_CellEnter);
-            this.confirmationApplication_dgv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.confirmationApplication_dgv_CellFormatting);
-            this.confirmationApplication_dgv.VisibleChanged += new System.EventHandler(this.confirmationApplication_dgv_VisibleChanged);
-            // 
-            // CapplicationID
-            // 
-            this.CapplicationID.DataPropertyName = "applicationID";
-            this.CapplicationID.HeaderText = "applicationID";
-            this.CapplicationID.Name = "CapplicationID";
-            this.CapplicationID.ReadOnly = true;
-            this.CapplicationID.Visible = false;
-            // 
-            // CprofileID
-            // 
-            this.CprofileID.DataPropertyName = "profileID";
-            this.CprofileID.HeaderText = "profileID";
-            this.CprofileID.Name = "CprofileID";
-            this.CprofileID.ReadOnly = true;
-            this.CprofileID.Visible = false;
-            this.CprofileID.Width = 76;
-            // 
-            // Crequirements
-            // 
-            this.Crequirements.DataPropertyName = "requirements";
-            this.Crequirements.HeaderText = "requirements";
-            this.Crequirements.Name = "Crequirements";
-            this.Crequirements.ReadOnly = true;
-            this.Crequirements.Visible = false;
-            this.Crequirements.Width = 99;
-            // 
-            // CfirstName
-            // 
-            this.CfirstName.DataPropertyName = "firstName";
-            this.CfirstName.HeaderText = "First Name";
-            this.CfirstName.Name = "CfirstName";
-            this.CfirstName.ReadOnly = true;
-            this.CfirstName.Width = 85;
-            // 
-            // CmidName
-            // 
-            this.CmidName.DataPropertyName = "midName";
-            this.CmidName.HeaderText = "M.I.";
-            this.CmidName.Name = "CmidName";
-            this.CmidName.ReadOnly = true;
-            this.CmidName.Width = 50;
-            // 
-            // ClastName
-            // 
-            this.ClastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ClastName.DataPropertyName = "lastName";
-            this.ClastName.HeaderText = "Last Name";
-            this.ClastName.Name = "ClastName";
-            this.ClastName.ReadOnly = true;
-            // 
-            // Csuffix
-            // 
-            this.Csuffix.DataPropertyName = "suffix";
-            this.Csuffix.HeaderText = "Suffix";
-            this.Csuffix.Name = "Csuffix";
-            this.Csuffix.ReadOnly = true;
-            this.Csuffix.Width = 60;
-            // 
-            // Cgender
-            // 
-            this.Cgender.DataPropertyName = "gender";
-            this.Cgender.HeaderText = "Gender";
-            this.Cgender.Name = "Cgender";
-            this.Cgender.ReadOnly = true;
-            this.Cgender.Width = 69;
-            // 
-            // Cbirthdate
-            // 
-            this.Cbirthdate.DataPropertyName = "birthdate";
-            this.Cbirthdate.HeaderText = "Birth Date";
-            this.Cbirthdate.Name = "Cbirthdate";
-            this.Cbirthdate.ReadOnly = true;
-            this.Cbirthdate.Width = 83;
-            // 
-            // Cstatus
-            // 
-            this.Cstatus.DataPropertyName = "status";
-            this.Cstatus.HeaderText = "Status";
-            this.Cstatus.Name = "Cstatus";
-            this.Cstatus.ReadOnly = true;
-            this.Cstatus.Width = 63;
-            // 
             // metroTabPage3
             // 
             this.metroTabPage3.Controls.Add(this.panel18);
@@ -2421,7 +2441,7 @@
             this.panel18.Location = new System.Drawing.Point(3, 3);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(494, 49);
-            this.panel18.TabIndex = 74;
+            this.panel18.TabIndex = 0;
             // 
             // marriageApplication_filter
             // 
@@ -2466,6 +2486,8 @@
             // 
             // marriageApplicationDetailsPanel
             // 
+            this.marriageApplicationDetailsPanel.BackColor = System.Drawing.Color.White;
+            this.marriageApplicationDetailsPanel.Controls.Add(this.marriageApplication_edit_btn);
             this.marriageApplicationDetailsPanel.Controls.Add(this.dtpBBirthDate);
             this.marriageApplicationDetailsPanel.Controls.Add(this.label94);
             this.marriageApplicationDetailsPanel.Controls.Add(this.txtBSuffix);
@@ -2491,7 +2513,8 @@
             this.marriageApplicationDetailsPanel.Location = new System.Drawing.Point(504, 3);
             this.marriageApplicationDetailsPanel.Name = "marriageApplicationDetailsPanel";
             this.marriageApplicationDetailsPanel.Size = new System.Drawing.Size(290, 435);
-            this.marriageApplicationDetailsPanel.TabIndex = 73;
+            this.marriageApplicationDetailsPanel.TabIndex = 2;
+            this.marriageApplicationDetailsPanel.Tag = "Details";
             this.marriageApplicationDetailsPanel.VerticalScrollbarBarColor = true;
             this.marriageApplicationDetailsPanel.VerticalScrollbarHighlightOnWheel = false;
             this.marriageApplicationDetailsPanel.VerticalScrollbarSize = 10;
@@ -2609,6 +2632,7 @@
             this.marriageApplication_editReq_btn.TabIndex = 10;
             this.marriageApplication_editReq_btn.Text = "Edit Requirements";
             this.marriageApplication_editReq_btn.UseSelectable = true;
+            this.marriageApplication_editReq_btn.EnabledChanged += new System.EventHandler(this.baptismApplication_editReq_button_EnabledChanged);
             this.marriageApplication_editReq_btn.Click += new System.EventHandler(this.marriageApplication_editReq_btn_Click);
             // 
             // marriageApplication_payment_groupbox
@@ -2935,7 +2959,7 @@
             this.marriageApplication_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.marriageApplication_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.marriageApplication_dgv.Size = new System.Drawing.Size(493, 380);
-            this.marriageApplication_dgv.TabIndex = 72;
+            this.marriageApplication_dgv.TabIndex = 1;
             this.marriageApplication_dgv.TabStop = false;
             this.marriageApplication_dgv.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.marriageApplication_dgv_CellEnter);
             this.marriageApplication_dgv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.marriageApplication_dgv_CellFormatting);
@@ -5029,12 +5053,9 @@
             // 
             this.sacrament_panel.BackColor = System.Drawing.Color.White;
             this.sacrament_panel.Controls.Add(this.metroGrid1);
-            this.sacrament_panel.Controls.Add(this.bunifuMaterialTextbox1);
             this.sacrament_panel.Controls.Add(this.panel13);
             this.sacrament_panel.Controls.Add(this.panel12);
             this.sacrament_panel.Controls.Add(this.panel14);
-            this.sacrament_panel.Controls.Add(this.label8);
-            this.sacrament_panel.Controls.Add(this.comboBoxFilter);
             this.sacrament_panel.Controls.Add(this.panel11);
             this.sacrament_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sacrament_panel.Location = new System.Drawing.Point(156, 33);
@@ -5085,28 +5106,8 @@
             this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(493, 426);
+            this.metroGrid1.Size = new System.Drawing.Size(493, 461);
             this.metroGrid1.TabIndex = 9;
-            // 
-            // bunifuMaterialTextbox1
-            // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(337, 32);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(164, 33);
-            this.bunifuMaterialTextbox1.TabIndex = 8;
-            this.bunifuMaterialTextbox1.Text = "Search bar";
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // panel13
             // 
@@ -5118,7 +5119,7 @@
             this.panel13.Controls.Add(this.label13);
             this.panel13.Controls.Add(this.label12);
             this.panel13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel13.Location = new System.Drawing.Point(508, 74);
+            this.panel13.Location = new System.Drawing.Point(561, 74);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(237, 198);
             this.panel13.TabIndex = 5;
@@ -5195,7 +5196,7 @@
             this.panel12.Controls.Add(this.label64);
             this.panel12.Controls.Add(this.label82);
             this.panel12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel12.Location = new System.Drawing.Point(508, 278);
+            this.panel12.Location = new System.Drawing.Point(561, 278);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(237, 121);
             this.panel12.TabIndex = 5;
@@ -5241,7 +5242,7 @@
             this.panel14.Controls.Add(this.textBox6);
             this.panel14.Controls.Add(this.label85);
             this.panel14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel14.Location = new System.Drawing.Point(508, 405);
+            this.panel14.Location = new System.Drawing.Point(561, 405);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(237, 95);
             this.panel14.TabIndex = 5;
@@ -5264,91 +5265,40 @@
             this.label85.TabIndex = 1;
             this.label85.Text = "Remarks";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 42);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 21);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Filter";
-            // 
-            // comboBoxFilter
-            // 
-            this.comboBoxFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxFilter.FormattingEnabled = true;
-            this.comboBoxFilter.ItemHeight = 23;
-            this.comboBoxFilter.Items.AddRange(new object[] {
-            "None",
-            "Has Reference",
-            "No Reference"});
-            this.comboBoxFilter.Location = new System.Drawing.Point(53, 37);
-            this.comboBoxFilter.Name = "comboBoxFilter";
-            this.comboBoxFilter.Size = new System.Drawing.Size(121, 29);
-            this.comboBoxFilter.Style = MetroFramework.MetroColorStyle.Green;
-            this.comboBoxFilter.TabIndex = 2;
-            this.comboBoxFilter.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.comboBoxFilter.UseSelectable = true;
-            // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.libraryMarriageButton);
-            this.panel11.Controls.Add(this.libraryConfirmationButton);
-            this.panel11.Controls.Add(this.libraryBaptismButton);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(802, 28);
             this.panel11.TabIndex = 1;
             // 
-            // libraryMarriageButton
+            // baptismApplication_edit_btn
             // 
-            this.libraryMarriageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.libraryMarriageButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.libraryMarriageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.libraryMarriageButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.libraryMarriageButton.ForeColor = System.Drawing.Color.White;
-            this.libraryMarriageButton.Location = new System.Drawing.Point(202, 0);
-            this.libraryMarriageButton.Name = "libraryMarriageButton";
-            this.libraryMarriageButton.Size = new System.Drawing.Size(88, 28);
-            this.libraryMarriageButton.TabIndex = 0;
-            this.libraryMarriageButton.Text = "Marriage";
-            this.libraryMarriageButton.UseVisualStyleBackColor = false;
+            this.baptismApplication_edit_btn.Location = new System.Drawing.Point(209, 4);
+            this.baptismApplication_edit_btn.Name = "baptismApplication_edit_btn";
+            this.baptismApplication_edit_btn.Size = new System.Drawing.Size(75, 23);
+            this.baptismApplication_edit_btn.TabIndex = 19;
+            this.baptismApplication_edit_btn.Text = "Edit";
+            this.baptismApplication_edit_btn.UseSelectable = true;
             // 
-            // libraryConfirmationButton
+            // confirmationApplication_edit_btn
             // 
-            this.libraryConfirmationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.libraryConfirmationButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.libraryConfirmationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.libraryConfirmationButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.libraryConfirmationButton.ForeColor = System.Drawing.Color.White;
-            this.libraryConfirmationButton.Location = new System.Drawing.Point(86, 0);
-            this.libraryConfirmationButton.Name = "libraryConfirmationButton";
-            this.libraryConfirmationButton.Size = new System.Drawing.Size(116, 28);
-            this.libraryConfirmationButton.TabIndex = 0;
-            this.libraryConfirmationButton.Text = "Confirmation";
-            this.libraryConfirmationButton.UseVisualStyleBackColor = false;
+            this.confirmationApplication_edit_btn.Location = new System.Drawing.Point(209, 3);
+            this.confirmationApplication_edit_btn.Name = "confirmationApplication_edit_btn";
+            this.confirmationApplication_edit_btn.Size = new System.Drawing.Size(75, 23);
+            this.confirmationApplication_edit_btn.TabIndex = 19;
+            this.confirmationApplication_edit_btn.Text = "Edit";
+            this.confirmationApplication_edit_btn.UseSelectable = true;
             // 
-            // libraryBaptismButton
+            // marriageApplication_edit_btn
             // 
-            this.libraryBaptismButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(106)))), ((int)(((byte)(61)))));
-            this.libraryBaptismButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.libraryBaptismButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.libraryBaptismButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.libraryBaptismButton.ForeColor = System.Drawing.Color.White;
-            this.libraryBaptismButton.Location = new System.Drawing.Point(0, 0);
-            this.libraryBaptismButton.Name = "libraryBaptismButton";
-            this.libraryBaptismButton.Size = new System.Drawing.Size(86, 28);
-            this.libraryBaptismButton.TabIndex = 0;
-            this.libraryBaptismButton.Text = "Baptism";
-            this.libraryBaptismButton.UseVisualStyleBackColor = false;
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = null;
-            this.bunifuDragControl1.Vertical = true;
+            this.marriageApplication_edit_btn.Location = new System.Drawing.Point(212, 2);
+            this.marriageApplication_edit_btn.Name = "marriageApplication_edit_btn";
+            this.marriageApplication_edit_btn.Size = new System.Drawing.Size(75, 23);
+            this.marriageApplication_edit_btn.TabIndex = 26;
+            this.marriageApplication_edit_btn.Text = "Edit";
+            this.marriageApplication_edit_btn.UseSelectable = true;
             // 
             // SAD
             // 
@@ -5357,9 +5307,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(958, 575);
             this.ControlBox = false;
+            this.Controls.Add(this.sacrament_panel);
             this.Controls.Add(this.application_panel);
             this.Controls.Add(this.bloodletting_panel);
-            this.Controls.Add(this.sacrament_panel);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.home_panel);
             this.Controls.Add(this.CRB_panel);
@@ -5385,6 +5335,7 @@
             this.metroTabPage1.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.baptismApplication_dgv)).EndInit();
             this.baptismApplicationDetailsPanel.ResumeLayout(false);
             this.baptismApplicationDetailsPanel.PerformLayout();
             this.baptismApplication_buttons_panel.ResumeLayout(false);
@@ -5397,10 +5348,10 @@
             this.baptismApplication_requirements_tablePanel.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.baptismApplication_dgv)).EndInit();
             this.metroTabPage2.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.confirmationApplication_dgv)).EndInit();
             this.confirmationApplicationDetailsPanel.ResumeLayout(false);
             this.confirmationApplicationDetailsPanel.PerformLayout();
             this.confirmationApplication_buttons_panel.ResumeLayout(false);
@@ -5413,7 +5364,6 @@
             this.confirmationApplication_requirements_tablePanel.PerformLayout();
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.confirmationApplication_dgv)).EndInit();
             this.metroTabPage3.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
@@ -5488,7 +5438,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profiles_dataGridView_baptism)).EndInit();
             this.sacrament_panel.ResumeLayout(false);
-            this.sacrament_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
@@ -5496,7 +5445,7 @@
             this.panel12.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.applicationBS)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -5738,14 +5687,8 @@
         private System.Windows.Forms.ToolTip lastname_tooltip_profiles;
         private System.Windows.Forms.ToolTip middlename_tooltip_profiles;
         private System.Windows.Forms.Panel sacrament_panel;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button libraryBaptismButton;
-        private System.Windows.Forms.Button libraryMarriageButton;
-        private System.Windows.Forms.Button libraryConfirmationButton;
-        private MetroFramework.Controls.MetroComboBox comboBoxFilter;
         private System.Windows.Forms.Panel panel14;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label17;
@@ -5902,9 +5845,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Bgender;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bbirthdate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bstatus;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.FlowLayoutPanel baptismApplication_approveRevoke_panel;
         private System.Windows.Forms.FlowLayoutPanel confirmationApplication_approveRevoke_panel;
         private System.Windows.Forms.FlowLayoutPanel marriageApplication_approveRevoke_panel;
+        private System.Windows.Forms.BindingSource applicationBS;
+        private MetroFramework.Controls.MetroButton baptismApplication_edit_btn;
+        private MetroFramework.Controls.MetroButton confirmationApplication_edit_btn;
+        private MetroFramework.Controls.MetroButton marriageApplication_edit_btn;
     }
 }

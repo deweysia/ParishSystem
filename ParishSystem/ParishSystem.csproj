@@ -49,6 +49,18 @@
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\Documents\Visual Studio 2015\MySql.Data.dll</HintPath>
@@ -124,6 +136,7 @@
     <Compile Include="HiddenNumericUpDown.Designer.cs">
       <DependentUpon>HiddenNumericUpDown.cs</DependentUpon>
     </Compile>
+    <Compile Include="ParameterizedSQL.cs" />
     <Compile Include="SacramentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -447,6 +460,7 @@
     <Content Include="Resources\btn_closeImage.png" />
     <Content Include="Resources\btn_maxImage.png" />
     <Content Include="Resources\btn_minImage.png" />
+    <Content Include="Tools\SQL_Writer.jar" />
     <None Include="Resources\messageBox_cancel.png" />
     <None Include="Resources\messageBox_success.png" />
     <None Include="Resources\messageBox_warning.png" />

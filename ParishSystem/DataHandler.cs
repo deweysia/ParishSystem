@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
 using System.Windows.Forms;
-
+using System.Text.RegularExpressions;
 namespace ParishSystem
 {
     //I changed something
@@ -60,6 +60,70 @@ namespace ParishSystem
             return dt;
         }
 
+        private bool ExecuteNonQuery(string q, params object[] values)
+        {
+            string[] parameters = getParameters(q);
+
+            if (parameters.Length != values.Length)
+                throw new Exception("Number of parameters does not match number of values");
+
+            var ParameterValues = parameters.Zip(values, (p, v) => new { Parameter = p, Value = v });
+
+            conn.Open();
+            com = new MySqlCommand(q, conn);
+            foreach (var pv in ParameterValues)
+            {
+                com.Parameters.AddWithValue(pv.Parameter, pv.Value);
+                Console.WriteLine(pv.Parameter + " " + pv.Value);
+            }
+
+            Console.WriteLine(q);
+
+            int rowsAffected = com.ExecuteNonQuery();
+            conn.Close();
+            return rowsAffected > 0;
+        }
+
+        private DataTable ExecuteQuery(string q, params object[] values)
+        {
+            string[] parameters = getParameters(q);
+
+            if (parameters.Length != values.Length)
+                throw new Exception("Number of parameters does not match number of values");
+
+            var ParameterValues = parameters.Zip(values, (p, v) => new { Parameter = p, Value = v });
+
+            conn.Open();
+            com = new MySqlCommand(q, conn);
+            foreach (var pv in ParameterValues)
+            {
+                com.Parameters.AddWithValue(pv.Parameter, pv.Value);
+                Console.WriteLine(pv.Parameter + " " + pv.Value);
+            }
+
+            Console.WriteLine(q);
+
+            MySqlDataAdapter adp = new MySqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            adp.Fill(dt);
+            conn.Close();
+            return dt;
+        }
+
+        private string[] getParameters(string query)
+        {
+            List<string> l = new List<string>();
+            foreach (Match match in Regex.Matches(query, @"(?<!\w)@\w+"))
+            {
+                Console.WriteLine(match.Value);
+                l.Add(match.Value);
+            }
+
+            return l.ToArray();
+        }
+
+
+
         public string[,] toArray(DataTable dt)
         {
             string[,] arr = new string[dt.Rows.Count, dt.Columns.Count];
@@ -84,6 +148,7 @@ namespace ParishSystem
 
         public int getLatestID(string tableName, string primaryKeyName)
         {
+            MySqlCommand msq = new MySqlCommand();
             string q = "SELECT MAX(" + primaryKeyName + ") FROM " + tableName;
 
             DataTable dt = runQuery(q);
@@ -835,17 +900,17 @@ namespace ParishSystem
         }
 
 
-        public DataTable getSacramentIncomePaid(int sacramentIncomeID)
-        {
-            throw new Exception();
-            return new DataTable();
-        }
+        //public DataTable getSacramentIncomePaid(int sacramentIncomeID)
+        //{
+        //    throw new Exception();
+        //    return new DataTable();
+        //}
 
-        public DataTable getSacramentIncomesUnpaid()
-        {
-            throw new Exception();
-            return new DataTable();
-        }
+        //public DataTable getSacramentIncomesUnpaid()
+        //{
+        //    throw new Exception();
+        //    return new DataTable();
+        //}
 
         public bool addPayment(int sacramentIncomeID, double paymentAmount, int ORnum, string remarks, DateTime paymentDateTime)
         {
@@ -1161,7 +1226,12 @@ namespace ParishSystem
                                          =============================================================
         */
 
-
+        /// <summary>
+        /// Adds Applicant and Application for the Applicant
+        /// </summary>
+        /// <param name="profileID"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
         public bool addNewApplicant(int profileID, SacramentType type)
         {
             addApplication(type);
@@ -2462,11 +2532,40 @@ namespace ParishSystem
             return dt;
         }
 
+        /// <summary>
+        /// Gets Application of a Profile with status Approved, Pending, or Final
+        /// </summary>
+        /// <param name="profileID"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public DataTable getActiveApplicationOf(int profileID, SacramentType type)
+        {
+            string q = "SELECT * FROM GeneralProfile NATURAL JOIN Applicant NATURAl JOIN Application "
+                +"WHERE profileID = '" + profileID 
+                + "' AND status != '" + (int) ApplicationStatus.Revoked 
+                + "' AND sacramentType = '" + (int) type + "'";
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        /// <summary>
+        /// Checks if a Profile has a certain Application with status Approved, Pending, or Final
+        /// </summary>
+        /// <param name="profileID"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public bool hasActiveApplication(int profileID, SacramentType type)
+        {
+            DataTable dt = getActiveApplicationOf(profileID, type);
+
+            return dt.Rows.Count > 0;
+        }
 
         public bool hasBaptismApplication(int profileID)
         {
             string q = "select * from generalprofile natural join applicant natural join application where (status != " + (int)ApplicationStatus.Revoked + ") AND sacramentType = 1 and generalprofile.profileID =" + profileID;
-
+            
             DataTable dt = runQuery(q);
 
             return dt.Rows.Count > 0;
