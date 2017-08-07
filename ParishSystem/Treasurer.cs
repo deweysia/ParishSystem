@@ -285,23 +285,23 @@ namespace ParishSystem
         }
         private void refreshSacramentPaymentDataGrid()
         {
-            applicant_datagridview_sacramentpay.DataSource = dh.getPendingApplications();
-            foreach (DataGridViewColumn dc in applicant_datagridview_sacramentpay.Columns)
+            DataTable dt = dh.getPendingApplications();
+            profile_combobox_sacramentdownpayment.Items.Clear();
+            foreach (DataRow dr in dt.Rows)
             {
-                dc.Visible = false;
+                profile_combobox_sacramentdownpayment.Items.Add(new ComboboxContent(int.Parse(dr["profileID"].ToString()), dr["name"].ToString()));
             }
-            applicant_datagridview_sacramentpay.Columns["name"].Visible = true;
         }
         
         private void applicant_datagridview_sacramentpay_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
            
-            firstname_label_sacramentpayment.Text = applicant_datagridview_sacramentpay.SelectedRows[0].Cells["firstname"].Value.ToString();
-            middleinitiall_label_sacramentpayment.Text = applicant_datagridview_sacramentpay.SelectedRows[0].Cells["midname"].Value.ToString();
-            lastname_label_sacramentpayment.Text= applicant_datagridview_sacramentpay.SelectedRows[0].Cells["lastname"].Value.ToString();
-            suffix_label_sacramentpayment.Text= applicant_datagridview_sacramentpay.SelectedRows[0].Cells["suffix"].Value.ToString();
-            address_textarea_sacramentpayment.Text= applicant_datagridview_sacramentpay.SelectedRows[0].Cells["address"].Value.ToString();
-            contactnumber_textbox_sacramentpayment.Text= applicant_datagridview_sacramentpay.SelectedRows[0].Cells["contactnumber"].Value.ToString();
+           // firstname_label_sacramentpayment.Text = applicant_datagridview_sacramentpay.SelectedRows[0].Cells["firstname"].Value.ToString();
+           // middleinitiall_label_sacramentpayment.Text = applicant_datagridview_sacramentpay.SelectedRows[0].Cells["midname"].Value.ToString();
+           // lastname_label_sacramentpayment.Text= applicant_datagridview_sacramentpay.SelectedRows[0].Cells["lastname"].Value.ToString();
+           // suffix_label_sacramentpayment.Text= applicant_datagridview_sacramentpay.SelectedRows[0].Cells["suffix"].Value.ToString();
+            //address_textarea_sacramentpayment.Text= applicant_datagridview_sacramentpay.SelectedRows[0].Cells["address"].Value.ToString();
+            //contactnumber_textbox_sacramentpayment.Text= applicant_datagridview_sacramentpay.SelectedRows[0].Cells["contactnumber"].Value.ToString();
 
         }
 
