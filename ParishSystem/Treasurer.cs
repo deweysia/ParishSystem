@@ -329,13 +329,13 @@ namespace ParishSystem
         }
         public void refreshPayments()
         {
+            
             try
             {
                 ornumber_label_sacramentpayment.Text = dh.getnextORof((int)BookType.Parish).ToString();
                 DataTable dt = dh.getSacramentIncome(int.Parse(((ComboboxContent)profileID_combobox_sacrament.SelectedItem).content4));
                 totalprice_label_sacramentpayment.Text = dt.Rows[0]["price"].ToString();
-                remarks_textbox_fullpay.Text = dt.Rows[0]["remarks"].ToString();
-
+                remarks_textbox_sacramentPayment.Text = dt.Rows[0]["remarks"].ToString();
                 DataTable dt2 = dh.getPayments(int.Parse(((ComboboxContent)profileID_combobox_sacrament.SelectedItem).content4));
                 paid_datagridview_sacramentpayment.DataSource = dt2;
                 foreach (DataGridViewColumn dgvr in paid_datagridview_sacramentpayment.Columns)
@@ -352,26 +352,35 @@ namespace ParishSystem
                 paid_datagridview_sacramentpayment.Columns["primaryincomedatetime"].HeaderText = "Date and Time Paid";
                 paid_datagridview_sacramentpayment.Columns["amount"].HeaderText = "Amount";
 
+                cover_panel.Visible = false;
                 refreshTotalPaymentSacrament();
+                add_button_sacramentpayment.Enabled = true;
+                paid_nud_sacramentpayment.Enabled = true;
+
             }
             catch
             {
-
+                ornumber_label_sacramentpayment.Text = "";
+                totalprice_label_sacramentpayment.Text="";
+                remarks_textbox_sacramentPayment.Text = "";
+                paid_datagridview_sacramentpayment.DataSource = null;
+                totalpaid_label_sacramentpayment.Text ="";
+                balance_label_sacramentpayment.Text = "";
+                add_button_sacramentpayment.Enabled = false;
+                paid_nud_sacramentpayment.Enabled = false;
             }
             }
            
         private void refreshTotalPaymentSacrament()
         {
-            //fix this...total does not refresh...balance etc ndi naga pasok sa for each 
             decimal max = 0;
             foreach (DataGridViewRow dr in paid_datagridview_sacramentpayment.Rows)
             {
-                MessageBox.Show((dr.Cells["amount"].Value.ToString()));
                 max += (decimal.Parse(dr.Cells["amount"].Value.ToString()));
             }
-
             totalpaid_label_sacramentpayment.Text = max.ToString();
             balance_label_sacramentpayment.Text = (max - int.Parse(totalprice_label_sacramentpayment.Text)).ToString();
+            //balance_label_sacramentpayment.ForeColor = (int.Parse(balance_label_sacramentpayment.Text) == 0 ? Color.Black : Color.IndianRed);
         }
 
         private void address_textarea_sacramentpayment_TextChanged(object sender, EventArgs e)

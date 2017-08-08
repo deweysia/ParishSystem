@@ -96,6 +96,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.sacramentpay = new System.Windows.Forms.TabPage();
             this.profile_panel_sacramentpay = new System.Windows.Forms.Panel();
+            this.cover_panel = new System.Windows.Forms.Panel();
             this.editTotalCost_button = new System.Windows.Forms.Button();
             this.label31 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -114,7 +115,7 @@
             this.profileID_combobox_sacrament = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.remarks_textbox_sacramentPayment = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.address_textarea_sacramentpayment = new System.Windows.Forms.TextBox();
@@ -894,6 +895,7 @@
             // profile_panel_sacramentpay
             // 
             this.profile_panel_sacramentpay.BackColor = System.Drawing.Color.White;
+            this.profile_panel_sacramentpay.Controls.Add(this.cover_panel);
             this.profile_panel_sacramentpay.Controls.Add(this.editTotalCost_button);
             this.profile_panel_sacramentpay.Controls.Add(this.label31);
             this.profile_panel_sacramentpay.Controls.Add(this.label29);
@@ -914,6 +916,13 @@
             this.profile_panel_sacramentpay.Name = "profile_panel_sacramentpay";
             this.profile_panel_sacramentpay.Size = new System.Drawing.Size(468, 408);
             this.profile_panel_sacramentpay.TabIndex = 2;
+            // 
+            // cover_panel
+            // 
+            this.cover_panel.Location = new System.Drawing.Point(3, 3);
+            this.cover_panel.Name = "cover_panel";
+            this.cover_panel.Size = new System.Drawing.Size(462, 402);
+            this.cover_panel.TabIndex = 72;
             // 
             // editTotalCost_button
             // 
@@ -1102,7 +1111,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.panel5.Controls.Add(this.label25);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.remarks_textbox_sacramentPayment);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(0, 236);
             this.panel5.Name = "panel5";
@@ -1120,17 +1129,17 @@
             this.label25.TabIndex = 72;
             this.label25.Text = "Remarks";
             // 
-            // textBox1
+            // remarks_textbox_sacramentPayment
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(13, 43);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 108);
-            this.textBox1.TabIndex = 71;
-            this.textBox1.Text = "This person hasnt paid poor af lolz";
+            this.remarks_textbox_sacramentPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.remarks_textbox_sacramentPayment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.remarks_textbox_sacramentPayment.ForeColor = System.Drawing.Color.White;
+            this.remarks_textbox_sacramentPayment.Location = new System.Drawing.Point(13, 43);
+            this.remarks_textbox_sacramentPayment.Multiline = true;
+            this.remarks_textbox_sacramentPayment.Name = "remarks_textbox_sacramentPayment";
+            this.remarks_textbox_sacramentPayment.Size = new System.Drawing.Size(262, 108);
+            this.remarks_textbox_sacramentPayment.TabIndex = 71;
+            this.remarks_textbox_sacramentPayment.Text = "This person hasnt paid poor af lolz";
             // 
             // label20
             // 
@@ -1554,7 +1563,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox profileID_combobox_sacrament;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox remarks_textbox_sacramentPayment;
         private System.Windows.Forms.Button editTotalCost_button;
+        private System.Windows.Forms.Panel cover_panel;
     }
 }
