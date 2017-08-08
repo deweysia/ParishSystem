@@ -652,34 +652,11 @@ namespace ParishSystem
         /// <param name="remarks"></param>
         /// <returns></returns>
 
-        public DataTable getSacramentIncome(int sacramentIncomeID)
+
+        public void addPayment(int sacramentIncomeID, int primaryIncomeID,decimal amount)
         {
-            string q = "SELECT * FROM SacramentIncome WHERE = " + sacramentIncomeID;
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
-        public DataTable getSacramentIncomePaid(int sacramentIncomeID)
-        {
-            throw new Exception();
-            return new DataTable();
-        }
-
-        public DataTable getSacramentIncomesUnpaid()
-        {
-            throw new Exception();
-            return new DataTable();
-        }
-
-        public bool addPayment(int sacramentIncomeID, double paymentAmount, int ORnum, string remarks, DateTime paymentDateTime)
-        {
-            string q = "INSERT INTO Payment(sacramentIncomeID, paymentAmount, ORnum, remarks, paymentDateTime) VALUES ('"
-                + sacramentIncomeID + "', '" + paymentAmount + "', '" + ORnum + "', '" + remarks + "', NOW())";
-            bool success = runNonQuery(q);
-
-            return success;
+            string q = $"INSERT INTO `sad2`.`payment` (`sacramentIncomeID`, `primaryIncomeID`, `amount`) VALUES ({sacramentIncomeID}, {primaryIncomeID}, {amount})";
+            runNonQuery(q);
         }
 
         public double getTotalPaymentOfSacramentIncome(int sacramentIncomeID)
@@ -2431,23 +2408,10 @@ namespace ParishSystem
             string q = $"INSERT INTO `sad2`.`item` (`itemTypeID`, `primaryIncomeID`, `price`, `quantity`) VALUES ('{itemTypeID}', '{primaryIncomeID}', '{price}', '{quantity}')";
             runNonQuery(q);
         }
-        public DataTable getApplicationsWhereNameLike(string name, SacramentType sacrament, ApplicationStatus applicationStatus)
-        {
-           
-            string q = "SELECT generalprofile.profileid, concat(lastname,\" \",coalesce(suffix,\" \"),\",\",firstName,\" \",midName,\".\") as name,  gender, birthdate FROM GeneralProfile"
-                + " JOIN Applicant ON  GeneralProfile.profileID = Applicant.profileID "
-                + " JOIN Application ON Application.applicationID = Applicant.applicationID"
-                + " WHERE Application.sacramentType = " + (int)sacrament
-                + " AND Application.status = " + (int)applicationStatus
-                + " AND (firstname like '%" + name + "%' or lastname like '%" + name + "%')";
 
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
         public DataTable getPendingApplications()
         {
-            string q = @"SELECT generalprofile.profileid,address,contactnumber,firstname,midname,lastname,suffix,application.applicationID,concat(lastname,"" "",coalesce(suffix,"" ""),"","",firstName,"" "",midName,""."") as name,  gender, birthdate
+            string q = @"SELECT generalprofile.profileid,address,contactnumber,firstname,midname,lastname,suffix,application.applicationID,concat(lastname,"" "",coalesce(suffix,"" ""),"","",firstName,"" "",midName,""."") as name,  sacramentType
                         FROM GeneralProfile JOIN Applicant ON  GeneralProfile.profileID = Applicant.profileID  JOIN Application ON Application.applicationID = Applicant.applicationID WHERE  Application.status = 1";
 
             DataTable dt = runQuery(q);
@@ -2462,15 +2426,27 @@ namespace ParishSystem
 
         }
         public DataTable test(string a)
-        {        
-            string q = $"SELECT generalprofile.profileid, concat(lastname,\"\",coalesce(suffix,\" \"),\",\",firstName,\"\",midName,\".\") as name from generalprofile where firstname like \"%"+a+ "%\" or lastname like \"%" + a + "%\"";
+        {
+            string q = $"SELECT generalprofile.profileid, concat(lastname,\"\",coalesce(suffix,\" \"),\",\",firstName,\"\",midName,\".\") as name from generalprofile where firstname like \"%" + a + "%\" or lastname like \"%" + a + "%\"";
             return runQuery(q);
         }
-        public bool hasSacramentIncome(int applicationID,SacramentType type)
+        public bool hasSacramentIncome(int applicationID, int type)
         {
-            string q = $"select* from application inner join sacramentincome on sacramentincome.applicationID = application.applicationID where application.applicationid = {applicationID} and application.status={ApplicationStatus.Pending}";
+            string q = $"select* from application inner join sacramentincome on sacramentincome.applicationID = application.applicationID where sacramentType = {type} and application.applicationid = {applicationID} and application.status={(int)ApplicationStatus.Pending}";
             return (runQuery(q).Rows.Count > 0 ? true : false);
         }
-    }
+        public DataTable getPayments(int sacramentIncome)
+        {
+            string q = $"select* from primaryincome inner join payment on payment.primaryIncomeID = primaryincome.primaryIncomeID where sacramentIncomeID = {sacramentIncome};";
+            return runQuery(q);
+        }
+        public DataTable getSacramentIncome(int applicationID)
+        {
+            string q = $"select * from sacramentIncome where applicationID ={applicationID};";
+            return runQuery(q);
+        }
+       
+       
+    } 
 
 }

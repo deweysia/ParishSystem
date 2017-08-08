@@ -96,32 +96,29 @@
             this.label10 = new System.Windows.Forms.Label();
             this.sacramentpay = new System.Windows.Forms.TabPage();
             this.profile_panel_sacramentpay = new System.Windows.Forms.Panel();
+            this.editTotalCost_button = new System.Windows.Forms.Button();
             this.label31 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.ornumber_label_sacramentpayment = new System.Windows.Forms.Label();
-            this.paid_nud_sacramentpayment = new System.Windows.Forms.NumericUpDown();
-            this.add_button_sacramentpayment = new System.Windows.Forms.Button();
-            this.paid_datagridview_sacramentpayment = new System.Windows.Forms.DataGridView();
-            this.label30 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.profile_combobox_sacramentdownpayment = new System.Windows.Forms.ComboBox();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.totalprice_label_sacramentpayment = new System.Windows.Forms.Label();
             this.totalpaid_label_sacramentpayment = new System.Windows.Forms.Label();
+            this.ornumber_label_sacramentpayment = new System.Windows.Forms.Label();
             this.balance_label_sacramentpayment = new System.Windows.Forms.Label();
+            this.paid_nud_sacramentpayment = new System.Windows.Forms.NumericUpDown();
             this.label22 = new System.Windows.Forms.Label();
+            this.add_button_sacramentpayment = new System.Windows.Forms.Button();
             this.totalprice_nud_sacramentpayment = new System.Windows.Forms.NumericUpDown();
+            this.paid_datagridview_sacramentpayment = new System.Windows.Forms.DataGridView();
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.profileID_combobox_sacrament = new System.Windows.Forms.ComboBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.address_textarea_sacramentpayment = new System.Windows.Forms.TextBox();
             this.contactnumber_textbox_sacramentpayment = new System.Windows.Forms.MaskedTextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.IncomeCashReleaseType_TabControl = new ParishSystem.HiddenTabControl();
             this.IncomeTypeTab = new System.Windows.Forms.TabPage();
             this.enable_button_itemType = new System.Windows.Forms.Button();
@@ -149,10 +146,10 @@
             this.sacramentpay.SuspendLayout();
             this.profile_panel_sacramentpay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.paid_nud_sacramentpayment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.totalprice_nud_sacramentpayment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paid_datagridview_sacramentpayment)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.totalprice_nud_sacramentpayment)).BeginInit();
             this.IncomeCashReleaseType_TabControl.SuspendLayout();
             this.IncomeTypeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemType_dgv)).BeginInit();
@@ -897,13 +894,20 @@
             // profile_panel_sacramentpay
             // 
             this.profile_panel_sacramentpay.BackColor = System.Drawing.Color.White;
+            this.profile_panel_sacramentpay.Controls.Add(this.editTotalCost_button);
             this.profile_panel_sacramentpay.Controls.Add(this.label31);
             this.profile_panel_sacramentpay.Controls.Add(this.label29);
+            this.profile_panel_sacramentpay.Controls.Add(this.totalprice_label_sacramentpayment);
+            this.profile_panel_sacramentpay.Controls.Add(this.totalpaid_label_sacramentpayment);
             this.profile_panel_sacramentpay.Controls.Add(this.ornumber_label_sacramentpayment);
+            this.profile_panel_sacramentpay.Controls.Add(this.balance_label_sacramentpayment);
             this.profile_panel_sacramentpay.Controls.Add(this.paid_nud_sacramentpayment);
+            this.profile_panel_sacramentpay.Controls.Add(this.label22);
             this.profile_panel_sacramentpay.Controls.Add(this.add_button_sacramentpayment);
+            this.profile_panel_sacramentpay.Controls.Add(this.totalprice_nud_sacramentpayment);
             this.profile_panel_sacramentpay.Controls.Add(this.paid_datagridview_sacramentpayment);
-            this.profile_panel_sacramentpay.Controls.Add(this.label30);
+            this.profile_panel_sacramentpay.Controls.Add(this.label17);
+            this.profile_panel_sacramentpay.Controls.Add(this.label19);
             this.profile_panel_sacramentpay.Dock = System.Windows.Forms.DockStyle.Right;
             this.profile_panel_sacramentpay.Location = new System.Drawing.Point(299, 0);
             this.profile_panel_sacramentpay.Margin = new System.Windows.Forms.Padding(0);
@@ -911,123 +915,42 @@
             this.profile_panel_sacramentpay.Size = new System.Drawing.Size(468, 408);
             this.profile_panel_sacramentpay.TabIndex = 2;
             // 
+            // editTotalCost_button
+            // 
+            this.editTotalCost_button.Location = new System.Drawing.Point(58, 364);
+            this.editTotalCost_button.Name = "editTotalCost_button";
+            this.editTotalCost_button.Size = new System.Drawing.Size(48, 36);
+            this.editTotalCost_button.TabIndex = 71;
+            this.editTotalCost_button.Text = "E";
+            this.editTotalCost_button.UseVisualStyleBackColor = true;
+            this.editTotalCost_button.Click += new System.EventHandler(this.editTotalCost_button_Click);
+            // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(81, 131);
+            this.label31.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label31.Location = new System.Drawing.Point(41, 218);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(39, 21);
+            this.label31.Size = new System.Drawing.Size(125, 19);
             this.label31.TabIndex = 7;
-            this.label31.Text = "Paid";
+            this.label31.Text = "Amount to be paid";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(83, 70);
+            this.label29.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.label29.Location = new System.Drawing.Point(36, 19);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(94, 21);
+            this.label29.Size = new System.Drawing.Size(70, 15);
             this.label29.TabIndex = 5;
             this.label29.Text = "OR Number";
-            // 
-            // ornumber_label_sacramentpayment
-            // 
-            this.ornumber_label_sacramentpayment.AutoSize = true;
-            this.ornumber_label_sacramentpayment.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ornumber_label_sacramentpayment.Location = new System.Drawing.Point(206, 51);
-            this.ornumber_label_sacramentpayment.Name = "ornumber_label_sacramentpayment";
-            this.ornumber_label_sacramentpayment.Size = new System.Drawing.Size(119, 37);
-            this.ornumber_label_sacramentpayment.TabIndex = 4;
-            this.ornumber_label_sacramentpayment.Text = "1328904";
-            // 
-            // paid_nud_sacramentpayment
-            // 
-            this.paid_nud_sacramentpayment.DecimalPlaces = 2;
-            this.paid_nud_sacramentpayment.Location = new System.Drawing.Point(135, 127);
-            this.paid_nud_sacramentpayment.Name = "paid_nud_sacramentpayment";
-            this.paid_nud_sacramentpayment.Size = new System.Drawing.Size(188, 29);
-            this.paid_nud_sacramentpayment.TabIndex = 3;
-            // 
-            // add_button_sacramentpayment
-            // 
-            this.add_button_sacramentpayment.Location = new System.Drawing.Point(346, 121);
-            this.add_button_sacramentpayment.Name = "add_button_sacramentpayment";
-            this.add_button_sacramentpayment.Size = new System.Drawing.Size(44, 40);
-            this.add_button_sacramentpayment.TabIndex = 1;
-            this.add_button_sacramentpayment.Text = "+";
-            this.add_button_sacramentpayment.UseVisualStyleBackColor = true;
-            this.add_button_sacramentpayment.Click += new System.EventHandler(this.add_button_sacramentpayment_Click);
-            // 
-            // paid_datagridview_sacramentpayment
-            // 
-            this.paid_datagridview_sacramentpayment.BackgroundColor = System.Drawing.Color.White;
-            this.paid_datagridview_sacramentpayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.paid_datagridview_sacramentpayment.Location = new System.Drawing.Point(50, 186);
-            this.paid_datagridview_sacramentpayment.Name = "paid_datagridview_sacramentpayment";
-            this.paid_datagridview_sacramentpayment.Size = new System.Drawing.Size(365, 171);
-            this.paid_datagridview_sacramentpayment.TabIndex = 0;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(46, 74);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(369, 20);
-            this.label30.TabIndex = 6;
-            this.label30.Text = "________________________________________";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.panel6.Controls.Add(this.profile_combobox_sacramentdownpayment);
-            this.panel6.Controls.Add(this.panel5);
-            this.panel6.Controls.Add(this.label20);
-            this.panel6.Controls.Add(this.label15);
-            this.panel6.Controls.Add(this.address_textarea_sacramentpayment);
-            this.panel6.Controls.Add(this.contactnumber_textbox_sacramentpayment);
-            this.panel6.Controls.Add(this.label16);
-            this.panel6.Controls.Add(this.label24);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(306, 408);
-            this.panel6.TabIndex = 0;
-            // 
-            // profile_combobox_sacramentdownpayment
-            // 
-            this.profile_combobox_sacramentdownpayment.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.profile_combobox_sacramentdownpayment.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.profile_combobox_sacramentdownpayment.FormattingEnabled = true;
-            this.profile_combobox_sacramentdownpayment.Location = new System.Drawing.Point(9, 35);
-            this.profile_combobox_sacramentdownpayment.Name = "profile_combobox_sacramentdownpayment";
-            this.profile_combobox_sacramentdownpayment.Size = new System.Drawing.Size(284, 29);
-            this.profile_combobox_sacramentdownpayment.TabIndex = 13;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.panel5.Controls.Add(this.totalprice_label_sacramentpayment);
-            this.panel5.Controls.Add(this.totalpaid_label_sacramentpayment);
-            this.panel5.Controls.Add(this.balance_label_sacramentpayment);
-            this.panel5.Controls.Add(this.label22);
-            this.panel5.Controls.Add(this.totalprice_nud_sacramentpayment);
-            this.panel5.Controls.Add(this.label17);
-            this.panel5.Controls.Add(this.label19);
-            this.panel5.Controls.Add(this.label21);
-            this.panel5.Controls.Add(this.label18);
-            this.panel5.Controls.Add(this.label23);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 232);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(306, 176);
-            this.panel5.TabIndex = 0;
             // 
             // totalprice_label_sacramentpayment
             // 
             this.totalprice_label_sacramentpayment.AutoSize = true;
             this.totalprice_label_sacramentpayment.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalprice_label_sacramentpayment.ForeColor = System.Drawing.Color.White;
-            this.totalprice_label_sacramentpayment.Location = new System.Drawing.Point(146, 14);
+            this.totalprice_label_sacramentpayment.ForeColor = System.Drawing.Color.Black;
+            this.totalprice_label_sacramentpayment.Location = new System.Drawing.Point(32, 308);
             this.totalprice_label_sacramentpayment.Name = "totalprice_label_sacramentpayment";
             this.totalprice_label_sacramentpayment.Size = new System.Drawing.Size(95, 37);
             this.totalprice_label_sacramentpayment.TabIndex = 70;
@@ -1037,107 +960,184 @@
             // 
             this.totalpaid_label_sacramentpayment.AutoSize = true;
             this.totalpaid_label_sacramentpayment.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalpaid_label_sacramentpayment.ForeColor = System.Drawing.Color.White;
-            this.totalpaid_label_sacramentpayment.Location = new System.Drawing.Point(146, 59);
+            this.totalpaid_label_sacramentpayment.ForeColor = System.Drawing.Color.Black;
+            this.totalpaid_label_sacramentpayment.Location = new System.Drawing.Point(196, 310);
             this.totalpaid_label_sacramentpayment.Name = "totalpaid_label_sacramentpayment";
             this.totalpaid_label_sacramentpayment.Size = new System.Drawing.Size(95, 37);
             this.totalpaid_label_sacramentpayment.TabIndex = 69;
             this.totalpaid_label_sacramentpayment.Text = "100.00";
             // 
+            // ornumber_label_sacramentpayment
+            // 
+            this.ornumber_label_sacramentpayment.AutoSize = true;
+            this.ornumber_label_sacramentpayment.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ornumber_label_sacramentpayment.Location = new System.Drawing.Point(39, 34);
+            this.ornumber_label_sacramentpayment.Name = "ornumber_label_sacramentpayment";
+            this.ornumber_label_sacramentpayment.Size = new System.Drawing.Size(119, 37);
+            this.ornumber_label_sacramentpayment.TabIndex = 4;
+            this.ornumber_label_sacramentpayment.Text = "1328904";
+            // 
             // balance_label_sacramentpayment
             // 
             this.balance_label_sacramentpayment.AutoSize = true;
-            this.balance_label_sacramentpayment.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.balance_label_sacramentpayment.ForeColor = System.Drawing.Color.White;
-            this.balance_label_sacramentpayment.Location = new System.Drawing.Point(145, 107);
+            this.balance_label_sacramentpayment.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.balance_label_sacramentpayment.ForeColor = System.Drawing.Color.IndianRed;
+            this.balance_label_sacramentpayment.Location = new System.Drawing.Point(341, 308);
             this.balance_label_sacramentpayment.Name = "balance_label_sacramentpayment";
-            this.balance_label_sacramentpayment.Size = new System.Drawing.Size(95, 37);
+            this.balance_label_sacramentpayment.Size = new System.Drawing.Size(104, 37);
             this.balance_label_sacramentpayment.TabIndex = 68;
             this.balance_label_sacramentpayment.Text = "100.00";
+            // 
+            // paid_nud_sacramentpayment
+            // 
+            this.paid_nud_sacramentpayment.DecimalPlaces = 2;
+            this.paid_nud_sacramentpayment.Location = new System.Drawing.Point(179, 213);
+            this.paid_nud_sacramentpayment.Name = "paid_nud_sacramentpayment";
+            this.paid_nud_sacramentpayment.Size = new System.Drawing.Size(197, 29);
+            this.paid_nud_sacramentpayment.TabIndex = 3;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(43, 123);
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.label22.ForeColor = System.Drawing.Color.Black;
+            this.label22.Location = new System.Drawing.Point(343, 293);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(63, 21);
+            this.label22.Size = new System.Drawing.Size(48, 15);
             this.label22.TabIndex = 65;
             this.label22.Text = "Balance";
             // 
+            // add_button_sacramentpayment
+            // 
+            this.add_button_sacramentpayment.FlatAppearance.BorderSize = 0;
+            this.add_button_sacramentpayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add_button_sacramentpayment.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.add_button_sacramentpayment.Location = new System.Drawing.Point(386, 213);
+            this.add_button_sacramentpayment.Name = "add_button_sacramentpayment";
+            this.add_button_sacramentpayment.Size = new System.Drawing.Size(30, 30);
+            this.add_button_sacramentpayment.TabIndex = 1;
+            this.add_button_sacramentpayment.Text = "+";
+            this.add_button_sacramentpayment.UseVisualStyleBackColor = true;
+            this.add_button_sacramentpayment.Click += new System.EventHandler(this.add_button_sacramentpayment_Click);
+            // 
             // totalprice_nud_sacramentpayment
             // 
-            this.totalprice_nud_sacramentpayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.totalprice_nud_sacramentpayment.BackColor = System.Drawing.Color.White;
             this.totalprice_nud_sacramentpayment.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.totalprice_nud_sacramentpayment.DecimalPlaces = 2;
             this.totalprice_nud_sacramentpayment.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalprice_nud_sacramentpayment.ForeColor = System.Drawing.Color.White;
-            this.totalprice_nud_sacramentpayment.Location = new System.Drawing.Point(139, 16);
+            this.totalprice_nud_sacramentpayment.ForeColor = System.Drawing.Color.Black;
+            this.totalprice_nud_sacramentpayment.Location = new System.Drawing.Point(25, 310);
             this.totalprice_nud_sacramentpayment.Name = "totalprice_nud_sacramentpayment";
             this.totalprice_nud_sacramentpayment.Size = new System.Drawing.Size(124, 35);
             this.totalprice_nud_sacramentpayment.TabIndex = 50;
             this.totalprice_nud_sacramentpayment.ThousandsSeparator = true;
             this.totalprice_nud_sacramentpayment.Visible = false;
             // 
+            // paid_datagridview_sacramentpayment
+            // 
+            this.paid_datagridview_sacramentpayment.AllowUserToAddRows = false;
+            this.paid_datagridview_sacramentpayment.AllowUserToDeleteRows = false;
+            this.paid_datagridview_sacramentpayment.AllowUserToResizeColumns = false;
+            this.paid_datagridview_sacramentpayment.AllowUserToResizeRows = false;
+            this.paid_datagridview_sacramentpayment.BackgroundColor = System.Drawing.Color.White;
+            this.paid_datagridview_sacramentpayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.paid_datagridview_sacramentpayment.Location = new System.Drawing.Point(21, 81);
+            this.paid_datagridview_sacramentpayment.MultiSelect = false;
+            this.paid_datagridview_sacramentpayment.Name = "paid_datagridview_sacramentpayment";
+            this.paid_datagridview_sacramentpayment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.paid_datagridview_sacramentpayment.RowHeadersVisible = false;
+            this.paid_datagridview_sacramentpayment.Size = new System.Drawing.Size(428, 98);
+            this.paid_datagridview_sacramentpayment.TabIndex = 0;
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(43, 75);
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(199, 291);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(75, 21);
+            this.label17.Size = new System.Drawing.Size(59, 15);
             this.label17.TabIndex = 62;
             this.label17.Text = "Total Paid";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(43, 30);
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(33, 289);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(80, 21);
+            this.label19.Size = new System.Drawing.Size(60, 15);
             this.label19.TabIndex = 51;
-            this.label19.Text = "Total Price";
+            this.label19.Text = "Total Cost";
             // 
-            // label21
+            // panel6
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(29, 34);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(234, 20);
-            this.label21.TabIndex = 60;
-            this.label21.Text = "_________________________";
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.panel6.Controls.Add(this.profileID_combobox_sacrament);
+            this.panel6.Controls.Add(this.panel5);
+            this.panel6.Controls.Add(this.label20);
+            this.panel6.Controls.Add(this.label15);
+            this.panel6.Controls.Add(this.address_textarea_sacramentpayment);
+            this.panel6.Controls.Add(this.contactnumber_textbox_sacramentpayment);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(306, 408);
+            this.panel6.TabIndex = 0;
             // 
-            // label18
+            // profileID_combobox_sacrament
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(29, 81);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(234, 20);
-            this.label18.TabIndex = 66;
-            this.label18.Text = "_________________________";
+            this.profileID_combobox_sacrament.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.profileID_combobox_sacrament.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.profileID_combobox_sacrament.FormattingEnabled = true;
+            this.profileID_combobox_sacrament.Location = new System.Drawing.Point(13, 22);
+            this.profileID_combobox_sacrament.Name = "profileID_combobox_sacrament";
+            this.profileID_combobox_sacrament.Size = new System.Drawing.Size(275, 29);
+            this.profileID_combobox_sacrament.TabIndex = 11;
+            this.profileID_combobox_sacrament.SelectedValueChanged += new System.EventHandler(this.profileID_combobox_sacrament_SelectedValueChanged);
             // 
-            // label23
+            // panel5
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(29, 127);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(234, 20);
-            this.label23.TabIndex = 67;
-            this.label23.Text = "_________________________";
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.panel5.Controls.Add(this.label25);
+            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 236);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(306, 172);
+            this.panel5.TabIndex = 0;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Location = new System.Drawing.Point(14, 17);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(58, 17);
+            this.label25.TabIndex = 72;
+            this.label25.Text = "Remarks";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(13, 43);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(262, 108);
+            this.textBox1.TabIndex = 71;
+            this.textBox1.Text = "This person hasnt paid poor af lolz";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(14, 127);
+            this.label20.Location = new System.Drawing.Point(14, 78);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(91, 13);
             this.label20.TabIndex = 8;
@@ -1148,7 +1148,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(57, 172);
+            this.label15.Location = new System.Drawing.Point(14, 149);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(48, 13);
             this.label15.TabIndex = 8;
@@ -1160,12 +1160,13 @@
             this.address_textarea_sacramentpayment.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.address_textarea_sacramentpayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.address_textarea_sacramentpayment.ForeColor = System.Drawing.Color.White;
-            this.address_textarea_sacramentpayment.Location = new System.Drawing.Point(115, 170);
+            this.address_textarea_sacramentpayment.Location = new System.Drawing.Point(13, 169);
             this.address_textarea_sacramentpayment.Multiline = true;
             this.address_textarea_sacramentpayment.Name = "address_textarea_sacramentpayment";
-            this.address_textarea_sacramentpayment.Size = new System.Drawing.Size(160, 45);
+            this.address_textarea_sacramentpayment.Size = new System.Drawing.Size(262, 45);
             this.address_textarea_sacramentpayment.TabIndex = 5;
             this.address_textarea_sacramentpayment.Text = "555 San Miguel St. Phase 2 Matina Davao City";
+            this.address_textarea_sacramentpayment.TextChanged += new System.EventHandler(this.address_textarea_sacramentpayment_TextChanged);
             // 
             // contactnumber_textbox_sacramentpayment
             // 
@@ -1173,33 +1174,11 @@
             this.contactnumber_textbox_sacramentpayment.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.contactnumber_textbox_sacramentpayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactnumber_textbox_sacramentpayment.ForeColor = System.Drawing.Color.White;
-            this.contactnumber_textbox_sacramentpayment.Location = new System.Drawing.Point(115, 118);
+            this.contactnumber_textbox_sacramentpayment.Location = new System.Drawing.Point(17, 99);
             this.contactnumber_textbox_sacramentpayment.Mask = "(+63) 999 999 9999";
             this.contactnumber_textbox_sacramentpayment.Name = "contactnumber_textbox_sacramentpayment";
             this.contactnumber_textbox_sacramentpayment.Size = new System.Drawing.Size(160, 22);
             this.contactnumber_textbox_sacramentpayment.TabIndex = 4;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(6, 59);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(288, 20);
-            this.label16.TabIndex = 9;
-            this.label16.Text = "_______________________________";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(6, 4);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(288, 20);
-            this.label24.TabIndex = 10;
-            this.label24.Text = "_______________________________";
             // 
             // IncomeCashReleaseType_TabControl
             // 
@@ -1466,12 +1445,12 @@
             this.profile_panel_sacramentpay.ResumeLayout(false);
             this.profile_panel_sacramentpay.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.paid_nud_sacramentpayment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.totalprice_nud_sacramentpayment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paid_datagridview_sacramentpayment)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.totalprice_nud_sacramentpayment)).EndInit();
             this.IncomeCashReleaseType_TabControl.ResumeLayout(false);
             this.IncomeTypeTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.itemType_dgv)).EndInit();
@@ -1557,28 +1536,25 @@
         private System.Windows.Forms.MaskedTextBox contactnumber_textbox_sacramentpayment;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.NumericUpDown totalprice_nud_sacramentpayment;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label totalprice_label_sacramentpayment;
         private System.Windows.Forms.Label totalpaid_label_sacramentpayment;
         private System.Windows.Forms.Label balance_label_sacramentpayment;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.DataGridView paid_datagridview_sacramentpayment;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label ornumber_label_sacramentpayment;
         private System.Windows.Forms.NumericUpDown paid_nud_sacramentpayment;
         private System.Windows.Forms.Button add_button_sacramentpayment;
-        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label total_label_fullpay;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox profile_combobox_sacramentdownpayment;
+        private System.Windows.Forms.ComboBox profileID_combobox_sacrament;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button editTotalCost_button;
     }
 }
