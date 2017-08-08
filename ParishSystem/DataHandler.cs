@@ -879,12 +879,16 @@ namespace ParishSystem
 
             return success;
         }
-
-        public DataTable getSacramentIncome(int sacramentIncomeID)
+        public void addPayment(int sacramentIncomeID, int primaryIncomeID, decimal amount)
+        {
+            string q = $"INSERT INTO `sad2`.`payment` (`sacramentIncomeID`, `primaryIncomeID`, `amount`) VALUES ({sacramentIncomeID}, {primaryIncomeID}, {amount})";
+            runNonQuery(q);
+        }
+        public DataTable getSacramentIncomeOfID(int sacramentIncomeID)
         {
             string q = "SELECT * FROM SacramentIncome WHERE sacramentIncomeID = " + sacramentIncomeID;
 
-        public void addPayment(int sacramentIncomeID, int primaryIncomeID,decimal amount)
+        
             DataTable dt = runQuery(q);
 
             return dt;
@@ -892,8 +896,7 @@ namespace ParishSystem
 
         public int getSacramentIncomeID(int applicationID)
         {
-            string q = $"INSERT INTO `sad2`.`payment` (`sacramentIncomeID`, `primaryIncomeID`, `amount`) VALUES ({sacramentIncomeID}, {primaryIncomeID}, {amount})";
-            runNonQuery(q);
+           
             string q = "SELECT sacramentIncomeID FROM SacramentIncome WHERE applicationID = " + applicationID;
 
             DataTable dt = runQuery(q);
@@ -931,7 +934,7 @@ namespace ParishSystem
 
         public double getBalanceOfSacramentIncome(int sacramentIncomeID)
         {
-            DataTable dt = getSacramentIncome(sacramentIncomeID);
+            DataTable dt = getSacramentIncomeOfID(sacramentIncomeID);
             double price = double.Parse(dt.Rows[0]["price"].ToString());
             double totalPayment = getTotalPaymentOfSacramentIncome(sacramentIncomeID); //chec
             return price - totalPayment;
