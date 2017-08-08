@@ -71,6 +71,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "BloodlettingTest";
             this.Text = "BloodlettingTest";
+            this.Load += new System.EventHandler(this.BloodlettingTest_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);

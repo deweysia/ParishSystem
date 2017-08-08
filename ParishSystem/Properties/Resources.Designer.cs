@@ -63,9 +63,29 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btn_CANCEL {
+            get {
+                object obj = ResourceManager.GetObject("btn_CANCEL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btn_closeImage {
             get {
                 object obj = ResourceManager.GetObject("btn_closeImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_EDIT {
+            get {
+                object obj = ResourceManager.GetObject("btn_EDIT", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +106,46 @@ namespace ParishSystem.Properties {
         internal static System.Drawing.Bitmap btn_minImage {
             get {
                 object obj = ResourceManager.GetObject("btn_minImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_NEWclose {
+            get {
+                object obj = ResourceManager.GetObject("btn_NEWclose", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_NEWmaximize {
+            get {
+                object obj = ResourceManager.GetObject("btn_NEWmaximize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_NEWminimize {
+            get {
+                object obj = ResourceManager.GetObject("btn_NEWminimize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_SAVE {
+            get {
+                object obj = ResourceManager.GetObject("btn_SAVE", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +226,16 @@ namespace ParishSystem.Properties {
         internal static System.Drawing.Bitmap Delete_32px_Light {
             get {
                 object obj = ResourceManager.GetObject("Delete_32px_Light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Delete_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("Delete_32px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

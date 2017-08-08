@@ -12,25 +12,24 @@ namespace ParishSystem
 {
     public partial class AddApplication : Form
     {
-        DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
+        DataHandler dh;
         Point lastClick;
         SacramentType sacramentType;
         DataTable sacramentItem;
 
         Dictionary<TextBox, string> placeHolderText = new Dictionary<TextBox, string>();
         
-
-
-        public AddApplication(SacramentType type)
+        public AddApplication(SacramentType type, DataHandler dh)
         {
             InitializeComponent();
+            sacramentType = type;
+
+            this.dh = dh;
+
             birthdate_dtp.MaxDate = DateTime.Now;
             label1.MouseDown += AddApplication_MouseDown;
             label1.MouseMove += AddApplication_MouseMove;
-            panel1.MouseDown += AddApplication_MouseDown;
-            panel1.MouseMove += AddApplication_MouseMove;
-
-
+            
             //Input up filler text
             placeHolderText.Add(firstName_textBox, "First Name");
             placeHolderText.Add(midName_textBox, "M.I.");
@@ -42,10 +41,6 @@ namespace ParishSystem
             midName_textBox.Text = placeHolderText[midName_textBox];
             lastName_textBox.Text = placeHolderText[lastName_textBox];
             suffix_textBox.Text = placeHolderText[suffix_textBox];
-
-            Console.WriteLine("firstName_textBox.Text = placeHolderText[firstName_textBox]; NOT SAME {0}", Object.ReferenceEquals(firstName_textBox.Text, placeHolderText[firstName_textBox]));
-            
-            applicationNotice_label.MaximumSize = panel1.Size - panel1.Padding.Size;
 
             this.sacramentType = type;
             label1.Text = sacramentType + " Application";
@@ -75,6 +70,12 @@ namespace ParishSystem
 
         private void application_apply_button_Click(object sender, EventArgs e)
         {
+            if (!allFilled())
+            {
+                Notification.Show("Please fill in all required details!", NotificationType.info);
+                return;
+            }
+            
             string fn = firstName_textBox.Text;
             string mn = midName_textBox.Text;
             string ln = lastName_textBox.Text;
@@ -83,27 +84,39 @@ namespace ParishSystem
             DateTime birthDate = birthdate_dtp.Value;
 
             int itemTypeID = int.Parse(sacramentItem.Rows[0]["itemTypeID"].ToString());
-            double price = double.Parse(sacramentItem.Rows[0]["suggestedPrice"].ToString());
+            double price = double.Parse(price_textBox.Text);
 
-            int id = dh.getGeneralProfileID(fn, mn, ln, suffix, gender, birthDate);
-
-            if (id == -1) //-1 indicates no such profile exists in the database
+            bool success = true;
+            int profileID = dh.getGeneralProfileID(fn, mn, ln, suffix, gender, birthDate);
+            if(profileID != -1)//gen prof exists
             {
-                dh.addGeneralProfile(fn, mn, ln, suffix, gender, birthDate, null, null, null);
-                id = dh.getLatestID("GeneralProfile", "profileID");
-
-                bool success = dh.addNewApplicant(id, sacramentType);
-                id = dh.getLatestID("Application", "applicationID");
-                dh.addSacramentIncome(id, itemTypeID, price, remarks_textBox.Text);
-                displayMessage(success);
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                //gen prof does not have active application
+                if (!dh.hasActiveApplication(profileID, sacramentType))
+                {
+                    success &= dh.addNewApplicant(profileID, sacramentType);
+                    int applicationID = dh.getLatestID("Application", "applicationID");
+                    success &= dh.addSacramentIncome(applicationID, itemTypeID, price, remarks_textBox.Text);
+                }
+                else //gen prof has active application
+                {
+                    Notification.Show(string.Format("{0} {1} {2} {3} has an existing active {4} application. Cannot add duplicate sacrament record.", fn, mn, ln, suffix, sacramentType.ToString()), NotificationType.warning);
+                    this.Close();
+                    return;
+                }
             }
-            else
+            else //gen prof does not exist
             {
-                this.AcceptButton = yes_button;
-                panel1.Show();
+                //add genprof and add application
+
+                success &= dh.addGeneralProfile(fn, mn, ln, suffix, gender, birthDate);
+                profileID = dh.getLatestID("GeneralProfile", "profileID");
+                success &= dh.addNewApplicant(profileID, sacramentType);
+                int applicationID = dh.getLatestID("Application", "applicationID");
+                success &= dh.addSacramentIncome(applicationID, itemTypeID, price, remarks_textBox.Text);
             }
+
+            displayMessage(success);
+            this.Close();
         }
 
         private void displayMessage(bool success)
@@ -149,58 +162,6 @@ namespace ParishSystem
             this.Close();
         }
 
-        private void application_cancel_button_Click(object sender, EventArgs e)
-        {
-            panel1.Hide();
-        }
-
-        private void application_createNewProfile_button_Click(object sender, EventArgs e)
-        {
-            string fn = firstName_textBox.Text;
-            string mn = midName_textBox.Text;
-            string ln = lastName_textBox.Text;
-            string suffix = suffix_textBox.Text;
-            Gender gender = male_radio.Checked ? Gender.Male : Gender.Female;
-            DateTime birthDate = birthdate_dtp.Value;
-            MessageBox.Show(birthDate.ToString());
-
-            dh.addGeneralProfile(fn, mn, ln, suffix, gender, birthDate, null, null, null);
-            bool success = dh.addNewApplicant(dh.getLatestID("GeneralProfile", "profileID"), sacramentType);
-
-            displayMessage(success);
-
-
-        }
-
-        private void application_yes_button_Click(object sender, EventArgs e)
-        {
-            string fn = firstName_textBox.Text;
-            string mn = midName_textBox.Text;
-            string ln = lastName_textBox.Text;
-            string suffix = suffix_textBox.Text;
-            Gender gender = male_radio.Checked ? Gender.Male : Gender.Female;
-            DateTime birthDate = birthdate_dtp.Value;
-
-            int id = dh.getGeneralProfileID(fn, mn, ln, suffix, gender, birthDate);
-            MessageBox.Show("WELCOME");
-            bool hasApplication = true;
-            if (sacramentType == SacramentType.Baptism)
-                hasApplication =  dh.hasBaptismApplication(id);
-            else
-                hasApplication = dh.hasConfirmationApplication(id);
-
-            if (hasApplication)
-            {
-                MessageBox.Show("BITCH BE EXISTING!");
-                Notification.Show("Applicant already has an active or approved application.", NotificationType.warning);
-                return;
-            }
-                
-                
-            bool success = dh.addNewApplicant(id, sacramentType);
-            displayMessage(success);
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Notification.Show("HEEEEEEEEEEEEEEEELOOOOO MY BITCHESSSS");
@@ -224,6 +185,23 @@ namespace ParishSystem
                 t.Text = "";
                 t.ForeColor = Color.Black;
             }
+        }
+
+        private bool allFilled()
+        {
+            bool allFilled = true;
+            foreach (Control c in this.Controls)
+            {
+                if (c is TextBox && c.Tag == null)
+                {
+                    TextBox t = c as TextBox;
+                    allFilled &= !string.IsNullOrWhiteSpace(t.Text);
+                    if (!allFilled)
+                        return false;
+                }
+            }
+
+            return allFilled;
         }
     }
 
