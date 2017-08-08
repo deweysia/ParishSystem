@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class BloodlettingTest : Form
+    public partial class HiddenNumericUpDown : NumericUpDown
     {
-        public BloodlettingTest()
+        public HiddenNumericUpDown()
         {
+            Controls[0].Visible = false;
             InitializeComponent();
         }
 
-        private void BloodlettingTest_Load(object sender, EventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
-
+            e.Graphics.Clear(SystemColors.Window);
+            base.OnPaint(e);
         }
     }
 }

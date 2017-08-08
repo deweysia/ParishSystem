@@ -1,16 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    class Draggable
+    public partial class Draggable : Component
     {
-        private Draggable(object target)
+        public Draggable()
         {
-            
+            InitializeComponent();
+            TargetControls = new List<Control>();
+
+        }
+
+        public List<Control> TargetControls 
+        {
+            get; set;
+        }
+
+
+        public Draggable(IContainer container)
+        {
+            container.Add(this);
+
+            InitializeComponent();
         }
     }
 }

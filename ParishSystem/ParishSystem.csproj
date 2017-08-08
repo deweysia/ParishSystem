@@ -49,6 +49,18 @@
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\Documents\Visual Studio 2015\MySql.Data.dll</HintPath>
@@ -76,29 +88,23 @@
     <Compile Include="AddApplication.Designer.cs">
       <DependentUpon>AddApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bloodletting.cs">
+    <Compile Include="AddMarriageApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bloodletting.Designer.cs">
-      <DependentUpon>Bloodletting.cs</DependentUpon>
+    <Compile Include="AddMarriageApplication.Designer.cs">
+      <DependentUpon>AddMarriageApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="BloodlettingEventPopUp.cs">
+    <Compile Include="AlphaTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AlphaTextBox.Designer.cs">
+      <DependentUpon>AlphaTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationPayment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BloodlettingEventPopUp.Designer.cs">
-      <DependentUpon>BloodlettingEventPopUp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BloodlettingTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BloodlettingTest.Designer.cs">
-      <DependentUpon>BloodlettingTest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Bloodletting_Profile_Popup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bloodletting_Profile_Popup.Designer.cs">
-      <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
+    <Compile Include="ApplicationPayment.Designer.cs">
+      <DependentUpon>ApplicationPayment.cs</DependentUpon>
     </Compile>
     <Compile Include="CashReleaseType.cs">
       <SubType>Form</SubType>
@@ -106,34 +112,35 @@
     <Compile Include="CashReleaseType.Designer.cs">
       <DependentUpon>CashReleaseType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classifications.cs" />
-    <Compile Include="ComboboxContent.cs" />
-    <Compile Include="ComboBoxItem.cs" />
-    <Compile Include="CustomNotification.cs">
-      <SubType>Form</SubType>
+    <Compile Include="CDemo.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CustomNotification.Designer.cs">
-      <DependentUpon>CustomNotification.cs</DependentUpon>
+    <Compile Include="CDemo.Designer.cs">
+      <DependentUpon>CDemo.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataHandler.cs" />
-    <Compile Include="DownPaymentProfile.cs">
-      <SubType>Form</SubType>
+    <Compile Include="CurrencyTextBox.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DownPaymentProfile.Designer.cs">
-      <DependentUpon>DownPaymentProfile.cs</DependentUpon>
+    <Compile Include="CurrencyTextBox.Designer.cs">
+      <DependentUpon>CurrencyTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Enums.cs" />
+    <Compile Include="Draggable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Draggable.Designer.cs">
+      <DependentUpon>Draggable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="HiddenTabControl.cs">
+    <Compile Include="HiddenNumericUpDown.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="HiddenTabControl.Designer.cs">
-      <DependentUpon>HiddenTabControl.cs</DependentUpon>
+    <Compile Include="HiddenNumericUpDown.Designer.cs">
+      <DependentUpon>HiddenNumericUpDown.cs</DependentUpon>
     </Compile>
     <Compile Include="IncomeType.cs">
       <SubType>Form</SubType>
@@ -141,11 +148,71 @@
     <Compile Include="IncomeType.Designer.cs">
       <DependentUpon>IncomeType.cs</DependentUpon>
     </Compile>
+    <Compile Include="ParameterizedSQL.cs" />
+    <Compile Include="SacramentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SacramentForm.Designer.cs">
+      <DependentUpon>SacramentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodlettingTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodlettingTest.Designer.cs">
+      <DependentUpon>BloodlettingTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classifications.cs" />
+    <Compile Include="ComboboxContent.cs" />
+    <Compile Include="ComboBoxItem.cs" />
+    <Compile Include="CueTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CueTextBox.Designer.cs">
+      <DependentUpon>CueTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControlBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControlBar.Designer.cs">
+      <DependentUpon>CustomControlBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMessage.Designer.cs">
+      <DependentUpon>CustomMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomNotification.Designer.cs">
+      <DependentUpon>CustomNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataHandler.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="ExButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExButton.Designer.cs">
+      <DependentUpon>ExButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HiddenTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HiddenTabControl.Designer.cs">
+      <DependentUpon>HiddenTabControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="MarriageApplication.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MarriageApplication.Designer.cs">
       <DependentUpon>MarriageApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarriageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarriageForm.Designer.cs">
+      <DependentUpon>MarriageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="menu.cs">
       <SubType>UserControl</SubType>
@@ -159,9 +226,12 @@
     <Compile Include="messageBox.Designer.cs">
       <DependentUpon>messageBox.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="HiddenTabControl.resx">
-      <DependentUpon>HiddenTabControl.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="MinisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinisterForm.Designer.cs">
+      <DependentUpon>MinisterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Person.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,26 +338,20 @@
     <EmbeddedResource Include="AddApplication.resx">
       <DependentUpon>AddApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Bloodletting.resx">
-      <DependentUpon>Bloodletting.cs</DependentUpon>
+    <EmbeddedResource Include="AddMarriageApplication.resx">
+      <DependentUpon>AddMarriageApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BloodlettingEventPopUp.resx">
-      <DependentUpon>BloodlettingEventPopUp.cs</DependentUpon>
+    <EmbeddedResource Include="AlphaTextBox.resx">
+      <DependentUpon>AlphaTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BloodlettingTest.resx">
-      <DependentUpon>BloodlettingTest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Bloodletting_Profile_Popup.resx">
-      <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
+    <EmbeddedResource Include="ApplicationPayment.resx">
+      <DependentUpon>ApplicationPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CashReleaseType.resx">
       <DependentUpon>CashReleaseType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomNotification.resx">
-      <DependentUpon>CustomNotification.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DownPaymentProfile.resx">
-      <DependentUpon>DownPaymentProfile.cs</DependentUpon>
+    <EmbeddedResource Include="CurrencyTextBox.resx">
+      <DependentUpon>CurrencyTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -295,11 +359,38 @@
     <EmbeddedResource Include="IncomeType.resx">
       <DependentUpon>IncomeType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SacramentForm.resx">
+      <DependentUpon>SacramentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodlettingTest.resx">
+      <DependentUpon>BloodlettingTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CueTextBox.resx">
+      <DependentUpon>CueTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControlBar.resx">
+      <DependentUpon>CustomControlBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomMessage.resx">
+      <DependentUpon>CustomMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomNotification.resx">
+      <DependentUpon>CustomNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExButton.resx">
+      <DependentUpon>ExButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MarriageApplication.resx">
       <DependentUpon>MarriageApplication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MarriageForm.resx">
+      <DependentUpon>MarriageForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="messageBox.resx">
       <DependentUpon>messageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinisterForm.resx">
+      <DependentUpon>MinisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\ParishSystem.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\ParishSystem.Properties.Resources.resources" />
@@ -396,6 +487,7 @@
     <Content Include="Resources\btn_closeImage.png" />
     <Content Include="Resources\btn_maxImage.png" />
     <Content Include="Resources\btn_minImage.png" />
+    <Content Include="Tools\SQL_Writer.jar" />
     <None Include="Resources\messageBox_cancel.png" />
     <None Include="Resources\messageBox_success.png" />
     <None Include="Resources\messageBox_warning.png" />
