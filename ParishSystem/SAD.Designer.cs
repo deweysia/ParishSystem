@@ -428,21 +428,21 @@
             this.imageListMenu = new System.Windows.Forms.ImageList(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.sacrament_panel = new System.Windows.Forms.Panel();
-            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
             this.label63 = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label64 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.label84 = new System.Windows.Forms.Label();
+            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
             this.panel14 = new System.Windows.Forms.Panel();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label85 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.applicationBS = new System.Windows.Forms.BindingSource(this.components);
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label8 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.profile_panel.SuspendLayout();
@@ -516,11 +516,11 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profiles_dataGridView_baptism)).BeginInit();
             this.sacrament_panel.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage4.SuspendLayout();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.applicationBS)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -1743,7 +1743,7 @@
             this.baptismApplication_birthDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.baptismApplication_birthDate.Enabled = false;
             this.baptismApplication_birthDate.Location = new System.Drawing.Point(69, 104);
-            this.baptismApplication_birthDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.baptismApplication_birthDate.MinimumSize = new System.Drawing.Size(4, 29);
             this.baptismApplication_birthDate.Name = "baptismApplication_birthDate";
             this.baptismApplication_birthDate.Size = new System.Drawing.Size(200, 29);
             this.baptismApplication_birthDate.TabIndex = 8;
@@ -5084,6 +5084,62 @@
             this.sacrament_panel.Size = new System.Drawing.Size(802, 542);
             this.sacrament_panel.TabIndex = 38;
             // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(7, 456);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(79, 21);
+            this.label63.TabIndex = 2;
+            this.label63.Text = "Reference";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.label64, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label82, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 480);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(525, 55);
+            this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // label64
+            // 
+            this.label64.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(43, 4);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(89, 21);
+            this.label64.TabIndex = 1;
+            this.label64.Text = "Registry no";
+            // 
+            // label82
+            // 
+            this.label82.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label82.AutoSize = true;
+            this.label82.Location = new System.Drawing.Point(397, 4);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(81, 21);
+            this.label82.TabIndex = 1;
+            this.label82.Text = "Record no";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(229, 4);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 21);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Book no";
+            // 
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
@@ -5101,7 +5157,7 @@
             this.metroTabPage4.Controls.Add(this.label84);
             this.metroTabPage4.HorizontalScrollbarBarColor = true;
             this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage4.HorizontalScrollbarSize = 6;
+            this.metroTabPage4.HorizontalScrollbarSize = 4;
             this.metroTabPage4.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage4.Name = "metroTabPage4";
             this.metroTabPage4.Size = new System.Drawing.Size(784, 324);
@@ -5109,44 +5165,7 @@
             this.metroTabPage4.Text = "Baptism";
             this.metroTabPage4.VerticalScrollbarBarColor = true;
             this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage4.VerticalScrollbarSize = 7;
-            // 
-            // metroTabPage5
-            // 
-            this.metroTabPage5.HorizontalScrollbarBarColor = true;
-            this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage5.HorizontalScrollbarSize = 6;
-            this.metroTabPage5.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(288, 177);
-            this.metroTabPage5.TabIndex = 1;
-            this.metroTabPage5.Text = "Confirmation";
-            this.metroTabPage5.VerticalScrollbarBarColor = true;
-            this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage5.VerticalScrollbarSize = 7;
-            // 
-            // metroTabPage6
-            // 
-            this.metroTabPage6.HorizontalScrollbarBarColor = true;
-            this.metroTabPage6.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage6.HorizontalScrollbarSize = 6;
-            this.metroTabPage6.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage6.Name = "metroTabPage6";
-            this.metroTabPage6.Size = new System.Drawing.Size(288, 177);
-            this.metroTabPage6.TabIndex = 2;
-            this.metroTabPage6.Text = "Marriage";
-            this.metroTabPage6.VerticalScrollbarBarColor = true;
-            this.metroTabPage6.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage6.VerticalScrollbarSize = 7;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(7, 456);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(79, 21);
-            this.label63.TabIndex = 2;
-            this.label63.Text = "Reference";
+            this.metroTabPage4.VerticalScrollbarSize = 5;
             // 
             // label84
             // 
@@ -5157,25 +5176,33 @@
             this.label84.TabIndex = 1;
             this.label84.Text = "Registry no";
             // 
-            // label64
+            // metroTabPage5
             // 
-            this.label64.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(42, 4);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(89, 21);
-            this.label64.TabIndex = 1;
-            this.label64.Text = "Registry no";
+            this.metroTabPage5.HorizontalScrollbarBarColor = true;
+            this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.HorizontalScrollbarSize = 4;
+            this.metroTabPage5.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage5.Name = "metroTabPage5";
+            this.metroTabPage5.Size = new System.Drawing.Size(784, 324);
+            this.metroTabPage5.TabIndex = 1;
+            this.metroTabPage5.Text = "Confirmation";
+            this.metroTabPage5.VerticalScrollbarBarColor = true;
+            this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.VerticalScrollbarSize = 5;
             // 
-            // label82
+            // metroTabPage6
             // 
-            this.label82.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label82.AutoSize = true;
-            this.label82.Location = new System.Drawing.Point(396, 4);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(81, 21);
-            this.label82.TabIndex = 1;
-            this.label82.Text = "Record no";
+            this.metroTabPage6.HorizontalScrollbarBarColor = true;
+            this.metroTabPage6.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage6.HorizontalScrollbarSize = 4;
+            this.metroTabPage6.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage6.Name = "metroTabPage6";
+            this.metroTabPage6.Size = new System.Drawing.Size(784, 324);
+            this.metroTabPage6.TabIndex = 2;
+            this.metroTabPage6.Text = "Marriage";
+            this.metroTabPage6.VerticalScrollbarBarColor = true;
+            this.metroTabPage6.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage6.VerticalScrollbarSize = 5;
             // 
             // panel14
             // 
@@ -5212,33 +5239,6 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(802, 28);
             this.panel11.TabIndex = 1;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.label64, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label82, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 480);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(525, 55);
-            this.tableLayoutPanel1.TabIndex = 7;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(227, 4);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 21);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Book no";
             // 
             // SAD
             // 
@@ -5379,14 +5379,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.profiles_dataGridView_baptism)).EndInit();
             this.sacrament_panel.ResumeLayout(false);
             this.sacrament_panel.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage4.ResumeLayout(false);
             this.metroTabPage4.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.applicationBS)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

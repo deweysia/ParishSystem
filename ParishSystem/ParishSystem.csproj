@@ -106,6 +106,12 @@
     <Compile Include="ApplicationPayment.Designer.cs">
       <DependentUpon>ApplicationPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="CashReleaseType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashReleaseType.Designer.cs">
+      <DependentUpon>CashReleaseType.cs</DependentUpon>
+    </Compile>
     <Compile Include="CDemo.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -135,6 +141,12 @@
     </Compile>
     <Compile Include="HiddenNumericUpDown.Designer.cs">
       <DependentUpon>HiddenNumericUpDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncomeType.Designer.cs">
+      <DependentUpon>IncomeType.cs</DependentUpon>
     </Compile>
     <Compile Include="ParameterizedSQL.cs" />
     <Compile Include="SacramentForm.cs">
@@ -311,6 +323,12 @@
     <Compile Include="topBarControl.Designer.cs">
       <DependentUpon>topBarControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Treasurer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Treasurer.Designer.cs">
+      <DependentUpon>Treasurer.cs</DependentUpon>
+    </Compile>
     <Compile Include="tReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,11 +347,17 @@
     <EmbeddedResource Include="ApplicationPayment.resx">
       <DependentUpon>ApplicationPayment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CashReleaseType.resx">
+      <DependentUpon>CashReleaseType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CurrencyTextBox.resx">
       <DependentUpon>CurrencyTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncomeType.resx">
+      <DependentUpon>IncomeType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SacramentForm.resx">
       <DependentUpon>SacramentForm.cs</DependentUpon>
@@ -417,6 +441,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="topBarControl.resx">
       <DependentUpon>topBarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Treasurer.resx">
+      <DependentUpon>Treasurer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tReport.resx">
       <DependentUpon>tReport.cs</DependentUpon>

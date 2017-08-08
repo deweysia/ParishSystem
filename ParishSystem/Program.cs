@@ -20,7 +20,7 @@ namespace ParishSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Treasurer());
+            Application.Run(new SAD());
         }
     }
 

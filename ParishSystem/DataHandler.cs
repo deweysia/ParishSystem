@@ -2779,6 +2779,173 @@ namespace ParishSystem
             string q = "select * from (select application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID = " + profileID + ") as A left outer join (select concat(lastname, \" \", coalesce(suffix, \" \"), \"\", firstName, \" \", midname, \".\") as name, generalprofile.profileID, address, contactNumber, gender, civilstatus, birthplace, birthdate, residence, application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID != " + profileID + ") as B on A.applicationID = B.applicationID";
             return runQuery(q);
         }
+
+        public int getNextProfileID()
+        {
+            string q = "SELECT max(profileID)+1 as max FROM sad2.generalprofile;";
+            return int.Parse(runQuery(q).Rows[0]["max"].ToString());
+        }
+        public void editBloodDonor(int profileID, string fn, string mn, string ln, string sf, string add, string contact, int blood)
+        {
+            string q = "UPDATE `sad2`.`generalprofile` SET `firstName`='" + fn + "', `midName`='" + mn + "', `lastName`='" + ln + "', `suffix`='" + sf + "', `address`='" + add + "', `contactNumber`='" + contact + "',`bloodtype`='" + blood + "' WHERE `profileID`='" + profileID + "';";
+            runNonQuery(q);
+        }
+        public void addBloodDonor(string fn, string mn, string ln, string sf, string add, string contact, int blood)
+        {
+            string q = "INSERT INTO `sad2`.`generalprofile` (`firstName`, `midName`, `lastName`, `suffix`, `address`, `contactNumber`, `bloodType`) VALUES ('" + fn + "', '" + mn + "', '" + ln + "', '" + sf + "', '" + add + "', '" + contact + "', '" + blood + "');";
+            runNonQuery(q);
+        }
+        public DataTable getbloodlettingEvent(int EventID)
+        {
+            string q = "select * from blooddonationevent where bloodDonationEventID= " + EventID;
+            return runQuery(q);
+        }
+        public int getMaxBloodEvent()
+        {
+            string q = " select max(bloodDonationEventID) from blooddonationevent";
+            return int.Parse(runQuery(q).Rows[0][0].ToString());
+        }
+        public DataTable getCashRelease(int cashRelreaseID)
+        {
+            string q = "select * from cashreleasetype where cashReleaseTypeID =" + cashRelreaseID;
+            return runQuery(q);
+        }
+        public void addCashReleaseType(string cashReleaseType, string description, bool active, int bookType)
+        {
+            int A;
+            if (active) A = 1;
+            else A = 2;
+            string q = "INSERT INTO `sad2`.`cashreleasetype` (`cashReleaseType`, `description`, `status`, `bookType`) VALUES ('" + cashReleaseType + "', '" + description + "', '" + A + "','" + bookType + "')";
+            runNonQuery(q);
+        }
+        public int getMaxCashReleaseType()
+        {
+            string q = " select max(cashReleaseTypeID) from cashreleasetype";
+            return int.Parse(runQuery(q).Rows[0][0].ToString());
+        }
+        public void editCashReleaseType(int cashReleaseID, string cashReleaseType, string description, bool active, int bookType)
+        {
+            int A;
+            if (active) A = 1;
+            else A = 2;
+            string q = "UPDATE `sad2`.`cashreleasetype` SET `cashReleaseType`='" + cashReleaseType + "', `description`='" + description + "', `status`='" + A + "', `bookType`='" + bookType + "' WHERE `cashReleaseTypeID`='" + cashReleaseID + "'";
+            runNonQuery(q);
+        }
+        public void addIncomeType(string itemType, int bookType, Decimal suggestedPrice, int status, string details)
+        {
+            string q = "INSERT INTO `sad2`.`itemtype` (`itemType`, `bookType`, `suggestedPrice`, `status`,`details`) VALUES ('" + itemType + "', '" + bookType + "', '" + suggestedPrice + "', '" + status + "','" + details + "')";
+            runNonQuery(q);
+        }
+        public void editIncomeType(int incomeTypeID, string itemType, int bookType, Decimal suggestedPrice, int status, string details)
+        {
+            string q = "UPDATE `sad2`.`itemtype` SET `itemType`='" + itemType + "', `bookType`='" + bookType + "', `suggestedPrice`='" + suggestedPrice + "', `status`='" + status + "',details='" + details + "' WHERE `itemTypeID`='" + incomeTypeID + "'";
+            runNonQuery(q);
+        }
+        public int getMaxIncomeType()
+        {
+            string q = "SELECT max(itemTypeID) FROM sad2.itemtype;";
+            return int.Parse(runQuery(q).Rows[0][0].ToString());
+        }
+        public DataTable getIncomeType(int IncomeTypeID)
+        {
+            string q = "select * from itemType where itemTypeID= " + IncomeTypeID + ";";
+            return runQuery(q);
+        }
+        public DataTable getIncomeTypes()
+        {
+            string q = @"SELECT itemType, itemTypeID  ,case when bookType=1 then 'Parish' when bookType=2 then 'Community' when bookType=3 then 'Postulancy' end as Book,
+                     case when status=1 then 'Active' when status=2 then 'Inactive' end as Status , concat('₱',' ',suggestedprice)as SuggestedPrice FROM sad2.itemtype;";
+            return runQuery(q);
+        }
+        public void disableIncomeType(int IncomeTypeID)
+        {
+            string q = $"UPDATE `sad2`.`itemtype` SET `status`='2' WHERE `itemTypeID`='{IncomeTypeID}'";
+            runNonQuery(q);
+        }
+        public DataTable getIncomeTypesOf(int bookType)
+        {
+            string q = @"SELECT itemType, itemTypeID  ,case when bookType=1 then 'Parish' when bookType=2 then 'Community' when bookType=3 then 'Postulancy' end as Book,
+                     case when status=1 then 'Active' when status=2 then 'Inactive' end as Status , suggestedprice as SuggestedPrice FROM sad2.itemtype where status=1 and bookType='" + bookType + "';";
+            return runQuery(q);
+        }
+        public void enableIncomeType(int IncomeTypeID)
+        {
+            string q = $"UPDATE `sad2`.`itemtype` SET `status`='1' WHERE `itemTypeID`='{IncomeTypeID}'";
+            runNonQuery(q);
+        }
+        public void disableCashReleaseType(int CashReleaseTypeID)
+        {
+            string q = $"UPDATE `sad2`.`cashreleasetype` SET `status`='2' WHERE `cashreleasetypeID`='{CashReleaseTypeID}'";
+            runNonQuery(q);
+        }
+        public void enableCashReleaseType(int CashReleaseTypeID)
+        {
+            string q = $"UPDATE `sad2`.`cashreleasetype` SET `status`='1' WHERE `cashreleasetypeID`='{CashReleaseTypeID}'";
+            runNonQuery(q);
+        }
+        public int getnextORof(int bookType)
+        {
+            string q = $"select max(ORnum) as max from primaryincome where bookType={bookType};";
+
+            try
+            {
+                return int.Parse(runQuery(q).Rows[0]["max"].ToString()) + 1;
+            }
+            catch
+            {
+                return 1;
+            }
+        }
+        public int addPrimaryIncome(string sourceName, int bookType, int ORnum, string remarks)
+        {
+            string q = $"INSERT INTO `sad2`.`primaryincome` ( `sourceName`, `bookType`, `ORnum`, `remarks`, `primaryIncomeDateTime`) VALUES ('{sourceName}', '{bookType}', '{ORnum}', '{remarks}', '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}'); SELECT LAST_INSERT_ID();";
+            return int.Parse(runQuery(q).Rows[0][0].ToString());
+        }
+        public void addItem(int itemTypeID, int primaryIncomeID, decimal price, int quantity)
+        {
+            string q = $"INSERT INTO `sad2`.`item` (`itemTypeID`, `primaryIncomeID`, `price`, `quantity`) VALUES ('{itemTypeID}', '{primaryIncomeID}', '{price}', '{quantity}')";
+            runNonQuery(q);
+        }
+        public DataTable getApplicationsWhereNameLike(string name, SacramentType sacrament, ApplicationStatus applicationStatus)
+        {
+
+            string q = "SELECT generalprofile.profileid, concat(lastname,\" \",coalesce(suffix,\" \"),\",\",firstName,\" \",midName,\".\") as name,  gender, birthdate FROM GeneralProfile"
+                + " JOIN Applicant ON  GeneralProfile.profileID = Applicant.profileID "
+                + " JOIN Application ON Application.applicationID = Applicant.applicationID"
+                + " WHERE Application.sacramentType = " + (int)sacrament
+                + " AND Application.status = " + (int)applicationStatus
+                + " AND (firstname like '%" + name + "%' or lastname like '%" + name + "%')";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+        public DataTable getPendingApplications()
+        {
+            string q = @"SELECT generalprofile.profileid,address,contactnumber,firstname,midname,lastname,suffix,application.applicationID,concat(lastname,"" "",coalesce(suffix,"" ""),"","",firstName,"" "",midName,""."") as name,  gender, birthdate
+                        FROM GeneralProfile JOIN Applicant ON  GeneralProfile.profileID = Applicant.profileID  JOIN Application ON Application.applicationID = Applicant.applicationID WHERE  Application.status = 1";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+        public void addDownPaymentProfile(string firstname, string middlename, string lastname, string suffix, string address, string contactnumber)
+        {
+            string q = $@"INSERT INTO `sad2`.`downpaymentprofile` (`firstname`, `middlename`, `lastname`, `suffix`, `address`, `contactnumber`) 
+                        VALUES ('{firstname}', '{middlename}', '{lastname}', '{suffix}', '{address}', '{contactnumber}');";
+            runNonQuery(q);
+
+        }
+        public DataTable test(string a)
+        {
+            string q = $"SELECT generalprofile.profileid, concat(lastname,\"\",coalesce(suffix,\" \"),\",\",firstName,\"\",midName,\".\") as name from generalprofile where firstname like \"%" + a + "%\" or lastname like \"%" + a + "%\"";
+            return runQuery(q);
+        }
+        public bool hasSacramentIncome(int applicationID, SacramentType type)
+        {
+            string q = $"select* from application inner join sacramentincome on sacramentincome.applicationID = application.applicationID where application.applicationid = {applicationID} and application.status={ApplicationStatus.Pending}";
+            return (runQuery(q).Rows.Count > 0 ? true : false);
+        }
     }
 
 }
