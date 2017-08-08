@@ -61,25 +61,7 @@ namespace ParishSystem
                 gender_panel.Visible = false;
             }
 
-            if (temp.Rows[0]["civilstatus"].ToString()!= "")
-                {
-                if (int.Parse(temp.Rows[0]["civilstatus"].ToString()) == (int)Enums.CivilStatus.Single) civilStatus_label.Text = "Single";
-                else if (int.Parse(temp.Rows[0]["civilstatus"].ToString()) == (int)Enums.CivilStatus.Widowed) civilStatus_label.Text = "Widowed";
-                }
-            else
-            {
-                civilstatus_panel.Visible = false;
-            }
-            if (temp.Rows[0]["legitimacy"].ToString() != "")
-            {
-                if (int.Parse(temp.Rows[0]["legitimacy"].ToString()) == (int)Legitimacy.Legal) legitimacy_label.Text = "Legal";
-                else if (int.Parse(temp.Rows[0]["legitimacy"].ToString()) == (int)Legitimacy.Civil) legitimacy_label.Text = "Civil";
-                else if (int.Parse(temp.Rows[0]["legitimacy"].ToString()) == (int)Legitimacy.Natural) legitimacy_label.Text = "Natural";
-            }
-            else
-            {
-                legitimacy_panel.Visible = false;
-            }
+           
             if (temp.Rows[0]["birthplace"].ToString() != "")
             {
                 po_label.Text = temp.Rows[0]["birthplace"].ToString();
@@ -166,15 +148,19 @@ namespace ParishSystem
                         godMother_panel_baptism.Visible = false;
                     }
 
-                    date_label_baptism.Text = dh.toDateTime(dh.getBaptism(int.Parse(dr["applicationID"].ToString())).Rows[0]["baptismDate"].ToString(), false).ToString("MMMM dd yyyy");
+                    DataTable temp = dh.getBaptism(int.Parse(dr["applicationID"].ToString()));
+
+                    registryNumber_label_baptism.Text = temp.Rows[0]["registryNumber"].ToString();
+
+                    date_label_baptism.Text = dh.toDateTime(temp.Rows[0]["baptismDate"].ToString(), false).ToString("MMMM dd yyyy");
 
                     name_label_minister_baptism.Text = dh.getMinister(int.Parse(dh.getBaptism(int.Parse(dr["applicationID"].ToString())).Rows[0]["ministerID"].ToString())).Rows[0]["name"].ToString();
 
-                    registryNumber_label_baptism.Text = dh.getBaptism(int.Parse(dr["applicationID"].ToString())).Rows[0]["registryNumber"].ToString();
+                    registryNumber_label_baptism.Text = temp.Rows[0]["registryNumber"].ToString();
 
-                    pageNumber_label_baptism.Text = dh.getBaptism(int.Parse(dr["applicationID"].ToString())).Rows[0]["pageNumber"].ToString();
+                    pageNumber_label_baptism.Text = temp.Rows[0]["pageNumber"].ToString();
 
-                    recordNumber_label_baptism.Text = dh.getBaptism(int.Parse(dr["applicationID"].ToString())).Rows[0]["recordNumber"].ToString();
+                    recordNumber_label_baptism.Text = temp.Rows[0]["recordNumber"].ToString();
                 }
              }
         }
@@ -232,15 +218,17 @@ namespace ParishSystem
                         godMother_panel_confirmation.Visible = false;
                     }
 
-                    date_label_confirmation.Text = dh.toDateTime(dh.getConfirmation(int.Parse(dr["applicationID"].ToString())).Rows[0]["confirmationDate"].ToString(), false).ToString("MMMM dd yyyy");
+                    DataTable temp = dh.getConfirmation(int.Parse(dr["applicationID"].ToString()));
+
+                    date_label_confirmation.Text = dh.toDateTime(temp.Rows[0]["confirmationDate"].ToString(), false).ToString("MMMM dd yyyy");
 
                     name_label_minister_confirmation.Text = dh.getMinister(int.Parse(dh.getConfirmation(int.Parse(dr["applicationID"].ToString())).Rows[0]["ministerID"].ToString())).Rows[0]["name"].ToString();
 
-                    registryNumber_label_confirmation.Text = dh.getConfirmation(int.Parse(dr["applicationID"].ToString())).Rows[0]["registryNumber"].ToString();
+                    registryNumber_label_confirmation.Text = temp.Rows[0]["registryNumber"].ToString();
 
-                    pageNumber_label_confirmation.Text = dh.getConfirmation(int.Parse(dr["applicationID"].ToString())).Rows[0]["pageNumber"].ToString();
+                    pageNumber_label_confirmation.Text = temp.Rows[0]["pageNumber"].ToString();
 
-                    recordNumber_label_confirmation.Text = dh.getConfirmation(int.Parse(dr["applicationID"].ToString())).Rows[0]["recordNumber"].ToString();
+                    recordNumber_label_confirmation.Text = temp.Rows[0]["recordNumber"].ToString();
                 }
             }
 
@@ -300,18 +288,7 @@ namespace ParishSystem
                     else
                     {
                         gender_panel_spouse_marriage.Visible = false;
-                    }
-
-                    if (dr["civilstatus"].ToString() != "")
-                    {
-                        if (int.Parse(dr["civilstatus"].ToString()) == (int)Enums.CivilStatus.Single) civilstatus_label_spouse_marriage.Text = "Single";
-                        else if (int.Parse(dr["civilstatus"].ToString()) == (int)Enums.CivilStatus.Widowed) civilstatus_label_spouse_marriage.Text = "Widowed";
-                    }
-                    else
-                    {
-                        civilstatus_panel_spouse_marriage.Visible = false;
-                    }
-                    
+                    }                   
                     if (dr["birthplace"].ToString() != "")
                     {
                         po_label_spouse_marriage.Text = dr["birthplace"].ToString();
@@ -375,17 +352,38 @@ namespace ParishSystem
                         godmother_panel_marriage.Visible = true;
                         name_label_godmother_marriage.Text = godMother.Rows[0]["Name"].ToString();
                     }
-                  
+
                     //minister
-                    date_label_marriage.Text = dh.toDateTime(dh.getMarriage(int.Parse(dr["applicationID"].ToString())).Rows[0]["marriageDate"].ToString(), false).ToString("MMMM dd yyyy");
+                    DataTable temp = dh.getMarriage(int.Parse(dr["applicationID"].ToString()));
+
+                    date_label_marriage.Text = dh.toDateTime(temp.Rows[0]["marriageDate"].ToString(), false).ToString("MMMM dd yyyy");
 
                     name_label_minister_marriage.Text = dh.getMinister(int.Parse(dh.getMarriage(int.Parse(dr["applicationID"].ToString())).Rows[0]["ministerID"].ToString())).Rows[0]["name"].ToString();
 
-                    registryNumber_label_marriage.Text = dh.getMarriage(int.Parse(dr["applicationID"].ToString())).Rows[0]["registryNumber"].ToString();
+                    registryNumber_label_marriage.Text = temp.Rows[0]["registryNumber"].ToString();
 
-                    pageNumber_label_marriage.Text = dh.getMarriage(int.Parse(dr["applicationID"].ToString())).Rows[0]["pageNumber"].ToString();
+                    pageNumber_label_marriage.Text = temp.Rows[0]["pageNumber"].ToString();
 
-                    recordNumber_label_marriage.Text = dh.getMarriage(int.Parse(dr["applicationID"].ToString())).Rows[0]["recordNumber"].ToString();
+                    recordNumber_label_marriage.Text = temp.Rows[0]["recordNumber"].ToString();
+
+                    if (temp.Rows[0]["civilStatusGroom"].ToString() != "")
+                    {
+                        if (int.Parse(temp.Rows[0]["civilStatusGroom"].ToString()) == (int)Enums.CivilStatus.Single) civilStatus_self_marriage.Text = "Single";
+                        else if (int.Parse(temp.Rows[0]["civilStatusGroom"].ToString()) == (int)Enums.CivilStatus.Widowed) civilStatus_self_marriage.Text = "Widowed";
+                    }
+                    else
+                    {
+                        civilStatus_panel_marriage.Visible = false;
+                    }
+                    if (temp.Rows[0]["civilStatusBride"].ToString() != "")
+                    {
+                        if (int.Parse(temp.Rows[0]["civilstatusBride"].ToString()) == (int)Enums.CivilStatus.Single) civilstatus_label_spouse_marriage.Text = "Single";
+                        else if (int.Parse(temp.Rows[0]["civilstatusBride"].ToString()) == (int)Enums.CivilStatus.Widowed) civilstatus_label_spouse_marriage.Text = "Widowed";
+                    }
+                    else
+                    {
+                        civilstatus_panel_spouse_marriage.Visible = false;
+                    }
                 }
             }
         }
