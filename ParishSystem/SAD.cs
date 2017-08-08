@@ -32,6 +32,8 @@ namespace ParishSystem
             navigation.Add(CRB_button_menu, CRB_panel);
             navigation.Add(application_button_menu, application_panel);
             navigation.Add(sacrament_button_menu, sacrament_panel);
+            baptismApplication_dgv.Size = new Size(493, 380);
+            baptismApplication_dgv.Location = new Point(3, 56);
 
         }
 
@@ -317,7 +319,7 @@ namespace ParishSystem
             
             int applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
             string requirements = dgv.SelectedRows[0].Cells[2].Value.ToString();
-            MessageBox.Show(requirements);
+            //MessageBox.Show(requirements);
             string fn = dgv.SelectedRows[0].Cells[3].Value.ToString();
             string mn = dgv.SelectedRows[0].Cells[4].Value.ToString();
             string ln = dgv.SelectedRows[0].Cells[5].Value.ToString();
@@ -327,6 +329,11 @@ namespace ParishSystem
             ApplicationStatus status = (ApplicationStatus)int.Parse(dgv.SelectedRows[0].Cells[9].Value.ToString());
 
             bool isPending = status == ApplicationStatus.Pending;
+
+            if(baptismApplication_edit_btn.Tag.ToString() == "Save State")
+            {
+                baptismApplication_edit_btn.Tag = "Edit State";
+            }
 
             baptismApplicationDetailsPanel.Enabled = isPending;
             baptismApplication_buttons_panel.Enabled = isPending;
@@ -347,6 +354,7 @@ namespace ParishSystem
             double price = double.Parse(dt.Rows[0]["price"].ToString());
 
             double totalPayment = double.Parse(dt.Rows[0]["totalPayment"].ToString());
+            baptismApplication_addPayment_btn.Enabled = (price - totalPayment) != 0;
             baptismApplication_payment_label.Text = (price - totalPayment).ToString("C");
             baptismApplication_payment_remarks.Text = dt.Rows[0]["remarks"].ToString();
         }
@@ -392,6 +400,7 @@ namespace ParishSystem
             double price = double.Parse(dt.Rows[0]["price"].ToString());
 
             double totalPayment = double.Parse(dt.Rows[0]["totalPayment"].ToString());
+            confirmationApplication_addPayment_btn.Enabled = (price - totalPayment) != 0;
             confirmationApplication_payment_label.Text = (price - totalPayment).ToString("C");
             confirmationApplication_payment_remarks.Text = dt.Rows[0]["remarks"].ToString();
         }
@@ -440,6 +449,7 @@ namespace ParishSystem
             double price = double.Parse(dt.Rows[0]["price"].ToString());
 
             double totalPayment = double.Parse(dt.Rows[0]["totalPayment"].ToString());
+            marriageApplication_addPayment_btn.Enabled = (price - totalPayment) != 0;
             marriageApplication_price_label.Text = (price - totalPayment).ToString("C");
             marriageApplication_payment_remarks.Text = dt.Rows[0]["remarks"].ToString();
         }
@@ -706,17 +716,19 @@ namespace ParishSystem
                     break;
             }
 
-            bool enabled = gb.Enabled;
+            bool enabled = editBtn.Tag.ToString() == "Save State";
             gb.Enabled = !enabled;
             flp.Enabled = enabled;
 
             if (!enabled)
             {
                 editBtn.Text = "Save Changes";
+                editBtn.Tag = "Save State";
             }
             else
             {
                 editBtn.Text = "Edit Requirements";
+                editBtn.Tag = "Edit State";
                 bool success = editRequirements(dgv, tlp);
 
                 if (success)
@@ -735,6 +747,7 @@ namespace ParishSystem
         // APPLICATION EDIT BUTTON CLICK=========================================================================================
         private void baptismApplication_editReq_button_Click(object sender, EventArgs e)
         {
+
             applicationEditRequirementsClick(SacramentType.Baptism);
         }
 

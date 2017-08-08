@@ -50,8 +50,8 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblBalance = new System.Windows.Forms.Label();
-            this.txtRemarks = new ParishSystem.CueTextBox();
             this.nudPayment = new ParishSystem.HiddenNumericUpDown();
+            this.txtRemarks = new ParishSystem.CueTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaymentHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPayment)).BeginInit();
@@ -296,16 +296,6 @@
             this.lblBalance.TabIndex = 8;
             this.lblBalance.Text = "P n";
             // 
-            // txtRemarks
-            // 
-            this.txtRemarks.Cue = null;
-            this.txtRemarks.CueColor = System.Drawing.Color.Empty;
-            this.txtRemarks.Location = new System.Drawing.Point(92, 326);
-            this.txtRemarks.Multiline = true;
-            this.txtRemarks.Name = "txtRemarks";
-            this.txtRemarks.Size = new System.Drawing.Size(150, 51);
-            this.txtRemarks.TabIndex = 10;
-            // 
             // nudPayment
             // 
             this.nudPayment.DecimalPlaces = 2;
@@ -315,6 +305,18 @@
             this.nudPayment.TabIndex = 12;
             this.nudPayment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudPayment.ThousandsSeparator = true;
+            this.nudPayment.ValueChanged += new System.EventHandler(this.nudPayment_ValueChanged);
+            this.nudPayment.Leave += new System.EventHandler(this.nudPayment_Leave);
+            // 
+            // txtRemarks
+            // 
+            this.txtRemarks.Cue = null;
+            this.txtRemarks.CueColor = System.Drawing.Color.Empty;
+            this.txtRemarks.Location = new System.Drawing.Point(92, 326);
+            this.txtRemarks.Multiline = true;
+            this.txtRemarks.Name = "txtRemarks";
+            this.txtRemarks.Size = new System.Drawing.Size(150, 51);
+            this.txtRemarks.TabIndex = 10;
             // 
             // ApplicationPayment
             // 

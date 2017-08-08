@@ -16,6 +16,7 @@ namespace ParishSystem
         DataGridViewCellCollection row;
         SacramentType type;
         int sacramentIncomeID;
+        double remainingBalance;
         public ApplicationPayment(SacramentType type, DataGridViewRow dr, DataHandler dh)
         {
             InitializeComponent();
@@ -42,8 +43,8 @@ namespace ParishSystem
             lblDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
             lblPrice.Text = string.Format("{0:C}", double.Parse(sacramentIncome.Rows[0]["price"].ToString()));
-            double bal = dh.getBalanceOfSacramentIncome(sacramentIncomeID);
-            lblBalance.Text = string.Format("{0:C}", bal);
+            remainingBalance = dh.getBalanceOfSacramentIncome(sacramentIncomeID);
+            lblBalance.Text = string.Format("{0:C}", remainingBalance);
 
             dgvPaymentHistory.AutoGenerateColumns = false;
             dgvPaymentHistory.DataSource = dh.getPaymentHistory(sacramentIncomeID);
@@ -88,6 +89,22 @@ namespace ParishSystem
             {
                 e.Value = Convert.ToDouble(e.Value).ToString("C");
             }
+        }
+
+        private void nudPayment_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(nudPayment.Value.ToString()))
+            {
+                nudPayment.Value = 0;
+            }
+
+            
+        }
+
+        private void nudPayment_ValueChanged(object sender, EventArgs e)
+        {
+            if (Convert.ToDouble(nudPayment.Value) > remainingBalance)
+                nudPayment.Value = (decimal)remainingBalance;
         }
     }
 }
