@@ -106,6 +106,24 @@
     <Compile Include="ApplicationPayment.Designer.cs">
       <DependentUpon>ApplicationPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bloodletting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bloodletting.Designer.cs">
+      <DependentUpon>Bloodletting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodlettingEventPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodlettingEventPopUp.Designer.cs">
+      <DependentUpon>BloodlettingEventPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bloodletting_Profile_Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bloodletting_Profile_Popup.Designer.cs">
+      <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
+    </Compile>
     <Compile Include="CashReleaseType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +141,12 @@
     </Compile>
     <Compile Include="CurrencyTextBox.Designer.cs">
       <DependentUpon>CurrencyTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DownPaymentProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DownPaymentProfile.Designer.cs">
+      <DependentUpon>DownPaymentProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="Draggable.cs">
       <SubType>Component</SubType>
@@ -147,6 +171,12 @@
     </Compile>
     <Compile Include="IncomeType.Designer.cs">
       <DependentUpon>IncomeType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORdetailsPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORdetailsPopUp.Designer.cs">
+      <DependentUpon>ORdetailsPopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="ParameterizedSQL.cs" />
     <Compile Include="SacramentForm.cs">
@@ -329,6 +359,7 @@
     <Compile Include="Treasurer.Designer.cs">
       <DependentUpon>Treasurer.cs</DependentUpon>
     </Compile>
+    <Compile Include="treasurerBackend.cs" />
     <Compile Include="tReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -347,17 +378,32 @@
     <EmbeddedResource Include="ApplicationPayment.resx">
       <DependentUpon>ApplicationPayment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Bloodletting.resx">
+      <DependentUpon>Bloodletting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodlettingEventPopUp.resx">
+      <DependentUpon>BloodlettingEventPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bloodletting_Profile_Popup.resx">
+      <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CashReleaseType.resx">
       <DependentUpon>CashReleaseType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CurrencyTextBox.resx">
       <DependentUpon>CurrencyTextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DownPaymentProfile.resx">
+      <DependentUpon>DownPaymentProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IncomeType.resx">
       <DependentUpon>IncomeType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORdetailsPopUp.resx">
+      <DependentUpon>ORdetailsPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SacramentForm.resx">
       <DependentUpon>SacramentForm.cs</DependentUpon>

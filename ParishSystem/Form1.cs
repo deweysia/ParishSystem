@@ -12,7 +12,7 @@ namespace ParishSystem
 {
     public partial class Form1 : Form
     {
-        DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
+        treasurerBackend dh = new treasurerBackend();
         public Form1()
         {
             InitializeComponent();
@@ -20,11 +20,7 @@ namespace ParishSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            DataTable dt = dh.test(comboBox1.Text);
-            foreach(DataRow dr in dt.Rows)
-            {
-                comboBox1.Items.Add(new ComboboxContent(int.Parse(dr["profileID"].ToString()), dr["name"].ToString()));
-            }
+            
         }
 
         private void comboBox1_KeyUp(object sender, KeyEventArgs e)
@@ -52,6 +48,13 @@ namespace ParishSystem
         {
            
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        { 
+
+            //dh.getbreakdownSummaryOfTransactions(dh.getTransactionsByAccountingBookFormatByBook(1),1);
+           dataGridView1.DataSource=  dh.getTotalSummaryOfTransactionsOnOrRange(dh.getTransactionsByAccountingBookFormatByBook(1));
+        }//accounting book form
     }
     }
     /*

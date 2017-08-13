@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,6 +47,8 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.item_button_menu = new System.Windows.Forms.Button();
+            this.CRB_button = new System.Windows.Forms.Button();
+            this.CDB_button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.welcome_Text = new System.Windows.Forms.Label();
             this.username_Welcome_Text = new System.Windows.Forms.Label();
@@ -57,8 +63,72 @@
             this.IncomeCashReleaseType_panel = new System.Windows.Forms.Panel();
             this.cashReleaseType_label = new System.Windows.Forms.Label();
             this.incomeType_label = new System.Windows.Forms.Label();
+            this.CDB_panel = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.breakdown_radiobutton_cashdisbursment = new System.Windows.Forms.RadioButton();
+            this.total_radiobutton_cashdisbursment = new System.Windows.Forms.RadioButton();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.searchbar_textbox_report_disbursment = new System.Windows.Forms.TextBox();
+            this.from_dtp_cashdisbursment = new System.Windows.Forms.DateTimePicker();
+            this.to_dtp_cashdisbursment = new System.Windows.Forms.DateTimePicker();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.breakdown_datagridview_report_disbursment = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.summary_datagridview_report_disbursment = new System.Windows.Forms.DataGridView();
+            this.label23 = new System.Windows.Forms.Label();
+            this.filterBy_combobox_disbursment = new System.Windows.Forms.ComboBox();
+            this.postulancy_label_report = new System.Windows.Forms.Label();
+            this.community_label_report = new System.Windows.Forms.Label();
+            this.parish_label_report = new System.Windows.Forms.Label();
+            this.CRB_panel = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label34 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.ORNumber_CRB = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.postulancy_label_CRB = new System.Windows.Forms.Label();
+            this.community_label_CRB = new System.Windows.Forms.Label();
+            this.parish_label_CRB = new System.Windows.Forms.Label();
             this.CashDisbursment = new ParishSystem.HiddenTabControl();
             this.fullpay = new System.Windows.Forms.TabPage();
+            this.applicant_combox_fullpay = new System.Windows.Forms.ComboBox();
             this.total_label_fullpay = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -137,6 +207,21 @@
             this.panel_controlbox.SuspendLayout();
             this.CDB_parish_panel.SuspendLayout();
             this.IncomeCashReleaseType_panel.SuspendLayout();
+            this.CDB_panel.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.breakdown_datagridview_report_disbursment)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summary_datagridview_report_disbursment)).BeginInit();
+            this.CRB_panel.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.CashDisbursment.SuspendLayout();
             this.fullpay.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -229,6 +314,8 @@
             this.flowLayoutPanel1.Controls.Add(this.CRB_button_menu);
             this.flowLayoutPanel1.Controls.Add(this.CDB_button_menu);
             this.flowLayoutPanel1.Controls.Add(this.item_button_menu);
+            this.flowLayoutPanel1.Controls.Add(this.CRB_button);
+            this.flowLayoutPanel1.Controls.Add(this.CDB_button);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 33);
@@ -264,6 +351,39 @@
             this.item_button_menu.Text = "item";
             this.item_button_menu.UseVisualStyleBackColor = false;
             this.item_button_menu.Click += new System.EventHandler(this.item_button_menu_Click);
+            // 
+            // CRB_button
+            // 
+            this.CRB_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.CRB_button.FlatAppearance.BorderSize = 0;
+            this.CRB_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CRB_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CRB_button.ForeColor = System.Drawing.Color.White;
+            this.CRB_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CRB_button.Location = new System.Drawing.Point(0, 309);
+            this.CRB_button.Margin = new System.Windows.Forms.Padding(0);
+            this.CRB_button.Name = "CRB_button";
+            this.CRB_button.Size = new System.Drawing.Size(180, 40);
+            this.CRB_button.TabIndex = 45;
+            this.CRB_button.Text = "CRB Reports";
+            this.CRB_button.UseVisualStyleBackColor = false;
+            this.CRB_button.Click += new System.EventHandler(this.CRB_button_Click);
+            // 
+            // CDB_button
+            // 
+            this.CDB_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.CDB_button.FlatAppearance.BorderSize = 0;
+            this.CDB_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CDB_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CDB_button.ForeColor = System.Drawing.Color.White;
+            this.CDB_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CDB_button.Location = new System.Drawing.Point(0, 349);
+            this.CDB_button.Margin = new System.Windows.Forms.Padding(0);
+            this.CDB_button.Name = "CDB_button";
+            this.CDB_button.Size = new System.Drawing.Size(180, 40);
+            this.CDB_button.TabIndex = 46;
+            this.CDB_button.Text = "CDB Reports";
+            this.CDB_button.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -327,11 +447,11 @@
             // 
             this.CDB_parish_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.CDB_parish_panel.Controls.Add(this.sacramentPayment_label);
-            this.CDB_parish_panel.Controls.Add(this.CashDisbursment);
             this.CDB_parish_panel.Controls.Add(this.postulancy_label_fullpay);
             this.CDB_parish_panel.Controls.Add(this.community_label_fullpay);
             this.CDB_parish_panel.Controls.Add(this.parish_label_fullpay);
             this.CDB_parish_panel.Controls.Add(this.fullpay_label);
+            this.CDB_parish_panel.Controls.Add(this.CashDisbursment);
             this.CDB_parish_panel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CDB_parish_panel.Location = new System.Drawing.Point(184, 33);
             this.CDB_parish_panel.Margin = new System.Windows.Forms.Padding(0);
@@ -400,8 +520,8 @@
             // 
             this.IncomeCashReleaseType_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.IncomeCashReleaseType_panel.Controls.Add(this.cashReleaseType_label);
-            this.IncomeCashReleaseType_panel.Controls.Add(this.incomeType_label);
             this.IncomeCashReleaseType_panel.Controls.Add(this.IncomeCashReleaseType_TabControl);
+            this.IncomeCashReleaseType_panel.Controls.Add(this.incomeType_label);
             this.IncomeCashReleaseType_panel.Location = new System.Drawing.Point(184, 33);
             this.IncomeCashReleaseType_panel.Margin = new System.Windows.Forms.Padding(0);
             this.IncomeCashReleaseType_panel.Name = "IncomeCashReleaseType_panel";
@@ -432,6 +552,716 @@
             this.incomeType_label.Text = "Income Type";
             this.incomeType_label.Click += new System.EventHandler(this.incomeType_label_Click);
             // 
+            // CDB_panel
+            // 
+            this.CDB_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.CDB_panel.Controls.Add(this.label18);
+            this.CDB_panel.Controls.Add(this.panel7);
+            this.CDB_panel.Controls.Add(this.postulancy_label_report);
+            this.CDB_panel.Controls.Add(this.community_label_report);
+            this.CDB_panel.Controls.Add(this.parish_label_report);
+            this.CDB_panel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CDB_panel.Location = new System.Drawing.Point(183, 33);
+            this.CDB_panel.Name = "CDB_panel";
+            this.CDB_panel.Size = new System.Drawing.Size(776, 542);
+            this.CDB_panel.TabIndex = 12;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(35, 30);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(111, 21);
+            this.label18.TabIndex = 15;
+            this.label18.Text = "--------------->";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.breakdown_radiobutton_cashdisbursment);
+            this.panel7.Controls.Add(this.total_radiobutton_cashdisbursment);
+            this.panel7.Controls.Add(this.flowLayoutPanel2);
+            this.panel7.Controls.Add(this.tabControl1);
+            this.panel7.Controls.Add(this.label23);
+            this.panel7.Controls.Add(this.filterBy_combobox_disbursment);
+            this.panel7.Location = new System.Drawing.Point(0, 82);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(776, 460);
+            this.panel7.TabIndex = 14;
+            // 
+            // breakdown_radiobutton_cashdisbursment
+            // 
+            this.breakdown_radiobutton_cashdisbursment.AutoSize = true;
+            this.breakdown_radiobutton_cashdisbursment.ForeColor = System.Drawing.Color.White;
+            this.breakdown_radiobutton_cashdisbursment.Location = new System.Drawing.Point(564, 51);
+            this.breakdown_radiobutton_cashdisbursment.Name = "breakdown_radiobutton_cashdisbursment";
+            this.breakdown_radiobutton_cashdisbursment.Size = new System.Drawing.Size(106, 25);
+            this.breakdown_radiobutton_cashdisbursment.TabIndex = 17;
+            this.breakdown_radiobutton_cashdisbursment.Text = "Breakdown";
+            this.breakdown_radiobutton_cashdisbursment.UseVisualStyleBackColor = true;
+            this.breakdown_radiobutton_cashdisbursment.CheckedChanged += new System.EventHandler(this.breakdown_radiobutton_cashdisbursment_CheckedChanged);
+            // 
+            // total_radiobutton_cashdisbursment
+            // 
+            this.total_radiobutton_cashdisbursment.AutoSize = true;
+            this.total_radiobutton_cashdisbursment.Checked = true;
+            this.total_radiobutton_cashdisbursment.ForeColor = System.Drawing.Color.White;
+            this.total_radiobutton_cashdisbursment.Location = new System.Drawing.Point(688, 53);
+            this.total_radiobutton_cashdisbursment.Name = "total_radiobutton_cashdisbursment";
+            this.total_radiobutton_cashdisbursment.Size = new System.Drawing.Size(60, 25);
+            this.total_radiobutton_cashdisbursment.TabIndex = 17;
+            this.total_radiobutton_cashdisbursment.TabStop = true;
+            this.total_radiobutton_cashdisbursment.Text = "Total";
+            this.total_radiobutton_cashdisbursment.UseVisualStyleBackColor = true;
+            this.total_radiobutton_cashdisbursment.CheckedChanged += new System.EventHandler(this.total_radiobutton_cashdisbursment_CheckedChanged);
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.searchbar_textbox_report_disbursment);
+            this.flowLayoutPanel2.Controls.Add(this.from_dtp_cashdisbursment);
+            this.flowLayoutPanel2.Controls.Add(this.to_dtp_cashdisbursment);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(30, 9);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(463, 36);
+            this.flowLayoutPanel2.TabIndex = 16;
+            // 
+            // searchbar_textbox_report_disbursment
+            // 
+            this.searchbar_textbox_report_disbursment.Location = new System.Drawing.Point(3, 3);
+            this.searchbar_textbox_report_disbursment.Name = "searchbar_textbox_report_disbursment";
+            this.searchbar_textbox_report_disbursment.Size = new System.Drawing.Size(448, 29);
+            this.searchbar_textbox_report_disbursment.TabIndex = 12;
+            this.searchbar_textbox_report_disbursment.TextChanged += new System.EventHandler(this.searchbar_textbox_report_disbursment_TextChanged);
+            // 
+            // from_dtp_cashdisbursment
+            // 
+            this.from_dtp_cashdisbursment.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.from_dtp_cashdisbursment.Location = new System.Drawing.Point(3, 38);
+            this.from_dtp_cashdisbursment.Name = "from_dtp_cashdisbursment";
+            this.from_dtp_cashdisbursment.Size = new System.Drawing.Size(221, 29);
+            this.from_dtp_cashdisbursment.TabIndex = 17;
+            this.from_dtp_cashdisbursment.ValueChanged += new System.EventHandler(this.from_dtp_cashdisbursment_ValueChanged);
+            // 
+            // to_dtp_cashdisbursment
+            // 
+            this.to_dtp_cashdisbursment.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.to_dtp_cashdisbursment.Location = new System.Drawing.Point(230, 38);
+            this.to_dtp_cashdisbursment.Name = "to_dtp_cashdisbursment";
+            this.to_dtp_cashdisbursment.Size = new System.Drawing.Size(221, 29);
+            this.to_dtp_cashdisbursment.TabIndex = 18;
+            this.to_dtp_cashdisbursment.ValueChanged += new System.EventHandler(this.to_dtp_cashdisbursment_ValueChanged);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(30, 83);
+            this.tabControl1.Multiline = true;
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(716, 348);
+            this.tabControl1.TabIndex = 16;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.breakdown_datagridview_report_disbursment);
+            this.tabPage1.Location = new System.Drawing.Point(4, 30);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(708, 314);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Report";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // breakdown_datagridview_report_disbursment
+            // 
+            this.breakdown_datagridview_report_disbursment.AllowUserToAddRows = false;
+            this.breakdown_datagridview_report_disbursment.BackgroundColor = System.Drawing.Color.White;
+            this.breakdown_datagridview_report_disbursment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.breakdown_datagridview_report_disbursment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.breakdown_datagridview_report_disbursment.Location = new System.Drawing.Point(23, 19);
+            this.breakdown_datagridview_report_disbursment.Name = "breakdown_datagridview_report_disbursment";
+            this.breakdown_datagridview_report_disbursment.Size = new System.Drawing.Size(663, 288);
+            this.breakdown_datagridview_report_disbursment.TabIndex = 0;
+            this.breakdown_datagridview_report_disbursment.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.breakdown_datagridview_report_disbursment_CellContentDoubleClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "OR Number";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Price";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Name ";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Date of Transaction";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.summary_datagridview_report_disbursment);
+            this.tabPage2.Location = new System.Drawing.Point(4, 30);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(708, 314);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Summary ";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // summary_datagridview_report_disbursment
+            // 
+            this.summary_datagridview_report_disbursment.BackgroundColor = System.Drawing.Color.White;
+            this.summary_datagridview_report_disbursment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.summary_datagridview_report_disbursment.Location = new System.Drawing.Point(23, 24);
+            this.summary_datagridview_report_disbursment.Name = "summary_datagridview_report_disbursment";
+            this.summary_datagridview_report_disbursment.Size = new System.Drawing.Size(663, 277);
+            this.summary_datagridview_report_disbursment.TabIndex = 16;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(499, 21);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(66, 21);
+            this.label23.TabIndex = 15;
+            this.label23.Text = "Filter By";
+            // 
+            // filterBy_combobox_disbursment
+            // 
+            this.filterBy_combobox_disbursment.FormattingEnabled = true;
+            this.filterBy_combobox_disbursment.Items.AddRange(new object[] {
+            "Recent",
+            "Day",
+            "Month",
+            "Year",
+            "Date Range",
+            "OR Number"});
+            this.filterBy_combobox_disbursment.Location = new System.Drawing.Point(564, 18);
+            this.filterBy_combobox_disbursment.Name = "filterBy_combobox_disbursment";
+            this.filterBy_combobox_disbursment.Size = new System.Drawing.Size(182, 29);
+            this.filterBy_combobox_disbursment.TabIndex = 13;
+            this.filterBy_combobox_disbursment.SelectedIndexChanged += new System.EventHandler(this.filterBy_combobox_disbursment_SelectedIndexChanged);
+            // 
+            // postulancy_label_report
+            // 
+            this.postulancy_label_report.AutoSize = true;
+            this.postulancy_label_report.ForeColor = System.Drawing.Color.White;
+            this.postulancy_label_report.Location = new System.Drawing.Point(484, 30);
+            this.postulancy_label_report.Name = "postulancy_label_report";
+            this.postulancy_label_report.Size = new System.Drawing.Size(84, 21);
+            this.postulancy_label_report.TabIndex = 11;
+            this.postulancy_label_report.Text = "Postulancy";
+            this.postulancy_label_report.Click += new System.EventHandler(this.postulancy_label_report_Click);
+            // 
+            // community_label_report
+            // 
+            this.community_label_report.AutoSize = true;
+            this.community_label_report.ForeColor = System.Drawing.Color.White;
+            this.community_label_report.Location = new System.Drawing.Point(312, 30);
+            this.community_label_report.Name = "community_label_report";
+            this.community_label_report.Size = new System.Drawing.Size(92, 21);
+            this.community_label_report.TabIndex = 10;
+            this.community_label_report.Text = "Community";
+            this.community_label_report.Click += new System.EventHandler(this.community_label_report_Click);
+            // 
+            // parish_label_report
+            // 
+            this.parish_label_report.AutoSize = true;
+            this.parish_label_report.ForeColor = System.Drawing.Color.White;
+            this.parish_label_report.Location = new System.Drawing.Point(168, 30);
+            this.parish_label_report.Name = "parish_label_report";
+            this.parish_label_report.Size = new System.Drawing.Size(52, 21);
+            this.parish_label_report.TabIndex = 9;
+            this.parish_label_report.Text = "Parish";
+            this.parish_label_report.Click += new System.EventHandler(this.parish_label_report_Click);
+            // 
+            // CRB_panel
+            // 
+            this.CRB_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.CRB_panel.Controls.Add(this.panel9);
+            this.CRB_panel.Controls.Add(this.panel1);
+            this.CRB_panel.Controls.Add(this.postulancy_label_CRB);
+            this.CRB_panel.Controls.Add(this.community_label_CRB);
+            this.CRB_panel.Controls.Add(this.parish_label_CRB);
+            this.CRB_panel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CRB_panel.Location = new System.Drawing.Point(184, 33);
+            this.CRB_panel.Name = "CRB_panel";
+            this.CRB_panel.Size = new System.Drawing.Size(775, 542);
+            this.CRB_panel.TabIndex = 12;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Controls.Add(this.label30);
+            this.panel9.Controls.Add(this.label32);
+            this.panel9.Controls.Add(this.label33);
+            this.panel9.Controls.Add(this.button3);
+            this.panel9.Controls.Add(this.label34);
+            this.panel9.Controls.Add(this.numericUpDown1);
+            this.panel9.Controls.Add(this.label35);
+            this.panel9.Controls.Add(this.label36);
+            this.panel9.Controls.Add(this.button4);
+            this.panel9.Controls.Add(this.button5);
+            this.panel9.Controls.Add(this.numericUpDown2);
+            this.panel9.Controls.Add(this.comboBox1);
+            this.panel9.Controls.Add(this.label37);
+            this.panel9.Controls.Add(this.label38);
+            this.panel9.Controls.Add(this.label39);
+            this.panel9.Controls.Add(this.label40);
+            this.panel9.Location = new System.Drawing.Point(462, 79);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(313, 463);
+            this.panel9.TabIndex = 70;
+            // 
+            // label30
+            // 
+            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Segoe UI Semibold", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Black;
+            this.label30.Location = new System.Drawing.Point(86, 375);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(97, 50);
+            this.label30.TabIndex = 84;
+            this.label30.Text = "11111";
+            // 
+            // label32
+            // 
+            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.Black;
+            this.label32.Location = new System.Drawing.Point(43, 394);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(45, 21);
+            this.label32.TabIndex = 85;
+            this.label32.Text = "Total";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(27, 259);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(79, 21);
+            this.label33.TabIndex = 79;
+            this.label33.Text = "Sub-Total";
+            // 
+            // button3
+            // 
+            this.button3.Enabled = false;
+            this.button3.Location = new System.Drawing.Point(226, 302);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(52, 37);
+            this.button3.TabIndex = 78;
+            this.button3.Text = "D";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(56, 197);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(70, 21);
+            this.label34.TabIndex = 77;
+            this.label34.Text = "Quantity";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDown1.Location = new System.Drawing.Point(145, 199);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(114, 25);
+            this.numericUpDown1.TabIndex = 76;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(56, 136);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(44, 21);
+            this.label35.TabIndex = 74;
+            this.label35.Text = "Price";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(22, 72);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(87, 21);
+            this.label36.TabIndex = 75;
+            this.label36.Text = "Item Name";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(47, 304);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(52, 37);
+            this.button4.TabIndex = 72;
+            this.button4.Text = "C";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(135, 302);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(52, 37);
+            this.button5.TabIndex = 73;
+            this.button5.Tag = "a";
+            this.button5.Text = "+";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDown2.DecimalPlaces = 2;
+            this.numericUpDown2.Location = new System.Drawing.Point(145, 137);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(114, 25);
+            this.numericUpDown2.TabIndex = 71;
+            this.numericUpDown2.ThousandsSeparator = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            ""});
+            this.comboBox1.Location = new System.Drawing.Point(111, 70);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(176, 29);
+            this.comboBox1.TabIndex = 70;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(103, 249);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(0, 37);
+            this.label37.TabIndex = 80;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(37, 220);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(243, 20);
+            this.label38.TabIndex = 83;
+            this.label38.Text = "__________________________";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(37, 160);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(243, 20);
+            this.label39.TabIndex = 82;
+            this.label39.Text = "__________________________";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(37, 98);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(243, 20);
+            this.label40.TabIndex = 81;
+            this.label40.Text = "__________________________";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel1.Controls.Add(this.panel8);
+            this.panel1.Controls.Add(this.label21);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.label26);
+            this.panel1.Controls.Add(this.label27);
+            this.panel1.Controls.Add(this.label28);
+            this.panel1.Location = new System.Drawing.Point(0, 80);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(462, 462);
+            this.panel1.TabIndex = 47;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel8.Controls.Add(this.label16);
+            this.panel8.Controls.Add(this.ORNumber_CRB);
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(462, 70);
+            this.panel8.TabIndex = 21;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(84, 26);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(30, 21);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "CV";
+            // 
+            // ORNumber_CRB
+            // 
+            this.ORNumber_CRB.AutoSize = true;
+            this.ORNumber_CRB.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ORNumber_CRB.ForeColor = System.Drawing.Color.White;
+            this.ORNumber_CRB.Location = new System.Drawing.Point(130, 19);
+            this.ORNumber_CRB.Name = "ORNumber_CRB";
+            this.ORNumber_CRB.Size = new System.Drawing.Size(92, 37);
+            this.ORNumber_CRB.TabIndex = 2;
+            this.ORNumber_CRB.Text = "11111";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(38, 276);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(42, 17);
+            this.label21.TabIndex = 17;
+            this.label21.Text = "Payee";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(95, 306);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(281, 47);
+            this.textBox1.TabIndex = 14;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.ForeColor = System.Drawing.Color.White;
+            this.textBox2.Location = new System.Drawing.Point(95, 271);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(281, 22);
+            this.textBox2.TabIndex = 16;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(31, 321);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(58, 17);
+            this.label24.TabIndex = 15;
+            this.label24.Text = "Remarks";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridView1.ColumnHeadersHeight = 40;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 72);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Magenta;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 50;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.DarkRed;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(464, 172);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Item Type";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Price";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Quantity";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Total";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "ItemTypeID";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(95, 369);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(79, 37);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Can";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(306, 369);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(70, 37);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Fin";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(84, 280);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(304, 21);
+            this.label26.TabIndex = 18;
+            this.label26.Text = "__________________________________________";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.Location = new System.Drawing.Point(84, 338);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(304, 21);
+            this.label27.TabIndex = 19;
+            this.label27.Text = "__________________________________________";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label28.Location = new System.Drawing.Point(-28, 226);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(535, 21);
+            this.label28.TabIndex = 20;
+            this.label28.Text = "___________________________________________________________________________";
+            // 
+            // postulancy_label_CRB
+            // 
+            this.postulancy_label_CRB.AutoSize = true;
+            this.postulancy_label_CRB.ForeColor = System.Drawing.Color.White;
+            this.postulancy_label_CRB.Location = new System.Drawing.Point(494, 44);
+            this.postulancy_label_CRB.Name = "postulancy_label_CRB";
+            this.postulancy_label_CRB.Size = new System.Drawing.Size(84, 21);
+            this.postulancy_label_CRB.TabIndex = 11;
+            this.postulancy_label_CRB.Text = "Postulancy";
+            // 
+            // community_label_CRB
+            // 
+            this.community_label_CRB.AutoSize = true;
+            this.community_label_CRB.ForeColor = System.Drawing.Color.White;
+            this.community_label_CRB.Location = new System.Drawing.Point(345, 40);
+            this.community_label_CRB.Name = "community_label_CRB";
+            this.community_label_CRB.Size = new System.Drawing.Size(92, 21);
+            this.community_label_CRB.TabIndex = 10;
+            this.community_label_CRB.Text = "Community";
+            // 
+            // parish_label_CRB
+            // 
+            this.parish_label_CRB.AutoSize = true;
+            this.parish_label_CRB.ForeColor = System.Drawing.Color.White;
+            this.parish_label_CRB.Location = new System.Drawing.Point(201, 40);
+            this.parish_label_CRB.Name = "parish_label_CRB";
+            this.parish_label_CRB.Size = new System.Drawing.Size(52, 21);
+            this.parish_label_CRB.TabIndex = 9;
+            this.parish_label_CRB.Text = "Parish";
+            // 
             // CashDisbursment
             // 
             this.CashDisbursment.Controls.Add(this.fullpay);
@@ -445,6 +1275,7 @@
             // 
             // fullpay
             // 
+            this.fullpay.Controls.Add(this.applicant_combox_fullpay);
             this.fullpay.Controls.Add(this.total_label_fullpay);
             this.fullpay.Controls.Add(this.label12);
             this.fullpay.Controls.Add(this.panel3);
@@ -469,6 +1300,16 @@
             this.fullpay.TabIndex = 0;
             this.fullpay.Text = "tabPage1";
             this.fullpay.UseVisualStyleBackColor = true;
+            // 
+            // applicant_combox_fullpay
+            // 
+            this.applicant_combox_fullpay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.applicant_combox_fullpay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.applicant_combox_fullpay.FormattingEnabled = true;
+            this.applicant_combox_fullpay.Location = new System.Drawing.Point(470, 11);
+            this.applicant_combox_fullpay.Name = "applicant_combox_fullpay";
+            this.applicant_combox_fullpay.Size = new System.Drawing.Size(275, 29);
+            this.applicant_combox_fullpay.TabIndex = 55;
             // 
             // total_label_fullpay
             // 
@@ -839,6 +1680,7 @@
             this.itemType_combobox_fullpay.Name = "itemType_combobox_fullpay";
             this.itemType_combobox_fullpay.Size = new System.Drawing.Size(176, 29);
             this.itemType_combobox_fullpay.TabIndex = 35;
+            this.itemType_combobox_fullpay.SelectedIndexChanged += new System.EventHandler(this.itemType_combobox_fullpay_SelectedIndexChanged);
             this.itemType_combobox_fullpay.SelectedValueChanged += new System.EventHandler(this.itemType_combobox_fullpay_SelectedValueChanged);
             // 
             // subTotal_label_fullpay
@@ -932,7 +1774,6 @@
             this.editTotalCost_button.TabIndex = 71;
             this.editTotalCost_button.Text = "E";
             this.editTotalCost_button.UseVisualStyleBackColor = true;
-            this.editTotalCost_button.Click += new System.EventHandler(this.editTotalCost_button_Click);
             // 
             // label31
             // 
@@ -1175,7 +2016,6 @@
             this.address_textarea_sacramentpayment.Size = new System.Drawing.Size(262, 45);
             this.address_textarea_sacramentpayment.TabIndex = 5;
             this.address_textarea_sacramentpayment.Text = "555 San Miguel St. Phase 2 Matina Davao City";
-            this.address_textarea_sacramentpayment.TextChanged += new System.EventHandler(this.address_textarea_sacramentpayment_TextChanged);
             // 
             // contactnumber_textbox_sacramentpayment
             // 
@@ -1425,6 +2265,8 @@
             this.ClientSize = new System.Drawing.Size(958, 575);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel_controlbox);
+            this.Controls.Add(this.CDB_panel);
+            this.Controls.Add(this.CRB_panel);
             this.Controls.Add(this.CDB_parish_panel);
             this.Controls.Add(this.IncomeCashReleaseType_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1440,6 +2282,28 @@
             this.CDB_parish_panel.PerformLayout();
             this.IncomeCashReleaseType_panel.ResumeLayout(false);
             this.IncomeCashReleaseType_panel.PerformLayout();
+            this.CDB_panel.ResumeLayout(false);
+            this.CDB_panel.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.breakdown_datagridview_report_disbursment)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.summary_datagridview_report_disbursment)).EndInit();
+            this.CRB_panel.ResumeLayout(false);
+            this.CRB_panel.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.CashDisbursment.ResumeLayout(false);
             this.fullpay.ResumeLayout(false);
             this.fullpay.PerformLayout();
@@ -1566,5 +2430,71 @@
         private System.Windows.Forms.TextBox remarks_textbox_sacramentPayment;
         private System.Windows.Forms.Button editTotalCost_button;
         private System.Windows.Forms.Panel cover_panel;
+        private System.Windows.Forms.Button CRB_button;
+        private System.Windows.Forms.Panel CDB_panel;
+        private System.Windows.Forms.DataGridView breakdown_datagridview_report_disbursment;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox searchbar_textbox_report_disbursment;
+        private System.Windows.Forms.ComboBox filterBy_combobox_disbursment;
+        private System.Windows.Forms.Label postulancy_label_report;
+        private System.Windows.Forms.Label community_label_report;
+        private System.Windows.Forms.Label parish_label_report;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridView summary_datagridview_report_disbursment;
+        private System.Windows.Forms.Panel CRB_panel;
+        private System.Windows.Forms.Label postulancy_label_CRB;
+        private System.Windows.Forms.Label community_label_CRB;
+        private System.Windows.Forms.Label parish_label_CRB;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label ORNumber_CRB;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button CDB_button;
+        private System.Windows.Forms.DateTimePicker to_dtp_cashdisbursment;
+        private System.Windows.Forms.DateTimePicker from_dtp_cashdisbursment;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.RadioButton breakdown_radiobutton_cashdisbursment;
+        private System.Windows.Forms.RadioButton total_radiobutton_cashdisbursment;
+        private System.Windows.Forms.ComboBox applicant_combox_fullpay;
     }
 }

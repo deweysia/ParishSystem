@@ -13,12 +13,13 @@ namespace ParishSystem
     public partial class Treasurer : Form
     {
         int selectedIncome = 0;
-        DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
+        treasurerBackend dh = new treasurerBackend();
 
         public Treasurer()
         {
             InitializeComponent();
-            suggestedPrice_nud_fullpay.Maximum = decimal.MaxValue;           
+            suggestedPrice_nud_fullpay.Maximum = decimal.MaxValue;
+            filterBy_combobox_disbursment.SelectedIndex = 0;
         }
        
         #region Income Type
@@ -32,7 +33,14 @@ namespace ParishSystem
             itemType_dgv.DataSource = dh.getIncomeTypes();
             itemType_dgv.Columns["itemTypeID"].Visible = false;
             itemType_dgv.Columns["itemType"].HeaderText = "Item Type";
-            itemType_dgv.Rows[selectedIncome].Selected = true;
+            try
+            {
+                itemType_dgv.Rows[selectedIncome].Selected = true;
+            }
+            catch
+            {
+
+            }
         }
         private void itemType_dgv_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -115,7 +123,7 @@ namespace ParishSystem
         int bookModeFullPay;
         private void fullpay_label_Click(object sender, EventArgs e)
         {
-           //TabControl.SelectedTab = fullPayment_tab;
+            CashDisbursment.SelectedTab = fullpay;
         }
         private void load_IncomePage()
         {//make generic 
@@ -230,6 +238,7 @@ namespace ParishSystem
         private void CDB_button_menu_Click(object sender, EventArgs e)
         {
             CDB_parish_panel.BringToFront();
+            load_IncomePage();
         } 
         private void item_dgv_fullpay_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -273,10 +282,32 @@ namespace ParishSystem
             }
            
         }
+        private void itemType_combobox_fullpay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            if (itemType_combobox_fullpay.Text == "Baptism")
+            {
+                dt = dh.getPendingApplicationsOfType((int)SacramentType.Baptism);
 
+            }
+            else if (itemType_combobox_fullpay.Text == "Confirmation")
+            {
+                dt = dh.getPendingApplicationsOfType((int)SacramentType.Confirmation);
+            }
+            else if (itemType_combobox_fullpay.Text == "Marriage")
+            {
+                dt = dh.getPendingApplicationsOfType((int)SacramentType.Marriage);
+            }
+            applicant_combox_fullpay.Items.Clear();
+            foreach (DataRow dr in dt.Rows)
+            {
+                applicant_combox_fullpay.Items.Add(new ComboboxContent(int.Parse(dr["profileID"].ToString()), dr["name"].ToString(), dr["address"].ToString(), dr["contactnumber"].ToString(), dr["applicationID"].ToString(), dr["sacramentType"].ToString()));
+            }
+        }
 
         #endregion
 
+        #region sacramentPay
         private void sacramentPayment_label_Click(object sender, EventArgs e)
         {
             refreshSacramentPaymentDataGrid();
@@ -292,7 +323,6 @@ namespace ParishSystem
             }
             ornumber_label_sacramentpayment.Text = dh.getnextORof((int)BookType.Parish).ToString();
         }
-        
         private void applicant_datagridview_sacramentpay_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
            // firstname_label_sacramentpayment.Text = applicant_datagridview_sacramentpay.SelectedRows[0].Cells["firstname"].Value.ToString();
@@ -303,16 +333,13 @@ namespace ParishSystem
             //contactnumber_textbox_sacramentpayment.Text= applicant_datagridview_sacramentpay.SelectedRows[0].Cells["contactnumber"].Value.ToString();
 
         }
-
-     
-
         private void add_button_sacramentpayment_Click(object sender, EventArgs e)
         {
+            //reset the form kasi combobox needs to be selected again =(
             int primaryincomeID = dh.addPrimaryIncome(null, int.Parse(((ComboboxContent)profileID_combobox_sacrament.SelectedItem).content5),int.Parse(ornumber_label_sacramentpayment.Text),null);
             dh.addPayment(int.Parse(((ComboboxContent)profileID_combobox_sacrament.SelectedItem).content4), primaryincomeID, paid_nud_sacramentpayment.Value);
             refreshPayments();
         }
-
         private void profileID_combobox_sacrament_SelectedValueChanged(object sender, EventArgs e)
         {
            
@@ -332,11 +359,13 @@ namespace ParishSystem
             
             try
             {
+                
                 ornumber_label_sacramentpayment.Text = dh.getnextORof((int)BookType.Parish).ToString();
                 DataTable dt = dh.getSacramentIncome(int.Parse(((ComboboxContent)profileID_combobox_sacrament.SelectedItem).content4));
                 totalprice_label_sacramentpayment.Text = dt.Rows[0]["price"].ToString();
                 remarks_textbox_sacramentPayment.Text = dt.Rows[0]["remarks"].ToString();
-                DataTable dt2 = dh.getPayments(int.Parse(((ComboboxContent)profileID_combobox_sacrament.SelectedItem).content4));
+
+                DataTable dt2 = dh.getPayments(int.Parse(((ComboboxContent)profileID_combobox_sacrament.SelectedItem).content4)); 
                 paid_datagridview_sacramentpayment.DataSource = dt2;
                 foreach (DataGridViewColumn dgvr in paid_datagridview_sacramentpayment.Columns)
                 {
@@ -369,8 +398,7 @@ namespace ParishSystem
                 add_button_sacramentpayment.Enabled = false;
                 paid_nud_sacramentpayment.Enabled = false;
             }
-            }
-           
+            }   
         private void refreshTotalPaymentSacrament()
         {
             decimal max = 0;
@@ -383,14 +411,95 @@ namespace ParishSystem
             //balance_label_sacramentpayment.ForeColor = (int.Parse(balance_label_sacramentpayment.Text) == 0 ? Color.Black : Color.IndianRed);
         }
 
-        private void address_textarea_sacramentpayment_TextChanged(object sender, EventArgs e)
+        #endregion
+
+        #region CDB report
+        int cashDisbursmentMode = 0;
+        private void parish_label_report_Click(object sender, EventArgs e)
+                {
+            cashDisbursmentMode = (int)BookType.Parish;
+            refreshReports();
+                }
+        private void community_label_report_Click(object sender, EventArgs e)
+                {
+            cashDisbursmentMode = (int)BookType.Community;
+                    refreshReports();
+                }
+        private void postulancy_label_report_Click(object sender, EventArgs e)
+                {
+            cashDisbursmentMode = (int)BookType.Postulancy;
+                    refreshReports();
+                }
+        private void CRB_button_Click(object sender, EventArgs e)
+                {
+                    CDB_panel.BringToFront();
+                }
+        private void breakdown_datagridview_report_disbursment_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+                {
+                    Form A = new ORdetailsPopUp(int.Parse(breakdown_datagridview_report_disbursment.CurrentRow.Cells["ORnum"].Value.ToString()), cashDisbursmentMode, dh);
+                    A.ShowDialog();
+                }
+        private void searchbar_textbox_report_disbursment_TextChanged(object sender, EventArgs e)
         {
+           
+        }
+        private void from_dtp_cashdisbursment_ValueChanged(object sender, EventArgs e)
+        {
+           
+
+           
 
         }
-
-        private void editTotalCost_button_Click(object sender, EventArgs e)
+        private void to_dtp_cashdisbursment_ValueChanged(object sender, EventArgs e)
         {
+           
+        }
+
+        #endregion
+
+        private void filterBy_combobox_disbursment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(filterBy_combobox_disbursment.SelectedIndex == 0|| filterBy_combobox_disbursment.SelectedIndex == 1|| filterBy_combobox_disbursment.SelectedIndex == 2 || filterBy_combobox_disbursment.SelectedIndex == 3 || filterBy_combobox_disbursment.SelectedIndex == 5) { from_dtp_cashdisbursment.Visible = true; } else { from_dtp_cashdisbursment.Visible = false; }
+            if (filterBy_combobox_disbursment.SelectedIndex == 0) { }
+            if (filterBy_combobox_disbursment.SelectedIndex == 1) { }
+            if (filterBy_combobox_disbursment.SelectedIndex == 2) { }
+            if (filterBy_combobox_disbursment.SelectedIndex == 3) { to_dtp_cashdisbursment.Visible = true; } else { to_dtp_cashdisbursment.Visible = false; }
+            if (filterBy_combobox_disbursment.SelectedIndex == 4) { searchbar_textbox_report_disbursment.Visible = true; } else { searchbar_textbox_report_disbursment.Visible = false; }
+            if (filterBy_combobox_disbursment.SelectedIndex == 5) { }
+            if (filterBy_combobox_disbursment.SelectedIndex == 6) { }
+            if (filterBy_combobox_disbursment.SelectedIndex == 7) { }
+            if (filterBy_combobox_disbursment.SelectedIndex == 8) { }
+        }
+        int viewMode = 1;
+        private void breakdown_radiobutton_cashdisbursment_CheckedChanged(object sender, EventArgs e)
+        {
+            viewMode = 1;
+        }
+        private void total_radiobutton_cashdisbursment_CheckedChanged(object sender, EventArgs e)
+        {
+            viewMode = 2;
+        }
+        private void refreshReports()
+        {
+            breakdown_datagridview_report_disbursment.Rows.Clear();
+            if (total_radiobutton_cashdisbursment.Checked && filterBy_combobox_disbursment.SelectedIndex==0)
+            {
+                DataTable summaryDt = dh.getSummaryOfTransactions(dh.getTransactionsByAccountingBookFormatRecent((int)BookType.Parish), cashDisbursmentMode);
+                summary_datagridview_report_disbursment.DataSource = summaryDt;
+                
+            }
+            else if (breakdown_radiobutton_cashdisbursment.Checked && filterBy_combobox_disbursment.SelectedIndex == 0)
+            {
+                
+            }
+
             
         }
+
+       
+
+        
+        //.DataSource=  dh.getbreakdownSummaryOfTransactions(dh.getTransactionsByAccountingBookFormatByBook(1),1);
+        
     }
 }
