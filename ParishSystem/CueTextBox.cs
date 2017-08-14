@@ -18,9 +18,17 @@ namespace ParishSystem
             get; set;
         }
 
+        Color cueColor = Color.Gray;
+
         public Color CueColor
         {
-            get; set;
+            set
+            {
+                if (value == this.ForeColor)
+                    throw new Exception("CueColor and ForeColor cannot be the same!");
+                cueColor = value;
+            }
+            get { return cueColor; }
         }
 
         private void CueTextBox_Enter(object sender, EventArgs e)
@@ -41,6 +49,11 @@ namespace ParishSystem
                 t.Text = Cue;
                 t.ForeColor = this.CueColor;
             }
+        }
+
+        public bool isEmpty()
+        {
+            return this.ForeColor == CueColor || string.IsNullOrWhiteSpace(this.Text);
         }
     }
 }

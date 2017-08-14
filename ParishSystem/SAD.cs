@@ -339,14 +339,18 @@ namespace ParishSystem
             baptismApplication_buttons_panel.Enabled = isPending;
             baptismApplication_payment_groupbox.Enabled = isPending;
 
-            baptismApplication_firstName_textbox.Text = fn;
-            baptismApplication_midName_textbox.Text = mn;
-            baptismApplication_lastName_textbox.Text = ln;
-            baptismApplication_suffix_textbox.Text = suffix;
+            baptismApplication_firstName_textBox.Text = fn;
+            baptismApplication_midName_textBox.Text = mn;
+            baptismApplication_lastName_textBox.Text = ln;
+            baptismApplication_suffix_textBox.Text = suffix;
             baptismApplication_birthDate.Value = birthdate;
             baptismApplication_male_radio.Checked = gender == "1";
             baptismApplication_female_radio.Checked = gender == "2";
             baptismApplication_status_label.Text = status.ToString();
+
+            baptismApplication_name_lbl.Text = string.Format("{0} {1} {2} {3}", fn, mn, ln, suffix);
+            baptismApplication_birthdate_lbl.Text = birthdate.ToString("yyyy-MM-dd");
+            baptismApplication_gender_lbl.Text = gender == "1" ? "Male" : "Female";
 
             tickRequirements(baptismApplication_requirements_tablePanel, requirements);
             DataTable dt = dh.getApplicationIncomeDetails(applicationID);
@@ -383,11 +387,11 @@ namespace ParishSystem
             confirmationApplication_payment_groupbox.Enabled = isPending;
 
 
-            confirmationApplication_firstname_text.Text = fn;
-            confirmationApplication_mi_text.Text = mn;
-            confirmationApplication_lastname_text.Text = ln;
-            confirmationApplication_suffix_text.Text = suffix;
-            confirmationApplication_birthdate_dtp.Value = birthdate;
+            confirmationApplication_firstName_textBox.Text = fn;
+            confirmationApplication_mi_textBox.Text = mn;
+            confirmationApplication_lastname_textBox.Text = ln;
+            confirmationApplication_suffix_textBox.Text = suffix;
+            confirmationApplication_birthDate_dtp.Value = birthdate;
             confirmationApplication_male_radio.Checked = gender == "1";
             confirmationApplication_female_radio.Checked = gender == "2";
             confirmationApplication_status_label.Text = status.ToString();
@@ -689,7 +693,8 @@ namespace ParishSystem
             Button editBtn;
             DataGridView dgv;
             GroupBox gb;
-            TableLayoutPanel tlp;
+            TableLayoutPanel tlpRequirements;
+            TableLayoutPanel tlpProfile = null;
             FlowLayoutPanel flp;
             switch (type)
             {
@@ -697,44 +702,198 @@ namespace ParishSystem
                     editBtn = baptismApplication_editReq_button;
                     dgv = baptismApplication_dgv;
                     gb = baptismApplication_requirements_groupbox;
-                    tlp = baptismApplication_requirements_tablePanel;
+                    tlpRequirements = baptismApplication_requirements_tablePanel;
+                    tlpProfile = baptismApplication_profile_tlp;
                     flp = baptismApplication_approveRevoke_panel;
                     break;
                 case SacramentType.Confirmation:
                     editBtn = confirmationApplication_editReq_btn;
                     dgv = confirmationApplication_dgv;
                     gb = confirmationApplication_requirements_groupbox;
-                    tlp = confirmationApplication_requirements_tablePanel;
+                    tlpRequirements = confirmationApplication_requirements_tablePanel;
                     flp = confirmationApplication_approveRevoke_panel;
                     break;
                 default:
                     editBtn = marriageApplication_editReq_btn;
                     dgv = marriageApplication_dgv;
                     gb = marriageApplication_requirements_groupbox;
-                    tlp = marriageApplication_requirements_tablePanel;
+                    tlpRequirements = marriageApplication_requirements_tablePanel;
                     flp = marriageApplication_approveRevoke_panel;
                     break;
             }
 
-            bool enabled = editBtn.Tag.ToString() == "Save State";
-            gb.Enabled = !enabled;
-            flp.Enabled = enabled;
+            MessageBox.Show(editBtn.Tag.ToString());
+            bool inSaveState = editBtn.Tag.ToString() == "Save State";
+            gb.Enabled = !inSaveState;
+            flp.Enabled = inSaveState;
+            tlpProfile.Visible = inSaveState;
 
-            if (!enabled)
+            if (!inSaveState)
             {
                 editBtn.Text = "Save Changes";
                 editBtn.Tag = "Save State";
+                
             }
             else
             {
                 editBtn.Text = "Edit Requirements";
                 editBtn.Tag = "Edit State";
-                bool success = editRequirements(dgv, tlp);
+                bool success = editRequirements(dgv, tlpRequirements);
 
                 if (success)
                     Notification.Show("Successfully Applied Edits!", NotificationType.success);
                 else
                     Notification.Show("Something went wrong!", NotificationType.error);
+            }
+        }
+
+        public void editApplicationProfile(SacramentType type)
+        {
+            TableLayoutPanel tlpProfile;
+            GroupBox gbRequirements;
+            FlowLayoutPanel flpApproveRevoke;
+            Button btnEdit = new Button();
+            
+
+            string fn;
+            
+            
+            if(type == SacramentType.Baptism)
+            {
+                btnEdit = baptismApplication_edit_btn;
+                tlpProfile = baptismApplication_profile_tlp;
+                flpApproveRevoke = baptismApplication_approveRevoke_panel;
+                gbRequirements = baptismApplication_requirements_groupbox;
+            }else if(type == SacramentType.Confirmation)
+            {
+                btnEdit = confirmationApplication_edit_btn;
+                tlpProfile = confirmationApplication_profile_tlp;
+                flpApproveRevoke = confirmationApplication_approveRevoke_panel;
+                gbRequirements = confirmationApplication_requirements_groupbox;
+            }else
+            {
+                //MARRIAGE
+                btnEdit = marriageApplication_edit_btn;
+                tlpProfile = marriageApplication_profile_tlp;
+                flpApproveRevoke = marriageApplication_approveRevoke_panel;
+                gbRequirements = marriageApplication_requirements_groupbox;
+            }
+
+            //If in view state, enter edit state by negation
+            bool enableEdit = btnEdit.Tag.ToString() == "Edit";
+
+            flpApproveRevoke.Enabled = !enableEdit;
+            //If Tag is View, do Edits and change Tag to Edit
+            if (enableEdit)
+            {
+                tlpProfile.BringToFront();
+                btnEdit.Text = "Save";
+                btnEdit.Tag = "Save";
+                
+            }
+            else
+            {
+                tlpProfile.SendToBack();
+                btnEdit.Text = "Edit";
+                btnEdit.Tag = "Edit";
+
+            }
+        }
+
+        public bool editApplicationProfile(SacramentType type)
+        {
+            bool success = true;
+            if (type == SacramentType.Baptism)
+            {
+                string fn = baptismApplication_firstName_textBox.Text;
+                string mi = baptismApplication_midName_textBox.Text;
+                string ln = baptismApplication_lastName_textBox.Text;
+                string suffix = baptismApplication_suffix_textBox.Text;
+                Gender g = baptismApplication_male_radio.Checked ? Gender.Male : Gender.Female;
+                DateTime birthDate = baptismApplication_birthDate.Value;
+
+                int profileID = dh.getGeneralProfileID(fn, mi, ln, suffix, g, birthDate);
+
+                if (profileID != -1)
+                {
+                    Notification.Show("Profile already exists", NotificationType.error);
+                    return false;
+                }
+
+                success &= dh.editGeneralProfile(profileID, fn, mi, ln, suffix, g, birthDate);
+            }
+            else if(type == SacramentType.Confirmation)
+            {
+                string fn = confirmationApplication_firstName_textBox.Text;
+                string mi = confirmationApplication_mi_textBox.Text;
+                string ln = confirmationApplication_lastname_textBox.Text;
+                string suffix = confirmationApplication_suffix_textBox.Text;
+                Gender g = confirmationApplication_male_radio.Checked ? Gender.Male : Gender.Female;
+                DateTime birthDate = confirmationApplication_birthDate_dtp.Value;
+
+                int profileID = dh.getGeneralProfileID(fn, mi, ln, suffix, g, birthDate);
+
+                if (profileID != -1){
+                    Notification.Show("Profile already exists", NotificationType.error);
+                    return false;
+                }
+
+                success &= dh.editGeneralProfile(profileID, fn, mi, ln, suffix, g, birthDate);
+            }
+            else //Marriage
+            {
+                string gfn = txtGFN.Text;
+                string gmi = txtGMI.Text;
+                string gln = txtGLN.Text;
+                string gsuffix = txtGSuffix.Text;
+                DateTime gbd = dtpGBirthDate.Value;
+                int gID = dh.getGeneralProfileID(gfn, gmi, gln, gsuffix, Gender.Male, gbd);
+
+                if(gID != -1)
+                {
+                    Notification.Show("Groom profile already exists", NotificationType.error);
+                    return false;
+                }
+
+                string bfn = txtBFN.Text;
+                string bmi = txtBMI.Text;
+                string bln = txtBLN.Text;
+                string bsuffix = txtBSuffix.Text;
+                DateTime bbd = dtpBBirthDate.Value;
+                int bID = dh.getGeneralProfileID(bfn, bmi, bln, bsuffix, Gender.Female, bbd);
+
+                if (bID != -1)
+                {
+                    Notification.Show("Bride profile already exists", NotificationType.error);
+                    return false;
+                }
+
+                success &= dh.editGeneralProfile(gID, gfn, gmi, gln, gsuffix, Gender.Male, gbd);
+                success &= dh.editGeneralProfile(bID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
+            }
+
+            if (success)
+            {
+                Notification.Show("Successfully applied changes", NotificationType.success);
+            }
+            else
+            {
+                Notification.Show("Something went wrong", NotificationType.warning);
+            }
+
+            return success;
+        }
+
+        public bool generalProfileExistsPrompt(string firstName, string midName, string lastName, string suffix, Gender gender, DateTime birthDate)
+        {
+            if(dh.generalProfileExists(firstName, midName, lastName, suffix, gender, birthDate){
+                Notification.Show("Profile already exists", NotificationType.error);
+                return true;
+            }
+            else
+            {
+                Notification.Show("Successfully applied changes", NotificationType.success);
+                return false;
             }
         }
 
@@ -1137,6 +1296,37 @@ namespace ParishSystem
         }
 
         private void applicationTabControl_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sacrament_panel_VisibleChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void panelSacrament_VisibleChanged(object sender, EventArgs e)
+        {
+            while (panelSacrament.Controls.Count > 0)
+            {
+                panelSacrament.Controls[0].Dispose();
+            }
+
+            Sacrament s = new Sacrament(dh);
+            s.FormBorderStyle = FormBorderStyle.None;
+            s.TopLevel = false;
+            s.AutoScroll = true;
+            panelSacrament.Controls.Add(s);
+            s.Dock = DockStyle.Fill;
+            s.Show();
+        }
+
+        private void baptismApplication_edit_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label94_Click(object sender, EventArgs e)
         {
 
         }

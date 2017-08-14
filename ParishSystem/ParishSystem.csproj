@@ -69,6 +69,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -149,6 +150,12 @@
       <DependentUpon>IncomeType.cs</DependentUpon>
     </Compile>
     <Compile Include="ParameterizedSQL.cs" />
+    <Compile Include="Sacrament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sacrament.Designer.cs">
+      <DependentUpon>Sacrament.cs</DependentUpon>
+    </Compile>
     <Compile Include="SacramentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +257,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sacraments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sacraments.Designer.cs">
+      <DependentUpon>Sacraments.cs</DependentUpon>
     </Compile>
     <Compile Include="SAD.cs">
       <SubType>Form</SubType>
@@ -359,6 +372,9 @@
     <EmbeddedResource Include="IncomeType.resx">
       <DependentUpon>IncomeType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sacrament.resx">
+      <DependentUpon>Sacrament.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SacramentForm.resx">
       <DependentUpon>SacramentForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -404,6 +420,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sacraments.resx">
+      <DependentUpon>Sacraments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SAD.resx">
       <DependentUpon>SAD.cs</DependentUpon>

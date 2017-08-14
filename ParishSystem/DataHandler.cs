@@ -30,9 +30,6 @@ namespace ParishSystem
         {
             conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True;");
             this.userID = -1;
-
-
-
         }
 
         //                                         ========[HELPER FUNCTIONS]=========
@@ -1504,12 +1501,15 @@ namespace ParishSystem
 
         public DataTable getBaptisms()
         {
-            string q = "SELECT * FROM Baptism";
+            string q = "SELECT profileID, applicationID, baptismID, firstName, midname, lastName, suffix, baptismDate, registryNumber, pageNumber, recordNumber  "
+                +"FROM Baptism NATURAL JOIN Application NATURAL JOIN Applicant NATURAL JOIN GeneralProfile";
 
+            
             DataTable dt = runQuery(q);
 
             return dt;
         }
+
 
         public DataTable getBaptismsByYear(int year)
         {
@@ -1728,7 +1728,8 @@ namespace ParishSystem
 
         public DataTable getConfirmations()
         {
-            string q = "SELECT * FROM Confirmation";
+            string q = "SELECT profileID, applicationID, confirmationID, firstName, midname, lastName, suffix, baptismDate, registryNumber, pageNumber, recordNumber  "
+                + "FROM Confirmation NATURAL JOIN Application NATURAL JOIN Applicant NATURAL JOIN GeneralProfile";
 
             DataTable dt = runQuery(q);
 
@@ -1846,39 +1847,19 @@ namespace ParishSystem
         */
         #region
 
-        public bool addMarriage(int applicationID, int groomID, int brideID, int ministerID, DateTime licenseDate, DateTime marriageDate, string status)
+        public bool addMarriage(int applicationID, int ministerID, DateTime licenseDate, DateTime marriageDate, MarriageStatus status)
         {
-            string q = "INSERT INTO Marriage(applicationID, groomID, brideID, ministerID, licenseDate, marriageDate, status) VALUES ('"
-                + applicationID + "', '" + groomID + "', '" + brideID + "', '" + ministerID + "', '" + licenseDate.ToString("yyyy-MM-dd") + "', '" + marriageDate.ToString("yyyy-MM-dd") + "', '" + status + "')";
-
-            bool success = runNonQuery(q);
-
-            //if (success)
-            //    updateModificationInfo("Marriage", "marriageID", getLatestID("Marriage", "marriageID"));
-
+            string q = "INSERT INTO Marriage(applicationID, ministerID, licenseDate, marriageDate, status) VALUES (@applicationID, @ministerID, @licenseDate, @marriageDate, @status)";
+            bool success = ExecuteNonQuery(q, applicationID, ministerID, licenseDate.ToString("yyyy-MM-dd HH:mm:ss"), marriageDate.ToString("yyyy-MM-dd HH:mm:ss"), status);
+            
             return success;
         }
 
-        public bool editMarriage(int marriageID, int groomID, int brideID, int ministerID, DateTime licenseDate, DateTime marriageDate, string status)
+        public bool editMarriage(int marriageID, int groomID, int brideID, int ministerID, DateTime licenseDate, DateTime marriageDate, MarriageStatus status)
         {
-            //if (!idExists("Marriage", "marriageID", marriageID))
-            //    return false;
-
-            //addMarriageLog(marriageID);
-
-            string q = "UPDATE Marriage SET groomID = '" + groomID
-                + "', brideID = '" + brideID
-                + "', ministerID = '" + ministerID
-                + "', licenseDate = '" + licenseDate.ToString("yyyy-MM-dd")
-                + "', marriageDate = '" + marriageDate.ToString("yyyy-MM-dd")
-                + "', status = '" + status
-                + "' WHERE marriageID = '" + marriageID + "'";
-
-            bool success = runNonQuery(q);
-
-            //if (success)
-            //    updateModificationInfo("Marriage", "marriageID", marriageID);
-
+            string q = "INSERT INTO Marriage(marriageID, groomID, brideID, ministerID, licenseDate, marriageDate, status) VALUES "
+                +"(@marriageID, @groomID, @brideID, @ministerID, @licenseDate, @marriageDate, @status)";
+            bool success = ExecuteNonQuery(q, marriageID, groomID, brideID, ministerID, licenseDate.ToString("yyyy-MM-dd HH:mm:ss"), marriageDate.ToString("yyyy-MM-dd HH:mm:ss"), status);
             return success;
         }
 
@@ -1983,6 +1964,8 @@ namespace ParishSystem
 
             return dt;
         }
+
+        
 
         public DataTable getMarriagesWithNoReference()
         {
