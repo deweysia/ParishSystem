@@ -67,9 +67,6 @@ namespace ParishSystem
                         where  YEAR(primaryIncomeDateTime) = {year} AND MONTH(primaryIncomeDateTime) = {month} and bookType = {bookType}";
             return runQuery(q);
         }
-
-        
-        
         public DataTable getTransactionsOnYear( int bookType , int year)
         {
             string q = $@"SELECT * FROM primaryincome left outer join item on item.primaryIncomeID = primaryincome.primaryIncomeID 
@@ -89,13 +86,13 @@ namespace ParishSystem
         }
 
 
-        public DataTable getTransactionsByAccountingBookFormatByBook(int BookType)
+        public DataTable getTransactionsByAccountingBookFormatByOrNumber(int BookType,int OR)
         {
             string q = $@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,price,itemType from primaryincome 
                             inner join item on item.primaryIncomeID = primaryincome.primaryincomeid 
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where primaryincome.booktype = {BookType} and 
-                            primaryIncomeDateTime between '{ (DateTime.Now - new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd hh:mm:ss")}' and '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}'
+                            ORnum like '%{OR}%'
                             union
                             select primaryincome.primaryIncomeID,sourceName,primaryincome.bookType,ORnum,primaryIncomeDateTime,amount,itemType from primaryincome 
                             inner join payment on payment.primaryIncomeID = primaryincome.primaryIncomeID 
@@ -103,7 +100,7 @@ namespace ParishSystem
                             inner join application on application.applicationID = sacramentincome.applicationID 
                             inner join itemtype on itemtype.itemTypeID = application.sacramentType 
                             where primaryincome.booktype = {BookType} and 
-                            primaryIncomeDateTime between '{ (DateTime.Now - new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd hh:mm:ss")}' and '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}'
+                            ORnum like '%{OR}%'
                             ) as A  order by ORnum desc;";
             return runQuery(q);
         }
@@ -191,7 +188,14 @@ namespace ParishSystem
                             ) as A  order by ORnum desc;";
             return runQuery(q);
         }
-        public DataTable getSummaryOfTransactions(DataTable transactions,int bookType)//summary tab
+
+        //--------------------------------------------------------------------------------------------------------------//
+        //Def: total-summation of transactions per row
+        //     breakdown- in 1 row you can see all items in an OR
+        //     grouped- groups all OR in 1 day
+        //     ungrouped- shows individual OR
+
+        public DataTable getSummaryCashDisbursment(DataTable transactions,int bookType)//summary tab
         {
             DataTable allitems = getAllItemTypesOfBook(bookType);
             Dictionary<string, float> itemtypes = new Dictionary<string, float>();
@@ -205,10 +209,12 @@ namespace ParishSystem
             {
                 if (itemtypes.ContainsKey(dr["itemType"].ToString()))
                 {
-                    itemtypes[dr["itemtype"].ToString()] = itemtypes[dr["itemtype"].ToString()] + float.Parse(dr["itemtype"].ToString());
+                    itemtypes[dr["itemtype"].ToString()] = float.Parse(itemtypes[dr["itemtype"].ToString()].ToString()) + float.Parse(dr["price"].ToString());
                 }
             }
             DataTable output = new DataTable();
+            output.Columns.Add("Type",typeof(string));
+            output.Columns.Add("Sum", typeof(float));
             foreach (KeyValuePair<string, float> entry in itemtypes)
             {
                 if (entry.Value != 0)
@@ -218,8 +224,7 @@ namespace ParishSystem
             }
             return output;
         }
-        
-        public DataTable getTotalSummaryOfTransactions(DataTable transactions)//shows per OR with total
+        public DataTable getTotalUngroupedCashDisbursment(DataTable transactions)//total ungrouped
         {
             DataTable output = new DataTable();
             int currentOR = int.Parse(transactions.Rows[0]["ORnum"].ToString());
@@ -246,48 +251,46 @@ namespace ParishSystem
             output.Rows.Add(row);
             return output;
         }
-
-        public DataTable getTotalSummaryOfTransactionsOnOrRange(DataTable transactions)//shows per OR with total
+        public DataTable getTotalGroupedCashDisbursment(DataTable transactions)//total grouped
         {
             DataTable output = new DataTable();
             output.Columns.Add("OR Number", typeof(string));
             output.Columns.Add("Amount", typeof(float));
             output.Columns.Add("Date Paid", typeof(string));
             DataRow row = output.NewRow();
-            DateTime currentDate = toDateTime(transactions.Rows[0]["primaryIncomeDateTime"].ToString(), false);
-            int minOR = int.MaxValue;
-            int maxOR = 0;
-           
-            foreach (DataRow dr in transactions.Rows)
-            {
-                if (!currentDate.Equals(toDateTime(dr["primaryIncomeDateTime"].ToString(), false)))
-                {
-                    row["OR Number"] = minOR.ToString() + "-" + maxOR.ToString();
-                    output.Rows.Add(row);
-                    row = output.NewRow();
-                    currentDate = toDateTime(dr["primaryIncomeDateTime"].ToString(), false);
-                    minOR = int.MaxValue;
-                    maxOR = 0;
-                }
-                row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString("MMMM dd yyyy");
-                if (minOR > int.Parse(dr["ORnum"].ToString()))
-                {
-                    minOR = int.Parse(dr["ORnum"].ToString());
-                }
+                DateTime currentDate = toDateTime(transactions.Rows[0]["primaryIncomeDateTime"].ToString(), false);
+                int minOR = int.MaxValue;
+                int maxOR = 0;
 
-                if (maxOR < int.Parse(dr["ORnum"].ToString()))
+                foreach (DataRow dr in transactions.Rows)
                 {
-                    maxOR = int.Parse(dr["ORnum"].ToString());
+                    if (!currentDate.Equals(toDateTime(dr["primaryIncomeDateTime"].ToString(), false)))
+                    {
+                        row["OR Number"] = minOR.ToString() + "-" + maxOR.ToString();
+                        output.Rows.Add(row);
+                        row = output.NewRow();
+                        currentDate = toDateTime(dr["primaryIncomeDateTime"].ToString(), false);
+                        minOR = int.MaxValue;
+                        maxOR = 0;
+                    }
+                    row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString("MMMM dd yyyy");
+                    if (minOR > int.Parse(dr["ORnum"].ToString()))
+                    {
+                        minOR = int.Parse(dr["ORnum"].ToString());
+                    }
+
+                    if (maxOR < int.Parse(dr["ORnum"].ToString()))
+                    {
+                        maxOR = int.Parse(dr["ORnum"].ToString());
+                    }
+                    row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString("MMMM dd yyyy");
+                    try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["price"].ToString()); } catch { row["Amount"] = float.Parse(dr["price"].ToString()); };
                 }
-                row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString("MMMM dd yyyy");
-                try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["price"].ToString()); } catch { row["Amount"] = float.Parse(dr["price"].ToString()); };
-            }
-            row["OR Number"] = minOR.ToString() + "-" + maxOR.ToString();
-            output.Rows.Add(row);
+                row["OR Number"] = minOR.ToString() + "-" + maxOR.ToString();
+                output.Rows.Add(row);  
             return output;
         }
-
-        public DataTable getBreakdownSummaryOfTransactions(DataTable transactions, int bookType)//breakdown option //<<----item table must be passed here, separated ang per item, not in 1 OR
+        public DataTable getBreakdownUngroupedCashDisbursment(DataTable transactions, int bookType)//breakdown ungrouped
         {
             DataTable output = new DataTable();
             DataTable itemTypes = getAllItemTypesOfBook(bookType);
@@ -323,50 +326,7 @@ namespace ParishSystem
 
             return output;
         }
-        public DataTable getDayRangeSummaryOfTransactions(DataTable transactions) //sum of tranasctions per or range
-        {
-            DataTable output = new DataTable();
-            output.Columns.Add("OR Number", typeof(string));
-            output.Columns.Add("Amount", typeof(float));
-            output.Columns.Add("Date Paid", typeof(string));
-            DataRow row = output.NewRow();
-            DateTime currentDate = toDateTime(transactions.Rows[0]["primaryIncomeDateTime"].ToString(),false);
-            int minOR = int.MaxValue;
-            int maxOR = 0;
-            float amount = 0;   
-            foreach (DataRow dr in transactions.Rows)
-            {
-                if (!currentDate.Equals(toDateTime(dr["primaryIncomeDateTime"].ToString(), false)))
-                {
-                    row["OR Number"] = minOR.ToString()+"-"+ maxOR.ToString();
-                    row["Amount"] = amount;
-                    output.Rows.Add(row);
-                    row = output.NewRow();
-                    currentDate = toDateTime(dr["primaryIncomeDateTime"].ToString(), false);
-                    minOR = int.MaxValue;
-                    maxOR = 0;
-                    amount = 0;
-                }
-                row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString("MMMM dd yyyy");
-                if (minOR > int.Parse(dr["ORnum"].ToString()))
-                {
-                    minOR = int.Parse(dr["ORnum"].ToString());
-                }
-
-                if (maxOR < int.Parse(dr["ORnum"].ToString()))
-                {
-                    maxOR = int.Parse(dr["ORnum"].ToString());
-                }
-                amount += ((dr["price"].ToString() != "") ? float.Parse(dr["price"].ToString()) : float.Parse(dr["amount"].ToString()));
-            }
-            row["Date Paid"] = currentDate.ToString("MMMM dd yyyy");
-            row["OR Number"] = minOR.ToString() + "-" + maxOR.ToString();
-            row["Amount"] = amount;
-            output.Rows.Add(row);
-            return output;
-        }
-
-        public DataTable getDayRangeSummaryOfTransactionsOnORrange(DataTable transactions,int bookType) //grouped by or per day + sum of transactions
+        public DataTable getBreakdownGroupedCashDisbursment(DataTable transactions,int bookType) //breakdown grouped
         {
             DateTime currentDate = toDateTime(transactions.Rows[0]["primaryIncomeDateTime"].ToString(), false);
             int minOR = int.MaxValue;
@@ -415,6 +375,88 @@ namespace ParishSystem
             output.Rows.Add(row);
 
             return output;
+        }
+        /*  LMAOOO this is the same as getTotalSummaryOfTransactionsOnOrRange >> im so stupid for recoding
+        public DataTable getDayRangeSummaryOfTransactions(DataTable transactions) //sum of tranasctions per or range
+        {
+            DataTable output = new DataTable();
+            output.Columns.Add("OR Number", typeof(string));
+            output.Columns.Add("Amount", typeof(float));
+            output.Columns.Add("Date Paid", typeof(string));
+            DataRow row = output.NewRow();
+            DateTime currentDate = toDateTime(transactions.Rows[0]["primaryIncomeDateTime"].ToString(),false);
+            int minOR = int.MaxValue;
+            int maxOR = 0;
+            float amount = 0;   
+            foreach (DataRow dr in transactions.Rows)
+            {
+                if (!currentDate.Equals(toDateTime(dr["primaryIncomeDateTime"].ToString(), false)))
+                {
+                    row["OR Number"] = minOR.ToString()+"-"+ maxOR.ToString();
+                    row["Amount"] = amount;
+                    output.Rows.Add(row);
+                    row = output.NewRow();
+                    currentDate = toDateTime(dr["primaryIncomeDateTime"].ToString(), false);
+                    minOR = int.MaxValue;
+                    maxOR = 0;
+                    amount = 0;
+                }
+                row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString("MMMM dd yyyy");
+                if (minOR > int.Parse(dr["ORnum"].ToString()))
+                {
+                    minOR = int.Parse(dr["ORnum"].ToString());
+                }
+
+                if (maxOR < int.Parse(dr["ORnum"].ToString()))
+                {
+                    maxOR = int.Parse(dr["ORnum"].ToString());
+                }
+                amount += ((dr["price"].ToString() != "") ? float.Parse(dr["price"].ToString()) : float.Parse(dr["amount"].ToString()));
+            }
+            row["Date Paid"] = currentDate.ToString("MMMM dd yyyy");
+            row["OR Number"] = minOR.ToString() + "-" + maxOR.ToString();
+            row["Amount"] = amount;
+            output.Rows.Add(row);
+            return output;
+        }
+        */
+        //--------------------------------------------------------------------------------------------------------------//
+
+        public int getMaxCNNumber(int book)
+        {
+            string q = $@"select max(checkNum) from cashreleasevoucher where booktype = {book}";
+            int holder=1;
+            if (int.TryParse(runQuery(q).Rows[0][0].ToString(), out holder))
+            {
+                return holder+1;
+            }
+            return 1;
+        }
+        public int getMaxCVNumber(int book)
+        {
+            string q = $@"select max(CVnum) from cashreleasevoucher where booktype = {book}";
+            int holder = 1;
+            if (int.TryParse(runQuery(q).Rows[0][0].ToString(), out holder))
+            {
+                return holder+1;
+            }
+            return 1;
+        }
+        public DataTable getItemTypesCashRelease(int bookType)
+        {
+            string q = $@"select * from cashreleasetype where booktype ={bookType} and status =1";
+            return runQuery(q);
+        }
+
+        public int addCashRelease(string remark, int checkNum, int CVnum, int bookType ,string name)
+        {
+            string q = $@"INSERT INTO `sad2`.`cashreleasevoucher` (`cashReleaseDateTime`, `remark`, `checkNum`, `CVnum`, `bookType`, `name`) VALUES ('{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}', '{remark}', '{checkNum}', '{CVnum}', '{bookType}','{name}'); SELECT LAST_INSERT_ID()" ;
+            return int.Parse(runQuery(q).Rows[0][0].ToString());
+        }
+        public void addCashReleaseItem(int CashReleaseVoucherID, int cashReleaseTypeID, decimal releaseAmount)
+        {
+            string q = $@"INSERT INTO `sad2`.`cashreleaseitem` (`CashReleaseVoucherID`, `cashReleaseTypeID`, `releaseAmount`) VALUES ('{CashReleaseVoucherID}', '{cashReleaseTypeID}', '{releaseAmount}')";
+            runNonQuery(q);
         }
 
     }

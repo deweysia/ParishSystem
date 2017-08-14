@@ -2391,15 +2391,7 @@ namespace ParishSystem
                                             ================= CASH RELEASE TABLE =================
                                          =============================================================
         */
-        public bool addCashRelease(int cashReleaseTypeID, DateTime cashReleaseDateTime, string remark, double releaseAmount, int checkNum, int CVnum)
-        {
-            string q = "INSERT INTO CashRelease(cashReleaseTypeID, cashReleaseDateTime, remark, releaseAmount, checkNum, CVnum) VALUES ('"
-                + cashReleaseTypeID + "', '" + cashReleaseDateTime.ToString("yyyy-MM-dd HH:mm:ss") + "', '" + remark + "', '" + releaseAmount + "', '" + checkNum + "', '" + CVnum + "')";
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
+       
 
         public bool editCashRelease(int cashReleaseID, int cashReleaseTypeID, DateTime cashReleaseDateTime, string remark, double releaseAmount, int checkNum, int CVnum)
         {
@@ -2504,7 +2496,7 @@ namespace ParishSystem
 
         public DataTable getCashReleaseTypes()
         {
-            string q = "SELECT * FROM CashReleaseType WHERE status = 1";
+            string q = "SELECT cashReleaseTypeID,cashReleaseType,description,case when booktype=1 then 'Parish' when booktype=2 then 'Community' when booktype=3 then 'Postulancy' end as booktype,case when status=1 then 'Active' when status=2 then 'Inactive' end as status FROM CashReleaseType ";
 
             DataTable dt = runQuery(q);
 
@@ -2894,15 +2886,14 @@ namespace ParishSystem
         public int getnextORof(int bookType)
         {
             string q = $"select max(ORnum) as max from primaryincome where bookType={bookType};";
-
-            try
+            
+            int holder = 1;
+            if (int.TryParse(runQuery(q).Rows[0]["max"].ToString(), out holder))
             {
-                return int.Parse(runQuery(q).Rows[0]["max"].ToString()) + 1;
+                return holder + 1;
             }
-            catch
-            {
-                return 1;
-            }
+            return 1;
+          
         }
         public int addPrimaryIncome(string sourceName, int bookType, int ORnum, string remarks)
         {

@@ -50,10 +50,10 @@ namespace ParishSystem
         }
 
         private void button1_Click(object sender, EventArgs e)
-        { 
+        {
 
-            //dh.getbreakdownSummaryOfTransactions(dh.getTransactionsByAccountingBookFormatByBook(1),1);
-           dataGridView1.DataSource=  dh.getTotalSummaryOfTransactionsOnOrRange(dh.getTransactionsByAccountingBookFormatByBook(1));
+            dataGridView1.DataSource = dh.getSummaryCashDisbursment(dh.getTransactionsByAccountingBookFormatRecent(1),1);
+          //dataGridView1.DataSource=  dh.getSummaryCashDisbursment(dh.get(1),1);
         }//accounting book form
     }
     }
