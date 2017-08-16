@@ -13,6 +13,7 @@ namespace ParishSystem
         public string content2;
         public string content3;
         public string content4;
+        public string content5 { get; set; }
         public ComboboxContent(int id, string content)
         {
             this.id = id;
@@ -31,6 +32,23 @@ namespace ParishSystem
             this.content2 = content2;
             this.content3 = content3;
             this.content4 = content4;
+        }
+        public ComboboxContent(int id, string content, string content2, string content3, string content4,string content5)
+        {
+            this.id = id;
+            this.content = content;
+            this.content2 = content2;
+            this.content3 = content3;
+            this.content4 = content4;
+            this.content5 = content5;
+        }
+        public ComboboxContent(int id, string content, string content2, string content3)
+        {
+            this.id = id;
+            this.content = content;
+            this.content2 = content2;
+            this.content3 = content3;
+         
         }
         public override string ToString()
         {
