@@ -26,7 +26,7 @@ namespace ParishSystem
             Application.SetCompatibleTextRenderingDefault(false);
             //MessageBox.Show((dh == null).ToString());
             //MessageBox.Show((new Sacraments(dh) == null).ToString());
-            Application.Run(new SAD());
+            Application.Run(new Treasurer());
         }
     }
 
