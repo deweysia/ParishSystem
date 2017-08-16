@@ -54,13 +54,6 @@
             this.flowLayout_ControlButtons = new System.Windows.Forms.FlowLayoutPanel();
             this.CDB_parish_panel = new System.Windows.Forms.Panel();
             this.sacramentPayment_label = new System.Windows.Forms.Label();
-            this.postulancy_label_fullpay = new System.Windows.Forms.Label();
-            this.community_label_fullpay = new System.Windows.Forms.Label();
-            this.parish_label_fullpay = new System.Windows.Forms.Label();
-            this.fullpay_label = new System.Windows.Forms.Label();
-            this.IncomeCashReleaseType_panel = new System.Windows.Forms.Panel();
-            this.cashReleaseType_label = new System.Windows.Forms.Label();
-            this.incomeType_label = new System.Windows.Forms.Label();
             this.CashDisbursment = new ParishSystem.HiddenTabControl();
             this.fullpay = new System.Windows.Forms.TabPage();
             this.total_label_fullpay = new System.Windows.Forms.Label();
@@ -132,6 +125,13 @@
             this.contactnumber_textbox_sacramentpayment = new System.Windows.Forms.MaskedTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.postulancy_label_fullpay = new System.Windows.Forms.Label();
+            this.community_label_fullpay = new System.Windows.Forms.Label();
+            this.parish_label_fullpay = new System.Windows.Forms.Label();
+            this.fullpay_label = new System.Windows.Forms.Label();
+            this.IncomeCashReleaseType_panel = new System.Windows.Forms.Panel();
+            this.cashReleaseType_label = new System.Windows.Forms.Label();
+            this.incomeType_label = new System.Windows.Forms.Label();
             this.IncomeCashReleaseType_TabControl = new ParishSystem.HiddenTabControl();
             this.IncomeTypeTab = new System.Windows.Forms.TabPage();
             this.enable_button_itemType = new System.Windows.Forms.Button();
@@ -148,7 +148,6 @@
             this.panel2.SuspendLayout();
             this.panel_controlbox.SuspendLayout();
             this.CDB_parish_panel.SuspendLayout();
-            this.IncomeCashReleaseType_panel.SuspendLayout();
             this.CashDisbursment.SuspendLayout();
             this.fullpay.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -166,6 +165,7 @@
             this.flowLayoutPanel3.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.totalprice_nud_sacramentpayment)).BeginInit();
+            this.IncomeCashReleaseType_panel.SuspendLayout();
             this.IncomeCashReleaseType_TabControl.SuspendLayout();
             this.IncomeTypeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemType_dgv)).BeginInit();
@@ -365,87 +365,6 @@
             this.sacramentPayment_label.TabIndex = 11;
             this.sacramentPayment_label.Text = "Sacrament DownPayment";
             this.sacramentPayment_label.Click += new System.EventHandler(this.sacramentPayment_label_Click);
-            // 
-            // postulancy_label_fullpay
-            // 
-            this.postulancy_label_fullpay.AutoSize = true;
-            this.postulancy_label_fullpay.ForeColor = System.Drawing.Color.White;
-            this.postulancy_label_fullpay.Location = new System.Drawing.Point(489, 76);
-            this.postulancy_label_fullpay.Name = "postulancy_label_fullpay";
-            this.postulancy_label_fullpay.Size = new System.Drawing.Size(84, 21);
-            this.postulancy_label_fullpay.TabIndex = 8;
-            this.postulancy_label_fullpay.Text = "Postulancy";
-            this.postulancy_label_fullpay.Click += new System.EventHandler(this.postulancy_label_fullpay_Click);
-            // 
-            // community_label_fullpay
-            // 
-            this.community_label_fullpay.AutoSize = true;
-            this.community_label_fullpay.ForeColor = System.Drawing.Color.White;
-            this.community_label_fullpay.Location = new System.Drawing.Point(317, 76);
-            this.community_label_fullpay.Name = "community_label_fullpay";
-            this.community_label_fullpay.Size = new System.Drawing.Size(92, 21);
-            this.community_label_fullpay.TabIndex = 7;
-            this.community_label_fullpay.Text = "Community";
-            this.community_label_fullpay.Click += new System.EventHandler(this.community_label_fullpay_Click);
-            // 
-            // parish_label_fullpay
-            // 
-            this.parish_label_fullpay.AutoSize = true;
-            this.parish_label_fullpay.ForeColor = System.Drawing.Color.White;
-            this.parish_label_fullpay.Location = new System.Drawing.Point(173, 76);
-            this.parish_label_fullpay.Name = "parish_label_fullpay";
-            this.parish_label_fullpay.Size = new System.Drawing.Size(52, 21);
-            this.parish_label_fullpay.TabIndex = 6;
-            this.parish_label_fullpay.Text = "Parish";
-            this.parish_label_fullpay.Click += new System.EventHandler(this.parish_label_fullpay_Click);
-            // 
-            // fullpay_label
-            // 
-            this.fullpay_label.AutoSize = true;
-            this.fullpay_label.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fullpay_label.ForeColor = System.Drawing.Color.White;
-            this.fullpay_label.Location = new System.Drawing.Point(93, 16);
-            this.fullpay_label.Name = "fullpay_label";
-            this.fullpay_label.Size = new System.Drawing.Size(132, 45);
-            this.fullpay_label.TabIndex = 5;
-            this.fullpay_label.Text = "Full pay";
-            this.fullpay_label.Click += new System.EventHandler(this.fullpay_label_Click);
-            // 
-            // IncomeCashReleaseType_panel
-            // 
-            this.IncomeCashReleaseType_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.IncomeCashReleaseType_panel.Controls.Add(this.cashReleaseType_label);
-            this.IncomeCashReleaseType_panel.Controls.Add(this.incomeType_label);
-            this.IncomeCashReleaseType_panel.Controls.Add(this.IncomeCashReleaseType_TabControl);
-            this.IncomeCashReleaseType_panel.Location = new System.Drawing.Point(184, 33);
-            this.IncomeCashReleaseType_panel.Margin = new System.Windows.Forms.Padding(0);
-            this.IncomeCashReleaseType_panel.Name = "IncomeCashReleaseType_panel";
-            this.IncomeCashReleaseType_panel.Size = new System.Drawing.Size(775, 542);
-            this.IncomeCashReleaseType_panel.TabIndex = 0;
-            // 
-            // cashReleaseType_label
-            // 
-            this.cashReleaseType_label.AutoSize = true;
-            this.cashReleaseType_label.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cashReleaseType_label.ForeColor = System.Drawing.Color.White;
-            this.cashReleaseType_label.Location = new System.Drawing.Point(254, 11);
-            this.cashReleaseType_label.Name = "cashReleaseType_label";
-            this.cashReleaseType_label.Size = new System.Drawing.Size(285, 45);
-            this.cashReleaseType_label.TabIndex = 2;
-            this.cashReleaseType_label.Text = "Cash Release Type";
-            this.cashReleaseType_label.Click += new System.EventHandler(this.cashReleaseType_label_Click);
-            // 
-            // incomeType_label
-            // 
-            this.incomeType_label.AutoSize = true;
-            this.incomeType_label.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.incomeType_label.ForeColor = System.Drawing.Color.White;
-            this.incomeType_label.Location = new System.Drawing.Point(21, 11);
-            this.incomeType_label.Name = "incomeType_label";
-            this.incomeType_label.Size = new System.Drawing.Size(204, 45);
-            this.incomeType_label.TabIndex = 1;
-            this.incomeType_label.Text = "Income Type";
-            this.incomeType_label.Click += new System.EventHandler(this.incomeType_label_Click);
             // 
             // CashDisbursment
             // 
@@ -1334,6 +1253,87 @@
             this.label24.TabIndex = 10;
             this.label24.Text = "_______________________________";
             // 
+            // postulancy_label_fullpay
+            // 
+            this.postulancy_label_fullpay.AutoSize = true;
+            this.postulancy_label_fullpay.ForeColor = System.Drawing.Color.White;
+            this.postulancy_label_fullpay.Location = new System.Drawing.Point(489, 76);
+            this.postulancy_label_fullpay.Name = "postulancy_label_fullpay";
+            this.postulancy_label_fullpay.Size = new System.Drawing.Size(84, 21);
+            this.postulancy_label_fullpay.TabIndex = 8;
+            this.postulancy_label_fullpay.Text = "Postulancy";
+            this.postulancy_label_fullpay.Click += new System.EventHandler(this.postulancy_label_fullpay_Click);
+            // 
+            // community_label_fullpay
+            // 
+            this.community_label_fullpay.AutoSize = true;
+            this.community_label_fullpay.ForeColor = System.Drawing.Color.White;
+            this.community_label_fullpay.Location = new System.Drawing.Point(317, 76);
+            this.community_label_fullpay.Name = "community_label_fullpay";
+            this.community_label_fullpay.Size = new System.Drawing.Size(92, 21);
+            this.community_label_fullpay.TabIndex = 7;
+            this.community_label_fullpay.Text = "Community";
+            this.community_label_fullpay.Click += new System.EventHandler(this.community_label_fullpay_Click);
+            // 
+            // parish_label_fullpay
+            // 
+            this.parish_label_fullpay.AutoSize = true;
+            this.parish_label_fullpay.ForeColor = System.Drawing.Color.White;
+            this.parish_label_fullpay.Location = new System.Drawing.Point(173, 76);
+            this.parish_label_fullpay.Name = "parish_label_fullpay";
+            this.parish_label_fullpay.Size = new System.Drawing.Size(52, 21);
+            this.parish_label_fullpay.TabIndex = 6;
+            this.parish_label_fullpay.Text = "Parish";
+            this.parish_label_fullpay.Click += new System.EventHandler(this.parish_label_fullpay_Click);
+            // 
+            // fullpay_label
+            // 
+            this.fullpay_label.AutoSize = true;
+            this.fullpay_label.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullpay_label.ForeColor = System.Drawing.Color.White;
+            this.fullpay_label.Location = new System.Drawing.Point(93, 16);
+            this.fullpay_label.Name = "fullpay_label";
+            this.fullpay_label.Size = new System.Drawing.Size(132, 45);
+            this.fullpay_label.TabIndex = 5;
+            this.fullpay_label.Text = "Full pay";
+            this.fullpay_label.Click += new System.EventHandler(this.fullpay_label_Click);
+            // 
+            // IncomeCashReleaseType_panel
+            // 
+            this.IncomeCashReleaseType_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.IncomeCashReleaseType_panel.Controls.Add(this.cashReleaseType_label);
+            this.IncomeCashReleaseType_panel.Controls.Add(this.incomeType_label);
+            this.IncomeCashReleaseType_panel.Controls.Add(this.IncomeCashReleaseType_TabControl);
+            this.IncomeCashReleaseType_panel.Location = new System.Drawing.Point(184, 33);
+            this.IncomeCashReleaseType_panel.Margin = new System.Windows.Forms.Padding(0);
+            this.IncomeCashReleaseType_panel.Name = "IncomeCashReleaseType_panel";
+            this.IncomeCashReleaseType_panel.Size = new System.Drawing.Size(775, 542);
+            this.IncomeCashReleaseType_panel.TabIndex = 0;
+            // 
+            // cashReleaseType_label
+            // 
+            this.cashReleaseType_label.AutoSize = true;
+            this.cashReleaseType_label.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cashReleaseType_label.ForeColor = System.Drawing.Color.White;
+            this.cashReleaseType_label.Location = new System.Drawing.Point(254, 11);
+            this.cashReleaseType_label.Name = "cashReleaseType_label";
+            this.cashReleaseType_label.Size = new System.Drawing.Size(285, 45);
+            this.cashReleaseType_label.TabIndex = 2;
+            this.cashReleaseType_label.Text = "Cash Release Type";
+            this.cashReleaseType_label.Click += new System.EventHandler(this.cashReleaseType_label_Click);
+            // 
+            // incomeType_label
+            // 
+            this.incomeType_label.AutoSize = true;
+            this.incomeType_label.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.incomeType_label.ForeColor = System.Drawing.Color.White;
+            this.incomeType_label.Location = new System.Drawing.Point(21, 11);
+            this.incomeType_label.Name = "incomeType_label";
+            this.incomeType_label.Size = new System.Drawing.Size(204, 45);
+            this.incomeType_label.TabIndex = 1;
+            this.incomeType_label.Text = "Income Type";
+            this.incomeType_label.Click += new System.EventHandler(this.incomeType_label_Click);
+            // 
             // IncomeCashReleaseType_TabControl
             // 
             this.IncomeCashReleaseType_TabControl.Controls.Add(this.IncomeTypeTab);
@@ -1583,8 +1583,6 @@
             this.panel_controlbox.PerformLayout();
             this.CDB_parish_panel.ResumeLayout(false);
             this.CDB_parish_panel.PerformLayout();
-            this.IncomeCashReleaseType_panel.ResumeLayout(false);
-            this.IncomeCashReleaseType_panel.PerformLayout();
             this.CashDisbursment.ResumeLayout(false);
             this.fullpay.ResumeLayout(false);
             this.fullpay.PerformLayout();
@@ -1610,6 +1608,8 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.totalprice_nud_sacramentpayment)).EndInit();
+            this.IncomeCashReleaseType_panel.ResumeLayout(false);
+            this.IncomeCashReleaseType_panel.PerformLayout();
             this.IncomeCashReleaseType_TabControl.ResumeLayout(false);
             this.IncomeTypeTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.itemType_dgv)).EndInit();

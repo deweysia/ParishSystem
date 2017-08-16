@@ -746,7 +746,7 @@ namespace ParishSystem
                     Notification.Show("Something went wrong!", NotificationType.error);
             }
         }
-
+        /*
         public void editApplicationProfile(SacramentType type)
         {
             TableLayoutPanel tlpProfile;
@@ -799,7 +799,7 @@ namespace ParishSystem
 
             }
         }
-
+        */
         public bool editApplicationProfile(SacramentType type)
         {
             bool success = true;
@@ -886,7 +886,7 @@ namespace ParishSystem
 
         public bool generalProfileExistsPrompt(string firstName, string midName, string lastName, string suffix, Gender gender, DateTime birthDate)
         {
-            if(dh.generalProfileExists(firstName, midName, lastName, suffix, gender, birthDate){
+            if(dh.generalProfileExists(firstName, midName, lastName, suffix, gender, birthDate)){
                 Notification.Show("Profile already exists", NotificationType.error);
                 return true;
             }
