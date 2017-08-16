@@ -437,7 +437,7 @@ namespace ParishSystem
                 }
         private void CRB_button_Click(object sender, EventArgs e)
                 {
-                    CDB_panel.BringToFront();
+                    Reports_panel.BringToFront();
                 }
         private void breakdown_datagridview_report_disbursment_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
                 {
@@ -488,206 +488,420 @@ namespace ParishSystem
         {
             try
             {
-                report_datagridview_cashdisbursment.DataSource = null;
-                if (grouped_radiobutton_cashdisbursment.Checked)
+                if (bookReportMode == 1)
                 {
-                    if (total_radiobutton_cashdisbursment.Checked)
+
+                    report_datagridview_cashdisbursment.DataSource = null;
+                    if (grouped_radiobutton_cashdisbursment.Checked)
                     {
-                        if (filterBy_combobox_disbursment.SelectedIndex == 0)
+                        if (total_radiobutton_cashdisbursment.Checked)
                         {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatRecent(cashDisbursmentMode);
-                            report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashDisbursment(dt);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            if (filterBy_combobox_disbursment.SelectedIndex == 0)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatRecent(cashDisbursmentMode);
+                                report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashDisbursment(dt);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 1)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatByDay(cashDisbursmentMode,
+                                                                                             int.Parse(from_dtp_cashdisbursment.Value.ToString("dd")),
+                                                                                             int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
+                                                                                             int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashDisbursment(dt);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 2)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatByMonth(cashDisbursmentMode,
+                                                                                               int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
+                                                                                               int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashDisbursment(dt);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 3)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatByYear(cashDisbursmentMode,
+                                                                                             int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashDisbursment(dt);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 4)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatBetweenDates(cashDisbursmentMode,
+                                                                                                    from_dtp_cashdisbursment.Value,
+                                                                                                    to_dtp_cashdisbursment.Value);
+                                report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashDisbursment(dt);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 5)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatByOrNumber(cashDisbursmentMode,
+                                                                                                 int.Parse(searchbar_textbox_report_disbursment.Text));
+                                report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashDisbursment(dt);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
                         }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 1)
+                        else if (breakdown_radiobutton_cashdisbursment.Checked)
                         {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatByDay(cashDisbursmentMode,
-                                                                                         int.Parse(from_dtp_cashdisbursment.Value.ToString("dd")),
-                                                                                         int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
-                                                                                         int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
-                            report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashDisbursment(dt);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 2)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatByMonth(cashDisbursmentMode,
-                                                                                           int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
-                                                                                           int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
-                            report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashDisbursment(dt);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 3)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatByYear(cashDisbursmentMode,
-                                                                                         int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
-                            report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashDisbursment(dt);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 4)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatBetweenDates(cashDisbursmentMode,
-                                                                                                from_dtp_cashdisbursment.Value,
-                                                                                                to_dtp_cashdisbursment.Value);
-                            report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashDisbursment(dt);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 5)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatByOrNumber(cashDisbursmentMode,
-                                                                                             int.Parse(searchbar_textbox_report_disbursment.Text));
-                            report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashDisbursment(dt);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                    }
-                    else if (breakdown_radiobutton_cashdisbursment.Checked)
-                    {
-                        if (filterBy_combobox_disbursment.SelectedIndex == 0)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatRecent(cashDisbursmentMode);
-                            report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashDisbursment(dt, cashDisbursmentMode);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 1)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatByDay(cashDisbursmentMode,
-                                                                                         int.Parse(from_dtp_cashdisbursment.Value.ToString("dd")),
-                                                                                         int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
-                                                                                         int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
-                            report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashDisbursment(dt, cashDisbursmentMode);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 2)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatByMonth(cashDisbursmentMode,
-                                                                                           int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
-                                                                                           int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
-                            report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashDisbursment(dt, cashDisbursmentMode);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 3)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatByYear(cashDisbursmentMode,
-                                                                                         int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
-                            report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashDisbursment(dt, cashDisbursmentMode);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 4)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatBetweenDates(cashDisbursmentMode,
-                                                                                                from_dtp_cashdisbursment.Value,
-                                                                                                to_dtp_cashdisbursment.Value);
-                            report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashDisbursment(dt, cashDisbursmentMode);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 5)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatByOrNumber(cashDisbursmentMode,
-                                                                                             int.Parse(searchbar_textbox_report_disbursment.Text));
-                            report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashDisbursment(dt, cashDisbursmentMode);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                    }
-                }
-                else if (notGrouped_radiobutton_cashdisbursment.Checked)
-                {
-                    if (total_radiobutton_cashdisbursment.Checked)
-                    {
-                        if (filterBy_combobox_disbursment.SelectedIndex == 0)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatRecent(cashDisbursmentMode);
-                            report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashDisbursment(dt);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 1)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatByDay(cashDisbursmentMode,
-                                                                                         int.Parse(from_dtp_cashdisbursment.Value.ToString("dd")),
-                                                                                         int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
-                                                                                         int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
-                            report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashDisbursment(dt);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 2)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatByMonth(cashDisbursmentMode,
-                                                                                           int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
-                                                                                           int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
-                            report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashDisbursment(dt);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 3)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatByYear(cashDisbursmentMode,
-                                                                                         int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
-                            report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashDisbursment(dt);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 4)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatBetweenDates(cashDisbursmentMode,
-                                                                                                from_dtp_cashdisbursment.Value,
-                                                                                                to_dtp_cashdisbursment.Value);
-                            report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashDisbursment(dt);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 5)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatByOrNumber(cashDisbursmentMode,
-                                                                                             int.Parse(searchbar_textbox_report_disbursment.Text));
-                            report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashDisbursment(dt);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                    }
-                    else if (breakdown_radiobutton_cashdisbursment.Checked)
-                    {
-                        if (filterBy_combobox_disbursment.SelectedIndex == 0)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatRecent(cashDisbursmentMode);
-                            report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashDisbursment(dt, cashDisbursmentMode);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 1)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatByDay(cashDisbursmentMode,
-                                                                                         int.Parse(from_dtp_cashdisbursment.Value.ToString("dd")),
-                                                                                         int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
-                                                                                         int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
-                            report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashDisbursment(dt, cashDisbursmentMode);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 2)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatByMonth(cashDisbursmentMode,
-                                                                                           int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
-                                                                                           int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
-                            report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashDisbursment(dt, cashDisbursmentMode);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 3)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatByYear(cashDisbursmentMode,
-                                                                                         int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
-                            report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashDisbursment(dt, cashDisbursmentMode);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 4)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatBetweenDates(cashDisbursmentMode,
-                                                                                                from_dtp_cashdisbursment.Value,
-                                                                                                to_dtp_cashdisbursment.Value);
-                            report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashDisbursment(dt, cashDisbursmentMode);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
-                        }
-                        else if (filterBy_combobox_disbursment.SelectedIndex == 5)
-                        {
-                            DataTable dt = dh.getTransactionsByAccountingBookFormatByOrNumber(cashDisbursmentMode,
-                                                                                             int.Parse(searchbar_textbox_report_disbursment.Text));
-                            report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashDisbursment(dt, cashDisbursmentMode);
-                            summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            if (filterBy_combobox_disbursment.SelectedIndex == 0)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatRecent(cashDisbursmentMode);
+                                report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashDisbursment(dt, cashDisbursmentMode);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 1)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatByDay(cashDisbursmentMode,
+                                                                                             int.Parse(from_dtp_cashdisbursment.Value.ToString("dd")),
+                                                                                             int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
+                                                                                             int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashDisbursment(dt, cashDisbursmentMode);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 2)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatByMonth(cashDisbursmentMode,
+                                                                                               int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
+                                                                                               int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashDisbursment(dt, cashDisbursmentMode);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 3)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatByYear(cashDisbursmentMode,
+                                                                                             int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashDisbursment(dt, cashDisbursmentMode);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 4)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatBetweenDates(cashDisbursmentMode,
+                                                                                                    from_dtp_cashdisbursment.Value,
+                                                                                                    to_dtp_cashdisbursment.Value);
+                                report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashDisbursment(dt, cashDisbursmentMode);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 5)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatByOrNumber(cashDisbursmentMode,
+                                                                                                 int.Parse(searchbar_textbox_report_disbursment.Text));
+                                report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashDisbursment(dt, cashDisbursmentMode);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
                         }
 
                     }
+                    else if (notGrouped_radiobutton_cashdisbursment.Checked)
+                    {
+                        if (total_radiobutton_cashdisbursment.Checked)
+                        {
+                            if (filterBy_combobox_disbursment.SelectedIndex == 0)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatRecent(cashDisbursmentMode);
+                                report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashDisbursment(dt);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 1)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatByDay(cashDisbursmentMode,
+                                                                                             int.Parse(from_dtp_cashdisbursment.Value.ToString("dd")),
+                                                                                             int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
+                                                                                             int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashDisbursment(dt);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 2)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatByMonth(cashDisbursmentMode,
+                                                                                               int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
+                                                                                               int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashDisbursment(dt);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 3)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatByYear(cashDisbursmentMode,
+                                                                                             int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashDisbursment(dt);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 4)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatBetweenDates(cashDisbursmentMode,
+                                                                                                    from_dtp_cashdisbursment.Value,
+                                                                                                    to_dtp_cashdisbursment.Value);
+                                report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashDisbursment(dt);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 5)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatByOrNumber(cashDisbursmentMode,
+                                                                                                 int.Parse(searchbar_textbox_report_disbursment.Text));
+                                report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashDisbursment(dt);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                        }
+                        else if (breakdown_radiobutton_cashdisbursment.Checked)
+                        {
+                            if (filterBy_combobox_disbursment.SelectedIndex == 0)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatRecent(cashDisbursmentMode);
+                                report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashDisbursment(dt, cashDisbursmentMode);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 1)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatByDay(cashDisbursmentMode,
+                                                                                             int.Parse(from_dtp_cashdisbursment.Value.ToString("dd")),
+                                                                                             int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
+                                                                                             int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashDisbursment(dt, cashDisbursmentMode);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 2)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatByMonth(cashDisbursmentMode,
+                                                                                               int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
+                                                                                               int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashDisbursment(dt, cashDisbursmentMode);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 3)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatByYear(cashDisbursmentMode,
+                                                                                             int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashDisbursment(dt, cashDisbursmentMode);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 4)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatBetweenDates(cashDisbursmentMode,
+                                                                                                    from_dtp_cashdisbursment.Value,
+                                                                                                    to_dtp_cashdisbursment.Value);
+                                report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashDisbursment(dt, cashDisbursmentMode);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+                            else if (filterBy_combobox_disbursment.SelectedIndex == 5)
+                            {
+                                DataTable dt = dh.getTransactionsByAccountingBookFormatByOrNumber(cashDisbursmentMode,
+                                                                                                 int.Parse(searchbar_textbox_report_disbursment.Text));
+                                report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashDisbursment(dt, cashDisbursmentMode);
+                                summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashDisbursment(dt, cashDisbursmentMode);
+                            }
+
+                        }
+                    }
                 }
+
+                else if (bookReportMode == 2)
+                {
+                        report_datagridview_cashdisbursment.DataSource = null;
+                        if (grouped_radiobutton_cashdisbursment.Checked)
+                        {
+                            if (total_radiobutton_cashdisbursment.Checked)
+                            {
+                                if (filterBy_combobox_disbursment.SelectedIndex == 0)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatRecent(cashDisbursmentMode);
+                                    report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashRelease(dt);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 1)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatByDay(cashDisbursmentMode,
+                                                                                                 int.Parse(from_dtp_cashdisbursment.Value.ToString("dd")),
+                                                                                                 int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
+                                                                                                 int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                    report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashRelease(dt);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 2)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatByMonth(cashDisbursmentMode,
+                                                                                                   int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
+                                                                                                   int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                    report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashRelease(dt);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 3)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatByYear(cashDisbursmentMode,
+                                                                                                 int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                    report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashRelease(dt);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 4)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatBetweenDates(cashDisbursmentMode,
+                                                                                                        from_dtp_cashdisbursment.Value,
+                                                                                                        to_dtp_cashdisbursment.Value);
+                                    report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashRelease(dt);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 5)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatByOrNumber(cashDisbursmentMode,
+                                                                                                     int.Parse(CN_textbox_report_disbursment.Text),
+                                                                                                     int.Parse(CV_textbox_report_disbursment.Text));
+                                    report_datagridview_cashdisbursment.DataSource = dh.getTotalGroupedCashDisbursment(dt);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                            }
+                            else if (breakdown_radiobutton_cashdisbursment.Checked)
+                            {
+                                if (filterBy_combobox_disbursment.SelectedIndex == 0)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatRecent(cashDisbursmentMode);
+                                    report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashRelease(dt, cashDisbursmentMode);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 1)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatByDay(cashDisbursmentMode,
+                                                                                                 int.Parse(from_dtp_cashdisbursment.Value.ToString("dd")),
+                                                                                                 int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
+                                                                                                 int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                    report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashRelease(dt, cashDisbursmentMode);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 2)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatByMonth(cashDisbursmentMode,
+                                                                                                   int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
+                                                                                                   int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                    report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashRelease(dt, cashDisbursmentMode);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 3)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatByYear(cashDisbursmentMode,
+                                                                                                 int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                    report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashRelease(dt, cashDisbursmentMode);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 4)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatBetweenDates(cashDisbursmentMode,
+                                                                                                        from_dtp_cashdisbursment.Value,
+                                                                                                        to_dtp_cashdisbursment.Value);
+                                    report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashRelease(dt, cashDisbursmentMode);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 5)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatByOrNumber(cashDisbursmentMode,
+                                                                                                     int.Parse(CN_textbox_report_disbursment.Text),
+                                                                                                     int.Parse(CV_textbox_report_disbursment.Text));
+                                report_datagridview_cashdisbursment.DataSource = dh.getBreakdownGroupedCashRelease(dt, cashDisbursmentMode);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                            }
+
+                        }
+                        else if (notGrouped_radiobutton_cashdisbursment.Checked)
+                        {
+                            if (total_radiobutton_cashdisbursment.Checked)
+                            {
+                                if (filterBy_combobox_disbursment.SelectedIndex == 0)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatRecent(cashDisbursmentMode);
+                                    report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashRelease(dt);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 1)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatByDay(cashDisbursmentMode,
+                                                                                                 int.Parse(from_dtp_cashdisbursment.Value.ToString("dd")),
+                                                                                                 int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
+                                                                                                 int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                    report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashRelease(dt);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 2)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatByMonth(cashDisbursmentMode,
+                                                                                                   int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
+                                                                                                   int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                    report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashRelease(dt);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 3)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatByYear(cashDisbursmentMode,
+                                                                                                 int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                    report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashRelease(dt);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 4)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatBetweenDates(cashDisbursmentMode,
+                                                                                                        from_dtp_cashdisbursment.Value,
+                                                                                                        to_dtp_cashdisbursment.Value);
+                                    report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashRelease(dt);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 5)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatByOrNumber(cashDisbursmentMode,
+                                                                                                     int.Parse(CN_textbox_report_disbursment.Text),
+                                                                                                     int.Parse(CV_textbox_report_disbursment.Text));
+                                report_datagridview_cashdisbursment.DataSource = dh.getTotalUngroupedCashRelease(dt);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                            }
+                            else if (breakdown_radiobutton_cashdisbursment.Checked)
+                            {
+                                if (filterBy_combobox_disbursment.SelectedIndex == 0)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatRecent(cashDisbursmentMode);
+                                    report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashRelease(dt, cashDisbursmentMode);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 1)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatByDay(cashDisbursmentMode,
+                                                                                                 int.Parse(from_dtp_cashdisbursment.Value.ToString("dd")),
+                                                                                                 int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
+                                                                                                 int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                    report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashRelease(dt, cashDisbursmentMode);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 2)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatByMonth(cashDisbursmentMode,
+                                                                                                   int.Parse(from_dtp_cashdisbursment.Value.ToString("MM")),
+                                                                                                   int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                    report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashRelease(dt, cashDisbursmentMode);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 3)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatByYear(cashDisbursmentMode,
+                                                                                                 int.Parse(from_dtp_cashdisbursment.Value.ToString("yyyy")));
+                                    report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashRelease(dt, cashDisbursmentMode);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 4)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatBetweenDates(cashDisbursmentMode,
+                                                                                                        from_dtp_cashdisbursment.Value,
+                                                                                                        to_dtp_cashdisbursment.Value);
+                                    report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashRelease(dt, cashDisbursmentMode);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+                                else if (filterBy_combobox_disbursment.SelectedIndex == 5)
+                                {
+                                    DataTable dt = dh.getTransactionsCRBByAccountingBookFormatByOrNumber(cashDisbursmentMode,
+                                                                                                     int.Parse(CN_textbox_report_disbursment.Text),
+                                                                                                     int.Parse(CV_textbox_report_disbursment.Text));
+                                report_datagridview_cashdisbursment.DataSource = dh.getBreakdownUngroupedCashRelease(dt, cashDisbursmentMode);
+                                    summary_datagridview_report_disbursment.DataSource = dh.getSummaryCashRelease(dt, cashDisbursmentMode);
+                                }
+
+                            }
+                        }
+                    }
             }
             catch { }
 
@@ -704,26 +918,23 @@ namespace ParishSystem
 
         #endregion
 
+        #region CRB Tab
         int cashreleaseMode = 1;
-
         private void parish_label_CRB_Click(object sender, EventArgs e)
         {
             cashreleaseMode = (int)BookType.Parish;
             refreshCashRelease();
         }
-
         private void community_label_CRB_Click(object sender, EventArgs e)
         {
             cashreleaseMode = (int)BookType.Community;
             refreshCashRelease();
         }
-
         private void postulancy_label_CRB_Click(object sender, EventArgs e)
         {
             cashreleaseMode = (int)BookType.Postulancy;
             refreshCashRelease();
         }
-
         private void refreshCashRelease()
         {
             CVNumber_CRB.Text = dh.getMaxCVNumber(cashreleaseMode).ToString();
@@ -737,7 +948,6 @@ namespace ParishSystem
             }
             
         }
-
         private void itemtype_combobox_CRB_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -746,12 +956,10 @@ namespace ParishSystem
         {
 
         }
-
         private void CRB_button_menu_Click(object sender, EventArgs e)
         {
             CRB_panel.BringToFront();
         }
-
         private void add_button_CRB_Click(object sender, EventArgs e)
         {
             if (itemtype_combobox_CRB.Text != "")
@@ -795,7 +1003,6 @@ namespace ParishSystem
             }
             total_label_cashrelease.Text = sum.ToString();
         }
-
         private void item_dgv_fullpay_CRB_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             itemtype_combobox_CRB.SelectedIndex = int.Parse(item_dgv_fullpay_CRB.SelectedRows[0].Cells[2].Value.ToString());
@@ -804,12 +1011,10 @@ namespace ParishSystem
             add_button_CRB.Text = "+=";
             delete_button_CRB.Enabled = true;
         }
-
         private void clear_button_CRB_Click(object sender, EventArgs e)
         {
             clearCRB();
         }
-
         private void delete_button_CRB_Click(object sender, EventArgs e)
         {
             delete_button_CRB.Enabled = false;
@@ -817,7 +1022,6 @@ namespace ParishSystem
             clearCRB();
             refreshCRBTotal();
         }
-
         private void final_button_CRB_Click(object sender, EventArgs e)
         {
             if (item_dgv_fullpay_CRB.Rows.Count > 0)
@@ -839,7 +1043,6 @@ namespace ParishSystem
                 MessageBox.Show("shunga");
             }
         }
-
         private void cancel_button_CRB_Click(object sender, EventArgs e)
         {
             clearCRB();
@@ -848,6 +1051,21 @@ namespace ParishSystem
             remarks_textbox_CRB.Clear();
             total_label_cashrelease.Text = "";
             item_dgv_fullpay_CRB.Rows.Clear();
+        }
+
+
+
+        //make reports for CRB
+        #endregion
+        int bookReportMode = 0;
+        private void CDB_Label_Click(object sender, EventArgs e)
+        {
+             bookReportMode = 1;
+        }
+
+        private void CRB_Label_Click(object sender, EventArgs e)
+        {
+             bookReportMode = 2;
         }
     }
 }

@@ -85,7 +85,6 @@ namespace ParishSystem
             return runQuery(q);
         }
 
-
         public DataTable getTransactionsByAccountingBookFormatByOrNumber(int BookType,int OR)
         {
             string q = $@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,price,itemType from primaryincome 
@@ -188,13 +187,11 @@ namespace ParishSystem
                             ) as A  order by ORnum desc;";
             return runQuery(q);
         }
-
         //--------------------------------------------------------------------------------------------------------------//
         //Def: total-summation of transactions per row
         //     breakdown- in 1 row you can see all items in an OR
         //     grouped- groups all OR in 1 day
         //     ungrouped- shows individual OR
-
         public DataTable getSummaryCashDisbursment(DataTable transactions,int bookType)//summary tab
         {
             DataTable allitems = getAllItemTypesOfBook(bookType);
@@ -421,7 +418,6 @@ namespace ParishSystem
         }
         */
         //--------------------------------------------------------------------------------------------------------------//
-
         public int getMaxCNNumber(int book)
         {
             string q = $@"select max(checkNum) from cashreleasevoucher where booktype = {book}";
@@ -447,7 +443,6 @@ namespace ParishSystem
             string q = $@"select * from cashreleasetype where booktype ={bookType} and status =1";
             return runQuery(q);
         }
-
         public int addCashRelease(string remark, int checkNum, int CVnum, int bookType ,string name)
         {
             string q = $@"INSERT INTO `sad2`.`cashreleasevoucher` (`cashReleaseDateTime`, `remark`, `checkNum`, `CVnum`, `bookType`, `name`) VALUES ('{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}', '{remark}', '{checkNum}', '{CVnum}', '{bookType}','{name}'); SELECT LAST_INSERT_ID()" ;
@@ -457,6 +452,280 @@ namespace ParishSystem
         {
             string q = $@"INSERT INTO `sad2`.`cashreleaseitem` (`CashReleaseVoucherID`, `cashReleaseTypeID`, `releaseAmount`) VALUES ('{CashReleaseVoucherID}', '{cashReleaseTypeID}', '{releaseAmount}')";
             runNonQuery(q);
+        }
+
+        public DataTable getTransactionsCRBByAccountingBookFormatByOrNumber(int BookType, int checknum,int CVnum)
+        {
+            string q = $@"SELECT * FROM cashreleaseitem 
+                        INNER JOIN cashreleasetype on cashReleaseType.cashreleasetypeID = cashreleaseitem.cashReleaseTypeID 
+                        INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
+                        where 
+                        cashreleasetype.booktype = {BookType} and 
+                        checknum like '%{checknum}%' and
+                        CVnum like '%{CVnum}%'
+                        order by CVnum desc;";
+            return runQuery(q);
+        }
+        public DataTable getTransactionsCRBByAccountingBookFormatByDay(int BookType, int Day, int Month, int Year)
+        {
+            string q = $@"SELECT * FROM cashreleaseitem 
+                        INNER JOIN cashreleasetype on cashReleaseType.cashreleasetypeID = cashreleaseitem.cashReleaseTypeID 
+                        INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
+                        where 
+                        cashreleasetype.booktype = {BookType} and 
+						DAY(cashReleaseDateTime) = {Day} and MONTH(cashReleaseDateTime) = {Month} and YEAR(cashReleaseDateTime) = {Year}
+                        order by CVnum desc;";
+            return runQuery(q);
+        }
+        public DataTable getTransactionsCRBByAccountingBookFormatByMonth(int BookType, int Month, int Year)
+        {
+            string q = $@"SELECT * FROM cashreleaseitem 
+                        INNER JOIN cashreleasetype on cashReleaseType.cashreleasetypeID = cashreleaseitem.cashReleaseTypeID 
+                        INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
+                        where MONTH(cashReleaseDateTime) = {Month} and YEAR(cashReleaseDateTime) = {Year}
+                        and cashreleasevoucher.bookType = {BookType}
+                        order by CVnum desc;";
+            return runQuery(q);
+        }
+        public DataTable getTransactionsCRBByAccountingBookFormatByYear(int BookType, int Year)
+        {
+            string q = $@"SELECT * FROM cashreleaseitem 
+                        INNER JOIN cashreleasetype on cashReleaseType.cashreleasetypeID = cashreleaseitem.cashReleaseTypeID 
+                        INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
+                        where YEAR(cashReleaseDateTime) = {Year}
+                        and cashreleasevoucher.bookType = {BookType}
+                        order by CVnum desc;";
+            return runQuery(q);
+        }
+        public DataTable getTransactionsCRBByAccountingBookFormatBetweenDates(int BookType, DateTime from, DateTime to)
+        {
+            string q = $@"SELECT * FROM cashreleaseitem 
+                        INNER JOIN cashreleasetype on cashReleaseType.cashreleasetypeID = cashreleaseitem.cashReleaseTypeID 
+                        INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
+                        where(cashreleasedatetime between '{ from.ToString("yyyy-MM-dd hh:mm:ss")}' and '{to.ToString("yyyy-MM-dd hh:mm:ss")}')
+                        and cashreleasevoucher.bookType = { BookType }
+                        order by CVnum desc;";
+            return runQuery(q);
+        }
+        public DataTable getTransactionsCRBByAccountingBookFormatRecent(int BookType)
+        {
+            string q = $@"SELECT * FROM cashreleaseitem 
+                        INNER JOIN cashreleasetype on cashReleaseType.cashreleasetypeID = cashreleaseitem.cashReleaseTypeID 
+                        INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
+                        where(cashreleasedatetime between '{ (DateTime.Now - new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd hh:mm:ss")}' and '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}')
+                        and cashreleasevoucher.bookType = {BookType}
+                        order by CVnum desc;";
+            return runQuery(q);
+        }
+
+        public DataTable getSummaryCashRelease(DataTable transactions, int bookType)//summary tab
+        {
+            DataTable allitems = getItemTypesOfCashRelease(bookType);
+            Dictionary<string, float> itemtypes = new Dictionary<string, float>();
+
+            foreach (DataRow dr in allitems.Rows)
+            {
+                itemtypes.Add(dr["cashReleaseType"].ToString(), 0);
+            }
+
+            foreach (DataRow dr in transactions.Rows)
+            {
+                if (itemtypes.ContainsKey(dr["cashReleaseType"].ToString()))
+                {
+                    itemtypes[dr["cashReleaseType"].ToString()] = float.Parse(itemtypes[dr["cashReleaseType"].ToString()].ToString()) + float.Parse(dr["releaseAmount"].ToString());
+                }
+            }
+            DataTable output = new DataTable();
+            output.Columns.Add("Type", typeof(string));
+            output.Columns.Add("Sum", typeof(float));
+            foreach (KeyValuePair<string, float> entry in itemtypes)
+            {
+                if (entry.Value != 0)
+                {
+                    output.Rows.Add(entry.Key, entry.Value);
+                }
+            }
+            return output;
+        }
+        public DataTable getTotalUngroupedCashRelease(DataTable transactions)//total ungrouped
+        {
+            DataTable output = new DataTable();
+            int currentOR = int.Parse(transactions.Rows[0]["CVnum"].ToString());
+            DataRow row = output.NewRow();
+
+            output.Columns.Add("CVnum", typeof(string));
+            output.Columns.Add("checkNum", typeof(string));
+            output.Columns.Add("Amount", typeof(float));
+            output.Columns.Add("Name", typeof(string));
+            output.Columns.Add("Date Paid", typeof(string));
+
+            foreach (DataRow dr in transactions.Rows)
+            {
+                if (currentOR != int.Parse(dr["CVnum"].ToString()))
+                {
+                    output.Rows.Add(row);
+                    row = output.NewRow();
+                    currentOR = int.Parse(dr["CVnum"].ToString());
+                }
+                row["CVnum"] = dr["CVnum"].ToString();
+                row["checkNum"] = dr["checkNum"].ToString();
+                row["Name"] = dr["name"].ToString();
+                row["Date Paid"] = toDateTime(dr["cashReleaseDateTime"].ToString(), true).ToString("MMMM dd yyyy, hh-mm");
+                try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["price"].ToString()); } catch { row["Amount"] = float.Parse(dr["releaseAmount"].ToString()); };
+            }
+            output.Rows.Add(row);
+            return output;
+        }
+        public DataTable getTotalGroupedCashRelease(DataTable transactions)//total grouped
+        {
+            DataTable output = new DataTable();
+            output.Columns.Add("CVnum", typeof(string));
+            output.Columns.Add("checkNum", typeof(string));
+            output.Columns.Add("Amount", typeof(float));
+            output.Columns.Add("Date Paid", typeof(string));
+            DataRow row = output.NewRow();
+            DateTime currentDate = toDateTime(transactions.Rows[0]["cashReleaseDateTime"].ToString(), false);
+            int minCV = int.MaxValue;
+            int maxCV = 0;
+            int minCN = int.MaxValue;
+            int maxCN = 0;
+            foreach (DataRow dr in transactions.Rows)
+            {
+                if (!currentDate.Equals(toDateTime(dr["cashReleaseDateTime"].ToString(), false)))
+                {
+                    row["CVnum"] = minCV.ToString() + "-" + maxCV.ToString();
+                    row["checkNum"] = minCN.ToString() + "-" + maxCN.ToString();
+                    output.Rows.Add(row);
+                    row = output.NewRow();
+                    currentDate = toDateTime(dr["cashReleaseDateTime"].ToString(), false);
+                     minCV = int.MaxValue;
+                     maxCV = 0;
+                     minCN = int.MaxValue;
+                     maxCN = 0;
+                }
+                row["Date Paid"] = toDateTime(dr["cashReleaseDateTime"].ToString(), true).ToString("MMMM dd yyyy");
+                if (minCV > int.Parse(dr["CVnum"].ToString()))
+                {
+                    minCV = int.Parse(dr["CVnum"].ToString());
+                    minCN = int.Parse(dr["checkNum"].ToString());
+                }
+
+                if (maxCV < int.Parse(dr["CVnum"].ToString()))
+                {
+                    maxCV = int.Parse(dr["CVnum"].ToString());
+                    maxCN = int.Parse(dr["checkNum"].ToString());
+                }
+                row["Date Paid"] = toDateTime(dr["cashReleaseDateTime"].ToString(), true).ToString("MMMM dd yyyy");
+                try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["releaseAmount"].ToString()); } catch { row["Amount"] = float.Parse(dr["releaseAmount"].ToString()); };
+            }
+            row["CVnum"] = minCV.ToString() + "-" + maxCV.ToString();
+            row["checkNum"] = minCN.ToString() + "-" + maxCN.ToString();
+            output.Rows.Add(row);
+            return output;
+        }
+        public DataTable getBreakdownUngroupedCashRelease(DataTable transactions, int bookType)//breakdown ungrouped
+        {
+            DataTable output = new DataTable();
+            DataTable itemTypes = getItemTypesOfCashRelease(bookType);
+
+            output.Columns.Add("CVnum", typeof(string));
+            output.Columns.Add("checkNum", typeof(string));
+            output.Columns.Add("Name", typeof(string));
+            output.Columns.Add("Date Paid", typeof(string));
+
+            foreach (DataRow dr in itemTypes.Rows)
+            {
+                output.Columns.Add(dr["cashReleaseType"].ToString(), typeof(float)); //add columns 
+                output.Columns[dr["cashReleaseType"].ToString()].DefaultValue = 0;
+
+            }
+
+            int currentOR = int.Parse(transactions.Rows[0]["CVnum"].ToString());
+            DataRow row = output.NewRow();
+            foreach (DataRow dr in transactions.Rows)
+            {
+                if (currentOR != int.Parse(dr["CVnum"].ToString()))
+                {
+
+                    output.Rows.Add(row);
+                    row = output.NewRow();
+                    currentOR = int.Parse(dr["CVnum"].ToString());
+                }
+                row["CVnum"] = dr["CVnum"].ToString();
+                row["checkNum"] = dr["checkNum"].ToString();
+                row["Name"] = dr["name"].ToString();
+                row["Date Paid"] = toDateTime(dr["cashReleaseDateTime"].ToString(), true).ToString("MMMM dd yyyy, hh-mm");
+                row[dr["cashReleaseType"].ToString()] = (row[dr["cashReleaseType"].ToString()] == null ? 0 : float.Parse(row[dr["cashReleaseType"].ToString()].ToString())) + float.Parse(dr["releaseAmount"].ToString());
+            }
+            output.Rows.Add(row);
+
+            return output;
+        }
+        public DataTable getBreakdownGroupedCashRelease(DataTable transactions, int bookType) //breakdown grouped
+        {
+            DateTime currentDate = toDateTime(transactions.Rows[0]["cashReleaseDateTime"].ToString(), false);
+            DataTable output = new DataTable();
+            DataTable itemTypes = getItemTypesOfCashRelease(bookType);
+
+            output.Columns.Add("CVnum", typeof(string));
+            output.Columns.Add("checkNum", typeof(string));
+            output.Columns.Add("Name", typeof(string));
+            output.Columns.Add("Date Paid", typeof(string));
+
+            foreach (DataRow dr in itemTypes.Rows)
+            {
+                output.Columns.Add(dr["cashReleaseType"].ToString(), typeof(float)); //add columns 
+                output.Columns[dr["cashReleaseType"].ToString()].DefaultValue = 0;
+            }
+
+            int minCV = int.MaxValue;
+            int maxCV = 0;
+            int minCN = int.MaxValue;
+            int maxCN = 0;
+
+            DataRow row = output.NewRow();
+            foreach (DataRow dr in transactions.Rows)
+            {
+                if (!currentDate.Equals(toDateTime(dr["cashReleaseDateTime"].ToString(), false)))
+                {
+                    row["CVnum"] = minCV.ToString() + "-" + maxCV.ToString();
+                    row["checkNum"] = minCN.ToString() + "-" + maxCN.ToString();
+                    output.Rows.Add(row);
+                    row = output.NewRow();
+                    currentDate = toDateTime(dr["cashReleaseDateTime"].ToString(), false);
+                     minCV = int.MaxValue;
+                     maxCV = 0;
+                     minCN = int.MaxValue;
+                     maxCN = 0;
+                }
+                row["Date Paid"] = toDateTime(dr["cashReleaseDateTime"].ToString(), true).ToString("MMMM dd yyyy");
+                if (minCV > int.Parse(dr["CVnum"].ToString()))
+                {
+                    minCV = int.Parse(dr["CVnum"].ToString());
+                    minCN = int.Parse(dr["checkNum"].ToString());
+                }
+
+                if (maxCV < int.Parse(dr["CVnum"].ToString()))
+                {
+                    maxCV = int.Parse(dr["CVnum"].ToString());
+                    maxCN = int.Parse(dr["checkNum"].ToString());
+                }
+                //per itemtype code starts here
+                row["Date Paid"] = toDateTime(dr["cashReleaseDateTime"].ToString(), true).ToString("MMMM dd yyyy, hh-mm");
+                row[dr["cashReleaseType"].ToString()] = (row[dr["cashReleaseType"].ToString()] == null ? 0 : float.Parse(row[dr["cashReleaseType"].ToString()].ToString())) + float.Parse(dr["releaseAmount"].ToString());
+                //per item type code ends here
+            }
+            row["CVnum"] = minCV.ToString() + "-" + maxCV.ToString();
+            row["checkNum"] = minCN.ToString() + "-" + maxCN.ToString();
+            output.Rows.Add(row);
+
+            return output;
+        }
+
+        public DataTable getItemTypesOfCashRelease(int bookType)
+        {
+            string q = $@"SELECT * FROM sad2.cashreleasetype where bookType = {bookType}";
+            return runQuery(q);
         }
 
     }
