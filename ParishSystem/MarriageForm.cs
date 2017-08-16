@@ -85,6 +85,9 @@ namespace ParishSystem
             //get groomID, brideID
             int groomID = int.Parse(row[1].Value.ToString());
             int brideID = int.Parse(row[2].Value.ToString());
+            int ministerID = Convert.ToInt32(((ComboboxContent)cmbMinister.SelectedItem).ID);
+            DateTime licenseDate = dtpLicenseDate.Value;
+            DateTime marriageDate = dtpMarriageDate.Value;
 
             bool success = true;
 
@@ -113,6 +116,7 @@ namespace ParishSystem
             }
 
             dh.editApplication(applicationID, ApplicationStatus.Approved);
+           /// dh.addMarriage(applicationID, groomID, brideID, ministerID, licenseDate, marriageDate, MarriageStatus.Active);
             this.DialogResult = success ? DialogResult.OK : DialogResult.None;
         }
 

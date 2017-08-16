@@ -28,71 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button9 = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.date1_lbl = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.view_btn = new System.Windows.Forms.Button();
-            this.add_panel = new System.Windows.Forms.Panel();
-            this.finish_btn = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.summary_dgv = new System.Windows.Forms.DataGridView();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.price_nud = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.add_btn = new System.Windows.Forms.Button();
-            this.initialTotal_tb = new System.Windows.Forms.TextBox();
-            this.quantity_nud = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.type_cb = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.remarks_tb = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.or_tb = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.view_panel = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.end_dtp = new System.Windows.Forms.DateTimePicker();
-            this.start_dtp = new System.Windows.Forms.DateTimePicker();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -125,27 +61,72 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            this.panel12.SuspendLayout();
-            this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
-            this.tabPage1.SuspendLayout();
-            this.add_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.summary_dgv)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.price_nud)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quantity_nud)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.view_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.view_btn = new System.Windows.Forms.Button();
+            this.add_panel = new System.Windows.Forms.Panel();
+            this.finish_btn = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.summary_dgv = new System.Windows.Forms.DataGridView();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.price_nud = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.add_btn = new System.Windows.Forms.Button();
+            this.initialTotal_tb = new System.Windows.Forms.TextBox();
+            this.quantity_nud = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.type_cb = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.remarks_tb = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.or_tb = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.view_panel = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.end_dtp = new System.Windows.Forms.DateTimePicker();
+            this.start_dtp = new System.Windows.Forms.DateTimePicker();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button9 = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.date1_lbl = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.tabPage3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -156,698 +137,38 @@
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            this.add_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summary_dgv)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.price_nud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quantity_nud)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.view_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(268, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1012, 885);
-            this.tabControl1.TabIndex = 2;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.button9);
-            this.tabPage2.Controls.Add(this.panel10);
-            this.tabPage2.Controls.Add(this.panel13);
-            this.tabPage2.Controls.Add(this.button8);
-            this.tabPage2.Controls.Add(this.date1_lbl);
-            this.tabPage2.Controls.Add(this.label12);
-            this.tabPage2.Controls.Add(this.panel4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 30);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1004, 851);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Parish";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.DimGray;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(159, 92);
-            this.button9.Margin = new System.Windows.Forms.Padding(0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(137, 31);
-            this.button9.TabIndex = 34;
-            this.button9.Text = "View";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // panel10
-            // 
-            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel10.Controls.Add(this.button6);
-            this.panel10.Controls.Add(this.label5);
-            this.panel10.Controls.Add(this.dataGridView6);
-            this.panel10.Controls.Add(this.panel11);
-            this.panel10.Controls.Add(this.panel12);
-            this.panel10.Location = new System.Drawing.Point(22, 123);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(956, 707);
-            this.panel10.TabIndex = 33;
-            // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button6.Location = new System.Drawing.Point(123, 566);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(212, 43);
-            this.button6.TabIndex = 36;
-            this.button6.Text = "Finish";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(447, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 21);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Summary";
-            // 
-            // dataGridView6
-            // 
-            this.dataGridView6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(444, 59);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(492, 630);
-            this.dataGridView6.TabIndex = 35;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.numericUpDown3);
-            this.panel11.Controls.Add(this.label6);
-            this.panel11.Controls.Add(this.button7);
-            this.panel11.Controls.Add(this.textBox3);
-            this.panel11.Controls.Add(this.numericUpDown4);
-            this.panel11.Controls.Add(this.label13);
-            this.panel11.Controls.Add(this.label14);
-            this.panel11.Controls.Add(this.comboBox2);
-            this.panel11.Controls.Add(this.label28);
-            this.panel11.Location = new System.Drawing.Point(34, 286);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(393, 269);
-            this.panel11.TabIndex = 34;
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown3.Location = new System.Drawing.Point(135, 56);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(247, 25);
-            this.numericUpDown3.TabIndex = 13;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(57, 102);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 21);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Quantity";
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(269, 225);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(113, 35);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "Add";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(135, 159);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(247, 22);
-            this.textBox3.TabIndex = 10;
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown4.Location = new System.Drawing.Point(135, 103);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(247, 25);
-            this.numericUpDown4.TabIndex = 9;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(43, 126);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(339, 21);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "_______________________________________________";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(85, 56);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(44, 21);
-            this.label14.TabIndex = 7;
-            this.label14.Text = "Price";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(135, 8);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(247, 29);
-            this.comboBox2.TabIndex = 1;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(4, 11);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(125, 21);
-            this.label28.TabIndex = 0;
-            this.label28.Text = "Transaction Type";
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.richTextBox2);
-            this.panel12.Controls.Add(this.label29);
-            this.panel12.Controls.Add(this.label30);
-            this.panel12.Controls.Add(this.textBox4);
-            this.panel12.Location = new System.Drawing.Point(34, 76);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(362, 175);
-            this.panel12.TabIndex = 5;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Location = new System.Drawing.Point(83, 40);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(268, 131);
-            this.richTextBox2.TabIndex = 5;
-            this.richTextBox2.Text = "";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(3, 40);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(71, 21);
-            this.label29.TabIndex = 4;
-            this.label29.Text = "Remarks";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(3, 4);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(32, 21);
-            this.label30.TabIndex = 3;
-            this.label30.Text = "OR";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(83, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(268, 22);
-            this.textBox4.TabIndex = 0;
-            // 
-            // panel13
-            // 
-            this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel13.BackColor = System.Drawing.Color.DimGray;
-            this.panel13.Controls.Add(this.dataGridView7);
-            this.panel13.Controls.Add(this.dataGridView8);
-            this.panel13.Controls.Add(this.dateTimePicker3);
-            this.panel13.Controls.Add(this.dateTimePicker4);
-            this.panel13.Controls.Add(this.label31);
-            this.panel13.Controls.Add(this.label32);
-            this.panel13.Location = new System.Drawing.Point(22, 123);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(956, 707);
-            this.panel13.TabIndex = 35;
-            // 
-            // dataGridView7
-            // 
-            this.dataGridView7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(0, 113);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(205, 594);
-            this.dataGridView7.TabIndex = 6;
-            // 
-            // dataGridView8
-            // 
-            this.dataGridView8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Location = new System.Drawing.Point(235, 32);
-            this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.Size = new System.Drawing.Size(721, 675);
-            this.dataGridView8.TabIndex = 5;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.dateTimePicker3.CustomFormat = "MM dd yyyy";
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker3.Location = new System.Drawing.Point(89, 78);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(107, 29);
-            this.dateTimePicker3.TabIndex = 3;
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.dateTimePicker4.CustomFormat = "MM dd yyyy";
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker4.Location = new System.Drawing.Point(89, 32);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(107, 29);
-            this.dateTimePicker4.TabIndex = 2;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(36, 86);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(36, 21);
-            this.label31.TabIndex = 1;
-            this.label31.Text = "End";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(30, 40);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(42, 21);
-            this.label32.TabIndex = 0;
-            this.label32.Text = "Start";
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.DimGray;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(22, 92);
-            this.button8.Margin = new System.Windows.Forms.Padding(0);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(137, 31);
-            this.button8.TabIndex = 32;
-            this.button8.Text = "Add";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // date1_lbl
-            // 
-            this.date1_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.date1_lbl.AutoSize = true;
-            this.date1_lbl.Location = new System.Drawing.Point(903, 59);
-            this.date1_lbl.Name = "date1_lbl";
-            this.date1_lbl.Size = new System.Drawing.Size(66, 21);
-            this.date1_lbl.TabIndex = 17;
-            this.date1_lbl.Text = "--Date--";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(32, 52);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(168, 30);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Transaction View";
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(37, 85);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(927, 1);
-            this.panel4.TabIndex = 15;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.view_btn);
-            this.tabPage1.Controls.Add(this.add_panel);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Controls.Add(this.view_panel);
-            this.tabPage1.Location = new System.Drawing.Point(4, 30);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1004, 851);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Community";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // view_btn
-            // 
-            this.view_btn.BackColor = System.Drawing.Color.DimGray;
-            this.view_btn.FlatAppearance.BorderSize = 0;
-            this.view_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.view_btn.Location = new System.Drawing.Point(159, 92);
-            this.view_btn.Margin = new System.Windows.Forms.Padding(0);
-            this.view_btn.Name = "view_btn";
-            this.view_btn.Size = new System.Drawing.Size(137, 31);
-            this.view_btn.TabIndex = 33;
-            this.view_btn.Text = "View";
-            this.view_btn.UseVisualStyleBackColor = false;
-            // 
-            // add_panel
-            // 
-            this.add_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.add_panel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.add_panel.Controls.Add(this.finish_btn);
-            this.add_panel.Controls.Add(this.label11);
-            this.add_panel.Controls.Add(this.summary_dgv);
-            this.add_panel.Controls.Add(this.panel5);
-            this.add_panel.Controls.Add(this.panel3);
-            this.add_panel.Location = new System.Drawing.Point(22, 123);
-            this.add_panel.Name = "add_panel";
-            this.add_panel.Size = new System.Drawing.Size(956, 707);
-            this.add_panel.TabIndex = 32;
-            // 
-            // finish_btn
-            // 
-            this.finish_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.finish_btn.Location = new System.Drawing.Point(123, 566);
-            this.finish_btn.Name = "finish_btn";
-            this.finish_btn.Size = new System.Drawing.Size(212, 43);
-            this.finish_btn.TabIndex = 36;
-            this.finish_btn.Text = "Finish";
-            this.finish_btn.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(447, 35);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(78, 21);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Summary";
-            // 
-            // summary_dgv
-            // 
-            this.summary_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.summary_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.summary_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.summary_dgv.Location = new System.Drawing.Point(444, 59);
-            this.summary_dgv.Name = "summary_dgv";
-            this.summary_dgv.Size = new System.Drawing.Size(492, 630);
-            this.summary_dgv.TabIndex = 35;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.price_nud);
-            this.panel5.Controls.Add(this.label9);
-            this.panel5.Controls.Add(this.add_btn);
-            this.panel5.Controls.Add(this.initialTotal_tb);
-            this.panel5.Controls.Add(this.quantity_nud);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.type_cb);
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Location = new System.Drawing.Point(34, 286);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(393, 269);
-            this.panel5.TabIndex = 34;
-            // 
-            // price_nud
-            // 
-            this.price_nud.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.price_nud.Location = new System.Drawing.Point(135, 56);
-            this.price_nud.Name = "price_nud";
-            this.price_nud.Size = new System.Drawing.Size(247, 25);
-            this.price_nud.TabIndex = 13;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(57, 102);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 21);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Quantity";
-            // 
-            // add_btn
-            // 
-            this.add_btn.Location = new System.Drawing.Point(269, 225);
-            this.add_btn.Name = "add_btn";
-            this.add_btn.Size = new System.Drawing.Size(113, 35);
-            this.add_btn.TabIndex = 11;
-            this.add_btn.Text = "Add";
-            this.add_btn.UseVisualStyleBackColor = true;
-            // 
-            // initialTotal_tb
-            // 
-            this.initialTotal_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.initialTotal_tb.Location = new System.Drawing.Point(135, 159);
-            this.initialTotal_tb.Name = "initialTotal_tb";
-            this.initialTotal_tb.Size = new System.Drawing.Size(247, 22);
-            this.initialTotal_tb.TabIndex = 10;
-            // 
-            // quantity_nud
-            // 
-            this.quantity_nud.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.quantity_nud.Location = new System.Drawing.Point(135, 103);
-            this.quantity_nud.Name = "quantity_nud";
-            this.quantity_nud.Size = new System.Drawing.Size(247, 25);
-            this.quantity_nud.TabIndex = 9;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(43, 126);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(339, 21);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "_______________________________________________";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(85, 56);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 21);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Price";
-            // 
-            // type_cb
-            // 
-            this.type_cb.BackColor = System.Drawing.Color.White;
-            this.type_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.type_cb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.type_cb.FormattingEnabled = true;
-            this.type_cb.Location = new System.Drawing.Point(135, 8);
-            this.type_cb.Name = "type_cb";
-            this.type_cb.Size = new System.Drawing.Size(247, 29);
-            this.type_cb.TabIndex = 1;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(4, 11);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(125, 21);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Transaction Type";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.remarks_tb);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.or_tb);
-            this.panel3.Location = new System.Drawing.Point(34, 76);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(362, 175);
-            this.panel3.TabIndex = 5;
-            // 
-            // remarks_tb
-            // 
-            this.remarks_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.remarks_tb.Location = new System.Drawing.Point(83, 40);
-            this.remarks_tb.Name = "remarks_tb";
-            this.remarks_tb.Size = new System.Drawing.Size(268, 131);
-            this.remarks_tb.TabIndex = 5;
-            this.remarks_tb.Text = "";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 21);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Remarks";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 21);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "OR";
-            // 
-            // or_tb
-            // 
-            this.or_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.or_tb.Location = new System.Drawing.Point(83, 4);
-            this.or_tb.Name = "or_tb";
-            this.or_tb.Size = new System.Drawing.Size(268, 22);
-            this.or_tb.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DimGray;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(22, 92);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 31);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(903, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 21);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "--Date--";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(32, 52);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 30);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Transaction View";
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(37, 85);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(927, 1);
-            this.panel1.TabIndex = 23;
-            // 
-            // view_panel
-            // 
-            this.view_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.view_panel.BackColor = System.Drawing.Color.DimGray;
-            this.view_panel.Controls.Add(this.dataGridView1);
-            this.view_panel.Controls.Add(this.dataGridView2);
-            this.view_panel.Controls.Add(this.end_dtp);
-            this.view_panel.Controls.Add(this.start_dtp);
-            this.view_panel.Controls.Add(this.label16);
-            this.view_panel.Controls.Add(this.label15);
-            this.view_panel.Location = new System.Drawing.Point(22, 123);
-            this.view_panel.Name = "view_panel";
-            this.view_panel.Size = new System.Drawing.Size(956, 707);
-            this.view_panel.TabIndex = 34;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 113);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(205, 594);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(235, 32);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(721, 675);
-            this.dataGridView2.TabIndex = 5;
-            // 
-            // end_dtp
-            // 
-            this.end_dtp.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.end_dtp.CustomFormat = "MM dd yyyy";
-            this.end_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.end_dtp.Location = new System.Drawing.Point(89, 78);
-            this.end_dtp.Name = "end_dtp";
-            this.end_dtp.Size = new System.Drawing.Size(107, 29);
-            this.end_dtp.TabIndex = 3;
-            // 
-            // start_dtp
-            // 
-            this.start_dtp.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.start_dtp.CustomFormat = "MM dd yyyy";
-            this.start_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.start_dtp.Location = new System.Drawing.Point(89, 32);
-            this.start_dtp.Name = "start_dtp";
-            this.start_dtp.Size = new System.Drawing.Size(107, 29);
-            this.start_dtp.TabIndex = 2;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(36, 86);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(36, 21);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "End";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(30, 40);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(42, 21);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Start";
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(86, 49);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.TabIndex = 36;
+            this.metroButton1.Text = "metroButton1";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // tabPage3
             // 
@@ -1187,46 +508,718 @@
             this.panel8.Size = new System.Drawing.Size(927, 1);
             this.panel8.TabIndex = 34;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.view_btn);
+            this.tabPage1.Controls.Add(this.add_panel);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.panel1);
+            this.tabPage1.Controls.Add(this.view_panel);
+            this.tabPage1.Location = new System.Drawing.Point(4, 30);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1004, 851);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Community";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // view_btn
+            // 
+            this.view_btn.BackColor = System.Drawing.Color.DimGray;
+            this.view_btn.FlatAppearance.BorderSize = 0;
+            this.view_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.view_btn.Location = new System.Drawing.Point(159, 92);
+            this.view_btn.Margin = new System.Windows.Forms.Padding(0);
+            this.view_btn.Name = "view_btn";
+            this.view_btn.Size = new System.Drawing.Size(137, 31);
+            this.view_btn.TabIndex = 33;
+            this.view_btn.Text = "View";
+            this.view_btn.UseVisualStyleBackColor = false;
+            // 
+            // add_panel
+            // 
+            this.add_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.add_panel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.add_panel.Controls.Add(this.finish_btn);
+            this.add_panel.Controls.Add(this.label11);
+            this.add_panel.Controls.Add(this.summary_dgv);
+            this.add_panel.Controls.Add(this.panel5);
+            this.add_panel.Controls.Add(this.panel3);
+            this.add_panel.Location = new System.Drawing.Point(22, 123);
+            this.add_panel.Name = "add_panel";
+            this.add_panel.Size = new System.Drawing.Size(956, 707);
+            this.add_panel.TabIndex = 32;
+            // 
+            // finish_btn
+            // 
+            this.finish_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.finish_btn.Location = new System.Drawing.Point(123, 566);
+            this.finish_btn.Name = "finish_btn";
+            this.finish_btn.Size = new System.Drawing.Size(212, 43);
+            this.finish_btn.TabIndex = 36;
+            this.finish_btn.Text = "Finish";
+            this.finish_btn.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(447, 35);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(78, 21);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Summary";
+            // 
+            // summary_dgv
+            // 
+            this.summary_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.summary_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.summary_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.summary_dgv.Location = new System.Drawing.Point(444, 59);
+            this.summary_dgv.Name = "summary_dgv";
+            this.summary_dgv.Size = new System.Drawing.Size(492, 630);
+            this.summary_dgv.TabIndex = 35;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.price_nud);
+            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.add_btn);
+            this.panel5.Controls.Add(this.initialTotal_tb);
+            this.panel5.Controls.Add(this.quantity_nud);
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.type_cb);
+            this.panel5.Controls.Add(this.label10);
+            this.panel5.Location = new System.Drawing.Point(34, 286);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(393, 269);
+            this.panel5.TabIndex = 34;
+            // 
+            // price_nud
+            // 
+            this.price_nud.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.price_nud.Location = new System.Drawing.Point(135, 56);
+            this.price_nud.Name = "price_nud";
+            this.price_nud.Size = new System.Drawing.Size(247, 25);
+            this.price_nud.TabIndex = 13;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(57, 102);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 21);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Quantity";
+            // 
+            // add_btn
+            // 
+            this.add_btn.Location = new System.Drawing.Point(269, 225);
+            this.add_btn.Name = "add_btn";
+            this.add_btn.Size = new System.Drawing.Size(113, 35);
+            this.add_btn.TabIndex = 11;
+            this.add_btn.Text = "Add";
+            this.add_btn.UseVisualStyleBackColor = true;
+            // 
+            // initialTotal_tb
+            // 
+            this.initialTotal_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.initialTotal_tb.Location = new System.Drawing.Point(135, 159);
+            this.initialTotal_tb.Name = "initialTotal_tb";
+            this.initialTotal_tb.Size = new System.Drawing.Size(247, 22);
+            this.initialTotal_tb.TabIndex = 10;
+            // 
+            // quantity_nud
+            // 
+            this.quantity_nud.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.quantity_nud.Location = new System.Drawing.Point(135, 103);
+            this.quantity_nud.Name = "quantity_nud";
+            this.quantity_nud.Size = new System.Drawing.Size(247, 25);
+            this.quantity_nud.TabIndex = 9;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(43, 126);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(339, 21);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "_______________________________________________";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(85, 56);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 21);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Price";
+            // 
+            // type_cb
+            // 
+            this.type_cb.BackColor = System.Drawing.Color.White;
+            this.type_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.type_cb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.type_cb.FormattingEnabled = true;
+            this.type_cb.Location = new System.Drawing.Point(135, 8);
+            this.type_cb.Name = "type_cb";
+            this.type_cb.Size = new System.Drawing.Size(247, 29);
+            this.type_cb.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(4, 11);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(125, 21);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Transaction Type";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.remarks_tb);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.or_tb);
+            this.panel3.Location = new System.Drawing.Point(34, 76);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(362, 175);
+            this.panel3.TabIndex = 5;
+            // 
+            // remarks_tb
+            // 
+            this.remarks_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.remarks_tb.Location = new System.Drawing.Point(83, 40);
+            this.remarks_tb.Name = "remarks_tb";
+            this.remarks_tb.Size = new System.Drawing.Size(268, 131);
+            this.remarks_tb.TabIndex = 5;
+            this.remarks_tb.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 21);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Remarks";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 21);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "OR";
+            // 
+            // or_tb
+            // 
+            this.or_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.or_tb.Location = new System.Drawing.Point(83, 4);
+            this.or_tb.Name = "or_tb";
+            this.or_tb.Size = new System.Drawing.Size(268, 22);
+            this.or_tb.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DimGray;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(22, 92);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 31);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(903, 59);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 21);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "--Date--";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(32, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(168, 30);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Transaction View";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(37, 85);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(927, 1);
+            this.panel1.TabIndex = 23;
+            // 
+            // view_panel
+            // 
+            this.view_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.view_panel.BackColor = System.Drawing.Color.DimGray;
+            this.view_panel.Controls.Add(this.dataGridView1);
+            this.view_panel.Controls.Add(this.dataGridView2);
+            this.view_panel.Controls.Add(this.end_dtp);
+            this.view_panel.Controls.Add(this.start_dtp);
+            this.view_panel.Controls.Add(this.label16);
+            this.view_panel.Controls.Add(this.label15);
+            this.view_panel.Location = new System.Drawing.Point(22, 123);
+            this.view_panel.Name = "view_panel";
+            this.view_panel.Size = new System.Drawing.Size(956, 707);
+            this.view_panel.TabIndex = 34;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 113);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(205, 594);
+            this.dataGridView1.TabIndex = 6;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(235, 32);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(721, 675);
+            this.dataGridView2.TabIndex = 5;
+            // 
+            // end_dtp
+            // 
+            this.end_dtp.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.end_dtp.CustomFormat = "MM dd yyyy";
+            this.end_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.end_dtp.Location = new System.Drawing.Point(89, 78);
+            this.end_dtp.Name = "end_dtp";
+            this.end_dtp.Size = new System.Drawing.Size(107, 29);
+            this.end_dtp.TabIndex = 3;
+            // 
+            // start_dtp
+            // 
+            this.start_dtp.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.start_dtp.CustomFormat = "MM dd yyyy";
+            this.start_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.start_dtp.Location = new System.Drawing.Point(89, 32);
+            this.start_dtp.Name = "start_dtp";
+            this.start_dtp.Size = new System.Drawing.Size(107, 29);
+            this.start_dtp.TabIndex = 2;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(36, 86);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(36, 21);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "End";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(30, 40);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(42, 21);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Start";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.button9);
+            this.tabPage2.Controls.Add(this.panel10);
+            this.tabPage2.Controls.Add(this.panel13);
+            this.tabPage2.Controls.Add(this.button8);
+            this.tabPage2.Controls.Add(this.date1_lbl);
+            this.tabPage2.Controls.Add(this.label12);
+            this.tabPage2.Controls.Add(this.panel4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 30);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1004, 851);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Parish";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.DimGray;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Location = new System.Drawing.Point(159, 92);
+            this.button9.Margin = new System.Windows.Forms.Padding(0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(137, 31);
+            this.button9.TabIndex = 34;
+            this.button9.Text = "View";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // panel10
+            // 
+            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel10.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel10.Controls.Add(this.button6);
+            this.panel10.Controls.Add(this.label5);
+            this.panel10.Controls.Add(this.dataGridView6);
+            this.panel10.Controls.Add(this.panel11);
+            this.panel10.Controls.Add(this.panel12);
+            this.panel10.Location = new System.Drawing.Point(22, 123);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(956, 707);
+            this.panel10.TabIndex = 33;
+            // 
+            // button6
+            // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button6.Location = new System.Drawing.Point(123, 566);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(212, 43);
+            this.button6.TabIndex = 36;
+            this.button6.Text = "Finish";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(447, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 21);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Summary";
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Location = new System.Drawing.Point(444, 59);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.Size = new System.Drawing.Size(492, 630);
+            this.dataGridView6.TabIndex = 35;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.numericUpDown3);
+            this.panel11.Controls.Add(this.label6);
+            this.panel11.Controls.Add(this.button7);
+            this.panel11.Controls.Add(this.textBox3);
+            this.panel11.Controls.Add(this.numericUpDown4);
+            this.panel11.Controls.Add(this.label13);
+            this.panel11.Controls.Add(this.label14);
+            this.panel11.Controls.Add(this.comboBox2);
+            this.panel11.Controls.Add(this.label28);
+            this.panel11.Location = new System.Drawing.Point(34, 286);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(393, 269);
+            this.panel11.TabIndex = 34;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDown3.Location = new System.Drawing.Point(135, 56);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(247, 25);
+            this.numericUpDown3.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(57, 102);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 21);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Quantity";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(269, 225);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(113, 35);
+            this.button7.TabIndex = 11;
+            this.button7.Text = "Add";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Location = new System.Drawing.Point(135, 159);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(247, 22);
+            this.textBox3.TabIndex = 10;
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDown4.Location = new System.Drawing.Point(135, 103);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(247, 25);
+            this.numericUpDown4.TabIndex = 9;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(43, 126);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(339, 21);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "_______________________________________________";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(85, 56);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(44, 21);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Price";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.White;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(135, 8);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(247, 29);
+            this.comboBox2.TabIndex = 1;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(4, 11);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(125, 21);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "Transaction Type";
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.richTextBox2);
+            this.panel12.Controls.Add(this.label29);
+            this.panel12.Controls.Add(this.label30);
+            this.panel12.Controls.Add(this.textBox4);
+            this.panel12.Location = new System.Drawing.Point(34, 76);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(362, 175);
+            this.panel12.TabIndex = 5;
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.Location = new System.Drawing.Point(83, 40);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(268, 131);
+            this.richTextBox2.TabIndex = 5;
+            this.richTextBox2.Text = "";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(3, 40);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(71, 21);
+            this.label29.TabIndex = 4;
+            this.label29.Text = "Remarks";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(3, 4);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(32, 21);
+            this.label30.TabIndex = 3;
+            this.label30.Text = "OR";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Location = new System.Drawing.Point(83, 4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(268, 22);
+            this.textBox4.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel13.BackColor = System.Drawing.Color.DimGray;
+            this.panel13.Controls.Add(this.dataGridView7);
+            this.panel13.Controls.Add(this.dataGridView8);
+            this.panel13.Controls.Add(this.dateTimePicker3);
+            this.panel13.Controls.Add(this.dateTimePicker4);
+            this.panel13.Controls.Add(this.label31);
+            this.panel13.Controls.Add(this.label32);
+            this.panel13.Location = new System.Drawing.Point(22, 123);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(956, 707);
+            this.panel13.TabIndex = 35;
+            // 
+            // dataGridView7
+            // 
+            this.dataGridView7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView7.Location = new System.Drawing.Point(0, 113);
+            this.dataGridView7.Name = "dataGridView7";
+            this.dataGridView7.Size = new System.Drawing.Size(205, 594);
+            this.dataGridView7.TabIndex = 6;
+            // 
+            // dataGridView8
+            // 
+            this.dataGridView8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView8.Location = new System.Drawing.Point(235, 32);
+            this.dataGridView8.Name = "dataGridView8";
+            this.dataGridView8.Size = new System.Drawing.Size(721, 675);
+            this.dataGridView8.TabIndex = 5;
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.dateTimePicker3.CustomFormat = "MM dd yyyy";
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker3.Location = new System.Drawing.Point(89, 78);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(107, 29);
+            this.dateTimePicker3.TabIndex = 3;
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.dateTimePicker4.CustomFormat = "MM dd yyyy";
+            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker4.Location = new System.Drawing.Point(89, 32);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(107, 29);
+            this.dateTimePicker4.TabIndex = 2;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(36, 86);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(36, 21);
+            this.label31.TabIndex = 1;
+            this.label31.Text = "End";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(30, 40);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(42, 21);
+            this.label32.TabIndex = 0;
+            this.label32.Text = "Start";
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.DimGray;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Location = new System.Drawing.Point(22, 92);
+            this.button8.Margin = new System.Windows.Forms.Padding(0);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(137, 31);
+            this.button8.TabIndex = 32;
+            this.button8.Text = "Add";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // date1_lbl
+            // 
+            this.date1_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.date1_lbl.AutoSize = true;
+            this.date1_lbl.Location = new System.Drawing.Point(903, 59);
+            this.date1_lbl.Name = "date1_lbl";
+            this.date1_lbl.Size = new System.Drawing.Size(66, 21);
+            this.date1_lbl.TabIndex = 17;
+            this.date1_lbl.Text = "--Date--";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(32, 52);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(168, 30);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Transaction View";
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Location = new System.Drawing.Point(37, 85);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(927, 1);
+            this.panel4.TabIndex = 15;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(268, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1012, 885);
+            this.tabControl1.TabIndex = 2;
+            // 
+            // panel14
+            // 
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel14.Location = new System.Drawing.Point(268, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(1011, 885);
+            this.panel14.TabIndex = 37;
+            // 
             // tCDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 885);
+            this.Controls.Add(this.panel14);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "tCDB";
             this.Text = "tCDB";
             this.Load += new System.EventHandler(this.tCDB_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.add_panel.ResumeLayout(false);
-            this.add_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.summary_dgv)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.price_nud)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quantity_nud)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.view_panel.ResumeLayout(false);
-            this.view_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1242,49 +1235,44 @@
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.add_panel.ResumeLayout(false);
+            this.add_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summary_dgv)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.price_nud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quantity_nud)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.view_panel.ResumeLayout(false);
+            this.view_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label date1_lbl;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button view_btn;
-        private System.Windows.Forms.Panel add_panel;
-        private System.Windows.Forms.Button finish_btn;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView summary_dgv;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.NumericUpDown price_nud;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button add_btn;
-        private System.Windows.Forms.TextBox initialTotal_tb;
-        private System.Windows.Forms.NumericUpDown quantity_nud;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox type_cb;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.RichTextBox remarks_tb;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox or_tb;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel view_panel;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DateTimePicker end_dtp;
-        private System.Windows.Forms.DateTimePicker start_dtp;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
+        private MetroFramework.Controls.MetroButton metroButton1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button3;
@@ -1317,6 +1305,40 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button view_btn;
+        private System.Windows.Forms.Panel add_panel;
+        private System.Windows.Forms.Button finish_btn;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridView summary_dgv;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.NumericUpDown price_nud;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button add_btn;
+        private System.Windows.Forms.TextBox initialTotal_tb;
+        private System.Windows.Forms.NumericUpDown quantity_nud;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox type_cb;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.RichTextBox remarks_tb;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox or_tb;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel view_panel;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DateTimePicker end_dtp;
+        private System.Windows.Forms.DateTimePicker start_dtp;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label5;
@@ -1336,7 +1358,6 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.DataGridView dataGridView7;
         private System.Windows.Forms.DataGridView dataGridView8;
@@ -1345,5 +1366,10 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label date1_lbl;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Panel panel14;
     }
 }

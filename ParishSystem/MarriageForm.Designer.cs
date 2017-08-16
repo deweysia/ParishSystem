@@ -34,6 +34,16 @@
             this.lblGName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbGStatus = new MetroFramework.Controls.MetroComboBox();
+            this.txtGMSuffix = new ParishSystem.CueTextBox();
+            this.txtGFSuffix = new ParishSystem.CueTextBox();
+            this.txtGMLN = new ParishSystem.CueTextBox();
+            this.txtGFLN = new ParishSystem.CueTextBox();
+            this.txtGMMI = new ParishSystem.CueTextBox();
+            this.txtGFMI = new ParishSystem.CueTextBox();
+            this.txtGResidence = new ParishSystem.CueTextBox();
+            this.txtGMFN = new ParishSystem.CueTextBox();
+            this.txtGFFN = new ParishSystem.CueTextBox();
+            this.txtGBirthPlace = new ParishSystem.CueTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblGBirthPlace = new System.Windows.Forms.Label();
@@ -43,6 +53,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmbBStatus = new MetroFramework.Controls.MetroComboBox();
+            this.txtBFSuffix = new ParishSystem.CueTextBox();
+            this.txtBMSuffix = new ParishSystem.CueTextBox();
+            this.txtBFLN = new ParishSystem.CueTextBox();
+            this.txtBFMI = new ParishSystem.CueTextBox();
+            this.txtBMLN = new ParishSystem.CueTextBox();
+            this.txtBFFN = new ParishSystem.CueTextBox();
+            this.txtBMMI = new ParishSystem.CueTextBox();
+            this.txtBMFN = new ParishSystem.CueTextBox();
+            this.txtBResidence = new ParishSystem.CueTextBox();
+            this.txtBBirthPlace = new ParishSystem.CueTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -66,46 +86,26 @@
             this.residence = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnAddSponsor = new MetroFramework.Controls.MetroButton();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.radioMale = new MetroFramework.Controls.MetroRadioButton();
-            this.radioFemale = new MetroFramework.Controls.MetroRadioButton();
-            this.label11 = new System.Windows.Forms.Label();
             this.btnSubmit = new MetroFramework.Controls.MetroButton();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.cmbLicenseDate = new MetroFramework.Controls.MetroDateTime();
+            this.cueTextBox1 = new ParishSystem.CueTextBox();
+            this.dtpLicenseDate = new MetroFramework.Controls.MetroDateTime();
             this.dtpMarriageDate = new MetroFramework.Controls.MetroDateTime();
             this.cmbMinister = new MetroFramework.Controls.MetroComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.cueTextBox1 = new ParishSystem.CueTextBox();
-            this.txtBFSuffix = new ParishSystem.CueTextBox();
-            this.txtBMSuffix = new ParishSystem.CueTextBox();
-            this.txtBFLN = new ParishSystem.CueTextBox();
-            this.txtBFMI = new ParishSystem.CueTextBox();
-            this.txtBMLN = new ParishSystem.CueTextBox();
-            this.txtBFFN = new ParishSystem.CueTextBox();
-            this.txtBMMI = new ParishSystem.CueTextBox();
-            this.txtBMFN = new ParishSystem.CueTextBox();
-            this.txtBResidence = new ParishSystem.CueTextBox();
-            this.txtBBirthPlace = new ParishSystem.CueTextBox();
-            this.txtGMSuffix = new ParishSystem.CueTextBox();
-            this.txtGFSuffix = new ParishSystem.CueTextBox();
-            this.txtGMLN = new ParishSystem.CueTextBox();
-            this.txtGFLN = new ParishSystem.CueTextBox();
-            this.txtGMMI = new ParishSystem.CueTextBox();
-            this.txtGFMI = new ParishSystem.CueTextBox();
-            this.txtGResidence = new ParishSystem.CueTextBox();
-            this.txtGMFN = new ParishSystem.CueTextBox();
-            this.txtGFFN = new ParishSystem.CueTextBox();
-            this.txtGBirthPlace = new ParishSystem.CueTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.radioFemale = new MetroFramework.Controls.MetroRadioButton();
+            this.radioMale = new MetroFramework.Controls.MetroRadioButton();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSponsor)).BeginInit();
             this.panel3.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblGName
@@ -151,6 +151,98 @@
             this.cmbGStatus.Size = new System.Drawing.Size(223, 29);
             this.cmbGStatus.TabIndex = 56;
             this.cmbGStatus.UseSelectable = true;
+            // 
+            // txtGMSuffix
+            // 
+            this.txtGMSuffix.Cue = null;
+            this.txtGMSuffix.CueColor = System.Drawing.Color.Empty;
+            this.txtGMSuffix.Location = new System.Drawing.Point(255, 140);
+            this.txtGMSuffix.Name = "txtGMSuffix";
+            this.txtGMSuffix.Size = new System.Drawing.Size(47, 20);
+            this.txtGMSuffix.TabIndex = 55;
+            this.txtGMSuffix.Tag = "o";
+            // 
+            // txtGFSuffix
+            // 
+            this.txtGFSuffix.Cue = null;
+            this.txtGFSuffix.CueColor = System.Drawing.Color.Empty;
+            this.txtGFSuffix.Location = new System.Drawing.Point(255, 182);
+            this.txtGFSuffix.Name = "txtGFSuffix";
+            this.txtGFSuffix.Size = new System.Drawing.Size(47, 20);
+            this.txtGFSuffix.TabIndex = 55;
+            this.txtGFSuffix.Tag = "o";
+            // 
+            // txtGMLN
+            // 
+            this.txtGMLN.Cue = null;
+            this.txtGMLN.CueColor = System.Drawing.Color.Empty;
+            this.txtGMLN.Location = new System.Drawing.Point(154, 140);
+            this.txtGMLN.Name = "txtGMLN";
+            this.txtGMLN.Size = new System.Drawing.Size(95, 20);
+            this.txtGMLN.TabIndex = 55;
+            // 
+            // txtGFLN
+            // 
+            this.txtGFLN.Cue = null;
+            this.txtGFLN.CueColor = System.Drawing.Color.Empty;
+            this.txtGFLN.Location = new System.Drawing.Point(154, 182);
+            this.txtGFLN.Name = "txtGFLN";
+            this.txtGFLN.Size = new System.Drawing.Size(95, 20);
+            this.txtGFLN.TabIndex = 55;
+            // 
+            // txtGMMI
+            // 
+            this.txtGMMI.Cue = null;
+            this.txtGMMI.CueColor = System.Drawing.Color.Empty;
+            this.txtGMMI.Location = new System.Drawing.Point(117, 140);
+            this.txtGMMI.Name = "txtGMMI";
+            this.txtGMMI.Size = new System.Drawing.Size(31, 20);
+            this.txtGMMI.TabIndex = 55;
+            // 
+            // txtGFMI
+            // 
+            this.txtGFMI.Cue = null;
+            this.txtGFMI.CueColor = System.Drawing.Color.Empty;
+            this.txtGFMI.Location = new System.Drawing.Point(117, 182);
+            this.txtGFMI.Name = "txtGFMI";
+            this.txtGFMI.Size = new System.Drawing.Size(31, 20);
+            this.txtGFMI.TabIndex = 55;
+            // 
+            // txtGResidence
+            // 
+            this.txtGResidence.Cue = null;
+            this.txtGResidence.CueColor = System.Drawing.Color.Empty;
+            this.txtGResidence.Location = new System.Drawing.Point(78, 54);
+            this.txtGResidence.Name = "txtGResidence";
+            this.txtGResidence.Size = new System.Drawing.Size(224, 20);
+            this.txtGResidence.TabIndex = 4;
+            // 
+            // txtGMFN
+            // 
+            this.txtGMFN.Cue = null;
+            this.txtGMFN.CueColor = System.Drawing.Color.Empty;
+            this.txtGMFN.Location = new System.Drawing.Point(16, 140);
+            this.txtGMFN.Name = "txtGMFN";
+            this.txtGMFN.Size = new System.Drawing.Size(95, 20);
+            this.txtGMFN.TabIndex = 55;
+            // 
+            // txtGFFN
+            // 
+            this.txtGFFN.Cue = null;
+            this.txtGFFN.CueColor = System.Drawing.Color.Empty;
+            this.txtGFFN.Location = new System.Drawing.Point(16, 182);
+            this.txtGFFN.Name = "txtGFFN";
+            this.txtGFFN.Size = new System.Drawing.Size(95, 20);
+            this.txtGFFN.TabIndex = 55;
+            // 
+            // txtGBirthPlace
+            // 
+            this.txtGBirthPlace.Cue = null;
+            this.txtGBirthPlace.CueColor = System.Drawing.Color.Empty;
+            this.txtGBirthPlace.Location = new System.Drawing.Point(78, 30);
+            this.txtGBirthPlace.Name = "txtGBirthPlace";
+            this.txtGBirthPlace.Size = new System.Drawing.Size(224, 20);
+            this.txtGBirthPlace.TabIndex = 4;
             // 
             // label3
             // 
@@ -252,6 +344,98 @@
             this.cmbBStatus.Size = new System.Drawing.Size(223, 29);
             this.cmbBStatus.TabIndex = 56;
             this.cmbBStatus.UseSelectable = true;
+            // 
+            // txtBFSuffix
+            // 
+            this.txtBFSuffix.Cue = null;
+            this.txtBFSuffix.CueColor = System.Drawing.Color.Empty;
+            this.txtBFSuffix.Location = new System.Drawing.Point(255, 182);
+            this.txtBFSuffix.Name = "txtBFSuffix";
+            this.txtBFSuffix.Size = new System.Drawing.Size(47, 20);
+            this.txtBFSuffix.TabIndex = 55;
+            this.txtBFSuffix.Tag = "o";
+            // 
+            // txtBMSuffix
+            // 
+            this.txtBMSuffix.Cue = null;
+            this.txtBMSuffix.CueColor = System.Drawing.Color.Empty;
+            this.txtBMSuffix.Location = new System.Drawing.Point(255, 140);
+            this.txtBMSuffix.Name = "txtBMSuffix";
+            this.txtBMSuffix.Size = new System.Drawing.Size(47, 20);
+            this.txtBMSuffix.TabIndex = 55;
+            this.txtBMSuffix.Tag = "o";
+            // 
+            // txtBFLN
+            // 
+            this.txtBFLN.Cue = null;
+            this.txtBFLN.CueColor = System.Drawing.Color.Empty;
+            this.txtBFLN.Location = new System.Drawing.Point(154, 182);
+            this.txtBFLN.Name = "txtBFLN";
+            this.txtBFLN.Size = new System.Drawing.Size(95, 20);
+            this.txtBFLN.TabIndex = 55;
+            // 
+            // txtBFMI
+            // 
+            this.txtBFMI.Cue = null;
+            this.txtBFMI.CueColor = System.Drawing.Color.Empty;
+            this.txtBFMI.Location = new System.Drawing.Point(117, 182);
+            this.txtBFMI.Name = "txtBFMI";
+            this.txtBFMI.Size = new System.Drawing.Size(31, 20);
+            this.txtBFMI.TabIndex = 55;
+            // 
+            // txtBMLN
+            // 
+            this.txtBMLN.Cue = null;
+            this.txtBMLN.CueColor = System.Drawing.Color.Empty;
+            this.txtBMLN.Location = new System.Drawing.Point(154, 140);
+            this.txtBMLN.Name = "txtBMLN";
+            this.txtBMLN.Size = new System.Drawing.Size(95, 20);
+            this.txtBMLN.TabIndex = 55;
+            // 
+            // txtBFFN
+            // 
+            this.txtBFFN.Cue = null;
+            this.txtBFFN.CueColor = System.Drawing.Color.Empty;
+            this.txtBFFN.Location = new System.Drawing.Point(16, 182);
+            this.txtBFFN.Name = "txtBFFN";
+            this.txtBFFN.Size = new System.Drawing.Size(95, 20);
+            this.txtBFFN.TabIndex = 55;
+            // 
+            // txtBMMI
+            // 
+            this.txtBMMI.Cue = null;
+            this.txtBMMI.CueColor = System.Drawing.Color.Empty;
+            this.txtBMMI.Location = new System.Drawing.Point(117, 140);
+            this.txtBMMI.Name = "txtBMMI";
+            this.txtBMMI.Size = new System.Drawing.Size(31, 20);
+            this.txtBMMI.TabIndex = 55;
+            // 
+            // txtBMFN
+            // 
+            this.txtBMFN.Cue = null;
+            this.txtBMFN.CueColor = System.Drawing.Color.Empty;
+            this.txtBMFN.Location = new System.Drawing.Point(16, 140);
+            this.txtBMFN.Name = "txtBMFN";
+            this.txtBMFN.Size = new System.Drawing.Size(95, 20);
+            this.txtBMFN.TabIndex = 55;
+            // 
+            // txtBResidence
+            // 
+            this.txtBResidence.Cue = null;
+            this.txtBResidence.CueColor = System.Drawing.Color.Empty;
+            this.txtBResidence.Location = new System.Drawing.Point(78, 54);
+            this.txtBResidence.Name = "txtBResidence";
+            this.txtBResidence.Size = new System.Drawing.Size(224, 20);
+            this.txtBResidence.TabIndex = 4;
+            // 
+            // txtBBirthPlace
+            // 
+            this.txtBBirthPlace.Cue = null;
+            this.txtBBirthPlace.CueColor = System.Drawing.Color.Empty;
+            this.txtBBirthPlace.Location = new System.Drawing.Point(78, 30);
+            this.txtBBirthPlace.Name = "txtBBirthPlace";
+            this.txtBBirthPlace.Size = new System.Drawing.Size(224, 20);
+            this.txtBBirthPlace.TabIndex = 4;
             // 
             // label6
             // 
@@ -493,53 +677,13 @@
             // 
             this.btnAddSponsor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddSponsor.Location = new System.Drawing.Point(511, 135);
+            this.btnAddSponsor.Location = new System.Drawing.Point(528, 135);
             this.btnAddSponsor.Name = "btnAddSponsor";
             this.btnAddSponsor.Size = new System.Drawing.Size(95, 23);
             this.btnAddSponsor.TabIndex = 54;
             this.btnAddSponsor.Text = "Add Sponsor";
             this.btnAddSponsor.UseSelectable = true;
             this.btnAddSponsor.Click += new System.EventHandler(this.btnAddSponsor_Click);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.radioMale);
-            this.flowLayoutPanel1.Controls.Add(this.radioFemale);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 105);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(136, 28);
-            this.flowLayoutPanel1.TabIndex = 53;
-            // 
-            // radioMale
-            // 
-            this.radioMale.AutoSize = true;
-            this.radioMale.Checked = true;
-            this.radioMale.Location = new System.Drawing.Point(3, 3);
-            this.radioMale.Name = "radioMale";
-            this.radioMale.Size = new System.Drawing.Size(49, 15);
-            this.radioMale.TabIndex = 55;
-            this.radioMale.TabStop = true;
-            this.radioMale.Text = "Male";
-            this.radioMale.UseSelectable = true;
-            // 
-            // radioFemale
-            // 
-            this.radioFemale.AutoSize = true;
-            this.radioFemale.Location = new System.Drawing.Point(58, 3);
-            this.radioFemale.Name = "radioFemale";
-            this.radioFemale.Size = new System.Drawing.Size(61, 15);
-            this.radioFemale.TabIndex = 55;
-            this.radioFemale.Text = "Female";
-            this.radioFemale.UseSelectable = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(10, 88);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 13);
-            this.label11.TabIndex = 50;
-            this.label11.Text = "Gender";
             // 
             // btnSubmit
             // 
@@ -554,7 +698,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.cueTextBox1);
-            this.panel4.Controls.Add(this.cmbLicenseDate);
+            this.panel4.Controls.Add(this.dtpLicenseDate);
             this.panel4.Controls.Add(this.dtpMarriageDate);
             this.panel4.Controls.Add(this.cmbMinister);
             this.panel4.Controls.Add(this.label19);
@@ -566,13 +710,24 @@
             this.panel4.Size = new System.Drawing.Size(634, 111);
             this.panel4.TabIndex = 55;
             // 
-            // cmbLicenseDate
+            // cueTextBox1
             // 
-            this.cmbLicenseDate.Location = new System.Drawing.Point(93, 76);
-            this.cmbLicenseDate.MinimumSize = new System.Drawing.Size(0, 29);
-            this.cmbLicenseDate.Name = "cmbLicenseDate";
-            this.cmbLicenseDate.Size = new System.Drawing.Size(206, 29);
-            this.cmbLicenseDate.TabIndex = 57;
+            this.cueTextBox1.Cue = null;
+            this.cueTextBox1.CueColor = System.Drawing.Color.Empty;
+            this.cueTextBox1.Location = new System.Drawing.Point(336, 30);
+            this.cueTextBox1.Multiline = true;
+            this.cueTextBox1.Name = "cueTextBox1";
+            this.cueTextBox1.Size = new System.Drawing.Size(286, 75);
+            this.cueTextBox1.TabIndex = 58;
+            this.cueTextBox1.Tag = "o";
+            // 
+            // dtpLicenseDate
+            // 
+            this.dtpLicenseDate.Location = new System.Drawing.Point(93, 76);
+            this.dtpLicenseDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpLicenseDate.Name = "dtpLicenseDate";
+            this.dtpLicenseDate.Size = new System.Drawing.Size(206, 29);
+            this.dtpLicenseDate.TabIndex = 57;
             // 
             // dtpMarriageDate
             // 
@@ -628,200 +783,45 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "Minister";
             // 
-            // cueTextBox1
+            // label11
             // 
-            this.cueTextBox1.Cue = null;
-            this.cueTextBox1.CueColor = System.Drawing.Color.Empty;
-            this.cueTextBox1.Location = new System.Drawing.Point(336, 30);
-            this.cueTextBox1.Multiline = true;
-            this.cueTextBox1.Name = "cueTextBox1";
-            this.cueTextBox1.Size = new System.Drawing.Size(286, 75);
-            this.cueTextBox1.TabIndex = 58;
-            this.cueTextBox1.Tag = "o";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(10, 88);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 13);
+            this.label11.TabIndex = 50;
+            this.label11.Text = "Gender";
             // 
-            // txtBFSuffix
+            // radioFemale
             // 
-            this.txtBFSuffix.Cue = null;
-            this.txtBFSuffix.CueColor = System.Drawing.Color.Empty;
-            this.txtBFSuffix.Location = new System.Drawing.Point(255, 182);
-            this.txtBFSuffix.Name = "txtBFSuffix";
-            this.txtBFSuffix.Size = new System.Drawing.Size(47, 20);
-            this.txtBFSuffix.TabIndex = 55;
-            this.txtBFSuffix.Tag = "o";
+            this.radioFemale.AutoSize = true;
+            this.radioFemale.Location = new System.Drawing.Point(58, 3);
+            this.radioFemale.Name = "radioFemale";
+            this.radioFemale.Size = new System.Drawing.Size(61, 15);
+            this.radioFemale.TabIndex = 55;
+            this.radioFemale.Text = "Female";
+            this.radioFemale.UseSelectable = true;
             // 
-            // txtBMSuffix
+            // radioMale
             // 
-            this.txtBMSuffix.Cue = null;
-            this.txtBMSuffix.CueColor = System.Drawing.Color.Empty;
-            this.txtBMSuffix.Location = new System.Drawing.Point(255, 140);
-            this.txtBMSuffix.Name = "txtBMSuffix";
-            this.txtBMSuffix.Size = new System.Drawing.Size(47, 20);
-            this.txtBMSuffix.TabIndex = 55;
-            this.txtBMSuffix.Tag = "o";
+            this.radioMale.AutoSize = true;
+            this.radioMale.Checked = true;
+            this.radioMale.Location = new System.Drawing.Point(3, 3);
+            this.radioMale.Name = "radioMale";
+            this.radioMale.Size = new System.Drawing.Size(49, 15);
+            this.radioMale.TabIndex = 55;
+            this.radioMale.TabStop = true;
+            this.radioMale.Text = "Male";
+            this.radioMale.UseSelectable = true;
             // 
-            // txtBFLN
+            // flowLayoutPanel1
             // 
-            this.txtBFLN.Cue = null;
-            this.txtBFLN.CueColor = System.Drawing.Color.Empty;
-            this.txtBFLN.Location = new System.Drawing.Point(154, 182);
-            this.txtBFLN.Name = "txtBFLN";
-            this.txtBFLN.Size = new System.Drawing.Size(95, 20);
-            this.txtBFLN.TabIndex = 55;
-            // 
-            // txtBFMI
-            // 
-            this.txtBFMI.Cue = null;
-            this.txtBFMI.CueColor = System.Drawing.Color.Empty;
-            this.txtBFMI.Location = new System.Drawing.Point(117, 182);
-            this.txtBFMI.Name = "txtBFMI";
-            this.txtBFMI.Size = new System.Drawing.Size(31, 20);
-            this.txtBFMI.TabIndex = 55;
-            // 
-            // txtBMLN
-            // 
-            this.txtBMLN.Cue = null;
-            this.txtBMLN.CueColor = System.Drawing.Color.Empty;
-            this.txtBMLN.Location = new System.Drawing.Point(154, 140);
-            this.txtBMLN.Name = "txtBMLN";
-            this.txtBMLN.Size = new System.Drawing.Size(95, 20);
-            this.txtBMLN.TabIndex = 55;
-            // 
-            // txtBFFN
-            // 
-            this.txtBFFN.Cue = null;
-            this.txtBFFN.CueColor = System.Drawing.Color.Empty;
-            this.txtBFFN.Location = new System.Drawing.Point(16, 182);
-            this.txtBFFN.Name = "txtBFFN";
-            this.txtBFFN.Size = new System.Drawing.Size(95, 20);
-            this.txtBFFN.TabIndex = 55;
-            // 
-            // txtBMMI
-            // 
-            this.txtBMMI.Cue = null;
-            this.txtBMMI.CueColor = System.Drawing.Color.Empty;
-            this.txtBMMI.Location = new System.Drawing.Point(117, 140);
-            this.txtBMMI.Name = "txtBMMI";
-            this.txtBMMI.Size = new System.Drawing.Size(31, 20);
-            this.txtBMMI.TabIndex = 55;
-            // 
-            // txtBMFN
-            // 
-            this.txtBMFN.Cue = null;
-            this.txtBMFN.CueColor = System.Drawing.Color.Empty;
-            this.txtBMFN.Location = new System.Drawing.Point(16, 140);
-            this.txtBMFN.Name = "txtBMFN";
-            this.txtBMFN.Size = new System.Drawing.Size(95, 20);
-            this.txtBMFN.TabIndex = 55;
-            // 
-            // txtBResidence
-            // 
-            this.txtBResidence.Cue = null;
-            this.txtBResidence.CueColor = System.Drawing.Color.Empty;
-            this.txtBResidence.Location = new System.Drawing.Point(78, 54);
-            this.txtBResidence.Name = "txtBResidence";
-            this.txtBResidence.Size = new System.Drawing.Size(224, 20);
-            this.txtBResidence.TabIndex = 4;
-            // 
-            // txtBBirthPlace
-            // 
-            this.txtBBirthPlace.Cue = null;
-            this.txtBBirthPlace.CueColor = System.Drawing.Color.Empty;
-            this.txtBBirthPlace.Location = new System.Drawing.Point(78, 30);
-            this.txtBBirthPlace.Name = "txtBBirthPlace";
-            this.txtBBirthPlace.Size = new System.Drawing.Size(224, 20);
-            this.txtBBirthPlace.TabIndex = 4;
-            // 
-            // txtGMSuffix
-            // 
-            this.txtGMSuffix.Cue = null;
-            this.txtGMSuffix.CueColor = System.Drawing.Color.Empty;
-            this.txtGMSuffix.Location = new System.Drawing.Point(255, 140);
-            this.txtGMSuffix.Name = "txtGMSuffix";
-            this.txtGMSuffix.Size = new System.Drawing.Size(47, 20);
-            this.txtGMSuffix.TabIndex = 55;
-            this.txtGMSuffix.Tag = "o";
-            // 
-            // txtGFSuffix
-            // 
-            this.txtGFSuffix.Cue = null;
-            this.txtGFSuffix.CueColor = System.Drawing.Color.Empty;
-            this.txtGFSuffix.Location = new System.Drawing.Point(255, 182);
-            this.txtGFSuffix.Name = "txtGFSuffix";
-            this.txtGFSuffix.Size = new System.Drawing.Size(47, 20);
-            this.txtGFSuffix.TabIndex = 55;
-            this.txtGFSuffix.Tag = "o";
-            // 
-            // txtGMLN
-            // 
-            this.txtGMLN.Cue = null;
-            this.txtGMLN.CueColor = System.Drawing.Color.Empty;
-            this.txtGMLN.Location = new System.Drawing.Point(154, 140);
-            this.txtGMLN.Name = "txtGMLN";
-            this.txtGMLN.Size = new System.Drawing.Size(95, 20);
-            this.txtGMLN.TabIndex = 55;
-            // 
-            // txtGFLN
-            // 
-            this.txtGFLN.Cue = null;
-            this.txtGFLN.CueColor = System.Drawing.Color.Empty;
-            this.txtGFLN.Location = new System.Drawing.Point(154, 182);
-            this.txtGFLN.Name = "txtGFLN";
-            this.txtGFLN.Size = new System.Drawing.Size(95, 20);
-            this.txtGFLN.TabIndex = 55;
-            // 
-            // txtGMMI
-            // 
-            this.txtGMMI.Cue = null;
-            this.txtGMMI.CueColor = System.Drawing.Color.Empty;
-            this.txtGMMI.Location = new System.Drawing.Point(117, 140);
-            this.txtGMMI.Name = "txtGMMI";
-            this.txtGMMI.Size = new System.Drawing.Size(31, 20);
-            this.txtGMMI.TabIndex = 55;
-            // 
-            // txtGFMI
-            // 
-            this.txtGFMI.Cue = null;
-            this.txtGFMI.CueColor = System.Drawing.Color.Empty;
-            this.txtGFMI.Location = new System.Drawing.Point(117, 182);
-            this.txtGFMI.Name = "txtGFMI";
-            this.txtGFMI.Size = new System.Drawing.Size(31, 20);
-            this.txtGFMI.TabIndex = 55;
-            // 
-            // txtGResidence
-            // 
-            this.txtGResidence.Cue = null;
-            this.txtGResidence.CueColor = System.Drawing.Color.Empty;
-            this.txtGResidence.Location = new System.Drawing.Point(78, 54);
-            this.txtGResidence.Name = "txtGResidence";
-            this.txtGResidence.Size = new System.Drawing.Size(224, 20);
-            this.txtGResidence.TabIndex = 4;
-            // 
-            // txtGMFN
-            // 
-            this.txtGMFN.Cue = null;
-            this.txtGMFN.CueColor = System.Drawing.Color.Empty;
-            this.txtGMFN.Location = new System.Drawing.Point(16, 140);
-            this.txtGMFN.Name = "txtGMFN";
-            this.txtGMFN.Size = new System.Drawing.Size(95, 20);
-            this.txtGMFN.TabIndex = 55;
-            // 
-            // txtGFFN
-            // 
-            this.txtGFFN.Cue = null;
-            this.txtGFFN.CueColor = System.Drawing.Color.Empty;
-            this.txtGFFN.Location = new System.Drawing.Point(16, 182);
-            this.txtGFFN.Name = "txtGFFN";
-            this.txtGFFN.Size = new System.Drawing.Size(95, 20);
-            this.txtGFFN.TabIndex = 55;
-            // 
-            // txtGBirthPlace
-            // 
-            this.txtGBirthPlace.Cue = null;
-            this.txtGBirthPlace.CueColor = System.Drawing.Color.Empty;
-            this.txtGBirthPlace.Location = new System.Drawing.Point(78, 30);
-            this.txtGBirthPlace.Name = "txtGBirthPlace";
-            this.txtGBirthPlace.Size = new System.Drawing.Size(224, 20);
-            this.txtGBirthPlace.TabIndex = 4;
+            this.flowLayoutPanel1.Controls.Add(this.radioMale);
+            this.flowLayoutPanel1.Controls.Add(this.radioFemale);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 105);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(136, 28);
+            this.flowLayoutPanel1.TabIndex = 53;
             // 
             // MarriageForm
             // 
@@ -849,10 +849,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSponsor)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -888,8 +888,6 @@
         private System.Windows.Forms.Label label16;
         private MetroFramework.Controls.MetroGrid dgvSponsor;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label11;
         private MetroFramework.Controls.MetroButton btnSubmit;
         private CueTextBox txtGMSuffix;
         private CueTextBox txtGFSuffix;
@@ -913,7 +911,7 @@
         private MetroFramework.Controls.MetroComboBox cmbBStatus;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel4;
-        private MetroFramework.Controls.MetroDateTime cmbLicenseDate;
+        private MetroFramework.Controls.MetroDateTime dtpLicenseDate;
         private MetroFramework.Controls.MetroDateTime dtpMarriageDate;
         private MetroFramework.Controls.MetroComboBox cmbMinister;
         private System.Windows.Forms.Label label19;
@@ -921,13 +919,15 @@
         private System.Windows.Forms.Label label17;
         private CueTextBox cueTextBox1;
         private System.Windows.Forms.Label label20;
-        private MetroFramework.Controls.MetroRadioButton radioMale;
-        private MetroFramework.Controls.MetroRadioButton radioFemale;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn midName;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn suffix;
         private System.Windows.Forms.DataGridViewTextBoxColumn gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn residence;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private MetroFramework.Controls.MetroRadioButton radioMale;
+        private MetroFramework.Controls.MetroRadioButton radioFemale;
+        private System.Windows.Forms.Label label11;
     }
 }

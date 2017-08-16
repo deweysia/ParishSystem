@@ -15,11 +15,17 @@ namespace ParishSystem
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
+
+        static DataHandler dh;
         [STAThread]
         static void Main()
         {
+            dh = new DataHandler("localhost", "sad2", "root", "root");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //MessageBox.Show((dh == null).ToString());
+            //MessageBox.Show((new Sacraments(dh) == null).ToString());
             Application.Run(new SAD());
         }
     }
