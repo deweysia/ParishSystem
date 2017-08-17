@@ -11,8 +11,12 @@ namespace ParishSystem
 {
     //I changed something
 
+
+    
+
     public class DataHandler
     {
+
         public MySqlConnection conn;
         public MySqlCommand com;
 
@@ -21,7 +25,7 @@ namespace ParishSystem
         public DataHandler()
         {
             conn = new MySqlConnection("Server=" + "localhost" + ";Database=" + "sad2" + ";Uid=" + "root" + ";Pwd=" + "root" + ";pooling = false; convert zero datetime=True;");
-
+            
         }
         //  MySqlConnection connect = new MySqlConnection("server=localhost; database=sad2; user=root; password=root; pooling = false; convert zero datetime=True");
         public DataHandler(string server, string database, string user, string password, int UserID)
@@ -36,6 +40,21 @@ namespace ParishSystem
             this.userID = -1;
         }
 
+        //====== SINGLETON PATTERN IMPLEMENTATION OF DATAHANDLER
+        private static DataHandler _dh;
+        public static DataHandler getDataHandler()
+        {
+            if (_dh != null)
+                return _dh;
+            else
+            {
+                _dh = new DataHandler();
+                return _dh;
+            }
+        }
+        //======================================================
+
+        
         //                                         ========[HELPER FUNCTIONS]=========
         #region
         public bool runNonQuery(string q)

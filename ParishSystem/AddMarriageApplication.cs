@@ -15,10 +15,10 @@ namespace ParishSystem
         DataHandler dh;
 
         DataTable sacramentItem;
-        public AddMarriageApplication(DataHandler dh)
+        public AddMarriageApplication()
         {
             InitializeComponent();
-            this.dh = dh;
+            this.dh = DataHandler.getDataHandler();
             
             sacramentItem = dh.getItem(SacramentType.Marriage.ToString());
             txtPrice.Text = sacramentItem.Rows[0]["suggestedPrice"].ToString();

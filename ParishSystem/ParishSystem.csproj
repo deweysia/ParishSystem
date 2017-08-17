@@ -131,18 +131,13 @@
     <Compile Include="CashReleaseType.Designer.cs">
       <DependentUpon>CashReleaseType.cs</DependentUpon>
     </Compile>
-    <Compile Include="CDemo.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CDemo.Designer.cs">
-      <DependentUpon>CDemo.cs</DependentUpon>
-    </Compile>
     <Compile Include="CurrencyTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CurrencyTextBox.Designer.cs">
       <DependentUpon>CurrencyTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Delegates.cs" />
     <Compile Include="DownPaymentProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,9 +199,7 @@
     <Compile Include="BloodlettingTest.Designer.cs">
       <DependentUpon>BloodlettingTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classifications.cs" />
     <Compile Include="ComboboxContent.cs" />
-    <Compile Include="ComboBoxItem.cs" />
     <Compile Include="CueTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -305,6 +298,12 @@
     </Compile>
     <Compile Include="SAD.Designer.cs">
       <DependentUpon>SAD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SAD2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SAD2.Designer.cs">
+      <DependentUpon>SAD2.cs</DependentUpon>
     </Compile>
     <Compile Include="sApplicant.cs">
       <SubType>Form</SubType>
@@ -480,6 +479,9 @@
     <EmbeddedResource Include="SAD.resx">
       <DependentUpon>SAD.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SAD2.resx">
+      <DependentUpon>SAD2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sApplicant.resx">
       <DependentUpon>sApplicant.cs</DependentUpon>

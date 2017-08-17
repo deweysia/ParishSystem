@@ -12,13 +12,13 @@ namespace ParishSystem
     {
         public string Message;
         public NotificationType Type;
-        public State(string msg, NotificationType t)
+        private State(string msg, NotificationType t)
         {
             this.Message = msg;
             this.Type = t;
         }
 
-        
+
         public static State
             MissingFields = new State("Please fill in all necessary fields", NotificationType.info),
             GenericError = new State("Something went wrong", NotificationType.error),
@@ -28,10 +28,16 @@ namespace ParishSystem
             PaymentSuccess = new State("Payment successful", NotificationType.success),
             PaymentFail = new State("Payment failed", NotificationType.error),
             TransactionSuccess = new State("Transaction successful", NotificationType.success),
-            TransactionFail = new State("Transaction Failed", NotificationType.error);
+            TransactionFail = new State("Transaction Failed", NotificationType.error),
+            RevokeSucess = new State("Application has been revoked", NotificationType.success),
+            RevokeFail = new State("Application revoke failed", NotificationType.error),
+            ApplicationApproveSuccess = new State("Application successfully approved", NotificationType.success),
+            ApplicationApproveFail = new State("Application approve failed", NotificationType.error);
+            
+            
     }
 
-    public static class SystemNotification
+    public class SystemNotification
     {
         public static void Notify(State ss)
         {

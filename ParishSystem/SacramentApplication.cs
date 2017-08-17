@@ -13,6 +13,7 @@ namespace ParishSystem
     public partial class SacramentApplication : Form
     {
         DataHandler dh;
+        private int profileID, groomID, brideID;
         public SacramentApplication(DataHandler dh)
         {
             InitializeComponent();
@@ -30,8 +31,135 @@ namespace ParishSystem
             
         }
 
+        private DataGridView getDataGridView(SacramentType t)
+        {
+            if (t == SacramentType.Baptism)
+                return baptismApplication_dgv;
+            else if (t == SacramentType.Confirmation)
+                return confirmationApplication_dgv;
+            else
+                return marriageApplication_dgv;
+        }
 
+        private TableLayoutPanel getRequirementTableLayoutPanel(SacramentType t)
+        {
+            if (t == SacramentType.Baptism)
+                return baptismApplication_requirements_tlp;
+            else if (t == SacramentType.Confirmation)
+                return confirmationApplication_requirements_tlp;
+            else
+                return marriageApplication_requirements_tlp;
+        }
 
+        private ComboBox getFilter(SacramentType t)
+        {
+            if (t == SacramentType.Baptism)
+                return baptismApplication_filter_cmb;
+            else if (t == SacramentType.Confirmation)
+                return confirmationApplication_filter_cmb;
+            else
+                return marriageApplication_filter_cmb;
+        }
+
+        private CheckBox getCheckAllCheckBox(SacramentType t)
+        {
+            if (t == SacramentType.Baptism)
+                return baptismApplication_checkAll_checkBox;
+            else if (t == SacramentType.Confirmation)
+                return confirmationApplication_checkAll_checkBox;
+            else
+                return marriageApplication_checkAll_checkBox;
+        }
+
+        private Panel getApplicationDetailsPanel(SacramentType t)
+        {
+            if (t == SacramentType.Baptism)
+                return baptismApplicationDetailsPanel;
+            else if (t == SacramentType.Confirmation)
+                return confirmationApplicationDetailsPanel;
+            else
+                return marriageApplicationDetailsPanel;
+        }
+        private Form getAddApplicationForm(SacramentType t)
+        {
+            if (t == SacramentType.Baptism)
+                return new AddApplication(SacramentType.Baptism);
+            else if (t == SacramentType.Confirmation)
+                return new AddApplication(SacramentType.Confirmation);
+            else
+                return new AddMarriageApplication();
+        }
+
+        /// <summary>
+        /// Loads all applications of given SacramentType
+        /// </summary>
+        /// <param name="t"></param>
+        public void loadApplications(SacramentType t)
+        {
+            DataGridView dgv = getDataGridView(t);
+            ComboBox filter = getFilter(t);
+            dgv.AutoGenerateColumns = false;
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dh.getApplications(t);
+            dgv.DataSource = bs;
+            dgv.ClearSelection();
+            filter.SelectedIndex = 0;
+
+        }
+
+        private void showAddApplicationForm(SacramentType t)
+        {
+            Form f = getAddApplicationForm(t);
+            f.ShowDialog();
+
+            loadApplications(t);
+        }
+
+        private Form getApplicationForm(SacramentType t)
+        {
+            DataGridViewRow dgvr;
+            if (t == SacramentType.Baptism)
+            {
+                dgvr = baptismApplication_dgv.SelectedRows[0];
+                return new SacramentForm(SacramentType.Baptism, dgvr);
+            }else if (t == SacramentType.Confirmation)
+            {
+                dgvr = confirmationApplication_dgv.SelectedRows[0];
+                return new SacramentForm(SacramentType.Confirmation, dgvr);
+            }else
+            {
+                dgvr = marriageApplication_dgv.SelectedRows[0];
+                return new MarriageForm(dgvr);
+            }
+                
+        }
+
+        private void loadApplicationDetails(SacramentType t)
+        {
+            DataGridView dgv;
+            LoadApplicationDetailsDelegate Load;
+            if (t == SacramentType.Baptism)
+            {
+                dgv = baptismApplication_dgv;
+                Load = loadBaptismApplicationDetails;
+
+            }
+            else if (t == SacramentType.Confirmation)
+            {
+                dgv = confirmationApplication_dgv;
+                Load = loadConfirmationApplicationDetails;
+            }
+            else
+            {
+                dgv = marriageApplication_dgv;
+                Load = loadMarriageApplicationDetails;
+            }
+
+            if (!dgv.Focused || dgv.SelectedRows.Count == 0)
+                return;
+
+            Load(dgv);
+        }
         /*
                                          =============================================================
                                                 ================ APPLICATION TAB =================
@@ -39,6 +167,8 @@ namespace ParishSystem
         */
 
         #region Application
+
+        
 
         /// <summary>
         /// Loads all baptism applications to Baptism DataGridView
@@ -49,7 +179,7 @@ namespace ParishSystem
             BindingSource bs = new BindingSource();
             bs.DataSource = dh.getApplications(SacramentType.Baptism);
             baptismApplication_dgv.DataSource = bs;
-            baptismApplication_filter_comboBox.SelectedIndex = 0;
+            baptismApplication_filter_cmb.SelectedIndex = 0;
         }
         /// <summary>
         /// Loads all confirmation applications to Confirmation DataGridView
@@ -60,7 +190,7 @@ namespace ParishSystem
             BindingSource bs = new BindingSource();
             bs.DataSource = dh.getApplications(SacramentType.Confirmation);
             confirmationApplication_dgv.DataSource = bs;
-            confirmationApplication_filter.SelectedIndex = 0;
+            confirmationApplication_filter_cmb.SelectedIndex = 0;
         }
 
         /// <summary>
@@ -72,8 +202,9 @@ namespace ParishSystem
             BindingSource bs = new BindingSource();
             bs.DataSource = dh.getApplications(SacramentType.Marriage);
             marriageApplication_dgv.DataSource = bs;
-            marriageApplication_filter.SelectedIndex = 0;
+            marriageApplication_filter_cmb.SelectedIndex = 0;
         }
+
         /// <summary>
         /// Loads details of the SelectedRow in DataGridView to the Baptism Details Panel
         /// </summary>
@@ -81,7 +212,9 @@ namespace ParishSystem
         public void loadBaptismApplicationDetails(DataGridView dgv)
         {
 
+            baptismApplicationDetailsPanel.Enabled = true;
             int applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
+            this.profileID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
             string requirements = dgv.SelectedRows[0].Cells[2].Value.ToString();
             //MessageBox.Show(requirements);
             string fn = dgv.SelectedRows[0].Cells[3].Value.ToString();
@@ -109,7 +242,7 @@ namespace ParishSystem
             baptismApplication_gender_lbl.Text = gender == "1" ? "Male" : "Female";
             baptismApplication_birthdate_lbl.Text = birthdate.ToString("yyyy-MM-dd");
 
-            tickRequirements(baptismApplication_requirements_tablePanel, requirements);
+            tickRequirements(baptismApplication_requirements_tlp, requirements);
             DataTable dt = dh.getApplicationIncomeDetails(applicationID);
 
             double price = double.Parse(dt.Rows[0]["price"].ToString());
@@ -126,7 +259,9 @@ namespace ParishSystem
         /// <param name="dgv"></param>
         private void loadConfirmationApplicationDetails(DataGridView dgv)
         {
+            confirmationApplicationDetailsPanel.Enabled = true;
             int applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
+            this.profileID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
             int profileID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
             string requirements = dgv.SelectedRows[0].Cells[2].Value.ToString();
             string fn = dgv.SelectedRows[0].Cells[3].Value.ToString();
@@ -149,7 +284,7 @@ namespace ParishSystem
             confirmationApplication_male_radio.Checked = gender == "1";
             confirmationApplication_female_radio.Checked = gender == "2";
             confirmationApplication_status_label.Text = status.ToString();
-            tickRequirements(confirmationApplication_requirements_tablePanel, requirements);
+            tickRequirements(confirmationApplication_requirements_tlp, requirements);
 
 
             DataTable dt = dh.getApplicationIncomeDetails(applicationID);
@@ -169,7 +304,11 @@ namespace ParishSystem
         /// <param name="dgv"></param>
         public void loadMarriageApplicationDetails(DataGridView dgv)
         {
+            marriageApplicationDetailsPanel.Enabled = true;
             int applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
+
+            this.groomID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
+            this.brideID = this.profileID = int.Parse(dgv.SelectedRows[0].Cells[2].Value.ToString());
 
             string requirements = dgv.SelectedRows[0].Cells[3].Value.ToString();
 
@@ -191,13 +330,6 @@ namespace ParishSystem
 
             ApplicationStatus status = (ApplicationStatus)int.Parse(dgv.SelectedRows[0].Cells[8].Value.ToString());
 
-            //bool isPending = status == ApplicationStatus.Pending;
-
-
-            //marriageApplicationDetailsPanel.Enabled = isPending;
-            //marriageApplication_buttons_panel.Enabled = isPending;
-            //marriageApplication_payment_groupbox.Enabled = isPending;
-
             marriageApplication_groomName_lbl.Text = string.Format("{0} {1} {2} {3}", GName[0], GName[1], GName[2], GName[3]);
             marriageApplication_groomBirthdate_lbl.Text = dtpGBirthDate.Value.ToString("yyyy-MM-dd");
             marriageApplication_brideName_lbl.Text = string.Format("{0} {1} {2} {3}", BName[0], BName[1], BName[2], BName[3]);
@@ -205,7 +337,7 @@ namespace ParishSystem
 
 
 
-            tickRequirements(marriageApplication_requirements_tablePanel, requirements);
+            tickRequirements(marriageApplication_requirements_tlp, requirements);
 
             DataTable dt = dh.getApplicationIncomeDetails(applicationID);
 
@@ -223,22 +355,16 @@ namespace ParishSystem
         /// <param name="type"></param>
         /// <param name="dgv"></param>
         /// <param name="tlp"></param>
-        private void applicationApprove(SacramentType type, DataGridView dgv, TableLayoutPanel tlp)
+        private void applicationApprove(SacramentType type)
         {
 
-            int applicationID = int.Parse(dgv.SelectedRows[0].Cells[2].Value.ToString());
-            DataGridViewRow dgvr = dgv.SelectedRows[0];
+            //int applicationID = int.Parse(dgv.SelectedRows[0].Cells[2].Value.ToString());
+            DataGridViewRow dgvr = getDataGridView(type).SelectedRows[0];
+            TableLayoutPanel tlp = getRequirementTableLayoutPanel(type);
             DialogResult d = DialogResult.None;
 
 
-            Form f;
-
-            if (type == SacramentType.Baptism)
-                f = new SacramentForm(SacramentType.Baptism, dgvr, dh);
-            else if (type == SacramentType.Confirmation)
-                f = new SacramentForm(SacramentType.Confirmation, dgvr, dh);
-            else
-                f = new MarriageForm(dgvr, dh);
+            Form f = getApplicationForm(type);
 
             if (allRequirementsFulfilled(tlp))
             {
@@ -254,7 +380,7 @@ namespace ParishSystem
             }
 
             if (d == DialogResult.OK)
-                Notification.Show(string.Format("Successfully Added {0}!", SacramentType.Marriage.ToString()), NotificationType.success);
+                SystemNotification.Notify(State.ApplicationApproveSuccess);
         }
 
         /// <summary>
@@ -262,28 +388,19 @@ namespace ParishSystem
         /// </summary>
         /// <param name="type"></param>
         /// <param name="dgv"></param>
-        private void applicationRevoke(SacramentType type, DataGridView dgv)
+        private void applicationRevoke(SacramentType type)
         {
+            DataGridView dgv = getDataGridView(type);
             int applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
             bool success = dh.editApplication(applicationID, ApplicationStatus.Revoked);
 
             if (success)
-                Notification.Show("Successfully revoked application.", NotificationType.success);
+                SystemNotification.Notify(State.RevokeSucess);
             else
-                Notification.Show("Something went wrong!.", NotificationType.error);
+                SystemNotification.Notify(State.RevokeFail);
 
-            switch (type)
-            {
-                case SacramentType.Baptism:
-                    loadBaptismApplications();
-                    return;
-                case SacramentType.Confirmation:
-                    loadConfirmationApplications();
-                    return;
-                case SacramentType.Marriage:
-                    loadMarriageApplications();
-                    return;
-            }
+            loadApplications(type);
+            
         }
 
         /// <summary>
@@ -307,27 +424,28 @@ namespace ParishSystem
         /// </summary>
         /// <param name="dgv"></param>
         /// <param name="cb"></param>
-        private void applicationFilter(DataGridView dgv, ComboBox cb)
+        private void applicationFilter(SacramentType t)
         {
+            DataGridView dgv = getDataGridView(t);
+            ComboBox filter = getFilter(t);
+            
             BindingSource bs = dgv.DataSource as BindingSource;
             DataTable dt = bs.DataSource as DataTable;
 
-            if (cb.SelectedIndex == 0)
+            if (filter.SelectedIndex == 0)
                 dt.DefaultView.RowFilter = "";
             else
-                dt.DefaultView.RowFilter = "status = " + cb.SelectedIndex;
+                dt.DefaultView.RowFilter = "status = " + filter.SelectedIndex;
 
+            
             Control parent = dgv.Parent;
-            foreach (Control c in parent.Controls)
-            {
-                if (c.Tag != null && c.Tag.ToString() == "Details")
-                {
-                    RecursiveClearControl(c);
-                    break;
-                }
-            }
 
+            Panel applicationDetailsPanel = getApplicationDetailsPanel(t);
 
+            RecursiveClearControl(applicationDetailsPanel);
+
+            dgv.ClearSelection();
+            applicationDetailsPanel.Enabled = false;
         }
 
         /// <summary>
@@ -407,11 +525,13 @@ namespace ParishSystem
         /// <param name="dgv"></param>
         /// <param name="tb"></param>
         /// <returns></returns>
-        private bool editRequirements(DataGridView dgv, TableLayoutPanel tb)
+        private bool editRequirements(SacramentType t)
         {
+            DataGridView dgv = getDataGridView(t);
+            TableLayoutPanel tlpReq = getRequirementTableLayoutPanel(t);
             int applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
             int profileID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
-            string r = getRequirements(tb);
+            string r = getRequirements(tlpReq);
             bool a = dh.editApplication(applicationID, r);
 
             return a;
@@ -422,8 +542,9 @@ namespace ParishSystem
         /// </summary>
         /// <param name="type"></param>
         /// <param name="dgv"></param>
-        private void payApplication(SacramentType type, DataGridView dgv)
+        private void payApplication(SacramentType type)
         {
+            DataGridView dgv = getDataGridView(type);
             DataGridViewRow dgvr = dgv.SelectedRows[0];
             ApplicationPayment ap = new ApplicationPayment(type, dgvr, dh);
             DialogResult dr = ap.ShowDialog();
@@ -440,130 +561,12 @@ namespace ParishSystem
 
         }
 
-
-
-
-        /// <summary>
-        /// Handles process for Edit Requirements button
-        /// </summary>
-        /// <param name="type"></param>
-        private void applicationEditRequirementsClick(SacramentType type)
-        {
-            Button editBtn;
-            DataGridView dgv;
-            GroupBox gb;
-            TableLayoutPanel tlpRequirements;
-            TableLayoutPanel tlpProfile = null;
-            FlowLayoutPanel flp;
-            switch (type)
-            {
-                case SacramentType.Baptism:
-                    editBtn = baptismApplication_editReq_button;
-                    dgv = baptismApplication_dgv;
-                    gb = baptismApplication_requirements_groupbox;
-                    tlpRequirements = baptismApplication_requirements_tablePanel;
-                    tlpProfile = baptismApplication_profile_tlp;
-                    flp = baptismApplication_approveRevoke_panel;
-                    break;
-                case SacramentType.Confirmation:
-                    editBtn = confirmationApplication_editReq_btn;
-                    dgv = confirmationApplication_dgv;
-                    gb = confirmationApplication_requirements_groupbox;
-                    tlpRequirements = confirmationApplication_requirements_tablePanel;
-                    flp = confirmationApplication_approveRevoke_panel;
-                    break;
-                default:
-                    editBtn = marriageApplication_editReq_btn;
-                    dgv = marriageApplication_dgv;
-                    gb = marriageApplication_requirements_groupbox;
-                    tlpRequirements = marriageApplication_requirements_tablePanel;
-                    flp = marriageApplication_approveRevoke_panel;
-                    break;
-            }
-
-            MessageBox.Show(editBtn.Tag.ToString());
-            bool inSaveState = editBtn.Tag.ToString() == "Save State";
-            gb.Enabled = !inSaveState;
-            flp.Enabled = inSaveState;
-            tlpProfile.Visible = inSaveState;
-
-            if (!inSaveState)
-            {
-                editBtn.Text = "Save Changes";
-                editBtn.Tag = "Save State";
-
-            }
-            else
-            {
-                editBtn.Text = "Edit Requirements";
-                editBtn.Tag = "Edit State";
-                bool success = editRequirements(dgv, tlpRequirements);
-
-                if (success)
-                    Notification.Show("Successfully Applied Edits!", NotificationType.success);
-                else
-                    Notification.Show("Something went wrong!", NotificationType.error);
-            }
-        }
-
-        public void editApplication(SacramentType type)
-        {
-            TableLayoutPanel tlpProfile;
-            GroupBox gbRequirements;
-            FlowLayoutPanel flpApproveRevoke;
-            Button btnEdit = new Button();
-
-
-            if (type == SacramentType.Baptism)
-            {
-                //btnEdit = baptismApplication_edit_btn;
-                tlpProfile = baptismApplication_profile_tlp;
-                flpApproveRevoke = baptismApplication_approveRevoke_panel;
-                gbRequirements = baptismApplication_requirements_groupbox;
-            }
-            else if (type == SacramentType.Confirmation)
-            {
-                //btnEdit = confirmationApplication_edit_btn;
-                tlpProfile = confirmationApplication_profile_tlp;
-                flpApproveRevoke = confirmationApplication_approveRevoke_panel;
-                gbRequirements = confirmationApplication_requirements_groupbox;
-            }
-            else
-            {
-                //MARRIAGE
-                //btnEdit = marriageApplication_edit_btn;
-                tlpProfile = marriageApplication_profile_tlp;
-                flpApproveRevoke = marriageApplication_approveRevoke_panel;
-                gbRequirements = marriageApplication_requirements_groupbox;
-            }
-
-            //If in view state, enter edit state by negation
-            bool enableEdit = btnEdit.Tag.ToString() == "Edit";
-
-            flpApproveRevoke.Enabled = !enableEdit;
-            //If Tag is View, do Edits and change Tag to Edit
-            if (enableEdit)
-            {
-                tlpProfile.BringToFront();
-                btnEdit.Text = "Save";
-                btnEdit.Tag = "Save";
-
-            }
-            else
-            {
-                tlpProfile.SendToBack();
-                btnEdit.Text = "Edit";
-                btnEdit.Tag = "Edit";
-
-            }
-        }
-
         /// <summary>
         /// Indicates whether the TextBox or CueTextBox controls in a Control has empty text or filler text
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        private bool isTextBoxesEmpty(Control c)
+        private bool hasEmptyTextBoxes(Control c)
         {
             foreach (Control con in c.Controls)
             {
@@ -582,16 +585,17 @@ namespace ParishSystem
             }
 
             return false;
-
         }
 
+        
         public bool editApplicationProfile(SacramentType type)
         {
 
             bool success = true;
+            
             if (type == SacramentType.Baptism)
             {
-                if (isTextBoxesEmpty(baptismApplication_profile_tlp))
+                if (hasEmptyTextBoxes(baptismApplication_profile_tlp))
                 {
                     SystemNotification.Notify(State.MissingFields);
                     return false;
@@ -603,24 +607,23 @@ namespace ParishSystem
                 string suffix = baptismApplication_suffix_textBox.Text;
                 Gender g = baptismApplication_male_radio.Checked ? Gender.Male : Gender.Female;
                 DateTime birthDate = baptismApplication_birthDate_dtp.Value;
-
-
-                int profileID = dh.getGeneralProfileID(fn, mi, ln, suffix, g, birthDate);
+                
 
                 bool profileExists = dh.generalProfileExists(profileID, fn, mi, ln, suffix, g, birthDate);
-                MessageBox.Show("Profile Exists: " + profileExists);
+                //MessageBox.Show("Profile Exists: " + profileExists);
                 if (profileExists)
                 {
                     SystemNotification.Notify(State.ProfileExists);
                     return false;
                 }
 
-                success &= dh.editGeneralProfile(profileID, fn, mi, ln, suffix, g, birthDate);
-                MessageBox.Show("Sucess: " + success);
+                success &= dh.editGeneralProfile(this.profileID, fn, mi, ln, suffix, g, birthDate);
+                
+                //MessageBox.Show("Sucess: " + success);
             }
             else if (type == SacramentType.Confirmation)
             {
-                if (isTextBoxesEmpty(confirmationApplication_profile_tlp))
+                if (hasEmptyTextBoxes(confirmationApplication_profile_tlp))
                 {
                     SystemNotification.Notify(State.MissingFields);
                     return false;
@@ -633,21 +636,19 @@ namespace ParishSystem
                 Gender g = confirmationApplication_male_radio.Checked ? Gender.Male : Gender.Female;
                 DateTime birthDate = confirmationApplication_birthDate_dtp.Value;
 
-                int profileID = dh.getGeneralProfileID(fn, mi, ln, suffix, g, birthDate);
-
-                bool profileExists = dh.generalProfileExists(profileID, fn, mi, ln, suffix, g, birthDate);
+                bool profileExists = dh.generalProfileExists(this.profileID, fn, mi, ln, suffix, g, birthDate);
                 if (profileExists)
                 {
                     SystemNotification.Notify(State.ProfileExists);
                     return false;
                 }
 
-                success &= dh.editGeneralProfile(profileID, fn, mi, ln, suffix, g, birthDate);
+                success &= dh.editGeneralProfile(this.profileID, fn, mi, ln, suffix, g, birthDate);
             }
             else //Marriage
             {
 
-                if (isTextBoxesEmpty(marriageApplication_profile_tlp))
+                if (hasEmptyTextBoxes(marriageApplication_profile_tlp))
                 {
                     SystemNotification.Notify(State.MissingFields);
                     return false;
@@ -659,8 +660,7 @@ namespace ParishSystem
                 string gln = txtGLN.Text;
                 string gsuffix = txtGSuffix.Text;
                 DateTime gbd = dtpGBirthDate.Value;
-                int gID = dh.getGeneralProfileID(gfn, gmi, gln, gsuffix, Gender.Male, gbd);
-                bool groomExists = dh.generalProfileExists(gID, gfn, gmi, gln, gsuffix, Gender.Male, gbd);
+                bool groomExists = dh.generalProfileExists(this.groomID, gfn, gmi, gln, gsuffix, Gender.Male, gbd);
 
                 if (groomExists)
                 {
@@ -668,63 +668,38 @@ namespace ParishSystem
                     return false;
                 }
 
-
                 string bfn = txtBFN.Text;
                 string bmi = txtBMI.Text;
                 string bln = txtBLN.Text;
                 string bsuffix = txtBSuffix.Text;
                 DateTime bbd = dtpBBirthDate.Value;
-                int bID = dh.getGeneralProfileID(bfn, bmi, bln, bsuffix, Gender.Female, bbd);
 
-                bool brideExists = dh.generalProfileExists(bID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
+                bool brideExists = dh.generalProfileExists(this.brideID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
                 if (brideExists)
                 {
                     SystemNotification.Notify(State.BrideExists);
                     return false;
                 }
 
-                success &= dh.editGeneralProfile(gID, gfn, gmi, gln, gsuffix, Gender.Male, gbd);
-                success &= dh.editGeneralProfile(bID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
+                success &= dh.editGeneralProfile(this.groomID, gfn, gmi, gln, gsuffix, Gender.Male, gbd);
+                success &= dh.editGeneralProfile(this.brideID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
             }
 
             if (success)
             {
                 Notification.Show("Successfully applied changes", NotificationType.success);
+                loadApplications(type);
+                Panel p = getApplicationDetailsPanel(type);
+                RecursiveClearControl(p);
+
             }
             else
             {
-                Notification.Show("Something went wrong la", NotificationType.warning);
+                Notification.Show("Something went wrong", NotificationType.warning);
             }
 
             return success;
         }
-
-
-
-
-        // APPLICATION EDIT BUTTON CLICK=========================================================================================
-        private void baptismApplication_editReq_button_Click(object sender, EventArgs e)
-        {
-
-            applicationEditRequirementsClick(SacramentType.Baptism);
-        }
-
-        private void confirmationApplication_editReq_btn_Click(object sender, EventArgs e)
-        {
-            applicationEditRequirementsClick(SacramentType.Confirmation);
-        }
-
-        private void marriageApplication_editReq_btn_Click(object sender, EventArgs e)
-        {
-
-            applicationEditRequirementsClick(SacramentType.Marriage);
-        }
-        // =======================================================================================================================
-
-
-
-
-
 
 
         // DGV CELL FORMATTING ==================================================================================================
@@ -788,17 +763,17 @@ namespace ParishSystem
 
         private void confirmationApplication_approve_btn_Click(object sender, EventArgs e)
         {
-            applicationApprove(SacramentType.Confirmation, confirmationApplication_dgv, confirmationApplication_requirements_tablePanel);
+            applicationApprove(SacramentType.Confirmation);
         }
 
         private void marriageApplication_approve_btn_Click(object sender, EventArgs e)
         {
-            applicationApprove(SacramentType.Marriage, marriageApplication_dgv, marriageApplication_requirements_tablePanel);
+            applicationApprove(SacramentType.Marriage);
         }
 
         private void baptismApplication_approve_button_Click(object sender, EventArgs e)
         {
-            applicationApprove(SacramentType.Baptism, baptismApplication_dgv, baptismApplication_requirements_tablePanel);
+            applicationApprove(SacramentType.Baptism);
         }
         //=====================================================================================================================
 
@@ -809,17 +784,17 @@ namespace ParishSystem
 
         private void baptismApplication_checkAll_checkBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkAllCheckChanged(baptismApplication_checkAll_checkBox, baptismApplication_requirements_tablePanel);
+            checkAllCheckChanged(baptismApplication_checkAll_checkBox, baptismApplication_requirements_tlp);
         }
 
         private void confirmationApplication_checkAll_checkBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkAllCheckChanged(confirmationApplication_checkAll_checkBox, confirmationApplication_requirements_tablePanel);
+            checkAllCheckChanged(confirmationApplication_checkAll_checkBox, confirmationApplication_requirements_tlp);
         }
 
         private void marriageApplication_checkAll_checkBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkAllCheckChanged(marriageApplication_checkAll_checkBox, marriageApplication_requirements_tablePanel);
+            checkAllCheckChanged(marriageApplication_checkAll_checkBox, marriageApplication_requirements_tlp);
         }
         //=====================================================================================================================
 
@@ -831,18 +806,18 @@ namespace ParishSystem
         private void baptismApplication_requirement_checkBox_CheckedChanged(object sender, EventArgs e)
         {
 
-            requirementCheckChanged((CheckBox)sender, baptismApplication_checkAll_checkBox, baptismApplication_requirements_tablePanel);
+            requirementCheckChanged((CheckBox)sender, baptismApplication_checkAll_checkBox, baptismApplication_requirements_tlp);
 
         }
 
         private void confirmationApplication_requirement_checkBox_CheckChanged(object sender, EventArgs e)
         {
-            requirementCheckChanged((CheckBox)sender, confirmationApplication_checkAll_checkBox, confirmationApplication_requirements_tablePanel);
+            requirementCheckChanged((CheckBox)sender, confirmationApplication_checkAll_checkBox, confirmationApplication_requirements_tlp);
         }
 
         private void marriage_requirement_checkBox_CheckedChanged(object sender, EventArgs e)
         {
-            requirementCheckChanged((CheckBox)sender, marriageApplication_checkAll_checkBox, marriageApplication_requirements_tablePanel);
+            requirementCheckChanged((CheckBox)sender, marriageApplication_checkAll_checkBox, marriageApplication_requirements_tlp);
         }
 
         //=====================================================================================================================
@@ -854,18 +829,18 @@ namespace ParishSystem
         // APPLICATION REVOKE BUTTON CLICK=====================================================================================
         private void baptismApplication_revoke_button_Click(object sender, EventArgs e)
         {
-            applicationRevoke(SacramentType.Baptism, baptismApplication_dgv);
+            applicationRevoke(SacramentType.Baptism);
         }
 
         private void confirmationApplication_revoke_btn_Click(object sender, EventArgs e)
         {
-            applicationRevoke(SacramentType.Confirmation, confirmationApplication_dgv);
+            applicationRevoke(SacramentType.Confirmation);
         }
 
 
         private void marriageApplication_revoke_btn_Click(object sender, EventArgs e)
         {
-            applicationRevoke(SacramentType.Marriage, marriageApplication_dgv);
+            applicationRevoke(SacramentType.Marriage);
         }
 
         //======================================================================================================================
@@ -878,32 +853,35 @@ namespace ParishSystem
 
         #endregion
 
+        // APPLICATION ADD BUTTON CLICK=====================================================================================
+
         
 
-
-
-        // APPLICATION ADD BUTTON CLICK=====================================================================================
         private void baptismApplication_add_button_Click(object sender, EventArgs e)
         {
-            AddApplication aa = new AddApplication(SacramentType.Baptism, dh);
-            aa.ShowDialog();
+            Form f = getAddApplicationForm(SacramentType.Baptism);
+            f.ShowDialog();
 
-            loadBaptismApplications();
+            loadApplications(SacramentType.Baptism);
+            
         }
 
         private void confirmationApplication_add_btn_Click(object sender, EventArgs e)
         {
-            AddApplication aa = new AddApplication(SacramentType.Confirmation, dh);
-            aa.ShowDialog();
-            loadConfirmationApplications();
+            Form f = getAddApplicationForm(SacramentType.Confirmation);
+            f.ShowDialog();
+
+            loadApplications(SacramentType.Confirmation);
+
         }
 
-        private void marriageApplication_add_btn_Click(object sender, EventArgs e)
+        private void marriageApplication_add_button_Click(object sender, EventArgs e)
         {
+            Form f = getAddApplicationForm(SacramentType.Marriage);
+            f.ShowDialog();
 
-            AddMarriageApplication ama = new AddMarriageApplication(dh);
-            ama.ShowDialog();
-            loadMarriageApplications();
+            loadApplications(SacramentType.Marriage);
+
         }
         //======================================================================================================================
 
@@ -914,18 +892,18 @@ namespace ParishSystem
         // APPLICATION ADD PAYMENT BUTTON CLICK=================================================================================
         private void baptismApplication_addPayment_button_Click(object sender, EventArgs e)
         {
-            payApplication(SacramentType.Baptism, baptismApplication_dgv);
-
+            payApplication(SacramentType.Baptism);
         }
 
         private void confirmationApplication_addPayment_btn_Click(object sender, EventArgs e)
         {
-            payApplication(SacramentType.Confirmation, confirmationApplication_dgv);
+            payApplication(SacramentType.Confirmation);
         }
+
 
         private void marriageApplication_addPayment_btn_Click(object sender, EventArgs e)
         {
-            payApplication(SacramentType.Marriage, marriageApplication_dgv);
+            payApplication(SacramentType.Marriage);
         }
         //======================================================================================================================
 
@@ -937,17 +915,18 @@ namespace ParishSystem
         //APPLICATION DGV VISIBLE CHANGED========================================================================================
         private void baptismApplication_dgv_VisibleChanged(object sender, EventArgs e)
         {
-            loadBaptismApplications();
+            loadApplications(SacramentType.Baptism);
+            
         }
 
         private void confirmationApplication_dgv_VisibleChanged(object sender, EventArgs e)
         {
-            loadConfirmationApplications();
+            loadApplications(SacramentType.Confirmation);
         }
 
         private void marriageApplication_dgv_VisibleChanged(object sender, EventArgs e)
         {
-            loadMarriageApplications();
+            loadApplications(SacramentType.Marriage);
         }
         //========================================================================================================================
 
@@ -955,17 +934,23 @@ namespace ParishSystem
         //APPLICATION FILTER COMBOBOX SELECTED INDEX CHANGED======================================================================
         private void baptismApplication_filter_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            applicationFilter(baptismApplication_dgv, baptismApplication_filter_comboBox);
+            Control c = sender as Control;
+            if(c.Focused)
+                applicationFilter(SacramentType.Baptism);
         }
 
         private void confirmationApplication_filter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            applicationFilter(confirmationApplication_dgv, confirmationApplication_filter);
+            Control c = sender as Control;
+            if (c.Focused)
+                applicationFilter(SacramentType.Confirmation);
         }
 
         private void marriageApplication_filter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            applicationFilter(marriageApplication_dgv, marriageApplication_filter);
+            Control c = sender as Control;
+            if (c.Focused)
+                applicationFilter(SacramentType.Marriage);
         }
         //========================================================================================================================
 
@@ -988,31 +973,24 @@ namespace ParishSystem
 
         //=======================================================================================================================
 
+        
+
+        
 
         //APPLICATION DGV CELL ENTER==============================================================================================
         private void baptismApplication_dgv_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView dgv = (DataGridView)sender;
-            if (!dgv.Focused || dgv.SelectedRows.Count == 0)
-                return;
-
-            loadBaptismApplicationDetails(dgv);
+            loadApplicationDetails(SacramentType.Baptism);
         }
 
         private void confirmationApplication_dgv_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView dgv = (DataGridView)sender;
-            if (!dgv.Focused || dgv.SelectedRows.Count == 0)
-                return;
-            loadConfirmationApplicationDetails(dgv);
+            loadApplicationDetails(SacramentType.Confirmation);
         }
 
         private void marriageApplication_dgv_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView dgv = (DataGridView)sender;
-            if (!dgv.Focused || dgv.SelectedRows.Count == 0)
-                return;
-            loadMarriageApplicationDetails(dgv);
+            loadApplicationDetails(SacramentType.Marriage);
         }
 
         //=========================================================================================================================
@@ -1023,6 +1001,7 @@ namespace ParishSystem
         /// <param name="c"></param>
         private void RecursiveClearControl(Control c)
         {
+            Console.WriteLine("ENTERED RECURSIVE CLEAR");
             if (c.Controls.Count == 0)
                 return;
             else
@@ -1060,6 +1039,12 @@ namespace ParishSystem
                         CheckBox a = con as CheckBox;
                         a.Checked = false;
                     }
+                    else if (con.Tag != null && con.Tag.ToString() == "detail" && con is Label)
+                    {
+                        Console.WriteLine("ENTERED LABEL");
+                        Label a = con as Label;
+                        a.Text = "";
+                    }
                     else if (con.Controls.Count > 0)
                     {
                         RecursiveClearControl(con);
@@ -1068,36 +1053,26 @@ namespace ParishSystem
             }
         }
 
-        private void baptismApplication_editReq_button_EnabledChanged(object sender, EventArgs e)
-        {
-            Button b = sender as Button;
-            b.Text = "Edit Requirements";
-        }
+        
 
         private void applicationTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (applicationTabControl.SelectedIndex == 0)
+            {
                 RecursiveClearControl(baptismApplicationDetailsPanel);
+                baptismApplicationDetailsPanel.Enabled = false;
+            }
             else if (applicationTabControl.SelectedIndex == 0)
+            {
                 RecursiveClearControl(confirmationApplicationDetailsPanel);
+                confirmationApplicationDetailsPanel.Enabled = false;
+            }
             else
+            {
                 RecursiveClearControl(marriageApplicationDetailsPanel);
+                marriageApplicationDetailsPanel.Enabled = false;
+            }
         }
-
-        private void applicationTabControl_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void label94_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
 
         private void applicationEditCheckChanged(SacramentType type)
         {
@@ -1106,7 +1081,6 @@ namespace ParishSystem
             TableLayoutPanel tlpProfile;
             GroupBox gbReq;
             CheckBox checkEdit;
-
             if (type == SacramentType.Baptism)
             {
                 tlpProfile = baptismApplication_profile_tlp;
@@ -1141,11 +1115,6 @@ namespace ParishSystem
                 checkEdit.Text = "Save";
             }
 
-
-        }
-
-        private void baptismApplication_add_button_Click_1(object sender, EventArgs e)
-        {
 
         }
     }

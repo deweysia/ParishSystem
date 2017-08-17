@@ -6,23 +6,22 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using MetroFramework.Controls;
 
 namespace ParishSystem
 {
-    public partial class SAD : Form
+    public partial class SAD2 : Form
     {
+
         DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
         Point lastClick;
 
         Dictionary<Button, Panel> navigation = new Dictionary<Button, Panel>();
 
-        public SAD()
+        public SAD2()
         {
             InitializeComponent();
-            
+
 
             //Add dictionary for navigation buttons
             navigation.Add(home_button_menu, profile_panel);
@@ -32,9 +31,16 @@ namespace ParishSystem
             navigation.Add(CRB_button_menu, CRB_panel);
             navigation.Add(application_button_menu, application_panel);
             navigation.Add(sacrament_button_menu, sacrament_panel);
-            
+            navigation.Add(scheduling_button_menu, schedule_panel);
+        }
+
+        private void panel_controlbox_Paint(object sender, PaintEventArgs e)
+        {
 
         }
+
+
+        
 
         #region generic Methods
         public void Names_textbox_Leave(object sender, EventArgs e)
@@ -238,7 +244,7 @@ namespace ParishSystem
             AddPNL.Visible = false;
 
         }
-        
+
         //======================================================================================================================
 
 
@@ -266,49 +272,40 @@ namespace ParishSystem
             }
         }
 
-        private void sacrament_panel_VisibleChanged(object sender, EventArgs e)
-        {
 
-        }
 
-        
         private void panelSacrament_VisibleChanged(object sender, EventArgs e)
         {
-            while (sacrament_panel.Controls.Count > 0)
+            while (panelSacrament.Controls.Count > 0)
             {
-                sacrament_panel.Controls[0].Dispose();
+                panelSacrament.Controls[0].Dispose();
             }
 
             Sacrament s = new Sacrament(dh);
             s.FormBorderStyle = FormBorderStyle.None;
             s.TopLevel = false;
             s.AutoScroll = true;
-            sacrament_panel.Controls.Add(s);
+            panelSacrament.Controls.Add(s);
             s.Dock = DockStyle.Fill;
             s.Show();
         }
 
-        private void application_panel_VisibleChanged(object sender, EventArgs e)
+        private void panelApplication_VisibleChanged(object sender, EventArgs e)
         {
-
-            while (application_panel.Controls.Count > 0)
+            while (panelApplication.Controls.Count > 0)
             {
-                application_panel.Controls[0].Dispose();
+                panelApplication.Controls[0].Dispose();
             }
 
             SacramentApplication s = new SacramentApplication(dh);
             s.FormBorderStyle = FormBorderStyle.None;
             s.TopLevel = false;
             s.AutoScroll = true;
-            application_panel.Controls.Add(s);
+            panelApplication.Controls.Add(s);
             s.Dock = DockStyle.Fill;
             s.Show();
         }
 
-        private void panel_controlbox_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
 
 

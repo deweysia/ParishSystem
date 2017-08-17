@@ -15,11 +15,11 @@ namespace ParishSystem
         DataHandler dh;
         DataGridViewCellCollection row;
         //Some controls have Tag set to 'o' for optional
-        public MarriageForm(DataGridViewRow dgvr, DataHandler dh)
+        public MarriageForm(DataGridViewRow dgvr)
         {
             InitializeComponent();
 
-            this.dh = dh;
+            this.dh = DataHandler.getDataHandler();
             this.row = dgvr.Cells;
 
             cmbBStatus.DataSource = Enum.GetValues(typeof(Legitimacy));

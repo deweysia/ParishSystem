@@ -19,12 +19,12 @@ namespace ParishSystem
 
         Dictionary<TextBox, string> placeHolderText = new Dictionary<TextBox, string>();
         
-        public AddApplication(SacramentType type, DataHandler dh)
+        public AddApplication(SacramentType type)
         {
             InitializeComponent();
             sacramentType = type;
 
-            this.dh = dh;
+            this.dh = DataHandler.getDataHandler();
 
             birthdate_dtp.MaxDate = DateTime.Now;
             label1.MouseDown += AddApplication_MouseDown;

@@ -16,11 +16,11 @@ namespace ParishSystem
         DataHandler dh;
         DataGridViewCellCollection row;
         SacramentType type;
-        public SacramentForm(SacramentType type, DataGridViewRow dr, DataHandler dh)
+        public SacramentForm(SacramentType type, DataGridViewRow dr)
         {
             InitializeComponent();
 
-            this.dh = dh;
+            this.dh = DataHandler.getDataHandler();
             this.row = dr.Cells;
             this.type = type;
 
