@@ -51,9 +51,13 @@ namespace ParishSystem
             }
         }
 
+        /// <summary>
+        /// Indicates whether the Text is null, empty, consists of white-space characters, or is the CueText
+        /// </summary>
+        /// <returns></returns>
         public bool isEmpty()
         {
-            return this.ForeColor == CueColor || string.IsNullOrWhiteSpace(this.Text);
+            return (this.ForeColor == CueColor || string.IsNullOrWhiteSpace(this.Text)) && !string.IsNullOrEmpty(this.Cue);
         }
     }
 }

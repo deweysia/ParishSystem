@@ -258,9 +258,6 @@ namespace ParishSystem
 
         public bool editGeneralProfile(int profileID, string firstName, string midName, string lastName, string suffix, Gender gender, DateTime birthDate)
         {
-            if (!idExists("generalProfile", "profileID", profileID))
-                return false;
-
             string q = "UPDATE GeneralProfile SET firstName = '" + firstName
                 + "', midName = '" + midName + "', lastName = '" + lastName
                 + "', suffix = '" + suffix + "', gender = '" + (int)gender
@@ -313,6 +310,19 @@ namespace ParishSystem
             DataTable dt = runQuery(q);
 
             return int.Parse(dt.Rows[0][0].ToString()) > 0;
+        }
+
+        public bool generalProfileExists(int profileID, string firstName, string midName, string lastName, string suffix, Gender gender, DateTime birthDate)
+        {
+            string q = @"SELECT COUNT(*) FROM generalProfile 
+                        WHERE firstName = @firstName AND midName = @midName 
+                        AND lastName = @lastName AND gender = @gender AND birthDate = @birthDate 
+                        AND profileID != @profileID";
+
+            DataTable dt = ExecuteQuery(q, firstName, midName, lastName, suffix, (int)gender, birthDate.ToString("yyyy-MM-dd"));
+
+            return int.Parse(dt.Rows[0][0].ToString()) > 0;
+
         }
 
 
@@ -437,25 +447,7 @@ namespace ParishSystem
 
             return dt;
         }
-
-        public DataTable getGeneralProfilesByBirthDate(DateTime birthdate)
-        {
-            string q = "SELECT * FROM GeneralProfile WHERE birthdate = '" + birthdate.ToString("yyyy-MM-dd") + "'";
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
-        public DataTable getListOfBalances(int generalProfileID)
-        {
-            string q = "SELECT * FROM Income WHERE sourceType = 'GeneralProfile' AND sourceID = " + generalProfileID;
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
+        
 
 
 

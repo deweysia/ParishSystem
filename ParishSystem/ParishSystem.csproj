@@ -156,6 +156,12 @@
     <Compile Include="Sacrament.Designer.cs">
       <DependentUpon>Sacrament.cs</DependentUpon>
     </Compile>
+    <Compile Include="SacramentApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SacramentApplication.Designer.cs">
+      <DependentUpon>SacramentApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="SacramentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -318,6 +324,7 @@
     <Compile Include="sTransaction.Designer.cs">
       <DependentUpon>sTransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="SystemNotification.cs" />
     <Compile Include="tCDB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sacrament.resx">
       <DependentUpon>Sacrament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SacramentApplication.resx">
+      <DependentUpon>SacramentApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SacramentForm.resx">
       <DependentUpon>SacramentForm.cs</DependentUpon>
