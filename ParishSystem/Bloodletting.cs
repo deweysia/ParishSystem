@@ -22,26 +22,26 @@ namespace ParishSystem
 
         private void Bloodletting_Load(object sender, EventArgs e)
         {
-            donors_datagridview_bloodletting.DataSource = dh.getCashReleaseTypes();
+            donors_datagridview_bloodletting.DataSource = dh.getGeneralProfiles();
             //donors_datagridview_bloodletting.Columns["bloodDonationEventID"].Visible = false;
-            
+            dataGridView1.DataSource = dh.getBloodlettingEvents();
         }
 
         private void donors_datagridview_bloodletting_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Form A = new CashReleaseType(int.Parse(donors_datagridview_bloodletting.CurrentRow.Cells["cashReleaseTypeID"].Value.ToString()), dh);
+            Form A = new Bloodletting_Profile_Popup(int.Parse(donors_datagridview_bloodletting.CurrentRow.Cells["profileID"].Value.ToString()), dh);
             A.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form A = new CashReleaseType(dh);
+            Form A = new BloodlettingEventPopUp(dh);
             A.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form A = new Bloodletting_Profile_Popup(2, dh);
+            Form A = new Bloodletting_Profile_Popup(dh);
             A.ShowDialog();
         }
 
@@ -60,6 +60,12 @@ namespace ParishSystem
         private void button5_Click(object sender, EventArgs e)
         {
             Form A = new CashReleaseType(dh);
+            A.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {           
+            Form A = new BloodlettingEventPopUp(int.Parse(dataGridView1.CurrentRow.Cells["bloodDonationEventID"].Value.ToString()),dh);
             A.ShowDialog();
         }
     }
