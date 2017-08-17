@@ -13,7 +13,7 @@ namespace ParishSystem
     public partial class SAD2 : Form
     {
 
-        DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
+        DataHandler dh = DataHandler.getDataHandler();
         Point lastClick;
 
         Dictionary<Button, Panel> navigation = new Dictionary<Button, Panel>();
@@ -281,7 +281,7 @@ namespace ParishSystem
                 panelSacrament.Controls[0].Dispose();
             }
 
-            Sacrament s = new Sacrament(dh);
+            SacramentModule s = new SacramentModule(dh);
             s.FormBorderStyle = FormBorderStyle.None;
             s.TopLevel = false;
             s.AutoScroll = true;
@@ -297,7 +297,7 @@ namespace ParishSystem
                 panelApplication.Controls[0].Dispose();
             }
 
-            SacramentApplication s = new SacramentApplication(dh);
+            ApplicationModule s = new ApplicationModule(dh);
             s.FormBorderStyle = FormBorderStyle.None;
             s.TopLevel = false;
             s.AutoScroll = true;
@@ -306,73 +306,10 @@ namespace ParishSystem
             s.Show();
         }
 
-
-
-
-
-
-
-        /*private bool sacramentApplicationApplyChanges(SacramentType type, TableLayoutPanel tlpProfile, GroupBox gbReq)
+        private void panelApplication_Paint(object sender, PaintEventArgs e)
         {
-            bool success;
 
-            //Checks for Empty TextBoxes
-            foreach (Control con in tlpProfile.Controls)
-            {
-                if (con is CueTextBox)
-                {
-                    CueTextBox ctxt = con as CueTextBox;
-                    if (ctxt.isEmpty())
-                        return false;
-                }
-            }
-
-            string fn, mn, ln, suffix;
-            DateTime bdate;
-            Gender gender;
-            if(type == SacramentType.Baptism)
-            {
-                fn = baptismApplication_firstName_textBox.Text;
-                mn = baptismApplication_midName_textBox.Text;
-                ln = baptismApplication_lastName_textBox.Text;
-                suffix = baptismApplication_suffix_textBox.Text;
-                bdate = baptismApplication_birthDate_dtp.Value;
-                gender = baptismApplication_male_radio.Checked ? Gender.Male : Gender.Female;
-            }else if(type == SacramentType.Confirmation)
-            {
-                fn = confirmationApplication_firstName_textBox.Text;
-                mn = confirmationApplication_midName_textBox.Text;
-                ln = confirmationApplication_lastName_textBox.Text;
-                suffix = confirmationApplication_suffix_textBox.Text;
-                bdate = confirmationApplication_birthDate_dtp.Value;
-                gender = confirmationApplication_male_radio.Checked ? Gender.Male : Gender.Female;
-
-            }else
-            {
-                string gFN, gMN, gLN, gSuffix, bFN, bMN, bLN, bSuffix;
-                DateTime gBD, bBD;
-                gFN = txtGFN.Text;
-                gMN = txtGMI.Text;
-                gLN = txtGLN.Text;
-                gSuffix = txtGSuffix.Text;
-                gBD = dtpGBirthDate.Value;
-
-                bFN = txtBFN.Text;
-                bMN = txtBMI.Text;
-                bLN = txtBLN.Text;
-                bSuffix = txtBSuffix.Text;
-                bBD = dtpBBirthDate.Value;
-
-                
-            }
-
-
-        }*/
-
-
-
-
-
+        }
 
     }
 }

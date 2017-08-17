@@ -175,17 +175,17 @@
       <DependentUpon>ORdetailsPopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="ParameterizedSQL.cs" />
-    <Compile Include="Sacrament.cs">
+    <Compile Include="SacramentModule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sacrament.Designer.cs">
-      <DependentUpon>Sacrament.cs</DependentUpon>
+    <Compile Include="SacramentModule.Designer.cs">
+      <DependentUpon>SacramentModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="SacramentApplication.cs">
+    <Compile Include="ApplicationModule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SacramentApplication.Designer.cs">
-      <DependentUpon>SacramentApplication.cs</DependentUpon>
+    <Compile Include="ApplicationModule.Designer.cs">
+      <DependentUpon>ApplicationModule.cs</DependentUpon>
     </Compile>
     <Compile Include="SacramentForm.cs">
       <SubType>Form</SubType>
@@ -286,12 +286,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Sacraments.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sacraments.Designer.cs">
-      <DependentUpon>Sacraments.cs</DependentUpon>
     </Compile>
     <Compile Include="SAD.cs">
       <SubType>Form</SubType>
@@ -424,8 +418,11 @@
     <EmbeddedResource Include="ORdetailsPopUp.resx">
       <DependentUpon>ORdetailsPopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SacramentApplication.resx">
-      <DependentUpon>SacramentApplication.cs</DependentUpon>
+    <EmbeddedResource Include="SacramentModule.resx">
+      <DependentUpon>SacramentModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationModule.resx">
+      <DependentUpon>ApplicationModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SacramentForm.resx">
       <DependentUpon>SacramentForm.cs</DependentUpon>
@@ -472,9 +469,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sacraments.resx">
-      <DependentUpon>Sacraments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SAD.resx">
       <DependentUpon>SAD.cs</DependentUpon>

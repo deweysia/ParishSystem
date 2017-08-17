@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class SacramentApplication : Form
+    public partial class ApplicationModule : Form
     {
         DataHandler dh;
         private int profileID, groomID, brideID;
-        public SacramentApplication(DataHandler dh)
+        public ApplicationModule(DataHandler dh)
         {
             InitializeComponent();
             this.dh = dh;

@@ -1,6 +1,6 @@
 ﻿namespace ParishSystem
 {
-    partial class SacramentApplication
+    partial class ApplicationModule
     {
         
         /// <summary>
@@ -270,7 +270,7 @@
             this.applicationTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicationTabControl.Location = new System.Drawing.Point(0, 46);
             this.applicationTabControl.Name = "applicationTabControl";
-            this.applicationTabControl.SelectedIndex = 0;
+            this.applicationTabControl.SelectedIndex = 1;
             this.applicationTabControl.Size = new System.Drawing.Size(815, 486);
             this.applicationTabControl.TabIndex = 70;
             this.applicationTabControl.Tag = "Edit";
@@ -683,7 +683,7 @@
             this.baptismApplication_birthDate_dtp.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.baptismApplication_birthDate_dtp.FontSize = MetroFramework.MetroDateTimeSize.Small;
             this.baptismApplication_birthDate_dtp.Location = new System.Drawing.Point(3, 68);
-            this.baptismApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(0, 25);
+            this.baptismApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(4, 25);
             this.baptismApplication_birthDate_dtp.Name = "baptismApplication_birthDate_dtp";
             this.baptismApplication_birthDate_dtp.Size = new System.Drawing.Size(185, 25);
             this.baptismApplication_birthDate_dtp.TabIndex = 26;
@@ -1317,7 +1317,7 @@
             this.confirmationApplication_birthDate_dtp.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.confirmationApplication_birthDate_dtp.FontSize = MetroFramework.MetroDateTimeSize.Small;
             this.confirmationApplication_birthDate_dtp.Location = new System.Drawing.Point(3, 68);
-            this.confirmationApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(4, 25);
+            this.confirmationApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(0, 25);
             this.confirmationApplication_birthDate_dtp.Name = "confirmationApplication_birthDate_dtp";
             this.confirmationApplication_birthDate_dtp.Size = new System.Drawing.Size(190, 25);
             this.confirmationApplication_birthDate_dtp.TabIndex = 8;
@@ -1829,6 +1829,7 @@
             this.marriageApplication_filter_cmb.TabIndex = 63;
             this.marriageApplication_filter_cmb.TabStop = false;
             this.marriageApplication_filter_cmb.UseSelectable = true;
+            this.marriageApplication_filter_cmb.SelectedIndexChanged += new System.EventHandler(this.marriageApplication_filter_SelectedIndexChanged);
             // 
             // label22
             // 
@@ -1951,7 +1952,7 @@
             this.dtpGBirthDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtpGBirthDate.FontSize = MetroFramework.MetroDateTimeSize.Small;
             this.dtpGBirthDate.Location = new System.Drawing.Point(3, 33);
-            this.dtpGBirthDate.MinimumSize = new System.Drawing.Size(0, 25);
+            this.dtpGBirthDate.MinimumSize = new System.Drawing.Size(4, 25);
             this.dtpGBirthDate.Name = "dtpGBirthDate";
             this.dtpGBirthDate.Size = new System.Drawing.Size(190, 25);
             this.dtpGBirthDate.TabIndex = 8;
@@ -2009,7 +2010,7 @@
             this.dtpBBirthDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtpBBirthDate.FontSize = MetroFramework.MetroDateTimeSize.Small;
             this.dtpBBirthDate.Location = new System.Drawing.Point(3, 93);
-            this.dtpBBirthDate.MinimumSize = new System.Drawing.Size(0, 25);
+            this.dtpBBirthDate.MinimumSize = new System.Drawing.Size(4, 25);
             this.dtpBBirthDate.Name = "dtpBBirthDate";
             this.dtpBBirthDate.Size = new System.Drawing.Size(190, 25);
             this.dtpBBirthDate.TabIndex = 10;
@@ -2407,14 +2408,14 @@
             this.label1.TabIndex = 37;
             this.label1.Text = "APPLICATIONS";
             // 
-            // SacramentApplication
+            // ApplicationModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(815, 532);
             this.Controls.Add(this.applicationTabControl);
             this.Controls.Add(this.panel15);
-            this.Name = "SacramentApplication";
+            this.Name = "ApplicationModule";
             this.Text = "SacramentApplication";
             this.Load += new System.EventHandler(this.SacramentApplication_Load);
             this.applicationTabControl.ResumeLayout(false);

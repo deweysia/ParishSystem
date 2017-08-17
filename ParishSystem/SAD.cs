@@ -279,7 +279,7 @@ namespace ParishSystem
                 sacrament_panel.Controls[0].Dispose();
             }
 
-            Sacrament s = new Sacrament(dh);
+            SacramentModule s = new SacramentModule(dh);
             s.FormBorderStyle = FormBorderStyle.None;
             s.TopLevel = false;
             s.AutoScroll = true;
@@ -296,7 +296,7 @@ namespace ParishSystem
                 application_panel.Controls[0].Dispose();
             }
 
-            SacramentApplication s = new SacramentApplication(dh);
+            ApplicationModule s = new ApplicationModule(dh);
             s.FormBorderStyle = FormBorderStyle.None;
             s.TopLevel = false;
             s.AutoScroll = true;

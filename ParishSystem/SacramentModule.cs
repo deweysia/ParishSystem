@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class Sacrament : Form
+    public partial class SacramentModule : Form
     {
         DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
-        public Sacrament(DataHandler dh)
+        public SacramentModule(DataHandler dh)
         {
             InitializeComponent();
             this.dh = dh;
@@ -46,7 +46,7 @@ namespace ParishSystem
             string mn = dgvBaptism.SelectedRows[0].Cells["bapMI"].Value.ToString();
             string ln = dgvBaptism.SelectedRows[0].Cells["bapLastName"].Value.ToString();
             string suffix = dgvBaptism.SelectedRows[0].Cells["bapSuffix"].Value.ToString();
-            lblName.Text = string.Format("{0} {1} {2} {3}", fn, mn, ln, suffix);
+            lblNameBap.Text = string.Format("{0} {1} {2} {3}", fn, mn, ln, suffix);
         }
 
         private void dgvBaptism_DataSourceChanged(object sender, EventArgs e)
@@ -67,6 +67,16 @@ namespace ParishSystem
             {
                 //bsSacrament.DataSource = dh.getMarriage();
             }
+        }
+
+        private void btnResetBap_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddReferencesBap_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -300,6 +300,7 @@
             this.panelApplication.Size = new System.Drawing.Size(812, 547);
             this.panelApplication.TabIndex = 0;
             this.panelApplication.VisibleChanged += new System.EventHandler(this.panelApplication_VisibleChanged);
+            this.panelApplication.Paint += new System.Windows.Forms.PaintEventHandler(this.panelApplication_Paint);
             // 
             // bloodletting_panel
             // 
