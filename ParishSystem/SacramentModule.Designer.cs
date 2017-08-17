@@ -29,42 +29,41 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSearchBap = new MetroFramework.Controls.MetroButton();
-            this.btnResetBap = new MetroFramework.Controls.MetroButton();
-            this.txtSearchBap = new ParishSystem.CueTextBox();
-            this.cmbFilterBap = new MetroFramework.Controls.MetroComboBox();
-            this.tlpProfileBap = new System.Windows.Forms.TableLayoutPanel();
-            this.btnOpenProfileBap = new MetroFramework.Controls.MetroButton();
-            this.btnAddReferencesBap = new MetroFramework.Controls.MetroButton();
-            this.lblNameBap = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.dgvBaptism = new MetroFramework.Controls.MetroGrid();
-            this.bapProfileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.baptismID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapApplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapMinisterID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.baptismDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapMI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapSuffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapRegistryNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapRecordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapPageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.bsSacrament = new System.Windows.Forms.BindingSource(this.components);
+            this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnResetMar = new MetroFramework.Controls.MetroButton();
+            this.tlpProfileMar = new System.Windows.Forms.TableLayoutPanel();
+            this.btnOpenGroomProfile = new MetroFramework.Controls.MetroButton();
+            this.btnAddReferencesMar = new MetroFramework.Controls.MetroButton();
+            this.btnOpenBrideProfile = new MetroFramework.Controls.MetroButton();
+            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.cueTextBox2 = new ParishSystem.CueTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnSearchMar = new MetroFramework.Controls.MetroButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.metroGrid3 = new MetroFramework.Controls.MetroGrid();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marriageDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brideName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marRegistryNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marRecordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marPageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -91,687 +90,48 @@
             this.conRecordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.conPageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.conRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnResetMar = new MetroFramework.Controls.MetroButton();
-            this.tlpProfileMar = new System.Windows.Forms.TableLayoutPanel();
-            this.btnOpenGroomProfile = new MetroFramework.Controls.MetroButton();
-            this.btnAddReferencesMar = new MetroFramework.Controls.MetroButton();
-            this.btnOpenBrideProfile = new MetroFramework.Controls.MetroButton();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
-            this.cueTextBox2 = new ParishSystem.CueTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnSearchMar = new MetroFramework.Controls.MetroButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.metroGrid3 = new MetroFramework.Controls.MetroGrid();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marriageDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brideName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marRegistryNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marRecordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marPageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bsSacrament = new System.Windows.Forms.BindingSource(this.components);
-            this.metroTabControl1.SuspendLayout();
+            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSearchBap = new MetroFramework.Controls.MetroButton();
+            this.btnResetBap = new MetroFramework.Controls.MetroButton();
+            this.txtSearchBap = new ParishSystem.CueTextBox();
+            this.tlpProfileBap = new System.Windows.Forms.TableLayoutPanel();
+            this.btnOpenProfileBap = new MetroFramework.Controls.MetroButton();
+            this.btnAddReferencesBap = new MetroFramework.Controls.MetroButton();
+            this.lblNameBap = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.dgvBaptism = new MetroFramework.Controls.MetroGrid();
+            this.bapProfileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.baptismID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapApplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapMinisterID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.baptismDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapMI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapSuffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapRegistryNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapRecordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapPageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            ((System.ComponentModel.ISupportInitialize)(this.bsSacrament)).BeginInit();
+            this.metroTabPage6.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tlpProfileMar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid3)).BeginInit();
+            this.metroTabPage5.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.tlpProfileCon.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).BeginInit();
             this.metroTabPage4.SuspendLayout();
             this.panel12.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tlpProfileBap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaptism)).BeginInit();
-            this.metroTabPage5.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.tlpProfileCon.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).BeginInit();
-            this.metroTabPage6.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.tlpProfileMar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsSacrament)).BeginInit();
+            this.metroTabControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // metroTabControl1
-            // 
-            this.metroTabControl1.Controls.Add(this.metroTabPage4);
-            this.metroTabControl1.Controls.Add(this.metroTabPage5);
-            this.metroTabControl1.Controls.Add(this.metroTabPage6);
-            this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(786, 475);
-            this.metroTabControl1.TabIndex = 11;
-            this.metroTabControl1.UseSelectable = true;
-            // 
-            // metroTabPage4
-            // 
-            this.metroTabPage4.Controls.Add(this.panel12);
-            this.metroTabPage4.Controls.Add(this.dgvBaptism);
-            this.metroTabPage4.HorizontalScrollbarBarColor = true;
-            this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage4.HorizontalScrollbarSize = 1;
-            this.metroTabPage4.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(778, 433);
-            this.metroTabPage4.TabIndex = 0;
-            this.metroTabPage4.Text = "Baptism";
-            this.metroTabPage4.VerticalScrollbarBarColor = true;
-            this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage4.VerticalScrollbarSize = 2;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.tableLayoutPanel2);
-            this.panel12.Controls.Add(this.tlpProfileBap);
-            this.panel12.Controls.Add(this.lblNameBap);
-            this.panel12.Controls.Add(this.label63);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel12.Location = new System.Drawing.Point(0, 339);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(778, 94);
-            this.panel12.TabIndex = 13;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Controls.Add(this.btnSearchBap, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnResetBap, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtSearchBap, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.cmbFilterBap, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(434, 10);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(336, 56);
-            this.tableLayoutPanel2.TabIndex = 14;
-            // 
-            // btnSearchBap
-            // 
-            this.btnSearchBap.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSearchBap.Location = new System.Drawing.Point(229, 3);
-            this.btnSearchBap.Name = "btnSearchBap";
-            this.btnSearchBap.Size = new System.Drawing.Size(101, 22);
-            this.btnSearchBap.TabIndex = 9;
-            this.btnSearchBap.Text = "Search";
-            this.btnSearchBap.UseSelectable = true;
-            // 
-            // btnResetBap
-            // 
-            this.btnResetBap.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnResetBap.Location = new System.Drawing.Point(229, 31);
-            this.btnResetBap.Name = "btnResetBap";
-            this.btnResetBap.Size = new System.Drawing.Size(101, 22);
-            this.btnResetBap.TabIndex = 9;
-            this.btnResetBap.Text = "Reset";
-            this.btnResetBap.UseSelectable = true;
-            this.btnResetBap.Click += new System.EventHandler(this.btnResetBap_Click);
-            // 
-            // txtSearchBap
-            // 
-            this.txtSearchBap.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearchBap.Cue = null;
-            this.txtSearchBap.CueColor = System.Drawing.Color.Gray;
-            this.txtSearchBap.Location = new System.Drawing.Point(3, 4);
-            this.txtSearchBap.Name = "txtSearchBap";
-            this.txtSearchBap.Size = new System.Drawing.Size(105, 20);
-            this.txtSearchBap.TabIndex = 11;
-            // 
-            // cmbFilterBap
-            // 
-            this.cmbFilterBap.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbFilterBap.FontSize = MetroFramework.MetroComboBoxSize.Small;
-            this.cmbFilterBap.FormattingEnabled = true;
-            this.cmbFilterBap.ItemHeight = 19;
-            this.cmbFilterBap.Items.AddRange(new object[] {
-            "Name",
-            "Date",
-            "Registry no",
-            "Record no",
-            "Page no"});
-            this.cmbFilterBap.Location = new System.Drawing.Point(115, 3);
-            this.cmbFilterBap.Name = "cmbFilterBap";
-            this.cmbFilterBap.Size = new System.Drawing.Size(105, 25);
-            this.cmbFilterBap.TabIndex = 12;
-            this.cmbFilterBap.UseSelectable = true;
-            // 
-            // tlpProfileBap
-            // 
-            this.tlpProfileBap.ColumnCount = 1;
-            this.tlpProfileBap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpProfileBap.Controls.Add(this.btnOpenProfileBap, 0, 0);
-            this.tlpProfileBap.Controls.Add(this.btnAddReferencesBap, 0, 1);
-            this.tlpProfileBap.Location = new System.Drawing.Point(12, 11);
-            this.tlpProfileBap.Name = "tlpProfileBap";
-            this.tlpProfileBap.RowCount = 2;
-            this.tlpProfileBap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpProfileBap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpProfileBap.Size = new System.Drawing.Size(120, 59);
-            this.tlpProfileBap.TabIndex = 13;
-            // 
-            // btnOpenProfileBap
-            // 
-            this.btnOpenProfileBap.Location = new System.Drawing.Point(3, 3);
-            this.btnOpenProfileBap.Name = "btnOpenProfileBap";
-            this.btnOpenProfileBap.Size = new System.Drawing.Size(104, 23);
-            this.btnOpenProfileBap.TabIndex = 8;
-            this.btnOpenProfileBap.Text = "Open Profile";
-            this.btnOpenProfileBap.UseSelectable = true;
-            // 
-            // btnAddReferencesBap
-            // 
-            this.btnAddReferencesBap.Location = new System.Drawing.Point(3, 32);
-            this.btnAddReferencesBap.Name = "btnAddReferencesBap";
-            this.btnAddReferencesBap.Size = new System.Drawing.Size(104, 23);
-            this.btnAddReferencesBap.TabIndex = 8;
-            this.btnAddReferencesBap.Text = "Add References";
-            this.btnAddReferencesBap.UseSelectable = true;
-            this.btnAddReferencesBap.Click += new System.EventHandler(this.btnAddReferencesBap_Click);
-            // 
-            // lblNameBap
-            // 
-            this.lblNameBap.AutoSize = true;
-            this.lblNameBap.Location = new System.Drawing.Point(150, 14);
-            this.lblNameBap.Name = "lblNameBap";
-            this.lblNameBap.Size = new System.Drawing.Size(35, 13);
-            this.lblNameBap.TabIndex = 10;
-            this.lblNameBap.Text = "Name";
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(-363, 25);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(57, 13);
-            this.label63.TabIndex = 2;
-            this.label63.Text = "Reference";
-            // 
-            // dgvBaptism
-            // 
-            this.dgvBaptism.AllowUserToAddRows = false;
-            this.dgvBaptism.AllowUserToDeleteRows = false;
-            this.dgvBaptism.AllowUserToResizeRows = false;
-            this.dgvBaptism.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dgvBaptism.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvBaptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvBaptism.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvBaptism.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBaptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvBaptism.ColumnHeadersHeight = 25;
-            this.dgvBaptism.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvBaptism.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.bapProfileID,
-            this.baptismID,
-            this.bapApplicationID,
-            this.bapMinisterID,
-            this.baptismDate,
-            this.bapFirstName,
-            this.bapMI,
-            this.bapLastName,
-            this.bapSuffix,
-            this.bapRegistryNumber,
-            this.bapRecordNumber,
-            this.bapPageNumber,
-            this.bapRemarks});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBaptism.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvBaptism.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBaptism.EnableHeadersVisualStyles = false;
-            this.dgvBaptism.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dgvBaptism.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvBaptism.Location = new System.Drawing.Point(0, 0);
-            this.dgvBaptism.MultiSelect = false;
-            this.dgvBaptism.Name = "dgvBaptism";
-            this.dgvBaptism.ReadOnly = true;
-            this.dgvBaptism.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBaptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvBaptism.RowHeadersVisible = false;
-            this.dgvBaptism.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvBaptism.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBaptism.Size = new System.Drawing.Size(778, 433);
-            this.dgvBaptism.TabIndex = 6;
-            this.dgvBaptism.TabStop = false;
-            // 
-            // bapProfileID
-            // 
-            this.bapProfileID.DataPropertyName = "profileID";
-            this.bapProfileID.HeaderText = "profileID";
-            this.bapProfileID.Name = "bapProfileID";
-            this.bapProfileID.ReadOnly = true;
-            this.bapProfileID.Visible = false;
-            this.bapProfileID.Width = 76;
-            // 
-            // baptismID
-            // 
-            this.baptismID.DataPropertyName = "baptismID";
-            this.baptismID.HeaderText = "baptismID";
-            this.baptismID.Name = "baptismID";
-            this.baptismID.ReadOnly = true;
-            this.baptismID.Visible = false;
-            this.baptismID.Width = 83;
-            // 
-            // bapApplicationID
-            // 
-            this.bapApplicationID.DataPropertyName = "applicationID";
-            this.bapApplicationID.HeaderText = "bapApplicationID";
-            this.bapApplicationID.Name = "bapApplicationID";
-            this.bapApplicationID.ReadOnly = true;
-            this.bapApplicationID.Width = 121;
-            // 
-            // bapMinisterID
-            // 
-            this.bapMinisterID.DataPropertyName = "ministerID";
-            this.bapMinisterID.HeaderText = "bapMinisterID";
-            this.bapMinisterID.Name = "bapMinisterID";
-            this.bapMinisterID.ReadOnly = true;
-            this.bapMinisterID.Visible = false;
-            this.bapMinisterID.Width = 104;
-            // 
-            // baptismDate
-            // 
-            this.baptismDate.DataPropertyName = "baptismDate";
-            this.baptismDate.HeaderText = "Baptism Date";
-            this.baptismDate.Name = "baptismDate";
-            this.baptismDate.ReadOnly = true;
-            this.baptismDate.Width = 99;
-            // 
-            // bapFirstName
-            // 
-            this.bapFirstName.DataPropertyName = "firstName";
-            this.bapFirstName.HeaderText = "First Name";
-            this.bapFirstName.Name = "bapFirstName";
-            this.bapFirstName.ReadOnly = true;
-            this.bapFirstName.Width = 85;
-            // 
-            // bapMI
-            // 
-            this.bapMI.DataPropertyName = "midName";
-            this.bapMI.HeaderText = "MI";
-            this.bapMI.Name = "bapMI";
-            this.bapMI.ReadOnly = true;
-            this.bapMI.Width = 44;
-            // 
-            // bapLastName
-            // 
-            this.bapLastName.DataPropertyName = "lastName";
-            this.bapLastName.HeaderText = "Last Name";
-            this.bapLastName.Name = "bapLastName";
-            this.bapLastName.ReadOnly = true;
-            this.bapLastName.Width = 83;
-            // 
-            // bapSuffix
-            // 
-            this.bapSuffix.DataPropertyName = "suffix";
-            this.bapSuffix.HeaderText = "Suffix";
-            this.bapSuffix.Name = "bapSuffix";
-            this.bapSuffix.ReadOnly = true;
-            this.bapSuffix.Width = 60;
-            // 
-            // bapRegistryNumber
-            // 
-            this.bapRegistryNumber.DataPropertyName = "registryNumber";
-            this.bapRegistryNumber.HeaderText = "Registry no";
-            this.bapRegistryNumber.Name = "bapRegistryNumber";
-            this.bapRegistryNumber.ReadOnly = true;
-            this.bapRegistryNumber.Width = 89;
-            // 
-            // bapRecordNumber
-            // 
-            this.bapRecordNumber.DataPropertyName = "recordNumber";
-            this.bapRecordNumber.HeaderText = "Record no";
-            this.bapRecordNumber.Name = "bapRecordNumber";
-            this.bapRecordNumber.ReadOnly = true;
-            this.bapRecordNumber.Width = 84;
-            // 
-            // bapPageNumber
-            // 
-            this.bapPageNumber.DataPropertyName = "pageNumber";
-            this.bapPageNumber.HeaderText = "Page no";
-            this.bapPageNumber.Name = "bapPageNumber";
-            this.bapPageNumber.ReadOnly = true;
-            this.bapPageNumber.Width = 73;
-            // 
-            // bapRemarks
-            // 
-            this.bapRemarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.bapRemarks.DataPropertyName = "remarks";
-            this.bapRemarks.HeaderText = "Remarks";
-            this.bapRemarks.Name = "bapRemarks";
-            this.bapRemarks.ReadOnly = true;
-            // 
-            // metroTabPage5
-            // 
-            this.metroTabPage5.Controls.Add(this.panel2);
-            this.metroTabPage5.Controls.Add(this.metroGrid2);
-            this.metroTabPage5.HorizontalScrollbarBarColor = true;
-            this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage5.HorizontalScrollbarSize = 1;
-            this.metroTabPage5.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(778, 433);
-            this.metroTabPage5.TabIndex = 1;
-            this.metroTabPage5.Text = "Confirmation";
-            this.metroTabPage5.VerticalScrollbarBarColor = true;
-            this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage5.VerticalScrollbarSize = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.tableLayoutPanel3);
-            this.panel2.Controls.Add(this.btnResetCon);
-            this.panel2.Controls.Add(this.tlpProfileCon);
-            this.panel2.Controls.Add(this.metroComboBox1);
-            this.panel2.Controls.Add(this.cueTextBox1);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.btnSearchCon);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 339);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(778, 94);
-            this.panel2.TabIndex = 14;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(515, 58);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 100);
-            this.tableLayoutPanel3.TabIndex = 14;
-            // 
-            // btnResetCon
-            // 
-            this.btnResetCon.Location = new System.Drawing.Point(673, 40);
-            this.btnResetCon.Name = "btnResetCon";
-            this.btnResetCon.Size = new System.Drawing.Size(101, 23);
-            this.btnResetCon.TabIndex = 9;
-            this.btnResetCon.Text = "Reset";
-            this.btnResetCon.UseSelectable = true;
-            // 
-            // tlpProfileCon
-            // 
-            this.tlpProfileCon.ColumnCount = 1;
-            this.tlpProfileCon.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpProfileCon.Controls.Add(this.btnOpenProfileCon, 0, 0);
-            this.tlpProfileCon.Controls.Add(this.btnAddReferencesCon, 0, 1);
-            this.tlpProfileCon.Location = new System.Drawing.Point(12, 11);
-            this.tlpProfileCon.Name = "tlpProfileCon";
-            this.tlpProfileCon.RowCount = 2;
-            this.tlpProfileCon.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpProfileCon.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpProfileCon.Size = new System.Drawing.Size(112, 59);
-            this.tlpProfileCon.TabIndex = 13;
-            // 
-            // btnOpenProfileCon
-            // 
-            this.btnOpenProfileCon.Location = new System.Drawing.Point(3, 3);
-            this.btnOpenProfileCon.Name = "btnOpenProfileCon";
-            this.btnOpenProfileCon.Size = new System.Drawing.Size(104, 23);
-            this.btnOpenProfileCon.TabIndex = 8;
-            this.btnOpenProfileCon.Text = "Open Profile";
-            this.btnOpenProfileCon.UseSelectable = true;
-            // 
-            // btnAddReferencesCon
-            // 
-            this.btnAddReferencesCon.Location = new System.Drawing.Point(3, 32);
-            this.btnAddReferencesCon.Name = "btnAddReferencesCon";
-            this.btnAddReferencesCon.Size = new System.Drawing.Size(104, 23);
-            this.btnAddReferencesCon.TabIndex = 8;
-            this.btnAddReferencesCon.Text = "Add References";
-            this.btnAddReferencesCon.UseSelectable = true;
-            // 
-            // metroComboBox1
-            // 
-            this.metroComboBox1.FontSize = MetroFramework.MetroComboBoxSize.Small;
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 19;
-            this.metroComboBox1.Location = new System.Drawing.Point(546, 9);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(121, 25);
-            this.metroComboBox1.TabIndex = 12;
-            this.metroComboBox1.UseSelectable = true;
-            // 
-            // cueTextBox1
-            // 
-            this.cueTextBox1.Cue = null;
-            this.cueTextBox1.CueColor = System.Drawing.Color.Gray;
-            this.cueTextBox1.Location = new System.Drawing.Point(396, 11);
-            this.cueTextBox1.Name = "cueTextBox1";
-            this.cueTextBox1.Size = new System.Drawing.Size(144, 20);
-            this.cueTextBox1.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(474, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Name";
-            // 
-            // btnSearchCon
-            // 
-            this.btnSearchCon.Location = new System.Drawing.Point(673, 11);
-            this.btnSearchCon.Name = "btnSearchCon";
-            this.btnSearchCon.Size = new System.Drawing.Size(101, 23);
-            this.btnSearchCon.TabIndex = 9;
-            this.btnSearchCon.Text = "Search";
-            this.btnSearchCon.UseSelectable = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(-363, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Reference";
-            // 
-            // metroGrid2
-            // 
-            this.metroGrid2.AllowUserToAddRows = false;
-            this.metroGrid2.AllowUserToDeleteRows = false;
-            this.metroGrid2.AllowUserToResizeRows = false;
-            this.metroGrid2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.metroGrid2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroGrid2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.metroGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.metroGrid2.ColumnHeadersHeight = 25;
-            this.metroGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.metroGrid2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.conProfileID,
-            this.dataGridViewTextBoxColumn2,
-            this.conApplicationID,
-            this.conMinisterID,
-            this.confirmationDate,
-            this.conFirstName,
-            this.conMI,
-            this.conLastName,
-            this.conSuffix,
-            this.conRegistryNumber,
-            this.conRecordNumber,
-            this.conPageNumber,
-            this.conRemarks});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid2.DefaultCellStyle = dataGridViewCellStyle5;
-            this.metroGrid2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroGrid2.EnableHeadersVisualStyles = false;
-            this.metroGrid2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.metroGrid2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid2.Location = new System.Drawing.Point(0, 0);
-            this.metroGrid2.MultiSelect = false;
-            this.metroGrid2.Name = "metroGrid2";
-            this.metroGrid2.ReadOnly = true;
-            this.metroGrid2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid2.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.metroGrid2.RowHeadersVisible = false;
-            this.metroGrid2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid2.Size = new System.Drawing.Size(778, 433);
-            this.metroGrid2.TabIndex = 6;
-            this.metroGrid2.TabStop = false;
-            // 
-            // conProfileID
-            // 
-            this.conProfileID.DataPropertyName = "profileID";
-            this.conProfileID.HeaderText = "profileID";
-            this.conProfileID.Name = "conProfileID";
-            this.conProfileID.ReadOnly = true;
-            this.conProfileID.Visible = false;
-            this.conProfileID.Width = 76;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "confirmationID";
-            this.dataGridViewTextBoxColumn2.HeaderText = "confirmationID";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Visible = false;
-            this.dataGridViewTextBoxColumn2.Width = 108;
-            // 
-            // conApplicationID
-            // 
-            this.conApplicationID.DataPropertyName = "applicationID";
-            this.conApplicationID.HeaderText = "conApplicationID";
-            this.conApplicationID.Name = "conApplicationID";
-            this.conApplicationID.ReadOnly = true;
-            this.conApplicationID.Visible = false;
-            this.conApplicationID.Width = 120;
-            // 
-            // conMinisterID
-            // 
-            this.conMinisterID.DataPropertyName = "ministerID";
-            this.conMinisterID.HeaderText = "conMinisterID";
-            this.conMinisterID.Name = "conMinisterID";
-            this.conMinisterID.ReadOnly = true;
-            this.conMinisterID.Visible = false;
-            this.conMinisterID.Width = 103;
-            // 
-            // confirmationDate
-            // 
-            this.confirmationDate.DataPropertyName = "confirmationDate";
-            this.confirmationDate.HeaderText = "Confirmation Date";
-            this.confirmationDate.Name = "confirmationDate";
-            this.confirmationDate.ReadOnly = true;
-            this.confirmationDate.Width = 126;
-            // 
-            // conFirstName
-            // 
-            this.conFirstName.DataPropertyName = "firstName";
-            this.conFirstName.HeaderText = "First Name";
-            this.conFirstName.Name = "conFirstName";
-            this.conFirstName.ReadOnly = true;
-            this.conFirstName.Width = 85;
-            // 
-            // conMI
-            // 
-            this.conMI.DataPropertyName = "midName";
-            this.conMI.HeaderText = "MI";
-            this.conMI.Name = "conMI";
-            this.conMI.ReadOnly = true;
-            this.conMI.Width = 44;
-            // 
-            // conLastName
-            // 
-            this.conLastName.DataPropertyName = "lastName";
-            this.conLastName.HeaderText = "Last Name";
-            this.conLastName.Name = "conLastName";
-            this.conLastName.ReadOnly = true;
-            this.conLastName.Width = 83;
-            // 
-            // conSuffix
-            // 
-            this.conSuffix.DataPropertyName = "suffix";
-            this.conSuffix.HeaderText = "Suffix";
-            this.conSuffix.Name = "conSuffix";
-            this.conSuffix.ReadOnly = true;
-            this.conSuffix.Width = 60;
-            // 
-            // conRegistryNumber
-            // 
-            this.conRegistryNumber.DataPropertyName = "registryNumber";
-            this.conRegistryNumber.HeaderText = "Registry no";
-            this.conRegistryNumber.Name = "conRegistryNumber";
-            this.conRegistryNumber.ReadOnly = true;
-            this.conRegistryNumber.Width = 89;
-            // 
-            // conRecordNumber
-            // 
-            this.conRecordNumber.DataPropertyName = "recordNumber";
-            this.conRecordNumber.HeaderText = "Record no";
-            this.conRecordNumber.Name = "conRecordNumber";
-            this.conRecordNumber.ReadOnly = true;
-            this.conRecordNumber.Width = 84;
-            // 
-            // conPageNumber
-            // 
-            this.conPageNumber.DataPropertyName = "pageNumber";
-            this.conPageNumber.HeaderText = "Page no";
-            this.conPageNumber.Name = "conPageNumber";
-            this.conPageNumber.ReadOnly = true;
-            this.conPageNumber.Width = 73;
-            // 
-            // conRemarks
-            // 
-            this.conRemarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.conRemarks.DataPropertyName = "remarks";
-            this.conRemarks.HeaderText = "Remarks";
-            this.conRemarks.Name = "conRemarks";
-            this.conRemarks.ReadOnly = true;
             // 
             // metroTabPage6
             // 
@@ -927,14 +287,14 @@
             this.metroGrid3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGrid3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.metroGrid3.ColumnHeadersHeight = 25;
             this.metroGrid3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.metroGrid3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -949,14 +309,14 @@
             this.marRecordNumber,
             this.marPageNumber,
             this.marRemarks});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid3.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid3.DefaultCellStyle = dataGridViewCellStyle11;
             this.metroGrid3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroGrid3.EnableHeadersVisualStyles = false;
             this.metroGrid3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -966,14 +326,14 @@
             this.metroGrid3.Name = "metroGrid3";
             this.metroGrid3.ReadOnly = true;
             this.metroGrid3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid3.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid3.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.metroGrid3.RowHeadersVisible = false;
             this.metroGrid3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1073,16 +433,648 @@
             this.marRemarks.Name = "marRemarks";
             this.marRemarks.ReadOnly = true;
             // 
-            // Sacrament
+            // metroTabPage5
+            // 
+            this.metroTabPage5.Controls.Add(this.panel2);
+            this.metroTabPage5.Controls.Add(this.metroGrid2);
+            this.metroTabPage5.HorizontalScrollbarBarColor = true;
+            this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.HorizontalScrollbarSize = 1;
+            this.metroTabPage5.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage5.Name = "metroTabPage5";
+            this.metroTabPage5.Size = new System.Drawing.Size(778, 433);
+            this.metroTabPage5.TabIndex = 1;
+            this.metroTabPage5.Text = "Confirmation";
+            this.metroTabPage5.VerticalScrollbarBarColor = true;
+            this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.VerticalScrollbarSize = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.tableLayoutPanel3);
+            this.panel2.Controls.Add(this.btnResetCon);
+            this.panel2.Controls.Add(this.tlpProfileCon);
+            this.panel2.Controls.Add(this.metroComboBox1);
+            this.panel2.Controls.Add(this.cueTextBox1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.btnSearchCon);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 339);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(778, 94);
+            this.panel2.TabIndex = 14;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(515, 58);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel3.TabIndex = 14;
+            // 
+            // btnResetCon
+            // 
+            this.btnResetCon.Location = new System.Drawing.Point(673, 40);
+            this.btnResetCon.Name = "btnResetCon";
+            this.btnResetCon.Size = new System.Drawing.Size(101, 23);
+            this.btnResetCon.TabIndex = 9;
+            this.btnResetCon.Text = "Reset";
+            this.btnResetCon.UseSelectable = true;
+            // 
+            // tlpProfileCon
+            // 
+            this.tlpProfileCon.ColumnCount = 1;
+            this.tlpProfileCon.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpProfileCon.Controls.Add(this.btnOpenProfileCon, 0, 0);
+            this.tlpProfileCon.Controls.Add(this.btnAddReferencesCon, 0, 1);
+            this.tlpProfileCon.Location = new System.Drawing.Point(12, 11);
+            this.tlpProfileCon.Name = "tlpProfileCon";
+            this.tlpProfileCon.RowCount = 2;
+            this.tlpProfileCon.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpProfileCon.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpProfileCon.Size = new System.Drawing.Size(112, 59);
+            this.tlpProfileCon.TabIndex = 13;
+            // 
+            // btnOpenProfileCon
+            // 
+            this.btnOpenProfileCon.Location = new System.Drawing.Point(3, 3);
+            this.btnOpenProfileCon.Name = "btnOpenProfileCon";
+            this.btnOpenProfileCon.Size = new System.Drawing.Size(104, 23);
+            this.btnOpenProfileCon.TabIndex = 8;
+            this.btnOpenProfileCon.Text = "Open Profile";
+            this.btnOpenProfileCon.UseSelectable = true;
+            // 
+            // btnAddReferencesCon
+            // 
+            this.btnAddReferencesCon.Location = new System.Drawing.Point(3, 32);
+            this.btnAddReferencesCon.Name = "btnAddReferencesCon";
+            this.btnAddReferencesCon.Size = new System.Drawing.Size(104, 23);
+            this.btnAddReferencesCon.TabIndex = 8;
+            this.btnAddReferencesCon.Text = "Add References";
+            this.btnAddReferencesCon.UseSelectable = true;
+            // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.FontSize = MetroFramework.MetroComboBoxSize.Small;
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 19;
+            this.metroComboBox1.Location = new System.Drawing.Point(546, 9);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(121, 25);
+            this.metroComboBox1.TabIndex = 12;
+            this.metroComboBox1.UseSelectable = true;
+            // 
+            // cueTextBox1
+            // 
+            this.cueTextBox1.Cue = null;
+            this.cueTextBox1.CueColor = System.Drawing.Color.Gray;
+            this.cueTextBox1.Location = new System.Drawing.Point(396, 11);
+            this.cueTextBox1.Name = "cueTextBox1";
+            this.cueTextBox1.Size = new System.Drawing.Size(144, 20);
+            this.cueTextBox1.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(474, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Name";
+            // 
+            // btnSearchCon
+            // 
+            this.btnSearchCon.Location = new System.Drawing.Point(673, 11);
+            this.btnSearchCon.Name = "btnSearchCon";
+            this.btnSearchCon.Size = new System.Drawing.Size(101, 23);
+            this.btnSearchCon.TabIndex = 9;
+            this.btnSearchCon.Text = "Search";
+            this.btnSearchCon.UseSelectable = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(-363, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Reference";
+            // 
+            // metroGrid2
+            // 
+            this.metroGrid2.AllowUserToAddRows = false;
+            this.metroGrid2.AllowUserToDeleteRows = false;
+            this.metroGrid2.AllowUserToResizeRows = false;
+            this.metroGrid2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.metroGrid2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metroGrid2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.metroGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.metroGrid2.ColumnHeadersHeight = 25;
+            this.metroGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.metroGrid2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.conProfileID,
+            this.dataGridViewTextBoxColumn2,
+            this.conApplicationID,
+            this.conMinisterID,
+            this.confirmationDate,
+            this.conFirstName,
+            this.conMI,
+            this.conLastName,
+            this.conSuffix,
+            this.conRegistryNumber,
+            this.conRecordNumber,
+            this.conPageNumber,
+            this.conRemarks});
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid2.DefaultCellStyle = dataGridViewCellStyle14;
+            this.metroGrid2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroGrid2.EnableHeadersVisualStyles = false;
+            this.metroGrid2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.metroGrid2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid2.Location = new System.Drawing.Point(0, 0);
+            this.metroGrid2.MultiSelect = false;
+            this.metroGrid2.Name = "metroGrid2";
+            this.metroGrid2.ReadOnly = true;
+            this.metroGrid2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid2.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            this.metroGrid2.RowHeadersVisible = false;
+            this.metroGrid2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.metroGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.metroGrid2.Size = new System.Drawing.Size(778, 433);
+            this.metroGrid2.TabIndex = 6;
+            this.metroGrid2.TabStop = false;
+            // 
+            // conProfileID
+            // 
+            this.conProfileID.DataPropertyName = "profileID";
+            this.conProfileID.HeaderText = "profileID";
+            this.conProfileID.Name = "conProfileID";
+            this.conProfileID.ReadOnly = true;
+            this.conProfileID.Visible = false;
+            this.conProfileID.Width = 76;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "confirmationID";
+            this.dataGridViewTextBoxColumn2.HeaderText = "confirmationID";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            this.dataGridViewTextBoxColumn2.Width = 108;
+            // 
+            // conApplicationID
+            // 
+            this.conApplicationID.DataPropertyName = "applicationID";
+            this.conApplicationID.HeaderText = "conApplicationID";
+            this.conApplicationID.Name = "conApplicationID";
+            this.conApplicationID.ReadOnly = true;
+            this.conApplicationID.Visible = false;
+            this.conApplicationID.Width = 120;
+            // 
+            // conMinisterID
+            // 
+            this.conMinisterID.DataPropertyName = "ministerID";
+            this.conMinisterID.HeaderText = "conMinisterID";
+            this.conMinisterID.Name = "conMinisterID";
+            this.conMinisterID.ReadOnly = true;
+            this.conMinisterID.Visible = false;
+            this.conMinisterID.Width = 103;
+            // 
+            // confirmationDate
+            // 
+            this.confirmationDate.DataPropertyName = "confirmationDate";
+            this.confirmationDate.HeaderText = "Confirmation Date";
+            this.confirmationDate.Name = "confirmationDate";
+            this.confirmationDate.ReadOnly = true;
+            this.confirmationDate.Width = 126;
+            // 
+            // conFirstName
+            // 
+            this.conFirstName.DataPropertyName = "firstName";
+            this.conFirstName.HeaderText = "First Name";
+            this.conFirstName.Name = "conFirstName";
+            this.conFirstName.ReadOnly = true;
+            this.conFirstName.Width = 85;
+            // 
+            // conMI
+            // 
+            this.conMI.DataPropertyName = "midName";
+            this.conMI.HeaderText = "MI";
+            this.conMI.Name = "conMI";
+            this.conMI.ReadOnly = true;
+            this.conMI.Width = 44;
+            // 
+            // conLastName
+            // 
+            this.conLastName.DataPropertyName = "lastName";
+            this.conLastName.HeaderText = "Last Name";
+            this.conLastName.Name = "conLastName";
+            this.conLastName.ReadOnly = true;
+            this.conLastName.Width = 83;
+            // 
+            // conSuffix
+            // 
+            this.conSuffix.DataPropertyName = "suffix";
+            this.conSuffix.HeaderText = "Suffix";
+            this.conSuffix.Name = "conSuffix";
+            this.conSuffix.ReadOnly = true;
+            this.conSuffix.Width = 60;
+            // 
+            // conRegistryNumber
+            // 
+            this.conRegistryNumber.DataPropertyName = "registryNumber";
+            this.conRegistryNumber.HeaderText = "Registry no";
+            this.conRegistryNumber.Name = "conRegistryNumber";
+            this.conRegistryNumber.ReadOnly = true;
+            this.conRegistryNumber.Width = 89;
+            // 
+            // conRecordNumber
+            // 
+            this.conRecordNumber.DataPropertyName = "recordNumber";
+            this.conRecordNumber.HeaderText = "Record no";
+            this.conRecordNumber.Name = "conRecordNumber";
+            this.conRecordNumber.ReadOnly = true;
+            this.conRecordNumber.Width = 84;
+            // 
+            // conPageNumber
+            // 
+            this.conPageNumber.DataPropertyName = "pageNumber";
+            this.conPageNumber.HeaderText = "Page no";
+            this.conPageNumber.Name = "conPageNumber";
+            this.conPageNumber.ReadOnly = true;
+            this.conPageNumber.Width = 73;
+            // 
+            // conRemarks
+            // 
+            this.conRemarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.conRemarks.DataPropertyName = "remarks";
+            this.conRemarks.HeaderText = "Remarks";
+            this.conRemarks.Name = "conRemarks";
+            this.conRemarks.ReadOnly = true;
+            // 
+            // metroTabPage4
+            // 
+            this.metroTabPage4.Controls.Add(this.panel12);
+            this.metroTabPage4.Controls.Add(this.dgvBaptism);
+            this.metroTabPage4.HorizontalScrollbarBarColor = true;
+            this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage4.HorizontalScrollbarSize = 1;
+            this.metroTabPage4.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage4.Name = "metroTabPage4";
+            this.metroTabPage4.Size = new System.Drawing.Size(778, 433);
+            this.metroTabPage4.TabIndex = 0;
+            this.metroTabPage4.Text = "Baptism";
+            this.metroTabPage4.VerticalScrollbarBarColor = true;
+            this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage4.VerticalScrollbarSize = 2;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.tableLayoutPanel2);
+            this.panel12.Controls.Add(this.tlpProfileBap);
+            this.panel12.Controls.Add(this.lblNameBap);
+            this.panel12.Controls.Add(this.label63);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel12.Location = new System.Drawing.Point(0, 339);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(778, 94);
+            this.panel12.TabIndex = 13;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Controls.Add(this.btnSearchBap, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnResetBap, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtSearchBap, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(434, 10);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(336, 56);
+            this.tableLayoutPanel2.TabIndex = 14;
+            // 
+            // btnSearchBap
+            // 
+            this.btnSearchBap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSearchBap.Location = new System.Drawing.Point(229, 3);
+            this.btnSearchBap.Name = "btnSearchBap";
+            this.btnSearchBap.Size = new System.Drawing.Size(101, 22);
+            this.btnSearchBap.TabIndex = 9;
+            this.btnSearchBap.Text = "Search";
+            this.btnSearchBap.UseSelectable = true;
+            this.btnSearchBap.Click += new System.EventHandler(this.btnSearchBap_Click);
+            // 
+            // btnResetBap
+            // 
+            this.btnResetBap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnResetBap.Location = new System.Drawing.Point(229, 31);
+            this.btnResetBap.Name = "btnResetBap";
+            this.btnResetBap.Size = new System.Drawing.Size(101, 22);
+            this.btnResetBap.TabIndex = 9;
+            this.btnResetBap.Text = "Reset";
+            this.btnResetBap.UseSelectable = true;
+            this.btnResetBap.Click += new System.EventHandler(this.btnResetBap_Click);
+            // 
+            // txtSearchBap
+            // 
+            this.txtSearchBap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchBap.Cue = null;
+            this.txtSearchBap.CueColor = System.Drawing.Color.Gray;
+            this.txtSearchBap.Location = new System.Drawing.Point(115, 4);
+            this.txtSearchBap.Name = "txtSearchBap";
+            this.txtSearchBap.Size = new System.Drawing.Size(105, 20);
+            this.txtSearchBap.TabIndex = 11;
+            // 
+            // tlpProfileBap
+            // 
+            this.tlpProfileBap.ColumnCount = 1;
+            this.tlpProfileBap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpProfileBap.Controls.Add(this.btnOpenProfileBap, 0, 0);
+            this.tlpProfileBap.Controls.Add(this.btnAddReferencesBap, 0, 1);
+            this.tlpProfileBap.Location = new System.Drawing.Point(12, 11);
+            this.tlpProfileBap.Name = "tlpProfileBap";
+            this.tlpProfileBap.RowCount = 2;
+            this.tlpProfileBap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpProfileBap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpProfileBap.Size = new System.Drawing.Size(120, 59);
+            this.tlpProfileBap.TabIndex = 13;
+            // 
+            // btnOpenProfileBap
+            // 
+            this.btnOpenProfileBap.Location = new System.Drawing.Point(3, 3);
+            this.btnOpenProfileBap.Name = "btnOpenProfileBap";
+            this.btnOpenProfileBap.Size = new System.Drawing.Size(104, 23);
+            this.btnOpenProfileBap.TabIndex = 8;
+            this.btnOpenProfileBap.Text = "Open Profile";
+            this.btnOpenProfileBap.UseSelectable = true;
+            // 
+            // btnAddReferencesBap
+            // 
+            this.btnAddReferencesBap.Location = new System.Drawing.Point(3, 32);
+            this.btnAddReferencesBap.Name = "btnAddReferencesBap";
+            this.btnAddReferencesBap.Size = new System.Drawing.Size(104, 23);
+            this.btnAddReferencesBap.TabIndex = 8;
+            this.btnAddReferencesBap.Text = "Add References";
+            this.btnAddReferencesBap.UseSelectable = true;
+            this.btnAddReferencesBap.Click += new System.EventHandler(this.btnAddReferencesBap_Click);
+            // 
+            // lblNameBap
+            // 
+            this.lblNameBap.AutoSize = true;
+            this.lblNameBap.Location = new System.Drawing.Point(150, 14);
+            this.lblNameBap.Name = "lblNameBap";
+            this.lblNameBap.Size = new System.Drawing.Size(35, 13);
+            this.lblNameBap.TabIndex = 10;
+            this.lblNameBap.Text = "Name";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(-363, 25);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(57, 13);
+            this.label63.TabIndex = 2;
+            this.label63.Text = "Reference";
+            // 
+            // dgvBaptism
+            // 
+            this.dgvBaptism.AllowUserToAddRows = false;
+            this.dgvBaptism.AllowUserToDeleteRows = false;
+            this.dgvBaptism.AllowUserToResizeRows = false;
+            this.dgvBaptism.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvBaptism.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvBaptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvBaptism.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvBaptism.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBaptism.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.dgvBaptism.ColumnHeadersHeight = 25;
+            this.dgvBaptism.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvBaptism.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bapProfileID,
+            this.baptismID,
+            this.bapApplicationID,
+            this.bapMinisterID,
+            this.baptismDate,
+            this.bapFirstName,
+            this.bapMI,
+            this.bapLastName,
+            this.bapSuffix,
+            this.bapRegistryNumber,
+            this.bapRecordNumber,
+            this.bapPageNumber,
+            this.bapRemarks});
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBaptism.DefaultCellStyle = dataGridViewCellStyle17;
+            this.dgvBaptism.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBaptism.EnableHeadersVisualStyles = false;
+            this.dgvBaptism.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dgvBaptism.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvBaptism.Location = new System.Drawing.Point(0, 0);
+            this.dgvBaptism.MultiSelect = false;
+            this.dgvBaptism.Name = "dgvBaptism";
+            this.dgvBaptism.ReadOnly = true;
+            this.dgvBaptism.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBaptism.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.dgvBaptism.RowHeadersVisible = false;
+            this.dgvBaptism.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvBaptism.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvBaptism.Size = new System.Drawing.Size(778, 433);
+            this.dgvBaptism.TabIndex = 6;
+            this.dgvBaptism.TabStop = false;
+            this.dgvBaptism.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBaptism_CellEnter_1);
+            // 
+            // bapProfileID
+            // 
+            this.bapProfileID.DataPropertyName = "profileID";
+            this.bapProfileID.HeaderText = "profileID";
+            this.bapProfileID.Name = "bapProfileID";
+            this.bapProfileID.ReadOnly = true;
+            this.bapProfileID.Visible = false;
+            this.bapProfileID.Width = 76;
+            // 
+            // baptismID
+            // 
+            this.baptismID.DataPropertyName = "baptismID";
+            this.baptismID.HeaderText = "baptismID";
+            this.baptismID.Name = "baptismID";
+            this.baptismID.ReadOnly = true;
+            this.baptismID.Visible = false;
+            this.baptismID.Width = 83;
+            // 
+            // bapApplicationID
+            // 
+            this.bapApplicationID.DataPropertyName = "applicationID";
+            this.bapApplicationID.HeaderText = "bapApplicationID";
+            this.bapApplicationID.Name = "bapApplicationID";
+            this.bapApplicationID.ReadOnly = true;
+            this.bapApplicationID.Width = 121;
+            // 
+            // bapMinisterID
+            // 
+            this.bapMinisterID.DataPropertyName = "ministerID";
+            this.bapMinisterID.HeaderText = "bapMinisterID";
+            this.bapMinisterID.Name = "bapMinisterID";
+            this.bapMinisterID.ReadOnly = true;
+            this.bapMinisterID.Visible = false;
+            this.bapMinisterID.Width = 104;
+            // 
+            // baptismDate
+            // 
+            this.baptismDate.DataPropertyName = "baptismDate";
+            this.baptismDate.HeaderText = "Baptism Date";
+            this.baptismDate.Name = "baptismDate";
+            this.baptismDate.ReadOnly = true;
+            this.baptismDate.Width = 99;
+            // 
+            // bapFirstName
+            // 
+            this.bapFirstName.DataPropertyName = "firstName";
+            this.bapFirstName.HeaderText = "First Name";
+            this.bapFirstName.Name = "bapFirstName";
+            this.bapFirstName.ReadOnly = true;
+            this.bapFirstName.Width = 85;
+            // 
+            // bapMI
+            // 
+            this.bapMI.DataPropertyName = "midName";
+            this.bapMI.HeaderText = "MI";
+            this.bapMI.Name = "bapMI";
+            this.bapMI.ReadOnly = true;
+            this.bapMI.Width = 44;
+            // 
+            // bapLastName
+            // 
+            this.bapLastName.DataPropertyName = "lastName";
+            this.bapLastName.HeaderText = "Last Name";
+            this.bapLastName.Name = "bapLastName";
+            this.bapLastName.ReadOnly = true;
+            this.bapLastName.Width = 83;
+            // 
+            // bapSuffix
+            // 
+            this.bapSuffix.DataPropertyName = "suffix";
+            this.bapSuffix.HeaderText = "Suffix";
+            this.bapSuffix.Name = "bapSuffix";
+            this.bapSuffix.ReadOnly = true;
+            this.bapSuffix.Width = 60;
+            // 
+            // bapRegistryNumber
+            // 
+            this.bapRegistryNumber.DataPropertyName = "registryNumber";
+            this.bapRegistryNumber.HeaderText = "Registry no";
+            this.bapRegistryNumber.Name = "bapRegistryNumber";
+            this.bapRegistryNumber.ReadOnly = true;
+            this.bapRegistryNumber.Width = 89;
+            // 
+            // bapRecordNumber
+            // 
+            this.bapRecordNumber.DataPropertyName = "recordNumber";
+            this.bapRecordNumber.HeaderText = "Record no";
+            this.bapRecordNumber.Name = "bapRecordNumber";
+            this.bapRecordNumber.ReadOnly = true;
+            this.bapRecordNumber.Width = 84;
+            // 
+            // bapPageNumber
+            // 
+            this.bapPageNumber.DataPropertyName = "pageNumber";
+            this.bapPageNumber.HeaderText = "Page no";
+            this.bapPageNumber.Name = "bapPageNumber";
+            this.bapPageNumber.ReadOnly = true;
+            this.bapPageNumber.Width = 73;
+            // 
+            // bapRemarks
+            // 
+            this.bapRemarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.bapRemarks.DataPropertyName = "remarks";
+            this.bapRemarks.HeaderText = "Remarks";
+            this.bapRemarks.Name = "bapRemarks";
+            this.bapRemarks.ReadOnly = true;
+            // 
+            // metroTabControl1
+            // 
+            this.metroTabControl1.Controls.Add(this.metroTabPage4);
+            this.metroTabControl1.Controls.Add(this.metroTabPage5);
+            this.metroTabControl1.Controls.Add(this.metroTabPage6);
+            this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.metroTabControl1.Name = "metroTabControl1";
+            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.Size = new System.Drawing.Size(786, 475);
+            this.metroTabControl1.TabIndex = 11;
+            this.metroTabControl1.UseSelectable = true;
+            // 
+            // SacramentModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 475);
             this.Controls.Add(this.metroTabControl1);
-            this.Name = "Sacrament";
+            this.Name = "SacramentModule";
             this.Text = "Sacrament";
-            this.Load += new System.EventHandler(this.Sacrament_Load);
-            this.metroTabControl1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.SacramentModule_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bsSacrament)).EndInit();
+            this.metroTabPage6.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.tlpProfileMar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid3)).EndInit();
+            this.metroTabPage5.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.tlpProfileCon.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).EndInit();
             this.metroTabPage4.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
@@ -1090,26 +1082,50 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tlpProfileBap.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaptism)).EndInit();
-            this.metroTabPage5.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.tlpProfileCon.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).EndInit();
-            this.metroTabPage6.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.tlpProfileMar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsSacrament)).EndInit();
+            this.metroTabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroTabControl metroTabControl1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage4;
+        private System.Windows.Forms.BindingSource bsSacrament;
+        private MetroFramework.Controls.MetroTabPage metroTabPage6;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private MetroFramework.Controls.MetroButton btnResetMar;
+        private System.Windows.Forms.TableLayoutPanel tlpProfileMar;
+        private MetroFramework.Controls.MetroButton btnOpenGroomProfile;
+        private MetroFramework.Controls.MetroButton btnAddReferencesMar;
+        private MetroFramework.Controls.MetroButton btnOpenBrideProfile;
+        private MetroFramework.Controls.MetroComboBox metroComboBox2;
+        private CueTextBox cueTextBox2;
+        private System.Windows.Forms.Label label3;
+        private MetroFramework.Controls.MetroButton btnSearchMar;
+        private System.Windows.Forms.Label label4;
+        private MetroFramework.Controls.MetroGrid metroGrid3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marriageDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn groomName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brideName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marRegistryNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marRecordNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marPageNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marRemarks;
         private MetroFramework.Controls.MetroTabPage metroTabPage5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private MetroFramework.Controls.MetroButton btnResetCon;
+        private System.Windows.Forms.TableLayoutPanel tlpProfileCon;
+        private MetroFramework.Controls.MetroButton btnOpenProfileCon;
+        private MetroFramework.Controls.MetroButton btnAddReferencesCon;
+        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private CueTextBox cueTextBox1;
+        private System.Windows.Forms.Label label1;
+        private MetroFramework.Controls.MetroButton btnSearchCon;
+        private System.Windows.Forms.Label label2;
         private MetroFramework.Controls.MetroGrid metroGrid2;
         private System.Windows.Forms.DataGridViewTextBoxColumn conProfileID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -1124,30 +1140,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn conRecordNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn conPageNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn conRemarks;
-        private MetroFramework.Controls.MetroTabPage metroTabPage6;
-        private MetroFramework.Controls.MetroGrid metroGrid3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marriageDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn groomName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn brideName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marRegistryNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marRecordNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marPageNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marRemarks;
-        private System.Windows.Forms.BindingSource bsSacrament;
+        private MetroFramework.Controls.MetroTabPage metroTabPage4;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private MetroFramework.Controls.MetroButton btnSearchBap;
         private MetroFramework.Controls.MetroButton btnResetBap;
+        private CueTextBox txtSearchBap;
         private System.Windows.Forms.TableLayoutPanel tlpProfileBap;
         private MetroFramework.Controls.MetroButton btnOpenProfileBap;
         private MetroFramework.Controls.MetroButton btnAddReferencesBap;
-        private MetroFramework.Controls.MetroComboBox cmbFilterBap;
-        private CueTextBox txtSearchBap;
         private System.Windows.Forms.Label lblNameBap;
-        private MetroFramework.Controls.MetroButton btnSearchBap;
         private System.Windows.Forms.Label label63;
         private MetroFramework.Controls.MetroGrid dgvBaptism;
         private System.Windows.Forms.DataGridViewTextBoxColumn bapProfileID;
@@ -1163,28 +1165,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bapRecordNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn bapPageNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn bapRemarks;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private MetroFramework.Controls.MetroButton btnResetCon;
-        private System.Windows.Forms.TableLayoutPanel tlpProfileCon;
-        private MetroFramework.Controls.MetroButton btnOpenProfileCon;
-        private MetroFramework.Controls.MetroButton btnAddReferencesCon;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
-        private CueTextBox cueTextBox1;
-        private System.Windows.Forms.Label label1;
-        private MetroFramework.Controls.MetroButton btnSearchCon;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private MetroFramework.Controls.MetroButton btnResetMar;
-        private System.Windows.Forms.TableLayoutPanel tlpProfileMar;
-        private MetroFramework.Controls.MetroButton btnOpenGroomProfile;
-        private MetroFramework.Controls.MetroButton btnAddReferencesMar;
-        private MetroFramework.Controls.MetroButton btnOpenBrideProfile;
-        private MetroFramework.Controls.MetroComboBox metroComboBox2;
-        private CueTextBox cueTextBox2;
-        private System.Windows.Forms.Label label3;
-        private MetroFramework.Controls.MetroButton btnSearchMar;
-        private System.Windows.Forms.Label label4;
+        private MetroFramework.Controls.MetroTabControl metroTabControl1;
     }
 }

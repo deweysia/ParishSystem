@@ -61,6 +61,15 @@ namespace ParishSystem
         Widowed
     }
 
+    public enum SacramentFilter
+    {
+        Name,
+        Date,
+        RegistryNo,
+        RecordNo,
+        PageNo
+    }
+
     
 
 }

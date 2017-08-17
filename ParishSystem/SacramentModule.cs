@@ -12,7 +12,9 @@ namespace ParishSystem
 {
     public partial class SacramentModule : Form
     {
-        DataHandler dh = new DataHandler("localhost", "sad2", "root", "root");
+        DataHandler dh = DataHandler.getDataHandler();
+        private int profileID, groomID, brideID;
+        private int applicationID;
         public SacramentModule(DataHandler dh)
         {
             InitializeComponent();
@@ -20,12 +22,15 @@ namespace ParishSystem
             dgvBaptism.AutoGenerateColumns = false;
         }
 
-        private void Sacrament_Load(object sender, EventArgs e)
+        private void SacramentModule_Load(object sender, EventArgs e)
         {
             bsSacrament.DataSource = dh.getBaptisms();
             dgvBaptism.DataSource = bsSacrament;
             dgvBaptism.ClearSelection();
         }
+
+
+        
 
         private void dgvBaptism_SelectionChanged(object sender, EventArgs e)
         {
@@ -77,6 +82,16 @@ namespace ParishSystem
         private void btnAddReferencesBap_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvBaptism_CellEnter_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnSearchBap_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
