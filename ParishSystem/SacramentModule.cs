@@ -24,9 +24,7 @@ namespace ParishSystem
 
         private void SacramentModule_Load(object sender, EventArgs e)
         {
-            bsSacrament.DataSource = dh.getBaptisms();
-            dgvBaptism.DataSource = bsSacrament;
-            dgvBaptism.ClearSelection();
+            
         }
 
 
@@ -79,19 +77,75 @@ namespace ParishSystem
 
         }
 
+
+        private void openAddReferences(SacramentType t)
+        {
+            AddReferences f;
+            if(t == SacramentType.Baptism)
+            {
+                f = new AddReferences(t, lblNameBap.Text);
+            }else if (t == SacramentType.Confirmation)
+            {
+                f = new AddReferences(t, lblNameCon.Text);
+            }
+            else
+            {
+                f = new AddReferences(t, lblNameGroom.Text, lblNameBride.Text);
+            }
+
+            f.ShowDialog();
+
+        }
         private void btnAddReferencesBap_Click(object sender, EventArgs e)
         {
+            openAddReferences(SacramentType.Baptism);
+        }
 
+        private void dgvBaptism_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void loadSacrament(SacramentType t)
+        {
+            DataGridView dgv = getDGV(t);
+            if(t == SacramentType.Baptism)
+            {
+                bsSacrament.DataSource = dh.getBaptisms();
+                dgvBaptism.DataSource = bsSacrament;
+                dgvBaptism.ClearSelection();
+            }
+        }
+
+        //private GetSacrament getSacrament(SacramentType t)
+        //{
+        //    GetSacrament s;
+        //    if (t == SacramentType.Baptism)
+        //        s = dh.getBaptisms;
+        //    else if (t == SacramentType.Confirmation)
+        //        s = dh.getConfirmations;
+        //    else
+        //        s = dh.getMarriage
+        //}
+
+        private DataGridView getDGV(SacramentType t)
+        {
+            if (t == SacramentType.Baptism)
+                return dgvBaptism;
+            else if (t == SacramentType.Confirmation)
+                return dgvConfirmation;
+            else
+                return dgvMarriage;
         }
 
         private void dgvBaptism_CellEnter_1(object sender, DataGridViewCellEventArgs e)
         {
-
+            openAddReferences(SacramentType.Confirmation);
         }
 
         private void btnSearchBap_Click(object sender, EventArgs e)
         {
-            
+            openAddReferences(SacramentType.Marriage);
         }
     }
 }

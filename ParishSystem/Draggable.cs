@@ -1,34 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Drawing;
 namespace ParishSystem
 {
-    public partial class Draggable : Component
+    class Draggable
     {
-        public Draggable()
-        {
-            InitializeComponent();
-            TargetControls = new List<Control>();
+        Point lastClick;
+        Control f;
 
+
+        private Draggable(Form f)
+        {
+            this.f = f;
         }
 
-        public List<Control> TargetControls 
+        public void makeDraggable(Form ContainingForm, Control MakeDraggable)
         {
-            get; set;
+
+            MakeDraggable.MouseMove += this.controlMouseMove;
+            MakeDraggable.MouseDown += this.controlMouseDown;
         }
 
-
-        public Draggable(IContainer container)
+        private void controlMouseMove(object sender, MouseEventArgs e)
         {
-            container.Add(this);
+            
+            //if (!(sender is Control))
+            //    return;
 
-            InitializeComponent();
+            //Control c = sender as Control;
+            //c.MouseMove += this.controlMouseDown;
+
+            if (e.Button == MouseButtons.Left)
+            {
+                f.Left += e.X - lastClick.X;
+                f.Top += e.Y - lastClick.Y;
+            }
+        }
+
+        private void controlMouseDown(object sender, MouseEventArgs e)
+        {
+            lastClick = new Point(e.X, e.Y);
         }
     }
 }

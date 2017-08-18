@@ -311,5 +311,9 @@ namespace ParishSystem
 
         }
 
+        private void panel_controlbox_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

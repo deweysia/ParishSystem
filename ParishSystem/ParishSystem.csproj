@@ -95,6 +95,12 @@
     <Compile Include="AddMarriageApplication.Designer.cs">
       <DependentUpon>AddMarriageApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddReferences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddReferences.Designer.cs">
+      <DependentUpon>AddReferences.cs</DependentUpon>
+    </Compile>
     <Compile Include="AlphaTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -144,12 +150,7 @@
     <Compile Include="DownPaymentProfile.Designer.cs">
       <DependentUpon>DownPaymentProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Draggable.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Draggable.Designer.cs">
-      <DependentUpon>Draggable.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Draggable.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -384,6 +385,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddMarriageApplication.resx">
       <DependentUpon>AddMarriageApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddReferences.resx">
+      <DependentUpon>AddReferences.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AlphaTextBox.resx">
       <DependentUpon>AlphaTextBox.cs</DependentUpon>

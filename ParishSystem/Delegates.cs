@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data;
 namespace ParishSystem
 {
     class Delegates
@@ -18,4 +18,5 @@ namespace ParishSystem
     public delegate void ApplicationRevokeDelegate();
     public delegate void CustomEvent(object sender, EventArgs e, SacramentType t);
     public delegate void LoadApplicationDetailsDelegate(DataGridView dgv);
+    public delegate DataTable GetSacrament();
 }
