@@ -566,18 +566,6 @@ namespace ParishSystem
             return runNonQuery(q);
 
         }
-
-        public DataTable getBloodDonors()
-        {
-            string q = "SELECT DISTINCT GeneralProfile.profileID, firstName, midName, lastName, suffix, gender, "
-                + "DATE_FORMAT(birthdate, '%m-%d-%Y %H:%i'), contactNumber, address, birthplace, bloodType  "
-                + "FROM GeneralProfile JOIN bloodDonation ON GeneralProfile.profileID = BloodDonation.profileID";
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
         public DataTable getBloodDonorsBetweenDates(DateTime start, DateTime end)
         {
             string q = "SELECT DISTINCT GeneralProfile.profileID, firstName, midName, lastName, suffix, gender, "
@@ -656,10 +644,10 @@ namespace ParishSystem
         public bool editBloodDonationEvent(int bloodDonationEventID, string eventName, DateTime startTime, DateTime endTime, string eventVenue, string eventDetails)
         {
             string q = "UPDATE BloodDonationEvent SET eventName = '" + eventName
-                + "', startTime = '" + startTime.ToString("yyyy-MM-dd HH:mm:ss")
-                + "', endTime = '" + endTime.ToString("yyyy-MM-dd HH:mm:ss")
+                + "', startDateTime = '" + startTime.ToString("yyyy-MM-dd HH:mm:ss")
+                + "', endDateTime = '" + endTime.ToString("yyyy-MM-dd HH:mm:ss")
                 + "', eventVenue = '" + eventVenue + "', eventDetails = '" + eventDetails
-                + "' WHERE bloodDonationEventID = '" + bloodDonationEventID;
+                + "' WHERE bloodDonationEventID = " + bloodDonationEventID;
 
             bool success = runNonQuery(q);
             //if (success)

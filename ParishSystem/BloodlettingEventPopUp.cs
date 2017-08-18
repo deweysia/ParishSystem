@@ -105,8 +105,16 @@ namespace ParishSystem
 
         private void delete_button_Click(object sender, EventArgs e)
         {
-            dh.deleteBloodDonationEvent(bloodlettingID);
-            close_button.PerformClick();
+            try
+            {
+                dh.deleteBloodDonationEvent(bloodlettingID);
+                close_button.PerformClick();
+            }
+            catch
+            {
+                dh.conn.Close();
+                MessageBox.Show("Shunga");
+            }
         }
     }
 }
