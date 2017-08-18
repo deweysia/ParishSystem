@@ -721,12 +721,118 @@ namespace ParishSystem
 
             return output;
         }
-
         public DataTable getItemTypesOfCashRelease(int bookType)
         {
             string q = $@"SELECT * FROM sad2.cashreleasetype where bookType = {bookType}";
             return runQuery(q);
         }
 
+
+
+
+        public DataTable getBloodDonors()
+        {
+            string q = $@"select generalprofile.profileid , concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as 
+                    name,count(blooddonationid),address from generalprofile inner join blooddonation 
+                    on blooddonation.profileID = generalprofile.profileID group by generalprofile.profileID";
+            return runQuery(q);
+        }
+        public DataTable getBloodDonorsRecent()
+        {
+            string q = $@"select * from generalprofile 
+                        inner join blooddonation on blooddonation.profileid = generalprofile.profileID
+                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
+                    where(startDateTime between '{ (DateTime.Now - new TimeSpan(30, 0, 0, 0)).ToString("yyyy-MM-dd hh:mm:ss")}' and '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}')
+                    or   (endDateTime between '{ (DateTime.Now - new TimeSpan(30, 0, 0, 0)).ToString("yyyy-MM-dd hh:mm:ss")}' and '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}')";
+            return runQuery(q);
+        }
+        public DataTable getBloodDonorsOnEvent(int blooddonationeventid)
+        {
+            string q = $@"select * from generalprofile 
+                        inner join blooddonation on blooddonation.profileid = generalprofile.profileID
+                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
+                        where bloodDonationEvent.bloodDonationEventID = {blooddonationeventid}";
+            return runQuery(q);
+        }
+        public DataTable getBloodDonorsOnDate(DateTime Start)
+        {
+            string q = $@"select * from generalprofile 
+                        inner join blooddonation on blooddonation.profileid = generalprofile.profileID 
+                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
+                        where startDateTime=""{Start.ToString("yyyy-MM-dd 00:00:00")}""";
+            return runQuery(q);
+        }
+        public DataTable getBloodDonorsOnDateRange(DateTime Start,DateTime Stop)
+        {
+            string q = $@"select * from generalprofile 
+                        inner join blooddonation on blooddonation.profileid = generalprofile.profileID 
+                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
+                        where startDateTime between""{Start.ToString("yyyy-MM-dd 00:00:00")}"" and ""{Stop.ToString("yyyy-MM-dd 00:00:00")}""";
+            return runQuery(q);
+        }
+        public DataTable getTotalDonationsOnEvents()
+        {
+            string q = $@"select sum(quantity) from generalprofile 
+                            inner join blooddonation on blooddonation.profileid = generalprofile.profileID 
+                            inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
+                            group by bloodDonationEvent.bloodDonationEventID;";
+            return runQuery(q);
+        }
+        public DataTable getTotalDonationsOnEvent(int eventid)
+        {
+            string q = $@"select bloodDonationEvent.bloodDonationEventID,sum(quantity) from generalprofile 
+                            inner join blooddonation on blooddonation.profileid = generalprofile.profileID 
+                            inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
+                            where bloodDonationEvent.bloodDonationEventID={eventid}
+                            group by bloodDonationEvent.bloodDonationEventID;";
+            return runQuery(q);
+        }
+        public DataTable getTotalDonationsOnDate(DateTime date)
+        {
+            string q = $@"select bloodDonationEvent.bloodDonationEventID,sum(quantity) from generalprofile 
+                            inner join blooddonation on blooddonation.profileid = generalprofile.profileID 
+                            inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
+                            where startDateTime=""{date.ToString("yyyy-MM-dd 00:00:00")}""
+                            group by bloodDonationEvent.bloodDonationEventID;";
+            return runQuery(q);
+        }
+        public DataTable getTotalDonationsOnDateRange(DateTime Start,DateTime Stop)
+        {
+            string q = $@"select bloodDonationEvent.bloodDonationEventID,sum(quantity) from generalprofile 
+                            inner join blooddonation on blooddonation.profileid = generalprofile.profileID 
+                            inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
+                            where startDateTime=""{Start.ToString("yyyy-MM-dd 00:00:00")}""and endDateTime=""{Stop.ToString("yyyy-MM-dd 00:00:00")}""
+                            group by bloodDonationEvent.bloodDonationEventID;";
+            return runQuery(q);
+        }
+        public DataTable getsummaryOfBloodleting(DataTable bloodlettingData)
+        {
+            DataTable Events = getBloodlettingEvents();
+            Dictionary<string, float> EventList = new Dictionary<string, float>();
+
+            foreach (DataRow dr in Events.Rows)
+            {
+                EventList.Add(dr["eventName"].ToString(), 0);
+            }
+
+            foreach (DataRow dr in bloodlettingData.Rows)
+            {
+                if (EventList.ContainsKey(dr["eventName"].ToString()))
+                {
+                    EventList[dr["eventName"].ToString()] = EventList[dr["eventName"].ToString()] + int.Parse(dr["quantity"].ToString());
+                }
+            }
+            DataTable output = new DataTable();
+            output.Columns.Add("Type", typeof(string));
+            output.Columns.Add("Sum", typeof(float));
+            foreach (KeyValuePair<string, float> entry in EventList)
+            {
+                if (entry.Value != 0)
+                {
+                    output.Rows.Add(entry.Key, entry.Value);
+                }
+            }
+            return output;
+        }
     }
 }

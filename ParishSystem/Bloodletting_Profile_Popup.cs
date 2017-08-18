@@ -82,11 +82,11 @@ namespace ParishSystem
 
         private void edit_button_Click(object sender, EventArgs e)
         {
-            if (edit_button.Text == "E")
+            if (edit_button.Tag.ToString() == "e")
             {
                 bloodtype_combobox.Visible = true;
                 cancel_button.Visible = true;
-                edit_button.Text = "S";
+                edit_button.Tag = "s";
 
                 firstname_label_bloodletting.Visible = false;
                 mi_label_bloodletting.Visible = false;
@@ -116,7 +116,7 @@ namespace ParishSystem
                     suffix_textbox_bloodletting.Text = "Suffix";
                 }
             }
-            else if (edit_button.Text == "S")
+            else if (edit_button.Tag.ToString() == "s")
             {
                 if ((firstname_textbox_bloodletting.Text != "" &&
                     mi_textbox_bloodletting.Text != "" &&
@@ -154,7 +154,7 @@ namespace ParishSystem
                         count = (contactNumber_textbox.Text.Trim());
                     }
                     bloodtype_combobox.Visible = false;
-                    edit_button.Text = "E";
+                    edit_button.Tag = "e";
                     cancel_button.Visible = false;
 
                     
@@ -235,7 +235,7 @@ namespace ParishSystem
             delete_button_bloodletting.Enabled = true;
             event_combobox_bloodletting.SelectedItem = new ComboboxContent(int.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["bloodDonationEventID"].Value.ToString()), (blooddonation_dataGridView_bloodletting.CurrentRow.Cells["eventname"].Value.ToString()));
             event_combobox_bloodletting.Text = (blooddonation_dataGridView_bloodletting.CurrentRow.Cells["eventname"].Value.ToString());
-            quantity_nud.Value = int.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["quantity"].Value.ToString());
+            quantity_nud.Value = decimal.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["quantity"].Value.ToString());
         }
 
        
@@ -299,5 +299,7 @@ namespace ParishSystem
                 A.Text = "";
             }   
         }
+
+    
     }
 }
