@@ -21,8 +21,6 @@ namespace ParishSystem
         public SAD2()
         {
             InitializeComponent();
-
-
             //Add dictionary for navigation buttons
             navigation.Add(home_button_menu, profile_panel);
             navigation.Add(profile_menu_button, profile_panel);
@@ -33,38 +31,6 @@ namespace ParishSystem
             navigation.Add(sacrament_button_menu, sacrament_panel);
             navigation.Add(scheduling_button_menu, schedule_panel);
         }
-
-        private void panel_controlbox_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-        
-
-        #region generic Methods
-        public void Names_textbox_Leave(object sender, EventArgs e)
-        {
-            TextBox A = sender as TextBox;
-            string B = A.Name.Split('_')[0];
-            if (A.Text.Trim().Equals(""))
-            {
-                A.Text = B;
-                A.ForeColor = Color.Silver;
-            }
-        }
-
-        public void Names_textbox_MouseClick(object sender, MouseEventArgs e)
-        {
-            TextBox A = sender as TextBox;
-            if (A.Text.Equals(A.Name.Split('_')[0]))
-            {
-                A.Text = "";
-                A.ForeColor = Color.Black;
-            }
-        }
-
-        #endregion
 
         #region Effects
         protected override void WndProc(ref Message m)
@@ -91,7 +57,6 @@ namespace ParishSystem
             Button A = sender as Button;
             navigation[A].BringToFront();
         }
-
 
         #endregion
 
@@ -130,150 +95,6 @@ namespace ParishSystem
 
         #endregion
 
-
-        #region Profiles
-
-        private void resetProfilesVariables()
-        {//reset variables used by profiles tab
-            lastGeneralProfile = 0;
-        }
-
-        int lastGeneralProfile = 0;
-
-        private void refreshGeneralProfileTable()
-        {//refresh general profile table
-            DataTable dt = dh.getGeneralProfiles();
-            generalprofile_datagridview.DataSource = dt;
-            generalprofile_datagridview.Columns["profileID"].Visible = false;
-            generalprofile_datagridview.Columns["firstName"].Visible = false;
-            generalprofile_datagridview.Columns["midName"].Visible = false;
-            generalprofile_datagridview.Columns["lastName"].Visible = false;
-            generalprofile_datagridview.Columns["suffix"].Visible = false;
-            generalprofile_datagridview.Columns["gender"].Visible = false;
-            generalprofile_datagridview.Columns["birthdate"].Visible = false;
-            generalprofile_datagridview.Columns["contactNumber"].Visible = false;
-            generalprofile_datagridview.Columns["address"].Visible = false;
-            generalprofile_datagridview.Columns["birthplace"].Visible = false;
-            generalprofile_datagridview.Columns["bloodtype"].Visible = false;
-            generalprofile_datagridview.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        }
-
-        private void generalprofile_datagridview_CellClick(object sender, DataGridViewCellEventArgs e)
-        {//data grid cell click
-            openProfile_button.Enabled = true;
-            deleteProfile_button.Enabled = true;
-            lastGeneralProfile = int.Parse(generalprofile_datagridview.CurrentRow.Cells["profileID"].Value.ToString());
-            //label changes
-            firstname_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["firstname"].Value.ToString();
-            middlename_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["midname"].Value.ToString();
-            lastname_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["lastname"].Value.ToString();
-            suffix_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["suffix"].Value.ToString();
-
-            if (!generalprofile_datagridview.CurrentRow.Cells["gender"].Value.ToString().Equals("0"))
-                gender_label_profiles.Text = generalprofile_datagridview.CurrentRow.Cells["gender"].Value.ToString().ToUpper();
-            else
-                gender_label_profiles.Text = "";
-
-            Console.WriteLine(DateTime.MinValue.ToString());
-            Console.WriteLine(generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString());
-            Console.WriteLine(DateTime.MinValue.ToString().Equals(generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString()));
-
-            if (!generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString().Equals(DateTime.MinValue.ToString()))
-                birthday_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["birthdate"].Value.ToString();
-            else
-                birthday_label_profile.Text = "";
-
-            contactNumber_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["contactnumber"].Value.ToString();
-            address_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["address"].Value.ToString();
-            birthplace_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["birthplace"].Value.ToString();
-            bloodtype_label_profile.Text = generalprofile_datagridview.CurrentRow.Cells["bloodtype"].Value.ToString();
-            Console.WriteLine(lastGeneralProfile);
-        }
-
-        private void addProfile_button_Click(object sender, EventArgs e)
-        {//adds basic profile with name values only 
-            if (suffix_textbox.Text.Equals("suffix")) { suffix_textbox.Text = null; }
-            if (firstname_textbox.Text.Equals("firstname")) { firstname_tooltip_profiles.Active = true; suffix_textbox.Text = "suffix"; }
-            if (middlename_textbox.Text.Equals("middlename")) { middlename_tooltip_profiles.Active = true; suffix_textbox.Text = "suffix"; }
-            if (lastname_textbox.Text.Equals("lastname")) { lastname_tooltip_profiles.Active = true; suffix_textbox.Text = "suffix"; }
-
-
-            if (!firstname_textbox.Text.Equals("firstname") && !middlename_textbox.Text.Equals("middlename") && !lastname_textbox.Text.Equals("lastname"))
-            {
-                //dh.addGeneralProfile(firstname_textbox.Text, middlename_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, '0', DateTime.MinValue, null, null, null);
-                refreshGeneralProfileTable();
-                AddPNL.Visible = false;
-            }
-
-        }
-
-
-
-
-        private void openProfile_button_Click(object sender, EventArgs e)
-        {//open person complete profile
-
-            Form person = new PersonView(lastGeneralProfile, dh);
-            person.ShowDialog();
-
-
-
-        }
-
-        private void deleteProfile_button_Click(object sender, EventArgs e)
-        {
-            dh.deleteGeneralProfile(lastGeneralProfile);
-            refreshGeneralProfileTable();
-            lastGeneralProfile = 0;
-            deleteProfile_button.Enabled = false;
-            openProfile_button.Enabled = false;
-        }
-
-
-        private void clearProfile()
-        {
-            lastname_textbox.Text = "lastname";
-            middlename_textbox.Text = "middlename";
-            firstname_textbox.Text = "firstname";
-            suffix_textbox.Text = "suffix";
-            lastGeneralProfile = 0;
-        }
-
-        private void clear_profile_button_Click(object sender, EventArgs e)
-        {
-            AddPNL.Visible = false;
-
-        }
-
-        //======================================================================================================================
-
-
-
-
-        #endregion
-
-        private void AddBTN_Click(object sender, EventArgs e)
-        {
-            AddPNL.BringToFront();
-            AddPNL.Visible = true;
-        }
-
-        private void Name_textbox_Profile_TextChanged(object sender, EventArgs e)
-        {
-            if (firstname_textbox.Text != "firstname" && firstname_textbox.Text.Trim() != "" &&
-               middlename_textbox.Text != "middlename" && middlename_textbox.Text.Trim() != "" &&
-               lastname_textbox.Text != "lastname" && lastname_textbox.Text.Trim() != "")
-            {
-                save_button_profile.Enabled = true;
-            }
-            else
-            {
-                save_button_profile.Enabled = false;
-            }
-        }
-
-
-
         private void panelSacrament_VisibleChanged(object sender, EventArgs e)
         {
             while (panelSacrament.Controls.Count > 0)
@@ -306,10 +127,7 @@ namespace ParishSystem
             s.Show();
         }
 
-        private void panelApplication_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void panel_controlbox_Paint_1(object sender, PaintEventArgs e)
         {

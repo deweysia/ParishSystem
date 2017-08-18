@@ -36,7 +36,7 @@ namespace ParishSystem
             else
                 lblName.Text = string.Join(" ", row[3].Value, row[4].Value, row[5].Value, row[6].Value);
 
-            DataTable sacramentIncome = dh.getSacramentIncome(sacramentIncomeID);
+            DataTable sacramentIncome = dh.getSacramentIncome(applicationID);
 
             lblPaymentFor.Text = type.ToString();
             lblOR.Text = dh.getNextOR(BookType.Parish).ToString();

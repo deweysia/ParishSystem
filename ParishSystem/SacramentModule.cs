@@ -138,6 +138,12 @@ namespace ParishSystem
                 return dgvMarriage;
         }
 
+        private void btnOpenProfileBap_Click(object sender, EventArgs e)
+        {
+            Form f = new PersonView(profileID, dh);
+            f.ShowDialog();
+        }
+
         private void dgvBaptism_CellEnter_1(object sender, DataGridViewCellEventArgs e)
         {
             openAddReferences(SacramentType.Confirmation);

@@ -57,7 +57,6 @@ namespace ParishSystem
     public enum CivilStatus
     {
         Single = 1,
-        Divorced,
         Widowed
     }
 

@@ -98,6 +98,8 @@
             this.name_label_minister_baptism = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.legitimacy_label_baptism = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.remarks_textbox_baptism = new System.Windows.Forms.RichTextBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -147,6 +149,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.marriageDetails_panel = new System.Windows.Forms.Panel();
             this.flowlayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.civilStatus_panel_marriage = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.civilStatus_self_marriage = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
             this.father_panel_self_marriage = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
             this.name_father_self_marriage = new System.Windows.Forms.Label();
@@ -219,12 +225,6 @@
             this.label82 = new System.Windows.Forms.Label();
             this.marriage_panel = new System.Windows.Forms.Panel();
             this.blank_panel = new System.Windows.Forms.Panel();
-            this.legitimacy_label_baptism = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.civilStatus_panel_marriage = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.civilStatus_self_marriage = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
             this.generalDetails_panel.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.birthdate_panel.SuspendLayout();
@@ -257,6 +257,7 @@
             this.panel10.SuspendLayout();
             this.marriageDetails_panel.SuspendLayout();
             this.flowlayout.SuspendLayout();
+            this.civilStatus_panel_marriage.SuspendLayout();
             this.father_panel_self_marriage.SuspendLayout();
             this.mother_panel_self_marriage.SuspendLayout();
             this.spouse_panel_marriage.SuspendLayout();
@@ -275,7 +276,6 @@
             this.minister_panel_marriage.SuspendLayout();
             this.details_panel_marriage.SuspendLayout();
             this.marriage_panel.SuspendLayout();
-            this.civilStatus_panel_marriage.SuspendLayout();
             this.SuspendLayout();
             // 
             // generalDetails_panel
@@ -567,6 +567,7 @@
             this.controlBar_panel.Name = "controlBar_panel";
             this.controlBar_panel.Size = new System.Drawing.Size(685, 35);
             this.controlBar_panel.TabIndex = 2;
+            this.controlBar_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.controlBar_panel_Paint);
             // 
             // close_button
             // 
@@ -1023,6 +1024,27 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(345, 192);
             this.panel2.TabIndex = 12;
+            // 
+            // legitimacy_label_baptism
+            // 
+            this.legitimacy_label_baptism.AutoSize = true;
+            this.legitimacy_label_baptism.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.legitimacy_label_baptism.Location = new System.Drawing.Point(120, 32);
+            this.legitimacy_label_baptism.Name = "legitimacy_label_baptism";
+            this.legitimacy_label_baptism.Size = new System.Drawing.Size(50, 21);
+            this.legitimacy_label_baptism.TabIndex = 19;
+            this.legitimacy_label_baptism.Text = "qqqq";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(4, 41);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 15);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Legitimacy";
             // 
             // label28
             // 
@@ -1539,6 +1561,44 @@
             this.flowlayout.Name = "flowlayout";
             this.flowlayout.Size = new System.Drawing.Size(352, 1143);
             this.flowlayout.TabIndex = 17;
+            // 
+            // civilStatus_panel_marriage
+            // 
+            this.civilStatus_panel_marriage.Controls.Add(this.label5);
+            this.civilStatus_panel_marriage.Controls.Add(this.civilStatus_self_marriage);
+            this.civilStatus_panel_marriage.Controls.Add(this.label38);
+            this.civilStatus_panel_marriage.Location = new System.Drawing.Point(3, 3);
+            this.civilStatus_panel_marriage.Name = "civilStatus_panel_marriage";
+            this.civilStatus_panel_marriage.Size = new System.Drawing.Size(345, 56);
+            this.civilStatus_panel_marriage.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(-3, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(355, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "__________________________________________________________";
+            // 
+            // civilStatus_self_marriage
+            // 
+            this.civilStatus_self_marriage.AutoSize = true;
+            this.civilStatus_self_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.civilStatus_self_marriage.Location = new System.Drawing.Point(105, 10);
+            this.civilStatus_self_marriage.Name = "civilStatus_self_marriage";
+            this.civilStatus_self_marriage.Size = new System.Drawing.Size(0, 21);
+            this.civilStatus_self_marriage.TabIndex = 10;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(3, 10);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(83, 20);
+            this.label38.TabIndex = 4;
+            this.label38.Text = "Civil Status";
             // 
             // father_panel_self_marriage
             // 
@@ -2273,65 +2333,6 @@
             this.blank_panel.Size = new System.Drawing.Size(383, 439);
             this.blank_panel.TabIndex = 9;
             // 
-            // legitimacy_label_baptism
-            // 
-            this.legitimacy_label_baptism.AutoSize = true;
-            this.legitimacy_label_baptism.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.legitimacy_label_baptism.Location = new System.Drawing.Point(120, 32);
-            this.legitimacy_label_baptism.Name = "legitimacy_label_baptism";
-            this.legitimacy_label_baptism.Size = new System.Drawing.Size(50, 21);
-            this.legitimacy_label_baptism.TabIndex = 19;
-            this.legitimacy_label_baptism.Text = "qqqq";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(4, 41);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 15);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Legitimacy";
-            // 
-            // civilStatus_panel_marriage
-            // 
-            this.civilStatus_panel_marriage.Controls.Add(this.label5);
-            this.civilStatus_panel_marriage.Controls.Add(this.civilStatus_self_marriage);
-            this.civilStatus_panel_marriage.Controls.Add(this.label38);
-            this.civilStatus_panel_marriage.Location = new System.Drawing.Point(3, 3);
-            this.civilStatus_panel_marriage.Name = "civilStatus_panel_marriage";
-            this.civilStatus_panel_marriage.Size = new System.Drawing.Size(345, 56);
-            this.civilStatus_panel_marriage.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(-3, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(355, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "__________________________________________________________";
-            // 
-            // civilStatus_self_marriage
-            // 
-            this.civilStatus_self_marriage.AutoSize = true;
-            this.civilStatus_self_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.civilStatus_self_marriage.Location = new System.Drawing.Point(105, 10);
-            this.civilStatus_self_marriage.Name = "civilStatus_self_marriage";
-            this.civilStatus_self_marriage.Size = new System.Drawing.Size(0, 21);
-            this.civilStatus_self_marriage.TabIndex = 10;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(3, 10);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(83, 20);
-            this.label38.TabIndex = 4;
-            this.label38.Text = "Civil Status";
-            // 
             // PersonView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2403,6 +2404,8 @@
             this.panel10.PerformLayout();
             this.marriageDetails_panel.ResumeLayout(false);
             this.flowlayout.ResumeLayout(false);
+            this.civilStatus_panel_marriage.ResumeLayout(false);
+            this.civilStatus_panel_marriage.PerformLayout();
             this.father_panel_self_marriage.ResumeLayout(false);
             this.father_panel_self_marriage.PerformLayout();
             this.mother_panel_self_marriage.ResumeLayout(false);
@@ -2437,8 +2440,6 @@
             this.details_panel_marriage.ResumeLayout(false);
             this.details_panel_marriage.PerformLayout();
             this.marriage_panel.ResumeLayout(false);
-            this.civilStatus_panel_marriage.ResumeLayout(false);
-            this.civilStatus_panel_marriage.PerformLayout();
             this.ResumeLayout(false);
 
         }

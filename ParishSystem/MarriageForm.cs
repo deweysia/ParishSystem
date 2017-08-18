@@ -22,7 +22,7 @@ namespace ParishSystem
             this.dh = DataHandler.getDataHandler();
             this.row = dgvr.Cells;
 
-            cmbBStatus.DataSource = Enum.GetValues(typeof(Legitimacy));
+            cmbBStatus.DataSource = Enum.GetValues(typeof(CivilStatus));
             cmbGStatus.DataSource = cmbBStatus.DataSource;
 
             DataTable dt = dh.getMinisterWithStatus(MinisterStatus.Active);
@@ -88,6 +88,8 @@ namespace ParishSystem
             int ministerID = Convert.ToInt32(((ComboboxContent)cmbMinister.SelectedItem).ID);
             DateTime licenseDate = dtpLicenseDate.Value;
             DateTime marriageDate = dtpMarriageDate.Value;
+            CivilStatus groomCS = (CivilStatus)cmbGStatus.SelectedValue;
+            CivilStatus brideCS = (CivilStatus)cmbBStatus.SelectedValue;
 
             bool success = true;
 
@@ -116,7 +118,7 @@ namespace ParishSystem
             }
 
             dh.editApplication(applicationID, ApplicationStatus.Approved);
-           /// dh.addMarriage(applicationID, groomID, brideID, ministerID, licenseDate, marriageDate, MarriageStatus.Active);
+            dh.addMarriage(applicationID, ministerID, licenseDate, marriageDate, groomCS, brideCS);
             this.DialogResult = success ? DialogResult.OK : DialogResult.None;
         }
 

@@ -87,6 +87,7 @@ namespace ParishSystem
             success &= dh.addSponsor(applicationID, gFatherFirstNameText.Text, gFatherMiText.Text, gFatherLastNameText.Text, gFatherSuffixText.Text, Gender.Male, gFatherResidenceText.Text);
 
             dh.editApplication(applicationID, ApplicationStatus.Approved);
+
             this.DialogResult = success ? DialogResult.OK : DialogResult.None;
         }
 

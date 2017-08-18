@@ -421,5 +421,10 @@ namespace ParishSystem
            
                    
         }
+
+        private void controlBar_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -49,21 +49,11 @@
             this.btnOpenBrideProfile = new MetroFramework.Controls.MetroButton();
             this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
             this.cueTextBox2 = new ParishSystem.CueTextBox();
+            this.lblNameBride = new System.Windows.Forms.Label();
             this.lblNameGroom = new System.Windows.Forms.Label();
             this.btnSearchMar = new MetroFramework.Controls.MetroButton();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvMarriage = new MetroFramework.Controls.MetroGrid();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marriageDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brideName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marRegistryNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marRecordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marPageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -116,7 +106,19 @@
             this.bapPageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bapRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.lblNameBride = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marGroomID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marBrideID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marriageDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brideName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marRegistryNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marRecordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marPageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bsSacrament)).BeginInit();
             this.metroTabPage6.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -252,6 +254,15 @@
             this.cueTextBox2.Size = new System.Drawing.Size(144, 20);
             this.cueTextBox2.TabIndex = 11;
             // 
+            // lblNameBride
+            // 
+            this.lblNameBride.AutoSize = true;
+            this.lblNameBride.Location = new System.Drawing.Point(404, 66);
+            this.lblNameBride.Name = "lblNameBride";
+            this.lblNameBride.Size = new System.Drawing.Size(35, 13);
+            this.lblNameBride.TabIndex = 10;
+            this.lblNameBride.Text = "Name";
+            // 
             // lblNameGroom
             // 
             this.lblNameGroom.AutoSize = true;
@@ -301,6 +312,8 @@
             this.dgvMarriage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvMarriage.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
+            this.marGroomID,
+            this.marBrideID,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
@@ -342,98 +355,6 @@
             this.dgvMarriage.Size = new System.Drawing.Size(778, 433);
             this.dgvMarriage.TabIndex = 7;
             this.dgvMarriage.TabStop = false;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "profileID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "profileID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            this.dataGridViewTextBoxColumn1.Width = 76;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "confirmationID";
-            this.dataGridViewTextBoxColumn3.HeaderText = "confirmationID";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            this.dataGridViewTextBoxColumn3.Width = 108;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "applicationID";
-            this.dataGridViewTextBoxColumn4.HeaderText = "conApplicationID";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Visible = false;
-            this.dataGridViewTextBoxColumn4.Width = 120;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "ministerID";
-            this.dataGridViewTextBoxColumn5.HeaderText = "conMinisterID";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Visible = false;
-            this.dataGridViewTextBoxColumn5.Width = 103;
-            // 
-            // marriageDate
-            // 
-            this.marriageDate.DataPropertyName = "marriageDate";
-            this.marriageDate.HeaderText = "Marriage Date";
-            this.marriageDate.Name = "marriageDate";
-            this.marriageDate.ReadOnly = true;
-            this.marriageDate.Width = 104;
-            // 
-            // groomName
-            // 
-            this.groomName.DataPropertyName = "groomName";
-            this.groomName.HeaderText = "Groom";
-            this.groomName.Name = "groomName";
-            this.groomName.ReadOnly = true;
-            this.groomName.Width = 66;
-            // 
-            // brideName
-            // 
-            this.brideName.DataPropertyName = "brideName";
-            this.brideName.HeaderText = "Bride";
-            this.brideName.Name = "brideName";
-            this.brideName.ReadOnly = true;
-            this.brideName.Width = 58;
-            // 
-            // marRegistryNumber
-            // 
-            this.marRegistryNumber.DataPropertyName = "registryNumber";
-            this.marRegistryNumber.HeaderText = "Registry no";
-            this.marRegistryNumber.Name = "marRegistryNumber";
-            this.marRegistryNumber.ReadOnly = true;
-            this.marRegistryNumber.Width = 89;
-            // 
-            // marRecordNumber
-            // 
-            this.marRecordNumber.DataPropertyName = "recordNumber";
-            this.marRecordNumber.HeaderText = "Record no";
-            this.marRecordNumber.Name = "marRecordNumber";
-            this.marRecordNumber.ReadOnly = true;
-            this.marRecordNumber.Width = 84;
-            // 
-            // marPageNumber
-            // 
-            this.marPageNumber.DataPropertyName = "pageNumber";
-            this.marPageNumber.HeaderText = "Page no";
-            this.marPageNumber.Name = "marPageNumber";
-            this.marPageNumber.ReadOnly = true;
-            this.marPageNumber.Width = 73;
-            // 
-            // marRemarks
-            // 
-            this.marRemarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.marRemarks.DataPropertyName = "remarks";
-            this.marRemarks.HeaderText = "Remarks";
-            this.marRemarks.Name = "marRemarks";
-            this.marRemarks.ReadOnly = true;
             // 
             // metroTabPage5
             // 
@@ -841,6 +762,7 @@
             this.btnOpenProfileBap.TabIndex = 8;
             this.btnOpenProfileBap.Text = "Open Profile";
             this.btnOpenProfileBap.UseSelectable = true;
+            this.btnOpenProfileBap.Click += new System.EventHandler(this.btnOpenProfileBap_Click);
             // 
             // btnAddReferencesBap
             // 
@@ -1053,19 +975,115 @@
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(786, 475);
             this.metroTabControl1.TabIndex = 11;
             this.metroTabControl1.UseSelectable = true;
             // 
-            // lblNameBride
+            // dataGridViewTextBoxColumn1
             // 
-            this.lblNameBride.AutoSize = true;
-            this.lblNameBride.Location = new System.Drawing.Point(404, 66);
-            this.lblNameBride.Name = "lblNameBride";
-            this.lblNameBride.Size = new System.Drawing.Size(35, 13);
-            this.lblNameBride.TabIndex = 10;
-            this.lblNameBride.Text = "Name";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "profileID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "profileID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn1.Width = 76;
+            // 
+            // marGroomID
+            // 
+            this.marGroomID.DataPropertyName = "groomID";
+            this.marGroomID.HeaderText = "groomID";
+            this.marGroomID.Name = "marGroomID";
+            this.marGroomID.ReadOnly = true;
+            this.marGroomID.Width = 76;
+            // 
+            // marBrideID
+            // 
+            this.marBrideID.DataPropertyName = "brideID";
+            this.marBrideID.HeaderText = "brideID";
+            this.marBrideID.Name = "marBrideID";
+            this.marBrideID.ReadOnly = true;
+            this.marBrideID.Width = 69;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "marriageID";
+            this.dataGridViewTextBoxColumn3.HeaderText = "marriageID";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 87;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "applicationID";
+            this.dataGridViewTextBoxColumn4.HeaderText = "marApplicationID";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 120;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "ministerID";
+            this.dataGridViewTextBoxColumn5.HeaderText = "marMinisterID";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 103;
+            // 
+            // marriageDate
+            // 
+            this.marriageDate.DataPropertyName = "marriageDate";
+            this.marriageDate.HeaderText = "Marriage Date";
+            this.marriageDate.Name = "marriageDate";
+            this.marriageDate.ReadOnly = true;
+            this.marriageDate.Width = 104;
+            // 
+            // groomName
+            // 
+            this.groomName.DataPropertyName = "groomName";
+            this.groomName.HeaderText = "Groom Name";
+            this.groomName.Name = "groomName";
+            this.groomName.ReadOnly = true;
+            this.groomName.Width = 98;
+            // 
+            // brideName
+            // 
+            this.brideName.DataPropertyName = "brideName";
+            this.brideName.HeaderText = "Bride Name";
+            this.brideName.Name = "brideName";
+            this.brideName.ReadOnly = true;
+            this.brideName.Width = 90;
+            // 
+            // marRegistryNumber
+            // 
+            this.marRegistryNumber.DataPropertyName = "registryNumber";
+            this.marRegistryNumber.HeaderText = "Registry no";
+            this.marRegistryNumber.Name = "marRegistryNumber";
+            this.marRegistryNumber.ReadOnly = true;
+            this.marRegistryNumber.Width = 89;
+            // 
+            // marRecordNumber
+            // 
+            this.marRecordNumber.DataPropertyName = "recordNumber";
+            this.marRecordNumber.HeaderText = "Record no";
+            this.marRecordNumber.Name = "marRecordNumber";
+            this.marRecordNumber.ReadOnly = true;
+            this.marRecordNumber.Width = 84;
+            // 
+            // marPageNumber
+            // 
+            this.marPageNumber.DataPropertyName = "pageNumber";
+            this.marPageNumber.HeaderText = "Page no";
+            this.marPageNumber.Name = "marPageNumber";
+            this.marPageNumber.ReadOnly = true;
+            this.marPageNumber.Width = 73;
+            // 
+            // marRemarks
+            // 
+            this.marRemarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.marRemarks.DataPropertyName = "remarks";
+            this.marRemarks.HeaderText = "Remarks";
+            this.marRemarks.Name = "marRemarks";
+            this.marRemarks.ReadOnly = true;
             // 
             // SacramentModule
             // 
@@ -1115,17 +1133,6 @@
         private MetroFramework.Controls.MetroButton btnSearchMar;
         private System.Windows.Forms.Label label4;
         private MetroFramework.Controls.MetroGrid dgvMarriage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marriageDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn groomName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn brideName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marRegistryNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marRecordNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marPageNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marRemarks;
         private MetroFramework.Controls.MetroTabPage metroTabPage5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
@@ -1179,5 +1186,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bapRemarks;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private System.Windows.Forms.Label lblNameBride;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marGroomID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marBrideID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marriageDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn groomName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brideName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marRegistryNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marRecordNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marPageNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marRemarks;
     }
 }

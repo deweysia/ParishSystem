@@ -1850,7 +1850,7 @@ namespace ParishSystem
         #endregion
         /*
                                          =============================================================
-                                            ================= MARRIAGE TABLE =================
+                                             =================== MARRIAGE TABLE =================
                                          =============================================================
         */
         #region
@@ -1860,6 +1860,14 @@ namespace ParishSystem
             string q = "INSERT INTO Marriage(applicationID, ministerID, licenseDate, marriageDate, status) VALUES (@applicationID, @ministerID, @licenseDate, @marriageDate, @status)";
             bool success = ExecuteNonQuery(q, applicationID, ministerID, licenseDate.ToString("yyyy-MM-dd HH:mm:ss"), marriageDate.ToString("yyyy-MM-dd HH:mm:ss"), status);
             
+            return success;
+        }
+
+        public bool addMarriage(int applicationID, int ministerID, DateTime licenseDate, DateTime marriageDate, CivilStatus groomCivilStatus, CivilStatus brideCivilStatus)
+        {
+            string q = "INSERT INTO Marriage(applicationID, ministerID, licenseDate, marriageDate, groomCivilStatus, brideCivilStatus) VALUES (@applicationID, @ministerID, @licenseDate, @marriageDate, @groomCivilStatus, @brideCivilStatus)";
+            bool success = ExecuteNonQuery(q, applicationID, ministerID, licenseDate.ToString("yyyy-MM-dd"), marriageDate.ToString("yyyy-MM-dd"), (int)groomCivilStatus, (int)brideCivilStatus);
+
             return success;
         }
 
@@ -1972,6 +1980,8 @@ namespace ParishSystem
 
             return dt;
         }
+
+        
 
         
 

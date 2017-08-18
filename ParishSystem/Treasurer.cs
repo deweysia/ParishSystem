@@ -1377,6 +1377,16 @@ namespace ParishSystem
             summary_dgv_bloodletting.DataSource = dh.getsummaryOfBloodleting(dt);
         }
         #endregion
+
+        private void controlbox_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Treasurer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
