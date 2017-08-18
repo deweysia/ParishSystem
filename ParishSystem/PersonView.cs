@@ -149,18 +149,28 @@ namespace ParishSystem
                     }
 
                     DataTable temp = dh.getBaptism(int.Parse(dr["applicationID"].ToString()));
+                    try
+                    {
+                        registryNumber_label_baptism.Text = temp.Rows[0]["registryNumber"].ToString();
 
-                    registryNumber_label_baptism.Text = temp.Rows[0]["registryNumber"].ToString();
+                        date_label_baptism.Text = dh.toDateTime(temp.Rows[0]["baptismDate"].ToString(), false).ToString("MMMM dd yyyy");
 
-                    date_label_baptism.Text = dh.toDateTime(temp.Rows[0]["baptismDate"].ToString(), false).ToString("MMMM dd yyyy");
+                        name_label_minister_baptism.Text = dh.getMinister(int.Parse(dh.getBaptism(int.Parse(dr["applicationID"].ToString())).Rows[0]["ministerID"].ToString())).Rows[0]["name"].ToString();
+                    }
+                    catch { }
+                    
+                    try
+                    {
+                        registryNumber_label_baptism.Text = temp.Rows[0]["registryNumber"].ToString();
 
-                    name_label_minister_baptism.Text = dh.getMinister(int.Parse(dh.getBaptism(int.Parse(dr["applicationID"].ToString())).Rows[0]["ministerID"].ToString())).Rows[0]["name"].ToString();
+                        pageNumber_label_baptism.Text = temp.Rows[0]["pageNumber"].ToString();
 
-                    registryNumber_label_baptism.Text = temp.Rows[0]["registryNumber"].ToString();
+                        recordNumber_label_baptism.Text = temp.Rows[0]["recordNumber"].ToString();
+                    }
+                    catch
+                    {
 
-                    pageNumber_label_baptism.Text = temp.Rows[0]["pageNumber"].ToString();
-
-                    recordNumber_label_baptism.Text = temp.Rows[0]["recordNumber"].ToString();
+                    }
                 }
              }
         }

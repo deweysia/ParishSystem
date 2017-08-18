@@ -119,17 +119,53 @@
     <Compile Include="BloodlettingEventPopUp.Designer.cs">
       <DependentUpon>BloodlettingEventPopUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bloodletting_Module.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bloodletting_Module.Designer.cs">
+      <DependentUpon>Bloodletting_Module.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bloodletting_Profile_Popup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Bloodletting_Profile_Popup.Designer.cs">
       <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
     </Compile>
+    <Compile Include="CashRelease_Module.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashRelease_Module.Designer.cs">
+      <DependentUpon>CashRelease_Module.cs</DependentUpon>
+    </Compile>
     <Compile Include="CashReleaseType.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CashReleaseType.Designer.cs">
       <DependentUpon>CashReleaseType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodlettingReports_Module.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodlettingReports_Module.Designer.cs">
+      <DependentUpon>BloodlettingReports_Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashReport_Module.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashReport_Module.Designer.cs">
+      <DependentUpon>CashReport_Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CDB_FullPayment_Module.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CDB_FullPayment_Module.Designer.cs">
+      <DependentUpon>CDB_FullPayment_Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CDB_SacramentPayment_Module.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CDB_SacramentPayment_Module.Designer.cs">
+      <DependentUpon>CDB_SacramentPayment_Module.cs</DependentUpon>
     </Compile>
     <Compile Include="CDemo.cs">
       <SubType>Component</SubType>
@@ -172,6 +208,12 @@
     </Compile>
     <Compile Include="IncomeType.Designer.cs">
       <DependentUpon>IncomeType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemTypes_Module.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemTypes_Module.Designer.cs">
+      <DependentUpon>ItemTypes_Module.cs</DependentUpon>
     </Compile>
     <Compile Include="ORdetailsPopUp.cs">
       <SubType>Form</SubType>
@@ -397,11 +439,29 @@
     <EmbeddedResource Include="BloodlettingEventPopUp.resx">
       <DependentUpon>BloodlettingEventPopUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Bloodletting_Module.resx">
+      <DependentUpon>Bloodletting_Module.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bloodletting_Profile_Popup.resx">
       <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CashRelease_Module.resx">
+      <DependentUpon>CashRelease_Module.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CashReleaseType.resx">
       <DependentUpon>CashReleaseType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodlettingReports_Module.resx">
+      <DependentUpon>BloodlettingReports_Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashReport_Module.resx">
+      <DependentUpon>CashReport_Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CDB_FullPayment_Module.resx">
+      <DependentUpon>CDB_FullPayment_Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CDB_SacramentPayment_Module.resx">
+      <DependentUpon>CDB_SacramentPayment_Module.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CurrencyTextBox.resx">
       <DependentUpon>CurrencyTextBox.cs</DependentUpon>
@@ -414,6 +474,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IncomeType.resx">
       <DependentUpon>IncomeType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemTypes_Module.resx">
+      <DependentUpon>ItemTypes_Module.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ORdetailsPopUp.resx">
       <DependentUpon>ORdetailsPopUp.cs</DependentUpon>
