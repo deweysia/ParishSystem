@@ -1387,6 +1387,11 @@ namespace ParishSystem
         {
 
         }
+
+        private void CV_textbox_report_disbursment_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
