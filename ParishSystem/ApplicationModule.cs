@@ -14,6 +14,7 @@ namespace ParishSystem
     {
         DataHandler dh;
         private int profileID, groomID, brideID;
+        private int applicationID;
         public ApplicationModule(DataHandler dh)
         {
             InitializeComponent();
@@ -213,7 +214,7 @@ namespace ParishSystem
         {
 
             baptismApplicationDetailsPanel.Enabled = true;
-            int applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
+            this.applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
             this.profileID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
             string requirements = dgv.SelectedRows[0].Cells[2].Value.ToString();
             //MessageBox.Show(requirements);
@@ -260,7 +261,7 @@ namespace ParishSystem
         private void loadConfirmationApplicationDetails(DataGridView dgv)
         {
             confirmationApplicationDetailsPanel.Enabled = true;
-            int applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
+            this.applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
             this.profileID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
             int profileID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
             string requirements = dgv.SelectedRows[0].Cells[2].Value.ToString();
@@ -305,7 +306,7 @@ namespace ParishSystem
         public void loadMarriageApplicationDetails(DataGridView dgv)
         {
             marriageApplicationDetailsPanel.Enabled = true;
-            int applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
+            this.applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
 
             this.groomID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
             this.brideID = this.profileID = int.Parse(dgv.SelectedRows[0].Cells[2].Value.ToString());
@@ -358,7 +359,6 @@ namespace ParishSystem
         private void applicationApprove(SacramentType type)
         {
 
-            //int applicationID = int.Parse(dgv.SelectedRows[0].Cells[2].Value.ToString());
             DataGridViewRow dgvr = getDataGridView(type).SelectedRows[0];
             TableLayoutPanel tlp = getRequirementTableLayoutPanel(type);
             DialogResult d = DialogResult.None;
@@ -366,7 +366,7 @@ namespace ParishSystem
 
             Form f = getApplicationForm(type);
 
-            if (allRequirementsFulfilled(tlp))
+            if (allRequirementsFulfilled(type))
             {
                 d = f.ShowDialog();
             }
@@ -391,8 +391,8 @@ namespace ParishSystem
         private void applicationRevoke(SacramentType type)
         {
             DataGridView dgv = getDataGridView(type);
-            int applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
-            bool success = dh.editApplication(applicationID, ApplicationStatus.Revoked);
+            
+            bool success = dh.editApplication(this.applicationID, ApplicationStatus.Revoked);
 
             if (success)
                 SystemNotification.Notify(State.RevokeSucess);
@@ -453,23 +453,28 @@ namespace ParishSystem
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
-        private string getRequirements(Panel p)
+        private string getRequirements(SacramentType t)
         {
+
+            TableLayoutPanel tlpReq = getRequirementTableLayoutPanel(t);
+
             string r = "";
-            foreach (CheckBox c in p.Controls)
+            foreach (CheckBox c in tlpReq.Controls)
                 r += c.Checked ? "1" : "0";
 
             return r;
+
         }
         /// <summary>
         /// Checks if all requirement CheckBoxes are Checked
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
-        private bool allRequirementsFulfilled(Panel p)
+        private bool allRequirementsFulfilled(SacramentType t)
         {
+            TableLayoutPanel tlp = getRequirementTableLayoutPanel(t);
             bool fulfilled = true;
-            foreach (CheckBox c in p.Controls)
+            foreach (CheckBox c in tlp.Controls)
             {
                 fulfilled = fulfilled && c.Checked;
             }
@@ -528,11 +533,8 @@ namespace ParishSystem
         private bool editRequirements(SacramentType t)
         {
             DataGridView dgv = getDataGridView(t);
-            TableLayoutPanel tlpReq = getRequirementTableLayoutPanel(t);
-            int applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
-            int profileID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
-            string r = getRequirements(tlpReq);
-            bool a = dh.editApplication(applicationID, r);
+            string r = getRequirements(t);
+            bool a = dh.editApplication(this.applicationID, r);
 
             return a;
         }
@@ -558,6 +560,8 @@ namespace ParishSystem
                     break;
                 }
             }
+
+            loadApplicationDetails(type);
 
         }
 
@@ -617,9 +621,9 @@ namespace ParishSystem
                     return false;
                 }
 
+                success &= dh.editApplication(this.applicationID, getRequirements(type));
                 success &= dh.editGeneralProfile(this.profileID, fn, mi, ln, suffix, g, birthDate);
                 
-                //MessageBox.Show("Sucess: " + success);
             }
             else if (type == SacramentType.Confirmation)
             {
@@ -643,7 +647,9 @@ namespace ParishSystem
                     return false;
                 }
 
+                success &= dh.editApplication(this.applicationID, getRequirements(type));
                 success &= dh.editGeneralProfile(this.profileID, fn, mi, ln, suffix, g, birthDate);
+                
             }
             else //Marriage
             {
@@ -681,6 +687,7 @@ namespace ParishSystem
                     return false;
                 }
 
+                success &= dh.editApplication(this.applicationID, getRequirements(type));
                 success &= dh.editGeneralProfile(this.groomID, gfn, gmi, gln, gsuffix, Gender.Male, gbd);
                 success &= dh.editGeneralProfile(this.brideID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
             }

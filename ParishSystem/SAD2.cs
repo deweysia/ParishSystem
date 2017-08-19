@@ -17,7 +17,7 @@ namespace ParishSystem
         Point lastClick;
 
         Dictionary<Button, Panel> navigation = new Dictionary<Button, Panel>();
-
+        //Dictionary<Panel, Form> forms = new Dictionary<Panel, Form>();
         public SAD2()
         {
             InitializeComponent();
@@ -30,6 +30,10 @@ namespace ParishSystem
             navigation.Add(application_button_menu, application_panel);
             navigation.Add(sacrament_button_menu, sacrament_panel);
             navigation.Add(scheduling_button_menu, schedule_panel);
+
+            
+
+            
         }
 
         #region Effects
@@ -95,43 +99,67 @@ namespace ParishSystem
 
         #endregion
 
-        private void panelSacrament_VisibleChanged(object sender, EventArgs e)
-        {
-            while (panelSacrament.Controls.Count > 0)
-            {
-                panelSacrament.Controls[0].Dispose();
-            }
 
-            SacramentModule s = new SacramentModule(dh);
-            s.FormBorderStyle = FormBorderStyle.None;
-            s.TopLevel = false;
-            s.AutoScroll = true;
-            panelSacrament.Controls.Add(s);
-            s.Dock = DockStyle.Fill;
-            s.Show();
+        private void showForm(object sender, Form f)
+        {
+            Panel s = sender as Panel;
+            f.TopLevel = false;
+            f.AutoScroll = true;
+            s.Controls.Add(f);
+
+            f.FormBorderStyle = FormBorderStyle.None;
+            
+            f.Dock = DockStyle.Fill;
+            f.Show();
         }
 
-        private void panelApplication_VisibleChanged(object sender, EventArgs e)
+        private void application_panel_VisibleChanged(object sender, EventArgs e)
         {
-            while (panelApplication.Controls.Count > 0)
-            {
-                panelApplication.Controls[0].Dispose();
-            }
+            ApplicationModule f = new ApplicationModule(dh);
+            showForm(sender, f);
 
-            ApplicationModule s = new ApplicationModule(dh);
-            s.FormBorderStyle = FormBorderStyle.None;
-            s.TopLevel = false;
-            s.AutoScroll = true;
-            panelApplication.Controls.Add(s);
-            s.Dock = DockStyle.Fill;
-            s.Show();
         }
 
-        
-
-        private void panel_controlbox_Paint_1(object sender, PaintEventArgs e)
+        private void profile_panel_VisibleChanged(object sender, EventArgs e)
         {
+            ProfileModule f = new ProfileModule();
+            showForm(sender, f);
+        }
 
+        private void sacrament_panel_VisibleChanged(object sender, EventArgs e)
+        {
+            SacramentModule f = new SacramentModule(dh);
+            showForm(sender, f);
+        }
+
+        private void schedule_panel_VisibleChanged(object sender, EventArgs e)
+        {
+            ScheduleModule f = new ScheduleModule();
+            showForm(sender, f);
+        }
+
+        private void CDB_panel_VisibleChanged(object sender, EventArgs e)
+        {
+            CDB_FullPayment_Module f = new CDB_FullPayment_Module(0);
+            showForm(sender, f);
+        }
+
+        private void CRB_panel_VisibleChanged(object sender, EventArgs e)
+        {
+            CashRelease_Module f = new CashRelease_Module(0);
+            showForm(sender, f);
+        }
+
+        private void home_panel_VisibleChanged(object sender, EventArgs e)
+        {
+            HomeModule f = new HomeModule();
+            showForm(sender, f);
+        }
+
+        private void bloodletting_panel_VisibleChanged(object sender, EventArgs e)
+        {
+            Bloodletting_Module f = new Bloodletting_Module(0);
+            showForm(sender, f);
         }
     }
 }

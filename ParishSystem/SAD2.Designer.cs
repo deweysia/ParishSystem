@@ -31,9 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SAD2));
             this.sacrament_panel = new System.Windows.Forms.Panel();
-            this.panelSacrament = new System.Windows.Forms.Panel();
             this.application_panel = new System.Windows.Forms.Panel();
-            this.panelApplication = new System.Windows.Forms.Panel();
             this.bloodletting_panel = new System.Windows.Forms.Panel();
             this.home_panel = new System.Windows.Forms.Panel();
             this.CRB_panel = new System.Windows.Forms.Panel();
@@ -64,8 +62,6 @@
             this.lastname_tooltip_profiles = new System.Windows.Forms.ToolTip(this.components);
             this.middlename_tooltip_profiles = new System.Windows.Forms.ToolTip(this.components);
             this.schedule_panel = new System.Windows.Forms.Panel();
-            this.sacrament_panel.SuspendLayout();
-            this.application_panel.SuspendLayout();
             this.panel_controlbox.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayout_ControlButtons.SuspendLayout();
@@ -76,41 +72,23 @@
             // sacrament_panel
             // 
             this.sacrament_panel.BackColor = System.Drawing.Color.White;
-            this.sacrament_panel.Controls.Add(this.panelSacrament);
             this.sacrament_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sacrament_panel.Location = new System.Drawing.Point(156, 33);
             this.sacrament_panel.Name = "sacrament_panel";
             this.sacrament_panel.Size = new System.Drawing.Size(812, 547);
             this.sacrament_panel.TabIndex = 39;
-            // 
-            // panelSacrament
-            // 
-            this.panelSacrament.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSacrament.Location = new System.Drawing.Point(0, 0);
-            this.panelSacrament.Name = "panelSacrament";
-            this.panelSacrament.Size = new System.Drawing.Size(812, 547);
-            this.panelSacrament.TabIndex = 2;
-            this.panelSacrament.VisibleChanged += new System.EventHandler(this.panelSacrament_VisibleChanged);
+            this.sacrament_panel.VisibleChanged += new System.EventHandler(this.sacrament_panel_VisibleChanged);
             // 
             // application_panel
             // 
             this.application_panel.BackColor = System.Drawing.Color.White;
-            this.application_panel.Controls.Add(this.panelApplication);
             this.application_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.application_panel.Location = new System.Drawing.Point(156, 33);
             this.application_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.application_panel.Name = "application_panel";
             this.application_panel.Size = new System.Drawing.Size(812, 547);
             this.application_panel.TabIndex = 40;
-            // 
-            // panelApplication
-            // 
-            this.panelApplication.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelApplication.Location = new System.Drawing.Point(0, 0);
-            this.panelApplication.Name = "panelApplication";
-            this.panelApplication.Size = new System.Drawing.Size(812, 547);
-            this.panelApplication.TabIndex = 0;
-            this.panelApplication.VisibleChanged += new System.EventHandler(this.panelApplication_VisibleChanged);
+            this.application_panel.VisibleChanged += new System.EventHandler(this.application_panel_VisibleChanged);
             // 
             // bloodletting_panel
             // 
@@ -120,6 +98,7 @@
             this.bloodletting_panel.Name = "bloodletting_panel";
             this.bloodletting_panel.Size = new System.Drawing.Size(968, 580);
             this.bloodletting_panel.TabIndex = 41;
+            this.bloodletting_panel.VisibleChanged += new System.EventHandler(this.bloodletting_panel_VisibleChanged);
             // 
             // home_panel
             // 
@@ -130,6 +109,7 @@
             this.home_panel.Name = "home_panel";
             this.home_panel.Size = new System.Drawing.Size(968, 580);
             this.home_panel.TabIndex = 42;
+            this.home_panel.VisibleChanged += new System.EventHandler(this.home_panel_VisibleChanged);
             // 
             // CRB_panel
             // 
@@ -139,6 +119,7 @@
             this.CRB_panel.Name = "CRB_panel";
             this.CRB_panel.Size = new System.Drawing.Size(968, 580);
             this.CRB_panel.TabIndex = 57;
+            this.CRB_panel.VisibleChanged += new System.EventHandler(this.CRB_panel_VisibleChanged);
             // 
             // CDB_panel
             // 
@@ -148,6 +129,7 @@
             this.CDB_panel.Name = "CDB_panel";
             this.CDB_panel.Size = new System.Drawing.Size(968, 580);
             this.CDB_panel.TabIndex = 58;
+            this.CDB_panel.VisibleChanged += new System.EventHandler(this.CDB_panel_VisibleChanged);
             // 
             // panel_controlbox
             // 
@@ -160,7 +142,6 @@
             this.panel_controlbox.Name = "panel_controlbox";
             this.panel_controlbox.Size = new System.Drawing.Size(968, 33);
             this.panel_controlbox.TabIndex = 59;
-            this.panel_controlbox.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_controlbox_Paint_1);
             this.panel_controlbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseDown);
             this.panel_controlbox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseMove);
             // 
@@ -466,6 +447,7 @@
             this.profile_panel.Name = "profile_panel";
             this.profile_panel.Size = new System.Drawing.Size(812, 547);
             this.profile_panel.TabIndex = 61;
+            this.profile_panel.VisibleChanged += new System.EventHandler(this.profile_panel_VisibleChanged);
             // 
             // imageListMenu
             // 
@@ -509,6 +491,7 @@
             this.schedule_panel.Name = "schedule_panel";
             this.schedule_panel.Size = new System.Drawing.Size(812, 547);
             this.schedule_panel.TabIndex = 62;
+            this.schedule_panel.VisibleChanged += new System.EventHandler(this.schedule_panel_VisibleChanged);
             // 
             // SAD2
             // 
@@ -528,8 +511,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SAD2";
             this.Text = "SAD2";
-            this.sacrament_panel.ResumeLayout(false);
-            this.application_panel.ResumeLayout(false);
             this.panel_controlbox.ResumeLayout(false);
             this.panel_controlbox.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -544,7 +525,6 @@
         #endregion
 
         private System.Windows.Forms.Panel sacrament_panel;
-        private System.Windows.Forms.Panel panelSacrament;
         private System.Windows.Forms.Panel application_panel;
         private System.Windows.Forms.Panel bloodletting_panel;
         private System.Windows.Forms.Panel home_panel;
@@ -576,6 +556,5 @@
         private System.Windows.Forms.ToolTip lastname_tooltip_profiles;
         private System.Windows.Forms.ToolTip middlename_tooltip_profiles;
         private System.Windows.Forms.Panel schedule_panel;
-        private System.Windows.Forms.Panel panelApplication;
     }
 }

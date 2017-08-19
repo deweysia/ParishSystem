@@ -270,7 +270,7 @@
             this.applicationTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicationTabControl.Location = new System.Drawing.Point(0, 46);
             this.applicationTabControl.Name = "applicationTabControl";
-            this.applicationTabControl.SelectedIndex = 2;
+            this.applicationTabControl.SelectedIndex = 1;
             this.applicationTabControl.Size = new System.Drawing.Size(815, 486);
             this.applicationTabControl.TabIndex = 70;
             this.applicationTabControl.Tag = "Edit";
@@ -683,7 +683,7 @@
             this.baptismApplication_birthDate_dtp.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.baptismApplication_birthDate_dtp.FontSize = MetroFramework.MetroDateTimeSize.Small;
             this.baptismApplication_birthDate_dtp.Location = new System.Drawing.Point(3, 68);
-            this.baptismApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(4, 25);
+            this.baptismApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(0, 25);
             this.baptismApplication_birthDate_dtp.Name = "baptismApplication_birthDate_dtp";
             this.baptismApplication_birthDate_dtp.Size = new System.Drawing.Size(185, 25);
             this.baptismApplication_birthDate_dtp.TabIndex = 26;
@@ -1317,7 +1317,7 @@
             this.confirmationApplication_birthDate_dtp.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.confirmationApplication_birthDate_dtp.FontSize = MetroFramework.MetroDateTimeSize.Small;
             this.confirmationApplication_birthDate_dtp.Location = new System.Drawing.Point(3, 68);
-            this.confirmationApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(4, 25);
+            this.confirmationApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(0, 25);
             this.confirmationApplication_birthDate_dtp.Name = "confirmationApplication_birthDate_dtp";
             this.confirmationApplication_birthDate_dtp.Size = new System.Drawing.Size(190, 25);
             this.confirmationApplication_birthDate_dtp.TabIndex = 8;
