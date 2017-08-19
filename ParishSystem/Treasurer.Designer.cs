@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             this.time_Text = new System.Windows.Forms.Label();
             this.CRB_button_menu = new System.Windows.Forms.Button();
             this.CDB_button_menu = new System.Windows.Forms.Button();
@@ -124,17 +124,6 @@
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.IncomeCashReleaseType_panel = new System.Windows.Forms.Panel();
-            this.IncomeCashReleaseType_TabControl = new ParishSystem.HiddenTabControl();
-            this.IncomeTypeTab = new System.Windows.Forms.TabPage();
-            this.enable_button_itemType = new System.Windows.Forms.Button();
-            this.disable_button_itemType = new System.Windows.Forms.Button();
-            this.add_button_itemType = new System.Windows.Forms.Button();
-            this.itemType_dgv = new System.Windows.Forms.DataGridView();
-            this.CashReleaseTypeTab = new System.Windows.Forms.TabPage();
-            this.enable_button_CashRelease = new System.Windows.Forms.Button();
-            this.disable_button_CashRelease = new System.Windows.Forms.Button();
-            this.add_button_CashRelease = new System.Windows.Forms.Button();
-            this.cashRelease_dgv = new System.Windows.Forms.DataGridView();
             this.sacramentPayment_label = new System.Windows.Forms.Label();
             this.fullpay_label = new System.Windows.Forms.Label();
             this.applicant_combox_fullpay = new System.Windows.Forms.ComboBox();
@@ -174,6 +163,15 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.sacramentpay_panel_CDB = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.profileID_combobox_sacrament = new System.Windows.Forms.ComboBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.remarks_textbox_sacramentPayment = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.address_textarea_sacramentpayment = new System.Windows.Forms.TextBox();
+            this.contactnumber_textbox_sacramentpayment = new System.Windows.Forms.MaskedTextBox();
             this.profile_panel_sacramentpay = new System.Windows.Forms.Panel();
             this.paid_datagridview_sacramentpayment = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -195,15 +193,6 @@
             this.totalprice_nud_sacramentpayment = new System.Windows.Forms.NumericUpDown();
             this.label22 = new System.Windows.Forms.Label();
             this.balance_label_sacramentpayment = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.profileID_combobox_sacrament = new System.Windows.Forms.ComboBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
-            this.remarks_textbox_sacramentPayment = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.address_textarea_sacramentpayment = new System.Windows.Forms.TextBox();
-            this.contactnumber_textbox_sacramentpayment = new System.Windows.Forms.MaskedTextBox();
             this.blooddonor_panel = new System.Windows.Forms.Panel();
             this.search_button_blood = new System.Windows.Forms.Button();
             this.search_textbox_blood = new System.Windows.Forms.TextBox();
@@ -224,6 +213,17 @@
             this.from_bloodlettingeventreport_dtp = new System.Windows.Forms.DateTimePicker();
             this.bloodlettingeventreport_datagridview = new System.Windows.Forms.DataGridView();
             this.bloodlettingeventreport_combobox = new System.Windows.Forms.ComboBox();
+            this.IncomeCashReleaseType_TabControl = new ParishSystem.HiddenTabControl();
+            this.IncomeTypeTab = new System.Windows.Forms.TabPage();
+            this.enable_button_itemType = new System.Windows.Forms.Button();
+            this.disable_button_itemType = new System.Windows.Forms.Button();
+            this.add_button_itemType = new System.Windows.Forms.Button();
+            this.itemType_dgv = new System.Windows.Forms.DataGridView();
+            this.CashReleaseTypeTab = new System.Windows.Forms.TabPage();
+            this.enable_button_CashRelease = new System.Windows.Forms.Button();
+            this.disable_button_CashRelease = new System.Windows.Forms.Button();
+            this.add_button_CashRelease = new System.Windows.Forms.Button();
+            this.cashRelease_dgv = new System.Windows.Forms.DataGridView();
             this.menu.SuspendLayout();
             this.controlbox.SuspendLayout();
             this.Reports_panel.SuspendLayout();
@@ -242,11 +242,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.item_dgv_fullpay_CRB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.price_nud_button_CRB)).BeginInit();
             this.IncomeCashReleaseType_panel.SuspendLayout();
-            this.IncomeCashReleaseType_TabControl.SuspendLayout();
-            this.IncomeTypeTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.itemType_dgv)).BeginInit();
-            this.CashReleaseTypeTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cashRelease_dgv)).BeginInit();
             this.fullpay_panel_CDB.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -254,6 +249,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.quantity_nud_fullpay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suggestedPrice_nud_fullpay)).BeginInit();
             this.sacramentpay_panel_CDB.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.profile_panel_sacramentpay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.paid_datagridview_sacramentpayment)).BeginInit();
             this.panel2.SuspendLayout();
@@ -261,8 +258,6 @@
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.paid_nud_sacramentpayment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalprice_nud_sacramentpayment)).BeginInit();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.blooddonor_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bloodletting_dgv)).BeginInit();
             this.bloodlettingevents_panel.SuspendLayout();
@@ -270,6 +265,11 @@
             this.bloodlettingreports_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.summary_dgv_bloodletting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bloodlettingeventreport_datagridview)).BeginInit();
+            this.IncomeCashReleaseType_TabControl.SuspendLayout();
+            this.IncomeTypeTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itemType_dgv)).BeginInit();
+            this.CashReleaseTypeTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cashRelease_dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // time_Text
@@ -325,6 +325,7 @@
             // 
             // menu
             // 
+            this.menu.AutoScroll = true;
             this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
             this.menu.Controls.Add(this.CDB_button_menu);
             this.menu.Controls.Add(this.CDBparish_button);
@@ -755,7 +756,7 @@
             this.flowLayoutPanel2.Controls.Add(this.CN_textbox_report_disbursment);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(11, 13);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(232, 73);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(708, 73);
             this.flowLayoutPanel2.TabIndex = 16;
             // 
             // from_dtp_cashdisbursment
@@ -770,7 +771,7 @@
             // to_dtp_cashdisbursment
             // 
             this.to_dtp_cashdisbursment.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.to_dtp_cashdisbursment.Location = new System.Drawing.Point(3, 38);
+            this.to_dtp_cashdisbursment.Location = new System.Drawing.Point(230, 3);
             this.to_dtp_cashdisbursment.Name = "to_dtp_cashdisbursment";
             this.to_dtp_cashdisbursment.Size = new System.Drawing.Size(221, 29);
             this.to_dtp_cashdisbursment.TabIndex = 18;
@@ -778,7 +779,7 @@
             // 
             // searchbar_textbox_report_disbursment
             // 
-            this.searchbar_textbox_report_disbursment.Location = new System.Drawing.Point(3, 73);
+            this.searchbar_textbox_report_disbursment.Location = new System.Drawing.Point(457, 3);
             this.searchbar_textbox_report_disbursment.Name = "searchbar_textbox_report_disbursment";
             this.searchbar_textbox_report_disbursment.Size = new System.Drawing.Size(221, 29);
             this.searchbar_textbox_report_disbursment.TabIndex = 12;
@@ -786,14 +787,15 @@
             // 
             // CV_textbox_report_disbursment
             // 
-            this.CV_textbox_report_disbursment.Location = new System.Drawing.Point(3, 108);
+            this.CV_textbox_report_disbursment.Location = new System.Drawing.Point(3, 38);
             this.CV_textbox_report_disbursment.Name = "CV_textbox_report_disbursment";
             this.CV_textbox_report_disbursment.Size = new System.Drawing.Size(221, 29);
             this.CV_textbox_report_disbursment.TabIndex = 19;
+            this.CV_textbox_report_disbursment.TextChanged += new System.EventHandler(this.CV_textbox_report_disbursment_TextChanged);
             // 
             // CN_textbox_report_disbursment
             // 
-            this.CN_textbox_report_disbursment.Location = new System.Drawing.Point(3, 143);
+            this.CN_textbox_report_disbursment.Location = new System.Drawing.Point(230, 38);
             this.CN_textbox_report_disbursment.Name = "CN_textbox_report_disbursment";
             this.CN_textbox_report_disbursment.Size = new System.Drawing.Size(221, 29);
             this.CN_textbox_report_disbursment.TabIndex = 20;
@@ -969,7 +971,7 @@
             this.summary_datagridview_report_disbursment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.summary_datagridview_report_disbursment.Location = new System.Drawing.Point(3, 3);
             this.summary_datagridview_report_disbursment.Name = "summary_datagridview_report_disbursment";
-            this.summary_datagridview_report_disbursment.Size = new System.Drawing.Size(750, 398);
+            this.summary_datagridview_report_disbursment.Size = new System.Drawing.Size(750, 406);
             this.summary_datagridview_report_disbursment.TabIndex = 16;
             // 
             // CRB_panel
@@ -1106,49 +1108,49 @@
             this.item_dgv_fullpay_CRB.BackgroundColor = System.Drawing.Color.White;
             this.item_dgv_fullpay_CRB.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.item_dgv_fullpay_CRB.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.item_dgv_fullpay_CRB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.item_dgv_fullpay_CRB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.item_dgv_fullpay_CRB.ColumnHeadersHeight = 40;
             this.item_dgv_fullpay_CRB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.item_dgv_fullpay_CRB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn5});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.item_dgv_fullpay_CRB.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.item_dgv_fullpay_CRB.DefaultCellStyle = dataGridViewCellStyle21;
             this.item_dgv_fullpay_CRB.EnableHeadersVisualStyles = false;
             this.item_dgv_fullpay_CRB.GridColor = System.Drawing.Color.White;
             this.item_dgv_fullpay_CRB.Location = new System.Drawing.Point(28, 25);
             this.item_dgv_fullpay_CRB.MultiSelect = false;
             this.item_dgv_fullpay_CRB.Name = "item_dgv_fullpay_CRB";
             this.item_dgv_fullpay_CRB.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Magenta;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.item_dgv_fullpay_CRB.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.Magenta;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.item_dgv_fullpay_CRB.RowHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.item_dgv_fullpay_CRB.RowHeadersVisible = false;
             this.item_dgv_fullpay_CRB.RowHeadersWidth = 50;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DarkRed;
-            this.item_dgv_fullpay_CRB.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.DarkRed;
+            this.item_dgv_fullpay_CRB.RowsDefaultCellStyle = dataGridViewCellStyle23;
             this.item_dgv_fullpay_CRB.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.item_dgv_fullpay_CRB.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.item_dgv_fullpay_CRB.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
@@ -1386,228 +1388,6 @@
             this.IncomeCashReleaseType_panel.Size = new System.Drawing.Size(812, 547);
             this.IncomeCashReleaseType_panel.TabIndex = 0;
             // 
-            // IncomeCashReleaseType_TabControl
-            // 
-            this.IncomeCashReleaseType_TabControl.Controls.Add(this.IncomeTypeTab);
-            this.IncomeCashReleaseType_TabControl.Controls.Add(this.CashReleaseTypeTab);
-            this.IncomeCashReleaseType_TabControl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.IncomeCashReleaseType_TabControl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncomeCashReleaseType_TabControl.Location = new System.Drawing.Point(0, 0);
-            this.IncomeCashReleaseType_TabControl.Name = "IncomeCashReleaseType_TabControl";
-            this.IncomeCashReleaseType_TabControl.SelectedIndex = 0;
-            this.IncomeCashReleaseType_TabControl.Size = new System.Drawing.Size(812, 547);
-            this.IncomeCashReleaseType_TabControl.TabIndex = 0;
-            // 
-            // IncomeTypeTab
-            // 
-            this.IncomeTypeTab.BackColor = System.Drawing.Color.White;
-            this.IncomeTypeTab.Controls.Add(this.enable_button_itemType);
-            this.IncomeTypeTab.Controls.Add(this.disable_button_itemType);
-            this.IncomeTypeTab.Controls.Add(this.add_button_itemType);
-            this.IncomeTypeTab.Controls.Add(this.itemType_dgv);
-            this.IncomeTypeTab.Location = new System.Drawing.Point(4, 30);
-            this.IncomeTypeTab.Name = "IncomeTypeTab";
-            this.IncomeTypeTab.Padding = new System.Windows.Forms.Padding(3);
-            this.IncomeTypeTab.Size = new System.Drawing.Size(804, 513);
-            this.IncomeTypeTab.TabIndex = 0;
-            this.IncomeTypeTab.Text = "tabPage1";
-            // 
-            // enable_button_itemType
-            // 
-            this.enable_button_itemType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
-            this.enable_button_itemType.FlatAppearance.BorderSize = 0;
-            this.enable_button_itemType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(168)))));
-            this.enable_button_itemType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.enable_button_itemType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enable_button_itemType.ForeColor = System.Drawing.Color.White;
-            this.enable_button_itemType.Location = new System.Drawing.Point(517, 458);
-            this.enable_button_itemType.Name = "enable_button_itemType";
-            this.enable_button_itemType.Size = new System.Drawing.Size(204, 37);
-            this.enable_button_itemType.TabIndex = 3;
-            this.enable_button_itemType.Text = "Enable";
-            this.enable_button_itemType.UseVisualStyleBackColor = false;
-            this.enable_button_itemType.Click += new System.EventHandler(this.enable_button_itemType_Click);
-            // 
-            // disable_button_itemType
-            // 
-            this.disable_button_itemType.BackColor = System.Drawing.Color.IndianRed;
-            this.disable_button_itemType.FlatAppearance.BorderSize = 0;
-            this.disable_button_itemType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.disable_button_itemType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.disable_button_itemType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.disable_button_itemType.ForeColor = System.Drawing.Color.White;
-            this.disable_button_itemType.Location = new System.Drawing.Point(297, 458);
-            this.disable_button_itemType.Name = "disable_button_itemType";
-            this.disable_button_itemType.Size = new System.Drawing.Size(204, 37);
-            this.disable_button_itemType.TabIndex = 2;
-            this.disable_button_itemType.Text = "Disable";
-            this.disable_button_itemType.UseVisualStyleBackColor = false;
-            this.disable_button_itemType.Click += new System.EventHandler(this.disable_button_itemType_Click);
-            // 
-            // add_button_itemType
-            // 
-            this.add_button_itemType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
-            this.add_button_itemType.FlatAppearance.BorderSize = 0;
-            this.add_button_itemType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(168)))));
-            this.add_button_itemType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add_button_itemType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add_button_itemType.ForeColor = System.Drawing.Color.White;
-            this.add_button_itemType.Location = new System.Drawing.Point(78, 458);
-            this.add_button_itemType.Name = "add_button_itemType";
-            this.add_button_itemType.Size = new System.Drawing.Size(204, 37);
-            this.add_button_itemType.TabIndex = 1;
-            this.add_button_itemType.Text = "Add";
-            this.add_button_itemType.UseVisualStyleBackColor = false;
-            this.add_button_itemType.Click += new System.EventHandler(this.add_button_itemType_Click);
-            // 
-            // itemType_dgv
-            // 
-            this.itemType_dgv.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.itemType_dgv.AllowUserToAddRows = false;
-            this.itemType_dgv.AllowUserToDeleteRows = false;
-            this.itemType_dgv.AllowUserToOrderColumns = true;
-            this.itemType_dgv.AllowUserToResizeRows = false;
-            this.itemType_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.itemType_dgv.BackgroundColor = System.Drawing.Color.White;
-            this.itemType_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.itemType_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.itemType_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.itemType_dgv.ColumnHeadersHeight = 40;
-            this.itemType_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.itemType_dgv.EnableHeadersVisualStyles = false;
-            this.itemType_dgv.GridColor = System.Drawing.Color.White;
-            this.itemType_dgv.Location = new System.Drawing.Point(26, 24);
-            this.itemType_dgv.MultiSelect = false;
-            this.itemType_dgv.Name = "itemType_dgv";
-            this.itemType_dgv.ReadOnly = true;
-            this.itemType_dgv.RowHeadersVisible = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.itemType_dgv.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.itemType_dgv.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.itemType_dgv.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
-            this.itemType_dgv.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.itemType_dgv.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(118)))), ((int)(((byte)(140)))));
-            this.itemType_dgv.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.itemType_dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.itemType_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.itemType_dgv.Size = new System.Drawing.Size(752, 414);
-            this.itemType_dgv.TabIndex = 0;
-            this.itemType_dgv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemType_dgv_CellContentDoubleClick);
-            this.itemType_dgv.Click += new System.EventHandler(this.itemType_dgv_Click);
-            // 
-            // CashReleaseTypeTab
-            // 
-            this.CashReleaseTypeTab.BackColor = System.Drawing.Color.White;
-            this.CashReleaseTypeTab.Controls.Add(this.enable_button_CashRelease);
-            this.CashReleaseTypeTab.Controls.Add(this.disable_button_CashRelease);
-            this.CashReleaseTypeTab.Controls.Add(this.add_button_CashRelease);
-            this.CashReleaseTypeTab.Controls.Add(this.cashRelease_dgv);
-            this.CashReleaseTypeTab.Location = new System.Drawing.Point(4, 30);
-            this.CashReleaseTypeTab.Name = "CashReleaseTypeTab";
-            this.CashReleaseTypeTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CashReleaseTypeTab.Size = new System.Drawing.Size(804, 513);
-            this.CashReleaseTypeTab.TabIndex = 1;
-            this.CashReleaseTypeTab.Text = "tabPage2";
-            // 
-            // enable_button_CashRelease
-            // 
-            this.enable_button_CashRelease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
-            this.enable_button_CashRelease.FlatAppearance.BorderSize = 0;
-            this.enable_button_CashRelease.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(168)))));
-            this.enable_button_CashRelease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.enable_button_CashRelease.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enable_button_CashRelease.ForeColor = System.Drawing.Color.White;
-            this.enable_button_CashRelease.Location = new System.Drawing.Point(517, 458);
-            this.enable_button_CashRelease.Name = "enable_button_CashRelease";
-            this.enable_button_CashRelease.Size = new System.Drawing.Size(204, 37);
-            this.enable_button_CashRelease.TabIndex = 7;
-            this.enable_button_CashRelease.Text = "Enable";
-            this.enable_button_CashRelease.UseVisualStyleBackColor = false;
-            this.enable_button_CashRelease.Click += new System.EventHandler(this.enable_button_CashRelease_Click);
-            // 
-            // disable_button_CashRelease
-            // 
-            this.disable_button_CashRelease.BackColor = System.Drawing.Color.IndianRed;
-            this.disable_button_CashRelease.FlatAppearance.BorderSize = 0;
-            this.disable_button_CashRelease.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.disable_button_CashRelease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.disable_button_CashRelease.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.disable_button_CashRelease.ForeColor = System.Drawing.Color.White;
-            this.disable_button_CashRelease.Location = new System.Drawing.Point(297, 458);
-            this.disable_button_CashRelease.Name = "disable_button_CashRelease";
-            this.disable_button_CashRelease.Size = new System.Drawing.Size(204, 37);
-            this.disable_button_CashRelease.TabIndex = 6;
-            this.disable_button_CashRelease.Text = "Disable";
-            this.disable_button_CashRelease.UseVisualStyleBackColor = false;
-            this.disable_button_CashRelease.Click += new System.EventHandler(this.disable_button_CashRelease_Click);
-            // 
-            // add_button_CashRelease
-            // 
-            this.add_button_CashRelease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
-            this.add_button_CashRelease.FlatAppearance.BorderSize = 0;
-            this.add_button_CashRelease.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(168)))));
-            this.add_button_CashRelease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add_button_CashRelease.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add_button_CashRelease.ForeColor = System.Drawing.Color.White;
-            this.add_button_CashRelease.Location = new System.Drawing.Point(78, 458);
-            this.add_button_CashRelease.Name = "add_button_CashRelease";
-            this.add_button_CashRelease.Size = new System.Drawing.Size(204, 37);
-            this.add_button_CashRelease.TabIndex = 5;
-            this.add_button_CashRelease.Text = "Add";
-            this.add_button_CashRelease.UseVisualStyleBackColor = false;
-            this.add_button_CashRelease.Click += new System.EventHandler(this.add_button_CashRelease_Click);
-            // 
-            // cashRelease_dgv
-            // 
-            this.cashRelease_dgv.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.cashRelease_dgv.AllowUserToAddRows = false;
-            this.cashRelease_dgv.AllowUserToDeleteRows = false;
-            this.cashRelease_dgv.AllowUserToOrderColumns = true;
-            this.cashRelease_dgv.AllowUserToResizeRows = false;
-            this.cashRelease_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.cashRelease_dgv.BackgroundColor = System.Drawing.Color.White;
-            this.cashRelease_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.cashRelease_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.cashRelease_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.cashRelease_dgv.ColumnHeadersHeight = 40;
-            this.cashRelease_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.cashRelease_dgv.EnableHeadersVisualStyles = false;
-            this.cashRelease_dgv.GridColor = System.Drawing.Color.White;
-            this.cashRelease_dgv.Location = new System.Drawing.Point(26, 24);
-            this.cashRelease_dgv.MultiSelect = false;
-            this.cashRelease_dgv.Name = "cashRelease_dgv";
-            this.cashRelease_dgv.ReadOnly = true;
-            this.cashRelease_dgv.RowHeadersVisible = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cashRelease_dgv.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.cashRelease_dgv.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.cashRelease_dgv.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
-            this.cashRelease_dgv.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.cashRelease_dgv.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(118)))), ((int)(((byte)(140)))));
-            this.cashRelease_dgv.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.cashRelease_dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.cashRelease_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cashRelease_dgv.Size = new System.Drawing.Size(752, 414);
-            this.cashRelease_dgv.TabIndex = 4;
-            this.cashRelease_dgv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cashRelease_dgv_CellContentDoubleClick);
-            this.cashRelease_dgv.Click += new System.EventHandler(this.cashRelease_dgv_Click);
-            // 
             // sacramentPayment_label
             // 
             this.sacramentPayment_label.AutoSize = true;
@@ -1828,14 +1608,14 @@
             this.item_dgv_fullpay.BackgroundColor = System.Drawing.Color.White;
             this.item_dgv_fullpay.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.item_dgv_fullpay.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.item_dgv_fullpay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.item_dgv_fullpay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.item_dgv_fullpay.ColumnHeadersHeight = 40;
             this.item_dgv_fullpay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.item_dgv_fullpay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1844,35 +1624,35 @@
             this.QuantityDataGridViewColumn,
             this.TotalDataGridViewColumn,
             this.ItemIDcomboboxcolumn});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.item_dgv_fullpay.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.item_dgv_fullpay.DefaultCellStyle = dataGridViewCellStyle25;
             this.item_dgv_fullpay.EnableHeadersVisualStyles = false;
             this.item_dgv_fullpay.GridColor = System.Drawing.Color.White;
             this.item_dgv_fullpay.Location = new System.Drawing.Point(29, 62);
             this.item_dgv_fullpay.MultiSelect = false;
             this.item_dgv_fullpay.Name = "item_dgv_fullpay";
             this.item_dgv_fullpay.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Magenta;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.item_dgv_fullpay.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.Magenta;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.item_dgv_fullpay.RowHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.item_dgv_fullpay.RowHeadersVisible = false;
             this.item_dgv_fullpay.RowHeadersWidth = 50;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.DarkRed;
-            this.item_dgv_fullpay.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.DarkRed;
+            this.item_dgv_fullpay.RowsDefaultCellStyle = dataGridViewCellStyle27;
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -2124,6 +1904,111 @@
             this.sacramentpay_panel_CDB.Size = new System.Drawing.Size(811, 549);
             this.sacramentpay_panel_CDB.TabIndex = 12;
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel6.Controls.Add(this.profileID_combobox_sacrament);
+            this.panel6.Controls.Add(this.panel5);
+            this.panel6.Controls.Add(this.label20);
+            this.panel6.Controls.Add(this.label15);
+            this.panel6.Controls.Add(this.address_textarea_sacramentpayment);
+            this.panel6.Controls.Add(this.contactnumber_textbox_sacramentpayment);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(310, 549);
+            this.panel6.TabIndex = 0;
+            // 
+            // profileID_combobox_sacrament
+            // 
+            this.profileID_combobox_sacrament.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.profileID_combobox_sacrament.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.profileID_combobox_sacrament.FormattingEnabled = true;
+            this.profileID_combobox_sacrament.Location = new System.Drawing.Point(17, 22);
+            this.profileID_combobox_sacrament.Name = "profileID_combobox_sacrament";
+            this.profileID_combobox_sacrament.Size = new System.Drawing.Size(275, 29);
+            this.profileID_combobox_sacrament.TabIndex = 11;
+            this.profileID_combobox_sacrament.SelectedValueChanged += new System.EventHandler(this.profileID_combobox_sacrament_SelectedValueChanged);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel5.Controls.Add(this.label25);
+            this.panel5.Controls.Add(this.remarks_textbox_sacramentPayment);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 377);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(310, 172);
+            this.panel5.TabIndex = 0;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(14, 17);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(58, 17);
+            this.label25.TabIndex = 72;
+            this.label25.Text = "Remarks";
+            // 
+            // remarks_textbox_sacramentPayment
+            // 
+            this.remarks_textbox_sacramentPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.remarks_textbox_sacramentPayment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.remarks_textbox_sacramentPayment.ForeColor = System.Drawing.Color.Black;
+            this.remarks_textbox_sacramentPayment.Location = new System.Drawing.Point(21, 38);
+            this.remarks_textbox_sacramentPayment.Multiline = true;
+            this.remarks_textbox_sacramentPayment.Name = "remarks_textbox_sacramentPayment";
+            this.remarks_textbox_sacramentPayment.Size = new System.Drawing.Size(262, 108);
+            this.remarks_textbox_sacramentPayment.TabIndex = 71;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Black;
+            this.label20.Location = new System.Drawing.Point(14, 78);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(91, 13);
+            this.label20.TabIndex = 8;
+            this.label20.Text = "Contact Number";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(14, 161);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(48, 13);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "Address";
+            // 
+            // address_textarea_sacramentpayment
+            // 
+            this.address_textarea_sacramentpayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.address_textarea_sacramentpayment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.address_textarea_sacramentpayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.address_textarea_sacramentpayment.ForeColor = System.Drawing.Color.Black;
+            this.address_textarea_sacramentpayment.Location = new System.Drawing.Point(17, 184);
+            this.address_textarea_sacramentpayment.Multiline = true;
+            this.address_textarea_sacramentpayment.Name = "address_textarea_sacramentpayment";
+            this.address_textarea_sacramentpayment.Size = new System.Drawing.Size(275, 86);
+            this.address_textarea_sacramentpayment.TabIndex = 5;
+            // 
+            // contactnumber_textbox_sacramentpayment
+            // 
+            this.contactnumber_textbox_sacramentpayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.contactnumber_textbox_sacramentpayment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contactnumber_textbox_sacramentpayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactnumber_textbox_sacramentpayment.ForeColor = System.Drawing.Color.Black;
+            this.contactnumber_textbox_sacramentpayment.Location = new System.Drawing.Point(17, 99);
+            this.contactnumber_textbox_sacramentpayment.Mask = "(+63) 999 999 9999";
+            this.contactnumber_textbox_sacramentpayment.Name = "contactnumber_textbox_sacramentpayment";
+            this.contactnumber_textbox_sacramentpayment.Size = new System.Drawing.Size(160, 22);
+            this.contactnumber_textbox_sacramentpayment.TabIndex = 4;
+            // 
             // profile_panel_sacramentpay
             // 
             this.profile_panel_sacramentpay.BackColor = System.Drawing.Color.White;
@@ -2145,14 +2030,14 @@
             this.paid_datagridview_sacramentpayment.BackgroundColor = System.Drawing.Color.White;
             this.paid_datagridview_sacramentpayment.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.paid_datagridview_sacramentpayment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.paid_datagridview_sacramentpayment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.paid_datagridview_sacramentpayment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.paid_datagridview_sacramentpayment.ColumnHeadersHeight = 40;
             this.paid_datagridview_sacramentpayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.paid_datagridview_sacramentpayment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -2377,111 +2262,6 @@
             this.balance_label_sacramentpayment.TabIndex = 68;
             this.balance_label_sacramentpayment.Text = "100.00";
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel6.Controls.Add(this.profileID_combobox_sacrament);
-            this.panel6.Controls.Add(this.panel5);
-            this.panel6.Controls.Add(this.label20);
-            this.panel6.Controls.Add(this.label15);
-            this.panel6.Controls.Add(this.address_textarea_sacramentpayment);
-            this.panel6.Controls.Add(this.contactnumber_textbox_sacramentpayment);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(310, 549);
-            this.panel6.TabIndex = 0;
-            // 
-            // profileID_combobox_sacrament
-            // 
-            this.profileID_combobox_sacrament.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.profileID_combobox_sacrament.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.profileID_combobox_sacrament.FormattingEnabled = true;
-            this.profileID_combobox_sacrament.Location = new System.Drawing.Point(17, 22);
-            this.profileID_combobox_sacrament.Name = "profileID_combobox_sacrament";
-            this.profileID_combobox_sacrament.Size = new System.Drawing.Size(275, 29);
-            this.profileID_combobox_sacrament.TabIndex = 11;
-            this.profileID_combobox_sacrament.SelectedValueChanged += new System.EventHandler(this.profileID_combobox_sacrament_SelectedValueChanged);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel5.Controls.Add(this.label25);
-            this.panel5.Controls.Add(this.remarks_textbox_sacramentPayment);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 377);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(310, 172);
-            this.panel5.TabIndex = 0;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(14, 17);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(58, 17);
-            this.label25.TabIndex = 72;
-            this.label25.Text = "Remarks";
-            // 
-            // remarks_textbox_sacramentPayment
-            // 
-            this.remarks_textbox_sacramentPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.remarks_textbox_sacramentPayment.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.remarks_textbox_sacramentPayment.ForeColor = System.Drawing.Color.Black;
-            this.remarks_textbox_sacramentPayment.Location = new System.Drawing.Point(21, 38);
-            this.remarks_textbox_sacramentPayment.Multiline = true;
-            this.remarks_textbox_sacramentPayment.Name = "remarks_textbox_sacramentPayment";
-            this.remarks_textbox_sacramentPayment.Size = new System.Drawing.Size(262, 108);
-            this.remarks_textbox_sacramentPayment.TabIndex = 71;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(14, 78);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(91, 13);
-            this.label20.TabIndex = 8;
-            this.label20.Text = "Contact Number";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(14, 161);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 13);
-            this.label15.TabIndex = 8;
-            this.label15.Text = "Address";
-            // 
-            // address_textarea_sacramentpayment
-            // 
-            this.address_textarea_sacramentpayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.address_textarea_sacramentpayment.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.address_textarea_sacramentpayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.address_textarea_sacramentpayment.ForeColor = System.Drawing.Color.Black;
-            this.address_textarea_sacramentpayment.Location = new System.Drawing.Point(17, 184);
-            this.address_textarea_sacramentpayment.Multiline = true;
-            this.address_textarea_sacramentpayment.Name = "address_textarea_sacramentpayment";
-            this.address_textarea_sacramentpayment.Size = new System.Drawing.Size(275, 86);
-            this.address_textarea_sacramentpayment.TabIndex = 5;
-            // 
-            // contactnumber_textbox_sacramentpayment
-            // 
-            this.contactnumber_textbox_sacramentpayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.contactnumber_textbox_sacramentpayment.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contactnumber_textbox_sacramentpayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactnumber_textbox_sacramentpayment.ForeColor = System.Drawing.Color.Black;
-            this.contactnumber_textbox_sacramentpayment.Location = new System.Drawing.Point(17, 99);
-            this.contactnumber_textbox_sacramentpayment.Mask = "(+63) 999 999 9999";
-            this.contactnumber_textbox_sacramentpayment.Name = "contactnumber_textbox_sacramentpayment";
-            this.contactnumber_textbox_sacramentpayment.Size = new System.Drawing.Size(160, 22);
-            this.contactnumber_textbox_sacramentpayment.TabIndex = 4;
-            // 
             // blooddonor_panel
             // 
             this.blooddonor_panel.BackColor = System.Drawing.Color.White;
@@ -2551,14 +2331,14 @@
             this.bloodletting_dgv.BackgroundColor = System.Drawing.Color.White;
             this.bloodletting_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.bloodletting_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bloodletting_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bloodletting_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.bloodletting_dgv.ColumnHeadersHeight = 40;
             this.bloodletting_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.bloodletting_dgv.EnableHeadersVisualStyles = false;
@@ -2567,14 +2347,14 @@
             this.bloodletting_dgv.Name = "bloodletting_dgv";
             this.bloodletting_dgv.ReadOnly = true;
             this.bloodletting_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bloodletting_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bloodletting_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.bloodletting_dgv.RowHeadersVisible = false;
             this.bloodletting_dgv.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.bloodletting_dgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2654,14 +2434,14 @@
             this.bloodletingevents_dgv.BackgroundColor = System.Drawing.Color.White;
             this.bloodletingevents_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.bloodletingevents_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bloodletingevents_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bloodletingevents_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
             this.bloodletingevents_dgv.ColumnHeadersHeight = 40;
             this.bloodletingevents_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.bloodletingevents_dgv.EnableHeadersVisualStyles = false;
@@ -2670,14 +2450,14 @@
             this.bloodletingevents_dgv.Name = "bloodletingevents_dgv";
             this.bloodletingevents_dgv.ReadOnly = true;
             this.bloodletingevents_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bloodletingevents_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bloodletingevents_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
             this.bloodletingevents_dgv.RowHeadersVisible = false;
             this.bloodletingevents_dgv.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.bloodletingevents_dgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2715,14 +2495,14 @@
             this.summary_dgv_bloodletting.BackgroundColor = System.Drawing.Color.White;
             this.summary_dgv_bloodletting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.summary_dgv_bloodletting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.summary_dgv_bloodletting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.summary_dgv_bloodletting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.summary_dgv_bloodletting.ColumnHeadersHeight = 40;
             this.summary_dgv_bloodletting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.summary_dgv_bloodletting.EnableHeadersVisualStyles = false;
@@ -2754,7 +2534,7 @@
             "All Blood Donations"});
             this.filterBy_combobox_bloodletting.Location = new System.Drawing.Point(326, 54);
             this.filterBy_combobox_bloodletting.Name = "filterBy_combobox_bloodletting";
-            this.filterBy_combobox_bloodletting.Size = new System.Drawing.Size(256, 29);
+            this.filterBy_combobox_bloodletting.Size = new System.Drawing.Size(276, 29);
             this.filterBy_combobox_bloodletting.TabIndex = 5;
             this.filterBy_combobox_bloodletting.SelectedIndexChanged += new System.EventHandler(this.filterBy_combobox_bloodletting_SelectedIndexChanged);
             // 
@@ -2767,7 +2547,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(604, 57);
+            this.button3.Location = new System.Drawing.Point(649, 53);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 3;
@@ -2791,14 +2571,14 @@
             this.bloodlettingeventreport_datagridview.BackgroundColor = System.Drawing.Color.White;
             this.bloodlettingeventreport_datagridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.bloodlettingeventreport_datagridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bloodlettingeventreport_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bloodlettingeventreport_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.bloodlettingeventreport_datagridview.ColumnHeadersHeight = 40;
             this.bloodlettingeventreport_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.bloodlettingeventreport_datagridview.EnableHeadersVisualStyles = false;
@@ -2828,6 +2608,228 @@
             this.bloodlettingeventreport_combobox.TabIndex = 0;
             this.bloodlettingeventreport_combobox.SelectedIndexChanged += new System.EventHandler(this.bloodlettingeventreport_combobox_SelectedIndexChanged);
             // 
+            // IncomeCashReleaseType_TabControl
+            // 
+            this.IncomeCashReleaseType_TabControl.Controls.Add(this.IncomeTypeTab);
+            this.IncomeCashReleaseType_TabControl.Controls.Add(this.CashReleaseTypeTab);
+            this.IncomeCashReleaseType_TabControl.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.IncomeCashReleaseType_TabControl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IncomeCashReleaseType_TabControl.Location = new System.Drawing.Point(0, 0);
+            this.IncomeCashReleaseType_TabControl.Name = "IncomeCashReleaseType_TabControl";
+            this.IncomeCashReleaseType_TabControl.SelectedIndex = 0;
+            this.IncomeCashReleaseType_TabControl.Size = new System.Drawing.Size(812, 547);
+            this.IncomeCashReleaseType_TabControl.TabIndex = 0;
+            // 
+            // IncomeTypeTab
+            // 
+            this.IncomeTypeTab.BackColor = System.Drawing.Color.White;
+            this.IncomeTypeTab.Controls.Add(this.enable_button_itemType);
+            this.IncomeTypeTab.Controls.Add(this.disable_button_itemType);
+            this.IncomeTypeTab.Controls.Add(this.add_button_itemType);
+            this.IncomeTypeTab.Controls.Add(this.itemType_dgv);
+            this.IncomeTypeTab.Location = new System.Drawing.Point(4, 30);
+            this.IncomeTypeTab.Name = "IncomeTypeTab";
+            this.IncomeTypeTab.Padding = new System.Windows.Forms.Padding(3);
+            this.IncomeTypeTab.Size = new System.Drawing.Size(804, 513);
+            this.IncomeTypeTab.TabIndex = 0;
+            this.IncomeTypeTab.Text = "tabPage1";
+            // 
+            // enable_button_itemType
+            // 
+            this.enable_button_itemType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            this.enable_button_itemType.FlatAppearance.BorderSize = 0;
+            this.enable_button_itemType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(168)))));
+            this.enable_button_itemType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.enable_button_itemType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enable_button_itemType.ForeColor = System.Drawing.Color.White;
+            this.enable_button_itemType.Location = new System.Drawing.Point(517, 458);
+            this.enable_button_itemType.Name = "enable_button_itemType";
+            this.enable_button_itemType.Size = new System.Drawing.Size(204, 37);
+            this.enable_button_itemType.TabIndex = 3;
+            this.enable_button_itemType.Text = "Enable";
+            this.enable_button_itemType.UseVisualStyleBackColor = false;
+            this.enable_button_itemType.Click += new System.EventHandler(this.enable_button_itemType_Click);
+            // 
+            // disable_button_itemType
+            // 
+            this.disable_button_itemType.BackColor = System.Drawing.Color.IndianRed;
+            this.disable_button_itemType.FlatAppearance.BorderSize = 0;
+            this.disable_button_itemType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.disable_button_itemType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.disable_button_itemType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.disable_button_itemType.ForeColor = System.Drawing.Color.White;
+            this.disable_button_itemType.Location = new System.Drawing.Point(297, 458);
+            this.disable_button_itemType.Name = "disable_button_itemType";
+            this.disable_button_itemType.Size = new System.Drawing.Size(204, 37);
+            this.disable_button_itemType.TabIndex = 2;
+            this.disable_button_itemType.Text = "Disable";
+            this.disable_button_itemType.UseVisualStyleBackColor = false;
+            this.disable_button_itemType.Click += new System.EventHandler(this.disable_button_itemType_Click);
+            // 
+            // add_button_itemType
+            // 
+            this.add_button_itemType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            this.add_button_itemType.FlatAppearance.BorderSize = 0;
+            this.add_button_itemType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(168)))));
+            this.add_button_itemType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add_button_itemType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_button_itemType.ForeColor = System.Drawing.Color.White;
+            this.add_button_itemType.Location = new System.Drawing.Point(78, 458);
+            this.add_button_itemType.Name = "add_button_itemType";
+            this.add_button_itemType.Size = new System.Drawing.Size(204, 37);
+            this.add_button_itemType.TabIndex = 1;
+            this.add_button_itemType.Text = "Add";
+            this.add_button_itemType.UseVisualStyleBackColor = false;
+            this.add_button_itemType.Click += new System.EventHandler(this.add_button_itemType_Click);
+            // 
+            // itemType_dgv
+            // 
+            this.itemType_dgv.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.itemType_dgv.AllowUserToAddRows = false;
+            this.itemType_dgv.AllowUserToDeleteRows = false;
+            this.itemType_dgv.AllowUserToOrderColumns = true;
+            this.itemType_dgv.AllowUserToResizeRows = false;
+            this.itemType_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.itemType_dgv.BackgroundColor = System.Drawing.Color.White;
+            this.itemType_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.itemType_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.itemType_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            this.itemType_dgv.ColumnHeadersHeight = 40;
+            this.itemType_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.itemType_dgv.EnableHeadersVisualStyles = false;
+            this.itemType_dgv.GridColor = System.Drawing.Color.White;
+            this.itemType_dgv.Location = new System.Drawing.Point(26, 24);
+            this.itemType_dgv.MultiSelect = false;
+            this.itemType_dgv.Name = "itemType_dgv";
+            this.itemType_dgv.ReadOnly = true;
+            this.itemType_dgv.RowHeadersVisible = false;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.itemType_dgv.RowsDefaultCellStyle = dataGridViewCellStyle36;
+            this.itemType_dgv.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.itemType_dgv.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.itemType_dgv.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.itemType_dgv.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(118)))), ((int)(((byte)(140)))));
+            this.itemType_dgv.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.itemType_dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.itemType_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.itemType_dgv.Size = new System.Drawing.Size(752, 414);
+            this.itemType_dgv.TabIndex = 0;
+            this.itemType_dgv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemType_dgv_CellContentDoubleClick);
+            this.itemType_dgv.Click += new System.EventHandler(this.itemType_dgv_Click);
+            // 
+            // CashReleaseTypeTab
+            // 
+            this.CashReleaseTypeTab.BackColor = System.Drawing.Color.White;
+            this.CashReleaseTypeTab.Controls.Add(this.enable_button_CashRelease);
+            this.CashReleaseTypeTab.Controls.Add(this.disable_button_CashRelease);
+            this.CashReleaseTypeTab.Controls.Add(this.add_button_CashRelease);
+            this.CashReleaseTypeTab.Controls.Add(this.cashRelease_dgv);
+            this.CashReleaseTypeTab.Location = new System.Drawing.Point(4, 30);
+            this.CashReleaseTypeTab.Name = "CashReleaseTypeTab";
+            this.CashReleaseTypeTab.Padding = new System.Windows.Forms.Padding(3);
+            this.CashReleaseTypeTab.Size = new System.Drawing.Size(804, 513);
+            this.CashReleaseTypeTab.TabIndex = 1;
+            this.CashReleaseTypeTab.Text = "tabPage2";
+            // 
+            // enable_button_CashRelease
+            // 
+            this.enable_button_CashRelease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            this.enable_button_CashRelease.FlatAppearance.BorderSize = 0;
+            this.enable_button_CashRelease.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(168)))));
+            this.enable_button_CashRelease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.enable_button_CashRelease.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enable_button_CashRelease.ForeColor = System.Drawing.Color.White;
+            this.enable_button_CashRelease.Location = new System.Drawing.Point(517, 458);
+            this.enable_button_CashRelease.Name = "enable_button_CashRelease";
+            this.enable_button_CashRelease.Size = new System.Drawing.Size(204, 37);
+            this.enable_button_CashRelease.TabIndex = 7;
+            this.enable_button_CashRelease.Text = "Enable";
+            this.enable_button_CashRelease.UseVisualStyleBackColor = false;
+            this.enable_button_CashRelease.Click += new System.EventHandler(this.enable_button_CashRelease_Click);
+            // 
+            // disable_button_CashRelease
+            // 
+            this.disable_button_CashRelease.BackColor = System.Drawing.Color.IndianRed;
+            this.disable_button_CashRelease.FlatAppearance.BorderSize = 0;
+            this.disable_button_CashRelease.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.disable_button_CashRelease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.disable_button_CashRelease.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.disable_button_CashRelease.ForeColor = System.Drawing.Color.White;
+            this.disable_button_CashRelease.Location = new System.Drawing.Point(297, 458);
+            this.disable_button_CashRelease.Name = "disable_button_CashRelease";
+            this.disable_button_CashRelease.Size = new System.Drawing.Size(204, 37);
+            this.disable_button_CashRelease.TabIndex = 6;
+            this.disable_button_CashRelease.Text = "Disable";
+            this.disable_button_CashRelease.UseVisualStyleBackColor = false;
+            this.disable_button_CashRelease.Click += new System.EventHandler(this.disable_button_CashRelease_Click);
+            // 
+            // add_button_CashRelease
+            // 
+            this.add_button_CashRelease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            this.add_button_CashRelease.FlatAppearance.BorderSize = 0;
+            this.add_button_CashRelease.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(168)))));
+            this.add_button_CashRelease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add_button_CashRelease.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_button_CashRelease.ForeColor = System.Drawing.Color.White;
+            this.add_button_CashRelease.Location = new System.Drawing.Point(78, 458);
+            this.add_button_CashRelease.Name = "add_button_CashRelease";
+            this.add_button_CashRelease.Size = new System.Drawing.Size(204, 37);
+            this.add_button_CashRelease.TabIndex = 5;
+            this.add_button_CashRelease.Text = "Add";
+            this.add_button_CashRelease.UseVisualStyleBackColor = false;
+            this.add_button_CashRelease.Click += new System.EventHandler(this.add_button_CashRelease_Click);
+            // 
+            // cashRelease_dgv
+            // 
+            this.cashRelease_dgv.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.cashRelease_dgv.AllowUserToAddRows = false;
+            this.cashRelease_dgv.AllowUserToDeleteRows = false;
+            this.cashRelease_dgv.AllowUserToOrderColumns = true;
+            this.cashRelease_dgv.AllowUserToResizeRows = false;
+            this.cashRelease_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.cashRelease_dgv.BackgroundColor = System.Drawing.Color.White;
+            this.cashRelease_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.cashRelease_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cashRelease_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
+            this.cashRelease_dgv.ColumnHeadersHeight = 40;
+            this.cashRelease_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.cashRelease_dgv.EnableHeadersVisualStyles = false;
+            this.cashRelease_dgv.GridColor = System.Drawing.Color.White;
+            this.cashRelease_dgv.Location = new System.Drawing.Point(26, 24);
+            this.cashRelease_dgv.MultiSelect = false;
+            this.cashRelease_dgv.Name = "cashRelease_dgv";
+            this.cashRelease_dgv.ReadOnly = true;
+            this.cashRelease_dgv.RowHeadersVisible = false;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cashRelease_dgv.RowsDefaultCellStyle = dataGridViewCellStyle38;
+            this.cashRelease_dgv.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.cashRelease_dgv.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.cashRelease_dgv.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.cashRelease_dgv.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(118)))), ((int)(((byte)(140)))));
+            this.cashRelease_dgv.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.cashRelease_dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.cashRelease_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cashRelease_dgv.Size = new System.Drawing.Size(752, 414);
+            this.cashRelease_dgv.TabIndex = 4;
+            this.cashRelease_dgv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cashRelease_dgv_CellContentDoubleClick);
+            this.cashRelease_dgv.Click += new System.EventHandler(this.cashRelease_dgv_Click);
+            // 
             // Treasurer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2836,6 +2838,7 @@
             this.ClientSize = new System.Drawing.Size(988, 581);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.controlbox);
+            this.Controls.Add(this.Reports_panel);
             this.Controls.Add(this.blooddonor_panel);
             this.Controls.Add(this.bloodlettingevents_panel);
             this.Controls.Add(this.CRB_panel);
@@ -2843,7 +2846,6 @@
             this.Controls.Add(this.sacramentpay_panel_CDB);
             this.Controls.Add(this.fullpay_panel_CDB);
             this.Controls.Add(this.bloodlettingreports_panel);
-            this.Controls.Add(this.Reports_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Treasurer";
             this.Text = "Treasurer";
@@ -2872,11 +2874,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.item_dgv_fullpay_CRB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.price_nud_button_CRB)).EndInit();
             this.IncomeCashReleaseType_panel.ResumeLayout(false);
-            this.IncomeCashReleaseType_TabControl.ResumeLayout(false);
-            this.IncomeTypeTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.itemType_dgv)).EndInit();
-            this.CashReleaseTypeTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cashRelease_dgv)).EndInit();
             this.fullpay_panel_CDB.ResumeLayout(false);
             this.fullpay_panel_CDB.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -2887,6 +2884,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.quantity_nud_fullpay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suggestedPrice_nud_fullpay)).EndInit();
             this.sacramentpay_panel_CDB.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.profile_panel_sacramentpay.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.paid_datagridview_sacramentpayment)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -2896,10 +2897,6 @@
             this.panel15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.paid_nud_sacramentpayment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalprice_nud_sacramentpayment)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.blooddonor_panel.ResumeLayout(false);
             this.blooddonor_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bloodletting_dgv)).EndInit();
@@ -2909,6 +2906,11 @@
             this.bloodlettingreports_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.summary_dgv_bloodletting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bloodlettingeventreport_datagridview)).EndInit();
+            this.IncomeCashReleaseType_TabControl.ResumeLayout(false);
+            this.IncomeTypeTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.itemType_dgv)).EndInit();
+            this.CashReleaseTypeTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cashRelease_dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
