@@ -193,32 +193,33 @@ namespace ParishSystem
         public DateTime toDateTime(string s, bool timePortion)
         {
 
-            string[] components = s.Split(' ');
-            string[] date = components[0].Split('/');
+                string[] components = s.Split(' ');
+                string[] date = components[0].Split('/');
 
-            Console.Write(date[1] + " --- " + date[0] + " --- " + date[2]);
+                Console.Write(date[1] + " --- " + date[0] + " --- " + date[2]);
 
-            int day = int.Parse(date[1]);
-            int month = int.Parse(date[0]);
-            int year = int.Parse(date[2]);
+                int day = int.Parse(date[0]);
+                int month = int.Parse(date[1]);
+                int year = int.Parse(date[2]);
 
 
 
-            if (timePortion)
-            {
-                string[] time = components[1].Split(':');
+                if (timePortion)
+                {
+                    string[] time = components[1].Split(':');
 
-                int hour = int.Parse(time[0]) % 12;
-                if (components[components.Length - 1] == "PM")
-                    hour += 12;
+                    int hour = int.Parse(time[0]) % 12;
+                    if (components[components.Length - 1] == "PM")
+                        hour += 12;
 
-                int min = int.Parse(time[1]);
-                int sec = int.Parse(time[2]);
+                    int min = int.Parse(time[1]);
+                    int sec = int.Parse(time[2]);
 
-                return new DateTime(year, month, day, hour, min, sec);
-            }
-
-            return new DateTime(year, month, day);
+                    return new DateTime(year, month, day, hour, min, sec);
+                }
+                return new DateTime(year, month, day);
+            
+          
 
         }
 
@@ -365,7 +366,7 @@ namespace ParishSystem
 
         public DataTable getGeneralProfile(int profileID)
         {
-            string q = "SELECT firstName, midName, lastName, suffix, gender, DATE(birthdate), address, birthplace, contactNumber, bloodType FROM generalProfile WHERE profileID = " + profileID;
+            string q = "SELECT *, firstName, midName, lastName, suffix, gender, DATE(birthdate), address, birthplace, contactNumber, bloodType FROM generalProfile WHERE profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
