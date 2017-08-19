@@ -13,8 +13,7 @@ using System.Text.RegularExpressions;
 namespace ParishSystem
 {
     class treasurerBackend :DataHandler
-    {
-        
+    {     
         public treasurerBackend()
         {
                     }
@@ -833,6 +832,21 @@ namespace ParishSystem
                 }
             }
             return output;
+        }
+        
+        public DataTable getBloodlettingDonorsLike(string name)
+        {
+            string q = $@"select generalprofile.profileid , concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as 
+                    name,count(blooddonationid),address from generalprofile inner join blooddonation
+                    on blooddonation.profileID = generalprofile.profileID where firstname like ""%{name}%"" or lastname like ""%{name}%""
+                    group by generalprofile.profileID";
+            return runQuery(q);
+           
+        }
+        public DataTable getBloodlettingEventsLike(string name)
+        {
+            string q = $@"SELECT * FROM sad2.blooddonationevent where eventName like ""%{name}%""";
+            return runQuery(q);
         }
     }
 }

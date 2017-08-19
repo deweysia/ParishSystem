@@ -1275,11 +1275,11 @@ namespace ParishSystem
 
         private void refreshBloodDonors()
         {
-            donor_dgv.DataSource = dh.getBloodDonors();
-            donor_dgv.Columns[0].Visible = false;
-            donor_dgv.Columns[1].HeaderText = "Name";
-            donor_dgv.Columns[2].HeaderText = "Total Donated";
-            donor_dgv.Columns[3].HeaderText = "Address";
+            bloodletting_dgv.DataSource = dh.getBloodDonors();
+            bloodletting_dgv.Columns[0].Visible = false;
+            bloodletting_dgv.Columns[1].HeaderText = "Name";
+            bloodletting_dgv.Columns[2].HeaderText = "Total Donated";
+            bloodletting_dgv.Columns[3].HeaderText = "Address";
         }
         private void add_button_donor_Click(object sender, EventArgs e)
         {
@@ -1294,7 +1294,7 @@ namespace ParishSystem
         }
         private void donor_dgv_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Form A = new Bloodletting_Profile_Popup(int.Parse(donor_dgv.CurrentRow.Cells["profileid"].Value.ToString()), dh);
+            Form A = new Bloodletting_Profile_Popup(int.Parse(bloodletting_dgv.CurrentRow.Cells["profileid"].Value.ToString()), dh);
             A.ShowDialog();
             refreshBloodDonors();
         }
@@ -1305,13 +1305,13 @@ namespace ParishSystem
         #region bloodletting event
         private void refreshEvents()
         {
-            bloodletingevents_dgv.DataSource = dh.getBloodlettingEvents();
-            bloodletingevents_dgv.Columns["eventName"].HeaderText = "Name";
-            bloodletingevents_dgv.Columns["startDateTime"].HeaderText = "Start";
-            bloodletingevents_dgv.Columns["endDateTime"].HeaderText = "End";
-            bloodletingevents_dgv.Columns["eventVenue"].HeaderText = "Venue";
-            bloodletingevents_dgv.Columns["eventDetails"].HeaderText = "Details";
-            bloodletingevents_dgv.Columns["bloodDonationEventID"].Visible = false;
+            bloodletting_dgv.DataSource = dh.getBloodlettingEvents();
+            bloodletting_dgv.Columns["eventName"].HeaderText = "Name";
+            bloodletting_dgv.Columns["startDateTime"].HeaderText = "Start";
+            bloodletting_dgv.Columns["endDateTime"].HeaderText = "End";
+            bloodletting_dgv.Columns["eventVenue"].HeaderText = "Venue";
+            bloodletting_dgv.Columns["eventDetails"].HeaderText = "Details";
+            bloodletting_dgv.Columns["bloodDonationEventID"].Visible = false;
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -1378,12 +1378,12 @@ namespace ParishSystem
         }
         #endregion
 
-        private void controlbox_Paint(object sender, PaintEventArgs e)
+        private void search_button_blooddonors_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Treasurer_Load(object sender, EventArgs e)
+        private void bloodlettingreports_panel_Paint(object sender, PaintEventArgs e)
         {
 
         }

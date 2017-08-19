@@ -2744,7 +2744,7 @@ namespace ParishSystem
         }
         public DataTable getApplicationsOf(int profileID)
         {
-            string q = "select * from generalprofile inner join applicant on applicant.profileID=generalprofile.profileID inner join application on applicant.applicationID=application.applicationID where generalProfile.profileID=" + profileID;
+            string q = $@"select * from generalprofile inner join applicant on applicant.profileID=generalprofile.profileID inner join application on applicant.applicationID=application.applicationID where (status = {(int)ApplicationStatus.Final} or status = {(int)ApplicationStatus.Approved}) and generalProfile.profileID=" + profileID;
             return runQuery(q);
         }
         public void editFather(int profileID, string fn, string mi, string ln, string sf, string residence, string birthplace)
