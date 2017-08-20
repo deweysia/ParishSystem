@@ -450,7 +450,7 @@ namespace ParishSystem
         public DataTable getApplicationIncomeDetails(int applicationID)
         {
             string q = "SELECT sacramentIncome.sacramentIncomeID, price, sacramentincome.remarks, "
-                + "COALESCE(SUM(paymentAmount),0) AS 'totalPayment' "
+                + "COALESCE(SUM(amount),0) AS 'totalPayment' "
                 + "FROM Application NATURAL JOIN SacramentIncome "
                 + "LEFT JOIN Payment ON Payment.sacramentIncomeID = sacramentIncome.sacramentIncomeID"
                 + " WHERE applicationID = " + applicationID;
@@ -879,10 +879,11 @@ namespace ParishSystem
 
             return success;
         }
-        public void addPayment(int sacramentIncomeID, int primaryIncomeID, decimal amount)
+        public bool addPayment(int sacramentIncomeID, int primaryIncomeID, decimal amount)
         {
             string q = $"INSERT INTO `sad2`.`payment` (`sacramentIncomeID`, `primaryIncomeID`, `amount`) VALUES ({sacramentIncomeID}, {primaryIncomeID}, {amount})";
-            runNonQuery(q);
+            bool success = runNonQuery(q);
+            return success;
         }
         public DataTable getSacramentIncomeOfID(int sacramentIncomeID)
         {
@@ -911,11 +912,11 @@ namespace ParishSystem
             return new DataTable();
         }
 
-        public bool addPayment(int sacramentIncomeID, double paymentAmount, int ORnum, string remarks, DateTime paymentDateTime)
+        public bool addSacramentPayment(int sacramentIncomeID, double amount, int ORnum, string remarks, DateTime paymentDateTime)
         {
-            string q = "INSERT INTO Payment(sacramentIncomeID, paymentAmount, ORnum, remarks, paymentDateTime) VALUES ('"
-                + sacramentIncomeID + "', '" + paymentAmount + "', '" + ORnum + "', '" + remarks + "', NOW())";
-            bool success = runNonQuery(q);
+
+            bool success = addPrimaryIncome((int)BookType.Parish, ORnum, remarks);
+            success &= addPayment(sacramentIncomeID, getLatestID("PrimaryIncome", "primaryIncomeID"), Convert.ToDecimal(amount));
 
             return success;
         }
@@ -923,7 +924,7 @@ namespace ParishSystem
         public double getTotalPaymentOfSacramentIncome(int sacramentIncomeID)
         {
             //AS sum
-            string q = "SELECT COALESCE(SUM(paymentAmount), 0) AS sum FROM Payment WHERE sacramentIncomeID = " + sacramentIncomeID;
+            string q = "SELECT COALESCE(SUM(amount), 0) AS sum FROM Payment WHERE sacramentIncomeID = " + sacramentIncomeID;
 
             DataTable dt = runQuery(q);
 
@@ -1028,7 +1029,7 @@ namespace ParishSystem
 
         public double getTotalPayment(int incomeID)
         {
-            string q = "SELECT SUM(paymentAmount) FROM SacramentIncome JOIN Payment ON SacramentIncome.SacramentIncomeID = Invoice.invoiceID WHERE Income.incomeID = " + incomeID;
+            string q = "SELECT SUM(amount) FROM SacramentIncome JOIN Payment ON SacramentIncome.SacramentIncomeID = Invoice.invoiceID WHERE Income.incomeID = " + incomeID;
 
             DataTable dt = runQuery(q);
 
@@ -1052,7 +1053,7 @@ namespace ParishSystem
 
         public int getNextOR(BookType type)
         {
-            string q = "SELECT COALESCE(MAX(ORnum), 0) + 1 FROM SacramentIncome NATURAL JOIN ItemType JOIN Payment ON SacramentIncome.SacramentIncomeID = Payment.SacramentIncomeID WHERE bookType = " + (int)type;
+            string q = "SELECT COALESCE(MAX(ORnum), 0) + 1 FROM PrimaryIncome WHERE bookType = " + (int) type;
             DataTable dt = runQuery(q);
 
             return int.Parse(dt.Rows[0][0].ToString());
@@ -1060,10 +1061,11 @@ namespace ParishSystem
 
         public DataTable getPaymentHistory(int sacramentIncomeID)
         {
-            string q = "SELECT paymentAmount, ORnum, Payment.remarks, paymentDateTime "
-                + "FROM Payment JOIN SacramentIncome ON SacramentIncome.SacramentIncomeID = Payment.SacramentIncomeID "
-                + " NATURAL JOIN Application "
-                + "WHERE SacramentIncome.sacramentIncomeID = " + sacramentIncomeID;
+            string q = "SELECT Payment.amount, PrimaryIncome.ORnum, PrimaryIncome.remarks, primaryIncomeDateTime "
+                + "FROM Payment NATURAL JOIN PrimaryIncome "
+                + " JOIN SacramentIncome ON SacramentIncome.SacramentIncomeID = Payment.SacramentIncomeID "
+                + " NATURAL JOIN Application"
+                + " WHERE SacramentIncome.sacramentIncomeID = " + sacramentIncomeID;
 
             DataTable dt = runQuery(q);
 
@@ -2893,6 +2895,14 @@ namespace ParishSystem
             string q = $"INSERT INTO `sad2`.`primaryincome` ( `sourceName`, `bookType`, `ORnum`, `remarks`, `primaryIncomeDateTime`) VALUES ('{sourceName}', '{bookType}', '{ORnum}', '{remarks}', '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}'); SELECT LAST_INSERT_ID();";
             return int.Parse(runQuery(q).Rows[0][0].ToString());
         }
+
+        public bool addPrimaryIncome(int bookType, int ORnum, string remarks)
+        {
+            string q = "INSERT INTO PrimaryIncome(bookType, ORnum, remarks) VALUES (@bookType, @ORnum, @remarks)";
+            bool success = ExecuteNonQuery(q, bookType, ORnum, remarks);
+            return success;
+        }
+
         public void addItem(int itemTypeID, int primaryIncomeID, decimal price, int quantity)
         {
             string q = $"INSERT INTO `sad2`.`item` (`itemTypeID`, `primaryIncomeID`, `price`, `quantity`) VALUES ('{itemTypeID}', '{primaryIncomeID}', '{price}', '{quantity}')";

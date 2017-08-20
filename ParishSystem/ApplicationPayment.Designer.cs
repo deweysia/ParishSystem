@@ -41,9 +41,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.dgvPaymentHistory = new MetroFramework.Controls.MetroGrid();
-            this.OR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paymentAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paymentDateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnPay = new MetroFramework.Controls.MetroButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,6 +49,9 @@
             this.lblBalance = new System.Windows.Forms.Label();
             this.nudPayment = new ParishSystem.HiddenNumericUpDown();
             this.txtRemarks = new ParishSystem.CueTextBox();
+            this.OR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paymentDateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaymentHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPayment)).BeginInit();
@@ -185,7 +185,7 @@
             this.dgvPaymentHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPaymentHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.OR,
-            this.paymentAmount,
+            this.amount,
             this.paymentDateTime});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -217,29 +217,6 @@
             this.dgvPaymentHistory.TabIndex = 3;
             this.dgvPaymentHistory.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPaymentHistory_CellFormatting);
             this.dgvPaymentHistory.VisibleChanged += new System.EventHandler(this.dgvPaymentHistory_VisibleChanged);
-            // 
-            // OR
-            // 
-            this.OR.DataPropertyName = "ORnum";
-            this.OR.HeaderText = "OR";
-            this.OR.Name = "OR";
-            this.OR.ReadOnly = true;
-            // 
-            // paymentAmount
-            // 
-            this.paymentAmount.DataPropertyName = "paymentAmount";
-            this.paymentAmount.FillWeight = 80F;
-            this.paymentAmount.HeaderText = "Amount Paid";
-            this.paymentAmount.Name = "paymentAmount";
-            this.paymentAmount.ReadOnly = true;
-            // 
-            // paymentDateTime
-            // 
-            this.paymentDateTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.paymentDateTime.DataPropertyName = "paymentDateTime";
-            this.paymentDateTime.HeaderText = "Payment Date";
-            this.paymentDateTime.Name = "paymentDateTime";
-            this.paymentDateTime.ReadOnly = true;
             // 
             // btnPay
             // 
@@ -318,6 +295,29 @@
             this.txtRemarks.Size = new System.Drawing.Size(150, 51);
             this.txtRemarks.TabIndex = 10;
             // 
+            // OR
+            // 
+            this.OR.DataPropertyName = "ORnum";
+            this.OR.HeaderText = "OR";
+            this.OR.Name = "OR";
+            this.OR.ReadOnly = true;
+            // 
+            // amount
+            // 
+            this.amount.DataPropertyName = "amount";
+            this.amount.FillWeight = 80F;
+            this.amount.HeaderText = "Amount Paid";
+            this.amount.Name = "amount";
+            this.amount.ReadOnly = true;
+            // 
+            // paymentDateTime
+            // 
+            this.paymentDateTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.paymentDateTime.DataPropertyName = "paymentDateTime";
+            this.paymentDateTime.HeaderText = "Payment Date";
+            this.paymentDateTime.Name = "paymentDateTime";
+            this.paymentDateTime.ReadOnly = true;
+            // 
             // ApplicationPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,9 +365,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblBalance;
         private CueTextBox txtRemarks;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paymentAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paymentDateTime;
         private HiddenNumericUpDown nudPayment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paymentDateTime;
     }
 }

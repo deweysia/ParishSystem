@@ -634,6 +634,7 @@
     <Content Include="database\SQLDB_V9.sql" />
     <Content Include="database\updatedDB.sql" />
     <Content Include="database\SQLDB_V6.sql" />
+    <Content Include="database\V10.sql" />
     <Content Include="obj\Debug\ParishSystem.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\ParishSystem.exe" />
     <Content Include="obj\Debug\ParishSystem.pdb" />

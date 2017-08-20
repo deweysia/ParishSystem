@@ -70,10 +70,15 @@ namespace ParishSystem
         private void btnPay_Click(object sender, EventArgs e)
         {
             double payment = Convert.ToDouble(nudPayment.Value);
+            if (payment == 0)
+            {
+                SystemNotification.Notify(State.PaymentZero);
+                return;
+            }
             uint ORnum = uint.Parse(lblOR.Text);
             string remarks = txtRemarks.Text;
             DateTime dt = DateTime.ParseExact(lblDate.Text, "yyyy-MM-dd", null);
-            bool success = dh.addPayment(sacramentIncomeID, payment, int.Parse(lblOR.Text), txtRemarks.Text, dt);
+            bool success = dh.addSacramentPayment(sacramentIncomeID, payment, int.Parse(lblOR.Text), txtRemarks.Text, dt);
 
             if(success)
                 Notification.Show("Successfully added payment!", NotificationType.success);
