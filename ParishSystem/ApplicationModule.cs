@@ -97,14 +97,19 @@ namespace ParishSystem
         /// <param name="t"></param>
         public void loadApplications(SacramentType t)
         {
-            DataGridView dgv = getDataGridView(t);
-            ComboBox filter = getFilter(t);
-            dgv.AutoGenerateColumns = false;
-            BindingSource bs = new BindingSource();
-            bs.DataSource = dh.getApplications(t);
-            dgv.DataSource = bs;
-            dgv.ClearSelection();
-            filter.SelectedIndex = 0;
+            //Dewey naga cause ng error so temporarily i try catch ko pls fix this
+            try
+            {
+                DataGridView dgv = getDataGridView(t);
+                ComboBox filter = getFilter(t);
+                dgv.AutoGenerateColumns = false;
+                BindingSource bs = new BindingSource();
+                bs.DataSource = dh.getApplications(t);
+                dgv.DataSource = bs;
+                dgv.ClearSelection();
+                filter.SelectedIndex = 0;
+            }
+            catch { }
 
         }
 

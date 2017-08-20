@@ -12,29 +12,21 @@ namespace ParishSystem
 {
     public partial class SAD2 : Form
     {
-
+        Color ButtonPressed = Color.DodgerBlue;
+        Color ButtonBackColor = Color.Gainsboro;
         DataHandler dh = DataHandler.getDataHandler();
         Point lastClick;
-
-        Dictionary<Button, Panel> navigation = new Dictionary<Button, Panel>();
-        //Dictionary<Panel, Form> forms = new Dictionary<Panel, Form>();
+        Dictionary<Button, Panel_Size_Pair> SubMenu= new Dictionary<Button, Panel_Size_Pair>();
         public SAD2()
         {
             InitializeComponent();
-            //Add dictionary for navigation buttons
-            navigation.Add(home_button_menu, profile_panel);
-            navigation.Add(profile_menu_button, profile_panel);
-            navigation.Add(bloodletting_button_menu, bloodletting_panel);
-            navigation.Add(CDB_button_menu, CDB_panel);
-            navigation.Add(CRB_button_menu, CRB_panel);
-            navigation.Add(application_button_menu, application_panel);
-            navigation.Add(sacrament_button_menu, sacrament_panel);
-            navigation.Add(scheduling_button_menu, schedule_panel);
-
-            
-
-            
-        }
+            SubMenu.Add(bloodletting_button_menu,new Panel_Size_Pair(175,58,bloodlettingmenu_panel,false));
+            SubMenu.Add(CRB_button_menu, new Panel_Size_Pair(234, 58, CRBmenu_panel, false));
+            SubMenu.Add(CDB_button_menu, new Panel_Size_Pair(234, 58, CDB_menu_panel, false));
+            SubMenu.Add(itemtypemenu_button, new Panel_Size_Pair(175, 58, itemtypemenu_panel, false));
+            SubMenu.Add(CDBreport_button, new Panel_Size_Pair(234, 58, CDBreport_panel, false));
+            SubMenu.Add(CRBreport_button, new Panel_Size_Pair(234, 58, CRBreport_panel, false));
+        }//CRBreport_panel
 
         #region Effects
         protected override void WndProc(ref Message m)
@@ -56,11 +48,7 @@ namespace ParishSystem
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void home_button_menu_Click(object sender, EventArgs e)
-        {
-            Button A = sender as Button;
-            navigation[A].BringToFront();
-        }
+      
 
         #endregion
 
@@ -108,7 +96,7 @@ namespace ParishSystem
             s.Controls.Add(f);
 
             f.FormBorderStyle = FormBorderStyle.None;
-            
+
             f.Dock = DockStyle.Fill;
             f.Show();
         }
@@ -120,51 +108,230 @@ namespace ParishSystem
 
         }
 
-        private void profile_panel_VisibleChanged(object sender, EventArgs e)
+
+        int coefficientOfChangeOfMenu = 1;//this for initial speed is for speed of timer, reset every stop
+        private void MenuTimer_Tick(object sender, EventArgs e)
         {
-            ProfileModule f = new ProfileModule();
-            showForm(sender, f);
+            if (menuUp)
+            {
+                if (Menu_panel.Location.Y <= 0) { MenuTimer.Stop(); coefficientOfChangeOfMenu = 1; OpenMenu_button.Enabled = true; Menu_panel.BackColor = Color.FromArgb(115,115,115); menuUp = false; }
+                else
+                {
+                    Menu_panel.Location = new Point(Menu_panel.Location.X, Menu_panel.Location.Y - coefficientOfChangeOfMenu);
+                    Menu_panel.BackColor = Color.FromArgb(Menu_panel.BackColor.R -4, Menu_panel.BackColor.G - 4, Menu_panel.BackColor.B - 4);
+                    coefficientOfChangeOfMenu++;
+                }
+            }
+            else
+            {
+                if (Menu_panel.Location.Y >= 545) { MenuTimer.Stop(); coefficientOfChangeOfMenu = 1; OpenMenu_button.Enabled = true; Menu_panel.BackColor = Color.FromArgb(255,255,255); menuUp = true; }
+                else
+                {
+                    Menu_panel.Location = new Point(Menu_panel.Location.X, Menu_panel.Location.Y + coefficientOfChangeOfMenu);
+                    Menu_panel.BackColor = Color.FromArgb(Menu_panel.BackColor.R + 3, Menu_panel.BackColor.G + 3, Menu_panel.BackColor.B + 3);
+                    coefficientOfChangeOfMenu++;
+                }
+            }
+        }
+        bool menuUp = true;
+        private void OpenMenu_button_Click(object sender, EventArgs e)
+        {
+            Menu_panel.BringToFront();
+            OpenMenu_button.Enabled = false;
+            MenuTimer.Start();
+            
         }
 
-        private void sacrament_panel_VisibleChanged(object sender, EventArgs e)
+        private void btn_Close_Click_1(object sender, EventArgs e)
         {
-            SacramentModule f = new SacramentModule(dh);
-            showForm(sender, f);
+            this.Close();
         }
 
-        private void schedule_panel_VisibleChanged(object sender, EventArgs e)
+        private void tile_Click(object sender, EventArgs e)
         {
-            ScheduleModule f = new ScheduleModule();
-            showForm(sender, f);
+            Button A = (sender as Button);
+            opensize = SubMenu[A].OpenSize;
+            closesize = SubMenu[A].CloseSize;
+            PanelToMove = SubMenu[A].panel;
+            open = SubMenu[A].open;
+            SubMenu[A].open= !(SubMenu[A].open);
+            Panel_Timer.Start();
+            
+        }
+        int closesize = 0;
+        int opensize = 0;
+        Panel PanelToMove;
+        bool open;
+        int coefficientOfChangeOfPanel = 1;
+         
+        private void Panel_Timer_Tick(object sender, EventArgs e)
+        {
+            if (!open)
+            {
+                if (opensize >= PanelToMove.Height)
+                {
+                    PanelToMove.Height = PanelToMove.Height + coefficientOfChangeOfPanel;
+                    coefficientOfChangeOfPanel++;
+                    
+                }
+                else
+                {
+                    Panel_Timer.Stop();
+                    PanelToMove.Height = opensize;
+                    coefficientOfChangeOfPanel = 1;
+                }
+            }
+            else
+            {
+               
+                if (PanelToMove.Height >= closesize)
+                {
+                    PanelToMove.Height = PanelToMove.Height - coefficientOfChangeOfPanel;
+                    coefficientOfChangeOfPanel++;
+                  
+                }
+                else
+                {
+                    Panel_Timer.Stop();
+                    PanelToMove.Height = closesize;
+                    coefficientOfChangeOfPanel = 1;
+                }
+            }
         }
 
-        private void CDB_panel_VisibleChanged(object sender, EventArgs e)
+     
+      
+        private void SubMenuClick(object sender, EventArgs e)
         {
-            CDB_FullPayment_Module f = new CDB_FullPayment_Module(0);
-            showForm(sender, f);
+            resetButtonColors();
+            Button A = sender as Button;
+            A.BackColor = ButtonPressed;
+            OpenMenu_button.PerformClick();
+            closeAllSubMenu();
+        }
+        private void closeAllSubMenu()
+        {
+            foreach (KeyValuePair<Button, Panel_Size_Pair> pair in SubMenu)
+            {
+                if ((pair.Value).open)
+                {
+                    pair.Key.PerformClick();
+                }
+            }
         }
 
-        private void CRB_panel_VisibleChanged(object sender, EventArgs e)
+        private void resetButtonColors()
         {
-            CashRelease_Module f = new CashRelease_Module(0);
-            showForm(sender, f);
+            application_button_menu.BackColor = ButtonBackColor;
+            profile_menu_button.BackColor = ButtonBackColor;
+            scheduling_button_menu.BackColor = ButtonBackColor;
+            bloodlettingdonor_button.BackColor = ButtonBackColor;
+            bloodlettingevent_button.BackColor = ButtonBackColor;
+            sacrament_button_menu.BackColor = ButtonBackColor;
+            CRBparish_button_menu.BackColor = ButtonBackColor;
+            CRBcommunity_button_menu.BackColor = ButtonBackColor;
+            CRBpostulancy_button_menu.BackColor = ButtonBackColor;
+            CDBparish_button_menu.BackColor = ButtonBackColor;
+            CDBcommunity_button_menu.BackColor = ButtonBackColor;
+            CDBpostulancy_button_menu.BackColor = ButtonBackColor;
+            itemtypemenuCRB_button.BackColor = ButtonBackColor;
+            itemtypemenuCDB_button.BackColor = ButtonBackColor;
+            CDBreport_parish.BackColor = ButtonBackColor;
+            CDBreport_community.BackColor = ButtonBackColor;
+            CDBreport_postulancy.BackColor = ButtonBackColor;
+            CRBparishreport_button.BackColor = ButtonBackColor;
+            CRBcommunityreport_button.BackColor = ButtonBackColor;
+            CRBpostulancyreport_button.BackColor = ButtonBackColor;
+            itemtypemenu_button.BackColor = ButtonBackColor;
+            CDB_button_menu.BackColor = ButtonBackColor;
+            CRB_button_menu.BackColor = ButtonBackColor;
+            bloodletting_button_menu.BackColor = ButtonBackColor;
+            CRBreport_button.BackColor = ButtonBackColor;
+            CDBreport_button.BackColor = ButtonBackColor;
         }
 
-        private void home_panel_VisibleChanged(object sender, EventArgs e)
+        private void bloodlettingdonor_button_MouseClick(object sender, MouseEventArgs e)
         {
-            HomeModule f = new HomeModule();
-            showForm(sender, f);
+            bloodletting_button_menu.PerformClick();
         }
 
-        private void bloodletting_panel_VisibleChanged(object sender, EventArgs e)
+        private void bloodlettingevent_button_MouseClick(object sender, MouseEventArgs e)
         {
-            Bloodletting_Module f = new Bloodletting_Module(0);
-            showForm(sender, f);
+            bloodletting_button_menu.PerformClick();
         }
 
-        private void panel_controlbox_Paint(object sender, PaintEventArgs e)
+        private void CRBparish_button_menu_MouseClick(object sender, MouseEventArgs e)
         {
-
+            CRB_button_menu.PerformClick();
         }
+
+        private void CRBcommunity_button_menu_MouseClick(object sender, MouseEventArgs e)
+        {
+            CRB_button_menu.PerformClick();
+        }
+
+        private void CRBpostulancy_button_menu_MouseClick(object sender, MouseEventArgs e)
+        {
+            CRB_button_menu.PerformClick();
+        }
+
+        private void CDBparish_button_menu_MouseClick(object sender, MouseEventArgs e)
+        {
+            CDB_button_menu.PerformClick();
+        }
+
+        private void CDBcommunity_button_menu_MouseClick(object sender, MouseEventArgs e)
+        {
+            CDB_button_menu.PerformClick();
+        }
+
+        private void CDBpostulancy_button_menu_MouseClick(object sender, MouseEventArgs e)
+        {
+            CDB_button_menu.PerformClick();
+        }
+
+        private void itemtypemenuCRB_button_MouseClick(object sender, MouseEventArgs e)
+        {
+            itemtypemenu_button.PerformClick();
+        }
+
+        private void itemtypemenuCDB_button_MouseClick(object sender, MouseEventArgs e)
+        {
+            itemtypemenu_button.PerformClick();
+        }
+
+        private void CDBreport_parish_MouseClick(object sender, MouseEventArgs e)
+        {
+            CDBreport_button.PerformClick();
+        }
+
+        private void CDBreport_community_MouseClick(object sender, MouseEventArgs e)
+        {
+            CDBreport_button.PerformClick();
+        }
+
+        private void CDBreport_postulancy_MouseClick(object sender, MouseEventArgs e)
+        {
+            CDBreport_button.PerformClick();
+        }
+
+        private void CRBparishreport_button_MouseClick(object sender, MouseEventArgs e)
+        {
+            CRBreport_button.PerformClick();
+        }
+
+        private void CRBcommunityreport_button_MouseClick(object sender, MouseEventArgs e)
+        {
+            CRBreport_button.PerformClick();
+        }
+
+        private void CRBpostulancyreport_button_MouseClick(object sender, MouseEventArgs e)
+        {
+            CRBreport_button.PerformClick();
+        }
+
+     
     }
 }
+
+
