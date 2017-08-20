@@ -522,8 +522,6 @@ namespace ParishSystem
 
 
 
-
-
         /// <summary>
         /// Saves changes of requirements to the database
         /// </summary>

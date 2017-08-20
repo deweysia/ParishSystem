@@ -41,7 +41,6 @@
             this.midName_textBox = new System.Windows.Forms.TextBox();
             this.lastName_textBox = new System.Windows.Forms.TextBox();
             this.suffix_textBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.apply_button = new MetroFramework.Controls.MetroButton();
@@ -190,16 +189,6 @@
             this.suffix_textBox.Enter += new System.EventHandler(this.name_textBox_Enter);
             this.suffix_textBox.Leave += new System.EventHandler(this.name_textBox_Leave);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(207, 97);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ParishSystem.Properties.Resources.Delete_32px;
@@ -297,7 +286,6 @@
             this.Controls.Add(this.remarks_textBox);
             this.Controls.Add(this.application_remarks_textBox);
             this.Controls.Add(this.price_textBox);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lastName_textBox);
             this.Controls.Add(this.suffix_textBox);
@@ -341,7 +329,6 @@
         private System.Windows.Forms.TextBox midName_textBox;
         private System.Windows.Forms.TextBox firstName_textBox;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
         private MetroFramework.Controls.MetroButton apply_button;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox remarks_textBox;

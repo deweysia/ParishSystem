@@ -161,5 +161,10 @@ namespace ParishSystem
             Bloodletting_Module f = new Bloodletting_Module(0);
             showForm(sender, f);
         }
+
+        private void panel_controlbox_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
