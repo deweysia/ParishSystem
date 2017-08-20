@@ -380,7 +380,10 @@ namespace ParishSystem
             }
 
             if (d == DialogResult.OK)
+            {
                 SystemNotification.Notify(State.ApplicationApproveSuccess);
+                loadApplications(type);
+            }
         }
 
         /// <summary>
@@ -712,7 +715,7 @@ namespace ParishSystem
         {//Might be really slow!
             if (e.ColumnIndex == 7)//Gender
                 e.Value = e.Value.ToString() == "1" ? "M" : "F";
-            else
+            else if (e.ColumnIndex == 9)
             {
                 switch (e.Value.ToString())
                 {

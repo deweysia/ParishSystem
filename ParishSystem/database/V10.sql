@@ -608,7 +608,7 @@ CREATE TABLE `sponsor` (
   `firstname` varchar(45) DEFAULT NULL,
   `midname` varchar(45) DEFAULT NULL,
   `lastname` varchar(45) DEFAULT NULL,
-  `suffix` int(11) DEFAULT NULL,
+  `suffix` varchar(45) DEFAULT NULL,
   `gender` varchar(45) DEFAULT NULL,
   `residence` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`sponsorID`),

@@ -744,7 +744,7 @@ namespace ParishSystem
 
         public bool addEditParent(int profileID, string PfirstName, string PmidName, string PlastName, string Psuffix, Gender Pgender, string PbirthPlace)
         {
-            DataTable dt = getParentsOf(profileID);
+            DataTable dt = getParentOf(profileID, Pgender);
 
             bool success = true;
             if (dt.Rows.Count == 0)
@@ -806,6 +806,7 @@ namespace ParishSystem
 
             return dt;
         }
+
         public DataTable getParent(int parentID)
         {
             string q = "SELECT * FROM Parent WHERE parentID = " + parentID;

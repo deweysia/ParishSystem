@@ -42,16 +42,6 @@
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.panel12 = new System.Windows.Forms.Panel();
             this.baptismApplication_dgv = new MetroFramework.Controls.MetroGrid();
-            this.BapplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BprofileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Brequirements = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BfirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BmidName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BlastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bsuffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bgender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bbirthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel16 = new System.Windows.Forms.Panel();
             this.baptismApplication_filter_cmb = new MetroFramework.Controls.MetroComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -63,10 +53,6 @@
             this.label86 = new System.Windows.Forms.Label();
             this.baptismApplication_profile_tlp = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.baptismApplication_firstName_textBox = new ParishSystem.CueTextBox();
-            this.baptismApplication_midName_textBox = new ParishSystem.CueTextBox();
-            this.baptismApplication_lastName_textBox = new ParishSystem.CueTextBox();
-            this.baptismApplication_suffix_textBox = new ParishSystem.CueTextBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.baptismApplication_male_radio = new MetroFramework.Controls.MetroRadioButton();
             this.baptismApplication_female_radio = new MetroFramework.Controls.MetroRadioButton();
@@ -113,10 +99,6 @@
             this.confirmationApplicationDetailsPanel = new MetroFramework.Controls.MetroPanel();
             this.confirmationApplication_profile_tlp = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
-            this.confirmationApplication_firstName_textBox = new ParishSystem.CueTextBox();
-            this.confirmationApplication_midName_textBox = new ParishSystem.CueTextBox();
-            this.confirmationApplication_lastName_textBox = new ParishSystem.CueTextBox();
-            this.confirmationApplication_suffix_textBox = new ParishSystem.CueTextBox();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.confirmationApplication_male_radio = new MetroFramework.Controls.MetroRadioButton();
             this.confirmationApplication_female_radio = new MetroFramework.Controls.MetroRadioButton();
@@ -166,16 +148,8 @@
             this.marriageApplicationDetailsPanel = new MetroFramework.Controls.MetroPanel();
             this.marriageApplication_profile_tlp = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtGFN = new ParishSystem.CueTextBox();
-            this.txtGMI = new ParishSystem.CueTextBox();
-            this.txtGLN = new ParishSystem.CueTextBox();
-            this.txtGSuffix = new ParishSystem.CueTextBox();
             this.dtpGBirthDate = new MetroFramework.Controls.MetroDateTime();
             this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtBFN = new ParishSystem.CueTextBox();
-            this.txtBMI = new ParishSystem.CueTextBox();
-            this.txtBLN = new ParishSystem.CueTextBox();
-            this.txtBSuffix = new ParishSystem.CueTextBox();
             this.dtpBBirthDate = new MetroFramework.Controls.MetroDateTime();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label95 = new System.Windows.Forms.Label();
@@ -210,6 +184,32 @@
             this.marriageApplication_approve_btn = new MetroFramework.Controls.MetroButton();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.BapplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BprofileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Brequirements = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BfirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BmidName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BlastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bsuffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bgender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bbirthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.baptismApplication_firstName_textBox = new ParishSystem.CueTextBox();
+            this.baptismApplication_midName_textBox = new ParishSystem.CueTextBox();
+            this.baptismApplication_lastName_textBox = new ParishSystem.CueTextBox();
+            this.baptismApplication_suffix_textBox = new ParishSystem.CueTextBox();
+            this.confirmationApplication_firstName_textBox = new ParishSystem.CueTextBox();
+            this.confirmationApplication_midName_textBox = new ParishSystem.CueTextBox();
+            this.confirmationApplication_lastName_textBox = new ParishSystem.CueTextBox();
+            this.confirmationApplication_suffix_textBox = new ParishSystem.CueTextBox();
+            this.txtGFN = new ParishSystem.CueTextBox();
+            this.txtGMI = new ParishSystem.CueTextBox();
+            this.txtGLN = new ParishSystem.CueTextBox();
+            this.txtGSuffix = new ParishSystem.CueTextBox();
+            this.txtBFN = new ParishSystem.CueTextBox();
+            this.txtBMI = new ParishSystem.CueTextBox();
+            this.txtBLN = new ParishSystem.CueTextBox();
+            this.txtBSuffix = new ParishSystem.CueTextBox();
             this.applicationTabControl.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -270,7 +270,7 @@
             this.applicationTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicationTabControl.Location = new System.Drawing.Point(0, 46);
             this.applicationTabControl.Name = "applicationTabControl";
-            this.applicationTabControl.SelectedIndex = 1;
+            this.applicationTabControl.SelectedIndex = 0;
             this.applicationTabControl.Size = new System.Drawing.Size(815, 486);
             this.applicationTabControl.TabIndex = 70;
             this.applicationTabControl.Tag = "Edit";
@@ -367,88 +367,6 @@
             this.baptismApplication_dgv.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.baptismApplication_dgv_CellEnter);
             this.baptismApplication_dgv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.baptismApplication_dgv_CellFormatting);
             this.baptismApplication_dgv.VisibleChanged += new System.EventHandler(this.baptismApplication_dgv_VisibleChanged);
-            // 
-            // BapplicationID
-            // 
-            this.BapplicationID.DataPropertyName = "applicationID";
-            this.BapplicationID.HeaderText = "applicationID";
-            this.BapplicationID.Name = "BapplicationID";
-            this.BapplicationID.ReadOnly = true;
-            this.BapplicationID.Visible = false;
-            // 
-            // BprofileID
-            // 
-            this.BprofileID.DataPropertyName = "profileID";
-            this.BprofileID.HeaderText = "profileID";
-            this.BprofileID.Name = "BprofileID";
-            this.BprofileID.ReadOnly = true;
-            this.BprofileID.Visible = false;
-            this.BprofileID.Width = 76;
-            // 
-            // Brequirements
-            // 
-            this.Brequirements.DataPropertyName = "requirements";
-            this.Brequirements.HeaderText = "requirements";
-            this.Brequirements.Name = "Brequirements";
-            this.Brequirements.ReadOnly = true;
-            this.Brequirements.Visible = false;
-            this.Brequirements.Width = 99;
-            // 
-            // BfirstName
-            // 
-            this.BfirstName.DataPropertyName = "firstName";
-            this.BfirstName.HeaderText = "First Name";
-            this.BfirstName.Name = "BfirstName";
-            this.BfirstName.ReadOnly = true;
-            this.BfirstName.Width = 85;
-            // 
-            // BmidName
-            // 
-            this.BmidName.DataPropertyName = "midName";
-            this.BmidName.HeaderText = "M.I.";
-            this.BmidName.Name = "BmidName";
-            this.BmidName.ReadOnly = true;
-            this.BmidName.Width = 50;
-            // 
-            // BlastName
-            // 
-            this.BlastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BlastName.DataPropertyName = "lastName";
-            this.BlastName.HeaderText = "Last Name";
-            this.BlastName.Name = "BlastName";
-            this.BlastName.ReadOnly = true;
-            // 
-            // Bsuffix
-            // 
-            this.Bsuffix.DataPropertyName = "suffix";
-            this.Bsuffix.HeaderText = "Suffix";
-            this.Bsuffix.Name = "Bsuffix";
-            this.Bsuffix.ReadOnly = true;
-            this.Bsuffix.Width = 60;
-            // 
-            // Bgender
-            // 
-            this.Bgender.DataPropertyName = "gender";
-            this.Bgender.HeaderText = "Gender";
-            this.Bgender.Name = "Bgender";
-            this.Bgender.ReadOnly = true;
-            this.Bgender.Width = 69;
-            // 
-            // Bbirthdate
-            // 
-            this.Bbirthdate.DataPropertyName = "birthdate";
-            this.Bbirthdate.HeaderText = "Birth Date";
-            this.Bbirthdate.Name = "Bbirthdate";
-            this.Bbirthdate.ReadOnly = true;
-            this.Bbirthdate.Width = 83;
-            // 
-            // Bstatus
-            // 
-            this.Bstatus.DataPropertyName = "status";
-            this.Bstatus.HeaderText = "Status";
-            this.Bstatus.Name = "Bstatus";
-            this.Bstatus.ReadOnly = true;
-            this.Bstatus.Width = 63;
             // 
             // panel16
             // 
@@ -606,46 +524,6 @@
             this.flowLayoutPanel6.Size = new System.Drawing.Size(226, 26);
             this.flowLayoutPanel6.TabIndex = 0;
             // 
-            // baptismApplication_firstName_textBox
-            // 
-            this.baptismApplication_firstName_textBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.baptismApplication_firstName_textBox.Cue = null;
-            this.baptismApplication_firstName_textBox.CueColor = System.Drawing.Color.Gray;
-            this.baptismApplication_firstName_textBox.Location = new System.Drawing.Point(3, 3);
-            this.baptismApplication_firstName_textBox.Name = "baptismApplication_firstName_textBox";
-            this.baptismApplication_firstName_textBox.Size = new System.Drawing.Size(75, 21);
-            this.baptismApplication_firstName_textBox.TabIndex = 31;
-            // 
-            // baptismApplication_midName_textBox
-            // 
-            this.baptismApplication_midName_textBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.baptismApplication_midName_textBox.Cue = null;
-            this.baptismApplication_midName_textBox.CueColor = System.Drawing.Color.Gray;
-            this.baptismApplication_midName_textBox.Location = new System.Drawing.Point(84, 3);
-            this.baptismApplication_midName_textBox.Name = "baptismApplication_midName_textBox";
-            this.baptismApplication_midName_textBox.Size = new System.Drawing.Size(25, 21);
-            this.baptismApplication_midName_textBox.TabIndex = 31;
-            // 
-            // baptismApplication_lastName_textBox
-            // 
-            this.baptismApplication_lastName_textBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.baptismApplication_lastName_textBox.Cue = null;
-            this.baptismApplication_lastName_textBox.CueColor = System.Drawing.Color.Gray;
-            this.baptismApplication_lastName_textBox.Location = new System.Drawing.Point(115, 3);
-            this.baptismApplication_lastName_textBox.Name = "baptismApplication_lastName_textBox";
-            this.baptismApplication_lastName_textBox.Size = new System.Drawing.Size(75, 21);
-            this.baptismApplication_lastName_textBox.TabIndex = 31;
-            // 
-            // baptismApplication_suffix_textBox
-            // 
-            this.baptismApplication_suffix_textBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.baptismApplication_suffix_textBox.Cue = null;
-            this.baptismApplication_suffix_textBox.CueColor = System.Drawing.Color.Gray;
-            this.baptismApplication_suffix_textBox.Location = new System.Drawing.Point(196, 3);
-            this.baptismApplication_suffix_textBox.Name = "baptismApplication_suffix_textBox";
-            this.baptismApplication_suffix_textBox.Size = new System.Drawing.Size(25, 21);
-            this.baptismApplication_suffix_textBox.TabIndex = 31;
-            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -683,7 +561,7 @@
             this.baptismApplication_birthDate_dtp.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.baptismApplication_birthDate_dtp.FontSize = MetroFramework.MetroDateTimeSize.Small;
             this.baptismApplication_birthDate_dtp.Location = new System.Drawing.Point(3, 68);
-            this.baptismApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(4, 25);
+            this.baptismApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(0, 25);
             this.baptismApplication_birthDate_dtp.Name = "baptismApplication_birthDate_dtp";
             this.baptismApplication_birthDate_dtp.Size = new System.Drawing.Size(185, 25);
             this.baptismApplication_birthDate_dtp.TabIndex = 26;
@@ -1241,46 +1119,6 @@
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
             this.flowLayoutPanel8.Size = new System.Drawing.Size(226, 26);
             this.flowLayoutPanel8.TabIndex = 0;
-            // 
-            // confirmationApplication_firstName_textBox
-            // 
-            this.confirmationApplication_firstName_textBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.confirmationApplication_firstName_textBox.Cue = null;
-            this.confirmationApplication_firstName_textBox.CueColor = System.Drawing.Color.Empty;
-            this.confirmationApplication_firstName_textBox.Location = new System.Drawing.Point(3, 3);
-            this.confirmationApplication_firstName_textBox.Name = "confirmationApplication_firstName_textBox";
-            this.confirmationApplication_firstName_textBox.Size = new System.Drawing.Size(75, 21);
-            this.confirmationApplication_firstName_textBox.TabIndex = 0;
-            // 
-            // confirmationApplication_midName_textBox
-            // 
-            this.confirmationApplication_midName_textBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.confirmationApplication_midName_textBox.Cue = null;
-            this.confirmationApplication_midName_textBox.CueColor = System.Drawing.Color.Empty;
-            this.confirmationApplication_midName_textBox.Location = new System.Drawing.Point(84, 3);
-            this.confirmationApplication_midName_textBox.Name = "confirmationApplication_midName_textBox";
-            this.confirmationApplication_midName_textBox.Size = new System.Drawing.Size(25, 21);
-            this.confirmationApplication_midName_textBox.TabIndex = 1;
-            // 
-            // confirmationApplication_lastName_textBox
-            // 
-            this.confirmationApplication_lastName_textBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.confirmationApplication_lastName_textBox.Cue = null;
-            this.confirmationApplication_lastName_textBox.CueColor = System.Drawing.Color.Empty;
-            this.confirmationApplication_lastName_textBox.Location = new System.Drawing.Point(115, 3);
-            this.confirmationApplication_lastName_textBox.Name = "confirmationApplication_lastName_textBox";
-            this.confirmationApplication_lastName_textBox.Size = new System.Drawing.Size(75, 21);
-            this.confirmationApplication_lastName_textBox.TabIndex = 0;
-            // 
-            // confirmationApplication_suffix_textBox
-            // 
-            this.confirmationApplication_suffix_textBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.confirmationApplication_suffix_textBox.Cue = null;
-            this.confirmationApplication_suffix_textBox.CueColor = System.Drawing.Color.Empty;
-            this.confirmationApplication_suffix_textBox.Location = new System.Drawing.Point(196, 3);
-            this.confirmationApplication_suffix_textBox.Name = "confirmationApplication_suffix_textBox";
-            this.confirmationApplication_suffix_textBox.Size = new System.Drawing.Size(25, 21);
-            this.confirmationApplication_suffix_textBox.TabIndex = 1;
             // 
             // flowLayoutPanel4
             // 
@@ -1911,42 +1749,6 @@
             this.flowLayoutPanel9.Size = new System.Drawing.Size(226, 24);
             this.flowLayoutPanel9.TabIndex = 0;
             // 
-            // txtGFN
-            // 
-            this.txtGFN.Cue = null;
-            this.txtGFN.CueColor = System.Drawing.Color.Empty;
-            this.txtGFN.Location = new System.Drawing.Point(3, 3);
-            this.txtGFN.Name = "txtGFN";
-            this.txtGFN.Size = new System.Drawing.Size(75, 21);
-            this.txtGFN.TabIndex = 0;
-            // 
-            // txtGMI
-            // 
-            this.txtGMI.Cue = null;
-            this.txtGMI.CueColor = System.Drawing.Color.Empty;
-            this.txtGMI.Location = new System.Drawing.Point(84, 3);
-            this.txtGMI.Name = "txtGMI";
-            this.txtGMI.Size = new System.Drawing.Size(25, 21);
-            this.txtGMI.TabIndex = 1;
-            // 
-            // txtGLN
-            // 
-            this.txtGLN.Cue = null;
-            this.txtGLN.CueColor = System.Drawing.Color.Empty;
-            this.txtGLN.Location = new System.Drawing.Point(115, 3);
-            this.txtGLN.Name = "txtGLN";
-            this.txtGLN.Size = new System.Drawing.Size(75, 21);
-            this.txtGLN.TabIndex = 0;
-            // 
-            // txtGSuffix
-            // 
-            this.txtGSuffix.Cue = null;
-            this.txtGSuffix.CueColor = System.Drawing.Color.Empty;
-            this.txtGSuffix.Location = new System.Drawing.Point(196, 3);
-            this.txtGSuffix.Name = "txtGSuffix";
-            this.txtGSuffix.Size = new System.Drawing.Size(25, 21);
-            this.txtGSuffix.TabIndex = 1;
-            // 
             // dtpGBirthDate
             // 
             this.dtpGBirthDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -1968,42 +1770,6 @@
             this.flowLayoutPanel10.Name = "flowLayoutPanel10";
             this.flowLayoutPanel10.Size = new System.Drawing.Size(226, 24);
             this.flowLayoutPanel10.TabIndex = 9;
-            // 
-            // txtBFN
-            // 
-            this.txtBFN.Cue = null;
-            this.txtBFN.CueColor = System.Drawing.Color.Empty;
-            this.txtBFN.Location = new System.Drawing.Point(3, 3);
-            this.txtBFN.Name = "txtBFN";
-            this.txtBFN.Size = new System.Drawing.Size(75, 21);
-            this.txtBFN.TabIndex = 0;
-            // 
-            // txtBMI
-            // 
-            this.txtBMI.Cue = null;
-            this.txtBMI.CueColor = System.Drawing.Color.Empty;
-            this.txtBMI.Location = new System.Drawing.Point(84, 3);
-            this.txtBMI.Name = "txtBMI";
-            this.txtBMI.Size = new System.Drawing.Size(25, 21);
-            this.txtBMI.TabIndex = 1;
-            // 
-            // txtBLN
-            // 
-            this.txtBLN.Cue = null;
-            this.txtBLN.CueColor = System.Drawing.Color.Empty;
-            this.txtBLN.Location = new System.Drawing.Point(115, 3);
-            this.txtBLN.Name = "txtBLN";
-            this.txtBLN.Size = new System.Drawing.Size(75, 21);
-            this.txtBLN.TabIndex = 0;
-            // 
-            // txtBSuffix
-            // 
-            this.txtBSuffix.Cue = null;
-            this.txtBSuffix.CueColor = System.Drawing.Color.Empty;
-            this.txtBSuffix.Location = new System.Drawing.Point(196, 3);
-            this.txtBSuffix.Name = "txtBSuffix";
-            this.txtBSuffix.Size = new System.Drawing.Size(25, 21);
-            this.txtBSuffix.TabIndex = 1;
             // 
             // dtpBBirthDate
             // 
@@ -2409,6 +2175,240 @@
             this.label1.TabIndex = 37;
             this.label1.Text = "APPLICATIONS";
             // 
+            // BapplicationID
+            // 
+            this.BapplicationID.DataPropertyName = "applicationID";
+            this.BapplicationID.HeaderText = "applicationID";
+            this.BapplicationID.Name = "BapplicationID";
+            this.BapplicationID.ReadOnly = true;
+            this.BapplicationID.Visible = false;
+            // 
+            // BprofileID
+            // 
+            this.BprofileID.DataPropertyName = "profileID";
+            this.BprofileID.HeaderText = "profileID";
+            this.BprofileID.Name = "BprofileID";
+            this.BprofileID.ReadOnly = true;
+            this.BprofileID.Visible = false;
+            this.BprofileID.Width = 76;
+            // 
+            // Brequirements
+            // 
+            this.Brequirements.DataPropertyName = "requirements";
+            this.Brequirements.HeaderText = "requirements";
+            this.Brequirements.Name = "Brequirements";
+            this.Brequirements.ReadOnly = true;
+            this.Brequirements.Visible = false;
+            this.Brequirements.Width = 99;
+            // 
+            // BfirstName
+            // 
+            this.BfirstName.DataPropertyName = "firstName";
+            this.BfirstName.HeaderText = "First Name";
+            this.BfirstName.Name = "BfirstName";
+            this.BfirstName.ReadOnly = true;
+            this.BfirstName.Width = 85;
+            // 
+            // BmidName
+            // 
+            this.BmidName.DataPropertyName = "midName";
+            this.BmidName.HeaderText = "M.I.";
+            this.BmidName.Name = "BmidName";
+            this.BmidName.ReadOnly = true;
+            this.BmidName.Width = 50;
+            // 
+            // BlastName
+            // 
+            this.BlastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BlastName.DataPropertyName = "lastName";
+            this.BlastName.HeaderText = "Last Name";
+            this.BlastName.Name = "BlastName";
+            this.BlastName.ReadOnly = true;
+            // 
+            // Bsuffix
+            // 
+            this.Bsuffix.DataPropertyName = "suffix";
+            this.Bsuffix.HeaderText = "Suffix";
+            this.Bsuffix.Name = "Bsuffix";
+            this.Bsuffix.ReadOnly = true;
+            this.Bsuffix.Width = 60;
+            // 
+            // Bgender
+            // 
+            this.Bgender.DataPropertyName = "gender";
+            this.Bgender.HeaderText = "Gender";
+            this.Bgender.Name = "Bgender";
+            this.Bgender.ReadOnly = true;
+            this.Bgender.Width = 69;
+            // 
+            // Bbirthdate
+            // 
+            this.Bbirthdate.DataPropertyName = "birthdate";
+            this.Bbirthdate.HeaderText = "Birth Date";
+            this.Bbirthdate.Name = "Bbirthdate";
+            this.Bbirthdate.ReadOnly = true;
+            this.Bbirthdate.Width = 83;
+            // 
+            // Bstatus
+            // 
+            this.Bstatus.DataPropertyName = "status";
+            this.Bstatus.HeaderText = "Status";
+            this.Bstatus.Name = "Bstatus";
+            this.Bstatus.ReadOnly = true;
+            this.Bstatus.Width = 63;
+            // 
+            // baptismApplication_firstName_textBox
+            // 
+            this.baptismApplication_firstName_textBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.baptismApplication_firstName_textBox.Cue = null;
+            this.baptismApplication_firstName_textBox.CueColor = System.Drawing.Color.Gray;
+            this.baptismApplication_firstName_textBox.Location = new System.Drawing.Point(3, 3);
+            this.baptismApplication_firstName_textBox.Name = "baptismApplication_firstName_textBox";
+            this.baptismApplication_firstName_textBox.Size = new System.Drawing.Size(75, 21);
+            this.baptismApplication_firstName_textBox.TabIndex = 31;
+            // 
+            // baptismApplication_midName_textBox
+            // 
+            this.baptismApplication_midName_textBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.baptismApplication_midName_textBox.Cue = null;
+            this.baptismApplication_midName_textBox.CueColor = System.Drawing.Color.Gray;
+            this.baptismApplication_midName_textBox.Location = new System.Drawing.Point(84, 3);
+            this.baptismApplication_midName_textBox.Name = "baptismApplication_midName_textBox";
+            this.baptismApplication_midName_textBox.Size = new System.Drawing.Size(25, 21);
+            this.baptismApplication_midName_textBox.TabIndex = 31;
+            // 
+            // baptismApplication_lastName_textBox
+            // 
+            this.baptismApplication_lastName_textBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.baptismApplication_lastName_textBox.Cue = null;
+            this.baptismApplication_lastName_textBox.CueColor = System.Drawing.Color.Gray;
+            this.baptismApplication_lastName_textBox.Location = new System.Drawing.Point(115, 3);
+            this.baptismApplication_lastName_textBox.Name = "baptismApplication_lastName_textBox";
+            this.baptismApplication_lastName_textBox.Size = new System.Drawing.Size(75, 21);
+            this.baptismApplication_lastName_textBox.TabIndex = 31;
+            // 
+            // baptismApplication_suffix_textBox
+            // 
+            this.baptismApplication_suffix_textBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.baptismApplication_suffix_textBox.Cue = null;
+            this.baptismApplication_suffix_textBox.CueColor = System.Drawing.Color.Gray;
+            this.baptismApplication_suffix_textBox.Location = new System.Drawing.Point(196, 3);
+            this.baptismApplication_suffix_textBox.Name = "baptismApplication_suffix_textBox";
+            this.baptismApplication_suffix_textBox.Size = new System.Drawing.Size(25, 21);
+            this.baptismApplication_suffix_textBox.TabIndex = 31;
+            // 
+            // confirmationApplication_firstName_textBox
+            // 
+            this.confirmationApplication_firstName_textBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.confirmationApplication_firstName_textBox.Cue = null;
+            this.confirmationApplication_firstName_textBox.CueColor = System.Drawing.Color.Empty;
+            this.confirmationApplication_firstName_textBox.Location = new System.Drawing.Point(3, 3);
+            this.confirmationApplication_firstName_textBox.Name = "confirmationApplication_firstName_textBox";
+            this.confirmationApplication_firstName_textBox.Size = new System.Drawing.Size(75, 21);
+            this.confirmationApplication_firstName_textBox.TabIndex = 0;
+            // 
+            // confirmationApplication_midName_textBox
+            // 
+            this.confirmationApplication_midName_textBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.confirmationApplication_midName_textBox.Cue = null;
+            this.confirmationApplication_midName_textBox.CueColor = System.Drawing.Color.Empty;
+            this.confirmationApplication_midName_textBox.Location = new System.Drawing.Point(84, 3);
+            this.confirmationApplication_midName_textBox.Name = "confirmationApplication_midName_textBox";
+            this.confirmationApplication_midName_textBox.Size = new System.Drawing.Size(25, 21);
+            this.confirmationApplication_midName_textBox.TabIndex = 1;
+            // 
+            // confirmationApplication_lastName_textBox
+            // 
+            this.confirmationApplication_lastName_textBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.confirmationApplication_lastName_textBox.Cue = null;
+            this.confirmationApplication_lastName_textBox.CueColor = System.Drawing.Color.Empty;
+            this.confirmationApplication_lastName_textBox.Location = new System.Drawing.Point(115, 3);
+            this.confirmationApplication_lastName_textBox.Name = "confirmationApplication_lastName_textBox";
+            this.confirmationApplication_lastName_textBox.Size = new System.Drawing.Size(75, 21);
+            this.confirmationApplication_lastName_textBox.TabIndex = 0;
+            // 
+            // confirmationApplication_suffix_textBox
+            // 
+            this.confirmationApplication_suffix_textBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.confirmationApplication_suffix_textBox.Cue = null;
+            this.confirmationApplication_suffix_textBox.CueColor = System.Drawing.Color.Empty;
+            this.confirmationApplication_suffix_textBox.Location = new System.Drawing.Point(196, 3);
+            this.confirmationApplication_suffix_textBox.Name = "confirmationApplication_suffix_textBox";
+            this.confirmationApplication_suffix_textBox.Size = new System.Drawing.Size(25, 21);
+            this.confirmationApplication_suffix_textBox.TabIndex = 1;
+            // 
+            // txtGFN
+            // 
+            this.txtGFN.Cue = null;
+            this.txtGFN.CueColor = System.Drawing.Color.Empty;
+            this.txtGFN.Location = new System.Drawing.Point(3, 3);
+            this.txtGFN.Name = "txtGFN";
+            this.txtGFN.Size = new System.Drawing.Size(75, 21);
+            this.txtGFN.TabIndex = 0;
+            // 
+            // txtGMI
+            // 
+            this.txtGMI.Cue = null;
+            this.txtGMI.CueColor = System.Drawing.Color.Empty;
+            this.txtGMI.Location = new System.Drawing.Point(84, 3);
+            this.txtGMI.Name = "txtGMI";
+            this.txtGMI.Size = new System.Drawing.Size(25, 21);
+            this.txtGMI.TabIndex = 1;
+            // 
+            // txtGLN
+            // 
+            this.txtGLN.Cue = null;
+            this.txtGLN.CueColor = System.Drawing.Color.Empty;
+            this.txtGLN.Location = new System.Drawing.Point(115, 3);
+            this.txtGLN.Name = "txtGLN";
+            this.txtGLN.Size = new System.Drawing.Size(75, 21);
+            this.txtGLN.TabIndex = 0;
+            // 
+            // txtGSuffix
+            // 
+            this.txtGSuffix.Cue = null;
+            this.txtGSuffix.CueColor = System.Drawing.Color.Empty;
+            this.txtGSuffix.Location = new System.Drawing.Point(196, 3);
+            this.txtGSuffix.Name = "txtGSuffix";
+            this.txtGSuffix.Size = new System.Drawing.Size(25, 21);
+            this.txtGSuffix.TabIndex = 1;
+            // 
+            // txtBFN
+            // 
+            this.txtBFN.Cue = null;
+            this.txtBFN.CueColor = System.Drawing.Color.Empty;
+            this.txtBFN.Location = new System.Drawing.Point(3, 3);
+            this.txtBFN.Name = "txtBFN";
+            this.txtBFN.Size = new System.Drawing.Size(75, 21);
+            this.txtBFN.TabIndex = 0;
+            // 
+            // txtBMI
+            // 
+            this.txtBMI.Cue = null;
+            this.txtBMI.CueColor = System.Drawing.Color.Empty;
+            this.txtBMI.Location = new System.Drawing.Point(84, 3);
+            this.txtBMI.Name = "txtBMI";
+            this.txtBMI.Size = new System.Drawing.Size(25, 21);
+            this.txtBMI.TabIndex = 1;
+            // 
+            // txtBLN
+            // 
+            this.txtBLN.Cue = null;
+            this.txtBLN.CueColor = System.Drawing.Color.Empty;
+            this.txtBLN.Location = new System.Drawing.Point(115, 3);
+            this.txtBLN.Name = "txtBLN";
+            this.txtBLN.Size = new System.Drawing.Size(75, 21);
+            this.txtBLN.TabIndex = 0;
+            // 
+            // txtBSuffix
+            // 
+            this.txtBSuffix.Cue = null;
+            this.txtBSuffix.CueColor = System.Drawing.Color.Empty;
+            this.txtBSuffix.Location = new System.Drawing.Point(196, 3);
+            this.txtBSuffix.Name = "txtBSuffix";
+            this.txtBSuffix.Size = new System.Drawing.Size(25, 21);
+            this.txtBSuffix.TabIndex = 1;
+            // 
             // ApplicationModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2504,16 +2504,6 @@
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private System.Windows.Forms.Panel panel12;
         private MetroFramework.Controls.MetroGrid baptismApplication_dgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BapplicationID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BprofileID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Brequirements;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BfirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BmidName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BlastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bsuffix;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bgender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bbirthdate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bstatus;
         private System.Windows.Forms.Panel panel16;
         private MetroFramework.Controls.MetroComboBox baptismApplication_filter_cmb;
         private System.Windows.Forms.Label label10;
@@ -2672,5 +2662,15 @@
         private MetroFramework.Controls.MetroButton marriageApplication_approve_btn;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BapplicationID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BprofileID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Brequirements;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BfirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BmidName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BlastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bsuffix;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bgender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bbirthdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bstatus;
     }
 }

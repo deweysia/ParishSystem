@@ -38,7 +38,7 @@ namespace ParishSystem
             genderLabel.Text = row[7].ToString() == "1" ? "Male" : "Female";
         }
 
-        private void BaptismForm_Load(object sender, EventArgs e)
+        private void SacramentForm_Load(object sender, EventArgs e)
         {
             legitimacyCBox.DataSource = Enum.GetValues(typeof(Legitimacy));
             DataTable dt = dh.getMinisterWithStatus(MinisterStatus.Active);
@@ -49,6 +49,29 @@ namespace ParishSystem
                 ComboboxContent cc = new ComboboxContent(int.Parse(r["ministerID"].ToString()), r["name"].ToString());
                 //MessageBox.Show(cc.ToString());
                 MinisterCBox.Items.Add(cc);
+            }
+
+            loadParents();
+           
+        }
+
+        private void loadParents()
+        {
+            int profileID = int.Parse(row[1].Value.ToString());
+            DataTable dt = dh.getParentsOf(profileID);
+            if(dt.Rows.Count == 2)
+            {
+                fatherFirstNameText.Text = dt.Rows[0]["firstName"].ToString();
+                fatherMiText.Text = dt.Rows[0]["midName"].ToString();
+                fatherLastNameText.Text = dt.Rows[0]["lastName"].ToString();
+                fatherSuffixText.Text = dt.Rows[0]["suffix"].ToString();
+                fatherBirthPlaceText.Text = dt.Rows[0]["birthplace"].ToString();
+
+                motherFirstNameText.Text = dt.Rows[1]["firstName"].ToString();
+                motherMiText.Text = dt.Rows[1]["midName"].ToString();
+                motherLastNameText.Text = dt.Rows[1]["lastName"].ToString();
+                motherSuffixText.Text = dt.Rows[1]["suffix"].ToString();
+                motherBirthPlaceText.Text = dt.Rows[1]["birthplace"].ToString();
             }
         }
 
@@ -77,9 +100,9 @@ namespace ParishSystem
 
 
             //Add Mother
-            success &= dh.addParent(profileID, motherFirstNameText.Text, motherMiText.Text, motherLastNameText.Text, motherSuffixText.Text, Gender.Female, motherBirthPlaceText.Text);
+            success &= dh.addEditParent(profileID, motherFirstNameText.Text, motherMiText.Text, motherLastNameText.Text, motherSuffixText.Text, Gender.Female, motherBirthPlaceText.Text);
             //Add Father
-            success &= dh.addParent(profileID, fatherFirstNameText.Text, fatherMiText.Text, fatherLastNameText.Text, fatherSuffixText.Text, Gender.Male, fatherBirthPlaceText.Text);
+            success &= dh.addEditParent(profileID, fatherFirstNameText.Text, fatherMiText.Text, fatherLastNameText.Text, fatherSuffixText.Text, Gender.Male, fatherBirthPlaceText.Text);
 
             //Add God Mother
             success &= dh.addSponsor(applicationID, gMotherFirstNameText.Text, gMotherMiText.Text, gMotherLastNameText.Text, gMotherSuffixText.Text, Gender.Female, gMotherResidenceText.Text);
