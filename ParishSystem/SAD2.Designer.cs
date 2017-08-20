@@ -310,6 +310,7 @@
             this.home_button_menu.Text = "Home";
             this.home_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.home_button_menu.UseVisualStyleBackColor = false;
+            this.home_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
             // 
             // application_button_menu
             // 

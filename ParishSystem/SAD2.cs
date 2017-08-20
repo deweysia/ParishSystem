@@ -339,6 +339,11 @@ namespace ParishSystem
         {
 
         }
+
+        private void home_button_menu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
