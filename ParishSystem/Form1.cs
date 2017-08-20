@@ -56,6 +56,35 @@ namespace ParishSystem
 
             //dataGridView1.DataSource=  dh.getSummaryCashDisbursment(dh.get(1),1);
         }//accounting book form
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form f = new ApplicationModule(dh);
+            f.TopLevel = false;
+            f.AutoScroll = true;
+            panel1.Controls.Add(f);
+
+            f.FormBorderStyle = FormBorderStyle.None;
+            MessageBox.Show("2");
+            f.Dock = DockStyle.Fill;
+            f.Show();
+            MessageBox.Show("3");
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            Form f = new BloodlettingEventPopUp(dh);
+            f.TopLevel = false;
+            f.AutoScroll = true;
+            panel1.Controls.Add(f);
+
+            f.FormBorderStyle = FormBorderStyle.None;
+            MessageBox.Show("2");
+            f.Dock = DockStyle.Fill;
+            f.Show();
+            MessageBox.Show("3");
+        }
     }
     }
     /*
