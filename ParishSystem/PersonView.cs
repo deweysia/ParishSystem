@@ -49,7 +49,7 @@ namespace ParishSystem
             suffix_label.Text = temp.Rows[0]["suffix"].ToString();
             firstname_label.Text = temp.Rows[0]["firstname"].ToString();
             mi_label.Text = temp.Rows[0]["midname"].ToString();
-            if (temp.Rows[0]["birthdate"].ToString()!="") { birthdate_label.Text = dh.toDateTime((temp.Rows[0]["birthdate"].ToString()), false).ToString("MMMM dd, yyyy"); } else { birthdate_panel.Visible = false; }
+            if (temp.Rows[0]["birthdate"].ToString()!="") { birthdate_label.Text = dh.toDateTime(temp.Rows[0]["birthdate"].ToString(),false).ToString("MMMM dd, yyyy");  } else { birthdate_panel.Visible = false; }
 
             if (temp.Rows[0]["gender"].ToString() != "")
             {
@@ -88,7 +88,7 @@ namespace ParishSystem
             }
             if (temp.Rows[0]["address"].ToString() != "")
             {
-                contactNumber_maskedTextbox.Text = temp.Rows[0]["address"].ToString();
+                address_textbox.Text = temp.Rows[0]["address"].ToString();
             }
             else
             {
@@ -151,8 +151,18 @@ namespace ParishSystem
                     DataTable temp = dh.getBaptism(int.Parse(dr["applicationID"].ToString()));
                     try
                     {
-                        registryNumber_label_baptism.Text = temp.Rows[0]["registryNumber"].ToString();
-
+                        if( temp.Rows[0]["legitimacy"].ToString() == "1")
+                        {
+                            legitimacy_label_baptism.Text = "Legal";
+                        }
+                        else if (temp.Rows[0]["legitimacy"].ToString() == "2")
+                        {
+                            legitimacy_label_baptism.Text = "Civil";
+                        }
+                        else if (temp.Rows[0]["legitimacy"].ToString() == "3")
+                        {
+                            legitimacy_label_baptism.Text = "Natural";
+                        }
                         date_label_baptism.Text = dh.toDateTime(temp.Rows[0]["baptismDate"].ToString(), false).ToString("MMMM dd yyyy");
 
                         name_label_minister_baptism.Text = dh.getMinister(int.Parse(dh.getBaptism(int.Parse(dr["applicationID"].ToString())).Rows[0]["ministerID"].ToString())).Rows[0]["name"].ToString();
@@ -227,18 +237,23 @@ namespace ParishSystem
                     {
                         godMother_panel_confirmation.Visible = false;
                     }
-
                     DataTable temp = dh.getConfirmation(int.Parse(dr["applicationID"].ToString()));
+                    try
+                    {
+                        date_label_confirmation.Text = dh.toDateTime(temp.Rows[0]["confirmationDate"].ToString(), false).ToString("MMMM dd yyyy");
 
-                    date_label_confirmation.Text = dh.toDateTime(temp.Rows[0]["confirmationDate"].ToString(), false).ToString("MMMM dd yyyy");
+                        name_label_minister_confirmation.Text = dh.getMinister(int.Parse(dh.getConfirmation(int.Parse(dr["applicationID"].ToString())).Rows[0]["ministerID"].ToString())).Rows[0]["name"].ToString();
+                    }
+                    catch { }
+                    try
+                    {
+                        registryNumber_label_confirmation.Text = temp.Rows[0]["registryNumber"].ToString();
 
-                    name_label_minister_confirmation.Text = dh.getMinister(int.Parse(dh.getConfirmation(int.Parse(dr["applicationID"].ToString())).Rows[0]["ministerID"].ToString())).Rows[0]["name"].ToString();
+                        pageNumber_label_confirmation.Text = temp.Rows[0]["pageNumber"].ToString();
 
-                    registryNumber_label_confirmation.Text = temp.Rows[0]["registryNumber"].ToString();
-
-                    pageNumber_label_confirmation.Text = temp.Rows[0]["pageNumber"].ToString();
-
-                    recordNumber_label_confirmation.Text = temp.Rows[0]["recordNumber"].ToString();
+                        recordNumber_label_confirmation.Text = temp.Rows[0]["recordNumber"].ToString();
+                    }
+                    catch { }
                 }
             }
 
@@ -287,7 +302,7 @@ namespace ParishSystem
                     }
                     else
                     {
-                        birthdate_label_spouse_marriage.Visible = false;
+                        birthdate_panel_spouse_marriage.Visible = false;
                     }
 
                     if (dr["gender"].ToString() != "")
@@ -362,38 +377,51 @@ namespace ParishSystem
                         godmother_panel_marriage.Visible = true;
                         name_label_godmother_marriage.Text = godMother.Rows[0]["Name"].ToString();
                     }
-
-                    //minister
                     DataTable temp = dh.getMarriage(int.Parse(dr["applicationID"].ToString()));
-
-                    date_label_marriage.Text = dh.toDateTime(temp.Rows[0]["marriageDate"].ToString(), false).ToString("MMMM dd yyyy");
-
-                    name_label_minister_marriage.Text = dh.getMinister(int.Parse(dh.getMarriage(int.Parse(dr["applicationID"].ToString())).Rows[0]["ministerID"].ToString())).Rows[0]["name"].ToString();
-
-                    registryNumber_label_marriage.Text = temp.Rows[0]["registryNumber"].ToString();
-
-                    pageNumber_label_marriage.Text = temp.Rows[0]["pageNumber"].ToString();
-
-                    recordNumber_label_marriage.Text = temp.Rows[0]["recordNumber"].ToString();
-
-                    if (temp.Rows[0]["civilStatusGroom"].ToString() != "")
+                    //minister
+                    try
                     {
+                        date_label_marriage.Text = dh.toDateTime(temp.Rows[0]["marriageDate"].ToString(), false).ToString("MMMM dd yyyy");
+
+                        name_label_minister_marriage.Text = dh.getMinister(int.Parse(dh.getMarriage(int.Parse(dr["applicationID"].ToString())).Rows[0]["ministerID"].ToString())).Rows[0]["name"].ToString();
+                    }
+                    catch
+                    {
+
+                    }
+
+                    try
+                    {
+                        registryNumber_label_marriage.Text = temp.Rows[0]["registryNumber"].ToString();
+
+                        pageNumber_label_marriage.Text = temp.Rows[0]["pageNumber"].ToString();
+
+                        recordNumber_label_marriage.Text = temp.Rows[0]["recordNumber"].ToString();
+                    }
+                    catch
+                    {
+
+                    }
+                    try
+                    { 
                         if (int.Parse(temp.Rows[0]["civilStatusGroom"].ToString()) == (int)Enums.CivilStatus.Single) civilStatus_self_marriage.Text = "Single";
                         else if (int.Parse(temp.Rows[0]["civilStatusGroom"].ToString()) == (int)Enums.CivilStatus.Widowed) civilStatus_self_marriage.Text = "Widowed";
                     }
-                    else
+                    catch
                     {
                         civilStatus_panel_marriage.Visible = false;
                     }
-                    if (temp.Rows[0]["civilStatusBride"].ToString() != "")
+                    try
                     {
-                        if (int.Parse(temp.Rows[0]["civilstatusBride"].ToString()) == (int)Enums.CivilStatus.Single) civilstatus_label_spouse_marriage.Text = "Single";
-                        else if (int.Parse(temp.Rows[0]["civilstatusBride"].ToString()) == (int)Enums.CivilStatus.Widowed) civilstatus_label_spouse_marriage.Text = "Widowed";
+                            if (int.Parse(temp.Rows[0]["civilstatusBride"].ToString()) == (int)Enums.CivilStatus.Single) civilstatus_label_spouse_marriage.Text = "Single";
+                            else if (int.Parse(temp.Rows[0]["civilstatusBride"].ToString()) == (int)Enums.CivilStatus.Widowed) civilstatus_label_spouse_marriage.Text = "Widowed";
+                        
                     }
-                    else
+                    catch
                     {
                         civilstatus_panel_spouse_marriage.Visible = false;
                     }
+                  
                 }
             }
         }

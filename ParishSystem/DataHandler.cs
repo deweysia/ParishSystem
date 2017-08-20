@@ -192,14 +192,12 @@ namespace ParishSystem
 
         public DateTime toDateTime(string s, bool timePortion)
         {
-
+          
                 string[] components = s.Split(' ');
                 string[] date = components[0].Split('/');
 
-                Console.Write(date[1] + " --- " + date[0] + " --- " + date[2]);
-
-                int day = int.Parse(date[0]);
-                int month = int.Parse(date[1]);
+                int month = int.Parse(date[0]);
+                int day = int.Parse(date[1]);
                 int year = int.Parse(date[2]);
 
 
@@ -217,6 +215,7 @@ namespace ParishSystem
 
                     return new DateTime(year, month, day, hour, min, sec);
                 }
+          
                 return new DateTime(year, month, day);
             
           
@@ -2747,6 +2746,7 @@ namespace ParishSystem
             string q = $@"select * from generalprofile inner join applicant on applicant.profileID=generalprofile.profileID inner join application on applicant.applicationID=application.applicationID where (status = {(int)ApplicationStatus.Final} or status = {(int)ApplicationStatus.Approved}) and generalProfile.profileID=" + profileID;
             return runQuery(q);
         }
+      
         public void editFather(int profileID, string fn, string mi, string ln, string sf, string residence, string birthplace)
         {
             string q = "UPDATE `sad2`.`parent` SET `firstName`='" + fn + "', `midName`='" + mi + "', `lastName`='" + ln + "', `suffix`='" + sf + "', `birthplace`='" + birthplace + "', `residence`='" + residence + "' WHERE gender='1' and profileID=+" + profileID;
@@ -2769,7 +2769,7 @@ namespace ParishSystem
         }
         public DataTable getPartner(int profileID)
         {
-            string q = "select * from (select application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID = " + profileID + ") as A left outer join (select concat(lastname, \" \", coalesce(suffix, \" \"), \"\", firstName, \" \", midname, \".\") as name, generalprofile.profileID, address, contactNumber, gender, civilstatus, birthplace, birthdate, residence, application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID != " + profileID + ") as B on A.applicationID = B.applicationID";
+            string q = "select * from (select application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID = " + profileID + ") as A left outer join (select concat(lastname, \" \", coalesce(suffix, \" \"), \"\", firstName, \" \", midname, \".\") as name, generalprofile.profileID, address, contactNumber, gender, birthplace, birthdate, residence, application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID != " + profileID + ") as B on A.applicationID = B.applicationID";
             return runQuery(q);
         }
 

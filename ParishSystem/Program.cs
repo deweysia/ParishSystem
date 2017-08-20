@@ -20,7 +20,7 @@ namespace ParishSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SAD2());
+            Application.Run(new PersonView(1,new DataHandler()));
         }
     }
 
