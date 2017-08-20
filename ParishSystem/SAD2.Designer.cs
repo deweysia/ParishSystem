@@ -107,7 +107,6 @@
             this.panel_controlbox.Name = "panel_controlbox";
             this.panel_controlbox.Size = new System.Drawing.Size(992, 33);
             this.panel_controlbox.TabIndex = 59;
-            this.panel_controlbox.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_controlbox_Paint);
             this.panel_controlbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseDown);
             this.panel_controlbox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseMove);
             // 
@@ -267,9 +266,9 @@
             // Menu_panel
             // 
             this.Menu_panel.AutoScroll = true;
-            this.Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
+            this.Menu_panel.BackColor = System.Drawing.Color.White;
             this.Menu_panel.Controls.Add(this.flowLayoutPanel2);
-            this.Menu_panel.Location = new System.Drawing.Point(0, 0);
+            this.Menu_panel.Location = new System.Drawing.Point(0, 545);
             this.Menu_panel.Name = "Menu_panel";
             this.Menu_panel.Size = new System.Drawing.Size(935, 586);
             this.Menu_panel.TabIndex = 45;
@@ -310,7 +309,7 @@
             this.home_button_menu.Text = "Home";
             this.home_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.home_button_menu.UseVisualStyleBackColor = false;
-            this.home_button_menu.Click += new System.EventHandler(this.home_button_menu_Click);
+            this.home_button_menu.Click += new System.EventHandler(this.SubMenuClick);
             // 
             // application_button_menu
             // 
@@ -561,7 +560,6 @@
             this.CDB_menu_panel.Name = "CDB_menu_panel";
             this.CDB_menu_panel.Size = new System.Drawing.Size(269, 58);
             this.CDB_menu_panel.TabIndex = 47;
-            this.CDB_menu_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.CDB_menu_panel_Paint);
             // 
             // CDBpostulancy_button_menu
             // 

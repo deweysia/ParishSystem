@@ -330,20 +330,7 @@ namespace ParishSystem
             CRBreport_button.PerformClick();
         }
 
-        private void CDB_menu_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel_controlbox_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void home_button_menu_Click(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }
 
