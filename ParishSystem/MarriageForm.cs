@@ -36,7 +36,7 @@ namespace ParishSystem
             lblGName.Text = row[4].Value.ToString();
             lblBName.Text = row[6].Value.ToString();
 
-
+            loadParents();
 
         }
 
@@ -153,22 +153,43 @@ namespace ParishSystem
 
         private void loadParents()
         {
-            int profileID = int.Parse(row[1].Value.ToString());
-            DataTable dt = dh.getParentsOf(profileID);
+            int groomID = int.Parse(row[2].Value.ToString());
+            DataTable dt = dh.getParentsOf(groomID);
             if (dt.Rows.Count == 2)
             {
                 txtBFFN.Text = dt.Rows[0]["firstName"].ToString();
                 txtBFMI.Text = dt.Rows[0]["midName"].ToString();
                 txtBFLN.Text = dt.Rows[0]["lastName"].ToString();
                 txtBFSuffix.Text = dt.Rows[0]["suffix"].ToString();
-                
 
-                motherFirstNameText.Text = dt.Rows[1]["firstName"].ToString();
-                motherMiText.Text = dt.Rows[1]["midName"].ToString();
-                motherLastNameText.Text = dt.Rows[1]["lastName"].ToString();
-                motherSuffixText.Text = dt.Rows[1]["suffix"].ToString();
-                motherBirthPlaceText.Text = dt.Rows[1]["birthplace"].ToString();
+                txtBMFN.Text = dt.Rows[1]["firstName"].ToString();
+                txtBMMI.Text = dt.Rows[1]["midName"].ToString();
+                txtBMLN.Text = dt.Rows[1]["lastName"].ToString();
+                txtBMSuffix.Text = dt.Rows[1]["suffix"].ToString();
+
+
+                
             }
+
+            int brideID = int.Parse(row[3].Value.ToString());
+            dt = dh.getParentsOf(groomID);
+
+            if (dt.Rows.Count == 2)
+            {
+                txtGFFN.Text = dt.Rows[0]["firstName"].ToString();
+                txtGFFN.Text = dt.Rows[0]["midName"].ToString();
+                txtGFFN.Text = dt.Rows[0]["lastName"].ToString();
+                txtGFFN.Text = dt.Rows[0]["suffix"].ToString();
+                txtGFFN.Text = dt.Rows[0]["birthplace"].ToString();
+
+
+                txtGMFN.Text = dt.Rows[1]["firstName"].ToString();
+                txtGMFN.Text = dt.Rows[1]["midName"].ToString();
+                txtGMFN.Text = dt.Rows[1]["lastName"].ToString();
+                txtGMFN.Text = dt.Rows[1]["suffix"].ToString();
+                txtGMFN.Text = dt.Rows[1]["birthplace"].ToString();
+            }
+
         }
     }
 }

@@ -38,7 +38,7 @@ namespace ParishSystem
         {
             if (!allFilled())
             {
-                Notification.Show("Please fill in all required details!", NotificationType.info);
+                Notification.Show(State.MissingFields);
                 return;
             }
 
@@ -100,9 +100,9 @@ namespace ParishSystem
             success &= dh.addSacramentIncome(applicationID, price, txtRemarks.Text);
 
             if (success)
-                Notification.Show("Successfully added marriage application!", NotificationType.success);
+                Notification.Show(State.ApplicationApproveSuccess);
             else
-                Notification.Show("Something went wrong!", NotificationType.error);
+                Notification.Show(State.ApplicationApproveFail);
 
             this.Close();
 

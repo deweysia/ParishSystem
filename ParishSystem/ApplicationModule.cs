@@ -385,7 +385,7 @@ namespace ParishSystem
 
             if (d == DialogResult.OK)
             {
-                SystemNotification.Notify(State.ApplicationApproveSuccess);
+                Notification.Show(State.ApplicationApproveSuccess);
                 loadApplications(type);
             }
         }
@@ -402,9 +402,9 @@ namespace ParishSystem
             bool success = dh.editApplication(this.applicationID, ApplicationStatus.Revoked);
 
             if (success)
-                SystemNotification.Notify(State.RevokeSucess);
+                Notification.Show(State.RevokeSucess);
             else
-                SystemNotification.Notify(State.RevokeFail);
+                Notification.Show(State.RevokeFail);
 
             loadApplications(type);
             
@@ -606,7 +606,7 @@ namespace ParishSystem
             {
                 if (hasEmptyTextBoxes(baptismApplication_profile_tlp))
                 {
-                    SystemNotification.Notify(State.MissingFields);
+                    Notification.Show(State.MissingFields);
                     return false;
                 }
 
@@ -622,7 +622,7 @@ namespace ParishSystem
                 //MessageBox.Show("Profile Exists: " + profileExists);
                 if (profileExists)
                 {
-                    SystemNotification.Notify(State.ProfileExists);
+                    Notification.Show(State.ProfileExists);
                     return false;
                 }
 
@@ -634,7 +634,7 @@ namespace ParishSystem
             {
                 if (hasEmptyTextBoxes(confirmationApplication_profile_tlp))
                 {
-                    SystemNotification.Notify(State.MissingFields);
+                    Notification.Show(State.MissingFields);
                     return false;
                 }
 
@@ -648,7 +648,7 @@ namespace ParishSystem
                 bool profileExists = dh.generalProfileExists(this.profileID, fn, mi, ln, suffix, g, birthDate);
                 if (profileExists)
                 {
-                    SystemNotification.Notify(State.ProfileExists);
+                    Notification.Show(State.ProfileExists);
                     return false;
                 }
 
@@ -661,7 +661,7 @@ namespace ParishSystem
 
                 if (hasEmptyTextBoxes(marriageApplication_profile_tlp))
                 {
-                    SystemNotification.Notify(State.MissingFields);
+                    Notification.Show(State.MissingFields);
                     return false;
                 }
 
@@ -675,7 +675,7 @@ namespace ParishSystem
 
                 if (groomExists)
                 {
-                    SystemNotification.Notify(State.GroomExists);
+                    Notification.Show(State.GroomExists);
                     return false;
                 }
 
@@ -688,7 +688,7 @@ namespace ParishSystem
                 bool brideExists = dh.generalProfileExists(this.brideID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
                 if (brideExists)
                 {
-                    SystemNotification.Notify(State.BrideExists);
+                    Notification.Show(State.BrideExists);
                     return false;
                 }
 
@@ -699,7 +699,7 @@ namespace ParishSystem
 
             if (success)
             {
-                Notification.Show("Successfully applied changes", NotificationType.success);
+                Notification.Show(State.MinisterAddSuccess);
                 loadApplications(type);
                 Panel p = getApplicationDetailsPanel(type);
                 RecursiveClearControl(p);
@@ -707,7 +707,7 @@ namespace ParishSystem
             }
             else
             {
-                Notification.Show("Something went wrong", NotificationType.warning);
+                Notification.Show(State.MinisterAddFail);
             }
 
             return success;

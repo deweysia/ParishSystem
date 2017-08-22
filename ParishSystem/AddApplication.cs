@@ -72,7 +72,7 @@ namespace ParishSystem
         {
             if (!allFilled())
             {
-                Notification.Show("Please fill in all required details!", NotificationType.info);
+                Notification.Show(State.MissingFields);
                 return;
             }
             
@@ -99,7 +99,7 @@ namespace ParishSystem
                 }
                 else //gen prof has active application
                 {
-                    Notification.Show(string.Format("{0} {1} {2} {3} has an existing active {4} application. Cannot add duplicate sacrament record.", fn, mn, ln, suffix, sacramentType.ToString()), NotificationType.warning);
+                    Notification.Show(State.ApplicationExists);
                     this.Close();
                     return;
                 }
@@ -115,17 +115,14 @@ namespace ParishSystem
                 success &= dh.addSacramentIncome(applicationID, price, remarks_textBox.Text);
             }
 
-            displayMessage(success);
+            if (success)
+                Notification.Show(State.ApplicationAddSuccess);
+            else
+                Notification.Show(State.ApplicationAddFail);
             this.Close();
         }
 
-        private void displayMessage(bool success)
-        {
-            if (success)
-                Notification.Show("Application Successfully Added!", NotificationType.success);
-            else
-                Notification.Show("There was an error.", NotificationType.error);
-        }
+
 
         private void AddApplication_MouseDown(object sender, MouseEventArgs e)
         {
@@ -164,7 +161,7 @@ namespace ParishSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Notification.Show("HEEEEEEEEEEEEEEEELOOOOO MY BITCHESSSS");
+            Notification.Show(State.GenericError);
         }
 
         private void name_textBox_Leave(object sender, EventArgs e)

@@ -72,7 +72,7 @@ namespace ParishSystem
             double payment = Convert.ToDouble(nudPayment.Value);
             if (payment == 0)
             {
-                SystemNotification.Notify(State.PaymentZero);
+                Notification.Show(State.PaymentZero);
                 return;
             }
             uint ORnum = uint.Parse(lblOR.Text);
@@ -80,10 +80,10 @@ namespace ParishSystem
             DateTime dt = DateTime.ParseExact(lblDate.Text, "yyyy-MM-dd", null);
             bool success = dh.addSacramentPayment(sacramentIncomeID, payment, int.Parse(lblOR.Text), txtRemarks.Text, dt);
 
-            if(success)
-                Notification.Show("Successfully added payment!", NotificationType.success);
+            if (success)
+                Notification.Show(State.PaymentSuccess);
             else
-                Notification.Show("Something went wrong!", NotificationType.warning);
+                Notification.Show(State.PaymentFail);
 
             this.Close();
         }

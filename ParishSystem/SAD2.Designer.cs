@@ -34,11 +34,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.welcome_Text = new System.Windows.Forms.Label();
             this.username_Welcome_Text = new System.Windows.Forms.Label();
-            this.content_panel = new System.Windows.Forms.Panel();
             this.flowLayout_ControlButtons = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_Close = new System.Windows.Forms.Button();
             this.btn_Max = new System.Windows.Forms.Button();
             this.time_Text = new System.Windows.Forms.Label();
+            this.content_panel = new System.Windows.Forms.Panel();
             this.imageListMenu = new System.Windows.Forms.ImageList(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.OpenMenu_button = new System.Windows.Forms.Button();
@@ -51,6 +51,7 @@
             this.profile_menu_button = new System.Windows.Forms.Button();
             this.scheduling_button_menu = new System.Windows.Forms.Button();
             this.bloodlettingmenu_panel = new System.Windows.Forms.Panel();
+            this.bloodlettingreport_button = new System.Windows.Forms.Button();
             this.bloodlettingevent_button = new System.Windows.Forms.Button();
             this.bloodlettingdonor_button = new System.Windows.Forms.Button();
             this.bloodletting_button_menu = new System.Windows.Forms.Button();
@@ -80,7 +81,6 @@
             this.CRBparishreport_button = new System.Windows.Forms.Button();
             this.CRBreport_button = new System.Windows.Forms.Button();
             this.Workspace_panel = new System.Windows.Forms.Panel();
-            this.bloodlettingreport_button = new System.Windows.Forms.Button();
             this.panel_controlbox.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayout_ControlButtons.SuspendLayout();
@@ -107,6 +107,7 @@
             this.panel_controlbox.Name = "panel_controlbox";
             this.panel_controlbox.Size = new System.Drawing.Size(992, 33);
             this.panel_controlbox.TabIndex = 59;
+            this.panel_controlbox.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_controlbox_Paint);
             this.panel_controlbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseDown);
             this.panel_controlbox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_controlbox_MouseMove);
             // 
@@ -144,14 +145,6 @@
             this.username_Welcome_Text.Size = new System.Drawing.Size(110, 23);
             this.username_Welcome_Text.TabIndex = 40;
             this.username_Welcome_Text.Text = "USERNAME";
-            // 
-            // content_panel
-            // 
-            this.content_panel.BackColor = System.Drawing.Color.White;
-            this.content_panel.Location = new System.Drawing.Point(0, 0);
-            this.content_panel.Name = "content_panel";
-            this.content_panel.Size = new System.Drawing.Size(935, 586);
-            this.content_panel.TabIndex = 61;
             // 
             // flowLayout_ControlButtons
             // 
@@ -209,6 +202,14 @@
             this.time_Text.Size = new System.Drawing.Size(61, 19);
             this.time_Text.TabIndex = 35;
             this.time_Text.Text = "HH:MM";
+            // 
+            // content_panel
+            // 
+            this.content_panel.BackColor = System.Drawing.Color.White;
+            this.content_panel.Location = new System.Drawing.Point(0, 0);
+            this.content_panel.Name = "content_panel";
+            this.content_panel.Size = new System.Drawing.Size(935, 586);
+            this.content_panel.TabIndex = 61;
             // 
             // imageListMenu
             // 
@@ -310,7 +311,6 @@
             this.home_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.home_button_menu.UseVisualStyleBackColor = false;
             this.home_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
-            this.home_button_menu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.home_button_menu_MouseUp);
             // 
             // application_button_menu
             // 
@@ -330,7 +330,6 @@
             this.application_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.application_button_menu.UseVisualStyleBackColor = false;
             this.application_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
-            this.application_button_menu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.application_button_menu_MouseUp);
             // 
             // profile_menu_button
             // 
@@ -350,7 +349,6 @@
             this.profile_menu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.profile_menu_button.UseVisualStyleBackColor = false;
             this.profile_menu_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
-            this.profile_menu_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.profile_menu_button_MouseUp);
             // 
             // scheduling_button_menu
             // 
@@ -370,7 +368,6 @@
             this.scheduling_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.scheduling_button_menu.UseVisualStyleBackColor = false;
             this.scheduling_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
-            this.scheduling_button_menu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.scheduling_button_menu_MouseUp);
             // 
             // bloodlettingmenu_panel
             // 
@@ -384,6 +381,25 @@
             this.bloodlettingmenu_panel.Name = "bloodlettingmenu_panel";
             this.bloodlettingmenu_panel.Size = new System.Drawing.Size(269, 58);
             this.bloodlettingmenu_panel.TabIndex = 45;
+            // 
+            // bloodlettingreport_button
+            // 
+            this.bloodlettingreport_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bloodlettingreport_button.FlatAppearance.BorderSize = 0;
+            this.bloodlettingreport_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bloodlettingreport_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodlettingreport_button.ForeColor = System.Drawing.Color.White;
+            this.bloodlettingreport_button.Image = global::ParishSystem.Properties.Resources.Heart_with_Pulse_32px;
+            this.bloodlettingreport_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bloodlettingreport_button.Location = new System.Drawing.Point(0, 174);
+            this.bloodlettingreport_button.Margin = new System.Windows.Forms.Padding(0);
+            this.bloodlettingreport_button.Name = "bloodlettingreport_button";
+            this.bloodlettingreport_button.Size = new System.Drawing.Size(269, 58);
+            this.bloodlettingreport_button.TabIndex = 45;
+            this.bloodlettingreport_button.Text = "Events";
+            this.bloodlettingreport_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bloodlettingreport_button.UseVisualStyleBackColor = false;
+            this.bloodlettingreport_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
             // 
             // bloodlettingevent_button
             // 
@@ -462,7 +478,6 @@
             this.sacrament_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.sacrament_button_menu.UseVisualStyleBackColor = false;
             this.sacrament_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
-            this.sacrament_button_menu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.sacrament_button_menu_MouseUp);
             // 
             // CRBmenu_panel
             // 
@@ -908,26 +923,6 @@
             this.Workspace_panel.Name = "Workspace_panel";
             this.Workspace_panel.Size = new System.Drawing.Size(935, 547);
             this.Workspace_panel.TabIndex = 61;
-            // 
-            // bloodlettingreport_button
-            // 
-            this.bloodlettingreport_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bloodlettingreport_button.FlatAppearance.BorderSize = 0;
-            this.bloodlettingreport_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bloodlettingreport_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bloodlettingreport_button.ForeColor = System.Drawing.Color.White;
-            this.bloodlettingreport_button.Image = global::ParishSystem.Properties.Resources.Heart_with_Pulse_32px;
-            this.bloodlettingreport_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bloodlettingreport_button.Location = new System.Drawing.Point(0, 174);
-            this.bloodlettingreport_button.Margin = new System.Windows.Forms.Padding(0);
-            this.bloodlettingreport_button.Name = "bloodlettingreport_button";
-            this.bloodlettingreport_button.Size = new System.Drawing.Size(269, 58);
-            this.bloodlettingreport_button.TabIndex = 45;
-            this.bloodlettingreport_button.Text = "Events";
-            this.bloodlettingreport_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bloodlettingreport_button.UseVisualStyleBackColor = false;
-            this.bloodlettingreport_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
-            this.bloodlettingreport_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bloodlettingreport_button_MouseClick);
             // 
             // SAD2
             // 
