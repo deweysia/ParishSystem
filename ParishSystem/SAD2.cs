@@ -103,7 +103,7 @@ namespace ParishSystem
 
         private void application_panel_VisibleChanged(object sender, EventArgs e)
         {
-            ApplicationModule f = new ApplicationModule(dh);
+            ApplicationModule f = new ApplicationModule();
             showForm(sender, f);
 
         }

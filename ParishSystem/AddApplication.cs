@@ -95,7 +95,7 @@ namespace ParishSystem
                 {
                     success &= dh.addNewApplicant(profileID, sacramentType);
                     int applicationID = dh.getLatestID("Application", "applicationID");
-                    success &= dh.addSacramentIncome(applicationID, itemTypeID, price, remarks_textBox.Text);
+                    success &= dh.addSacramentIncome(applicationID, price, remarks_textBox.Text);
                 }
                 else //gen prof has active application
                 {
@@ -112,7 +112,7 @@ namespace ParishSystem
                 profileID = dh.getLatestID("GeneralProfile", "profileID");
                 success &= dh.addNewApplicant(profileID, sacramentType);
                 int applicationID = dh.getLatestID("Application", "applicationID");
-                success &= dh.addSacramentIncome(applicationID, itemTypeID, price, remarks_textBox.Text);
+                success &= dh.addSacramentIncome(applicationID, price, remarks_textBox.Text);
             }
 
             displayMessage(success);

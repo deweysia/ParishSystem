@@ -871,12 +871,10 @@ namespace ParishSystem
         /// <param name="price"></param>
         /// <param name="remarks"></param>
         /// <returns></returns>
-        public bool addSacramentIncome(int applicationID, int itemTypeID, double price, string remarks)
+        public bool addSacramentIncome(int applicationID, double price, string remarks)
         {
-            string q = "INSERT INTO SacramentIncome(itemTypeID, applicationID, price, remarks, sacramentIncomeDateTime) VALUES ('"
-                + itemTypeID + "', '" + applicationID + "', '" + price + "', '" + remarks + "', NOW())";
-
-            bool success = runNonQuery(q);
+            string q = "INSERT INTO SacramentIncome(applicationID, price, remarks) VALUES (@applicationID, @price, @remarks)";
+            bool success = ExecuteNonQuery(q, applicationID, price, remarks);
 
             return success;
         }
@@ -1380,8 +1378,23 @@ namespace ParishSystem
             return dt;
         }
 
+        
 
 
+
+        public bool editSacramentReference(SacramentType t, int sacramentID, string registryNumber, string recordNumber, string pageNumber)
+        {
+            bool success;
+            if (t == SacramentType.Baptism)
+                success = editBaptismReference(sacramentID, registryNumber, recordNumber, pageNumber);
+            else if (t == SacramentType.Confirmation)
+                success = editConfirmationReference(sacramentID, registryNumber, recordNumber, pageNumber);
+            else
+                success = editMarriageReference(sacramentID, registryNumber, recordNumber, pageNumber);
+
+            return success;
+
+        }
 
         /*
                                          =============================================================
@@ -1482,38 +1495,19 @@ namespace ParishSystem
         }
 
         //addReference is same as editReference!!!!!!!!!
-        public bool addBaptismReference(int baptismID, string registryNumber, string recordNumber, string pageNumber)
-        {
-            string q = "UPDATE Baptism SET registryNumber = '" + registryNumber
-                + "', recordNumber = '" + recordNumber
-                + "', pageNumber = '" + pageNumber
-                + "' WHERE baptismID = '" + baptismID + "'";
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
 
         public bool editBaptismReference(int baptismID, string registryNumber, string recordNumber, string pageNumber)
         {
-            //if (!idExists("baptism", "baptismID", baptismID))
-            //    return false;
-
-            //addBaptismLog(baptismID);
-
-            bool success = addBaptismReference(baptismID, registryNumber, recordNumber, pageNumber);
-
-
-            //if (success)
-            //    updateModificationInfo("baptism", "baptismID", baptismID);
+            string q = "UPDATE Baptism SET registryNumber = @registryNumber, recordNumber = @recordNumber, pageNumber = @pageNumber WHERE baptismID = @baptismID";
+            bool success = ExecuteNonQuery(q, registryNumber, recordNumber, pageNumber, baptismID);
 
             return success;
         }
 
         public DataTable getBaptisms()
         {
-            string q = "SELECT profileID, applicationID, baptismID, firstName, midname, lastName, suffix, baptismDate, registryNumber, pageNumber, recordNumber  "
-                +"FROM Baptism NATURAL JOIN Application NATURAL JOIN Applicant NATURAL JOIN GeneralProfile";
+            string q = "SELECT profileID, applicationID, baptismID, firstName, midname, lastName, suffix, DATE_FORMAT(baptismDate, '%Y-%m-%d') AS baptismDate, registryNumber, pageNumber, recordNumber  "
+                + "FROM Baptism NATURAL JOIN Application NATURAL JOIN Applicant NATURAL JOIN GeneralProfile";
 
             
             DataTable dt = runQuery(q);
@@ -1678,19 +1672,10 @@ namespace ParishSystem
             return success;
         }
 
-        public bool editConfirmationReference(int confirmationID, string recordNumber, string pageNumber, string registryNumber)
+        public bool editConfirmationReference(int confirmationID, string registryNumber, string recordNumber, string pageNumber)
         {
-            //if (!idExists("Confirmation", "confirmationID", confirmationID))
-            //    return false;
-
-            //addConfirmationLog(confirmationID);
-
-
-
-            bool success = addConfirmationReference(confirmationID, recordNumber, pageNumber, registryNumber);
-
-            //if (success)
-            //    updateModificationInfo("Confirmation", "confirmationID", confirmationID);
+            string q = "UPDATE Confirmation SET registryNumber = @registryNumber, recordNumber = @recordNumber, pageNumber = @pageNumber WHERE confirmationID = @confirmationID";
+            bool success = ExecuteNonQuery(q, registryNumber, recordNumber, pageNumber, confirmationID);
 
             return success;
 
@@ -1722,7 +1707,7 @@ namespace ParishSystem
         public DataTable getConfirmationBetweenDates(DateTime start, DateTime end)
         {
             string q = "SELECT profileID, confirmationID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix) AS Name,"
-                + " gender, birthdate, registryNumber, pageNumber, recordNumber, DATE_FORMAT(confirmationDate, '%m-%d-%Y %H:%i') FROM Confirmation "
+                + " gender, birthdate, registryNumber, pageNumber, recordNumber, DATE_FORMAT(confirmationDate, '%m-%d-%Y') FROM Confirmation "
                 + "JOIN Application ON Confirmation.applicationID = Application.applicationID "
                 + "JOIN GeneralProfile ON GeneralProfile.profileID = Application.profileID "
                 + " WHERE confirmationDate >= '"
@@ -1739,7 +1724,7 @@ namespace ParishSystem
 
         public DataTable getConfirmations()
         {
-            string q = "SELECT profileID, applicationID, confirmationID, firstName, midname, lastName, suffix, baptismDate, registryNumber, pageNumber, recordNumber  "
+            string q = "SELECT profileID, applicationID, confirmationID, firstName, midname, lastName, suffix, DATE_FORMAT(confirmationDate, '%m-%Y-%d') AS confirmationDate, registryNumber, pageNumber, recordNumber  "
                 + "FROM Confirmation NATURAL JOIN Application NATURAL JOIN Applicant NATURAL JOIN GeneralProfile";
 
             DataTable dt = runQuery(q);
@@ -1858,27 +1843,19 @@ namespace ParishSystem
         */
         #region
 
-        public bool addMarriage(int applicationID, int ministerID, DateTime licenseDate, DateTime marriageDate, MarriageStatus status)
+        public bool addMarriage(int applicationID, int ministerID, DateTime licenseDate, DateTime marriageDate, CivilStatus civilStatusGroom, CivilStatus civilStatusBride)
         {
-            string q = "INSERT INTO Marriage(applicationID, ministerID, licenseDate, marriageDate, status) VALUES (@applicationID, @ministerID, @licenseDate, @marriageDate, @status)";
-            bool success = ExecuteNonQuery(q, applicationID, ministerID, licenseDate.ToString("yyyy-MM-dd HH:mm:ss"), marriageDate.ToString("yyyy-MM-dd HH:mm:ss"), status);
-            
-            return success;
-        }
-
-        public bool addMarriage(int applicationID, int ministerID, DateTime licenseDate, DateTime marriageDate, CivilStatus groomCivilStatus, CivilStatus brideCivilStatus)
-        {
-            string q = "INSERT INTO Marriage(applicationID, ministerID, licenseDate, marriageDate, groomCivilStatus, brideCivilStatus) VALUES (@applicationID, @ministerID, @licenseDate, @marriageDate, @groomCivilStatus, @brideCivilStatus)";
-            bool success = ExecuteNonQuery(q, applicationID, ministerID, licenseDate.ToString("yyyy-MM-dd"), marriageDate.ToString("yyyy-MM-dd"), (int)groomCivilStatus, (int)brideCivilStatus);
+            string q = "INSERT INTO Marriage(applicationID, ministerID, licenseDate, marriageDate, civilStatusGroom, civilStatusBride) VALUES (@applicationID, @ministerID, @licenseDate, @marriageDate, @civilStatusGroom, @civilStatusBride)";
+            bool success = ExecuteNonQuery(q, applicationID, ministerID, licenseDate.ToString("yyyy-MM-dd HH:mm:ss"), marriageDate.ToString("yyyy-MM-dd"), civilStatusGroom, civilStatusBride);
 
             return success;
         }
 
         public bool editMarriage(int marriageID, int groomID, int brideID, int ministerID, DateTime licenseDate, DateTime marriageDate, MarriageStatus status)
         {
-            string q = "INSERT INTO Marriage(marriageID, groomID, brideID, ministerID, licenseDate, marriageDate, status) VALUES "
-                +"(@marriageID, @groomID, @brideID, @ministerID, @licenseDate, @marriageDate, @status)";
-            bool success = ExecuteNonQuery(q, marriageID, groomID, brideID, ministerID, licenseDate.ToString("yyyy-MM-dd HH:mm:ss"), marriageDate.ToString("yyyy-MM-dd HH:mm:ss"), status);
+            string q = "UPDATE Marriage SET groomID = @groomID, brideID = @brideID, ministerID = @ministerID, "
+                + "licenseDate = @licenseDate, marriageDate = @marriageDate, status = @status WHERE marriageID = @marriageID";
+            bool success = ExecuteNonQuery(q, groomID, brideID, ministerID, licenseDate.ToString("yyyy-MM-dd"), marriageDate.ToString("yyyy-MM-dd"), status, marriageID);
             return success;
         }
 
@@ -1891,26 +1868,11 @@ namespace ParishSystem
             return success;
         }
 
-        public bool addMarriageReference(int marriageID, string registryNumber, string pageNumber, string recordNumber)
-        {
-            string q = "UPDATE Marriage SET recordNumber = '" + recordNumber
-                + "', pageNumber = '" + pageNumber + "', registryNumber = '" + registryNumber
-                + "' WHERE marriageID = '" + marriageID + "'";
-
-            bool success = runNonQuery(q);
-
-            //if (success)
-            //    updateModificationInfo("marriage", "marriageID", marriageID);
-
-            return success;
-        }
-
         public bool editMarriageReference(int marriageID, string recordNumber, string pageNumber, string registryNumber)
         {
-            //if (!idExists("Marriage", "marriageID", marriageID))
-            //    return false;
-
-            return addMarriageReference(marriageID, recordNumber, pageNumber, registryNumber);
+            string q = "UPDATE Marriage SET recordNumber = @recordNumber, pageNumber = @pageNumber, registryNumber = @registryNumber WHERE marriageID = @marriageID";
+            bool success = ExecuteNonQuery(q, recordNumber, pageNumber, registryNumber, marriageID);
+            return success;
 
         }
 
@@ -1947,7 +1909,7 @@ namespace ParishSystem
         public DataTable getMarriagesByYear(DateTime date)
         {
             string q = "SELECT Marriage.profileID, marriageID, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', suffix) AS Name,"
-                + " gender, birthdate, registryNumber, pageNumber, recordNumber, DATE_FORMAT(marriageDate, '%m-%d-%Y %H:%i') FROM Marriage "
+                + " gender, birthdate, registryNumber, pageNumber, recordNumber, DATE_FORMAT(marriageDate, '%m-%Y-%d') FROM Marriage "
                 + "JOIN Application ON Marriage.applicationID = Application.applicationID "
                 + "JOIN GeneralProfile ON GeneralProfile.profileID = Application.profileID "
                 + "WHERE YEAR(marriageDate) = '" + date.ToString("yyyy") + "'";
@@ -1984,10 +1946,26 @@ namespace ParishSystem
             return dt;
         }
 
-        
+        public DataTable getMarriages()
+        {
+            string q = @"SELECT marriageID, groom.applicationID, groom.profileID, bride.profileID, ministerID, marriageDate,
+                        CONCAT_WS(' ', groom.firstName, groom.midName, groom.lastName, groom.suffix) AS groomName, 
+                        CONCAT_WS(' ', bride.firstName, bride.midName, bride.lastName, bride.suffix) AS brideName,
+                        registryNumber, recordNumber, pageNumber, remarks
+                        FROM 
+                        (SELECT * FROM GeneralProfile NATURAL JOIN Applicant NATURAL JOIN Application WHERE gender = 1)
+                        AS groom 
+                        JOIN 
+                        (SELECT * FROM GeneralProfile NATURAL JOIN Applicant NATURAL JOIN Application WHERE gender = 2)
+                        AS bride
+                        ON groom.applicationID = bride.applicationID 
+                        JOIN Marriage ON Marriage.applicationID = groom.applicationID
+                        WHERE groom.profileID != bride.profileID";
+            DataTable dt = ExecuteQuery(q);
+            return dt;
+        }
 
         
-
         public DataTable getMarriagesWithNoReference()
         {
             return new DataTable();
@@ -2345,101 +2323,6 @@ namespace ParishSystem
 
             return dt;
         }
-
-        /*
-                                         =============================================================
-                                            ================= REQUIREMENT TABLE =================
-                                         =============================================================
-        */
-
-        public bool addRequirement(string requirementName, char sacramentType)
-        {
-            string q = "INSERT INTO Requirement(requirementName, sacramentType) VALUES ('" + requirementName + "', '" + sacramentType + "')";
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public bool editRequirement(int requirementID, string requirementName, char sacramentType)
-        {
-            string q = "UPDATE Requirement SET requirementName = '" + requirementName
-                + "', sacramentType = '" + sacramentType
-                + "' WHERE requirementID = '" + requirementID + "'";
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public DataTable getRequirementsFor(char sacramentType)
-        {
-            string q = "SELECT * FROM Requirement WHERE sacramentType = '" + sacramentType + "'";
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
-        /*
-                                         =============================================================
-                                            ================= CASH RELEASE TABLE =================
-                                         =============================================================
-        */
-       
-
-        public bool editCashRelease(int cashReleaseID, int cashReleaseTypeID, DateTime cashReleaseDateTime, string remark, double releaseAmount, int checkNum, int CVnum)
-        {
-            string q = "UPDATE CashRelease SET cashReleaseTypeID = '" + cashReleaseTypeID
-                + "', cashReleaseDateTime = '" + cashReleaseDateTime.ToString("yyyy-MM-dd HH:mm:ss")
-                + "', remark = '" + remark + "', releaseAmount = '" + releaseAmount
-                + "', checkNum = '" + checkNum + "', CVnum = '" + CVnum
-                + "' WHERE cashReleaseID = '" + cashReleaseID + "'";
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public bool deleteCashRelease(int cashReleaseID)
-        {
-            string q = "DELETE FROM CashRelease WHERE cashReleaseID = " + cashReleaseID;
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public DataTable getCashReleaseBetweenDates(DateTime start, DateTime end)
-        {
-            string q = "SELECT DATE_FORMAT(cashReleaseDateTime, '%m-%d-%Y %H:%i'),"
-                + " remark, releaseAmount, description "
-                + "FROM CashRelease "
-                + "JOIN CashReleaseType "
-                + "ON cashRelease.cashReleaseTypeID = cashReleaseType.cashReleaseTypeID "
-                + "WHERE cashReleaseDateTime BETWEEN '" + start.ToString("yyyy-MM-dd")
-                + "' AND '" + end.ToString("yyyy-MM-dd") + "'";
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
-        public DataTable getCashReleaseOfMonth(DateTime date)
-        {
-            string q = "SELECT DATE_FORMAT(cashReleaseDateTime, 'MM-dd-yyyy HH:mm:ss'), "
-                + " remark, releaseAmount, description"
-                + " FROM CashRelease WHERE MONTH(cashReleaseDateTime) = '"
-                + int.Parse(date.ToString("MM")) + "' AND YEAR(cashReleaseDateTime) = '"
-                + int.Parse(date.ToString("yyyy")) + "'";
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
-
-
         /*
                                          =============================================================
                                             ================= CASH RELEASE TYPE TABLE =================
@@ -2608,7 +2491,6 @@ namespace ParishSystem
             return int.Parse(dt.Rows[0]["profileID"].ToString());
 
         }
-
 
 
         //COMMENT: merge names into field "Name"

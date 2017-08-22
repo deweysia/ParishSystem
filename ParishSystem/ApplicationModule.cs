@@ -15,16 +15,16 @@ namespace ParishSystem
         DataHandler dh;
         private int profileID, groomID, brideID;
         private int applicationID;
-        public ApplicationModule(DataHandler dh)
+        public ApplicationModule()
         {
             InitializeComponent();
-            this.dh = dh;
-            this.TopLevel = false;
+            this.dh = DataHandler.getDataHandler();
 
             baptismApplication_birthDate_dtp.MaxDate = DateTime.Now.Date;
             confirmationApplication_birthDate_dtp.MaxDate = DateTime.Now.Date;
             dtpGBirthDate.MaxDate = DateTime.Now.Date;
             dtpBBirthDate.MaxDate = DateTime.Now.Date;
+            //applicationTabControl.TabPages[1].Enabled = false;
         }
 
         private void SacramentApplication_Load(object sender, EventArgs e)
@@ -113,13 +113,6 @@ namespace ParishSystem
 
         }
 
-        private void showAddApplicationForm(SacramentType t)
-        {
-            Form f = getAddApplicationForm(t);
-            f.ShowDialog();
-
-            loadApplications(t);
-        }
 
         private Form getApplicationForm(SacramentType t)
         {
@@ -211,6 +204,34 @@ namespace ParishSystem
             marriageApplication_filter_cmb.SelectedIndex = 0;
         }
 
+        private void loadApplicationPaymentDetails(SacramentType t)
+        {
+            Button btnPayment;
+            Label lblPrice;
+            if(t == SacramentType.Baptism)
+            {
+                btnPayment = baptismApplication_addPayment_btn;
+                lblPrice = baptismApplication_payment_label;
+            }else if(t == SacramentType.Confirmation)
+            {
+                btnPayment = confirmationApplication_addPayment_btn;
+                lblPrice = confirmationApplication_payment_label;
+            }else
+            {
+                btnPayment = marriageApplication_addPayment_btn;
+                lblPrice = marriageApplication_price_label;
+            }
+
+            DataTable dt = dh.getApplicationIncomeDetails(this.applicationID);
+
+            double price = double.Parse(dt.Rows[0]["price"].ToString());
+
+            double totalPayment = double.Parse(dt.Rows[0]["totalPayment"].ToString());
+            btnPayment.Enabled = (price - totalPayment) != 0;
+            lblPrice.Text = (price - totalPayment).ToString("C");
+
+        }
+
         /// <summary>
         /// Loads details of the SelectedRow in DataGridView to the Baptism Details Panel
         /// </summary>
@@ -249,14 +270,7 @@ namespace ParishSystem
             baptismApplication_birthdate_lbl.Text = birthdate.ToString("yyyy-MM-dd");
 
             tickRequirements(baptismApplication_requirements_tlp, requirements);
-            DataTable dt = dh.getApplicationIncomeDetails(applicationID);
-
-            double price = double.Parse(dt.Rows[0]["price"].ToString());
-
-            double totalPayment = double.Parse(dt.Rows[0]["totalPayment"].ToString());
-            baptismApplication_addPayment_btn.Enabled = (price - totalPayment) != 0;
-            baptismApplication_payment_label.Text = (price - totalPayment).ToString("C");
-            baptismApplication_payment_remarks.Text = dt.Rows[0]["remarks"].ToString();
+            loadApplicationPaymentDetails(SacramentType.Baptism);   
         }
 
         /// <summary>
@@ -292,15 +306,7 @@ namespace ParishSystem
             confirmationApplication_status_label.Text = status.ToString();
             tickRequirements(confirmationApplication_requirements_tlp, requirements);
 
-
-            DataTable dt = dh.getApplicationIncomeDetails(applicationID);
-
-            double price = double.Parse(dt.Rows[0]["price"].ToString());
-
-            double totalPayment = double.Parse(dt.Rows[0]["totalPayment"].ToString());
-            confirmationApplication_addPayment_btn.Enabled = (price - totalPayment) != 0;
-            confirmationApplication_payment_label.Text = (price - totalPayment).ToString("C");
-            confirmationApplication_payment_remarks.Text = dt.Rows[0]["remarks"].ToString();
+            loadApplicationPaymentDetails(SacramentType.Confirmation);
         }
 
 
@@ -345,14 +351,7 @@ namespace ParishSystem
 
             tickRequirements(marriageApplication_requirements_tlp, requirements);
 
-            DataTable dt = dh.getApplicationIncomeDetails(applicationID);
-
-            double price = double.Parse(dt.Rows[0]["price"].ToString());
-
-            double totalPayment = double.Parse(dt.Rows[0]["totalPayment"].ToString());
-            marriageApplication_addPayment_btn.Enabled = (price - totalPayment) != 0;
-            marriageApplication_price_label.Text = (price - totalPayment).ToString("C");
-            marriageApplication_payment_remarks.Text = dt.Rows[0]["remarks"].ToString();
+            loadApplicationPaymentDetails(SacramentType.Marriage);
         }
 
         /// <summary>
@@ -567,7 +566,7 @@ namespace ParishSystem
                 }
             }
 
-            loadApplicationDetails(type);
+            loadApplicationPaymentDetails(type);
 
         }
 

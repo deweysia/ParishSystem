@@ -158,6 +158,7 @@
             this.btnSubmit.TabIndex = 2;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseSelectable = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // bunifuElipse1
             // 

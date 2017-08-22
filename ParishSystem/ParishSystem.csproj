@@ -101,6 +101,12 @@
     <Compile Include="AddReferences.Designer.cs">
       <DependentUpon>AddReferences.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdvanceSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdvanceSearch.Designer.cs">
+      <DependentUpon>AdvanceSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="AlphaTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
