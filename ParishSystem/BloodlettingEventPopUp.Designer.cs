@@ -54,7 +54,7 @@
             // 
             // controlBar_panel
             // 
-            this.controlBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.controlBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
             this.controlBar_panel.Controls.Add(this.close_button);
             this.controlBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlBar_panel.Location = new System.Drawing.Point(0, 0);
@@ -62,6 +62,7 @@
             this.controlBar_panel.Name = "controlBar_panel";
             this.controlBar_panel.Size = new System.Drawing.Size(378, 33);
             this.controlBar_panel.TabIndex = 14;
+            this.controlBar_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.controlBar_panel_Paint);
             // 
             // close_button
             // 
@@ -106,34 +107,39 @@
             // 
             // edit_button
             // 
-            this.edit_button.Location = new System.Drawing.Point(40, 8);
+            this.edit_button.FlatAppearance.BorderSize = 0;
+            this.edit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.edit_button.Image = global::ParishSystem.Properties.Resources.icons8_Pencil_32;
+            this.edit_button.Location = new System.Drawing.Point(331, 7);
             this.edit_button.Name = "edit_button";
-            this.edit_button.Size = new System.Drawing.Size(86, 27);
+            this.edit_button.Size = new System.Drawing.Size(44, 35);
             this.edit_button.TabIndex = 21;
-            this.edit_button.Text = "E";
+            this.edit_button.Tag = "e";
             this.edit_button.UseVisualStyleBackColor = true;
             this.edit_button.Click += new System.EventHandler(this.edit_button_Click);
             // 
             // cancel_button
             // 
-            this.cancel_button.Location = new System.Drawing.Point(145, 8);
+            this.cancel_button.FlatAppearance.BorderSize = 0;
+            this.cancel_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancel_button.Image = global::ParishSystem.Properties.Resources.icons8_Refresh_32;
+            this.cancel_button.Location = new System.Drawing.Point(331, 62);
             this.cancel_button.Name = "cancel_button";
-            this.cancel_button.Size = new System.Drawing.Size(86, 27);
+            this.cancel_button.Size = new System.Drawing.Size(44, 35);
             this.cancel_button.TabIndex = 22;
-            this.cancel_button.Text = "C";
             this.cancel_button.UseVisualStyleBackColor = true;
             this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
             // 
             // event_name
             // 
-            this.event_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.event_name.BackColor = System.Drawing.Color.White;
             this.event_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.event_name.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.event_name.ForeColor = System.Drawing.Color.White;
+            this.event_name.ForeColor = System.Drawing.Color.Black;
             this.event_name.Location = new System.Drawing.Point(65, 12);
             this.event_name.Name = "event_name";
             this.event_name.ReadOnly = true;
-            this.event_name.Size = new System.Drawing.Size(301, 97);
+            this.event_name.Size = new System.Drawing.Size(260, 97);
             this.event_name.TabIndex = 23;
             this.event_name.Text = "";
             // 
@@ -141,7 +147,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(24, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 17);
@@ -150,8 +156,10 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.cancel_button);
+            this.panel1.Controls.Add(this.edit_button);
             this.panel1.Controls.Add(this.event_name);
             this.panel1.Location = new System.Drawing.Point(0, 33);
             this.panel1.Name = "panel1";
@@ -162,7 +170,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(15, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 15);
@@ -171,7 +179,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.start_dateTimePicker);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
@@ -185,7 +193,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Silver;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(24, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 17);
@@ -194,10 +202,8 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.delete_button);
-            this.panel3.Controls.Add(this.edit_button);
-            this.panel3.Controls.Add(this.cancel_button);
             this.panel3.Location = new System.Drawing.Point(0, 455);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(378, 49);
@@ -205,11 +211,14 @@
             // 
             // delete_button
             // 
-            this.delete_button.Location = new System.Drawing.Point(254, 8);
+            this.delete_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.delete_button.FlatAppearance.BorderSize = 0;
+            this.delete_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delete_button.Image = global::ParishSystem.Properties.Resources.icons8_Trash_64;
+            this.delete_button.Location = new System.Drawing.Point(329, 5);
             this.delete_button.Name = "delete_button";
-            this.delete_button.Size = new System.Drawing.Size(86, 28);
+            this.delete_button.Size = new System.Drawing.Size(36, 33);
             this.delete_button.TabIndex = 23;
-            this.delete_button.Text = "D";
             this.delete_button.UseVisualStyleBackColor = true;
             this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
             // 
@@ -217,6 +226,7 @@
             // 
             this.venue_textbox.BackColor = System.Drawing.Color.White;
             this.venue_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.venue_textbox.ForeColor = System.Drawing.Color.Black;
             this.venue_textbox.Location = new System.Drawing.Point(65, 264);
             this.venue_textbox.Name = "venue_textbox";
             this.venue_textbox.ReadOnly = true;

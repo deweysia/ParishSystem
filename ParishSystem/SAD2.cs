@@ -12,8 +12,10 @@ namespace ParishSystem
 {
     public partial class SAD2 : Form
     {
-        Color ButtonPressed = Color.DodgerBlue;
-        Color ButtonBackColor = Color.Gainsboro;
+        //#5587e0
+
+        Color ButtonPressed = Color.FromArgb(68, 108, 179);
+        Color ButtonBackColor = Color.Transparent;
         DataHandler dh = DataHandler.getDataHandler();
         Point lastClick;
         Dictionary<Button, Panel_Size_Pair> SubMenu= new Dictionary<Button, Panel_Size_Pair>();
@@ -26,6 +28,7 @@ namespace ParishSystem
             SubMenu.Add(itemtypemenu_button, new Panel_Size_Pair(175, 58, itemtypemenu_panel, false));
             SubMenu.Add(CDBreport_button, new Panel_Size_Pair(234, 58, CDBreport_panel, false));
             SubMenu.Add(CRBreport_button, new Panel_Size_Pair(234, 58, CRBreport_panel, false));
+
         }//CRBreport_panel
 
         #region Effects
@@ -402,8 +405,6 @@ namespace ParishSystem
             showForm(content_panel, f);
         }
 
-
-        
     }
 }
 

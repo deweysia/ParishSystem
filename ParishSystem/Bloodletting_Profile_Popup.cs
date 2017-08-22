@@ -55,15 +55,16 @@ namespace ParishSystem
             {
                 c.Visible = false;
             }
-            blooddonation_dataGridView_bloodletting.Columns["eventName"].HeaderText = "                  Event Name                    ";
+            blooddonation_dataGridView_bloodletting.Columns["eventName"].HeaderText = "Event Name";
             blooddonation_dataGridView_bloodletting.Columns["eventName"].Visible = true;
-            blooddonation_dataGridView_bloodletting.Columns["quantity"].HeaderText = "  Quantity  ";
+            blooddonation_dataGridView_bloodletting.Columns["quantity"].HeaderText = "Quantity";
             blooddonation_dataGridView_bloodletting.Columns["quantity"].Visible = true;
 
         }
 
         private void Bloodletting_Details_Popup_Load(object sender, EventArgs e)
         {
+            quantity_nud.Maximum = decimal.MaxValue;
             if (hasProfile == true)
             {
                 refreshBloodlettingInfo();
@@ -87,7 +88,7 @@ namespace ParishSystem
                 bloodtype_combobox.Visible = true;
                 cancel_button.Visible = true;
                 edit_button.Tag = "s";
-
+                edit_button.Image = Properties.Resources.icons8_Save_Filled_32;
                 firstname_label_bloodletting.Visible = false;
                 mi_label_bloodletting.Visible = false;
                 lastname_label_bloodletting.Visible = false;
@@ -155,6 +156,7 @@ namespace ParishSystem
                     }
                     bloodtype_combobox.Visible = false;
                     edit_button.Tag = "e";
+                    edit_button.Image = Properties.Resources.icons8_Pencil_32;
                     cancel_button.Visible = false;
 
                     
@@ -191,7 +193,6 @@ namespace ParishSystem
         private void cancel_button_Click(object sender, EventArgs e)
         {
             bloodtype_combobox.Visible = false;
-            edit_button.Text = "E";
             cancel_button.Visible = false;
             firstname_label_bloodletting.Visible = true;
             mi_label_bloodletting.Visible = true;
@@ -209,6 +210,9 @@ namespace ParishSystem
             mi_textbox_bloodletting.Clear();
             lastname_textbox_bloodletting.Clear();
             suffix_textbox_bloodletting.Clear();
+
+            edit_button.Tag = "e";
+            edit_button.Image = Properties.Resources.icons8_Pencil_32;
         }
 
         private void addDonation_button_bloodletting_Click(object sender, EventArgs e)

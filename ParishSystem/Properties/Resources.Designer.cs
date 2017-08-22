@@ -203,9 +203,29 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cash1_indent {
+            get {
+                object obj = ResourceManager.GetObject("cash1_indent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cash2 {
             get {
                 object obj = ResourceManager.GetObject("Cash2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cash2_indent {
+            get {
+                object obj = ResourceManager.GetObject("Cash2_indent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,6 +243,16 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cash3_indent {
+            get {
+                object obj = ResourceManager.GetObject("Cash3_indent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CashInput {
             get {
                 object obj = ResourceManager.GetObject("CashInput", resourceCulture);
@@ -233,9 +263,29 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CashInput_indent {
+            get {
+                object obj = ResourceManager.GetObject("CashInput_indent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CashReleaseReports {
             get {
                 object obj = ResourceManager.GetObject("CashReleaseReports", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CashReleaseReports_indent {
+            get {
+                object obj = ResourceManager.GetObject("CashReleaseReports_indent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +316,16 @@ namespace ParishSystem.Properties {
         internal static System.Drawing.Bitmap Community {
             get {
                 object obj = ResourceManager.GetObject("Community", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap community_indent {
+            get {
+                object obj = ResourceManager.GetObject("community_indent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -483,6 +543,16 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Home_indent {
+            get {
+                object obj = ResourceManager.GetObject("Home_indent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Cancel_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Cancel_50", resourceCulture);
@@ -523,6 +593,16 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Delete_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Delete_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Delete_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Delete_50", resourceCulture);
@@ -553,6 +633,16 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Pencil_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Pencil_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Plus_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Plus_48", resourceCulture);
@@ -576,6 +666,26 @@ namespace ParishSystem.Properties {
         internal static System.Drawing.Bitmap icons8_Plus_Math_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Plus_Math_50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Refresh_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Refresh_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Save_Filled_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Save_Filled_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -646,6 +756,16 @@ namespace ParishSystem.Properties {
         internal static System.Drawing.Bitmap ITEMS {
             get {
                 object obj = ResourceManager.GetObject("ITEMS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Items_indent {
+            get {
+                object obj = ResourceManager.GetObject("Items_indent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -743,9 +863,29 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Parish_indent {
+            get {
+                object obj = ResourceManager.GetObject("Parish_indent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Postulancy {
             get {
                 object obj = ResourceManager.GetObject("Postulancy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Postulancy_indent {
+            get {
+                object obj = ResourceManager.GetObject("Postulancy_indent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

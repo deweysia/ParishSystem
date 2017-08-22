@@ -39,8 +39,8 @@ namespace ParishSystem
 
         private void breakdown_datagridview_report_disbursment_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Form A = new ORdetailsPopUp(int.Parse(report_datagridview_cashdisbursment.CurrentRow.Cells["ORnum"].Value.ToString()), cashDisbursmentMode, dh);
-            A.ShowDialog();
+            //Form A = new ORdetailsPopUp(int.Parse(report_datagridview_cashdisbursment.CurrentRow.Cells["ORnum"].Value.ToString()), cashDisbursmentMode, dh);
+           // A.ShowDialog();
         }
         private void searchbar_textbox_report_disbursment_TextChanged(object sender, EventArgs e)
         {
@@ -137,7 +137,6 @@ namespace ParishSystem
             if (filterBy_combobox_disbursment.SelectedIndex == 8) { }
             
             */
-            refreshReports();
         }
         private void breakdown_radiobutton_cashdisbursment_CheckedChanged(object sender, EventArgs e)
         {
@@ -571,22 +570,12 @@ namespace ParishSystem
 
         }
 
-        private void CV_textbox_report_disbursment_TextChanged(object sender, EventArgs e)
-        {
-            refreshReports();
-        }
-        private void CN_textbox_report_disbursment_TextChanged(object sender, EventArgs e)
+       
+        private void generate_report(object sender, EventArgs e)
         {
             refreshReports();
         }
 
-        private void grouped_radiobutton_cashdisbursment_CheckedChanged(object sender, EventArgs e)
-        {
-            refreshReports();
-        }
-        private void notGrouped_radiobutton_cashdisbursment_CheckedChanged(object sender, EventArgs e)
-        {
-            refreshReports();
-        }
+     
     }
 }
