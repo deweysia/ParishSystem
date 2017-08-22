@@ -1352,10 +1352,10 @@ namespace ParishSystem
 
         private void filterBy_combobox_bloodletting_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable dt;
+            DataTable dt = new DataTable();
             if (filterBy_combobox_bloodletting.Text == "Recent")
             {
-                dt = dh.getBloodDonorsRecent();
+                //dt = dh.getBloodDonorsRecent();
             }
             else if (filterBy_combobox_bloodletting.Text == "Donations on Event")
             {

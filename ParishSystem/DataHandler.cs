@@ -640,11 +640,7 @@ namespace ParishSystem
 
         public bool addBloodDonationEvent(string eventName, DateTime startTime, DateTime endTime, string eventVenue, string eventDetails)
         {
-            string q = "UPDATE BloodDonationEvent SET startDateTime = '" + startTime.ToString("yyyy-MM-dd HH:mm:ss")
-                + "', endDateTime = '" + endTime.ToString("yyyy-MM-dd HH:mm:ss")
-                + "', eventVenue = '" + eventVenue + "', eventDetails = '" + eventDetails
-                + "' WHERE eventName = '" + eventName + "'";
-
+            string q = $@"INSERT INTO `sad2`.`blooddonationevent` (`eventName`, `startDateTime`, `endDateTime`, `eventVenue`, `eventDetails`) VALUES ('{eventName}','{startTime.ToString("yyyy-MM-dd HH:mm:ss")}', '{endTime.ToString("yyyy-MM-dd HH:mm:ss")}','{eventVenue}','{eventDetails}');";
             bool success = runNonQuery(q);
             //if (success)
             //    updateModificationInfo("BloodDnationEvent", "bloodbloodDonationEventID", getLatestID("BloodDonationEvent", "bloodbloodDonationEventID"));

@@ -34,14 +34,15 @@ namespace ParishSystem
 
         private void edit_button_Click(object sender, EventArgs e)
         {
-            if (edit_button.Text == "e")
+            if (edit_button.Tag.ToString() == "e")
             {
                 event_name.ReadOnly = false;
                 start_dateTimePicker.Enabled = true;
                 end_DateTimePicker.Enabled = true;
                 venue_textbox.ReadOnly = false;
                 details_textarea.ReadOnly = false;
-                edit_button.Text = "s";
+                edit_button.Tag = "s";
+                edit_button.Image = Properties.Resources.icons8_Save_Filled_32;
                 
             }
             else
@@ -53,13 +54,19 @@ namespace ParishSystem
                 else{
                     if (bloodlettingID.Equals(0)) {
                         dh.addBloodDonationEvent(event_name.Text, start_dateTimePicker.Value, end_DateTimePicker.Value, venue_textbox.Text, details_textarea.Text);
-                        bloodlettingID = dh.getMaxBloodEvent();
+                        bloodlettingID = dh.getMaxBloodEvent()+1;
                     }
                     else {
                         dh.editBloodDonationEvent(bloodlettingID,event_name.Text,start_dateTimePicker.Value,end_DateTimePicker.Value,venue_textbox.Text,details_textarea.Text);
                     }
-                    //edit_button.Text = "e";
-                    close_button.PerformClick();
+                    edit_button.Tag = "e";
+                    edit_button.Image = Properties.Resources.icons8_Pencil_32;
+                    event_name.ReadOnly = true;
+                    start_dateTimePicker.Enabled = false;
+                    end_DateTimePicker.Enabled = false;
+                    venue_textbox.ReadOnly = true;
+                    details_textarea.ReadOnly = true;
+
                 }
             }
         }
@@ -84,12 +91,20 @@ namespace ParishSystem
                 venue_textbox.ReadOnly = false;
                 details_textarea.ReadOnly = false;
              
-                edit_button.Text = "s";
+                edit_button.Tag = "s";
+                edit_button.Image = Properties.Resources.icons8_Save_Filled_32;
             }
             else
             {
+                event_name.ReadOnly = true;
+                start_dateTimePicker.Enabled = false;
+                end_DateTimePicker.Enabled = false;
+                venue_textbox.ReadOnly = true;
+                details_textarea.ReadOnly = true;
+
                 DataTable dt = dh.getbloodlettingEvent(bloodlettingID);
-                edit_button.Text = "e";
+                edit_button.Tag = "e";
+                edit_button.Image = Properties.Resources.icons8_Pencil_32;
                 event_name.Text = dt.Rows[0]["eventName"].ToString();
                 start_dateTimePicker.Value = dh.toDateTime(dt.Rows[0]["startDateTime"].ToString(), false);
                 end_DateTimePicker.Value = dh.toDateTime(dt.Rows[0]["endDateTime"].ToString(), false);
@@ -115,6 +130,11 @@ namespace ParishSystem
                 dh.conn.Close();
                 MessageBox.Show("Shunga");
             }
+        }
+
+        private void controlBar_panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

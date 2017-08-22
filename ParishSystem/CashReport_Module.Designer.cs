@@ -51,6 +51,7 @@
             this.report_datagridview_cashdisbursment = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.summary_datagridview_report_disbursment = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.Reports_panel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -77,6 +78,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.flowLayoutPanel2);
             this.panel3.Controls.Add(this.panel11);
             this.panel3.Controls.Add(this.filterBy_combobox_disbursment);
@@ -99,6 +101,7 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(232, 73);
             this.flowLayoutPanel2.TabIndex = 16;
+      
             // 
             // from_dtp_cashdisbursment
             // 
@@ -107,7 +110,7 @@
             this.from_dtp_cashdisbursment.Name = "from_dtp_cashdisbursment";
             this.from_dtp_cashdisbursment.Size = new System.Drawing.Size(221, 29);
             this.from_dtp_cashdisbursment.TabIndex = 17;
-            this.from_dtp_cashdisbursment.ValueChanged += new System.EventHandler(this.from_dtp_cashdisbursment_ValueChanged);
+            this.from_dtp_cashdisbursment.Visible = false;
             // 
             // to_dtp_cashdisbursment
             // 
@@ -116,7 +119,7 @@
             this.to_dtp_cashdisbursment.Name = "to_dtp_cashdisbursment";
             this.to_dtp_cashdisbursment.Size = new System.Drawing.Size(221, 29);
             this.to_dtp_cashdisbursment.TabIndex = 18;
-            this.to_dtp_cashdisbursment.ValueChanged += new System.EventHandler(this.to_dtp_cashdisbursment_ValueChanged);
+            this.to_dtp_cashdisbursment.Visible = false;
             // 
             // searchbar_textbox_report_disbursment
             // 
@@ -124,7 +127,8 @@
             this.searchbar_textbox_report_disbursment.Name = "searchbar_textbox_report_disbursment";
             this.searchbar_textbox_report_disbursment.Size = new System.Drawing.Size(221, 29);
             this.searchbar_textbox_report_disbursment.TabIndex = 12;
-            this.searchbar_textbox_report_disbursment.TextChanged += new System.EventHandler(this.searchbar_textbox_report_disbursment_TextChanged);
+            this.searchbar_textbox_report_disbursment.Visible = false;
+        
             // 
             // CV_textbox_report_disbursment
             // 
@@ -132,7 +136,7 @@
             this.CV_textbox_report_disbursment.Name = "CV_textbox_report_disbursment";
             this.CV_textbox_report_disbursment.Size = new System.Drawing.Size(221, 29);
             this.CV_textbox_report_disbursment.TabIndex = 19;
-            this.CV_textbox_report_disbursment.TextChanged += new System.EventHandler(this.CV_textbox_report_disbursment_TextChanged);
+            this.CV_textbox_report_disbursment.Visible = false;
             // 
             // CN_textbox_report_disbursment
             // 
@@ -140,7 +144,6 @@
             this.CN_textbox_report_disbursment.Name = "CN_textbox_report_disbursment";
             this.CN_textbox_report_disbursment.Size = new System.Drawing.Size(221, 29);
             this.CN_textbox_report_disbursment.TabIndex = 20;
-            this.CN_textbox_report_disbursment.TextChanged += new System.EventHandler(this.CN_textbox_report_disbursment_TextChanged);
             // 
             // panel11
             // 
@@ -173,7 +176,6 @@
             this.breakdown_radiobutton_cashdisbursment.TabIndex = 17;
             this.breakdown_radiobutton_cashdisbursment.Text = "Breakdown";
             this.breakdown_radiobutton_cashdisbursment.UseVisualStyleBackColor = true;
-            this.breakdown_radiobutton_cashdisbursment.CheckedChanged += new System.EventHandler(this.breakdown_radiobutton_cashdisbursment_CheckedChanged);
             // 
             // total_radiobutton_cashdisbursment
             // 
@@ -187,7 +189,6 @@
             this.total_radiobutton_cashdisbursment.TabStop = true;
             this.total_radiobutton_cashdisbursment.Text = "Total";
             this.total_radiobutton_cashdisbursment.UseVisualStyleBackColor = true;
-            this.total_radiobutton_cashdisbursment.CheckedChanged += new System.EventHandler(this.total_radiobutton_cashdisbursment_CheckedChanged);
             // 
             // filterBy_combobox_disbursment
             // 
@@ -226,7 +227,6 @@
             this.grouped_radiobutton_cashdisbursment.TabIndex = 20;
             this.grouped_radiobutton_cashdisbursment.Text = "Yes";
             this.grouped_radiobutton_cashdisbursment.UseVisualStyleBackColor = true;
-            this.grouped_radiobutton_cashdisbursment.CheckedChanged += new System.EventHandler(this.grouped_radiobutton_cashdisbursment_CheckedChanged);
             // 
             // notGrouped_radiobutton_cashdisbursment
             // 
@@ -240,7 +240,6 @@
             this.notGrouped_radiobutton_cashdisbursment.TabStop = true;
             this.notGrouped_radiobutton_cashdisbursment.Text = "No";
             this.notGrouped_radiobutton_cashdisbursment.UseVisualStyleBackColor = true;
-            this.notGrouped_radiobutton_cashdisbursment.CheckedChanged += new System.EventHandler(this.notGrouped_radiobutton_cashdisbursment_CheckedChanged);
             // 
             // label42
             // 
@@ -318,6 +317,16 @@
             this.summary_datagridview_report_disbursment.Size = new System.Drawing.Size(750, 398);
             this.summary_datagridview_report_disbursment.TabIndex = 16;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(310, 51);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(208, 37);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.generate_report);
+            // 
             // CashReport_Module
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,5 +379,6 @@
         private System.Windows.Forms.DataGridView report_datagridview_cashdisbursment;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView summary_datagridview_report_disbursment;
+        private System.Windows.Forms.Button button1;
     }
 }

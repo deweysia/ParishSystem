@@ -732,26 +732,6 @@ namespace ParishSystem
         public DataTable getBloodDonors()
         {
             string q = $@"select generalprofile.profileid , concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
-                    case 
-                    when bloodType =1 then 'A+' 
-                    when bloodType =2 then 'A-'  
-                    when bloodType =3 then 'B+'  
-                    when bloodType =4 then 'B-'  
-                    when bloodType =5 then 'AB+'  
-                    when bloodType =6 then 'AB-'  
-                    when bloodType =7 then 'O+'  
-                    when bloodType =8 then 'O-' end as bloodT,
-                    eventname,
-                    sum(quantity) as quantity,address from generalprofile inner join blooddonation 
-                    on blooddonation.profileID = generalprofile.profileID 
-                    inner join blooddonationevent on blooddonationevent.blooddonationeventid = blooddonation.blooddonationeventid
-                    group by generalprofile.profileID";
-            return runQuery(q);
-        }
-        public DataTable getBloodDonorsRecent()
-        {
-            string q = $@"select 
-                        generalprofile.profileid , concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
                         case 
                         when bloodType =1 then 'A+' 
                         when bloodType =2 then 'A-'  
@@ -761,16 +741,16 @@ namespace ParishSystem
                         when bloodType =6 then 'AB-'  
                         when bloodType =7 then 'O+'  
                         when bloodType =8 then 'O-' end as bloodT,
-                        address,
-                        quantity,
-                        eventname
-                        from generalprofile 
+                        sum(quantity),
+                        concat(""(+63)"",contactnumber) as contactnumber,
+                        address
+                        from generalprofile
                         inner join blooddonation on blooddonation.profileid = generalprofile.profileID
                         inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
-                    where(startDateTime between '{ (DateTime.Now - new TimeSpan(30, 0, 0, 0)).ToString("yyyy-MM-dd hh:mm:ss")}' and '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}')
-                    or   (endDateTime between '{ (DateTime.Now - new TimeSpan(30, 0, 0, 0)).ToString("yyyy-MM-dd hh:mm:ss")}' and '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}')";
+                        group by generalprofile.profileID";
             return runQuery(q);
         }
+      
         public DataTable getBloodDonorsOnEvent(int blooddonationeventid)
         {
             string q = $@"select 
@@ -784,8 +764,10 @@ namespace ParishSystem
                         when bloodType =6 then 'AB-'  
                         when bloodType =7 then 'O+'  
                         when bloodType =8 then 'O-' end as bloodT,
+                        sum(quantity) as quantity,
                         address,
-                        sum(quantity) as quantity,eventname
+                        contactnumber,
+                        eventname
                         from generalprofile 
                         inner join blooddonation on blooddonation.profileid = generalprofile.profileID
                         inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
@@ -838,7 +820,7 @@ namespace ParishSystem
         }
         public DataTable getTotalDonationsOnEvents()
         {
-            string q = $@"select eventname,sum(quantity) as total from generalprofile 
+            string q = $@"select blooddonationevent.bloodDonationEventID,eventname,sum(quantity) as total from generalprofile 
                             inner join blooddonation on blooddonation.profileid = generalprofile.profileID 
                             inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
                             group by bloodDonationEvent.bloodDonationEventID;";
@@ -885,7 +867,7 @@ namespace ParishSystem
             {
                 if (EventList.ContainsKey(dr["eventName"].ToString()))
                 {
-                    EventList[dr["eventName"].ToString()] = EventList[dr["eventName"].ToString()] + int.Parse(dr["quantity"].ToString());
+                    EventList[dr["eventName"].ToString()] = EventList[dr["eventName"].ToString()] + float.Parse(dr["quantity"].ToString());
                 }
             }
             DataTable output = new DataTable();
@@ -901,17 +883,52 @@ namespace ParishSystem
             return output;
         }
         
-        public DataTable getBloodlettingDonorsLike(string name)
+        public DataTable getBloodDonorsLike(string name)
         {
-            string q = $@"select generalprofile.profileid , concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as 
-                    name,count(blooddonationid),address from generalprofile inner join blooddonation
-                    on blooddonation.profileID = generalprofile.profileID where firstname like ""%{name}%"" or lastname like ""%{name}%""
-                    group by generalprofile.profileID";
+            string q = $@"select generalprofile.profileid , concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
+                        case 
+                        when bloodType =1 then 'A+' 
+                        when bloodType =2 then 'A-'  
+                        when bloodType =3 then 'B+'  
+                        when bloodType =4 then 'B-'  
+                        when bloodType =5 then 'AB+'  
+                        when bloodType =6 then 'AB-'  
+                        when bloodType =7 then 'O+'  
+                        when bloodType =8 then 'O-' end as bloodT,
+                        sum(quantity),
+                        concat(""(+63)"",contactnumber) as contactnumber,
+                        address
+                        from generalprofile
+                        inner join blooddonation on blooddonation.profileid = generalprofile.profileID
+                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
+                        where firstname like ""%{name}%"" or lastname like ""%{name}%""
+                        group by generalprofile.profileID";
             return runQuery(q);
         }
         public DataTable getBloodlettingEventsLike(string name)
         {
-            string q = $@"SELECT * FROM sad2.blooddonationevent where eventName like ""%{name}x%""";
+            string q = $@"SELECT * FROM sad2.blooddonationevent where eventName like ""%{name}%""";
+            return runQuery(q);
+        }
+        public DataTable getAllDonations()
+        {
+            string q = $@"select generalprofile.profileid , concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
+                        case 
+                        when bloodType =1 then 'A+' 
+                        when bloodType =2 then 'A-'  
+                        when bloodType =3 then 'B+'  
+                        when bloodType =4 then 'B-'  
+                        when bloodType =5 then 'AB+'  
+                        when bloodType =6 then 'AB-'  
+                        when bloodType =7 then 'O+'  
+                        when bloodType =8 then 'O-' end as bloodT,
+                        sum(quantity),
+                        concat(""(+63)"",contactnumber) as contactnumber,
+                        address
+                        from generalprofile
+                        inner join blooddonation on blooddonation.profileid = generalprofile.profileID
+                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
+                        group by generalprofile.profileID";
             return runQuery(q);
         }
     }

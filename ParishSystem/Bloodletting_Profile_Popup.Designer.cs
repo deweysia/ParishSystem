@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lastname_label_bloodletting = new System.Windows.Forms.Label();
             this.suffix_label_bloodletting = new System.Windows.Forms.Label();
@@ -64,6 +64,7 @@
             this.close_button = new System.Windows.Forms.Button();
             this.totalDonation_label = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.blooddonation_dataGridView_bloodletting)).BeginInit();
@@ -90,7 +91,7 @@
             // 
             this.lastname_label_bloodletting.AutoSize = true;
             this.lastname_label_bloodletting.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastname_label_bloodletting.ForeColor = System.Drawing.Color.White;
+            this.lastname_label_bloodletting.ForeColor = System.Drawing.Color.Black;
             this.lastname_label_bloodletting.Location = new System.Drawing.Point(4, 0);
             this.lastname_label_bloodletting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lastname_label_bloodletting.Name = "lastname_label_bloodletting";
@@ -101,7 +102,7 @@
             // 
             this.suffix_label_bloodletting.AutoSize = true;
             this.suffix_label_bloodletting.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suffix_label_bloodletting.ForeColor = System.Drawing.Color.White;
+            this.suffix_label_bloodletting.ForeColor = System.Drawing.Color.Black;
             this.suffix_label_bloodletting.Location = new System.Drawing.Point(12, 20);
             this.suffix_label_bloodletting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.suffix_label_bloodletting.Name = "suffix_label_bloodletting";
@@ -112,7 +113,7 @@
             // 
             this.lastname_textbox_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lastname_textbox_bloodletting.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lastname_textbox_bloodletting.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lastname_textbox_bloodletting.ForeColor = System.Drawing.Color.Black;
             this.lastname_textbox_bloodletting.Location = new System.Drawing.Point(19, 12);
             this.lastname_textbox_bloodletting.Name = "lastname_textbox_bloodletting";
             this.lastname_textbox_bloodletting.Size = new System.Drawing.Size(200, 22);
@@ -124,7 +125,7 @@
             // 
             this.suffix_textbox_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.suffix_textbox_bloodletting.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.suffix_textbox_bloodletting.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.suffix_textbox_bloodletting.ForeColor = System.Drawing.Color.Black;
             this.suffix_textbox_bloodletting.Location = new System.Drawing.Point(225, 12);
             this.suffix_textbox_bloodletting.Name = "suffix_textbox_bloodletting";
             this.suffix_textbox_bloodletting.Size = new System.Drawing.Size(44, 22);
@@ -149,7 +150,7 @@
             // 
             this.firstname_label_bloodletting.AutoSize = true;
             this.firstname_label_bloodletting.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstname_label_bloodletting.ForeColor = System.Drawing.Color.White;
+            this.firstname_label_bloodletting.ForeColor = System.Drawing.Color.Black;
             this.firstname_label_bloodletting.Location = new System.Drawing.Point(4, 0);
             this.firstname_label_bloodletting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.firstname_label_bloodletting.Name = "firstname_label_bloodletting";
@@ -160,7 +161,7 @@
             // 
             this.mi_label_bloodletting.AutoSize = true;
             this.mi_label_bloodletting.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mi_label_bloodletting.ForeColor = System.Drawing.Color.White;
+            this.mi_label_bloodletting.ForeColor = System.Drawing.Color.Black;
             this.mi_label_bloodletting.Location = new System.Drawing.Point(12, 0);
             this.mi_label_bloodletting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mi_label_bloodletting.Name = "mi_label_bloodletting";
@@ -171,7 +172,7 @@
             // 
             this.firstname_textbox_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.firstname_textbox_bloodletting.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstname_textbox_bloodletting.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.firstname_textbox_bloodletting.ForeColor = System.Drawing.Color.Black;
             this.firstname_textbox_bloodletting.Location = new System.Drawing.Point(19, 3);
             this.firstname_textbox_bloodletting.Name = "firstname_textbox_bloodletting";
             this.firstname_textbox_bloodletting.Size = new System.Drawing.Size(200, 22);
@@ -183,7 +184,7 @@
             // 
             this.mi_textbox_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.mi_textbox_bloodletting.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mi_textbox_bloodletting.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.mi_textbox_bloodletting.ForeColor = System.Drawing.Color.Black;
             this.mi_textbox_bloodletting.Location = new System.Drawing.Point(225, 3);
             this.mi_textbox_bloodletting.Name = "mi_textbox_bloodletting";
             this.mi_textbox_bloodletting.Size = new System.Drawing.Size(44, 22);
@@ -197,60 +198,65 @@
             this.blooddonation_dataGridView_bloodletting.AllowUserToDeleteRows = false;
             this.blooddonation_dataGridView_bloodletting.AllowUserToResizeColumns = false;
             this.blooddonation_dataGridView_bloodletting.AllowUserToResizeRows = false;
-            this.blooddonation_dataGridView_bloodletting.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.blooddonation_dataGridView_bloodletting.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.blooddonation_dataGridView_bloodletting.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.blooddonation_dataGridView_bloodletting.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.blooddonation_dataGridView_bloodletting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.blooddonation_dataGridView_bloodletting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.blooddonation_dataGridView_bloodletting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.blooddonation_dataGridView_bloodletting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.blooddonation_dataGridView_bloodletting.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.blooddonation_dataGridView_bloodletting.DefaultCellStyle = dataGridViewCellStyle2;
             this.blooddonation_dataGridView_bloodletting.EnableHeadersVisualStyles = false;
-            this.blooddonation_dataGridView_bloodletting.Location = new System.Drawing.Point(0, 393);
+            this.blooddonation_dataGridView_bloodletting.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.blooddonation_dataGridView_bloodletting.Location = new System.Drawing.Point(23, 413);
             this.blooddonation_dataGridView_bloodletting.MultiSelect = false;
             this.blooddonation_dataGridView_bloodletting.Name = "blooddonation_dataGridView_bloodletting";
             this.blooddonation_dataGridView_bloodletting.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.blooddonation_dataGridView_bloodletting.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.blooddonation_dataGridView_bloodletting.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.blooddonation_dataGridView_bloodletting.RowHeadersVisible = false;
             this.blooddonation_dataGridView_bloodletting.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(118)))), ((int)(((byte)(140)))));
-            this.blooddonation_dataGridView_bloodletting.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.blooddonation_dataGridView_bloodletting.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.blooddonation_dataGridView_bloodletting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.blooddonation_dataGridView_bloodletting.Size = new System.Drawing.Size(381, 192);
+            this.blooddonation_dataGridView_bloodletting.Size = new System.Drawing.Size(332, 158);
             this.blooddonation_dataGridView_bloodletting.TabIndex = 2;
             this.blooddonation_dataGridView_bloodletting.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.blooddonation_dataGridView_bloodletting_CellClick);
             // 
             // edit_button
             // 
+            this.edit_button.FlatAppearance.BorderSize = 0;
+            this.edit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.edit_button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.edit_button.Image = global::ParishSystem.Properties.Resources.btn_EDIT;
-            this.edit_button.Location = new System.Drawing.Point(338, 5);
+            this.edit_button.Image = global::ParishSystem.Properties.Resources.icons8_Pencil_32;
+            this.edit_button.Location = new System.Drawing.Point(335, 3);
             this.edit_button.Name = "edit_button";
             this.edit_button.Size = new System.Drawing.Size(37, 37);
             this.edit_button.TabIndex = 3;
             this.edit_button.Tag = "e";
-            this.edit_button.Text = "E";
             this.edit_button.UseVisualStyleBackColor = true;
             this.edit_button.Click += new System.EventHandler(this.edit_button_Click);
             // 
@@ -304,16 +310,15 @@
             // 
             // addDonation_button_bloodletting
             // 
-            this.addDonation_button_bloodletting.BackColor = System.Drawing.Color.Silver;
+            this.addDonation_button_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
             this.addDonation_button_bloodletting.Enabled = false;
             this.addDonation_button_bloodletting.FlatAppearance.BorderSize = 0;
-            this.addDonation_button_bloodletting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.addDonation_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.addDonation_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
             this.addDonation_button_bloodletting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addDonation_button_bloodletting.ForeColor = System.Drawing.Color.Black;
-            this.addDonation_button_bloodletting.Location = new System.Drawing.Point(0, 358);
+            this.addDonation_button_bloodletting.ForeColor = System.Drawing.Color.White;
+            this.addDonation_button_bloodletting.Location = new System.Drawing.Point(23, 358);
             this.addDonation_button_bloodletting.Name = "addDonation_button_bloodletting";
-            this.addDonation_button_bloodletting.Size = new System.Drawing.Size(129, 33);
+            this.addDonation_button_bloodletting.Size = new System.Drawing.Size(88, 33);
             this.addDonation_button_bloodletting.TabIndex = 7;
             this.addDonation_button_bloodletting.Text = "Add";
             this.addDonation_button_bloodletting.UseVisualStyleBackColor = false;
@@ -321,15 +326,14 @@
             // 
             // clear_button_bloodletting
             // 
-            this.clear_button_bloodletting.BackColor = System.Drawing.Color.Silver;
+            this.clear_button_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
             this.clear_button_bloodletting.FlatAppearance.BorderSize = 0;
-            this.clear_button_bloodletting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.clear_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.clear_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
             this.clear_button_bloodletting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_button_bloodletting.ForeColor = System.Drawing.Color.Black;
-            this.clear_button_bloodletting.Location = new System.Drawing.Point(126, 358);
+            this.clear_button_bloodletting.ForeColor = System.Drawing.Color.White;
+            this.clear_button_bloodletting.Location = new System.Drawing.Point(147, 358);
             this.clear_button_bloodletting.Name = "clear_button_bloodletting";
-            this.clear_button_bloodletting.Size = new System.Drawing.Size(129, 33);
+            this.clear_button_bloodletting.Size = new System.Drawing.Size(88, 33);
             this.clear_button_bloodletting.TabIndex = 8;
             this.clear_button_bloodletting.Text = "Clear";
             this.clear_button_bloodletting.UseVisualStyleBackColor = false;
@@ -337,16 +341,15 @@
             // 
             // delete_button_bloodletting
             // 
-            this.delete_button_bloodletting.BackColor = System.Drawing.Color.Silver;
+            this.delete_button_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
             this.delete_button_bloodletting.Enabled = false;
             this.delete_button_bloodletting.FlatAppearance.BorderSize = 0;
-            this.delete_button_bloodletting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.delete_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.delete_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
             this.delete_button_bloodletting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete_button_bloodletting.ForeColor = System.Drawing.Color.Black;
-            this.delete_button_bloodletting.Location = new System.Drawing.Point(252, 358);
+            this.delete_button_bloodletting.ForeColor = System.Drawing.Color.White;
+            this.delete_button_bloodletting.Location = new System.Drawing.Point(276, 358);
             this.delete_button_bloodletting.Name = "delete_button_bloodletting";
-            this.delete_button_bloodletting.Size = new System.Drawing.Size(129, 33);
+            this.delete_button_bloodletting.Size = new System.Drawing.Size(88, 33);
             this.delete_button_bloodletting.TabIndex = 8;
             this.delete_button_bloodletting.Text = "Delete";
             this.delete_button_bloodletting.UseVisualStyleBackColor = false;
@@ -354,12 +357,14 @@
             // 
             // cancel_button
             // 
+            this.cancel_button.FlatAppearance.BorderSize = 0;
+            this.cancel_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel_button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cancel_button.Location = new System.Drawing.Point(338, 47);
+            this.cancel_button.Image = global::ParishSystem.Properties.Resources.icons8_Refresh_32;
+            this.cancel_button.Location = new System.Drawing.Point(334, 42);
             this.cancel_button.Name = "cancel_button";
-            this.cancel_button.Size = new System.Drawing.Size(37, 30);
+            this.cancel_button.Size = new System.Drawing.Size(37, 38);
             this.cancel_button.TabIndex = 9;
-            this.cancel_button.Text = "C";
             this.cancel_button.UseVisualStyleBackColor = true;
             this.cancel_button.Visible = false;
             this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
@@ -371,13 +376,12 @@
             this.bloodtype_label.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bloodtype_label.Location = new System.Drawing.Point(136, 91);
             this.bloodtype_label.Name = "bloodtype_label";
-            this.bloodtype_label.Size = new System.Drawing.Size(32, 21);
+            this.bloodtype_label.Size = new System.Drawing.Size(0, 21);
             this.bloodtype_label.TabIndex = 10;
-            this.bloodtype_label.Text = "A+";
             // 
             // bloodtype_combobox
             // 
-            this.bloodtype_combobox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bloodtype_combobox.BackColor = System.Drawing.Color.White;
             this.bloodtype_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.bloodtype_combobox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bloodtype_combobox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -391,7 +395,7 @@
             "AB-",
             "O+",
             "O-"});
-            this.bloodtype_combobox.Location = new System.Drawing.Point(128, 85);
+            this.bloodtype_combobox.Location = new System.Drawing.Point(106, 88);
             this.bloodtype_combobox.Name = "bloodtype_combobox";
             this.bloodtype_combobox.Size = new System.Drawing.Size(80, 29);
             this.bloodtype_combobox.TabIndex = 11;
@@ -399,7 +403,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
@@ -413,7 +417,7 @@
             this.panel1.Controls.Add(this.cancel_button);
             this.panel1.Location = new System.Drawing.Point(0, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(381, 230);
+            this.panel1.Size = new System.Drawing.Size(381, 225);
             this.panel1.TabIndex = 12;
             // 
             // label6
@@ -451,7 +455,7 @@
             // 
             // address_textbox
             // 
-            this.address_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.address_textbox.BackColor = System.Drawing.Color.White;
             this.address_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.address_textbox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.address_textbox.Location = new System.Drawing.Point(122, 157);
@@ -463,7 +467,7 @@
             // 
             // contactNumber_textbox
             // 
-            this.contactNumber_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.contactNumber_textbox.BackColor = System.Drawing.Color.White;
             this.contactNumber_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.contactNumber_textbox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactNumber_textbox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -477,7 +481,7 @@
             // 
             // controlBar_panel
             // 
-            this.controlBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(62)))), ((int)(((byte)(89)))));
+            this.controlBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
             this.controlBar_panel.Controls.Add(this.close_button);
             this.controlBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlBar_panel.Location = new System.Drawing.Point(0, 0);
@@ -488,11 +492,15 @@
             // 
             // close_button
             // 
+            this.close_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.close_button.FlatAppearance.BorderSize = 0;
-            this.close_button.Image = global::ParishSystem.Properties.Resources.icons8_Delete_50;
-            this.close_button.Location = new System.Drawing.Point(348, 7);
+            this.close_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.close_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.close_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close_button.Image = global::ParishSystem.Properties.Resources.icons8_Delete_20;
+            this.close_button.Location = new System.Drawing.Point(350, 5);
             this.close_button.Name = "close_button";
-            this.close_button.Size = new System.Drawing.Size(20, 20);
+            this.close_button.Size = new System.Drawing.Size(21, 20);
             this.close_button.TabIndex = 0;
             this.close_button.UseVisualStyleBackColor = true;
             this.close_button.Click += new System.EventHandler(this.close_button_Click);
@@ -519,6 +527,17 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Total";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Gray;
+            this.label7.Location = new System.Drawing.Point(13, 240);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(351, 20);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "______________________________________";
+            // 
             // Bloodletting_Profile_Popup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -538,6 +557,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.event_combobox_bloodletting);
             this.Controls.Add(this.blooddonation_dataGridView_bloodletting);
+            this.Controls.Add(this.label7);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -591,5 +611,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox address_textbox;
         private System.Windows.Forms.MaskedTextBox contactNumber_textbox;
+        private System.Windows.Forms.Label label7;
     }
 }
