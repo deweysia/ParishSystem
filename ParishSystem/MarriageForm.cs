@@ -150,5 +150,25 @@ namespace ParishSystem
             if (e.ColumnIndex == 7)//Gender
                 e.Value = e.Value.ToString() == "1" ? "M" : "F";
         }
+
+        private void loadParents()
+        {
+            int profileID = int.Parse(row[1].Value.ToString());
+            DataTable dt = dh.getParentsOf(profileID);
+            if (dt.Rows.Count == 2)
+            {
+                txtBFFN.Text = dt.Rows[0]["firstName"].ToString();
+                txtBFMI.Text = dt.Rows[0]["midName"].ToString();
+                txtBFLN.Text = dt.Rows[0]["lastName"].ToString();
+                txtBFSuffix.Text = dt.Rows[0]["suffix"].ToString();
+                
+
+                motherFirstNameText.Text = dt.Rows[1]["firstName"].ToString();
+                motherMiText.Text = dt.Rows[1]["midName"].ToString();
+                motherLastNameText.Text = dt.Rows[1]["lastName"].ToString();
+                motherSuffixText.Text = dt.Rows[1]["suffix"].ToString();
+                motherBirthPlaceText.Text = dt.Rows[1]["birthplace"].ToString();
+            }
+        }
     }
 }

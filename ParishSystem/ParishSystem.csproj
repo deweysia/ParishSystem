@@ -294,12 +294,6 @@
     <Compile Include="HiddenTabControl.Designer.cs">
       <DependentUpon>HiddenTabControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="MarriageApplication.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MarriageApplication.Designer.cs">
-      <DependentUpon>MarriageApplication.cs</DependentUpon>
-    </Compile>
     <Compile Include="MarriageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -533,9 +527,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExButton.resx">
       <DependentUpon>ExButton.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MarriageApplication.resx">
-      <DependentUpon>MarriageApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MarriageForm.resx">
       <DependentUpon>MarriageForm.cs</DependentUpon>
