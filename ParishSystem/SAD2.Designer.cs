@@ -34,7 +34,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.welcome_Text = new System.Windows.Forms.Label();
             this.username_Welcome_Text = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.content_panel = new System.Windows.Forms.Panel();
             this.flowLayout_ControlButtons = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_Close = new System.Windows.Forms.Button();
             this.btn_Max = new System.Windows.Forms.Button();
@@ -80,6 +80,7 @@
             this.CRBparishreport_button = new System.Windows.Forms.Button();
             this.CRBreport_button = new System.Windows.Forms.Button();
             this.Workspace_panel = new System.Windows.Forms.Panel();
+            this.bloodlettingreport_button = new System.Windows.Forms.Button();
             this.panel_controlbox.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayout_ControlButtons.SuspendLayout();
@@ -99,7 +100,6 @@
             // 
             this.panel_controlbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.panel_controlbox.Controls.Add(this.panel2);
-            this.panel_controlbox.Controls.Add(this.panel4);
             this.panel_controlbox.Controls.Add(this.flowLayout_ControlButtons);
             this.panel_controlbox.Controls.Add(this.time_Text);
             this.panel_controlbox.Dock = System.Windows.Forms.DockStyle.Top;
@@ -145,13 +145,13 @@
             this.username_Welcome_Text.TabIndex = 40;
             this.username_Welcome_Text.Text = "USERNAME";
             // 
-            // panel4
+            // content_panel
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(510, 12);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 100);
-            this.panel4.TabIndex = 61;
+            this.content_panel.BackColor = System.Drawing.Color.White;
+            this.content_panel.Location = new System.Drawing.Point(0, 0);
+            this.content_panel.Name = "content_panel";
+            this.content_panel.Size = new System.Drawing.Size(935, 586);
+            this.content_panel.TabIndex = 61;
             // 
             // flowLayout_ControlButtons
             // 
@@ -309,7 +309,8 @@
             this.home_button_menu.Text = "Home";
             this.home_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.home_button_menu.UseVisualStyleBackColor = false;
-            this.home_button_menu.Click += new System.EventHandler(this.SubMenuClick);
+            this.home_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.home_button_menu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.home_button_menu_MouseUp);
             // 
             // application_button_menu
             // 
@@ -328,7 +329,8 @@
             this.application_button_menu.Text = "Applications";
             this.application_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.application_button_menu.UseVisualStyleBackColor = false;
-            this.application_button_menu.Click += new System.EventHandler(this.SubMenuClick);
+            this.application_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.application_button_menu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.application_button_menu_MouseUp);
             // 
             // profile_menu_button
             // 
@@ -347,7 +349,8 @@
             this.profile_menu_button.Text = "Profiles";
             this.profile_menu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.profile_menu_button.UseVisualStyleBackColor = false;
-            this.profile_menu_button.Click += new System.EventHandler(this.SubMenuClick);
+            this.profile_menu_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.profile_menu_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.profile_menu_button_MouseUp);
             // 
             // scheduling_button_menu
             // 
@@ -366,11 +369,13 @@
             this.scheduling_button_menu.Text = "Scheduling";
             this.scheduling_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.scheduling_button_menu.UseVisualStyleBackColor = false;
-            this.scheduling_button_menu.Click += new System.EventHandler(this.SubMenuClick);
+            this.scheduling_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.scheduling_button_menu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.scheduling_button_menu_MouseUp);
             // 
             // bloodlettingmenu_panel
             // 
             this.bloodlettingmenu_panel.BackColor = System.Drawing.Color.White;
+            this.bloodlettingmenu_panel.Controls.Add(this.bloodlettingreport_button);
             this.bloodlettingmenu_panel.Controls.Add(this.bloodlettingevent_button);
             this.bloodlettingmenu_panel.Controls.Add(this.bloodlettingdonor_button);
             this.bloodlettingmenu_panel.Controls.Add(this.bloodletting_button_menu);
@@ -397,8 +402,8 @@
             this.bloodlettingevent_button.Text = "Events";
             this.bloodlettingevent_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bloodlettingevent_button.UseVisualStyleBackColor = false;
-            this.bloodlettingevent_button.Click += new System.EventHandler(this.SubMenuClick);
-            this.bloodlettingevent_button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.bloodlettingevent_button_MouseClick);
+            this.bloodlettingevent_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.bloodlettingevent_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bloodlettingevent_button_MouseClick);
             // 
             // bloodlettingdonor_button
             // 
@@ -417,8 +422,8 @@
             this.bloodlettingdonor_button.Text = "Donors";
             this.bloodlettingdonor_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bloodlettingdonor_button.UseVisualStyleBackColor = false;
-            this.bloodlettingdonor_button.Click += new System.EventHandler(this.SubMenuClick);
-            this.bloodlettingdonor_button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.bloodlettingdonor_button_MouseClick);
+            this.bloodlettingdonor_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.bloodlettingdonor_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bloodlettingdonor_button_MouseClick);
             // 
             // bloodletting_button_menu
             // 
@@ -456,7 +461,8 @@
             this.sacrament_button_menu.Text = "Sacraments";
             this.sacrament_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.sacrament_button_menu.UseVisualStyleBackColor = false;
-            this.sacrament_button_menu.Click += new System.EventHandler(this.SubMenuClick);
+            this.sacrament_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.sacrament_button_menu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.sacrament_button_menu_MouseUp);
             // 
             // CRBmenu_panel
             // 
@@ -487,8 +493,8 @@
             this.CRBpostulancy_button_menu.Text = "Postulancy";
             this.CRBpostulancy_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CRBpostulancy_button_menu.UseVisualStyleBackColor = false;
-            this.CRBpostulancy_button_menu.Click += new System.EventHandler(this.SubMenuClick);
-            this.CRBpostulancy_button_menu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CRBpostulancy_button_menu_MouseClick);
+            this.CRBpostulancy_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.CRBpostulancy_button_menu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CRBpostulancy_button_menu_MouseClick);
             // 
             // CRBcommunity_button_menu
             // 
@@ -507,8 +513,8 @@
             this.CRBcommunity_button_menu.Text = "Community";
             this.CRBcommunity_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CRBcommunity_button_menu.UseVisualStyleBackColor = false;
-            this.CRBcommunity_button_menu.Click += new System.EventHandler(this.SubMenuClick);
-            this.CRBcommunity_button_menu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CRBcommunity_button_menu_MouseClick);
+            this.CRBcommunity_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.CRBcommunity_button_menu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CRBcommunity_button_menu_MouseClick);
             // 
             // CRBparish_button_menu
             // 
@@ -527,8 +533,8 @@
             this.CRBparish_button_menu.Text = "Parish";
             this.CRBparish_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CRBparish_button_menu.UseVisualStyleBackColor = false;
-            this.CRBparish_button_menu.Click += new System.EventHandler(this.SubMenuClick);
-            this.CRBparish_button_menu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CRBparish_button_menu_MouseClick);
+            this.CRBparish_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.CRBparish_button_menu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CRBparish_button_menu_MouseClick);
             // 
             // CRB_button_menu
             // 
@@ -578,8 +584,8 @@
             this.CDBpostulancy_button_menu.Text = "Postulancy";
             this.CDBpostulancy_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CDBpostulancy_button_menu.UseVisualStyleBackColor = false;
-            this.CDBpostulancy_button_menu.Click += new System.EventHandler(this.SubMenuClick);
-            this.CDBpostulancy_button_menu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CDBpostulancy_button_menu_MouseClick);
+            this.CDBpostulancy_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.CDBpostulancy_button_menu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CDBpostulancy_button_menu_MouseClick);
             // 
             // CDBcommunity_button_menu
             // 
@@ -598,8 +604,8 @@
             this.CDBcommunity_button_menu.Text = "Community";
             this.CDBcommunity_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CDBcommunity_button_menu.UseVisualStyleBackColor = false;
-            this.CDBcommunity_button_menu.Click += new System.EventHandler(this.SubMenuClick);
-            this.CDBcommunity_button_menu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CDBcommunity_button_menu_MouseClick);
+            this.CDBcommunity_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.CDBcommunity_button_menu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CDBcommunity_button_menu_MouseClick);
             // 
             // CDBparish_button_menu
             // 
@@ -618,8 +624,8 @@
             this.CDBparish_button_menu.Text = "Parish";
             this.CDBparish_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CDBparish_button_menu.UseVisualStyleBackColor = false;
-            this.CDBparish_button_menu.Click += new System.EventHandler(this.SubMenuClick);
-            this.CDBparish_button_menu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CDBparish_button_menu_MouseClick);
+            this.CDBparish_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.CDBparish_button_menu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CDBparish_button_menu_MouseClick);
             // 
             // CDB_button_menu
             // 
@@ -669,8 +675,8 @@
             this.itemtypemenuCDB_button.Text = "Events";
             this.itemtypemenuCDB_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.itemtypemenuCDB_button.UseVisualStyleBackColor = false;
-            this.itemtypemenuCDB_button.Click += new System.EventHandler(this.SubMenuClick);
-            this.itemtypemenuCDB_button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.itemtypemenuCDB_button_MouseClick);
+            this.itemtypemenuCDB_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.itemtypemenuCDB_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.itemtypemenuCDB_button_MouseClick);
             // 
             // itemtypemenuCRB_button
             // 
@@ -689,8 +695,8 @@
             this.itemtypemenuCRB_button.Text = "Donors";
             this.itemtypemenuCRB_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.itemtypemenuCRB_button.UseVisualStyleBackColor = false;
-            this.itemtypemenuCRB_button.Click += new System.EventHandler(this.SubMenuClick);
-            this.itemtypemenuCRB_button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.itemtypemenuCRB_button_MouseClick);
+            this.itemtypemenuCRB_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.itemtypemenuCRB_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.itemtypemenuCRB_button_MouseClick);
             // 
             // itemtypemenu_button
             // 
@@ -740,8 +746,8 @@
             this.CDBreport_postulancy.Text = "Postulancy";
             this.CDBreport_postulancy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CDBreport_postulancy.UseVisualStyleBackColor = false;
-            this.CDBreport_postulancy.Click += new System.EventHandler(this.SubMenuClick);
-            this.CDBreport_postulancy.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CDBreport_postulancy_MouseClick);
+            this.CDBreport_postulancy.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.CDBreport_postulancy.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CDBreport_postulancy_MouseClick);
             // 
             // CDBreport_community
             // 
@@ -760,8 +766,8 @@
             this.CDBreport_community.Text = "Community";
             this.CDBreport_community.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CDBreport_community.UseVisualStyleBackColor = false;
-            this.CDBreport_community.Click += new System.EventHandler(this.SubMenuClick);
-            this.CDBreport_community.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CDBreport_community_MouseClick);
+            this.CDBreport_community.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.CDBreport_community.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CDBreport_community_MouseClick);
             // 
             // CDBreport_parish
             // 
@@ -780,8 +786,8 @@
             this.CDBreport_parish.Text = "Parish";
             this.CDBreport_parish.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CDBreport_parish.UseVisualStyleBackColor = false;
-            this.CDBreport_parish.Click += new System.EventHandler(this.SubMenuClick);
-            this.CDBreport_parish.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CDBreport_parish_MouseClick);
+            this.CDBreport_parish.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.CDBreport_parish.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CDBreport_parish_MouseClick);
             // 
             // CDBreport_button
             // 
@@ -831,8 +837,8 @@
             this.CRBpostulancyreport_button.Text = "Postulancy";
             this.CRBpostulancyreport_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CRBpostulancyreport_button.UseVisualStyleBackColor = false;
-            this.CRBpostulancyreport_button.Click += new System.EventHandler(this.SubMenuClick);
-            this.CRBpostulancyreport_button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CRBpostulancyreport_button_MouseClick);
+            this.CRBpostulancyreport_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.CRBpostulancyreport_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CRBpostulancyreport_button_MouseClick);
             // 
             // CRBcommunityreport_button
             // 
@@ -851,8 +857,8 @@
             this.CRBcommunityreport_button.Text = "Community";
             this.CRBcommunityreport_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CRBcommunityreport_button.UseVisualStyleBackColor = false;
-            this.CRBcommunityreport_button.Click += new System.EventHandler(this.SubMenuClick);
-            this.CRBcommunityreport_button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CRBcommunityreport_button_MouseClick);
+            this.CRBcommunityreport_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.CRBcommunityreport_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CRBcommunityreport_button_MouseClick);
             // 
             // CRBparishreport_button
             // 
@@ -871,8 +877,8 @@
             this.CRBparishreport_button.Text = "Parish";
             this.CRBparishreport_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CRBparishreport_button.UseVisualStyleBackColor = false;
-            this.CRBparishreport_button.Click += new System.EventHandler(this.SubMenuClick);
-            this.CRBparishreport_button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CRBparishreport_button_MouseClick);
+            this.CRBparishreport_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.CRBparishreport_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CRBparishreport_button_MouseClick);
             // 
             // CRBreport_button
             // 
@@ -897,11 +903,31 @@
             // 
             this.Workspace_panel.BackColor = System.Drawing.Color.White;
             this.Workspace_panel.Controls.Add(this.Menu_panel);
-            this.Workspace_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Workspace_panel.Controls.Add(this.content_panel);
             this.Workspace_panel.Location = new System.Drawing.Point(57, 33);
             this.Workspace_panel.Name = "Workspace_panel";
             this.Workspace_panel.Size = new System.Drawing.Size(935, 547);
             this.Workspace_panel.TabIndex = 61;
+            // 
+            // bloodlettingreport_button
+            // 
+            this.bloodlettingreport_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bloodlettingreport_button.FlatAppearance.BorderSize = 0;
+            this.bloodlettingreport_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bloodlettingreport_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodlettingreport_button.ForeColor = System.Drawing.Color.White;
+            this.bloodlettingreport_button.Image = global::ParishSystem.Properties.Resources.Heart_with_Pulse_32px;
+            this.bloodlettingreport_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bloodlettingreport_button.Location = new System.Drawing.Point(0, 174);
+            this.bloodlettingreport_button.Margin = new System.Windows.Forms.Padding(0);
+            this.bloodlettingreport_button.Name = "bloodlettingreport_button";
+            this.bloodlettingreport_button.Size = new System.Drawing.Size(269, 58);
+            this.bloodlettingreport_button.TabIndex = 45;
+            this.bloodlettingreport_button.Text = "Events";
+            this.bloodlettingreport_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bloodlettingreport_button.UseVisualStyleBackColor = false;
+            this.bloodlettingreport_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SubMenuClick);
+            this.bloodlettingreport_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bloodlettingreport_button_MouseClick);
             // 
             // SAD2
             // 
@@ -947,7 +973,7 @@
         private System.Windows.Forms.Button OpenMenu_button;
         private System.Windows.Forms.Timer MenuTimer;
         private System.Windows.Forms.Timer Panel_Timer;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel content_panel;
         private System.Windows.Forms.Panel Menu_panel;
         private System.Windows.Forms.Button profile_menu_button;
         private System.Windows.Forms.Button CDB_button_menu;
@@ -984,5 +1010,6 @@
         private System.Windows.Forms.Button CRBcommunityreport_button;
         private System.Windows.Forms.Button CRBparishreport_button;
         private System.Windows.Forms.Button CRBreport_button;
+        private System.Windows.Forms.Button bloodlettingreport_button;
     }
 }
