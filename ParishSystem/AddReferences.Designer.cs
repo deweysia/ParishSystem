@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblSacrament = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,8 +38,8 @@
             this.txtRegistry = new ParishSystem.CueTextBox();
             this.txtPage = new ParishSystem.CueTextBox();
             this.btnSubmit = new MetroFramework.Controls.MetroButton();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +47,7 @@
             // 
             this.lblSacrament.AutoSize = true;
             this.lblSacrament.ForeColor = System.Drawing.Color.White;
-            this.lblSacrament.Location = new System.Drawing.Point(97, 23);
+            this.lblSacrament.Location = new System.Drawing.Point(103, 48);
             this.lblSacrament.Name = "lblSacrament";
             this.lblSacrament.Size = new System.Drawing.Size(107, 13);
             this.lblSacrament.TabIndex = 0;
@@ -58,7 +57,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(118, 54);
+            this.lblName.Location = new System.Drawing.Point(67, 71);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(67, 13);
             this.lblName.TabIndex = 0;
@@ -158,11 +157,7 @@
             this.btnSubmit.TabIndex = 2;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseSelectable = true;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // button1
             // 
@@ -170,11 +165,18 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Abort;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(284, 11);
+            this.button1.Location = new System.Drawing.Point(284, 71);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 25);
             this.button1.TabIndex = 3;
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(-2, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(323, 33);
+            this.panel1.TabIndex = 4;
             // 
             // AddReferences
             // 
@@ -182,6 +184,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(321, 328);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -212,7 +215,7 @@
         private CueTextBox txtRegistry;
         private CueTextBox txtPage;
         private MetroFramework.Controls.MetroButton btnSubmit;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

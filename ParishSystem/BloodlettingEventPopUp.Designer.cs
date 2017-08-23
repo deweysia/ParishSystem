@@ -66,11 +66,14 @@
             // 
             // close_button
             // 
-            this.close_button.Location = new System.Drawing.Point(338, 2);
+            this.close_button.BackgroundImage = global::ParishSystem.Properties.Resources.icons8_Delete_20;
+            this.close_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.close_button.FlatAppearance.BorderSize = 0;
+            this.close_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close_button.Location = new System.Drawing.Point(351, 5);
             this.close_button.Name = "close_button";
-            this.close_button.Size = new System.Drawing.Size(40, 29);
+            this.close_button.Size = new System.Drawing.Size(20, 20);
             this.close_button.TabIndex = 0;
-            this.close_button.Text = "x";
             this.close_button.UseVisualStyleBackColor = true;
             this.close_button.Click += new System.EventHandler(this.close_button_Click);
             // 
@@ -214,8 +217,8 @@
             this.delete_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.delete_button.FlatAppearance.BorderSize = 0;
             this.delete_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete_button.Image = global::ParishSystem.Properties.Resources.icons8_Trash_64;
-            this.delete_button.Location = new System.Drawing.Point(329, 5);
+            this.delete_button.Image = global::ParishSystem.Properties.Resources.icons8_Trash_32;
+            this.delete_button.Location = new System.Drawing.Point(333, 6);
             this.delete_button.Name = "delete_button";
             this.delete_button.Size = new System.Drawing.Size(36, 33);
             this.delete_button.TabIndex = 23;

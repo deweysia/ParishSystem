@@ -20,7 +20,7 @@ namespace ParishSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BloodlettingReports_Module());
+            Application.Run(new AddMarriageApplication());
         }
     }
 

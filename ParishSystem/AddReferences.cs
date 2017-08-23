@@ -57,5 +57,10 @@ namespace ParishSystem
         {
             btnSubmit.Enabled = !hasEmptyFields();
         }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -62,7 +62,7 @@ namespace ParishSystem
                 from_bloodlettingeventreport_dtp.Visible = false;
                 bloodlettingeventreport_combobox.Visible = false;
             }
-            refreshResults();
+            
             }
 
         private void BloodlettingReports_Module_Load(object sender, EventArgs e)
@@ -88,33 +88,30 @@ namespace ParishSystem
             }
             else if (filterBy_combobox_bloodletting.Text == "Donations on Event")
             {
-                MessageBox.Show("ertyuiop");
                 dt = dh.getBloodDonorsOnEvent(((ComboboxContent)bloodlettingeventreport_combobox.SelectedItem).ID);
                 summary_dgv_bloodletting.DataSource = dh.getsummaryOfBloodleting(dt);
                 bloodlettingeventreport_datagridview.DataSource = dt;
                 bloodlettingeventreport_datagridview.Columns["profileid"].Visible = false;
                 bloodlettingeventreport_datagridview.Columns["eventname"].Visible = false;
-                bloodlettingeventreport_datagridview.Columns["eventname1"].Visible = false;
-                //bloodlettingeventreport_datagridview.Columns["name"].HeaderText = "Name";
-                //bloodlettingeventreport_datagridview.Columns["bloodt"].HeaderText = "Blood Type";
-                //bloodlettingeventreport_datagridview.Columns["address"].HeaderText = "Address";
-                //bloodlettingeventreport_datagridview.Columns["quantity"].HeaderText = "Quantity";
+                bloodlettingeventreport_datagridview.Columns["name"].HeaderText = "Name";
+                bloodlettingeventreport_datagridview.Columns["bloodt"].HeaderText = "Blood Type";
+                bloodlettingeventreport_datagridview.Columns["address"].HeaderText = "Address";
+                bloodlettingeventreport_datagridview.Columns["quantity"].HeaderText = "Quantity";
+                bloodlettingeventreport_datagridview.Columns["contactnumber"].HeaderText = "Contact Number";
 
             }
             else if (filterBy_combobox_bloodletting.Text == "Donations on Date")
             {
-
                 dt = dh.getBloodDonorsOnDate(from_bloodlettingeventreport_dtp.Value);
                 summary_dgv_bloodletting.DataSource = dh.getsummaryOfBloodleting(dt);
                 bloodlettingeventreport_datagridview.DataSource = dt;
                 bloodlettingeventreport_datagridview.Columns["profileid"].Visible = false;
-                bloodlettingeventreport_datagridview.Columns["eventname1"].Visible = false;
+                bloodlettingeventreport_datagridview.Columns["eventname"].Visible = false;
                 bloodlettingeventreport_datagridview.Columns["name"].HeaderText = "Name";
-                bloodlettingeventreport_datagridview.Columns["eventname"].HeaderText = "Event";
                 bloodlettingeventreport_datagridview.Columns["bloodt"].HeaderText = "Blood Type";
                 bloodlettingeventreport_datagridview.Columns["address"].HeaderText = "Address";
                 bloodlettingeventreport_datagridview.Columns["quantity"].HeaderText = "Quantity";
-                bloodlettingeventreport_datagridview.Columns["eventname"].DisplayIndex = 5;
+                bloodlettingeventreport_datagridview.Columns["contactnumber"].HeaderText = "Contact Number";
             }
             else if (filterBy_combobox_bloodletting.Text == "Donations between Dates")
             {
@@ -122,13 +119,12 @@ namespace ParishSystem
                 summary_dgv_bloodletting.DataSource = dh.getsummaryOfBloodleting(dt);
                 bloodlettingeventreport_datagridview.DataSource = dt;
                 bloodlettingeventreport_datagridview.Columns["profileid"].Visible = false;
-                bloodlettingeventreport_datagridview.Columns["eventname1"].Visible = false;
+                bloodlettingeventreport_datagridview.Columns["eventname"].Visible = false;
                 bloodlettingeventreport_datagridview.Columns["name"].HeaderText = "Name";
-                bloodlettingeventreport_datagridview.Columns["eventname"].HeaderText = "Event";
                 bloodlettingeventreport_datagridview.Columns["bloodt"].HeaderText = "Blood Type";
                 bloodlettingeventreport_datagridview.Columns["address"].HeaderText = "Address";
                 bloodlettingeventreport_datagridview.Columns["quantity"].HeaderText = "Quantity";
-                bloodlettingeventreport_datagridview.Columns["eventname"].DisplayIndex = 5;
+                bloodlettingeventreport_datagridview.Columns["contactnumber"].HeaderText = "Contact Number";
             }
             else
             {
@@ -150,17 +146,17 @@ namespace ParishSystem
 
         private void from_bloodlettingeventreport_dtp_ValueChanged(object sender, EventArgs e)
         {
-            refreshResults();
+            
         }
 
         private void to_bloodlettingeventreport_dtp_ValueChanged(object sender, EventArgs e)
         {
-            refreshResults();
+            
         }
 
         private void bloodlettingeventreport_combobox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            refreshResults();
+           
         }
 
         private void bloodlettingeventreport_datagridview_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -181,6 +177,56 @@ namespace ParishSystem
                 A.ShowDialog();
             }
             catch { }
+        }
+        bool open = false;
+        private void open_button_Click(object sender, EventArgs e)
+        {
+            animation.Start();
+            open = !open;
+        }
+        int velocity = 0;
+        private void animation_Tick(object sender, EventArgs e)
+        {
+            if (open) {
+                if (summary_dgv_bloodletting.Height <= 350)
+                {
+                    summary_dgv_bloodletting.Size = new Size(576, summary_dgv_bloodletting.Height  + velocity);
+                    //bloodlettingeventreport_datagridview.Size = new Size(884, bloodlettingeventreport_datagridview.Height +velocity);
+                }
+                else
+                {
+                    summary_dgv_bloodletting.Height = 350;
+                    animation.Stop();
+                    velocity = 0;
+                }
+                velocity++;
+            }
+            else
+            {
+                if (summary_dgv_bloodletting.Height >= 62)
+                {
+                    summary_dgv_bloodletting.Size = new Size(576, summary_dgv_bloodletting.Height  - velocity);
+
+                }
+                else
+                {
+                    summary_dgv_bloodletting.Height = 62;
+                    animation.Stop();
+                    velocity = 0;
+                }
+                velocity++;
+            }
+        }
+
+        private void generateReport_button_Click(object sender, EventArgs e)
+        {
+            refreshResults();
+        }
+
+
+        private void backgroundWorker1_DoWork_1(object sender, DoWorkEventArgs e)
+        {
+          
         }
     }
 }

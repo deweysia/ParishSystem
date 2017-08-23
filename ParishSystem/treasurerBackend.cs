@@ -754,7 +754,7 @@ namespace ParishSystem
         public DataTable getBloodDonorsOnEvent(int blooddonationeventid)
         {
             string q = $@"select 
-                        generalprofile.profileid ,eventname, concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
+                        generalprofile.profileid, concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
                         case 
                         when bloodType =1 then 'A+' 
                         when bloodType =2 then 'A-'  
@@ -766,7 +766,7 @@ namespace ParishSystem
                         when bloodType =8 then 'O-' end as bloodT,
                         sum(quantity) as quantity,
                         address,
-                        contactnumber,
+                        concat(""(+63)"",contactnumber) as contactnumber,
                         eventname
                         from generalprofile 
                         inner join blooddonation on blooddonation.profileid = generalprofile.profileID
@@ -778,7 +778,7 @@ namespace ParishSystem
         public DataTable getBloodDonorsOnDate(DateTime Start)
         {
             string q = $@"select 
-                        generalprofile.profileid ,eventname, concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
+                        generalprofile.profileid, concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
                         case 
                         when bloodType =1 then 'A+' 
                         when bloodType =2 then 'A-'  
@@ -788,8 +788,10 @@ namespace ParishSystem
                         when bloodType =6 then 'AB-'  
                         when bloodType =7 then 'O+'  
                         when bloodType =8 then 'O-' end as bloodT,
+                        sum(quantity) as quantity,
                         address,
-                        sum(quantity) as quantity ,eventname
+                        concat(""(+63)"",contactnumber) as contactnumber,
+                        eventname
                         from generalprofile 
                         inner join blooddonation on blooddonation.profileid = generalprofile.profileID
                         inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
@@ -800,7 +802,7 @@ namespace ParishSystem
         public DataTable getBloodDonorsOnDateRange(DateTime Start,DateTime Stop)
         {
             string q = $@"select 
-                        generalprofile.profileid ,eventname, concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
+                        generalprofile.profileid, concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
                         case 
                         when bloodType =1 then 'A+' 
                         when bloodType =2 then 'A-'  
@@ -810,10 +812,13 @@ namespace ParishSystem
                         when bloodType =6 then 'AB-'  
                         when bloodType =7 then 'O+'  
                         when bloodType =8 then 'O-' end as bloodT,
+                        sum(quantity) as quantity,
                         address,
-                        sum(quantity) as quantity ,eventname from generalprofile 
-                        inner join blooddonation on blooddonation.profileid = generalprofile.profileID 
-                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
+                        concat(""(+63)"",contactnumber) as contactnumber,
+                        eventname
+                        from generalprofile 
+                        inner join blooddonation on blooddonation.profileid = generalprofile.profileID
+                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
                         where startDateTime between""{Start.ToString("yyyy-MM-dd 00:00:00")}"" and ""{Stop.ToString("yyyy-MM-dd 00:00:00")}""
                         group by generalprofile.profileid";
             return runQuery(q);

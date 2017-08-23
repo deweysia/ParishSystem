@@ -132,5 +132,28 @@ namespace ParishSystem
 
 
         }
+
+        private void close_picturebox_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void name_textBox_Leave(object sender, EventArgs e)
+        {
+            TextBox t = sender as TextBox;
+            if (t.Text.Trim().Length == 0)
+            {
+                t.Text = t.Tag.ToString();
+                t.ForeColor = Color.Gray;
+            }
+        }
+        private void name_textBox_Enter(object sender, EventArgs e)
+        {
+            TextBox t = sender as TextBox;
+            if (t.ForeColor == Color.Gray)
+            {
+                t.Text = "";
+                t.ForeColor = Color.Black;
+            }
+        }
     }
 }
