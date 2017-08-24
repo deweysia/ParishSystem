@@ -2339,13 +2339,13 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(685, 510);
             this.ControlBox = false;
+            this.Controls.Add(this.marriage_panel);
             this.Controls.Add(this.baptism_panel);
             this.Controls.Add(this.generalDetails_panel);
             this.Controls.Add(this.controlBar_panel);
             this.Controls.Add(this.menu_panel);
             this.Controls.Add(this.confirmation_panel);
             this.Controls.Add(this.blank_panel);
-            this.Controls.Add(this.marriage_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PersonView";
             this.Load += new System.EventHandler(this.PersonView_Load);

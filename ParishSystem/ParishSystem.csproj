@@ -122,12 +122,6 @@
     <Compile Include="ApplicationPayment.Designer.cs">
       <DependentUpon>ApplicationPayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bloodletting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bloodletting.Designer.cs">
-      <DependentUpon>Bloodletting.cs</DependentUpon>
-    </Compile>
     <Compile Include="BloodlettingEventPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,12 +245,6 @@
     </Compile>
     <Compile Include="SacramentForm.Designer.cs">
       <DependentUpon>SacramentForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BloodlettingTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BloodlettingTest.Designer.cs">
-      <DependentUpon>BloodlettingTest.cs</DependentUpon>
     </Compile>
     <Compile Include="ComboboxContent.cs" />
     <Compile Include="CueTextBox.cs">
@@ -432,9 +420,6 @@
     <EmbeddedResource Include="ApplicationPayment.resx">
       <DependentUpon>ApplicationPayment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Bloodletting.resx">
-      <DependentUpon>Bloodletting.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BloodlettingEventPopUp.resx">
       <DependentUpon>BloodlettingEventPopUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -485,9 +470,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SacramentForm.resx">
       <DependentUpon>SacramentForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BloodlettingTest.resx">
-      <DependentUpon>BloodlettingTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CueTextBox.resx">
       <DependentUpon>CueTextBox.cs</DependentUpon>
@@ -652,6 +634,10 @@
     <None Include="Resources\icons8-Refresh-32.png" />
     <None Include="Resources\icons8-Save Filled-32.png" />
     <None Include="Resources\icons8-Delete-20.png" />
+    <None Include="Resources\icons8-Zoom to Extents Filled-20.png" />
+    <None Include="Resources\icons8-Trash-32.png" />
+    <None Include="Resources\icons8-Plus 2 Math-32.png" />
+    <None Include="Resources\icons8-Close Window-32.png" />
     <Content Include="Tools\SQL_Writer.jar" />
     <None Include="Resources\messageBox_cancel.png" />
     <None Include="Resources\messageBox_success.png" />

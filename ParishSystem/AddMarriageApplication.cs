@@ -36,12 +36,13 @@ namespace ParishSystem
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            if (!allFilled())
+            if (txtGroomFN.Text=="First Name"||txtGroomMI.Text=="Mi"||txtGroomLN.Text=="Last Name"||txtGroomSuffix.Text=="Sf"||
+                txtBrideFN.Text == "First Name" || txtBrideMI.Text == "Mi" || txtGroomLN.Text == "Last Name" || txtBrideSuffix.Text == "Sf")
             {
                 Notification.Show(State.MissingFields);
                 return;
             }
-
+            
             string gFN = txtGroomFN.Text;
             string gMI = txtGroomMI.Text;
             string gLN = txtGroomLN.Text;
@@ -108,22 +109,7 @@ namespace ParishSystem
 
         }
 
-        private bool allFilled()
-        {
-            bool allFilled = true;
-            foreach(Control c in this.Controls)
-            {
-                if(c is TextBox && c.Tag == null)
-                {
-                    TextBox t = c as TextBox;
-                    allFilled &= !string.IsNullOrWhiteSpace(t.Text);
-                    if (!allFilled)
-                        return false;
-                }
-            }
-
-            return allFilled;
-        }
+        
 
 
         private void AddMarriageApplication_Load(object sender, EventArgs e)
@@ -131,6 +117,29 @@ namespace ParishSystem
             
 
 
+        }
+
+        private void close_picturebox_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void name_textBox_Leave(object sender, EventArgs e)
+        {
+            TextBox t = sender as TextBox;
+            if (t.Text.Trim().Length == 0)
+            {
+                t.Text = t.Tag.ToString();
+                t.ForeColor = Color.Gray;
+            }
+        }
+        private void name_textBox_Enter(object sender, EventArgs e)
+        {
+            TextBox t = sender as TextBox;
+            if (t.ForeColor == Color.Gray)
+            {
+                t.Text = "";
+                t.ForeColor = Color.Black;
+            }
         }
     }
 }

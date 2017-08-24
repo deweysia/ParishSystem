@@ -39,8 +39,15 @@ namespace ParishSystem
 
         private void breakdown_datagridview_report_disbursment_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Form A = new ORdetailsPopUp(int.Parse(report_datagridview_cashdisbursment.CurrentRow.Cells["ORnum"].Value.ToString()), cashDisbursmentMode, dh);
-           // A.ShowDialog();
+            if (notGrouped_radiobutton_cashdisbursment.Checked)
+            {
+                Form A = new ORdetailsPopUp(int.Parse(report_datagridview_cashdisbursment.CurrentRow.Cells[0].Value.ToString()), cashDisbursmentMode, dh);
+                A.ShowDialog();
+            }
+            else
+            {
+
+            }
         }
         private void searchbar_textbox_report_disbursment_TextChanged(object sender, EventArgs e)
         {
@@ -56,10 +63,6 @@ namespace ParishSystem
         }
         private void filterBy_combobox_disbursment_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (filterBy_combobox_disbursment.SelectedIndex == 0)
-            {
-                //refreshReports();
-            }
             if (filterBy_combobox_disbursment.Text == "Recent")
             {
                 searchbar_textbox_report_disbursment.Visible = false;
@@ -67,6 +70,17 @@ namespace ParishSystem
                 to_dtp_cashdisbursment.Visible = false;
                 CV_textbox_report_disbursment.Visible = false;
                 CN_textbox_report_disbursment.Visible = false;
+
+                date_lbl.Visible = false;
+                from_lbl.Visible = false;
+                to_lbl.Visible = false;
+                OR_lbl.Visible = false;
+                CV_lbl.Visible = false;
+                CN_lbl.Visible = false;
+                date_pnl.Visible = false;
+
+                input_panel.Visible = false;
+
             }
             else if (filterBy_combobox_disbursment.Text == "Day")
             {
@@ -75,6 +89,18 @@ namespace ParishSystem
                 to_dtp_cashdisbursment.Visible = false;
                 CV_textbox_report_disbursment.Visible = false;
                 CN_textbox_report_disbursment.Visible = false;
+
+                date_lbl.Visible = true;
+                from_lbl.Visible = false;
+                to_lbl.Visible = false;
+                OR_lbl.Visible = false;
+                CV_lbl.Visible = false;
+                CN_lbl.Visible = false;
+                date_pnl.Visible = true;
+
+                input_panel.Visible = true;
+
+                from_dtp_cashdisbursment.CustomFormat = "mmmm/dd/yyyy";
             }
             else if (filterBy_combobox_disbursment.Text == "Month")
             {
@@ -83,6 +109,18 @@ namespace ParishSystem
                 to_dtp_cashdisbursment.Visible = false;
                 CV_textbox_report_disbursment.Visible = false;
                 CN_textbox_report_disbursment.Visible = false;
+
+                date_lbl.Visible = true;
+                from_lbl.Visible = false;
+                to_lbl.Visible = false;
+                OR_lbl.Visible = false;
+                CV_lbl.Visible = false;
+                CN_lbl.Visible = false;
+                date_pnl.Visible = true;
+
+                input_panel.Visible = true;
+
+                from_dtp_cashdisbursment.CustomFormat = "mmmm/yyyy";
             }
             else if (filterBy_combobox_disbursment.Text == "Year")
             {
@@ -91,6 +129,18 @@ namespace ParishSystem
                 to_dtp_cashdisbursment.Visible = false;
                 CV_textbox_report_disbursment.Visible = false;
                 CN_textbox_report_disbursment.Visible = false;
+
+                date_lbl.Visible = true;
+                from_lbl.Visible = false;
+                to_lbl.Visible = false;
+                OR_lbl.Visible = false;
+                CV_lbl.Visible = false;
+                CN_lbl.Visible = false;
+                date_pnl.Visible = true;
+
+                input_panel.Visible = true;
+
+                from_dtp_cashdisbursment.CustomFormat = "yyyy";
             }
             else if (filterBy_combobox_disbursment.Text == "Date Range")
             {
@@ -99,6 +149,19 @@ namespace ParishSystem
                 to_dtp_cashdisbursment.Visible = true;
                 CV_textbox_report_disbursment.Visible = false;
                 CN_textbox_report_disbursment.Visible = false;
+
+                date_lbl.Visible = false;
+                from_lbl.Visible = true;
+                to_lbl.Visible = true;
+                OR_lbl.Visible = false;
+                CV_lbl.Visible = false;
+                CN_lbl.Visible = false;
+                date_pnl.Visible = true;
+
+                input_panel.Visible = true;
+
+                from_dtp_cashdisbursment.CustomFormat = "mmmm/dd/yyyy";
+                to_dtp_cashdisbursment.CustomFormat = "mmmm/dd/yyyy";
             }
             else if (filterBy_combobox_disbursment.Text == "OR Number")
             {
@@ -107,6 +170,16 @@ namespace ParishSystem
                 to_dtp_cashdisbursment.Visible = false;
                 CV_textbox_report_disbursment.Visible = false;
                 CN_textbox_report_disbursment.Visible = false;
+
+                date_lbl.Visible = false;
+                from_lbl.Visible = false;
+                to_lbl.Visible = false;
+                OR_lbl.Visible = true;
+                CV_lbl.Visible = false;
+                CN_lbl.Visible = false;
+                date_pnl.Visible = false;
+
+                input_panel.Visible = true;
             }
             else if (filterBy_combobox_disbursment.Text == "CV num")
             {
@@ -115,6 +188,16 @@ namespace ParishSystem
                 to_dtp_cashdisbursment.Visible = false;
                 CV_textbox_report_disbursment.Visible = true;
                 CN_textbox_report_disbursment.Visible = false;
+
+                date_lbl.Visible = false;
+                from_lbl.Visible = false;
+                to_lbl.Visible = false;
+                OR_lbl.Visible = false;
+                CV_lbl.Visible = true;
+                CN_lbl.Visible = false;
+                date_pnl.Visible = false;
+
+                input_panel.Visible = true;
             }
             else if (filterBy_combobox_disbursment.Text == "CN num")
             {
@@ -123,6 +206,16 @@ namespace ParishSystem
                 to_dtp_cashdisbursment.Visible = false;
                 CV_textbox_report_disbursment.Visible = false;
                 CN_textbox_report_disbursment.Visible = true;
+
+                date_lbl.Visible = false;
+                from_lbl.Visible = false;
+                to_lbl.Visible = false;
+                OR_lbl.Visible = false;
+                CV_lbl.Visible = false;
+                CN_lbl.Visible = true;
+                date_pnl.Visible = false;
+
+                input_panel.Visible = true;
             }
             /*
             if(filterBy_combobox_disbursment.SelectedIndex == 1|| filterBy_combobox_disbursment.SelectedIndex == 2|| filterBy_combobox_disbursment.SelectedIndex == 3 || filterBy_combobox_disbursment.SelectedIndex == 4 || filterBy_combobox_disbursment.SelectedIndex == 6) { from_dtp_cashdisbursment.Visible = true; } else { from_dtp_cashdisbursment.Visible = false; }
@@ -148,6 +241,7 @@ namespace ParishSystem
         }
         private void refreshReports()
         {
+            summary_datagridview_report_disbursment.DataSource = null;
             try
             {
                 if (bookReportMode == 1)
@@ -574,8 +668,50 @@ namespace ParishSystem
         private void generate_report(object sender, EventArgs e)
         {
             refreshReports();
+            open = !open;
+            timer1.Start();
+        }
+        bool open = false;
+        int velocity = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (open)
+            {
+                if (reportFilter_panel.Height <= 300)
+                {
+                    reportFilter_panel.Height = reportFilter_panel.Height + velocity;
+                    velocity++;
+                }
+                else
+                {
+                    timer1.Stop();
+                    reportFilter_panel.Height = 300;
+                    velocity = 0;
+                    Open_button.Text = "Close";
+                }
+            }
+            else
+            {
+                if (reportFilter_panel.Height >= 35)
+                {
+                    reportFilter_panel.Height = reportFilter_panel.Height - velocity;
+                    velocity++;
+                }
+                else
+                {
+                    timer1.Stop();
+                    reportFilter_panel.Height = 35;
+                    velocity = 0;
+                    Open_button.Text = "Open";
+                }
+            }
         }
 
-     
+        private void Open_button_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+            open = !open;
+         
+        }
     }
 }

@@ -313,7 +313,7 @@
             this.addDonation_button_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
             this.addDonation_button_bloodletting.Enabled = false;
             this.addDonation_button_bloodletting.FlatAppearance.BorderSize = 0;
-            this.addDonation_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.addDonation_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(135)))), ((int)(((byte)(224)))));
             this.addDonation_button_bloodletting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addDonation_button_bloodletting.ForeColor = System.Drawing.Color.White;
             this.addDonation_button_bloodletting.Location = new System.Drawing.Point(23, 358);
@@ -328,7 +328,7 @@
             // 
             this.clear_button_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
             this.clear_button_bloodletting.FlatAppearance.BorderSize = 0;
-            this.clear_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.clear_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(135)))), ((int)(((byte)(224)))));
             this.clear_button_bloodletting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_button_bloodletting.ForeColor = System.Drawing.Color.White;
             this.clear_button_bloodletting.Location = new System.Drawing.Point(147, 358);
@@ -344,7 +344,7 @@
             this.delete_button_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
             this.delete_button_bloodletting.Enabled = false;
             this.delete_button_bloodletting.FlatAppearance.BorderSize = 0;
-            this.delete_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.delete_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(135)))), ((int)(((byte)(224)))));
             this.delete_button_bloodletting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete_button_bloodletting.ForeColor = System.Drawing.Color.White;
             this.delete_button_bloodletting.Location = new System.Drawing.Point(276, 358);

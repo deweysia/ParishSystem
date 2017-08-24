@@ -593,6 +593,16 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Close_Window_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Close_Window_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Delete_20 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Delete_20", resourceCulture);
@@ -636,6 +646,16 @@ namespace ParishSystem.Properties {
         internal static System.Drawing.Bitmap icons8_Pencil_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Pencil_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Plus_2_Math_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Plus_2_Math_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -703,6 +723,16 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Trash_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Trash_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Trash_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Trash_64", resourceCulture);
@@ -716,6 +746,16 @@ namespace ParishSystem.Properties {
         internal static System.Drawing.Bitmap icons8_Trash_64__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8_Trash_64__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Zoom_to_Extents_Filled_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Zoom_to_Extents_Filled_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
