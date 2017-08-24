@@ -48,9 +48,9 @@
             this.dtpBrideBirthDate = new MetroFramework.Controls.MetroDateTime();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.close_picturebox = new System.Windows.Forms.PictureBox();
             this.btnApply = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -307,6 +307,18 @@
             this.panel1.Size = new System.Drawing.Size(347, 34);
             this.panel1.TabIndex = 35;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(7, 10);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(153, 20);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "Marriage Application";
+            // 
             // close_picturebox
             // 
             this.close_picturebox.Image = global::ParishSystem.Properties.Resources.Delete_32px;
@@ -322,6 +334,7 @@
             // 
             this.btnApply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
             this.btnApply.FlatAppearance.BorderSize = 0;
+            this.btnApply.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(135)))), ((int)(((byte)(224)))));
             this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApply.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApply.ForeColor = System.Drawing.Color.White;
@@ -332,18 +345,6 @@
             this.btnApply.Text = "Apply";
             this.btnApply.UseVisualStyleBackColor = false;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(7, 10);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(153, 20);
-            this.label8.TabIndex = 36;
-            this.label8.Text = "Marriage Application";
             // 
             // label7
             // 

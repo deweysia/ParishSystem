@@ -241,7 +241,7 @@ namespace ParishSystem
                 }
                 row["OR Number"] = dr["ORnum"].ToString();
                 row["Name"] = dr["SourceName"].ToString();
-                row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString("MMMM dd yyyy, hh-mm");
+                row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString(" MMMM dd yyyy, hh:mm");
                 try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["price"].ToString()); } catch { row["Amount"]= float.Parse(dr["price"].ToString()); };
             }
             output.Rows.Add(row);
@@ -279,8 +279,8 @@ namespace ParishSystem
                     {
                         maxOR = int.Parse(dr["ORnum"].ToString());
                     }
-                    row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString("MMMM dd yyyy");
-                    try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["price"].ToString()); } catch { row["Amount"] = float.Parse(dr["price"].ToString()); };
+                    row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString("MMMM dd yyyy, hh:mm");
+                try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["price"].ToString()); } catch { row["Amount"] = float.Parse(dr["price"].ToString()); };
                 }
                 row["OR Number"] = minOR.ToString() + "-" + maxOR.ToString();
                 output.Rows.Add(row);  
@@ -299,7 +299,6 @@ namespace ParishSystem
             {
                 output.Columns.Add(dr["itemType"].ToString(),typeof(float)); //add columns 
                 output.Columns[dr["itemType"].ToString()].DefaultValue = 0;
-               
             }
 
             int currentOR = int.Parse(transactions.Rows[0]["ORnum"].ToString());
@@ -308,18 +307,49 @@ namespace ParishSystem
             {
                 if (currentOR != int.Parse(dr["ORnum"].ToString()))
                 {
-
                     output.Rows.Add(row);
                     row = output.NewRow();
                     currentOR = int.Parse(dr["ORnum"].ToString());
                 }
                 row["OR Number"] = dr["ORnum"].ToString();
                 row["Name"] = dr["SourceName"].ToString();
-                row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(),true).ToString("MMMM dd yyyy, hh-mm");
+                row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(),true).ToString("MMMM dd yyyy, hh:mm");
                 row[dr["itemType"].ToString()] =(row[dr["itemType"].ToString()]==null ? 0:float.Parse(row[dr["itemType"].ToString()].ToString())) + float.Parse(dr["price"].ToString());
             }
             output.Rows.Add(row);
+            //remove all empty columns
+            bool[] columns = new bool[output.Columns.Count-3];
 
+                foreach(DataRow dr in output.Rows)
+                {
+                for (int x=0; x < output.Columns.Count - 3; x++)
+                    {
+                  
+                        if (dr[x+3].ToString()!="0")
+                        {
+                        columns[x] = true;
+                        }
+                    }
+                }
+            int y= 3;
+           foreach(bool b in columns)
+            {
+                Console.WriteLine(output.Columns[y].ToString());
+                Console.WriteLine(b.ToString());
+                y++;
+            }
+            int drawback=0;
+            for (int x=0; x< columns.Length; x++) 
+            {
+                if (columns[x]==false)
+                {
+                    
+                    output.Columns.RemoveAt(x+3-drawback);
+                    drawback++;
+
+                }
+                
+            }
             return output;
         }
         public DataTable getBreakdownGroupedCashDisbursment(DataTable transactions,int bookType) //breakdown grouped
@@ -363,13 +393,45 @@ namespace ParishSystem
                     maxOR = int.Parse(dr["ORnum"].ToString());
                 }
                 //per itemtype code starts here
-                row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString("MMMM dd yyyy, hh-mm");
+                row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString("MMMM dd yyyy, hh:mm");
                 row[dr["itemType"].ToString()] = (row[dr["itemType"].ToString()] == null ? 0 : float.Parse(row[dr["itemType"].ToString()].ToString())) + float.Parse(dr["price"].ToString());
                 //per item type code ends here
             }
             row["OR Number"] = minOR.ToString() + "-" + maxOR.ToString();
             output.Rows.Add(row);
 
+            bool[] columns = new bool[output.Columns.Count - 3];
+
+            foreach (DataRow dr in output.Rows)
+            {
+                for (int x = 0; x < output.Columns.Count - 3; x++)
+                {
+
+                    if (dr[x + 3].ToString() != "0")
+                    {
+                        columns[x] = true;
+                    }
+                }
+            }
+            int y = 3;
+            foreach (bool b in columns)
+            {
+                Console.WriteLine(output.Columns[y].ToString());
+                Console.WriteLine(b.ToString());
+                y++;
+            }
+            int drawback = 0;
+            for (int x = 0; x < columns.Length; x++)
+            {
+                if (columns[x] == false)
+                {
+
+                    output.Columns.RemoveAt(x + 3 - drawback);
+                    drawback++;
+
+                }
+
+            }
             return output;
         }
         /*  LMAOOO this is the same as getTotalSummaryOfTransactionsOnOrRange >> im so stupid for recoding

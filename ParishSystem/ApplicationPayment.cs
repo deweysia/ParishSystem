@@ -111,5 +111,10 @@ namespace ParishSystem
             if (Convert.ToDouble(nudPayment.Value) > remainingBalance)
                 nudPayment.Value = (decimal)remainingBalance;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

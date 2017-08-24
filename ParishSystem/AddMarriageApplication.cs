@@ -36,12 +36,13 @@ namespace ParishSystem
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            if (!allFilled())
+            if (txtGroomFN.Text=="First Name"||txtGroomMI.Text=="Mi"||txtGroomLN.Text=="Last Name"||txtGroomSuffix.Text=="Sf"||
+                txtBrideFN.Text == "First Name" || txtBrideMI.Text == "Mi" || txtGroomLN.Text == "Last Name" || txtBrideSuffix.Text == "Sf")
             {
                 Notification.Show("Please fill in all required details!", NotificationType.info);
                 return;
             }
-
+            
             string gFN = txtGroomFN.Text;
             string gMI = txtGroomMI.Text;
             string gLN = txtGroomLN.Text;
@@ -108,22 +109,7 @@ namespace ParishSystem
 
         }
 
-        private bool allFilled()
-        {
-            bool allFilled = true;
-            foreach(Control c in this.Controls)
-            {
-                if(c is TextBox && c.Tag == null)
-                {
-                    TextBox t = c as TextBox;
-                    allFilled &= !string.IsNullOrWhiteSpace(t.Text);
-                    if (!allFilled)
-                        return false;
-                }
-            }
-
-            return allFilled;
-        }
+        
 
 
         private void AddMarriageApplication_Load(object sender, EventArgs e)

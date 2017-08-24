@@ -237,12 +237,6 @@
     <Compile Include="SacramentForm.Designer.cs">
       <DependentUpon>SacramentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BloodlettingTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BloodlettingTest.Designer.cs">
-      <DependentUpon>BloodlettingTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="ComboboxContent.cs" />
     <Compile Include="CueTextBox.cs">
       <SubType>Component</SubType>
@@ -501,9 +495,6 @@
     <EmbeddedResource Include="SacramentForm.resx">
       <DependentUpon>SacramentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BloodlettingTest.resx">
-      <DependentUpon>BloodlettingTest.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CueTextBox.resx">
       <DependentUpon>CueTextBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -681,6 +672,8 @@
     <None Include="Resources\icons8-Delete-20.png" />
     <None Include="Resources\icons8-Zoom to Extents Filled-20.png" />
     <None Include="Resources\icons8-Trash-32.png" />
+    <None Include="Resources\icons8-Plus 2 Math-32.png" />
+    <None Include="Resources\icons8-Close Window-32.png" />
     <Content Include="Tools\SQL_Writer.jar" />
     <None Include="Resources\messageBox_cancel.png" />
     <None Include="Resources\messageBox_success.png" />
