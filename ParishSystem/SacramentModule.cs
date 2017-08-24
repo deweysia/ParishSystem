@@ -96,9 +96,11 @@ namespace ParishSystem
             this.sacramentID = Convert.ToInt32(dgvMarriage.SelectedRows[0].Cells["marriageID"].Value);
             this.groomID = Convert.ToInt32(dgvMarriage.SelectedRows[0].Cells["marGroomID"].Value);
             this.brideID = Convert.ToInt32(dgvMarriage.SelectedRows[0].Cells["marBrideID"].Value);
+            MessageBox.Show(groomID + " " + brideID);
 
             DataTable dt = ((BindingSource)dgv.DataSource).DataSource as DataTable;
 
+            //MessageBox.Show(string.Format("{0} - {1} - {2}", dgvMarriage.SelectedRows[0].Cells["marRegistryNumber"].Value.ToString(), dgvMarriage.SelectedRows[0].Cells["marPageNumber"].Value.ToString(), dgvMarriage.SelectedRows[0].Cells["marRecordNumber"].Value.ToString()));
             string groomName = dgvMarriage.SelectedRows[0].Cells["groomName"].Value.ToString();
             string brideName = dgvMarriage.SelectedRows[0].Cells["brideName"].Value.ToString();
             lblNameGroom.Text = groomName;
@@ -263,10 +265,32 @@ namespace ParishSystem
                 return dgvMarriage;
         }
 
+        private void openPersonView(int profileID)
+        {
+            PersonView pv = new PersonView(profileID,dh);
+            pv.ShowDialog();
+        }
+
+        private void openAdvanceSearch(SacramentType t)
+        {
+
+            using (AdvanceSearch s = new AdvanceSearch(t))
+            {
+                DialogResult dr = s.ShowDialog();
+                if (dr == DialogResult.OK)
+                {
+                    DataGridView dgv = getDGV(t);
+                    DataTable dt = ((BindingSource)dgv.DataSource).DataSource as DataTable;
+                    
+                    dt.DefaultView.RowFilter = s.filter;
+                    clearAndDisable(t);
+                }
+            }
+        }
+
         private void btnOpenProfileBap_Click(object sender, EventArgs e)
         {
-            Form f = new PersonView(this.profileID, dh);
-            f.ShowDialog();
+            openPersonView(this.profileID);
         }
 
         private void btnSearchCon_Click(object sender, EventArgs e)
@@ -309,8 +333,28 @@ namespace ParishSystem
 
         private void btnAdvanceSearch_Click(object sender, EventArgs e)
         {
-
+            openAdvanceSearch(SacramentType.Baptism);
             
+        }
+
+        private void btnOpenGroomProfile_Click(object sender, EventArgs e)
+        {
+            openPersonView(this.groomID);
+        }
+
+        private void btnOpenBrideProfile_Click(object sender, EventArgs e)
+        {
+            openPersonView(this.brideID);
+        }
+
+        private void btnAdvanceSearchCon_Click(object sender, EventArgs e)
+        {
+            openAdvanceSearch(SacramentType.Confirmation);
+        }
+
+        private void btnAdvanceSearchMar_Click(object sender, EventArgs e)
+        {
+            openAdvanceSearch(SacramentType.Marriage);
         }
 
         private void btnSearchBap_Click(object sender, EventArgs e)

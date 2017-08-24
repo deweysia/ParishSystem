@@ -137,6 +137,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomNotification";
             this.Padding = new System.Windows.Forms.Padding(10);
+            this.ShowInTaskbar = false;
             this.Text = "Notification";
             this.Load += new System.EventHandler(this.Notification_Load);
             this.MouseEnter += new System.EventHandler(this.CustomNotification_MouseEnter);

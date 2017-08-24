@@ -196,8 +196,8 @@ namespace ParishSystem
                 string[] components = s.Split(' ');
                 string[] date = components[0].Split('/');
 
-                int month = int.Parse(date[0]);
-                int day = int.Parse(date[1]);
+                int month = int.Parse(date[1]);
+                int day = int.Parse(date[0]);
                 int year = int.Parse(date[2]);
 
 
@@ -1502,8 +1502,8 @@ namespace ParishSystem
 
         public DataTable getBaptisms()
         {
-            string q = "SELECT profileID, applicationID, baptismID, firstName, midname, lastName, suffix, DATE_FORMAT(baptismDate, '%Y-%m-%d') AS baptismDate, registryNumber, pageNumber, recordNumber  "
-                + "FROM Baptism NATURAL JOIN Application NATURAL JOIN Applicant NATURAL JOIN GeneralProfile";
+            string q = "SELECT profileID, applicationID, baptismID, Minister.ministerID, p.firstName, p.midname, p.lastName, p.suffix, DATE_FORMAT(baptismDate, '%Y-%m-%d') AS baptismDate, registryNumber, pageNumber, recordNumber  "
+                + "FROM Baptism NATURAL JOIN Application NATURAL JOIN Applicant NATURAL JOIN GeneralProfile AS p JOIN Minister ON Baptism.ministerID = Minister.ministerID";
 
             
             DataTable dt = runQuery(q);
@@ -1720,8 +1720,8 @@ namespace ParishSystem
 
         public DataTable getConfirmations()
         {
-            string q = "SELECT profileID, applicationID, confirmationID, firstName, midname, lastName, suffix, DATE_FORMAT(confirmationDate, '%m-%Y-%d') AS confirmationDate, registryNumber, pageNumber, recordNumber  "
-                + "FROM Confirmation NATURAL JOIN Application NATURAL JOIN Applicant NATURAL JOIN GeneralProfile";
+            string q = "SELECT profileID, applicationID, confirmationID, Minister.ministerID, p.firstName, p.midname, p.lastName, p.suffix, DATE_FORMAT(confirmationDate, '%m-%Y-%d') AS confirmationDate, registryNumber, pageNumber, recordNumber  "
+                + "FROM Confirmation NATURAL JOIN Application NATURAL JOIN Applicant NATURAL JOIN GeneralProfile AS p JOIN Minister ON Confirmation.ministerID = Minister.ministerID";
 
             DataTable dt = runQuery(q);
 
@@ -1944,7 +1944,7 @@ namespace ParishSystem
 
         public DataTable getMarriages()
         {
-            string q = @"SELECT marriageID, groom.applicationID, groom.profileID, bride.profileID, ministerID, marriageDate,
+            string q = @"SELECT marriageID, groom.applicationID, groom.profileID AS groomID, bride.profileID AS brideID, Minister.ministerID, marriageDate,
                         CONCAT_WS(' ', groom.firstName, groom.midName, groom.lastName, groom.suffix) AS groomName, 
                         CONCAT_WS(' ', bride.firstName, bride.midName, bride.lastName, bride.suffix) AS brideName,
                         registryNumber, recordNumber, pageNumber, remarks
@@ -1955,7 +1955,7 @@ namespace ParishSystem
                         (SELECT * FROM GeneralProfile NATURAL JOIN Applicant NATURAL JOIN Application WHERE gender = 2)
                         AS bride
                         ON groom.applicationID = bride.applicationID 
-                        JOIN Marriage ON Marriage.applicationID = groom.applicationID
+                        JOIN Marriage ON Marriage.applicationID = groom.applicationID JOIN Minister ON Minister.ministerID = Marriage.ministerID 
                         WHERE groom.profileID != bride.profileID";
             DataTable dt = ExecuteQuery(q);
             return dt;
@@ -2466,7 +2466,7 @@ namespace ParishSystem
 
         public DataTable getMinisters()
         {
-            string q = "SELECT ministerID, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix)as Name, birthdate, ministryType, status, licenseNumber, expirationDate FROM Minister";
+            string q = "SELECT ministerID, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix)as Name, birthdate, ministryType, status, licenseNumber FROM Minister";
 
             DataTable dt = runQuery(q);
 

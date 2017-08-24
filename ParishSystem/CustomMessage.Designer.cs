@@ -60,7 +60,6 @@
             this.metroButton13 = new MetroFramework.Controls.MetroButton();
             this.metroButton12 = new MetroFramework.Controls.MetroButton();
             this.metroButton11 = new MetroFramework.Controls.MetroButton();
-            this.customControlBar1 = new ParishSystem.CustomControlBar();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox)).BeginInit();
             this.hiddenTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -431,18 +430,7 @@
             this.metroButton11.TabIndex = 2;
             this.metroButton11.Text = "Yes";
             this.metroButton11.UseSelectable = true;
-            // 
-            // customControlBar1
-            // 
-            this.customControlBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.customControlBar1.BackColor = System.Drawing.Color.Transparent;
-            this.customControlBar1.Location = new System.Drawing.Point(402, 10);
-            this.customControlBar1.Margin = new System.Windows.Forms.Padding(1);
-            this.customControlBar1.Name = "customControlBar1";
-            this.customControlBar1.Size = new System.Drawing.Size(26, 26);
-            this.customControlBar1.TabIndex = 0;
-            this.customControlBar1.Load += new System.EventHandler(this.customControlBar1_Load_1);
-            this.customControlBar1.Click += new System.EventHandler(this.customControlBar1_Click);
+
             // 
             // CustomMessage
             // 
@@ -455,7 +443,6 @@
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.infoLabel);
             this.Controls.Add(this.hiddenTabControl1);
-            this.Controls.Add(this.customControlBar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomMessage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -482,7 +469,6 @@
 
         #endregion
 
-        private CustomControlBar customControlBar1;
         private HiddenTabControl hiddenTabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;

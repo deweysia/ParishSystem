@@ -18,11 +18,11 @@ namespace ParishSystem
         Color ButtonBackColor = Color.Transparent;
         DataHandler dh = DataHandler.getDataHandler();
         Point lastClick;
-        Dictionary<Button, Panel_Size_Pair> SubMenu= new Dictionary<Button, Panel_Size_Pair>();
+        Dictionary<Button, Panel_Size_Pair> SubMenu = new Dictionary<Button, Panel_Size_Pair>();
         public SAD2()
         {
             InitializeComponent();
-            SubMenu.Add(bloodletting_button_menu,new Panel_Size_Pair(175,58,bloodlettingmenu_panel,false));
+            SubMenu.Add(bloodletting_button_menu, new Panel_Size_Pair(234, 58, bloodlettingmenu_panel, false));
             SubMenu.Add(CRB_button_menu, new Panel_Size_Pair(234, 58, CRBmenu_panel, false));
             SubMenu.Add(CDB_button_menu, new Panel_Size_Pair(234, 58, CDB_menu_panel, false));
             SubMenu.Add(itemtypemenu_button, new Panel_Size_Pair(175, 58, itemtypemenu_panel, false));
@@ -51,7 +51,7 @@ namespace ParishSystem
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-      
+
 
         #endregion
 
@@ -91,23 +91,22 @@ namespace ParishSystem
         #endregion
 
 
-        private void showForm(object sender, Form f)
+        private void showForm(Panel sender, Form f)
         {
-            Panel s = sender as Panel;
+            sender.Controls.Clear();
             f.TopLevel = false;
             f.AutoScroll = true;
-            s.Controls.Add(f);
+            sender.Controls.Add(f);
 
             f.FormBorderStyle = FormBorderStyle.None;
-
             f.Dock = DockStyle.Fill;
             f.Show();
         }
 
         private void application_panel_VisibleChanged(object sender, EventArgs e)
         {
-            ApplicationModule f = new ApplicationModule();
-            showForm(sender, f);
+            // ApplicationModule f = new ApplicationModule(dh);
+            // showForm(sender, f);
 
         }
 
@@ -117,17 +116,17 @@ namespace ParishSystem
         {
             if (menuUp)
             {
-                if (Menu_panel.Location.Y <= 0) { MenuTimer.Stop(); coefficientOfChangeOfMenu = 1; OpenMenu_button.Enabled = true; Menu_panel.BackColor = Color.FromArgb(115,115,115); menuUp = false; }
+                if (Menu_panel.Location.Y <= 0) { MenuTimer.Stop(); coefficientOfChangeOfMenu = 1; OpenMenu_button.Enabled = true; Menu_panel.BackColor = Color.FromArgb(115, 115, 115); menuUp = false; }
                 else
                 {
                     Menu_panel.Location = new Point(Menu_panel.Location.X, Menu_panel.Location.Y - coefficientOfChangeOfMenu);
-                    Menu_panel.BackColor = Color.FromArgb(Menu_panel.BackColor.R -4, Menu_panel.BackColor.G - 4, Menu_panel.BackColor.B - 4);
+                    Menu_panel.BackColor = Color.FromArgb(Menu_panel.BackColor.R - 4, Menu_panel.BackColor.G - 4, Menu_panel.BackColor.B - 4);
                     coefficientOfChangeOfMenu++;
                 }
             }
             else
             {
-                if (Menu_panel.Location.Y >= 545) { MenuTimer.Stop(); coefficientOfChangeOfMenu = 1; OpenMenu_button.Enabled = true; Menu_panel.BackColor = Color.FromArgb(255,255,255); menuUp = true; }
+                if (Menu_panel.Location.Y >= 545) { MenuTimer.Stop(); coefficientOfChangeOfMenu = 1; OpenMenu_button.Enabled = true; Menu_panel.BackColor = Color.FromArgb(255, 255, 255); menuUp = true; }
                 else
                 {
                     Menu_panel.Location = new Point(Menu_panel.Location.X, Menu_panel.Location.Y + coefficientOfChangeOfMenu);
@@ -142,7 +141,7 @@ namespace ParishSystem
             Menu_panel.BringToFront();
             OpenMenu_button.Enabled = false;
             MenuTimer.Start();
-            
+
         }
 
         private void btn_Close_Click_1(object sender, EventArgs e)
@@ -157,16 +156,16 @@ namespace ParishSystem
             closesize = SubMenu[A].CloseSize;
             PanelToMove = SubMenu[A].panel;
             open = SubMenu[A].open;
-            SubMenu[A].open= !(SubMenu[A].open);
+            SubMenu[A].open = !(SubMenu[A].open);
             Panel_Timer.Start();
-            
+
         }
         int closesize = 0;
         int opensize = 0;
         Panel PanelToMove;
         bool open;
         int coefficientOfChangeOfPanel = 1;
-         
+
         private void Panel_Timer_Tick(object sender, EventArgs e)
         {
             if (!open)
@@ -175,7 +174,7 @@ namespace ParishSystem
                 {
                     PanelToMove.Height = PanelToMove.Height + coefficientOfChangeOfPanel;
                     coefficientOfChangeOfPanel++;
-                    
+
                 }
                 else
                 {
@@ -186,12 +185,12 @@ namespace ParishSystem
             }
             else
             {
-               
+
                 if (PanelToMove.Height >= closesize)
                 {
                     PanelToMove.Height = PanelToMove.Height - coefficientOfChangeOfPanel;
                     coefficientOfChangeOfPanel++;
-                  
+
                 }
                 else
                 {
@@ -202,9 +201,9 @@ namespace ParishSystem
             }
         }
 
-     
-      
-        private void SubMenuClick(object sender, EventArgs e)
+
+
+        private void SubMenuClick(object sender, MouseEventArgs e)
         {
             resetButtonColors();
             Button A = sender as Button;
@@ -212,6 +211,7 @@ namespace ParishSystem
             OpenMenu_button.PerformClick();
             closeAllSubMenu();
         }
+
         private void closeAllSubMenu()
         {
             foreach (KeyValuePair<Button, Panel_Size_Pair> pair in SubMenu)
@@ -230,6 +230,7 @@ namespace ParishSystem
             scheduling_button_menu.BackColor = ButtonBackColor;
             bloodlettingdonor_button.BackColor = ButtonBackColor;
             bloodlettingevent_button.BackColor = ButtonBackColor;
+            bloodlettingreport_button.BackColor = ButtonBackColor;
             sacrament_button_menu.BackColor = ButtonBackColor;
             CRBparish_button_menu.BackColor = ButtonBackColor;
             CRBcommunity_button_menu.BackColor = ButtonBackColor;
@@ -251,96 +252,158 @@ namespace ParishSystem
             bloodletting_button_menu.BackColor = ButtonBackColor;
             CRBreport_button.BackColor = ButtonBackColor;
             CDBreport_button.BackColor = ButtonBackColor;
+            home_button_menu.BackColor = ButtonBackColor;
         }
 
         private void bloodlettingdonor_button_MouseClick(object sender, MouseEventArgs e)
         {
             bloodletting_button_menu.PerformClick();
+            Bloodletting_Module f = new Bloodletting_Module(1);
+            showForm(content_panel, f);
         }
 
         private void bloodlettingevent_button_MouseClick(object sender, MouseEventArgs e)
         {
             bloodletting_button_menu.PerformClick();
+            Bloodletting_Module f = new Bloodletting_Module(2);
+            showForm(content_panel, f);
+        }
+
+        private void bloodlettingreport_button_MouseClick(object sender, MouseEventArgs e)
+        {
+            bloodletting_button_menu.PerformClick();
+            BloodlettingReports_Module f = new BloodlettingReports_Module();
+            showForm(content_panel, f);
         }
 
         private void CRBparish_button_menu_MouseClick(object sender, MouseEventArgs e)
         {
             CRB_button_menu.PerformClick();
+            CashRelease_Module f = new CashRelease_Module(1);
+            showForm(content_panel, f);
         }
 
         private void CRBcommunity_button_menu_MouseClick(object sender, MouseEventArgs e)
         {
             CRB_button_menu.PerformClick();
+            CashRelease_Module f = new CashRelease_Module(1);
+            showForm(content_panel, f);
         }
 
         private void CRBpostulancy_button_menu_MouseClick(object sender, MouseEventArgs e)
         {
             CRB_button_menu.PerformClick();
+            CashRelease_Module f = new CashRelease_Module(1);
+            showForm(content_panel, f);
         }
 
         private void CDBparish_button_menu_MouseClick(object sender, MouseEventArgs e)
         {
             CDB_button_menu.PerformClick();
+            CDB_FullPayment_Module f = new CDB_FullPayment_Module(1);
+            showForm(content_panel, f);
         }
 
         private void CDBcommunity_button_menu_MouseClick(object sender, MouseEventArgs e)
         {
             CDB_button_menu.PerformClick();
+            CDB_FullPayment_Module f = new CDB_FullPayment_Module(2);
+            showForm(content_panel, f);
         }
 
         private void CDBpostulancy_button_menu_MouseClick(object sender, MouseEventArgs e)
         {
             CDB_button_menu.PerformClick();
+            CDB_FullPayment_Module f = new CDB_FullPayment_Module(3);
+            showForm(content_panel, f);
         }
 
         private void itemtypemenuCRB_button_MouseClick(object sender, MouseEventArgs e)
         {
             itemtypemenu_button.PerformClick();
+            ItemTypes_Module f = new ItemTypes_Module(1);
+            showForm(content_panel, f);
         }
 
         private void itemtypemenuCDB_button_MouseClick(object sender, MouseEventArgs e)
         {
             itemtypemenu_button.PerformClick();
+            ItemTypes_Module f = new ItemTypes_Module(2);
+            showForm(content_panel, f);
         }
 
         private void CDBreport_parish_MouseClick(object sender, MouseEventArgs e)
         {
             CDBreport_button.PerformClick();
+            CashReport_Module f = new CashReport_Module(1, 1);
+            showForm(content_panel, f);
         }
 
         private void CDBreport_community_MouseClick(object sender, MouseEventArgs e)
         {
             CDBreport_button.PerformClick();
+            CashReport_Module f = new CashReport_Module(1, 2);
+            showForm(content_panel, f);
         }
 
         private void CDBreport_postulancy_MouseClick(object sender, MouseEventArgs e)
         {
             CDBreport_button.PerformClick();
+            CashReport_Module f = new CashReport_Module(1, 3);
+            showForm(content_panel, f);
         }
 
         private void CRBparishreport_button_MouseClick(object sender, MouseEventArgs e)
         {
             CRBreport_button.PerformClick();
+            CashReport_Module f = new CashReport_Module(2, 1);
+            showForm(content_panel, f);
         }
 
         private void CRBcommunityreport_button_MouseClick(object sender, MouseEventArgs e)
         {
             CRBreport_button.PerformClick();
+            CashReport_Module f = new CashReport_Module(2, 2);
+            showForm(content_panel, f);
         }
 
         private void CRBpostulancyreport_button_MouseClick(object sender, MouseEventArgs e)
         {
             CRBreport_button.PerformClick();
+            CashReport_Module f = new CashReport_Module(2, 3);
+            showForm(content_panel, f);
         }
 
-        private void panel_controlbox_Paint(object sender, PaintEventArgs e)
+
+        private void application_button_menu_MouseUp(object sender, MouseEventArgs e)
         {
-
+            ApplicationModule f = new ApplicationModule();
+            showForm(content_panel, f);
         }
 
+        private void profile_menu_button_MouseUp(object sender, MouseEventArgs e)
+        {
+            ProfileModule f = new ProfileModule();
+            showForm(content_panel, f);
+        }
 
-        
+        private void scheduling_button_menu_MouseUp(object sender, MouseEventArgs e)
+        {
+            ScheduleModule f = new ScheduleModule();
+            showForm(content_panel, f);
+        }
+
+        private void sacrament_button_menu_MouseUp(object sender, MouseEventArgs e)
+        {
+            SacramentModule f = new SacramentModule();
+            showForm(content_panel, f);
+        }
+
+        private void home_button_menu_MouseUp(object sender, MouseEventArgs e)
+        {
+            HomeModule f = new HomeModule();
+            showForm(content_panel, f);
+        }
+
     }
 }
-
-

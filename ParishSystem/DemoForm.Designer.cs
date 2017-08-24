@@ -1,6 +1,6 @@
 ﻿namespace ParishSystem
 {
-    partial class ScheduleModule
+    partial class DemoForm
     {
         /// <summary>
         /// Required designer variable.
@@ -46,8 +46,9 @@
             this.monthView1.DaySelectedBackgroundColor = System.Drawing.SystemColors.Highlight;
             this.monthView1.DaySelectedColor = System.Drawing.SystemColors.WindowText;
             this.monthView1.DaySelectedTextColor = System.Drawing.SystemColors.HighlightText;
+            this.monthView1.Dock = System.Windows.Forms.DockStyle.Left;
             this.monthView1.ItemPadding = new System.Windows.Forms.Padding(2);
-            this.monthView1.Location = new System.Drawing.Point(12, 12);
+            this.monthView1.Location = new System.Drawing.Point(0, 0);
             this.monthView1.MaxSelectionCount = 35;
             this.monthView1.MonthTitleColor = System.Drawing.SystemColors.ActiveCaption;
             this.monthView1.MonthTitleColorInactive = System.Drawing.SystemColors.InactiveCaption;
@@ -62,10 +63,8 @@
             // 
             // calendar1
             // 
-            this.calendar1.AllowItemEdit = false;
-            this.calendar1.AllowItemResize = false;
-            this.calendar1.AllowNew = false;
-            this.calendar1.BackColor = System.Drawing.Color.Maroon;
+            this.calendar1.AllowDrop = true;
+            this.calendar1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calendar1.Font = new System.Drawing.Font("Segoe UI", 9F);
             calendarHighlightRange1.DayOfWeek = System.DayOfWeek.Monday;
             calendarHighlightRange1.EndTime = System.TimeSpan.Parse("17:00:00");
@@ -83,27 +82,27 @@
             calendarHighlightRange5.EndTime = System.TimeSpan.Parse("17:00:00");
             calendarHighlightRange5.StartTime = System.TimeSpan.Parse("08:00:00");
             this.calendar1.HighlightRanges = new System.Windows.Forms.Calendar.CalendarHighlightRange[] {
-        calendarHighlightRange1,
-        calendarHighlightRange2,
-        calendarHighlightRange3,
-        calendarHighlightRange4,
-        calendarHighlightRange5};
-            this.calendar1.Location = new System.Drawing.Point(226, 12);
+            calendarHighlightRange1,
+            calendarHighlightRange2,
+            calendarHighlightRange3,
+            calendarHighlightRange4,
+            calendarHighlightRange5};
+            this.calendar1.Location = new System.Drawing.Point(208, 0);
             this.calendar1.Name = "calendar1";
-            this.calendar1.Size = new System.Drawing.Size(575, 387);
+            this.calendar1.Size = new System.Drawing.Size(475, 279);
             this.calendar1.TabIndex = 4;
             this.calendar1.Text = "calendar1";
             this.calendar1.LoadItems += new System.Windows.Forms.Calendar.Calendar.CalendarLoadEventHandler(this.calendar1_LoadItems);
             // 
-            // ScheduleModule
+            // DemoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(813, 486);
+            this.ClientSize = new System.Drawing.Size(683, 279);
             this.Controls.Add(this.calendar1);
             this.Controls.Add(this.monthView1);
-            this.Name = "ScheduleModule";
-            this.Text = "Schedule Form";
+            this.Name = "DemoForm";
+            this.Text = "DemoForm";
             this.ResumeLayout(false);
 
         }

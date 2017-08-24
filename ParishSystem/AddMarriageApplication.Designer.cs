@@ -35,7 +35,6 @@
             this.dtpGroomBirthDate = new MetroFramework.Controls.MetroDateTime();
             this.txtRemarks = new System.Windows.Forms.TextBox();
             this.application_remarks_textBox = new System.Windows.Forms.Label();
-            this.txtPrice = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,52 +48,54 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnApply = new MetroFramework.Controls.MetroButton();
+            this.txtPrice = new ParishSystem.HiddenNumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // txtGroomLN
             // 
             this.txtGroomLN.ForeColor = System.Drawing.Color.Gray;
-            this.txtGroomLN.Location = new System.Drawing.Point(161, 77);
+            this.txtGroomLN.Location = new System.Drawing.Point(161, 76);
             this.txtGroomLN.MaxLength = 50;
             this.txtGroomLN.Name = "txtGroomLN";
-            this.txtGroomLN.Size = new System.Drawing.Size(95, 20);
+            this.txtGroomLN.Size = new System.Drawing.Size(95, 22);
             this.txtGroomLN.TabIndex = 2;
             this.txtGroomLN.Tag = "";
             // 
             // txtGroomSuffix
             // 
             this.txtGroomSuffix.ForeColor = System.Drawing.Color.Gray;
-            this.txtGroomSuffix.Location = new System.Drawing.Point(262, 77);
+            this.txtGroomSuffix.Location = new System.Drawing.Point(262, 76);
             this.txtGroomSuffix.MaxLength = 5;
             this.txtGroomSuffix.Name = "txtGroomSuffix";
-            this.txtGroomSuffix.Size = new System.Drawing.Size(47, 20);
+            this.txtGroomSuffix.Size = new System.Drawing.Size(47, 22);
             this.txtGroomSuffix.TabIndex = 3;
             this.txtGroomSuffix.Tag = "Suffix";
             // 
             // txtGroomMI
             // 
             this.txtGroomMI.ForeColor = System.Drawing.Color.Gray;
-            this.txtGroomMI.Location = new System.Drawing.Point(124, 77);
+            this.txtGroomMI.Location = new System.Drawing.Point(124, 76);
             this.txtGroomMI.MaxLength = 1;
             this.txtGroomMI.Name = "txtGroomMI";
-            this.txtGroomMI.Size = new System.Drawing.Size(31, 20);
+            this.txtGroomMI.Size = new System.Drawing.Size(31, 22);
             this.txtGroomMI.TabIndex = 1;
             this.txtGroomMI.Tag = "";
             // 
             // txtGroomFN
             // 
             this.txtGroomFN.ForeColor = System.Drawing.Color.Gray;
-            this.txtGroomFN.Location = new System.Drawing.Point(23, 77);
+            this.txtGroomFN.Location = new System.Drawing.Point(22, 76);
             this.txtGroomFN.MaxLength = 50;
             this.txtGroomFN.Name = "txtGroomFN";
-            this.txtGroomFN.Size = new System.Drawing.Size(95, 20);
+            this.txtGroomFN.Size = new System.Drawing.Size(95, 22);
             this.txtGroomFN.TabIndex = 0;
             this.txtGroomFN.Tag = "";
             // 
             // dtpGroomBirthDate
             // 
             this.dtpGroomBirthDate.FontSize = MetroFramework.MetroDateTimeSize.Small;
-            this.dtpGroomBirthDate.Location = new System.Drawing.Point(23, 120);
+            this.dtpGroomBirthDate.Location = new System.Drawing.Point(22, 120);
             this.dtpGroomBirthDate.MaxDate = new System.DateTime(2017, 7, 16, 0, 0, 0, 0);
             this.dtpGroomBirthDate.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpGroomBirthDate.Name = "dtpGroomBirthDate";
@@ -104,7 +105,7 @@
             // 
             // txtRemarks
             // 
-            this.txtRemarks.Location = new System.Drawing.Point(23, 350);
+            this.txtRemarks.Location = new System.Drawing.Point(22, 349);
             this.txtRemarks.Multiline = true;
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.Size = new System.Drawing.Size(286, 49);
@@ -121,13 +122,6 @@
             this.application_remarks_textBox.TabIndex = 22;
             this.application_remarks_textBox.Text = "Remarks";
             this.application_remarks_textBox.Click += new System.EventHandler(this.application_remarks_textBox_Click);
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(23, 309);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(100, 20);
-            this.txtPrice.TabIndex = 9;
             // 
             // label5
             // 
@@ -154,7 +148,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 102);
+            this.label4.Location = new System.Drawing.Point(22, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 15);
             this.label4.TabIndex = 24;
@@ -174,7 +168,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 219);
+            this.label2.Location = new System.Drawing.Point(22, 219);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 15);
             this.label2.TabIndex = 31;
@@ -183,47 +177,47 @@
             // txtBrideLN
             // 
             this.txtBrideLN.ForeColor = System.Drawing.Color.Gray;
-            this.txtBrideLN.Location = new System.Drawing.Point(161, 194);
+            this.txtBrideLN.Location = new System.Drawing.Point(161, 193);
             this.txtBrideLN.MaxLength = 50;
             this.txtBrideLN.Name = "txtBrideLN";
-            this.txtBrideLN.Size = new System.Drawing.Size(95, 20);
+            this.txtBrideLN.Size = new System.Drawing.Size(95, 22);
             this.txtBrideLN.TabIndex = 7;
             this.txtBrideLN.Tag = "";
             // 
             // txtBrideSuffix
             // 
             this.txtBrideSuffix.ForeColor = System.Drawing.Color.Gray;
-            this.txtBrideSuffix.Location = new System.Drawing.Point(262, 194);
+            this.txtBrideSuffix.Location = new System.Drawing.Point(262, 193);
             this.txtBrideSuffix.MaxLength = 5;
             this.txtBrideSuffix.Name = "txtBrideSuffix";
-            this.txtBrideSuffix.Size = new System.Drawing.Size(47, 20);
+            this.txtBrideSuffix.Size = new System.Drawing.Size(47, 22);
             this.txtBrideSuffix.TabIndex = 8;
             this.txtBrideSuffix.Tag = "Suffix";
             // 
             // txtBrideMI
             // 
             this.txtBrideMI.ForeColor = System.Drawing.Color.Gray;
-            this.txtBrideMI.Location = new System.Drawing.Point(124, 194);
+            this.txtBrideMI.Location = new System.Drawing.Point(124, 193);
             this.txtBrideMI.MaxLength = 1;
             this.txtBrideMI.Name = "txtBrideMI";
-            this.txtBrideMI.Size = new System.Drawing.Size(31, 20);
+            this.txtBrideMI.Size = new System.Drawing.Size(31, 22);
             this.txtBrideMI.TabIndex = 6;
             this.txtBrideMI.Tag = "";
             // 
             // txtBrideFN
             // 
             this.txtBrideFN.ForeColor = System.Drawing.Color.Gray;
-            this.txtBrideFN.Location = new System.Drawing.Point(23, 194);
+            this.txtBrideFN.Location = new System.Drawing.Point(22, 193);
             this.txtBrideFN.MaxLength = 50;
             this.txtBrideFN.Name = "txtBrideFN";
-            this.txtBrideFN.Size = new System.Drawing.Size(95, 20);
+            this.txtBrideFN.Size = new System.Drawing.Size(95, 22);
             this.txtBrideFN.TabIndex = 5;
             this.txtBrideFN.Tag = "";
             // 
             // dtpBrideBirthDate
             // 
             this.dtpBrideBirthDate.FontSize = MetroFramework.MetroDateTimeSize.Small;
-            this.dtpBrideBirthDate.Location = new System.Drawing.Point(23, 237);
+            this.dtpBrideBirthDate.Location = new System.Drawing.Point(22, 237);
             this.dtpBrideBirthDate.MaxDate = new System.DateTime(2017, 7, 16, 0, 0, 0, 0);
             this.dtpBrideBirthDate.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpBrideBirthDate.Name = "dtpBrideBirthDate";
@@ -234,7 +228,7 @@
             // label6
             // 
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(11, 270);
+            this.label6.Location = new System.Drawing.Point(10, 270);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(328, 2);
@@ -245,7 +239,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(105, 20);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 13);
+            this.label7.Size = new System.Drawing.Size(115, 13);
             this.label7.TabIndex = 34;
             this.label7.Text = "Marriage Application";
             // 
@@ -261,11 +255,22 @@
             this.btnApply.UseStyleColors = true;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
+            // txtPrice
+            // 
+            this.txtPrice.DecimalPlaces = 2;
+            this.txtPrice.Location = new System.Drawing.Point(22, 304);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(120, 22);
+            this.txtPrice.TabIndex = 35;
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrice.ThousandsSeparator = true;
+            // 
             // AddMarriageApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(345, 458);
+            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -280,17 +285,18 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtRemarks);
             this.Controls.Add(this.application_remarks_textBox);
-            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtGroomLN);
             this.Controls.Add(this.txtGroomSuffix);
             this.Controls.Add(this.txtGroomMI);
             this.Controls.Add(this.txtGroomFN);
             this.Controls.Add(this.dtpGroomBirthDate);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "AddMarriageApplication";
-            this.Padding = new System.Windows.Forms.Padding(20);
+            this.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
             this.Text = "AddMarriageApplication";
             this.Load += new System.EventHandler(this.AddMarriageApplication_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,7 +311,6 @@
         private MetroFramework.Controls.MetroDateTime dtpGroomBirthDate;
         private System.Windows.Forms.TextBox txtRemarks;
         private System.Windows.Forms.Label application_remarks_textBox;
-        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -319,5 +324,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private MetroFramework.Controls.MetroButton btnApply;
+        private HiddenNumericUpDown txtPrice;
     }
 }

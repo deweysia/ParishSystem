@@ -71,6 +71,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.Calendar">
+      <HintPath>..\..\..\..\..\Desktop\System.Windows.Forms.Calendar\System.Windows.Forms.Calendar\bin\Debug\System.Windows.Forms.Calendar.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -106,12 +109,6 @@
     </Compile>
     <Compile Include="AdvanceSearch.Designer.cs">
       <DependentUpon>AdvanceSearch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AlphaTextBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="AlphaTextBox.Designer.cs">
-      <DependentUpon>AlphaTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="ApplicationModule.cs">
       <SubType>Form</SubType>
@@ -192,6 +189,12 @@
       <DependentUpon>CurrencyTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Delegates.cs" />
+    <Compile Include="DemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoForm.Designer.cs">
+      <DependentUpon>DemoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DownPaymentProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,12 +265,6 @@
     <Compile Include="CueTextBox.Designer.cs">
       <DependentUpon>CueTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomControlBar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CustomControlBar.Designer.cs">
-      <DependentUpon>CustomControlBar.cs</DependentUpon>
-    </Compile>
     <Compile Include="CustomMessage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,12 +279,6 @@
     </Compile>
     <Compile Include="DataHandler.cs" />
     <Compile Include="Enums.cs" />
-    <Compile Include="ExButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExButton.Designer.cs">
-      <DependentUpon>ExButton.cs</DependentUpon>
-    </Compile>
     <Compile Include="HiddenTabControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -300,29 +291,11 @@
     <Compile Include="MarriageForm.Designer.cs">
       <DependentUpon>MarriageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="menu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="menu.Designer.cs">
-      <DependentUpon>menu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="messageBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="messageBox.Designer.cs">
-      <DependentUpon>messageBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="MinisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MinisterForm.Designer.cs">
       <DependentUpon>MinisterForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Person.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Person.Designer.cs">
-      <DependentUpon>Person.cs</DependentUpon>
     </Compile>
     <Compile Include="PersonView.cs">
       <SubType>Form</SubType>
@@ -450,8 +423,8 @@
     <EmbeddedResource Include="AddReferences.resx">
       <DependentUpon>AddReferences.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AlphaTextBox.resx">
-      <DependentUpon>AlphaTextBox.cs</DependentUpon>
+    <EmbeddedResource Include="AdvanceSearch.resx">
+      <DependentUpon>AdvanceSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationModule.resx">
       <DependentUpon>ApplicationModule.cs</DependentUpon>
@@ -492,6 +465,9 @@
     <EmbeddedResource Include="CurrencyTextBox.resx">
       <DependentUpon>CurrencyTextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DemoForm.resx">
+      <DependentUpon>DemoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DownPaymentProfile.resx">
       <DependentUpon>DownPaymentProfile.cs</DependentUpon>
     </EmbeddedResource>
@@ -516,32 +492,20 @@
     <EmbeddedResource Include="CueTextBox.resx">
       <DependentUpon>CueTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomControlBar.resx">
-      <DependentUpon>CustomControlBar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CustomMessage.resx">
       <DependentUpon>CustomMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomNotification.resx">
       <DependentUpon>CustomNotification.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExButton.resx">
-      <DependentUpon>ExButton.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MarriageForm.resx">
       <DependentUpon>MarriageForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="messageBox.resx">
-      <DependentUpon>messageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MinisterForm.resx">
       <DependentUpon>MinisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\ParishSystem.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\ParishSystem.Properties.Resources.resources" />
-    <EmbeddedResource Include="Person.resx">
-      <DependentUpon>Person.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PersonView.resx">
       <DependentUpon>PersonView.cs</DependentUpon>
     </EmbeddedResource>
@@ -568,6 +532,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sBloodletting.resx">
       <DependentUpon>sBloodletting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScheduleModule.resx">
+      <DependentUpon>ScheduleModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sConfirmation.resx">
       <DependentUpon>sConfirmation.cs</DependentUpon>

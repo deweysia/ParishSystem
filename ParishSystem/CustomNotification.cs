@@ -195,7 +195,6 @@ namespace ParishSystem
             MinisterAddSuccess = new State("Minister successfully added", NotificationType.success),
             MinisterAddFail = new State("Minister was not added", NotificationType.warning);
 
-        
 
 
     }
