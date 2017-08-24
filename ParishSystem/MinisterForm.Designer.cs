@@ -49,7 +49,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.ministryType_cBox = new MetroFramework.Controls.MetroComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.customControlBar1 = new ParishSystem.CustomControlBar();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -259,13 +259,15 @@
             this.panel2.Size = new System.Drawing.Size(397, 100);
             this.panel2.TabIndex = 13;
             // 
-            // customControlBar1
+            // btnClose
             // 
-            this.customControlBar1.BackColor = System.Drawing.Color.Transparent;
-            this.customControlBar1.Location = new System.Drawing.Point(382, 12);
-            this.customControlBar1.Name = "customControlBar1";
-            this.customControlBar1.Size = new System.Drawing.Size(26, 27);
-            this.customControlBar1.TabIndex = 11;
+            this.btnClose.Location = new System.Drawing.Point(334, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 14;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // MinisterForm
             // 
@@ -273,9 +275,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(421, 450);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.customControlBar1);
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.label4);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -311,9 +313,10 @@
         private MetroFramework.Controls.MetroButton addBtn;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private CustomControlBar customControlBar1;
+
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private MetroFramework.Controls.MetroComboBox ministryType_cBox;
+        private System.Windows.Forms.Button btnClose;
     }
 }

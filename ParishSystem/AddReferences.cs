@@ -14,18 +14,26 @@ namespace ParishSystem
     {
         private Point lastClick;
         private DataHandler dh = DataHandler.getDataHandler();
-        public AddReferences(SacramentType t, string name)
+        int sacramentID;
+        SacramentType t;
+        public AddReferences(SacramentType t, int sacramentID, string name)
         {
             InitializeComponent();
             lblSacrament.Text = t.ToString();
             lblName.Text = name;
+
+            this.sacramentID = sacramentID;
+            this.t = t;
         }
 
-        public AddReferences(SacramentType t, string groomName, string brideName)
+        public AddReferences(SacramentType t, int sacramentID, string groomName, string brideName)
         {
             InitializeComponent();
             lblSacrament.Text = t.ToString();
             lblName.Text = string.Format("{0} & {1}", groomName, brideName);
+
+            this.sacramentID = sacramentID;
+            this.t = t;
         }
 
         private bool hasEmptyFields()
@@ -60,7 +68,9 @@ namespace ParishSystem
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-
+            bool success = dh.editSacramentReference(t, sacramentID, txtRegistry.Text, txtRecord.Text, txtPage.Text);
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

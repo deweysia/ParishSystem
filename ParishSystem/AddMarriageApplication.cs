@@ -39,7 +39,7 @@ namespace ParishSystem
             if (txtGroomFN.Text=="First Name"||txtGroomMI.Text=="Mi"||txtGroomLN.Text=="Last Name"||
                 txtBrideFN.Text == "First Name" || txtBrideMI.Text == "Mi" || txtGroomLN.Text == "Last Name" )
             {
-                Notification.Show("Please fill in all required details!", NotificationType.info);
+                Notification.Show(State.MissingFields);
                 return;
             }
             
@@ -98,12 +98,12 @@ namespace ParishSystem
             int itemTypeID = int.Parse(sacramentItem.Rows[0]["itemTypeID"].ToString());
             double price = double.Parse(txtPrice.Text.ToString());
 
-            success &= dh.addSacramentIncome(applicationID, itemTypeID, price, txtRemarks.Text);
+            success &= dh.addSacramentIncome(applicationID, price, txtRemarks.Text);
 
             if (success)
-                Notification.Show("Successfully added marriage application!", NotificationType.success);
+                Notification.Show(State.ApplicationApproveSuccess);
             else
-                Notification.Show("Something went wrong!", NotificationType.error);
+                Notification.Show(State.ApplicationApproveFail);
 
             this.Close();
 

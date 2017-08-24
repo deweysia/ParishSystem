@@ -18,11 +18,11 @@ namespace ParishSystem
         Color ButtonBackColor = Color.Transparent;
         DataHandler dh = DataHandler.getDataHandler();
         Point lastClick;
-        Dictionary<Button, Panel_Size_Pair> SubMenu= new Dictionary<Button, Panel_Size_Pair>();
+        Dictionary<Button, Panel_Size_Pair> SubMenu = new Dictionary<Button, Panel_Size_Pair>();
         public SAD2()
         {
             InitializeComponent();
-            SubMenu.Add(bloodletting_button_menu,new Panel_Size_Pair(234, 58,bloodlettingmenu_panel,false));
+            SubMenu.Add(bloodletting_button_menu, new Panel_Size_Pair(234, 58, bloodlettingmenu_panel, false));
             SubMenu.Add(CRB_button_menu, new Panel_Size_Pair(234, 58, CRBmenu_panel, false));
             SubMenu.Add(CDB_button_menu, new Panel_Size_Pair(234, 58, CDB_menu_panel, false));
             SubMenu.Add(itemtypemenu_button, new Panel_Size_Pair(175, 58, itemtypemenu_panel, false));
@@ -51,7 +51,7 @@ namespace ParishSystem
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-      
+
 
         #endregion
 
@@ -105,8 +105,8 @@ namespace ParishSystem
 
         private void application_panel_VisibleChanged(object sender, EventArgs e)
         {
-           // ApplicationModule f = new ApplicationModule(dh);
-           // showForm(sender, f);
+            // ApplicationModule f = new ApplicationModule(dh);
+            // showForm(sender, f);
 
         }
 
@@ -116,17 +116,17 @@ namespace ParishSystem
         {
             if (menuUp)
             {
-                if (Menu_panel.Location.Y <= 0) { MenuTimer.Stop(); coefficientOfChangeOfMenu = 1; OpenMenu_button.Enabled = true; Menu_panel.BackColor = Color.FromArgb(115,115,115); menuUp = false; }
+                if (Menu_panel.Location.Y <= 0) { MenuTimer.Stop(); coefficientOfChangeOfMenu = 1; OpenMenu_button.Enabled = true; Menu_panel.BackColor = Color.FromArgb(115, 115, 115); menuUp = false; }
                 else
                 {
                     Menu_panel.Location = new Point(Menu_panel.Location.X, Menu_panel.Location.Y - coefficientOfChangeOfMenu);
-                    Menu_panel.BackColor = Color.FromArgb(Menu_panel.BackColor.R -4, Menu_panel.BackColor.G - 4, Menu_panel.BackColor.B - 4);
+                    Menu_panel.BackColor = Color.FromArgb(Menu_panel.BackColor.R - 4, Menu_panel.BackColor.G - 4, Menu_panel.BackColor.B - 4);
                     coefficientOfChangeOfMenu++;
                 }
             }
             else
             {
-                if (Menu_panel.Location.Y >= 545) { MenuTimer.Stop(); coefficientOfChangeOfMenu = 1; OpenMenu_button.Enabled = true; Menu_panel.BackColor = Color.FromArgb(255,255,255); menuUp = true; }
+                if (Menu_panel.Location.Y >= 545) { MenuTimer.Stop(); coefficientOfChangeOfMenu = 1; OpenMenu_button.Enabled = true; Menu_panel.BackColor = Color.FromArgb(255, 255, 255); menuUp = true; }
                 else
                 {
                     Menu_panel.Location = new Point(Menu_panel.Location.X, Menu_panel.Location.Y + coefficientOfChangeOfMenu);
@@ -141,7 +141,7 @@ namespace ParishSystem
             Menu_panel.BringToFront();
             OpenMenu_button.Enabled = false;
             MenuTimer.Start();
-            
+
         }
 
         private void btn_Close_Click_1(object sender, EventArgs e)
@@ -156,16 +156,16 @@ namespace ParishSystem
             closesize = SubMenu[A].CloseSize;
             PanelToMove = SubMenu[A].panel;
             open = SubMenu[A].open;
-            SubMenu[A].open= !(SubMenu[A].open);
+            SubMenu[A].open = !(SubMenu[A].open);
             Panel_Timer.Start();
-            
+
         }
         int closesize = 0;
         int opensize = 0;
         Panel PanelToMove;
         bool open;
         int coefficientOfChangeOfPanel = 1;
-         
+
         private void Panel_Timer_Tick(object sender, EventArgs e)
         {
             if (!open)
@@ -174,7 +174,7 @@ namespace ParishSystem
                 {
                     PanelToMove.Height = PanelToMove.Height + coefficientOfChangeOfPanel;
                     coefficientOfChangeOfPanel++;
-                    
+
                 }
                 else
                 {
@@ -185,12 +185,12 @@ namespace ParishSystem
             }
             else
             {
-               
+
                 if (PanelToMove.Height >= closesize)
                 {
                     PanelToMove.Height = PanelToMove.Height - coefficientOfChangeOfPanel;
                     coefficientOfChangeOfPanel++;
-                  
+
                 }
                 else
                 {
@@ -335,7 +335,7 @@ namespace ParishSystem
         private void CDBreport_parish_MouseClick(object sender, MouseEventArgs e)
         {
             CDBreport_button.PerformClick();
-            CashReport_Module f = new CashReport_Module(1,1);
+            CashReport_Module f = new CashReport_Module(1, 1);
             showForm(content_panel, f);
         }
 
@@ -374,10 +374,10 @@ namespace ParishSystem
             showForm(content_panel, f);
         }
 
-    
+
         private void application_button_menu_MouseUp(object sender, MouseEventArgs e)
         {
-            ApplicationModule f = new ApplicationModule(dh);
+            ApplicationModule f = new ApplicationModule();
             showForm(content_panel, f);
         }
 
@@ -395,7 +395,7 @@ namespace ParishSystem
 
         private void sacrament_button_menu_MouseUp(object sender, MouseEventArgs e)
         {
-            SacramentModule f = new SacramentModule(dh);
+            SacramentModule f = new SacramentModule();
             showForm(content_panel, f);
         }
 
@@ -407,5 +407,3 @@ namespace ParishSystem
 
     }
 }
-
-

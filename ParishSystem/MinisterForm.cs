@@ -65,9 +65,14 @@ namespace ParishSystem
                 licenseNum_textBox.Text, expirationDate_dtp.Value);
 
             if (success)
-                Notification.Show("Minister Added!", NotificationType.success);
+                Notification.Show(State.MinisterAddSuccess);
             else
-                Notification.Show("Something went wrong!", NotificationType.error);
+                Notification.Show(State.MinisterAddFail);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

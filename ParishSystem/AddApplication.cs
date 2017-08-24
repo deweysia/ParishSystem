@@ -72,7 +72,7 @@ namespace ParishSystem
         {
             if (!allFilled())
             {
-                Notification.Show("Please fill in all required details!", NotificationType.info);
+                Notification.Show(State.MissingFields);
                 return;
             }
             
@@ -95,11 +95,11 @@ namespace ParishSystem
                 {
                     success &= dh.addNewApplicant(profileID, sacramentType);
                     int applicationID = dh.getLatestID("Application", "applicationID");
-                    success &= dh.addSacramentIncome(applicationID, itemTypeID, price, remarks_textBox.Text);
+                    success &= dh.addSacramentIncome(applicationID, price, remarks_textBox.Text);
                 }
                 else //gen prof has active application
                 {
-                    Notification.Show(string.Format("{0} {1} {2} {3} has an existing active {4} application. Cannot add duplicate sacrament record.", fn, mn, ln, suffix, sacramentType.ToString()), NotificationType.warning);
+                    Notification.Show(State.ApplicationExists);
                     this.Close();
                     return;
                 }
@@ -112,68 +112,17 @@ namespace ParishSystem
                 profileID = dh.getLatestID("GeneralProfile", "profileID");
                 success &= dh.addNewApplicant(profileID, sacramentType);
                 int applicationID = dh.getLatestID("Application", "applicationID");
-                success &= dh.addSacramentIncome(applicationID, itemTypeID, price, remarks_textBox.Text);
+                success &= dh.addSacramentIncome(applicationID, price, remarks_textBox.Text);
             }
 
-            displayMessage(success);
-            this.Close();
-        }
-        /*
-         if (!allFilled())
-            {
-                Notification.Show("Please fill in all required details!", NotificationType.info);
-                return;
-            }
-            
-            string fn = firstName_textBox.Text;
-            string mn = midName_textBox.Text;
-            string ln = lastName_textBox.Text;
-            string suffix = suffix_textBox.Text == "Suffix" ? null : suffix_textBox.Text;
-            Gender gender = male_radio.Checked ? Gender.Male : Gender.Female;
-            DateTime birthDate = birthdate_dtp.Value;
-
-            int itemTypeID = int.Parse(sacramentItem.Rows[0]["itemTypeID"].ToString());
-            double price = double.Parse(price_textBox.Text);
-
-            bool success = true;
-            int profileID = dh.getGeneralProfileID(fn, mn, ln, suffix, gender, birthDate);
-            if(profileID != -1)//gen prof exists
-            {
-                //gen prof does not have active application
-                if (!dh.hasActiveApplication(profileID, sacramentType))
-                {
-                    success &= dh.addNewApplicant(profileID, sacramentType);
-                    int applicationID = dh.getLatestID("Application", "applicationID");
-                    success &= dh.addSacramentIncome(applicationID, itemTypeID, price, remarks_textBox.Text);
-                }
-                else //gen prof has active application
-                {
-                    Notification.Show(string.Format("{0} {1} {2} {3} has an existing active {4} application. Cannot add duplicate sacrament record.", fn, mn, ln, suffix, sacramentType.ToString()), NotificationType.warning);
-                    this.Close();
-                    return;
-                }
-            }
-            else //gen prof does not exist
-            {
-                //add genprof and add application
-
-                success &= dh.addGeneralProfile(fn, mn, ln, suffix, gender, birthDate);
-                profileID = dh.getLatestID("GeneralProfile", "profileID");
-                success &= dh.addNewApplicant(profileID, sacramentType);
-                int applicationID = dh.getLatestID("Application", "applicationID");
-                success &= dh.addSacramentIncome(applicationID, itemTypeID, price, remarks_textBox.Text);
-            }
-
-            displayMessage(success);
-            this.Close();
-             */
-        private void displayMessage(bool success)
-        {
             if (success)
-                Notification.Show("Application Successfully Added!", NotificationType.success);
+                Notification.Show(State.ApplicationAddSuccess);
             else
-                Notification.Show("There was an error.", NotificationType.error);
+                Notification.Show(State.ApplicationAddFail);
+            this.Close();
         }
+
+
 
         private void AddApplication_MouseDown(object sender, MouseEventArgs e)
         {
@@ -212,7 +161,7 @@ namespace ParishSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Notification.Show("HEEEEEEEEEEEEEEEELOOOOO MY BITCHESSSS");
+            Notification.Show(State.GenericError);
         }
 
         private void name_textBox_Leave(object sender, EventArgs e)

@@ -148,10 +148,56 @@ namespace ParishSystem
 
     public static class Notification
     {
-        public static void Show(string message, NotificationType type =  NotificationType.info)
+        private static void Notify(string message, NotificationType type =  NotificationType.info)
         {
             CustomNotification notif = new CustomNotification();
             notif.ShowNotif(message, type);
         }
+
+        public static void Show(State ss)
+        {
+            Notify(ss.Message, ss.Type);
+        }
     }
+
+
+    public class State
+    {
+        public string Message;
+        public NotificationType Type;
+        private State(string msg, NotificationType t)
+        {
+            this.Message = msg;
+            this.Type = t;
+        }
+
+
+        public static State
+            MissingFields = new State("Please fill in all necessary fields", NotificationType.info),
+            UpdateSuccess = new State("Changes successfully applied", NotificationType.success),
+            UpdateFail = new State("Changes failed to apply", NotificationType.error),
+            GenericError = new State("Something went wrong", NotificationType.error),
+            ProfileExists = new State("This profile already exists in the system", NotificationType.error),
+            GroomExists = new State("Groom profile already exists in the system", NotificationType.error),
+            BrideExists = new State("Bride profile already exists in the system", NotificationType.error),
+            PaymentSuccess = new State("Payment successful", NotificationType.success),
+            PaymentFail = new State("Payment failed", NotificationType.error),
+            PaymentZero = new State("Payment cannot be 0", NotificationType.warning),
+            TransactionSuccess = new State("Transaction successful", NotificationType.success),
+            TransactionFail = new State("Transaction Failed", NotificationType.error),
+            RevokeSucess = new State("Application has been revoked", NotificationType.success),
+            RevokeFail = new State("Application revoke failed", NotificationType.error),
+            ApplicationApproveSuccess = new State("Application successfully approved", NotificationType.success),
+            ApplicationApproveFail = new State("Application approve failed", NotificationType.error),
+            ApplicationExists = new State("Application already exists in the system", NotificationType.warning),
+            ApplicationAddSuccess = new State("Application successfully added", NotificationType.success),
+            ApplicationAddFail = new State("Application not added", NotificationType.warning),
+            MinisterAddSuccess = new State("Minister successfully added", NotificationType.success),
+            MinisterAddFail = new State("Minister was not added", NotificationType.warning);
+
+
+
+    }
+
+    
 }

@@ -108,6 +108,7 @@
             this.remarksText.Name = "remarksText";
             this.remarksText.Size = new System.Drawing.Size(277, 85);
             this.remarksText.TabIndex = 24;
+            this.remarksText.Tag = "NotNull";
             // 
             // MinisterCBox
             // 
@@ -435,7 +436,7 @@
             this.legitimacyCBox.TabIndex = 3;
             this.legitimacyCBox.UseSelectable = true;
             // 
-            // BaptismForm
+            // SacramentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -484,9 +485,9 @@
             this.Controls.Add(this.genderLabel);
             this.Controls.Add(this.birthdateLabel);
             this.Controls.Add(this.nameLabel);
-            this.Name = "BaptismForm";
+            this.Name = "SacramentForm";
             this.Text = "Baptism Fill-up Form";
-            this.Load += new System.EventHandler(this.BaptismForm_Load);
+            this.Load += new System.EventHandler(this.SacramentForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
