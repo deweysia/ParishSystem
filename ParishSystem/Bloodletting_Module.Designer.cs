@@ -55,9 +55,9 @@
             // 
             // search_button_blood
             // 
-            this.search_button_blood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.search_button_blood.BackColor = System.Drawing.Color.Gray;
             this.search_button_blood.FlatAppearance.BorderSize = 0;
-            this.search_button_blood.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(135)))), ((int)(((byte)(224)))));
+            this.search_button_blood.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.search_button_blood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.search_button_blood.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.search_button_blood.ForeColor = System.Drawing.Color.White;
@@ -80,9 +80,9 @@
             // 
             // add_button_donor
             // 
-            this.add_button_donor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.add_button_donor.BackColor = System.Drawing.Color.Gray;
             this.add_button_donor.FlatAppearance.BorderSize = 0;
-            this.add_button_donor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(135)))), ((int)(((byte)(224)))));
+            this.add_button_donor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.add_button_donor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_button_donor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_button_donor.ForeColor = System.Drawing.Color.White;
@@ -107,11 +107,11 @@
             this.bloodletting_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.bloodletting_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.bloodletting_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.bloodletting_dgv.ColumnHeadersHeight = 40;

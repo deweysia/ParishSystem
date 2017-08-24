@@ -571,7 +571,7 @@
             this.CRB_button_menu.Name = "CRB_button_menu";
             this.CRB_button_menu.Size = new System.Drawing.Size(280, 58);
             this.CRB_button_menu.TabIndex = 43;
-            this.CRB_button_menu.Text = "Cash Relciept ";
+            this.CRB_button_menu.Text = "Cash Disbursment ";
             this.CRB_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CRB_button_menu.UseVisualStyleBackColor = false;
             this.CRB_button_menu.Click += new System.EventHandler(this.tile_Click);
@@ -663,7 +663,7 @@
             this.CDB_button_menu.Name = "CDB_button_menu";
             this.CDB_button_menu.Size = new System.Drawing.Size(280, 58);
             this.CDB_button_menu.TabIndex = 43;
-            this.CDB_button_menu.Text = "Cash Disbursment ";
+            this.CDB_button_menu.Text = "Cash Receipt";
             this.CDB_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CDB_button_menu.UseVisualStyleBackColor = false;
             this.CDB_button_menu.Click += new System.EventHandler(this.tile_Click);

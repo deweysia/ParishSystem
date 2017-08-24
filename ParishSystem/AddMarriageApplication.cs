@@ -36,8 +36,8 @@ namespace ParishSystem
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            if (txtGroomFN.Text=="First Name"||txtGroomMI.Text=="Mi"||txtGroomLN.Text=="Last Name"||txtGroomSuffix.Text=="Sf"||
-                txtBrideFN.Text == "First Name" || txtBrideMI.Text == "Mi" || txtGroomLN.Text == "Last Name" || txtBrideSuffix.Text == "Sf")
+            if (txtGroomFN.Text=="First Name"||txtGroomMI.Text=="Mi"||txtGroomLN.Text=="Last Name"||
+                txtBrideFN.Text == "First Name" || txtBrideMI.Text == "Mi" || txtGroomLN.Text == "Last Name" )
             {
                 Notification.Show("Please fill in all required details!", NotificationType.info);
                 return;
@@ -46,14 +46,14 @@ namespace ParishSystem
             string gFN = txtGroomFN.Text;
             string gMI = txtGroomMI.Text;
             string gLN = txtGroomLN.Text;
-            string gSuffix = txtGroomSuffix.Text;
+            string gSuffix = (txtGroomSuffix.Text == "Sf" ? null : txtGroomSuffix.Text);
             DateTime gBD = dtpGroomBirthDate.Value;
             Gender gG = Gender.Male;
 
             string bFN = txtBrideFN.Text;
             string bMI = txtBrideMI.Text;
             string bLN = txtBrideLN.Text;
-            string bSuffix = txtBrideSuffix.Text;
+            string bSuffix = (txtBrideSuffix.Text == "Sf" ? null : txtBrideSuffix.Text);
             DateTime bBD = dtpBrideBirthDate.Value;
             Gender bG = Gender.Female;
 

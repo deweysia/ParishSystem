@@ -128,5 +128,50 @@ namespace ParishSystem
         {
             refreshCashRelease();
         }
+
+        private void total_label_cashrelease_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void remarks_textbox_CRB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void name_textbox_CRB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void item_dgv_fullpay_CRB_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

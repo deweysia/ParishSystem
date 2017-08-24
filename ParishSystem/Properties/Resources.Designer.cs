@@ -633,6 +633,26 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Delete_Filled_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Delete_Filled_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Delete_Filled_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Delete_Filled_50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Erase_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Erase_64", resourceCulture);
@@ -646,6 +666,16 @@ namespace ParishSystem.Properties {
         internal static System.Drawing.Bitmap icons8_Pencil_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Pencil_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Pencil_32__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Pencil_32__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -703,9 +733,29 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Refresh_Filled_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Refresh_Filled_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Save_Filled_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Save_Filled_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Save_Filled_32__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Save_Filled_32__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

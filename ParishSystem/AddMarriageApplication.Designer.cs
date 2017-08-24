@@ -299,7 +299,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.close_picturebox);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -332,9 +332,9 @@
             // 
             // btnApply
             // 
-            this.btnApply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.btnApply.BackColor = System.Drawing.Color.Gray;
             this.btnApply.FlatAppearance.BorderSize = 0;
-            this.btnApply.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(135)))), ((int)(((byte)(224)))));
+            this.btnApply.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApply.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApply.ForeColor = System.Drawing.Color.White;
@@ -394,8 +394,8 @@
             this.Controls.Add(this.txtGroomMI);
             this.Controls.Add(this.txtGroomFN);
             this.Controls.Add(this.dtpGroomBirthDate);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label9);
+            this.Controls.Add(this.label7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddMarriageApplication";
             this.Padding = new System.Windows.Forms.Padding(20);

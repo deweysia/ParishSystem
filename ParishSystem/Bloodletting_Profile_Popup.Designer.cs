@@ -203,20 +203,20 @@
             this.blooddonation_dataGridView_bloodletting.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.blooddonation_dataGridView_bloodletting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.blooddonation_dataGridView_bloodletting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.blooddonation_dataGridView_bloodletting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.blooddonation_dataGridView_bloodletting.DefaultCellStyle = dataGridViewCellStyle2;
             this.blooddonation_dataGridView_bloodletting.EnableHeadersVisualStyles = false;
@@ -236,7 +236,7 @@
             this.blooddonation_dataGridView_bloodletting.RowHeadersVisible = false;
             this.blooddonation_dataGridView_bloodletting.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
@@ -251,7 +251,7 @@
             this.edit_button.FlatAppearance.BorderSize = 0;
             this.edit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.edit_button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.edit_button.Image = global::ParishSystem.Properties.Resources.icons8_Pencil_32;
+            this.edit_button.Image = global::ParishSystem.Properties.Resources.icons8_Pencil_32__1_;
             this.edit_button.Location = new System.Drawing.Point(335, 3);
             this.edit_button.Name = "edit_button";
             this.edit_button.Size = new System.Drawing.Size(37, 37);
@@ -310,10 +310,10 @@
             // 
             // addDonation_button_bloodletting
             // 
-            this.addDonation_button_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.addDonation_button_bloodletting.BackColor = System.Drawing.Color.Gray;
             this.addDonation_button_bloodletting.Enabled = false;
             this.addDonation_button_bloodletting.FlatAppearance.BorderSize = 0;
-            this.addDonation_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(135)))), ((int)(((byte)(224)))));
+            this.addDonation_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.addDonation_button_bloodletting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addDonation_button_bloodletting.ForeColor = System.Drawing.Color.White;
             this.addDonation_button_bloodletting.Location = new System.Drawing.Point(23, 358);
@@ -326,9 +326,9 @@
             // 
             // clear_button_bloodletting
             // 
-            this.clear_button_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.clear_button_bloodletting.BackColor = System.Drawing.Color.Gray;
             this.clear_button_bloodletting.FlatAppearance.BorderSize = 0;
-            this.clear_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(135)))), ((int)(((byte)(224)))));
+            this.clear_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.clear_button_bloodletting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_button_bloodletting.ForeColor = System.Drawing.Color.White;
             this.clear_button_bloodletting.Location = new System.Drawing.Point(147, 358);
@@ -341,10 +341,10 @@
             // 
             // delete_button_bloodletting
             // 
-            this.delete_button_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.delete_button_bloodletting.BackColor = System.Drawing.Color.Gray;
             this.delete_button_bloodletting.Enabled = false;
             this.delete_button_bloodletting.FlatAppearance.BorderSize = 0;
-            this.delete_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(135)))), ((int)(((byte)(224)))));
+            this.delete_button_bloodletting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.delete_button_bloodletting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete_button_bloodletting.ForeColor = System.Drawing.Color.White;
             this.delete_button_bloodletting.Location = new System.Drawing.Point(276, 358);
@@ -360,7 +360,7 @@
             this.cancel_button.FlatAppearance.BorderSize = 0;
             this.cancel_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel_button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cancel_button.Image = global::ParishSystem.Properties.Resources.icons8_Refresh_32;
+            this.cancel_button.Image = global::ParishSystem.Properties.Resources.icons8_Refresh_Filled_32;
             this.cancel_button.Location = new System.Drawing.Point(334, 42);
             this.cancel_button.Name = "cancel_button";
             this.cancel_button.Size = new System.Drawing.Size(37, 38);
@@ -481,7 +481,7 @@
             // 
             // controlBar_panel
             // 
-            this.controlBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.controlBar_panel.BackColor = System.Drawing.Color.DimGray;
             this.controlBar_panel.Controls.Add(this.close_button);
             this.controlBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlBar_panel.Location = new System.Drawing.Point(0, 0);

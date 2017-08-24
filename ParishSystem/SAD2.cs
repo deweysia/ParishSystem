@@ -286,14 +286,14 @@ namespace ParishSystem
         private void CRBcommunity_button_menu_MouseClick(object sender, MouseEventArgs e)
         {
             CRB_button_menu.PerformClick();
-            CashRelease_Module f = new CashRelease_Module(1);
+            CashRelease_Module f = new CashRelease_Module(2);
             showForm(content_panel, f);
         }
 
         private void CRBpostulancy_button_menu_MouseClick(object sender, MouseEventArgs e)
         {
             CRB_button_menu.PerformClick();
-            CashRelease_Module f = new CashRelease_Module(1);
+            CashRelease_Module f = new CashRelease_Module(3);
             showForm(content_panel, f);
         }
 

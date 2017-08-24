@@ -42,7 +42,7 @@ namespace ParishSystem
                 venue_textbox.ReadOnly = false;
                 details_textarea.ReadOnly = false;
                 edit_button.Tag = "s";
-                edit_button.Image = Properties.Resources.icons8_Save_Filled_32;
+                edit_button.Image = Properties.Resources.icons8_Save_Filled_32__1_;
                 
             }
             else
@@ -60,7 +60,7 @@ namespace ParishSystem
                         dh.editBloodDonationEvent(bloodlettingID,event_name.Text,start_dateTimePicker.Value,end_DateTimePicker.Value,venue_textbox.Text,details_textarea.Text);
                     }
                     edit_button.Tag = "e";
-                    edit_button.Image = Properties.Resources.icons8_Pencil_32;
+                    edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
                     event_name.ReadOnly = true;
                     start_dateTimePicker.Enabled = false;
                     end_DateTimePicker.Enabled = false;
@@ -92,7 +92,7 @@ namespace ParishSystem
                 details_textarea.ReadOnly = false;
              
                 edit_button.Tag = "s";
-                edit_button.Image = Properties.Resources.icons8_Save_Filled_32;
+                edit_button.Image = Properties.Resources.icons8_Save_Filled_32__1_;
             }
             else
             {
@@ -104,7 +104,7 @@ namespace ParishSystem
 
                 DataTable dt = dh.getbloodlettingEvent(bloodlettingID);
                 edit_button.Tag = "e";
-                edit_button.Image = Properties.Resources.icons8_Pencil_32;
+                edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
                 event_name.Text = dt.Rows[0]["eventName"].ToString();
                 start_dateTimePicker.Value = dh.toDateTime(dt.Rows[0]["startDateTime"].ToString(), false);
                 end_DateTimePicker.Value = dh.toDateTime(dt.Rows[0]["endDateTime"].ToString(), false);

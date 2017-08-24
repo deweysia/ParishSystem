@@ -100,7 +100,7 @@ namespace ParishSystem
 
                 input_panel.Visible = true;
 
-                from_dtp_cashdisbursment.CustomFormat = "mmmm/dd/yyyy";
+                from_dtp_cashdisbursment.CustomFormat = "MM/dd/yyyy";
             }
             else if (filterBy_combobox_disbursment.Text == "Month")
             {
@@ -120,7 +120,7 @@ namespace ParishSystem
 
                 input_panel.Visible = true;
 
-                from_dtp_cashdisbursment.CustomFormat = "mmmm/yyyy";
+                from_dtp_cashdisbursment.CustomFormat = "MM/yyyy";
             }
             else if (filterBy_combobox_disbursment.Text == "Year")
             {
@@ -160,8 +160,8 @@ namespace ParishSystem
 
                 input_panel.Visible = true;
 
-                from_dtp_cashdisbursment.CustomFormat = "mmmm/dd/yyyy";
-                to_dtp_cashdisbursment.CustomFormat = "mmmm/dd/yyyy";
+                from_dtp_cashdisbursment.CustomFormat = "MM/dd/yyyy";
+                to_dtp_cashdisbursment.CustomFormat = "MM/dd/yyyy";
             }
             else if (filterBy_combobox_disbursment.Text == "OR Number")
             {
@@ -670,6 +670,15 @@ namespace ParishSystem
             refreshReports();
             open = !open;
             timer1.Start();
+            if (breakdown_radiobutton_cashdisbursment.Checked) 
+            {
+                report_datagridview_cashdisbursment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                MessageBox.Show("fghjkl");
+            }
+            else
+            {
+                report_datagridview_cashdisbursment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
         }
         bool open = false;
         int velocity = 0;
@@ -687,7 +696,7 @@ namespace ParishSystem
                     timer1.Stop();
                     reportFilter_panel.Height = 300;
                     velocity = 0;
-                    Open_button.Text = "Close";
+                   
                 }
             }
             else
@@ -702,7 +711,7 @@ namespace ParishSystem
                     timer1.Stop();
                     reportFilter_panel.Height = 35;
                     velocity = 0;
-                    Open_button.Text = "Open";
+                  
                 }
             }
         }

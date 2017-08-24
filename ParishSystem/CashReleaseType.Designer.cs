@@ -51,7 +51,7 @@
             // 
             // controlBar_panel
             // 
-            this.controlBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.controlBar_panel.BackColor = System.Drawing.Color.DimGray;
             this.controlBar_panel.Controls.Add(this.close_button);
             this.controlBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlBar_panel.Location = new System.Drawing.Point(0, 0);
@@ -133,7 +133,7 @@
             this.cancel_button.FlatAppearance.BorderSize = 0;
             this.cancel_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel_button.ForeColor = System.Drawing.Color.Black;
-            this.cancel_button.Image = global::ParishSystem.Properties.Resources.icons8_Refresh_32;
+            this.cancel_button.Image = global::ParishSystem.Properties.Resources.icons8_Refresh_Filled_32;
             this.cancel_button.Location = new System.Drawing.Point(252, 3);
             this.cancel_button.Name = "cancel_button";
             this.cancel_button.Size = new System.Drawing.Size(46, 37);
@@ -146,7 +146,7 @@
             this.save_button.FlatAppearance.BorderSize = 0;
             this.save_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save_button.ForeColor = System.Drawing.Color.Black;
-            this.save_button.Image = global::ParishSystem.Properties.Resources.icons8_Save_Filled_32;
+            this.save_button.Image = global::ParishSystem.Properties.Resources.icons8_Save_Filled_32__1_;
             this.save_button.Location = new System.Drawing.Point(304, 3);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(46, 37);

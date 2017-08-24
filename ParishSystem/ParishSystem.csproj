@@ -671,9 +671,14 @@
     <None Include="Resources\icons8-Save Filled-32.png" />
     <None Include="Resources\icons8-Delete-20.png" />
     <None Include="Resources\icons8-Zoom to Extents Filled-20.png" />
-    <None Include="Resources\icons8-Trash-32.png" />
-    <None Include="Resources\icons8-Plus 2 Math-32.png" />
     <None Include="Resources\icons8-Close Window-32.png" />
+    <None Include="Resources\icons8-Delete Filled-50.png" />
+    <None Include="Resources\icons8-Delete Filled-20.png" />
+    <None Include="Resources\icons8-Pencil-32 %281%29.png" />
+    <None Include="Resources\icons8-Refresh Filled-32.png" />
+    <None Include="Resources\icons8-Save Filled-32 %281%29.png" />
+    <None Include="Resources\icons8-Plus 2 Math-32.png" />
+    <None Include="Resources\icons8-Trash-32.png" />
     <Content Include="Tools\SQL_Writer.jar" />
     <None Include="Resources\messageBox_cancel.png" />
     <None Include="Resources\messageBox_success.png" />

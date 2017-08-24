@@ -88,7 +88,7 @@ namespace ParishSystem
                 bloodtype_combobox.Visible = true;
                 cancel_button.Visible = true;
                 edit_button.Tag = "s";
-                edit_button.Image = Properties.Resources.icons8_Save_Filled_32;
+                edit_button.Image = Properties.Resources.icons8_Save_Filled_32__1_;
                 firstname_label_bloodletting.Visible = false;
                 mi_label_bloodletting.Visible = false;
                 lastname_label_bloodletting.Visible = false;
@@ -156,7 +156,7 @@ namespace ParishSystem
                     }
                     bloodtype_combobox.Visible = false;
                     edit_button.Tag = "e";
-                    edit_button.Image = Properties.Resources.icons8_Pencil_32;
+                    edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
                     cancel_button.Visible = false;
 
                     
@@ -212,7 +212,7 @@ namespace ParishSystem
             suffix_textbox_bloodletting.Clear();
 
             edit_button.Tag = "e";
-            edit_button.Image = Properties.Resources.icons8_Pencil_32;
+            edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
         }
 
         private void addDonation_button_bloodletting_Click(object sender, EventArgs e)
