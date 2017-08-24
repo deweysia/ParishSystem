@@ -683,7 +683,7 @@
             this.baptismApplication_birthDate_dtp.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.baptismApplication_birthDate_dtp.FontSize = MetroFramework.MetroDateTimeSize.Small;
             this.baptismApplication_birthDate_dtp.Location = new System.Drawing.Point(3, 68);
-            this.baptismApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(0, 25);
+            this.baptismApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(4, 25);
             this.baptismApplication_birthDate_dtp.Name = "baptismApplication_birthDate_dtp";
             this.baptismApplication_birthDate_dtp.Size = new System.Drawing.Size(185, 25);
             this.baptismApplication_birthDate_dtp.TabIndex = 26;
