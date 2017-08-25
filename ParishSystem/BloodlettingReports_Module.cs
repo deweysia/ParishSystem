@@ -26,7 +26,11 @@ namespace ParishSystem
             {
                 bloodlettingeventreport_combobox.Items.Add(new ComboboxContent(int.Parse(dr["bloodDonationEventID"].ToString()), dr["eventName"].ToString()));
             }
-            bloodlettingeventreport_combobox.SelectedIndex = 0;
+            try
+            {
+                bloodlettingeventreport_combobox.SelectedIndex = 0;
+            }
+            catch { }
         }
        
 
@@ -88,17 +92,18 @@ namespace ParishSystem
             }
             else if (filterBy_combobox_bloodletting.Text == "Donations on Event")
             {
-                dt = dh.getBloodDonorsOnEvent(((ComboboxContent)bloodlettingeventreport_combobox.SelectedItem).ID);
-                summary_dgv_bloodletting.DataSource = dh.getsummaryOfBloodleting(dt);
-                bloodlettingeventreport_datagridview.DataSource = dt;
-                bloodlettingeventreport_datagridview.Columns["profileid"].Visible = false;
-                bloodlettingeventreport_datagridview.Columns["eventname"].Visible = false;
-                bloodlettingeventreport_datagridview.Columns["name"].HeaderText = "Name";
-                bloodlettingeventreport_datagridview.Columns["bloodt"].HeaderText = "Blood Type";
-                bloodlettingeventreport_datagridview.Columns["address"].HeaderText = "Address";
-                bloodlettingeventreport_datagridview.Columns["quantity"].HeaderText = "Quantity";
-                bloodlettingeventreport_datagridview.Columns["contactnumber"].HeaderText = "Contact Number";
-
+                if (bloodlettingeventreport_combobox.Text!="") {
+                    dt = dh.getBloodDonorsOnEvent(((ComboboxContent)bloodlettingeventreport_combobox.SelectedItem).ID);
+                    summary_dgv_bloodletting.DataSource = dh.getsummaryOfBloodleting(dt);
+                    bloodlettingeventreport_datagridview.DataSource = dt;
+                    bloodlettingeventreport_datagridview.Columns["profileid"].Visible = false;
+                    bloodlettingeventreport_datagridview.Columns["eventname"].Visible = false;
+                    bloodlettingeventreport_datagridview.Columns["name"].HeaderText = "Name";
+                    bloodlettingeventreport_datagridview.Columns["bloodt"].HeaderText = "Blood Type";
+                    bloodlettingeventreport_datagridview.Columns["address"].HeaderText = "Address";
+                    bloodlettingeventreport_datagridview.Columns["quantity"].HeaderText = "Quantity";
+                    bloodlettingeventreport_datagridview.Columns["contactnumber"].HeaderText = "Contact Number";
+                }
             }
             else if (filterBy_combobox_bloodletting.Text == "Donations on Date")
             {
@@ -203,14 +208,14 @@ namespace ParishSystem
             }
             else
             {
-                if (summary_dgv_bloodletting.Height >= 62)
+                if (summary_dgv_bloodletting.Height >= 0)
                 {
                     summary_dgv_bloodletting.Size = new Size(576, summary_dgv_bloodletting.Height  - velocity);
 
                 }
                 else
                 {
-                    summary_dgv_bloodletting.Height = 62;
+                    summary_dgv_bloodletting.Height = 0;
                     animation.Stop();
                     velocity = 0;
                 }

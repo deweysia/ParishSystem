@@ -189,12 +189,6 @@
     <Compile Include="DemoForm.Designer.cs">
       <DependentUpon>DemoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DownPaymentProfile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DownPaymentProfile.Designer.cs">
-      <DependentUpon>DownPaymentProfile.cs</DependentUpon>
-    </Compile>
     <Compile Include="Draggable.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -316,41 +310,11 @@
     <Compile Include="SAD2.Designer.cs">
       <DependentUpon>SAD2.cs</DependentUpon>
     </Compile>
-    <Compile Include="sApplicant.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sApplicant.Designer.cs">
-      <DependentUpon>sApplicant.cs</DependentUpon>
-    </Compile>
-    <Compile Include="sBaptism.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sBaptism.Designer.cs">
-      <DependentUpon>sBaptism.cs</DependentUpon>
-    </Compile>
-    <Compile Include="sBloodletting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sBloodletting.Designer.cs">
-      <DependentUpon>sBloodletting.cs</DependentUpon>
-    </Compile>
     <Compile Include="ScheduleModule.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ScheduleModule.Designer.cs">
       <DependentUpon>ScheduleModule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="sConfirmation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sConfirmation.Designer.cs">
-      <DependentUpon>sConfirmation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="sMarriage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sMarriage.Designer.cs">
-      <DependentUpon>sMarriage.cs</DependentUpon>
     </Compile>
     <Compile Include="sParent.cs">
       <SubType>Form</SubType>
@@ -358,31 +322,7 @@
     <Compile Include="sParent.Designer.cs">
       <DependentUpon>sParent.cs</DependentUpon>
     </Compile>
-    <Compile Include="sSacraments.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sSacraments.Designer.cs">
-      <DependentUpon>sSacraments.cs</DependentUpon>
-    </Compile>
-    <Compile Include="sTransaction.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sTransaction.Designer.cs">
-      <DependentUpon>sTransaction.cs</DependentUpon>
-    </Compile>
     <Compile Include="SystemNotification.cs" />
-    <Compile Include="tCDB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="tCDB.Designer.cs">
-      <DependentUpon>tCDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="tCRB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="tCRB.Designer.cs">
-      <DependentUpon>tCRB.cs</DependentUpon>
-    </Compile>
     <Compile Include="topBarControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -396,12 +336,6 @@
       <DependentUpon>Treasurer.cs</DependentUpon>
     </Compile>
     <Compile Include="treasurerBackend.cs" />
-    <Compile Include="tReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="tReport.Designer.cs">
-      <DependentUpon>tReport.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AddApplication.resx">
       <DependentUpon>AddApplication.cs</DependentUpon>
     </EmbeddedResource>
@@ -453,11 +387,11 @@
     <EmbeddedResource Include="DemoForm.resx">
       <DependentUpon>DemoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownPaymentProfile.resx">
-      <DependentUpon>DownPaymentProfile.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeModule.resx">
+      <DependentUpon>HomeModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IncomeType.resx">
       <DependentUpon>IncomeType.cs</DependentUpon>
@@ -506,47 +440,17 @@
     <EmbeddedResource Include="SAD2.resx">
       <DependentUpon>SAD2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="sApplicant.resx">
-      <DependentUpon>sApplicant.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sBaptism.resx">
-      <DependentUpon>sBaptism.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sBloodletting.resx">
-      <DependentUpon>sBloodletting.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ScheduleModule.resx">
       <DependentUpon>ScheduleModule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="sConfirmation.resx">
-      <DependentUpon>sConfirmation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sMarriage.resx">
-      <DependentUpon>sMarriage.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="sParent.resx">
       <DependentUpon>sParent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sSacraments.resx">
-      <DependentUpon>sSacraments.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sTransaction.resx">
-      <DependentUpon>sTransaction.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="tCDB.resx">
-      <DependentUpon>tCDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="tCRB.resx">
-      <DependentUpon>tCRB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="topBarControl.resx">
       <DependentUpon>topBarControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Treasurer.resx">
       <DependentUpon>Treasurer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="tReport.resx">
-      <DependentUpon>tReport.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\ParishSystem.exe.config" />
     <None Include="bin\Debug\ParishSystem.vshost.exe.config" />
@@ -643,6 +547,7 @@
     <None Include="Resources\icons8-Save Filled-32 %281%29.png" />
     <None Include="Resources\icons8-Plus 2 Math-32.png" />
     <None Include="Resources\icons8-Trash-32.png" />
+    <None Include="Resources\icons8-Expand Arrow-20.png" />
     <Content Include="Tools\SQL_Writer.jar" />
     <None Include="Resources\messageBox_cancel.png" />
     <None Include="Resources\messageBox_success.png" />
@@ -876,6 +781,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Calendar\Calendar.csproj">
+      <Project>{916e2f61-7928-4323-b178-b96471a0b372}</Project>
+      <Name>Calendar</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
