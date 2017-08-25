@@ -147,7 +147,7 @@ namespace ParishSystem
                     string count;
                     if (!contactNumber_textbox.MaskFull && !string.IsNullOrEmpty(contactNumber_textbox.Text.Trim()))
                     {
-                        MessageBox.Show("shungaII");
+                        Notification.Show(State.InvalidContactNumber);
                          count = "";
                     }
                     else
@@ -183,7 +183,7 @@ namespace ParishSystem
                 }
                 else
                 {
-                    MessageBox.Show("Shunga");
+                    Notification.Show(State.MissingFields);
                 }
             }
             

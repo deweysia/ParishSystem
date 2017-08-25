@@ -249,6 +249,7 @@
             // edit_button
             // 
             this.edit_button.FlatAppearance.BorderSize = 0;
+            this.edit_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.edit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.edit_button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.edit_button.Image = global::ParishSystem.Properties.Resources.icons8_Pencil_32__1_;
@@ -358,6 +359,7 @@
             // cancel_button
             // 
             this.cancel_button.FlatAppearance.BorderSize = 0;
+            this.cancel_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.cancel_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel_button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cancel_button.Image = global::ParishSystem.Properties.Resources.icons8_Refresh_Filled_32;

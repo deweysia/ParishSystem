@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.fullpay_panel_CDB = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.orNumber_label_fullpay = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.sourceName_textbox_fullpay = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.sub_total = new System.Windows.Forms.Label();
             this.delete_button_fullpay = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.quantity_nud_fullpay = new System.Windows.Forms.NumericUpDown();
@@ -65,6 +65,7 @@
             this.suggestedPrice_nud_fullpay = new System.Windows.Forms.NumericUpDown();
             this.itemType_combobox_fullpay = new System.Windows.Forms.ComboBox();
             this.subTotal_label_fullpay = new System.Windows.Forms.Label();
+            this.name_label = new System.Windows.Forms.Label();
             this.fullpay_panel_CDB.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.item_dgv_fullpay)).BeginInit();
@@ -75,11 +76,12 @@
             // fullpay_panel_CDB
             // 
             this.fullpay_panel_CDB.BackColor = System.Drawing.Color.White;
+            this.fullpay_panel_CDB.Controls.Add(this.name_label);
             this.fullpay_panel_CDB.Controls.Add(this.label2);
             this.fullpay_panel_CDB.Controls.Add(this.orNumber_label_fullpay);
             this.fullpay_panel_CDB.Controls.Add(this.applicant_combox_fullpay);
             this.fullpay_panel_CDB.Controls.Add(this.panel4);
-            this.fullpay_panel_CDB.Controls.Add(this.label4);
+            this.fullpay_panel_CDB.Controls.Add(this.sub_total);
             this.fullpay_panel_CDB.Controls.Add(this.delete_button_fullpay);
             this.fullpay_panel_CDB.Controls.Add(this.label5);
             this.fullpay_panel_CDB.Controls.Add(this.quantity_nud_fullpay);
@@ -95,7 +97,7 @@
             this.fullpay_panel_CDB.Location = new System.Drawing.Point(0, 0);
             this.fullpay_panel_CDB.Margin = new System.Windows.Forms.Padding(0);
             this.fullpay_panel_CDB.Name = "fullpay_panel_CDB";
-            this.fullpay_panel_CDB.Size = new System.Drawing.Size(936, 547);
+            this.fullpay_panel_CDB.Size = new System.Drawing.Size(930, 540);
             this.fullpay_panel_CDB.TabIndex = 1;
             // 
             // label2
@@ -123,12 +125,16 @@
             // 
             this.applicant_combox_fullpay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.applicant_combox_fullpay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.applicant_combox_fullpay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.applicant_combox_fullpay.FormattingEnabled = true;
-            this.applicant_combox_fullpay.Location = new System.Drawing.Point(640, 5);
+            this.applicant_combox_fullpay.Items.AddRange(new object[] {
+            ""});
+            this.applicant_combox_fullpay.Location = new System.Drawing.Point(695, 215);
             this.applicant_combox_fullpay.Name = "applicant_combox_fullpay";
-            this.applicant_combox_fullpay.Size = new System.Drawing.Size(275, 29);
+            this.applicant_combox_fullpay.Size = new System.Drawing.Size(220, 29);
             this.applicant_combox_fullpay.TabIndex = 55;
             this.applicant_combox_fullpay.Visible = false;
+            this.applicant_combox_fullpay.SelectedIndexChanged += new System.EventHandler(this.applicant_combox_fullpay_SelectedIndexChanged);
             // 
             // panel4
             // 
@@ -265,14 +271,14 @@
             this.item_dgv_fullpay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.item_dgv_fullpay.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.item_dgv_fullpay.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.item_dgv_fullpay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.item_dgv_fullpay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.item_dgv_fullpay.ColumnHeadersHeight = 40;
             this.item_dgv_fullpay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.item_dgv_fullpay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -281,35 +287,35 @@
             this.QuantityDataGridViewColumn,
             this.TotalDataGridViewColumn,
             this.ItemIDcomboboxcolumn});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.item_dgv_fullpay.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.item_dgv_fullpay.DefaultCellStyle = dataGridViewCellStyle10;
             this.item_dgv_fullpay.EnableHeadersVisualStyles = false;
             this.item_dgv_fullpay.GridColor = System.Drawing.Color.White;
             this.item_dgv_fullpay.Location = new System.Drawing.Point(32, 37);
             this.item_dgv_fullpay.MultiSelect = false;
             this.item_dgv_fullpay.Name = "item_dgv_fullpay";
             this.item_dgv_fullpay.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Magenta;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.item_dgv_fullpay.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Magenta;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.item_dgv_fullpay.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.item_dgv_fullpay.RowHeadersVisible = false;
             this.item_dgv_fullpay.RowHeadersWidth = 50;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DarkRed;
-            this.item_dgv_fullpay.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.DarkRed;
+            this.item_dgv_fullpay.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -385,15 +391,15 @@
             this.label9.TabIndex = 19;
             this.label9.Text = "__________________________________________";
             // 
-            // label4
+            // sub_total
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(602, 272);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 21);
-            this.label4.TabIndex = 44;
-            this.label4.Text = "Sub-Total";
+            this.sub_total.AutoSize = true;
+            this.sub_total.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sub_total.Location = new System.Drawing.Point(602, 272);
+            this.sub_total.Name = "sub_total";
+            this.sub_total.Size = new System.Drawing.Size(75, 21);
+            this.sub_total.TabIndex = 44;
+            this.sub_total.Text = "Sub-Total";
             // 
             // delete_button_fullpay
             // 
@@ -440,7 +446,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(602, 180);
+            this.label3.Location = new System.Drawing.Point(602, 168);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 21);
             this.label3.TabIndex = 39;
@@ -505,6 +511,7 @@
             // 
             // itemType_combobox_fullpay
             // 
+            this.itemType_combobox_fullpay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.itemType_combobox_fullpay.FormattingEnabled = true;
             this.itemType_combobox_fullpay.Items.AddRange(new object[] {
             ""});
@@ -524,11 +531,20 @@
             this.subTotal_label_fullpay.Size = new System.Drawing.Size(0, 37);
             this.subTotal_label_fullpay.TabIndex = 45;
             // 
+            // name_label
+            // 
+            this.name_label.AutoSize = true;
+            this.name_label.Location = new System.Drawing.Point(602, 219);
+            this.name_label.Name = "name_label";
+            this.name_label.Size = new System.Drawing.Size(64, 21);
+            this.name_label.TabIndex = 57;
+            this.name_label.Text = "Name   ";
+            // 
             // CDB_FullPayment_Module
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 547);
+            this.ClientSize = new System.Drawing.Size(930, 540);
             this.Controls.Add(this.fullpay_panel_CDB);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -570,7 +586,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox sourceName_textbox_fullpay;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label sub_total;
         private System.Windows.Forms.Button delete_button_fullpay;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown quantity_nud_fullpay;
@@ -582,5 +598,6 @@
         private System.Windows.Forms.ComboBox itemType_combobox_fullpay;
         private System.Windows.Forms.Label subTotal_label_fullpay;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label name_label;
     }
 }

@@ -38,18 +38,20 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // messageLabel
             // 
-            this.messageLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.messageLabel.BackColor = System.Drawing.Color.White;
+            this.messageLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.messageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.messageLabel.ForeColor = System.Drawing.Color.Black;
-            this.messageLabel.Location = new System.Drawing.Point(27, 5);
+            this.messageLabel.Location = new System.Drawing.Point(5, 5);
             this.messageLabel.Name = "messageLabel";
-            this.messageLabel.Size = new System.Drawing.Size(270, 59);
+            this.messageLabel.Size = new System.Drawing.Size(247, 59);
             this.messageLabel.TabIndex = 1;
             this.messageLabel.Text = "label1";
             this.messageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -74,10 +76,10 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.panel1.Controls.Add(this.messageLabel);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(13, 34);
+            this.panel1.Location = new System.Drawing.Point(72, 34);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(316, 69);
+            this.panel1.Size = new System.Drawing.Size(257, 69);
             this.panel1.TabIndex = 3;
             // 
             // imageList1
@@ -113,6 +115,15 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ParishSystem.Properties.Resources.Ok_32px;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 41);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 50);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // CustomNotification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,6 +131,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(342, 116);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -131,6 +143,7 @@
             this.MouseEnter += new System.EventHandler(this.CustomNotification_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.CustomNotification_MouseLeave);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -145,5 +158,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ImageList imageList1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

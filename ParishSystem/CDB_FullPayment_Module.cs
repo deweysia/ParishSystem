@@ -62,32 +62,68 @@ namespace ParishSystem
         }
         private void add_button_fullpay_parish_Click(object sender, EventArgs e)
         {
-            if (itemType_combobox_fullpay.Text != "" && quantity_nud_fullpay.Value != 0)
+            if(itemType_combobox_fullpay.Text=="Baptism"|| itemType_combobox_fullpay.Text == "Confirmation"|| itemType_combobox_fullpay.Text == "Marriage")
             {
-                if ((string)add_button_fullpay.Tag == "a")
+                if (applicant_combox_fullpay.Text != "")
                 {
-                    int index = item_dgv_fullpay.Rows.Add();
-                    item_dgv_fullpay.Rows[index].Cells[0].Value = itemType_combobox_fullpay.SelectedItem.ToString();
-                    item_dgv_fullpay.Rows[index].Cells[1].Value = suggestedPrice_nud_fullpay.Value.ToString();
-                    item_dgv_fullpay.Rows[index].Cells[2].Value = quantity_nud_fullpay.Value.ToString();
-                    item_dgv_fullpay.Rows[index].Cells[3].Value = subTotal_label_fullpay.Text;
-                    item_dgv_fullpay.Rows[index].Cells[4].Value = itemType_combobox_fullpay.SelectedIndex;//hidden
+                    if ((string)add_button_fullpay.Tag == "a")
+                    {
+                        /*
+                        int index = item_dgv_fullpay.Rows.Add();
+                        item_dgv_fullpay.Rows[index].Cells[0].Value = itemType_combobox_fullpay.SelectedItem.ToString();
+                        item_dgv_fullpay.Rows[index].Cells[1].Value = suggestedPrice_nud_fullpay.Value.ToString();
+                        item_dgv_fullpay.Rows[index].Cells[2].Value = quantity_nud_fullpay.Value.ToString();
+                        item_dgv_fullpay.Rows[index].Cells[3].Value = subTotal_label_fullpay.Text;
+                        item_dgv_fullpay.Rows[index].Cells[4].Value = itemType_combobox_fullpay.SelectedIndex;//hidden
+                        */
+                    }
+                    else//edit mode
+                    {
+                        /*
+                        item_dgv_fullpay.SelectedRows[0].Cells[0].Value = itemType_combobox_fullpay.SelectedItem.ToString();
+                        item_dgv_fullpay.SelectedRows[0].Cells[1].Value = suggestedPrice_nud_fullpay.Value.ToString();
+                        item_dgv_fullpay.SelectedRows[0].Cells[2].Value = quantity_nud_fullpay.Value.ToString();
+                        item_dgv_fullpay.SelectedRows[0].Cells[3].Value = subTotal_label_fullpay.Text;
+                        item_dgv_fullpay.SelectedRows[0].Cells[4].Value = itemType_combobox_fullpay.SelectedIndex;//hidden
+                        delete_button_fullpay.Enabled = false;
+                        */
+                    }
+                    clearIncomeTab();
+                    refreshTotalLabel();
                 }
                 else
                 {
-                    item_dgv_fullpay.SelectedRows[0].Cells[0].Value = itemType_combobox_fullpay.SelectedItem.ToString();
-                    item_dgv_fullpay.SelectedRows[0].Cells[1].Value = suggestedPrice_nud_fullpay.Value.ToString();
-                    item_dgv_fullpay.SelectedRows[0].Cells[2].Value = quantity_nud_fullpay.Value.ToString();
-                    item_dgv_fullpay.SelectedRows[0].Cells[3].Value = subTotal_label_fullpay.Text;
-                    item_dgv_fullpay.SelectedRows[0].Cells[4].Value = itemType_combobox_fullpay.SelectedIndex;//hidden
-                    delete_button_fullpay.Enabled = false;
+                    Notification.Show(State.MissingPersonInCRB);
                 }
-                clearIncomeTab();
-                refreshTotalLabel();
             }
-            else
-            {
-                MessageBox.Show("shunga");
+            else {
+                if (itemType_combobox_fullpay.Text != "" && quantity_nud_fullpay.Value != 0)
+                {
+                    if ((string)add_button_fullpay.Tag == "a")
+                    {
+                        int index = item_dgv_fullpay.Rows.Add();
+                        item_dgv_fullpay.Rows[index].Cells[0].Value = itemType_combobox_fullpay.SelectedItem.ToString();
+                        item_dgv_fullpay.Rows[index].Cells[1].Value = suggestedPrice_nud_fullpay.Value.ToString();
+                        item_dgv_fullpay.Rows[index].Cells[2].Value = quantity_nud_fullpay.Value.ToString();
+                        item_dgv_fullpay.Rows[index].Cells[3].Value = subTotal_label_fullpay.Text;
+                        item_dgv_fullpay.Rows[index].Cells[4].Value = itemType_combobox_fullpay.SelectedIndex;//hidden
+                    }
+                    else
+                    {
+                        item_dgv_fullpay.SelectedRows[0].Cells[0].Value = itemType_combobox_fullpay.SelectedItem.ToString();
+                        item_dgv_fullpay.SelectedRows[0].Cells[1].Value = suggestedPrice_nud_fullpay.Value.ToString();
+                        item_dgv_fullpay.SelectedRows[0].Cells[2].Value = quantity_nud_fullpay.Value.ToString();
+                        item_dgv_fullpay.SelectedRows[0].Cells[3].Value = subTotal_label_fullpay.Text;
+                        item_dgv_fullpay.SelectedRows[0].Cells[4].Value = itemType_combobox_fullpay.SelectedIndex;//hidden
+                        delete_button_fullpay.Enabled = false;
+                    }
+                    clearIncomeTab();
+                    refreshTotalLabel();
+                }
+                else
+                {
+                    MessageBox.Show("shunga");
+                }
             }
         }
         private void clearIncomeTab()
@@ -166,30 +202,51 @@ namespace ParishSystem
         }
         private void itemType_combobox_fullpay_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            if (itemType_combobox_fullpay.Text == "Baptism")
+            if (itemType_combobox_fullpay.Text == "Baptism" || itemType_combobox_fullpay.Text == "Confirmation" || itemType_combobox_fullpay.Text == "Marriage")
             {
-                dt = dh.getPendingApplicationsOfType((int)SacramentType.Baptism);
+                DataTable dt = new DataTable();
+                if (itemType_combobox_fullpay.Text == "Baptism")
+                {
+                    dt = dh.getPendingApplicationsOfType((int)SacramentType.Baptism);
+                }
+                else if (itemType_combobox_fullpay.Text == "Confirmation")
+                {
+                    dt = dh.getPendingApplicationsOfType((int)SacramentType.Confirmation);
+                }
+                else if (itemType_combobox_fullpay.Text == "Marriage")
+                {
+                    dt = dh.getPendingApplicationsOfType((int)SacramentType.Marriage);
+                }
+                applicant_combox_fullpay.Items.Clear();
+                applicant_combox_fullpay.Items.Add("");
+                applicant_combox_fullpay.SelectedIndex = 0;
 
+                foreach (DataRow dr in dt.Rows)
+                {
+                    applicant_combox_fullpay.Items.Add(new ComboboxContent(int.Parse(dr["applicationID"].ToString()), dr["name"].ToString()));
+                }
+                applicant_combox_fullpay.Visible = true;
+                name_label.Visible = true;
+                subTotal_label_fullpay.Visible = false;
+                sub_total.Visible = false;
             }
-            else if (itemType_combobox_fullpay.Text == "Confirmation")
+            else
             {
-                dt = dh.getPendingApplicationsOfType((int)SacramentType.Confirmation);
-            }
-            else if (itemType_combobox_fullpay.Text == "Marriage")
-            {
-                dt = dh.getPendingApplicationsOfType((int)SacramentType.Marriage);
-            }
-            applicant_combox_fullpay.Items.Clear();
-            foreach (DataRow dr in dt.Rows)
-            {
-                applicant_combox_fullpay.Items.Add(new ComboboxContent(int.Parse(dr["profileID"].ToString()), dr["name"].ToString(), dr["address"].ToString(), dr["contactnumber"].ToString(), dr["applicationID"].ToString(), dr["sacramentType"].ToString()));
+                applicant_combox_fullpay.Visible = false;
+                name_label.Visible = false;
+                subTotal_label_fullpay.Visible = true;
+                sub_total.Visible = true;
             }
         }
 
         private void CDB_FullPayment_Module_Load(object sender, EventArgs e)
         {
             load_IncomePage();
+        }
+
+        private void applicant_combox_fullpay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

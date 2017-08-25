@@ -439,6 +439,9 @@
   <data name="icons8_Save_Filled_32__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-Save Filled-32 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_Collapse_Arrow_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-Collapse Arrow-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_Expand_Arrow_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-Expand Arrow-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

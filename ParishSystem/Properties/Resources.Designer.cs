@@ -603,6 +603,16 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Collapse_Arrow_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Collapse_Arrow_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Delete_20 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Delete_20", resourceCulture);

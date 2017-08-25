@@ -183,15 +183,15 @@ namespace ParishSystem
             }
             catch { }
         }
-        bool open = false;
+        bool open = true;
         private void open_button_Click(object sender, EventArgs e)
         {
             animation.Start();
-            open = !open;
         }
         int velocity = 0;
         private void animation_Tick(object sender, EventArgs e)
         {
+            
             if (open) {
                 if (summary_dgv_bloodletting.Height <= 350)
                 {
@@ -200,24 +200,28 @@ namespace ParishSystem
                 }
                 else
                 {
+                    
                     summary_dgv_bloodletting.Height = 350;
                     animation.Stop();
                     velocity = 0;
+                    open_button.Image = ParishSystem.Properties.Resources.icons8_Expand_Arrow_20;
+                    open = false;
                 }
                 velocity++;
             }
             else
             {
-                if (summary_dgv_bloodletting.Height >= 0)
+                if (summary_dgv_bloodletting.Height >= 1)
                 {
                     summary_dgv_bloodletting.Size = new Size(576, summary_dgv_bloodletting.Height  - velocity);
-
                 }
                 else
                 {
                     summary_dgv_bloodletting.Height = 0;
                     animation.Stop();
                     velocity = 0;
+                    open_button.Image = ParishSystem.Properties.Resources.icons8_Collapse_Arrow_20;
+                    open = true;
                 }
                 velocity++;
             }

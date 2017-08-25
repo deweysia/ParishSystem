@@ -24,31 +24,7 @@ namespace ParishSystem
             expirationDate_dtp.MinDate = DateTime.Now;
         }
 
-        private void MinisterForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void firstName_textBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+ 
         private void licenseNum_textBox_TextChanged(object sender, EventArgs e)
         {
             addBtn.Enabled = !(string.IsNullOrWhiteSpace(firstName_textBox.Text)
@@ -71,6 +47,11 @@ namespace ParishSystem
         }
 
         private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void close_button_Click(object sender, EventArgs e)
         {
             this.Close();
         }

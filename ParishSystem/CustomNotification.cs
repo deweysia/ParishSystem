@@ -173,6 +173,8 @@ namespace ParishSystem
 
 
         public static State
+            InvalidContactNumber = new State("Contact number is Invalid", NotificationType.error),
+            MissingPersonInCRB = new State("There is no person selected", NotificationType.error),
             MissingFields = new State("Please fill in all necessary fields", NotificationType.info),
             UpdateSuccess = new State("Changes successfully applied", NotificationType.success),
             UpdateFail = new State("Changes failed to apply", NotificationType.error),

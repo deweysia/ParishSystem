@@ -41,7 +41,7 @@
             // 
             // IncomeCashReleaseType_panel
             // 
-            this.IncomeCashReleaseType_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.IncomeCashReleaseType_panel.BackColor = System.Drawing.Color.White;
             this.IncomeCashReleaseType_panel.Controls.Add(this.enable_button_itemType);
             this.IncomeCashReleaseType_panel.Controls.Add(this.disable_button_itemType);
             this.IncomeCashReleaseType_panel.Controls.Add(this.add_button_itemType);
@@ -54,9 +54,9 @@
             // 
             // enable_button_itemType
             // 
-            this.enable_button_itemType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            this.enable_button_itemType.BackColor = System.Drawing.Color.Gray;
             this.enable_button_itemType.FlatAppearance.BorderSize = 0;
-            this.enable_button_itemType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(168)))));
+            this.enable_button_itemType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.enable_button_itemType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enable_button_itemType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enable_button_itemType.ForeColor = System.Drawing.Color.White;
@@ -70,9 +70,9 @@
             // 
             // disable_button_itemType
             // 
-            this.disable_button_itemType.BackColor = System.Drawing.Color.IndianRed;
+            this.disable_button_itemType.BackColor = System.Drawing.Color.Gray;
             this.disable_button_itemType.FlatAppearance.BorderSize = 0;
-            this.disable_button_itemType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.disable_button_itemType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.disable_button_itemType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.disable_button_itemType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.disable_button_itemType.ForeColor = System.Drawing.Color.White;
@@ -86,9 +86,9 @@
             // 
             // add_button_itemType
             // 
-            this.add_button_itemType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            this.add_button_itemType.BackColor = System.Drawing.Color.Gray;
             this.add_button_itemType.FlatAppearance.BorderSize = 0;
-            this.add_button_itemType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(168)))));
+            this.add_button_itemType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.add_button_itemType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_button_itemType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_button_itemType.ForeColor = System.Drawing.Color.White;
@@ -108,11 +108,12 @@
             this.itemType_dgv.AllowUserToOrderColumns = true;
             this.itemType_dgv.AllowUserToResizeRows = false;
             this.itemType_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.itemType_dgv.BackgroundColor = System.Drawing.Color.White;
+            this.itemType_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.itemType_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.itemType_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.itemType_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
@@ -132,11 +133,11 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.itemType_dgv.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.itemType_dgv.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.itemType_dgv.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.itemType_dgv.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.itemType_dgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemType_dgv.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.itemType_dgv.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(118)))), ((int)(((byte)(140)))));
-            this.itemType_dgv.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.itemType_dgv.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
+            this.itemType_dgv.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.itemType_dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.itemType_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.itemType_dgv.Size = new System.Drawing.Size(752, 414);
