@@ -49,7 +49,7 @@
             this.IncomeCashReleaseType_panel.Location = new System.Drawing.Point(0, 0);
             this.IncomeCashReleaseType_panel.Margin = new System.Windows.Forms.Padding(0);
             this.IncomeCashReleaseType_panel.Name = "IncomeCashReleaseType_panel";
-            this.IncomeCashReleaseType_panel.Size = new System.Drawing.Size(812, 547);
+            this.IncomeCashReleaseType_panel.Size = new System.Drawing.Size(931, 547);
             this.IncomeCashReleaseType_panel.TabIndex = 1;
             // 
             // enable_button_itemType
@@ -60,7 +60,7 @@
             this.enable_button_itemType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enable_button_itemType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enable_button_itemType.ForeColor = System.Drawing.Color.White;
-            this.enable_button_itemType.Location = new System.Drawing.Point(521, 472);
+            this.enable_button_itemType.Location = new System.Drawing.Point(582, 471);
             this.enable_button_itemType.Name = "enable_button_itemType";
             this.enable_button_itemType.Size = new System.Drawing.Size(204, 37);
             this.enable_button_itemType.TabIndex = 7;
@@ -76,7 +76,7 @@
             this.disable_button_itemType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.disable_button_itemType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.disable_button_itemType.ForeColor = System.Drawing.Color.White;
-            this.disable_button_itemType.Location = new System.Drawing.Point(301, 472);
+            this.disable_button_itemType.Location = new System.Drawing.Point(362, 471);
             this.disable_button_itemType.Name = "disable_button_itemType";
             this.disable_button_itemType.Size = new System.Drawing.Size(204, 37);
             this.disable_button_itemType.TabIndex = 6;
@@ -92,7 +92,7 @@
             this.add_button_itemType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_button_itemType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_button_itemType.ForeColor = System.Drawing.Color.White;
-            this.add_button_itemType.Location = new System.Drawing.Point(82, 472);
+            this.add_button_itemType.Location = new System.Drawing.Point(143, 471);
             this.add_button_itemType.Name = "add_button_itemType";
             this.add_button_itemType.Size = new System.Drawing.Size(204, 37);
             this.add_button_itemType.TabIndex = 5;
@@ -140,7 +140,7 @@
             this.itemType_dgv.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.itemType_dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.itemType_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.itemType_dgv.Size = new System.Drawing.Size(752, 414);
+            this.itemType_dgv.Size = new System.Drawing.Size(865, 414);
             this.itemType_dgv.TabIndex = 4;
             this.itemType_dgv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemType_dgv_CellContentDoubleClick);
             this.itemType_dgv.Click += new System.EventHandler(this.itemType_dgv_Click);
@@ -149,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 547);
+            this.ClientSize = new System.Drawing.Size(930, 540);
             this.Controls.Add(this.IncomeCashReleaseType_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ItemTypes_Module";

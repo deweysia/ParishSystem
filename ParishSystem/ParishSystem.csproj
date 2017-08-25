@@ -402,6 +402,9 @@
     <EmbeddedResource Include="ORdetailsPopUp.resx">
       <DependentUpon>ORdetailsPopUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProfileModule.resx">
+      <DependentUpon>ProfileModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SacramentForm.resx">
       <DependentUpon>SacramentForm.cs</DependentUpon>
     </EmbeddedResource>
