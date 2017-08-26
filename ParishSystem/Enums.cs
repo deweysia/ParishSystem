@@ -60,13 +60,12 @@ namespace ParishSystem
         Widowed
     }
 
-    public enum SacramentFilter
+    public enum ScheduleType
     {
-        Name,
-        Date,
-        RegistryNo,
-        RecordNo,
-        PageNo
+        Unspecified,
+        Appointment,
+        BloodDonation
+        
     }
 
     

@@ -99,7 +99,8 @@ namespace ParishSystem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            AddSchedule f = new AddSchedule();
+            f.ShowDialog();
         }
     }
 }

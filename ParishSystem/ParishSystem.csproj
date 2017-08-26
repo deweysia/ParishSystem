@@ -71,8 +71,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
-    <Reference Include="System.Windows.Forms.Calendar">
-      <HintPath>..\..\..\..\..\Desktop\System.Windows.Forms.Calendar\System.Windows.Forms.Calendar\bin\Debug\System.Windows.Forms.Calendar.dll</HintPath>
+    <Reference Include="System.Windows.Forms.Calendar, Version=1.0.6444.28240, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Windows.Forms.Calendar.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -103,6 +104,12 @@
     </Compile>
     <Compile Include="AddReferences.Designer.cs">
       <DependentUpon>AddReferences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSchedule.Designer.cs">
+      <DependentUpon>AddSchedule.cs</DependentUpon>
     </Compile>
     <Compile Include="AdvanceSearch.cs">
       <SubType>Form</SubType>
@@ -140,6 +147,7 @@
     <Compile Include="Bloodletting_Profile_Popup.Designer.cs">
       <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
     </Compile>
+    <Compile Include="CalendarEvent.cs" />
     <Compile Include="CashRelease_Module.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -410,6 +418,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddReferences.resx">
       <DependentUpon>AddReferences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSchedule.resx">
+      <DependentUpon>AddSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdvanceSearch.resx">
       <DependentUpon>AdvanceSearch.cs</DependentUpon>

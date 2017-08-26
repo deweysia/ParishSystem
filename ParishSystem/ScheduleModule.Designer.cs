@@ -48,8 +48,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.panelRemoveEdit = new System.Windows.Forms.Panel();
             this.gbDetails.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panelRemoveEdit.SuspendLayout();
             this.SuspendLayout();
             // 
             // monthView1
@@ -112,7 +114,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(177, 153);
+            this.btnAdd.Location = new System.Drawing.Point(171, 155);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(43, 23);
             this.btnAdd.TabIndex = 6;
@@ -122,7 +124,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(81, 153);
+            this.btnEdit.Location = new System.Drawing.Point(71, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(43, 23);
             this.btnEdit.TabIndex = 6;
@@ -131,7 +133,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 153);
+            this.button1.Location = new System.Drawing.Point(3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(62, 23);
             this.button1.TabIndex = 6;
@@ -261,14 +263,22 @@
             this.label7.TabIndex = 1;
             this.label7.Text = "8/24/2017 21:00";
             // 
+            // panelRemoveEdit
+            // 
+            this.panelRemoveEdit.Controls.Add(this.button1);
+            this.panelRemoveEdit.Controls.Add(this.btnEdit);
+            this.panelRemoveEdit.Location = new System.Drawing.Point(15, 153);
+            this.panelRemoveEdit.Name = "panelRemoveEdit";
+            this.panelRemoveEdit.Size = new System.Drawing.Size(118, 28);
+            this.panelRemoveEdit.TabIndex = 3;
+            // 
             // ScheduleModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 501);
+            this.Controls.Add(this.panelRemoveEdit);
             this.Controls.Add(this.gbDetails);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.calendar1);
             this.Controls.Add(this.monthView1);
@@ -277,6 +287,7 @@
             this.gbDetails.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.panelRemoveEdit.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -297,5 +308,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panelRemoveEdit;
     }
 }
