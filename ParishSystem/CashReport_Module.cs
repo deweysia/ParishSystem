@@ -12,14 +12,14 @@ namespace ParishSystem
 {
     public partial class CashReport_Module : Form
     {
-        int cashDisbursmentMode; //cashdisbursment OR cashrelease
-        int bookReportMode; // book type parish community postulancy
+        int cashDisbursmentMode; //parish community post
+        int bookReportMode; // cash disburs cash release  -->opposite sila
         treasurerBackend dh = new treasurerBackend();
         public CashReport_Module(int cashdisbursment_cashrelease, int parish_community_postulancy)
         {
             InitializeComponent();
-            this.cashDisbursmentMode = cashdisbursment_cashrelease;
-            this.bookReportMode = parish_community_postulancy;
+            this.bookReportMode = cashdisbursment_cashrelease;
+            this.cashDisbursmentMode = parish_community_postulancy;
             if (cashdisbursment_cashrelease == 1)
             {
                 filterBy_combobox_disbursment.Items.Remove("CV num");
@@ -49,18 +49,7 @@ namespace ParishSystem
 
             }
         }
-        private void searchbar_textbox_report_disbursment_TextChanged(object sender, EventArgs e)
-        {
-            refreshReports();
-        }
-        private void from_dtp_cashdisbursment_ValueChanged(object sender, EventArgs e)
-        {
-            refreshReports();
-        }
-        private void to_dtp_cashdisbursment_ValueChanged(object sender, EventArgs e)
-        {
-            refreshReports();
-        }
+       
         private void filterBy_combobox_disbursment_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (filterBy_combobox_disbursment.Text == "Recent")
@@ -217,33 +206,11 @@ namespace ParishSystem
 
                 input_panel.Visible = true;
             }
-            /*
-            if(filterBy_combobox_disbursment.SelectedIndex == 1|| filterBy_combobox_disbursment.SelectedIndex == 2|| filterBy_combobox_disbursment.SelectedIndex == 3 || filterBy_combobox_disbursment.SelectedIndex == 4 || filterBy_combobox_disbursment.SelectedIndex == 6) { from_dtp_cashdisbursment.Visible = true; } else { from_dtp_cashdisbursment.Visible = false; }
-            if (filterBy_combobox_disbursment.SelectedIndex == 0) { }
-            if (filterBy_combobox_disbursment.SelectedIndex == 1) { }
-            if (filterBy_combobox_disbursment.SelectedIndex == 2) { }
-            if (filterBy_combobox_disbursment.SelectedIndex == 3) { to_dtp_cashdisbursment.Visible = true; } else { to_dtp_cashdisbursment.Visible = false; }
-            if (filterBy_combobox_disbursment.SelectedIndex == 4) { searchbar_textbox_report_disbursment.Visible = true; } else { searchbar_textbox_report_disbursment.Visible = false; }
-            if (filterBy_combobox_disbursment.SelectedIndex == 5) { }
-            if (filterBy_combobox_disbursment.SelectedIndex == 6) { }
-            if (filterBy_combobox_disbursment.SelectedIndex == 7) { }
-            if (filterBy_combobox_disbursment.SelectedIndex == 8) { }
-            
-            */
         }
-        private void breakdown_radiobutton_cashdisbursment_CheckedChanged(object sender, EventArgs e)
-        {
-            refreshReports();
-        }
-        private void total_radiobutton_cashdisbursment_CheckedChanged(object sender, EventArgs e)
-        {
-            refreshReports();
-        }
+       
         private void refreshReports()
         {
             summary_datagridview_report_disbursment.DataSource = null;
-            try
-            {
                 if (bookReportMode == 1)
                 {
 
@@ -452,6 +419,7 @@ namespace ParishSystem
 
                 else if (bookReportMode == 2)
                 {
+           
                     report_datagridview_cashdisbursment.DataSource = null;
                     if (grouped_radiobutton_cashdisbursment.Checked)
                     {
@@ -658,8 +626,7 @@ namespace ParishSystem
                         }
                     }
                 }
-            }
-            catch { }
+         
 
 
         }
@@ -673,7 +640,6 @@ namespace ParishSystem
             if (breakdown_radiobutton_cashdisbursment.Checked) 
             {
                 report_datagridview_cashdisbursment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                MessageBox.Show("fghjkl");
             }
             else
             {

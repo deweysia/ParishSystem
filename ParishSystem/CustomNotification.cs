@@ -173,6 +173,10 @@ namespace ParishSystem
 
 
         public static State
+            InvalidPrice = new State("The Price cannot be lesser than the payment", NotificationType.error),
+            HasTransaction = new State("This person already has a transaction", NotificationType.error),
+            PaymentExceeded = new State("Selected payment has exceeded price", NotificationType.error),
+            AlreadyPaid = new State("Person is already paid", NotificationType.error),
             InvalidContactNumber = new State("Contact number is Invalid", NotificationType.error),
             MissingPersonInCRB = new State("There is no person selected", NotificationType.error),
             MissingFields = new State("Please fill in all necessary fields", NotificationType.info),

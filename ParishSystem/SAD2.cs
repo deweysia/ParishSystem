@@ -404,6 +404,5 @@ namespace ParishSystem
             HomeModule f = new HomeModule();
             showForm(content_panel, f);
         }
-
     }
 }

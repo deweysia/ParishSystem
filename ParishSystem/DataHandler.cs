@@ -192,12 +192,11 @@ namespace ParishSystem
 
         public DateTime toDateTime(string s, bool timePortion)
         {
-          
                 string[] components = s.Split(' ');
                 string[] date = components[0].Split('/');
 
-                int month = int.Parse(date[1]);
-                int day = int.Parse(date[0]);
+                int month = int.Parse(date[0]);
+                int day = int.Parse(date[1]);
                 int year = int.Parse(date[2]);
 
 
@@ -860,6 +859,11 @@ namespace ParishSystem
 
             return success;
         }
+        public int getLastSacramentIncome()
+        {
+            string q = "SELECT max(sacramentIncomeID)as ID FROM sad2.sacramentincome";
+            return int.Parse(runQuery(q).Rows[0][0].ToString());
+        }
         public bool addPayment(int sacramentIncomeID, int primaryIncomeID, decimal amount)
         {
             string q = $"INSERT INTO `sad2`.`payment` (`sacramentIncomeID`, `primaryIncomeID`, `amount`) VALUES ({sacramentIncomeID}, {primaryIncomeID}, {amount})";
@@ -883,8 +887,8 @@ namespace ParishSystem
 
             DataTable dt = runQuery(q);
 
-            int id = int.Parse(dt.Rows[0]["sacramentIncomeID"].ToString());
-            return id;
+            try { return int.Parse(dt.Rows[0]["sacramentIncomeID"].ToString()); }
+            catch { return -1; }
         }
 
         public DataTable getSacramentIncomesUnpaid()

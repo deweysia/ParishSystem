@@ -28,11 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.fullpay_panel_CDB = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Person_panel = new System.Windows.Forms.Panel();
+            this.targetPriceNUD = new System.Windows.Forms.NumericUpDown();
+            this.targetPrice_label = new System.Windows.Forms.Label();
+            this.pricePaid_label = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.editPrice_button = new System.Windows.Forms.Button();
+            this.subtotal_panel = new System.Windows.Forms.Panel();
+            this.sub_total = new System.Windows.Forms.Label();
+            this.subTotal_label_fullpay = new System.Windows.Forms.Label();
+            this.name_label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.orNumber_label_fullpay = new System.Windows.Forms.Label();
             this.applicant_combox_fullpay = new System.Windows.Forms.ComboBox();
@@ -51,10 +63,12 @@
             this.QuantityDataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalDataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemIDcomboboxcolumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ApplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameIndex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.targetprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sourceName_textbox_fullpay = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.sub_total = new System.Windows.Forms.Label();
             this.delete_button_fullpay = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.quantity_nud_fullpay = new System.Windows.Forms.NumericUpDown();
@@ -64,9 +78,11 @@
             this.add_button_fullpay = new System.Windows.Forms.Button();
             this.suggestedPrice_nud_fullpay = new System.Windows.Forms.NumericUpDown();
             this.itemType_combobox_fullpay = new System.Windows.Forms.ComboBox();
-            this.subTotal_label_fullpay = new System.Windows.Forms.Label();
-            this.name_label = new System.Windows.Forms.Label();
             this.fullpay_panel_CDB.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.Person_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.targetPriceNUD)).BeginInit();
+            this.subtotal_panel.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.item_dgv_fullpay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantity_nud_fullpay)).BeginInit();
@@ -76,12 +92,12 @@
             // fullpay_panel_CDB
             // 
             this.fullpay_panel_CDB.BackColor = System.Drawing.Color.White;
+            this.fullpay_panel_CDB.Controls.Add(this.flowLayoutPanel1);
             this.fullpay_panel_CDB.Controls.Add(this.name_label);
             this.fullpay_panel_CDB.Controls.Add(this.label2);
             this.fullpay_panel_CDB.Controls.Add(this.orNumber_label_fullpay);
             this.fullpay_panel_CDB.Controls.Add(this.applicant_combox_fullpay);
             this.fullpay_panel_CDB.Controls.Add(this.panel4);
-            this.fullpay_panel_CDB.Controls.Add(this.sub_total);
             this.fullpay_panel_CDB.Controls.Add(this.delete_button_fullpay);
             this.fullpay_panel_CDB.Controls.Add(this.label5);
             this.fullpay_panel_CDB.Controls.Add(this.quantity_nud_fullpay);
@@ -91,7 +107,6 @@
             this.fullpay_panel_CDB.Controls.Add(this.add_button_fullpay);
             this.fullpay_panel_CDB.Controls.Add(this.suggestedPrice_nud_fullpay);
             this.fullpay_panel_CDB.Controls.Add(this.itemType_combobox_fullpay);
-            this.fullpay_panel_CDB.Controls.Add(this.subTotal_label_fullpay);
             this.fullpay_panel_CDB.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.fullpay_panel_CDB.ForeColor = System.Drawing.Color.Black;
             this.fullpay_panel_CDB.Location = new System.Drawing.Point(0, 0);
@@ -100,11 +115,135 @@
             this.fullpay_panel_CDB.Size = new System.Drawing.Size(930, 540);
             this.fullpay_panel_CDB.TabIndex = 1;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.Person_panel);
+            this.flowLayoutPanel1.Controls.Add(this.subtotal_panel);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(602, 223);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(318, 104);
+            this.flowLayoutPanel1.TabIndex = 65;
+            // 
+            // Person_panel
+            // 
+            this.Person_panel.Controls.Add(this.targetPriceNUD);
+            this.Person_panel.Controls.Add(this.targetPrice_label);
+            this.Person_panel.Controls.Add(this.pricePaid_label);
+            this.Person_panel.Controls.Add(this.label10);
+            this.Person_panel.Controls.Add(this.label4);
+            this.Person_panel.Controls.Add(this.editPrice_button);
+            this.Person_panel.Location = new System.Drawing.Point(3, 3);
+            this.Person_panel.Name = "Person_panel";
+            this.Person_panel.Size = new System.Drawing.Size(312, 100);
+            this.Person_panel.TabIndex = 55;
+            this.Person_panel.Visible = false;
+            this.Person_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Person_panel_Paint);
+            // 
+            // targetPriceNUD
+            // 
+            this.targetPriceNUD.Location = new System.Drawing.Point(100, 15);
+            this.targetPriceNUD.Name = "targetPriceNUD";
+            this.targetPriceNUD.Size = new System.Drawing.Size(120, 29);
+            this.targetPriceNUD.TabIndex = 58;
+            this.targetPriceNUD.Tag = "a";
+            this.targetPriceNUD.Visible = false;
+            this.targetPriceNUD.ValueChanged += new System.EventHandler(this.targetPriceNUD_ValueChanged);
+            // 
+            // targetPrice_label
+            // 
+            this.targetPrice_label.AutoSize = true;
+            this.targetPrice_label.Location = new System.Drawing.Point(115, 19);
+            this.targetPrice_label.Name = "targetPrice_label";
+            this.targetPrice_label.Size = new System.Drawing.Size(0, 21);
+            this.targetPrice_label.TabIndex = 59;
+            // 
+            // pricePaid_label
+            // 
+            this.pricePaid_label.AutoSize = true;
+            this.pricePaid_label.Location = new System.Drawing.Point(96, 64);
+            this.pricePaid_label.Name = "pricePaid_label";
+            this.pricePaid_label.Size = new System.Drawing.Size(0, 21);
+            this.pricePaid_label.TabIndex = 60;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(4, 64);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(75, 21);
+            this.label10.TabIndex = 63;
+            this.label10.Text = "Total Paid";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 21);
+            this.label4.TabIndex = 62;
+            this.label4.Text = "Target Price";
+            // 
+            // editPrice_button
+            // 
+            this.editPrice_button.BackColor = System.Drawing.Color.Gray;
+            this.editPrice_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.editPrice_button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.editPrice_button.FlatAppearance.BorderSize = 0;
+            this.editPrice_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            this.editPrice_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.editPrice_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editPrice_button.ForeColor = System.Drawing.Color.White;
+            this.editPrice_button.Location = new System.Drawing.Point(226, 14);
+            this.editPrice_button.Name = "editPrice_button";
+            this.editPrice_button.Size = new System.Drawing.Size(83, 31);
+            this.editPrice_button.TabIndex = 61;
+            this.editPrice_button.Tag = "a";
+            this.editPrice_button.Text = "Edit";
+            this.editPrice_button.UseVisualStyleBackColor = false;
+            this.editPrice_button.Click += new System.EventHandler(this.editPrice_button_Click);
+            // 
+            // subtotal_panel
+            // 
+            this.subtotal_panel.Controls.Add(this.sub_total);
+            this.subtotal_panel.Controls.Add(this.subTotal_label_fullpay);
+            this.subtotal_panel.Location = new System.Drawing.Point(3, 109);
+            this.subtotal_panel.Name = "subtotal_panel";
+            this.subtotal_panel.Size = new System.Drawing.Size(312, 63);
+            this.subtotal_panel.TabIndex = 64;
+            // 
+            // sub_total
+            // 
+            this.sub_total.AutoSize = true;
+            this.sub_total.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sub_total.Location = new System.Drawing.Point(3, 28);
+            this.sub_total.Name = "sub_total";
+            this.sub_total.Size = new System.Drawing.Size(75, 21);
+            this.sub_total.TabIndex = 44;
+            this.sub_total.Text = "Sub-Total";
+            // 
+            // subTotal_label_fullpay
+            // 
+            this.subTotal_label_fullpay.AutoSize = true;
+            this.subTotal_label_fullpay.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subTotal_label_fullpay.Location = new System.Drawing.Point(93, 18);
+            this.subTotal_label_fullpay.Name = "subTotal_label_fullpay";
+            this.subTotal_label_fullpay.Size = new System.Drawing.Size(0, 37);
+            this.subTotal_label_fullpay.TabIndex = 45;
+            // 
+            // name_label
+            // 
+            this.name_label.AutoSize = true;
+            this.name_label.Location = new System.Drawing.Point(602, 192);
+            this.name_label.Name = "name_label";
+            this.name_label.Size = new System.Drawing.Size(64, 21);
+            this.name_label.TabIndex = 57;
+            this.name_label.Text = "Name   ";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(609, 58);
+            this.label2.Location = new System.Drawing.Point(609, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 21);
             this.label2.TabIndex = 6;
@@ -115,7 +254,7 @@
             this.orNumber_label_fullpay.AutoSize = true;
             this.orNumber_label_fullpay.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orNumber_label_fullpay.ForeColor = System.Drawing.Color.Black;
-            this.orNumber_label_fullpay.Location = new System.Drawing.Point(698, 45);
+            this.orNumber_label_fullpay.Location = new System.Drawing.Point(698, 36);
             this.orNumber_label_fullpay.Name = "orNumber_label_fullpay";
             this.orNumber_label_fullpay.Size = new System.Drawing.Size(62, 37);
             this.orNumber_label_fullpay.TabIndex = 2;
@@ -129,12 +268,13 @@
             this.applicant_combox_fullpay.FormattingEnabled = true;
             this.applicant_combox_fullpay.Items.AddRange(new object[] {
             ""});
-            this.applicant_combox_fullpay.Location = new System.Drawing.Point(695, 215);
+            this.applicant_combox_fullpay.Location = new System.Drawing.Point(695, 187);
             this.applicant_combox_fullpay.Name = "applicant_combox_fullpay";
             this.applicant_combox_fullpay.Size = new System.Drawing.Size(220, 29);
             this.applicant_combox_fullpay.TabIndex = 55;
             this.applicant_combox_fullpay.Visible = false;
             this.applicant_combox_fullpay.SelectedIndexChanged += new System.EventHandler(this.applicant_combox_fullpay_SelectedIndexChanged);
+            this.applicant_combox_fullpay.SelectedValueChanged += new System.EventHandler(this.applicant_combox_fullpay_SelectedValueChanged);
             // 
             // panel4
             // 
@@ -252,7 +392,7 @@
             // 
             this.remarks_textbox_fullpay.BackColor = System.Drawing.Color.White;
             this.remarks_textbox_fullpay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.remarks_textbox_fullpay.ForeColor = System.Drawing.Color.White;
+            this.remarks_textbox_fullpay.ForeColor = System.Drawing.Color.Black;
             this.remarks_textbox_fullpay.Location = new System.Drawing.Point(160, 390);
             this.remarks_textbox_fullpay.Multiline = true;
             this.remarks_textbox_fullpay.Name = "remarks_textbox_fullpay";
@@ -271,14 +411,14 @@
             this.item_dgv_fullpay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.item_dgv_fullpay.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.item_dgv_fullpay.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.item_dgv_fullpay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.item_dgv_fullpay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.item_dgv_fullpay.ColumnHeadersHeight = 40;
             this.item_dgv_fullpay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.item_dgv_fullpay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -286,36 +426,39 @@
             this.priceDataGridViewColumn,
             this.QuantityDataGridViewColumn,
             this.TotalDataGridViewColumn,
-            this.ItemIDcomboboxcolumn});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.item_dgv_fullpay.DefaultCellStyle = dataGridViewCellStyle10;
+            this.ItemIDcomboboxcolumn,
+            this.ApplicationID,
+            this.nameIndex,
+            this.targetprice});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.item_dgv_fullpay.DefaultCellStyle = dataGridViewCellStyle6;
             this.item_dgv_fullpay.EnableHeadersVisualStyles = false;
             this.item_dgv_fullpay.GridColor = System.Drawing.Color.White;
             this.item_dgv_fullpay.Location = new System.Drawing.Point(32, 37);
             this.item_dgv_fullpay.MultiSelect = false;
             this.item_dgv_fullpay.Name = "item_dgv_fullpay";
             this.item_dgv_fullpay.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Magenta;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.item_dgv_fullpay.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Magenta;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.item_dgv_fullpay.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.item_dgv_fullpay.RowHeadersVisible = false;
             this.item_dgv_fullpay.RowHeadersWidth = 50;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.DarkRed;
-            this.item_dgv_fullpay.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.DarkRed;
+            this.item_dgv_fullpay.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -359,11 +502,32 @@
             this.ItemIDcomboboxcolumn.ReadOnly = true;
             this.ItemIDcomboboxcolumn.Visible = false;
             // 
+            // ApplicationID
+            // 
+            this.ApplicationID.HeaderText = "applicationid";
+            this.ApplicationID.Name = "ApplicationID";
+            this.ApplicationID.ReadOnly = true;
+            this.ApplicationID.Visible = false;
+            // 
+            // nameIndex
+            // 
+            this.nameIndex.HeaderText = "nameIndex";
+            this.nameIndex.Name = "nameIndex";
+            this.nameIndex.ReadOnly = true;
+            this.nameIndex.Visible = false;
+            // 
+            // targetprice
+            // 
+            this.targetprice.HeaderText = "targetPrice";
+            this.targetprice.Name = "targetprice";
+            this.targetprice.ReadOnly = true;
+            this.targetprice.Visible = false;
+            // 
             // sourceName_textbox_fullpay
             // 
             this.sourceName_textbox_fullpay.BackColor = System.Drawing.Color.White;
             this.sourceName_textbox_fullpay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.sourceName_textbox_fullpay.ForeColor = System.Drawing.Color.White;
+            this.sourceName_textbox_fullpay.ForeColor = System.Drawing.Color.Black;
             this.sourceName_textbox_fullpay.Location = new System.Drawing.Point(160, 344);
             this.sourceName_textbox_fullpay.Name = "sourceName_textbox_fullpay";
             this.sourceName_textbox_fullpay.Size = new System.Drawing.Size(281, 22);
@@ -391,16 +555,6 @@
             this.label9.TabIndex = 19;
             this.label9.Text = "__________________________________________";
             // 
-            // sub_total
-            // 
-            this.sub_total.AutoSize = true;
-            this.sub_total.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sub_total.Location = new System.Drawing.Point(602, 272);
-            this.sub_total.Name = "sub_total";
-            this.sub_total.Size = new System.Drawing.Size(75, 21);
-            this.sub_total.TabIndex = 44;
-            this.sub_total.Text = "Sub-Total";
-            // 
             // delete_button_fullpay
             // 
             this.delete_button_fullpay.BackColor = System.Drawing.Color.Gray;
@@ -412,7 +566,7 @@
             this.delete_button_fullpay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.delete_button_fullpay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete_button_fullpay.ForeColor = System.Drawing.Color.White;
-            this.delete_button_fullpay.Location = new System.Drawing.Point(628, 482);
+            this.delete_button_fullpay.Location = new System.Drawing.Point(628, 480);
             this.delete_button_fullpay.Name = "delete_button_fullpay";
             this.delete_button_fullpay.Size = new System.Drawing.Size(261, 37);
             this.delete_button_fullpay.TabIndex = 43;
@@ -423,7 +577,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(602, 219);
+            this.label5.Location = new System.Drawing.Point(602, 187);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 21);
             this.label5.TabIndex = 42;
@@ -432,7 +586,7 @@
             // quantity_nud_fullpay
             // 
             this.quantity_nud_fullpay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.quantity_nud_fullpay.Location = new System.Drawing.Point(695, 219);
+            this.quantity_nud_fullpay.Location = new System.Drawing.Point(695, 187);
             this.quantity_nud_fullpay.Name = "quantity_nud_fullpay";
             this.quantity_nud_fullpay.Size = new System.Drawing.Size(220, 25);
             this.quantity_nud_fullpay.TabIndex = 41;
@@ -446,7 +600,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(602, 168);
+            this.label3.Location = new System.Drawing.Point(602, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 21);
             this.label3.TabIndex = 39;
@@ -455,7 +609,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(602, 125);
+            this.label1.Location = new System.Drawing.Point(602, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 21);
             this.label1.TabIndex = 40;
@@ -471,7 +625,7 @@
             this.cancel_button_fullpay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.cancel_button_fullpay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel_button_fullpay.ForeColor = System.Drawing.Color.White;
-            this.cancel_button_fullpay.Location = new System.Drawing.Point(628, 432);
+            this.cancel_button_fullpay.Location = new System.Drawing.Point(628, 430);
             this.cancel_button_fullpay.Name = "cancel_button_fullpay";
             this.cancel_button_fullpay.Size = new System.Drawing.Size(261, 37);
             this.cancel_button_fullpay.TabIndex = 37;
@@ -489,7 +643,7 @@
             this.add_button_fullpay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.add_button_fullpay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_button_fullpay.ForeColor = System.Drawing.Color.White;
-            this.add_button_fullpay.Location = new System.Drawing.Point(628, 378);
+            this.add_button_fullpay.Location = new System.Drawing.Point(628, 376);
             this.add_button_fullpay.Name = "add_button_fullpay";
             this.add_button_fullpay.Size = new System.Drawing.Size(261, 37);
             this.add_button_fullpay.TabIndex = 38;
@@ -502,7 +656,7 @@
             // 
             this.suggestedPrice_nud_fullpay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.suggestedPrice_nud_fullpay.DecimalPlaces = 2;
-            this.suggestedPrice_nud_fullpay.Location = new System.Drawing.Point(695, 169);
+            this.suggestedPrice_nud_fullpay.Location = new System.Drawing.Point(695, 144);
             this.suggestedPrice_nud_fullpay.Name = "suggestedPrice_nud_fullpay";
             this.suggestedPrice_nud_fullpay.Size = new System.Drawing.Size(220, 25);
             this.suggestedPrice_nud_fullpay.TabIndex = 36;
@@ -515,30 +669,12 @@
             this.itemType_combobox_fullpay.FormattingEnabled = true;
             this.itemType_combobox_fullpay.Items.AddRange(new object[] {
             ""});
-            this.itemType_combobox_fullpay.Location = new System.Drawing.Point(695, 122);
+            this.itemType_combobox_fullpay.Location = new System.Drawing.Point(695, 98);
             this.itemType_combobox_fullpay.Name = "itemType_combobox_fullpay";
             this.itemType_combobox_fullpay.Size = new System.Drawing.Size(220, 29);
             this.itemType_combobox_fullpay.TabIndex = 35;
             this.itemType_combobox_fullpay.SelectedIndexChanged += new System.EventHandler(this.itemType_combobox_fullpay_SelectedIndexChanged);
             this.itemType_combobox_fullpay.SelectedValueChanged += new System.EventHandler(this.itemType_combobox_fullpay_SelectedValueChanged);
-            // 
-            // subTotal_label_fullpay
-            // 
-            this.subTotal_label_fullpay.AutoSize = true;
-            this.subTotal_label_fullpay.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subTotal_label_fullpay.Location = new System.Drawing.Point(678, 262);
-            this.subTotal_label_fullpay.Name = "subTotal_label_fullpay";
-            this.subTotal_label_fullpay.Size = new System.Drawing.Size(0, 37);
-            this.subTotal_label_fullpay.TabIndex = 45;
-            // 
-            // name_label
-            // 
-            this.name_label.AutoSize = true;
-            this.name_label.Location = new System.Drawing.Point(602, 219);
-            this.name_label.Name = "name_label";
-            this.name_label.Size = new System.Drawing.Size(64, 21);
-            this.name_label.TabIndex = 57;
-            this.name_label.Text = "Name   ";
             // 
             // CDB_FullPayment_Module
             // 
@@ -554,6 +690,12 @@
             this.Load += new System.EventHandler(this.CDB_FullPayment_Module_Load);
             this.fullpay_panel_CDB.ResumeLayout(false);
             this.fullpay_panel_CDB.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.Person_panel.ResumeLayout(false);
+            this.Person_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.targetPriceNUD)).EndInit();
+            this.subtotal_panel.ResumeLayout(false);
+            this.subtotal_panel.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.item_dgv_fullpay)).EndInit();
@@ -578,11 +720,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox remarks_textbox_fullpay;
         private System.Windows.Forms.DataGridView item_dgv_fullpay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ItemTypeDataGridViewColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QuantityDataGridViewColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalDataGridViewColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ItemIDcomboboxcolumn;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox sourceName_textbox_fullpay;
@@ -599,5 +736,22 @@
         private System.Windows.Forms.Label subTotal_label_fullpay;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label name_label;
+        private System.Windows.Forms.NumericUpDown targetPriceNUD;
+        private System.Windows.Forms.Label pricePaid_label;
+        private System.Windows.Forms.Label targetPrice_label;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemTypeDataGridViewColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QuantityDataGridViewColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalDataGridViewColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemIDcomboboxcolumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ApplicationID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameIndex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn targetprice;
+        private System.Windows.Forms.Button editPrice_button;
+        private System.Windows.Forms.Panel subtotal_panel;
+        private System.Windows.Forms.Panel Person_panel;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
