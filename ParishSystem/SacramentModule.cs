@@ -293,6 +293,11 @@ namespace ParishSystem
             openPersonView(this.profileID);
         }
 
+        private void btnOpenProfileConf_Click(object sender, EventArgs e)
+        {
+            openPersonView(this.profileID);
+        }
+
         private void btnSearchCon_Click(object sender, EventArgs e)
         {
             searchDVG(SacramentType.Confirmation);

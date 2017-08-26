@@ -316,19 +316,7 @@
     <Compile Include="ScheduleModule.Designer.cs">
       <DependentUpon>ScheduleModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="sParent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sParent.Designer.cs">
-      <DependentUpon>sParent.cs</DependentUpon>
-    </Compile>
     <Compile Include="SystemNotification.cs" />
-    <Compile Include="topBarControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="topBarControl.Designer.cs">
-      <DependentUpon>topBarControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Treasurer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -445,12 +433,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ScheduleModule.resx">
       <DependentUpon>ScheduleModule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sParent.resx">
-      <DependentUpon>sParent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="topBarControl.resx">
-      <DependentUpon>topBarControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Treasurer.resx">
       <DependentUpon>Treasurer.cs</DependentUpon>
