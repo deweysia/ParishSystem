@@ -87,5 +87,19 @@ namespace ParishSystem
             calendar1.SetViewRange(monthView1.SelectionStart, monthView1.SelectionEnd);
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbDetails_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
