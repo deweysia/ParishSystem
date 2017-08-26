@@ -13,6 +13,11 @@ namespace ParishSystem
     public partial class AddSchedule : Form
     {
         DataHandler dh = DataHandler.getDataHandler();
+        private enum ScheduleTime
+        {
+            Start, End
+        }
+
         public AddSchedule()
         {
             InitializeComponent();
@@ -58,7 +63,7 @@ namespace ParishSystem
 
         private void cmbScheduleType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmbMinister.Enabled = cmbScheduleType.SelectedText == "Appointment";
+            tabScheduleType.SelectedIndex = cmbScheduleType.SelectedIndex;
         }
 
         
@@ -95,10 +100,17 @@ namespace ParishSystem
 
         private bool startStartLessThanEnd()
         {
-            DateTime start = new DateTime(dtpDateStart.Value.Year, dtpDateStart.Value.Month, dtpDateStart.Value.Day, dtpTimeStart.Value.Hour, dtpTimeStart.Value.Minute, 0);
-            DateTime end = new DateTime(dtpDateEnd.Value.Year, dtpDateEnd.Value.Month, dtpDateEnd.Value.Day, dtpTimeEnd.Value.Hour, dtpTimeEnd.Value.Minute, 0);
+            DateTime start = getDateTime(ScheduleTime.Start);
+            DateTime end = getDateTime(ScheduleTime.End);
 
             return start < end;
+        }
+
+        private DateTime getDateTime(ScheduleTime t)
+        {
+            if(t == ScheduleTime.Start)
+                return new DateTime(dtpDateStart.Value.Year, dtpDateStart.Value.Month, dtpDateStart.Value.Day, dtpTimeStart.Value.Hour, dtpTimeStart.Value.Minute, 0);
+            return new DateTime(dtpDateEnd.Value.Year, dtpDateEnd.Value.Month, dtpDateEnd.Value.Day, dtpTimeEnd.Value.Hour, dtpTimeEnd.Value.Minute, 0);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

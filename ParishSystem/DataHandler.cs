@@ -640,38 +640,22 @@ namespace ParishSystem
 
         public bool addBloodDonationEvent(string eventName, DateTime startTime, DateTime endTime, string eventVenue, string eventDetails)
         {
-            string q = $@"INSERT INTO `sad2`.`blooddonationevent` (`eventName`, `startDateTime`, `endDateTime`, `eventVenue`, `eventDetails`) VALUES ('{eventName}','{startTime.ToString("yyyy-MM-dd HH:mm:ss")}', '{endTime.ToString("yyyy-MM-dd HH:mm:ss")}','{eventVenue}','{eventDetails}');";
-            bool success = runNonQuery(q);
-            //if (success)
-            //    updateModificationInfo("BloodDnationEvent", "bloodbloodDonationEventID", getLatestID("BloodDonationEvent", "bloodbloodDonationEventID"));
-
+            string q = "INSERT INTO BloodDonationEvent(eventName, startTime, endTime, eventVenue, eventDetails) VALUES (@eventName, @startTime, @endTime, @eventVenue, @eventDetails)";
+            bool success = ExecuteNonQuery(q, eventName, startTime.ToString("yyyy-MM-dd HH:mm:ss"), endTime.ToString("yyyy-MM-dd HH:mm:ss"), eventVenue, eventDetails);
             return success;
+
         }
 
         public bool editBloodDonationEvent(int bloodDonationEventID, string eventName, DateTime startTime, DateTime endTime, string eventVenue, string eventDetails)
         {
-            string q = "UPDATE BloodDonationEvent SET eventName = '" + eventName
-                + "', startDateTime = '" + startTime.ToString("yyyy-MM-dd HH:mm:ss")
-                + "', endDateTime = '" + endTime.ToString("yyyy-MM-dd HH:mm:ss")
-                + "', eventVenue = '" + eventVenue + "', eventDetails = '" + eventDetails
-                + "' WHERE bloodDonationEventID = " + bloodDonationEventID;
-
-            bool success = runNonQuery(q);
-            //if (success)
-            //    updateModificationInfo("bloodDonationEvent", "bloodbloodDonationEventID", bloodbloodDonationEventID);
-
+            string q = "UPDATE BloodDonationEvent SET eventName = @eventName, startTime = @startTime, endTime = @endTime, eventVenue = @eventVenue, eventDetails = @eventDetails WHERE bloodDonationEventID = @bloodDonationEventID";
+            bool success = ExecuteNonQuery(q, eventName, startTime.ToString("yyyy-MM-dd HH:mm:ss"), endTime.ToString("yyyy-MM-dd HH:mm:ss"), eventVenue, eventDetails, bloodDonationEventID);
             return success;
+
         }
 
         public bool deleteBloodDonationEvent(int bloodDonationEventID)
         {
-
-            //if (!idExists("bloodDonationEvent", "bloodbloodDonationEventID", bloodbloodDonationEventID))
-            //    return false;
-
-            //addBloodDonationLog(bloodDonationEventID);
-            //updateModificationInfo("bloodDonationEvent", "bloodDonationEventID", bloodDonationEventID);
-            //addBloodDonationLog(bloodDonationEventID);
 
             string q = "DELETE FROM bloodDonationEvent WHERE bloodDonationEventID = " + bloodDonationEventID;
 
@@ -2151,19 +2135,28 @@ namespace ParishSystem
             return success;
         }
 
-        public bool editSchedule(int scheduleID, string scheduleType, DateTime startTimeDate, DateTime endDateTime, string details, string status, string priority)
+        public bool addSchedule(string title, DateTime start, DateTime end, string details)
         {
-            string q = "UPDATE Schedule SET scheduleType = '" + scheduleType
-                + "', startTimeDate = '" + startTimeDate.ToString("yyyy-MM-dd HH:mm:ss.fff")
-                + "', endDateTime = '" + endDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff")
-                + "', details = '" + details + "', status = '" + status
-                + "', priority = '" + priority
-                + "' WHERE scheduleID = '" + scheduleID + "'";
-
-            bool success = runNonQuery(q);
-
+            string q = "INSERT INTO Schedule(title, start, end, details) VALUES (@title, @start, @end, @details)";
+            bool success = ExecuteNonQuery(q, title, start.ToString("yyyy-MM-dd HH:mm:ss"), end.ToString("yyyy-MM-dd HH:mm:ss"), details);
             return success;
         }
+
+        public bool addMinisterSchedule(int ministerID, string title, DateTime start, DateTime end, string details)
+        {
+            string q = "INSERT INTO MinisterSchedule(ministerID, title, start, end, details) VALUES (@ministerID, @title, @start, @end, @details)";
+            bool success = ExecuteNonQuery(q, ministerID, title, start.ToString("yyyy-MM-dd HH:mm:ss"), end.ToString("yyyy-MM-dd HH:mm:ss"), details);
+            return success;
+
+        }
+        
+        public bool editMinisterSchedule(int ministerScheduleID, int ministerID, string title, DateTime start, DateTime end, string details)
+        {
+            string q = "UPDATE MinisterSchedule SET ministerID = @ministerID, title = @title, start = @start, end = @end, details = @details WHERE ministerScheduleID = @ministerScheduleID";
+            bool success = ExecuteNonQuery(q, ministerID, title, start.ToString("yyyy-MM-dd HH:mm:ss"), end.ToString("yyyy-MM-dd HH:mm:ss"), details, ministerScheduleID);
+            return success;
+        }
+
 
         public DataTable getSchedule(int scheduleID)
         {
@@ -2227,18 +2220,6 @@ namespace ParishSystem
             return success;
         }
 
-        public bool setSchedule(int profileID, int ministerID, int scheduleID, string scheduleType, DateTime startDateTime, DateTime endDateTime, string details, string priority)
-        {
-            bool success = addSchedule(scheduleType, startDateTime, endDateTime, details, priority);
-
-            bool success2 = addAppointment(profileID, ministerID, getLatestScheduleID());
-
-            if (!(success && success2))
-                throw new Exception("One of the Successes don't work. Btch");
-
-
-            return true;
-        }
 
         public DataTable getAppointment(int appointmentID)
         {
