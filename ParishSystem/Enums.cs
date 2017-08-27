@@ -68,6 +68,12 @@ namespace ParishSystem
         
     }
 
+    public enum DialogType
+    {
+        Add,
+        Edit
+    }
+
     
 
 }

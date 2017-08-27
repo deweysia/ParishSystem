@@ -82,11 +82,11 @@
             calendarHighlightRange5.EndTime = System.TimeSpan.Parse("17:00:00");
             calendarHighlightRange5.StartTime = System.TimeSpan.Parse("08:00:00");
             this.calendar1.HighlightRanges = new System.Windows.Forms.Calendar.CalendarHighlightRange[] {
-            calendarHighlightRange1,
-            calendarHighlightRange2,
-            calendarHighlightRange3,
-            calendarHighlightRange4,
-            calendarHighlightRange5};
+        calendarHighlightRange1,
+        calendarHighlightRange2,
+        calendarHighlightRange3,
+        calendarHighlightRange4,
+        calendarHighlightRange5};
             this.calendar1.Location = new System.Drawing.Point(208, 0);
             this.calendar1.Name = "calendar1";
             this.calendar1.Size = new System.Drawing.Size(475, 279);

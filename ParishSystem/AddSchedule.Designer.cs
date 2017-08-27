@@ -47,8 +47,8 @@
             this.cmbMinister = new System.Windows.Forms.ComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtDescription = new ParishSystem.CueTextBox();
+            this.txtVenue = new System.Windows.Forms.TextBox();
+            this.txtDetails = new ParishSystem.CueTextBox();
             this.txtTitle = new ParishSystem.CueTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabScheduleType.SuspendLayout();
@@ -82,20 +82,19 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 11);
+            this.label2.Location = new System.Drawing.Point(13, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 26);
             this.label2.TabIndex = 4;
             this.label2.Text = "Start Time";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 59);
+            this.label3.Location = new System.Drawing.Point(3, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 26);
+            this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "End Time";
             // 
@@ -103,20 +102,19 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 85);
+            this.label4.Location = new System.Drawing.Point(16, 72);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Title";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.88235F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.11765F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel1.Controls.Add(this.dtpTimeStart, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.dtpDateEnd, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
@@ -137,7 +135,7 @@
             this.dtpTimeStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpTimeStart.CustomFormat = "hh:mm tt";
             this.dtpTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTimeStart.Location = new System.Drawing.Point(235, 14);
+            this.dtpTimeStart.Location = new System.Drawing.Point(249, 14);
             this.dtpTimeStart.Name = "dtpTimeStart";
             this.dtpTimeStart.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpTimeStart.ShowUpDown = true;
@@ -149,10 +147,10 @@
             // 
             this.dtpDateEnd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDateEnd.FontSize = MetroFramework.MetroDateTimeSize.Small;
-            this.dtpDateEnd.Location = new System.Drawing.Point(59, 59);
+            this.dtpDateEnd.Location = new System.Drawing.Point(65, 59);
             this.dtpDateEnd.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpDateEnd.Name = "dtpDateEnd";
-            this.dtpDateEnd.Size = new System.Drawing.Size(156, 25);
+            this.dtpDateEnd.Size = new System.Drawing.Size(158, 25);
             this.dtpDateEnd.TabIndex = 7;
             this.dtpDateEnd.ValueChanged += new System.EventHandler(this.dtpDateEnd_ValueChanged);
             // 
@@ -160,10 +158,10 @@
             // 
             this.dtpDateStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDateStart.FontSize = MetroFramework.MetroDateTimeSize.Small;
-            this.dtpDateStart.Location = new System.Drawing.Point(59, 11);
+            this.dtpDateStart.Location = new System.Drawing.Point(65, 11);
             this.dtpDateStart.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpDateStart.Name = "dtpDateStart";
-            this.dtpDateStart.Size = new System.Drawing.Size(156, 25);
+            this.dtpDateStart.Size = new System.Drawing.Size(158, 25);
             this.dtpDateStart.TabIndex = 7;
             this.dtpDateStart.ValueChanged += new System.EventHandler(this.dtpDateStart_ValueChanged);
             // 
@@ -172,7 +170,7 @@
             this.dtpTimeEnd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpTimeEnd.CustomFormat = "hh:mm tt";
             this.dtpTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTimeEnd.Location = new System.Drawing.Point(235, 62);
+            this.dtpTimeEnd.Location = new System.Drawing.Point(249, 62);
             this.dtpTimeEnd.Name = "dtpTimeEnd";
             this.dtpTimeEnd.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpTimeEnd.ShowUpDown = true;
@@ -184,29 +182,28 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 284);
+            this.label5.Location = new System.Drawing.Point(9, 271);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.Size = new System.Drawing.Size(39, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Description";
-            this.label5.Click += new System.EventHandler(this.label4_Click);
+            this.label5.Text = "Details";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(136, 416);
+            this.btnAdd.Location = new System.Drawing.Point(135, 377);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(115, 23);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add Schedule";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_ClickAdd);
             // 
             // tabScheduleType
             // 
             this.tabScheduleType.Controls.Add(this.tabPage1);
             this.tabScheduleType.Controls.Add(this.tabPage2);
             this.tabScheduleType.Controls.Add(this.tabPage3);
-            this.tabScheduleType.Location = new System.Drawing.Point(184, 25);
+            this.tabScheduleType.Location = new System.Drawing.Point(184, 12);
             this.tabScheduleType.Name = "tabScheduleType";
             this.tabScheduleType.SelectedIndex = 0;
             this.tabScheduleType.Size = new System.Drawing.Size(200, 100);
@@ -258,7 +255,7 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.txtVenue);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -277,32 +274,32 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "Venue";
             // 
-            // textBox1
+            // txtVenue
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox1.Location = new System.Drawing.Point(3, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 20);
-            this.textBox1.TabIndex = 9;
+            this.txtVenue.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtVenue.Location = new System.Drawing.Point(3, 51);
+            this.txtVenue.Name = "txtVenue";
+            this.txtVenue.Size = new System.Drawing.Size(186, 20);
+            this.txtVenue.TabIndex = 9;
             // 
-            // txtDescription
+            // txtDetails
             // 
-            this.txtDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDescription.Cue = null;
-            this.txtDescription.CueColor = System.Drawing.Color.Gray;
-            this.txtDescription.Location = new System.Drawing.Point(12, 300);
-            this.txtDescription.MaxLength = 1000;
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(365, 85);
-            this.txtDescription.TabIndex = 5;
+            this.txtDetails.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDetails.Cue = null;
+            this.txtDetails.CueColor = System.Drawing.Color.Gray;
+            this.txtDetails.Location = new System.Drawing.Point(12, 287);
+            this.txtDetails.MaxLength = 1000;
+            this.txtDetails.Multiline = true;
+            this.txtDetails.Name = "txtDetails";
+            this.txtDetails.Size = new System.Drawing.Size(365, 53);
+            this.txtDetails.TabIndex = 5;
             // 
             // txtTitle
             // 
             this.txtTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTitle.Cue = null;
             this.txtTitle.CueColor = System.Drawing.Color.Gray;
-            this.txtTitle.Location = new System.Drawing.Point(18, 101);
+            this.txtTitle.Location = new System.Drawing.Point(18, 88);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(157, 20);
             this.txtTitle.TabIndex = 5;
@@ -311,11 +308,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 451);
+            this.ClientSize = new System.Drawing.Size(396, 425);
             this.Controls.Add(this.tabScheduleType);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.txtDetails);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.label4);
@@ -347,7 +344,7 @@
         private MetroFramework.Controls.MetroDateTime dtpDateEnd;
         private MetroFramework.Controls.MetroDateTime dtpDateStart;
         private System.Windows.Forms.Label label5;
-        private CueTextBox txtDescription;
+        private CueTextBox txtDetails;
         private System.Windows.Forms.DateTimePicker dtpTimeStart;
         private System.Windows.Forms.DateTimePicker dtpTimeEnd;
         private System.Windows.Forms.Button btnAdd;
@@ -358,6 +355,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbMinister;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtVenue;
     }
 }

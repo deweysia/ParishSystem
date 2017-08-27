@@ -28,26 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange1 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange2 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange3 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange4 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange5 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange6 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange7 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange8 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange9 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange10 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
             this.monthView1 = new System.Windows.Forms.Calendar.MonthView();
             this.calendar1 = new System.Windows.Forms.Calendar.Calendar();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.gbDetails = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblDetails = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblStart = new System.Windows.Forms.Label();
+            this.lblEnd = new System.Windows.Forms.Label();
+            this.lblExtra = new System.Windows.Forms.Label();
+            this.lblExtraInfo = new System.Windows.Forms.Label();
             this.panelRemoveEdit = new System.Windows.Forms.Panel();
             this.gbDetails.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -84,33 +86,37 @@
             this.calendar1.AllowNew = false;
             this.calendar1.BackColor = System.Drawing.Color.Maroon;
             this.calendar1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            calendarHighlightRange1.DayOfWeek = System.DayOfWeek.Monday;
-            calendarHighlightRange1.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange1.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange2.DayOfWeek = System.DayOfWeek.Tuesday;
-            calendarHighlightRange2.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange2.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange3.DayOfWeek = System.DayOfWeek.Wednesday;
-            calendarHighlightRange3.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange3.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange4.DayOfWeek = System.DayOfWeek.Thursday;
-            calendarHighlightRange4.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange4.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange5.DayOfWeek = System.DayOfWeek.Friday;
-            calendarHighlightRange5.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange5.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange6.DayOfWeek = System.DayOfWeek.Monday;
+            calendarHighlightRange6.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange6.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange7.DayOfWeek = System.DayOfWeek.Tuesday;
+            calendarHighlightRange7.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange7.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange8.DayOfWeek = System.DayOfWeek.Wednesday;
+            calendarHighlightRange8.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange8.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange9.DayOfWeek = System.DayOfWeek.Thursday;
+            calendarHighlightRange9.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange9.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange10.DayOfWeek = System.DayOfWeek.Friday;
+            calendarHighlightRange10.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange10.StartTime = System.TimeSpan.Parse("08:00:00");
             this.calendar1.HighlightRanges = new System.Windows.Forms.Calendar.CalendarHighlightRange[] {
-        calendarHighlightRange1,
-        calendarHighlightRange2,
-        calendarHighlightRange3,
-        calendarHighlightRange4,
-        calendarHighlightRange5};
+        calendarHighlightRange6,
+        calendarHighlightRange7,
+        calendarHighlightRange8,
+        calendarHighlightRange9,
+        calendarHighlightRange10};
             this.calendar1.Location = new System.Drawing.Point(226, 12);
             this.calendar1.Name = "calendar1";
-            this.calendar1.Size = new System.Drawing.Size(676, 477);
+            this.calendar1.Size = new System.Drawing.Size(692, 516);
             this.calendar1.TabIndex = 4;
             this.calendar1.Text = "calendar1";
             this.calendar1.LoadItems += new System.Windows.Forms.Calendar.Calendar.CalendarLoadEventHandler(this.calendar1_LoadItems);
+            this.calendar1.ItemCreated += new System.Windows.Forms.Calendar.Calendar.CalendarItemCancelEventHandler(this.calendar1_ItemCreated);
+            this.calendar1.ItemClick += new System.Windows.Forms.Calendar.Calendar.CalendarItemEventHandler(this.calendar1_ItemClick);
+            this.calendar1.ItemMouseHover += new System.Windows.Forms.Calendar.Calendar.CalendarItemEventHandler(this.calendar1_ItemMouseHover);
+            this.calendar1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.calendar1_MouseClick);
             // 
             // btnAdd
             // 
@@ -130,22 +136,23 @@
             this.btnEdit.TabIndex = 6;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // button1
+            // btnRemove
             // 
-            this.button1.Location = new System.Drawing.Point(3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Remove";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRemove.Location = new System.Drawing.Point(3, 2);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(62, 23);
+            this.btnRemove.TabIndex = 6;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseVisualStyleBackColor = true;
             // 
             // gbDetails
             // 
             this.gbDetails.Controls.Add(this.tableLayoutPanel1);
-            this.gbDetails.Location = new System.Drawing.Point(12, 192);
+            this.gbDetails.Location = new System.Drawing.Point(12, 187);
             this.gbDetails.Name = "gbDetails";
-            this.gbDetails.Size = new System.Drawing.Size(208, 297);
+            this.gbDetails.Size = new System.Drawing.Size(208, 302);
             this.gbDetails.TabIndex = 7;
             this.gbDetails.TabStop = false;
             this.gbDetails.Text = "Agenda";
@@ -158,24 +165,27 @@
             this.tableLayoutPanel1.Controls.Add(this.lblTitle, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblDetails, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.lblStart, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lblEnd, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.lblExtra, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.lblExtraInfo, 0, 9);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 19);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 9;
+            this.tableLayoutPanel1.RowCount = 10;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 272);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 322);
             this.tableLayoutPanel1.TabIndex = 2;
             this.tableLayoutPanel1.Tag = "notnull";
             // 
@@ -211,15 +221,15 @@
             this.label1.Text = "Details";
             this.label1.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // lblDetails
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Implement Schedule Module";
+            this.lblDetails.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblDetails.AutoSize = true;
+            this.lblDetails.Location = new System.Drawing.Point(29, 70);
+            this.lblDetails.Name = "lblDetails";
+            this.lblDetails.Size = new System.Drawing.Size(141, 13);
+            this.lblDetails.TabIndex = 1;
+            this.lblDetails.Text = "Implement Schedule Module";
             // 
             // label4
             // 
@@ -236,37 +246,59 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(90, 173);
+            this.label6.Location = new System.Drawing.Point(90, 183);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(20, 13);
             this.label6.TabIndex = 1;
             this.label6.Text = "To";
             this.label6.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label5
+            // lblStart
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(58, 140);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "8/24/2017 9:15";
+            this.lblStart.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblStart.AutoSize = true;
+            this.lblStart.Location = new System.Drawing.Point(70, 140);
+            this.lblStart.Name = "lblStart";
+            this.lblStart.Size = new System.Drawing.Size(59, 26);
+            this.lblStart.TabIndex = 1;
+            this.lblStart.Text = "8/24/2017\r\n09:15";
             // 
-            // label7
+            // lblEnd
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(55, 190);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "8/24/2017 21:00";
+            this.lblEnd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblEnd.AutoSize = true;
+            this.lblEnd.Location = new System.Drawing.Point(70, 200);
+            this.lblEnd.Name = "lblEnd";
+            this.lblEnd.Size = new System.Drawing.Size(59, 26);
+            this.lblEnd.TabIndex = 1;
+            this.lblEnd.Text = "8/24/2017\r\n21:00";
+            // 
+            // lblExtra
+            // 
+            this.lblExtra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblExtra.AutoSize = true;
+            this.lblExtra.Location = new System.Drawing.Point(39, 243);
+            this.lblExtra.Name = "lblExtra";
+            this.lblExtra.Size = new System.Drawing.Size(121, 13);
+            this.lblExtra.TabIndex = 1;
+            this.lblExtra.Text = "Nothing/Minister/Venue";
+            this.lblExtra.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // lblExtraInfo
+            // 
+            this.lblExtraInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblExtraInfo.AutoSize = true;
+            this.lblExtraInfo.Location = new System.Drawing.Point(80, 260);
+            this.lblExtraInfo.Name = "lblExtraInfo";
+            this.lblExtraInfo.Size = new System.Drawing.Size(39, 13);
+            this.lblExtraInfo.TabIndex = 1;
+            this.lblExtraInfo.Text = "Blobby";
             // 
             // panelRemoveEdit
             // 
-            this.panelRemoveEdit.Controls.Add(this.button1);
+            this.panelRemoveEdit.Controls.Add(this.btnRemove);
             this.panelRemoveEdit.Controls.Add(this.btnEdit);
+            this.panelRemoveEdit.Enabled = false;
             this.panelRemoveEdit.Location = new System.Drawing.Point(15, 153);
             this.panelRemoveEdit.Name = "panelRemoveEdit";
             this.panelRemoveEdit.Size = new System.Drawing.Size(118, 28);
@@ -276,14 +308,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 501);
+            this.ClientSize = new System.Drawing.Size(930, 540);
             this.Controls.Add(this.panelRemoveEdit);
             this.Controls.Add(this.gbDetails);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.calendar1);
             this.Controls.Add(this.monthView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ScheduleModule";
             this.Text = "Schedule Form";
+            this.Load += new System.EventHandler(this.ScheduleModule_Load);
             this.gbDetails.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -297,17 +331,19 @@
         private System.Windows.Forms.Calendar.Calendar calendar1;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.GroupBox gbDetails;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDetails;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblStart;
+        private System.Windows.Forms.Label lblEnd;
         private System.Windows.Forms.Panel panelRemoveEdit;
+        private System.Windows.Forms.Label lblExtra;
+        private System.Windows.Forms.Label lblExtraInfo;
     }
 }
