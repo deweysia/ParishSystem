@@ -173,6 +173,7 @@ namespace ParishSystem
 
 
         public static State
+            InvalidPayment = new State("The Price cannot be 0", NotificationType.error),
             InvalidPrice = new State("The Price cannot be lesser than the payment", NotificationType.error),
             HasTransaction = new State("This person already has a transaction", NotificationType.error),
             PaymentExceeded = new State("Selected payment has exceeded price", NotificationType.error),

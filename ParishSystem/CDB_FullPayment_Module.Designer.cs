@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.fullpay_panel_CDB = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Person_panel = new System.Windows.Forms.Panel();
@@ -58,14 +58,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.remarks_textbox_fullpay = new System.Windows.Forms.TextBox();
             this.item_dgv_fullpay = new System.Windows.Forms.DataGridView();
-            this.ItemTypeDataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuantityDataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalDataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemIDcomboboxcolumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ApplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameIndex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.targetprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sourceName_textbox_fullpay = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -78,6 +70,15 @@
             this.add_button_fullpay = new System.Windows.Forms.Button();
             this.suggestedPrice_nud_fullpay = new System.Windows.Forms.NumericUpDown();
             this.itemType_combobox_fullpay = new System.Windows.Forms.ComboBox();
+            this.Cancel_button = new System.Windows.Forms.Button();
+            this.ItemTypeDataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuantityDataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalDataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemIDcomboboxcolumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ApplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameIndex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.targetprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullpay_panel_CDB.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.Person_panel.SuspendLayout();
@@ -126,6 +127,7 @@
             // 
             // Person_panel
             // 
+            this.Person_panel.Controls.Add(this.Cancel_button);
             this.Person_panel.Controls.Add(this.targetPriceNUD);
             this.Person_panel.Controls.Add(this.targetPrice_label);
             this.Person_panel.Controls.Add(this.pricePaid_label);
@@ -148,6 +150,7 @@
             this.targetPriceNUD.Tag = "a";
             this.targetPriceNUD.Visible = false;
             this.targetPriceNUD.ValueChanged += new System.EventHandler(this.targetPriceNUD_ValueChanged);
+            this.targetPriceNUD.VisibleChanged += new System.EventHandler(this.targetPriceNUD_VisibleChanged);
             // 
             // targetPrice_label
             // 
@@ -411,14 +414,14 @@
             this.item_dgv_fullpay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.item_dgv_fullpay.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.item_dgv_fullpay.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.item_dgv_fullpay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.item_dgv_fullpay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.item_dgv_fullpay.ColumnHeadersHeight = 40;
             this.item_dgv_fullpay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.item_dgv_fullpay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -430,35 +433,35 @@
             this.ApplicationID,
             this.nameIndex,
             this.targetprice});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.item_dgv_fullpay.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.item_dgv_fullpay.DefaultCellStyle = dataGridViewCellStyle2;
             this.item_dgv_fullpay.EnableHeadersVisualStyles = false;
             this.item_dgv_fullpay.GridColor = System.Drawing.Color.White;
             this.item_dgv_fullpay.Location = new System.Drawing.Point(32, 37);
             this.item_dgv_fullpay.MultiSelect = false;
             this.item_dgv_fullpay.Name = "item_dgv_fullpay";
             this.item_dgv_fullpay.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Magenta;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.item_dgv_fullpay.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Magenta;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.item_dgv_fullpay.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.item_dgv_fullpay.RowHeadersVisible = false;
             this.item_dgv_fullpay.RowHeadersWidth = 50;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.DarkRed;
-            this.item_dgv_fullpay.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DarkRed;
+            this.item_dgv_fullpay.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -470,58 +473,6 @@
             this.item_dgv_fullpay.Size = new System.Drawing.Size(536, 286);
             this.item_dgv_fullpay.TabIndex = 3;
             this.item_dgv_fullpay.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.item_dgv_fullpay_CellContentDoubleClick);
-            // 
-            // ItemTypeDataGridViewColumn
-            // 
-            this.ItemTypeDataGridViewColumn.HeaderText = "Item Type";
-            this.ItemTypeDataGridViewColumn.Name = "ItemTypeDataGridViewColumn";
-            this.ItemTypeDataGridViewColumn.ReadOnly = true;
-            // 
-            // priceDataGridViewColumn
-            // 
-            this.priceDataGridViewColumn.HeaderText = "Price";
-            this.priceDataGridViewColumn.Name = "priceDataGridViewColumn";
-            this.priceDataGridViewColumn.ReadOnly = true;
-            // 
-            // QuantityDataGridViewColumn
-            // 
-            this.QuantityDataGridViewColumn.HeaderText = "Quantity";
-            this.QuantityDataGridViewColumn.Name = "QuantityDataGridViewColumn";
-            this.QuantityDataGridViewColumn.ReadOnly = true;
-            // 
-            // TotalDataGridViewColumn
-            // 
-            this.TotalDataGridViewColumn.HeaderText = "Total";
-            this.TotalDataGridViewColumn.Name = "TotalDataGridViewColumn";
-            this.TotalDataGridViewColumn.ReadOnly = true;
-            // 
-            // ItemIDcomboboxcolumn
-            // 
-            this.ItemIDcomboboxcolumn.HeaderText = "ItemTypeID";
-            this.ItemIDcomboboxcolumn.Name = "ItemIDcomboboxcolumn";
-            this.ItemIDcomboboxcolumn.ReadOnly = true;
-            this.ItemIDcomboboxcolumn.Visible = false;
-            // 
-            // ApplicationID
-            // 
-            this.ApplicationID.HeaderText = "applicationid";
-            this.ApplicationID.Name = "ApplicationID";
-            this.ApplicationID.ReadOnly = true;
-            this.ApplicationID.Visible = false;
-            // 
-            // nameIndex
-            // 
-            this.nameIndex.HeaderText = "nameIndex";
-            this.nameIndex.Name = "nameIndex";
-            this.nameIndex.ReadOnly = true;
-            this.nameIndex.Visible = false;
-            // 
-            // targetprice
-            // 
-            this.targetprice.HeaderText = "targetPrice";
-            this.targetprice.Name = "targetprice";
-            this.targetprice.ReadOnly = true;
-            this.targetprice.Visible = false;
             // 
             // sourceName_textbox_fullpay
             // 
@@ -676,6 +627,78 @@
             this.itemType_combobox_fullpay.SelectedIndexChanged += new System.EventHandler(this.itemType_combobox_fullpay_SelectedIndexChanged);
             this.itemType_combobox_fullpay.SelectedValueChanged += new System.EventHandler(this.itemType_combobox_fullpay_SelectedValueChanged);
             // 
+            // Cancel_button
+            // 
+            this.Cancel_button.BackColor = System.Drawing.Color.Gray;
+            this.Cancel_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Cancel_button.Enabled = false;
+            this.Cancel_button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Cancel_button.FlatAppearance.BorderSize = 0;
+            this.Cancel_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
+            this.Cancel_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.Cancel_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel_button.ForeColor = System.Drawing.Color.White;
+            this.Cancel_button.Location = new System.Drawing.Point(226, 51);
+            this.Cancel_button.Name = "Cancel_button";
+            this.Cancel_button.Size = new System.Drawing.Size(83, 31);
+            this.Cancel_button.TabIndex = 64;
+            this.Cancel_button.Tag = "a";
+            this.Cancel_button.Text = "Cancel";
+            this.Cancel_button.UseVisualStyleBackColor = false;
+            this.Cancel_button.Click += new System.EventHandler(this.Cancel_button_Click);
+            // 
+            // ItemTypeDataGridViewColumn
+            // 
+            this.ItemTypeDataGridViewColumn.HeaderText = "Item Type";
+            this.ItemTypeDataGridViewColumn.Name = "ItemTypeDataGridViewColumn";
+            this.ItemTypeDataGridViewColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewColumn
+            // 
+            this.priceDataGridViewColumn.HeaderText = "Price";
+            this.priceDataGridViewColumn.Name = "priceDataGridViewColumn";
+            this.priceDataGridViewColumn.ReadOnly = true;
+            // 
+            // QuantityDataGridViewColumn
+            // 
+            this.QuantityDataGridViewColumn.HeaderText = "Quantity";
+            this.QuantityDataGridViewColumn.Name = "QuantityDataGridViewColumn";
+            this.QuantityDataGridViewColumn.ReadOnly = true;
+            // 
+            // TotalDataGridViewColumn
+            // 
+            this.TotalDataGridViewColumn.HeaderText = "Total";
+            this.TotalDataGridViewColumn.Name = "TotalDataGridViewColumn";
+            this.TotalDataGridViewColumn.ReadOnly = true;
+            // 
+            // ItemIDcomboboxcolumn
+            // 
+            this.ItemIDcomboboxcolumn.HeaderText = "ItemTypeID";
+            this.ItemIDcomboboxcolumn.Name = "ItemIDcomboboxcolumn";
+            this.ItemIDcomboboxcolumn.ReadOnly = true;
+            this.ItemIDcomboboxcolumn.Visible = false;
+            // 
+            // ApplicationID
+            // 
+            this.ApplicationID.HeaderText = "applicationid";
+            this.ApplicationID.Name = "ApplicationID";
+            this.ApplicationID.ReadOnly = true;
+            this.ApplicationID.Visible = false;
+            // 
+            // nameIndex
+            // 
+            this.nameIndex.HeaderText = "nameIndex";
+            this.nameIndex.Name = "nameIndex";
+            this.nameIndex.ReadOnly = true;
+            this.nameIndex.Visible = false;
+            // 
+            // targetprice
+            // 
+            this.targetprice.HeaderText = "targetPrice";
+            this.targetprice.Name = "targetprice";
+            this.targetprice.ReadOnly = true;
+            this.targetprice.Visible = false;
+            // 
             // CDB_FullPayment_Module
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -739,6 +762,13 @@
         private System.Windows.Forms.NumericUpDown targetPriceNUD;
         private System.Windows.Forms.Label pricePaid_label;
         private System.Windows.Forms.Label targetPrice_label;
+        private System.Windows.Forms.Button editPrice_button;
+        private System.Windows.Forms.Panel subtotal_panel;
+        private System.Windows.Forms.Panel Person_panel;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button Cancel_button;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemTypeDataGridViewColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn QuantityDataGridViewColumn;
@@ -747,11 +777,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ApplicationID;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameIndex;
         private System.Windows.Forms.DataGridViewTextBoxColumn targetprice;
-        private System.Windows.Forms.Button editPrice_button;
-        private System.Windows.Forms.Panel subtotal_panel;
-        private System.Windows.Forms.Panel Person_panel;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
