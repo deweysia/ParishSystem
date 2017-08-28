@@ -645,6 +645,7 @@ namespace ParishSystem
             {
                 report_datagridview_cashdisbursment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
+            excel.Enabled = true;
         }
         bool open = false;
         int velocity = 0;
@@ -687,6 +688,16 @@ namespace ParishSystem
             timer1.Start();
             open = !open;
          
+        }
+
+        private void excel_Click(object sender, EventArgs e)
+        {
+            dh.DisplayInExcel(report_datagridview_cashdisbursment);
+        }
+
+        private void reportFilter_panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

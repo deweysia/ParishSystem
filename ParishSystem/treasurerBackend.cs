@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-
+using Excel = Microsoft.Office.Interop.Excel;
 
 
 namespace ParishSystem
@@ -1055,5 +1055,32 @@ namespace ParishSystem
         }
         //select only those who have not fully paid
 
+
+        public void DisplayInExcel(DataGridView dgv)
+        {
+            var excelApp = new Excel.Application();
+            excelApp.Visible = true;
+            excelApp.Workbooks.Add();
+            Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet;
+
+            int a = 65;
+            foreach (DataGridViewColumn dc in dgv.Columns)
+            {
+                workSheet.Cells[1, ((char)a).ToString()] = dc.HeaderText.ToString();
+                workSheet.Columns[a-64].AutoFit();
+                a++;
+            }
+            int b = 2;
+            foreach (DataGridViewRow dgvr in dgv.Rows)
+            {
+                for (int x = 65; x < a; x++)
+                    {
+                    workSheet.Cells[b, ((char)x).ToString()] =dgvr.Cells[x-65].Value.ToString();
+                    }
+                    b++;
+                
+            }
+
+        }
     }
 }
