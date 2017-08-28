@@ -173,6 +173,8 @@ namespace ParishSystem
 
 
         public static State
+            MergingDone = new State("Merging Finished", NotificationType.warning),
+            ProfileAdded = new State("Profile added", NotificationType.success),
             InvalidPayment = new State("The Price cannot be 0", NotificationType.error),
             InvalidPrice = new State("The Price cannot be lesser than the payment", NotificationType.error),
             HasTransaction = new State("This person already has a transaction", NotificationType.error),

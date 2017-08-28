@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `sad2` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `sad2`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: sad2
@@ -18,8 +20,7 @@
 --
 -- Table structure for table `applicant`
 --
-CREATE DATABASE sad2;
-USE sad2;
+
 DROP TABLE IF EXISTS `applicant`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -32,7 +33,7 @@ CREATE TABLE `applicant` (
   KEY `applicant_application_idx` (`applicationID`),
   CONSTRAINT `applicant_application` FOREIGN KEY (`applicationID`) REFERENCES `application` (`applicationID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `applicant_genprof` FOREIGN KEY (`profileID`) REFERENCES `generalprofile` (`profileID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +42,7 @@ CREATE TABLE `applicant` (
 
 LOCK TABLES `applicant` WRITE;
 /*!40000 ALTER TABLE `applicant` DISABLE KEYS */;
-INSERT INTO `applicant` VALUES (1,1,1),(2,2,2),(3,3,3);
+INSERT INTO `applicant` VALUES (5,4,4),(6,5,5);
 /*!40000 ALTER TABLE `applicant` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,7 +61,7 @@ CREATE TABLE `application` (
   PRIMARY KEY (`applicationID`),
   KEY `sacType_idx` (`sacramentType`),
   CONSTRAINT `sacType` FOREIGN KEY (`sacramentType`) REFERENCES `itemtype` (`itemTypeID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +70,7 @@ CREATE TABLE `application` (
 
 LOCK TABLES `application` WRITE;
 /*!40000 ALTER TABLE `application` DISABLE KEYS */;
-INSERT INTO `application` VALUES (1,1,'1',NULL),(2,1,'1',NULL),(3,2,'1',NULL);
+INSERT INTO `application` VALUES (4,1,'1','000000'),(5,2,'1','000');
 /*!40000 ALTER TABLE `application` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -95,7 +96,7 @@ CREATE TABLE `baptism` (
   KEY `baptism_minister_idx` (`ministerID`),
   CONSTRAINT `baptism_app` FOREIGN KEY (`applicationID`) REFERENCES `application` (`applicationID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `baptism_minister` FOREIGN KEY (`ministerID`) REFERENCES `minister` (`ministerID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -121,10 +122,10 @@ CREATE TABLE `blooddonation` (
   `quantity` int(11) DEFAULT NULL,
   PRIMARY KEY (`bloodDonationID`),
   KEY `fk_blooddonation_blooddonationevent1_idx` (`bloodDonationEventID`),
-  KEY `bloodDonation_generalProfile_idx` (`profileID`),
-  CONSTRAINT `bloodDonation_generalProfile` FOREIGN KEY (`profileID`) REFERENCES `generalprofile` (`profileID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_blooddonation_blooddonationevent1` FOREIGN KEY (`bloodDonationEventID`) REFERENCES `blooddonationevent` (`bloodDonationEventID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  KEY `fk_donor_idx` (`profileID`),
+  CONSTRAINT `fk_blooddonation_blooddonationevent1` FOREIGN KEY (`bloodDonationEventID`) REFERENCES `blooddonationevent` (`bloodDonationEventID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_donor` FOREIGN KEY (`profileID`) REFERENCES `blooddonor` (`blooddonorID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,7 +152,7 @@ CREATE TABLE `blooddonationevent` (
   `eventVenue` varchar(45) DEFAULT NULL,
   `eventDetails` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`bloodDonationEventID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -161,6 +162,35 @@ CREATE TABLE `blooddonationevent` (
 LOCK TABLES `blooddonationevent` WRITE;
 /*!40000 ALTER TABLE `blooddonationevent` DISABLE KEYS */;
 /*!40000 ALTER TABLE `blooddonationevent` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `blooddonor`
+--
+
+DROP TABLE IF EXISTS `blooddonor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `blooddonor` (
+  `blooddonorID` int(11) NOT NULL,
+  `firstname` varchar(45) DEFAULT NULL,
+  `midname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `suffix` varchar(45) DEFAULT NULL,
+  `bloodtype` int(11) DEFAULT NULL,
+  `address` varchar(45) DEFAULT NULL,
+  `contactnumber` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`blooddonorID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `blooddonor`
+--
+
+LOCK TABLES `blooddonor` WRITE;
+/*!40000 ALTER TABLE `blooddonor` DISABLE KEYS */;
+/*!40000 ALTER TABLE `blooddonor` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -180,7 +210,7 @@ CREATE TABLE `cashreleaseitem` (
   KEY `b_idx` (`CashReleaseVoucherID`),
   CONSTRAINT `a` FOREIGN KEY (`cashReleaseTypeID`) REFERENCES `itemtype` (`itemTypeID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `b` FOREIGN KEY (`CashReleaseVoucherID`) REFERENCES `cashreleasevoucher` (`CashReleaseVoucherID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -189,7 +219,7 @@ CREATE TABLE `cashreleaseitem` (
 
 LOCK TABLES `cashreleaseitem` WRITE;
 /*!40000 ALTER TABLE `cashreleaseitem` DISABLE KEYS */;
-INSERT INTO `cashreleaseitem` VALUES (1,1,1,100.00),(2,5,1,30.00),(3,6,1,1.00),(4,7,1,1.00),(5,8,1,1.00),(6,9,1,1.00),(7,10,2,3.00),(8,10,1,4.00),(9,11,1,3.00),(10,11,2,3.00),(11,12,1,2.00),(12,13,1,200.50);
+INSERT INTO `cashreleaseitem` VALUES (1,1,1,100.00),(2,5,1,30.00),(3,6,1,1.00),(4,7,1,1.00),(5,8,1,1.00),(6,9,1,1.00),(7,10,2,3.00),(8,10,1,4.00),(9,11,1,3.00),(10,11,2,3.00),(11,12,1,2.00),(12,13,1,200.50),(13,14,2,5.00),(14,14,2,5.00);
 /*!40000 ALTER TABLE `cashreleaseitem` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -207,7 +237,7 @@ CREATE TABLE `cashreleasetype` (
   `bookType` int(11) NOT NULL,
   `status` int(11) DEFAULT '1',
   PRIMARY KEY (`cashReleaseTypeID`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -216,7 +246,7 @@ CREATE TABLE `cashreleasetype` (
 
 LOCK TABLES `cashreleasetype` WRITE;
 /*!40000 ALTER TABLE `cashreleasetype` DISABLE KEYS */;
-INSERT INTO `cashreleasetype` VALUES (1,'Candid','',1,1),(2,'Feeding Program','Food program ',1,2);
+INSERT INTO `cashreleasetype` VALUES (1,'Candid','',1,1),(2,'Feeding Program','Food program ',1,1),(3,'ser','',2,1);
 /*!40000 ALTER TABLE `cashreleasetype` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -236,7 +266,7 @@ CREATE TABLE `cashreleasevoucher` (
   `bookType` int(11) NOT NULL,
   `name` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`CashReleaseVoucherID`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -245,7 +275,7 @@ CREATE TABLE `cashreleasevoucher` (
 
 LOCK TABLES `cashreleasevoucher` WRITE;
 /*!40000 ALTER TABLE `cashreleasevoucher` DISABLE KEYS */;
-INSERT INTO `cashreleasevoucher` VALUES (1,'2017-08-15 03:30:11','',1,1,1,NULL),(5,'2017-08-15 03:46:12','',2,2,2,NULL),(6,'2017-08-15 03:51:55','',2,2,1,NULL),(7,'2017-08-15 03:55:41','',3,3,1,NULL),(8,'2017-08-15 03:55:52','',4,4,1,NULL),(9,'2017-08-15 03:55:59','',5,5,1,NULL),(10,'2017-08-15 03:58:16','',6,6,1,NULL),(11,'2017-08-15 04:00:37','qqq',7,7,1,NULL),(12,'2017-08-15 04:05:49','qqq',8,8,1,'qqqq'),(13,'2017-08-15 04:06:36','',9,9,1,'');
+INSERT INTO `cashreleasevoucher` VALUES (1,'2017-08-15 03:30:11','',1,1,1,NULL),(5,'2017-08-15 03:46:12','',2,2,2,NULL),(6,'2017-08-15 03:51:55','',2,2,1,NULL),(7,'2017-08-15 03:55:41','',3,3,1,NULL),(8,'2017-08-15 03:55:52','',4,4,1,NULL),(9,'2017-08-15 03:55:59','',5,5,1,NULL),(10,'2017-08-15 03:58:16','',6,6,1,NULL),(11,'2017-08-15 04:00:37','qqq',7,7,1,NULL),(12,'2017-08-15 04:05:49','qqq',8,8,1,'qqqq'),(13,'2017-08-15 04:06:36','',9,9,1,''),(14,'2017-08-18 22:52:35','',10,10,1,'Justin');
 /*!40000 ALTER TABLE `cashreleasevoucher` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -270,7 +300,7 @@ CREATE TABLE `confirmation` (
   KEY `confirmation_minister_idx` (`ministerID`),
   CONSTRAINT `confirmation_app` FOREIGN KEY (`applicationID`) REFERENCES `application` (`applicationID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `confirmation_minister` FOREIGN KEY (`ministerID`) REFERENCES `minister` (`ministerID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -297,14 +327,11 @@ CREATE TABLE `generalprofile` (
   `suffix` varchar(5) DEFAULT NULL,
   `birthdate` date DEFAULT NULL,
   `gender` char(1) DEFAULT NULL,
-  `address` varchar(45) DEFAULT NULL,
   `birthplace` varchar(45) DEFAULT NULL,
-  `contactNumber` varchar(45) DEFAULT NULL,
-  `bloodType` varchar(3) DEFAULT NULL,
   `residence` int(11) DEFAULT NULL,
   PRIMARY KEY (`profileID`),
   UNIQUE KEY `personName` (`firstName`,`midName`,`lastName`,`suffix`,`birthdate`,`gender`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -313,7 +340,7 @@ CREATE TABLE `generalprofile` (
 
 LOCK TABLES `generalprofile` WRITE;
 /*!40000 ALTER TABLE `generalprofile` DISABLE KEYS */;
-#INSERT INTO `generalprofile` VALUES (1,'Albert ','Mister','Law','Jr',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,'Banisa','Nougat','Milver',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,'Catniss','Lougan','No',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `generalprofile` VALUES (4,'q','q','q','q','2017-07-16','1',NULL,NULL),(5,'a','a','a','a','2017-07-12','1',NULL,NULL);
 /*!40000 ALTER TABLE `generalprofile` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -336,7 +363,7 @@ CREATE TABLE `item` (
   KEY `item_primaryIncome_idx` (`primaryIncomeID`),
   CONSTRAINT `item_itemType` FOREIGN KEY (`itemTypeID`) REFERENCES `itemtype` (`itemTypeID`) ON DELETE NO ACTION ON UPDATE CASCADE,
   CONSTRAINT `item_primaryIncome` FOREIGN KEY (`primaryIncomeID`) REFERENCES `primaryincome` (`primaryIncomeID`) ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -345,7 +372,7 @@ CREATE TABLE `item` (
 
 LOCK TABLES `item` WRITE;
 /*!40000 ALTER TABLE `item` DISABLE KEYS */;
-INSERT INTO `item` VALUES (50,17,54,100.00,1),(51,19,54,100.00,1),(52,19,55,100.00,1),(53,18,55,100.00,1),(54,17,55,100.00,1),(55,19,56,100.00,1),(56,17,59,100.00,1),(57,17,59,50.00,1);
+INSERT INTO `item` VALUES (79,18,98,100.00,1),(80,19,100,200.00,1);
 /*!40000 ALTER TABLE `item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -365,7 +392,7 @@ CREATE TABLE `itemtype` (
   `details` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`itemTypeID`),
   UNIQUE KEY `itemTypeID_UNIQUE` (`itemTypeID`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -374,7 +401,7 @@ CREATE TABLE `itemtype` (
 
 LOCK TABLES `itemtype` WRITE;
 /*!40000 ALTER TABLE `itemtype` DISABLE KEYS */;
-INSERT INTO `itemtype` VALUES (1,'Baptism',1,100.00,1,NULL),(2,'Confirmation',1,200.00,1,NULL),(3,'Marriage',1,300.00,1,NULL),(17,'Baptism Certificate',1,100.00,1,''),(18,'Confirmation Certificate',1,100.00,1,''),(19,'Marriage Certificate',1,100.00,1,'');
+INSERT INTO `itemtype` VALUES (1,'Baptism',1,100.00,1,NULL),(2,'Confirmation',1,200.00,1,NULL),(3,'Marriage',1,300.00,1,NULL),(17,'Baptism Certificate',1,50.00,1,''),(18,'Confirmation Certificate',1,100.00,1,''),(19,'Marriage Certificate',1,200.00,1,''),(20,'bap',1,0.00,2,''),(21,'Fuel',2,50.00,1,'');
 /*!40000 ALTER TABLE `itemtype` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -403,7 +430,7 @@ CREATE TABLE `marriage` (
   KEY `marraige_application_idx` (`applicationID`),
   CONSTRAINT `marraige_application` FOREIGN KEY (`applicationID`) REFERENCES `application` (`applicationID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `marriage_minister` FOREIGN KEY (`ministerID`) REFERENCES `minister` (`ministerID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -434,7 +461,7 @@ CREATE TABLE `minister` (
   `licenseNumber` varchar(45) DEFAULT NULL,
   `expirationDate` date DEFAULT NULL,
   PRIMARY KEY (`ministerID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -443,6 +470,7 @@ CREATE TABLE `minister` (
 
 LOCK TABLES `minister` WRITE;
 /*!40000 ALTER TABLE `minister` DISABLE KEYS */;
+INSERT INTO `minister` VALUES (1,'1','1','1','1',NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `minister` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -525,7 +553,7 @@ CREATE TABLE `payment` (
   KEY `payment_primaryIncome_idx` (`primaryIncomeID`),
   CONSTRAINT `payment_primaryIncome` FOREIGN KEY (`primaryIncomeID`) REFERENCES `primaryincome` (`primaryIncomeID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `payment_sacramentIncome` FOREIGN KEY (`sacramentIncomeID`) REFERENCES `sacramentincome` (`sacramentIncomeID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -534,7 +562,7 @@ CREATE TABLE `payment` (
 
 LOCK TABLES `payment` WRITE;
 /*!40000 ALTER TABLE `payment` DISABLE KEYS */;
-INSERT INTO `payment` VALUES (9,1,57,50.00),(10,1,58,50.00);
+INSERT INTO `payment` VALUES (34,7,100,290.00),(35,7,101,2.00),(36,7,102,3.00);
 /*!40000 ALTER TABLE `payment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -554,7 +582,7 @@ CREATE TABLE `primaryincome` (
   `primaryIncomeDateTime` datetime DEFAULT NULL,
   PRIMARY KEY (`primaryIncomeID`),
   UNIQUE KEY `itemID_UNIQUE` (`primaryIncomeID`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=103 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -563,7 +591,7 @@ CREATE TABLE `primaryincome` (
 
 LOCK TABLES `primaryincome` WRITE;
 /*!40000 ALTER TABLE `primaryincome` DISABLE KEYS */;
-INSERT INTO `primaryincome` VALUES (54,'','1',1,'','2017-08-12 12:54:35'),(55,'','1',2,'','2017-08-13 12:54:47'),(56,'','1',3,'','2017-08-13 12:55:05'),(57,'','1',4,'','2017-08-13 01:04:44'),(58,'','1',5,'','2017-08-14 01:05:39'),(59,'','1',6,'','2017-08-14 01:41:23');
+INSERT INTO `primaryincome` VALUES (96,'','1',1,'','2017-08-26 06:23:52'),(97,'','1',2,'','2017-08-26 06:44:16'),(98,'','1',3,'','2017-08-26 06:44:52'),(99,'','1',4,'','2017-08-27 09:01:27'),(100,'','1',5,'','2017-08-27 02:33:19'),(101,'','1',6,'','2017-08-27 03:59:40'),(102,'','1',7,'','2017-08-27 04:10:26');
 /*!40000 ALTER TABLE `primaryincome` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -582,7 +610,7 @@ CREATE TABLE `sacramentincome` (
   PRIMARY KEY (`sacramentIncomeID`),
   KEY `sacramentIncome_application_idx` (`applicationID`),
   CONSTRAINT `sacramentIncome_application` FOREIGN KEY (`applicationID`) REFERENCES `application` (`applicationID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -591,7 +619,7 @@ CREATE TABLE `sacramentincome` (
 
 LOCK TABLES `sacramentincome` WRITE;
 /*!40000 ALTER TABLE `sacramentincome` DISABLE KEYS */;
-INSERT INTO `sacramentincome` VALUES (1,1,200,'***'),(2,2,300,'***'),(3,3,400,'***');
+INSERT INTO `sacramentincome` VALUES (6,4,100,''),(7,5,295,'');
 /*!40000 ALTER TABLE `sacramentincome` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -608,7 +636,7 @@ CREATE TABLE `sponsor` (
   `firstname` varchar(45) DEFAULT NULL,
   `midname` varchar(45) DEFAULT NULL,
   `lastname` varchar(45) DEFAULT NULL,
-  `suffix` varchar(45) DEFAULT NULL,
+  `suffix` int(11) DEFAULT NULL,
   `gender` varchar(45) DEFAULT NULL,
   `residence` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`sponsorID`),
@@ -635,4 +663,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-15  4:10:38
+-- Dump completed on 2017-08-28 11:24:42

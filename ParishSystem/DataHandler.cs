@@ -2553,7 +2553,7 @@ namespace ParishSystem
             // add quantity here.. change db and add quantity in query
 
 
-            string q = "select * from blooddonation inner join generalprofile on blooddonation.profileID = generalprofile.profileID inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID where generalprofile.profileID = " + profileID;
+            string q = "select * from blooddonation inner join blooddonor on blooddonation.profileID = blooddonor.blooddonorID inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID where blooddonor.blooddonorID = " + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -2676,19 +2676,15 @@ namespace ParishSystem
             return runQuery(q);
         }
 
-        public int getNextProfileID()
+        public int getNextBloodlettingID()
         {
-            string q = "SELECT max(profileID)+1 as max FROM sad2.generalprofile;";
+            string q = "SELECT case when count(blooddonorID) = 0 then 1 else max(blooddonorID)+1 end  as max FROM sad2.blooddonor;";
             return int.Parse(runQuery(q).Rows[0]["max"].ToString());
         }
-        public void editBloodDonor(int profileID, string fn, string mn, string ln, string sf, string add, string contact, int blood)
-        {
-            string q = "UPDATE `sad2`.`generalprofile` SET `firstName`='" + fn + "', `midName`='" + mn + "', `lastName`='" + ln + "', `suffix`='" + sf + "', `address`='" + add + "', `contactNumber`='" + contact + "',`bloodtype`='" + blood + "' WHERE `profileID`='" + profileID + "';";
-            runNonQuery(q);
-        }
+      
         public void addBloodDonor(string fn, string mn, string ln, string sf, string add, string contact, int blood)
         {
-            string q = "INSERT INTO `sad2`.`generalprofile` (`firstName`, `midName`, `lastName`, `suffix`, `address`, `contactNumber`, `bloodType`) VALUES ('" + fn + "', '" + mn + "', '" + ln + "', '" + sf + "', '" + add + "', '" + contact + "', '" + blood + "');";
+            string q = "INSERT INTO `sad2`.`blooddonor` (`firstName`, `midName`, `lastName`, `suffix`, `address`, `contactNumber`, `bloodType`) VALUES ('" + fn + "', '" + mn + "', '" + ln + "', '" + sf + "', '" + add + "', '" + contact + "', '" + blood + "');";
             runNonQuery(q);
         }
         public DataTable getbloodlettingEvent(int EventID)
@@ -2864,6 +2860,42 @@ namespace ParishSystem
             string q = $@"SELECT generalprofile.profileid,address,contactnumber,firstname,midname,lastname,suffix,application.applicationID,concat(lastname, "" "", coalesce(suffix, "" ""), "", "", firstName, "" "", midName, ""."") as name,  sacramentType
                                  FROM GeneralProfile JOIN Applicant ON  GeneralProfile.profileID = Applicant.profileID  JOIN Application ON Application.applicationID = Applicant.applicationID WHERE Application.status = {(int)ApplicationStatus.Pending} and sacramenttype= {sacramentType}";
             return runQuery(q);
+        }
+        public DataTable getBloodDonorProfile(int ID)
+        {
+            string q = $@"SELECT * FROM sad2.blooddonor WHERE blooddonorID={ID}";
+
+            return runQuery(q);
+        }
+        public int countSameDonor(string fn, string mn, string ln, string sf, string address, string contactnum,int bloodtype)
+        {
+            string q = $@"SELECT count(blooddonorID) from blooddonor where firstname='{fn}' and midname='{mn}' and lastname='{ln}' and suffix='{sf}' and address='{address}' and contactnumber={contactnum} and bloodtype={bloodtype}";
+
+            return int.Parse(runQuery(q).Rows[0][0].ToString());
+
+        }
+
+        public int getBloodDonorWhere(string fn, string mn, string ln, string sf, string address, string contactnum, int bloodtype)
+        {
+            string q = $@"SELECT blooddonorID from blooddonor where firstname='{fn}' and midname='{mn}' and lastname='{ln}' and suffix='{sf}'and address='{address}' and contactnumber={contactnum} and bloodtype={bloodtype}";
+
+            return int.Parse(runQuery(q).Rows[0][0].ToString());
+
+        }
+        public void mergeDonations(int transferFrom, int transferTo)
+        {
+            DataTable dt = getBloodDonations(transferFrom);
+            foreach (DataRow dr in dt.Rows)
+            {
+                string q = $@"UPDATE `sad2`.`blooddonation` SET `profileID`='{transferTo}' WHERE `bloodDonationID`='{dr[0].ToString()}'";
+                runNonQuery(q);
+            }
+            runNonQuery($@"DELETE FROM `sad2`.`blooddonor` WHERE `blooddonorID`='{transferFrom}'");
+        }
+        public void editBloodDonor(int blooddonorID,string fn, string mn, string ln, string sf, string address, string contactnum, int bloodtype)
+        {
+            string q = $@"UPDATE `sad2`.`blooddonor` SET `firstname`='{fn}', `midname`='{mn}', `lastname`='{ln}', `suffix`='{sf}', `bloodtype`='{bloodtype}', `address`='{address}', `contactnumber`='{contactnum}' WHERE `blooddonorID`='{blooddonorID}'";
+            runNonQuery(q);
         }
     } 
 

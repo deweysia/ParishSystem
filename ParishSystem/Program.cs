@@ -19,7 +19,7 @@ namespace ParishSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SAD2());
+            Application.Run(new Bloodletting_Profile_Popup(new DataHandler()));
         }
     }
 

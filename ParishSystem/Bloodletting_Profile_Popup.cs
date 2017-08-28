@@ -20,203 +20,138 @@ namespace ParishSystem
         bool hasProfile;
         public Bloodletting_Profile_Popup(int profileID, DataHandler dh)
         {
-            InitializeComponent();
-            ProfileID = profileID;
-            this.dh = dh;
-            hasProfile = true;
+           
         }
         public Bloodletting_Profile_Popup(DataHandler dh)
         {
             InitializeComponent();
             this.dh = dh;
-            ProfileID = dh.getNextProfileID();
+            ProfileID = dh.getNextBloodlettingID();
             hasProfile = false;
+            edit_button.Tag = "s";
+            edit_button.Image= Properties.Resources.icons8_Save_Filled_32__1_;
+            
         }
-        private void refreshBloodlettingInfo()
-        {
-            DataTable dt = dh.getGeneralProfile(ProfileID);
-            firstname_label_bloodletting.Text = dt.Rows[0]["firstname"].ToString();
-            mi_label_bloodletting.Text = dt.Rows[0]["midname"].ToString();
-            lastname_label_bloodletting.Text = dt.Rows[0]["lastname"].ToString();
-            suffix_label_bloodletting.Text = dt.Rows[0]["suffix"].ToString();
-            try
-            {
-                bloodtype_label.Text = bloodType[int.Parse(dt.Rows[0]["bloodtype"].ToString()) - 1];
-            }
-            catch { }
-            address_textbox.Text = dt.Rows[0]["address"].ToString();
-            contactNumber_textbox.Text = dt.Rows[0]["contactNumber"].ToString();
-        }
-        private void refreshBloodDonation()
-        {
-            blooddonation_dataGridView_bloodletting.DataSource = dh.getBloodDonations(ProfileID);
-            totalDonation_label.Text = dh.getTotalBloodDonationOf(ProfileID).ToString();
-            foreach (DataGridViewColumn c in blooddonation_dataGridView_bloodletting.Columns)
-            {
-                c.Visible = false;
-            }
-            blooddonation_dataGridView_bloodletting.Columns["eventName"].HeaderText = "Event Name";
-            blooddonation_dataGridView_bloodletting.Columns["eventName"].Visible = true;
-            blooddonation_dataGridView_bloodletting.Columns["quantity"].HeaderText = "Quantity";
-            blooddonation_dataGridView_bloodletting.Columns["quantity"].Visible = true;
-
-        }
+        
+    
 
         private void Bloodletting_Details_Popup_Load(object sender, EventArgs e)
         {
             quantity_nud.Maximum = decimal.MaxValue;
             if (hasProfile == true)
             {
-                refreshBloodlettingInfo();
-                refreshBloodDonation();
+                bloodtype_combobox.Visible = false;
+                contactNumber_textbox.ReadOnly = true;
+                address_textbox.ReadOnly = true;
+
             }
-            else
-            {
-                edit_button.PerformClick();
-            }
-            DataTable dt = dh.getBloodlettingEvents();
-            foreach (DataRow dr in dt.Rows)
-            {
-                event_combobox_bloodletting.Items.Add(new ComboboxContent(int.Parse(dr["bloodDonationEventID"].ToString()), dr["eventName"].ToString()));
-            }
+
+            
         }
+        string firstname;
+        string midname;
+        string lastname;
+        string suffix;
+        string contact;
+        string addres;
 
         private void edit_button_Click(object sender, EventArgs e)
         {
-            if (edit_button.Tag.ToString() == "e")
+            firstname = firstname_label_bloodletting.Text;
+            midname = mi_label_bloodletting.Text;
+            lastname = lastname_label_bloodletting.Text;
+            suffix = suffix_label_bloodletting.Text;
+            contact = contactNumber_textbox.Text;
+            addres = address_textbox.Text;
+            if (edit_button.Tag.ToString() == "s")
             {
-                bloodtype_combobox.Visible = true;
-                cancel_button.Visible = true;
-                edit_button.Tag = "s";
-                edit_button.Image = Properties.Resources.icons8_Save_Filled_32__1_;
-                firstname_label_bloodletting.Visible = false;
-                mi_label_bloodletting.Visible = false;
-                lastname_label_bloodletting.Visible = false;
-                suffix_label_bloodletting.Visible = false;
-
-                firstname_textbox_bloodletting.Visible = true;
-                mi_textbox_bloodletting.Visible = true;
-                lastname_textbox_bloodletting.Visible = true;
-                suffix_textbox_bloodletting.Visible = true;
-                bloodtype_combobox.SelectedItem = bloodtype_label.Text;
-                address_textbox.ReadOnly = false;
-                contactNumber_textbox.ReadOnly = false;
-
-                if (hasProfile == true)
+                if (fn.Text != "" && mn.Text != "" && ln.Text != "" && address_textbox.Text != "" && contactNumber_textbox.MaskFull && bloodtype_combobox.Text != "")
                 {
-                    firstname_textbox_bloodletting.Text = firstname_label_bloodletting.Text;
-                    mi_textbox_bloodletting.Text = mi_label_bloodletting.Text;
-                    lastname_textbox_bloodletting.Text = lastname_label_bloodletting.Text;
-                    suffix_textbox_bloodletting.Text = suffix_label_bloodletting.Text;
-                }
-                else
-                {
-                    firstname_textbox_bloodletting.Text = "Firstname";
-                    mi_textbox_bloodletting.Text = "MI";
-                    lastname_textbox_bloodletting.Text = "Lastname";
-                    suffix_textbox_bloodletting.Text = "Suffix";
-                }
-            }
-            else if (edit_button.Tag.ToString() == "s")
-            {
-                if ((firstname_textbox_bloodletting.Text != "" &&
-                    mi_textbox_bloodletting.Text != "" &&
-                    lastname_textbox_bloodletting.Text !=""&&
-                    bloodtype_combobox.Text!="")&&(
-                    firstname_textbox_bloodletting.Text != "Firstname" &&
-                    mi_textbox_bloodletting.Text != "MI" &&
-                    lastname_textbox_bloodletting.Text != "Lastname" 
-                    )) { 
-                    string suff;
-                    if(suffix_textbox_bloodletting.Text == "Suffix")
+                    if (hasProfile)//edit
                     {
-                        suff = null;
+                        if (dh.countSameDonor(fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex) != 0)//someone exists
+                        {
+                            int from = dh.getBloodDonorWhere(fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex);
+                            if (from != ProfileID)
+                            {
+                                DialogResult result = MessageBox.Show("A profile is already existing do you wish to merge the donations?", "", MessageBoxButtons.YesNoCancel);
+                                if (result == DialogResult.Yes)
+                                {
+                                    dh.mergeDonations(from, ProfileID);
+                                    Notification.Show(State.MergingDone); 
+                                }
+                            }
+                        }
+                        dh.editBloodDonor(ProfileID, fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex);
+                        ln.Visible = false;//has visibility change 
+                        edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
+                        edit_button.Tag = "e";
                     }
-                    else
+                    else//add
                     {
-                        suff = suffix_textbox_bloodletting.Text;
+                        if (dh.countSameDonor(fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex) == 0)
+                        {
+                            dh.addBloodDonor(fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex);
+                            Notification.Show(State.ProfileAdded);
+                            ln.Visible = false;//has visibility change 
+                            edit_button.Tag = "e";
+                            edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
+                            hasProfile = true;
+                            
+                        }
+                        else
+                        {
+                            Notification.Show(State.ProfileExists);
+                            fn.Clear();
+                            mn.Clear();
+                            ln.Clear();
+                            sf.Clear();
+                            address_textbox.Clear();
+                            contactNumber_textbox.Clear();
+                        }
                     }
-                    string add;
-                    if (address_textbox.Text.Trim() == "")
-                    {
-                        add = null;
-                    } else
-                    {
-                        add = address_textbox.Text;
-                    }
-                    string count;
-                    if (!contactNumber_textbox.MaskFull && !string.IsNullOrEmpty(contactNumber_textbox.Text.Trim()))
-                    {
-                        Notification.Show(State.InvalidContactNumber);
-                         count = "";
-                    }
-                    else
-                    {
-                        count = (contactNumber_textbox.Text.Trim());
-                    }
-                    bloodtype_combobox.Visible = false;
-                    edit_button.Tag = "e";
-                    edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
-                    cancel_button.Visible = false;
 
-                    
-
-                    if (hasProfile == true)
-                    { dh.editBloodDonor(ProfileID, firstname_textbox_bloodletting.Text, mi_textbox_bloodletting.Text, lastname_textbox_bloodletting.Text, suff,add,count, bloodtype_combobox.SelectedIndex + 1); }
-                    else
-                    {
-                      dh.addBloodDonor(firstname_textbox_bloodletting.Text, mi_textbox_bloodletting.Text, lastname_textbox_bloodletting.Text, suff, add, count, bloodtype_combobox.SelectedIndex + 1);
-                      hasProfile = true;
-                    }
-                    firstname_label_bloodletting.Visible = true;
-                    mi_label_bloodletting.Visible = true;
-                    lastname_label_bloodletting.Visible = true;
-                    suffix_label_bloodletting.Visible = true;
-
-                    firstname_textbox_bloodletting.Visible = false;
-                    mi_textbox_bloodletting.Visible = false;
-                    lastname_textbox_bloodletting.Visible = false;
-                    suffix_textbox_bloodletting.Visible = false;
-                    address_textbox.ReadOnly = true;
-                    contactNumber_textbox.ReadOnly = true;
-                    refreshBloodlettingInfo();
                 }
                 else
                 {
                     Notification.Show(State.MissingFields);
                 }
             }
-            
-
+            else
+            {
+                ln.Visible = true;
+                edit_button.Tag = "s";
+                edit_button.Image = Properties.Resources.icons8_Save_Filled_32__1_;
+            }
         }
+           
 
         private void cancel_button_Click(object sender, EventArgs e)
         {
-            bloodtype_combobox.Visible = false;
-            cancel_button.Visible = false;
-            firstname_label_bloodletting.Visible = true;
-            mi_label_bloodletting.Visible = true;
-            lastname_label_bloodletting.Visible = true;
-            suffix_label_bloodletting.Visible = true;
-            address_textbox.ReadOnly = true;
-            contactNumber_textbox.ReadOnly = true;
-
-            firstname_textbox_bloodletting.Visible = false;
-            mi_textbox_bloodletting.Visible = false;
-            lastname_textbox_bloodletting.Visible = false;
-            suffix_textbox_bloodletting.Visible = false;
-
-            firstname_textbox_bloodletting.Clear();
-            mi_textbox_bloodletting.Clear();
-            lastname_textbox_bloodletting.Clear();
-            suffix_textbox_bloodletting.Clear();
-
-            edit_button.Tag = "e";
-            edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
+            ln.Visible = true;
+            if (hasProfile)
+            {
+                firstname_label_bloodletting.Text= firstname;
+                mi_label_bloodletting.Text= midname;
+                lastname_label_bloodletting.Text= lastname;
+                suffix_label_bloodletting.Text= suffix;
+                contactNumber_textbox.Text= contact;
+                address_textbox.Text= addres;
+            }
+            else
+            {
+                fn.Clear();
+                mn.Clear();
+                ln.Clear();
+                sf.Clear();
+                address_textbox.Clear();
+                contactNumber_textbox.Clear();
+            }
         }
 
         private void addDonation_button_bloodletting_Click(object sender, EventArgs e)
         {
+            
             if (addDonation_button_bloodletting.Text == "Add")
             {
                 dh.addBloodDonation(ProfileID, (int)quantity_nud.Value, ((ComboboxContent)event_combobox_bloodletting.SelectedItem).ID);
@@ -231,79 +166,89 @@ namespace ParishSystem
             refreshBloodDonation();
             addDonation_button_bloodletting.Enabled = false;
             delete_button_bloodletting.Enabled = false;
+            
         }
         private void blooddonation_dataGridView_bloodletting_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            addDonation_button_bloodletting.Text = "Edit";
-            addDonation_button_bloodletting.Enabled = true;
-            delete_button_bloodletting.Enabled = true;
-            event_combobox_bloodletting.SelectedItem = new ComboboxContent(int.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["bloodDonationEventID"].Value.ToString()), (blooddonation_dataGridView_bloodletting.CurrentRow.Cells["eventname"].Value.ToString()));
-            event_combobox_bloodletting.Text = (blooddonation_dataGridView_bloodletting.CurrentRow.Cells["eventname"].Value.ToString());
-            quantity_nud.Value = decimal.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["quantity"].Value.ToString());
+           
         }
+        private void clearAddInfo()
+        {
+            quantity_nud.Value = 0;
+            event_combobox_bloodletting.SelectedIndex = 0;
+        }
+       private void refreshBloodDonation()
+        {
+            blooddonation_dataGridView_bloodletting.DataSource = dh.getBloodDonations(ProfileID);
 
-       
+        }
 
         private void clear_button_bloodletting_Click(object sender, EventArgs e)
         {
-            clearAddInfo();
-            delete_button_bloodletting.Enabled = false;
-            addDonation_button_bloodletting.Text = "Add";
-            event_combobox_bloodletting.Text = "";
-            
+           
         }
 
         private void delete_button_bloodletting_Click(object sender, EventArgs e)
         {
-            dh.deleteBloodDonation(int.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["bloodDonationID"].Value.ToString()));
-            refreshBloodDonation();
-            delete_button_bloodletting.Enabled = false;
-            addDonation_button_bloodletting.Enabled = false;
-            clearAddInfo();
+            
         }
-        private void clearAddInfo()
-        {
-            event_combobox_bloodletting.SelectedIndex = 0;
-            quantity_nud.Value = 0;
-            blooddonation_dataGridView_bloodletting.ClearSelection();
-        }
+       
 
         private void quantity_nud_ValueChanged(object sender, EventArgs e)
         {
-            checkContent();
+         
         }
         private void event_combobox_bloodletting_SelectedIndexChanged(object sender, EventArgs e)
         {
-            checkContent();
+        
         }
-        private void checkContent()
-        {
-            if(event_combobox_bloodletting.Text=="" || quantity_nud.Value == 0)
-            {
-                addDonation_button_bloodletting.Enabled = false;
-            }
-            else
-            {
-                addDonation_button_bloodletting.Enabled = true;
-            }
-        }
-
+       
         private void close_button_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-     
-
-        private void textbox_bloodletting_MouseClick(object sender, MouseEventArgs e)
+        private void ln_VisibleChanged(object sender, EventArgs e)
         {
-            if (hasProfile == false)
+            if (ln.Visible)
             {
-                TextBox A = sender as TextBox;
-                A.Text = "";
-            }   
-        }
+                fn.Visible = true;
+                mn.Visible = true;
+                sf.Visible = true;
+                firstname_label_bloodletting.Visible = false;
+                lastname_label_bloodletting.Visible = false;
+                suffix_label_bloodletting.Visible = false;
+                mi_label_bloodletting.Visible = false;
 
-    
+            }
+            else
+            {
+                fn.Visible = false;
+                mn.Visible = false;
+                sf.Visible = false;
+                firstname_label_bloodletting.Text = fn.Text;
+                lastname_label_bloodletting.Text = ln.Text;
+                suffix_label_bloodletting.Text = sf.Text;
+                mi_label_bloodletting.Text = mn.Text;
+                firstname_label_bloodletting.Visible = true;
+                lastname_label_bloodletting.Visible = true;
+                suffix_label_bloodletting.Visible = true;
+                mi_label_bloodletting.Visible = true;
+            }
+        }
+        bool firsttime = true;
+        private void cover_VisibleChanged(object sender, EventArgs e)
+        {
+            if (firsttime)
+            {
+                DataTable dt = dh.getBloodlettingEvents();
+                foreach (DataRow dr in dt.Rows)
+                {
+                    event_combobox_bloodletting.Items.Add(new ComboboxContent(int.Parse(dr[0].ToString()), dr[1].ToString()));
+                }
+            }
+            refreshBloodDonation();
+
+        }
     }
 }
