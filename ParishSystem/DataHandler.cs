@@ -194,7 +194,6 @@ namespace ParishSystem
         {
                 string[] components = s.Split(' ');
                 string[] date = components[0].Split('/');
-
                 int month = int.Parse(date[0]);
                 int day = int.Parse(date[1]);
                 int year = int.Parse(date[2]);
@@ -498,10 +497,8 @@ namespace ParishSystem
         }
         public DataTable getBloodDonor(int bloodDonorID)
         {
-            string q = "SELECT firstName, midName, lastName, suffix, gender, bloodType, birthDate, contactNumber "
-                + "FROM bloodDonor "
-                + "JOIN generalProfile ON generalProfile.profileID = bloodDonor.profileID"
-                + " WHERE bloodDonor.bloodDonorID = " + bloodDonorID;
+            string q = "SELECT * "
+                + "FROM bloodDonor where blooddonorid=" + bloodDonorID;
 
             DataTable dt = runQuery(q);
 

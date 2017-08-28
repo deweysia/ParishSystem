@@ -323,12 +323,6 @@
       <DependentUpon>ScheduleModule.cs</DependentUpon>
     </Compile>
     <Compile Include="SystemNotification.cs" />
-    <Compile Include="Treasurer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Treasurer.Designer.cs">
-      <DependentUpon>Treasurer.cs</DependentUpon>
-    </Compile>
     <Compile Include="treasurerBackend.cs" />
     <EmbeddedResource Include="AddApplication.resx">
       <DependentUpon>AddApplication.cs</DependentUpon>
@@ -442,9 +436,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ScheduleModule.resx">
       <DependentUpon>ScheduleModule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Treasurer.resx">
-      <DependentUpon>Treasurer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\ParishSystem.exe.config" />
     <None Include="bin\Debug\ParishSystem.vshost.exe.config" />

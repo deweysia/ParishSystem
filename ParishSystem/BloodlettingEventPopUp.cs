@@ -49,7 +49,7 @@ namespace ParishSystem
             {
                 if (event_name.Text.Trim()=="" ||(start_dateTimePicker.Value.Date>end_DateTimePicker.Value.Date))
                 {
-                    MessageBox.Show("shunga");
+                    Notification.Show(State.MissingFields);
                 }
                 else{
                     if (bloodlettingID.Equals(0)) {
@@ -128,7 +128,7 @@ namespace ParishSystem
             catch
             {
                 dh.conn.Close();
-                MessageBox.Show("Shunga");
+                Notification.Show(State.CannotDeleteBloodEvent);
             }
         }
 
