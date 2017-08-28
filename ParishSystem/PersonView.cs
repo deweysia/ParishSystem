@@ -105,7 +105,7 @@ namespace ParishSystem
             baptism_panel.Visible = true;
             confirmation_panel.Visible = false;
             marriage_panel.Visible = false;
-            baptism_label_menu.BackColor = Color.FromArgb(30, 30, 30);
+            baptism_label_menu.BackColor = Color.FromArgb(224, 224, 224);
             baptism_label_menu.ForeColor = Color.White;
             if (confirmation_label_menu.Enabled == true)
             {

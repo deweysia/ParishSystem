@@ -49,18 +49,18 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblBalance = new System.Windows.Forms.Label();
-            this.nudPayment = new ParishSystem.HiddenNumericUpDown();
-            this.txtRemarks = new ParishSystem.CueTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnPay = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.nudPayment = new ParishSystem.HiddenNumericUpDown();
+            this.txtRemarks = new ParishSystem.CueTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaymentHistory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPayment)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPayment)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -182,10 +182,10 @@
             this.dgvPaymentHistory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvPaymentHistory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPaymentHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -195,10 +195,10 @@
             this.amount,
             this.paymentDateTime});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPaymentHistory.DefaultCellStyle = dataGridViewCellStyle2;
@@ -298,28 +298,6 @@
             this.lblBalance.TabIndex = 8;
             this.lblBalance.Text = "P n";
             // 
-            // nudPayment
-            // 
-            this.nudPayment.DecimalPlaces = 2;
-            this.nudPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudPayment.Location = new System.Drawing.Point(92, 318);
-            this.nudPayment.Name = "nudPayment";
-            this.nudPayment.Size = new System.Drawing.Size(214, 22);
-            this.nudPayment.TabIndex = 12;
-            this.nudPayment.ThousandsSeparator = true;
-            this.nudPayment.ValueChanged += new System.EventHandler(this.nudPayment_ValueChanged);
-            this.nudPayment.Leave += new System.EventHandler(this.nudPayment_Leave);
-            // 
-            // txtRemarks
-            // 
-            this.txtRemarks.Cue = null;
-            this.txtRemarks.CueColor = System.Drawing.Color.Empty;
-            this.txtRemarks.Location = new System.Drawing.Point(92, 344);
-            this.txtRemarks.Multiline = true;
-            this.txtRemarks.Name = "txtRemarks";
-            this.txtRemarks.Size = new System.Drawing.Size(214, 33);
-            this.txtRemarks.TabIndex = 10;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -342,8 +320,9 @@
             // 
             // btnPay
             // 
-            this.btnPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.btnPay.BackColor = System.Drawing.Color.Gray;
             this.btnPay.FlatAppearance.BorderSize = 0;
+            this.btnPay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPay.ForeColor = System.Drawing.Color.White;
@@ -357,7 +336,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-5, -2);
             this.panel1.Name = "panel1";
@@ -374,6 +353,28 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // nudPayment
+            // 
+            this.nudPayment.DecimalPlaces = 2;
+            this.nudPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudPayment.Location = new System.Drawing.Point(92, 318);
+            this.nudPayment.Name = "nudPayment";
+            this.nudPayment.Size = new System.Drawing.Size(214, 22);
+            this.nudPayment.TabIndex = 12;
+            this.nudPayment.ThousandsSeparator = true;
+            this.nudPayment.ValueChanged += new System.EventHandler(this.nudPayment_ValueChanged);
+            this.nudPayment.Leave += new System.EventHandler(this.nudPayment_Leave);
+            // 
+            // txtRemarks
+            // 
+            this.txtRemarks.Cue = null;
+            this.txtRemarks.CueColor = System.Drawing.Color.Empty;
+            this.txtRemarks.Location = new System.Drawing.Point(92, 344);
+            this.txtRemarks.Multiline = true;
+            this.txtRemarks.Name = "txtRemarks";
+            this.txtRemarks.Size = new System.Drawing.Size(214, 33);
+            this.txtRemarks.TabIndex = 10;
             // 
             // ApplicationPayment
             // 
@@ -401,9 +402,9 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaymentHistory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPayment)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPayment)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

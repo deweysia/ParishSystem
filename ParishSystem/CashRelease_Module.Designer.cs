@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.CRB_panel = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.total_label_cashrelease = new System.Windows.Forms.Label();
@@ -60,22 +59,13 @@
             this.add_button_CRB = new System.Windows.Forms.Button();
             this.price_nud_button_CRB = new System.Windows.Forms.NumericUpDown();
             this.itemtype_combobox_CRB = new System.Windows.Forms.ComboBox();
-            this.CRB_panel.SuspendLayout();
+            this.CRB_panel = new System.Windows.Forms.Panel();
             this.panel9.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.item_dgv_fullpay_CRB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.price_nud_button_CRB)).BeginInit();
+            this.CRB_panel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // CRB_panel
-            // 
-            this.CRB_panel.BackColor = System.Drawing.Color.White;
-            this.CRB_panel.Controls.Add(this.panel9);
-            this.CRB_panel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CRB_panel.Location = new System.Drawing.Point(0, 0);
-            this.CRB_panel.Name = "CRB_panel";
-            this.CRB_panel.Size = new System.Drawing.Size(812, 547);
-            this.CRB_panel.TabIndex = 13;
             // 
             // panel9
             // 
@@ -95,7 +85,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(812, 547);
+            this.panel9.Size = new System.Drawing.Size(935, 547);
             this.panel9.TabIndex = 70;
             // 
             // panel1
@@ -112,10 +102,11 @@
             this.panel1.Controls.Add(this.final_button_CRB);
             this.panel1.Controls.Add(this.label27);
             this.panel1.Controls.Add(this.label26);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(493, 549);
+            this.panel1.Size = new System.Drawing.Size(596, 547);
             this.panel1.TabIndex = 47;
             // 
             // total_label_cashrelease
@@ -124,11 +115,12 @@
             this.total_label_cashrelease.AutoSize = true;
             this.total_label_cashrelease.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_label_cashrelease.ForeColor = System.Drawing.Color.Black;
-            this.total_label_cashrelease.Location = new System.Drawing.Point(131, 434);
+            this.total_label_cashrelease.Location = new System.Drawing.Point(264, 432);
             this.total_label_cashrelease.Name = "total_label_cashrelease";
             this.total_label_cashrelease.Size = new System.Drawing.Size(72, 25);
             this.total_label_cashrelease.TabIndex = 84;
             this.total_label_cashrelease.Text = "12345";
+            this.total_label_cashrelease.Click += new System.EventHandler(this.total_label_cashrelease_Click);
             // 
             // label32
             // 
@@ -136,54 +128,59 @@
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.label32.ForeColor = System.Drawing.Color.Black;
-            this.label32.Location = new System.Drawing.Point(75, 437);
+            this.label32.Location = new System.Drawing.Point(100, 432);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(36, 17);
             this.label32.TabIndex = 85;
             this.label32.Text = "Total";
+            this.label32.Click += new System.EventHandler(this.label32_Click);
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(74, 351);
+            this.label21.Location = new System.Drawing.Point(100, 350);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(42, 17);
             this.label21.TabIndex = 17;
             this.label21.Text = "Payee";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // remarks_textbox_CRB
             // 
             this.remarks_textbox_CRB.BackColor = System.Drawing.Color.White;
             this.remarks_textbox_CRB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.remarks_textbox_CRB.ForeColor = System.Drawing.Color.Black;
-            this.remarks_textbox_CRB.Location = new System.Drawing.Point(134, 387);
+            this.remarks_textbox_CRB.Location = new System.Drawing.Point(160, 386);
             this.remarks_textbox_CRB.Multiline = true;
             this.remarks_textbox_CRB.Name = "remarks_textbox_CRB";
             this.remarks_textbox_CRB.Size = new System.Drawing.Size(281, 22);
             this.remarks_textbox_CRB.TabIndex = 14;
+            this.remarks_textbox_CRB.TextChanged += new System.EventHandler(this.remarks_textbox_CRB_TextChanged);
             // 
             // name_textbox_CRB
             // 
             this.name_textbox_CRB.BackColor = System.Drawing.Color.White;
             this.name_textbox_CRB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.name_textbox_CRB.ForeColor = System.Drawing.Color.Black;
-            this.name_textbox_CRB.Location = new System.Drawing.Point(134, 344);
+            this.name_textbox_CRB.Location = new System.Drawing.Point(160, 343);
             this.name_textbox_CRB.Name = "name_textbox_CRB";
             this.name_textbox_CRB.Size = new System.Drawing.Size(281, 22);
             this.name_textbox_CRB.TabIndex = 16;
+            this.name_textbox_CRB.TextChanged += new System.EventHandler(this.name_textbox_CRB_TextChanged);
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(59, 399);
+            this.label24.Location = new System.Drawing.Point(84, 395);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(58, 17);
             this.label24.TabIndex = 15;
             this.label24.Text = "Remarks";
+            this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
             // item_dgv_fullpay_CRB
             // 
@@ -201,7 +198,7 @@
             this.item_dgv_fullpay_CRB.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.item_dgv_fullpay_CRB.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
@@ -250,9 +247,10 @@
             this.item_dgv_fullpay_CRB.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.item_dgv_fullpay_CRB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.item_dgv_fullpay_CRB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.item_dgv_fullpay_CRB.Size = new System.Drawing.Size(433, 288);
+            this.item_dgv_fullpay_CRB.Size = new System.Drawing.Size(536, 286);
             this.item_dgv_fullpay_CRB.TabIndex = 3;
             this.item_dgv_fullpay_CRB.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.item_dgv_fullpay_CRB_CellClick);
+            this.item_dgv_fullpay_CRB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.item_dgv_fullpay_CRB_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -275,12 +273,12 @@
             // 
             // cancel_button_CRB
             // 
-            this.cancel_button_CRB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.cancel_button_CRB.BackColor = System.Drawing.Color.Gray;
             this.cancel_button_CRB.FlatAppearance.BorderSize = 0;
-            this.cancel_button_CRB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(135)))), ((int)(((byte)(224)))));
+            this.cancel_button_CRB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.cancel_button_CRB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel_button_CRB.ForeColor = System.Drawing.Color.White;
-            this.cancel_button_CRB.Location = new System.Drawing.Point(32, 482);
+            this.cancel_button_CRB.Location = new System.Drawing.Point(87, 482);
             this.cancel_button_CRB.Name = "cancel_button_CRB";
             this.cancel_button_CRB.Size = new System.Drawing.Size(204, 37);
             this.cancel_button_CRB.TabIndex = 4;
@@ -290,12 +288,12 @@
             // 
             // final_button_CRB
             // 
-            this.final_button_CRB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.final_button_CRB.BackColor = System.Drawing.Color.Gray;
             this.final_button_CRB.FlatAppearance.BorderSize = 0;
-            this.final_button_CRB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(135)))), ((int)(((byte)(224)))));
+            this.final_button_CRB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.final_button_CRB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.final_button_CRB.ForeColor = System.Drawing.Color.White;
-            this.final_button_CRB.Location = new System.Drawing.Point(265, 482);
+            this.final_button_CRB.Location = new System.Drawing.Point(311, 482);
             this.final_button_CRB.Name = "final_button_CRB";
             this.final_button_CRB.Size = new System.Drawing.Size(204, 37);
             this.final_button_CRB.TabIndex = 5;
@@ -307,27 +305,29 @@
             // 
             this.label27.AutoSize = true;
             this.label27.ForeColor = System.Drawing.Color.Black;
-            this.label27.Location = new System.Drawing.Point(123, 396);
+            this.label27.Location = new System.Drawing.Point(148, 395);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(304, 21);
             this.label27.TabIndex = 19;
             this.label27.Text = "__________________________________________";
+            this.label27.Click += new System.EventHandler(this.label27_Click);
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(123, 351);
+            this.label26.Location = new System.Drawing.Point(148, 350);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(304, 21);
             this.label26.TabIndex = 18;
             this.label26.Text = "__________________________________________";
+            this.label26.Click += new System.EventHandler(this.label26_Click);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(511, 109);
+            this.label18.Location = new System.Drawing.Point(614, 109);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(114, 21);
             this.label18.TabIndex = 8;
@@ -338,7 +338,7 @@
             this.CNNumber_CRB.AutoSize = true;
             this.CNNumber_CRB.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CNNumber_CRB.ForeColor = System.Drawing.Color.Black;
-            this.CNNumber_CRB.Location = new System.Drawing.Point(635, 100);
+            this.CNNumber_CRB.Location = new System.Drawing.Point(729, 96);
             this.CNNumber_CRB.Name = "CNNumber_CRB";
             this.CNNumber_CRB.Size = new System.Drawing.Size(62, 37);
             this.CNNumber_CRB.TabIndex = 7;
@@ -346,15 +346,15 @@
             // 
             // delete_button_CRB
             // 
-            this.delete_button_CRB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.delete_button_CRB.BackColor = System.Drawing.Color.DimGray;
             this.delete_button_CRB.Enabled = false;
             this.delete_button_CRB.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.delete_button_CRB.FlatAppearance.BorderSize = 0;
             this.delete_button_CRB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
-            this.delete_button_CRB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(135)))), ((int)(((byte)(224)))));
+            this.delete_button_CRB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.delete_button_CRB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete_button_CRB.ForeColor = System.Drawing.Color.White;
-            this.delete_button_CRB.Location = new System.Drawing.Point(515, 482);
+            this.delete_button_CRB.Location = new System.Drawing.Point(628, 482);
             this.delete_button_CRB.Name = "delete_button_CRB";
             this.delete_button_CRB.Size = new System.Drawing.Size(274, 37);
             this.delete_button_CRB.TabIndex = 78;
@@ -365,7 +365,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(508, 268);
+            this.label35.Location = new System.Drawing.Point(611, 268);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(44, 21);
             this.label35.TabIndex = 74;
@@ -375,7 +375,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(506, 60);
+            this.label16.Location = new System.Drawing.Point(609, 60);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(113, 21);
             this.label16.TabIndex = 6;
@@ -386,7 +386,7 @@
             this.CVNumber_CRB.AutoSize = true;
             this.CVNumber_CRB.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CVNumber_CRB.ForeColor = System.Drawing.Color.Black;
-            this.CVNumber_CRB.Location = new System.Drawing.Point(626, 51);
+            this.CVNumber_CRB.Location = new System.Drawing.Point(729, 51);
             this.CVNumber_CRB.Name = "CVNumber_CRB";
             this.CVNumber_CRB.Size = new System.Drawing.Size(62, 37);
             this.CVNumber_CRB.TabIndex = 2;
@@ -395,7 +395,7 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(506, 212);
+            this.label36.Location = new System.Drawing.Point(609, 207);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(87, 21);
             this.label36.TabIndex = 75;
@@ -403,14 +403,14 @@
             // 
             // clear_button_CRB
             // 
-            this.clear_button_CRB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.clear_button_CRB.BackColor = System.Drawing.Color.DimGray;
             this.clear_button_CRB.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.clear_button_CRB.FlatAppearance.BorderSize = 0;
             this.clear_button_CRB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.clear_button_CRB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(135)))), ((int)(((byte)(224)))));
+            this.clear_button_CRB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.clear_button_CRB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_button_CRB.ForeColor = System.Drawing.Color.White;
-            this.clear_button_CRB.Location = new System.Drawing.Point(515, 432);
+            this.clear_button_CRB.Location = new System.Drawing.Point(628, 432);
             this.clear_button_CRB.Name = "clear_button_CRB";
             this.clear_button_CRB.Size = new System.Drawing.Size(274, 37);
             this.clear_button_CRB.TabIndex = 72;
@@ -420,14 +420,14 @@
             // 
             // add_button_CRB
             // 
-            this.add_button_CRB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.add_button_CRB.BackColor = System.Drawing.Color.DimGray;
             this.add_button_CRB.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.add_button_CRB.FlatAppearance.BorderSize = 0;
             this.add_button_CRB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
-            this.add_button_CRB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(135)))), ((int)(((byte)(224)))));
+            this.add_button_CRB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.add_button_CRB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_button_CRB.ForeColor = System.Drawing.Color.White;
-            this.add_button_CRB.Location = new System.Drawing.Point(515, 384);
+            this.add_button_CRB.Location = new System.Drawing.Point(628, 378);
             this.add_button_CRB.Name = "add_button_CRB";
             this.add_button_CRB.Size = new System.Drawing.Size(274, 37);
             this.add_button_CRB.TabIndex = 73;
@@ -440,7 +440,7 @@
             // 
             this.price_nud_button_CRB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.price_nud_button_CRB.DecimalPlaces = 2;
-            this.price_nud_button_CRB.Location = new System.Drawing.Point(599, 264);
+            this.price_nud_button_CRB.Location = new System.Drawing.Point(702, 264);
             this.price_nud_button_CRB.Name = "price_nud_button_CRB";
             this.price_nud_button_CRB.Size = new System.Drawing.Size(200, 25);
             this.price_nud_button_CRB.TabIndex = 71;
@@ -451,35 +451,44 @@
             this.itemtype_combobox_CRB.FormattingEnabled = true;
             this.itemtype_combobox_CRB.Items.AddRange(new object[] {
             ""});
-            this.itemtype_combobox_CRB.Location = new System.Drawing.Point(599, 209);
+            this.itemtype_combobox_CRB.Location = new System.Drawing.Point(702, 204);
             this.itemtype_combobox_CRB.Name = "itemtype_combobox_CRB";
             this.itemtype_combobox_CRB.Size = new System.Drawing.Size(200, 29);
             this.itemtype_combobox_CRB.TabIndex = 70;
+            // 
+            // CRB_panel
+            // 
+            this.CRB_panel.BackColor = System.Drawing.Color.White;
+            this.CRB_panel.Controls.Add(this.panel9);
+            this.CRB_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CRB_panel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CRB_panel.Location = new System.Drawing.Point(0, 0);
+            this.CRB_panel.Name = "CRB_panel";
+            this.CRB_panel.Size = new System.Drawing.Size(935, 547);
+            this.CRB_panel.TabIndex = 13;
             // 
             // CashRelease_Module
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 549);
+            this.ClientSize = new System.Drawing.Size(935, 547);
             this.Controls.Add(this.CRB_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CashRelease_Module";
             this.Text = "CashDisbursment_Module";
             this.Load += new System.EventHandler(this.CashDisbursment_Module_Load);
-            this.CRB_panel.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.item_dgv_fullpay_CRB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.price_nud_button_CRB)).EndInit();
+            this.CRB_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel CRB_panel;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label total_label_cashrelease;
@@ -507,5 +516,6 @@
         private System.Windows.Forms.Button add_button_CRB;
         private System.Windows.Forms.NumericUpDown price_nud_button_CRB;
         private System.Windows.Forms.ComboBox itemtype_combobox_CRB;
+        private System.Windows.Forms.Panel CRB_panel;
     }
 }

@@ -54,7 +54,7 @@
             // 
             // controlBar_panel
             // 
-            this.controlBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.controlBar_panel.BackColor = System.Drawing.Color.DimGray;
             this.controlBar_panel.Controls.Add(this.close_button);
             this.controlBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlBar_panel.Location = new System.Drawing.Point(0, 0);
@@ -111,8 +111,9 @@
             // edit_button
             // 
             this.edit_button.FlatAppearance.BorderSize = 0;
+            this.edit_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.edit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.edit_button.Image = global::ParishSystem.Properties.Resources.icons8_Pencil_32;
+            this.edit_button.Image = global::ParishSystem.Properties.Resources.icons8_Pencil_32__1_;
             this.edit_button.Location = new System.Drawing.Point(331, 7);
             this.edit_button.Name = "edit_button";
             this.edit_button.Size = new System.Drawing.Size(44, 35);
@@ -124,8 +125,9 @@
             // cancel_button
             // 
             this.cancel_button.FlatAppearance.BorderSize = 0;
+            this.cancel_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.cancel_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel_button.Image = global::ParishSystem.Properties.Resources.icons8_Refresh_32;
+            this.cancel_button.Image = global::ParishSystem.Properties.Resources.icons8_Refresh_Filled_32;
             this.cancel_button.Location = new System.Drawing.Point(331, 62);
             this.cancel_button.Name = "cancel_button";
             this.cancel_button.Size = new System.Drawing.Size(44, 35);
@@ -216,6 +218,7 @@
             // 
             this.delete_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.delete_button.FlatAppearance.BorderSize = 0;
+            this.delete_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.delete_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete_button.Image = global::ParishSystem.Properties.Resources.icons8_Trash_32;
             this.delete_button.Location = new System.Drawing.Point(333, 6);

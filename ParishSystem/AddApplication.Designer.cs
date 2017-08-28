@@ -48,7 +48,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -119,7 +118,7 @@
             this.male_radio.Location = new System.Drawing.Point(26, 122);
             this.male_radio.Name = "male_radio";
             this.male_radio.Size = new System.Drawing.Size(55, 19);
-            this.male_radio.Style = MetroFramework.MetroColorStyle.Blue;
+            this.male_radio.Style = MetroFramework.MetroColorStyle.Black;
             this.male_radio.TabIndex = 5;
             this.male_radio.TabStop = true;
             this.male_radio.Text = "Male";
@@ -137,7 +136,7 @@
             this.female_radio.Location = new System.Drawing.Point(106, 124);
             this.female_radio.Name = "female_radio";
             this.female_radio.Size = new System.Drawing.Size(68, 19);
-            this.female_radio.Style = MetroFramework.MetroColorStyle.Blue;
+            this.female_radio.Style = MetroFramework.MetroColorStyle.Black;
             this.female_radio.TabIndex = 6;
             this.female_radio.Text = "Female";
             this.female_radio.UseCustomBackColor = true;
@@ -207,7 +206,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ParishSystem.Properties.Resources.Delete_32px;
+            this.pictureBox1.Image = global::ParishSystem.Properties.Resources.icons8_Delete_20;
             this.pictureBox1.Location = new System.Drawing.Point(301, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
@@ -273,7 +272,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-2, -1);
@@ -283,9 +282,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(108)))), ((int)(((byte)(179)))));
+            this.button1.BackColor = System.Drawing.Color.Gray;
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(135)))), ((int)(((byte)(224)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -300,29 +299,22 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(18, 159);
+            this.label9.ForeColor = System.Drawing.Color.Gray;
+            this.label9.Location = new System.Drawing.Point(24, 192);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 13);
+            this.label9.Size = new System.Drawing.Size(205, 13);
             this.label9.TabIndex = 24;
-            this.label9.Text = "______________";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 101);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 13);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "______________";
+            this.label9.Text = "_________________________________";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 52);
+            this.label7.ForeColor = System.Drawing.Color.Gray;
+            this.label7.Location = new System.Drawing.Point(20, 77);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 13);
+            this.label7.Size = new System.Drawing.Size(289, 13);
             this.label7.TabIndex = 24;
-            this.label7.Text = "______________";
+            this.label7.Text = "_______________________________________________";
             // 
             // AddApplication
             // 
@@ -330,6 +322,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(332, 383);
+            this.Controls.Add(this.birthdate_dtp);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
@@ -342,13 +335,11 @@
             this.Controls.Add(this.firstName_textBox);
             this.Controls.Add(this.female_radio);
             this.Controls.Add(this.male_radio);
-            this.Controls.Add(this.birthdate_dtp);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -387,7 +378,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
     }
 }

@@ -54,7 +54,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.name_textbox);
             this.panel1.Controls.Add(this.label2);
@@ -67,7 +67,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(3, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 13);
@@ -76,10 +76,10 @@
             // 
             // name_textbox
             // 
-            this.name_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.name_textbox.BackColor = System.Drawing.Color.White;
             this.name_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.name_textbox.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name_textbox.ForeColor = System.Drawing.Color.White;
+            this.name_textbox.ForeColor = System.Drawing.Color.Black;
             this.name_textbox.Location = new System.Drawing.Point(52, 34);
             this.name_textbox.Name = "name_textbox";
             this.name_textbox.Size = new System.Drawing.Size(259, 36);
@@ -90,7 +90,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(45, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(277, 13);
@@ -99,7 +99,7 @@
             // 
             // controlBar_panel
             // 
-            this.controlBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.controlBar_panel.BackColor = System.Drawing.Color.DimGray;
             this.controlBar_panel.Controls.Add(this.close_button);
             this.controlBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlBar_panel.Location = new System.Drawing.Point(0, 0);
@@ -110,17 +110,20 @@
             // 
             // close_button
             // 
-            this.close_button.Location = new System.Drawing.Point(319, 1);
+            this.close_button.BackColor = System.Drawing.Color.DimGray;
+            this.close_button.FlatAppearance.BorderSize = 0;
+            this.close_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close_button.Image = global::ParishSystem.Properties.Resources.icons8_Delete_20;
+            this.close_button.Location = new System.Drawing.Point(320, 1);
             this.close_button.Name = "close_button";
             this.close_button.Size = new System.Drawing.Size(40, 29);
             this.close_button.TabIndex = 0;
-            this.close_button.Text = "x";
-            this.close_button.UseVisualStyleBackColor = true;
+            this.close_button.UseVisualStyleBackColor = false;
             this.close_button.Click += new System.EventHandler(this.close_button_Click);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.cancel_button);
             this.panel2.Controls.Add(this.save_button);
             this.panel2.Location = new System.Drawing.Point(0, 347);
@@ -130,27 +133,34 @@
             // 
             // cancel_button
             // 
-            this.cancel_button.Location = new System.Drawing.Point(197, 17);
+            this.cancel_button.FlatAppearance.BorderSize = 0;
+            this.cancel_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.cancel_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancel_button.Image = global::ParishSystem.Properties.Resources.icons8_Refresh_Filled_32;
+            this.cancel_button.Location = new System.Drawing.Point(241, 6);
             this.cancel_button.Name = "cancel_button";
-            this.cancel_button.Size = new System.Drawing.Size(75, 23);
+            this.cancel_button.Size = new System.Drawing.Size(53, 40);
             this.cancel_button.TabIndex = 1;
-            this.cancel_button.Text = "C";
             this.cancel_button.UseVisualStyleBackColor = true;
             this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
             // 
             // save_button
             // 
-            this.save_button.Location = new System.Drawing.Point(71, 17);
+            this.save_button.FlatAppearance.BorderSize = 0;
+            this.save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.save_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.save_button.Image = global::ParishSystem.Properties.Resources.icons8_Save_Filled_32__1_;
+            this.save_button.Location = new System.Drawing.Point(300, 6);
             this.save_button.Name = "save_button";
-            this.save_button.Size = new System.Drawing.Size(75, 23);
+            this.save_button.Size = new System.Drawing.Size(53, 40);
             this.save_button.TabIndex = 0;
-            this.save_button.Text = "S";
+            this.save_button.Tag = "";
             this.save_button.UseVisualStyleBackColor = true;
             this.save_button.Click += new System.EventHandler(this.save_button_Click);
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.suggestedPrice_nud);
@@ -165,7 +175,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(19, 64);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 13);
@@ -176,7 +186,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(12, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 13);
@@ -187,6 +197,7 @@
             // 
             this.suggestedPrice_nud.DecimalPlaces = 2;
             this.suggestedPrice_nud.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suggestedPrice_nud.ForeColor = System.Drawing.Color.Black;
             this.suggestedPrice_nud.Location = new System.Drawing.Point(114, 59);
             this.suggestedPrice_nud.Name = "suggestedPrice_nud";
             this.suggestedPrice_nud.Size = new System.Drawing.Size(235, 25);
@@ -197,6 +208,7 @@
             this.book_combobox.BackColor = System.Drawing.Color.White;
             this.book_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.book_combobox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.book_combobox.ForeColor = System.Drawing.Color.Black;
             this.book_combobox.FormattingEnabled = true;
             this.book_combobox.Items.AddRange(new object[] {
             "",
@@ -212,7 +224,7 @@
             // 
             this.active_button.AutoSize = true;
             this.active_button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.active_button.ForeColor = System.Drawing.Color.White;
+            this.active_button.ForeColor = System.Drawing.Color.Black;
             this.active_button.Location = new System.Drawing.Point(114, 96);
             this.active_button.Name = "active_button";
             this.active_button.Size = new System.Drawing.Size(61, 21);

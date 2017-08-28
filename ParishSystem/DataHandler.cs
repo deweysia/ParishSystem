@@ -197,12 +197,11 @@ namespace ParishSystem
 
         public DateTime toDateTime(string s, bool timePortion)
         {
-          
                 string[] components = s.Split(' ');
                 string[] date = components[0].Split('/');
 
-                int month = int.Parse(date[1]);
-                int day = int.Parse(date[0]);
+                int month = int.Parse(date[0]);
+                int day = int.Parse(date[1]);
                 int year = int.Parse(date[2]);
 
 
@@ -235,20 +234,6 @@ namespace ParishSystem
         */
         #region
         //ADD
-        public bool addGeneralProfile(string firstName, string midName, string lastName, string suffix, Gender gender, DateTime birthDate, string contactNumber, string address, string birthplace)
-        {
-            if (generalProfileExists(firstName, midName, lastName, suffix, gender, birthDate))
-                throw new Exception("DataHandler: Duplicate in GeneralProfile");
-
-            string q = "INSERT INTO GeneralProfile(firstName, midName, lastName, suffix, gender, birthDate, contactNumber, address, birthplace) VALUES ('"
-                + firstName + "', '" + midName + "', '" + lastName + "', '" + suffix + "', '" + (int)gender
-                + "', '" + birthDate.ToString("yyyy-MM-dd") + "', '" + contactNumber + "', '" + address + "', '" + birthplace + "')";
-
-            bool success = runNonQuery(q);
-
-
-            return success;
-        }
 
         public bool addGeneralProfile(string firstName, string midName, string lastName, string suffix, Gender gender, DateTime birthDate)
         {
@@ -875,6 +860,11 @@ namespace ParishSystem
 
             return success;
         }
+        public int getLastSacramentIncome()
+        {
+            string q = "SELECT max(sacramentIncomeID)as ID FROM sad2.sacramentincome";
+            return int.Parse(runQuery(q).Rows[0][0].ToString());
+        }
         public bool addPayment(int sacramentIncomeID, int primaryIncomeID, decimal amount)
         {
             string q = $"INSERT INTO `sad2`.`payment` (`sacramentIncomeID`, `primaryIncomeID`, `amount`) VALUES ({sacramentIncomeID}, {primaryIncomeID}, {amount})";
@@ -898,8 +888,8 @@ namespace ParishSystem
 
             DataTable dt = runQuery(q);
 
-            int id = int.Parse(dt.Rows[0]["sacramentIncomeID"].ToString());
-            return id;
+            try { return int.Parse(dt.Rows[0]["sacramentIncomeID"].ToString()); }
+            catch { return -1; }
         }
 
         public DataTable getSacramentIncomesUnpaid()

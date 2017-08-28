@@ -49,8 +49,6 @@ namespace ParishSystem
         }
         private void profileID_combobox_sacrament_SelectedValueChanged(object sender, EventArgs e)
         {
-            address_textarea_sacramentpayment.Text = ((ComboboxContent)profileID_combobox_sacrament.SelectedItem).Content2;
-            contactnumber_textbox_sacramentpayment.Text = ((ComboboxContent)profileID_combobox_sacrament.SelectedItem).Content3;
             refreshPayments();
 
             /*catch
