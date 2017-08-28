@@ -180,6 +180,12 @@
     <Compile Include="CDB_SacramentPayment_Module.Designer.cs">
       <DependentUpon>CDB_SacramentPayment_Module.cs</DependentUpon>
     </Compile>
+    <Compile Include="Component1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Component1.Designer.cs">
+      <DependentUpon>Component1.cs</DependentUpon>
+    </Compile>
     <Compile Include="CurrencyTextBox.cs">
       <SubType>Component</SubType>
     </Compile>

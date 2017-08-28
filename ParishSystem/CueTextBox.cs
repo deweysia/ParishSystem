@@ -13,41 +13,77 @@ namespace ParishSystem
 {
     public partial class CueTextBox : TextBox
     {
-        public string Cue
+        private string _cue;
+        private string _text;
+        private Color _cueColor;
+        private Color _foreColor;
+
+        public CueTextBox()
         {
-            get; set;
+            InitializeComponent();
+            this._foreColor = this.ForeColor;
+            this._text = this.Text;
         }
 
-        Color cueColor = Color.Gray;
+
+        public string Cue
+        {
+            get
+            {
+                return _cue;
+            }
+
+            set
+            {
+                _cue = value;
+                if (!string.IsNullOrWhiteSpace(_cue))
+                {
+                    _text = this.Text;
+                    this.Text = Cue;
+                    _foreColor = this.ForeColor;
+                    this.ForeColor = CueColor;
+                }
+            }
+        }
 
         public Color CueColor
         {
             set
             {
-                if (value == this.ForeColor)
+
+                if (_foreColor == _cueColor && _foreColor != Color.Empty)
                     throw new Exception("CueColor and ForeColor cannot be the same!");
-                cueColor = value;
+                else
+                {
+
+                    _cueColor = value;
+                }
             }
-            get { return cueColor; }
+            get { return _cueColor; }
         }
 
+        //If ForeColor is same as CueColor, clear Cue and change ForeColor
+        //If not present, nothing happens
         private void CueTextBox_Enter(object sender, EventArgs e)
         {
             TextBox t = sender as TextBox;
-            if (t.ForeColor == this.CueColor)
+            if (this.ForeColor == CueColor)
             {
-                t.Text = "";
-                t.ForeColor = this.ForeColor;
+                this.Text = "";
+                this.ForeColor = _foreColor;
             }
         }
 
+        //If isEmpty(), set Text and ForeColor to Cue and CueColor
         private void CueTextBox_Leave(object sender, EventArgs e)
         {
             TextBox t = sender as TextBox;
-            if (t.Text.Trim().Length == 0)
+            if (isEmpty())
             {
-                t.Text = Cue;
-                t.ForeColor = this.CueColor;
+                _text = this.Text;
+                this.Text = Cue;
+                _foreColor = this.ForeColor;
+                this.ForeColor = CueColor;
             }
         }
 

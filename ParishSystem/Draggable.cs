@@ -7,18 +7,18 @@ using System.Windows.Forms;
 using System.Drawing;
 namespace ParishSystem
 {
-    class Draggable
+    public class Draggable
     {
         Point lastClick;
         Control f;
 
 
-        private Draggable(Form f)
+        public Draggable(Form f)
         {
             this.f = f;
         }
 
-        public void makeDraggable(Form ContainingForm, Control MakeDraggable)
+        public void makeDraggable(Control MakeDraggable)
         {
 
             MakeDraggable.MouseMove += this.controlMouseMove;
@@ -28,12 +28,6 @@ namespace ParishSystem
         private void controlMouseMove(object sender, MouseEventArgs e)
         {
             
-            //if (!(sender is Control))
-            //    return;
-
-            //Control c = sender as Control;
-            //c.MouseMove += this.controlMouseDown;
-
             if (e.Button == MouseButtons.Left)
             {
                 f.Left += e.X - lastClick.X;
