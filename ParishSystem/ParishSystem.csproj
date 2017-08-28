@@ -180,11 +180,11 @@
     <Compile Include="CDB_SacramentPayment_Module.Designer.cs">
       <DependentUpon>CDB_SacramentPayment_Module.cs</DependentUpon>
     </Compile>
-    <Compile Include="Component1.cs">
+    <Compile Include="CueTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Component1.Designer.cs">
-      <DependentUpon>Component1.cs</DependentUpon>
+    <Compile Include="CueTextBox.designer.cs">
+      <DependentUpon>CueTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="CurrencyTextBox.cs">
       <SubType>Component</SubType>
@@ -251,12 +251,6 @@
       <DependentUpon>SacramentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ComboboxContent.cs" />
-    <Compile Include="CueTextBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CueTextBox.Designer.cs">
-      <DependentUpon>CueTextBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="CustomMessage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,7 +320,6 @@
     <Compile Include="ScheduleModule.Designer.cs">
       <DependentUpon>ScheduleModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="SystemNotification.cs" />
     <Compile Include="Treasurer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -382,6 +375,9 @@
     <EmbeddedResource Include="CDB_SacramentPayment_Module.resx">
       <DependentUpon>CDB_SacramentPayment_Module.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CueTextBox.resx">
+      <DependentUpon>CueTextBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CurrencyTextBox.resx">
       <DependentUpon>CurrencyTextBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -408,9 +404,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SacramentForm.resx">
       <DependentUpon>SacramentForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CueTextBox.resx">
-      <DependentUpon>CueTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomMessage.resx">
       <DependentUpon>CustomMessage.cs</DependentUpon>

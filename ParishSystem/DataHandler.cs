@@ -2145,6 +2145,14 @@ namespace ParishSystem
             return success;
         }
 
+        public bool deleteSchedule(int scheduleID)
+        {
+            string q = "DELETE FROM Schedule WHERE scheduleID = @scheduleID";
+            bool success = ExecuteNonQuery(q, scheduleID);
+
+            return success;
+        }
+
         public DataTable getSchedule()
         {
             string q = "SELECT * FROM Schedule";

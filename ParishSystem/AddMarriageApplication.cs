@@ -13,16 +13,15 @@ namespace ParishSystem
     public partial class AddMarriageApplication : Form
     {
         DataHandler dh;
-        Point lastClick;
         DataTable sacramentItem;
 
-        Draggable draggable;
+        
         public AddMarriageApplication()
         {
             InitializeComponent();
             this.dh = DataHandler.getDataHandler();
 
-            draggable = new Draggable(this);
+            Draggable draggable = new Draggable(this);
             draggable.makeDraggable(this);
             draggable.makeDraggable(panel1);
 

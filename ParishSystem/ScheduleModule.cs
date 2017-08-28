@@ -17,7 +17,6 @@ namespace ParishSystem
         //List<CalendarItem> _items = new List<CalendarItem>();
         Dictionary<CalendarItem, CalendarEvent> _events;
 
-        CalendarItem contextItem = null;
 
         public ScheduleModule()
         {
@@ -42,11 +41,8 @@ namespace ParishSystem
 
         }
 
-
-
         private void calendar1_LoadItems(object sender, CalendarLoadEventArgs e)
         {
-            
             PlaceItems();
         }
 
@@ -243,5 +239,14 @@ namespace ParishSystem
             
         }
 
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            CalendarItem i = calendar1.GetSelectedItems().ToList()[0];
+            CalendarEvent ev = _events[i];
+
+
+            loadEvents();
+            PlaceItems();
+        }
     }
 }

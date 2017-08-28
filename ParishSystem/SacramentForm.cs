@@ -16,6 +16,8 @@ namespace ParishSystem
         DataHandler dh;
         DataGridViewCellCollection row;
         SacramentType type;
+
+        
         public SacramentForm(SacramentType type, DataGridViewRow dr)
         {
             InitializeComponent();
@@ -23,6 +25,9 @@ namespace ParishSystem
             this.dh = DataHandler.getDataHandler();
             this.row = dr.Cells;
             this.type = type;
+
+            Draggable drag = new Draggable(this);
+            drag.makeDraggable(controlBar_panel);
 
             if (type == SacramentType.Confirmation)
             {

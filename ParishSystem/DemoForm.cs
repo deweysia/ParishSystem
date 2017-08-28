@@ -14,7 +14,6 @@ namespace ParishSystem
     public partial class DemoForm : Form
     {
         List<CalendarItem> _items = new List<CalendarItem>();
-        CalendarItem contextItem = null;
 
         public DemoForm()
         {

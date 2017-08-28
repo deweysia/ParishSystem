@@ -13,7 +13,6 @@ namespace ParishSystem
     public partial class AddApplication : Form
     {
         DataHandler dh;
-        Point lastClick;
         SacramentType sacramentType;
         DataTable sacramentItem;
         
@@ -26,6 +25,7 @@ namespace ParishSystem
             sacramentType = type;
 
             this.dh = DataHandler.getDataHandler();
+
             Draggable drag = new Draggable(this);
             drag.makeDraggable(this);
             drag.makeDraggable(panel1);
@@ -208,16 +208,6 @@ namespace ParishSystem
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void metroTextBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTextBox1_Click_1(object sender, EventArgs e)
-        {
-            metroTextBox1.Font = new Font("Comic-Sans", 16, FontStyle.Italic);
         }
     }
 
