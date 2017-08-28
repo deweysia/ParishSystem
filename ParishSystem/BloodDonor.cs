@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class BloodlettingDonorPopup : Form
+    public partial class BloodDonor : Form
     {
-        public BloodlettingDonorPopup()
+        public BloodDonor()
         {
             InitializeComponent();
         }
 
-        private void BloodlettingDonorPopup_Load(object sender, EventArgs e)
+        private void Add_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

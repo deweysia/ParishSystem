@@ -50,27 +50,28 @@
             this.label3 = new System.Windows.Forms.Label();
             this.address_textbox = new System.Windows.Forms.RichTextBox();
             this.contactNumber_textbox = new System.Windows.Forms.MaskedTextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lastname_label_bloodletting = new System.Windows.Forms.Label();
+            this.suffix_label_bloodletting = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.firstname_label_bloodletting = new System.Windows.Forms.Label();
+            this.mi_label_bloodletting = new System.Windows.Forms.Label();
             this.controlBar_panel = new System.Windows.Forms.Panel();
             this.close_button = new System.Windows.Forms.Button();
             this.totalDonation_label = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.suffix_textbox_bloodletting = new System.Windows.Forms.TextBox();
-            this.lastname_textbox_bloodletting = new System.Windows.Forms.TextBox();
-            this.suffix_label_bloodletting = new System.Windows.Forms.Label();
-            this.lastname_label_bloodletting = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.mi_textbox_bloodletting = new System.Windows.Forms.TextBox();
-            this.firstname_textbox_bloodletting = new System.Windows.Forms.TextBox();
-            this.mi_label_bloodletting = new System.Windows.Forms.Label();
-            this.firstname_label_bloodletting = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ln = new ParishSystem.CueTextBox();
+            this.sf = new ParishSystem.CueTextBox();
+            this.fn = new ParishSystem.CueTextBox();
+            this.mn = new ParishSystem.CueTextBox();
+            this.cover = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.blooddonation_dataGridView_bloodletting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantity_nud)).BeginInit();
             this.panel1.SuspendLayout();
-            this.controlBar_panel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            this.controlBar_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // blooddonation_dataGridView_bloodletting
@@ -282,11 +283,11 @@
             this.bloodtype_combobox.Name = "bloodtype_combobox";
             this.bloodtype_combobox.Size = new System.Drawing.Size(80, 29);
             this.bloodtype_combobox.TabIndex = 11;
-            this.bloodtype_combobox.Visible = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.cover);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
@@ -343,7 +344,6 @@
             this.address_textbox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.address_textbox.Location = new System.Drawing.Point(122, 157);
             this.address_textbox.Name = "address_textbox";
-            this.address_textbox.ReadOnly = true;
             this.address_textbox.Size = new System.Drawing.Size(244, 60);
             this.address_textbox.TabIndex = 13;
             this.address_textbox.Text = "";
@@ -352,15 +352,86 @@
             // 
             this.contactNumber_textbox.BackColor = System.Drawing.Color.White;
             this.contactNumber_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contactNumber_textbox.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.contactNumber_textbox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactNumber_textbox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.contactNumber_textbox.Location = new System.Drawing.Point(128, 125);
             this.contactNumber_textbox.Mask = "(+63) 999 999 9999";
             this.contactNumber_textbox.Name = "contactNumber_textbox";
-            this.contactNumber_textbox.ReadOnly = true;
             this.contactNumber_textbox.Size = new System.Drawing.Size(147, 22);
             this.contactNumber_textbox.TabIndex = 12;
             this.contactNumber_textbox.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.lastname_label_bloodletting);
+            this.flowLayoutPanel1.Controls.Add(this.suffix_label_bloodletting);
+            this.flowLayoutPanel1.Controls.Add(this.ln);
+            this.flowLayoutPanel1.Controls.Add(this.sf);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
+            this.flowLayoutPanel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 5);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(327, 37);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // lastname_label_bloodletting
+            // 
+            this.lastname_label_bloodletting.AutoSize = true;
+            this.lastname_label_bloodletting.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastname_label_bloodletting.ForeColor = System.Drawing.Color.Black;
+            this.lastname_label_bloodletting.Location = new System.Drawing.Point(4, 0);
+            this.lastname_label_bloodletting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lastname_label_bloodletting.Name = "lastname_label_bloodletting";
+            this.lastname_label_bloodletting.Size = new System.Drawing.Size(0, 37);
+            this.lastname_label_bloodletting.TabIndex = 0;
+            // 
+            // suffix_label_bloodletting
+            // 
+            this.suffix_label_bloodletting.AutoSize = true;
+            this.suffix_label_bloodletting.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suffix_label_bloodletting.ForeColor = System.Drawing.Color.Black;
+            this.suffix_label_bloodletting.Location = new System.Drawing.Point(12, 20);
+            this.suffix_label_bloodletting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.suffix_label_bloodletting.Name = "suffix_label_bloodletting";
+            this.suffix_label_bloodletting.Size = new System.Drawing.Size(0, 17);
+            this.suffix_label_bloodletting.TabIndex = 1;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.firstname_label_bloodletting);
+            this.flowLayoutPanel2.Controls.Add(this.mi_label_bloodletting);
+            this.flowLayoutPanel2.Controls.Add(this.fn);
+            this.flowLayoutPanel2.Controls.Add(this.mn);
+            this.flowLayoutPanel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 47);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(327, 30);
+            this.flowLayoutPanel2.TabIndex = 1;
+            // 
+            // firstname_label_bloodletting
+            // 
+            this.firstname_label_bloodletting.AutoSize = true;
+            this.firstname_label_bloodletting.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstname_label_bloodletting.ForeColor = System.Drawing.Color.Black;
+            this.firstname_label_bloodletting.Location = new System.Drawing.Point(4, 0);
+            this.firstname_label_bloodletting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.firstname_label_bloodletting.Name = "firstname_label_bloodletting";
+            this.firstname_label_bloodletting.Size = new System.Drawing.Size(0, 25);
+            this.firstname_label_bloodletting.TabIndex = 2;
+            // 
+            // mi_label_bloodletting
+            // 
+            this.mi_label_bloodletting.AutoSize = true;
+            this.mi_label_bloodletting.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mi_label_bloodletting.ForeColor = System.Drawing.Color.Black;
+            this.mi_label_bloodletting.Location = new System.Drawing.Point(12, 0);
+            this.mi_label_bloodletting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.mi_label_bloodletting.Name = "mi_label_bloodletting";
+            this.mi_label_bloodletting.Size = new System.Drawing.Size(0, 25);
+            this.mi_label_bloodletting.TabIndex = 3;
             // 
             // controlBar_panel
             // 
@@ -421,124 +492,53 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "______________________________________";
             // 
-            // suffix_textbox_bloodletting
+            // ln
             // 
-            this.suffix_textbox_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.suffix_textbox_bloodletting.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.suffix_textbox_bloodletting.ForeColor = System.Drawing.Color.Black;
-            this.suffix_textbox_bloodletting.Location = new System.Drawing.Point(225, 12);
-            this.suffix_textbox_bloodletting.Name = "suffix_textbox_bloodletting";
-            this.suffix_textbox_bloodletting.Size = new System.Drawing.Size(44, 22);
-            this.suffix_textbox_bloodletting.TabIndex = 3;
-            this.suffix_textbox_bloodletting.Visible = false;
-            this.suffix_textbox_bloodletting.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textbox_bloodletting_MouseClick);
+            this.ln.Cue = "Lastname";
+            this.ln.CueColor = System.Drawing.Color.Gray;
+            this.ln.Location = new System.Drawing.Point(19, 5);
+            this.ln.Name = "ln";
+            this.ln.Size = new System.Drawing.Size(184, 29);
+            this.ln.TabIndex = 2;
+            this.ln.VisibleChanged += new System.EventHandler(this.ln_VisibleChanged);
             // 
-            // lastname_textbox_bloodletting
+            // sf
             // 
-            this.lastname_textbox_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lastname_textbox_bloodletting.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lastname_textbox_bloodletting.ForeColor = System.Drawing.Color.Black;
-            this.lastname_textbox_bloodletting.Location = new System.Drawing.Point(19, 12);
-            this.lastname_textbox_bloodletting.Name = "lastname_textbox_bloodletting";
-            this.lastname_textbox_bloodletting.Size = new System.Drawing.Size(200, 22);
-            this.lastname_textbox_bloodletting.TabIndex = 2;
-            this.lastname_textbox_bloodletting.Visible = false;
-            this.lastname_textbox_bloodletting.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textbox_bloodletting_MouseClick);
+            this.sf.Cue = "Sf";
+            this.sf.CueColor = System.Drawing.Color.Gray;
+            this.sf.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sf.Location = new System.Drawing.Point(209, 9);
+            this.sf.Name = "sf";
+            this.sf.Size = new System.Drawing.Size(65, 25);
+            this.sf.TabIndex = 6;
             // 
-            // suffix_label_bloodletting
+            // fn
             // 
-            this.suffix_label_bloodletting.AutoSize = true;
-            this.suffix_label_bloodletting.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suffix_label_bloodletting.ForeColor = System.Drawing.Color.Black;
-            this.suffix_label_bloodletting.Location = new System.Drawing.Point(12, 20);
-            this.suffix_label_bloodletting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.suffix_label_bloodletting.Name = "suffix_label_bloodletting";
-            this.suffix_label_bloodletting.Size = new System.Drawing.Size(0, 17);
-            this.suffix_label_bloodletting.TabIndex = 1;
+            this.fn.Cue = "Firstname";
+            this.fn.CueColor = System.Drawing.Color.Gray;
+            this.fn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fn.Location = new System.Drawing.Point(19, 3);
+            this.fn.Name = "fn";
+            this.fn.Size = new System.Drawing.Size(184, 25);
+            this.fn.TabIndex = 4;
             // 
-            // lastname_label_bloodletting
+            // mn
             // 
-            this.lastname_label_bloodletting.AutoSize = true;
-            this.lastname_label_bloodletting.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastname_label_bloodletting.ForeColor = System.Drawing.Color.Black;
-            this.lastname_label_bloodletting.Location = new System.Drawing.Point(4, 0);
-            this.lastname_label_bloodletting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lastname_label_bloodletting.Name = "lastname_label_bloodletting";
-            this.lastname_label_bloodletting.Size = new System.Drawing.Size(0, 37);
-            this.lastname_label_bloodletting.TabIndex = 0;
+            this.mn.Cue = "Mi";
+            this.mn.CueColor = System.Drawing.Color.Gray;
+            this.mn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mn.Location = new System.Drawing.Point(209, 3);
+            this.mn.Name = "mn";
+            this.mn.Size = new System.Drawing.Size(65, 25);
+            this.mn.TabIndex = 5;
             // 
-            // flowLayoutPanel1
+            // cover
             // 
-            this.flowLayoutPanel1.Controls.Add(this.lastname_label_bloodletting);
-            this.flowLayoutPanel1.Controls.Add(this.suffix_label_bloodletting);
-            this.flowLayoutPanel1.Controls.Add(this.lastname_textbox_bloodletting);
-            this.flowLayoutPanel1.Controls.Add(this.suffix_textbox_bloodletting);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
-            this.flowLayoutPanel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 5);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(327, 37);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // mi_textbox_bloodletting
-            // 
-            this.mi_textbox_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.mi_textbox_bloodletting.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mi_textbox_bloodletting.ForeColor = System.Drawing.Color.Black;
-            this.mi_textbox_bloodletting.Location = new System.Drawing.Point(225, 3);
-            this.mi_textbox_bloodletting.Name = "mi_textbox_bloodletting";
-            this.mi_textbox_bloodletting.Size = new System.Drawing.Size(44, 22);
-            this.mi_textbox_bloodletting.TabIndex = 5;
-            this.mi_textbox_bloodletting.Visible = false;
-            this.mi_textbox_bloodletting.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textbox_bloodletting_MouseClick);
-            // 
-            // firstname_textbox_bloodletting
-            // 
-            this.firstname_textbox_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.firstname_textbox_bloodletting.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstname_textbox_bloodletting.ForeColor = System.Drawing.Color.Black;
-            this.firstname_textbox_bloodletting.Location = new System.Drawing.Point(19, 3);
-            this.firstname_textbox_bloodletting.Name = "firstname_textbox_bloodletting";
-            this.firstname_textbox_bloodletting.Size = new System.Drawing.Size(200, 22);
-            this.firstname_textbox_bloodletting.TabIndex = 4;
-            this.firstname_textbox_bloodletting.Visible = false;
-            this.firstname_textbox_bloodletting.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textbox_bloodletting_MouseClick);
-            // 
-            // mi_label_bloodletting
-            // 
-            this.mi_label_bloodletting.AutoSize = true;
-            this.mi_label_bloodletting.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mi_label_bloodletting.ForeColor = System.Drawing.Color.Black;
-            this.mi_label_bloodletting.Location = new System.Drawing.Point(12, 0);
-            this.mi_label_bloodletting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.mi_label_bloodletting.Name = "mi_label_bloodletting";
-            this.mi_label_bloodletting.Size = new System.Drawing.Size(0, 25);
-            this.mi_label_bloodletting.TabIndex = 3;
-            // 
-            // firstname_label_bloodletting
-            // 
-            this.firstname_label_bloodletting.AutoSize = true;
-            this.firstname_label_bloodletting.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstname_label_bloodletting.ForeColor = System.Drawing.Color.Black;
-            this.firstname_label_bloodletting.Location = new System.Drawing.Point(4, 0);
-            this.firstname_label_bloodletting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.firstname_label_bloodletting.Name = "firstname_label_bloodletting";
-            this.firstname_label_bloodletting.Size = new System.Drawing.Size(0, 25);
-            this.firstname_label_bloodletting.TabIndex = 2;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.firstname_label_bloodletting);
-            this.flowLayoutPanel2.Controls.Add(this.mi_label_bloodletting);
-            this.flowLayoutPanel2.Controls.Add(this.firstname_textbox_bloodletting);
-            this.flowLayoutPanel2.Controls.Add(this.mi_textbox_bloodletting);
-            this.flowLayoutPanel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 47);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(327, 30);
-            this.flowLayoutPanel2.TabIndex = 1;
+            this.cover.Location = new System.Drawing.Point(300, 117);
+            this.cover.Name = "cover";
+            this.cover.Size = new System.Drawing.Size(200, 100);
+            this.cover.TabIndex = 15;
+            this.cover.VisibleChanged += new System.EventHandler(this.cover_VisibleChanged);
             // 
             // Bloodletting_Profile_Popup
             // 
@@ -569,11 +569,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.quantity_nud)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.controlBar_panel.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
+            this.controlBar_panel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -606,12 +606,13 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label lastname_label_bloodletting;
         private System.Windows.Forms.Label suffix_label_bloodletting;
-        private System.Windows.Forms.TextBox lastname_textbox_bloodletting;
-        private System.Windows.Forms.TextBox suffix_textbox_bloodletting;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label firstname_label_bloodletting;
         private System.Windows.Forms.Label mi_label_bloodletting;
-        private System.Windows.Forms.TextBox firstname_textbox_bloodletting;
-        private System.Windows.Forms.TextBox mi_textbox_bloodletting;
+        private CueTextBox ln;
+        private CueTextBox sf;
+        private CueTextBox fn;
+        private CueTextBox mn;
+        private System.Windows.Forms.Panel cover;
     }
 }

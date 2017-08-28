@@ -122,11 +122,11 @@
     <Compile Include="ApplicationPayment.Designer.cs">
       <DependentUpon>ApplicationPayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="BloodlettingDonorPopup.cs">
+    <Compile Include="BloodDonor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BloodlettingDonorPopup.Designer.cs">
-      <DependentUpon>BloodlettingDonorPopup.cs</DependentUpon>
+    <Compile Include="BloodDonor.Designer.cs">
+      <DependentUpon>BloodDonor.cs</DependentUpon>
     </Compile>
     <Compile Include="BloodlettingEventPopUp.cs">
       <SubType>Form</SubType>
@@ -348,8 +348,8 @@
     <EmbeddedResource Include="ApplicationPayment.resx">
       <DependentUpon>ApplicationPayment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BloodlettingDonorPopup.resx">
-      <DependentUpon>BloodlettingDonorPopup.cs</DependentUpon>
+    <EmbeddedResource Include="BloodDonor.resx">
+      <DependentUpon>BloodDonor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BloodlettingEventPopUp.resx">
       <DependentUpon>BloodlettingEventPopUp.cs</DependentUpon>
