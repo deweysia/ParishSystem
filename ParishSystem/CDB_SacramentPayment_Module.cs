@@ -73,7 +73,7 @@ namespace ParishSystem
                 {
                     paid_datagridview_sacramentpayment.Rows.Add(dr["ORnum"].ToString(), dr["amount"].ToString(), dr["primaryIncomeDateTime"].ToString(), dr["remarks"].ToString());
                 }
-                cover_panel.Visible = false;
+             
                 refreshTotalPaymentSacrament();
                 add_button_sacramentpayment.Enabled = true;
                 paid_nud_sacramentpayment.Enabled = true;
