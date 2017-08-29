@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-
+using Excel = Microsoft.Office.Interop.Excel;
 
 
 namespace ParishSystem
@@ -77,7 +77,7 @@ namespace ParishSystem
         {
             string q = $@"select ORnum, sourceName,primaryIncomeDateTime,remarks,primaryincome.primaryIncomeID,bookType, sum(price) as price ,sum(amount) as amount
                         from primaryincome left outer join item on item.primaryIncomeID= primaryincome.primaryIncomeID left outer join payment on payment.primaryIncomeID= primaryincome.primaryIncomeID
-                        where(primaryIncomeDateTime between '{ from.ToString("yyyy-MM-dd hh:mm:ss")}' and '{to.ToString("yyyy-MM-dd hh:mm:ss")}')
+                        where(primaryIncomeDateTime between '{ from.ToString("yyyy-MM-dd 00:00:00")}' and '{to.ToString("yyyy-MM-dd 23:59:59")}')
                         and bookType = {bookType}
                         group by  ORnum
                         order by ORnum desc";
@@ -86,7 +86,7 @@ namespace ParishSystem
 
         public DataTable getTransactionsByAccountingBookFormatByOrNumber(int BookType,int OR)
         {
-            string q = $@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,price,itemType from primaryincome 
+            string q = $@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,(price*quantity)as price,itemType from primaryincome 
                             inner join item on item.primaryIncomeID = primaryincome.primaryincomeid 
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where primaryincome.booktype = {BookType} and 
@@ -104,7 +104,7 @@ namespace ParishSystem
         }
         public DataTable getTransactionsByAccountingBookFormatByDay(int BookType ,int Day, int Month ,int Year)
         {
-            string q = $@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,price,itemType from primaryincome 
+            string q = $@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,(price*quantity)as price,itemType from primaryincome 
                             inner join item on item.primaryIncomeID = primaryincome.primaryincomeid 
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where DAY(primaryIncomeDateTime) = {Day} and MONTH(primaryIncomeDateTime) = {Month} and YEAR(primaryIncomeDateTime) = {Year} and primaryIncome.bookType = {BookType}
@@ -120,7 +120,7 @@ namespace ParishSystem
         }
         public DataTable getTransactionsByAccountingBookFormatByMonth(int BookType, int Month, int Year)
         {
-            string q = $@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,price,itemType from primaryincome 
+            string q = $@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,(price*quantity)as price,itemType from primaryincome 
                             inner join item on item.primaryIncomeID = primaryincome.primaryincomeid 
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where MONTH(primaryIncomeDateTime) = {Month} and YEAR(primaryIncomeDateTime) = {Year} and primaryIncome.bookType = {BookType}
@@ -136,7 +136,7 @@ namespace ParishSystem
         }
         public DataTable getTransactionsByAccountingBookFormatByYear(int BookType, int Year)
         {
-            string q = $@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,price,itemType from primaryincome 
+            string q = $@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,(price*quantity)as price,itemType from primaryincome 
                             inner join item on item.primaryIncomeID = primaryincome.primaryincomeid 
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where YEAR(primaryIncomeDateTime) = {Year} and primaryIncome.bookType = {BookType}
@@ -152,10 +152,10 @@ namespace ParishSystem
         }
         public DataTable getTransactionsByAccountingBookFormatBetweenDates(int BookType, DateTime from, DateTime to)
         {
-            string q = $@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,price,itemType from primaryincome 
+            string q = $@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,(price*quantity)as price,itemType from primaryincome 
                             inner join item on item.primaryIncomeID = primaryincome.primaryincomeid 
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
-                            where(primaryIncomeDateTime between '{ from.ToString("yyyy-MM-dd hh:mm:ss")}' and '{to.ToString("yyyy-MM-dd hh:mm:ss")}')
+                            where(primaryIncomeDateTime between '{ from.ToString("yyyy-MM-dd 00:00:00")}' and '{to.ToString("yyyy-MM-dd 23:59:59")}')
                             and primaryIncome.bookType = { BookType }
                             union
                             select primaryincome.primaryIncomeID,sourceName,primaryincome.bookType,ORnum,primaryIncomeDateTime,amount,itemType from primaryincome 
@@ -163,14 +163,14 @@ namespace ParishSystem
                             inner join sacramentincome on sacramentincome.sacramentIncomeID = payment.sacramentIncomeID 
                             inner join application on application.applicationID = sacramentincome.applicationID 
                             inner join itemtype on itemtype.itemTypeID = application.sacramentType 
-                            where(primaryIncomeDateTime between '{ from.ToString("yyyy-MM-dd hh:mm:ss")}' and '{to.ToString("yyyy-MM-dd hh:mm:ss")}')
+                            where(primaryIncomeDateTime between '{ from.ToString("yyyy-MM-dd 00:00:00")}' and '{to.ToString("yyyy-MM-dd 23:59:59")}')
                             and primaryIncome.bookType = { BookType }
                             ) as A  order by ORnum desc;";
             return runQuery(q);
         }
         public DataTable getTransactionsByAccountingBookFormatRecent(int BookType)
         {
-            string q = $@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,price,itemType from primaryincome 
+            string q = $@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,(price*quantity)as price,itemType from primaryincome 
                             inner join item on item.primaryIncomeID = primaryincome.primaryincomeid 
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where(primaryIncomeDateTime between '{ (DateTime.Now - new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd hh:mm:ss")}' and '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}')
@@ -833,7 +833,7 @@ namespace ParishSystem
 
         public DataTable getBloodDonors()
         {
-            string q = $@"select generalprofile.profileid , concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
+            string q = $@"select blooddonor.blooddonorID , concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
                         case 
                         when bloodType =1 then 'A+' 
                         when bloodType =2 then 'A-'  
@@ -846,17 +846,17 @@ namespace ParishSystem
                         sum(quantity),
                         concat(""(+63)"",contactnumber) as contactnumber,
                         address
-                        from generalprofile
-                        inner join blooddonation on blooddonation.profileid = generalprofile.profileID
-                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
-                        group by generalprofile.profileID";
+                        from blooddonor
+                        left outer join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
+                        left outer join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
+                        group by blooddonor.blooddonorID";
             return runQuery(q);
         }
       
         public DataTable getBloodDonorsOnEvent(int blooddonationeventid)
         {
             string q = $@"select 
-                        generalprofile.profileid, concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
+                        blooddonor.blooddonorID, concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
                         case 
                         when bloodType =1 then 'A+' 
                         when bloodType =2 then 'A-'  
@@ -870,17 +870,17 @@ namespace ParishSystem
                         address,
                         concat(""(+63)"",contactnumber) as contactnumber,
                         eventname
-                        from generalprofile 
-                        inner join blooddonation on blooddonation.profileid = generalprofile.profileID
+                        from blooddonor
+                        inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
                         inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
                         where bloodDonationEvent.bloodDonationEventID = {blooddonationeventid}
-                        group by generalprofile.profileid";
+                        group by blooddonor.blooddonorID";
             return runQuery(q);
         }
         public DataTable getBloodDonorsOnDate(DateTime Start)
         {
             string q = $@"select 
-                        generalprofile.profileid, concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
+                        blooddonor.blooddonorID, concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
                         case 
                         when bloodType =1 then 'A+' 
                         when bloodType =2 then 'A-'  
@@ -894,17 +894,17 @@ namespace ParishSystem
                         address,
                         concat(""(+63)"",contactnumber) as contactnumber,
                         eventname
-                        from generalprofile 
-                        inner join blooddonation on blooddonation.profileid = generalprofile.profileID
+                        from blooddonor
+                        inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
                         inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
-                        where startDateTime=""{Start.ToString("yyyy-MM-dd 00:00:00")}""
-                        group by generalprofile.profileid";
+                        where startDateTime>=""{Start.ToString("yyyy-MM-dd 00:00:00")}"" and startDateTime<=""{Start.ToString("yyyy-MM-dd 23:59:59")}""
+                        group by blooddonor.blooddonorID";
             return runQuery(q);
         }
         public DataTable getBloodDonorsOnDateRange(DateTime Start,DateTime Stop)
         {
             string q = $@"select 
-                        generalprofile.profileid, concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
+                        blooddonor.blooddonorID, concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
                         case 
                         when bloodType =1 then 'A+' 
                         when bloodType =2 then 'A-'  
@@ -918,25 +918,25 @@ namespace ParishSystem
                         address,
                         concat(""(+63)"",contactnumber) as contactnumber,
                         eventname
-                        from generalprofile 
-                        inner join blooddonation on blooddonation.profileid = generalprofile.profileID
+                        from blooddonor
+                        inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
                         inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
-                        where startDateTime between""{Start.ToString("yyyy-MM-dd 00:00:00")}"" and ""{Stop.ToString("yyyy-MM-dd 00:00:00")}""
-                        group by generalprofile.profileid";
+                        where startDateTime between""{Start.ToString("yyyy-MM-dd 00:00:00")}"" and ""{Stop.ToString("yyyy-MM-dd 23:59:59")}""
+                        group by blooddonor.blooddonorID";
             return runQuery(q);
         }
         public DataTable getTotalDonationsOnEvents()
         {
-            string q = $@"select blooddonationevent.bloodDonationEventID,eventname,sum(quantity) as total from generalprofile 
-                            inner join blooddonation on blooddonation.profileid = generalprofile.profileID 
+            string q = $@"select blooddonationevent.bloodDonationEventID,eventname,sum(quantity) as total from blooddonor 
+                            inner join blooddonation on blooddonation.profileid =blooddonor.blooddonorID
                             inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
                             group by bloodDonationEvent.bloodDonationEventID;";
             return runQuery(q);
         }
         public DataTable getTotalDonationsOnEvent(int eventid)
         {
-            string q = $@"select bloodDonationEvent.bloodDonationEventID,sum(quantity) from generalprofile 
-                            inner join blooddonation on blooddonation.profileid = generalprofile.profileID 
+            string q = $@"select bloodDonationEvent.bloodDonationEventID,sum(quantity) from blooddonor 
+                            inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
                             inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
                             where bloodDonationEvent.bloodDonationEventID={eventid}
                             group by bloodDonationEvent.bloodDonationEventID;";
@@ -944,8 +944,8 @@ namespace ParishSystem
         }
         public DataTable getTotalDonationsOnDate(DateTime date)
         {
-            string q = $@"select bloodDonationEvent.bloodDonationEventID,sum(quantity) from generalprofile 
-                            inner join blooddonation on blooddonation.profileid = generalprofile.profileID 
+            string q = $@"select bloodDonationEvent.bloodDonationEventID,sum(quantity) from blooddonor 
+                            inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
                             inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
                             where startDateTime=""{date.ToString("yyyy-MM-dd 00:00:00")}""
                             group by bloodDonationEvent.bloodDonationEventID;";
@@ -953,8 +953,8 @@ namespace ParishSystem
         }
         public DataTable getTotalDonationsOnDateRange(DateTime Start,DateTime Stop)
         {
-            string q = $@"select bloodDonationEvent.bloodDonationEventID,sum(quantity) from generalprofile 
-                            inner join blooddonation on blooddonation.profileid = generalprofile.profileID 
+            string q = $@"select bloodDonationEvent.bloodDonationEventID,sum(quantity) from blooddonor 
+                            inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
                             inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
                             where startDateTime=""{Start.ToString("yyyy-MM-dd 00:00:00")}""and endDateTime=""{Stop.ToString("yyyy-MM-dd 00:00:00")}""
                             group by bloodDonationEvent.bloodDonationEventID;";
@@ -992,7 +992,7 @@ namespace ParishSystem
         
         public DataTable getBloodDonorsLike(string name)
         {
-            string q = $@"select generalprofile.profileid , concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
+            string q = $@"select blooddonor.blooddonorID , concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
                         case 
                         when bloodType =1 then 'A+' 
                         when bloodType =2 then 'A-'  
@@ -1005,11 +1005,11 @@ namespace ParishSystem
                         sum(quantity),
                         concat(""(+63)"",contactnumber) as contactnumber,
                         address
-                        from generalprofile
-                        inner join blooddonation on blooddonation.profileid = generalprofile.profileID
+                        from blooddonor
+                        inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
                         inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
                         where firstname like ""%{name}%"" or lastname like ""%{name}%""
-                        group by generalprofile.profileID";
+                        group by blooddonor.blooddonorID";
             return runQuery(q);
         }
         public DataTable getBloodlettingEventsLike(string name)
@@ -1019,7 +1019,7 @@ namespace ParishSystem
         }
         public DataTable getAllDonations()
         {
-            string q = $@"select generalprofile.profileid , concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
+            string q = $@"select blooddonor.blooddonorID , concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
                         case 
                         when bloodType =1 then 'A+' 
                         when bloodType =2 then 'A-'  
@@ -1032,10 +1032,10 @@ namespace ParishSystem
                         sum(quantity),
                         concat(""(+63)"",contactnumber) as contactnumber,
                         address
-                        from generalprofile
-                        inner join blooddonation on blooddonation.profileid = generalprofile.profileID
+                        from blooddonor
+                        inner join blooddonation on blooddonation.profileid =blooddonor.blooddonorID
                         inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
-                        group by generalprofile.profileID";
+                        group by blooddonor.blooddonorID";
             return runQuery(q);
         }
 
@@ -1055,5 +1055,32 @@ namespace ParishSystem
         }
         //select only those who have not fully paid
 
+
+        public void DisplayInExcel(DataGridView dgv)
+        {
+            var excelApp = new Excel.Application();
+            excelApp.Visible = true;
+            excelApp.Workbooks.Add();
+            Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet;
+
+            int a = 65;
+            foreach (DataGridViewColumn dc in dgv.Columns)
+            {
+                workSheet.Cells[1, ((char)a).ToString()] = dc.HeaderText.ToString();
+                workSheet.Columns[a-64].AutoFit();
+                a++;
+            }
+            int b = 2;
+            foreach (DataGridViewRow dgvr in dgv.Rows)
+            {
+                for (int x = 65; x < a; x++)
+                    {
+                    workSheet.Cells[b, ((char)x).ToString()] =dgvr.Cells[x-65].Value.ToString();
+                    }
+                    b++;
+                
+            }
+
+        }
     }
 }

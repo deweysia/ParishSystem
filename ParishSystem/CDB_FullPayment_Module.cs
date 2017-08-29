@@ -139,7 +139,7 @@ namespace ParishSystem
                     }
                     else
                     {
-                        MessageBox.Show("shunga");
+                        Notification.Show(State.MissingFields);
                     }
                 }
             }
@@ -241,7 +241,6 @@ namespace ParishSystem
                         }
                         else if (sacramentincomeID != -1 && targetPriceNUD.Tag.ToString() != "a")
                         {
-                            MessageBox.Show(dgvr.Cells[7].Value.ToString());
                             dh.editSacramentIncome(decimal.Parse(dgvr.Cells[7].Value.ToString()), sacramentincomeID);
                         }
                         dh.addPayment(sacramentincomeID, primaryIncomeID, decimal.Parse(dgvr.Cells[3].Value.ToString()));
@@ -251,7 +250,7 @@ namespace ParishSystem
             }
             else
             {
-                MessageBox.Show("shunga");
+                Notification.Show(State.InvalidTransaction);
             }
 
         }

@@ -41,7 +41,7 @@ namespace ParishSystem
                 if(name_textbox.Text.Trim()=="" ||
                    book_combobox.Text.Trim() == "")
                 {
-                    MessageBox.Show("Shunga");
+                Notification.Show(State.MissingFields);
                 }
                 else
                 {

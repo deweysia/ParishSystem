@@ -163,6 +163,8 @@ namespace ParishSystem
 
 
         public static State
+            InvalidTransaction = new State("Cannot add an entry with no items", NotificationType.warning),
+            CannotDeleteBloodEvent = new State("Cannot delete blood donation events with donations", NotificationType.warning),
             MergingDone = new State("Merging Finished", NotificationType.warning),
             ProfileAdded = new State("Profile added", NotificationType.success),
             InvalidPayment = new State("The Price cannot be 0", NotificationType.error),
@@ -175,6 +177,7 @@ namespace ParishSystem
             MissingFields = new State("Please fill in all necessary fields", NotificationType.info),
             AddSuccess = new State("Entry successfully added", NotificationType.success),
             AddFail = new State("Entry failed to add", NotificationType.error),
+            MissingFields = new State("Please properly fill in all necessary fields", NotificationType.info),
             UpdateSuccess = new State("Changes successfully applied", NotificationType.success),
             UpdateFail = new State("Changes failed to apply", NotificationType.error),
             GenericError = new State("Something went wrong", NotificationType.error),

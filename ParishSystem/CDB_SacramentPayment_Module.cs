@@ -44,7 +44,7 @@ namespace ParishSystem
             }
             else
             {
-                MessageBox.Show("SHUNGA");
+                Notification.Show(State.MissingFields);
             }
         }
         private void profileID_combobox_sacrament_SelectedValueChanged(object sender, EventArgs e)

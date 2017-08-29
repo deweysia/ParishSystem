@@ -70,7 +70,7 @@ namespace ParishSystem
             {
                 try
                 {
-                    Form A = new Bloodletting_Profile_Popup(int.Parse(bloodletting_dgv.CurrentRow.Cells["profileid"].Value.ToString()), dh);
+                    Form A = new Bloodletting_Profile_Popup(int.Parse(bloodletting_dgv.CurrentRow.Cells["blooddonorID"].Value.ToString()), dh);
                     A.ShowDialog();
                     refresh();
                 }

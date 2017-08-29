@@ -96,7 +96,7 @@ namespace ParishSystem
                     dt = dh.getBloodDonorsOnEvent(((ComboboxContent)bloodlettingeventreport_combobox.SelectedItem).ID);
                     summary_dgv_bloodletting.DataSource = dh.getsummaryOfBloodleting(dt);
                     bloodlettingeventreport_datagridview.DataSource = dt;
-                    bloodlettingeventreport_datagridview.Columns["profileid"].Visible = false;
+                    bloodlettingeventreport_datagridview.Columns["blooddonorID"].Visible = false;
                     bloodlettingeventreport_datagridview.Columns["eventname"].Visible = false;
                     bloodlettingeventreport_datagridview.Columns["name"].HeaderText = "Name";
                     bloodlettingeventreport_datagridview.Columns["bloodt"].HeaderText = "Blood Type";
@@ -110,7 +110,7 @@ namespace ParishSystem
                 dt = dh.getBloodDonorsOnDate(from_bloodlettingeventreport_dtp.Value);
                 summary_dgv_bloodletting.DataSource = dh.getsummaryOfBloodleting(dt);
                 bloodlettingeventreport_datagridview.DataSource = dt;
-                bloodlettingeventreport_datagridview.Columns["profileid"].Visible = false;
+                bloodlettingeventreport_datagridview.Columns["blooddonorID"].Visible = false;
                 bloodlettingeventreport_datagridview.Columns["eventname"].Visible = false;
                 bloodlettingeventreport_datagridview.Columns["name"].HeaderText = "Name";
                 bloodlettingeventreport_datagridview.Columns["bloodt"].HeaderText = "Blood Type";
@@ -123,7 +123,7 @@ namespace ParishSystem
                 dt = dh.getBloodDonorsOnDateRange(from_bloodlettingeventreport_dtp.Value, to_bloodlettingeventreport_dtp.Value);
                 summary_dgv_bloodletting.DataSource = dh.getsummaryOfBloodleting(dt);
                 bloodlettingeventreport_datagridview.DataSource = dt;
-                bloodlettingeventreport_datagridview.Columns["profileid"].Visible = false;
+                bloodlettingeventreport_datagridview.Columns["blooddonorID"].Visible = false;
                 bloodlettingeventreport_datagridview.Columns["eventname"].Visible = false;
                 bloodlettingeventreport_datagridview.Columns["name"].HeaderText = "Name";
                 bloodlettingeventreport_datagridview.Columns["bloodt"].HeaderText = "Blood Type";
@@ -139,7 +139,7 @@ namespace ParishSystem
                 summary_dgv_bloodletting.Columns["total"].HeaderText = "Total";
                 summary_dgv_bloodletting.Columns["bloodDonationEventID"].Visible = false;
                 bloodlettingeventreport_datagridview.DataSource = dt;
-                bloodlettingeventreport_datagridview.Columns["profileid"].Visible = false;
+                bloodlettingeventreport_datagridview.Columns["blooddonorID"].Visible = false;
                 bloodlettingeventreport_datagridview.Columns["name"].HeaderText = "Name";
                 bloodlettingeventreport_datagridview.Columns["bloodt"].HeaderText = "Blood Type";
                 bloodlettingeventreport_datagridview.Columns["address"].HeaderText = "Address";

@@ -448,9 +448,6 @@
     <EmbeddedResource Include="ScheduleModule.resx">
       <DependentUpon>ScheduleModule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Treasurer.resx">
-      <DependentUpon>Treasurer.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="bin\Debug\ParishSystem.exe.config" />
     <None Include="bin\Debug\ParishSystem.vshost.exe.config" />
     <None Include="bin\Debug\ParishSystem.vshost.exe.manifest" />

@@ -56,7 +56,7 @@ namespace ParishSystem
             }
             else
             {
-                MessageBox.Show("shunga");
+                Notification.Show(State.MissingFields);
             }
         }
         private void clearCRB()
@@ -112,7 +112,7 @@ namespace ParishSystem
             }
             else
             {
-                MessageBox.Show("shunga");
+                Notification.Show(State.InvalidTransaction);
             }
         }
         private void cancel_button_CRB_Click(object sender, EventArgs e)

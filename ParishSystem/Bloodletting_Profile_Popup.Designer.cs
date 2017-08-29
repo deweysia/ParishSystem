@@ -45,6 +45,7 @@
             this.bloodtype_label = new System.Windows.Forms.Label();
             this.bloodtype_combobox = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cover = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@
             this.sf = new ParishSystem.CueTextBox();
             this.fn = new ParishSystem.CueTextBox();
             this.mn = new ParishSystem.CueTextBox();
-            this.cover = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.blooddonation_dataGridView_bloodletting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantity_nud)).BeginInit();
             this.panel1.SuspendLayout();
@@ -279,7 +279,7 @@
             "AB-",
             "O+",
             "O-"});
-            this.bloodtype_combobox.Location = new System.Drawing.Point(106, 88);
+            this.bloodtype_combobox.Location = new System.Drawing.Point(97, 88);
             this.bloodtype_combobox.Name = "bloodtype_combobox";
             this.bloodtype_combobox.Size = new System.Drawing.Size(80, 29);
             this.bloodtype_combobox.TabIndex = 11;
@@ -287,7 +287,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.cover);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
@@ -303,6 +302,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(381, 225);
             this.panel1.TabIndex = 12;
+            // 
+            // cover
+            // 
+            this.cover.Location = new System.Drawing.Point(7, 259);
+            this.cover.Name = "cover";
+            this.cover.Size = new System.Drawing.Size(365, 355);
+            this.cover.TabIndex = 15;
+            this.cover.VisibleChanged += new System.EventHandler(this.cover_VisibleChanged);
             // 
             // label6
             // 
@@ -496,11 +503,11 @@
             // 
             this.ln.Cue = "Lastname";
             this.ln.CueColor = System.Drawing.Color.Gray;
-            this.ln.Location = new System.Drawing.Point(19, 5);
+            this.ln.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ln.Location = new System.Drawing.Point(19, 9);
             this.ln.Name = "ln";
-            this.ln.Size = new System.Drawing.Size(184, 29);
+            this.ln.Size = new System.Drawing.Size(184, 25);
             this.ln.TabIndex = 2;
-            this.ln.VisibleChanged += new System.EventHandler(this.ln_VisibleChanged);
             // 
             // sf
             // 
@@ -532,14 +539,6 @@
             this.mn.Size = new System.Drawing.Size(65, 25);
             this.mn.TabIndex = 5;
             // 
-            // cover
-            // 
-            this.cover.Location = new System.Drawing.Point(300, 117);
-            this.cover.Name = "cover";
-            this.cover.Size = new System.Drawing.Size(200, 100);
-            this.cover.TabIndex = 15;
-            this.cover.VisibleChanged += new System.EventHandler(this.cover_VisibleChanged);
-            // 
             // Bloodletting_Profile_Popup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -547,6 +546,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(378, 621);
             this.ControlBox = false;
+            this.Controls.Add(this.cover);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.totalDonation_label);
             this.Controls.Add(this.controlBar_panel);
