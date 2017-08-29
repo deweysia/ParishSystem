@@ -24,6 +24,8 @@ namespace ParishSystem
             this.type = type;
             this.row = dr.Cells;
 
+            Draggable drag = new Draggable(this);
+            drag.makeDraggable(panel1);
 
             int applicationID = int.Parse(row[0].Value.ToString());
             sacramentIncomeID = dh.getSacramentIncomeID(applicationID);

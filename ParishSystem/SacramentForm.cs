@@ -28,6 +28,7 @@ namespace ParishSystem
 
             Draggable drag = new Draggable(this);
             drag.makeDraggable(controlBar_panel);
+            
 
             if (type == SacramentType.Confirmation)
             {
@@ -50,9 +51,7 @@ namespace ParishSystem
             
             foreach(DataRow r in dt.Rows)
             {
-                
                 ComboboxContent cc = new ComboboxContent(int.Parse(r["ministerID"].ToString()), r["name"].ToString());
-                //MessageBox.Show(cc.ToString());
                 MinisterCBox.Items.Add(cc);
             }
 

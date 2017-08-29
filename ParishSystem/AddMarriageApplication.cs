@@ -22,7 +22,6 @@ namespace ParishSystem
             this.dh = DataHandler.getDataHandler();
 
             Draggable draggable = new Draggable(this);
-            draggable.makeDraggable(this);
             draggable.makeDraggable(panel1);
 
             sacramentItem = dh.getItem(SacramentType.Marriage.ToString());

@@ -21,6 +21,9 @@ namespace ParishSystem
             DataTable dt = dh.getMinisters();
             this.t = t;
 
+            Draggable drag = new Draggable(this);
+            drag.makeDraggable(panel2);
+
             foreach (DataRow dr in dt.Rows)
             {
                 ComboboxContent cc = new ComboboxContent(int.Parse(dr["ministerID"].ToString()), dr["name"].ToString());

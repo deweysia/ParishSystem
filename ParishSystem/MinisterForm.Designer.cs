@@ -327,6 +327,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MinisterForm";
             this.Text = "MinisterForm";
+            this.Load += new System.EventHandler(this.MinisterForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

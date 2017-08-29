@@ -243,7 +243,6 @@
       <DependentUpon>ORdetailsPopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Panel_Size_Pair.cs" />
-    <Compile Include="ParameterizedSQL.cs" />
     <Compile Include="ProfileModule.cs">
       <SubType>Form</SubType>
     </Compile>

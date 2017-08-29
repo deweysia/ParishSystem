@@ -18,6 +18,10 @@ namespace ParishSystem
         public MinisterForm()
         {
             InitializeComponent();
+
+            Draggable drag = new Draggable(this);
+            drag.makeDraggable(controlBar_panel);
+
             birthDate_dtp.Value = DateTime.Now;
             birthDate_dtp.MaxDate = DateTime.Now;
             expirationDate_dtp.Value = DateTime.Now;
@@ -54,6 +58,11 @@ namespace ParishSystem
         private void close_button_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void MinisterForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
