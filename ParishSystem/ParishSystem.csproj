@@ -325,12 +325,6 @@
     <Compile Include="ScheduleModule.Designer.cs">
       <DependentUpon>ScheduleModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="Treasurer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Treasurer.Designer.cs">
-      <DependentUpon>Treasurer.cs</DependentUpon>
-    </Compile>
     <Compile Include="treasurerBackend.cs" />
     <EmbeddedResource Include="AddApplication.resx">
       <DependentUpon>AddApplication.cs</DependentUpon>

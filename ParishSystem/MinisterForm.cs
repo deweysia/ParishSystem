@@ -24,26 +24,21 @@ namespace ParishSystem
 
             birthDate_dtp.Value = DateTime.Now;
             birthDate_dtp.MaxDate = DateTime.Now;
-            expirationDate_dtp.Value = DateTime.Now;
-            expirationDate_dtp.MinDate = DateTime.Now;
         }
 
  
         private void licenseNum_textBox_TextChanged(object sender, EventArgs e)
         {
-            addBtn.Enabled = !(string.IsNullOrWhiteSpace(firstName_textBox.Text)
-                || string.IsNullOrWhiteSpace(mi_textBox.Text)
+            addBtn.Enabled = !(string.IsNullOrWhiteSpace(txtFN.Text)
+                || string.IsNullOrWhiteSpace(txtMI.Text)
                 || string.IsNullOrWhiteSpace(lastName_textBox.Text)
-                || string.IsNullOrWhiteSpace(licenseNum_textBox.Text));
         }
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            bool success = dh.addMinister(firstName_textBox.Text, mi_textBox.Text, lastName_textBox.Text, suffix_textBox.Text, 
-                birthDate_dtp.Value, (MinistryType) (ministryType_cBox.SelectedIndex + 1), 
-                (MinisterStatus) (status_cBox.SelectedIndex + 1), 
-                licenseNum_textBox.Text, expirationDate_dtp.Value);
-
+            bool success = dh.addMinister(txtFN.Text, txtMI.Text, lastName_textBox.Text, suffix_textBox.Text,
+                birthDate_dtp.Value, (MinistryType)(ministryType_cBox.SelectedIndex + 1),
+                (MinisterStatus)(status_cBox.SelectedIndex + 1);
             if (success)
                 Notification.Show(State.MinisterAddSuccess);
             else

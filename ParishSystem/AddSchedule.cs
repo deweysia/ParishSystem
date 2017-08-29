@@ -31,6 +31,8 @@ namespace ParishSystem
             dtpTimeEnd.Value = DateTime.Now;
 
             DataTable dt = dh.getMinisterWithStatus(MinisterStatus.Active);
+
+            cmbMinister.Items.Add(string.Empty);//Added empty item to cmbMinister
             foreach (DataRow r in dt.Rows)
             {
                 ComboboxContent cc = new ComboboxContent(int.Parse(r["ministerID"].ToString()), r["name"].ToString());
@@ -142,7 +144,14 @@ namespace ParishSystem
         {
             if (!allFilled())
             {
-                Notification.Show(State.ScheduleMissingTitle);
+                Notification.Show(State.MissingFields);
+                return;
+            }
+
+            if (!ministerAvailable())
+            {
+                Notification.Show(State.ScheduleMinisterUnavailable);
+                return;
             }
 
             bool success = ev == null ? addEntry() : editEntry();
@@ -153,11 +162,12 @@ namespace ParishSystem
                 Notification.Show(State.ScheduleAddFail);
 
             this.Close();
-
         }
 
         private bool editEntry()
         {
+            
+
             string title = txtTitle.Text;
             string details = txtDetails.Text;
             DateTime start = getDateTime(ScheduleTime.Start);
@@ -184,6 +194,7 @@ namespace ParishSystem
 
         private bool addEntry()
         {
+
             string title = txtTitle.Text;
             string details = txtDetails.Text;
             DateTime start = getDateTime(ScheduleTime.Start);
@@ -206,10 +217,20 @@ namespace ParishSystem
             return success;
         }
 
+
         private bool allFilled()
         {
-            return !string.IsNullOrWhiteSpace(txtTitle.Text);
+            bool success = !string.IsNullOrWhiteSpace(txtTitle.Text);
+            if (cmbScheduleType.SelectedIndex == (int)ScheduleType.Appointment) //Checks if Appointment type is selected
+                success &= cmbMinister.SelectedIndex != 0;
+
+            return success;
                 
+        }
+
+        public bool ministerAvailable()
+        {
+            return dh.ministerAvailable(((ComboboxContent)cmbMinister.SelectedItem).id, getDateTime(ScheduleTime.Start), getDateTime(ScheduleTime.End));
         }
     }
 }

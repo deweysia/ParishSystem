@@ -114,7 +114,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.88235F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.11765F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel1.Controls.Add(this.dtpTimeStart, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.dtpDateEnd, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
@@ -135,7 +135,7 @@
             this.dtpTimeStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpTimeStart.CustomFormat = "hh:mm tt";
             this.dtpTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTimeStart.Location = new System.Drawing.Point(249, 14);
+            this.dtpTimeStart.Location = new System.Drawing.Point(248, 14);
             this.dtpTimeStart.Name = "dtpTimeStart";
             this.dtpTimeStart.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpTimeStart.ShowUpDown = true;
@@ -170,7 +170,7 @@
             this.dtpTimeEnd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpTimeEnd.CustomFormat = "hh:mm tt";
             this.dtpTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTimeEnd.Location = new System.Drawing.Point(249, 62);
+            this.dtpTimeEnd.Location = new System.Drawing.Point(248, 62);
             this.dtpTimeEnd.Name = "dtpTimeEnd";
             this.dtpTimeEnd.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpTimeEnd.ShowUpDown = true;
@@ -194,7 +194,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(115, 23);
             this.btnAdd.TabIndex = 7;
-            this.btnAdd.Text = "Add Schedule";
+            this.btnAdd.Text = "Save";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_ClickAdd);
             // 

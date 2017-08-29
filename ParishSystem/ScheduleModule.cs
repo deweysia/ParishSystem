@@ -27,14 +27,7 @@ namespace ParishSystem
             monthView1.ArrowsColor = CalendarColorTable.FromHex("#77A1D3");
             monthView1.DaySelectedBackgroundColor = CalendarColorTable.FromHex("#F4CC52");
             monthView1.DaySelectedTextColor = monthView1.ForeColor;
-
-            //CalendarItem c = new CalendarItem(calendar1, DateTime.Now.AddMinutes(-10), DateTime.Now, "End of SAD");
-            //c.ApplyColor(Color.GreenYellow);
-            //_items.Add(c);
-            //_items.Add(new CalendarItem(calendar1, DateTime.Now, DateTime.Now.AddMinutes(10), "Start of Mig"));
-            //_items.Add(new CalendarItem(calendar1, DateTime.Now.AddMinutes(30), DateTime.Now.AddMinutes(10), "Magic"));
-            //_items.Add(new CalendarItem(calendar1, DateTime.Now, DateTime.Now.AddMinutes(60), "Chill Jazz Time"));
-            //_items.Add(new CalendarItem(calendar1, DateTime.Now, DateTime.Now.AddHours(2), "Chill Jazz Time"));
+            calendar1.BackColor = Color.Black;
 
             loadEvents();
             PlaceItems();

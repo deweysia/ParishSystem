@@ -177,7 +177,6 @@ namespace ParishSystem
             MissingFields = new State("Please fill in all necessary fields", NotificationType.info),
             AddSuccess = new State("Entry successfully added", NotificationType.success),
             AddFail = new State("Entry failed to add", NotificationType.error),
-            MissingFields = new State("Please properly fill in all necessary fields", NotificationType.info),
             UpdateSuccess = new State("Changes successfully applied", NotificationType.success),
             UpdateFail = new State("Changes failed to apply", NotificationType.error),
             GenericError = new State("Something went wrong", NotificationType.error),
@@ -200,7 +199,8 @@ namespace ParishSystem
             MinisterAddFail = new State("Minister was not added", NotificationType.warning),
             ScheduleMissingTitle = new State("Please add a title", NotificationType.info),
             ScheduleAddSuccess = new State("Successfully added to schedule", NotificationType.success),
-            ScheduleAddFail = new State("Failed to add to schedule", NotificationType.error);
+            ScheduleAddFail = new State("Failed to add to schedule", NotificationType.error),
+            ScheduleMinisterUnavailable = new State("The selected minister is currently unavailable", NotificationType.warning);
 
 
 
