@@ -31,14 +31,14 @@ namespace ParishSystem
         {
             addBtn.Enabled = !(string.IsNullOrWhiteSpace(txtFN.Text)
                 || string.IsNullOrWhiteSpace(txtMI.Text)
-                || string.IsNullOrWhiteSpace(lastName_textBox.Text)
+                || string.IsNullOrWhiteSpace(lastName_textBox.Text));
         }
 
         private void addBtn_Click(object sender, EventArgs e)
         {
             bool success = dh.addMinister(txtFN.Text, txtMI.Text, lastName_textBox.Text, suffix_textBox.Text,
                 birthDate_dtp.Value, (MinistryType)(ministryType_cBox.SelectedIndex + 1),
-                (MinisterStatus)(status_cBox.SelectedIndex + 1);
+                (MinisterStatus)(status_cBox.SelectedIndex + 1));
             if (success)
                 Notification.Show(State.MinisterAddSuccess);
             else
