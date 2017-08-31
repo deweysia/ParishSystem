@@ -17,11 +17,15 @@ namespace ParishSystem
         Color ButtonPressed = Color.FromArgb(68, 108, 179);
         Color ButtonBackColor = Color.Transparent;
         DataHandler dh = DataHandler.getDataHandler();
-        Point lastClick;
         Dictionary<Button, Panel_Size_Pair> SubMenu = new Dictionary<Button, Panel_Size_Pair>();
         public SAD2()
         {
             InitializeComponent();
+
+            Draggable drag = new Draggable(this);
+            drag.makeDraggable(panel_controlbox);
+            drag.makeDraggable(panel2);
+
             SubMenu.Add(bloodletting_button_menu, new Panel_Size_Pair(234, 58, bloodlettingmenu_panel, false));
             SubMenu.Add(CRB_button_menu, new Panel_Size_Pair(234, 58, CRBmenu_panel, false));
             SubMenu.Add(CDB_button_menu, new Panel_Size_Pair(234, 58, CDB_menu_panel, false));
@@ -32,26 +36,6 @@ namespace ParishSystem
         }//CRBreport_panel
 
         #region Effects
-        protected override void WndProc(ref Message m)
-        {
-            switch (m.Msg)
-            {
-                case 0x84:
-                    base.WndProc(ref m);
-                    if ((int)m.Result == 0x1)
-                        m.Result = (IntPtr)0x2;
-                    return;
-            }
-
-            base.WndProc(ref m);
-        }
-
-        /// <summary>
-        /// Changes panel based on Button
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-
 
         #endregion
 
@@ -73,21 +57,6 @@ namespace ParishSystem
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void panel_controlbox_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                this.Left += e.X - lastClick.X;
-                this.Top += e.Y - lastClick.Y;
-            }
-        }
-
-        private void panel_controlbox_MouseDown(object sender, MouseEventArgs e)
-        {
-            lastClick = new Point(e.X, e.Y);
-        }
-
         #endregion
 
 

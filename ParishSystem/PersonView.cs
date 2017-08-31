@@ -28,17 +28,17 @@ namespace ParishSystem
         {
             foreach (DataRow dr in Applications.Rows)
             {
-                if (int.Parse(dr["sacramentType"].ToString()) == (int)Enums.SacramentType.Baptism)
+                if (int.Parse(dr["sacramentType"].ToString()) == (int)SacramentType.Baptism)
                 {
                     baptism_label_menu.ForeColor = Color.Black;
                     baptism_label_menu.Enabled = true;
                 }
-                else if (int.Parse(dr["sacramentType"].ToString()) == (int)Enums.SacramentType.Confirmation)
+                else if (int.Parse(dr["sacramentType"].ToString()) == (int)SacramentType.Confirmation)
                 {
                     confirmation_label_menu.ForeColor = Color.Black;
                     confirmation_label_menu.Enabled = true;
                 }
-                else if (int.Parse(dr["sacramentType"].ToString()) == (int)Enums.SacramentType.Marriage)
+                else if (int.Parse(dr["sacramentType"].ToString()) == (int)SacramentType.Marriage)
                 {
                     marriage_label_menu.ForeColor = Color.Black;
                     marriage_label_menu.Enabled = true;
@@ -53,8 +53,8 @@ namespace ParishSystem
 
             if (temp.Rows[0]["gender"].ToString() != "")
             {
-                if (int.Parse(temp.Rows[0]["gender"].ToString()) == (int)Enums.Gender.Male) gender_label.Text = "Male";
-                else if (int.Parse(temp.Rows[0]["gender"].ToString()) == (int)Enums.Gender.Female) gender_label.Text = "Female";
+                if (int.Parse(temp.Rows[0]["gender"].ToString()) == (int)Gender.Male) gender_label.Text = "Male";
+                else if (int.Parse(temp.Rows[0]["gender"].ToString()) == (int)Gender.Female) gender_label.Text = "Female";
             }
             else
             {
@@ -124,7 +124,7 @@ namespace ParishSystem
         {
             foreach (DataRow dr in Applications.Rows)
             {
-                if (dr["SacramentType"].ToString() == ((int)(Enums.SacramentType.Baptism)).ToString())
+                if (dr["SacramentType"].ToString() == ((int)(SacramentType.Baptism)).ToString())
                 {
                     
                     DataTable godFather = dh.getGodFatherOn(int.Parse(dr["applicationID"].ToString()));
@@ -216,7 +216,7 @@ namespace ParishSystem
         {
             foreach (DataRow dr in Applications.Rows)
             {
-                if (dr["SacramentType"].ToString() == ((int)(Enums.SacramentType.Confirmation)).ToString())
+                if (dr["SacramentType"].ToString() == ((int)(SacramentType.Confirmation)).ToString())
                 {
                    
                     DataTable godFather = dh.getGodFatherOn(int.Parse(dr["applicationID"].ToString()));
@@ -307,8 +307,8 @@ namespace ParishSystem
 
                     if (dr["gender"].ToString() != "")
                     {
-                        if (int.Parse(dr["gender"].ToString()) == (int)Enums.Gender.Male) gender_label_spouse_marriage.Text = "Male";
-                        else if (int.Parse(dr["gender"].ToString()) == (int)Enums.Gender.Female) gender_label_spouse_marriage.Text = "Female";
+                        if (int.Parse(dr["gender"].ToString()) == (int)Gender.Male) gender_label_spouse_marriage.Text = "Male";
+                        else if (int.Parse(dr["gender"].ToString()) == (int)Gender.Female) gender_label_spouse_marriage.Text = "Female";
                     }
                     else
                     {
@@ -404,8 +404,8 @@ namespace ParishSystem
                     }
                     try
                     { 
-                        if (int.Parse(temp.Rows[0]["civilStatusGroom"].ToString()) == (int)Enums.CivilStatus.Single) civilStatus_self_marriage.Text = "Single";
-                        else if (int.Parse(temp.Rows[0]["civilStatusGroom"].ToString()) == (int)Enums.CivilStatus.Widowed) civilStatus_self_marriage.Text = "Widowed";
+                        if (int.Parse(temp.Rows[0]["civilStatusGroom"].ToString()) == (int)CivilStatus.Single) civilStatus_self_marriage.Text = "Single";
+                        else if (int.Parse(temp.Rows[0]["civilStatusGroom"].ToString()) == (int)CivilStatus.Widowed) civilStatus_self_marriage.Text = "Widowed";
                     }
                     catch
                     {
@@ -413,8 +413,8 @@ namespace ParishSystem
                     }
                     try
                     {
-                            if (int.Parse(temp.Rows[0]["civilstatusBride"].ToString()) == (int)Enums.CivilStatus.Single) civilstatus_label_spouse_marriage.Text = "Single";
-                            else if (int.Parse(temp.Rows[0]["civilstatusBride"].ToString()) == (int)Enums.CivilStatus.Widowed) civilstatus_label_spouse_marriage.Text = "Widowed";
+                            if (int.Parse(temp.Rows[0]["civilstatusBride"].ToString()) == (int)CivilStatus.Single) civilstatus_label_spouse_marriage.Text = "Single";
+                            else if (int.Parse(temp.Rows[0]["civilstatusBride"].ToString()) == (int)CivilStatus.Widowed) civilstatus_label_spouse_marriage.Text = "Widowed";
                         
                     }
                     catch

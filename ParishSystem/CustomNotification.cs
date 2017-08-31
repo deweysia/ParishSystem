@@ -18,23 +18,13 @@ namespace ParishSystem
         {
             InitializeComponent();
             messageLabel.MaximumSize = this.Size - this.Padding.Size;
+
+            Draggable drag = new Draggable(this);
+            drag.makeDraggable(this);
+            drag.makeDraggable(messageLabel);
+            drag.makeDraggable(pictureBox1);
             
         }
-
-        protected override void WndProc(ref Message m)
-        {
-            switch (m.Msg)
-            {
-                case 0x84:
-                    base.WndProc(ref m);
-                    if ((int)m.Result == 0x1)
-                        m.Result = (IntPtr)0x2;
-                    return;
-            }
-
-            base.WndProc(ref m);
-        }
-
 
         public void ShowNotif(string message, NotificationType type)
         {
@@ -184,7 +174,9 @@ namespace ParishSystem
             AlreadyPaid = new State("Person is already paid", NotificationType.error),
             InvalidContactNumber = new State("Contact number is Invalid", NotificationType.error),
             MissingPersonInCRB = new State("There is no person selected", NotificationType.error),
-            MissingFields = new State("Please properly fill in all necessary fields", NotificationType.info),
+            MissingFields = new State("Please fill in all necessary fields", NotificationType.info),
+            AddSuccess = new State("Entry successfully added", NotificationType.success),
+            AddFail = new State("Entry failed to add", NotificationType.error),
             UpdateSuccess = new State("Changes successfully applied", NotificationType.success),
             UpdateFail = new State("Changes failed to apply", NotificationType.error),
             GenericError = new State("Something went wrong", NotificationType.error),
@@ -195,7 +187,7 @@ namespace ParishSystem
             PaymentFail = new State("Payment failed", NotificationType.error),
             PaymentZero = new State("Payment cannot be 0", NotificationType.warning),
             TransactionSuccess = new State("Transaction successful", NotificationType.success),
-            TransactionFail = new State("Transaction Failed", NotificationType.error),
+            TransactionFail = new State("Transaction failed", NotificationType.error),
             RevokeSucess = new State("Application has been revoked", NotificationType.success),
             RevokeFail = new State("Application revoke failed", NotificationType.error),
             ApplicationApproveSuccess = new State("Application successfully approved", NotificationType.success),
@@ -204,7 +196,11 @@ namespace ParishSystem
             ApplicationAddSuccess = new State("Application successfully added", NotificationType.success),
             ApplicationAddFail = new State("Application not added", NotificationType.warning),
             MinisterAddSuccess = new State("Minister successfully added", NotificationType.success),
-            MinisterAddFail = new State("Minister was not added", NotificationType.warning);
+            MinisterAddFail = new State("Minister was not added", NotificationType.warning),
+            ScheduleMissingTitle = new State("Please add a title", NotificationType.info),
+            ScheduleAddSuccess = new State("Successfully added to schedule", NotificationType.success),
+            ScheduleAddFail = new State("Failed to add to schedule", NotificationType.error),
+            ScheduleMinisterUnavailable = new State("The selected minister is currently unavailable", NotificationType.warning);
 
 
 

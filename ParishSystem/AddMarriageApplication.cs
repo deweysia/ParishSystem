@@ -13,13 +13,17 @@ namespace ParishSystem
     public partial class AddMarriageApplication : Form
     {
         DataHandler dh;
-
         DataTable sacramentItem;
+
+        
         public AddMarriageApplication()
         {
             InitializeComponent();
             this.dh = DataHandler.getDataHandler();
-            
+
+            Draggable draggable = new Draggable(this);
+            draggable.makeDraggable(panel1);
+
             sacramentItem = dh.getItem(SacramentType.Marriage.ToString());
             txtPrice.Text = sacramentItem.Rows[0]["suggestedPrice"].ToString();
         }
@@ -140,6 +144,20 @@ namespace ParishSystem
                 t.Text = "";
                 t.ForeColor = Color.Black;
             }
+        }
+
+        private void AddMarriageApplication_MouseMove(object sender, MouseEventArgs e)
+        {
+            //if (e.Button == MouseButtons.Left)
+            //{
+            //    this.Left += e.X - lastClick.X;
+            //    this.Top += e.Y - lastClick.Y;
+            //}
+        }
+
+        private void AddMarriageApplication_MouseDown(object sender, MouseEventArgs e)
+        {
+            //lastClick = new Point(e.X, e.Y);
         }
     }
 }

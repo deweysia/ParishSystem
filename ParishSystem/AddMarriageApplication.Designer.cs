@@ -53,6 +53,7 @@
             this.btnApply = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.cueTextBox1 = new ParishSystem.CueTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.close_picturebox)).BeginInit();
             this.SuspendLayout();
@@ -366,6 +367,17 @@
             this.label9.TabIndex = 37;
             this.label9.Text = "__________________________________________________";
             // 
+            // cueTextBox1
+            // 
+            this.cueTextBox1.Cue = "Hello";
+            this.cueTextBox1.CueColor = System.Drawing.Color.Gray;
+            this.cueTextBox1.ForeColor = System.Drawing.Color.Gray;
+            this.cueTextBox1.Location = new System.Drawing.Point(222, 239);
+            this.cueTextBox1.Name = "cueTextBox1";
+            this.cueTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.cueTextBox1.TabIndex = 38;
+            this.cueTextBox1.Text = "Hello";
+            // 
             // AddMarriageApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -373,6 +385,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(345, 458);
             this.ControlBox = false;
+            this.Controls.Add(this.cueTextBox1);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
@@ -400,6 +413,8 @@
             this.Name = "AddMarriageApplication";
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Load += new System.EventHandler(this.AddMarriageApplication_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddMarriageApplication_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddMarriageApplication_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.close_picturebox)).EndInit();
@@ -435,5 +450,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
+        private CueTextBox cueTextBox1;
     }
 }

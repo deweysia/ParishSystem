@@ -13,9 +13,9 @@ namespace ParishSystem
     public partial class AddApplication : Form
     {
         DataHandler dh;
-        Point lastClick;
         SacramentType sacramentType;
         DataTable sacramentItem;
+        
 
         Dictionary<TextBox, string> placeHolderText = new Dictionary<TextBox, string>();
         
@@ -25,6 +25,10 @@ namespace ParishSystem
             sacramentType = type;
 
             this.dh = DataHandler.getDataHandler();
+
+            Draggable drag = new Draggable(this);
+            drag.makeDraggable(this);
+            drag.makeDraggable(panel1);
 
             birthdate_dtp.MaxDate = DateTime.Now;
             label1.MouseDown += AddApplication_MouseDown;
@@ -126,17 +130,17 @@ namespace ParishSystem
 
         private void AddApplication_MouseDown(object sender, MouseEventArgs e)
         {
-            lastClick = new Point(e.X, e.Y);
-            Console.WriteLine("DOWN");
+            //lastClick = new Point(e.X, e.Y);
+            
         }
 
         private void AddApplication_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                this.Left += e.X - lastClick.X;
-                this.Top += e.Y - lastClick.Y;
-            }
+            //if (e.Button == MouseButtons.Left)
+            //{
+            //    this.Left += e.X - lastClick.X;
+            //    this.Top += e.Y - lastClick.Y;
+            //}
         }
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
@@ -199,6 +203,11 @@ namespace ParishSystem
             }
 
             return allFilled;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

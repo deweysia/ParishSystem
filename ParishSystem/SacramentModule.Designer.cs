@@ -41,7 +41,14 @@
             this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnResetMar = new System.Windows.Forms.Button();
+            this.btnAdvanceSearchMar = new System.Windows.Forms.Button();
+            this.btnSearchMar = new System.Windows.Forms.Button();
+            this.txtSearchMar = new ParishSystem.CueTextBox();
             this.tlpProfileMar = new System.Windows.Forms.TableLayoutPanel();
+            this.btnOpenBrideProfile = new System.Windows.Forms.Button();
+            this.btnAddReferencesMar = new System.Windows.Forms.Button();
+            this.btnOpenGroomProfile = new System.Windows.Forms.Button();
             this.lblNameBride = new System.Windows.Forms.Label();
             this.lblNameGroom = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -61,7 +68,13 @@
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAdvanceSearchCon = new System.Windows.Forms.Button();
+            this.btnResetCon = new System.Windows.Forms.Button();
+            this.btnSearchCon = new System.Windows.Forms.Button();
+            this.txtSearchCon = new ParishSystem.CueTextBox();
             this.tlpProfileCon = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAddReferencesCon = new System.Windows.Forms.Button();
+            this.btnOpenProfileCon = new System.Windows.Forms.Button();
             this.lblNameCon = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvConfirmation = new MetroFramework.Controls.MetroGrid();
@@ -83,6 +96,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnResetBap = new System.Windows.Forms.Button();
             this.btnSearchBap = new System.Windows.Forms.Button();
+            this.txtSearchBap = new ParishSystem.CueTextBox();
             this.btnAdvanceSearchBap = new System.Windows.Forms.Button();
             this.tlpProfileBap = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddReferencesBap = new System.Windows.Forms.Button();
@@ -105,20 +119,6 @@
             this.bapRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.bsSacrament = new System.Windows.Forms.BindingSource(this.components);
-            this.btnOpenProfileCon = new System.Windows.Forms.Button();
-            this.btnAddReferencesCon = new System.Windows.Forms.Button();
-            this.btnSearchCon = new System.Windows.Forms.Button();
-            this.btnResetCon = new System.Windows.Forms.Button();
-            this.btnAdvanceSearchCon = new System.Windows.Forms.Button();
-            this.btnOpenGroomProfile = new System.Windows.Forms.Button();
-            this.btnAddReferencesMar = new System.Windows.Forms.Button();
-            this.btnOpenBrideProfile = new System.Windows.Forms.Button();
-            this.btnAdvanceSearchMar = new System.Windows.Forms.Button();
-            this.btnSearchMar = new System.Windows.Forms.Button();
-            this.btnResetMar = new System.Windows.Forms.Button();
-            this.txtSearchBap = new ParishSystem.CueTextBox();
-            this.txtSearchCon = new ParishSystem.CueTextBox();
-            this.txtSearchMar = new ParishSystem.CueTextBox();
             this.metroTabPage6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -186,6 +186,67 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(340, 60);
             this.tableLayoutPanel1.TabIndex = 15;
             // 
+            // btnResetMar
+            // 
+            this.btnResetMar.BackColor = System.Drawing.Color.Gray;
+            this.btnResetMar.FlatAppearance.BorderSize = 0;
+            this.btnResetMar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnResetMar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetMar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetMar.ForeColor = System.Drawing.Color.White;
+            this.btnResetMar.Location = new System.Drawing.Point(241, 33);
+            this.btnResetMar.Name = "btnResetMar";
+            this.btnResetMar.Size = new System.Drawing.Size(96, 23);
+            this.btnResetMar.TabIndex = 21;
+            this.btnResetMar.Text = "Reset";
+            this.btnResetMar.UseVisualStyleBackColor = false;
+            this.btnResetMar.Click += new System.EventHandler(this.btnResetMar_Click);
+            // 
+            // btnAdvanceSearchMar
+            // 
+            this.btnAdvanceSearchMar.BackColor = System.Drawing.Color.Gray;
+            this.btnAdvanceSearchMar.FlatAppearance.BorderSize = 0;
+            this.btnAdvanceSearchMar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnAdvanceSearchMar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdvanceSearchMar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdvanceSearchMar.ForeColor = System.Drawing.Color.White;
+            this.btnAdvanceSearchMar.Location = new System.Drawing.Point(98, 33);
+            this.btnAdvanceSearchMar.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
+            this.btnAdvanceSearchMar.Name = "btnAdvanceSearchMar";
+            this.btnAdvanceSearchMar.Size = new System.Drawing.Size(113, 23);
+            this.btnAdvanceSearchMar.TabIndex = 19;
+            this.btnAdvanceSearchMar.Text = "Advance Search";
+            this.btnAdvanceSearchMar.UseVisualStyleBackColor = false;
+            this.btnAdvanceSearchMar.Click += new System.EventHandler(this.btnAdvanceSearchMar_Click);
+            // 
+            // btnSearchMar
+            // 
+            this.btnSearchMar.BackColor = System.Drawing.Color.Gray;
+            this.btnSearchMar.FlatAppearance.BorderSize = 0;
+            this.btnSearchMar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnSearchMar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchMar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchMar.ForeColor = System.Drawing.Color.White;
+            this.btnSearchMar.Location = new System.Drawing.Point(241, 3);
+            this.btnSearchMar.Name = "btnSearchMar";
+            this.btnSearchMar.Size = new System.Drawing.Size(96, 23);
+            this.btnSearchMar.TabIndex = 20;
+            this.btnSearchMar.Text = "Search";
+            this.btnSearchMar.UseVisualStyleBackColor = false;
+            this.btnSearchMar.Click += new System.EventHandler(this.btnSearchMar_Click);
+            // 
+            // txtSearchMar
+            // 
+            this.txtSearchMar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchMar.Cue = null;
+            this.txtSearchMar.CueColor = System.Drawing.Color.Gray;
+            this.txtSearchMar.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtSearchMar.Location = new System.Drawing.Point(73, 3);
+            this.txtSearchMar.Name = "txtSearchMar";
+            this.txtSearchMar.Size = new System.Drawing.Size(160, 25);
+            this.txtSearchMar.TabIndex = 11;
+            this.txtSearchMar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchMar_KeyDown);
+            // 
             // tlpProfileMar
             // 
             this.tlpProfileMar.ColumnCount = 2;
@@ -202,6 +263,54 @@
             this.tlpProfileMar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpProfileMar.Size = new System.Drawing.Size(314, 59);
             this.tlpProfileMar.TabIndex = 13;
+            // 
+            // btnOpenBrideProfile
+            // 
+            this.btnOpenBrideProfile.BackColor = System.Drawing.Color.Gray;
+            this.btnOpenBrideProfile.FlatAppearance.BorderSize = 0;
+            this.btnOpenBrideProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnOpenBrideProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenBrideProfile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenBrideProfile.ForeColor = System.Drawing.Color.White;
+            this.btnOpenBrideProfile.Location = new System.Drawing.Point(160, 3);
+            this.btnOpenBrideProfile.Name = "btnOpenBrideProfile";
+            this.btnOpenBrideProfile.Size = new System.Drawing.Size(113, 23);
+            this.btnOpenBrideProfile.TabIndex = 18;
+            this.btnOpenBrideProfile.Text = "Open Bride";
+            this.btnOpenBrideProfile.UseVisualStyleBackColor = false;
+            this.btnOpenBrideProfile.Click += new System.EventHandler(this.btnOpenBrideProfile_Click);
+            // 
+            // btnAddReferencesMar
+            // 
+            this.btnAddReferencesMar.BackColor = System.Drawing.Color.Gray;
+            this.btnAddReferencesMar.FlatAppearance.BorderSize = 0;
+            this.btnAddReferencesMar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnAddReferencesMar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddReferencesMar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddReferencesMar.ForeColor = System.Drawing.Color.White;
+            this.btnAddReferencesMar.Location = new System.Drawing.Point(3, 32);
+            this.btnAddReferencesMar.Name = "btnAddReferencesMar";
+            this.btnAddReferencesMar.Size = new System.Drawing.Size(113, 23);
+            this.btnAddReferencesMar.TabIndex = 17;
+            this.btnAddReferencesMar.Text = "Add References";
+            this.btnAddReferencesMar.UseVisualStyleBackColor = false;
+            this.btnAddReferencesMar.Click += new System.EventHandler(this.btnAddReferencesMar_Click);
+            // 
+            // btnOpenGroomProfile
+            // 
+            this.btnOpenGroomProfile.BackColor = System.Drawing.Color.Gray;
+            this.btnOpenGroomProfile.FlatAppearance.BorderSize = 0;
+            this.btnOpenGroomProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnOpenGroomProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenGroomProfile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenGroomProfile.ForeColor = System.Drawing.Color.White;
+            this.btnOpenGroomProfile.Location = new System.Drawing.Point(3, 3);
+            this.btnOpenGroomProfile.Name = "btnOpenGroomProfile";
+            this.btnOpenGroomProfile.Size = new System.Drawing.Size(113, 23);
+            this.btnOpenGroomProfile.TabIndex = 17;
+            this.btnOpenGroomProfile.Text = "Open Groom";
+            this.btnOpenGroomProfile.UseVisualStyleBackColor = false;
+            this.btnOpenGroomProfile.Click += new System.EventHandler(this.btnOpenGroomProfile_Click);
             // 
             // lblNameBride
             // 
@@ -447,6 +556,66 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(340, 60);
             this.tableLayoutPanel3.TabIndex = 14;
             // 
+            // btnAdvanceSearchCon
+            // 
+            this.btnAdvanceSearchCon.BackColor = System.Drawing.Color.Gray;
+            this.btnAdvanceSearchCon.FlatAppearance.BorderSize = 0;
+            this.btnAdvanceSearchCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnAdvanceSearchCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdvanceSearchCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdvanceSearchCon.ForeColor = System.Drawing.Color.White;
+            this.btnAdvanceSearchCon.Location = new System.Drawing.Point(98, 33);
+            this.btnAdvanceSearchCon.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
+            this.btnAdvanceSearchCon.Name = "btnAdvanceSearchCon";
+            this.btnAdvanceSearchCon.Size = new System.Drawing.Size(113, 23);
+            this.btnAdvanceSearchCon.TabIndex = 18;
+            this.btnAdvanceSearchCon.Text = "Advance Search";
+            this.btnAdvanceSearchCon.UseVisualStyleBackColor = false;
+            this.btnAdvanceSearchCon.Click += new System.EventHandler(this.btnAdvanceSearchCon_Click);
+            // 
+            // btnResetCon
+            // 
+            this.btnResetCon.BackColor = System.Drawing.Color.Gray;
+            this.btnResetCon.FlatAppearance.BorderSize = 0;
+            this.btnResetCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnResetCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetCon.ForeColor = System.Drawing.Color.White;
+            this.btnResetCon.Location = new System.Drawing.Point(241, 33);
+            this.btnResetCon.Name = "btnResetCon";
+            this.btnResetCon.Size = new System.Drawing.Size(96, 23);
+            this.btnResetCon.TabIndex = 18;
+            this.btnResetCon.Text = "Reset";
+            this.btnResetCon.UseVisualStyleBackColor = false;
+            this.btnResetCon.Click += new System.EventHandler(this.btnResetCon_Click);
+            // 
+            // btnSearchCon
+            // 
+            this.btnSearchCon.BackColor = System.Drawing.Color.Gray;
+            this.btnSearchCon.FlatAppearance.BorderSize = 0;
+            this.btnSearchCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnSearchCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchCon.ForeColor = System.Drawing.Color.White;
+            this.btnSearchCon.Location = new System.Drawing.Point(241, 3);
+            this.btnSearchCon.Name = "btnSearchCon";
+            this.btnSearchCon.Size = new System.Drawing.Size(96, 23);
+            this.btnSearchCon.TabIndex = 17;
+            this.btnSearchCon.Text = "Search";
+            this.btnSearchCon.UseVisualStyleBackColor = false;
+            this.btnSearchCon.Click += new System.EventHandler(this.btnSearchCon_Click);
+            // 
+            // txtSearchCon
+            // 
+            this.txtSearchCon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchCon.Cue = null;
+            this.txtSearchCon.CueColor = System.Drawing.Color.Gray;
+            this.txtSearchCon.Location = new System.Drawing.Point(73, 3);
+            this.txtSearchCon.Name = "txtSearchCon";
+            this.txtSearchCon.Size = new System.Drawing.Size(160, 25);
+            this.txtSearchCon.TabIndex = 11;
+            this.txtSearchCon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchCon_KeyDown);
+            // 
             // tlpProfileCon
             // 
             this.tlpProfileCon.ColumnCount = 1;
@@ -461,6 +630,38 @@
             this.tlpProfileCon.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpProfileCon.Size = new System.Drawing.Size(121, 59);
             this.tlpProfileCon.TabIndex = 13;
+            // 
+            // btnAddReferencesCon
+            // 
+            this.btnAddReferencesCon.BackColor = System.Drawing.Color.Gray;
+            this.btnAddReferencesCon.FlatAppearance.BorderSize = 0;
+            this.btnAddReferencesCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnAddReferencesCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddReferencesCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddReferencesCon.ForeColor = System.Drawing.Color.White;
+            this.btnAddReferencesCon.Location = new System.Drawing.Point(3, 32);
+            this.btnAddReferencesCon.Name = "btnAddReferencesCon";
+            this.btnAddReferencesCon.Size = new System.Drawing.Size(113, 23);
+            this.btnAddReferencesCon.TabIndex = 17;
+            this.btnAddReferencesCon.Text = "Add References";
+            this.btnAddReferencesCon.UseVisualStyleBackColor = false;
+            this.btnAddReferencesCon.Click += new System.EventHandler(this.btnAddReferencesCon_Click);
+            // 
+            // btnOpenProfileCon
+            // 
+            this.btnOpenProfileCon.BackColor = System.Drawing.Color.Gray;
+            this.btnOpenProfileCon.FlatAppearance.BorderSize = 0;
+            this.btnOpenProfileCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnOpenProfileCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenProfileCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenProfileCon.ForeColor = System.Drawing.Color.White;
+            this.btnOpenProfileCon.Location = new System.Drawing.Point(3, 3);
+            this.btnOpenProfileCon.Name = "btnOpenProfileCon";
+            this.btnOpenProfileCon.Size = new System.Drawing.Size(113, 23);
+            this.btnOpenProfileCon.TabIndex = 16;
+            this.btnOpenProfileCon.Text = "Open Profile";
+            this.btnOpenProfileCon.UseVisualStyleBackColor = false;
+            this.btnOpenProfileCon.Click += new System.EventHandler(this.btnOpenProfileConf_Click);
             // 
             // lblNameCon
             // 
@@ -738,6 +939,17 @@
             this.btnSearchBap.UseVisualStyleBackColor = false;
             this.btnSearchBap.Click += new System.EventHandler(this.btnSearchBap_Click);
             // 
+            // txtSearchBap
+            // 
+            this.txtSearchBap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchBap.Cue = null;
+            this.txtSearchBap.CueColor = System.Drawing.Color.Gray;
+            this.txtSearchBap.Location = new System.Drawing.Point(73, 3);
+            this.txtSearchBap.Name = "txtSearchBap";
+            this.txtSearchBap.Size = new System.Drawing.Size(160, 25);
+            this.txtSearchBap.TabIndex = 11;
+            this.txtSearchBap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBap_KeyDown);
+            // 
             // btnAdvanceSearchBap
             // 
             this.btnAdvanceSearchBap.BackColor = System.Drawing.Color.Gray;
@@ -1014,218 +1226,6 @@
             this.metroTabControl1.TabIndex = 11;
             this.metroTabControl1.UseSelectable = true;
             this.metroTabControl1.UseStyleColors = true;
-            // 
-            // btnOpenProfileCon
-            // 
-            this.btnOpenProfileCon.BackColor = System.Drawing.Color.Gray;
-            this.btnOpenProfileCon.FlatAppearance.BorderSize = 0;
-            this.btnOpenProfileCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnOpenProfileCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenProfileCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpenProfileCon.ForeColor = System.Drawing.Color.White;
-            this.btnOpenProfileCon.Location = new System.Drawing.Point(3, 3);
-            this.btnOpenProfileCon.Name = "btnOpenProfileCon";
-            this.btnOpenProfileCon.Size = new System.Drawing.Size(113, 23);
-            this.btnOpenProfileCon.TabIndex = 16;
-            this.btnOpenProfileCon.Text = "Open Profile";
-            this.btnOpenProfileCon.UseVisualStyleBackColor = false;
-            this.btnOpenProfileCon.Click += new System.EventHandler(this.btnOpenProfileConf_Click);
-            // 
-            // btnAddReferencesCon
-            // 
-            this.btnAddReferencesCon.BackColor = System.Drawing.Color.Gray;
-            this.btnAddReferencesCon.FlatAppearance.BorderSize = 0;
-            this.btnAddReferencesCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnAddReferencesCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddReferencesCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddReferencesCon.ForeColor = System.Drawing.Color.White;
-            this.btnAddReferencesCon.Location = new System.Drawing.Point(3, 32);
-            this.btnAddReferencesCon.Name = "btnAddReferencesCon";
-            this.btnAddReferencesCon.Size = new System.Drawing.Size(113, 23);
-            this.btnAddReferencesCon.TabIndex = 17;
-            this.btnAddReferencesCon.Text = "Add References";
-            this.btnAddReferencesCon.UseVisualStyleBackColor = false;
-            this.btnAddReferencesCon.Click += new System.EventHandler(this.btnAddReferencesCon_Click);
-            // 
-            // btnSearchCon
-            // 
-            this.btnSearchCon.BackColor = System.Drawing.Color.Gray;
-            this.btnSearchCon.FlatAppearance.BorderSize = 0;
-            this.btnSearchCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnSearchCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchCon.ForeColor = System.Drawing.Color.White;
-            this.btnSearchCon.Location = new System.Drawing.Point(241, 3);
-            this.btnSearchCon.Name = "btnSearchCon";
-            this.btnSearchCon.Size = new System.Drawing.Size(96, 23);
-            this.btnSearchCon.TabIndex = 17;
-            this.btnSearchCon.Text = "Search";
-            this.btnSearchCon.UseVisualStyleBackColor = false;
-            this.btnSearchCon.Click += new System.EventHandler(this.btnSearchCon_Click);
-            // 
-            // btnResetCon
-            // 
-            this.btnResetCon.BackColor = System.Drawing.Color.Gray;
-            this.btnResetCon.FlatAppearance.BorderSize = 0;
-            this.btnResetCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnResetCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResetCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetCon.ForeColor = System.Drawing.Color.White;
-            this.btnResetCon.Location = new System.Drawing.Point(241, 33);
-            this.btnResetCon.Name = "btnResetCon";
-            this.btnResetCon.Size = new System.Drawing.Size(96, 23);
-            this.btnResetCon.TabIndex = 18;
-            this.btnResetCon.Text = "Reset";
-            this.btnResetCon.UseVisualStyleBackColor = false;
-            this.btnResetCon.Click += new System.EventHandler(this.btnResetCon_Click);
-            // 
-            // btnAdvanceSearchCon
-            // 
-            this.btnAdvanceSearchCon.BackColor = System.Drawing.Color.Gray;
-            this.btnAdvanceSearchCon.FlatAppearance.BorderSize = 0;
-            this.btnAdvanceSearchCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnAdvanceSearchCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdvanceSearchCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdvanceSearchCon.ForeColor = System.Drawing.Color.White;
-            this.btnAdvanceSearchCon.Location = new System.Drawing.Point(98, 33);
-            this.btnAdvanceSearchCon.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
-            this.btnAdvanceSearchCon.Name = "btnAdvanceSearchCon";
-            this.btnAdvanceSearchCon.Size = new System.Drawing.Size(113, 23);
-            this.btnAdvanceSearchCon.TabIndex = 18;
-            this.btnAdvanceSearchCon.Text = "Advance Search";
-            this.btnAdvanceSearchCon.UseVisualStyleBackColor = false;
-            this.btnAdvanceSearchCon.Click += new System.EventHandler(this.btnAdvanceSearchCon_Click);
-            // 
-            // btnOpenGroomProfile
-            // 
-            this.btnOpenGroomProfile.BackColor = System.Drawing.Color.Gray;
-            this.btnOpenGroomProfile.FlatAppearance.BorderSize = 0;
-            this.btnOpenGroomProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnOpenGroomProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenGroomProfile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpenGroomProfile.ForeColor = System.Drawing.Color.White;
-            this.btnOpenGroomProfile.Location = new System.Drawing.Point(3, 3);
-            this.btnOpenGroomProfile.Name = "btnOpenGroomProfile";
-            this.btnOpenGroomProfile.Size = new System.Drawing.Size(113, 23);
-            this.btnOpenGroomProfile.TabIndex = 17;
-            this.btnOpenGroomProfile.Text = "Open Groom";
-            this.btnOpenGroomProfile.UseVisualStyleBackColor = false;
-            this.btnOpenGroomProfile.Click += new System.EventHandler(this.btnOpenGroomProfile_Click);
-            // 
-            // btnAddReferencesMar
-            // 
-            this.btnAddReferencesMar.BackColor = System.Drawing.Color.Gray;
-            this.btnAddReferencesMar.FlatAppearance.BorderSize = 0;
-            this.btnAddReferencesMar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnAddReferencesMar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddReferencesMar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddReferencesMar.ForeColor = System.Drawing.Color.White;
-            this.btnAddReferencesMar.Location = new System.Drawing.Point(3, 32);
-            this.btnAddReferencesMar.Name = "btnAddReferencesMar";
-            this.btnAddReferencesMar.Size = new System.Drawing.Size(113, 23);
-            this.btnAddReferencesMar.TabIndex = 17;
-            this.btnAddReferencesMar.Text = "Add References";
-            this.btnAddReferencesMar.UseVisualStyleBackColor = false;
-            this.btnAddReferencesMar.Click += new System.EventHandler(this.btnAddReferencesMar_Click);
-            // 
-            // btnOpenBrideProfile
-            // 
-            this.btnOpenBrideProfile.BackColor = System.Drawing.Color.Gray;
-            this.btnOpenBrideProfile.FlatAppearance.BorderSize = 0;
-            this.btnOpenBrideProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnOpenBrideProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenBrideProfile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpenBrideProfile.ForeColor = System.Drawing.Color.White;
-            this.btnOpenBrideProfile.Location = new System.Drawing.Point(160, 3);
-            this.btnOpenBrideProfile.Name = "btnOpenBrideProfile";
-            this.btnOpenBrideProfile.Size = new System.Drawing.Size(113, 23);
-            this.btnOpenBrideProfile.TabIndex = 18;
-            this.btnOpenBrideProfile.Text = "Open Bride";
-            this.btnOpenBrideProfile.UseVisualStyleBackColor = false;
-            this.btnOpenBrideProfile.Click += new System.EventHandler(this.btnOpenBrideProfile_Click);
-            // 
-            // btnAdvanceSearchMar
-            // 
-            this.btnAdvanceSearchMar.BackColor = System.Drawing.Color.Gray;
-            this.btnAdvanceSearchMar.FlatAppearance.BorderSize = 0;
-            this.btnAdvanceSearchMar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnAdvanceSearchMar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdvanceSearchMar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdvanceSearchMar.ForeColor = System.Drawing.Color.White;
-            this.btnAdvanceSearchMar.Location = new System.Drawing.Point(98, 33);
-            this.btnAdvanceSearchMar.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
-            this.btnAdvanceSearchMar.Name = "btnAdvanceSearchMar";
-            this.btnAdvanceSearchMar.Size = new System.Drawing.Size(113, 23);
-            this.btnAdvanceSearchMar.TabIndex = 19;
-            this.btnAdvanceSearchMar.Text = "Advance Search";
-            this.btnAdvanceSearchMar.UseVisualStyleBackColor = false;
-            this.btnAdvanceSearchMar.Click += new System.EventHandler(this.btnAdvanceSearchMar_Click);
-            // 
-            // btnSearchMar
-            // 
-            this.btnSearchMar.BackColor = System.Drawing.Color.Gray;
-            this.btnSearchMar.FlatAppearance.BorderSize = 0;
-            this.btnSearchMar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnSearchMar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchMar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchMar.ForeColor = System.Drawing.Color.White;
-            this.btnSearchMar.Location = new System.Drawing.Point(241, 3);
-            this.btnSearchMar.Name = "btnSearchMar";
-            this.btnSearchMar.Size = new System.Drawing.Size(96, 23);
-            this.btnSearchMar.TabIndex = 20;
-            this.btnSearchMar.Text = "Search";
-            this.btnSearchMar.UseVisualStyleBackColor = false;
-            this.btnSearchMar.Click += new System.EventHandler(this.btnSearchMar_Click);
-            // 
-            // btnResetMar
-            // 
-            this.btnResetMar.BackColor = System.Drawing.Color.Gray;
-            this.btnResetMar.FlatAppearance.BorderSize = 0;
-            this.btnResetMar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnResetMar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResetMar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetMar.ForeColor = System.Drawing.Color.White;
-            this.btnResetMar.Location = new System.Drawing.Point(241, 33);
-            this.btnResetMar.Name = "btnResetMar";
-            this.btnResetMar.Size = new System.Drawing.Size(96, 23);
-            this.btnResetMar.TabIndex = 21;
-            this.btnResetMar.Text = "Reset";
-            this.btnResetMar.UseVisualStyleBackColor = false;
-            this.btnResetMar.Click += new System.EventHandler(this.btnResetMar_Click);
-            // 
-            // txtSearchBap
-            // 
-            this.txtSearchBap.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearchBap.Cue = null;
-            this.txtSearchBap.CueColor = System.Drawing.Color.Gray;
-            this.txtSearchBap.Location = new System.Drawing.Point(73, 3);
-            this.txtSearchBap.Name = "txtSearchBap";
-            this.txtSearchBap.Size = new System.Drawing.Size(160, 25);
-            this.txtSearchBap.TabIndex = 11;
-            this.txtSearchBap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBap_KeyDown);
-            // 
-            // txtSearchCon
-            // 
-            this.txtSearchCon.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearchCon.Cue = null;
-            this.txtSearchCon.CueColor = System.Drawing.Color.Gray;
-            this.txtSearchCon.Location = new System.Drawing.Point(73, 3);
-            this.txtSearchCon.Name = "txtSearchCon";
-            this.txtSearchCon.Size = new System.Drawing.Size(160, 25);
-            this.txtSearchCon.TabIndex = 11;
-            this.txtSearchCon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchCon_KeyDown);
-            // 
-            // txtSearchMar
-            // 
-            this.txtSearchMar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearchMar.Cue = null;
-            this.txtSearchMar.CueColor = System.Drawing.Color.Gray;
-            this.txtSearchMar.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtSearchMar.Location = new System.Drawing.Point(73, 3);
-            this.txtSearchMar.Name = "txtSearchMar";
-            this.txtSearchMar.Size = new System.Drawing.Size(160, 25);
-            this.txtSearchMar.TabIndex = 11;
-            this.txtSearchMar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchMar_KeyDown);
             // 
             // SacramentModule
             // 

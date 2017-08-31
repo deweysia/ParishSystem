@@ -130,6 +130,11 @@ namespace ParishSystem
             return dt;
         }
 
+        /// <summary>
+        /// Returns list containing the parameter names of a parameterized query
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
         private string[] getParameters(string query)
         {
             List<string> l = new List<string>();
@@ -620,40 +625,25 @@ namespace ParishSystem
 
         #region
 
-        public bool addBloodDonationEvent(string eventName, DateTime startTime, DateTime endTime, string eventVenue, string eventDetails)
+        public bool addBloodDonationEvent(string eventName, DateTime startDateTime, DateTime endDateTime, string eventVenue, string eventDetails)
         {
-            string q = $@"INSERT INTO `sad2`.`blooddonationevent` (`eventName`, `startDateTime`, `endDateTime`, `eventVenue`, `eventDetails`) VALUES ('{eventName}','{startTime.ToString("yyyy-MM-dd HH:mm:ss")}', '{endTime.ToString("yyyy-MM-dd HH:mm:ss")}','{eventVenue}','{eventDetails}');";
-            bool success = runNonQuery(q);
-            //if (success)
-            //    updateModificationInfo("BloodDnationEvent", "bloodbloodDonationEventID", getLatestID("BloodDonationEvent", "bloodbloodDonationEventID"));
-
+            string q = "INSERT INTO BloodDonationEvent(eventName, startDateTime, endDateTime, eventVenue, eventDetails) VALUES (@eventName, @startDateTime, @endDateTime, @eventVenue, @eventDetails)";
+            bool success = ExecuteNonQuery(q, eventName, startDateTime.ToString("yyyy-MM-dd HH:mm:ss"), endDateTime.ToString("yyyy-MM-dd HH:mm:ss"), eventVenue, eventDetails);
             return success;
+
+
         }
 
         public bool editBloodDonationEvent(int bloodDonationEventID, string eventName, DateTime startTime, DateTime endTime, string eventVenue, string eventDetails)
         {
-            string q = "UPDATE BloodDonationEvent SET eventName = '" + eventName
-                + "', startDateTime = '" + startTime.ToString("yyyy-MM-dd HH:mm:ss")
-                + "', endDateTime = '" + endTime.ToString("yyyy-MM-dd HH:mm:ss")
-                + "', eventVenue = '" + eventVenue + "', eventDetails = '" + eventDetails
-                + "' WHERE bloodDonationEventID = " + bloodDonationEventID;
-
-            bool success = runNonQuery(q);
-            //if (success)
-            //    updateModificationInfo("bloodDonationEvent", "bloodbloodDonationEventID", bloodbloodDonationEventID);
-
+            string q = "UPDATE BloodDonationEvent SET eventName = @eventName, startTime = @startTime, endTime = @endTime, eventVenue = @eventVenue, eventDetails = @eventDetails WHERE bloodDonationEventID = @bloodDonationEventID";
+            bool success = ExecuteNonQuery(q, eventName, startTime.ToString("yyyy-MM-dd HH:mm:ss"), endTime.ToString("yyyy-MM-dd HH:mm:ss"), eventVenue, eventDetails, bloodDonationEventID);
             return success;
+
         }
 
         public bool deleteBloodDonationEvent(int bloodDonationEventID)
         {
-
-            //if (!idExists("bloodDonationEvent", "bloodbloodDonationEventID", bloodbloodDonationEventID))
-            //    return false;
-
-            //addBloodDonationLog(bloodDonationEventID);
-            //updateModificationInfo("bloodDonationEvent", "bloodDonationEventID", bloodDonationEventID);
-            //addBloodDonationLog(bloodDonationEventID);
 
             string q = "DELETE FROM bloodDonationEvent WHERE bloodDonationEventID = " + bloodDonationEventID;
 
@@ -673,6 +663,17 @@ namespace ParishSystem
             string q = "SELECT * FROM BloodDonationEvent WHERE eventStatus = 'active'";
 
             DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getBloodDonationEvents(DateTime startDateTime, DateTime endDateTime)
+        {
+            string q = @"SELECT bloodDonationEventID, eventName, eventDetails, eventVenue,
+                            DATE_FORMAT(startDateTime, '%Y-%m-%d %H:%i') AS startDateTime, DATE_FORMAT(endDateTime, '%Y-%m-%d %H:%i') AS endDateTime
+                            FROM BloodDonationEvent WHERE startDateTime >= @startDateTime AND endDateTime <= @endDateTime";
+
+            DataTable dt = ExecuteQuery(q, startDateTime.ToString("yyyy-MM-dd hh:mm:ss"), endDateTime.ToString("yyyy-MM-dd hh:mm:ss"));
 
             return dt;
         }
@@ -1926,48 +1927,57 @@ namespace ParishSystem
         */
         #region
 
-        public bool addMinister(string firstName, string midName, string lastName, string suffix, DateTime birthDate, MinistryType ministryType, MinisterStatus status, string licenseNumber, DateTime expirationDate)
+        public bool addMinister(string firstName, string midName, string lastName, string suffix, DateTime birthDate, MinistryType ministryType, MinisterStatus status)
         {
-            string q = "INSERT INTO Minister(firstName, midName, lastName, suffix, birthDate, ministryType, status, licenseNumber, expirationDate) VALUES ('"
-                + firstName + "', '" + midName + "', '"
-                + lastName + "', '" + suffix + "', '"
-                + birthDate.ToString("yyyy-MM-dd") + "', '"
-                + (int)ministryType + "', '" + (int)status + "', '"
-                + licenseNumber + "', '"
-                + expirationDate.ToString("yyyy-MM-dd") + "')";
-
-            bool success = runNonQuery(q);
-
-            //if (success)
-            //    updateModificationInfo("Minister", "ministerID", getLatestID("Minister", "ministerID"));
-
+            string q = "INSERT INTO Minister(firstName, midName, lastName, suffix, birthDate, ministryType, status) VALUES (@firstName, @midName, @lastName, @suffix, @birthDate, @ministryType, @status)";
+            bool success = ExecuteNonQuery(q, firstName, midName, lastName, suffix, birthDate.ToString("yyyy-MM-dd"), ministryType, status);
             return success;
         }
 
-        public bool editMinister(int ministerID, string firstName, string midName, string lastName, string suffix, DateTime birthDate, string ministryType, string status, string licenseNumber, DateTime expirationDate)
+        public bool editMinister(int ministerID, string firstName, string midName, string lastName, string suffix, DateTime birthDate, MinistryType ministryType, MinisterStatus status)
         {
             if (!idExists("Minister", "ministerID", ministerID))
                 return false;
 
             //No need addMinisterLog
 
-            string q = "UPDATE Minister SET firstName = '" + firstName
-                + "', midName = '" + midName + "', lastName = '" + lastName
-                + "', suffix = '" + suffix + "', birthDate = '" + birthDate
-                + "', ministryType = '" + ministryType + "', status = '" + status
-                + "', licenseNumber = '" + licenseNumber
-                + "', expirationDate = '" + expirationDate
-                + "' WHERE ministerID =" + ministerID;
-
-            bool success = runNonQuery(q);
-
-            //if (success)
-            //    updateModificationInfo("Minister", "ministerID", ministerID);
-
+            string q = "UPDATE Minister SET firstName = @firstName, midName = @midName, lastName = @lastName, suffix = @suffix, birthDate = @birthDate, ministryType = @ministryType, status = @status WHERE ministerID = @ministerID";
+            bool success = ExecuteNonQuery(q, firstName, midName, lastName, suffix, birthDate.ToString("yyyy-MM-dd HH:mm:ss"), ministryType, status, ministerID);
             return success;
 
 
+
         }
+
+
+        //COMMENT: merge names into field "Name"
+        public DataTable getMinister(int ministerID)
+        {
+            string q = "SELECT *,CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix) as name FROM Minister WHERE ministerID = @ministerID";
+
+            DataTable dt = ExecuteQuery(q, ministerID);
+
+            return dt;
+        }
+
+        public DataTable getMinisterWithStatus(MinisterStatus status)
+        {
+            string q = "SELECT ministerID, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix) as name FROM Minister WHERE status = " + (int)status;
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
+        public DataTable getMinisters()
+        {
+            string q = "SELECT ministerID, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix)as Name, birthdate, ministryType, status, licenseNumber FROM Minister";
+
+            DataTable dt = runQuery(q);
+
+            return dt;
+        }
+
 
         public int getMinisterID(string firstName, string midName, string lastName, string suffix, DateTime birthDate)
         {
@@ -1981,21 +1991,6 @@ namespace ParishSystem
                 return -1;
 
             return int.Parse(dt.Rows[0][0].ToString());
-        }
-
-        public bool ministerIsActive(int ministerID)
-        {
-            if (!idExists("Minister", "ministerID", ministerID))
-                throw new MissingPrimaryKeyException();
-
-            string q = "SELECT status FROM Minister WHERE ministerID = " + ministerID;
-
-            DataTable dt = runQuery(q);
-
-            bool active = dt.Rows[0][0].ToString().ToUpper() == "ACTIVE" ? true : false;
-
-            return active;
-
         }
 
         public bool ministerChangeStatus(int ministerID, string status)
@@ -2086,39 +2081,94 @@ namespace ParishSystem
                                          =============================================================
         */
 
-        public bool addSchedule(string scheduleType, DateTime startTimeDate, DateTime endDateTime, string details, string priority)
-        {
-            string q = "INSERT INTO Schedule(scheduleType, startTimeDate, endDateTime, details, priority) VALUES ('"
-                + scheduleType + "', '" + startTimeDate.ToString("yyyy-MM-dd HH:mm:ss.fff")
-                + "', '" + endDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff")
-                + "', '" + details + "', '" + priority + "')";
 
-            bool success = runNonQuery(q);
+        public bool addSchedule(string title, DateTime startDateTime, DateTime endDateTime, string details)
+        {
+            string q = "INSERT INTO Schedule(title, startDateTime, endDateTime, details) VALUES (@title, @startDateTime, @endDateTime, @details)";
+            bool success = ExecuteNonQuery(q, title, startDateTime.ToString("yyyy-MM-dd HH:mm:ss"), endDateTime.ToString("yyyy-MM-dd HH:mm:ss"), details);
+            return success;
+        }
+
+        public bool editSchedule(int scheduleID, string title, DateTime startDateTime, DateTime endDateTime, string details)
+        {
+            string q = "UPDATE Schedule SET title = @title, startDateTime = @startDateTime, endDateTime = @endDateTime, details = @details WHERE scheduleID = @scheduleID";
+            bool success = ExecuteNonQuery(q, title, startDateTime.ToString("yyyy-MM-dd HH:mm:ss"), endDateTime.ToString("yyyy-MM-dd HH:mm:ss"), details, scheduleID);
+            return success;
+        }
+
+        public bool deleteSchedule(int scheduleID)
+        {
+            string q = "DELETE FROM Schedule WHERE scheduleID = @scheduleID";
+            bool success = ExecuteNonQuery(q, scheduleID);
 
             return success;
         }
 
-        public bool editSchedule(int scheduleID, string scheduleType, DateTime startTimeDate, DateTime endDateTime, string details, string status, string priority)
+        public DataTable getSchedule()
         {
-            string q = "UPDATE Schedule SET scheduleType = '" + scheduleType
-                + "', startTimeDate = '" + startTimeDate.ToString("yyyy-MM-dd HH:mm:ss.fff")
-                + "', endDateTime = '" + endDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff")
-                + "', details = '" + details + "', status = '" + status
-                + "', priority = '" + priority
-                + "' WHERE scheduleID = '" + scheduleID + "'";
-
-            bool success = runNonQuery(q);
-
-            return success;
+            string q = "SELECT * FROM Schedule";
+            DataTable dt = ExecuteQuery(q);
+            return dt;
         }
 
-        public DataTable getSchedule(int scheduleID)
+        /// <summary>
+        /// Retrieves schedules greater than or equal to Start and less than or equal to End
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
+        /// <returns></returns>
+        public DataTable getSchedules(DateTime Start, DateTime End)
         {
-            string q = "SELECT * FROM Schedule WHERE scheduleID = " + scheduleID;
+            string q = "SELECT scheduleID, title, details, "
+                + "DATE_FORMAT(startDateTime, '%Y-%m-%d %H:%i') AS startDateTime, DATE_FORMAT(endDateTime, '%Y-%m-%d %H:%i') AS endDateTime "
+                + "FROM Schedule WHERE startDateTime >= @startDateTime AND endDateTime <= @endDateTime";
 
-            DataTable dt = runQuery(q);
+            DataTable dt = ExecuteQuery(q, Start.ToString("yyyy-MM-dd hh:mm:ss"), End.ToString("yyyy-MM-dd hh:mm:ss"));
 
             return dt;
+        }
+
+
+
+        public bool addMinisterSchedule(int ministerID, string title, DateTime startDateTime, DateTime endDateTime, string details)
+        {
+            string q = "INSERT INTO MinisterSchedule(ministerID, title, startDateTime, endDateTime, details) VALUES (@ministerID, @title, @startDateTime, @endDateTime, @details)";
+            bool success = ExecuteNonQuery(q, ministerID, title, startDateTime.ToString("yyyy-MM-dd HH:mm:ss"), endDateTime.ToString("yyyy-MM-dd HH:mm:ss"), details);
+            return success;
+
+        }
+
+        public bool editMinisterSchedule(int ministerScheduleID, int ministerID, string title, DateTime startDateTime, DateTime endDateTime, string details)
+        {
+            string q = "UPDATE MinisterSchedule SET ministerID = @ministerID, title = @title, startDateTime = @startDateTime, endDateTime = @endDateTime, details = @details WHERE ministerScheduleID = @ministerScheduleID";
+            bool success = ExecuteNonQuery(q, ministerID, title, startDateTime.ToString("yyyy-MM-dd HH:mm:ss"), endDateTime.ToString("yyyy-MM-dd HH:mm:ss"), details, ministerScheduleID);
+            return success;
+        }
+
+        /// <summary>
+        /// Get the entries from MinisterSchedules with schedules between Start and End
+        /// </summary>
+        /// <param name="Start"></param>
+        /// <param name="End"></param>
+        /// <returns></returns>
+        public DataTable getMinisterSchedules(DateTime Start, DateTime End)
+        {
+            string q = "SELECT ministerScheduleID, ministerID, title, details, "
+                + "DATE_FORMAT(startDateTime, '%Y-%m-%d %H:%i') AS startDateTime, DATE_FORMAT(endDateTime, '%Y-%m-%d %H:%i') AS endDateTime "
+                + "FROM MinisterSchedule WHERE startDateTime >= @startDateTime AND endDateTime <= @endDateTime";
+
+            DataTable dt = ExecuteQuery(q, Start.ToString("yyyy-MM-dd hh:mm:ss"), End.ToString("yyyy-MM-dd hh:mm:ss"));
+
+            return dt;
+        }
+
+        public bool ministerAvailable(int ministerID, DateTime startDateTime, DateTime endDateTime)
+        {
+            string q = "SELECT ministerID FROM MinisterSchedule WHERE startDateTime >= @startDateTime AND endDateTime <= @endDateTime";
+
+            DataTable dt = ExecuteQuery(q);
+
+            return dt.Rows.Count == 0;
         }
 
         public DataTable getScheduleOfDay(DateTime day)
@@ -2174,18 +2224,6 @@ namespace ParishSystem
             return success;
         }
 
-        public bool setSchedule(int profileID, int ministerID, int scheduleID, string scheduleType, DateTime startDateTime, DateTime endDateTime, string details, string priority)
-        {
-            bool success = addSchedule(scheduleType, startDateTime, endDateTime, details, priority);
-
-            bool success2 = addAppointment(profileID, ministerID, getLatestScheduleID());
-
-            if (!(success && success2))
-                throw new Exception("One of the Successes don't work. Btch");
-
-
-            return true;
-        }
 
         public DataTable getAppointment(int appointmentID)
         {
@@ -2411,14 +2449,7 @@ namespace ParishSystem
             return dt.Rows.Count > 0;
         }
 
-        public DataTable getMinisters()
-        {
-            string q = "SELECT ministerID, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix)as Name, birthdate, ministryType, status, licenseNumber FROM Minister";
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
+        
         public int getBaptismID(int profileID)
         {
             string q = "SELECT baptismID FROM Baptism "
@@ -2436,24 +2467,6 @@ namespace ParishSystem
         }
 
 
-        //COMMENT: merge names into field "Name"
-        public DataTable getMinister(int ministerID)
-        {
-            string q = "SELECT *,CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix) as name FROM Minister WHERE ministerID = " + ministerID;
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
-        public DataTable getMinisterWithStatus(MinisterStatus status)
-        {
-            string q = "SELECT ministerID, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix) as name FROM Minister WHERE status = " + (int)status;
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
 
         public bool addBloodDonation(int profleID, int quantity, int bloodDonationEventID)
         {
@@ -2496,6 +2509,9 @@ namespace ParishSystem
 
             return dt;
         }
+
+        
+
         public DataTable getMarriageApplications(int profileID)
         {
             string q = "select * from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID =" + profileID;

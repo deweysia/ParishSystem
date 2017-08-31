@@ -71,9 +71,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
-    <Reference Include="System.Windows.Forms.Calendar">
-      <HintPath>..\..\..\..\..\Desktop\System.Windows.Forms.Calendar\System.Windows.Forms.Calendar\bin\Debug\System.Windows.Forms.Calendar.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -103,6 +100,12 @@
     </Compile>
     <Compile Include="AddReferences.Designer.cs">
       <DependentUpon>AddReferences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSchedule.Designer.cs">
+      <DependentUpon>AddSchedule.cs</DependentUpon>
     </Compile>
     <Compile Include="AdvanceSearch.cs">
       <SubType>Form</SubType>
@@ -152,6 +155,7 @@
     <Compile Include="Bloodletting_Profile_Popup.Designer.cs">
       <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
     </Compile>
+    <Compile Include="CalendarEvent.cs" />
     <Compile Include="CashRelease_Module.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +191,12 @@
     </Compile>
     <Compile Include="CDB_SacramentPayment_Module.Designer.cs">
       <DependentUpon>CDB_SacramentPayment_Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CueTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CueTextBox.designer.cs">
+      <DependentUpon>CueTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="CurrencyTextBox.cs">
       <SubType>Component</SubType>
@@ -239,7 +249,6 @@
       <DependentUpon>ORdetailsPopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Panel_Size_Pair.cs" />
-    <Compile Include="ParameterizedSQL.cs" />
     <Compile Include="ProfileModule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,12 +262,6 @@
       <DependentUpon>SacramentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ComboboxContent.cs" />
-    <Compile Include="CueTextBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CueTextBox.Designer.cs">
-      <DependentUpon>CueTextBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="CustomMessage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,7 +325,6 @@
     <Compile Include="ScheduleModule.Designer.cs">
       <DependentUpon>ScheduleModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="SystemNotification.cs" />
     <Compile Include="treasurerBackend.cs" />
     <EmbeddedResource Include="AddApplication.resx">
       <DependentUpon>AddApplication.cs</DependentUpon>
@@ -332,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddReferences.resx">
       <DependentUpon>AddReferences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSchedule.resx">
+      <DependentUpon>AddSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdvanceSearch.resx">
       <DependentUpon>AdvanceSearch.cs</DependentUpon>
@@ -375,6 +380,9 @@
     <EmbeddedResource Include="CDB_SacramentPayment_Module.resx">
       <DependentUpon>CDB_SacramentPayment_Module.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CueTextBox.resx">
+      <DependentUpon>CueTextBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CurrencyTextBox.resx">
       <DependentUpon>CurrencyTextBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -401,9 +409,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SacramentForm.resx">
       <DependentUpon>SacramentForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CueTextBox.resx">
-      <DependentUpon>CueTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomMessage.resx">
       <DependentUpon>CustomMessage.cs</DependentUpon>
