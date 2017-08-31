@@ -203,10 +203,6 @@ namespace ParishSystem
             ScheduleAddSuccess = new State("Successfully added to schedule", NotificationType.success),
             ScheduleAddFail = new State("Failed to add to schedule", NotificationType.error),
             ScheduleMinisterUnavailable = new State("The selected minister is currently unavailable", NotificationType.warning);
-            
-
-
-
     }
 
     

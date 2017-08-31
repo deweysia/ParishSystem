@@ -2213,9 +2213,9 @@ namespace ParishSystem
             string q = "SELECT ministerID FROM MinisterSchedule WHERE ministerID = @ministerID AND ((@startDateTime BETWEEN startDateTime AND endDateTime) OR (@endDateTime BETWEEN startDateTime AND endDateTime))";
 
             string q2 = "SELECT ministerID FROM MinisterSchedule WHERE ministerID = @ministerID AND ((@startDateTime < endDateTime) AND (@endDateTime > startDateTime))";
-            string start = startDateTime.ToString("yyyy-MM-dd hh:mm:ss");
-            string end = endDateTime.ToString("yyyy-MM-dd hh:mm:ss");
-            DataTable dt = ExecuteQuery(q, ministerID, start, end);
+            string start = startDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+            string end = endDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+            DataTable dt = ExecuteQuery(q2, ministerID, start, end);
 
             return dt.Rows.Count == 0;
         }
