@@ -53,6 +53,18 @@
             this.lblNameGroom = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvMarriage = new MetroFramework.Controls.MetroGrid();
+            this.marriageID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marApplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marGroomID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marBrideID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marMinisterID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marriageDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brideName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marRegistryNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marRecordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marPageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -92,20 +104,6 @@
             this.lblNameBap = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.dgvBaptism = new MetroFramework.Controls.MetroGrid();
-            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.bsSacrament = new System.Windows.Forms.BindingSource(this.components);
-            this.marriageID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marApplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marGroomID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marBrideID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marMinisterID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marriageDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brideName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marRegistryNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marRecordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marPageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.baptismID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bapApplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bapProfileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -119,6 +117,8 @@
             this.bapRecordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bapPageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bapRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.bsSacrament = new System.Windows.Forms.BindingSource(this.components);
             this.metroTabPage6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -408,6 +408,107 @@
             this.dgvMarriage.UseStyleColors = true;
             this.dgvMarriage.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarriage_CellEnter);
             this.dgvMarriage.VisibleChanged += new System.EventHandler(this.dgvMarriage_VisibleChanged);
+            // 
+            // marriageID
+            // 
+            this.marriageID.DataPropertyName = "marriageID";
+            this.marriageID.HeaderText = "marriageID";
+            this.marriageID.Name = "marriageID";
+            this.marriageID.ReadOnly = true;
+            this.marriageID.Visible = false;
+            this.marriageID.Width = 86;
+            // 
+            // marApplicationID
+            // 
+            this.marApplicationID.DataPropertyName = "applicationID";
+            this.marApplicationID.HeaderText = "marApplicationID";
+            this.marApplicationID.Name = "marApplicationID";
+            this.marApplicationID.ReadOnly = true;
+            this.marApplicationID.Visible = false;
+            this.marApplicationID.Width = 119;
+            // 
+            // marGroomID
+            // 
+            this.marGroomID.DataPropertyName = "groomID";
+            this.marGroomID.HeaderText = "groomID";
+            this.marGroomID.Name = "marGroomID";
+            this.marGroomID.ReadOnly = true;
+            this.marGroomID.Visible = false;
+            this.marGroomID.Width = 75;
+            // 
+            // marBrideID
+            // 
+            this.marBrideID.DataPropertyName = "brideID";
+            this.marBrideID.HeaderText = "brideID";
+            this.marBrideID.Name = "marBrideID";
+            this.marBrideID.ReadOnly = true;
+            this.marBrideID.Visible = false;
+            this.marBrideID.Width = 68;
+            // 
+            // marMinisterID
+            // 
+            this.marMinisterID.DataPropertyName = "ministerID";
+            this.marMinisterID.HeaderText = "marMinisterID";
+            this.marMinisterID.Name = "marMinisterID";
+            this.marMinisterID.ReadOnly = true;
+            this.marMinisterID.Visible = false;
+            this.marMinisterID.Width = 102;
+            // 
+            // marriageDate
+            // 
+            this.marriageDate.DataPropertyName = "marriageDate";
+            this.marriageDate.HeaderText = "Marriage Date";
+            this.marriageDate.Name = "marriageDate";
+            this.marriageDate.ReadOnly = true;
+            this.marriageDate.Width = 103;
+            // 
+            // groomName
+            // 
+            this.groomName.DataPropertyName = "groomName";
+            this.groomName.HeaderText = "Groom Name";
+            this.groomName.Name = "groomName";
+            this.groomName.ReadOnly = true;
+            this.groomName.Width = 97;
+            // 
+            // brideName
+            // 
+            this.brideName.DataPropertyName = "brideName";
+            this.brideName.HeaderText = "Bride Name";
+            this.brideName.Name = "brideName";
+            this.brideName.ReadOnly = true;
+            this.brideName.Width = 89;
+            // 
+            // marRegistryNumber
+            // 
+            this.marRegistryNumber.DataPropertyName = "registryNumber";
+            this.marRegistryNumber.HeaderText = "Registry";
+            this.marRegistryNumber.Name = "marRegistryNumber";
+            this.marRegistryNumber.ReadOnly = true;
+            this.marRegistryNumber.Width = 71;
+            // 
+            // marRecordNumber
+            // 
+            this.marRecordNumber.DataPropertyName = "recordNumber";
+            this.marRecordNumber.HeaderText = "Record";
+            this.marRecordNumber.Name = "marRecordNumber";
+            this.marRecordNumber.ReadOnly = true;
+            this.marRecordNumber.Width = 66;
+            // 
+            // marPageNumber
+            // 
+            this.marPageNumber.DataPropertyName = "pageNumber";
+            this.marPageNumber.HeaderText = "Page";
+            this.marPageNumber.Name = "marPageNumber";
+            this.marPageNumber.ReadOnly = true;
+            this.marPageNumber.Width = 55;
+            // 
+            // marRemarks
+            // 
+            this.marRemarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.marRemarks.DataPropertyName = "remarks";
+            this.marRemarks.HeaderText = "Remarks";
+            this.marRemarks.Name = "marRemarks";
+            this.marRemarks.ReadOnly = true;
             // 
             // metroTabPage5
             // 
@@ -1015,122 +1116,6 @@
             this.dgvBaptism.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBaptism_CellEnter);
             this.dgvBaptism.VisibleChanged += new System.EventHandler(this.dgvBaptism_VisibleChanged);
             // 
-            // metroTabControl1
-            // 
-            this.metroTabControl1.Controls.Add(this.metroTabPage4);
-            this.metroTabControl1.Controls.Add(this.metroTabPage5);
-            this.metroTabControl1.Controls.Add(this.metroTabPage6);
-            this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(930, 540);
-            this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Silver;
-            this.metroTabControl1.TabIndex = 11;
-            this.metroTabControl1.UseSelectable = true;
-            this.metroTabControl1.UseStyleColors = true;
-            // 
-            // marriageID
-            // 
-            this.marriageID.DataPropertyName = "marriageID";
-            this.marriageID.HeaderText = "marriageID";
-            this.marriageID.Name = "marriageID";
-            this.marriageID.ReadOnly = true;
-            this.marriageID.Visible = false;
-            this.marriageID.Width = 86;
-            // 
-            // marApplicationID
-            // 
-            this.marApplicationID.DataPropertyName = "applicationID";
-            this.marApplicationID.HeaderText = "marApplicationID";
-            this.marApplicationID.Name = "marApplicationID";
-            this.marApplicationID.ReadOnly = true;
-            this.marApplicationID.Visible = false;
-            this.marApplicationID.Width = 119;
-            // 
-            // marGroomID
-            // 
-            this.marGroomID.DataPropertyName = "groomID";
-            this.marGroomID.HeaderText = "groomID";
-            this.marGroomID.Name = "marGroomID";
-            this.marGroomID.ReadOnly = true;
-            this.marGroomID.Visible = false;
-            this.marGroomID.Width = 75;
-            // 
-            // marBrideID
-            // 
-            this.marBrideID.DataPropertyName = "brideID";
-            this.marBrideID.HeaderText = "brideID";
-            this.marBrideID.Name = "marBrideID";
-            this.marBrideID.ReadOnly = true;
-            this.marBrideID.Visible = false;
-            this.marBrideID.Width = 68;
-            // 
-            // marMinisterID
-            // 
-            this.marMinisterID.DataPropertyName = "ministerID";
-            this.marMinisterID.HeaderText = "marMinisterID";
-            this.marMinisterID.Name = "marMinisterID";
-            this.marMinisterID.ReadOnly = true;
-            this.marMinisterID.Visible = false;
-            this.marMinisterID.Width = 102;
-            // 
-            // marriageDate
-            // 
-            this.marriageDate.DataPropertyName = "marriageDate";
-            this.marriageDate.HeaderText = "Marriage Date";
-            this.marriageDate.Name = "marriageDate";
-            this.marriageDate.ReadOnly = true;
-            this.marriageDate.Width = 103;
-            // 
-            // groomName
-            // 
-            this.groomName.DataPropertyName = "groomName";
-            this.groomName.HeaderText = "Groom Name";
-            this.groomName.Name = "groomName";
-            this.groomName.ReadOnly = true;
-            this.groomName.Width = 97;
-            // 
-            // brideName
-            // 
-            this.brideName.DataPropertyName = "brideName";
-            this.brideName.HeaderText = "Bride Name";
-            this.brideName.Name = "brideName";
-            this.brideName.ReadOnly = true;
-            this.brideName.Width = 89;
-            // 
-            // marRegistryNumber
-            // 
-            this.marRegistryNumber.DataPropertyName = "registryNumber";
-            this.marRegistryNumber.HeaderText = "Registry";
-            this.marRegistryNumber.Name = "marRegistryNumber";
-            this.marRegistryNumber.ReadOnly = true;
-            this.marRegistryNumber.Width = 71;
-            // 
-            // marRecordNumber
-            // 
-            this.marRecordNumber.DataPropertyName = "recordNumber";
-            this.marRecordNumber.HeaderText = "Record";
-            this.marRecordNumber.Name = "marRecordNumber";
-            this.marRecordNumber.ReadOnly = true;
-            this.marRecordNumber.Width = 66;
-            // 
-            // marPageNumber
-            // 
-            this.marPageNumber.DataPropertyName = "pageNumber";
-            this.marPageNumber.HeaderText = "Page";
-            this.marPageNumber.Name = "marPageNumber";
-            this.marPageNumber.ReadOnly = true;
-            this.marPageNumber.Width = 55;
-            // 
-            // marRemarks
-            // 
-            this.marRemarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.marRemarks.DataPropertyName = "remarks";
-            this.marRemarks.HeaderText = "Remarks";
-            this.marRemarks.Name = "marRemarks";
-            this.marRemarks.ReadOnly = true;
-            // 
             // baptismID
             // 
             this.baptismID.DataPropertyName = "baptismID";
@@ -1238,6 +1223,21 @@
             this.bapRemarks.HeaderText = "Remarks";
             this.bapRemarks.Name = "bapRemarks";
             this.bapRemarks.ReadOnly = true;
+            // 
+            // metroTabControl1
+            // 
+            this.metroTabControl1.Controls.Add(this.metroTabPage4);
+            this.metroTabControl1.Controls.Add(this.metroTabPage5);
+            this.metroTabControl1.Controls.Add(this.metroTabPage6);
+            this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.metroTabControl1.Name = "metroTabControl1";
+            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.Size = new System.Drawing.Size(930, 540);
+            this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Silver;
+            this.metroTabControl1.TabIndex = 11;
+            this.metroTabControl1.UseSelectable = true;
+            this.metroTabControl1.UseStyleColors = true;
             // 
             // SacramentModule
             // 

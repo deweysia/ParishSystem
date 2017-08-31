@@ -25,7 +25,7 @@ namespace ParishSystem
             cmbBStatus.DataSource = Enum.GetValues(typeof(CivilStatus));
             cmbGStatus.DataSource = cmbBStatus.DataSource;
 
-            DataTable dt = dh.getMinisterWithStatus(MinisterStatus.Active);
+            DataTable dt = dh.getMinisters(MinisterStatus.Active);
 
             foreach (DataRow r in dt.Rows)
             {

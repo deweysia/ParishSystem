@@ -1990,11 +1990,9 @@ namespace ParishSystem
             string q = "UPDATE Minister SET firstName = @firstName, midName = @midName, lastName = @lastName, suffix = @suffix, birthDate = @birthDate, ministryType = @ministryType, status = @status WHERE ministerID = @ministerID";
             bool success = ExecuteNonQuery(q, firstName, midName, lastName, suffix, birthDate.ToString("yyyy-MM-dd HH:mm:ss"), ministryType, status, ministerID);
             return success;
-
-
-
         }
 
+        
 
         //COMMENT: merge names into field "Name"
         public DataTable getMinister(int ministerID)
@@ -2006,15 +2004,41 @@ namespace ParishSystem
             return dt;
         }
 
-        public DataTable getMinisterWithStatus(MinisterStatus status)
+        /// <summary>
+        /// Returns ministers with indicated status
+        /// </summary>
+        /// <param name="status"></param>
+        /// <returns></returns>
+        public DataTable getMinisters(MinisterStatus status)
         {
-            string q = "SELECT ministerID, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix) as name FROM Minister WHERE status = " + (int)status;
+            string q = "SELECT ministerID, firstName, midName, lastName, suffix, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix)as Name, birthdate, ministryType, status, licenseNumber FROM Minister WHERE status = @status";
 
-            DataTable dt = runQuery(q);
+            DataTable dt = ExecuteQuery(q, (int)status);
 
             return dt;
         }
 
+        public DataTable getMinisters(MinistryType type)
+        {
+            string q = "SELECT ministerID, firstName, midName, lastName, suffix, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix)as Name, birthdate, ministryType, status, licenseNumber FROM Minister WHERE ministryType = @ministryType";
+
+            DataTable dt = ExecuteQuery(q, (int)type);
+            
+            return dt;
+        }
+
+        public DataTable getMinisters(MinistryType type, MinisterStatus status)
+        {
+            string q = "SELECT ministerID, firstName, midName, lastName, suffix, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix)as Name, birthdate, ministryType, status, licenseNumber FROM Minister WHERE ministryType = @ministryType AND status = @status";
+            DataTable dt = ExecuteQuery(q, (int)type, (int)status);
+            return dt;
+        }
+
+
+        /// <summary>
+        /// Returns all ministers
+        /// </summary>
+        /// <returns></returns>
         public DataTable getMinisters()
         {
             string q = "SELECT ministerID, firstName, midName, lastName, suffix, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix)as Name, birthdate, ministryType, status, licenseNumber FROM Minister";
@@ -2023,38 +2047,6 @@ namespace ParishSystem
 
             return dt;
         }
-
-
-        public int getMinisterID(string firstName, string midName, string lastName, string suffix, DateTime birthDate)
-        {
-            string q = "SELECT ministerID from Minister WHERE firstName = '"
-                + firstName + "' AND midName = '" + midName + "' AND lastName = '" + lastName
-                + "' AND suffix = '" + suffix + "' AND birthDate = '" + birthDate.ToString("yyyy-MM-dd") + "'";
-
-            DataTable dt = runQuery(q);
-
-            if (dt.Rows.Count == 0)
-                return -1;
-
-            return int.Parse(dt.Rows[0][0].ToString());
-        }
-
-        public bool ministerChangeStatus(int ministerID, string status)
-        {
-            if (!idExists("Minister", "ministerID", ministerID))
-                throw new MissingPrimaryKeyException();
-
-            string q = "UPDATE Minister SET status = '" + status + "' WHERE ministerID = '" + ministerID + "'";
-
-            bool success = runNonQuery(q);
-
-            //if (success)
-            //    updateModificationInfo("Minister", "ministerID", ministerID);
-
-            return success;
-
-        }
-
 
         #endregion
 

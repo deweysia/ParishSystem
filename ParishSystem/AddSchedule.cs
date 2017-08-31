@@ -30,7 +30,7 @@ namespace ParishSystem
             dtpTimeStart.Value = DateTime.Now;
             dtpTimeEnd.Value = DateTime.Now;
 
-            DataTable dt = dh.getMinisterWithStatus(MinisterStatus.Active);
+            DataTable dt = dh.getMinisters(MinisterStatus.Active);
 
             cmbMinister.Items.Add(string.Empty);//Added empty item to cmbMinister
             foreach (DataRow r in dt.Rows)
@@ -64,7 +64,7 @@ namespace ParishSystem
             if (t == ScheduleType.Appointment)
             {
 
-                DataTable dt = dh.getMinisterWithStatus(MinisterStatus.Active);
+                DataTable dt = dh.getMinisters(MinisterStatus.Active);
 
                 foreach (DataRow r in dt.Rows)
                 {
