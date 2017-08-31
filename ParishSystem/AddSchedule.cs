@@ -227,10 +227,15 @@ namespace ParishSystem
             return success;
                 
         }
-
+        /// <summary>
+        /// Indicates whether a minister is available between Start and End
+        /// </summary>
+        /// <returns></returns>
         public bool ministerAvailable()
         {
-            return dh.ministerAvailable(((ComboboxContent)cmbMinister.SelectedItem).id, getDateTime(ScheduleTime.Start), getDateTime(ScheduleTime.End));
+
+            bool available = dh.ministerAvailable(((ComboboxContent)cmbMinister.SelectedItem).id, getDateTime(ScheduleTime.Start), getDateTime(ScheduleTime.End));
+            return available;
         }
     }
 }

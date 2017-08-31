@@ -108,7 +108,13 @@ namespace ParishSystem
         {
             string[] parameters = getParameters(q);
 
-            if (parameters.Length != values.Length)
+            HashSet<string> set = new HashSet<string>();
+            foreach(string s in parameters)
+            {
+                set.Add(s);
+            }
+
+            if (set.Count != values.Length)
                 throw new Exception("Number of parameters does not match number of values");
 
             var ParameterValues = parameters.Zip(values, (p, v) => new { Parameter = p, Value = v });
@@ -2011,7 +2017,7 @@ namespace ParishSystem
 
         public DataTable getMinisters()
         {
-            string q = "SELECT ministerID, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix)as Name, birthdate, ministryType, status, licenseNumber FROM Minister";
+            string q = "SELECT ministerID, firstName, midName, lastName, suffix, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix)as Name, birthdate, ministryType, status, licenseNumber FROM Minister";
 
             DataTable dt = runQuery(q);
 
@@ -2204,9 +2210,12 @@ namespace ParishSystem
 
         public bool ministerAvailable(int ministerID, DateTime startDateTime, DateTime endDateTime)
         {
-            string q = "SELECT ministerID FROM MinisterSchedule WHERE startDateTime >= @startDateTime AND endDateTime <= @endDateTime";
+            string q = "SELECT ministerID FROM MinisterSchedule WHERE ministerID = @ministerID AND ((@startDateTime BETWEEN startDateTime AND endDateTime) OR (@endDateTime BETWEEN startDateTime AND endDateTime))";
 
-            DataTable dt = ExecuteQuery(q);
+            string q2 = "SELECT ministerID FROM MinisterSchedule WHERE ministerID = @ministerID AND ((@startDateTime < endDateTime) AND (@endDateTime > startDateTime))";
+            string start = startDateTime.ToString("yyyy-MM-dd hh:mm:ss");
+            string end = endDateTime.ToString("yyyy-MM-dd hh:mm:ss");
+            DataTable dt = ExecuteQuery(q, ministerID, start, end);
 
             return dt.Rows.Count == 0;
         }
