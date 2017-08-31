@@ -122,6 +122,12 @@
     <Compile Include="ApplicationPayment.Designer.cs">
       <DependentUpon>ApplicationPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="BloodClaim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodClaim.Designer.cs">
+      <DependentUpon>BloodClaim.cs</DependentUpon>
+    </Compile>
     <Compile Include="BloodDonor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,11 +220,11 @@
     <Compile Include="HomeModule.Designer.cs">
       <DependentUpon>HomeModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="IncomeType.cs">
+    <Compile Include="ItemType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IncomeType.Designer.cs">
-      <DependentUpon>IncomeType.cs</DependentUpon>
+    <Compile Include="ItemType.Designer.cs">
+      <DependentUpon>ItemType.cs</DependentUpon>
     </Compile>
     <Compile Include="ItemTypes_Module.cs">
       <SubType>Form</SubType>
@@ -304,12 +310,6 @@
     <Compile Include="SacramentModule.Designer.cs">
       <DependentUpon>SacramentModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="SAD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SAD.Designer.cs">
-      <DependentUpon>SAD.cs</DependentUpon>
-    </Compile>
     <Compile Include="SAD2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationPayment.resx">
       <DependentUpon>ApplicationPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodClaim.resx">
+      <DependentUpon>BloodClaim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BloodDonor.resx">
       <DependentUpon>BloodDonor.cs</DependentUpon>
@@ -384,8 +387,8 @@
     <EmbeddedResource Include="HomeModule.resx">
       <DependentUpon>HomeModule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IncomeType.resx">
-      <DependentUpon>IncomeType.cs</DependentUpon>
+    <EmbeddedResource Include="ItemType.resx">
+      <DependentUpon>ItemType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemTypes_Module.resx">
       <DependentUpon>ItemTypes_Module.cs</DependentUpon>
@@ -426,10 +429,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SacramentModule.resx">
       <DependentUpon>SacramentModule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SAD.resx">
-      <DependentUpon>SAD.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SAD2.resx">
       <DependentUpon>SAD2.cs</DependentUpon>

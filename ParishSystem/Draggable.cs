@@ -13,7 +13,7 @@ namespace ParishSystem
         Control f;
 
 
-        private Draggable(Form f)
+        public Draggable(Form f)
         {
             this.f = f;
         }

@@ -208,7 +208,7 @@
             this.content_panel.Location = new System.Drawing.Point(0, 0);
             this.content_panel.Name = "content_panel";
             this.content_panel.Size = new System.Drawing.Size(935, 547);
-            this.content_panel.TabIndex = 61;
+            this.content_panel.TabIndex = 0;
             // 
             // imageListMenu
             // 

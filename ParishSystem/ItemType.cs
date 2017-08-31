@@ -10,21 +10,24 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class IncomeType : Form
+    public partial class ItemType : Form
     {
         int IncomeTypeID;
+        int cashreceipt_cashdisbursment;
         DataHandler dh;
-        public IncomeType(DataHandler dh)
+        public ItemType(int cashreceipt_cashdisbursment, DataHandler dh)
         {
             InitializeComponent();
             this.dh = dh;
+            this.cashreceipt_cashdisbursment = cashreceipt_cashdisbursment;
             suggestedPrice_nud.Maximum = decimal.MaxValue;
         }
-        public IncomeType(int IncomeTypeID,DataHandler dh)
+        public ItemType(int IncomeTypeID, int cashreceipt_cashdisbursment, DataHandler dh)
         {
             InitializeComponent();
             this.dh = dh;
             this.IncomeTypeID = IncomeTypeID;
+            this.cashreceipt_cashdisbursment = cashreceipt_cashdisbursment;
             suggestedPrice_nud.Maximum = decimal.MaxValue;
         }
 
@@ -38,12 +41,12 @@ namespace ParishSystem
                 {
                     if (IncomeTypeID == 0)
                     {
-                        dh.addIncomeType(name_textbox.Text, book_combobox.SelectedIndex, suggestedPrice_nud.Value, (active_button.Checked ? 1 : 2), details_textbox.Text);
+                        dh.addItemType(name_textbox.Text, book_combobox.SelectedIndex, suggestedPrice_nud.Value, (active_button.Checked ? 1 : 2), cashreceipt_cashdisbursment, details_textbox.Text);
                         IncomeTypeID = dh.getMaxIncomeType();
                     }
                     else
                     {
-                        dh.editIncomeType(IncomeTypeID, name_textbox.Text, book_combobox.SelectedIndex, suggestedPrice_nud.Value, (active_button.Checked ? 1 : 2), details_textbox.Text);
+                        dh.editIncomeType(IncomeTypeID, name_textbox.Text, book_combobox.SelectedIndex, suggestedPrice_nud.Value, (active_button.Checked ? 1 : 2), cashreceipt_cashdisbursment, details_textbox.Text);
                     }
                 this.Close();
                 }
@@ -53,7 +56,7 @@ namespace ParishSystem
         {
             if (IncomeTypeID != 0)
             {
-                DataTable dt = dh.getIncomeType(IncomeTypeID);
+                DataTable dt = dh.getIncomeType(IncomeTypeID, cashreceipt_cashdisbursment);
                 name_textbox.Text = dt.Rows[0]["itemType"].ToString();
                 book_combobox.SelectedIndex = int.Parse(dt.Rows[0]["bookType"].ToString());
                 suggestedPrice_nud.Value = decimal.Parse(dt.Rows[0]["suggestedPrice"].ToString());
@@ -74,6 +77,8 @@ namespace ParishSystem
         private void IncomeType_Load(object sender, EventArgs e)
         {
             refreshIncomeType();
+            Draggable a = new Draggable(this);
+            a.makeDraggable(controlBar_panel);
         }
 
         private void cancel_button_Click(object sender, EventArgs e)
@@ -84,6 +89,19 @@ namespace ParishSystem
         private void close_button_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ItemType_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+
+        private void controlBar_panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
