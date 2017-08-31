@@ -685,7 +685,6 @@
             this.TotalDataGridViewColumn.HeaderText = "Total";
             this.TotalDataGridViewColumn.Name = "TotalDataGridViewColumn";
             this.TotalDataGridViewColumn.ReadOnly = true;
-            this.TotalDataGridViewColumn.Visible = false;
             // 
             // ItemIDcomboboxcolumn
             // 
@@ -699,6 +698,7 @@
             this.ApplicationID.HeaderText = "applicationid";
             this.ApplicationID.Name = "ApplicationID";
             this.ApplicationID.ReadOnly = true;
+            this.ApplicationID.Visible = false;
             // 
             // nameIndex
             // 

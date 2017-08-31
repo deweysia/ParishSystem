@@ -162,12 +162,6 @@
     <Compile Include="CashRelease_Module.Designer.cs">
       <DependentUpon>CashRelease_Module.cs</DependentUpon>
     </Compile>
-    <Compile Include="CashReleaseType.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CashReleaseType.Designer.cs">
-      <DependentUpon>CashReleaseType.cs</DependentUpon>
-    </Compile>
     <Compile Include="BloodlettingReports_Module.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,11 +224,11 @@
     <Compile Include="HomeModule.Designer.cs">
       <DependentUpon>HomeModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="ItemType.cs">
+    <Compile Include="ItemTypePopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ItemType.Designer.cs">
-      <DependentUpon>ItemType.cs</DependentUpon>
+    <Compile Include="ItemTypePopUp.Designer.cs">
+      <DependentUpon>ItemTypePopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="ItemTypes_Module.cs">
       <SubType>Form</SubType>
@@ -365,9 +359,6 @@
     <EmbeddedResource Include="CashRelease_Module.resx">
       <DependentUpon>CashRelease_Module.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CashReleaseType.resx">
-      <DependentUpon>CashReleaseType.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BloodlettingReports_Module.resx">
       <DependentUpon>BloodlettingReports_Module.cs</DependentUpon>
     </EmbeddedResource>
@@ -395,8 +386,8 @@
     <EmbeddedResource Include="HomeModule.resx">
       <DependentUpon>HomeModule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ItemType.resx">
-      <DependentUpon>ItemType.cs</DependentUpon>
+    <EmbeddedResource Include="ItemTypePopUp.resx">
+      <DependentUpon>ItemTypePopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemTypes_Module.resx">
       <DependentUpon>ItemTypes_Module.cs</DependentUpon>
@@ -538,6 +529,8 @@
     <None Include="Resources\icons8-Trash-32.png" />
     <None Include="Resources\icons8-Expand Arrow-20.png" />
     <None Include="Resources\icons8-Collapse Arrow-20.png" />
+    <None Include="Resources\icons8-Search Filled-20.png" />
+    <None Include="Resources\icons8-Delete Filled-20-666666.png" />
     <Content Include="Tools\SQL_Writer.jar" />
     <None Include="Resources\messageBox_cancel.png" />
     <None Include="Resources\messageBox_success.png" />

@@ -1,6 +1,6 @@
 ﻿namespace ParishSystem
 {
-    partial class ItemType
+    partial class ItemTypePopUp
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.forTabStop = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.name_textbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,7 +47,7 @@
             this.details_textbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.forTabStop = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.controlBar_panel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -67,12 +68,19 @@
             this.panel1.Size = new System.Drawing.Size(362, 100);
             this.panel1.TabIndex = 0;
             // 
+            // forTabStop
+            // 
+            this.forTabStop.Location = new System.Drawing.Point(12, 10);
+            this.forTabStop.Name = "forTabStop";
+            this.forTabStop.Size = new System.Drawing.Size(0, 20);
+            this.forTabStop.TabIndex = 0;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(3, 58);
+            this.label1.Location = new System.Drawing.Point(16, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 1;
@@ -84,7 +92,7 @@
             this.name_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.name_textbox.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name_textbox.ForeColor = System.Drawing.Color.Black;
-            this.name_textbox.Location = new System.Drawing.Point(52, 40);
+            this.name_textbox.Location = new System.Drawing.Point(65, 39);
             this.name_textbox.Name = "name_textbox";
             this.name_textbox.Size = new System.Drawing.Size(259, 28);
             this.name_textbox.TabIndex = 1;
@@ -94,7 +102,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(45, 62);
+            this.label2.Location = new System.Drawing.Point(58, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(277, 13);
             this.label2.TabIndex = 2;
@@ -103,6 +111,7 @@
             // controlBar_panel
             // 
             this.controlBar_panel.BackColor = System.Drawing.Color.DimGray;
+            this.controlBar_panel.Controls.Add(this.label6);
             this.controlBar_panel.Controls.Add(this.close_button);
             this.controlBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlBar_panel.Location = new System.Drawing.Point(0, 0);
@@ -115,12 +124,14 @@
             // close_button
             // 
             this.close_button.BackColor = System.Drawing.Color.DimGray;
+            this.close_button.Dock = System.Windows.Forms.DockStyle.Right;
             this.close_button.FlatAppearance.BorderSize = 0;
+            this.close_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
             this.close_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close_button.Image = global::ParishSystem.Properties.Resources.icons8_Delete_20;
-            this.close_button.Location = new System.Drawing.Point(320, 1);
+            this.close_button.Location = new System.Drawing.Point(321, 0);
             this.close_button.Name = "close_button";
-            this.close_button.Size = new System.Drawing.Size(40, 29);
+            this.close_button.Size = new System.Drawing.Size(40, 33);
             this.close_button.TabIndex = 1;
             this.close_button.UseVisualStyleBackColor = false;
             this.close_button.Click += new System.EventHandler(this.close_button_Click);
@@ -265,14 +276,19 @@
             this.panel4.Size = new System.Drawing.Size(362, 88);
             this.panel4.TabIndex = 2;
             // 
-            // forTabStop
+            // label6
             // 
-            this.forTabStop.Location = new System.Drawing.Point(12, 10);
-            this.forTabStop.Name = "forTabStop";
-            this.forTabStop.Size = new System.Drawing.Size(0, 20);
-            this.forTabStop.TabIndex = 0;
+            this.label6.AutoSize = true;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(7, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 20);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Item Type";
             // 
-            // ItemType
+            // ItemTypePopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -285,12 +301,13 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ItemType";
+            this.Name = "ItemTypePopUp";
             this.Load += new System.EventHandler(this.IncomeType_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ItemType_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.controlBar_panel.ResumeLayout(false);
+            this.controlBar_panel.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -322,5 +339,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox forTabStop;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class ItemType : Form
+    public partial class ItemTypePopUp : Form
     {
         int IncomeTypeID;
         int cashreceipt_cashdisbursment;
         DataHandler dh;
-        public ItemType(int cashreceipt_cashdisbursment, DataHandler dh)
+        public ItemTypePopUp(int cashreceipt_cashdisbursment, DataHandler dh)
         {
             InitializeComponent();
             this.dh = dh;
             this.cashreceipt_cashdisbursment = cashreceipt_cashdisbursment;
             suggestedPrice_nud.Maximum = decimal.MaxValue;
         }
-        public ItemType(int IncomeTypeID, int cashreceipt_cashdisbursment, DataHandler dh)
+        public ItemTypePopUp(int IncomeTypeID, int cashreceipt_cashdisbursment, DataHandler dh)
         {
             InitializeComponent();
             this.dh = dh;
@@ -79,6 +79,7 @@ namespace ParishSystem
             refreshIncomeType();
             Draggable a = new Draggable(this);
             a.makeDraggable(controlBar_panel);
+
         }
 
         private void cancel_button_Click(object sender, EventArgs e)

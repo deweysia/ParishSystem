@@ -521,7 +521,7 @@ namespace ParishSystem
         }
         public DataTable getItemTypesCashRelease(int bookType)
         {
-            string q = $@"select * from cashreleasetype where booktype ={bookType} and status =1";
+            string q = $@"select * from itemtype where booktype ={bookType} and status =1 and cashreceipt_cashdisbursment=2";
             return runQuery(q);
         }
         public int addCashRelease(string remark, int checkNum, int CVnum, int bookType ,string name)
@@ -536,12 +536,13 @@ namespace ParishSystem
         }
 
         public DataTable getTransactionsCRBByAccountingBookFormatByOrNumber(int BookType, int checknum,int CVnum)
-        {
+        {//here fix reports
             string q = $@"SELECT * FROM cashreleaseitem 
-                        INNER JOIN cashreleasetype on cashReleaseType.cashreleasetypeID = cashreleaseitem.cashReleaseTypeID 
+                        INNER JOIN itemtype on itemtype.itemTypeID = cashreleaseitem.cashReleaseTypeID 
                         INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
                         where 
-                        cashreleasetype.booktype = {BookType} and 
+                        itemtype.booktype = {BookType} and 
+                        and cashreceipt_cashdisbursment =2,
                         checknum like '%{checknum}%' and
                         CVnum like '%{CVnum}%'
                         order by CVnum desc;";
@@ -550,7 +551,7 @@ namespace ParishSystem
         public DataTable getTransactionsCRBByAccountingBookFormatByDay(int BookType, int Day, int Month, int Year)
         {
             string q = $@"SELECT * FROM cashreleaseitem 
-                        INNER JOIN cashreleasetype on cashReleaseType.cashreleasetypeID = cashreleaseitem.cashReleaseTypeID 
+                        INNER JOIN itemtype on itemtype.itemTypeID = cashreleaseitem.cashReleaseTypeID 
                         INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
                         where 
                         cashreleasetype.booktype = {BookType} and 
@@ -561,9 +562,10 @@ namespace ParishSystem
         public DataTable getTransactionsCRBByAccountingBookFormatByMonth(int BookType, int Month, int Year)
         {
             string q = $@"SELECT * FROM cashreleaseitem 
-                        INNER JOIN cashreleasetype on cashReleaseType.cashreleasetypeID = cashreleaseitem.cashReleaseTypeID 
+                        INNER JOIN itemtype on itemtype.itemTypeID = cashreleaseitem.cashReleaseTypeID 
                         INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
-                        where MONTH(cashReleaseDateTime) = {Month} and YEAR(cashReleaseDateTime) = {Year}
+                        where 
+                        MONTH(cashReleaseDateTime) = {Month} and YEAR(cashReleaseDateTime) = {Year}
                         and cashreleasevoucher.bookType = {BookType}
                         order by CVnum desc;";
             return runQuery(q);
@@ -571,9 +573,10 @@ namespace ParishSystem
         public DataTable getTransactionsCRBByAccountingBookFormatByYear(int BookType, int Year)
         {
             string q = $@"SELECT * FROM cashreleaseitem 
-                        INNER JOIN cashreleasetype on cashReleaseType.cashreleasetypeID = cashreleaseitem.cashReleaseTypeID 
+                        INNER JOIN itemtype on itemtype.itemTypeID = cashreleaseitem.cashReleaseTypeID 
                         INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
-                        where YEAR(cashReleaseDateTime) = {Year}
+                        where 
+                        YEAR(cashReleaseDateTime) = {Year}
                         and cashreleasevoucher.bookType = {BookType}
                         order by CVnum desc;";
             return runQuery(q);
@@ -581,9 +584,10 @@ namespace ParishSystem
         public DataTable getTransactionsCRBByAccountingBookFormatBetweenDates(int BookType, DateTime from, DateTime to)
         {
             string q = $@"SELECT * FROM cashreleaseitem 
-                        INNER JOIN cashreleasetype on cashReleaseType.cashreleasetypeID = cashreleaseitem.cashReleaseTypeID 
+                        INNER JOIN itemtype on itemtype.itemTypeID = cashreleaseitem.cashReleaseTypeID 
                         INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
-                        where(cashreleasedatetime between '{ from.ToString("yyyy-MM-dd hh:mm:ss")}' and '{to.ToString("yyyy-MM-dd hh:mm:ss")}')
+                        where 
+                        (cashreleasedatetime between '{ from.ToString("yyyy-MM-dd hh:mm:ss")}' and '{to.ToString("yyyy-MM-dd hh:mm:ss")}')
                         and cashreleasevoucher.bookType = { BookType }
                         order by CVnum desc;";
             return runQuery(q);
@@ -591,9 +595,10 @@ namespace ParishSystem
         public DataTable getTransactionsCRBByAccountingBookFormatRecent(int BookType)
         {
             string q = $@"SELECT * FROM cashreleaseitem 
-                        INNER JOIN cashreleasetype on cashReleaseType.cashreleasetypeID = cashreleaseitem.cashReleaseTypeID 
+                        INNER JOIN itemtype on itemtype.itemTypeID = cashreleaseitem.cashReleaseTypeID 
                         INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
-                        where(cashreleasedatetime between '{ (DateTime.Now - new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd hh:mm:ss")}' and '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}')
+                        where 
+                        (cashreleasedatetime between '{ (DateTime.Now - new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd hh:mm:ss")}' and '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}')
                         and cashreleasevoucher.bookType = {BookType}
                         order by CVnum desc;";
             return runQuery(q);
@@ -1081,6 +1086,12 @@ namespace ParishSystem
                 
             }
 
+        }
+        public DataTable getItemsLike(string like, int cashreceipt_cashdisbursment)
+        {
+            string q= $@"SELECT itemType, itemTypeID  ,case when bookType=1 then 'Parish' when bookType=2 then 'Community' when bookType=3 then 'Postulancy' end as Book,
+                     case when status=1 then 'Active' when status=2 then 'Inactive' end as Status , concat('₱',' ',suggestedprice)as SuggestedPrice FROM sad2.itemtype where itemType like '%{like}%' and cashreceipt_cashdisbursment ={cashreceipt_cashdisbursment};";
+            return runQuery(q);
         }
     }
 }

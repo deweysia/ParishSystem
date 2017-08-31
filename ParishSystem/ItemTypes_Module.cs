@@ -39,25 +39,34 @@ namespace ParishSystem
         }
         private void itemType_dgv_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-                Form A = new ItemType(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment, dh);
+                Form A = new ItemTypePopUp(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment, dh);
                 A.ShowDialog();
                 refreshItemTypes();
         }
         private void add_button_itemType_Click(object sender, EventArgs e)
         {
-                Form A = new ItemType(cashreceipt_cashdisbursment, dh);
+                Form A = new ItemTypePopUp(cashreceipt_cashdisbursment, dh);
                 A.ShowDialog();
                 refreshItemTypes();           
         }
         private void disable_button_itemType_Click(object sender, EventArgs e)
         {
-                dh.disableIncomeType(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment);
-                refreshItemTypes();        
+                
         }
         private void enable_button_itemType_Click(object sender, EventArgs e)
         {
+            if (itemType_dgv.SelectedRows[0].Cells["Status"].Value.ToString()=="Inactive")
+                {
                 dh.enableIncomeType(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment);
-                refreshItemTypes();
+                itemType_dgv.SelectedRows[0].Cells["Status"].Value = "Active";
+                enable_button_itemType.Text = "Disable";
+                }
+            else
+                {
+                dh.disableIncomeType(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment);
+                itemType_dgv.SelectedRows[0].Cells["Status"].Value = "Inactive";
+                enable_button_itemType.Text = "Enable";
+            }
         }
         private void itemType_dgv_Click(object sender, EventArgs e)
         {
@@ -77,7 +86,7 @@ namespace ParishSystem
         {
             if(e.KeyData== Keys.Enter)
             {
-                Form A = new ItemType(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment, dh);
+                Form A = new ItemTypePopUp(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment, dh);
                 A.ShowDialog();
                 refreshItemTypes();
             }
@@ -87,10 +96,47 @@ namespace ParishSystem
         {
             if (e.KeyData == Keys.Enter)
             {
-                Form A = new ItemType(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment, dh);
+                Form A = new ItemTypePopUp(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment, dh);
                 A.ShowDialog();
                 refreshItemTypes();
             }
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            if (searchButton.Tag.ToString() == "s")
+            {
+                searchButton.Image = ParishSystem.Properties.Resources.icons8_Delete_Filled_20_666666;
+                searchButton.Tag = "c";
+                itemType_dgv.DataSource = dh.getItemsLike(searchTextbox.Text, cashreceipt_cashdisbursment);
+                itemType_dgv.Columns["itemTypeID"].Visible = false;
+                itemType_dgv.Columns["itemType"].HeaderText = "Item Type";
+            }
+            else
+            {
+                searchButton.Image = ParishSystem.Properties.Resources.icons8_Search_Filled_20;
+                searchButton.Tag = "s";
+                searchTextbox.Clear();
+                refreshItemTypes();
+            }
+        }
+
+        private void itemType_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (itemType_dgv.SelectedRows[0].Cells["Status"].Value.ToString() == "Inactive")
+            {
+                enable_button_itemType.Text = "Enable";
+            }
+            else
+            {
+                enable_button_itemType.Text = "Disable";
+            }
+        }
+
+        private void searchTextbox_TextChanged(object sender, EventArgs e)
+        {
+            searchButton.Image = ParishSystem.Properties.Resources.icons8_Search_Filled_20;
+            searchButton.Tag = "s";
         }
     }
 }

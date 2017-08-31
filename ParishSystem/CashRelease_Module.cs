@@ -20,18 +20,61 @@ namespace ParishSystem
             this.cashreleaseMode = cashReleaseMode;
             price_nud_button_CRB.Maximum = decimal.MaxValue;
         }
-        private void refreshCashRelease()
+        private void CashDisbursment_Module_Load(object sender, EventArgs e)
         {
-            CVNumber_CRB.Text = dh.getMaxCVNumber(cashreleaseMode).ToString();
-            CNNumber_CRB.Text = dh.getMaxCNNumber(cashreleaseMode).ToString();
             itemtype_combobox_CRB.Items.Clear();
             itemtype_combobox_CRB.Items.Add("");
             DataTable dt = dh.getItemTypesCashRelease(cashreleaseMode);
             foreach (DataRow dr in dt.Rows)
             {
-                itemtype_combobox_CRB.Items.Add(new ComboboxContent(int.Parse(dr["cashReleaseTypeID"].ToString()), dr["cashReleaseType"].ToString()));
+                itemtype_combobox_CRB.Items.Add(new ComboboxContent(int.Parse(dr["itemTypeID"].ToString()), dr["itemType"].ToString(), dr["suggestedPrice"].ToString()));
             }
+            CVNumber_CRB.Text = dh.getMaxCVNumber(cashreleaseMode).ToString();
+            CNNumber_CRB.Text = dh.getMaxCNNumber(cashreleaseMode).ToString();
+        }
+        private void itemtype_combobox_CRB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (itemtype_combobox_CRB.Text != "")
+            {
+                price_nud_button_CRB.Value = Decimal.Parse(((ComboboxContent)itemtype_combobox_CRB.SelectedItem).Content2);
+                if (Decimal.Parse(((ComboboxContent)itemtype_combobox_CRB.SelectedItem).Content2) != 0)
+                {
+                    paymentPanel.Visible = true;
+                    priceHeader_label.Visible = true;
+                    editPrice_button.Visible = true;
+                    cancelPrice_button.Visible = false;
+                    price_nud_button_CRB.Visible = false;
+                    price_label.Visible = true;
+                    editPrice_button.Tag = "e";
+                }
+                else
+                {
+                    paymentPanel.Visible = true;
+                    priceHeader_label.Visible = true;
+                    price_label.Visible = false;
+                    price_nud_button_CRB.Visible = true;
+                    editPrice_button.Visible = false;
+                    cancelPrice_button.Visible = false;
+                }
+            }
+            else
+            {
+                paymentPanel.Visible = false;
+                add_button_CRB.Enabled = false;
+            }
+        }
 
+        private void price_nud_button_CRB_ValueChanged(object sender, EventArgs e)
+        {
+            price_label.Text = price_nud_button_CRB.Value.ToString();
+            if (price_nud_button_CRB.Value > 0)
+            {
+                add_button_CRB.Enabled = true;
+            }
+            else
+            {
+                add_button_CRB.Enabled = false;
+            }
         }
         private void add_button_CRB_Click(object sender, EventArgs e)
         {
@@ -85,7 +128,7 @@ namespace ParishSystem
         }
         private void clear_button_CRB_Click(object sender, EventArgs e)
         {
-            clearCRB();
+            itemtype_combobox_CRB.SelectedIndex = 0;
         }
         private void delete_button_CRB_Click(object sender, EventArgs e)
         {
@@ -104,10 +147,11 @@ namespace ParishSystem
                     dh.addCashReleaseItem(cashReleaseID, int.Parse(dgvr.Cells[2].Value.ToString()), decimal.Parse(dgvr.Cells[1].Value.ToString()));
                 }
                 clearCRB();
-                refreshCashRelease();
+                CNNumber_CRB.Text = (int.Parse(CNNumber_CRB.Text)+1).ToString();
+                CVNumber_CRB.Text = (int.Parse(CVNumber_CRB.Text)+1).ToString();
                 name_textbox_CRB.Clear();
                 remarks_textbox_CRB.Clear();
-                total_label_cashrelease.Text = "";
+                total_label_cashrelease.Text = "0.00";
                 item_dgv_fullpay_CRB.Rows.Clear();
             }
             else
@@ -118,60 +162,62 @@ namespace ParishSystem
         private void cancel_button_CRB_Click(object sender, EventArgs e)
         {
             clearCRB();
-            refreshCashRelease();
             name_textbox_CRB.Clear();
             remarks_textbox_CRB.Clear();
-            total_label_cashrelease.Text = "";
+            total_label_cashrelease.Text = "0.00";
             item_dgv_fullpay_CRB.Rows.Clear();
         }
-        private void CashDisbursment_Module_Load(object sender, EventArgs e)
+        decimal lastSet=0;
+        private void editPrice_button_Click(object sender, EventArgs e)
         {
-            refreshCashRelease();
+            if (editPrice_button.Tag.ToString() == "e")
+            {
+                cancelPrice_button.Visible = true;
+                price_nud_button_CRB.Visible = true;
+                price_label.Visible = false;
+                editPrice_button.Tag = "s";
+                lastSet = price_nud_button_CRB.Value;
+            }
+            else
+            {
+                cancelPrice_button.Visible = false;
+                price_nud_button_CRB.Visible = false;
+                price_label.Visible = true;
+                editPrice_button.Tag = "e";
+            }
         }
 
-        private void total_label_cashrelease_Click(object sender, EventArgs e)
+        private void cancelPrice_button_Click(object sender, EventArgs e)
         {
-
+            cancelPrice_button.Visible = false;
+            price_nud_button_CRB.Visible = false;
+            price_label.Visible = true;
+            editPrice_button.Tag = "e";
+            price_nud_button_CRB.Value = lastSet;
         }
 
-        private void label32_Click(object sender, EventArgs e)
+        private void item_dgv_fullpay_CRB_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-
+            if (item_dgv_fullpay_CRB.Rows.Count > 0)
+            {
+                final_button_CRB.Enabled = true;
+            }
+            else
+            {
+                final_button_CRB.Enabled = false;
+            }
         }
 
-        private void label21_Click(object sender, EventArgs e)
+        private void item_dgv_fullpay_CRB_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-
-        }
-
-        private void remarks_textbox_CRB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void name_textbox_CRB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label24_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label27_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label26_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void item_dgv_fullpay_CRB_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            if (item_dgv_fullpay_CRB.Rows.Count > 0)
+            {
+                final_button_CRB.Enabled = true;
+            }
+            else
+            {
+                final_button_CRB.Enabled = false;
+            }
         }
     }
 }
