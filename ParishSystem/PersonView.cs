@@ -78,22 +78,8 @@ namespace ParishSystem
             {
                 residence_panel.Visible = false;
             }
-            if (temp.Rows[0]["contactnumber"].ToString() != "")
-            {
-                contactNumber_maskedTextbox.Text = temp.Rows[0]["contactnumber"].ToString();
-            }
-            else
-            {
-                contactNumber_panel.Visible = false;
-            }
-            if (temp.Rows[0]["address"].ToString() != "")
-            {
-                address_textbox.Text = temp.Rows[0]["address"].ToString();
-            }
-            else
-            {
-                address_panel.Visible = false;
-            }
+            
+           
             refreshParent();
 
 
@@ -330,22 +316,8 @@ namespace ParishSystem
                     {
                         residence_panel_spouse_marriage.Visible = false;
                     }
-                    if (dr["contactnumber"].ToString() != "")
-                    {
-                        contactnumber_label_spouse_marriage.Text = dr["contactnumber"].ToString();
-                    }
-                    else
-                    {
-                        contactNumber_panel_spouse_marriage.Visible = false;
-                    }
-                    if (dr["address"].ToString() != "")
-                    {
-                        address_textbox_spouse_marriage.Text = dr["address"].ToString();
-                    }
-                    else
-                    {
-                        address_panel_spouse_marriage.Visible = false;
-                    }
+                   
+                    
                     //father
                     DataTable Father = dh.getFatherOf(int.Parse(dr["profileID"].ToString()));
                     if (Father.Rows.Count > 0)
@@ -461,6 +433,11 @@ namespace ParishSystem
         }
 
         private void controlBar_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }
