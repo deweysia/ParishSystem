@@ -631,6 +631,10 @@ namespace ParishSystem
 
         }
 
+        private void refreshReport()
+        {
+
+        }
        
         private void generate_report(object sender, EventArgs e)
         {

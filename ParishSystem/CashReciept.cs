@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class CDB_FullPayment_Module : Form
+    public partial class CashReciept : Form
     {
         int bookModeFullPay;
         treasurerBackend dh = new treasurerBackend();
-        public CDB_FullPayment_Module(int bookModeFullPay)
+        public CashReciept(int bookModeFullPay)
         {
             InitializeComponent();
             this.bookModeFullPay = bookModeFullPay;
@@ -34,7 +34,7 @@ namespace ParishSystem
             sourceName_textbox_fullpay.Clear();
             remarks_textbox_fullpay.Clear();
             final_button_fullpay.Enabled = false;
-            DataTable dt = dh.getIncomeTypesOf(bookModeFullPay);
+            DataTable dt = dh.getItems(1,bookModeFullPay);
             foreach (DataRow dr in dt.Rows)
             {
                 itemType_combobox_fullpay.Items.Add(new ComboboxContent(int.Parse(dr["itemTypeID"].ToString()), dr["itemType"].ToString(), dr["suggestedPrice"].ToString()));

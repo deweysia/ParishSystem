@@ -156,11 +156,11 @@
       <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
     </Compile>
     <Compile Include="CalendarEvent.cs" />
-    <Compile Include="CashRelease_Module.cs">
+    <Compile Include="CashDisbursment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CashRelease_Module.Designer.cs">
-      <DependentUpon>CashRelease_Module.cs</DependentUpon>
+    <Compile Include="CashDisbursment.Designer.cs">
+      <DependentUpon>CashDisbursment.cs</DependentUpon>
     </Compile>
     <Compile Include="BloodlettingReports_Module.cs">
       <SubType>Form</SubType>
@@ -174,11 +174,11 @@
     <Compile Include="CashReport_Module.Designer.cs">
       <DependentUpon>CashReport_Module.cs</DependentUpon>
     </Compile>
-    <Compile Include="CDB_FullPayment_Module.cs">
+    <Compile Include="CashReciept.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CDB_FullPayment_Module.Designer.cs">
-      <DependentUpon>CDB_FullPayment_Module.cs</DependentUpon>
+    <Compile Include="CashReciept.Designer.cs">
+      <DependentUpon>CashReciept.cs</DependentUpon>
     </Compile>
     <Compile Include="CDB_SacramentPayment_Module.cs">
       <SubType>Form</SubType>
@@ -356,8 +356,8 @@
     <EmbeddedResource Include="Bloodletting_Profile_Popup.resx">
       <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CashRelease_Module.resx">
-      <DependentUpon>CashRelease_Module.cs</DependentUpon>
+    <EmbeddedResource Include="CashDisbursment.resx">
+      <DependentUpon>CashDisbursment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BloodlettingReports_Module.resx">
       <DependentUpon>BloodlettingReports_Module.cs</DependentUpon>
@@ -365,8 +365,8 @@
     <EmbeddedResource Include="CashReport_Module.resx">
       <DependentUpon>CashReport_Module.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CDB_FullPayment_Module.resx">
-      <DependentUpon>CDB_FullPayment_Module.cs</DependentUpon>
+    <EmbeddedResource Include="CashReciept.resx">
+      <DependentUpon>CashReciept.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CDB_SacramentPayment_Module.resx">
       <DependentUpon>CDB_SacramentPayment_Module.cs</DependentUpon>

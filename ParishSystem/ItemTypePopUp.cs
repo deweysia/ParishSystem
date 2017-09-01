@@ -56,7 +56,7 @@ namespace ParishSystem
         {
             if (IncomeTypeID != 0)
             {
-                DataTable dt = dh.getIncomeType(IncomeTypeID, cashreceipt_cashdisbursment);
+                DataTable dt = dh.getItem(IncomeTypeID, cashreceipt_cashdisbursment);
                 name_textbox.Text = dt.Rows[0]["itemType"].ToString();
                 book_combobox.SelectedIndex = int.Parse(dt.Rows[0]["bookType"].ToString());
                 suggestedPrice_nud.Value = decimal.Parse(dt.Rows[0]["suggestedPrice"].ToString());

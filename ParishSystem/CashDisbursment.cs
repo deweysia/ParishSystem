@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class CashRelease_Module : Form
+    public partial class CashDisbursment : Form
     {
         treasurerBackend dh = new treasurerBackend();
         int cashreleaseMode;
-        public CashRelease_Module(int cashReleaseMode)
+        public CashDisbursment(int cashReleaseMode)
         {
             InitializeComponent();
             this.cashreleaseMode = cashReleaseMode;
@@ -24,7 +24,7 @@ namespace ParishSystem
         {
             itemtype_combobox_CRB.Items.Clear();
             itemtype_combobox_CRB.Items.Add("");
-            DataTable dt = dh.getItemTypesCashRelease(cashreleaseMode);
+            DataTable dt = dh.getItems(cashreleaseMode,2);
             foreach (DataRow dr in dt.Rows)
             {
                 itemtype_combobox_CRB.Items.Add(new ComboboxContent(int.Parse(dr["itemTypeID"].ToString()), dr["itemType"].ToString(), dr["suggestedPrice"].ToString()));
@@ -86,12 +86,13 @@ namespace ParishSystem
                     item_dgv_fullpay_CRB.Rows[index].Cells[0].Value = itemtype_combobox_CRB.SelectedItem.ToString();
                     item_dgv_fullpay_CRB.Rows[index].Cells[1].Value = price_nud_button_CRB.Value.ToString();
                     item_dgv_fullpay_CRB.Rows[index].Cells[2].Value = itemtype_combobox_CRB.SelectedIndex;//hidden
+                    item_dgv_fullpay_CRB.Rows[index].Cells[3].Value = ((ComboboxContent)itemtype_combobox_CRB.SelectedItem).ID.ToString();//hidden
                 }
                 else
                 {
                     item_dgv_fullpay_CRB.SelectedRows[0].Cells[0].Value = itemtype_combobox_CRB.SelectedItem.ToString();
                     item_dgv_fullpay_CRB.SelectedRows[0].Cells[1].Value = price_nud_button_CRB.Value.ToString();
-                    item_dgv_fullpay_CRB.SelectedRows[0].Cells[2].Value = itemtype_combobox_CRB.SelectedIndex;//hidden
+                    item_dgv_fullpay_CRB.SelectedRows[0].Cells[2].Value = itemtype_combobox_CRB.SelectedIndex;//hidden            
                     delete_button_CRB.Enabled = false;
                 }
                 clearCRB();
@@ -144,7 +145,7 @@ namespace ParishSystem
                 int cashReleaseID = dh.addCashRelease(remarks_textbox_CRB.Text, int.Parse(CNNumber_CRB.Text), int.Parse(CVNumber_CRB.Text), cashreleaseMode, name_textbox_CRB.Text);
                 foreach (DataGridViewRow dgvr in item_dgv_fullpay_CRB.Rows)
                 {
-                    dh.addCashReleaseItem(cashReleaseID, int.Parse(dgvr.Cells[2].Value.ToString()), decimal.Parse(dgvr.Cells[1].Value.ToString()));
+                    dh.addCashReleaseItem(cashReleaseID, int.Parse(dgvr.Cells[3].Value.ToString()), decimal.Parse(dgvr.Cells[1].Value.ToString()));
                 }
                 clearCRB();
                 CNNumber_CRB.Text = (int.Parse(CNNumber_CRB.Text)+1).ToString();

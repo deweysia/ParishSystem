@@ -1,6 +1,6 @@
 ﻿namespace ParishSystem
 {
-    partial class CDB_FullPayment_Module
+    partial class CashReciept
     {
         /// <summary>
         /// Required designer variable.

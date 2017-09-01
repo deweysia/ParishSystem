@@ -16,74 +16,9 @@ namespace ParishSystem
     {     
         public treasurerBackend()
         {
-                    }
-        public DataTable getAllItemTypesOfBook(int b)
-        {
-            string q = $"select * from itemtype where booktype = {b}";
-            return runQuery(q);
         }
-        public DataTable searchByOR(int OR, int BookType)
-        {
-            string q = $@"select ORnum, sourceName,primaryIncomeDateTime,remarks,primaryincome.primaryIncomeID,bookType, sum(price) as price ,sum(amount) as amount
-                        from primaryincome left outer join item on item.primaryIncomeID= primaryincome.primaryIncomeID left outer join payment on payment.primaryIncomeID= primaryincome.primaryIncomeID
-                        where
-                        bookType = 1 and ORnum like '%{OR}%'
-                        group by  ORnum
-                        order by ORnum desc";
-            return runQuery(q);
-        }
-
-        public DataTable getTransactions(int BookType)
-        {
-            string q = $@"select ORnum, sourceName,primaryIncomeDateTime,remarks,primaryincome.primaryIncomeID,bookType, sum(price) as price ,sum(amount) as amount
-                        from primaryincome left outer join item on item.primaryIncomeID= primaryincome.primaryIncomeID left outer join payment on payment.primaryIncomeID= primaryincome.primaryIncomeID
-                        where(primaryIncomeDateTime between '{ (DateTime.Now - new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd hh:mm:ss")}' and '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}')
-                        and bookType = {BookType}
-                        group by  ORnum
-                        order by ORnum desc";
-            return runQuery(q);
-        }
-        public DataTable getTransactionSummary(int BookType)
-        {
-            string q = $@"select itemtype.itemType, sum(price) from primaryincome inner join item on item.primaryIncomeID = primaryincome.primaryincomeid inner join itemtype on item.itemTypeID = itemtype.itemTypeID
-                        where(primaryIncomeDateTime between '{ (DateTime.Now - new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd hh:mm:ss")}' and '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}')
-                        and primaryincome.bookType = {BookType}
-                        group by itemtype.itemtypeid
-                        order by itemtype.itemType asc; ";
-            return runQuery(q);
-        }
-        public DataTable getTransactionsOnDay( int bookType, int day, int month, int year)
-        {
-            string q = $@"SELECT * FROM primaryincome left outer join item on item.primaryIncomeID = primaryincome.primaryIncomeID 
-                        left outer join payment on payment.primaryIncomeID=primaryincome.primaryincomeid 
-                        where  DAY(primaryIncomeDateTime) = {day} and MONTH(primaryIncomeDateTime) = {month} and YEAR(primaryIncomeDateTime) = {year} and bookType = {bookType}";
-            return runQuery(q);
-        }
-        public DataTable getTransactionsOnMonth( int bookType, int month, int year )
-        {
-            string q = $@"SELECT * FROM primaryincome left outer join item on item.primaryIncomeID = primaryincome.primaryIncomeID 
-                        left outer join payment on payment.primaryIncomeID=primaryincome.primaryincomeid 
-                        where  YEAR(primaryIncomeDateTime) = {year} AND MONTH(primaryIncomeDateTime) = {month} and bookType = {bookType}";
-            return runQuery(q);
-        }
-        public DataTable getTransactionsOnYear( int bookType , int year)
-        {
-            string q = $@"SELECT * FROM primaryincome left outer join item on item.primaryIncomeID = primaryincome.primaryIncomeID 
-                         left outer join payment on payment.primaryIncomeID=primaryincome.primaryincomeid 
-                        where  YEAR(primaryIncomeDateTime) = {year} and bookType = {bookType}";
-            return runQuery(q);
-        }
-        public DataTable getTransactionsInBetweenDates(int bookType, DateTime from, DateTime to)
-        {
-            string q = $@"select ORnum, sourceName,primaryIncomeDateTime,remarks,primaryincome.primaryIncomeID,bookType, sum(price) as price ,sum(amount) as amount
-                        from primaryincome left outer join item on item.primaryIncomeID= primaryincome.primaryIncomeID left outer join payment on payment.primaryIncomeID= primaryincome.primaryIncomeID
-                        where(primaryIncomeDateTime between '{ from.ToString("yyyy-MM-dd 00:00:00")}' and '{to.ToString("yyyy-MM-dd 23:59:59")}')
-                        and bookType = {bookType}
-                        group by  ORnum
-                        order by ORnum desc";
-            return runQuery(q);
-        }
-
+       
+        #region Cash Reciept
         public DataTable getTransactionsByAccountingBookFormatByOrNumber(int BookType,int OR)
         {
             string q = $@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,(price*quantity)as price,itemType from primaryincome 
@@ -173,7 +108,7 @@ namespace ParishSystem
             string q = $@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,(price*quantity)as price,itemType from primaryincome 
                             inner join item on item.primaryIncomeID = primaryincome.primaryincomeid 
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
-                            where(primaryIncomeDateTime between '{ (DateTime.Now - new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd hh:mm:ss")}' and '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}')
+                            where(primaryIncomeDateTime between '{ (DateTime.Now - new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd")}' and '{DateTime.Now.ToString("yyyy-MM-dd 23:59:59")}')
                             and primaryIncome.bookType = {BookType}
                             union
                             select primaryincome.primaryIncomeID,sourceName,primaryincome.bookType,ORnum,primaryIncomeDateTime,amount,itemType from primaryincome 
@@ -181,7 +116,7 @@ namespace ParishSystem
                             inner join sacramentincome on sacramentincome.sacramentIncomeID = payment.sacramentIncomeID 
                             inner join application on application.applicationID = sacramentincome.applicationID 
                             inner join itemtype on itemtype.itemTypeID = application.sacramentType 
-                             where(primaryIncomeDateTime between '{ (DateTime.Now - new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd hh:mm:ss")}' and '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}')
+                             where(primaryIncomeDateTime between '{ (DateTime.Now - new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd")}' and '{DateTime.Now.ToString("yyyy-MM-dd 23:59:59")}')
                              and primaryIncome.bookType = {BookType}
                             ) as A  order by ORnum desc;";
             return runQuery(q);
@@ -193,9 +128,8 @@ namespace ParishSystem
         //     ungrouped- shows individual OR
         public DataTable getSummaryCashDisbursment(DataTable transactions,int bookType)//summary tab
         {
-            try
-            {
-                DataTable allitems = getAllItemTypesOfBook(bookType);
+           
+                DataTable allitems = getItems(bookType,1);
                 Dictionary<string, float> itemtypes = new Dictionary<string, float>();
 
                 foreach (DataRow dr in allitems.Rows)
@@ -221,12 +155,11 @@ namespace ParishSystem
                     }
                 }
                 return output;
-            }
-            catch { return new DataTable(); }
+           
         }
         public DataTable getTotalUngroupedCashDisbursment(DataTable transactions)//total ungrouped
         {
-            try
+            if (transactions.Rows.Count > 0)
             {
                 DataTable output = new DataTable();
                 int currentOR = int.Parse(transactions.Rows[0]["ORnum"].ToString());
@@ -253,11 +186,11 @@ namespace ParishSystem
                 output.Rows.Add(row);
                 return output;
             }
-            catch { return new DataTable(); }
+            else { return new DataTable(); }
         }
         public DataTable getTotalGroupedCashDisbursment(DataTable transactions)//total grouped
         {
-            try
+            if (transactions.Rows.Count > 0)
             {
                 DataTable output = new DataTable();
                 output.Columns.Add("OR Number", typeof(string));
@@ -296,14 +229,13 @@ namespace ParishSystem
                 output.Rows.Add(row);
                 return output;
             }
-            catch { return new DataTable(); }
+            else { return new DataTable(); }
         }
         public DataTable getBreakdownUngroupedCashDisbursment(DataTable transactions, int bookType)//breakdown ungrouped
         {
-            try
-            {
+            if (transactions.Rows.Count > 0) { 
                 DataTable output = new DataTable();
-                DataTable itemTypes = getAllItemTypesOfBook(bookType);
+                DataTable itemTypes = getItems(bookType, 1);
 
                 output.Columns.Add("OR Number", typeof(string));
                 output.Columns.Add("Name", typeof(string));
@@ -366,18 +298,17 @@ namespace ParishSystem
                 }
                 return output;
             }
-            catch { return new DataTable(); }
+            else { return new DataTable(); }
         }
         public DataTable getBreakdownGroupedCashDisbursment(DataTable transactions,int bookType) //breakdown grouped
         {
-            try
-            {
+            if (transactions.Rows.Count > 0) { 
                 DateTime currentDate = toDateTime(transactions.Rows[0]["primaryIncomeDateTime"].ToString(), false);
                 int minOR = int.MaxValue;
                 int maxOR = 0;
 
                 DataTable output = new DataTable();
-                DataTable itemTypes = getAllItemTypesOfBook(bookType);
+                DataTable itemTypes = getItems(bookType, 1);
 
                 output.Columns.Add("OR Number", typeof(string));
                 output.Columns.Add("Date Paid", typeof(string));
@@ -452,53 +383,12 @@ namespace ParishSystem
                 }
                 return output;
             }
-            catch { return new DataTable(); }
+            else { return new DataTable(); }
         }
-        /*  LMAOOO this is the same as getTotalSummaryOfTransactionsOnOrRange >> im so stupid for recoding
-        public DataTable getDayRangeSummaryOfTransactions(DataTable transactions) //sum of tranasctions per or range
-        {
-            DataTable output = new DataTable();
-            output.Columns.Add("OR Number", typeof(string));
-            output.Columns.Add("Amount", typeof(float));
-            output.Columns.Add("Date Paid", typeof(string));
-            DataRow row = output.NewRow();
-            DateTime currentDate = toDateTime(transactions.Rows[0]["primaryIncomeDateTime"].ToString(),false);
-            int minOR = int.MaxValue;
-            int maxOR = 0;
-            float amount = 0;   
-            foreach (DataRow dr in transactions.Rows)
-            {
-                if (!currentDate.Equals(toDateTime(dr["primaryIncomeDateTime"].ToString(), false)))
-                {
-                    row["OR Number"] = minOR.ToString()+"-"+ maxOR.ToString();
-                    row["Amount"] = amount;
-                    output.Rows.Add(row);
-                    row = output.NewRow();
-                    currentDate = toDateTime(dr["primaryIncomeDateTime"].ToString(), false);
-                    minOR = int.MaxValue;
-                    maxOR = 0;
-                    amount = 0;
-                }
-                row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString("MMMM dd yyyy");
-                if (minOR > int.Parse(dr["ORnum"].ToString()))
-                {
-                    minOR = int.Parse(dr["ORnum"].ToString());
-                }
+        #endregion
 
-                if (maxOR < int.Parse(dr["ORnum"].ToString()))
-                {
-                    maxOR = int.Parse(dr["ORnum"].ToString());
-                }
-                amount += ((dr["price"].ToString() != "") ? float.Parse(dr["price"].ToString()) : float.Parse(dr["amount"].ToString()));
-            }
-            row["Date Paid"] = currentDate.ToString("MMMM dd yyyy");
-            row["OR Number"] = minOR.ToString() + "-" + maxOR.ToString();
-            row["Amount"] = amount;
-            output.Rows.Add(row);
-            return output;
-        }
-        */
-        //--------------------------------------------------------------------------------------------------------------//
+
+
         public int getMaxCNNumber(int book)
         {
             string q = $@"select max(checkNum) from cashreleasevoucher where booktype = {book}";
@@ -519,11 +409,7 @@ namespace ParishSystem
             }
             return 1;
         }
-        public DataTable getItemTypesCashRelease(int bookType)
-        {
-            string q = $@"select * from itemtype where booktype ={bookType} and status =1 and cashreceipt_cashdisbursment=2";
-            return runQuery(q);
-        }
+       
         public int addCashRelease(string remark, int checkNum, int CVnum, int bookType ,string name)
         {
             string q = $@"INSERT INTO `sad2`.`cashreleasevoucher` (`cashReleaseDateTime`, `remark`, `checkNum`, `CVnum`, `bookType`, `name`) VALUES ('{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}', '{remark}', '{checkNum}', '{CVnum}', '{bookType}','{name}'); SELECT LAST_INSERT_ID()" ;
@@ -536,7 +422,7 @@ namespace ParishSystem
         }
 
         public DataTable getTransactionsCRBByAccountingBookFormatByOrNumber(int BookType, int checknum,int CVnum)
-        {//here fix reports
+        {
             string q = $@"SELECT * FROM cashreleaseitem 
                         INNER JOIN itemtype on itemtype.itemTypeID = cashreleaseitem.cashReleaseTypeID 
                         INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
@@ -554,7 +440,7 @@ namespace ParishSystem
                         INNER JOIN itemtype on itemtype.itemTypeID = cashreleaseitem.cashReleaseTypeID 
                         INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
                         where 
-                        cashreleasetype.booktype = {BookType} and 
+                        itemtype.booktype = {BookType} and 
 						DAY(cashReleaseDateTime) = {Day} and MONTH(cashReleaseDateTime) = {Month} and YEAR(cashReleaseDateTime) = {Year}
                         order by CVnum desc;";
             return runQuery(q);
@@ -587,7 +473,7 @@ namespace ParishSystem
                         INNER JOIN itemtype on itemtype.itemTypeID = cashreleaseitem.cashReleaseTypeID 
                         INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
                         where 
-                        (cashreleasedatetime between '{ from.ToString("yyyy-MM-dd hh:mm:ss")}' and '{to.ToString("yyyy-MM-dd hh:mm:ss")}')
+                        (cashreleasedatetime'{ from.ToString("yyyy-MM-dd 00:00:00")}' and '{to.ToString("yyyy-MM-dd 23:59:59")}')
                         and cashreleasevoucher.bookType = { BookType }
                         order by CVnum desc;";
             return runQuery(q);
@@ -598,7 +484,7 @@ namespace ParishSystem
                         INNER JOIN itemtype on itemtype.itemTypeID = cashreleaseitem.cashReleaseTypeID 
                         INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
                         where 
-                        (cashreleasedatetime between '{ (DateTime.Now - new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd hh:mm:ss")}' and '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}')
+                        (cashreleasedatetime between '{ (DateTime.Now - new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd")}' and '{DateTime.Now.ToString("yyyy-MM-dd 23:59:59")}')
                         and cashreleasevoucher.bookType = {BookType}
                         order by CVnum desc;";
             return runQuery(q);
@@ -606,47 +492,54 @@ namespace ParishSystem
 
         public DataTable getSummaryCashRelease(DataTable transactions, int bookType)//summary tab
         {
-            try
+            if (transactions.Rows.Count > 0)
             {
-                DataTable allitems = getItemTypesOfCashRelease(bookType);
+                DataTable allitems = getItems(bookType, 2);
                 Dictionary<string, float> itemtypes = new Dictionary<string, float>();
 
                 foreach (DataRow dr in allitems.Rows)
                 {
-                    itemtypes.Add(dr["cashReleaseType"].ToString(), 0);
+                    itemtypes.Add(dr["itemType"].ToString(), 0);
                 }
 
                 foreach (DataRow dr in transactions.Rows)
                 {
-                    if (itemtypes.ContainsKey(dr["cashReleaseType"].ToString()))
+                    if (itemtypes.ContainsKey(dr["itemType"].ToString()))
                     {
-                        itemtypes[dr["cashReleaseType"].ToString()] = float.Parse(itemtypes[dr["cashReleaseType"].ToString()].ToString()) + float.Parse(dr["releaseAmount"].ToString());
+                        itemtypes[dr["itemType"].ToString()] = float.Parse(itemtypes[dr["itemType"].ToString()].ToString()) + float.Parse(dr["releaseAmount"].ToString());
                     }
                 }
                 DataTable output = new DataTable();
                 output.Columns.Add("Type", typeof(string));
                 output.Columns.Add("Sum", typeof(float));
+
                 foreach (KeyValuePair<string, float> entry in itemtypes)
                 {
-                    if (entry.Value != 0)
+                     if (entry.Value != 0)
                     {
                         output.Rows.Add(entry.Key, entry.Value);
                     }
                 }
+
                 return output;
             }
-            catch { return new DataTable(); }
+            else
+            {
+                return new DataTable();
+            }
+               
+
         }
         public DataTable getTotalUngroupedCashRelease(DataTable transactions)//total ungrouped
         {
-            try
+            if (transactions.Rows.Count > 0)
             {
                 DataTable output = new DataTable();
                 int currentOR = int.Parse(transactions.Rows[0]["CVnum"].ToString());
                 DataRow row = output.NewRow();
 
                 output.Columns.Add("CVnum", typeof(string));
-                output.Columns.Add("checkNum", typeof(string));
+                output.Columns.Add("CheckNum", typeof(string));
                 output.Columns.Add("Amount", typeof(float));
                 output.Columns.Add("Name", typeof(string));
                 output.Columns.Add("Date Paid", typeof(string));
@@ -660,23 +553,26 @@ namespace ParishSystem
                         currentOR = int.Parse(dr["CVnum"].ToString());
                     }
                     row["CVnum"] = dr["CVnum"].ToString();
-                    row["checkNum"] = dr["checkNum"].ToString();
+                    row["CheckNum"] = dr["checkNum"].ToString();
                     row["Name"] = dr["name"].ToString();
                     row["Date Paid"] = toDateTime(dr["cashReleaseDateTime"].ToString(), true).ToString("MMMM dd yyyy, hh-mm");
-                    try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["price"].ToString()); } catch { row["Amount"] = float.Parse(dr["releaseAmount"].ToString()); };
+                    try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["releaseAmount"].ToString()); } catch { row["Amount"] = float.Parse(dr["releaseAmount"].ToString()); };
                 }
                 output.Rows.Add(row);
                 return output;
             }
-            catch { return new DataTable(); }
-        }
+            else
+                 {
+                return new DataTable();
+                }
+            }
         public DataTable getTotalGroupedCashRelease(DataTable transactions)//total grouped
         {
-            try
+            if (transactions.Rows.Count > 0)
             {
                 DataTable output = new DataTable();
                 output.Columns.Add("CVnum", typeof(string));
-                output.Columns.Add("checkNum", typeof(string));
+                output.Columns.Add("CheckNum", typeof(string));
                 output.Columns.Add("Amount", typeof(float));
                 output.Columns.Add("Date Paid", typeof(string));
                 DataRow row = output.NewRow();
@@ -690,7 +586,7 @@ namespace ParishSystem
                     if (!currentDate.Equals(toDateTime(dr["cashReleaseDateTime"].ToString(), false)))
                     {
                         row["CVnum"] = minCV.ToString() + "-" + maxCV.ToString();
-                        row["checkNum"] = minCN.ToString() + "-" + maxCN.ToString();
+                        row["CheckNum"] = minCN.ToString() + "-" + maxCN.ToString();
                         output.Rows.Add(row);
                         row = output.NewRow();
                         currentDate = toDateTime(dr["cashReleaseDateTime"].ToString(), false);
@@ -715,28 +611,32 @@ namespace ParishSystem
                     try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["releaseAmount"].ToString()); } catch { row["Amount"] = float.Parse(dr["releaseAmount"].ToString()); };
                 }
                 row["CVnum"] = minCV.ToString() + "-" + maxCV.ToString();
-                row["checkNum"] = minCN.ToString() + "-" + maxCN.ToString();
+                row["CheckNum"] = minCN.ToString() + "-" + maxCN.ToString();
                 output.Rows.Add(row);
                 return output;
             }
-            catch { return new DataTable(); }
+            else
+            {
+                return new DataTable();
+            }
         }
+    
         public DataTable getBreakdownUngroupedCashRelease(DataTable transactions, int bookType)//breakdown ungrouped
         {
-            try
-            {
-                DataTable output = new DataTable();
-                DataTable itemTypes = getItemTypesOfCashRelease(bookType);
+        if (transactions.Rows.Count > 0)
+        {
+            DataTable output = new DataTable();
+                DataTable itemTypes = getItems(bookType, 2);
 
                 output.Columns.Add("CVnum", typeof(string));
-                output.Columns.Add("checkNum", typeof(string));
+                output.Columns.Add("CheckNum", typeof(string));
                 output.Columns.Add("Name", typeof(string));
                 output.Columns.Add("Date Paid", typeof(string));
 
                 foreach (DataRow dr in itemTypes.Rows)
                 {
-                    output.Columns.Add(dr["cashReleaseType"].ToString(), typeof(float)); //add columns 
-                    output.Columns[dr["cashReleaseType"].ToString()].DefaultValue = 0;
+                    output.Columns.Add(dr["itemtype"].ToString(), typeof(float)); //add columns 
+                    output.Columns[dr["itemtype"].ToString()].DefaultValue = 0;
 
                 }
 
@@ -752,33 +652,37 @@ namespace ParishSystem
                         currentOR = int.Parse(dr["CVnum"].ToString());
                     }
                     row["CVnum"] = dr["CVnum"].ToString();
-                    row["checkNum"] = dr["checkNum"].ToString();
+                    row["CheckNum"] = dr["checkNum"].ToString();
                     row["Name"] = dr["name"].ToString();
                     row["Date Paid"] = toDateTime(dr["cashReleaseDateTime"].ToString(), true).ToString("MMMM dd yyyy, hh-mm");
-                    row[dr["cashReleaseType"].ToString()] = (row[dr["cashReleaseType"].ToString()] == null ? 0 : float.Parse(row[dr["cashReleaseType"].ToString()].ToString())) + float.Parse(dr["releaseAmount"].ToString());
+                    row[dr["itemtype"].ToString()] = (row[dr["itemtype"].ToString()] == null ? 0 : float.Parse(row[dr["itemtype"].ToString()].ToString())) + float.Parse(dr["releaseAmount"].ToString());
                 }
                 output.Rows.Add(row);
 
                 return output;
-            }
-            catch { return new DataTable(); }
+                }
+            else
+                 {
+            return new DataTable();
         }
+    }
+
         public DataTable getBreakdownGroupedCashRelease(DataTable transactions, int bookType) //breakdown grouped
         {
-            try {
+            if (transactions.Rows.Count > 0) { 
                 DateTime currentDate = toDateTime(transactions.Rows[0]["cashReleaseDateTime"].ToString(), false);
                 DataTable output = new DataTable();
-                DataTable itemTypes = getItemTypesOfCashRelease(bookType);
+                DataTable itemTypes = getItems(bookType, 2);
 
                 output.Columns.Add("CVnum", typeof(string));
-                output.Columns.Add("checkNum", typeof(string));
+                output.Columns.Add("CheckNum", typeof(string));
                 output.Columns.Add("Name", typeof(string));
                 output.Columns.Add("Date Paid", typeof(string));
 
                 foreach (DataRow dr in itemTypes.Rows)
                 {
-                    output.Columns.Add(dr["cashReleaseType"].ToString(), typeof(float)); //add columns 
-                    output.Columns[dr["cashReleaseType"].ToString()].DefaultValue = 0;
+                    output.Columns.Add(dr["itemtype"].ToString(), typeof(float)); //add columns 
+                    output.Columns[dr["itemtype"].ToString()].DefaultValue = 0;
                 }
 
                 int minCV = int.MaxValue;
@@ -792,7 +696,7 @@ namespace ParishSystem
                     if (!currentDate.Equals(toDateTime(dr["cashReleaseDateTime"].ToString(), false)))
                     {
                         row["CVnum"] = minCV.ToString() + "-" + maxCV.ToString();
-                        row["checkNum"] = minCN.ToString() + "-" + maxCN.ToString();
+                        row["CheckNum"] = minCN.ToString() + "-" + maxCN.ToString();
                         output.Rows.Add(row);
                         row = output.NewRow();
                         currentDate = toDateTime(dr["cashReleaseDateTime"].ToString(), false);
@@ -814,28 +718,19 @@ namespace ParishSystem
                         maxCN = int.Parse(dr["checkNum"].ToString());
                     }
                     //per itemtype code starts here
-                    row["Date Paid"] = toDateTime(dr["cashReleaseDateTime"].ToString(), true).ToString("MMMM dd yyyy, hh-mm");
-                    row[dr["cashReleaseType"].ToString()] = (row[dr["cashReleaseType"].ToString()] == null ? 0 : float.Parse(row[dr["cashReleaseType"].ToString()].ToString())) + float.Parse(dr["releaseAmount"].ToString());
+                    row["Date Paid"] = toDateTime(dr["cashReleaseDateTime"].ToString(), true).ToString("MMMM dd yyyy");
+                    row[dr["itemtype"].ToString()] = (row[dr["itemtype"].ToString()] == null ? 0 : float.Parse(row[dr["itemtype"].ToString()].ToString())) + float.Parse(dr["releaseAmount"].ToString());
                     //per item type code ends here
                 }
                 row["CVnum"] = minCV.ToString() + "-" + maxCV.ToString();
-                row["checkNum"] = minCN.ToString() + "-" + maxCN.ToString();
+                row["CheckNum"] = minCN.ToString() + "-" + maxCN.ToString();
                 output.Rows.Add(row);
 
                 return output;
             }
-            catch { return new DataTable(); }
+            else { return new DataTable(); }
         }
-
-        public DataTable getItemTypesOfCashRelease(int bookType)
-        {
-            string q = $@"SELECT * FROM sad2.cashreleasetype where bookType = {bookType}";
-            return runQuery(q);
-        }
-
-
-
-
+        
         public DataTable getBloodDonors()
         {
             string q = $@"select blooddonor.blooddonorID , concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
@@ -848,7 +743,7 @@ namespace ParishSystem
                         when bloodType =6 then 'AB-'  
                         when bloodType =7 then 'O+'  
                         when bloodType =8 then 'O-' end as bloodT,
-                        sum(quantity),
+                        count(bloodDonationID),
                         concat(""(+63)"",contactnumber) as contactnumber,
                         address
                         from blooddonor
@@ -871,15 +766,14 @@ namespace ParishSystem
                         when bloodType =6 then 'AB-'  
                         when bloodType =7 then 'O+'  
                         when bloodType =8 then 'O-' end as bloodT,
-                        sum(quantity) as quantity,
+                        donationid,
                         address,
                         concat(""(+63)"",contactnumber) as contactnumber,
                         eventname
                         from blooddonor
                         inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
                         inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
-                        where bloodDonationEvent.bloodDonationEventID = {blooddonationeventid}
-                        group by blooddonor.blooddonorID";
+                        where bloodDonationEvent.bloodDonationEventID = {blooddonationeventid}""";
             return runQuery(q);
         }
         public DataTable getBloodDonorsOnDate(DateTime Start)
@@ -895,15 +789,14 @@ namespace ParishSystem
                         when bloodType =6 then 'AB-'  
                         when bloodType =7 then 'O+'  
                         when bloodType =8 then 'O-' end as bloodT,
-                        sum(quantity) as quantity,
+                        donationid,
                         address,
                         concat(""(+63)"",contactnumber) as contactnumber,
                         eventname
                         from blooddonor
                         inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
                         inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
-                        where startDateTime>=""{Start.ToString("yyyy-MM-dd 00:00:00")}"" and startDateTime<=""{Start.ToString("yyyy-MM-dd 23:59:59")}""
-                        group by blooddonor.blooddonorID";
+                        where startDateTime>=""{Start.ToString("yyyy-MM-dd 00:00:00")}"" and startDateTime<=""{Start.ToString("yyyy-MM-dd 23:59:59")}""";
             return runQuery(q);
         }
         public DataTable getBloodDonorsOnDateRange(DateTime Start,DateTime Stop)
@@ -919,52 +812,25 @@ namespace ParishSystem
                         when bloodType =6 then 'AB-'  
                         when bloodType =7 then 'O+'  
                         when bloodType =8 then 'O-' end as bloodT,
-                        sum(quantity) as quantity,
+                        donationid,
                         address,
                         concat(""(+63)"",contactnumber) as contactnumber,
                         eventname
                         from blooddonor
                         inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
                         inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
-                        where startDateTime between""{Start.ToString("yyyy-MM-dd 00:00:00")}"" and ""{Stop.ToString("yyyy-MM-dd 23:59:59")}""
-                        group by blooddonor.blooddonorID";
+                        where startDateTime between""{Start.ToString("yyyy-MM-dd 00:00:00")}"" and ""{Stop.ToString("yyyy-MM-dd 23:59:59")}""";
             return runQuery(q);
         }
         public DataTable getTotalDonationsOnEvents()
         {
-            string q = $@"select blooddonationevent.bloodDonationEventID,eventname,sum(quantity) as total from blooddonor 
+            string q = $@"select blooddonationevent.bloodDonationEventID,eventname,count(donationid) as total from blooddonor 
                             inner join blooddonation on blooddonation.profileid =blooddonor.blooddonorID
                             inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
                             group by bloodDonationEvent.bloodDonationEventID;";
             return runQuery(q);
         }
-        public DataTable getTotalDonationsOnEvent(int eventid)
-        {
-            string q = $@"select bloodDonationEvent.bloodDonationEventID,sum(quantity) from blooddonor 
-                            inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
-                            inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
-                            where bloodDonationEvent.bloodDonationEventID={eventid}
-                            group by bloodDonationEvent.bloodDonationEventID;";
-            return runQuery(q);
-        }
-        public DataTable getTotalDonationsOnDate(DateTime date)
-        {
-            string q = $@"select bloodDonationEvent.bloodDonationEventID,sum(quantity) from blooddonor 
-                            inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
-                            inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
-                            where startDateTime=""{date.ToString("yyyy-MM-dd 00:00:00")}""
-                            group by bloodDonationEvent.bloodDonationEventID;";
-            return runQuery(q);
-        }
-        public DataTable getTotalDonationsOnDateRange(DateTime Start,DateTime Stop)
-        {
-            string q = $@"select bloodDonationEvent.bloodDonationEventID,sum(quantity) from blooddonor 
-                            inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
-                            inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
-                            where startDateTime=""{Start.ToString("yyyy-MM-dd 00:00:00")}""and endDateTime=""{Stop.ToString("yyyy-MM-dd 00:00:00")}""
-                            group by bloodDonationEvent.bloodDonationEventID;";
-            return runQuery(q);
-        }
+     
         public DataTable getsummaryOfBloodleting(DataTable bloodlettingData)
         {
             DataTable Events = getBloodlettingEvents();
@@ -979,7 +845,7 @@ namespace ParishSystem
             {
                 if (EventList.ContainsKey(dr["eventName"].ToString()))
                 {
-                    EventList[dr["eventName"].ToString()] = EventList[dr["eventName"].ToString()] + float.Parse(dr["quantity"].ToString());
+                    EventList[dr["eventName"].ToString()] = EventList[dr["eventName"].ToString()] + 1;
                 }
             }
             DataTable output = new DataTable();
@@ -1007,7 +873,7 @@ namespace ParishSystem
                         when bloodType =6 then 'AB-'  
                         when bloodType =7 then 'O+'  
                         when bloodType =8 then 'O-' end as bloodT,
-                        sum(quantity),
+                        count(donationid),
                         concat(""(+63)"",contactnumber) as contactnumber,
                         address
                         from blooddonor
@@ -1034,7 +900,7 @@ namespace ParishSystem
                         when bloodType =6 then 'AB-'  
                         when bloodType =7 then 'O+'  
                         when bloodType =8 then 'O-' end as bloodT,
-                        sum(quantity),
+                        count(donationid),
                         concat(""(+63)"",contactnumber) as contactnumber,
                         address
                         from blooddonor
@@ -1087,11 +953,41 @@ namespace ParishSystem
             }
 
         }
-        public DataTable getItemsLike(string like, int cashreceipt_cashdisbursment)
+        public DataTable getItemsLike(string like, int cashreceipt_cashdisbursment)//no booktype needed because for search only
         {
             string q= $@"SELECT itemType, itemTypeID  ,case when bookType=1 then 'Parish' when bookType=2 then 'Community' when bookType=3 then 'Postulancy' end as Book,
                      case when status=1 then 'Active' when status=2 then 'Inactive' end as Status , concat('₱',' ',suggestedprice)as SuggestedPrice FROM sad2.itemtype where itemType like '%{like}%' and cashreceipt_cashdisbursment ={cashreceipt_cashdisbursment};";
             return runQuery(q);
         }
+         public DataTable getItems(int bookType, int cashreceipt_cashdisbursment)
+        {
+            string q= $@"SELECT itemType, itemTypeID  ,case when bookType=1 then 'Parish' when bookType=2 then 'Community' when bookType=3 then 'Postulancy' end as Book,
+                     case when status=1 then 'Active' when status=2 then 'Inactive' end as Status ,suggestedprice FROM sad2.itemtype where booktype={bookType} and cashreceipt_cashdisbursment ={cashreceipt_cashdisbursment}";
+            return runQuery(q);
+        }
+        public int getDonationIDPrimaryKey(string donationID)
+        {
+            string q = $@"select * from blooddonation where donationID='{donationID}' and bloodclaimant is null";
+            DataTable a = runQuery(q);
+            if (a.Rows.Count>0)
+            {
+                return int.Parse(a.Rows[0]["bloodDonationID"].ToString());
+            }
+            else
+            {
+                return -1;
+            }
+        }
+        public int AddClaimant(string firstname, string midname, string lastname, string suffix)
+        {
+            string q = $@"INSERT INTO `sad2`.`bloodclaimant` ( `firstname`, `midname`, `lastname`, `suffix`) VALUES ('{firstname}', '{midname}', '{lastname}', '{suffix}');SELECT MAX(bloodclaimantID) FROM bloodclaimant; ";
+            return int.Parse(runQuery(q).Rows[0][0].ToString());
+        }
+        public void ClaimBloodDonation(int bloodDonationID, int claimantID)
+        {
+            string q = $@"UPDATE `sad2`.`blooddonation` SET `bloodclaimant`='{claimantID}' WHERE `bloodDonationID`='{bloodDonationID}'";
+            runNonQuery(q);
+        }
+       
     }
 }

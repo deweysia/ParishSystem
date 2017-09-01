@@ -544,7 +544,7 @@ namespace ParishSystem
         //SPECIAL FUNCTION
         public int getTotalBloodDonationOf(int generalProfileID)
         {
-            string q = "SELECT SUM(quantity) FROM BloodDonation WHERE profileID = " + generalProfileID;
+            string q = "SELECT count(donationid) FROM BloodDonation WHERE profileID = " + generalProfileID;
 
             DataTable dt = runQuery(q);
             try
@@ -1095,77 +1095,6 @@ namespace ParishSystem
         {
             string q = $"select * from primaryincome inner join payment on payment.primaryIncomeID=primaryincome.primaryIncomeID inner join sacramentincome on sacramentincome.sacramentIncomeID = payment.sacramentIncomeID inner join application on application.applicationID= sacramentincome.applicationID where ORnum ={ORnum} and primaryincome.bookType={bookType}";
             return runQuery(q);
-        }
-
-        /*
-                                        =============================================================
-                                           ================= ITEM TYPE TABLE =================
-                                        =============================================================
-       */
-
-       
-
-        public bool editItemType(int itemTypeID, string itemType, string bookType, double suggestedPrice, ItemTypeStatus status)
-        {
-            string q = "UPDATE ItemType SET itemType = '" + itemType
-                + "', bookType = '" + bookType
-                + "', suggestedPrice = '" + suggestedPrice
-                + "', status = '" + (int)status
-                + "' WHERE itemTypeID = '" + itemTypeID + "'";
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public bool deleteItemType(int itemTypeID)
-        {
-            string q = "DELETE FROM ItemType WHERE itemTypeID = " + itemTypeID;
-
-            bool success = runNonQuery(q);
-
-            return success;
-        }
-
-        public int getItemTypeID(string itemType, BookType bookType)
-        {
-            string q = "SELECT itemTypeID FROM ItemType WHERE itemType = '" + itemType + "' AND bookType = '" + (int)bookType + "'";
-
-            DataTable dt = runQuery(q);
-
-
-            if (dt.Rows.Count == 0)
-                return -1;
-            else if (dt.Rows.Count > 1)
-                throw new DuplicateNameException("DUPLICATE NAME FOR ITEM TYPE in ItemType! btch");
-
-            return int.Parse(dt.Rows[0][0].ToString());
-        }
-
-        public DataTable getItemType(int itemTypeID)
-        {
-            string q = "SELECT * FROM ItemType WHERE itemTypeID = " + itemTypeID;
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
-        public DataTable getItemTypesOfBook(BookType bookType)
-        {
-            string q = "SELECT * FROM ItemType WHERE bookType = '" + (int)bookType + "' AND status = " + ItemTypeStatus.Active;
-
-            DataTable dt = runQuery(q);
-
-            return dt;
-        }
-
-        public bool setItemTypeStatus(int itemTypeID, ItemTypeStatus status)
-        {
-            string q = "UPDATE ItemType SET status = '" + (int)status + "'";
-            bool success = runNonQuery(q);
-
-            return success;
         }
 
 
@@ -2468,20 +2397,20 @@ namespace ParishSystem
 
 
 
-        public bool addBloodDonation(int profleID, int quantity, int bloodDonationEventID)
+        public bool addBloodDonation(int profleID, string donationID, int bloodDonationEventID)
         {
-            string q = "INSERT INTO BloodDonation(profileID, quantity, bloodDonationEventID) VALUES ('"
-                + profleID + "', '" + quantity + "', '" + bloodDonationEventID + "')";
+            string q = "INSERT INTO BloodDonation(profileID, donationID, bloodDonationEventID) VALUES ('"
+                + profleID + "', '" + donationID + "', '" + bloodDonationEventID + "')";
 
             bool success = runNonQuery(q);
 
             return success;
         }
 
-        public bool editBloodDonation(int profleID, int quantity, int bloodDonationEventID)
+        public bool editBloodDonation(int profleID, string donationID, int bloodDonationEventID)
         {
             //edit donation
-            string q = "UPDATE BloodDonation SET quantity = '" + quantity
+            string q = "UPDATE BloodDonation SET donationID = '" + donationID
                 + "', bloodDonationEventID = '" + bloodDonationEventID
                 + "' WHERE blooddonationID = '" + profleID + "'";
 
@@ -2679,11 +2608,13 @@ namespace ParishSystem
             string q = "SELECT max(itemTypeID) FROM sad2.itemtype;";
             return int.Parse(runQuery(q).Rows[0][0].ToString());
         }
-        public DataTable getIncomeType(int IncomeTypeID, int cashreceipt_cashdisbursment)
+        
+        public DataTable getItem(int IncomeTypeID, int cashreceipt_cashdisbursment)
         {
             string q = $@"select * from itemType where itemTypeID=  {IncomeTypeID} and cashreceipt_cashdisbursment={cashreceipt_cashdisbursment};";
             return runQuery(q);
         }
+        
         public DataTable getIncomeTypes(int cashreceipt_cashdisbursment)
         {
             string q = $@"SELECT itemType, itemTypeID  ,case when bookType=1 then 'Parish' when bookType=2 then 'Community' when bookType=3 then 'Postulancy' end as Book,
@@ -2695,27 +2626,13 @@ namespace ParishSystem
             string q = $"UPDATE `sad2`.`itemtype` SET `status`='2' WHERE `itemTypeID`='{IncomeTypeID}' and `cashreceipt_cashdisbursment`='{cashreceipt_cashdisbursment}'";
             runNonQuery(q);
         }
-        public DataTable getIncomeTypesOf(int bookType)
-        {
-            string q = @"SELECT itemType, itemTypeID  ,case when bookType=1 then 'Parish' when bookType=2 then 'Community' when bookType=3 then 'Postulancy' end as Book,
-                     case when status=1 then 'Active' when status=2 then 'Inactive' end as Status , suggestedprice as SuggestedPrice FROM sad2.itemtype where status=1 and bookType='" + bookType + "';";
-            return runQuery(q);
-        }
+       
         public void enableIncomeType(int IncomeTypeID,int cashreceipt_cashdisbursment)
         {
             string q = $"UPDATE `sad2`.`itemtype` SET `status`='1' WHERE `itemTypeID`='{IncomeTypeID}' and `cashreceipt_cashdisbursment`='{cashreceipt_cashdisbursment}'";
             runNonQuery(q);
         }
-        public void disableCashReleaseType(int CashReleaseTypeID)
-        {
-            string q = $"UPDATE `sad2`.`cashreleasetype` SET `status`='2' WHERE `cashreleasetypeID`='{CashReleaseTypeID}'";
-            runNonQuery(q);
-        }
-        public void enableCashReleaseType(int CashReleaseTypeID)
-        {
-            string q = $"UPDATE `sad2`.`cashreleasetype` SET `status`='1' WHERE `cashreleasetypeID`='{CashReleaseTypeID}'";
-            runNonQuery(q);
-        }
+       
         public int getnextORof(int bookType)
         {
             string q = $"select max(ORnum) as max from primaryincome where bookType={bookType};";
