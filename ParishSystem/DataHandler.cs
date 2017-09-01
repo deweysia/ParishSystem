@@ -354,7 +354,7 @@ namespace ParishSystem
 
         public DataTable getGeneralProfile(int profileID)
         {
-            string q = "SELECT *, firstName, midName, lastName, suffix, gender, DATE(birthdate), address, birthplace, contactNumber, bloodType FROM generalProfile WHERE profileID = " + profileID;
+            string q = "SELECT *, firstName, midName, lastName, suffix, gender, DATE(birthdate), birthplace, bloodType FROM generalProfile WHERE profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 

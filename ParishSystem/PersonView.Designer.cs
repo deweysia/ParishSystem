@@ -42,12 +42,6 @@
             this.residence_panel = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.residence_label = new System.Windows.Forms.Label();
-            this.contactNumber_panel = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.contactNumber_maskedTextbox = new System.Windows.Forms.MaskedTextBox();
-            this.address_panel = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.address_textbox = new System.Windows.Forms.RichTextBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.firstname_label = new System.Windows.Forms.Label();
             this.mi_label = new System.Windows.Forms.Label();
@@ -231,8 +225,6 @@
             this.gender_panel.SuspendLayout();
             this.po_panel.SuspendLayout();
             this.residence_panel.SuspendLayout();
-            this.contactNumber_panel.SuspendLayout();
-            this.address_panel.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.controlBar_panel.SuspendLayout();
@@ -298,8 +290,6 @@
             this.flowLayoutPanel3.Controls.Add(this.gender_panel);
             this.flowLayoutPanel3.Controls.Add(this.po_panel);
             this.flowLayoutPanel3.Controls.Add(this.residence_panel);
-            this.flowLayoutPanel3.Controls.Add(this.contactNumber_panel);
-            this.flowLayoutPanel3.Controls.Add(this.address_panel);
             this.flowLayoutPanel3.Location = new System.Drawing.Point(9, 113);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(280, 351);
@@ -421,71 +411,6 @@
             this.residence_label.Name = "residence_label";
             this.residence_label.Size = new System.Drawing.Size(0, 21);
             this.residence_label.TabIndex = 3;
-            // 
-            // contactNumber_panel
-            // 
-            this.contactNumber_panel.Controls.Add(this.label4);
-            this.contactNumber_panel.Controls.Add(this.contactNumber_maskedTextbox);
-            this.contactNumber_panel.ForeColor = System.Drawing.Color.Black;
-            this.contactNumber_panel.Location = new System.Drawing.Point(3, 149);
-            this.contactNumber_panel.Name = "contactNumber_panel";
-            this.contactNumber_panel.Size = new System.Drawing.Size(276, 32);
-            this.contactNumber_panel.TabIndex = 12;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(4, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Contact Number";
-            // 
-            // contactNumber_maskedTextbox
-            // 
-            this.contactNumber_maskedTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.contactNumber_maskedTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contactNumber_maskedTextbox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactNumber_maskedTextbox.ForeColor = System.Drawing.Color.Black;
-            this.contactNumber_maskedTextbox.Location = new System.Drawing.Point(114, 4);
-            this.contactNumber_maskedTextbox.Mask = "(+63) 999-999-9999";
-            this.contactNumber_maskedTextbox.Name = "contactNumber_maskedTextbox";
-            this.contactNumber_maskedTextbox.ReadOnly = true;
-            this.contactNumber_maskedTextbox.Size = new System.Drawing.Size(128, 22);
-            this.contactNumber_maskedTextbox.TabIndex = 6;
-            // 
-            // address_panel
-            // 
-            this.address_panel.Controls.Add(this.label3);
-            this.address_panel.Controls.Add(this.address_textbox);
-            this.address_panel.Location = new System.Drawing.Point(3, 187);
-            this.address_panel.Name = "address_panel";
-            this.address_panel.Size = new System.Drawing.Size(275, 102);
-            this.address_panel.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(3, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Address";
-            // 
-            // address_textbox
-            // 
-            this.address_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.address_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.address_textbox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.address_textbox.ForeColor = System.Drawing.Color.Black;
-            this.address_textbox.Location = new System.Drawing.Point(114, 3);
-            this.address_textbox.Name = "address_textbox";
-            this.address_textbox.ReadOnly = true;
-            this.address_textbox.Size = new System.Drawing.Size(158, 96);
-            this.address_textbox.TabIndex = 4;
-            this.address_textbox.Text = "";
             // 
             // flowLayoutPanel2
             // 
@@ -1540,6 +1465,7 @@
             this.button3.TabIndex = 1;
             this.button3.Text = "Print Certificate";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // marriageDetails_panel
             // 
@@ -2367,10 +2293,6 @@
             this.po_panel.PerformLayout();
             this.residence_panel.ResumeLayout(false);
             this.residence_panel.PerformLayout();
-            this.contactNumber_panel.ResumeLayout(false);
-            this.contactNumber_panel.PerformLayout();
-            this.address_panel.ResumeLayout(false);
-            this.address_panel.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -2466,12 +2388,6 @@
         private System.Windows.Forms.Panel residence_panel;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label residence_label;
-        private System.Windows.Forms.Panel contactNumber_panel;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox contactNumber_maskedTextbox;
-        private System.Windows.Forms.Panel address_panel;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox address_textbox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label firstname_label;
         private System.Windows.Forms.Label mi_label;
