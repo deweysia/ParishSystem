@@ -653,6 +653,16 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Delete_Filled_20_666666 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Delete_Filled_20_666666", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Delete_Filled_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Delete_Filled_50", resourceCulture);
@@ -786,6 +796,16 @@ namespace ParishSystem.Properties {
         internal static System.Drawing.Bitmap icons8_Screen_Wiper_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Screen_Wiper_50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Search_Filled_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Search_Filled_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

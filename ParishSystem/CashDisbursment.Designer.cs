@@ -1,6 +1,6 @@
 ﻿namespace ParishSystem
 {
-    partial class CashRelease_Module
+    partial class CashDisbursment
     {
         /// <summary>
         /// Required designer variable.
@@ -33,6 +33,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.paymentPanel = new System.Windows.Forms.Panel();
+            this.cancelPrice_button = new System.Windows.Forms.Button();
+            this.price_label = new System.Windows.Forms.Label();
+            this.editPrice_button = new System.Windows.Forms.Button();
+            this.price_nud_button_CRB = new System.Windows.Forms.NumericUpDown();
+            this.priceHeader_label = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.total_label_cashrelease = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -41,9 +47,6 @@
             this.name_textbox_CRB = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.item_dgv_fullpay_CRB = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cancel_button_CRB = new System.Windows.Forms.Button();
             this.final_button_CRB = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
@@ -51,42 +54,109 @@
             this.label18 = new System.Windows.Forms.Label();
             this.CNNumber_CRB = new System.Windows.Forms.Label();
             this.delete_button_CRB = new System.Windows.Forms.Button();
-            this.label35 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.CVNumber_CRB = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.clear_button_CRB = new System.Windows.Forms.Button();
             this.add_button_CRB = new System.Windows.Forms.Button();
-            this.price_nud_button_CRB = new System.Windows.Forms.NumericUpDown();
             this.itemtype_combobox_CRB = new System.Windows.Forms.ComboBox();
             this.CRB_panel = new System.Windows.Forms.Panel();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemTypeII = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel9.SuspendLayout();
+            this.paymentPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.price_nud_button_CRB)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.item_dgv_fullpay_CRB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.price_nud_button_CRB)).BeginInit();
             this.CRB_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Controls.Add(this.paymentPanel);
             this.panel9.Controls.Add(this.panel1);
             this.panel9.Controls.Add(this.label18);
             this.panel9.Controls.Add(this.CNNumber_CRB);
             this.panel9.Controls.Add(this.delete_button_CRB);
-            this.panel9.Controls.Add(this.label35);
             this.panel9.Controls.Add(this.label16);
             this.panel9.Controls.Add(this.CVNumber_CRB);
             this.panel9.Controls.Add(this.label36);
             this.panel9.Controls.Add(this.clear_button_CRB);
             this.panel9.Controls.Add(this.add_button_CRB);
-            this.panel9.Controls.Add(this.price_nud_button_CRB);
             this.panel9.Controls.Add(this.itemtype_combobox_CRB);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(935, 547);
             this.panel9.TabIndex = 70;
+            // 
+            // paymentPanel
+            // 
+            this.paymentPanel.Controls.Add(this.cancelPrice_button);
+            this.paymentPanel.Controls.Add(this.price_label);
+            this.paymentPanel.Controls.Add(this.editPrice_button);
+            this.paymentPanel.Controls.Add(this.price_nud_button_CRB);
+            this.paymentPanel.Controls.Add(this.priceHeader_label);
+            this.paymentPanel.Location = new System.Drawing.Point(613, 223);
+            this.paymentPanel.Name = "paymentPanel";
+            this.paymentPanel.Size = new System.Drawing.Size(304, 69);
+            this.paymentPanel.TabIndex = 82;
+            this.paymentPanel.Visible = false;
+            // 
+            // cancelPrice_button
+            // 
+            this.cancelPrice_button.Location = new System.Drawing.Point(211, 13);
+            this.cancelPrice_button.Name = "cancelPrice_button";
+            this.cancelPrice_button.Size = new System.Drawing.Size(36, 40);
+            this.cancelPrice_button.TabIndex = 80;
+            this.cancelPrice_button.Text = "C";
+            this.cancelPrice_button.UseVisualStyleBackColor = true;
+            this.cancelPrice_button.Visible = false;
+            this.cancelPrice_button.Click += new System.EventHandler(this.cancelPrice_button_Click);
+            // 
+            // price_label
+            // 
+            this.price_label.AutoSize = true;
+            this.price_label.Location = new System.Drawing.Point(91, 13);
+            this.price_label.Name = "price_label";
+            this.price_label.Size = new System.Drawing.Size(40, 21);
+            this.price_label.TabIndex = 79;
+            this.price_label.Text = "0.00";
+            // 
+            // editPrice_button
+            // 
+            this.editPrice_button.Location = new System.Drawing.Point(253, 13);
+            this.editPrice_button.Name = "editPrice_button";
+            this.editPrice_button.Size = new System.Drawing.Size(36, 40);
+            this.editPrice_button.TabIndex = 81;
+            this.editPrice_button.Tag = "e";
+            this.editPrice_button.Text = "E";
+            this.editPrice_button.UseVisualStyleBackColor = true;
+            this.editPrice_button.Click += new System.EventHandler(this.editPrice_button_Click);
+            // 
+            // price_nud_button_CRB
+            // 
+            this.price_nud_button_CRB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.price_nud_button_CRB.DecimalPlaces = 2;
+            this.price_nud_button_CRB.Location = new System.Drawing.Point(95, 14);
+            this.price_nud_button_CRB.Name = "price_nud_button_CRB";
+            this.price_nud_button_CRB.Size = new System.Drawing.Size(54, 25);
+            this.price_nud_button_CRB.TabIndex = 71;
+            this.price_nud_button_CRB.ThousandsSeparator = true;
+            this.price_nud_button_CRB.Visible = false;
+            this.price_nud_button_CRB.ValueChanged += new System.EventHandler(this.price_nud_button_CRB_ValueChanged);
+            // 
+            // priceHeader_label
+            // 
+            this.priceHeader_label.AutoSize = true;
+            this.priceHeader_label.Location = new System.Drawing.Point(16, 12);
+            this.priceHeader_label.Name = "priceHeader_label";
+            this.priceHeader_label.Size = new System.Drawing.Size(44, 21);
+            this.priceHeader_label.TabIndex = 74;
+            this.priceHeader_label.Text = "Price";
             // 
             // panel1
             // 
@@ -115,12 +185,11 @@
             this.total_label_cashrelease.AutoSize = true;
             this.total_label_cashrelease.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_label_cashrelease.ForeColor = System.Drawing.Color.Black;
-            this.total_label_cashrelease.Location = new System.Drawing.Point(264, 432);
+            this.total_label_cashrelease.Location = new System.Drawing.Point(192, 432);
             this.total_label_cashrelease.Name = "total_label_cashrelease";
             this.total_label_cashrelease.Size = new System.Drawing.Size(72, 25);
             this.total_label_cashrelease.TabIndex = 84;
             this.total_label_cashrelease.Text = "12345";
-            this.total_label_cashrelease.Click += new System.EventHandler(this.total_label_cashrelease_Click);
             // 
             // label32
             // 
@@ -133,7 +202,6 @@
             this.label32.Size = new System.Drawing.Size(36, 17);
             this.label32.TabIndex = 85;
             this.label32.Text = "Total";
-            this.label32.Click += new System.EventHandler(this.label32_Click);
             // 
             // label21
             // 
@@ -145,7 +213,6 @@
             this.label21.Size = new System.Drawing.Size(42, 17);
             this.label21.TabIndex = 17;
             this.label21.Text = "Payee";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // remarks_textbox_CRB
             // 
@@ -157,7 +224,6 @@
             this.remarks_textbox_CRB.Name = "remarks_textbox_CRB";
             this.remarks_textbox_CRB.Size = new System.Drawing.Size(281, 22);
             this.remarks_textbox_CRB.TabIndex = 14;
-            this.remarks_textbox_CRB.TextChanged += new System.EventHandler(this.remarks_textbox_CRB_TextChanged);
             // 
             // name_textbox_CRB
             // 
@@ -168,7 +234,6 @@
             this.name_textbox_CRB.Name = "name_textbox_CRB";
             this.name_textbox_CRB.Size = new System.Drawing.Size(281, 22);
             this.name_textbox_CRB.TabIndex = 16;
-            this.name_textbox_CRB.TextChanged += new System.EventHandler(this.name_textbox_CRB_TextChanged);
             // 
             // label24
             // 
@@ -180,7 +245,6 @@
             this.label24.Size = new System.Drawing.Size(58, 17);
             this.label24.TabIndex = 15;
             this.label24.Text = "Remarks";
-            this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
             // item_dgv_fullpay_CRB
             // 
@@ -210,7 +274,8 @@
             this.item_dgv_fullpay_CRB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn5});
+            this.dataGridViewTextBoxColumn5,
+            this.ItemTypeII});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -250,26 +315,8 @@
             this.item_dgv_fullpay_CRB.Size = new System.Drawing.Size(536, 286);
             this.item_dgv_fullpay_CRB.TabIndex = 3;
             this.item_dgv_fullpay_CRB.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.item_dgv_fullpay_CRB_CellClick);
-            this.item_dgv_fullpay_CRB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.item_dgv_fullpay_CRB_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Item Type";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Price";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "ItemTypeID";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Visible = false;
+            this.item_dgv_fullpay_CRB.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.item_dgv_fullpay_CRB_RowsAdded);
+            this.item_dgv_fullpay_CRB.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.item_dgv_fullpay_CRB_RowsRemoved);
             // 
             // cancel_button_CRB
             // 
@@ -289,6 +336,7 @@
             // final_button_CRB
             // 
             this.final_button_CRB.BackColor = System.Drawing.Color.Gray;
+            this.final_button_CRB.Enabled = false;
             this.final_button_CRB.FlatAppearance.BorderSize = 0;
             this.final_button_CRB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.final_button_CRB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -310,7 +358,6 @@
             this.label27.Size = new System.Drawing.Size(304, 21);
             this.label27.TabIndex = 19;
             this.label27.Text = "__________________________________________";
-            this.label27.Click += new System.EventHandler(this.label27_Click);
             // 
             // label26
             // 
@@ -321,7 +368,6 @@
             this.label26.Size = new System.Drawing.Size(304, 21);
             this.label26.TabIndex = 18;
             this.label26.Text = "__________________________________________";
-            this.label26.Click += new System.EventHandler(this.label26_Click);
             // 
             // label18
             // 
@@ -362,15 +408,6 @@
             this.delete_button_CRB.UseVisualStyleBackColor = false;
             this.delete_button_CRB.Click += new System.EventHandler(this.delete_button_CRB_Click);
             // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(611, 268);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(44, 21);
-            this.label35.TabIndex = 74;
-            this.label35.Text = "Price";
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -395,7 +432,7 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(609, 207);
+            this.label36.Location = new System.Drawing.Point(615, 169);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(87, 21);
             this.label36.TabIndex = 75;
@@ -421,6 +458,7 @@
             // add_button_CRB
             // 
             this.add_button_CRB.BackColor = System.Drawing.Color.DimGray;
+            this.add_button_CRB.Enabled = false;
             this.add_button_CRB.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.add_button_CRB.FlatAppearance.BorderSize = 0;
             this.add_button_CRB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(91)))), ((int)(((byte)(132)))));
@@ -436,25 +474,17 @@
             this.add_button_CRB.UseVisualStyleBackColor = false;
             this.add_button_CRB.Click += new System.EventHandler(this.add_button_CRB_Click);
             // 
-            // price_nud_button_CRB
-            // 
-            this.price_nud_button_CRB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.price_nud_button_CRB.DecimalPlaces = 2;
-            this.price_nud_button_CRB.Location = new System.Drawing.Point(702, 264);
-            this.price_nud_button_CRB.Name = "price_nud_button_CRB";
-            this.price_nud_button_CRB.Size = new System.Drawing.Size(200, 25);
-            this.price_nud_button_CRB.TabIndex = 71;
-            this.price_nud_button_CRB.ThousandsSeparator = true;
-            // 
             // itemtype_combobox_CRB
             // 
+            this.itemtype_combobox_CRB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.itemtype_combobox_CRB.FormattingEnabled = true;
             this.itemtype_combobox_CRB.Items.AddRange(new object[] {
             ""});
-            this.itemtype_combobox_CRB.Location = new System.Drawing.Point(702, 204);
+            this.itemtype_combobox_CRB.Location = new System.Drawing.Point(708, 168);
             this.itemtype_combobox_CRB.Name = "itemtype_combobox_CRB";
             this.itemtype_combobox_CRB.Size = new System.Drawing.Size(200, 29);
             this.itemtype_combobox_CRB.TabIndex = 70;
+            this.itemtype_combobox_CRB.SelectedIndexChanged += new System.EventHandler(this.itemtype_combobox_CRB_SelectedIndexChanged);
             // 
             // CRB_panel
             // 
@@ -467,22 +497,50 @@
             this.CRB_panel.Size = new System.Drawing.Size(935, 547);
             this.CRB_panel.TabIndex = 13;
             // 
-            // CashRelease_Module
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Item Type";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Price";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "ItemTypeID";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Visible = false;
+            // 
+            // ItemTypeII
+            // 
+            this.ItemTypeII.HeaderText = "Column1";
+            this.ItemTypeII.Name = "ItemTypeII";
+            this.ItemTypeII.ReadOnly = true;
+            this.ItemTypeII.Visible = false;
+            // 
+            // CashDisbursment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(935, 547);
             this.Controls.Add(this.CRB_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CashRelease_Module";
+            this.Name = "CashDisbursment";
             this.Text = "CashDisbursment_Module";
             this.Load += new System.EventHandler(this.CashDisbursment_Module_Load);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.paymentPanel.ResumeLayout(false);
+            this.paymentPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.price_nud_button_CRB)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.item_dgv_fullpay_CRB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.price_nud_button_CRB)).EndInit();
             this.CRB_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -498,9 +556,6 @@
         private System.Windows.Forms.TextBox name_textbox_CRB;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.DataGridView item_dgv_fullpay_CRB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Button cancel_button_CRB;
         private System.Windows.Forms.Button final_button_CRB;
         private System.Windows.Forms.Label label26;
@@ -508,7 +563,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label CNNumber_CRB;
         private System.Windows.Forms.Button delete_button_CRB;
-        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label priceHeader_label;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label CVNumber_CRB;
         private System.Windows.Forms.Label label36;
@@ -517,5 +572,13 @@
         private System.Windows.Forms.NumericUpDown price_nud_button_CRB;
         private System.Windows.Forms.ComboBox itemtype_combobox_CRB;
         private System.Windows.Forms.Panel CRB_panel;
+        private System.Windows.Forms.Label price_label;
+        private System.Windows.Forms.Button editPrice_button;
+        private System.Windows.Forms.Button cancelPrice_button;
+        private System.Windows.Forms.Panel paymentPanel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemTypeII;
     }
 }

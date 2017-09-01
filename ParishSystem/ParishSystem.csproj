@@ -125,6 +125,12 @@
     <Compile Include="ApplicationPayment.Designer.cs">
       <DependentUpon>ApplicationPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="BloodClaim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodClaim.Designer.cs">
+      <DependentUpon>BloodClaim.cs</DependentUpon>
+    </Compile>
     <Compile Include="BloodDonor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,17 +156,11 @@
       <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
     </Compile>
     <Compile Include="CalendarEvent.cs" />
-    <Compile Include="CashRelease_Module.cs">
+    <Compile Include="CashDisbursment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CashRelease_Module.Designer.cs">
-      <DependentUpon>CashRelease_Module.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CashReleaseType.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CashReleaseType.Designer.cs">
-      <DependentUpon>CashReleaseType.cs</DependentUpon>
+    <Compile Include="CashDisbursment.Designer.cs">
+      <DependentUpon>CashDisbursment.cs</DependentUpon>
     </Compile>
     <Compile Include="BloodlettingReports_Module.cs">
       <SubType>Form</SubType>
@@ -174,11 +174,11 @@
     <Compile Include="CashReport_Module.Designer.cs">
       <DependentUpon>CashReport_Module.cs</DependentUpon>
     </Compile>
-    <Compile Include="CDB_FullPayment_Module.cs">
+    <Compile Include="CashReciept.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CDB_FullPayment_Module.Designer.cs">
-      <DependentUpon>CDB_FullPayment_Module.cs</DependentUpon>
+    <Compile Include="CashReciept.Designer.cs">
+      <DependentUpon>CashReciept.cs</DependentUpon>
     </Compile>
     <Compile Include="CDB_SacramentPayment_Module.cs">
       <SubType>Form</SubType>
@@ -224,11 +224,11 @@
     <Compile Include="HomeModule.Designer.cs">
       <DependentUpon>HomeModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="IncomeType.cs">
+    <Compile Include="ItemTypePopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IncomeType.Designer.cs">
-      <DependentUpon>IncomeType.cs</DependentUpon>
+    <Compile Include="ItemTypePopUp.Designer.cs">
+      <DependentUpon>ItemTypePopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="ItemTypes_Module.cs">
       <SubType>Form</SubType>
@@ -313,12 +313,6 @@
     <Compile Include="SacramentModule.Designer.cs">
       <DependentUpon>SacramentModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="SAD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SAD.Designer.cs">
-      <DependentUpon>SAD.cs</DependentUpon>
-    </Compile>
     <Compile Include="SAD2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -353,6 +347,9 @@
     <EmbeddedResource Include="ApplicationPayment.resx">
       <DependentUpon>ApplicationPayment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BloodClaim.resx">
+      <DependentUpon>BloodClaim.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BloodDonor.resx">
       <DependentUpon>BloodDonor.cs</DependentUpon>
     </EmbeddedResource>
@@ -365,11 +362,8 @@
     <EmbeddedResource Include="Bloodletting_Profile_Popup.resx">
       <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CashRelease_Module.resx">
-      <DependentUpon>CashRelease_Module.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CashReleaseType.resx">
-      <DependentUpon>CashReleaseType.cs</DependentUpon>
+    <EmbeddedResource Include="CashDisbursment.resx">
+      <DependentUpon>CashDisbursment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BloodlettingReports_Module.resx">
       <DependentUpon>BloodlettingReports_Module.cs</DependentUpon>
@@ -377,8 +371,8 @@
     <EmbeddedResource Include="CashReport_Module.resx">
       <DependentUpon>CashReport_Module.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CDB_FullPayment_Module.resx">
-      <DependentUpon>CDB_FullPayment_Module.cs</DependentUpon>
+    <EmbeddedResource Include="CashReciept.resx">
+      <DependentUpon>CashReciept.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CDB_SacramentPayment_Module.resx">
       <DependentUpon>CDB_SacramentPayment_Module.cs</DependentUpon>
@@ -398,8 +392,8 @@
     <EmbeddedResource Include="HomeModule.resx">
       <DependentUpon>HomeModule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IncomeType.resx">
-      <DependentUpon>IncomeType.cs</DependentUpon>
+    <EmbeddedResource Include="ItemTypePopUp.resx">
+      <DependentUpon>ItemTypePopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemTypes_Module.resx">
       <DependentUpon>ItemTypes_Module.cs</DependentUpon>
@@ -440,10 +434,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SacramentModule.resx">
       <DependentUpon>SacramentModule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SAD.resx">
-      <DependentUpon>SAD.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SAD2.resx">
       <DependentUpon>SAD2.cs</DependentUpon>
@@ -548,6 +538,8 @@
     <None Include="Resources\icons8-Trash-32.png" />
     <None Include="Resources\icons8-Expand Arrow-20.png" />
     <None Include="Resources\icons8-Collapse Arrow-20.png" />
+    <None Include="Resources\icons8-Search Filled-20.png" />
+    <None Include="Resources\icons8-Delete Filled-20-666666.png" />
     <Content Include="Tools\SQL_Writer.jar" />
     <None Include="Resources\messageBox_cancel.png" />
     <None Include="Resources\messageBox_success.png" />

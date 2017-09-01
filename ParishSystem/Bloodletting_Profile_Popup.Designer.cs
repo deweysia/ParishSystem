@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.blooddonation_dataGridView_bloodletting = new System.Windows.Forms.DataGridView();
             this.edit_button = new System.Windows.Forms.Button();
             this.event_combobox_bloodletting = new System.Windows.Forms.ComboBox();
-            this.quantity_nud = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.addDonation_button_bloodletting = new System.Windows.Forms.Button();
@@ -54,20 +53,20 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lastname_label_bloodletting = new System.Windows.Forms.Label();
             this.suffix_label_bloodletting = new System.Windows.Forms.Label();
+            this.ln = new ParishSystem.CueTextBox();
+            this.sf = new ParishSystem.CueTextBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.firstname_label_bloodletting = new System.Windows.Forms.Label();
             this.mi_label_bloodletting = new System.Windows.Forms.Label();
+            this.fn = new ParishSystem.CueTextBox();
+            this.mn = new ParishSystem.CueTextBox();
             this.controlBar_panel = new System.Windows.Forms.Panel();
             this.close_button = new System.Windows.Forms.Button();
             this.totalDonation_label = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.ln = new ParishSystem.CueTextBox();
-            this.sf = new ParishSystem.CueTextBox();
-            this.fn = new ParishSystem.CueTextBox();
-            this.mn = new ParishSystem.CueTextBox();
+            this.donationID_textbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.blooddonation_dataGridView_bloodletting)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quantity_nud)).BeginInit();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -84,45 +83,45 @@
             this.blooddonation_dataGridView_bloodletting.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.blooddonation_dataGridView_bloodletting.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.blooddonation_dataGridView_bloodletting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.blooddonation_dataGridView_bloodletting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.blooddonation_dataGridView_bloodletting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.blooddonation_dataGridView_bloodletting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.blooddonation_dataGridView_bloodletting.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.blooddonation_dataGridView_bloodletting.DefaultCellStyle = dataGridViewCellStyle14;
             this.blooddonation_dataGridView_bloodletting.EnableHeadersVisualStyles = false;
             this.blooddonation_dataGridView_bloodletting.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.blooddonation_dataGridView_bloodletting.Location = new System.Drawing.Point(23, 413);
             this.blooddonation_dataGridView_bloodletting.MultiSelect = false;
             this.blooddonation_dataGridView_bloodletting.Name = "blooddonation_dataGridView_bloodletting";
             this.blooddonation_dataGridView_bloodletting.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.blooddonation_dataGridView_bloodletting.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.blooddonation_dataGridView_bloodletting.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.blooddonation_dataGridView_bloodletting.RowHeadersVisible = false;
             this.blooddonation_dataGridView_bloodletting.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.blooddonation_dataGridView_bloodletting.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            this.blooddonation_dataGridView_bloodletting.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.blooddonation_dataGridView_bloodletting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.blooddonation_dataGridView_bloodletting.Size = new System.Drawing.Size(332, 158);
             this.blooddonation_dataGridView_bloodletting.TabIndex = 2;
@@ -158,17 +157,6 @@
             this.event_combobox_bloodletting.TabIndex = 4;
             this.event_combobox_bloodletting.SelectedIndexChanged += new System.EventHandler(this.event_combobox_bloodletting_SelectedIndexChanged);
             // 
-            // quantity_nud
-            // 
-            this.quantity_nud.BackColor = System.Drawing.Color.White;
-            this.quantity_nud.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.quantity_nud.ForeColor = System.Drawing.Color.Black;
-            this.quantity_nud.Location = new System.Drawing.Point(122, 276);
-            this.quantity_nud.Name = "quantity_nud";
-            this.quantity_nud.Size = new System.Drawing.Size(64, 25);
-            this.quantity_nud.TabIndex = 5;
-            this.quantity_nud.ValueChanged += new System.EventHandler(this.quantity_nud_ValueChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -187,9 +175,9 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(15, 278);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 17);
+            this.label2.Size = new System.Drawing.Size(77, 17);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Quantity";
+            this.label2.Text = "Donation ID";
             // 
             // addDonation_button_bloodletting
             // 
@@ -287,6 +275,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.cover);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
@@ -305,7 +294,7 @@
             // 
             // cover
             // 
-            this.cover.Location = new System.Drawing.Point(7, 259);
+            this.cover.Location = new System.Drawing.Point(291, 192);
             this.cover.Name = "cover";
             this.cover.Size = new System.Drawing.Size(365, 355);
             this.cover.TabIndex = 15;
@@ -405,6 +394,26 @@
             this.suffix_label_bloodletting.Size = new System.Drawing.Size(0, 17);
             this.suffix_label_bloodletting.TabIndex = 1;
             // 
+            // ln
+            // 
+            this.ln.Cue = "Lastname";
+            this.ln.CueColor = System.Drawing.Color.Gray;
+            this.ln.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ln.Location = new System.Drawing.Point(19, 9);
+            this.ln.Name = "ln";
+            this.ln.Size = new System.Drawing.Size(184, 25);
+            this.ln.TabIndex = 2;
+            // 
+            // sf
+            // 
+            this.sf.Cue = "Sf";
+            this.sf.CueColor = System.Drawing.Color.Gray;
+            this.sf.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sf.Location = new System.Drawing.Point(209, 9);
+            this.sf.Name = "sf";
+            this.sf.Size = new System.Drawing.Size(65, 25);
+            this.sf.TabIndex = 6;
+            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.firstname_label_bloodletting);
@@ -439,6 +448,26 @@
             this.mi_label_bloodletting.Name = "mi_label_bloodletting";
             this.mi_label_bloodletting.Size = new System.Drawing.Size(0, 25);
             this.mi_label_bloodletting.TabIndex = 3;
+            // 
+            // fn
+            // 
+            this.fn.Cue = "Firstname";
+            this.fn.CueColor = System.Drawing.Color.Gray;
+            this.fn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fn.Location = new System.Drawing.Point(19, 3);
+            this.fn.Name = "fn";
+            this.fn.Size = new System.Drawing.Size(184, 25);
+            this.fn.TabIndex = 4;
+            // 
+            // mn
+            // 
+            this.mn.Cue = "Mi";
+            this.mn.CueColor = System.Drawing.Color.Gray;
+            this.mn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mn.Location = new System.Drawing.Point(209, 3);
+            this.mn.Name = "mn";
+            this.mn.Size = new System.Drawing.Size(65, 25);
+            this.mn.TabIndex = 5;
             // 
             // controlBar_panel
             // 
@@ -499,45 +528,13 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "______________________________________";
             // 
-            // ln
+            // donationID_textbox
             // 
-            this.ln.Cue = "Lastname";
-            this.ln.CueColor = System.Drawing.Color.Gray;
-            this.ln.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ln.Location = new System.Drawing.Point(19, 9);
-            this.ln.Name = "ln";
-            this.ln.Size = new System.Drawing.Size(184, 25);
-            this.ln.TabIndex = 2;
-            // 
-            // sf
-            // 
-            this.sf.Cue = "Sf";
-            this.sf.CueColor = System.Drawing.Color.Gray;
-            this.sf.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sf.Location = new System.Drawing.Point(209, 9);
-            this.sf.Name = "sf";
-            this.sf.Size = new System.Drawing.Size(65, 25);
-            this.sf.TabIndex = 6;
-            // 
-            // fn
-            // 
-            this.fn.Cue = "Firstname";
-            this.fn.CueColor = System.Drawing.Color.Gray;
-            this.fn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fn.Location = new System.Drawing.Point(19, 3);
-            this.fn.Name = "fn";
-            this.fn.Size = new System.Drawing.Size(184, 25);
-            this.fn.TabIndex = 4;
-            // 
-            // mn
-            // 
-            this.mn.Cue = "Mi";
-            this.mn.CueColor = System.Drawing.Color.Gray;
-            this.mn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mn.Location = new System.Drawing.Point(209, 3);
-            this.mn.Name = "mn";
-            this.mn.Size = new System.Drawing.Size(65, 25);
-            this.mn.TabIndex = 5;
+            this.donationID_textbox.Location = new System.Drawing.Point(107, 272);
+            this.donationID_textbox.Name = "donationID_textbox";
+            this.donationID_textbox.Size = new System.Drawing.Size(237, 29);
+            this.donationID_textbox.TabIndex = 17;
+            this.donationID_textbox.TextChanged += new System.EventHandler(this.donationID_textbox_TextChanged);
             // 
             // Bloodletting_Profile_Popup
             // 
@@ -546,14 +543,13 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(378, 621);
             this.ControlBox = false;
-            this.Controls.Add(this.cover);
+            this.Controls.Add(this.donationID_textbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.totalDonation_label);
             this.Controls.Add(this.controlBar_panel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.delete_button_bloodletting);
             this.Controls.Add(this.clear_button_bloodletting);
-            this.Controls.Add(this.quantity_nud);
             this.Controls.Add(this.addDonation_button_bloodletting);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -566,7 +562,6 @@
             this.Name = "Bloodletting_Profile_Popup";
             this.Load += new System.EventHandler(this.Bloodletting_Details_Popup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.blooddonation_dataGridView_bloodletting)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quantity_nud)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -583,7 +578,6 @@
         private System.Windows.Forms.DataGridView blooddonation_dataGridView_bloodletting;
         private System.Windows.Forms.Button edit_button;
         private System.Windows.Forms.ComboBox event_combobox_bloodletting;
-        private System.Windows.Forms.NumericUpDown quantity_nud;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button addDonation_button_bloodletting;
@@ -614,5 +608,6 @@
         private CueTextBox fn;
         private CueTextBox mn;
         private System.Windows.Forms.Panel cover;
+        private System.Windows.Forms.TextBox donationID_textbox;
     }
 }

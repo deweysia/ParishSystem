@@ -248,42 +248,42 @@ namespace ParishSystem
         private void CRBparish_button_menu_MouseClick(object sender, MouseEventArgs e)
         {
             CRB_button_menu.PerformClick();
-            CashRelease_Module f = new CashRelease_Module(1);
+            CashDisbursment f = new CashDisbursment(1);
             showForm(content_panel, f);
         }
 
         private void CRBcommunity_button_menu_MouseClick(object sender, MouseEventArgs e)
         {
             CRB_button_menu.PerformClick();
-            CashRelease_Module f = new CashRelease_Module(2);
+            CashDisbursment f = new CashDisbursment(2);
             showForm(content_panel, f);
         }
 
         private void CRBpostulancy_button_menu_MouseClick(object sender, MouseEventArgs e)
         {
             CRB_button_menu.PerformClick();
-            CashRelease_Module f = new CashRelease_Module(3);
+            CashDisbursment f = new CashDisbursment(3);
             showForm(content_panel, f);
         }
 
         private void CDBparish_button_menu_MouseClick(object sender, MouseEventArgs e)
         {
             CDB_button_menu.PerformClick();
-            CDB_FullPayment_Module f = new CDB_FullPayment_Module(1);
+            CashReciept f = new CashReciept(1);
             showForm(content_panel, f);
         }
 
         private void CDBcommunity_button_menu_MouseClick(object sender, MouseEventArgs e)
         {
             CDB_button_menu.PerformClick();
-            CDB_FullPayment_Module f = new CDB_FullPayment_Module(2);
+            CashReciept f = new CashReciept(2);
             showForm(content_panel, f);
         }
 
         private void CDBpostulancy_button_menu_MouseClick(object sender, MouseEventArgs e)
         {
             CDB_button_menu.PerformClick();
-            CDB_FullPayment_Module f = new CDB_FullPayment_Module(3);
+            CashReciept f = new CashReciept(3);
             showForm(content_panel, f);
         }
 

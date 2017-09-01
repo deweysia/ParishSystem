@@ -14,19 +14,18 @@ namespace ParishSystem
     {
         treasurerBackend dh = new treasurerBackend();
         int selectedIncome = 0;
-        int Mode;
+        int cashreceipt_cashdisbursment;
 
-        public ItemTypes_Module(int Mode)
+        public ItemTypes_Module(int cashreceipt_cashdisbursment)
         {
             InitializeComponent();
-            this.Mode = Mode;
+            this.cashreceipt_cashdisbursment = cashreceipt_cashdisbursment;
+           
         }
         
         private void refreshItemTypes()
-        {
-            if (Mode == 1)
-            {
-                itemType_dgv.DataSource = dh.getIncomeTypes();
+        {          
+                itemType_dgv.DataSource = dh.getIncomeTypes(cashreceipt_cashdisbursment);
                 itemType_dgv.Columns["itemTypeID"].Visible = false;
                 itemType_dgv.Columns["itemType"].HeaderText = "Item Type";
                 try
@@ -37,76 +36,36 @@ namespace ParishSystem
                 {
 
                 }
-            }
-            else
-            {
-                itemType_dgv.DataSource = dh.getCashReleaseTypes();
-                itemType_dgv.Columns["cashReleaseTypeID"].Visible = false;
-                itemType_dgv.Columns["cashReleaseType"].HeaderText = "Cash Release Type";
-                itemType_dgv.Columns["description"].HeaderText = "Description";
-                itemType_dgv.Columns["booktype"].HeaderText = "Book Type";
-                itemType_dgv.Columns["status"].HeaderText = "Status";
-                try
-                {
-                    itemType_dgv.Rows[selectedIncome].Selected = true;
-                }
-                catch { }
-            }
         }
         private void itemType_dgv_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (Mode == 1)
-            {
-                Form A = new IncomeType(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), dh);
+                Form A = new ItemTypePopUp(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment, dh);
                 A.ShowDialog();
                 refreshItemTypes();
-            }
-            else
-            {
-                Form A = new CashReleaseType(int.Parse(itemType_dgv.SelectedRows[0].Cells["cashReleaseTypeID"].Value.ToString()), dh);
-                A.ShowDialog();
-                refreshItemTypes();
-            }
         }
         private void add_button_itemType_Click(object sender, EventArgs e)
         {
-            if (Mode == 1)
-            {
-                Form A = new IncomeType(dh);
+                Form A = new ItemTypePopUp(cashreceipt_cashdisbursment, dh);
                 A.ShowDialog();
-                refreshItemTypes();
-            }
-            else
-            {
-                Form A = new CashReleaseType(dh);
-                A.ShowDialog();
-                refreshItemTypes();
-            }
+                refreshItemTypes();           
         }
         private void disable_button_itemType_Click(object sender, EventArgs e)
         {
-            if (Mode == 1)
-            {
-                dh.disableIncomeType(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()));
-                refreshItemTypes();
-            }
-            else
-            {
-                dh.disableCashReleaseType(int.Parse(itemType_dgv.SelectedRows[0].Cells["cashReleaseTypeID"].Value.ToString()));
-                refreshItemTypes();
-            }
+                
         }
         private void enable_button_itemType_Click(object sender, EventArgs e)
         {
-            if (Mode == 1)
-            {
-                dh.enableIncomeType(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()));
-                refreshItemTypes();
-            }
+            if (itemType_dgv.SelectedRows[0].Cells["Status"].Value.ToString()=="Inactive")
+                {
+                dh.enableIncomeType(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment);
+                itemType_dgv.SelectedRows[0].Cells["Status"].Value = "Active";
+                enable_button_itemType.Text = "Disable";
+                }
             else
-            {
-                dh.enableCashReleaseType(int.Parse(itemType_dgv.SelectedRows[0].Cells["cashReleaseTypeID"].Value.ToString()));
-                refreshItemTypes();
+                {
+                dh.disableIncomeType(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment);
+                itemType_dgv.SelectedRows[0].Cells["Status"].Value = "Inactive";
+                enable_button_itemType.Text = "Enable";
             }
         }
         private void itemType_dgv_Click(object sender, EventArgs e)
@@ -122,6 +81,62 @@ namespace ParishSystem
         {
             refreshItemTypes();
         }
-      
+
+        private void itemType_dgv_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyData== Keys.Enter)
+            {
+                Form A = new ItemTypePopUp(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment, dh);
+                A.ShowDialog();
+                refreshItemTypes();
+            }
+        }
+
+        private void ItemTypes_Module_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                Form A = new ItemTypePopUp(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment, dh);
+                A.ShowDialog();
+                refreshItemTypes();
+            }
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            if (searchButton.Tag.ToString() == "s")
+            {
+                searchButton.Image = ParishSystem.Properties.Resources.icons8_Delete_Filled_20_666666;
+                searchButton.Tag = "c";
+                itemType_dgv.DataSource = dh.getItemsLike(searchTextbox.Text, cashreceipt_cashdisbursment);
+                itemType_dgv.Columns["itemTypeID"].Visible = false;
+                itemType_dgv.Columns["itemType"].HeaderText = "Item Type";
+            }
+            else
+            {
+                searchButton.Image = ParishSystem.Properties.Resources.icons8_Search_Filled_20;
+                searchButton.Tag = "s";
+                searchTextbox.Clear();
+                refreshItemTypes();
+            }
+        }
+
+        private void itemType_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (itemType_dgv.SelectedRows[0].Cells["Status"].Value.ToString() == "Inactive")
+            {
+                enable_button_itemType.Text = "Enable";
+            }
+            else
+            {
+                enable_button_itemType.Text = "Disable";
+            }
+        }
+
+        private void searchTextbox_TextChanged(object sender, EventArgs e)
+        {
+            searchButton.Image = ParishSystem.Properties.Resources.icons8_Search_Filled_20;
+            searchButton.Tag = "s";
+        }
     }
 }

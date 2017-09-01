@@ -209,6 +209,11 @@ namespace ParishSystem
         {
 
         }
+
+        private void pictureBox1_Click(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 
     

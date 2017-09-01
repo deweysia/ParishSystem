@@ -86,7 +86,7 @@ namespace ParishSystem
                 bloodlettingeventreport_datagridview.Columns["name"].HeaderText = "Name";
                 bloodlettingeventreport_datagridview.Columns["bloodt"].HeaderText = "Blood Type";
                 bloodlettingeventreport_datagridview.Columns["address"].HeaderText = "Address";
-                bloodlettingeventreport_datagridview.Columns["quantity"].HeaderText = "Quantity";
+                bloodlettingeventreport_datagridview.Columns["donationID"].HeaderText = "Donation ID";
                 bloodlettingeventreport_datagridview.Columns["Eventname"].HeaderText = "Event";
                 */
             }
@@ -101,7 +101,7 @@ namespace ParishSystem
                     bloodlettingeventreport_datagridview.Columns["name"].HeaderText = "Name";
                     bloodlettingeventreport_datagridview.Columns["bloodt"].HeaderText = "Blood Type";
                     bloodlettingeventreport_datagridview.Columns["address"].HeaderText = "Address";
-                    bloodlettingeventreport_datagridview.Columns["quantity"].HeaderText = "Quantity";
+                    bloodlettingeventreport_datagridview.Columns["donationID"].HeaderText = "Donation ID";
                     bloodlettingeventreport_datagridview.Columns["contactnumber"].HeaderText = "Contact Number";
                 }
             }
@@ -115,7 +115,7 @@ namespace ParishSystem
                 bloodlettingeventreport_datagridview.Columns["name"].HeaderText = "Name";
                 bloodlettingeventreport_datagridview.Columns["bloodt"].HeaderText = "Blood Type";
                 bloodlettingeventreport_datagridview.Columns["address"].HeaderText = "Address";
-                bloodlettingeventreport_datagridview.Columns["quantity"].HeaderText = "Quantity";
+                bloodlettingeventreport_datagridview.Columns["donationID"].HeaderText = "Donation ID";
                 bloodlettingeventreport_datagridview.Columns["contactnumber"].HeaderText = "Contact Number";
             }
             else if (filterBy_combobox_bloodletting.Text == "Donations between Dates")
@@ -128,7 +128,7 @@ namespace ParishSystem
                 bloodlettingeventreport_datagridview.Columns["name"].HeaderText = "Name";
                 bloodlettingeventreport_datagridview.Columns["bloodt"].HeaderText = "Blood Type";
                 bloodlettingeventreport_datagridview.Columns["address"].HeaderText = "Address";
-                bloodlettingeventreport_datagridview.Columns["quantity"].HeaderText = "Quantity";
+                bloodlettingeventreport_datagridview.Columns["donationID"].HeaderText = "Donation ID";
                 bloodlettingeventreport_datagridview.Columns["contactnumber"].HeaderText = "Contact Number";
             }
             else
@@ -143,7 +143,7 @@ namespace ParishSystem
                 bloodlettingeventreport_datagridview.Columns["name"].HeaderText = "Name";
                 bloodlettingeventreport_datagridview.Columns["bloodt"].HeaderText = "Blood Type";
                 bloodlettingeventreport_datagridview.Columns["address"].HeaderText = "Address";
-                bloodlettingeventreport_datagridview.Columns["sum(quantity)"].HeaderText = "Quantity";
+                bloodlettingeventreport_datagridview.Columns["count(bloodDonationID)"].HeaderText = "Donation ID";
                 bloodlettingeventreport_datagridview.Columns["contactnumber"].HeaderText = "Contact Number";
             }
 
@@ -195,6 +195,7 @@ namespace ParishSystem
             if (open) {
                 if (summary_dgv_bloodletting.Height <= 350)
                 {
+                    open_button.Image = ParishSystem.Properties.Resources.icons8_Expand_Arrow_20;
                     summary_dgv_bloodletting.Size = new Size(576, summary_dgv_bloodletting.Height  + velocity);
                     //bloodlettingeventreport_datagridview.Size = new Size(884, bloodlettingeventreport_datagridview.Height +velocity);
                 }
@@ -204,7 +205,6 @@ namespace ParishSystem
                     summary_dgv_bloodletting.Height = 350;
                     animation.Stop();
                     velocity = 0;
-                    open_button.Image = ParishSystem.Properties.Resources.icons8_Expand_Arrow_20;
                     open = false;
                 }
                 velocity++;
@@ -213,6 +213,7 @@ namespace ParishSystem
             {
                 if (summary_dgv_bloodletting.Height >= 1)
                 {
+                    open_button.Image = ParishSystem.Properties.Resources.icons8_Collapse_Arrow_20;
                     summary_dgv_bloodletting.Size = new Size(576, summary_dgv_bloodletting.Height  - velocity);
                 }
                 else
@@ -220,7 +221,7 @@ namespace ParishSystem
                     summary_dgv_bloodletting.Height = 0;
                     animation.Stop();
                     velocity = 0;
-                    open_button.Image = ParishSystem.Properties.Resources.icons8_Collapse_Arrow_20;
+                    
                     open = true;
                 }
                 velocity++;
