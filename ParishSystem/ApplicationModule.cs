@@ -606,173 +606,173 @@ namespace ParishSystem
 
         
 
-        public bool editApplicationProfile2(SacramentType type)
-        {
-            bool success = true;
-            if (type == SacramentType.Baptism)
-            {
-                if (hasEmptyTextBoxes(baptismApplication_profile_tlp))
-                {
-                    Notification.Show(State.MissingFields);
-                    return false;
-                }
+        //public bool editApplicationProfile2(SacramentType type)
+        //{
+        //    bool success = true;
+        //    if (type == SacramentType.Baptism)
+        //    {
+        //        if (hasEmptyTextBoxes(baptismApplication_profile_tlp))
+        //        {
+        //            Notification.Show(State.MissingFields);
+        //            return false;
+        //        }
 
-                string fn = baptismApplication_firstName_textBox.Text;
-                string mi = baptismApplication_midName_textBox.Text;
-                string ln = baptismApplication_lastName_textBox.Text;
-                string suffix = baptismApplication_suffix_textBox.Text;
-                Gender g = baptismApplication_male_radio.Checked ? Gender.Male : Gender.Female;
-                DateTime birthDate = baptismApplication_birthDate_dtp.Value;
+        //        string fn = baptismApplication_firstName_textBox.Text;
+        //        string mi = baptismApplication_midName_textBox.Text;
+        //        string ln = baptismApplication_lastName_textBox.Text;
+        //        string suffix = baptismApplication_suffix_textBox.Text;
+        //        Gender g = baptismApplication_male_radio.Checked ? Gender.Male : Gender.Female;
+        //        DateTime birthDate = baptismApplication_birthDate_dtp.Value;
 
 
-                bool profileExists = dh.generalProfileExists(this.profileID, fn, mi, ln, suffix, g, birthDate);
-                //if another generalprofile exists, and has no active application
+        //        bool profileExists = dh.generalProfileExists(this.profileID, fn, mi, ln, suffix, g, birthDate);
+        //        //if another generalprofile exists, and has no active application
 
-                if (profileExists) //Another profile with same biodata exists
-                {
-                    int existingProfileID = dh.getGeneralProfileID(fn, mi, ln, suffix, g, birthDate);
-                    DataTable dt = dh.getActiveApplicationOf(existingProfileID, type);
+        //        if (profileExists) //Another profile with same biodata exists
+        //        {
+        //            int existingProfileID = dh.getGeneralProfileID(fn, mi, ln, suffix, g, birthDate);
+        //            DataTable dt = dh.getActiveApplicationOf(existingProfileID, type);
                     
-                    if (dt.Rows.Count != 0)
-                    {
-                        Notification.Show(State.ApplicationExists);
-                    }
-                    else
-                    {//edit applicant, add application
-                        success &= dh.addApplication(type);
-                        int newApplicationID = dh.getLatestID("Application", "applicationID");
-                        success &= dh.editApplicant(this.applicantID, existingProfileID, newApplicationID);
-                        success &= dh.editSacramentIncome(this.applicationID, newApplicationID);
-                    }
+        //            if (dt.Rows.Count != 0)
+        //            {
+        //                Notification.Show(State.ApplicationExists);
+        //            }
+        //            else
+        //            {//edit applicant, add application
+        //                success &= dh.addApplication(type);
+        //                int newApplicationID = dh.getLatestID("Application", "applicationID");
+        //                success &= dh.editApplicant(this.applicantID, existingProfileID, newApplicationID);
+        //                success &= dh.editSacramentIncome(this.applicationID, newApplicationID);
+        //            }
 
-                }else
-                {
-                    success &= dh.editGeneralProfile(this.profileID, fn, mi, ln, suffix, g, birthDate);
-                }
+        //        }else
+        //        {
+        //            success &= dh.editGeneralProfile(this.profileID, fn, mi, ln, suffix, g, birthDate);
+        //        }
 
-                success &= dh.editApplication(this.applicationID, getRequirements(type));
+        //        success &= dh.editApplication(this.applicationID, getRequirements(type));
                 
 
-            }
-            else if (type == SacramentType.Confirmation)
-            {
-                if (hasEmptyTextBoxes(confirmationApplication_profile_tlp))
-                {
-                    Notification.Show(State.MissingFields);
-                    return false;
-                }
+        //    }
+        //    else if (type == SacramentType.Confirmation)
+        //    {
+        //        if (hasEmptyTextBoxes(confirmationApplication_profile_tlp))
+        //        {
+        //            Notification.Show(State.MissingFields);
+        //            return false;
+        //        }
 
-                string fn = confirmationApplication_firstName_textBox.Text;
-                string mi = confirmationApplication_lastName_textBox.Text;
-                string ln = confirmationApplication_midName_textBox.Text;
-                string suffix = confirmationApplication_suffix_textBox.Text;
-                Gender g = confirmationApplication_male_radio.Checked ? Gender.Male : Gender.Female;
-                DateTime birthDate = confirmationApplication_birthDate_dtp.Value;
+        //        string fn = confirmationApplication_firstName_textBox.Text;
+        //        string mi = confirmationApplication_lastName_textBox.Text;
+        //        string ln = confirmationApplication_midName_textBox.Text;
+        //        string suffix = confirmationApplication_suffix_textBox.Text;
+        //        Gender g = confirmationApplication_male_radio.Checked ? Gender.Male : Gender.Female;
+        //        DateTime birthDate = confirmationApplication_birthDate_dtp.Value;
 
-                bool profileExists = dh.generalProfileExists(this.profileID, fn, mi, ln, suffix, g, birthDate);
-                if (profileExists) //Another profile with same biodata exists
-                {
-                    int existingProfileID = dh.getGeneralProfileID(fn, mi, ln, suffix, g, birthDate);
-                    DataTable dt = dh.getActiveApplicationOf(existingProfileID, type);
+        //        bool profileExists = dh.generalProfileExists(this.profileID, fn, mi, ln, suffix, g, birthDate);
+        //        if (profileExists) //Another profile with same biodata exists
+        //        {
+        //            int existingProfileID = dh.getGeneralProfileID(fn, mi, ln, suffix, g, birthDate);
+        //            DataTable dt = dh.getActiveApplicationOf(existingProfileID, type);
 
-                    if (dt.Rows.Count != 0)
-                    {
-                        Notification.Show(State.ApplicationExists);
-                    }
-                    else
-                    {//edit applicant, add application
-                        success &= dh.addApplication(type);
-                        int newApplicationID = dh.getLatestID("Application", "applicationID");
-                        success &= dh.editApplicant(this.applicantID, existingProfileID, newApplicationID);
-                        success &= dh.editSacramentIncome(this.applicationID, newApplicationID);
-                    }
+        //            if (dt.Rows.Count != 0)
+        //            {
+        //                Notification.Show(State.ApplicationExists);
+        //            }
+        //            else
+        //            {//edit applicant, add application
+        //                success &= dh.addApplication(type);
+        //                int newApplicationID = dh.getLatestID("Application", "applicationID");
+        //                success &= dh.editApplicant(this.applicantID, existingProfileID, newApplicationID);
+        //                success &= dh.editSacramentIncome(this.applicationID, newApplicationID);
+        //            }
 
-                }
-                else
-                {
-                    success &= dh.editGeneralProfile(this.profileID, fn, mi, ln, suffix, g, birthDate);
-                }
+        //        }
+        //        else
+        //        {
+        //            success &= dh.editGeneralProfile(this.profileID, fn, mi, ln, suffix, g, birthDate);
+        //        }
 
-                success &= dh.editApplication(this.applicationID, getRequirements(type));
+        //        success &= dh.editApplication(this.applicationID, getRequirements(type));
 
-            }
-            else //Marriage
-            {
+        //    }
+        //    else //Marriage
+        //    {
 
-                if (hasEmptyTextBoxes(marriageApplication_profile_tlp))
-                {
-                    Notification.Show(State.MissingFields);
-                    return false;
-                }
-
-
-                string gfn = txtGFN.Text;
-                string gmi = txtGMI.Text;
-                string gln = txtGLN.Text;
-                string gsuffix = txtGSuffix.Text;
-                DateTime gbd = dtpGBirthDate.Value;
-                bool groomExists = dh.generalProfileExists(this.groomID, gfn, gmi, gln, gsuffix, Gender.Male, gbd);
-
-                if (groomExists)
-                {
-                    Notification.Show(State.GroomExists);
-                    return false;
-                }
-
-                if (groomExists) //Another profile with same biodata exists
-                {
-                    int existingProfileID = dh.getGeneralProfileID(gfn, gmi, gln, gsuffix, Gender.Male, gbd);
-
-                    //Map to the new general profile
-                    dh.editApplicant(this.applicantID, existingProfileID, this.applicantID);
-
-                }
-                else
-                {
-                    success &= dh.editGeneralProfile(this.groomID, gfn, gmi, gln, gsuffix, Gender.Male, gbd);
-                }
-
-                string bfn = txtBFN.Text;
-                string bmi = txtBMI.Text;
-                string bln = txtBLN.Text;
-                string bsuffix = txtBSuffix.Text;
-                DateTime bbd = dtpBBirthDate.Value;
-
-                bool brideExists = dh.generalProfileExists(this.brideID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
-
-                if (brideExists)
-                {
-                    int existingProfileID = dh.getGeneralProfileID(bfn, bmi, bln, bsuffix, Gender.Female, bbd);
-
-                    //Map to the new general profile
-                    dh.editApplicant(this.applicantID, existingProfileID, this.applicantID);
-                }
-                else
-                {
-                    success &= dh.editGeneralProfile(this.brideID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
-                }
+        //        if (hasEmptyTextBoxes(marriageApplication_profile_tlp))
+        //        {
+        //            Notification.Show(State.MissingFields);
+        //            return false;
+        //        }
 
 
-                success &= dh.editApplication(this.applicationID, getRequirements(type));
-                //success &= dh.editGeneralProfile(this.groomID, gfn, gmi, gln, gsuffix, Gender.Male, gbd);
-                //success &= dh.editGeneralProfile(this.brideID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
-            }
+        //        string gfn = txtGFN.Text;
+        //        string gmi = txtGMI.Text;
+        //        string gln = txtGLN.Text;
+        //        string gsuffix = txtGSuffix.Text;
+        //        DateTime gbd = dtpGBirthDate.Value;
+        //        bool groomExists = dh.generalProfileExists(this.groomID, gfn, gmi, gln, gsuffix, Gender.Male, gbd);
 
-            if (success)
-            {
-                Notification.Show(State.MinisterAddSuccess);
-                loadApplications(type);
-                Panel p = getApplicationDetailsPanel(type);
-                RecursiveClearControl(p);
+        //        if (groomExists)
+        //        {
+        //            Notification.Show(State.GroomExists);
+        //            return false;
+        //        }
 
-            }
-            else
-            {
-                Notification.Show(State.MinisterAddFail);
-            }
+        //        if (groomExists) //Another profile with same biodata exists
+        //        {
+        //            int existingProfileID = dh.getGeneralProfileID(gfn, gmi, gln, gsuffix, Gender.Male, gbd);
 
-            return success;
-        }
+        //            //Map to the new general profile
+        //            dh.editApplicant(this.applicantID, existingProfileID, this.applicantID);
+
+        //        }
+        //        else
+        //        {
+        //            success &= dh.editGeneralProfile(this.groomID, gfn, gmi, gln, gsuffix, Gender.Male, gbd);
+        //        }
+
+        //        string bfn = txtBFN.Text;
+        //        string bmi = txtBMI.Text;
+        //        string bln = txtBLN.Text;
+        //        string bsuffix = txtBSuffix.Text;
+        //        DateTime bbd = dtpBBirthDate.Value;
+
+        //        bool brideExists = dh.generalProfileExists(this.brideID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
+
+        //        if (brideExists)
+        //        {
+        //            int existingProfileID = dh.getGeneralProfileID(bfn, bmi, bln, bsuffix, Gender.Female, bbd);
+
+        //            //Map to the new general profile
+        //            dh.editApplicant(this.applicantID, existingProfileID, this.applicantID);
+        //        }
+        //        else
+        //        {
+        //            success &= dh.editGeneralProfile(this.brideID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
+        //        }
+
+
+        //        success &= dh.editApplication(this.applicationID, getRequirements(type));
+        //        //success &= dh.editGeneralProfile(this.groomID, gfn, gmi, gln, gsuffix, Gender.Male, gbd);
+        //        //success &= dh.editGeneralProfile(this.brideID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
+        //    }
+
+        //    if (success)
+        //    {
+        //        Notification.Show(State.MinisterAddSuccess);
+        //        loadApplications(type);
+        //        Panel p = getApplicationDetailsPanel(type);
+        //        RecursiveClearControl(p);
+
+        //    }
+        //    else
+        //    {
+        //        Notification.Show(State.MinisterAddFail);
+        //    }
+
+        //    return success;
+        //}
 
         public bool editApplicationProfile(SacramentType type)
         {
@@ -793,55 +793,43 @@ namespace ParishSystem
                 string suffix = baptismApplication_suffix_textBox.Text;
                 Gender g = baptismApplication_male_radio.Checked ? Gender.Male : Gender.Female;
                 DateTime birthDate = baptismApplication_birthDate_dtp.Value;
-                
 
                 bool profileExists = dh.generalProfileExists(this.profileID, fn, mi, ln, suffix, g, birthDate);
-                MessageBox.Show("profileExists: " + profileExists);
-                //Check if has active baptism application
-                //if yes, error; show notif
-                //if no, this means they have profile somewhere else. map to that profile. Discard current profileID
-                //map id to getGeneralProfile
 
-                //if another generalprofile exists, and has no active application
-
-                if (profileExists) //Another profile with same biodata exists
+                //If another person with same info exists,
+                if (profileExists) 
                 {
+                    //Get the GeneralProfileID of the other person
                     int existingProfileID = dh.getGeneralProfileID(fn, mi, ln, suffix, g, birthDate);
-                    MessageBox.Show("Existing profileID: " + existingProfileID);
+
+                    //Retrieve active baptism application of the other person
                     DataTable dt = dh.getActiveApplicationOf(existingProfileID, type);
-                    MessageBox.Show("Existing Application of Baptism: " + dt.Rows.Count);
-                    //Has active application
+
+                    //If he has an existing baptism application, by checking if an active application is returned
                     if (dt.Rows.Count != 0)
                     {
+                        //If the other person has active application, process failed. Return.
                         Notification.Show(State.ApplicationExists);
+                        return false;
                     }
                     else
-                    {//edit applicant, add application
-                        //success &= dh.addNewApplicant(existingProfileID, type);
-
+                    {//If other person has no active application, 
+                        //Add new application
                         success &= dh.addApplication(type);
-                        
                         int newApplicationID = dh.getLatestID("Application", "applicationID");
-                        MessageBox.Show("newApplicationID: " + newApplicationID);
+                        //Rereference the applicant record of current person to point to the ID of the other person. Also reference new application
                         success &= dh.editApplicant(this.applicantID, existingProfileID, newApplicationID);
+                        //Rereference sacrament income to point to new application
                         success &= dh.editSacramentIncome(this.applicationID, newApplicationID);
                     }
 
                 }else
                 {
+                    //If no profile with same info exists, simply update person's info
                     success &= dh.editGeneralProfile(this.profileID, fn, mi, ln, suffix, g, birthDate);
                 }
-
-                ////MessageBox.Show("Profile Exists: " + profileExists);
-                //if (profileExists)
-                //{
-                    
-                //    Notification.Show(State.ProfileExists);
-                //    return false;
-                //}
-
+                //Update the requirements
                 success &= dh.editApplication(this.applicationID, getRequirements(type));
-                //
                 
             }
             else if (type == SacramentType.Confirmation)
@@ -870,6 +858,7 @@ namespace ParishSystem
                     if (dt.Rows.Count != 0)
                     {
                         Notification.Show(State.ApplicationExists);
+                        return false;
                     }
                     else
                     {//edit applicant, add application
