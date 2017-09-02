@@ -373,5 +373,12 @@ namespace ParishSystem
             HomeModule f = new HomeModule();
             showForm(content_panel, f);
         }
+
+        private void ministers_button_menu_MouseUp(object sender, MouseEventArgs e)
+        {
+            MinisterModule f = new MinisterModule();
+            showForm(content_panel, f);
+        }
+
     }
 }

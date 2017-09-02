@@ -30,17 +30,17 @@
         {
             this.txtFN = new System.Windows.Forms.TextBox();
             this.txtMI = new System.Windows.Forms.TextBox();
-            this.lastName_textBox = new System.Windows.Forms.TextBox();
-            this.suffix_textBox = new System.Windows.Forms.TextBox();
-            this.birthDate_dtp = new MetroFramework.Controls.MetroDateTime();
+            this.txtLN = new System.Windows.Forms.TextBox();
+            this.txtSuffix = new System.Windows.Forms.TextBox();
+            this.dtpBirthdate = new MetroFramework.Controls.MetroDateTime();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.status_cBox = new MetroFramework.Controls.MetroComboBox();
+            this.cmbStatus = new MetroFramework.Controls.MetroComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ministryType_cBox = new MetroFramework.Controls.MetroComboBox();
+            this.cmbMinistryType = new MetroFramework.Controls.MetroComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.controlBar_panel = new System.Windows.Forms.Panel();
             this.close_button = new System.Windows.Forms.Button();
@@ -67,30 +67,30 @@
             this.txtMI.TabIndex = 1;
             this.txtMI.TextChanged += new System.EventHandler(this.licenseNum_textBox_TextChanged);
             // 
-            // lastName_textBox
+            // txtLN
             // 
-            this.lastName_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lastName_textBox.Location = new System.Drawing.Point(237, 49);
-            this.lastName_textBox.Name = "lastName_textBox";
-            this.lastName_textBox.Size = new System.Drawing.Size(100, 18);
-            this.lastName_textBox.TabIndex = 2;
-            this.lastName_textBox.TextChanged += new System.EventHandler(this.licenseNum_textBox_TextChanged);
+            this.txtLN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLN.Location = new System.Drawing.Point(237, 49);
+            this.txtLN.Name = "txtLN";
+            this.txtLN.Size = new System.Drawing.Size(100, 18);
+            this.txtLN.TabIndex = 2;
+            this.txtLN.TextChanged += new System.EventHandler(this.licenseNum_textBox_TextChanged);
             // 
-            // suffix_textBox
+            // txtSuffix
             // 
-            this.suffix_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.suffix_textBox.Location = new System.Drawing.Point(343, 49);
-            this.suffix_textBox.Name = "suffix_textBox";
-            this.suffix_textBox.Size = new System.Drawing.Size(35, 18);
-            this.suffix_textBox.TabIndex = 3;
+            this.txtSuffix.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSuffix.Location = new System.Drawing.Point(343, 49);
+            this.txtSuffix.Name = "txtSuffix";
+            this.txtSuffix.Size = new System.Drawing.Size(35, 18);
+            this.txtSuffix.TabIndex = 3;
             // 
-            // birthDate_dtp
+            // dtpBirthdate
             // 
-            this.birthDate_dtp.Location = new System.Drawing.Point(104, 77);
-            this.birthDate_dtp.MinimumSize = new System.Drawing.Size(0, 29);
-            this.birthDate_dtp.Name = "birthDate_dtp";
-            this.birthDate_dtp.Size = new System.Drawing.Size(233, 29);
-            this.birthDate_dtp.TabIndex = 5;
+            this.dtpBirthdate.Location = new System.Drawing.Point(104, 77);
+            this.dtpBirthdate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpBirthdate.Name = "dtpBirthdate";
+            this.dtpBirthdate.Size = new System.Drawing.Size(233, 29);
+            this.dtpBirthdate.TabIndex = 5;
             // 
             // label1
             // 
@@ -119,18 +119,18 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Ministry Type";
             // 
-            // status_cBox
+            // cmbStatus
             // 
-            this.status_cBox.FormattingEnabled = true;
-            this.status_cBox.ItemHeight = 23;
-            this.status_cBox.Items.AddRange(new object[] {
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.ItemHeight = 23;
+            this.cmbStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.status_cBox.Location = new System.Drawing.Point(104, 147);
-            this.status_cBox.Name = "status_cBox";
-            this.status_cBox.Size = new System.Drawing.Size(140, 29);
-            this.status_cBox.TabIndex = 7;
-            this.status_cBox.UseSelectable = true;
+            this.cmbStatus.Location = new System.Drawing.Point(104, 147);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(140, 29);
+            this.cmbStatus.TabIndex = 7;
+            this.cmbStatus.UseSelectable = true;
             // 
             // label5
             // 
@@ -153,7 +153,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.ministryType_cBox);
+            this.panel1.Controls.Add(this.cmbMinistryType);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label5);
@@ -161,10 +161,10 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtFN);
             this.panel1.Controls.Add(this.txtMI);
-            this.panel1.Controls.Add(this.lastName_textBox);
-            this.panel1.Controls.Add(this.suffix_textBox);
-            this.panel1.Controls.Add(this.birthDate_dtp);
-            this.panel1.Controls.Add(this.status_cBox);
+            this.panel1.Controls.Add(this.txtLN);
+            this.panel1.Controls.Add(this.txtSuffix);
+            this.panel1.Controls.Add(this.dtpBirthdate);
+            this.panel1.Controls.Add(this.cmbStatus);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.Black;
@@ -173,18 +173,18 @@
             this.panel1.Size = new System.Drawing.Size(398, 200);
             this.panel1.TabIndex = 12;
             // 
-            // ministryType_cBox
+            // cmbMinistryType
             // 
-            this.ministryType_cBox.FormattingEnabled = true;
-            this.ministryType_cBox.ItemHeight = 23;
-            this.ministryType_cBox.Items.AddRange(new object[] {
+            this.cmbMinistryType.FormattingEnabled = true;
+            this.cmbMinistryType.ItemHeight = 23;
+            this.cmbMinistryType.Items.AddRange(new object[] {
             "Priest",
             "Bishop"});
-            this.ministryType_cBox.Location = new System.Drawing.Point(104, 112);
-            this.ministryType_cBox.Name = "ministryType_cBox";
-            this.ministryType_cBox.Size = new System.Drawing.Size(140, 29);
-            this.ministryType_cBox.TabIndex = 11;
-            this.ministryType_cBox.UseSelectable = true;
+            this.cmbMinistryType.Location = new System.Drawing.Point(104, 112);
+            this.cmbMinistryType.Name = "cmbMinistryType";
+            this.cmbMinistryType.Size = new System.Drawing.Size(140, 29);
+            this.cmbMinistryType.TabIndex = 11;
+            this.cmbMinistryType.UseSelectable = true;
             // 
             // label11
             // 
@@ -205,6 +205,7 @@
             this.controlBar_panel.Name = "controlBar_panel";
             this.controlBar_panel.Size = new System.Drawing.Size(421, 33);
             this.controlBar_panel.TabIndex = 57;
+            this.controlBar_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.controlBar_panel_Paint);
             // 
             // close_button
             // 
@@ -232,7 +233,7 @@
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(128, 35);
             this.addBtn.TabIndex = 58;
-            this.addBtn.Text = "Add";
+            this.addBtn.Text = "Apply";
             this.addBtn.UseVisualStyleBackColor = false;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
@@ -262,18 +263,18 @@
 
         private System.Windows.Forms.TextBox txtFN;
         private System.Windows.Forms.TextBox txtMI;
-        private System.Windows.Forms.TextBox lastName_textBox;
-        private System.Windows.Forms.TextBox suffix_textBox;
-        private MetroFramework.Controls.MetroDateTime birthDate_dtp;
+        private System.Windows.Forms.TextBox txtLN;
+        private System.Windows.Forms.TextBox txtSuffix;
+        private MetroFramework.Controls.MetroDateTime dtpBirthdate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private MetroFramework.Controls.MetroComboBox status_cBox;
+        private MetroFramework.Controls.MetroComboBox cmbStatus;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
 
         private System.Windows.Forms.Panel panel1;
-        private MetroFramework.Controls.MetroComboBox ministryType_cBox;
+        private MetroFramework.Controls.MetroComboBox cmbMinistryType;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel controlBar_panel;
         private System.Windows.Forms.Button close_button;

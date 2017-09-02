@@ -236,6 +236,12 @@
     <Compile Include="ItemTypes_Module.Designer.cs">
       <DependentUpon>ItemTypes_Module.cs</DependentUpon>
     </Compile>
+    <Compile Include="MinisterModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinisterModule.Designer.cs">
+      <DependentUpon>MinisterModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="ORdetailsPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -391,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ItemTypes_Module.resx">
       <DependentUpon>ItemTypes_Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinisterModule.resx">
+      <DependentUpon>MinisterModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ORdetailsPopUp.resx">
       <DependentUpon>ORdetailsPopUp.cs</DependentUpon>

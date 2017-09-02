@@ -501,6 +501,7 @@
             this.close_button.Size = new System.Drawing.Size(24, 20);
             this.close_button.TabIndex = 0;
             this.close_button.UseVisualStyleBackColor = true;
+            this.close_button.Click += new System.EventHandler(this.close_button_Click);
             // 
             // SacramentForm
             // 

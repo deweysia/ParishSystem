@@ -433,6 +433,7 @@
             this.marGroomID.HeaderText = "groomID";
             this.marGroomID.Name = "marGroomID";
             this.marGroomID.ReadOnly = true;
+            this.marGroomID.Visible = false;
             this.marGroomID.Width = 75;
             // 
             // marBrideID
@@ -441,6 +442,7 @@
             this.marBrideID.HeaderText = "brideID";
             this.marBrideID.Name = "marBrideID";
             this.marBrideID.ReadOnly = true;
+            this.marBrideID.Visible = false;
             this.marBrideID.Width = 68;
             // 
             // marMinisterID
@@ -790,6 +792,7 @@
             // confirmationDate
             // 
             this.confirmationDate.DataPropertyName = "confirmationDate";
+            this.confirmationDate.FillWeight = 122.4157F;
             this.confirmationDate.HeaderText = "Confirmation Date";
             this.confirmationDate.Name = "confirmationDate";
             this.confirmationDate.ReadOnly = true;
@@ -798,6 +801,7 @@
             // conFirstName
             // 
             this.conFirstName.DataPropertyName = "firstName";
+            this.conFirstName.FillWeight = 77.82124F;
             this.conFirstName.HeaderText = "First Name";
             this.conFirstName.Name = "conFirstName";
             this.conFirstName.ReadOnly = true;
@@ -806,6 +810,7 @@
             // conMI
             // 
             this.conMI.DataPropertyName = "midName";
+            this.conMI.FillWeight = 39.64971F;
             this.conMI.HeaderText = "MI";
             this.conMI.Name = "conMI";
             this.conMI.ReadOnly = true;
@@ -814,6 +819,7 @@
             // conLastName
             // 
             this.conLastName.DataPropertyName = "lastName";
+            this.conLastName.FillWeight = 78.65975F;
             this.conLastName.HeaderText = "Last Name";
             this.conLastName.Name = "conLastName";
             this.conLastName.ReadOnly = true;
@@ -822,6 +828,7 @@
             // conSuffix
             // 
             this.conSuffix.DataPropertyName = "suffix";
+            this.conSuffix.FillWeight = 56.28576F;
             this.conSuffix.HeaderText = "Suffix";
             this.conSuffix.Name = "conSuffix";
             this.conSuffix.ReadOnly = true;
@@ -830,6 +837,7 @@
             // conRegistryNumber
             // 
             this.conRegistryNumber.DataPropertyName = "registryNumber";
+            this.conRegistryNumber.FillWeight = 69.08814F;
             this.conRegistryNumber.HeaderText = "Registry";
             this.conRegistryNumber.Name = "conRegistryNumber";
             this.conRegistryNumber.ReadOnly = true;
@@ -838,6 +846,7 @@
             // conRecordNumber
             // 
             this.conRecordNumber.DataPropertyName = "recordNumber";
+            this.conRecordNumber.FillWeight = 64.56241F;
             this.conRecordNumber.HeaderText = "Record";
             this.conRecordNumber.Name = "conRecordNumber";
             this.conRecordNumber.ReadOnly = true;
@@ -846,6 +855,7 @@
             // conPageNumber
             // 
             this.conPageNumber.DataPropertyName = "pageNumber";
+            this.conPageNumber.FillWeight = 54.35588F;
             this.conPageNumber.HeaderText = "Page";
             this.conPageNumber.Name = "conPageNumber";
             this.conPageNumber.ReadOnly = true;
@@ -855,6 +865,7 @@
             // 
             this.conRemarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.conRemarks.DataPropertyName = "remarks";
+            this.conRemarks.FillWeight = 337.1614F;
             this.conRemarks.HeaderText = "Remarks";
             this.conRemarks.Name = "conRemarks";
             this.conRemarks.ReadOnly = true;
@@ -1138,6 +1149,7 @@
             this.bapMinisterID.HeaderText = "ministerID";
             this.bapMinisterID.Name = "bapMinisterID";
             this.bapMinisterID.ReadOnly = true;
+            this.bapMinisterID.Visible = false;
             this.bapMinisterID.Width = 82;
             // 
             // baptismDate
@@ -1220,7 +1232,7 @@
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(930, 540);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroTabControl1.TabIndex = 11;
@@ -1305,31 +1317,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn conRemarks;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private CueTextBox txtSearchMar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn baptismID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapApplicationID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapProfileID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapMinisterID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn baptismDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapFirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapMI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapLastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapSuffix;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapRegistryNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapRecordNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapPageNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapRemarks;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marriageID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marApplicationID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marGroomID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marBrideID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marMinisterID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marriageDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn groomName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn brideName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marRegistryNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marRecordNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marPageNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marRemarks;
         private System.Windows.Forms.Button btnSearchBap;
         private System.Windows.Forms.Button btnAdvanceSearchBap;
         private System.Windows.Forms.Button btnAddReferencesBap;
@@ -1346,5 +1333,30 @@
         private System.Windows.Forms.Button btnResetCon;
         private System.Windows.Forms.Button btnSearchCon;
         private System.Windows.Forms.Button btnAddReferencesCon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marriageID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marApplicationID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marGroomID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marBrideID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marMinisterID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marriageDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn groomName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brideName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marRegistryNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marRecordNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marPageNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marRemarks;
+        private System.Windows.Forms.DataGridViewTextBoxColumn baptismID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapApplicationID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapProfileID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapMinisterID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn baptismDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapFirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapMI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapLastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapSuffix;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapRegistryNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapRecordNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapPageNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapRemarks;
     }
 }

@@ -42,21 +42,45 @@ namespace ParishSystem
             nameLabel.Text = string.Format("{0} {1}. {2} {3}", row[4].Value, row[5].Value, row[3].Value, row[6].Value);
             birthdateLabel.Text = row[8].Value.ToString();
             genderLabel.Text = row[7].ToString() == "1" ? "Male" : "Female";
+
+
+            legitimacyCBox.DataSource = Enum.GetValues(typeof(Legitimacy));
+            loadMinisters();
+            loadParents();
+
+            MinisterCBox.SelectedIndex = 0;
         }
 
         private void SacramentForm_Load(object sender, EventArgs e)
         {
-            legitimacyCBox.DataSource = Enum.GetValues(typeof(Legitimacy));
-            DataTable dt = dh.getMinisterWithStatus(MinisterStatus.Active);
             
-            foreach(DataRow r in dt.Rows)
+           
+        }
+
+        /// <summary>
+        /// Loads ministers into a combobox
+        /// </summary>
+        private void loadMinisters()
+        {
+            
+            DataTable dt;
+            if (type == SacramentType.Confirmation)
+            {//Only Archbishop and Mosignor can perform confirmation
+                dt = dh.getMinisters(MinistryType.Archbishop, MinisterStatus.Active);
+                DataTable dt2 = dh.getMinisters(MinistryType.Mosignor, MinisterStatus.Active);
+                dt.Merge(dt2);
+            }
+            else
+            {//All ministers can perform baptism
+                dt = dh.getMinisters(MinisterStatus.Active);
+            }
+
+            MinisterCBox.Items.Add(""); //First item of ministerCBox is empty
+            foreach (DataRow r in dt.Rows)
             {
                 ComboboxContent cc = new ComboboxContent(int.Parse(r["ministerID"].ToString()), r["name"].ToString());
                 MinisterCBox.Items.Add(cc);
             }
-
-            loadParents();
-           
         }
 
         private void loadParents()
@@ -136,9 +160,14 @@ namespace ParishSystem
                 }
             }
 
-            allFilled &= MinisterCBox.SelectedIndex != -1;
+            allFilled &= MinisterCBox.SelectedIndex != 0;
 
             return allFilled;
+        }
+
+        private void close_button_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

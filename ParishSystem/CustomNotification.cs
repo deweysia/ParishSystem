@@ -198,13 +198,12 @@ namespace ParishSystem
             ApplicationAddFail = new State("Application not added", NotificationType.warning),
             MinisterAddSuccess = new State("Minister successfully added", NotificationType.success),
             MinisterAddFail = new State("Minister was not added", NotificationType.warning),
+            MinisterEditSuccess = new State("Minister changes successfully applied", NotificationType.success),
+            MinisterEditFail = new State("Minister changes failed to apply", NotificationType.error),
             ScheduleMissingTitle = new State("Please add a title", NotificationType.info),
             ScheduleAddSuccess = new State("Successfully added to schedule", NotificationType.success),
             ScheduleAddFail = new State("Failed to add to schedule", NotificationType.error),
             ScheduleMinisterUnavailable = new State("The selected minister is currently unavailable", NotificationType.warning);
-
-
-
     }
 
     

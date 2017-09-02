@@ -39,11 +39,6 @@
             this.btn_Max = new System.Windows.Forms.Button();
             this.time_Text = new System.Windows.Forms.Label();
             this.content_panel = new System.Windows.Forms.Panel();
-            this.imageListMenu = new System.Windows.Forms.ImageList(this.components);
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.OpenMenu_button = new System.Windows.Forms.Button();
-            this.MenuTimer = new System.Windows.Forms.Timer(this.components);
-            this.Panel_Timer = new System.Windows.Forms.Timer(this.components);
             this.Menu_panel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.home_button_menu = new System.Windows.Forms.Button();
@@ -80,11 +75,17 @@
             this.itemtypemenuCDB_button = new System.Windows.Forms.Button();
             this.itemtypemenuCRB_button = new System.Windows.Forms.Button();
             this.itemtypemenu_button = new System.Windows.Forms.Button();
+            this.ministers_button_menu = new System.Windows.Forms.Button();
+            this.imageListMenu = new System.Windows.Forms.ImageList(this.components);
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.OpenMenu_button = new System.Windows.Forms.Button();
+            this.MenuTimer = new System.Windows.Forms.Timer(this.components);
+            this.Panel_Timer = new System.Windows.Forms.Timer(this.components);
             this.Workspace_panel = new System.Windows.Forms.Panel();
             this.panel_controlbox.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayout_ControlButtons.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.content_panel.SuspendLayout();
             this.Menu_panel.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.bloodlettingmenu_panel.SuspendLayout();
@@ -93,6 +94,7 @@
             this.CDBreport_panel.SuspendLayout();
             this.CRBreport_panel.SuspendLayout();
             this.itemtypemenu_panel.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.Workspace_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -203,62 +205,11 @@
             // content_panel
             // 
             this.content_panel.BackColor = System.Drawing.Color.White;
+            this.content_panel.Controls.Add(this.Menu_panel);
             this.content_panel.Location = new System.Drawing.Point(0, 0);
             this.content_panel.Name = "content_panel";
             this.content_panel.Size = new System.Drawing.Size(935, 547);
             this.content_panel.TabIndex = 0;
-            // 
-            // imageListMenu
-            // 
-            this.imageListMenu.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMenu.ImageStream")));
-            this.imageListMenu.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListMenu.Images.SetKeyName(0, "Home.png");
-            this.imageListMenu.Images.SetKeyName(1, "Gender.png");
-            this.imageListMenu.Images.SetKeyName(2, "HeartPulse.png");
-            this.imageListMenu.Images.SetKeyName(3, "ReportCard.png");
-            this.imageListMenu.Images.SetKeyName(4, "Money.png");
-            this.imageListMenu.Images.SetKeyName(5, "Resume_96px.png");
-            this.imageListMenu.Images.SetKeyName(6, "Holy Bible_96px.png");
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.flowLayoutPanel1.Controls.Add(this.OpenMenu_button);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 33);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(57, 547);
-            this.flowLayoutPanel1.TabIndex = 60;
-            // 
-            // OpenMenu_button
-            // 
-            this.OpenMenu_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
-            this.OpenMenu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.OpenMenu_button.FlatAppearance.BorderSize = 0;
-            this.OpenMenu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OpenMenu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OpenMenu_button.ForeColor = System.Drawing.Color.White;
-            this.OpenMenu_button.Image = global::ParishSystem.Properties.Resources.Home_32px;
-            this.OpenMenu_button.Location = new System.Drawing.Point(0, 0);
-            this.OpenMenu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.OpenMenu_button.Name = "OpenMenu_button";
-            this.OpenMenu_button.Size = new System.Drawing.Size(57, 51);
-            this.OpenMenu_button.TabIndex = 45;
-            this.OpenMenu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.OpenMenu_button.UseVisualStyleBackColor = false;
-            this.OpenMenu_button.Click += new System.EventHandler(this.OpenMenu_button_Click);
-            // 
-            // MenuTimer
-            // 
-            this.MenuTimer.Interval = 1;
-            this.MenuTimer.Tick += new System.EventHandler(this.MenuTimer_Tick);
-            // 
-            // Panel_Timer
-            // 
-            this.Panel_Timer.Interval = 1;
-            this.Panel_Timer.Tick += new System.EventHandler(this.Panel_Timer_Tick);
             // 
             // Menu_panel
             // 
@@ -284,6 +235,7 @@
             this.flowLayoutPanel2.Controls.Add(this.CDBreport_panel);
             this.flowLayoutPanel2.Controls.Add(this.CRBreport_panel);
             this.flowLayoutPanel2.Controls.Add(this.itemtypemenu_panel);
+            this.flowLayoutPanel2.Controls.Add(this.ministers_button_menu);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(31, 27);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(873, 520);
@@ -921,10 +873,80 @@
             this.itemtypemenu_button.UseVisualStyleBackColor = false;
             this.itemtypemenu_button.Click += new System.EventHandler(this.tile_Click);
             // 
+            // ministers_button_menu
+            // 
+            this.ministers_button_menu.BackColor = System.Drawing.Color.Transparent;
+            this.ministers_button_menu.FlatAppearance.BorderSize = 0;
+            this.ministers_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ministers_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ministers_button_menu.ForeColor = System.Drawing.Color.White;
+            this.ministers_button_menu.Image = ((System.Drawing.Image)(resources.GetObject("ministers_button_menu.Image")));
+            this.ministers_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ministers_button_menu.Location = new System.Drawing.Point(580, 204);
+            this.ministers_button_menu.Margin = new System.Windows.Forms.Padding(0);
+            this.ministers_button_menu.Name = "ministers_button_menu";
+            this.ministers_button_menu.Size = new System.Drawing.Size(280, 58);
+            this.ministers_button_menu.TabIndex = 50;
+            this.ministers_button_menu.Text = "Ministers";
+            this.ministers_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ministers_button_menu.UseVisualStyleBackColor = false;
+            this.ministers_button_menu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ministers_button_menu_MouseUp);
+            // 
+            // imageListMenu
+            // 
+            this.imageListMenu.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMenu.ImageStream")));
+            this.imageListMenu.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListMenu.Images.SetKeyName(0, "Home.png");
+            this.imageListMenu.Images.SetKeyName(1, "Gender.png");
+            this.imageListMenu.Images.SetKeyName(2, "HeartPulse.png");
+            this.imageListMenu.Images.SetKeyName(3, "ReportCard.png");
+            this.imageListMenu.Images.SetKeyName(4, "Money.png");
+            this.imageListMenu.Images.SetKeyName(5, "Resume_96px.png");
+            this.imageListMenu.Images.SetKeyName(6, "Holy Bible_96px.png");
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.flowLayoutPanel1.Controls.Add(this.OpenMenu_button);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 33);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(57, 547);
+            this.flowLayoutPanel1.TabIndex = 60;
+            // 
+            // OpenMenu_button
+            // 
+            this.OpenMenu_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
+            this.OpenMenu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.OpenMenu_button.FlatAppearance.BorderSize = 0;
+            this.OpenMenu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OpenMenu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OpenMenu_button.ForeColor = System.Drawing.Color.White;
+            this.OpenMenu_button.Image = global::ParishSystem.Properties.Resources.Home_32px;
+            this.OpenMenu_button.Location = new System.Drawing.Point(0, 0);
+            this.OpenMenu_button.Margin = new System.Windows.Forms.Padding(0);
+            this.OpenMenu_button.Name = "OpenMenu_button";
+            this.OpenMenu_button.Size = new System.Drawing.Size(57, 51);
+            this.OpenMenu_button.TabIndex = 45;
+            this.OpenMenu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.OpenMenu_button.UseVisualStyleBackColor = false;
+            this.OpenMenu_button.Click += new System.EventHandler(this.OpenMenu_button_Click);
+            // 
+            // MenuTimer
+            // 
+            this.MenuTimer.Interval = 1;
+            this.MenuTimer.Tick += new System.EventHandler(this.MenuTimer_Tick);
+            // 
+            // Panel_Timer
+            // 
+            this.Panel_Timer.Interval = 1;
+            this.Panel_Timer.Tick += new System.EventHandler(this.Panel_Timer_Tick);
+            // 
             // Workspace_panel
             // 
             this.Workspace_panel.BackColor = System.Drawing.Color.White;
-            this.Workspace_panel.Controls.Add(this.Menu_panel);
             this.Workspace_panel.Controls.Add(this.content_panel);
             this.Workspace_panel.Location = new System.Drawing.Point(57, 33);
             this.Workspace_panel.Name = "Workspace_panel";
@@ -947,7 +969,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.flowLayout_ControlButtons.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.content_panel.ResumeLayout(false);
             this.Menu_panel.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.bloodlettingmenu_panel.ResumeLayout(false);
@@ -956,6 +978,7 @@
             this.CDBreport_panel.ResumeLayout(false);
             this.CRBreport_panel.ResumeLayout(false);
             this.itemtypemenu_panel.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.Workspace_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1013,5 +1036,6 @@
         private System.Windows.Forms.Button CRBparishreport_button;
         private System.Windows.Forms.Button CRBreport_button;
         private System.Windows.Forms.Button bloodlettingreport_button;
+        private System.Windows.Forms.Button ministers_button_menu;
     }
 }
