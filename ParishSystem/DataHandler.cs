@@ -2756,6 +2756,12 @@ namespace ParishSystem
             string q = $@"UPDATE `sad2`.`blooddonor` SET `firstname`='{fn}', `midname`='{mn}', `lastname`='{ln}', `suffix`='{sf}', `bloodtype`='{bloodtype}', `address`='{address}', `contactnumber`='{contactnum}' WHERE `blooddonorID`='{blooddonorID}'";
             runNonQuery(q);
         }
+
+        public DataTable getEmployee(string Username)
+        {
+            string q = $"Select *,concat(lastname,\" \",coalesce(suffix,\" \"),\"\",firstName,\" \",midname,\".\")as name from employee where Username='{Username}'";
+            return runQuery(q);
+        }
     } 
 
 }

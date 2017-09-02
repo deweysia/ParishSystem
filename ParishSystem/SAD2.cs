@@ -18,10 +18,20 @@ namespace ParishSystem
         Color ButtonBackColor = Color.Transparent;
         DataHandler dh = DataHandler.getDataHandler();
         Dictionary<Button, Panel_Size_Pair> SubMenu = new Dictionary<Button, Panel_Size_Pair>();
+        int UserID=-1;
         public SAD2()
         {
             InitializeComponent();
+        }//CRBreport_panel
 
+        public SAD2(string  Username)
+        {
+            InitializeComponent();
+            this.username_Welcome_Text.Text = Username.ToUpper();
+            this.UserID = int.Parse(dh.getEmployee(Username).Rows[0]["employeeID"].ToString());
+        }
+        private void SAD2_Load(object sender, EventArgs e)
+        {
             Draggable drag = new Draggable(this);
             drag.makeDraggable(panel_controlbox);
             drag.makeDraggable(panel2);
@@ -32,9 +42,7 @@ namespace ParishSystem
             SubMenu.Add(itemtypemenu_button, new Panel_Size_Pair(175, 58, itemtypemenu_panel, false));
             SubMenu.Add(CDBreport_button, new Panel_Size_Pair(234, 58, CDBreport_panel, false));
             SubMenu.Add(CRBreport_button, new Panel_Size_Pair(234, 58, CRBreport_panel, false));
-
-        }//CRBreport_panel
-
+        }
         #region Effects
 
         #endregion
@@ -380,5 +388,6 @@ namespace ParishSystem
             showForm(content_panel, f);
         }
 
+        
     }
 }

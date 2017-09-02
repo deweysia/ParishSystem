@@ -28,182 +28,125 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.usernameBox = new System.Windows.Forms.TextBox();
-            this.passwordBox = new System.Windows.Forms.TextBox();
-            this.loginButton = new System.Windows.Forms.Button();
-            this.passwordText = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.usernameText = new System.Windows.Forms.Label();
-            this.Title = new System.Windows.Forms.Label();
-            this.closeButton = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.Username_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.Password_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.login_button = new System.Windows.Forms.Button();
+            this.peek_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // panel1
+            // Username_textbox
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::ParishSystem.Properties.Resources.LoginFormPanelBackground2;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.usernameBox);
-            this.panel1.Controls.Add(this.passwordBox);
-            this.panel1.Controls.Add(this.loginButton);
-            this.panel1.Controls.Add(this.passwordText);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.usernameText);
-            this.panel1.Location = new System.Drawing.Point(-4, 46);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(502, 321);
-            this.panel1.TabIndex = 0;
             // 
-            // usernameBox
             // 
-            this.usernameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.usernameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.usernameBox.Font = new System.Drawing.Font("Segoe UI Light", 14F);
-            this.usernameBox.Location = new System.Drawing.Point(161, 86);
-            this.usernameBox.Name = "usernameBox";
-            this.usernameBox.Size = new System.Drawing.Size(281, 32);
-            this.usernameBox.TabIndex = 2;
-            this.usernameBox.TextChanged += new System.EventHandler(this.usernameBox_TextChanged);
             // 
-            // passwordBox
+            this.Username_textbox.CustomButton.Image = null;
+            this.Username_textbox.CustomButton.Location = new System.Drawing.Point(233, 1);
+            this.Username_textbox.CustomButton.Name = "";
+            this.Username_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Username_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Username_textbox.CustomButton.TabIndex = 1;
+            this.Username_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Username_textbox.CustomButton.UseSelectable = true;
+            this.Username_textbox.CustomButton.Visible = false;
+            this.Username_textbox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.Username_textbox.Lines = new string[0];
+            this.Username_textbox.Location = new System.Drawing.Point(46, 52);
+            this.Username_textbox.MaxLength = 32767;
+            this.Username_textbox.Name = "Username_textbox";
+            this.Username_textbox.PasswordChar = '\0';
+            this.Username_textbox.PromptText = "Username";
+            this.Username_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Username_textbox.SelectedText = "";
+            this.Username_textbox.SelectionLength = 0;
+            this.Username_textbox.SelectionStart = 0;
+            this.Username_textbox.ShortcutsEnabled = true;
+            this.Username_textbox.Size = new System.Drawing.Size(255, 23);
+            this.Username_textbox.TabIndex = 0;
+            this.Username_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Username_textbox.UseSelectable = true;
+            this.Username_textbox.WaterMark = "Username";
+            this.Username_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Username_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            this.passwordBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.passwordBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passwordBox.Font = new System.Drawing.Font("Segoe UI Light", 14F);
-            this.passwordBox.Location = new System.Drawing.Point(161, 159);
-            this.passwordBox.Name = "passwordBox";
-            this.passwordBox.PasswordChar = '*';
-            this.passwordBox.Size = new System.Drawing.Size(281, 32);
-            this.passwordBox.TabIndex = 2;
+            // Password_textbox
             // 
-            // loginButton
             // 
-            this.loginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.loginButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.loginButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.loginButton.FlatAppearance.BorderSize = 0;
-            this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.ForeColor = System.Drawing.Color.White;
-            this.loginButton.Location = new System.Drawing.Point(188, 237);
-            this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(122, 36);
-            this.loginButton.TabIndex = 1;
-            this.loginButton.Text = "Login";
-            this.loginButton.UseVisualStyleBackColor = false;
             // 
-            // passwordText
             // 
-            this.passwordText.AutoSize = true;
-            this.passwordText.BackColor = System.Drawing.Color.Transparent;
-            this.passwordText.Font = new System.Drawing.Font("Segoe UI Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordText.ForeColor = System.Drawing.Color.White;
-            this.passwordText.Location = new System.Drawing.Point(16, 158);
-            this.passwordText.Name = "passwordText";
-            this.passwordText.Size = new System.Drawing.Size(132, 38);
-            this.passwordText.TabIndex = 0;
-            this.passwordText.Text = "Password:";
+            this.Password_textbox.CustomButton.Image = null;
+            this.Password_textbox.CustomButton.Location = new System.Drawing.Point(233, 1);
+            this.Password_textbox.CustomButton.Name = "";
+            this.Password_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Password_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Password_textbox.CustomButton.TabIndex = 1;
+            this.Password_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Password_textbox.CustomButton.UseSelectable = true;
+            this.Password_textbox.CustomButton.Visible = false;
+            this.Password_textbox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.Password_textbox.Lines = new string[0];
+            this.Password_textbox.Location = new System.Drawing.Point(46, 97);
+            this.Password_textbox.MaxLength = 32767;
+            this.Password_textbox.Name = "Password_textbox";
+            this.Password_textbox.PasswordChar = '*';
+            this.Password_textbox.PromptText = "Password";
+            this.Password_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Password_textbox.SelectedText = "";
+            this.Password_textbox.SelectionLength = 0;
+            this.Password_textbox.SelectionStart = 0;
+            this.Password_textbox.ShortcutsEnabled = true;
+            this.Password_textbox.Size = new System.Drawing.Size(255, 23);
+            this.Password_textbox.TabIndex = 1;
+            this.Password_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Password_textbox.UseSelectable = true;
+            this.Password_textbox.WaterMark = "Password";
+            this.Password_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Password_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // label5
+            // login_button
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(154, 163);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(301, 33);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "______________________";
+            this.login_button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_button.Location = new System.Drawing.Point(92, 172);
+            this.login_button.Name = "login_button";
+            this.login_button.Size = new System.Drawing.Size(180, 39);
+            this.login_button.TabIndex = 2;
+            this.login_button.Text = "Log in";
+            this.login_button.UseVisualStyleBackColor = true;
+            this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
-            // label4
+            // peek_button
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(154, 91);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(301, 33);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "______________________";
-            // 
-            // usernameText
-            // 
-            this.usernameText.AutoSize = true;
-            this.usernameText.BackColor = System.Drawing.Color.Transparent;
-            this.usernameText.Font = new System.Drawing.Font("Segoe UI Light", 16F);
-            this.usernameText.ForeColor = System.Drawing.Color.White;
-            this.usernameText.Location = new System.Drawing.Point(12, 86);
-            this.usernameText.Name = "usernameText";
-            this.usernameText.Size = new System.Drawing.Size(136, 37);
-            this.usernameText.TabIndex = 0;
-            this.usernameText.Text = "Username:";
-            // 
-            // Title
-            // 
-            this.Title.AutoSize = true;
-            this.Title.BackColor = System.Drawing.Color.Transparent;
-            this.Title.Font = new System.Drawing.Font("Segoe UI Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.ForeColor = System.Drawing.Color.White;
-            this.Title.Location = new System.Drawing.Point(161, 5);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(177, 38);
-            this.Title.TabIndex = 0;
-            this.Title.Text = "Parish System";
-            // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.Transparent;
-            this.closeButton.BackgroundImage = global::ParishSystem.Properties.Resources.btn_closeImage;
-            this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.closeButton.FlatAppearance.BorderSize = 0;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.ForeColor = System.Drawing.Color.White;
-            this.closeButton.Location = new System.Drawing.Point(426, 3);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(54, 37);
-            this.closeButton.TabIndex = 1;
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.peek_button.Location = new System.Drawing.Point(307, 97);
+            this.peek_button.Name = "peek_button";
+            this.peek_button.Size = new System.Drawing.Size(28, 23);
+            this.peek_button.TabIndex = 3;
+            this.peek_button.UseVisualStyleBackColor = true;
+            this.peek_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.peek_button_MouseDown);
+            this.peek_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.peek_button_MouseUp);
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.BackgroundImage = global::ParishSystem.Properties.Resources.LoginFormBackground;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(492, 404);
-            this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.Title);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(371, 269);
+            this.Controls.Add(this.peek_button);
+            this.Controls.Add(this.login_button);
+            this.Controls.Add(this.Password_textbox);
+            this.Controls.Add(this.Username_textbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
-            this.Text = "Login";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "LoginForm";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox usernameBox;
-        private System.Windows.Forms.TextBox passwordBox;
-        private System.Windows.Forms.Button loginButton;
-        private System.Windows.Forms.Label passwordText;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label usernameText;
-        private System.Windows.Forms.Label Title;
-        private System.Windows.Forms.Button closeButton;
+        private MetroFramework.Controls.MetroTextBox Username_textbox;
+        private MetroFramework.Controls.MetroTextBox Password_textbox;
+        private System.Windows.Forms.Button login_button;
+        private System.Windows.Forms.Button peek_button;
     }
 }

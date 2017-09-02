@@ -163,6 +163,8 @@ namespace ParishSystem
 
 
         public static State
+            WrongCredentials = new State("Wrong username or password", NotificationType.warning),
+            DuplicateUsername = new State("This username is taken", NotificationType.warning),
             InnvalidDononationID = new State("No donation ID was found", NotificationType.warning),
             InvalidTransaction = new State("Cannot add an entry with no items", NotificationType.warning),
             CannotDeleteBloodEvent = new State("Cannot delete blood donation events with donations", NotificationType.warning),
