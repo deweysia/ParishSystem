@@ -84,7 +84,7 @@
             this.panel_controlbox.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayout_ControlButtons.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.content_panel.SuspendLayout();
             this.Menu_panel.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.bloodlettingmenu_panel.SuspendLayout();
@@ -93,7 +93,6 @@
             this.CDBreport_panel.SuspendLayout();
             this.CRBreport_panel.SuspendLayout();
             this.itemtypemenu_panel.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.Workspace_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -858,6 +857,33 @@
             this.itemtypemenu_button.UseVisualStyleBackColor = false;
             this.itemtypemenu_button.Click += new System.EventHandler(this.tile_Click);
             // 
+            // ministers_button_menu
+            // 
+            this.ministers_button_menu.Location = new System.Drawing.Point(583, 207);
+            this.ministers_button_menu.Name = "ministers_button_menu";
+            this.ministers_button_menu.Size = new System.Drawing.Size(75, 23);
+            this.ministers_button_menu.TabIndex = 50;
+            // 
+            // imageListMenu
+            // 
+            this.imageListMenu.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageListMenu.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageListMenu.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel1.TabIndex = 62;
+            // 
+            // OpenMenu_button
+            // 
+            this.OpenMenu_button.Location = new System.Drawing.Point(0, 0);
+            this.OpenMenu_button.Name = "OpenMenu_button";
+            this.OpenMenu_button.Size = new System.Drawing.Size(75, 23);
+            this.OpenMenu_button.TabIndex = 0;
+            // 
             // Workspace_panel
             // 
             this.Workspace_panel.BackColor = System.Drawing.Color.White;
@@ -883,7 +909,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.flowLayout_ControlButtons.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.content_panel.ResumeLayout(false);
             this.Menu_panel.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.bloodlettingmenu_panel.ResumeLayout(false);
@@ -892,7 +918,6 @@
             this.CDBreport_panel.ResumeLayout(false);
             this.CRBreport_panel.ResumeLayout(false);
             this.itemtypemenu_panel.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.Workspace_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
