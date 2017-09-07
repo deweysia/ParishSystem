@@ -12,6 +12,8 @@ using System.Drawing.Imaging;
 using PdfSharp;
 using PdfSharp.Pdf;
 using PdfSharp.Drawing;
+using System.IO;
+using System.Drawing.Printing;
 
 
 
@@ -20,11 +22,13 @@ namespace DatabasePopulator
 {
     public partial class BaptismalPreview : Form
     {
+
+
         public BaptismalPreview(String baptizedName, String bPlace
             , String bdate, String fname, String mname
             , String fOrigin, String mOrigin, String datemonthyear, String sponsorsname, String issueDate
 
-            , String rno, String bno, String pno, String purpose, String OMinister)
+            , String rno, String bno, String pno, String OMinister, String purpose)
         {
             InitializeComponent();
 
@@ -119,15 +123,23 @@ private void Form1_Load(object sender, EventArgs e)
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e) 
         {
+
+            
             int width = panel1.Size.Width;
             int height = panel1.Size.Height;
 
+            saveFileDialog1.ShowDialog();
+            string filepath = saveFileDialog1.FileName;
+                
             Bitmap bm = new Bitmap(width, height);
             panel1.DrawToBitmap(bm, new Rectangle(0, 0, width, height));
 
-            bm.Save(@"C://Users//Josh//Desktop//Reports//temp2.bmp", ImageFormat.Bmp);
+
+            string tempFolder = Path.GetTempPath();
+            bm.Save(tempFolder + "//temp2.bmp", ImageFormat.Bmp);
+                
 
             // --------------------DOCUMENT---------------------- //
 
@@ -137,19 +149,23 @@ private void Form1_Load(object sender, EventArgs e)
             page.Width = width;
             page.Orientation = PageOrientation.Portrait;
             doc.Pages.Add(page);
-            
-            
+
+
             XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
 
-            
 
-            XImage poop = XImage.FromFile("C://Users//Josh//Desktop//Reports//temp2.bmp");
 
-            xgr.DrawImage(poop, 0, 0, width, height);
-            doc.Save("C://Users//Josh//Desktop//Reports//Report.pdf");
+            XImage saved = XImage.FromFile(tempFolder + "//temp2.bmp");
+
+            xgr.DrawImage(saved, 0, 0, width, height);
+            doc.Save(filepath);
+
             doc.Close();
-
+            this.Close();
             
+           
+           
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -159,9 +175,54 @@ private void Form1_Load(object sender, EventArgs e)
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            int width = panel1.Size.Width;
+            int height = panel1.Size.Height;
+
+            Bitmap bm = new Bitmap(width, height);
+            panel1.DrawToBitmap(bm, new Rectangle(0, 0, width, height));
+
+
+            string tempFolder = Path.GetTempPath();
+            bm.Save(tempFolder + "//temp2.bmp", ImageFormat.Bmp);
+
+
+            // --------------------DOCUMENT---------------------- //
+
+            PdfDocument doc = new PdfDocument();
+            PdfPage page = new PdfPage();
+            page.Height = height;
+            page.Width = width;
+            page.Orientation = PageOrientation.Portrait;
+            doc.Pages.Add(page);
+
+
+            XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
+            XImage saved = XImage.FromFile(tempFolder + "\\temp2.bmp");
+
+            xgr.DrawImage(saved, 0, 0, width, height);
+
+            string filepath = tempFolder + "tempreport.pdf";
+            doc.Save(filepath);
+
+            doc.Close();
+
+            // ---------------------PRINTING------------------//
+            
+            printDocument1.DocumentName = "nope.pdf";
+            
+            printDocument1.
+
+
         }
 
-      
+        private void printDocument1_PrintPage_1(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+        }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

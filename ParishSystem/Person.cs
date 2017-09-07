@@ -107,7 +107,7 @@ namespace ParishSystem
 
         public void load_Baptism()
         {
-            baptism_sponsor_dgv.DataSource = dh.getSponsors("bap",ProfileID);
+      //      baptism_sponsor_dgv.DataSource = dh.getSponsors("bap",ProfileID);
 
 
 
@@ -187,7 +187,7 @@ namespace ParishSystem
 
         }
 
-        private void confirmation_button_Click(object sender, EventArgs e)
+  /*      private void confirmation_button_Click(object sender, EventArgs e)
         {
             if (dh.hasConfirmaionApplication(ProfileID))
             {
@@ -204,6 +204,7 @@ namespace ParishSystem
                 dh.addApplication(ProfileID, "conf");
             }
         }
+        */
 
         private void marriage_button_Click(object sender, EventArgs e)
         {
@@ -231,7 +232,7 @@ namespace ParishSystem
         {
             if (dh.hasBaptismApplication(ProfileID)) { baptism_button.BackColor = Color.Green; } else { baptism_button.BackColor = Color.Red; }
             if (dh.hasMarriageApplication(ProfileID)) { marriage_button.BackColor = Color.Green; } else { marriage_button.BackColor = Color.Red; }
-            if (dh.hasConfirmaionApplication(ProfileID)) { confirmation_button.BackColor = Color.Green; } else { confirmation_button.BackColor = Color.Red; }
+         //   if (dh.hasConfirmaionApplication(ProfileID)) { confirmation_button.BackColor = Color.Green; } else { confirmation_button.BackColor = Color.Red; }
 
         }
     }

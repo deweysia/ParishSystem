@@ -351,7 +351,7 @@
             this.confirmation_button.TabIndex = 3;
             this.confirmation_button.Text = "Confirmation";
             this.confirmation_button.UseVisualStyleBackColor = true;
-            this.confirmation_button.Click += new System.EventHandler(this.confirmation_button_Click);
+         //   this.confirmation_button.Click += new System.EventHandler(this.confirmation_button_Click);
             // 
             // marriage_button
             // 
