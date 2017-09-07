@@ -75,7 +75,6 @@
             this.itemtypemenuCRB_button = new System.Windows.Forms.Button();
             this.itemtypemenu_button = new System.Windows.Forms.Button();
             this.ministers_button_menu = new System.Windows.Forms.Button();
-            this.imageListMenu = new System.Windows.Forms.ImageList(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.OpenMenu_button = new System.Windows.Forms.Button();
             this.MenuTimer = new System.Windows.Forms.Timer(this.components);
@@ -874,18 +873,6 @@
             this.ministers_button_menu.UseVisualStyleBackColor = false;
             this.ministers_button_menu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ministers_button_menu_MouseUp);
             // 
-            // imageListMenu
-            // 
-            this.imageListMenu.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMenu.ImageStream")));
-            this.imageListMenu.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListMenu.Images.SetKeyName(0, "Home.png");
-            this.imageListMenu.Images.SetKeyName(1, "Gender.png");
-            this.imageListMenu.Images.SetKeyName(2, "HeartPulse.png");
-            this.imageListMenu.Images.SetKeyName(3, "ReportCard.png");
-            this.imageListMenu.Images.SetKeyName(4, "Money.png");
-            this.imageListMenu.Images.SetKeyName(5, "Resume_96px.png");
-            this.imageListMenu.Images.SetKeyName(6, "Holy Bible_96px.png");
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
@@ -974,7 +961,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayout_ControlButtons;
         private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.Button btn_Max;
-        private System.Windows.Forms.ImageList imageListMenu;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button OpenMenu_button;
         private System.Windows.Forms.Timer MenuTimer;
