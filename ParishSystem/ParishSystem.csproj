@@ -326,12 +326,6 @@
     <Compile Include="SacramentModule.Designer.cs">
       <DependentUpon>SacramentModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="SAD2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SAD2.Designer.cs">
-      <DependentUpon>SAD2.cs</DependentUpon>
-    </Compile>
     <Compile Include="ScheduleModule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -453,9 +447,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SacramentModule.resx">
       <DependentUpon>SacramentModule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SAD2.resx">
-      <DependentUpon>SAD2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ScheduleModule.resx">
       <DependentUpon>ScheduleModule.cs</DependentUpon>
