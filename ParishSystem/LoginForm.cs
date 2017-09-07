@@ -12,27 +12,35 @@ namespace ParishSystem
 {
     public partial class LoginForm : Form
     {
+        Login login = new Login();
         public LoginForm()
         {
-            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             InitializeComponent();
-
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
+        private void login_button_Click(object sender, EventArgs e)
         {
-            usernameBox.BackColor = Color.Transparent;
-            passwordBox.BackColor = Color.Transparent;
+           if(login.verify(Username_textbox.Text, Password_textbox.Text))
+            {
+                this.Hide();
+                SAD2 sad = new SAD2(Username_textbox.Text);
+                sad.ShowDialog();
+                this.Show();
+            }
+           else
+            {
+                Notification.Show(State.WrongCredentials);
+            }
         }
 
-        private void usernameBox_TextChanged(object sender, EventArgs e)
+        private void peek_button_MouseDown(object sender, MouseEventArgs e)
         {
-
+            Password_textbox.PasswordChar = '\0';   
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
+        private void peek_button_MouseUp(object sender, MouseEventArgs e)
         {
-            this.Close();
+            Password_textbox.PasswordChar = '*';
         }
     }
 }

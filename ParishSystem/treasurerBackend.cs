@@ -8,7 +8,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using Excel = Microsoft.Office.Interop.Excel;
-
+using System.Security.Cryptography;
 
 namespace ParishSystem
 {
@@ -988,6 +988,61 @@ namespace ParishSystem
             string q = $@"UPDATE `sad2`.`blooddonation` SET `bloodclaimant`='{claimantID}' WHERE `bloodDonationID`='{bloodDonationID}'";
             runNonQuery(q);
         }
-       
+        public DataTable getDonationClaims()
+        {
+            string q = $@"select *, concat(blooddonor.lastname,"" "",coalesce(blooddonor.suffix,"" ""),"" "",blooddonor.firstName,"" "",blooddonor.midname,""."")as Donor,
+                        concat(bloodclaimant.lastname, "" "", coalesce(bloodclaimant.suffix, "" ""), "" "", bloodclaimant.firstName, "" "", bloodclaimant.midname, ""."") as Claimant
+                        from blooddonation inner join bloodclaimant on bloodclaimant.bloodclaimantID = blooddonation.bloodclaimant inner
+                        join blooddonor on blooddonor.blooddonorID = blooddonation.profileID order by donationID desc";
+            return runQuery(q);
+        }
+        public DataTable getDonationClaimsWhereDonationIDLike(string like)
+        {
+            string q = $@"select *, concat(blooddonor.lastname,"" "",coalesce(blooddonor.suffix,"" ""),"" "",blooddonor.firstName,"" "",blooddonor.midname,""."")as Donor,
+                        concat(bloodclaimant.lastname, "" "", coalesce(bloodclaimant.suffix, "" ""), "" "", bloodclaimant.firstName, "" "", bloodclaimant.midname, ""."") as Claimant
+                        from blooddonation inner join bloodclaimant on bloodclaimant.bloodclaimantID = blooddonation.bloodclaimant inner
+                        join blooddonor on blooddonor.blooddonorID = blooddonation.profileID where donationID like ""%{like}%"" order by donationID desc";
+            return runQuery(q);
+        }
+        public void AddUser(string fn, string mn, string ln, string sf, string username, string password)
+        {
+            byte[] salt;
+            new RNGCryptoServiceProvider().GetBytes(salt = new byte[16]);
+            var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 1000);
+            byte[] hash = pbkdf2.GetBytes(20);
+            byte[] hashBytes = new byte[36];
+            Array.Copy(salt, 0, hashBytes, 0, 16);
+            Array.Copy(hash, 0, hashBytes, 16, 20);
+            string savedPasswordHash = Convert.ToBase64String(hashBytes);
+            string q = $@"INSERT INTO `sad2`.`employee` (`firstname`, `midname`, `lastname`, `suffix`, `username`, `pass`) VALUES ('{fn}', '{mn}', '{ln}', '{sf}', '{username}', '{savedPasswordHash}');";
+            runNonQuery(q);
+        }
+
+     
+
+        public void editEmployeeResetPassword(string fn, string mn, string ln, string sf, string username, string password, bool status, int employeeID)
+        {
+            byte[] salt;
+            new RNGCryptoServiceProvider().GetBytes(salt = new byte[16]);
+            var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 1000);
+            byte[] hash = pbkdf2.GetBytes(20);
+            byte[] hashBytes = new byte[36];
+            Array.Copy(salt, 0, hashBytes, 0, 16);
+            Array.Copy(hash, 0, hashBytes, 16, 20);
+            string savedPasswordHash = Convert.ToBase64String(hashBytes);
+            string q = $@"UPDATE `sad2`.`employee` SET `firstname`='{fn}', `midname`='{mn}', `lastname`='{ln}', `suffix`='{sf}', `username`='{username}', `pass`='{password}',`status`='{(status ? 1 : 2)}' WHERE `employeeID`='{employeeID}';";
+            runNonQuery(q);
+        }
+        public void editEmployee(string fn, string mn, string ln, string sf, string username, bool status, int employeeID)
+        {
+            string q = $@"UPDATE `sad2`.`employee` SET `firstname`='{fn}', `midname`='{mn}', `lastname`='{ln}', `suffix`='{sf}', `username`='{username}', `status`='{(status ? 1 : 2)}'  WHERE `employeeID`='{employeeID}';";
+            runNonQuery(q);
+        }
+
+        public DataTable getEmployees()
+        {
+            return runQuery($@"SELECT *,case when status = 1 then ""Active"" else ""Inactive"" end as WStatus ,concat(lastname,"" "",coalesce(suffix,"" ""),"" "",firstName,"" "",midname,""."")as name FROM sad2.employee ");
+        }
+
     }
 }

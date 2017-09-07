@@ -37,7 +37,6 @@
             this.flowLayout_ControlButtons = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_Close = new System.Windows.Forms.Button();
             this.btn_Max = new System.Windows.Forms.Button();
-            this.time_Text = new System.Windows.Forms.Label();
             this.content_panel = new System.Windows.Forms.Panel();
             this.Menu_panel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -103,7 +102,6 @@
             this.panel_controlbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.panel_controlbox.Controls.Add(this.panel2);
             this.panel_controlbox.Controls.Add(this.flowLayout_ControlButtons);
-            this.panel_controlbox.Controls.Add(this.time_Text);
             this.panel_controlbox.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_controlbox.Location = new System.Drawing.Point(0, 0);
             this.panel_controlbox.Name = "panel_controlbox";
@@ -188,19 +186,6 @@
             this.btn_Max.TabIndex = 33;
             this.btn_Max.UseVisualStyleBackColor = true;
             this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
-            // 
-            // time_Text
-            // 
-            this.time_Text.AutoSize = true;
-            this.time_Text.BackColor = System.Drawing.Color.Transparent;
-            this.time_Text.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.time_Text.ForeColor = System.Drawing.Color.White;
-            this.time_Text.Location = new System.Drawing.Point(4, 6);
-            this.time_Text.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.time_Text.Name = "time_Text";
-            this.time_Text.Size = new System.Drawing.Size(61, 19);
-            this.time_Text.TabIndex = 35;
-            this.time_Text.Text = "HH:MM";
             // 
             // content_panel
             // 
@@ -893,8 +878,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SAD2";
             this.Text = "SAD2";
+            this.Load += new System.EventHandler(this.SAD2_Load);
             this.panel_controlbox.ResumeLayout(false);
-            this.panel_controlbox.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.flowLayout_ControlButtons.ResumeLayout(false);
@@ -921,7 +906,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayout_ControlButtons;
         private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.Button btn_Max;
-        private System.Windows.Forms.Label time_Text;
         private System.Windows.Forms.ImageList imageListMenu;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button OpenMenu_button;

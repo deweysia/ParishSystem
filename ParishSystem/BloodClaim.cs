@@ -22,11 +22,11 @@ namespace ParishSystem
         {
             if (donationAdd.Tag.ToString()=="a") {
                 int a;
-                a = dh.getDonationIDPrimaryKey(DonationID_textbox.Text);
+                a = dh.getDonationIDPrimaryKey(label2.Text);
                 if (a!=-1)
                 {
                     int index = BloodDonationsDGV.Rows.Add();
-                    BloodDonationsDGV.Rows[index].Cells[0].Value = DonationID_textbox.Text;
+                    BloodDonationsDGV.Rows[index].Cells[0].Value = label2.Text;
                     BloodDonationsDGV.Rows[index].Cells[1].Value = a.ToString();
                     DonationID_textbox.Clear();
                     donationAdd.Enabled = false;
@@ -39,10 +39,10 @@ namespace ParishSystem
             else
             {
                 int a;
-                a = dh.getDonationIDPrimaryKey(DonationID_textbox.Text);
+                a = dh.getDonationIDPrimaryKey(label2.Text);
                 if (a != -1)
                 {
-                    BloodDonationsDGV.SelectedRows[0].Cells[0].Value = DonationID_textbox.Text;
+                    BloodDonationsDGV.SelectedRows[0].Cells[0].Value = label2.Text;
                     BloodDonationsDGV.SelectedRows[0].Cells[1].Value = a.ToString();
                     DonationID_textbox.Clear();
                     donationAdd.Tag = "a";
@@ -59,7 +59,7 @@ namespace ParishSystem
 
         private void BloodDonationsDGV_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DonationID_textbox.Text = BloodDonationsDGV.SelectedRows[0].Cells[0].Value.ToString();
+            label2.Text = BloodDonationsDGV.SelectedRows[0].Cells[0].Value.ToString();
             donationDelete.Enabled = true;
             donationAdd.Text = "Edit";
             donationAdd.Tag = "e";
@@ -76,7 +76,7 @@ namespace ParishSystem
 
         private void DonationID_textbox_TextChanged(object sender, EventArgs e)
         {
-            if (DonationID_textbox.Text != "")
+            if (label2.Text != "")
             {
                 donationAdd.Enabled = true;
             }

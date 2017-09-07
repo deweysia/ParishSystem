@@ -131,11 +131,11 @@
     <Compile Include="BloodClaim.Designer.cs">
       <DependentUpon>BloodClaim.cs</DependentUpon>
     </Compile>
-    <Compile Include="BloodDonor.cs">
+    <Compile Include="BloodClaimView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BloodDonor.Designer.cs">
-      <DependentUpon>BloodDonor.cs</DependentUpon>
+    <Compile Include="BloodClaimView.Designer.cs">
+      <DependentUpon>BloodClaimView.cs</DependentUpon>
     </Compile>
     <Compile Include="BloodlettingEventPopUp.cs">
       <SubType>Form</SubType>
@@ -206,6 +206,12 @@
       <DependentUpon>DemoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Draggable.cs" />
+    <Compile Include="EmployeeModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeModule.Designer.cs">
+      <DependentUpon>EmployeeModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,13 @@
     </Compile>
     <Compile Include="ItemTypes_Module.Designer.cs">
       <DependentUpon>ItemTypes_Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MinisterModule.cs">
       <SubType>Form</SubType>
@@ -350,8 +363,8 @@
     <EmbeddedResource Include="BloodClaim.resx">
       <DependentUpon>BloodClaim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BloodDonor.resx">
-      <DependentUpon>BloodDonor.cs</DependentUpon>
+    <EmbeddedResource Include="BloodClaimView.resx">
+      <DependentUpon>BloodClaimView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BloodlettingEventPopUp.resx">
       <DependentUpon>BloodlettingEventPopUp.cs</DependentUpon>
@@ -386,6 +399,9 @@
     <EmbeddedResource Include="DemoForm.resx">
       <DependentUpon>DemoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeModule.resx">
+      <DependentUpon>EmployeeModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -397,6 +413,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ItemTypes_Module.resx">
       <DependentUpon>ItemTypes_Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MinisterModule.resx">
       <DependentUpon>MinisterModule.cs</DependentUpon>
