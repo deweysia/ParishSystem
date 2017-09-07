@@ -85,7 +85,6 @@
             this.panel_controlbox.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayout_ControlButtons.SuspendLayout();
-            this.content_panel.SuspendLayout();
             this.Menu_panel.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.bloodlettingmenu_panel.SuspendLayout();
@@ -205,7 +204,6 @@
             // content_panel
             // 
             this.content_panel.BackColor = System.Drawing.Color.White;
-            this.content_panel.Controls.Add(this.Menu_panel);
             this.content_panel.Location = new System.Drawing.Point(0, 0);
             this.content_panel.Name = "content_panel";
             this.content_panel.Size = new System.Drawing.Size(935, 547);
@@ -880,7 +878,6 @@
             this.ministers_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ministers_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ministers_button_menu.ForeColor = System.Drawing.Color.White;
-            this.ministers_button_menu.Image = ((System.Drawing.Image)(resources.GetObject("ministers_button_menu.Image")));
             this.ministers_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ministers_button_menu.Location = new System.Drawing.Point(580, 204);
             this.ministers_button_menu.Margin = new System.Windows.Forms.Padding(0);
@@ -947,6 +944,7 @@
             // Workspace_panel
             // 
             this.Workspace_panel.BackColor = System.Drawing.Color.White;
+            this.Workspace_panel.Controls.Add(this.Menu_panel);
             this.Workspace_panel.Controls.Add(this.content_panel);
             this.Workspace_panel.Location = new System.Drawing.Point(57, 33);
             this.Workspace_panel.Name = "Workspace_panel";
@@ -969,7 +967,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.flowLayout_ControlButtons.ResumeLayout(false);
-            this.content_panel.ResumeLayout(false);
             this.Menu_panel.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.bloodlettingmenu_panel.ResumeLayout(false);
