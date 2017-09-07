@@ -1,0 +1,2999 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KellermanSoftware.Excel-Reports</name>
+    </assembly>
+    <members>
+        <member name="T:KellermanSoftware.ExcelReports.CellFormat">
+            <summary>
+            Specify the Excel Cell Format
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.ExcelReports.CellFormat.General">
+            <summary>
+            Excel General Format
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.ExcelReports.CellFormat.Text">
+            <summary>
+            Everything formatted as text even if it is something other than a text data type
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.ExcelReports.CellFormat.Currency">
+            <summary>
+            Excel Currency Format
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.ExcelReports.CellFormat.Percent">
+            <summary>
+            Excel Percent Format
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.ExcelReports.CellFormat.Integer">
+            <summary>
+            Format a number as an integer
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.ExcelReports.CellFormat.Real">
+            <summary>
+            Format a number as a real number with two decimal places
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.ExcelReports.CellFormat.LongDate">
+            <summary>
+            Format a date in a verbose format
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.ExcelReports.CellFormat.ShortDate">
+            <summary>
+            Format a date in a short format
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.ExcelReports.CellFormat.Time">
+            <summary>
+            Format as a time 
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.ExcelReports.CellFormat.DateAndTime">
+            <summary>
+            Show both the date and the time
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.ExcelReports.CellFormat.Scientific">
+            <summary>
+            Format a number in scientific format
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.ExcelReports.CellFormat.CustomExcel">
+            <summary>
+            Format using a custom Excel format specifier
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.ExcelReports.CellFormat.CustomNet">
+            <summary>
+            Format using a custom .NET format specifier
+            </summary>
+        </member>
+        <member name="T:KellermanSoftware.ExcelReports.ColumnDefinition">
+            <summary>
+            Defines the formatting and other options for a column
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ColumnDefinition.#ctor(System.String)">
+            <summary>
+            Setup Defaults
+            </summary>
+            <param name="columnName">The name of the column, must match exactly with the CSV Header Name, Class Property Name, or Data Table Column Name</param>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.ColumnDefinition.ColumnName">
+            <summary>
+            The name of the column, must match exactly with the CSV Header Name, Class Property Name, or Data Table Column Name
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.ColumnDefinition.HeaderText">
+            <summary>
+            The text for the header of the column
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.ColumnDefinition.Format">
+            <summary>
+            The Excel Format to use
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.ColumnDefinition.CustomFormatString">
+            <summary>
+            A .NET Custom Format String or Excel Custom Format String.
+            Set the CellFormat to CustomNet or CustomExcel respectively.
+            </summary>
+            <remarks>
+            	<para>Example .NET Format For Numbers:</para>
+            	<para>
+            		<see cref="!:http://msdn.microsoft.com/en-us/library/0c899ak8.aspx"/>
+            	</para>
+            	<para></para>
+            	<para>Example .NET Format For Dates:</para>
+            	<para>
+            		<see cref="!:http://msdn.microsoft.com/en-us/library/8kb3ddd4.aspx"/>
+            	</para>
+            	<para></para>
+            	<para>Reference for Excel Formats:</para>
+            	<para>
+            		<see cref="!:http://office.microsoft.com/en-us/excel-help/number-format-codes-HP005198679.aspx"/>
+            	</para>
+            	<para></para>
+            	<para>Examples for Excel Custom Format:</para>
+            	<list type="bullet">
+            		<item>Text:  @</item>
+            		<item>Integer:  #,##0</item>
+            		<item>Currency:  [$$-409]#,##0.00</item>
+            		<item>Real:  #,##0.00</item>
+            		<item>Long Date:  [$-F800]dddd\\,\\ mmmm\\ dd\\,\\ yyyy</item>
+            		<item>Short Date:  mm-dd-yy</item>
+            		<item>Percent:  0%</item>
+            		<item>Real Percent:  0.00%</item>
+            		<item>Time:  [$-F400]h:mm:ss\\ AM/PM</item>
+            		<item>Date and Time:  [$-409]m/d/yy\\ h:mm\\ AM/PM;@</item>
+            		<item>Scientific:  0.000E+00</item>
+            	</list>
+            </remarks>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.ColumnDefinition.AddTotalAtTheEnd">
+            <summary>
+            Add a total (sum) at the end of this column
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.ColumnDefinition.BackgroundColor">
+            <summary>
+            The background color of the cell. The default is White
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.ColumnDefinition.ForegroundColor">
+            <summary>
+            The foreground color of the cell. The default is Black
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.ColumnDefinition.TotalBold">
+            <summary>
+            Determines if the Total for this column will be bolded.  
+            Works in conjunction with AddTotalAtTheEnd.
+            The default is true.
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.Common.InsertSpaces(System.String)">
+            <summary>
+            Insert spaces into a string 
+            </summary>
+            <example>
+            OrderDetails = Order Details
+            10Net30 = 10 Net 30
+            FTPHost = FTP Host
+            </example> 
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KellermanSoftware.ExcelReports.Configuration">
+            <summary>
+            Global configuration for Excel Reports
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.Configuration.#ctor">
+            <summary>
+            Initialize Defaults
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Configuration.CreateHeader">
+            <summary>
+            Create a header for the worksheet. The default is true.
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Configuration.HeaderBackgroundColor">
+            <summary>
+            The background color of the header. The default is Black
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Configuration.HeaderForegroundColor">
+            <summary>
+            The foreground color of the header. The default is White
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Configuration.InsertSpacesIntoHeaderColumns">
+            <summary>
+            Insert spaces into header columns based on capitilization. The default is True
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Configuration.InsertSpacesIntoEnumValues">
+            <summary>
+            Insert spaces into enum values based on capitilization. The default is True
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Configuration.TrueText">
+            <summary>
+            The text when a boolean is true. The default is True
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Configuration.FalseText">
+            <summary>
+            The text when a boolean is false. The default is False
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Configuration.MinValueDateText">
+            <summary>
+            The default text when a date is DateTime.MinValue. The default is string.Empty
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Configuration.NullText">
+            <summary>
+            The default text when a value is null. The default is string.Empty.
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Configuration.NoItemsMessage">
+            <summary>
+            When there are no items in a list or data table or just the header for CSV, 
+            the NoItemsMessage will show on the second row
+            The default is "No items found"
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Configuration.UseGrayBar">
+            <summary>
+            If true, every other row will be highlighted in the GrayBarColor.  
+            This is used when generating from a list or CSV
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Configuration.GrayBarColor">
+            <summary>
+            The Background color when UseGrayBar is true
+            </summary>
+        </member>
+        <member name="T:KellermanSoftware.ExcelReports.CsvReader">
+            <summary>
+            Class to read CSV files.  Handles Quoted Quotes, Escaped Quotes, Delimiters within fields, and New Lines within fields
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.CsvReader.CsvStringToDataTable(System.String)">
+            <summary>
+            Read a CSV string into a DataTable.  
+            There must be a header row and the column names must be alpha numeric.
+            </summary>
+            <param name="csvString">A CSV String</param>
+            <returns></returns>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            CsvReader csvReader = new CsvReader(); //Trial Mode
+            //CsvReader csvReader = new CsvReader("place user name here", "place license key here"); //License Mode            
+             
+            string csvString = "FirstName,LastName\r\nJohn,Smith";
+             
+            DataTable results = csvReader.CsvStringToDataTable(csvString);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim csvReader As New CsvReader() 'Trial Mode
+            'Dim csvReader As New CsvReader("place user name here", "place license key here") 'License Mode            
+             
+            Dim csvString As String = "FirstName,LastName" &amp; vbCrLf &amp; "John,Smith"
+             
+            Dim results As DataTable = csvReader.CsvStringToDataTable(csvString)</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.CsvReader.CsvFileToDataTable(System.String)">
+            <summary>
+            Read a CSV file into a DataTable.
+            There must be a header row and the column names must be alpha numeric.
+            </summary>
+            <param name="filePath">A fully qualified file path</param>
+            <returns></returns>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            CsvReader csvReader = new CsvReader(); //Trial Mode
+            //CsvReader csvReader = new CsvReader("place user name here", "place license key here"); //License Mode
+             
+            //Create a test file
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "testReader.csv");
+            File.WriteAllText(filePath, "Name,Birthdate\r\nJohn,5/30/2013");
+             
+            DataTable results = csvReader.CsvFileToDataTable(filePath);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim csvReader As New CsvReader() 'Trial Mode
+            'Dim csvReader As New CsvReader("place user name here", "place license key here") 'License Mode
+             
+            'Create a test file
+            Dim filePath As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "testReader.csv")
+            File.WriteAllText(filePath, "Name,Birthdate" &amp; vbCrLf &amp; "John,5/30/2013")
+             
+            Dim results As DataTable = csvReader.CsvFileToDataTable(filePath)</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.CsvReader.CsvStreamToDataTable(System.IO.Stream)">
+            <summary>
+            Read a CSV stream into a DataTable
+            </summary>
+            <param name="stream">A stream</param>
+            <returns></returns>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            CsvReader csvReader = new CsvReader(); //Trial Mode
+            //CsvReader csvReader = new CsvReader("place user name here", "place license key here"); //License Mode
+             
+            //Create a test file
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "testReader.csv");
+            File.WriteAllText(filePath,"Name,Birthdate\r\nJohn,5/30/2013");
+             
+            DataTable results;
+             
+            using (FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+            {
+                results = csvReader.CsvStreamToDataTable(stream);
+            }</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim csvReader As New CsvReader() 'Trial Mode
+            'Dim csvReader As New CsvReader("place user name here", "place license key here") 'License Mode
+             
+            'Create a test file
+            Dim filePath As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "testReader.csv")
+            File.WriteAllText(filePath,"Name,Birthdate" &amp; vbCrLf &amp; "John,5/30/2013")
+             
+            Dim results As DataTable
+             
+            Using stream As New FileStream(filePath, FileMode.Open, FileAccess.Read)
+                results = csvReader.CsvStreamToDataTable(stream)
+            End Using</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.CsvReader.CsvFileToObjectList``1(System.String)">
+            <summary>
+            Read a CSV file into a list of objects.  
+            Public properties are mapped by name, they are case sensitive.  
+            All mapped properties must be of type string or an exception will be thrown.  
+            Properties that do not exist are ignored.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="filePath"></param>
+            <returns></returns>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            //Example Mapping Class
+            public class TestMapper
+            {
+                public string Name { get; set; }
+                public string Birthdate { get; set; }
+            }
+             
+            CsvReader csvReader = new CsvReader(); //Trial Mode
+            //CsvReader csvReader = new CsvReader("place user name here", "place license key here"); //License Mode
+             
+            //Create a test file
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "testReader.csv");
+            File.WriteAllText(filePath, "Name,Birthdate\r\nJohn,5/30/2013");
+             
+            List&lt;NormalMapper&gt; results = csvReader.CsvFileToObjectList&lt;NormalMapper&gt;(filePath);
+            Console.WriteLine(results[0].Name);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            'Example Mapping Class
+            Public Class TestMapper
+                Public Property Name() As String
+                Public Property Birthdate() As String
+            End Class
+             
+            Dim csvReader As New CsvReader() 'Trial Mode
+            'Dim csvReader As New CsvReader("place user name here", "place license key here") 'License Mode
+             
+            'Create a test file
+            Dim filePath As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "testReader.csv")
+            File.WriteAllText(filePath, "Name,Birthdate" &amp; vbCrLf &amp; "John,5/30/2013")
+             
+            Dim results As List(Of NormalMapper) = csvReader.CsvFileToObjectList(Of NormalMapper)(filePath)
+            Console.WriteLine(results(0).Name)</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.CsvReader.CsvStringToObjectList``1(System.String)">
+            <summary>
+            Read a CSV string into a list of objects.  
+            Public properties are mapped by name, they are case sensitive.  
+            All mapped properties must be of type string or an exception will be thrown.  
+            Properties that do not exist are ignored.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="csvString"></param>
+            <returns></returns>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            //Example Mapping Class
+            public class TestMapper
+            {
+                public string Name { get; set; }
+                public string Birthdate { get; set; }
+            }
+             
+            CsvReader csvReader = new CsvReader(); //Trial Mode
+            //CsvReader csvReader = new CsvReader("place user name here", "place license key here"); //License Mode
+             
+            //Parameters
+            string csvString = "Name,Birthdate\r\nJohn,5/30/2013";
+             
+            List&lt;TestMapper&gt; results = csvReader.CsvStringToObjectList&lt;TestMapper&gt;(csvString);
+             
+            Console.WriteLine(results[0].Name);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            'Example Mapping Class
+            Public Class TestMapper
+                Public Property Name() As String
+                Public Property Birthdate() As String
+            End Class
+             
+            Dim csvReader As New CsvReader() 'Trial Mode
+            'Dim csvReader As New CsvReader("place user name here", "place license key here") 'License Mode
+             
+            'Parameters
+            Dim csvString As String = "Name,Birthdate" &amp; vbCrLf &amp; "John,5/30/2013"
+             
+            Dim results As List(Of TestMapper) = csvReader.CsvStringToObjectList(Of TestMapper)(csvString)
+             
+            Console.WriteLine(results(0).Name)</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.CsvReader.CsvStreamToObjectList``1(System.IO.Stream)">
+            <summary>
+            Read a CSV stream into a list of objects.  
+            Public properties are mapped by name, they are case sensitive.
+            By default header column name spaces are removed.  See RemoveColumnNameSpaces.  
+            All mapped properties must be of type string or an exception will be thrown.  
+            Properties that do not exist are ignored.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="stream"></param>
+            <returns></returns>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            //Example Mapping Class
+            public class TestMapper
+            {
+                public string Name { get; set; }
+                public string Birthdate { get; set; }
+            }
+             
+            CsvReader csvReader = new CsvReader(); //Trial Mode
+            //CsvReader csvReader = new CsvReader("place user name here", "place license key here"); //License Mode
+             
+            //Create a test file
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "testReader.csv");
+            File.WriteAllText(filePath, "Name,Birthdate\r\nJohn,5/30/2013");
+             
+            List&lt;TestMapper&gt; results;
+             
+            using (FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+            {
+                results = csvReader.CsvStreamToObjectList&lt;TestMapper&gt;(stream);
+            }
+             
+            Console.WriteLine(results[0].Name);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            'Example Mapping Class
+            Public Class TestMapper
+                Public Property Name() As String
+                Public Property Birthdate() As String
+            End Class
+             
+            Dim csvReader As New CsvReader() 'Trial Mode
+            'Dim csvReader As New CsvReader("place user name here", "place license key here") 'License Mode
+             
+            'Create a test file
+            Dim filePath As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "testReader.csv")
+            File.WriteAllText(filePath, "Name,Birthdate" &amp; vbCrLf &amp; "John,5/30/2013")
+             
+            Dim results As List(Of TestMapper)
+             
+            Using stream As New FileStream(filePath, FileMode.Open, FileAccess.Read)
+                results = csvReader.CsvStreamToObjectList(Of TestMapper)(stream)
+            End Using
+             
+            Console.WriteLine(results(0).Name)</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.CsvReader.CsvFileToDictionary(System.String)">
+            <summary>
+            Read a CSV File and return a dictionary with the keys as the header names.
+            By default header column name spaces are removed.  See RemoveColumnNameSpaces.
+            </summary>
+            <param name="filePath">The fully qualified file path</param>
+            <returns>A dictionary list</returns>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            CsvReader csvReader = new CsvReader(); //Trial Mode
+            //CsvReader csvReader = new CsvReader("place user name here", "place license key here"); //License Mode
+             
+            //Create a test file
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "testReader.csv");
+            File.WriteAllText(filePath, "Name,Birthdate\r\nJohn,5/30/2013");
+             
+            List&lt;Dictionary&lt;string, string&gt;&gt; results = csvReader.CsvFileToDictionary(filePath);
+            Console.WriteLine(results[0]["Name"]);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim csvReader As New CsvReader() 'Trial Mode
+            'Dim csvReader As New CsvReader("place user name here", "place license key here") 'License Mode
+             
+            'Create a test file
+            Dim filePath As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "testReader.csv")
+            File.WriteAllText(filePath, "Name,Birthdate" &amp; vbCrLf &amp; "John,5/30/2013")
+             
+            Dim results As List(Of Dictionary(Of String, String)) = csvReader.CsvFileToDictionary(filePath)
+            Console.WriteLine(results(0)("Name"))</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.CsvReader.CsvStringToDictionary(System.String)">
+            <summary>
+            Read a CSV String and return a dictionary with the keys as the header names.
+            By default header column name spaces are removed.  See RemoveColumnNameSpaces.
+            </summary>
+            <param name="csvString">A CSV String with a header</param>
+            <returns>A dictionary list</returns>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            CsvReader csvReader = new CsvReader(); //Trial Mode
+            //CsvReader csvReader = new CsvReader("place user name here", "place license key here"); //License Mode            
+             
+            string csvString = "FirstName,LastName\r\nJohn,Smith";
+             
+            List&lt;Dictionary&lt;string,string&gt;&gt; results = csvReader.CsvStringToDictionary(csvString);
+             
+            Console.WriteLine(results[0]["FirstName"]);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim csvReader As New CsvReader() 'Trial Mode
+            'Dim csvReader As New CsvReader("place user name here", "place license key here") 'License Mode            
+             
+            Dim csvString As String = "FirstName,LastName" &amp; vbCrLf &amp; "John,Smith"
+             
+            Dim results As List(Of Dictionary(Of String,String)) = csvReader.CsvStringToDictionary(csvString)
+             
+            Console.WriteLine(results(0)("FirstName"))</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.CsvReader.CsvStreamToDictionary(System.IO.Stream)">
+            <summary>
+            Read a CSV Stream and return a dictionary with the keys as the header names.
+            By default header column name spaces are removed.  See RemoveColumnNameSpaces.
+            </summary>
+            <param name="stream">A stream to read</param>
+            <returns>A dictionary list</returns>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            CsvReader csvReader = new CsvReader(); //Trial Mode
+            //CsvReader csvReader = new CsvReader("place user name here", "place license key here"); //License Mode
+             
+            //Create a test file
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "testReader.csv");
+            File.WriteAllText(filePath,"Name,Birthdate\r\nJohn,5/30/2013");
+             
+            List&lt;Dictionary&lt;string, string&gt;&gt; results;
+             
+            using (FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+            {
+                results = csvReader.CsvStreamToDictionary(stream);
+            }
+             
+            Console.WriteLine(results[0]["Name"]);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim csvReader As New CsvReader() 'Trial Mode
+            'Dim csvReader As New CsvReader("place user name here", "place license key here") 'License Mode
+             
+            'Create a test file
+            Dim filePath As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "testReader.csv")
+            File.WriteAllText(filePath,"Name,Birthdate" &amp; vbCrLf &amp; "John,5/30/2013")
+             
+            Dim results As List(Of Dictionary(Of String, String))
+             
+            Using stream As New FileStream(filePath, FileMode.Open, FileAccess.Read)
+                results = csvReader.CsvStreamToDictionary(stream)
+            End Using
+             
+            Console.WriteLine(results(0)("Name"))</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.CsvReader.CsvFileToStringList(System.String)">
+            <summary>
+            Read a CSV File and return a list of rows and columns
+            </summary>
+            <param name="filePath">A fully qualified file path</param>
+            <returns>A list of list strings</returns>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            CsvReader csvReader = new CsvReader(); //Trial Mode
+            //CsvReader csvReader = new CsvReader("place user name here", "place license key here"); //License Mode
+             
+            //Create a test file
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "testReader.csv");
+            File.WriteAllText(filePath, "Name,Birthdate\r\nJohn,5/30/2013");
+             
+            List&lt;List&lt;string&gt;&gt; results = csvReader.CsvFileToStringList(filePath);
+             
+            //Write out the first column name in the header
+            Console.WriteLine(results[0][0]);
+             
+            //Write out the first column value in the first row
+            Console.WriteLine(results[1][0]);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Imports Microsoft.VisualBasic
+             
+            Dim csvReader As New CsvReader() 'Trial Mode
+            'Dim csvReader As New CsvReader("place user name here", "place license key here") 'License Mode
+             
+            'Create a test file
+            Dim filePath As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "testReader.csv")
+            File.WriteAllText(filePath, "Name,Birthdate" &amp; vbCrLf &amp; "John,5/30/2013")
+             
+            Dim results As List(Of List(Of String)) = csvReader.CsvFileToStringList(filePath)
+             
+            'Write out the first column name in the header
+            Console.WriteLine(results(0)(0))
+             
+            'Write out the first column value in the first row
+            Console.WriteLine(results(1)(0))</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.CsvReader.CsvStringToStringList(System.String)">
+            <summary>
+            Read a CSV String and return a list of rows and columns
+            </summary>
+            <param name="csvString">A CSV string</param>
+            <returns>A list of list strings</returns>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            CsvReader csvReader = new CsvReader(); //Trial Mode
+            //CsvReader csvReader = new CsvReader("place user name here", "place license key here"); //License Mode
+             
+            //Parameters
+            string csvString = "Name,Birthdate\r\nJohn,5/30/2013";
+             
+            List&lt;List&lt;string&gt;&gt; results = csvReader.CsvStringToStringList(csvString);
+             
+            //Write out the first column name in the header
+            Console.WriteLine(results[0][0]);
+             
+            //Write out the first column value in the first row
+            Console.WriteLine(results[1][0]);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim csvReader As New CsvReader() 'Trial Mode
+            'Dim csvReader As New CsvReader("place user name here", "place license key here") 'License Mode
+             
+            'Parameters
+            Dim csvString As String = "Name,Birthdate" &amp; vbCrLf &amp; "John,5/30/2013"
+             
+            Dim results As List(Of List(Of String)) = csvReader.CsvStringToStringList(csvString)
+             
+            'Write out the first column name in the header
+            Console.WriteLine(results(0)(0))
+             
+            'Write out the first column value in the first row
+            Console.WriteLine(results(1)(0))</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.CsvReader.CsvStreamToStringList(System.IO.Stream)">
+            <summary>
+            Read a CSV Stream and return a list of rows and columns
+            </summary>
+            <param name="stream">A CSV Stream</param>
+            <returns>A list of list strings</returns>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            CsvReader csvReader = new CsvReader(); //Trial Mode
+            //CsvReader csvReader = new CsvReader("place user name here", "place license key here"); //License Mode
+             
+            //Create a test file
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "testReader.csv");
+            File.WriteAllText(filePath, "Name,Birthdate\r\nJohn,5/30/2013");
+             
+            List&lt;List&lt;string&gt;&gt; results;
+             
+            using (FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+            {
+                results = csvReader.CsvStreamToStringList(stream);
+            }
+             
+            //Write out the first column name in the header
+            Console.WriteLine(results[0][0]);
+             
+            //Write out the first column value in the first row
+            Console.WriteLine(results[1][0]);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim csvReader As New CsvReader() 'Trial Mode
+            'Dim csvReader As New CsvReader("place user name here", "place license key here") 'License Mode
+             
+            'Create a test file
+            Dim filePath As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "testReader.csv")
+            File.WriteAllText(filePath, "Name,Birthdate" &amp; vbCrLf &amp; "John,5/30/2013")
+             
+            Dim results As List(Of List(Of String))
+             
+            Using stream As New FileStream(filePath, FileMode.Open, FileAccess.Read)
+                results = csvReader.CsvStreamToStringList(stream)
+            End Using
+             
+            'Write out the first column name in the header
+            Console.WriteLine(results(0)(0))
+             
+            'Write out the first column value in the first row
+            Console.WriteLine(results(1)(0))</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.CsvReader.CleanWord(System.Text.StringBuilder)">
+            <summary>
+            Remove double quotes, escaped quotes, and escaped delmiters
+            </summary>
+            <param name="sb"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.CsvReader.ConvertCsvListToCsvDictionary(System.Collections.Generic.List{System.Collections.Generic.List{System.String}})">
+            <summary>
+            Convert a list of rows and columns into a dictionary
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.CsvReader.RemoveColumnNameSpaces">
+            <summary>
+            Any spaces in header column names are removed.  The default is true.
+            </summary>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            CsvReader csvReader = new CsvReader(); //Trial Mode
+            //CsvReader csvReader = new CsvReader("place user name here", "place license key here"); //License Mode
+             
+            csvReader.RemoveColumnNameSpaces = true;
+            string csvString = "First Name,Last Name\r\nJohn,Smith";
+             
+            List&lt;Dictionary&lt;string, string&gt;&gt; result = csvReader.CsvStringToDictionary(csvString);
+             
+            //The column name will be FirstName since the spaces are removed
+            Console.WriteLine(result[0]["FirstName"]);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim csvReader As New CsvReader() 'Trial Mode
+            'CsvReader csvReader = new CsvReader("place user name here", "place license key here"); //License Mode
+             
+            csvReader.RemoveColumnNameSpaces = True
+            Dim csvString As String = "First Name,Last Name" &amp; vbCrLf &amp; "John,Smith"
+             
+            Dim result As List(Of Dictionary(Of String, String)) = csvReader.CsvStringToDictionary(csvString)
+             
+            'The column name will be FirstName since the spaces are removed
+            Console.WriteLine(result(0)("FirstName"))</code>
+            </example>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.CsvReader.Seperator">
+            <summary>
+            The seperator for the columns.  Default is a comma.  It can be changed to a pipe, tab, etc.
+            </summary>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            CsvReader csvReader = new CsvReader(); //Trial Mode
+            //CsvReader csvReader = new CsvReader("place user name here", "place license key here"); //License Mode
+             
+            //Change to be tab delimited
+            csvReader.Seperator = '\t';
+             
+            string tabDelimitedString = "FirstName\tLastName\r\nJohn\tSmith";
+             
+            List&lt;Dictionary&lt;string, string&gt;&gt; result = csvReader.CsvStringToDictionary(tabDelimitedString);
+             
+            Console.WriteLine(result[0]["FirstName"]);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim csvReader As New CsvReader() 'Trial Mode
+            'CsvReader csvReader = new CsvReader("place user name here", "place license key here"); //License Mode
+             
+            'Change to be tab delimited
+            csvReader.Seperator = ControlChars.Tab
+             
+            Dim tabDelimitedString As String = "FirstName" &amp; vbTab &amp; "LastName" &amp; vbCrLf &amp; "John" &amp; vbTab &amp; "Smith"
+             
+            Dim result As List(Of Dictionary(Of String, String)) = csvReader.CsvStringToDictionary(tabDelimitedString)
+             
+            Console.WriteLine(result(0)("FirstName"))</code>
+            </example>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.CsvReader.QuoteCharacter">
+            <summary>
+            The quote character.  Defaults to double quote
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.CsvReader.EscapeCharacter">
+            <summary>
+            Value used to escape the quote character.  Defaults to \
+            </summary>
+        </member>
+        <member name="T:KellermanSoftware.ExcelReports.ExcelReportsGenerator">
+            <summary>
+            Incredibly easy to use Excel Reports Generator that does not need Excel installed
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.#ctor">
+            <summary>
+            Constructor for trial mode
+            </summary>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            //Trial Mode
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); 
+             
+            //License Mode
+            ExcelReportsGenerator generator2 = new ExcelReportsGenerator("place user name here", "place license key here");</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            'Trial Mode
+            Dim generator As New ExcelReportsGenerator()
+             
+            'License Mode
+            Dim generator2 As New ExcelReportsGenerator("place user name here", "place license key here")</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.#ctor(System.String,System.String)">
+            <summary>
+            Constructor for licensed mode
+            </summary>
+            <param name="userName"></param>
+            <param name="licenseKey"></param>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.CheckLicense(System.String,System.String)">
+            <summary>
+            The variables below are specific to the licensing component
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.GenerateFromClassList``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)">
+            <summary>
+            Creates an Excel file based on the properties of the passed in object.
+            Supports all value types plus reference types of string and DateTime.
+            By default, puts in a header with the names of the properties.
+            </summary>
+            <typeparam name="T">The type of the class</typeparam>
+            <param name="list">A list of objects of the class</param>
+            <param name="worksheetName">The name for the tab of the worksheet</param>
+            <param name="filePath">Where to save the .xlsx file</param>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            List&lt;Employee&gt; employees = new List&lt;Employee&gt;();
+             
+            Employee employee1 = new Employee();
+            employee1.FirstName = "John";
+            employee1.LastName = "Smith";
+            employee1.Married = true;
+            employee1.NumberOfChildren = 3;
+            employee1.Salary = 60000;
+            employee1.HealthSavingsContribution = 6250;
+            employee1.EmployeeType = EmployeeType.LeadAccountant;
+            employee1.RetirementContributionPercent = .06F;
+            employee1.YearsOfService = 4;
+            employee1.QuarterlyMeetingAttendance = 15;
+            employee1.CompanyCarMileage = 152000;
+            employee1.VacationHours = 120;
+            employee1.SickHours = 40;
+            employee1.PersonalHours = 8;
+            employee1.BirthDate = new DateTime(1977,12,15);
+            employees.Add(employee1);
+             
+            Employee employee2 = new Employee();
+            employee2.FirstName = "Joe";
+            employee2.LastName = "Jones";
+            employee2.Married = false;
+            employee2.NumberOfChildren = 0;
+            employee2.Salary = 30000;
+            employee2.HealthSavingsContribution = 3000;
+            employee2.EmployeeType = EmployeeType.MediumJanitor;
+            employee2.RetirementContributionPercent = .03F;
+            employee2.YearsOfService = 1;
+            employee2.QuarterlyMeetingAttendance = 4;
+            employee2.CompanyCarMileage = 0;
+            employee2.VacationHours = 80;
+            employee2.SickHours = 20;
+            employee2.PersonalHours = 8;
+            employee2.BirthDate = new DateTime(1988, 6, 25);
+            employees.Add(employee2);
+             
+            generator.GenerateFromClassList(employees, "Employees", "GenerateFromListExample.xlsx");</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            Dim employees As New List(Of Employee)()
+             
+            Dim employee1 As New Employee()
+            employee1.FirstName = "John"
+            employee1.LastName = "Smith"
+            employee1.Married = True
+            employee1.NumberOfChildren = 3
+            employee1.Salary = 60000
+            employee1.HealthSavingsContribution = 6250
+            employee1.EmployeeType = EmployeeType.LeadAccountant
+            employee1.RetirementContributionPercent =.06F
+            employee1.YearsOfService = 4
+            employee1.QuarterlyMeetingAttendance = 15
+            employee1.CompanyCarMileage = 152000
+            employee1.VacationHours = 120
+            employee1.SickHours = 40
+            employee1.PersonalHours = 8
+            employee1.BirthDate = New Date(1977,12,15)
+            employees.Add(employee1)
+             
+            Dim employee2 As New Employee()
+            employee2.FirstName = "Joe"
+            employee2.LastName = "Jones"
+            employee2.Married = False
+            employee2.NumberOfChildren = 0
+            employee2.Salary = 30000
+            employee2.HealthSavingsContribution = 3000
+            employee2.EmployeeType = EmployeeType.MediumJanitor
+            employee2.RetirementContributionPercent =.03F
+            employee2.YearsOfService = 1
+            employee2.QuarterlyMeetingAttendance = 4
+            employee2.CompanyCarMileage = 0
+            employee2.VacationHours = 80
+            employee2.SickHours = 20
+            employee2.PersonalHours = 8
+            employee2.BirthDate = New Date(1988, 6, 25)
+            employees.Add(employee2)
+             
+            generator.GenerateFromClassList(employees, "Employees", "GenerateFromListExample.xlsx")</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.GenerateFromClassList``1(System.Collections.Generic.IEnumerable{``0},System.String,System.IO.Stream)">
+            <summary>
+            Creates an Excel file based on the properties of the passed in object.
+            Supports all value types plus reference types of string and DateTime.
+            By default, puts in a header with the names of the properties.
+            </summary>
+            <typeparam name="T">The type of the class</typeparam>
+            <param name="list">A list of objects of the class</param>
+            <param name="worksheetName">The name for the tab of the worksheet</param>
+            <param name="outputStream">Where to generate the output</param>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            List&lt;Employee&gt; employees = new List&lt;Employee&gt;();
+             
+            Employee employee1 = new Employee();
+            employee1.FirstName = "John";
+            employee1.LastName = "Smith";
+            employee1.Married = true;
+            employee1.NumberOfChildren = 3;
+            employee1.Salary = 60000;
+            employee1.HealthSavingsContribution = 6250;
+            employee1.EmployeeType = EmployeeType.LeadAccountant;
+            employee1.RetirementContributionPercent = .06F;
+            employee1.YearsOfService = 4;
+            employee1.QuarterlyMeetingAttendance = 15;
+            employee1.CompanyCarMileage = 152000;
+            employee1.VacationHours = 120;
+            employee1.SickHours = 40;
+            employee1.PersonalHours = 8;
+            employee1.BirthDate = new DateTime(1977, 12, 15);
+            employees.Add(employee1);
+             
+            Employee employee2 = new Employee();
+            employee2.FirstName = "Joe";
+            employee2.LastName = "Jones";
+            employee2.Married = false;
+            employee2.NumberOfChildren = 0;
+            employee2.Salary = 30000;
+            employee2.HealthSavingsContribution = 3000;
+            employee2.EmployeeType = EmployeeType.MediumJanitor;
+            employee2.RetirementContributionPercent = .03F;
+            employee2.YearsOfService = 1;
+            employee2.QuarterlyMeetingAttendance = 4;
+            employee2.CompanyCarMileage = 0;
+            employee2.VacationHours = 80;
+            employee2.SickHours = 20;
+            employee2.PersonalHours = 8;
+            employee2.BirthDate = new DateTime(1988, 6, 25);
+            employees.Add(employee2);
+             
+            using (FileStream outputStream = new FileStream("GenerateFromListStream.xlsx",FileMode.Create))
+            {
+                generator.GenerateFromClassList(employees, "Employees", outputStream);
+            }</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            Dim employees As New List(Of Employee)()
+             
+            Dim employee1 As New Employee()
+            employee1.FirstName = "John"
+            employee1.LastName = "Smith"
+            employee1.Married = True
+            employee1.NumberOfChildren = 3
+            employee1.Salary = 60000
+            employee1.HealthSavingsContribution = 6250
+            employee1.EmployeeType = EmployeeType.LeadAccountant
+            employee1.RetirementContributionPercent =.06F
+            employee1.YearsOfService = 4
+            employee1.QuarterlyMeetingAttendance = 15
+            employee1.CompanyCarMileage = 152000
+            employee1.VacationHours = 120
+            employee1.SickHours = 40
+            employee1.PersonalHours = 8
+            employee1.BirthDate = New Date(1977, 12, 15)
+            employees.Add(employee1)
+             
+            Dim employee2 As New Employee()
+            employee2.FirstName = "Joe"
+            employee2.LastName = "Jones"
+            employee2.Married = False
+            employee2.NumberOfChildren = 0
+            employee2.Salary = 30000
+            employee2.HealthSavingsContribution = 3000
+            employee2.EmployeeType = EmployeeType.MediumJanitor
+            employee2.RetirementContributionPercent =.03F
+            employee2.YearsOfService = 1
+            employee2.QuarterlyMeetingAttendance = 4
+            employee2.CompanyCarMileage = 0
+            employee2.VacationHours = 80
+            employee2.SickHours = 20
+            employee2.PersonalHours = 8
+            employee2.BirthDate = New Date(1988, 6, 25)
+            employees.Add(employee2)
+             
+            Using outputStream As New FileStream("GenerateFromListStream.xlsx",FileMode.Create)
+                generator.GenerateFromClassList(employees, "Employees", outputStream)
+            End Using</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.GenerateFromDataTable(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            Creates an Excel file based on the data columns of the passed in DataTable
+            Supports all value types plus reference types of string and DateTime.
+            By default, puts in a header with the names of the properties.
+            </summary>
+            <param name="dataTable">A table of records</param>
+            <param name="worksheetName">The name for the tab of the worksheet</param>
+            <param name="filePath">Where to save the .xlsx file</param>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("FirstName", typeof (string));
+            dataTable.Columns.Add("LastName", typeof (string));
+            dataTable.Columns.Add("Married", typeof (bool));
+            dataTable.Columns.Add("NumberOfChildren", typeof (int));
+            dataTable.Columns.Add("Salary", typeof (decimal));
+            dataTable.Columns.Add("BirthDate", typeof (DateTime));
+             
+            DataRow employee1 = dataTable.NewRow();
+            employee1["FirstName"] = "John";
+            employee1["LastName"] = "Smith";
+            employee1["Married"] = true;
+            employee1["NumberOfChildren"] = 3;
+            employee1["Salary"] = 60000M;
+            employee1["BirthDate"] = new DateTime(1977, 12, 15);
+            dataTable.Rows.Add(employee1);
+             
+            DataRow employee2 = dataTable.NewRow();
+            employee2["FirstName"] = "Joe";
+            employee2["LastName"] = "Jones";
+            employee2["Married"] = false;
+            employee2["NumberOfChildren"] = 0;
+            employee2["Salary"] = 30000M;
+            employee2["BirthDate"] = new DateTime(1993, 6, 25);
+            dataTable.Rows.Add(employee2);
+             
+            generator.GenerateFromDataTable(dataTable, "Employees", "GenerateFromDatatableExample.xlsx");</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            Dim dataTable As New DataTable()
+            dataTable.Columns.Add("FirstName", GetType(String))
+            dataTable.Columns.Add("LastName", GetType(String))
+            dataTable.Columns.Add("Married", GetType(Boolean))
+            dataTable.Columns.Add("NumberOfChildren", GetType(Integer))
+            dataTable.Columns.Add("Salary", GetType(Decimal))
+            dataTable.Columns.Add("BirthDate", GetType(Date))
+             
+            Dim employee1 As DataRow = dataTable.NewRow()
+            employee1("FirstName") = "John"
+            employee1("LastName") = "Smith"
+            employee1("Married") = True
+            employee1("NumberOfChildren") = 3
+            employee1("Salary") = 60000D
+            employee1("BirthDate") = New Date(1977, 12, 15)
+            dataTable.Rows.Add(employee1)
+             
+            Dim employee2 As DataRow = dataTable.NewRow()
+            employee2("FirstName") = "Joe"
+            employee2("LastName") = "Jones"
+            employee2("Married") = False
+            employee2("NumberOfChildren") = 0
+            employee2("Salary") = 30000D
+            employee2("BirthDate") = New Date(1993, 6, 25)
+            dataTable.Rows.Add(employee2)
+             
+            generator.GenerateFromDataTable(dataTable, "Employees", "GenerateFromDatatableExample.xlsx")</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.GenerateFromDataTable(System.Data.DataTable,System.String,System.IO.Stream)">
+            <summary>
+            Creates an Excel file based on the data columns of the passed in DataTable
+            Supports all value types plus reference types of string and DateTime.
+            By default, puts in a header with the names of the properties.
+            </summary>
+            <param name="dataTable">A table of records</param>
+            <param name="worksheetName">The name for the tab of the worksheet</param>
+            <param name="outputStream">Where to generate the output</param>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("FirstName", typeof(string));
+            dataTable.Columns.Add("LastName", typeof(string));
+            dataTable.Columns.Add("Married", typeof(bool));
+            dataTable.Columns.Add("NumberOfChildren", typeof(int));
+            dataTable.Columns.Add("Salary", typeof(decimal));
+            dataTable.Columns.Add("BirthDate", typeof(DateTime));
+             
+            DataRow employee1 = dataTable.NewRow();
+            employee1["FirstName"] = "John";
+            employee1["LastName"] = "Smith";
+            employee1["Married"] = true;
+            employee1["NumberOfChildren"] = 3;
+            employee1["Salary"] = 60000M;
+            employee1["BirthDate"] = new DateTime(1977, 12, 15);
+            dataTable.Rows.Add(employee1);
+             
+            DataRow employee2 = dataTable.NewRow();
+            employee2["FirstName"] = "Joe";
+            employee2["LastName"] = "Jones";
+            employee2["Married"] = false;
+            employee2["NumberOfChildren"] = 0;
+            employee2["Salary"] = 30000M;
+            employee2["BirthDate"] = new DateTime(1993, 6, 25);
+            dataTable.Rows.Add(employee2);
+             
+            using (FileStream outputStream = new FileStream("GenerateFromDataTableStreamExample.xlsx", FileMode.Create))
+            {
+                generator.GenerateFromDataTable(dataTable, "Employees", outputStream);
+            }</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            Dim dataTable As New DataTable()
+            dataTable.Columns.Add("FirstName", GetType(String))
+            dataTable.Columns.Add("LastName", GetType(String))
+            dataTable.Columns.Add("Married", GetType(Boolean))
+            dataTable.Columns.Add("NumberOfChildren", GetType(Integer))
+            dataTable.Columns.Add("Salary", GetType(Decimal))
+            dataTable.Columns.Add("BirthDate", GetType(Date))
+             
+            Dim employee1 As DataRow = dataTable.NewRow()
+            employee1("FirstName") = "John"
+            employee1("LastName") = "Smith"
+            employee1("Married") = True
+            employee1("NumberOfChildren") = 3
+            employee1("Salary") = 60000D
+            employee1("BirthDate") = New Date(1977, 12, 15)
+            dataTable.Rows.Add(employee1)
+             
+            Dim employee2 As DataRow = dataTable.NewRow()
+            employee2("FirstName") = "Joe"
+            employee2("LastName") = "Jones"
+            employee2("Married") = False
+            employee2("NumberOfChildren") = 0
+            employee2("Salary") = 30000D
+            employee2("BirthDate") = New Date(1993, 6, 25)
+            dataTable.Rows.Add(employee2)
+             
+            Using outputStream As New FileStream("GenerateFromDataTableStreamExample.xlsx", FileMode.Create)
+                generator.GenerateFromDataTable(dataTable, "Employees", outputStream)
+            End Using</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.GenerateFromCsvString(System.String,System.String,System.String)">
+            <summary>
+            Turn a CSV string into an Excel Workbook
+            </summary>
+            <param name="csvString">The string to use for the data</param>
+            <param name="worksheetName">The name for the tab of the worksheet</param>
+            <param name="filePath">Where to save the .xlsx file</param>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            string csvString = @"FirstName,LastName,Married,NumberOfChildren,Salary,BirthDate
+            John,Smith,True,3,""$60,000"",12/15/1977
+            Joe,Jones,False,0,""$30,000"",6/25/1993";
+             
+            generator.GenerateFromCsvString(csvString, "Employees", "GenerateFromCsvStringExample.xlsx");</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            Dim csvString As String = "FirstName,LastName,Married,NumberOfChildren,Salary,BirthDate" &amp; ControlChars.CrLf &amp; "John,Smith,True,3,""$60,000"",12/15/1977" &amp; ControlChars.CrLf &amp; "Joe,Jones,False,0,""$30,000"",6/25/1993"
+             
+            generator.GenerateFromCsvString(csvString, "Employees", "GenerateFromCsvStringExample.xlsx")</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.GenerateFromCsvStream(System.IO.Stream,System.String,System.IO.Stream)">
+            <summary>
+            Turn a CSV string into an Excel Workbook
+            </summary>
+            <param name="csvStream">A stream of CSV data</param>
+            <param name="worksheetName">The name for the tab of the worksheet</param>
+            <param name="outputStream">Where to generate the output</param>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            string csvString = @"FirstName,LastName,Married,NumberOfChildren,Salary,BirthDate
+            John,Smith,True,3,""$60,000"",12/15/1977
+            Joe,Jones,False,0,""$30,000"",6/25/1993";
+             
+            File.WriteAllText("ExampleInput.csv", csvString);
+             
+            using (FileStream inputStream = new FileStream("ExampleInput.csv", FileMode.Open, FileAccess.Read))
+            {
+                using (FileStream outputStream = new FileStream("GenerateFromCsvStreamExample.xlsx",FileMode.Create))
+                {
+                    generator.GenerateFromCsvStream(inputStream, "Employees", outputStream);
+                }
+            }</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            Dim csvString As String = "FirstName,LastName,Married,NumberOfChildren,Salary,BirthDate" &amp; ControlChars.CrLf &amp; "John,Smith,True,3,""$60,000"",12/15/1977" &amp; ControlChars.CrLf &amp; "Joe,Jones,False,0,""$30,000"",6/25/1993"
+             
+            File.WriteAllText("ExampleInput.csv", csvString)
+             
+            Using inputStream As New FileStream("ExampleInput.csv", FileMode.Open, FileAccess.Read)
+                Using outputStream As New FileStream("GenerateFromCsvStreamExample.xlsx",FileMode.Create)
+                    generator.GenerateFromCsvStream(inputStream, "Employees", outputStream)
+                End Using
+            End Using</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.WorkbookFactory(System.String)">
+            <summary>
+            Creates a new Workbook In Memory
+            </summary>
+            <returns>Instantiated Workbook</returns>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            //Parameters
+            string filePath = "WorkbookFactoryExample.xlsx";
+             
+            Workbook workbook= generator.WorkbookFactory(filePath);
+             
+            workbook.Author = "John Smith";
+            workbook.CreatedTime = DateTime.Now;
+            workbook.LastSavedBy = "John Smith";
+            workbook.Subject = "This is a subject";
+            workbook.Title = "This is a title";
+             
+            Worksheet worksheet = generator.AddWorksheet(workbook, "Employees");
+             
+            string csvString = @"FirstName,LastName,Married,NumberOfChildren,Salary,BirthDate
+            John,Smith,True,3,""$60,000"",12/15/1977
+            Joe,Jones,False,0,""$30,000"",6/25/1993";
+             
+            generator.FillFromCsvString(worksheet, csvString);
+            generator.SaveWorkbook(workbook);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            'Parameters
+            Dim filePath As String = "WorkbookFactoryExample.xlsx"
+             
+            Dim workbook As Workbook= generator.WorkbookFactory(filePath)
+             
+            workbook.Author = "John Smith"
+            workbook.CreatedTime = Date.Now
+            workbook.LastSavedBy = "John Smith"
+            workbook.Subject = "This is a subject"
+            workbook.Title = "This is a title"
+             
+            Dim worksheet As Worksheet = generator.AddWorksheet(workbook, "Employees")
+             
+            Dim csvString As String = "FirstName,LastName,Married,NumberOfChildren,Salary,BirthDate" &amp; ControlChars.CrLf &amp; "John,Smith,True,3,""$60,000"",12/15/1977" &amp; ControlChars.CrLf &amp; "Joe,Jones,False,0,""$30,000"",6/25/1993"
+             
+            generator.FillFromCsvString(worksheet, csvString)
+            generator.SaveWorkbook(workbook)</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.AddWorksheet(KellermanSoftware.ExcelReports.Workbook)">
+            <summary>
+            Add a worksheet to a workbook with a default name
+            </summary>
+            <param name="workbook">The workbook to add the worksheet to</param>
+            <returns>The worksheet that was added</returns>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            //Parameters
+            string filePath = "AddWorksheetDefaultExample.xlsx";
+             
+            Workbook workbook = generator.WorkbookFactory(filePath);
+             
+            workbook.Author = "John Smith";
+            workbook.CreatedTime = DateTime.Now;
+            workbook.LastSavedBy = "John Smith";
+            workbook.Subject = "This is a subject";
+            workbook.Title = "This is a title";
+             
+            Worksheet worksheet = generator.AddWorksheet(workbook);
+             
+            string csvString = @"FirstName,LastName,Married,NumberOfChildren,Salary,BirthDate
+            John,Smith,True,3,""$60,000"",12/15/1977
+            Joe,Jones,False,0,""$30,000"",6/25/1993";
+             
+            generator.FillFromCsvString(worksheet, csvString);
+            generator.SaveWorkbook(workbook);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            'Parameters
+            Dim filePath As String = "AddWorksheetDefaultExample.xlsx"
+             
+            Dim workbook As Workbook = generator.WorkbookFactory(filePath)
+             
+            workbook.Author = "John Smith"
+            workbook.CreatedTime = Date.Now
+            workbook.LastSavedBy = "John Smith"
+            workbook.Subject = "This is a subject"
+            workbook.Title = "This is a title"
+             
+            Dim worksheet As Worksheet = generator.AddWorksheet(workbook)
+             
+            Dim csvString As String = "FirstName,LastName,Married,NumberOfChildren,Salary,BirthDate" &amp; ControlChars.CrLf &amp; "John,Smith,True,3,""$60,000"",12/15/1977" &amp; ControlChars.CrLf &amp; "Joe,Jones,False,0,""$30,000"",6/25/1993"
+             
+            generator.FillFromCsvString(worksheet, csvString)
+            generator.SaveWorkbook(workbook)</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.AddWorksheet(KellermanSoftware.ExcelReports.Workbook,System.String)">
+            <summary>
+            Add a worksheet to a workbook with a specified name
+            </summary>
+            <param name="workbook">The workbook to add the worksheet to</param>
+            <param name="worksheetName">The name of the worksheet</param>
+            <returns>The worksheet that was added</returns>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            //Parameters
+            string filePath = "AddWorksheetNamedExample.xlsx";
+             
+            Workbook workbook = generator.WorkbookFactory(filePath);
+             
+            workbook.Author = "John Smith";
+            workbook.CreatedTime = DateTime.Now;
+            workbook.LastSavedBy = "John Smith";
+            workbook.Subject = "This is a subject";
+            workbook.Title = "This is a title";
+             
+            Worksheet worksheet = generator.AddWorksheet(workbook, "Employees");
+             
+            string csvString = @"FirstName,LastName,Married,NumberOfChildren,Salary,BirthDate
+            John,Smith,True,3,""$60,000"",12/15/1977
+            Joe,Jones,False,0,""$30,000"",6/25/1993";
+             
+            generator.FillFromCsvString(worksheet, csvString);
+            generator.SaveWorkbook(workbook);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            'Parameters
+            Dim filePath As String = "AddWorksheetNamedExample.xlsx"
+             
+            Dim workbook As Workbook = generator.WorkbookFactory(filePath)
+             
+            workbook.Author = "John Smith"
+            workbook.CreatedTime = Date.Now
+            workbook.LastSavedBy = "John Smith"
+            workbook.Subject = "This is a subject"
+            workbook.Title = "This is a title"
+             
+            Dim worksheet As Worksheet = generator.AddWorksheet(workbook, "Employees")
+             
+            Dim csvString As String = "FirstName,LastName,Married,NumberOfChildren,Salary,BirthDate" &amp; ControlChars.CrLf &amp; "John,Smith,True,3,""$60,000"",12/15/1977" &amp; ControlChars.CrLf &amp; "Joe,Jones,False,0,""$30,000"",6/25/1993"
+             
+            generator.FillFromCsvString(worksheet, csvString)
+            generator.SaveWorkbook(workbook)</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.AddWorksheet(KellermanSoftware.ExcelReports.Workbook,System.String,System.Collections.Generic.IEnumerable{KellermanSoftware.ExcelReports.ColumnDefinition})">
+            <summary>
+            Add a worksheet to a workbook with a specified name
+            </summary>
+            <param name="workbook"></param>
+            <param name="worksheetName"></param>
+            <param name="columnDefinitions">Column order and formatting</param>
+            <returns></returns>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            //Parameters
+            string filePath = "AddWorksheetWithColumnDefinitionsExample.xlsx";
+             
+            Workbook workbook = generator.WorkbookFactory(filePath);
+             
+            workbook.Author = "John Smith";
+            workbook.CreatedTime = DateTime.Now;
+            workbook.LastSavedBy = "John Smith";
+            workbook.Subject = "This is a subject";
+            workbook.Title = "This is a title";
+             
+            List&lt;ColumnDefinition&gt; definitions = new List&lt;ColumnDefinition&gt;
+                                                     {
+                                                         //Put the last name column first
+                                                         new ColumnDefinition("LastName"),
+                                                         new ColumnDefinition("FirstName"),
+                                                         new ColumnDefinition("Married"),
+                                                         new ColumnDefinition("NumberOfChildren"),
+                                                         new ColumnDefinition("Salary"),
+                                                         new ColumnDefinition("BirthDate")
+                                                     };
+             
+            Worksheet worksheet = generator.AddWorksheet(workbook, "Employees", definitions);
+             
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("FirstName", typeof(string));
+            dataTable.Columns.Add("LastName", typeof(string));
+            dataTable.Columns.Add("Married", typeof(bool));
+            dataTable.Columns.Add("NumberOfChildren", typeof(int));
+            dataTable.Columns.Add("Salary", typeof(decimal));
+            dataTable.Columns.Add("BirthDate", typeof(DateTime));
+             
+            DataRow employee1 = dataTable.NewRow();
+            employee1["FirstName"] = "John";
+            employee1["LastName"] = "Smith";
+            employee1["Married"] = true;
+            employee1["NumberOfChildren"] = 3;
+            employee1["Salary"] = 60000M;
+            employee1["BirthDate"] = new DateTime(1977, 12, 15);
+            dataTable.Rows.Add(employee1);
+             
+            DataRow employee2 = dataTable.NewRow();
+            employee2["FirstName"] = "Joe";
+            employee2["LastName"] = "Jones";
+            employee2["Married"] = false;
+            employee2["NumberOfChildren"] = 0;
+            employee2["Salary"] = 30000M;
+            employee2["BirthDate"] = new DateTime(1993, 6, 25);
+            dataTable.Rows.Add(employee2);
+             
+            generator.FillFromDataTable(worksheet,dataTable);
+            generator.SaveWorkbook(workbook);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            'Parameters
+            Dim filePath As String = "AddWorksheetWithColumnDefinitionsExample.xlsx"
+             
+            Dim workbook As Workbook = generator.WorkbookFactory(filePath)
+             
+            workbook.Author = "John Smith"
+            workbook.CreatedTime = Date.Now
+            workbook.LastSavedBy = "John Smith"
+            workbook.Subject = "This is a subject"
+            workbook.Title = "This is a title"
+             
+            Dim definitions As New List(Of ColumnDefinition)() From { _
+                New ColumnDefinition("LastName"), _
+                New ColumnDefinition("FirstName"), _
+                New ColumnDefinition("Married"), _
+                New ColumnDefinition("NumberOfChildren"), _
+                New ColumnDefinition("Salary"), _
+                New ColumnDefinition("BirthDate") _
+            }
+             
+            Dim worksheet As Worksheet = generator.AddWorksheet(workbook, "Employees", definitions)
+             
+            Dim dataTable As New DataTable()
+            dataTable.Columns.Add("FirstName", GetType(String))
+            dataTable.Columns.Add("LastName", GetType(String))
+            dataTable.Columns.Add("Married", GetType(Boolean))
+            dataTable.Columns.Add("NumberOfChildren", GetType(Integer))
+            dataTable.Columns.Add("Salary", GetType(Decimal))
+            dataTable.Columns.Add("BirthDate", GetType(Date))
+             
+            Dim employee1 As DataRow = dataTable.NewRow()
+            employee1("FirstName") = "John"
+            employee1("LastName") = "Smith"
+            employee1("Married") = True
+            employee1("NumberOfChildren") = 3
+            employee1("Salary") = 60000D
+            employee1("BirthDate") = New Date(1977, 12, 15)
+            dataTable.Rows.Add(employee1)
+             
+            Dim employee2 As DataRow = dataTable.NewRow()
+            employee2("FirstName") = "Joe"
+            employee2("LastName") = "Jones"
+            employee2("Married") = False
+            employee2("NumberOfChildren") = 0
+            employee2("Salary") = 30000D
+            employee2("BirthDate") = New Date(1993, 6, 25)
+            dataTable.Rows.Add(employee2)
+             
+            generator.FillFromDataTable(worksheet,dataTable)
+            generator.SaveWorkbook(workbook)</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.FillFromDataTable(KellermanSoftware.ExcelReports.Worksheet,System.Data.DataTable)">
+            <summary>
+            Fill a worksheet with a data table. 
+            Use default formatting or the formatting specified in the Worksheet.
+            </summary>
+            <param name="worksheet">The worksheet to fill</param>
+            <param name="dataTable">A table of records</param>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            //Parameters
+            string filePath = "FillWorksheetWithDatatableExample.xlsx";
+             
+            Workbook workbook = generator.WorkbookFactory(filePath);
+             
+            workbook.Author = "John Smith";
+            workbook.CreatedTime = DateTime.Now;
+            workbook.LastSavedBy = "John Smith";
+            workbook.Subject = "This is a subject";
+            workbook.Title = "This is a title";
+             
+            Worksheet worksheet = generator.AddWorksheet(workbook, "Employees");
+             
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("FirstName", typeof(string));
+            dataTable.Columns.Add("LastName", typeof(string));
+            dataTable.Columns.Add("Married", typeof(bool));
+            dataTable.Columns.Add("NumberOfChildren", typeof(int));
+            dataTable.Columns.Add("Salary", typeof(decimal));
+            dataTable.Columns.Add("BirthDate", typeof(DateTime));
+             
+            DataRow employee1 = dataTable.NewRow();
+            employee1["FirstName"] = "John";
+            employee1["LastName"] = "Smith";
+            employee1["Married"] = true;
+            employee1["NumberOfChildren"] = 3;
+            employee1["Salary"] = 60000M;
+            employee1["BirthDate"] = new DateTime(1977, 12, 15);
+            dataTable.Rows.Add(employee1);
+             
+            DataRow employee2 = dataTable.NewRow();
+            employee2["FirstName"] = "Joe";
+            employee2["LastName"] = "Jones";
+            employee2["Married"] = false;
+            employee2["NumberOfChildren"] = 0;
+            employee2["Salary"] = 30000M;
+            employee2["BirthDate"] = new DateTime(1993, 6, 25);
+            dataTable.Rows.Add(employee2);
+             
+            generator.FillFromDataTable(worksheet, dataTable);
+            generator.SaveWorkbook(workbook);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            'Parameters
+            Dim filePath As String = "FillWorksheetWithDatatableExample.xlsx"
+             
+            Dim workbook As Workbook = generator.WorkbookFactory(filePath)
+             
+            workbook.Author = "John Smith"
+            workbook.CreatedTime = Date.Now
+            workbook.LastSavedBy = "John Smith"
+            workbook.Subject = "This is a subject"
+            workbook.Title = "This is a title"
+             
+            Dim worksheet As Worksheet = generator.AddWorksheet(workbook, "Employees")
+             
+            Dim dataTable As New DataTable()
+            dataTable.Columns.Add("FirstName", GetType(String))
+            dataTable.Columns.Add("LastName", GetType(String))
+            dataTable.Columns.Add("Married", GetType(Boolean))
+            dataTable.Columns.Add("NumberOfChildren", GetType(Integer))
+            dataTable.Columns.Add("Salary", GetType(Decimal))
+            dataTable.Columns.Add("BirthDate", GetType(Date))
+             
+            Dim employee1 As DataRow = dataTable.NewRow()
+            employee1("FirstName") = "John"
+            employee1("LastName") = "Smith"
+            employee1("Married") = True
+            employee1("NumberOfChildren") = 3
+            employee1("Salary") = 60000D
+            employee1("BirthDate") = New Date(1977, 12, 15)
+            dataTable.Rows.Add(employee1)
+             
+            Dim employee2 As DataRow = dataTable.NewRow()
+            employee2("FirstName") = "Joe"
+            employee2("LastName") = "Jones"
+            employee2("Married") = False
+            employee2("NumberOfChildren") = 0
+            employee2("Salary") = 30000D
+            employee2("BirthDate") = New Date(1993, 6, 25)
+            dataTable.Rows.Add(employee2)
+             
+            generator.FillFromDataTable(worksheet, dataTable)
+            generator.SaveWorkbook(workbook)</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.FillFromCsvString(KellermanSoftware.ExcelReports.Worksheet,System.String)">
+            <summary>
+            Fill a worksheet using data from a CSV string
+            </summary>
+            <param name="worksheet">The worksheet to fill</param>
+            <param name="csvString">The string to use for the data</param>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            //Parameters
+            string filePath = "FillWorksheetWithCsvStringExample.xlsx";
+             
+            Workbook workbook = generator.WorkbookFactory(filePath);
+             
+            workbook.Author = "John Smith";
+            workbook.CreatedTime = DateTime.Now;
+            workbook.LastSavedBy = "John Smith";
+            workbook.Subject = "This is a subject";
+            workbook.Title = "This is a title";
+             
+            Worksheet worksheet = generator.AddWorksheet(workbook, "Employees");
+             
+            string csvString = @"FirstName,LastName,Married,NumberOfChildren,Salary,BirthDate
+            John,Smith,True,3,""$60,000"",12/15/1977
+            Joe,Jones,False,0,""$30,000"",6/25/1993";
+             
+            generator.FillFromCsvString(worksheet, csvString);
+             
+            generator.SaveWorkbook(workbook);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            'Parameters
+            Dim filePath As String = "FillWorksheetWithCsvStringExample.xlsx"
+             
+            Dim workbook As Workbook = generator.WorkbookFactory(filePath)
+             
+            workbook.Author = "John Smith"
+            workbook.CreatedTime = Date.Now
+            workbook.LastSavedBy = "John Smith"
+            workbook.Subject = "This is a subject"
+            workbook.Title = "This is a title"
+             
+            Dim worksheet As Worksheet = generator.AddWorksheet(workbook, "Employees")
+             
+            Dim csvString As String = "FirstName,LastName,Married,NumberOfChildren,Salary,BirthDate" &amp; ControlChars.CrLf &amp; "John,Smith,True,3,""$60,000"",12/15/1977" &amp; ControlChars.CrLf &amp; "Joe,Jones,False,0,""$30,000"",6/25/1993"
+             
+            generator.FillFromCsvString(worksheet, csvString)
+             
+            generator.SaveWorkbook(workbook)</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.FillFromCsvFile(KellermanSoftware.ExcelReports.Worksheet,System.String)">
+            <summary>
+            Fill a worksheet using data from a CSV file
+            </summary>
+            <param name="worksheet">The worksheet to fill</param>
+            <param name="csvFilePath">The path to the CSV file</param>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            //Parameters
+            string filePath = "FillWorksheetWithCsvFileExample.xlsx";
+             
+            Workbook workbook = generator.WorkbookFactory(filePath);
+             
+            workbook.Author = "John Smith";
+            workbook.CreatedTime = DateTime.Now;
+            workbook.LastSavedBy = "John Smith";
+            workbook.Subject = "This is a subject";
+            workbook.Title = "This is a title";
+             
+            Worksheet worksheet = generator.AddWorksheet(workbook, "Employees");
+             
+            string csvString = @"FirstName,LastName,Married,NumberOfChildren,Salary,BirthDate
+            John,Smith,True,3,""$60,000"",12/15/1977
+            Joe,Jones,False,0,""$30,000"",6/25/1993";
+             
+            File.WriteAllText("Input.csv", csvString);
+             
+            generator.FillFromCsvFile(worksheet, "Input.csv");
+             
+            generator.SaveWorkbook(workbook);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            'Parameters
+            Dim filePath As String = "FillWorksheetWithCsvFileExample.xlsx"
+             
+            Dim workbook As Workbook = generator.WorkbookFactory(filePath)
+             
+            workbook.Author = "John Smith"
+            workbook.CreatedTime = Date.Now
+            workbook.LastSavedBy = "John Smith"
+            workbook.Subject = "This is a subject"
+            workbook.Title = "This is a title"
+             
+            Dim worksheet As Worksheet = generator.AddWorksheet(workbook, "Employees")
+             
+            Dim csvString As String = "FirstName,LastName,Married,NumberOfChildren,Salary,BirthDate" &amp; ControlChars.CrLf &amp; "John,Smith,True,3,""$60,000"",12/15/1977" &amp; ControlChars.CrLf &amp; "Joe,Jones,False,0,""$30,000"",6/25/1993"
+             
+            File.WriteAllText("Input.csv", csvString)
+             
+            generator.FillFromCsvFile(worksheet, "Input.csv")
+             
+            generator.SaveWorkbook(workbook)</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.FillFromCsvStream(KellermanSoftware.ExcelReports.Worksheet,System.IO.Stream)">
+            <summary>
+            Fill a worksheet using data from a CSV stream
+            </summary>
+            <param name="worksheet">The worksheet to fill</param>
+            <param name="csvStream">The stream with CSV file</param>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            //Parameters
+            string filePath = "FillWorksheetWithCsvStreamExample.xlsx";
+             
+            Workbook workbook = generator.WorkbookFactory(filePath);
+             
+            workbook.Author = "John Smith";
+            workbook.CreatedTime = DateTime.Now;
+            workbook.LastSavedBy = "John Smith";
+            workbook.Subject = "This is a subject";
+            workbook.Title = "This is a title";
+             
+            Worksheet worksheet = generator.AddWorksheet(workbook, "Employees");
+             
+            string csvString = @"FirstName,LastName,Married,NumberOfChildren,Salary,BirthDate
+            John,Smith,True,3,""$60,000"",12/15/1977
+            Joe,Jones,False,0,""$30,000"",6/25/1993";
+             
+            File.WriteAllText("Input.csv",csvString);
+             
+            using (FileStream csvStream = new FileStream("Input.csv", FileMode.Open, FileAccess.Read))
+            {
+                generator.FillFromCsvStream(worksheet, csvStream);
+            }
+             
+            generator.SaveWorkbook(workbook);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            'Parameters
+            Dim filePath As String = "FillWorksheetWithCsvStreamExample.xlsx"
+             
+            Dim workbook As Workbook = generator.WorkbookFactory(filePath)
+             
+            workbook.Author = "John Smith"
+            workbook.CreatedTime = Date.Now
+            workbook.LastSavedBy = "John Smith"
+            workbook.Subject = "This is a subject"
+            workbook.Title = "This is a title"
+             
+            Dim worksheet As Worksheet = generator.AddWorksheet(workbook, "Employees")
+             
+            Dim csvString As String = "FirstName,LastName,Married,NumberOfChildren,Salary,BirthDate" &amp; ControlChars.CrLf &amp; "John,Smith,True,3,""$60,000"",12/15/1977" &amp; ControlChars.CrLf &amp; "Joe,Jones,False,0,""$30,000"",6/25/1993"
+             
+            File.WriteAllText("Input.csv",csvString)
+             
+            Using csvStream As New FileStream("Input.csv", FileMode.Open, FileAccess.Read)
+                generator.FillFromCsvStream(worksheet, csvStream)
+            End Using
+             
+            generator.SaveWorkbook(workbook)</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.FillFromClassList``1(KellermanSoftware.ExcelReports.Worksheet,System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Fill a worksheet using data from the passed in list
+            </summary>
+            <typeparam name="T">Object Class Type</typeparam>
+            <param name="worksheet">Worksheet to fill</param>
+            <param name="list">List of Objects With The Data</param>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            string filePath = "FillWorksheetWithClassListExample.xlsx";
+             
+            Workbook workbook = generator.WorkbookFactory(filePath);
+             
+            workbook.Author = "John Smith";
+            workbook.CreatedTime = DateTime.Now;
+            workbook.LastSavedBy = "John Smith";
+            workbook.Subject = "This is a subject";
+            workbook.Title = "This is a title";
+             
+            Worksheet worksheet = generator.AddWorksheet(workbook, "Employees");
+             
+            List&lt;Employee&gt; employees = new List&lt;Employee&gt;();
+             
+            Employee employee1 = new Employee();
+            employee1.FirstName = "John";
+            employee1.LastName = "Smith";
+            employee1.Married = true;
+            employee1.NumberOfChildren = 3;
+            employee1.Salary = 60000;
+            employee1.HealthSavingsContribution = 6250;
+            employee1.EmployeeType = EmployeeType.LeadAccountant;
+            employee1.RetirementContributionPercent = .06F;
+            employee1.YearsOfService = 4;
+            employee1.QuarterlyMeetingAttendance = 15;
+            employee1.CompanyCarMileage = 152000;
+            employee1.VacationHours = 120;
+            employee1.SickHours = 40;
+            employee1.PersonalHours = 8;
+            employee1.BirthDate = new DateTime(1977, 12, 15);
+            employees.Add(employee1);
+             
+            Employee employee2 = new Employee();
+            employee2.FirstName = "Joe";
+            employee2.LastName = "Jones";
+            employee2.Married = false;
+            employee2.NumberOfChildren = 0;
+            employee2.Salary = 30000;
+            employee2.HealthSavingsContribution = 3000;
+            employee2.EmployeeType = EmployeeType.MediumJanitor;
+            employee2.RetirementContributionPercent = .03F;
+            employee2.YearsOfService = 1;
+            employee2.QuarterlyMeetingAttendance = 4;
+            employee2.CompanyCarMileage = 0;
+            employee2.VacationHours = 80;
+            employee2.SickHours = 20;
+            employee2.PersonalHours = 8;
+            employee2.BirthDate = new DateTime(1988, 6, 25);
+            employees.Add(employee2);
+             
+            generator.FillFromClassList(worksheet, employees);
+             
+            generator.SaveWorkbook(workbook);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            Dim filePath As String = "FillWorksheetWithClassListExample.xlsx"
+             
+            Dim workbook As Workbook = generator.WorkbookFactory(filePath)
+             
+            workbook.Author = "John Smith"
+            workbook.CreatedTime = Date.Now
+            workbook.LastSavedBy = "John Smith"
+            workbook.Subject = "This is a subject"
+            workbook.Title = "This is a title"
+             
+            Dim worksheet As Worksheet = generator.AddWorksheet(workbook, "Employees")
+             
+            Dim employees As New List(Of Employee)()
+             
+            Dim employee1 As New Employee()
+            employee1.FirstName = "John"
+            employee1.LastName = "Smith"
+            employee1.Married = True
+            employee1.NumberOfChildren = 3
+            employee1.Salary = 60000
+            employee1.HealthSavingsContribution = 6250
+            employee1.EmployeeType = EmployeeType.LeadAccountant
+            employee1.RetirementContributionPercent =.06F
+            employee1.YearsOfService = 4
+            employee1.QuarterlyMeetingAttendance = 15
+            employee1.CompanyCarMileage = 152000
+            employee1.VacationHours = 120
+            employee1.SickHours = 40
+            employee1.PersonalHours = 8
+            employee1.BirthDate = New Date(1977, 12, 15)
+            employees.Add(employee1)
+             
+            Dim employee2 As New Employee()
+            employee2.FirstName = "Joe"
+            employee2.LastName = "Jones"
+            employee2.Married = False
+            employee2.NumberOfChildren = 0
+            employee2.Salary = 30000
+            employee2.HealthSavingsContribution = 3000
+            employee2.EmployeeType = EmployeeType.MediumJanitor
+            employee2.RetirementContributionPercent =.03F
+            employee2.YearsOfService = 1
+            employee2.QuarterlyMeetingAttendance = 4
+            employee2.CompanyCarMileage = 0
+            employee2.VacationHours = 80
+            employee2.SickHours = 20
+            employee2.PersonalHours = 8
+            employee2.BirthDate = New Date(1988, 6, 25)
+            employees.Add(employee2)
+             
+            generator.FillFromClassList(worksheet, employees)
+             
+            generator.SaveWorkbook(workbook)</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.SaveWorkbook(KellermanSoftware.ExcelReports.Workbook)">
+            <summary>
+            Save the passed workboook to .xlsx file specified by workbook.FilePath
+            </summary>
+            <param name="workbook"></param>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            string filePath = "SaveWorkbookExample.xlsx";
+             
+            Workbook workbook = generator.WorkbookFactory(filePath);
+             
+            workbook.Author = "John Smith";
+            workbook.CreatedTime = DateTime.Now;
+            workbook.LastSavedBy = "John Smith";
+            workbook.Subject = "This is a subject";
+            workbook.Title = "This is a title";
+             
+            Worksheet worksheet = generator.AddWorksheet(workbook, "Employees");
+             
+            List&lt;Employee&gt; employees = new List&lt;Employee&gt;();
+             
+            Employee employee1 = new Employee();
+            employee1.FirstName = "John";
+            employee1.LastName = "Smith";
+            employee1.Married = true;
+            employee1.NumberOfChildren = 3;
+            employee1.Salary = 60000;
+            employee1.HealthSavingsContribution = 6250;
+            employee1.EmployeeType = EmployeeType.LeadAccountant;
+            employee1.RetirementContributionPercent = .06F;
+            employee1.YearsOfService = 4;
+            employee1.QuarterlyMeetingAttendance = 15;
+            employee1.CompanyCarMileage = 152000;
+            employee1.VacationHours = 120;
+            employee1.SickHours = 40;
+            employee1.PersonalHours = 8;
+            employee1.BirthDate = new DateTime(1977, 12, 15);
+            employees.Add(employee1);
+             
+            Employee employee2 = new Employee();
+            employee2.FirstName = "Joe";
+            employee2.LastName = "Jones";
+            employee2.Married = false;
+            employee2.NumberOfChildren = 0;
+            employee2.Salary = 30000;
+            employee2.HealthSavingsContribution = 3000;
+            employee2.EmployeeType = EmployeeType.MediumJanitor;
+            employee2.RetirementContributionPercent = .03F;
+            employee2.YearsOfService = 1;
+            employee2.QuarterlyMeetingAttendance = 4;
+            employee2.CompanyCarMileage = 0;
+            employee2.VacationHours = 80;
+            employee2.SickHours = 20;
+            employee2.PersonalHours = 8;
+            employee2.BirthDate = new DateTime(1988, 6, 25);
+            employees.Add(employee2);
+             
+            generator.FillFromClassList(worksheet, employees);
+             
+            generator.SaveWorkbook(workbook);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            Dim filePath As String = "SaveWorkbookExample.xlsx"
+             
+            Dim workbook As Workbook = generator.WorkbookFactory(filePath)
+             
+            workbook.Author = "John Smith"
+            workbook.CreatedTime = Date.Now
+            workbook.LastSavedBy = "John Smith"
+            workbook.Subject = "This is a subject"
+            workbook.Title = "This is a title"
+             
+            Dim worksheet As Worksheet = generator.AddWorksheet(workbook, "Employees")
+             
+            Dim employees As New List(Of Employee)()
+             
+            Dim employee1 As New Employee()
+            employee1.FirstName = "John"
+            employee1.LastName = "Smith"
+            employee1.Married = True
+            employee1.NumberOfChildren = 3
+            employee1.Salary = 60000
+            employee1.HealthSavingsContribution = 6250
+            employee1.EmployeeType = EmployeeType.LeadAccountant
+            employee1.RetirementContributionPercent =.06F
+            employee1.YearsOfService = 4
+            employee1.QuarterlyMeetingAttendance = 15
+            employee1.CompanyCarMileage = 152000
+            employee1.VacationHours = 120
+            employee1.SickHours = 40
+            employee1.PersonalHours = 8
+            employee1.BirthDate = New Date(1977, 12, 15)
+            employees.Add(employee1)
+             
+            Dim employee2 As New Employee()
+            employee2.FirstName = "Joe"
+            employee2.LastName = "Jones"
+            employee2.Married = False
+            employee2.NumberOfChildren = 0
+            employee2.Salary = 30000
+            employee2.HealthSavingsContribution = 3000
+            employee2.EmployeeType = EmployeeType.MediumJanitor
+            employee2.RetirementContributionPercent =.03F
+            employee2.YearsOfService = 1
+            employee2.QuarterlyMeetingAttendance = 4
+            employee2.CompanyCarMileage = 0
+            employee2.VacationHours = 80
+            employee2.SickHours = 20
+            employee2.PersonalHours = 8
+            employee2.BirthDate = New Date(1988, 6, 25)
+            employees.Add(employee2)
+             
+            generator.FillFromClassList(worksheet, employees)
+             
+            generator.SaveWorkbook(workbook)</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.SaveWorkbook(KellermanSoftware.ExcelReports.Workbook,System.String)">
+            <summary>
+            Save workbook to the specified path
+            </summary>
+            <param name="workbook"></param>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.ReplaceValuesInExcel(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Open an excel file and replace values in it and save it to another file.
+            This is useful for having an Excel template and creating a report from it like mail merge
+            </summary>
+            <param name="sourceFilePath">The Excel File to Read</param>
+            <param name="destFilePath">The Excel File to Write</param>
+            <param name="replacementValues">The values to search for in cells and replace</param>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            string inputTemplatePath = "InputTemplateExample.xlsx";
+             
+            Workbook workbook = generator.WorkbookFactory(inputTemplatePath);
+             
+            workbook.Author = "John Smith";
+            workbook.CreatedTime = DateTime.Now;
+            workbook.LastSavedBy = "John Smith";
+            workbook.Subject = "This is a subject";
+            workbook.Title = "This is a title";
+             
+            Worksheet worksheet = generator.AddWorksheet(workbook, "Employees");
+             
+            List&lt;Employee&gt; employees = new List&lt;Employee&gt;();
+             
+            Employee employee1 = new Employee();
+            employee1.FirstName = "John";
+            employee1.LastName = "Smith";
+            employee1.Married = true;
+            employee1.NumberOfChildren = 3;
+            employee1.Salary = 60000;
+            employee1.HealthSavingsContribution = 6250;
+            employee1.EmployeeType = EmployeeType.LeadAccountant;
+            employee1.RetirementContributionPercent = .06F;
+            employee1.YearsOfService = 4;
+            employee1.QuarterlyMeetingAttendance = 15;
+            employee1.CompanyCarMileage = 152000;
+            employee1.VacationHours = 120;
+            employee1.SickHours = 40;
+            employee1.PersonalHours = 8;
+            employee1.BirthDate = new DateTime(1977, 12, 15);
+            employees.Add(employee1);
+             
+            Employee employee2 = new Employee();
+            employee2.FirstName = "Joe";
+            employee2.LastName = "Jones";
+            employee2.Married = false;
+            employee2.NumberOfChildren = 0;
+            employee2.Salary = 30000;
+            employee2.HealthSavingsContribution = 3000;
+            employee2.EmployeeType = EmployeeType.MediumJanitor;
+            employee2.RetirementContributionPercent = .03F;
+            employee2.YearsOfService = 1;
+            employee2.QuarterlyMeetingAttendance = 4;
+            employee2.CompanyCarMileage = 0;
+            employee2.VacationHours = 80;
+            employee2.SickHours = 20;
+            employee2.PersonalHours = 8;
+            employee2.BirthDate = new DateTime(1988, 6, 25);
+            employees.Add(employee2);
+             
+            generator.FillFromClassList(worksheet, employees);
+             
+            generator.SaveWorkbook(workbook);
+             
+            Dictionary&lt;string,string&gt; replacementValues = new Dictionary&lt;string, string&gt;();
+            replacementValues.Add("Smith", "Kennedy");
+             
+            generator.ReplaceValuesInExcel(inputTemplatePath, "ReplaceValuesInExcelExample.xlsx", replacementValues);</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            Dim inputTemplatePath As String = "InputTemplateExample.xlsx"
+             
+            Dim workbook As Workbook = generator.WorkbookFactory(inputTemplatePath)
+             
+            workbook.Author = "John Smith"
+            workbook.CreatedTime = Date.Now
+            workbook.LastSavedBy = "John Smith"
+            workbook.Subject = "This is a subject"
+            workbook.Title = "This is a title"
+             
+            Dim worksheet As Worksheet = generator.AddWorksheet(workbook, "Employees")
+             
+            Dim employees As New List(Of Employee)()
+             
+            Dim employee1 As New Employee()
+            employee1.FirstName = "John"
+            employee1.LastName = "Smith"
+            employee1.Married = True
+            employee1.NumberOfChildren = 3
+            employee1.Salary = 60000
+            employee1.HealthSavingsContribution = 6250
+            employee1.EmployeeType = EmployeeType.LeadAccountant
+            employee1.RetirementContributionPercent =.06F
+            employee1.YearsOfService = 4
+            employee1.QuarterlyMeetingAttendance = 15
+            employee1.CompanyCarMileage = 152000
+            employee1.VacationHours = 120
+            employee1.SickHours = 40
+            employee1.PersonalHours = 8
+            employee1.BirthDate = New Date(1977, 12, 15)
+            employees.Add(employee1)
+             
+            Dim employee2 As New Employee()
+            employee2.FirstName = "Joe"
+            employee2.LastName = "Jones"
+            employee2.Married = False
+            employee2.NumberOfChildren = 0
+            employee2.Salary = 30000
+            employee2.HealthSavingsContribution = 3000
+            employee2.EmployeeType = EmployeeType.MediumJanitor
+            employee2.RetirementContributionPercent =.03F
+            employee2.YearsOfService = 1
+            employee2.QuarterlyMeetingAttendance = 4
+            employee2.CompanyCarMileage = 0
+            employee2.VacationHours = 80
+            employee2.SickHours = 20
+            employee2.PersonalHours = 8
+            employee2.BirthDate = New Date(1988, 6, 25)
+            employees.Add(employee2)
+             
+            generator.FillFromClassList(worksheet, employees)
+             
+            generator.SaveWorkbook(workbook)
+             
+            Dim replacementValues As New Dictionary(Of String,String)()
+            replacementValues.Add("Smith", "Kennedy")
+             
+            generator.ReplaceValuesInExcel(inputTemplatePath, "ReplaceValuesInExcelExample.xlsx", replacementValues)</code>
+            </example>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.ExcelReportsGenerator.SaveWorkbook(KellermanSoftware.ExcelReports.Workbook,System.IO.Stream)">
+            <summary>
+            Save workbook to the specified stream
+            </summary>
+            <param name="workbook"></param>
+            <param name="outputStream"></param>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.ExcelReportsGenerator.Configuration">
+            <summary>
+            Global formatting configuration
+            </summary>
+            <example>
+            	<code title="Example" description="" lang="CS">
+            ExcelReportsGenerator generator = new ExcelReportsGenerator(); //Trial Mode
+            //ExcelReportsGenerator generator = new ExcelReportsGenerator("place user name here", "place license key here"); //License Mode
+             
+            //Create a header for the worksheet. The default is true.
+            generator.Configuration.CreateHeader = true;
+             
+            //The text when a boolean is false. The default is False
+            generator.Configuration.FalseText = string.Empty;
+             
+            //The text when a boolean is true. The default is True
+            generator.Configuration.TrueText = "Yes";
+             
+            //The background color of the header. The default is Black
+            generator.Configuration.HeaderBackgroundColor = System.Drawing.Color.Blue;
+             
+            //The foreground color of the header. The default is White
+            generator.Configuration.HeaderForegroundColor = System.Drawing.Color.Yellow;
+             
+            //Insert spaces into enum values based on capitilization. The default is True
+            generator.Configuration.InsertSpacesIntoEnumValues = false;
+             
+            //Insert spaces into header columns based on capitilization. The default is True
+            generator.Configuration.InsertSpacesIntoHeaderColumns = false;
+             
+            //The default text when a date is DateTime.MinValue. The default is string.Empty
+            generator.Configuration.MinValueDateText = "1/1/1970";
+             
+            //When there are no items in a list or data table or just the header for CSV, 
+            //the NoItemsMessage will show on the second row
+            //The default is "No items found"
+            generator.Configuration.NoItemsMessage = "No records";
+             
+            //The default text when a value is null. The default is string.Empty.
+            generator.Configuration.NullText = "(null)";
+             
+            string csvString = @"Name,Birthdate
+            John Smith,6/22/2013";
+             
+            generator.GenerateFromCsvString(csvString,"Birthdays","ConfigurationExample.xlsx");</code>
+            	<code title="Example2" description="" lang="VB.NET">
+            Dim generator As New ExcelReportsGenerator() 'Trial Mode
+            'Dim generator As New ExcelReportsGenerator("place user name here", "place license key here") 'License Mode
+             
+            'Create a header for the worksheet. The default is true.
+            generator.Configuration.CreateHeader = True
+             
+            'The text when a boolean is false. The default is False
+            generator.Configuration.FalseText = String.Empty
+             
+            'The text when a boolean is true. The default is True
+            generator.Configuration.TrueText = "Yes"
+             
+            'The background color of the header. The default is Black
+            generator.Configuration.HeaderBackgroundColor = System.Drawing.Color.Blue
+             
+            'The foreground color of the header. The default is White
+            generator.Configuration.HeaderForegroundColor = System.Drawing.Color.Yellow
+             
+            'Insert spaces into enum values based on capitilization. The default is True
+            generator.Configuration.InsertSpacesIntoEnumValues = False
+             
+            'Insert spaces into header columns based on capitilization. The default is True
+            generator.Configuration.InsertSpacesIntoHeaderColumns = False
+             
+            'The default text when a date is DateTime.MinValue. The default is string.Empty
+            generator.Configuration.MinValueDateText = "1/1/1970"
+             
+            'When there are no items in a list or data table or just the header for CSV, 
+            'the NoItemsMessage will show on the second row
+            'The default is "No items found"
+            generator.Configuration.NoItemsMessage = "No records"
+             
+            'The default text when a value is null. The default is string.Empty.
+            generator.Configuration.NullText = "(null)"
+             
+            Dim csvString As String = "Name,Birthdate" &amp; ControlChars.CrLf &amp; "John Smith,6/22/2013"
+             
+            generator.GenerateFromCsvString(csvString,"Birthdays","ConfigurationExample.xlsx")</code>
+            </example>
+        </member>
+        <member name="T:KellermanSoftware.Licensing.IniFile">
+            <summary>
+            Create a New INI file to store or load data
+            <BR /><b>Author:</b>  Gregory T. Finzer<BR />
+            <b>Date:</b>  10/12/2002
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.IniFile.#ctor(System.String)">
+            <summary>
+            INIFile Constructor.
+            </summary>
+            <PARAM name="INIPath">File Path to the INI File</PARAM>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.IniFile.IniWriteValue(System.String,System.String,System.String)">
+            <summary>
+            Write Data to the INI File
+            </summary>
+            <param name="section">Section Name</param>
+            <param name="key">Key Name</param>
+            <param name="value">Value Name</param>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.IniFile.CheckINIPath">
+            <summary>
+            Ensure the directory exists for the 
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.IniFile.IniReadValue(System.String,System.String)">
+            <summary>
+            Read Data from an INI File
+            </summary>
+            <param name="section">Section Name</param>
+            <param name="key">Key Name</param>
+            <returns>Value</returns>
+        </member>
+        <member name="P:KellermanSoftware.Licensing.IniFile.Path">
+            <summary>
+            Returns the path to the ini file
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.Licensing.IniFile.INIPathWritable">
+            <summary>
+            Returns True if the INI path is writable
+            </summary>
+        </member>
+        <member name="T:KellermanSoftware.Licensing.Entry">
+            <summary>
+            Hold Subscription Entries 
+            </summary>
+        </member>
+        <member name="T:KellermanSoftware.Licensing.IniReaderWriter">
+            <summary>
+            Fully Managed INI File Reader and Writer without any COM Interop
+            See:  http://en.wikipedia.org/wiki/INI_file
+            See:  http://msdn.microsoft.com/en-us/library/windows/desktop/ms724348%28v=vs.85%29.aspx
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.IniReaderWriter.GetPrivateProfileString(System.String,System.String,System.String,System.String@,System.Int32,System.String)">
+            <summary>
+            Managed version of GetPrivateProfileString<br/>
+            No COM Interop is used<br/>
+            If the file does not exist or the value is not in the file, the defaultValue is used.<br/>
+            See:  http://msdn.microsoft.com/en-us/library/windows/desktop/ms724348%28v=vs.85%29.aspx
+            </summary>
+            <param name="sectionName">The INI Section Name</param>
+            <param name="settingName">The INI Setting Name</param>
+            <param name="defaultValue">The default value if there is no value</param>
+            <param name="returnedString">Output of the string</param>
+            <param name="size">The number of buffer characters (not used but here for backward compatibility)</param>
+            <param name="filePath">The path to the INI file</param>
+            <exception cref="T:System.ArgumentNullException">Occurs when sectionName, settingName or filePath is null</exception>
+            <returns>Number of characters returned</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.IniReaderWriter.GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32,System.String)">
+            <summary>
+            Managed version of GetPrivateProfileString<br/>
+            No COM Interop is used<br/>
+            If the file does not exist or the value is not in the file, the defaultValue is used.<br/>
+            See:  http://msdn.microsoft.com/en-us/library/windows/desktop/ms724348%28v=vs.85%29.aspx
+            </summary>
+            <param name="sectionName">The INI Section Name</param>
+            <param name="settingName">The INI Setting Name</param>
+            <param name="defaultValue">The default value if there is no value</param>
+            <param name="returnedBuffer">StrinbBuilder Output of the string</param>
+            <param name="size">The number of buffer characters (not used but here for backward compatibility)</param>
+            <param name="filePath">The path to the INI file</param>
+            <exception cref="T:System.ArgumentNullException">Occurs when sectionName, settingName or filePath is null</exception>
+            <returns>Number of characters returned</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.IniReaderWriter.WritePrivateProfileString(System.String,System.String,System.String,System.String)">
+            <summary>
+            Managed version of WritePrivateProfileString<br/>
+            No COM Interop is used<br/>
+            If the file does not exist it will be created.  If the section does not exist it will be created.  If the setting already exists it will be updated.  If the setting does not exist, it will be added.<br/>
+            See:  http://msdn.microsoft.com/en-us/library/windows/desktop/ms724348%28v=vs.85%29.aspx
+            </summary>
+            <param name="sectionName">The INI Section Name</param>
+            <param name="settingName">The INI Setting Name</param>
+            <param name="settingValue">The INI Setting Value</param>
+            <param name="filePath">The path to the INI file</param>
+            <exception cref="T:System.ArgumentNullException">Occurs when sectionName, settingName or filePath is null</exception>
+            <returns>True if the setting was set successfully</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.IniReaderWriter.GetPrivateProfileInt(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Managed version of GetPrivateProfileInt<br/>
+            No COM Interop is used<br/>
+            If the file does not exist or the value is not in the file, the defaultValue is used.<br/>
+            See:  http://msdn.microsoft.com/en-us/library/windows/desktop/ms724348%28v=vs.85%29.aspx
+            </summary>
+            <param name="sectionName">The INI Section Name</param>
+            <param name="settingName">The INI Setting Name</param>
+            <param name="defaultValue">The default value if there is no value</param>
+            <param name="filePath">The path to the INI file</param>
+            <exception cref="T:System.ArgumentNullException">Occurs when sectionName, settingName or filePath is null</exception>
+            <returns>The integer</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.IniReaderWriter.GetSectionNames(System.String)">
+            <summary>
+            Get a list of the sections in an INI file<br/>
+            No COM Interop is used<br/>
+            If the file does not exist, no sections will be returned.
+            </summary>
+            <param name="filePath">The path to the INI file</param>
+            <exception cref="T:System.ArgumentNullException">Occurs when filePath is null</exception>
+            <returns>A list of the section names</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.IniReaderWriter.GetSectionValues(System.String,System.String)">
+            <summary>
+            Get a dictionary of the key value pairs for a section in an INI file<br/>
+            No COM Interop is used<br/>
+            If the file does not exist, no items will be returned.
+            </summary>
+            <param name="sectionName">The section name</param>
+            <param name="filePath">The path to the INI file</param>
+            <exception cref="T:System.ArgumentNullException">Occurs when sectionName, or filePath is null</exception>
+            <returns>A list of the settings and their values</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.IniReaderWriter.SettingExists(System.String,System.String,System.String)">
+            <summary>
+            Return true if a setting exists<br/>
+            No COM Interop is used<br/>
+            If the file does not exist or the setting does not exist, the value returned will be false.
+            </summary>
+            <param name="sectionName">The section name</param>
+            <param name="settingName">The setting name</param>
+            <param name="filePath">The path to the INI File</param>
+            <exception cref="T:System.ArgumentNullException">Occurs when sectionName, settingName or filePath is null</exception>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.IniReaderWriter.GetSetting(System.String,System.String,System.String)">
+            <summary>
+            Get the value for a setting in a section<br/>
+            No COM Interop is used<br/>
+            If the file does not exist or the setting does not exist, the value returned will be null.
+            </summary>
+            <param name="sectionName">The section name</param>
+            <param name="settingName">The setting name</param>
+            <param name="filePath">The path to the INI File</param>
+            <exception cref="T:System.ArgumentNullException">Occurs when sectionName, settingName or filePath is null</exception>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.IniReaderWriter.SaveSetting(System.String,System.String,System.String,System.String)">
+            <summary>
+            Save a value to an INI file<br/>
+            No COM Interop is used<br/>
+            If the file does not exist it will be created.  If the section does not exist it will be created.  If the setting already exists it will be updated.  If the setting does not exist, it will be added.<br/>
+            </summary>
+            <param name="sectionName">The section name</param>
+            <param name="settingName">The setting name</param>
+            <param name="settingValue">The value to set</param>
+            <param name="filePath">The path to the INI file</param>
+            <exception cref="T:System.ArgumentNullException">Occurs when sectionName, settingName or filePath is null</exception>
+            <returns>True if it was saved successfully</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.IniReaderWriter.DeleteSetting(System.String,System.String,System.String)">
+            <summary>
+            Delete a setting from an INI file<br/>
+            No COM Interop is used<br/>
+            If the file does not exist or the value does not exist, false will be returned.
+            </summary>
+            <param name="sectionName">The name of the section</param>
+            <param name="settingName">The name of the setting</param>
+            <param name="filePath">The path to the INI file</param>
+            <exception cref="T:System.ArgumentNullException">Occurs when sectionName, settingName or filePath is null</exception>
+            <returns>True if the setting was deleted</returns>
+        </member>
+        <member name="P:KellermanSoftware.Licensing.IniReaderWriter.FileEncoding">
+            <summary>
+            Override the file encoding.  The default is Encoding.Default
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.Licensing.IniReaderWriter.IsProcessEscapeCharactersEnabled">
+            <summary>
+            If true, escape characters will be processed.  The default is false.
+            See http://en.wikipedia.org/wiki/INI_file
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.Licensing.IniReaderWriter.CommentCharacter">
+            <summary>
+            The comment character.  By default it is a semicolon
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.Licensing.IniReaderWriter.Delimiter">
+            <summary>
+            The delimiter between settings and values.  By default it is a equals sign
+            </summary>
+        </member>
+        <member name="T:KellermanSoftware.Licensing.Encryption">
+            <summary>
+            This class provides methods Encryption and Decryption using a variety
+            of cryptographic algorithms. The methods are overloaded to perform
+            encryption/decryption on ordinary texts of string, a MemoryStream
+            or a complete file (text or binary).
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.Licensing.Encryption.alg">
+            <summary>
+            The variable that will hold the relevant instantiated cryptographic class object.
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.Licensing.Encryption.provider">
+            <summary>
+            Enumeration that specifies the cryptographic service provider.
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.Licensing.Encryption.strKey">
+            <summary>
+            Serves as password used with salt to generate Key for encryption
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.Licensing.Encryption.strSalt">
+            <summary>
+            The salt used for generating Key for encryption
+            </summary>
+        </member>
+        <member name="F:KellermanSoftware.Licensing.Encryption.ivChars">
+            <summary>
+            The character array from which we set our initialization vector.
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.Encryption.#ctor">
+            <summary>
+            Default constructor for the Encryption class.
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.Encryption.#ctor(System.String,System.String)">
+            <summary>
+            Alternate Constructor for the Encryption class.
+            </summary>
+            <param name="strKey">The password used for generating the Key.</param>
+            <param name="strSalt">The Salt to be used in conjunction with 
+            the password to generate the actual Key.</param>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.Encryption.GetIV">
+            <summary>
+            Get an initialization vector for the crypto algorithms.
+            TODO: Random IV Generation
+            </summary>
+            <returns>a byte array that contains the generated initialization vector.</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.Encryption.GetKey">
+            <summary>
+            Gets the appropriate key for the cryptographic algorithm being used.
+            </summary>
+            <returns>a byte array that contains the generated key.</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.Encryption.InitializeAlgorithm(KellermanSoftware.Licensing.EncryptionProvider)">
+            <summary>
+            Instantiates the SymmetricAlgorithm object with the appropriate
+            cryptographic service provider class.
+            </summary>
+            <param name="encryptionType">Enumeration that specifies which cryptographic
+            algorithm is being used.</param>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.Encryption.Encrypt(KellermanSoftware.Licensing.EncryptionProvider,System.String)">
+            <summary>
+            Encrypts a plain string.
+            </summary>
+            <param name="encryptionType">Specifies what encryption algorithm is to be used.</param>
+            <param name="input">The input clear string.</param>
+            <returns>A base64-encoded representation of the encrypted string.</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.Encryption.Encrypt(KellermanSoftware.Licensing.EncryptionProvider,System.IO.MemoryStream)">
+            <summary>
+            Encrypts a MemoryStream.
+            </summary>
+            <param name="encryptionType">Specifies what encryption algorithm is to be used.</param>
+            <param name="memStream">The input MemoryStream object</param>
+            <returns>A base64-encoded MemoryStream object</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.Encryption.Encrypt(KellermanSoftware.Licensing.EncryptionProvider,System.String,System.String)">
+            <summary>
+            Encrypts the contents of a text file and outputs them to another file.
+            TODO: Convert to Base64
+            </summary>
+            <param name="encryptionType">Specifies what encryption algorithm is to be used.</param>
+            <param name="inputFile">The path to the input file.</param>
+            <param name="outputFile">The path to the output file.</param>
+            <returns>A boolean that specifies whether the encryption operation was successful or not.</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.Encryption.Decrypt(KellermanSoftware.Licensing.EncryptionProvider,System.String)">
+            <summary>
+            Decrypts a base64-encoded string.
+            </summary>
+            <param name="encryptionType">Specifies what encryption algorithm is to be used.</param>
+            <param name="input">The input clear string.</param>
+            <returns>The decrypted plain text.</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.Encryption.Decrypt(KellermanSoftware.Licensing.EncryptionProvider,System.IO.MemoryStream)">
+            <summary>
+            Decrypts a base64-encoded MemoryStream.
+            </summary>
+            <param name="encryptionType">Specifies what encryption algorithm is to be used.</param>
+            <param name="memStream">A base64-encoded MemoryStream object.</param>
+            <returns>Simple MemoryStream object.</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.Encryption.Decrypt(KellermanSoftware.Licensing.EncryptionProvider,System.String,System.String)">
+            <summary>
+            Decrypts the contents of a text file and outputs them to another file.
+            </summary>
+            <param name="encryptionType">Specifies what encryption algorithm is to be used.</param>
+            <param name="inputFile">The path to the input file.</param>
+            <param name="outputFile">The path to the output file.</param>
+            <returns>A boolean that specifies whether the decryption operation was successful or not.</returns>
+        </member>
+        <member name="P:KellermanSoftware.Licensing.Encryption.Key">
+            <summary>
+            Public property for Key
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.Licensing.Encryption.Salt">
+            <summary>
+            Public property for Salt
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="productCode"></param>
+            <param name="productName"></param>
+            <param name="website"></param>
+            <param name="userName"></param>
+            <param name="license"></param>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.ValidateInput">
+            <summary>
+            Ensure required input
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.UsDateToString(System.DateTime)">
+            <summary>
+            Convert a DateTime to a US date string
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.UsDateToDate(System.String)">
+            <summary>
+            Convert a US formatted date to DateTime
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.SetTargetLicense">
+            <summary>
+            Set the target license for the 
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.SetupVariables">
+            <summary>
+            A bunch of variable initialization
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.StartTrial">
+            <summary>
+            This is a new installation so start the trial
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.BetaExpired">
+            <summary>
+            Returns true if the beta has expired
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.AllKeysBlank">
+            <summary>
+            Returns true if all the keys are blank
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.SomeKeysBlank">
+            <summary>
+            Returns true if some of the keys are blank
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.GetKeys">
+            <summary>
+            Get all the keys from the registry and the INI file
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.GetTrialExtensions">
+            <summary>
+            Get the number of trial extensions
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.GetFailedAttemptsToday">
+            <summary>
+            Get the number of failed attempts today
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.GetUserName">
+            <summary>
+            Get the saved user name from the registry
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.GetLicense">
+            <summary>
+            Get the saved user name from the registry
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.GetLastRunDate">
+            <summary>
+            Get the last date the component was run, prevents back dating
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.GetInstallationDate">
+            <summary>
+            Get the date the component was installed
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.CombineKey(System.String)">
+            <summary>
+            Combine the key for the 
+            </summary>
+            <param name="prefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.ReadFromIni(System.String)">
+            <summary>
+            Read the key from the INI file
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.ReadFromRegistry(System.String)">
+            <summary>
+            Read the key from the registry
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.SaveToRegistryAndIni(System.String,System.String)">
+            <summary>
+            Save the key and value to the registry and INI file.  
+            Use the different encryption key for each.
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.SaveToRegistry(System.String,System.String)">
+            <summary>
+            Save the key to the registry
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.SaveToIniFile(System.String,System.String)">
+            <summary>
+            Save a key to an INI file
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.UpperLetterSpace(System.String)">
+            <summary>
+            Make the text upper case and return only letters and spaces
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.GetProductShortName(System.String)">
+            <summary>
+            Extract product short name from the given product code.
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.GetMajorVersion(System.String)">
+            <summary>
+            Extract major version from the given product code.
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.ExtendTrial(System.String)">
+            <summary>
+            Trial extensions are good for the current day and the the next day
+            </summary>
+            <param name="trialExtension"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.TrialMessage">
+            <summary>
+            User friendly trial days remaining
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.TrialDaysLeft">
+            <summary>
+            Returns the number of days left in the trial
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.CheckLicense">
+            <summary>
+            Check to see if it is a valid license OR the user is within the trial period
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.TrialValid">
+            <summary>
+            Returns true if the trial is valid, false if it is expired, hacked, or backdated
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.Mid(System.Object,System.Int32,System.Int32)">
+            <summary>
+            Same as VB mid function except it doesn't bomb at all
+            </summary>
+            <param name="oString">String to parse</param>
+            <param name="iStart">Start of string</param>
+            <param name="iLength">Length of section</param>
+            <returns>Section of string</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.Mid(System.Object,System.Int32)">
+            <summary>
+            Same as VB mid function except it doesn't bomb at all
+            </summary>
+            <param name="oString">String to parse</param>
+            <param name="iStart">Starting position</param>
+            <returns>The string section</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.Asc(System.String)">
+            <summary>
+            Get the ASCII value for the left most character of the passed string.
+            </summary>
+            <param name="sInString">The string to parse.</param>
+            <returns>ACSCII value of the leftmost character</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.Right(System.Object,System.Int32)">
+            <summary>
+            Same as VB function but doesn't bomb
+            </summary>
+            <param name="oString">The string to parse</param>
+            <param name="iLength">Starting Right Position</param>
+            <returns>String section</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.GetLastWord(System.String,System.String)">
+            <summary>
+            Get the last word in a string
+            </summary>
+            <param name="sSentence"></param>
+            <param name="sSeperator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.NumberOfWords(System.String,System.String)">
+            <summary>
+            Calculate the number of words in a string
+            </summary>
+            <param name="sSentence">String to parse</param>
+            <param name="sSeperator">Seperator character or string</param>
+            <returns>The number of words in the string</returns>
+        </member>
+        <member name="M:KellermanSoftware.Licensing.LicensingLibrary.GetField(System.String,System.Int32,System.String)">
+            <summary>
+            Parses sSentence delimited by sSeperator and returns the word specified by iPosition
+            </summary>
+            <param name="sSentence">The string to parse</param>
+            <param name="iPosition">Which word to look for</param>
+            <param name="sSeperator">What the words are delmited by</param>
+            <returns>"" or the word found</returns>
+        </member>
+        <member name="P:KellermanSoftware.Licensing.LicensingLibrary.AdditionalInfo">
+            <summary>
+            Additional information about the success or failure of a public method
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.Licensing.LicensingLibrary.FailedAttemptsToday">
+            <summary>
+            The failed attempts at checking a license today
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.Licensing.LicensingLibrary.TrialExtensions">
+            <summary>
+            The number of trial extensions for this user
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.Licensing.LicensingLibrary.TrialDays">
+            <summary>
+            The number of days for a trial period
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.Licensing.LicensingLibrary.BetaExpirationDate">
+            <summary>
+            Returns the maximum date the software can run in beta
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.Licensing.LicensingLibrary.IsService">
+            <summary>
+            Gets a value indicating whether the application is a windows service.
+            </summary>
+            <value>
+            <c>true</c> if this instance is service; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:KellermanSoftware.Common.Util.ExtractPath(System.String)">
+            <summary>
+            Extract the path from a path ending in a filename 
+            </summary>
+            <param name="fullPath">A fully qualified path ending in a filename</param>
+            <returns>The extacted path</returns>
+        </member>
+        <member name="M:KellermanSoftware.Common.Util.Writable(System.String)">
+            <summary>
+            Check to see if the program can create, update, and delete in the specified path.
+            </summary>
+            <param name="path">The path to check.</param>
+            <returns>True if the path is writable.</returns>
+        </member>
+        <member name="T:KellermanSoftware.ExcelReports.Workbook">
+            <summary>
+            Information about an Excel Workbook
+            </summary>
+        </member>
+        <member name="M:KellermanSoftware.ExcelReports.Workbook.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Workbook.FilePath">
+            <summary>
+            Where to save the file.
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Workbook.Author">
+            <summary>
+            Author Property in the Excel Workbook
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Workbook.Title">
+            <summary>
+            Title Property in the Excel Workbook
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Workbook.LastSavedBy">
+            <summary>
+            Last Saved By Property in the Excel Workbook
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Workbook.Subject">
+            <summary>
+            Subject Property in the Excel Workbook
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Workbook.CreatedTime">
+            <summary>
+            Created Time Property in the Excel Workbook
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Workbook.Worksheets">
+            <summary>
+            A list of worksheets in the Workbook
+            </summary>
+        </member>
+        <member name="T:KellermanSoftware.ExcelReports.Worksheet">
+            <summary>
+            Worksheet definition
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Worksheet.Name">
+            <summary>
+            The name of the worksheet
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Worksheet.ColumnDefinitions">
+            <summary>
+            The order and definition for each column in the worksheet
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Worksheet.ColumnNames">
+            <summary>
+            Names of the worksheet columns
+            </summary>
+        </member>
+        <member name="P:KellermanSoftware.ExcelReports.Worksheet.Data">
+            <summary>
+            Worksheet cells data
+            </summary>
+        </member>
+    </members>
+</doc>
