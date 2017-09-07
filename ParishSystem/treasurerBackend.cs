@@ -773,7 +773,7 @@ namespace ParishSystem
                         from blooddonor
                         inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
                         inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
-                        where bloodDonationEvent.bloodDonationEventID = {blooddonationeventid}""";
+                        where bloodDonationEvent.bloodDonationEventID = ""{blooddonationeventid}""";
             return runQuery(q);
         }
         public DataTable getBloodDonorsOnDate(DateTime Start)
@@ -819,7 +819,7 @@ namespace ParishSystem
                         from blooddonor
                         inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
                         inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
-                        where startDateTime between""{Start.ToString("yyyy-MM-dd 00:00:00")}"" and ""{Stop.ToString("yyyy-MM-dd 23:59:59")}""";
+                        where startDateTime between ""{Start.ToString("yyyy-MM-dd 00:00:00")}"" and ""{Stop.ToString("yyyy-MM-dd 23:59:59")}""";
             return runQuery(q);
         }
         public DataTable getTotalDonationsOnEvents()

@@ -48,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.privilege_combobox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeDGV)).BeginInit();
             this.panel.SuspendLayout();
             this.SuspendLayout();
@@ -117,6 +118,7 @@
             // 
             // panel
             // 
+            this.panel.Controls.Add(this.privilege_combobox);
             this.panel.Controls.Add(this.password_textbox);
             this.panel.Controls.Add(this.username_textbox);
             this.panel.Controls.Add(this.middleinitial_textbox);
@@ -400,7 +402,7 @@
             this.clear_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.clear_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_button.ForeColor = System.Drawing.Color.White;
-            this.clear_button.Location = new System.Drawing.Point(108, 351);
+            this.clear_button.Location = new System.Drawing.Point(105, 399);
             this.clear_button.Name = "clear_button";
             this.clear_button.Size = new System.Drawing.Size(204, 37);
             this.clear_button.TabIndex = 25;
@@ -416,7 +418,7 @@
             this.add_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_button.ForeColor = System.Drawing.Color.White;
-            this.add_button.Location = new System.Drawing.Point(108, 294);
+            this.add_button.Location = new System.Drawing.Point(105, 342);
             this.add_button.Name = "add_button";
             this.add_button.Size = new System.Drawing.Size(204, 37);
             this.add_button.TabIndex = 23;
@@ -431,7 +433,7 @@
             this.active_checkbox.Checked = true;
             this.active_checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.active_checkbox.Enabled = false;
-            this.active_checkbox.Location = new System.Drawing.Point(173, 238);
+            this.active_checkbox.Location = new System.Drawing.Point(175, 279);
             this.active_checkbox.Name = "active_checkbox";
             this.active_checkbox.Size = new System.Drawing.Size(71, 25);
             this.active_checkbox.TabIndex = 22;
@@ -464,6 +466,19 @@
             this.label3.Size = new System.Drawing.Size(220, 21);
             this.label3.TabIndex = 36;
             this.label3.Text = "______________________________";
+            // 
+            // privilege_combobox
+            // 
+            this.privilege_combobox.FormattingEnabled = true;
+            this.privilege_combobox.Items.AddRange(new object[] {
+            "",
+            "Bookkeeper",
+            "Secretary",
+            "Priest"});
+            this.privilege_combobox.Location = new System.Drawing.Point(105, 233);
+            this.privilege_combobox.Name = "privilege_combobox";
+            this.privilege_combobox.Size = new System.Drawing.Size(204, 29);
+            this.privilege_combobox.TabIndex = 44;
             // 
             // EmployeeModule
             // 
@@ -502,5 +517,6 @@
         private MetroFramework.Controls.MetroTextBox suffix_textbox;
         private MetroFramework.Controls.MetroTextBox password_textbox;
         private MetroFramework.Controls.MetroTextBox username_textbox;
+        private System.Windows.Forms.ComboBox privilege_combobox;
     }
 }

@@ -44,5 +44,16 @@ namespace ParishSystem
         {
             Password_textbox.PasswordChar = '*';
         }
+
+        private void Close_button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            Draggable a = new Draggable(this);
+            a.makeDraggable(panel1);
+        }
     }
 }
