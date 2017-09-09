@@ -42,6 +42,7 @@ namespace ParishSystem
             SubMenu.Add(itemtypemenu_button, new Panel_Size_Pair(175, 58, itemtypemenu_panel, false));
             SubMenu.Add(CDBreport_button, new Panel_Size_Pair(234, 58, CDBreport_panel, false));
             SubMenu.Add(CRBreport_button, new Panel_Size_Pair(234, 58, CRBreport_panel, false));
+            SubMenu.Add(ministers_button_menu, new Panel_Size_Pair(234, 58, minister_panel, false));
         }
         #region Effects
 
@@ -388,6 +389,15 @@ namespace ParishSystem
             showForm(content_panel, f);
         }
 
-        
+        private void ministers_button_menu_Click(object sender, EventArgs e)
+        {
+            Button A = (sender as Button);
+            opensize = SubMenu[A].OpenSize;
+            closesize = SubMenu[A].CloseSize;
+            PanelToMove = SubMenu[A].panel;
+            open = SubMenu[A].open;
+            SubMenu[A].open = !(SubMenu[A].open);
+            Panel_Timer.Start();
+        }
     }
 }

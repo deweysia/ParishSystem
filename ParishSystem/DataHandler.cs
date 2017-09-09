@@ -205,8 +205,8 @@ namespace ParishSystem
         {
                 string[] components = s.Split(' ');
                 string[] date = components[0].Split('/');
-                int month = int.Parse(date[0]);
-                int day = int.Parse(date[1]);
+                int month = int.Parse(date[1]);
+                int day = int.Parse(date[0]);
                 int year = int.Parse(date[2]);
 
 
@@ -360,7 +360,7 @@ namespace ParishSystem
 
         public DataTable getGeneralProfile(int profileID)
         {
-            string q = "SELECT *, firstName, midName, lastName, suffix, gender, DATE(birthdate), birthplace, bloodType FROM generalProfile WHERE profileID = " + profileID;
+            string q = "SELECT *, firstName, midName, lastName, suffix, gender, DATE(birthdate), birthplace FROM generalProfile WHERE profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 

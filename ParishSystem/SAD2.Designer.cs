@@ -80,9 +80,11 @@
             this.MenuTimer = new System.Windows.Forms.Timer(this.components);
             this.Panel_Timer = new System.Windows.Forms.Timer(this.components);
             this.Workspace_panel = new System.Windows.Forms.Panel();
+            this.minister_panel = new System.Windows.Forms.Panel();
             this.panel_controlbox.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayout_ControlButtons.SuspendLayout();
+            this.content_panel.SuspendLayout();
             this.Menu_panel.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.bloodlettingmenu_panel.SuspendLayout();
@@ -188,6 +190,7 @@
             // content_panel
             // 
             this.content_panel.BackColor = System.Drawing.Color.White;
+            this.content_panel.Controls.Add(this.Menu_panel);
             this.content_panel.Location = new System.Drawing.Point(0, 0);
             this.content_panel.Name = "content_panel";
             this.content_panel.Size = new System.Drawing.Size(935, 547);
@@ -210,6 +213,7 @@
             this.flowLayoutPanel2.Controls.Add(this.application_button_menu);
             this.flowLayoutPanel2.Controls.Add(this.profile_menu_button);
             this.flowLayoutPanel2.Controls.Add(this.scheduling_button_menu);
+            this.flowLayoutPanel2.Controls.Add(this.minister_panel);
             this.flowLayoutPanel2.Controls.Add(this.bloodlettingmenu_panel);
             this.flowLayoutPanel2.Controls.Add(this.sacrament_button_menu);
             this.flowLayoutPanel2.Controls.Add(this.CRBmenu_panel);
@@ -218,7 +222,7 @@
             this.flowLayoutPanel2.Controls.Add(this.CRBreport_panel);
             this.flowLayoutPanel2.Controls.Add(this.itemtypemenu_panel);
             this.flowLayoutPanel2.Controls.Add(this.ministers_button_menu);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(31, 27);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(25, 49);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(873, 520);
             this.flowLayoutPanel2.TabIndex = 46;
@@ -311,7 +315,7 @@
             this.bloodlettingmenu_panel.Controls.Add(this.bloodlettingevent_button);
             this.bloodlettingmenu_panel.Controls.Add(this.bloodlettingdonor_button);
             this.bloodlettingmenu_panel.Controls.Add(this.bloodletting_button_menu);
-            this.bloodlettingmenu_panel.Location = new System.Drawing.Point(295, 73);
+            this.bloodlettingmenu_panel.Location = new System.Drawing.Point(501, 73);
             this.bloodlettingmenu_panel.Margin = new System.Windows.Forms.Padding(5);
             this.bloodlettingmenu_panel.Name = "bloodlettingmenu_panel";
             this.bloodlettingmenu_panel.Size = new System.Drawing.Size(280, 58);
@@ -405,7 +409,7 @@
             this.sacrament_button_menu.ForeColor = System.Drawing.Color.White;
             this.sacrament_button_menu.Image = global::ParishSystem.Properties.Resources.Postulancy_indent;
             this.sacrament_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sacrament_button_menu.Location = new System.Drawing.Point(585, 73);
+            this.sacrament_button_menu.Location = new System.Drawing.Point(5, 141);
             this.sacrament_button_menu.Margin = new System.Windows.Forms.Padding(5);
             this.sacrament_button_menu.Name = "sacrament_button_menu";
             this.sacrament_button_menu.Size = new System.Drawing.Size(280, 58);
@@ -423,7 +427,7 @@
             this.CRBmenu_panel.Controls.Add(this.CRBcommunity_button_menu);
             this.CRBmenu_panel.Controls.Add(this.CRBparish_button_menu);
             this.CRBmenu_panel.Controls.Add(this.CRB_button_menu);
-            this.CRBmenu_panel.Location = new System.Drawing.Point(5, 141);
+            this.CRBmenu_panel.Location = new System.Drawing.Point(295, 141);
             this.CRBmenu_panel.Margin = new System.Windows.Forms.Padding(5);
             this.CRBmenu_panel.Name = "CRBmenu_panel";
             this.CRBmenu_panel.Size = new System.Drawing.Size(280, 58);
@@ -515,7 +519,7 @@
             this.CDB_menu_panel.Controls.Add(this.CDBcommunity_button_menu);
             this.CDB_menu_panel.Controls.Add(this.CDBparish_button_menu);
             this.CDB_menu_panel.Controls.Add(this.CDB_button_menu);
-            this.CDB_menu_panel.Location = new System.Drawing.Point(295, 141);
+            this.CDB_menu_panel.Location = new System.Drawing.Point(585, 141);
             this.CDB_menu_panel.Margin = new System.Windows.Forms.Padding(5);
             this.CDB_menu_panel.Name = "CDB_menu_panel";
             this.CDB_menu_panel.Size = new System.Drawing.Size(280, 58);
@@ -607,7 +611,7 @@
             this.CDBreport_panel.Controls.Add(this.CDBreport_community);
             this.CDBreport_panel.Controls.Add(this.CDBreport_parish);
             this.CDBreport_panel.Controls.Add(this.CDBreport_button);
-            this.CDBreport_panel.Location = new System.Drawing.Point(585, 141);
+            this.CDBreport_panel.Location = new System.Drawing.Point(5, 209);
             this.CDBreport_panel.Margin = new System.Windows.Forms.Padding(5);
             this.CDBreport_panel.Name = "CDBreport_panel";
             this.CDBreport_panel.Size = new System.Drawing.Size(280, 58);
@@ -699,7 +703,7 @@
             this.CRBreport_panel.Controls.Add(this.CRBcommunityreport_button);
             this.CRBreport_panel.Controls.Add(this.CRBparishreport_button);
             this.CRBreport_panel.Controls.Add(this.CRBreport_button);
-            this.CRBreport_panel.Location = new System.Drawing.Point(5, 209);
+            this.CRBreport_panel.Location = new System.Drawing.Point(295, 209);
             this.CRBreport_panel.Margin = new System.Windows.Forms.Padding(5);
             this.CRBreport_panel.Name = "CRBreport_panel";
             this.CRBreport_panel.Size = new System.Drawing.Size(280, 58);
@@ -790,7 +794,7 @@
             this.itemtypemenu_panel.Controls.Add(this.itemtypemenuCDB_button);
             this.itemtypemenu_panel.Controls.Add(this.itemtypemenuCRB_button);
             this.itemtypemenu_panel.Controls.Add(this.itemtypemenu_button);
-            this.itemtypemenu_panel.Location = new System.Drawing.Point(295, 209);
+            this.itemtypemenu_panel.Location = new System.Drawing.Point(585, 209);
             this.itemtypemenu_panel.Margin = new System.Windows.Forms.Padding(5);
             this.itemtypemenu_panel.Name = "itemtypemenu_panel";
             this.itemtypemenu_panel.Size = new System.Drawing.Size(280, 58);
@@ -863,7 +867,7 @@
             this.ministers_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ministers_button_menu.ForeColor = System.Drawing.Color.White;
             this.ministers_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ministers_button_menu.Location = new System.Drawing.Point(580, 204);
+            this.ministers_button_menu.Location = new System.Drawing.Point(0, 272);
             this.ministers_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.ministers_button_menu.Name = "ministers_button_menu";
             this.ministers_button_menu.Size = new System.Drawing.Size(280, 58);
@@ -871,6 +875,7 @@
             this.ministers_button_menu.Text = "Ministers";
             this.ministers_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ministers_button_menu.UseVisualStyleBackColor = false;
+            this.ministers_button_menu.Click += new System.EventHandler(this.ministers_button_menu_Click);
             this.ministers_button_menu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ministers_button_menu_MouseUp);
             // 
             // flowLayoutPanel1
@@ -916,12 +921,19 @@
             // Workspace_panel
             // 
             this.Workspace_panel.BackColor = System.Drawing.Color.White;
-            this.Workspace_panel.Controls.Add(this.Menu_panel);
             this.Workspace_panel.Controls.Add(this.content_panel);
             this.Workspace_panel.Location = new System.Drawing.Point(57, 33);
             this.Workspace_panel.Name = "Workspace_panel";
             this.Workspace_panel.Size = new System.Drawing.Size(935, 547);
             this.Workspace_panel.TabIndex = 61;
+            // 
+            // minister_panel
+            // 
+            this.minister_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.minister_panel.Location = new System.Drawing.Point(293, 71);
+            this.minister_panel.Name = "minister_panel";
+            this.minister_panel.Size = new System.Drawing.Size(200, 62);
+            this.minister_panel.TabIndex = 39;
             // 
             // SAD2
             // 
@@ -939,6 +951,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.flowLayout_ControlButtons.ResumeLayout(false);
+            this.content_panel.ResumeLayout(false);
             this.Menu_panel.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.bloodlettingmenu_panel.ResumeLayout(false);
@@ -1004,5 +1017,6 @@
         private System.Windows.Forms.Button CRBreport_button;
         private System.Windows.Forms.Button bloodlettingreport_button;
         private System.Windows.Forms.Button ministers_button_menu;
+        private System.Windows.Forms.Panel minister_panel;
     }
 }
