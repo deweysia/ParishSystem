@@ -14,7 +14,7 @@ namespace ParishSystem
     {
         int cashDisbursmentMode; //parish community post
         int bookReportMode; // cash disburs cash release  -->opposite sila
-        treasurerBackend dh = new treasurerBackend();
+        DataHandler dh = new DataHandler();
         public CashReport_Module(int cashdisbursment_cashrelease, int parish_community_postulancy)
         {
             InitializeComponent();

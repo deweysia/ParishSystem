@@ -55,5 +55,21 @@ namespace ParishSystem
             Draggable a = new Draggable(this);
             a.makeDraggable(panel1);
         }
+
+        private void Password_textbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyData== Keys.Enter)
+            {
+                login_button.PerformClick();
+            }
+        }
+
+        private void Username_textbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                login_button.PerformClick();
+            }
+        }
     }
 }

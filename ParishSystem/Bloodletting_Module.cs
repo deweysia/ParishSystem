@@ -12,7 +12,7 @@ namespace ParishSystem
 {
     public partial class Bloodletting_Module : Form
     {
-        treasurerBackend dh = new treasurerBackend();
+        DataHandler dh = new DataHandler();
         int Mode;
         public Bloodletting_Module(int Mode)
         {

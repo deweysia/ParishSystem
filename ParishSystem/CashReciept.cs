@@ -13,7 +13,7 @@ namespace ParishSystem
     public partial class CashReciept : Form
     {
         int bookModeFullPay;
-        treasurerBackend dh = new treasurerBackend();
+        DataHandler dh = new DataHandler();
         public CashReciept(int bookModeFullPay)
         {
             InitializeComponent();

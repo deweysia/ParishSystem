@@ -12,7 +12,7 @@ using System.Security.Cryptography;
 
 namespace ParishSystem
 {
-    class treasurerBackend :DataHandler
+    public class treasurerBackend :DataHandler
     {     
         public treasurerBackend()
         {
@@ -1004,7 +1004,7 @@ namespace ParishSystem
                         join blooddonor on blooddonor.blooddonorID = blooddonation.profileID where donationID like ""%{like}%"" order by donationID desc";
             return runQuery(q);
         }
-        public void AddUser(string fn, string mn, string ln, string sf, string username, string password)
+        public void AddUser(string fn, string mn, string ln, string sf, string username, string password,int employeeType)
         {
             byte[] salt;
             new RNGCryptoServiceProvider().GetBytes(salt = new byte[16]);
@@ -1014,13 +1014,13 @@ namespace ParishSystem
             Array.Copy(salt, 0, hashBytes, 0, 16);
             Array.Copy(hash, 0, hashBytes, 16, 20);
             string savedPasswordHash = Convert.ToBase64String(hashBytes);
-            string q = $@"INSERT INTO `sad2`.`employee` (`firstname`, `midname`, `lastname`, `suffix`, `username`, `pass`) VALUES ('{fn}', '{mn}', '{ln}', '{sf}', '{username}', '{savedPasswordHash}');";
+            string q = $@"INSERT INTO `sad2`.`employee` (`firstname`, `midname`, `lastname`, `suffix`, `username`, `pass`, `status`, `addedBy`, `privileges`) VALUES ('{fn}', '{mn}', '{ln}', '{sf}', '{username}', '{savedPasswordHash}',1,{userID},{employeeType});";
             runNonQuery(q);
         }
 
      
 
-        public void editEmployeeResetPassword(string fn, string mn, string ln, string sf, string username, string password, bool status, int employeeID)
+        public void editEmployeeResetPassword(string fn, string mn, string ln, string sf, string username, string password, bool status, int employeeType, int employeeID)
         {
             byte[] salt;
             new RNGCryptoServiceProvider().GetBytes(salt = new byte[16]);
@@ -1030,12 +1030,12 @@ namespace ParishSystem
             Array.Copy(salt, 0, hashBytes, 0, 16);
             Array.Copy(hash, 0, hashBytes, 16, 20);
             string savedPasswordHash = Convert.ToBase64String(hashBytes);
-            string q = $@"UPDATE `sad2`.`employee` SET `firstname`='{fn}', `midname`='{mn}', `lastname`='{ln}', `suffix`='{sf}', `username`='{username}', `pass`='{password}',`status`='{(status ? 1 : 2)}' WHERE `employeeID`='{employeeID}';";
+            string q = $@"UPDATE `sad2`.`employee` SET `firstname`='{fn}', `midname`='{mn}', `lastname`='{ln}', `suffix`='{sf}', `username`='{username}', `pass`='{password}',`status`='{(status ? 1 : 2)}',`privileges`='{employeeType}' WHERE `employeeID`='{employeeID}';";
             runNonQuery(q);
         }
-        public void editEmployee(string fn, string mn, string ln, string sf, string username, bool status, int employeeID)
+        public void editEmployee(string fn, string mn, string ln, string sf, string username, bool status,int employeeType, int employeeID)
         {
-            string q = $@"UPDATE `sad2`.`employee` SET `firstname`='{fn}', `midname`='{mn}', `lastname`='{ln}', `suffix`='{sf}', `username`='{username}', `status`='{(status ? 1 : 2)}'  WHERE `employeeID`='{employeeID}';";
+            string q = $@"UPDATE `sad2`.`employee` SET `firstname`='{fn}', `midname`='{mn}', `lastname`='{ln}', `suffix`='{sf}', `username`='{username}', `status`='{(status ? 1 : 2)}',`privileges`='{employeeType}'  WHERE `employeeID`='{employeeID}';";
             runNonQuery(q);
         }
 

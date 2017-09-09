@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.EmployeeDGV = new System.Windows.Forms.DataGridView();
             this.panel = new System.Windows.Forms.Panel();
+            this.employeeType_combobox = new System.Windows.Forms.ComboBox();
             this.password_textbox = new MetroFramework.Controls.MetroTextBox();
             this.username_textbox = new MetroFramework.Controls.MetroTextBox();
             this.middleinitial_textbox = new MetroFramework.Controls.MetroTextBox();
@@ -48,7 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.privilege_combobox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeDGV)).BeginInit();
             this.panel.SuspendLayout();
             this.SuspendLayout();
@@ -118,7 +118,7 @@
             // 
             // panel
             // 
-            this.panel.Controls.Add(this.privilege_combobox);
+            this.panel.Controls.Add(this.employeeType_combobox);
             this.panel.Controls.Add(this.password_textbox);
             this.panel.Controls.Add(this.username_textbox);
             this.panel.Controls.Add(this.middleinitial_textbox);
@@ -138,6 +138,23 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(406, 492);
             this.panel.TabIndex = 5;
+            // 
+            // employeeType_combobox
+            // 
+            this.employeeType_combobox.BackColor = System.Drawing.SystemColors.Window;
+            this.employeeType_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.employeeType_combobox.FormattingEnabled = true;
+            this.employeeType_combobox.Items.AddRange(new object[] {
+            "",
+            "Bookkeeper",
+            "Secretary",
+            "Priest",
+            "Admin"});
+            this.employeeType_combobox.Location = new System.Drawing.Point(105, 233);
+            this.employeeType_combobox.Name = "employeeType_combobox";
+            this.employeeType_combobox.Size = new System.Drawing.Size(204, 29);
+            this.employeeType_combobox.TabIndex = 44;
+            this.employeeType_combobox.SelectedIndexChanged += new System.EventHandler(this.employeeType_combobox_SelectedIndexChanged);
             // 
             // password_textbox
             // 
@@ -386,7 +403,7 @@
             this.resetPassword_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.resetPassword_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.resetPassword_button.ForeColor = System.Drawing.Color.White;
-            this.resetPassword_button.Location = new System.Drawing.Point(315, 182);
+            this.resetPassword_button.Location = new System.Drawing.Point(316, 188);
             this.resetPassword_button.Name = "resetPassword_button";
             this.resetPassword_button.Size = new System.Drawing.Size(30, 30);
             this.resetPassword_button.TabIndex = 26;
@@ -397,12 +414,12 @@
             // 
             // clear_button
             // 
-            this.clear_button.BackColor = System.Drawing.Color.Gray;
+            this.clear_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
             this.clear_button.FlatAppearance.BorderSize = 0;
             this.clear_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.clear_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_button.ForeColor = System.Drawing.Color.White;
-            this.clear_button.Location = new System.Drawing.Point(105, 399);
+            this.clear_button.Location = new System.Drawing.Point(105, 394);
             this.clear_button.Name = "clear_button";
             this.clear_button.Size = new System.Drawing.Size(204, 37);
             this.clear_button.TabIndex = 25;
@@ -412,7 +429,7 @@
             // 
             // add_button
             // 
-            this.add_button.BackColor = System.Drawing.Color.Gray;
+            this.add_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
             this.add_button.Enabled = false;
             this.add_button.FlatAppearance.BorderSize = 0;
             this.add_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
@@ -467,19 +484,6 @@
             this.label3.TabIndex = 36;
             this.label3.Text = "______________________________";
             // 
-            // privilege_combobox
-            // 
-            this.privilege_combobox.FormattingEnabled = true;
-            this.privilege_combobox.Items.AddRange(new object[] {
-            "",
-            "Bookkeeper",
-            "Secretary",
-            "Priest"});
-            this.privilege_combobox.Location = new System.Drawing.Point(105, 233);
-            this.privilege_combobox.Name = "privilege_combobox";
-            this.privilege_combobox.Size = new System.Drawing.Size(204, 29);
-            this.privilege_combobox.TabIndex = 44;
-            // 
             // EmployeeModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -517,6 +521,6 @@
         private MetroFramework.Controls.MetroTextBox suffix_textbox;
         private MetroFramework.Controls.MetroTextBox password_textbox;
         private MetroFramework.Controls.MetroTextBox username_textbox;
-        private System.Windows.Forms.ComboBox privilege_combobox;
+        private System.Windows.Forms.ComboBox employeeType_combobox;
     }
 }
