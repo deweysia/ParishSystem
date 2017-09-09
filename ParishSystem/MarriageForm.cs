@@ -33,8 +33,8 @@ namespace ParishSystem
                 cmbMinister.Items.Add(cc);
             }
 
-            lblGName.Text = row[4].Value.ToString();
-            lblBName.Text = row[6].Value.ToString();
+            lblGName.Text = row[6].Value.ToString();
+            lblBName.Text = row[7].Value.ToString();
 
             loadParents();
 
@@ -153,7 +153,8 @@ namespace ParishSystem
 
         private void loadParents()
         {
-            int groomID = int.Parse(row[2].Value.ToString());
+            int groomID = int.Parse(row[1].Value.ToString());
+
             DataTable dt = dh.getParentsOf(groomID);
             if (dt.Rows.Count == 2)
             {
@@ -171,8 +172,8 @@ namespace ParishSystem
                 
             }
 
-            int brideID = int.Parse(row[3].Value.ToString());
-            dt = dh.getParentsOf(groomID);
+            int brideID = int.Parse(row[2].Value.ToString());
+            dt = dh.getParentsOf(brideID);
 
             if (dt.Rows.Count == 2)
             {
@@ -195,6 +196,11 @@ namespace ParishSystem
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void close_button_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

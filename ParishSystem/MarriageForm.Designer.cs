@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblGName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbGStatus = new MetroFramework.Controls.MetroComboBox();
@@ -78,7 +78,15 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.dgvSponsor = new MetroFramework.Controls.MetroGrid();
+            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.suffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.residence = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAddSponsor = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.radioMale = new MetroFramework.Controls.MetroRadioButton();
             this.radioFemale = new MetroFramework.Controls.MetroRadioButton();
@@ -95,14 +103,6 @@
             this.controlBar_panel = new System.Windows.Forms.Panel();
             this.close_button = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.midName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.suffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.residence = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAddSponsor = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -564,21 +564,21 @@
             this.dgvSponsor.AllowUserToAddRows = false;
             this.dgvSponsor.AllowUserToDeleteRows = false;
             this.dgvSponsor.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.dgvSponsor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvSponsor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSponsor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSponsor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvSponsor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSponsor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvSponsor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSponsor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSponsor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSponsor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSponsor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.firstName,
@@ -587,14 +587,14 @@
             this.suffix,
             this.gender,
             this.residence});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSponsor.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSponsor.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSponsor.EnableHeadersVisualStyles = false;
             this.dgvSponsor.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvSponsor.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -602,14 +602,14 @@
             this.dgvSponsor.Name = "dgvSponsor";
             this.dgvSponsor.ReadOnly = true;
             this.dgvSponsor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSponsor.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSponsor.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSponsor.RowHeadersVisible = false;
             this.dgvSponsor.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvSponsor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -618,6 +618,45 @@
             this.dgvSponsor.UseCustomBackColor = true;
             this.dgvSponsor.UseCustomForeColor = true;
             this.dgvSponsor.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvSponsor_CellFormatting);
+            // 
+            // firstName
+            // 
+            this.firstName.HeaderText = "First";
+            this.firstName.Name = "firstName";
+            this.firstName.ReadOnly = true;
+            // 
+            // midName
+            // 
+            this.midName.HeaderText = "Middle";
+            this.midName.Name = "midName";
+            this.midName.ReadOnly = true;
+            // 
+            // lastName
+            // 
+            this.lastName.HeaderText = "Last";
+            this.lastName.Name = "lastName";
+            this.lastName.ReadOnly = true;
+            // 
+            // suffix
+            // 
+            this.suffix.HeaderText = "Sf";
+            this.suffix.Name = "suffix";
+            this.suffix.ReadOnly = true;
+            // 
+            // gender
+            // 
+            this.gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.gender.HeaderText = "Gender";
+            this.gender.Name = "gender";
+            this.gender.ReadOnly = true;
+            this.gender.Width = 74;
+            // 
+            // residence
+            // 
+            this.residence.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.residence.HeaderText = "Residence";
+            this.residence.Name = "residence";
+            this.residence.ReadOnly = true;
             // 
             // panel3
             // 
@@ -640,6 +679,28 @@
             this.panel3.Size = new System.Drawing.Size(642, 195);
             this.panel3.TabIndex = 53;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // btnAddSponsor
+            // 
+            this.btnAddSponsor.FlatAppearance.BorderSize = 0;
+            this.btnAddSponsor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.btnAddSponsor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddSponsor.Image = global::ParishSystem.Properties.Resources.icons8_Plus_2_Math_32;
+            this.btnAddSponsor.Location = new System.Drawing.Point(150, 148);
+            this.btnAddSponsor.Name = "btnAddSponsor";
+            this.btnAddSponsor.Size = new System.Drawing.Size(30, 30);
+            this.btnAddSponsor.TabIndex = 56;
+            this.btnAddSponsor.UseVisualStyleBackColor = true;
+            this.btnAddSponsor.Click += new System.EventHandler(this.btnAddSponsor_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(8, 5);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(63, 17);
+            this.label16.TabIndex = 55;
+            this.label16.Text = "Sponsors";
             // 
             // flowLayoutPanel1
             // 
@@ -796,6 +857,7 @@
             this.close_button.Size = new System.Drawing.Size(40, 29);
             this.close_button.TabIndex = 0;
             this.close_button.UseVisualStyleBackColor = false;
+            this.close_button.Click += new System.EventHandler(this.close_button_Click);
             // 
             // label10
             // 
@@ -806,67 +868,6 @@
             this.label10.TabIndex = 57;
             this.label10.Text = "_________________________________________________________________________________" +
     "__________________________";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(8, 5);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(63, 17);
-            this.label16.TabIndex = 55;
-            this.label16.Text = "Sponsors";
-            // 
-            // firstName
-            // 
-            this.firstName.HeaderText = "First";
-            this.firstName.Name = "firstName";
-            this.firstName.ReadOnly = true;
-            // 
-            // midName
-            // 
-            this.midName.HeaderText = "Middle";
-            this.midName.Name = "midName";
-            this.midName.ReadOnly = true;
-            // 
-            // lastName
-            // 
-            this.lastName.HeaderText = "Last";
-            this.lastName.Name = "lastName";
-            this.lastName.ReadOnly = true;
-            // 
-            // suffix
-            // 
-            this.suffix.HeaderText = "Sf";
-            this.suffix.Name = "suffix";
-            this.suffix.ReadOnly = true;
-            // 
-            // gender
-            // 
-            this.gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.gender.HeaderText = "Gender";
-            this.gender.Name = "gender";
-            this.gender.ReadOnly = true;
-            this.gender.Width = 74;
-            // 
-            // residence
-            // 
-            this.residence.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.residence.HeaderText = "Residence";
-            this.residence.Name = "residence";
-            this.residence.ReadOnly = true;
-            // 
-            // btnAddSponsor
-            // 
-            this.btnAddSponsor.FlatAppearance.BorderSize = 0;
-            this.btnAddSponsor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.btnAddSponsor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddSponsor.Image = global::ParishSystem.Properties.Resources.icons8_Plus_2_Math_32;
-            this.btnAddSponsor.Location = new System.Drawing.Point(150, 148);
-            this.btnAddSponsor.Name = "btnAddSponsor";
-            this.btnAddSponsor.Size = new System.Drawing.Size(30, 30);
-            this.btnAddSponsor.TabIndex = 56;
-            this.btnAddSponsor.UseVisualStyleBackColor = true;
-            this.btnAddSponsor.Click += new System.EventHandler(this.btnAddSponsor_Click);
             // 
             // btnSubmit
             // 
