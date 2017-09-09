@@ -26,6 +26,9 @@ namespace ParishSystem
 
         private void PersonView_Load(object sender, EventArgs e)
         {
+            Draggable drag = new Draggable(this);
+            drag.makeDraggable(controlBar_panel);
+
             foreach (DataRow dr in Applications.Rows)
             {
                 if (int.Parse(dr["sacramentType"].ToString()) == (int)SacramentType.Baptism)
@@ -438,6 +441,11 @@ namespace ParishSystem
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menu_panel_Paint(object sender, PaintEventArgs e)
         {
 
         }

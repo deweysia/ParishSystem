@@ -417,6 +417,7 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MarriageApplication.resx" />
     <EmbeddedResource Include="MinisterModule.resx">
       <DependentUpon>MinisterModule.cs</DependentUpon>
     </EmbeddedResource>

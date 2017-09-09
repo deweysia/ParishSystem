@@ -95,7 +95,6 @@
             this.legitimacy_label_baptism = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.remarks_textbox_baptism = new System.Windows.Forms.RichTextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.recordNumber_label_baptism = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -130,7 +129,6 @@
             this.label58 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label59 = new System.Windows.Forms.Label();
-            this.remarks_textbox_confirmation = new System.Windows.Forms.RichTextBox();
             this.label60 = new System.Windows.Forms.Label();
             this.recordNumber_label_confirmation = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
@@ -177,7 +175,6 @@
             this.contactnumber_label_spouse_marriage = new System.Windows.Forms.MaskedTextBox();
             this.address_panel_spouse_marriage = new System.Windows.Forms.Panel();
             this.label94 = new System.Windows.Forms.Label();
-            this.address_textbox_spouse_marriage = new System.Windows.Forms.RichTextBox();
             this.name_spouse_combobox = new System.Windows.Forms.ComboBox();
             this.label49 = new System.Windows.Forms.Label();
             this.father_panel_spouse_marriage = new System.Windows.Forms.Panel();
@@ -207,7 +204,6 @@
             this.label72 = new System.Windows.Forms.Label();
             this.details_panel_marriage = new System.Windows.Forms.Panel();
             this.label73 = new System.Windows.Forms.Label();
-            this.remarks_label_marriage = new System.Windows.Forms.RichTextBox();
             this.label74 = new System.Windows.Forms.Label();
             this.recordNumber_label_marriage = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
@@ -219,6 +215,12 @@
             this.label82 = new System.Windows.Forms.Label();
             this.marriage_panel = new System.Windows.Forms.Panel();
             this.blank_panel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.remarks_label_baptism = new System.Windows.Forms.Label();
+            this.address_textbox_spouse_marriage = new System.Windows.Forms.Label();
+            this.remarks_label_marriage = new System.Windows.Forms.Label();
+            this.remarks_label_confirmation = new System.Windows.Forms.Label();
             this.generalDetails_panel.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.birthdate_panel.SuspendLayout();
@@ -268,6 +270,7 @@
             this.minister_panel_marriage.SuspendLayout();
             this.details_panel_marriage.SuspendLayout();
             this.marriage_panel.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // generalDetails_panel
@@ -290,6 +293,7 @@
             this.flowLayoutPanel3.Controls.Add(this.gender_panel);
             this.flowLayoutPanel3.Controls.Add(this.po_panel);
             this.flowLayoutPanel3.Controls.Add(this.residence_panel);
+            this.flowLayoutPanel3.Controls.Add(this.panel1);
             this.flowLayoutPanel3.Location = new System.Drawing.Point(9, 113);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(280, 351);
@@ -516,10 +520,12 @@
             this.menu_panel.Controls.Add(this.confirmation_label_menu);
             this.menu_panel.Controls.Add(this.baptism_label_menu);
             this.menu_panel.Controls.Add(this.label24);
-            this.menu_panel.Location = new System.Drawing.Point(301, 33);
+            this.menu_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.menu_panel.Location = new System.Drawing.Point(302, 35);
             this.menu_panel.Name = "menu_panel";
-            this.menu_panel.Size = new System.Drawing.Size(381, 41);
+            this.menu_panel.Size = new System.Drawing.Size(383, 32);
             this.menu_panel.TabIndex = 4;
+            this.menu_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.menu_panel_Paint);
             // 
             // marriage_label_menu
             // 
@@ -574,9 +580,10 @@
             // 
             this.baptism_panel.Controls.Add(this.button1);
             this.baptism_panel.Controls.Add(this.baptism_details);
-            this.baptism_panel.Location = new System.Drawing.Point(302, 82);
+            this.baptism_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.baptism_panel.Location = new System.Drawing.Point(0, 0);
             this.baptism_panel.Name = "baptism_panel";
-            this.baptism_panel.Size = new System.Drawing.Size(383, 428);
+            this.baptism_panel.Size = new System.Drawing.Size(383, 443);
             this.baptism_panel.TabIndex = 5;
             // 
             // button1
@@ -589,7 +596,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 394);
+            this.button1.Location = new System.Drawing.Point(0, 409);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(383, 34);
@@ -938,10 +945,10 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.remarks_label_baptism);
             this.panel2.Controls.Add(this.legitimacy_label_baptism);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label28);
-            this.panel2.Controls.Add(this.remarks_textbox_baptism);
             this.panel2.Controls.Add(this.label26);
             this.panel2.Controls.Add(this.recordNumber_label_baptism);
             this.panel2.Controls.Add(this.label17);
@@ -987,16 +994,6 @@
             this.label28.Size = new System.Drawing.Size(52, 15);
             this.label28.TabIndex = 18;
             this.label28.Text = "Remarks";
-            // 
-            // remarks_textbox_baptism
-            // 
-            this.remarks_textbox_baptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.remarks_textbox_baptism.Location = new System.Drawing.Point(124, 164);
-            this.remarks_textbox_baptism.Name = "remarks_textbox_baptism";
-            this.remarks_textbox_baptism.ReadOnly = true;
-            this.remarks_textbox_baptism.Size = new System.Drawing.Size(218, 44);
-            this.remarks_textbox_baptism.TabIndex = 17;
-            this.remarks_textbox_baptism.Text = "";
             // 
             // label26
             // 
@@ -1092,9 +1089,10 @@
             // 
             this.confirmation_panel.Controls.Add(this.button2);
             this.confirmation_panel.Controls.Add(this.confirmationDetails_panel);
-            this.confirmation_panel.Location = new System.Drawing.Point(302, 82);
+            this.confirmation_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.confirmation_panel.Location = new System.Drawing.Point(0, 0);
             this.confirmation_panel.Name = "confirmation_panel";
-            this.confirmation_panel.Size = new System.Drawing.Size(383, 428);
+            this.confirmation_panel.Size = new System.Drawing.Size(383, 443);
             this.confirmation_panel.TabIndex = 6;
             // 
             // button2
@@ -1107,7 +1105,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 394);
+            this.button2.Location = new System.Drawing.Point(0, 409);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(383, 34);
@@ -1320,8 +1318,8 @@
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.remarks_label_confirmation);
             this.panel10.Controls.Add(this.label59);
-            this.panel10.Controls.Add(this.remarks_textbox_confirmation);
             this.panel10.Controls.Add(this.label60);
             this.panel10.Controls.Add(this.recordNumber_label_confirmation);
             this.panel10.Controls.Add(this.label62);
@@ -1347,16 +1345,6 @@
             this.label59.Size = new System.Drawing.Size(52, 15);
             this.label59.TabIndex = 18;
             this.label59.Text = "Remarks";
-            // 
-            // remarks_textbox_confirmation
-            // 
-            this.remarks_textbox_confirmation.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.remarks_textbox_confirmation.Location = new System.Drawing.Point(124, 140);
-            this.remarks_textbox_confirmation.Name = "remarks_textbox_confirmation";
-            this.remarks_textbox_confirmation.ReadOnly = true;
-            this.remarks_textbox_confirmation.Size = new System.Drawing.Size(218, 44);
-            this.remarks_textbox_confirmation.TabIndex = 17;
-            this.remarks_textbox_confirmation.Text = "";
             // 
             // label60
             // 
@@ -1458,10 +1446,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 394);
+            this.button3.Location = new System.Drawing.Point(0, 409);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(384, 34);
+            this.button3.Size = new System.Drawing.Size(383, 34);
             this.button3.TabIndex = 1;
             this.button3.Text = "Print Certificate";
             this.button3.UseVisualStyleBackColor = false;
@@ -1474,7 +1462,7 @@
             this.marriageDetails_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.marriageDetails_panel.Location = new System.Drawing.Point(0, 0);
             this.marriageDetails_panel.Name = "marriageDetails_panel";
-            this.marriageDetails_panel.Size = new System.Drawing.Size(384, 415);
+            this.marriageDetails_panel.Size = new System.Drawing.Size(383, 415);
             this.marriageDetails_panel.TabIndex = 0;
             // 
             // flowlayout
@@ -1816,8 +1804,8 @@
             // 
             // address_panel_spouse_marriage
             // 
-            this.address_panel_spouse_marriage.Controls.Add(this.label94);
             this.address_panel_spouse_marriage.Controls.Add(this.address_textbox_spouse_marriage);
+            this.address_panel_spouse_marriage.Controls.Add(this.label94);
             this.address_panel_spouse_marriage.Location = new System.Drawing.Point(3, 227);
             this.address_panel_spouse_marriage.Name = "address_panel_spouse_marriage";
             this.address_panel_spouse_marriage.Size = new System.Drawing.Size(275, 102);
@@ -1832,19 +1820,6 @@
             this.label94.Size = new System.Drawing.Size(45, 13);
             this.label94.TabIndex = 5;
             this.label94.Text = "Address";
-            // 
-            // address_textbox_spouse_marriage
-            // 
-            this.address_textbox_spouse_marriage.BackColor = System.Drawing.Color.White;
-            this.address_textbox_spouse_marriage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.address_textbox_spouse_marriage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.address_textbox_spouse_marriage.ForeColor = System.Drawing.Color.Black;
-            this.address_textbox_spouse_marriage.Location = new System.Drawing.Point(114, 3);
-            this.address_textbox_spouse_marriage.Name = "address_textbox_spouse_marriage";
-            this.address_textbox_spouse_marriage.ReadOnly = true;
-            this.address_textbox_spouse_marriage.Size = new System.Drawing.Size(158, 96);
-            this.address_textbox_spouse_marriage.TabIndex = 4;
-            this.address_textbox_spouse_marriage.Text = "";
             // 
             // name_spouse_combobox
             // 
@@ -2120,8 +2095,8 @@
             // 
             // details_panel_marriage
             // 
-            this.details_panel_marriage.Controls.Add(this.label73);
             this.details_panel_marriage.Controls.Add(this.remarks_label_marriage);
+            this.details_panel_marriage.Controls.Add(this.label73);
             this.details_panel_marriage.Controls.Add(this.label74);
             this.details_panel_marriage.Controls.Add(this.recordNumber_label_marriage);
             this.details_panel_marriage.Controls.Add(this.label76);
@@ -2147,16 +2122,6 @@
             this.label73.Size = new System.Drawing.Size(52, 15);
             this.label73.TabIndex = 18;
             this.label73.Text = "Remarks";
-            // 
-            // remarks_label_marriage
-            // 
-            this.remarks_label_marriage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.remarks_label_marriage.Location = new System.Drawing.Point(124, 140);
-            this.remarks_label_marriage.Name = "remarks_label_marriage";
-            this.remarks_label_marriage.ReadOnly = true;
-            this.remarks_label_marriage.Size = new System.Drawing.Size(218, 44);
-            this.remarks_label_marriage.TabIndex = 17;
-            this.remarks_label_marriage.Text = "";
             // 
             // label74
             // 
@@ -2244,26 +2209,75 @@
             this.label82.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.label82.Location = new System.Drawing.Point(3, 10);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(113, 20);
+            this.label82.Size = new System.Drawing.Size(122, 20);
             this.label82.TabIndex = 0;
-            this.label82.Text = "Baptism Details";
+            this.label82.Text = "Marriage Details";
             // 
             // marriage_panel
             // 
             this.marriage_panel.Controls.Add(this.button3);
             this.marriage_panel.Controls.Add(this.marriageDetails_panel);
-            this.marriage_panel.Location = new System.Drawing.Point(301, 82);
+            this.marriage_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.marriage_panel.Location = new System.Drawing.Point(0, 0);
             this.marriage_panel.Margin = new System.Windows.Forms.Padding(0);
             this.marriage_panel.Name = "marriage_panel";
-            this.marriage_panel.Size = new System.Drawing.Size(384, 428);
+            this.marriage_panel.Size = new System.Drawing.Size(383, 443);
             this.marriage_panel.TabIndex = 8;
             // 
             // blank_panel
             // 
-            this.blank_panel.Location = new System.Drawing.Point(302, 71);
+            this.blank_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.blank_panel.Location = new System.Drawing.Point(0, 0);
             this.blank_panel.Name = "blank_panel";
-            this.blank_panel.Size = new System.Drawing.Size(383, 439);
+            this.blank_panel.Size = new System.Drawing.Size(383, 443);
             this.blank_panel.TabIndex = 9;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(3, 149);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 17;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.marriage_panel);
+            this.panel3.Controls.Add(this.confirmation_panel);
+            this.panel3.Controls.Add(this.blank_panel);
+            this.panel3.Controls.Add(this.baptism_panel);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(302, 67);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(383, 443);
+            this.panel3.TabIndex = 6;
+            // 
+            // remarks_label_baptism
+            // 
+            this.remarks_label_baptism.Location = new System.Drawing.Point(124, 164);
+            this.remarks_label_baptism.Name = "remarks_label_baptism";
+            this.remarks_label_baptism.Size = new System.Drawing.Size(218, 44);
+            this.remarks_label_baptism.TabIndex = 21;
+            // 
+            // address_textbox_spouse_marriage
+            // 
+            this.address_textbox_spouse_marriage.Location = new System.Drawing.Point(54, 3);
+            this.address_textbox_spouse_marriage.Name = "address_textbox_spouse_marriage";
+            this.address_textbox_spouse_marriage.Size = new System.Drawing.Size(218, 94);
+            this.address_textbox_spouse_marriage.TabIndex = 0;
+            // 
+            // remarks_label_marriage
+            // 
+            this.remarks_label_marriage.Location = new System.Drawing.Point(124, 140);
+            this.remarks_label_marriage.Name = "remarks_label_marriage";
+            this.remarks_label_marriage.Size = new System.Drawing.Size(218, 44);
+            this.remarks_label_marriage.TabIndex = 19;
+            // 
+            // remarks_label_confirmation
+            // 
+            this.remarks_label_confirmation.Location = new System.Drawing.Point(124, 140);
+            this.remarks_label_confirmation.Name = "remarks_label_confirmation";
+            this.remarks_label_confirmation.Size = new System.Drawing.Size(218, 44);
+            this.remarks_label_confirmation.TabIndex = 19;
             // 
             // PersonView
             // 
@@ -2272,13 +2286,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(685, 510);
             this.ControlBox = false;
-            this.Controls.Add(this.marriage_panel);
-            this.Controls.Add(this.baptism_panel);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.menu_panel);
             this.Controls.Add(this.generalDetails_panel);
             this.Controls.Add(this.controlBar_panel);
-            this.Controls.Add(this.menu_panel);
-            this.Controls.Add(this.confirmation_panel);
-            this.Controls.Add(this.blank_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PersonView";
             this.Load += new System.EventHandler(this.PersonView_Load);
@@ -2368,6 +2379,7 @@
             this.details_panel_marriage.ResumeLayout(false);
             this.details_panel_marriage.PerformLayout();
             this.marriage_panel.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2432,7 +2444,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.RichTextBox remarks_textbox_baptism;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label recordNumber_label_baptism;
         private System.Windows.Forms.Label label17;
@@ -2472,7 +2483,6 @@
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.RichTextBox remarks_textbox_confirmation;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label recordNumber_label_confirmation;
         private System.Windows.Forms.Label label62;
@@ -2516,7 +2526,6 @@
         private System.Windows.Forms.MaskedTextBox contactnumber_label_spouse_marriage;
         private System.Windows.Forms.Panel address_panel_spouse_marriage;
         private System.Windows.Forms.Label label94;
-        private System.Windows.Forms.RichTextBox address_textbox_spouse_marriage;
         private System.Windows.Forms.ComboBox name_spouse_combobox;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Panel father_panel_spouse_marriage;
@@ -2546,7 +2555,6 @@
         private System.Windows.Forms.Label label72;
         private System.Windows.Forms.Panel details_panel_marriage;
         private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.RichTextBox remarks_label_marriage;
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Label recordNumber_label_marriage;
         private System.Windows.Forms.Label label76;
@@ -2565,5 +2573,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label civilStatus_self_marriage;
         private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label remarks_label_baptism;
+        private System.Windows.Forms.Label address_textbox_spouse_marriage;
+        private System.Windows.Forms.Label remarks_label_confirmation;
+        private System.Windows.Forms.Label remarks_label_marriage;
     }
 }

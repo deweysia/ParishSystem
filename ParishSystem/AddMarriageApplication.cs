@@ -65,22 +65,34 @@ namespace ParishSystem
             int bID = dh.getGeneralProfileID(bFN, bMI, bLN, bSuffix, bG, bBD);
 
             
-            
+            if(dh.hasApplication(gID, SacramentType.Marriage, ApplicationStatus.Pending))
+            {
+                Notification.Show(State.GroomApplicationExists);
+                return;
+            }
+            else if(dh.hasApplication(bID, SacramentType.Marriage, ApplicationStatus.Pending))
+            {
+                Notification.Show(State.BrideApplicationExists);
+                return;
+            }
 
             bool success;
             if (gID != -1 && bID != -1)
             {
                 //Check if they're in the same marriage already
+                
                 success = dh.addNewMarriageApplicants(gID, bID);
                 
-            }else if (gID != -1)
+            }
+            else if (gID != -1)
             {
                 dh.addGeneralProfile(bFN, bMI, bLN, bSuffix, bG, bBD);
                 bID = dh.getLatestID("GeneralProfile", "profileID");
-
+                
                 success = dh.addNewMarriageApplicants(bID, gID);
 
-            }else if (bID != -1)
+            }
+            else if (bID != -1)
             {
                 dh.addGeneralProfile(gFN, gMI, gLN, gSuffix, gG, gBD);
                 gID = dh.getLatestID("GeneralProfile", "profileID");
