@@ -12,7 +12,7 @@ namespace ParishSystem
 {
     public partial class CDB_SacramentPayment_Module : Form
     {
-        treasurerBackend dh = new treasurerBackend();
+        DataHandler dh = new DataHandler();
         public CDB_SacramentPayment_Module()
         {
             InitializeComponent();

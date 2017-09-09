@@ -12,7 +12,7 @@ namespace ParishSystem
 {
     public partial class Form1 : Form
     {
-        treasurerBackend dh = new treasurerBackend();
+        DataHandler dh = new DataHandler();
         public Form1()
         {
             InitializeComponent();

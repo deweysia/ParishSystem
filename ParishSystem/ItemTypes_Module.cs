@@ -12,7 +12,7 @@ namespace ParishSystem
 {
     public partial class ItemTypes_Module : Form
     {
-        treasurerBackend dh = new treasurerBackend();
+        DataHandler dh = new DataHandler();
         int selectedIncome = 0;
         int cashreceipt_cashdisbursment;
 

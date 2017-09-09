@@ -12,7 +12,7 @@ namespace ParishSystem
 {
     public partial class CashDisbursment : Form
     {
-        treasurerBackend dh = new treasurerBackend();
+        DataHandler dh = new DataHandler();
         int cashreleaseMode;
         public CashDisbursment(int cashReleaseMode)
         {
