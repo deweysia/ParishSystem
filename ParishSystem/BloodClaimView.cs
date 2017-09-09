@@ -12,7 +12,7 @@ namespace ParishSystem
 {
     public partial class BloodClaimView : Form
     {
-        treasurerBackend dh = new treasurerBackend();
+        DataHandler dh = new DataHandler();
         public BloodClaimView()
         {
             InitializeComponent();

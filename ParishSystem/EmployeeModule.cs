@@ -12,10 +12,11 @@ namespace ParishSystem
 {
     public partial class EmployeeModule : Form
     {
-        treasurerBackend login = new treasurerBackend();
-        public EmployeeModule()
+        DataHandler login;
+        public EmployeeModule(DataHandler dh)
         {
             InitializeComponent();
+            login =dh;
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -23,7 +24,7 @@ namespace ParishSystem
             try
             {
                 if (add_button.Tag.ToString()=="a") {
-                    login.AddUser(firstname_textbox.Text, middleinitial_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, username_textbox.Text, password_textbox.Text);
+                    login.AddUser(firstname_textbox.Text, middleinitial_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, username_textbox.Text, password_textbox.Text, employeeType_combobox.SelectedIndex);
                     refresEmployees();
                     clearFields();
             }
@@ -32,11 +33,11 @@ namespace ParishSystem
                
                     if (password_textbox.Enabled)
                     {
-                        login.editEmployeeResetPassword(firstname_textbox.Text, middleinitial_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, username_textbox.Text, password_textbox.Text,active_checkbox.Checked ,int.Parse(employeeID_label.Text));
+                        login.editEmployeeResetPassword(firstname_textbox.Text, middleinitial_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, username_textbox.Text, password_textbox.Text,active_checkbox.Checked, employeeType_combobox.SelectedIndex,int.Parse(employeeID_label.Text));
                     }
                     else
                     {
-                        login.editEmployee(firstname_textbox.Text, middleinitial_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, username_textbox.Text,active_checkbox.Checked, int.Parse(employeeID_label.Text));
+                        login.editEmployee(firstname_textbox.Text, middleinitial_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, username_textbox.Text,active_checkbox.Checked, employeeType_combobox.SelectedIndex, int.Parse(employeeID_label.Text));
                     }
                     add_button.Tag = "a";
                     add_button.Text = "Add";
@@ -62,6 +63,7 @@ namespace ParishSystem
             active_checkbox.Enabled = false;
             resetPassword_button.Visible = false;
             password_textbox.Enabled = true;
+            employeeType_combobox.SelectedIndex = 0;
            
 
         }
@@ -105,6 +107,7 @@ namespace ParishSystem
             username_textbox.Text = EmployeeDGV.SelectedRows[0].Cells["username"].Value.ToString();
             active_checkbox.Checked = (EmployeeDGV.SelectedRows[0].Cells["status"].Value.ToString() == "1");
             password_textbox.Text = "********";
+            employeeType_combobox.SelectedIndex = int.Parse(EmployeeDGV.SelectedRows[0].Cells["privileges"].Value.ToString());
             password_textbox.Enabled = false;
             resetPassword_button.Visible = true;
             active_checkbox.Enabled = true;
@@ -147,9 +150,13 @@ namespace ParishSystem
         {
             addButtonValidation();
         }
+        private void employeeType_combobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            addButtonValidation();
+        }
         private void addButtonValidation()
         {
-            if(lastname_textbox.Text!="" && firstname_textbox.Text != "" && middleinitial_textbox.Text != "")
+            if(lastname_textbox.Text!="" && firstname_textbox.Text != "" && middleinitial_textbox.Text != "" && employeeType_combobox.SelectedIndex!=0)
             {
                 if (password_textbox.Enabled==true)
                 {
@@ -178,5 +185,7 @@ namespace ParishSystem
         {
 
         }
+
+        
     }
 }

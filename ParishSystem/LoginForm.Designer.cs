@@ -54,7 +54,7 @@
             this.Username_textbox.CustomButton.Visible = false;
             this.Username_textbox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.Username_textbox.Lines = new string[0];
-            this.Username_textbox.Location = new System.Drawing.Point(46, 74);
+            this.Username_textbox.Location = new System.Drawing.Point(60, 74);
             this.Username_textbox.MaxLength = 32767;
             this.Username_textbox.Name = "Username_textbox";
             this.Username_textbox.PasswordChar = '\0';
@@ -71,6 +71,7 @@
             this.Username_textbox.WaterMark = "Username";
             this.Username_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Username_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username_textbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Username_textbox_KeyDown);
             // 
             // Password_textbox
             // 
@@ -88,7 +89,7 @@
             this.Password_textbox.CustomButton.Visible = false;
             this.Password_textbox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.Password_textbox.Lines = new string[0];
-            this.Password_textbox.Location = new System.Drawing.Point(46, 126);
+            this.Password_textbox.Location = new System.Drawing.Point(60, 126);
             this.Password_textbox.MaxLength = 32767;
             this.Password_textbox.Name = "Password_textbox";
             this.Password_textbox.PasswordChar = '*';
@@ -105,15 +106,17 @@
             this.Password_textbox.WaterMark = "Password";
             this.Password_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Password_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password_textbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Password_textbox_KeyDown);
             // 
             // login_button
             // 
-            this.login_button.BackColor = System.Drawing.Color.Silver;
+            this.login_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
+            this.login_button.FlatAppearance.BorderSize = 0;
             this.login_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.login_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login_button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_button.ForeColor = System.Drawing.Color.White;
-            this.login_button.Location = new System.Drawing.Point(98, 187);
+            this.login_button.Location = new System.Drawing.Point(97, 187);
             this.login_button.Name = "login_button";
             this.login_button.Size = new System.Drawing.Size(180, 39);
             this.login_button.TabIndex = 2;
@@ -127,7 +130,7 @@
             this.peek_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.peek_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.peek_button.Image = global::ParishSystem.Properties.Resources.icons8_Eye_20;
-            this.peek_button.Location = new System.Drawing.Point(307, 126);
+            this.peek_button.Location = new System.Drawing.Point(321, 126);
             this.peek_button.Name = "peek_button";
             this.peek_button.Size = new System.Drawing.Size(30, 30);
             this.peek_button.TabIndex = 3;
@@ -165,7 +168,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 4);
+            this.label1.Location = new System.Drawing.Point(12, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 21);
             this.label1.TabIndex = 5;
