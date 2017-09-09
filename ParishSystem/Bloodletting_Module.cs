@@ -14,10 +14,10 @@ namespace ParishSystem
     {
         DataHandler dh = new DataHandler();
         int Mode;
-        public Bloodletting_Module(int Mode)
+        public Bloodletting_Module(int donorMode_eventMode)
         {
             InitializeComponent();
-            this.Mode = Mode;
+            this.Mode = donorMode_eventMode;
         }
 
         private void refresh()
