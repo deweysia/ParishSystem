@@ -78,34 +78,6 @@
             this.lblNameCon = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvConfirmation = new MetroFramework.Controls.MetroGrid();
-            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnResetBap = new System.Windows.Forms.Button();
-            this.btnSearchBap = new System.Windows.Forms.Button();
-            this.txtSearchBap = new ParishSystem.CueTextBox();
-            this.btnAdvanceSearchBap = new System.Windows.Forms.Button();
-            this.tlpProfileBap = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAddReferencesBap = new System.Windows.Forms.Button();
-            this.btnOpenProfileBap = new System.Windows.Forms.Button();
-            this.lblNameBap = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.dgvBaptism = new MetroFramework.Controls.MetroGrid();
-            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.bsSacrament = new System.Windows.Forms.BindingSource(this.components);
-            this.baptismID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapApplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapProfileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapMinisterID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.baptismDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapMI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapSuffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapRegistryNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapRecordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapPageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bapRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.confirmationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.conApplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.conProfileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -119,6 +91,34 @@
             this.conRecordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.conPageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.conRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnResetBap = new System.Windows.Forms.Button();
+            this.btnSearchBap = new System.Windows.Forms.Button();
+            this.txtSearchBap = new ParishSystem.CueTextBox();
+            this.btnAdvanceSearchBap = new System.Windows.Forms.Button();
+            this.tlpProfileBap = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAddReferencesBap = new System.Windows.Forms.Button();
+            this.btnOpenProfileBap = new System.Windows.Forms.Button();
+            this.lblNameBap = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.dgvBaptism = new MetroFramework.Controls.MetroGrid();
+            this.baptismID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapApplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapProfileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapMinisterID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.baptismDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapMI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapSuffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapRegistryNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapRecordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapPageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bapRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.bsSacrament = new System.Windows.Forms.BindingSource(this.components);
             this.metroTabPage6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -156,7 +156,7 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.tableLayoutPanel1);
@@ -533,7 +533,7 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.tableLayoutPanel3);
@@ -745,11 +745,11 @@
             this.dgvConfirmation.ReadOnly = true;
             this.dgvConfirmation.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvConfirmation.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvConfirmation.RowHeadersVisible = false;
@@ -762,6 +762,110 @@
             this.dgvConfirmation.UseCustomForeColor = true;
             this.dgvConfirmation.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConfirmation_CellEnter);
             this.dgvConfirmation.VisibleChanged += new System.EventHandler(this.dgvConfirmation_VisibleChanged);
+            // 
+            // confirmationID
+            // 
+            this.confirmationID.DataPropertyName = "confirmationID";
+            this.confirmationID.HeaderText = "confirmationID";
+            this.confirmationID.Name = "confirmationID";
+            this.confirmationID.ReadOnly = true;
+            this.confirmationID.Visible = false;
+            // 
+            // conApplicationID
+            // 
+            this.conApplicationID.DataPropertyName = "applicationID";
+            this.conApplicationID.HeaderText = "conApplicationID";
+            this.conApplicationID.Name = "conApplicationID";
+            this.conApplicationID.ReadOnly = true;
+            this.conApplicationID.Visible = false;
+            // 
+            // conProfileID
+            // 
+            this.conProfileID.DataPropertyName = "profileID";
+            this.conProfileID.HeaderText = "profileID";
+            this.conProfileID.Name = "conProfileID";
+            this.conProfileID.ReadOnly = true;
+            this.conProfileID.Visible = false;
+            // 
+            // conMinisterID
+            // 
+            this.conMinisterID.DataPropertyName = "ministerID";
+            this.conMinisterID.HeaderText = "conMinisterID";
+            this.conMinisterID.Name = "conMinisterID";
+            this.conMinisterID.ReadOnly = true;
+            this.conMinisterID.Visible = false;
+            // 
+            // confirmationDate
+            // 
+            this.confirmationDate.DataPropertyName = "confirmationDate";
+            this.confirmationDate.FillWeight = 122.4157F;
+            this.confirmationDate.HeaderText = "Confirmation Date";
+            this.confirmationDate.Name = "confirmationDate";
+            this.confirmationDate.ReadOnly = true;
+            // 
+            // conFirstName
+            // 
+            this.conFirstName.DataPropertyName = "firstName";
+            this.conFirstName.FillWeight = 77.82124F;
+            this.conFirstName.HeaderText = "First Name";
+            this.conFirstName.Name = "conFirstName";
+            this.conFirstName.ReadOnly = true;
+            // 
+            // conMI
+            // 
+            this.conMI.DataPropertyName = "midName";
+            this.conMI.FillWeight = 39.64971F;
+            this.conMI.HeaderText = "MI";
+            this.conMI.Name = "conMI";
+            this.conMI.ReadOnly = true;
+            // 
+            // conLastName
+            // 
+            this.conLastName.DataPropertyName = "lastName";
+            this.conLastName.FillWeight = 78.65975F;
+            this.conLastName.HeaderText = "Last Name";
+            this.conLastName.Name = "conLastName";
+            this.conLastName.ReadOnly = true;
+            // 
+            // conSuffix
+            // 
+            this.conSuffix.DataPropertyName = "suffix";
+            this.conSuffix.FillWeight = 56.28576F;
+            this.conSuffix.HeaderText = "Suffix";
+            this.conSuffix.Name = "conSuffix";
+            this.conSuffix.ReadOnly = true;
+            // 
+            // conRegistryNumber
+            // 
+            this.conRegistryNumber.DataPropertyName = "registryNumber";
+            this.conRegistryNumber.FillWeight = 69.08814F;
+            this.conRegistryNumber.HeaderText = "Registry";
+            this.conRegistryNumber.Name = "conRegistryNumber";
+            this.conRegistryNumber.ReadOnly = true;
+            // 
+            // conRecordNumber
+            // 
+            this.conRecordNumber.DataPropertyName = "recordNumber";
+            this.conRecordNumber.FillWeight = 64.56241F;
+            this.conRecordNumber.HeaderText = "Record";
+            this.conRecordNumber.Name = "conRecordNumber";
+            this.conRecordNumber.ReadOnly = true;
+            // 
+            // conPageNumber
+            // 
+            this.conPageNumber.DataPropertyName = "pageNumber";
+            this.conPageNumber.FillWeight = 54.35588F;
+            this.conPageNumber.HeaderText = "Page";
+            this.conPageNumber.Name = "conPageNumber";
+            this.conPageNumber.ReadOnly = true;
+            // 
+            // conRemarks
+            // 
+            this.conRemarks.DataPropertyName = "remarks";
+            this.conRemarks.FillWeight = 337.1614F;
+            this.conRemarks.HeaderText = "Remarks";
+            this.conRemarks.Name = "conRemarks";
+            this.conRemarks.ReadOnly = true;
             // 
             // metroTabPage4
             // 
@@ -1013,21 +1117,6 @@
             this.dgvBaptism.SelectionChanged += new System.EventHandler(this.dgvBaptism_SelectionChanged);
             this.dgvBaptism.VisibleChanged += new System.EventHandler(this.dgvBaptism_VisibleChanged);
             // 
-            // metroTabControl1
-            // 
-            this.metroTabControl1.Controls.Add(this.metroTabPage4);
-            this.metroTabControl1.Controls.Add(this.metroTabPage5);
-            this.metroTabControl1.Controls.Add(this.metroTabPage6);
-            this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(930, 540);
-            this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Silver;
-            this.metroTabControl1.TabIndex = 11;
-            this.metroTabControl1.UseSelectable = true;
-            this.metroTabControl1.UseStyleColors = true;
-            // 
             // baptismID
             // 
             this.baptismID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -1132,109 +1221,20 @@
             this.bapRemarks.Name = "bapRemarks";
             this.bapRemarks.ReadOnly = true;
             // 
-            // confirmationID
+            // metroTabControl1
             // 
-            this.confirmationID.DataPropertyName = "confirmationID";
-            this.confirmationID.HeaderText = "confirmationID";
-            this.confirmationID.Name = "confirmationID";
-            this.confirmationID.ReadOnly = true;
-            this.confirmationID.Visible = false;
-            // 
-            // conApplicationID
-            // 
-            this.conApplicationID.DataPropertyName = "applicationID";
-            this.conApplicationID.HeaderText = "conApplicationID";
-            this.conApplicationID.Name = "conApplicationID";
-            this.conApplicationID.ReadOnly = true;
-            this.conApplicationID.Visible = false;
-            // 
-            // conProfileID
-            // 
-            this.conProfileID.DataPropertyName = "profileID";
-            this.conProfileID.HeaderText = "profileID";
-            this.conProfileID.Name = "conProfileID";
-            this.conProfileID.ReadOnly = true;
-            this.conProfileID.Visible = false;
-            // 
-            // conMinisterID
-            // 
-            this.conMinisterID.DataPropertyName = "ministerID";
-            this.conMinisterID.HeaderText = "conMinisterID";
-            this.conMinisterID.Name = "conMinisterID";
-            this.conMinisterID.ReadOnly = true;
-            this.conMinisterID.Visible = false;
-            // 
-            // confirmationDate
-            // 
-            this.confirmationDate.DataPropertyName = "confirmationDate";
-            this.confirmationDate.FillWeight = 122.4157F;
-            this.confirmationDate.HeaderText = "Confirmation Date";
-            this.confirmationDate.Name = "confirmationDate";
-            this.confirmationDate.ReadOnly = true;
-            // 
-            // conFirstName
-            // 
-            this.conFirstName.DataPropertyName = "firstName";
-            this.conFirstName.FillWeight = 77.82124F;
-            this.conFirstName.HeaderText = "First Name";
-            this.conFirstName.Name = "conFirstName";
-            this.conFirstName.ReadOnly = true;
-            // 
-            // conMI
-            // 
-            this.conMI.DataPropertyName = "midName";
-            this.conMI.FillWeight = 39.64971F;
-            this.conMI.HeaderText = "MI";
-            this.conMI.Name = "conMI";
-            this.conMI.ReadOnly = true;
-            // 
-            // conLastName
-            // 
-            this.conLastName.DataPropertyName = "lastName";
-            this.conLastName.FillWeight = 78.65975F;
-            this.conLastName.HeaderText = "Last Name";
-            this.conLastName.Name = "conLastName";
-            this.conLastName.ReadOnly = true;
-            // 
-            // conSuffix
-            // 
-            this.conSuffix.DataPropertyName = "suffix";
-            this.conSuffix.FillWeight = 56.28576F;
-            this.conSuffix.HeaderText = "Suffix";
-            this.conSuffix.Name = "conSuffix";
-            this.conSuffix.ReadOnly = true;
-            // 
-            // conRegistryNumber
-            // 
-            this.conRegistryNumber.DataPropertyName = "registryNumber";
-            this.conRegistryNumber.FillWeight = 69.08814F;
-            this.conRegistryNumber.HeaderText = "Registry";
-            this.conRegistryNumber.Name = "conRegistryNumber";
-            this.conRegistryNumber.ReadOnly = true;
-            // 
-            // conRecordNumber
-            // 
-            this.conRecordNumber.DataPropertyName = "recordNumber";
-            this.conRecordNumber.FillWeight = 64.56241F;
-            this.conRecordNumber.HeaderText = "Record";
-            this.conRecordNumber.Name = "conRecordNumber";
-            this.conRecordNumber.ReadOnly = true;
-            // 
-            // conPageNumber
-            // 
-            this.conPageNumber.DataPropertyName = "pageNumber";
-            this.conPageNumber.FillWeight = 54.35588F;
-            this.conPageNumber.HeaderText = "Page";
-            this.conPageNumber.Name = "conPageNumber";
-            this.conPageNumber.ReadOnly = true;
-            // 
-            // conRemarks
-            // 
-            this.conRemarks.DataPropertyName = "remarks";
-            this.conRemarks.FillWeight = 337.1614F;
-            this.conRemarks.HeaderText = "Remarks";
-            this.conRemarks.Name = "conRemarks";
-            this.conRemarks.ReadOnly = true;
+            this.metroTabControl1.Controls.Add(this.metroTabPage4);
+            this.metroTabControl1.Controls.Add(this.metroTabPage5);
+            this.metroTabControl1.Controls.Add(this.metroTabPage6);
+            this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.metroTabControl1.Name = "metroTabControl1";
+            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.Size = new System.Drawing.Size(930, 540);
+            this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Silver;
+            this.metroTabControl1.TabIndex = 11;
+            this.metroTabControl1.UseSelectable = true;
+            this.metroTabControl1.UseStyleColors = true;
             // 
             // SacramentModule
             // 
