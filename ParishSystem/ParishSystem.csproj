@@ -249,6 +249,11 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MarriageApplication.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarriageApplication.resx</DependentUpon>
+    </Compile>
     <Compile Include="MinisterModule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -416,7 +421,10 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MarriageApplication.resx" />
+    <EmbeddedResource Include="MarriageApplication.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MarriageApplication.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="MinisterModule.resx">
       <DependentUpon>MinisterModule.cs</DependentUpon>
     </EmbeddedResource>

@@ -56,6 +56,7 @@
             this.CDB_button_menu = new System.Windows.Forms.Button();
             this.cash_cabinet = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.bloodletting_cabinet_panel = new System.Windows.Forms.Panel();
             this.bloodlettingevent_button = new System.Windows.Forms.Button();
             this.bloodlettingdonor_button = new System.Windows.Forms.Button();
@@ -71,12 +72,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.OpenMenu_button = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.logout_button = new System.Windows.Forms.Button();
             this.MenuTimer = new System.Windows.Forms.Timer(this.components);
             this.Panel_Timer = new System.Windows.Forms.Timer(this.components);
             this.Workspace_panel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel_controlbox.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayout_ControlButtons.SuspendLayout();
@@ -94,6 +93,7 @@
             // 
             this.panel_controlbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.panel_controlbox.Controls.Add(this.panel2);
+            this.panel_controlbox.Controls.Add(this.logout_button);
             this.panel_controlbox.Controls.Add(this.flowLayout_ControlButtons);
             this.panel_controlbox.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_controlbox.Location = new System.Drawing.Point(0, 0);
@@ -192,9 +192,10 @@
             // 
             this.Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.Menu_panel.Controls.Add(this.menu_flowlayout);
+            this.Menu_panel.Dock = System.Windows.Forms.DockStyle.Left;
             this.Menu_panel.Location = new System.Drawing.Point(0, 0);
             this.Menu_panel.Name = "Menu_panel";
-            this.Menu_panel.Size = new System.Drawing.Size(232, 669);
+            this.Menu_panel.Size = new System.Drawing.Size(232, 667);
             this.Menu_panel.TabIndex = 45;
             // 
             // menu_flowlayout
@@ -234,14 +235,14 @@
             this.application_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.application_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.application_button_menu.ForeColor = System.Drawing.Color.White;
-            this.application_button_menu.Image = global::ParishSystem.Properties.Resources.CashReleaseReports_indent;
             this.application_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.application_button_menu.Location = new System.Drawing.Point(0, 194);
             this.application_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.application_button_menu.Name = "application_button_menu";
             this.application_button_menu.Size = new System.Drawing.Size(232, 45);
             this.application_button_menu.TabIndex = 43;
-            this.application_button_menu.Text = "Applications";
+            this.application_button_menu.Text = "                   Applications";
+            this.application_button_menu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.application_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.application_button_menu.UseVisualStyleBackColor = false;
             this.application_button_menu.Click += new System.EventHandler(this.application_button_menu_Click);
@@ -255,14 +256,14 @@
             this.profile_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.profile_menu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profile_menu_button.ForeColor = System.Drawing.Color.White;
-            this.profile_menu_button.Image = global::ParishSystem.Properties.Resources.community_indent;
             this.profile_menu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.profile_menu_button.Location = new System.Drawing.Point(0, 148);
             this.profile_menu_button.Margin = new System.Windows.Forms.Padding(0);
             this.profile_menu_button.Name = "profile_menu_button";
             this.profile_menu_button.Size = new System.Drawing.Size(232, 45);
             this.profile_menu_button.TabIndex = 43;
-            this.profile_menu_button.Text = "Profiles";
+            this.profile_menu_button.Text = "                   Profiles";
+            this.profile_menu_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.profile_menu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.profile_menu_button.UseVisualStyleBackColor = false;
             this.profile_menu_button.Click += new System.EventHandler(this.profile_menu_button_Click);
@@ -276,14 +277,14 @@
             this.sacrament_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sacrament_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sacrament_button_menu.ForeColor = System.Drawing.Color.White;
-            this.sacrament_button_menu.Image = global::ParishSystem.Properties.Resources.Postulancy_indent;
             this.sacrament_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.sacrament_button_menu.Location = new System.Drawing.Point(0, 102);
             this.sacrament_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.sacrament_button_menu.Name = "sacrament_button_menu";
             this.sacrament_button_menu.Size = new System.Drawing.Size(232, 45);
             this.sacrament_button_menu.TabIndex = 43;
-            this.sacrament_button_menu.Text = "Sacraments";
+            this.sacrament_button_menu.Text = "                   Sacraments";
+            this.sacrament_button_menu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.sacrament_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.sacrament_button_menu.UseVisualStyleBackColor = false;
             this.sacrament_button_menu.Click += new System.EventHandler(this.sacrament_button_menu_Click);
@@ -297,14 +298,14 @@
             this.scheduling_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.scheduling_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scheduling_button_menu.ForeColor = System.Drawing.Color.White;
-            this.scheduling_button_menu.Image = global::ParishSystem.Properties.Resources.Postulancy_indent;
             this.scheduling_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.scheduling_button_menu.Location = new System.Drawing.Point(0, 56);
             this.scheduling_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.scheduling_button_menu.Name = "scheduling_button_menu";
             this.scheduling_button_menu.Size = new System.Drawing.Size(232, 45);
             this.scheduling_button_menu.TabIndex = 44;
-            this.scheduling_button_menu.Text = "Scheduling";
+            this.scheduling_button_menu.Text = "                   Scheduling";
+            this.scheduling_button_menu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.scheduling_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.scheduling_button_menu.UseVisualStyleBackColor = false;
             this.scheduling_button_menu.Click += new System.EventHandler(this.scheduling_button_menu_Click);
@@ -374,14 +375,14 @@
             this.itemtypemenu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.itemtypemenu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemtypemenu_button.ForeColor = System.Drawing.Color.White;
-            this.itemtypemenu_button.Image = ((System.Drawing.Image)(resources.GetObject("itemtypemenu_button.Image")));
             this.itemtypemenu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.itemtypemenu_button.Location = new System.Drawing.Point(-2, 233);
             this.itemtypemenu_button.Margin = new System.Windows.Forms.Padding(0);
             this.itemtypemenu_button.Name = "itemtypemenu_button";
             this.itemtypemenu_button.Size = new System.Drawing.Size(232, 45);
             this.itemtypemenu_button.TabIndex = 42;
-            this.itemtypemenu_button.Text = "Cash Item Types";
+            this.itemtypemenu_button.Text = "                   Cash Item Types";
+            this.itemtypemenu_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.itemtypemenu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.itemtypemenu_button.UseVisualStyleBackColor = false;
             this.itemtypemenu_button.Click += new System.EventHandler(this.itemtypemenu_button_Click);
@@ -395,14 +396,14 @@
             this.CRBreport_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CRBreport_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CRBreport_button.ForeColor = System.Drawing.Color.White;
-            this.CRBreport_button.Image = global::ParishSystem.Properties.Resources.Postulancy_indent;
             this.CRBreport_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CRBreport_button.Location = new System.Drawing.Point(0, 98);
             this.CRBreport_button.Margin = new System.Windows.Forms.Padding(0);
             this.CRBreport_button.Name = "CRBreport_button";
             this.CRBreport_button.Size = new System.Drawing.Size(232, 45);
             this.CRBreport_button.TabIndex = 43;
-            this.CRBreport_button.Text = "Reciept Reports";
+            this.CRBreport_button.Text = "                   Reciept Reports";
+            this.CRBreport_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CRBreport_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CRBreport_button.UseVisualStyleBackColor = false;
             this.CRBreport_button.Click += new System.EventHandler(this.CRBreport_button_Click);
@@ -416,14 +417,14 @@
             this.CRB_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CRB_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CRB_button_menu.ForeColor = System.Drawing.Color.White;
-            this.CRB_button_menu.Image = ((System.Drawing.Image)(resources.GetObject("CRB_button_menu.Image")));
             this.CRB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CRB_button_menu.Location = new System.Drawing.Point(0, 53);
             this.CRB_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.CRB_button_menu.Name = "CRB_button_menu";
             this.CRB_button_menu.Size = new System.Drawing.Size(232, 45);
             this.CRB_button_menu.TabIndex = 43;
-            this.CRB_button_menu.Text = "Cash Receipt";
+            this.CRB_button_menu.Text = "                   Cash Receipt";
+            this.CRB_button_menu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CRB_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CRB_button_menu.UseVisualStyleBackColor = false;
             this.CRB_button_menu.Click += new System.EventHandler(this.CRB_button_menu_Click);
@@ -437,14 +438,14 @@
             this.CDBreport_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CDBreport_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CDBreport_button.ForeColor = System.Drawing.Color.White;
-            this.CDBreport_button.Image = global::ParishSystem.Properties.Resources.Postulancy_indent;
             this.CDBreport_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CDBreport_button.Location = new System.Drawing.Point(3, 188);
             this.CDBreport_button.Margin = new System.Windows.Forms.Padding(0);
             this.CDBreport_button.Name = "CDBreport_button";
             this.CDBreport_button.Size = new System.Drawing.Size(232, 45);
             this.CDBreport_button.TabIndex = 43;
-            this.CDBreport_button.Text = "Disbursment Reports";
+            this.CDBreport_button.Text = "                   Disbursment Reports";
+            this.CDBreport_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CDBreport_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CDBreport_button.UseVisualStyleBackColor = false;
             this.CDBreport_button.Click += new System.EventHandler(this.CDBreport_button_Click);
@@ -458,14 +459,14 @@
             this.CDB_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CDB_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CDB_button_menu.ForeColor = System.Drawing.Color.White;
-            this.CDB_button_menu.Image = ((System.Drawing.Image)(resources.GetObject("CDB_button_menu.Image")));
             this.CDB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CDB_button_menu.Location = new System.Drawing.Point(0, 143);
             this.CDB_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.CDB_button_menu.Name = "CDB_button_menu";
             this.CDB_button_menu.Size = new System.Drawing.Size(232, 45);
             this.CDB_button_menu.TabIndex = 43;
-            this.CDB_button_menu.Text = "Cash Disbursment ";
+            this.CDB_button_menu.Text = "                   Cash Disbursment ";
+            this.CDB_button_menu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CDB_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CDB_button_menu.UseVisualStyleBackColor = false;
             this.CDB_button_menu.Click += new System.EventHandler(this.CDB_button_menu_Click);
@@ -500,6 +501,19 @@
             this.label1.Text = "Cash ";
             this.label1.Click += new System.EventHandler(this.SubmenuOpen_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(5, 33);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(225, 20);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "________________________";
+            this.label2.Click += new System.EventHandler(this.SubmenuOpen_Click);
+            // 
             // bloodletting_cabinet_panel
             // 
             this.bloodletting_cabinet_panel.Controls.Add(this.bloodlettingevent_button);
@@ -529,7 +543,7 @@
             this.bloodlettingevent_button.Name = "bloodlettingevent_button";
             this.bloodlettingevent_button.Size = new System.Drawing.Size(232, 45);
             this.bloodlettingevent_button.TabIndex = 44;
-            this.bloodlettingevent_button.Text = "                           Events";
+            this.bloodlettingevent_button.Text = "                   Events";
             this.bloodlettingevent_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bloodlettingevent_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bloodlettingevent_button.UseVisualStyleBackColor = false;
@@ -550,7 +564,7 @@
             this.bloodlettingdonor_button.Name = "bloodlettingdonor_button";
             this.bloodlettingdonor_button.Size = new System.Drawing.Size(232, 45);
             this.bloodlettingdonor_button.TabIndex = 43;
-            this.bloodlettingdonor_button.Text = "                        Donors";
+            this.bloodlettingdonor_button.Text = "                   Donors";
             this.bloodlettingdonor_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bloodlettingdonor_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bloodlettingdonor_button.UseVisualStyleBackColor = false;
@@ -571,7 +585,7 @@
             this.bloodlettingreport_button.Name = "bloodlettingreport_button";
             this.bloodlettingreport_button.Size = new System.Drawing.Size(232, 45);
             this.bloodlettingreport_button.TabIndex = 45;
-            this.bloodlettingreport_button.Text = "                           Reports";
+            this.bloodlettingreport_button.Text = "                   Reports";
             this.bloodlettingreport_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bloodlettingreport_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bloodlettingreport_button.UseVisualStyleBackColor = false;
@@ -640,12 +654,13 @@
             this.Employee_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Employee_button_menu.ForeColor = System.Drawing.Color.White;
             this.Employee_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Employee_button_menu.Location = new System.Drawing.Point(3, 98);
+            this.Employee_button_menu.Location = new System.Drawing.Point(-1, 98);
             this.Employee_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.Employee_button_menu.Name = "Employee_button_menu";
             this.Employee_button_menu.Size = new System.Drawing.Size(232, 45);
             this.Employee_button_menu.TabIndex = 54;
-            this.Employee_button_menu.Text = "Employee";
+            this.Employee_button_menu.Text = "                   Employee";
+            this.Employee_button_menu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Employee_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Employee_button_menu.UseVisualStyleBackColor = false;
             this.Employee_button_menu.Click += new System.EventHandler(this.Employee_button_menu_Click);
@@ -660,12 +675,13 @@
             this.ministers_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ministers_button_menu.ForeColor = System.Drawing.Color.White;
             this.ministers_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ministers_button_menu.Location = new System.Drawing.Point(3, 53);
+            this.ministers_button_menu.Location = new System.Drawing.Point(-1, 53);
             this.ministers_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.ministers_button_menu.Name = "ministers_button_menu";
             this.ministers_button_menu.Size = new System.Drawing.Size(232, 45);
             this.ministers_button_menu.TabIndex = 50;
-            this.ministers_button_menu.Text = "Ministers";
+            this.ministers_button_menu.Text = "                   Ministers";
+            this.ministers_button_menu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ministers_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ministers_button_menu.UseVisualStyleBackColor = false;
             this.ministers_button_menu.Click += new System.EventHandler(this.ministers_button_menu_Click);
@@ -714,8 +730,6 @@
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.flowLayoutPanel1.Controls.Add(this.OpenMenu_button);
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Controls.Add(this.logout_button);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 33);
@@ -742,13 +756,6 @@
             this.OpenMenu_button.UseVisualStyleBackColor = false;
             this.OpenMenu_button.Click += new System.EventHandler(this.OpenMenu_button_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(3, 54);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(54, 577);
-            this.panel1.TabIndex = 46;
-            // 
             // logout_button
             // 
             this.logout_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -758,7 +765,7 @@
             this.logout_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logout_button.ForeColor = System.Drawing.Color.White;
             this.logout_button.Image = global::ParishSystem.Properties.Resources.Home_32px;
-            this.logout_button.Location = new System.Drawing.Point(0, 634);
+            this.logout_button.Location = new System.Drawing.Point(690, 9);
             this.logout_button.Margin = new System.Windows.Forms.Padding(0);
             this.logout_button.Name = "logout_button";
             this.logout_button.Size = new System.Drawing.Size(57, 27);
@@ -787,19 +794,6 @@
             this.Workspace_panel.Name = "Workspace_panel";
             this.Workspace_panel.Size = new System.Drawing.Size(943, 667);
             this.Workspace_panel.TabIndex = 61;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(5, 33);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(225, 20);
-            this.label2.TabIndex = 51;
-            this.label2.Text = "________________________";
-            this.label2.Click += new System.EventHandler(this.SubmenuOpen_Click);
             // 
             // SAD2
             // 
@@ -878,7 +872,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button Employee_button_menu;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button logout_button;
         private System.Windows.Forms.Label label2;
     }
