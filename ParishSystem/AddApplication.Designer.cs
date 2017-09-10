@@ -177,7 +177,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-2, -1);
@@ -433,6 +433,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddApplication";
             this.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddApplication";
             this.Load += new System.EventHandler(this.AddApplication_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddApplication_MouseDown);
