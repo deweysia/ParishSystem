@@ -35,21 +35,23 @@
             this.birthdate_dtp = new MetroFramework.Controls.MetroDateTime();
             this.male_radio = new MetroFramework.Controls.MetroRadioButton();
             this.female_radio = new MetroFramework.Controls.MetroRadioButton();
-            this.firstName_textBox = new System.Windows.Forms.TextBox();
-            this.midName_textBox = new System.Windows.Forms.TextBox();
-            this.lastName_textBox = new System.Windows.Forms.TextBox();
-            this.suffix_textBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.price_textBox = new System.Windows.Forms.TextBox();
             this.application_remarks_textBox = new System.Windows.Forms.Label();
-            this.remarks_textBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.txtSuffix = new MetroFramework.Controls.MetroTextBox();
+            this.txtLastName = new MetroFramework.Controls.MetroTextBox();
+            this.txtMI = new MetroFramework.Controls.MetroTextBox();
+            this.txtFN = new MetroFramework.Controls.MetroTextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.nupPrice = new ParishSystem.HiddenNumericUpDown();
+            this.txtRemarks = new MetroFramework.Controls.MetroTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,7 +71,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(24, 96);
+            this.label2.Location = new System.Drawing.Point(8, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 1;
@@ -80,7 +82,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(22, 47);
+            this.label3.Location = new System.Drawing.Point(6, 46);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 2;
@@ -91,7 +93,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(24, 155);
+            this.label4.Location = new System.Drawing.Point(8, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 1;
@@ -100,7 +102,7 @@
             // birthdate_dtp
             // 
             this.birthdate_dtp.FontSize = MetroFramework.MetroDateTimeSize.Small;
-            this.birthdate_dtp.Location = new System.Drawing.Point(26, 179);
+            this.birthdate_dtp.Location = new System.Drawing.Point(9, 166);
             this.birthdate_dtp.MaxDate = new System.DateTime(2017, 7, 16, 0, 0, 0, 0);
             this.birthdate_dtp.MinimumSize = new System.Drawing.Size(0, 25);
             this.birthdate_dtp.Name = "birthdate_dtp";
@@ -112,11 +114,10 @@
             // 
             this.male_radio.AutoSize = true;
             this.male_radio.Checked = true;
-            this.male_radio.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
             this.male_radio.ForeColor = System.Drawing.Color.Black;
-            this.male_radio.Location = new System.Drawing.Point(26, 122);
+            this.male_radio.Location = new System.Drawing.Point(3, 3);
             this.male_radio.Name = "male_radio";
-            this.male_radio.Size = new System.Drawing.Size(55, 19);
+            this.male_radio.Size = new System.Drawing.Size(49, 15);
             this.male_radio.Style = MetroFramework.MetroColorStyle.Black;
             this.male_radio.TabIndex = 5;
             this.male_radio.TabStop = true;
@@ -130,11 +131,10 @@
             // 
             this.female_radio.AutoSize = true;
             this.female_radio.BackColor = System.Drawing.Color.Transparent;
-            this.female_radio.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
             this.female_radio.ForeColor = System.Drawing.Color.Black;
-            this.female_radio.Location = new System.Drawing.Point(106, 124);
+            this.female_radio.Location = new System.Drawing.Point(58, 3);
             this.female_radio.Name = "female_radio";
-            this.female_radio.Size = new System.Drawing.Size(68, 19);
+            this.female_radio.Size = new System.Drawing.Size(61, 15);
             this.female_radio.Style = MetroFramework.MetroColorStyle.Black;
             this.female_radio.TabIndex = 6;
             this.female_radio.Text = "Female";
@@ -143,74 +143,14 @@
             this.female_radio.UseSelectable = true;
             this.female_radio.UseStyleColors = true;
             // 
-            // firstName_textBox
-            // 
-            this.firstName_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstName_textBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstName_textBox.ForeColor = System.Drawing.Color.Gray;
-            this.firstName_textBox.Location = new System.Drawing.Point(21, 66);
-            this.firstName_textBox.MaxLength = 50;
-            this.firstName_textBox.Name = "firstName_textBox";
-            this.firstName_textBox.Size = new System.Drawing.Size(104, 20);
-            this.firstName_textBox.TabIndex = 1;
-            this.firstName_textBox.Tag = "First Name";
-            this.firstName_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.firstName_textBox.Enter += new System.EventHandler(this.name_textBox_Enter);
-            this.firstName_textBox.Leave += new System.EventHandler(this.name_textBox_Leave);
-            // 
-            // midName_textBox
-            // 
-            this.midName_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.midName_textBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.midName_textBox.ForeColor = System.Drawing.Color.Gray;
-            this.midName_textBox.Location = new System.Drawing.Point(131, 66);
-            this.midName_textBox.MaxLength = 1;
-            this.midName_textBox.Name = "midName_textBox";
-            this.midName_textBox.Size = new System.Drawing.Size(22, 20);
-            this.midName_textBox.TabIndex = 2;
-            this.midName_textBox.Tag = "Mi";
-            this.midName_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.midName_textBox.Enter += new System.EventHandler(this.name_textBox_Enter);
-            this.midName_textBox.Leave += new System.EventHandler(this.name_textBox_Leave);
-            // 
-            // lastName_textBox
-            // 
-            this.lastName_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lastName_textBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastName_textBox.ForeColor = System.Drawing.Color.Gray;
-            this.lastName_textBox.Location = new System.Drawing.Point(159, 66);
-            this.lastName_textBox.MaxLength = 50;
-            this.lastName_textBox.Name = "lastName_textBox";
-            this.lastName_textBox.Size = new System.Drawing.Size(111, 20);
-            this.lastName_textBox.TabIndex = 3;
-            this.lastName_textBox.Tag = "Last Name";
-            this.lastName_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lastName_textBox.Enter += new System.EventHandler(this.name_textBox_Enter);
-            this.lastName_textBox.Leave += new System.EventHandler(this.name_textBox_Leave);
-            // 
-            // suffix_textBox
-            // 
-            this.suffix_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.suffix_textBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suffix_textBox.ForeColor = System.Drawing.Color.Gray;
-            this.suffix_textBox.Location = new System.Drawing.Point(276, 66);
-            this.suffix_textBox.MaxLength = 5;
-            this.suffix_textBox.Name = "suffix_textBox";
-            this.suffix_textBox.Size = new System.Drawing.Size(31, 20);
-            this.suffix_textBox.TabIndex = 4;
-            this.suffix_textBox.Tag = "Sf";
-            this.suffix_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.suffix_textBox.Enter += new System.EventHandler(this.name_textBox_Enter);
-            this.suffix_textBox.Leave += new System.EventHandler(this.name_textBox_Leave);
-            // 
             // label6
             // 
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(21, 219);
+            this.label6.Location = new System.Drawing.Point(10, 199);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(290, 2);
+            this.label6.Size = new System.Drawing.Size(312, 10);
             this.label6.TabIndex = 20;
             // 
             // label5
@@ -218,41 +158,22 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(27, 227);
+            this.label5.Location = new System.Drawing.Point(6, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(31, 13);
             this.label5.TabIndex = 1;
             this.label5.Text = "Price";
-            // 
-            // price_textBox
-            // 
-            this.price_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price_textBox.ForeColor = System.Drawing.Color.Black;
-            this.price_textBox.Location = new System.Drawing.Point(25, 244);
-            this.price_textBox.Name = "price_textBox";
-            this.price_textBox.Size = new System.Drawing.Size(201, 26);
-            this.price_textBox.TabIndex = 17;
             // 
             // application_remarks_textBox
             // 
             this.application_remarks_textBox.AutoSize = true;
             this.application_remarks_textBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.application_remarks_textBox.ForeColor = System.Drawing.Color.Black;
-            this.application_remarks_textBox.Location = new System.Drawing.Point(24, 275);
+            this.application_remarks_textBox.Location = new System.Drawing.Point(8, 273);
             this.application_remarks_textBox.Name = "application_remarks_textBox";
             this.application_remarks_textBox.Size = new System.Drawing.Size(50, 13);
             this.application_remarks_textBox.TabIndex = 18;
             this.application_remarks_textBox.Text = "Remarks";
-            // 
-            // remarks_textBox
-            // 
-            this.remarks_textBox.ForeColor = System.Drawing.Color.Black;
-            this.remarks_textBox.Location = new System.Drawing.Point(26, 292);
-            this.remarks_textBox.Multiline = true;
-            this.remarks_textBox.Name = "remarks_textBox";
-            this.remarks_textBox.Size = new System.Drawing.Size(286, 38);
-            this.remarks_textBox.TabIndex = 19;
-            this.remarks_textBox.Tag = "Remarks";
             // 
             // panel1
             // 
@@ -283,6 +204,192 @@
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Gray;
+            this.label9.Location = new System.Drawing.Point(7, 179);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(205, 13);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "_________________________________";
+            // 
+            // txtSuffix
+            // 
+            // 
+            // 
+            // 
+            this.txtSuffix.CustomButton.Image = null;
+            this.txtSuffix.CustomButton.Location = new System.Drawing.Point(28, 1);
+            this.txtSuffix.CustomButton.Name = "";
+            this.txtSuffix.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSuffix.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSuffix.CustomButton.TabIndex = 1;
+            this.txtSuffix.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSuffix.CustomButton.UseSelectable = true;
+            this.txtSuffix.CustomButton.Visible = false;
+            this.txtSuffix.Lines = new string[0];
+            this.txtSuffix.Location = new System.Drawing.Point(272, 62);
+            this.txtSuffix.MaxLength = 32767;
+            this.txtSuffix.Name = "txtSuffix";
+            this.txtSuffix.PasswordChar = '\0';
+            this.txtSuffix.PromptText = "Suffix";
+            this.txtSuffix.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSuffix.SelectedText = "";
+            this.txtSuffix.SelectionLength = 0;
+            this.txtSuffix.SelectionStart = 0;
+            this.txtSuffix.ShortcutsEnabled = true;
+            this.txtSuffix.Size = new System.Drawing.Size(50, 23);
+            this.txtSuffix.TabIndex = 40;
+            this.txtSuffix.UseSelectable = true;
+            this.txtSuffix.WaterMark = "Suffix";
+            this.txtSuffix.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSuffix.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtLastName
+            // 
+            // 
+            // 
+            // 
+            this.txtLastName.CustomButton.Image = null;
+            this.txtLastName.CustomButton.Location = new System.Drawing.Point(85, 1);
+            this.txtLastName.CustomButton.Name = "";
+            this.txtLastName.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtLastName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtLastName.CustomButton.TabIndex = 1;
+            this.txtLastName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtLastName.CustomButton.UseSelectable = true;
+            this.txtLastName.CustomButton.Visible = false;
+            this.txtLastName.Lines = new string[0];
+            this.txtLastName.Location = new System.Drawing.Point(159, 62);
+            this.txtLastName.MaxLength = 32767;
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.PasswordChar = '\0';
+            this.txtLastName.PromptText = "Last Name";
+            this.txtLastName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtLastName.SelectedText = "";
+            this.txtLastName.SelectionLength = 0;
+            this.txtLastName.SelectionStart = 0;
+            this.txtLastName.ShortcutsEnabled = true;
+            this.txtLastName.Size = new System.Drawing.Size(107, 23);
+            this.txtLastName.TabIndex = 41;
+            this.txtLastName.UseSelectable = true;
+            this.txtLastName.WaterMark = "Last Name";
+            this.txtLastName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtLastName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtMI
+            // 
+            // 
+            // 
+            // 
+            this.txtMI.CustomButton.Image = null;
+            this.txtMI.CustomButton.Location = new System.Drawing.Point(9, 1);
+            this.txtMI.CustomButton.Name = "";
+            this.txtMI.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtMI.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtMI.CustomButton.TabIndex = 1;
+            this.txtMI.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtMI.CustomButton.UseSelectable = true;
+            this.txtMI.CustomButton.Visible = false;
+            this.txtMI.Lines = new string[0];
+            this.txtMI.Location = new System.Drawing.Point(122, 62);
+            this.txtMI.MaxLength = 32767;
+            this.txtMI.Name = "txtMI";
+            this.txtMI.PasswordChar = '\0';
+            this.txtMI.PromptText = "M.I.";
+            this.txtMI.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtMI.SelectedText = "";
+            this.txtMI.SelectionLength = 0;
+            this.txtMI.SelectionStart = 0;
+            this.txtMI.ShortcutsEnabled = true;
+            this.txtMI.Size = new System.Drawing.Size(31, 23);
+            this.txtMI.TabIndex = 42;
+            this.txtMI.UseSelectable = true;
+            this.txtMI.WaterMark = "M.I.";
+            this.txtMI.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtMI.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtFN
+            // 
+            // 
+            // 
+            // 
+            this.txtFN.CustomButton.Image = null;
+            this.txtFN.CustomButton.Location = new System.Drawing.Point(85, 1);
+            this.txtFN.CustomButton.Name = "";
+            this.txtFN.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtFN.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtFN.CustomButton.TabIndex = 1;
+            this.txtFN.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtFN.CustomButton.UseSelectable = true;
+            this.txtFN.CustomButton.Visible = false;
+            this.txtFN.Lines = new string[0];
+            this.txtFN.Location = new System.Drawing.Point(9, 62);
+            this.txtFN.MaxLength = 32767;
+            this.txtFN.Name = "txtFN";
+            this.txtFN.PasswordChar = '\0';
+            this.txtFN.PromptText = "First Name";
+            this.txtFN.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtFN.SelectedText = "";
+            this.txtFN.SelectionLength = 0;
+            this.txtFN.SelectionStart = 0;
+            this.txtFN.ShortcutsEnabled = true;
+            this.txtFN.Size = new System.Drawing.Size(107, 23);
+            this.txtFN.TabIndex = 43;
+            this.txtFN.UseSelectable = true;
+            this.txtFN.WaterMark = "First Name";
+            this.txtFN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtFN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.male_radio);
+            this.flowLayoutPanel1.Controls.Add(this.female_radio);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(9, 111);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(126, 22);
+            this.flowLayoutPanel1.TabIndex = 44;
+            // 
+            // nupPrice
+            // 
+            this.nupPrice.DecimalPlaces = 2;
+            this.nupPrice.Location = new System.Drawing.Point(8, 242);
+            this.nupPrice.Name = "nupPrice";
+            this.nupPrice.Size = new System.Drawing.Size(120, 20);
+            this.nupPrice.TabIndex = 45;
+            // 
+            // txtRemarks
+            // 
+            // 
+            // 
+            // 
+            this.txtRemarks.CustomButton.Image = null;
+            this.txtRemarks.CustomButton.Location = new System.Drawing.Point(273, 1);
+            this.txtRemarks.CustomButton.Name = "";
+            this.txtRemarks.CustomButton.Size = new System.Drawing.Size(39, 39);
+            this.txtRemarks.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtRemarks.CustomButton.TabIndex = 1;
+            this.txtRemarks.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtRemarks.CustomButton.UseSelectable = true;
+            this.txtRemarks.CustomButton.Visible = false;
+            this.txtRemarks.Lines = new string[0];
+            this.txtRemarks.Location = new System.Drawing.Point(9, 289);
+            this.txtRemarks.MaxLength = 32767;
+            this.txtRemarks.Multiline = true;
+            this.txtRemarks.Name = "txtRemarks";
+            this.txtRemarks.PasswordChar = '\0';
+            this.txtRemarks.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtRemarks.SelectedText = "";
+            this.txtRemarks.SelectionLength = 0;
+            this.txtRemarks.SelectionStart = 0;
+            this.txtRemarks.ShortcutsEnabled = true;
+            this.txtRemarks.Size = new System.Drawing.Size(313, 41);
+            this.txtRemarks.TabIndex = 46;
+            this.txtRemarks.UseSelectable = true;
+            this.txtRemarks.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtRemarks.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Gray;
@@ -291,7 +398,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(68, 338);
+            this.button1.Location = new System.Drawing.Point(78, 336);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(188, 32);
             this.button1.TabIndex = 23;
@@ -299,51 +406,29 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.application_apply_button_Click);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(24, 192);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(205, 13);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "_________________________________";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(20, 77);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(289, 13);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "_______________________________________________";
-            // 
             // AddApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(332, 383);
-            this.Controls.Add(this.birthdate_dtp);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtRemarks);
+            this.Controls.Add(this.nupPrice);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.txtSuffix);
+            this.Controls.Add(this.txtLastName);
+            this.Controls.Add(this.txtMI);
+            this.Controls.Add(this.txtFN);
+            this.Controls.Add(this.birthdate_dtp);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.remarks_textBox);
             this.Controls.Add(this.application_remarks_textBox);
-            this.Controls.Add(this.price_textBox);
-            this.Controls.Add(this.lastName_textBox);
-            this.Controls.Add(this.suffix_textBox);
-            this.Controls.Add(this.midName_textBox);
-            this.Controls.Add(this.firstName_textBox);
-            this.Controls.Add(this.female_radio);
-            this.Controls.Add(this.male_radio);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label7);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddApplication";
@@ -354,6 +439,9 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddApplication_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,19 +455,19 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox lastName_textBox;
-        private System.Windows.Forms.TextBox suffix_textBox;
-        private System.Windows.Forms.TextBox midName_textBox;
-        private System.Windows.Forms.TextBox firstName_textBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox remarks_textBox;
         private System.Windows.Forms.Label application_remarks_textBox;
-        private System.Windows.Forms.TextBox price_textBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button pictureBox1;
+        private MetroFramework.Controls.MetroTextBox txtSuffix;
+        private MetroFramework.Controls.MetroTextBox txtLastName;
+        private MetroFramework.Controls.MetroTextBox txtMI;
+        private MetroFramework.Controls.MetroTextBox txtFN;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private HiddenNumericUpDown nupPrice;
+        private MetroFramework.Controls.MetroTextBox txtRemarks;
+        private System.Windows.Forms.Button button1;
     }
 }

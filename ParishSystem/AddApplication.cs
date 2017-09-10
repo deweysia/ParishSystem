@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Controls;
 
 namespace ParishSystem
 {
@@ -17,7 +18,7 @@ namespace ParishSystem
         DataTable sacramentItem;
         
 
-        Dictionary<TextBox, string> placeHolderText = new Dictionary<TextBox, string>();
+        
         
         public AddApplication(SacramentType type)
         {
@@ -33,26 +34,11 @@ namespace ParishSystem
             birthdate_dtp.MaxDate = DateTime.Now;
             label1.MouseDown += AddApplication_MouseDown;
             label1.MouseMove += AddApplication_MouseMove;
-            
-            //Input up filler text
-            placeHolderText.Add(firstName_textBox, "First Name");
-            placeHolderText.Add(midName_textBox, "M.I.");
-            placeHolderText.Add(lastName_textBox, "Last Name");
-            placeHolderText.Add(suffix_textBox, "Suffix");
-
-            //Load filler text
-            firstName_textBox.Text = placeHolderText[firstName_textBox];
-            midName_textBox.Text = placeHolderText[midName_textBox];
-            lastName_textBox.Text = placeHolderText[lastName_textBox];
-            suffix_textBox.Text = placeHolderText[suffix_textBox];
 
             this.sacramentType = type;
             label1.Text = sacramentType + " Application";
             sacramentItem = dh.getItem(sacramentType.ToString());
-            price_textBox.Text = sacramentItem.Rows[0]["suggestedPrice"].ToString();
-
-
-            
+            nupPrice.Text = sacramentItem.Rows[0]["suggestedPrice"].ToString();
         }
 
         private void AddApplication_Load(object sender, EventArgs e)
@@ -62,10 +48,10 @@ namespace ParishSystem
 
         private void setFormEditable(bool editable)
         {
-            firstName_textBox.ReadOnly = editable;
-            midName_textBox.ReadOnly = editable;
-            lastName_textBox.ReadOnly = editable;
-            suffix_textBox.ReadOnly = editable;
+            txtFN.ReadOnly = editable;
+            txtMI.ReadOnly = editable;
+            txtLastName.ReadOnly = editable;
+            txtSuffix.ReadOnly = editable;
             male_radio.Enabled = editable;
             female_radio.Enabled = editable;
             birthdate_dtp.Enabled = editable;
@@ -80,15 +66,15 @@ namespace ParishSystem
                 return;
             }
             
-            string fn = firstName_textBox.Text;
-            string mn = midName_textBox.Text;
-            string ln = lastName_textBox.Text;
-            string suffix = suffix_textBox.Text == "Suffix" ? "" : suffix_textBox.Text;
+            string fn = txtFN.Text;
+            string mn = txtMI.Text;
+            string ln = txtLastName.Text;
+            string suffix = txtSuffix.Text == "Suffix" ? "" : txtSuffix.Text;
             Gender gender = male_radio.Checked ? Gender.Male : Gender.Female;
             DateTime birthDate = birthdate_dtp.Value;
 
             int itemTypeID = int.Parse(sacramentItem.Rows[0]["itemTypeID"].ToString());
-            double price = double.Parse(price_textBox.Text);
+            double price = double.Parse(nupPrice.Text);
 
             bool success = true;
             int profileID = dh.getGeneralProfileID(fn, mn, ln, suffix, gender, birthDate);
@@ -99,7 +85,7 @@ namespace ParishSystem
                 {
                     success &= dh.addNewApplicant(profileID, sacramentType);
                     int applicationID = dh.getLatestID("Application", "applicationID");
-                    success &= dh.addSacramentIncome(applicationID, price, remarks_textBox.Text);
+                    success &= dh.addSacramentIncome(applicationID, price, txtRemarks.Text);
                 }
                 else //gen prof has active application
                 {
@@ -116,7 +102,7 @@ namespace ParishSystem
                 profileID = dh.getLatestID("GeneralProfile", "profileID");
                 success &= dh.addNewApplicant(profileID, sacramentType);
                 int applicationID = dh.getLatestID("Application", "applicationID");
-                success &= dh.addSacramentIncome(applicationID, price, remarks_textBox.Text);
+                success &= dh.addSacramentIncome(applicationID, price, txtRemarks.Text);
             }
 
             if (success)
@@ -166,26 +152,6 @@ namespace ParishSystem
         private void button1_Click(object sender, EventArgs e)
         {
             Notification.Show(State.GenericError);
-        }
-
-        private void name_textBox_Leave(object sender, EventArgs e)
-        {
-            TextBox t = sender as TextBox;
-            if (t.Text.Trim().Length == 0)
-            {
-                t.Text = placeHolderText[t];
-                t.ForeColor = Color.Gray;
-            }
-        }
-
-        private void name_textBox_Enter(object sender, EventArgs e)
-        {
-            TextBox t = sender as TextBox;
-            if (t.ForeColor == Color.Gray)
-            {
-                t.Text = "";
-                t.ForeColor = Color.Black;
-            }
         }
 
         private bool allFilled()

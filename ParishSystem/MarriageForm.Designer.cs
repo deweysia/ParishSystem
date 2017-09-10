@@ -647,7 +647,6 @@
             this.txtGMFN.MaxLength = 32767;
             this.txtGMFN.Name = "txtGMFN";
             this.txtGMFN.PasswordChar = '\0';
-            this.txtGMFN.PromptText = "First Name";
             this.txtGMFN.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtGMFN.SelectedText = "";
             this.txtGMFN.SelectionLength = 0;
@@ -679,7 +678,6 @@
             this.txtGMMI.MaxLength = 32767;
             this.txtGMMI.Name = "txtGMMI";
             this.txtGMMI.PasswordChar = '\0';
-            this.txtGMMI.PromptText = "M.I.";
             this.txtGMMI.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtGMMI.SelectedText = "";
             this.txtGMMI.SelectionLength = 0;
@@ -711,7 +709,6 @@
             this.txtGMLN.MaxLength = 32767;
             this.txtGMLN.Name = "txtGMLN";
             this.txtGMLN.PasswordChar = '\0';
-            this.txtGMLN.PromptText = "Last Name";
             this.txtGMLN.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtGMLN.SelectedText = "";
             this.txtGMLN.SelectionLength = 0;
@@ -743,7 +740,6 @@
             this.txtGMSuffix.MaxLength = 32767;
             this.txtGMSuffix.Name = "txtGMSuffix";
             this.txtGMSuffix.PasswordChar = '\0';
-            this.txtGMSuffix.PromptText = "Suffix";
             this.txtGMSuffix.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtGMSuffix.SelectedText = "";
             this.txtGMSuffix.SelectionLength = 0;
@@ -776,7 +772,6 @@
             this.txtGFFN.MaxLength = 32767;
             this.txtGFFN.Name = "txtGFFN";
             this.txtGFFN.PasswordChar = '\0';
-            this.txtGFFN.PromptText = "First Name";
             this.txtGFFN.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtGFFN.SelectedText = "";
             this.txtGFFN.SelectionLength = 0;
@@ -808,7 +803,6 @@
             this.txtGFMI.MaxLength = 32767;
             this.txtGFMI.Name = "txtGFMI";
             this.txtGFMI.PasswordChar = '\0';
-            this.txtGFMI.PromptText = "M.I.";
             this.txtGFMI.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtGFMI.SelectedText = "";
             this.txtGFMI.SelectionLength = 0;
@@ -840,7 +834,6 @@
             this.txtGFLN.MaxLength = 32767;
             this.txtGFLN.Name = "txtGFLN";
             this.txtGFLN.PasswordChar = '\0';
-            this.txtGFLN.PromptText = "Last Name";
             this.txtGFLN.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtGFLN.SelectedText = "";
             this.txtGFLN.SelectionLength = 0;
@@ -872,7 +865,6 @@
             this.txtGFSuffix.MaxLength = 32767;
             this.txtGFSuffix.Name = "txtGFSuffix";
             this.txtGFSuffix.PasswordChar = '\0';
-            this.txtGFSuffix.PromptText = "Suffix";
             this.txtGFSuffix.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtGFSuffix.SelectedText = "";
             this.txtGFSuffix.SelectionLength = 0;
@@ -1055,7 +1047,6 @@
             this.txtBMSuffix.MaxLength = 32767;
             this.txtBMSuffix.Name = "txtBMSuffix";
             this.txtBMSuffix.PasswordChar = '\0';
-            this.txtBMSuffix.PromptText = "Suffix";
             this.txtBMSuffix.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBMSuffix.SelectedText = "";
             this.txtBMSuffix.SelectionLength = 0;
@@ -1088,7 +1079,6 @@
             this.txtBMLN.MaxLength = 32767;
             this.txtBMLN.Name = "txtBMLN";
             this.txtBMLN.PasswordChar = '\0';
-            this.txtBMLN.PromptText = "Last Name";
             this.txtBMLN.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBMLN.SelectedText = "";
             this.txtBMLN.SelectionLength = 0;
@@ -1120,7 +1110,6 @@
             this.txtBMMI.MaxLength = 32767;
             this.txtBMMI.Name = "txtBMMI";
             this.txtBMMI.PasswordChar = '\0';
-            this.txtBMMI.PromptText = "M.I.";
             this.txtBMMI.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBMMI.SelectedText = "";
             this.txtBMMI.SelectionLength = 0;
@@ -1152,7 +1141,6 @@
             this.txtBMFN.MaxLength = 32767;
             this.txtBMFN.Name = "txtBMFN";
             this.txtBMFN.PasswordChar = '\0';
-            this.txtBMFN.PromptText = "First Name";
             this.txtBMFN.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBMFN.SelectedText = "";
             this.txtBMFN.SelectionLength = 0;
@@ -1184,7 +1172,6 @@
             this.txtBFFN.MaxLength = 32767;
             this.txtBFFN.Name = "txtBFFN";
             this.txtBFFN.PasswordChar = '\0';
-            this.txtBFFN.PromptText = "First Name";
             this.txtBFFN.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBFFN.SelectedText = "";
             this.txtBFFN.SelectionLength = 0;
@@ -1216,7 +1203,6 @@
             this.txtBFMI.MaxLength = 32767;
             this.txtBFMI.Name = "txtBFMI";
             this.txtBFMI.PasswordChar = '\0';
-            this.txtBFMI.PromptText = "M.I.";
             this.txtBFMI.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBFMI.SelectedText = "";
             this.txtBFMI.SelectionLength = 0;
@@ -1248,7 +1234,6 @@
             this.txtBFLN.MaxLength = 32767;
             this.txtBFLN.Name = "txtBFLN";
             this.txtBFLN.PasswordChar = '\0';
-            this.txtBFLN.PromptText = "Last Name";
             this.txtBFLN.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBFLN.SelectedText = "";
             this.txtBFLN.SelectionLength = 0;
@@ -1280,7 +1265,6 @@
             this.txtBFSuffix.MaxLength = 32767;
             this.txtBFSuffix.Name = "txtBFSuffix";
             this.txtBFSuffix.PasswordChar = '\0';
-            this.txtBFSuffix.PromptText = "Suffix";
             this.txtBFSuffix.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBFSuffix.SelectedText = "";
             this.txtBFSuffix.SelectionLength = 0;
@@ -1313,7 +1297,6 @@
             this.txtSponsorFN.MaxLength = 32767;
             this.txtSponsorFN.Name = "txtSponsorFN";
             this.txtSponsorFN.PasswordChar = '\0';
-            this.txtSponsorFN.PromptText = "First Name";
             this.txtSponsorFN.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtSponsorFN.SelectedText = "";
             this.txtSponsorFN.SelectionLength = 0;
@@ -1345,7 +1328,6 @@
             this.txtSponsorMI.MaxLength = 32767;
             this.txtSponsorMI.Name = "txtSponsorMI";
             this.txtSponsorMI.PasswordChar = '\0';
-            this.txtSponsorMI.PromptText = "M.I.";
             this.txtSponsorMI.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtSponsorMI.SelectedText = "";
             this.txtSponsorMI.SelectionLength = 0;
@@ -1377,7 +1359,6 @@
             this.txtSponsorLN.MaxLength = 32767;
             this.txtSponsorLN.Name = "txtSponsorLN";
             this.txtSponsorLN.PasswordChar = '\0';
-            this.txtSponsorLN.PromptText = "Last Name";
             this.txtSponsorLN.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtSponsorLN.SelectedText = "";
             this.txtSponsorLN.SelectionLength = 0;
@@ -1409,7 +1390,6 @@
             this.txtSponsorSuffix.MaxLength = 32767;
             this.txtSponsorSuffix.Name = "txtSponsorSuffix";
             this.txtSponsorSuffix.PasswordChar = '\0';
-            this.txtSponsorSuffix.PromptText = "Suffix";
             this.txtSponsorSuffix.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtSponsorSuffix.SelectedText = "";
             this.txtSponsorSuffix.SelectionLength = 0;

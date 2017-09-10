@@ -1252,8 +1252,8 @@ namespace ParishSystem
         public bool hasApplication(int profileID, SacramentType type, ApplicationStatus status)
         {
             string q = "SELECT COUNT(*) FROM Application NATURAL JOIN Applicant NATURAL JOIN GeneralProfile WHERE profileID = @profileID AND sacramentType = @sacramentType AND status = @status";
-            DataTable dt = ExecuteQuery(q, (int)type, (int)status);
-            return dt.Rows.Count > 0;
+            DataTable dt = ExecuteQuery(q, profileID, (int)type, (int)status);
+            return Convert.ToInt32(dt.Rows[0][0]) > 0;
         }
 
         public DataTable getBaptismApplications(ApplicationStatus s = ApplicationStatus.Pending)

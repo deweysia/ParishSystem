@@ -177,7 +177,6 @@
             this.password_textbox.MaxLength = 32767;
             this.password_textbox.Name = "password_textbox";
             this.password_textbox.PasswordChar = '\0';
-            this.password_textbox.PromptText = "Password";
             this.password_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.password_textbox.SelectedText = "";
             this.password_textbox.SelectionLength = 0;
@@ -214,7 +213,6 @@
             this.username_textbox.MaxLength = 32767;
             this.username_textbox.Name = "username_textbox";
             this.username_textbox.PasswordChar = '\0';
-            this.username_textbox.PromptText = "Username";
             this.username_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.username_textbox.SelectedText = "";
             this.username_textbox.SelectionLength = 0;
@@ -253,7 +251,6 @@
             this.middleinitial_textbox.MaxLength = 32767;
             this.middleinitial_textbox.Name = "middleinitial_textbox";
             this.middleinitial_textbox.PasswordChar = '\0';
-            this.middleinitial_textbox.PromptText = "Mi";
             this.middleinitial_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.middleinitial_textbox.SelectedText = "";
             this.middleinitial_textbox.SelectionLength = 0;
@@ -292,7 +289,6 @@
             this.firstname_textbox.MaxLength = 32767;
             this.firstname_textbox.Name = "firstname_textbox";
             this.firstname_textbox.PasswordChar = '\0';
-            this.firstname_textbox.PromptText = "Firstname";
             this.firstname_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.firstname_textbox.SelectedText = "";
             this.firstname_textbox.SelectionLength = 0;
@@ -331,7 +327,6 @@
             this.suffix_textbox.MaxLength = 32767;
             this.suffix_textbox.Name = "suffix_textbox";
             this.suffix_textbox.PasswordChar = '\0';
-            this.suffix_textbox.PromptText = "Sf";
             this.suffix_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.suffix_textbox.SelectedText = "";
             this.suffix_textbox.SelectionLength = 0;
@@ -369,7 +364,6 @@
             this.lastname_textbox.MaxLength = 32767;
             this.lastname_textbox.Name = "lastname_textbox";
             this.lastname_textbox.PasswordChar = '\0';
-            this.lastname_textbox.PromptText = "Lastname";
             this.lastname_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.lastname_textbox.SelectedText = "";
             this.lastname_textbox.SelectionLength = 0;
