@@ -17,8 +17,6 @@ namespace ParishSystem
         SacramentType sacramentType;
         DataTable sacramentItem;
         
-
-        
         
         public AddApplication(SacramentType type)
         {

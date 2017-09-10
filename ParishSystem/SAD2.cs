@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
+using Transitions;
 
 namespace ParishSystem
 {
@@ -14,6 +16,7 @@ namespace ParishSystem
     {
         //#5587e0
 
+        
         Color ButtonPressed = Color.FromArgb(115,115,115);
         Color ButtonBackColor = Color.Transparent;
         DataHandler dh = DataHandler.getDataHandler();
@@ -22,6 +25,7 @@ namespace ParishSystem
         public SAD2()
         {
             InitializeComponent();
+            
         }
 
         public SAD2(string  Username)
@@ -73,12 +77,23 @@ namespace ParishSystem
         {
             sender.Controls.Clear();
             f.TopLevel = false;
-            f.AutoScroll = true;
+            //f.AutoScroll = true;
             sender.Controls.Add(f);
 
             f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
             f.Show();
+
+            
+
+
+
+            //this.IsMdiContainer = true;
+            //f.TopLevel = false;
+            //sender.Controls.Add(f);
+            //f.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            //f.Dock = DockStyle.Fill;
+            //f.Show();
         }
         int Menu_velocity = 1;
         bool Menu_open = true;
@@ -126,6 +141,8 @@ namespace ParishSystem
         {
             MenuTimer.Start();
             OpenMenu_button.Enabled = false;
+
+
         }
 
         int temp_openSize;

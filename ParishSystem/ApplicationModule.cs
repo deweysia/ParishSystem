@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Controls;
 
 namespace ParishSystem
 {
@@ -112,7 +113,6 @@ namespace ParishSystem
             {
                 MessageBox.Show(e.ToString());
             }
-
         }
 
 
@@ -141,6 +141,7 @@ namespace ParishSystem
             LoadApplicationDetailsDelegate Load;
             if (t == SacramentType.Baptism)
             {
+                
                 dgv = baptismApplication_dgv;
                 Load = loadBaptismApplicationDetails;
 
@@ -260,10 +261,10 @@ namespace ParishSystem
 
 
             //Load into Edit Panel
-            baptismApplication_firstName_textBox.Text = fn;
-            baptismApplication_midName_textBox.Text = mn;
-            baptismApplication_lastName_textBox.Text = ln;
-            baptismApplication_suffix_textBox.Text = suffix;
+            txtBapFN.Text = fn;
+            txtBapMI.Text = mn;
+            txtBapLN.Text = ln;
+            txtBapSuffix.Text = suffix;
             baptismApplication_birthDate_dtp.Value = birthdate;
             baptismApplication_male_radio.Checked = gender == "1";
             baptismApplication_female_radio.Checked = gender == "2";
@@ -301,10 +302,10 @@ namespace ParishSystem
             confirmationApplication_gender_lbl.Text = gender == "1" ? "Male" : "Female";
             confirmationApplication_birthDate_lbl.Text = birthdate.ToString("yyyy-MM-dd");
 
-            confirmationApplication_firstName_textBox.Text = fn;
-            confirmationApplication_lastName_textBox.Text = mn;
-            confirmationApplication_midName_textBox.Text = ln;
-            confirmationApplication_suffix_textBox.Text = suffix;
+            txtConFN.Text = fn;
+            txtConLN.Text = mn;
+            txtConMI.Text = ln;
+            txtConSuffix.Text = suffix;
             confirmationApplication_birthDate_dtp.Value = birthdate;
             confirmationApplication_male_radio.Checked = gender == "1";
             confirmationApplication_female_radio.Checked = gender == "2";
@@ -444,8 +445,7 @@ namespace ParishSystem
             DataGridView dgv = getDataGridView(t);
             ComboBox filter = getFilter(t);
             
-            BindingSource bs = dgv.DataSource as BindingSource;
-            DataTable dt = bs.DataSource as DataTable;
+            DataTable dt = dgv.DataSource as DataTable;
 
             if (filter.SelectedIndex == 0)
                 dt.DefaultView.RowFilter = "";
@@ -787,10 +787,10 @@ namespace ParishSystem
                     return false;
                 }
 
-                string fn = baptismApplication_firstName_textBox.Text;
-                string mi = baptismApplication_midName_textBox.Text;
-                string ln = baptismApplication_lastName_textBox.Text;
-                string suffix = baptismApplication_suffix_textBox.Text;
+                string fn = txtBapFN.Text;
+                string mi = txtBapMI.Text;
+                string ln = txtBapLN.Text;
+                string suffix = txtBapSuffix.Text;
                 Gender g = baptismApplication_male_radio.Checked ? Gender.Male : Gender.Female;
                 DateTime birthDate = baptismApplication_birthDate_dtp.Value;
 
@@ -840,10 +840,10 @@ namespace ParishSystem
                     return false;
                 }
 
-                string fn = confirmationApplication_firstName_textBox.Text;
-                string mi = confirmationApplication_lastName_textBox.Text;
-                string ln = confirmationApplication_midName_textBox.Text;
-                string suffix = confirmationApplication_suffix_textBox.Text;
+                string fn = txtConFN.Text;
+                string mi = txtConLN.Text;
+                string ln = txtConMI.Text;
+                string suffix = txtConSuffix.Text;
                 Gender g = confirmationApplication_male_radio.Checked ? Gender.Male : Gender.Female;
                 DateTime birthDate = confirmationApplication_birthDate_dtp.Value;
 
