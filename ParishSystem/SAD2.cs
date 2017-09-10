@@ -36,10 +36,10 @@ namespace ParishSystem
             drag.makeDraggable(panel_controlbox);
             drag.makeDraggable(panel2);
 
-            SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(300, 60,sacrament_cabinet_panel,false));
-            SubMenu.Add(cash_cabinet, new Panel_Size_Pair(370, 60, cash_cabinet_panel, false));
-            SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(245, 60, bloodletting_cabinet_panel, false));
-            SubMenu.Add(admin_cabinet, new Panel_Size_Pair(190, 60, admin_cabinet_panel, false));
+            SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(255, 50,sacrament_cabinet_panel,false));
+            SubMenu.Add(cash_cabinet, new Panel_Size_Pair(295, 50, cash_cabinet_panel, false));
+            SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(195, 50, bloodletting_cabinet_panel, false));
+            SubMenu.Add(admin_cabinet, new Panel_Size_Pair(155, 50, admin_cabinet_panel, false));
 
           
             menu_flowlayout.HorizontalScroll.Maximum = 0;
@@ -86,7 +86,7 @@ namespace ParishSystem
         {
             if (!Menu_open)//menuopen== false 
             {
-                if (Menu_panel.Size.Width < 286)
+                if (Menu_panel.Size.Width < 232)
                 {
                     Menu_panel.Size =  new Size(Menu_panel.Size.Width+Menu_velocity, Menu_panel.Size.Height);
                     Menu_panel.BackColor = Color.FromArgb(Menu_panel.BackColor.R-2, Menu_panel.BackColor.B-2, Menu_panel.BackColor.G-2);
@@ -94,7 +94,7 @@ namespace ParishSystem
                 }
                 else
                 {
-                    Menu_panel.Size = new Size(286, Menu_panel.Size.Height);
+                    Menu_panel.Size = new Size(232, Menu_panel.Size.Height);
                     MenuTimer.Stop();
                     Menu_velocity = 0;
                     Menu_open = true;

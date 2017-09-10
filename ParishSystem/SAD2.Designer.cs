@@ -56,7 +56,6 @@
             this.CDB_button_menu = new System.Windows.Forms.Button();
             this.cash_cabinet = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.bloodletting_cabinet_panel = new System.Windows.Forms.Panel();
             this.bloodlettingevent_button = new System.Windows.Forms.Button();
             this.bloodlettingdonor_button = new System.Windows.Forms.Button();
@@ -77,6 +76,7 @@
             this.MenuTimer = new System.Windows.Forms.Timer(this.components);
             this.Panel_Timer = new System.Windows.Forms.Timer(this.components);
             this.Workspace_panel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel_controlbox.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayout_ControlButtons.SuspendLayout();
@@ -194,7 +194,7 @@
             this.Menu_panel.Controls.Add(this.menu_flowlayout);
             this.Menu_panel.Location = new System.Drawing.Point(0, 0);
             this.Menu_panel.Name = "Menu_panel";
-            this.Menu_panel.Size = new System.Drawing.Size(285, 669);
+            this.Menu_panel.Size = new System.Drawing.Size(232, 669);
             this.Menu_panel.TabIndex = 45;
             // 
             // menu_flowlayout
@@ -207,7 +207,7 @@
             this.menu_flowlayout.Location = new System.Drawing.Point(0, 51);
             this.menu_flowlayout.Margin = new System.Windows.Forms.Padding(0);
             this.menu_flowlayout.Name = "menu_flowlayout";
-            this.menu_flowlayout.Size = new System.Drawing.Size(286, 591);
+            this.menu_flowlayout.Size = new System.Drawing.Size(232, 591);
             this.menu_flowlayout.TabIndex = 46;
             // 
             // sacrament_cabinet_panel
@@ -222,7 +222,7 @@
             this.sacrament_cabinet_panel.Location = new System.Drawing.Point(0, 0);
             this.sacrament_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.sacrament_cabinet_panel.Name = "sacrament_cabinet_panel";
-            this.sacrament_cabinet_panel.Size = new System.Drawing.Size(283, 60);
+            this.sacrament_cabinet_panel.Size = new System.Drawing.Size(232, 50);
             this.sacrament_cabinet_panel.TabIndex = 51;
             this.sacrament_cabinet_panel.Click += new System.EventHandler(this.SubmenuOpen_Click);
             // 
@@ -232,14 +232,14 @@
             this.application_button_menu.FlatAppearance.BorderSize = 0;
             this.application_button_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.application_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.application_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.application_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.application_button_menu.ForeColor = System.Drawing.Color.White;
             this.application_button_menu.Image = global::ParishSystem.Properties.Resources.CashReleaseReports_indent;
             this.application_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.application_button_menu.Location = new System.Drawing.Point(0, 240);
+            this.application_button_menu.Location = new System.Drawing.Point(0, 194);
             this.application_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.application_button_menu.Name = "application_button_menu";
-            this.application_button_menu.Size = new System.Drawing.Size(287, 58);
+            this.application_button_menu.Size = new System.Drawing.Size(232, 45);
             this.application_button_menu.TabIndex = 43;
             this.application_button_menu.Text = "Applications";
             this.application_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -253,14 +253,14 @@
             this.profile_menu_button.FlatAppearance.BorderSize = 0;
             this.profile_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.profile_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profile_menu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profile_menu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profile_menu_button.ForeColor = System.Drawing.Color.White;
             this.profile_menu_button.Image = global::ParishSystem.Properties.Resources.community_indent;
             this.profile_menu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.profile_menu_button.Location = new System.Drawing.Point(0, 181);
+            this.profile_menu_button.Location = new System.Drawing.Point(0, 148);
             this.profile_menu_button.Margin = new System.Windows.Forms.Padding(0);
             this.profile_menu_button.Name = "profile_menu_button";
-            this.profile_menu_button.Size = new System.Drawing.Size(287, 58);
+            this.profile_menu_button.Size = new System.Drawing.Size(232, 45);
             this.profile_menu_button.TabIndex = 43;
             this.profile_menu_button.Text = "Profiles";
             this.profile_menu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -274,14 +274,14 @@
             this.sacrament_button_menu.FlatAppearance.BorderSize = 0;
             this.sacrament_button_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.sacrament_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sacrament_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sacrament_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sacrament_button_menu.ForeColor = System.Drawing.Color.White;
             this.sacrament_button_menu.Image = global::ParishSystem.Properties.Resources.Postulancy_indent;
             this.sacrament_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sacrament_button_menu.Location = new System.Drawing.Point(0, 122);
+            this.sacrament_button_menu.Location = new System.Drawing.Point(0, 102);
             this.sacrament_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.sacrament_button_menu.Name = "sacrament_button_menu";
-            this.sacrament_button_menu.Size = new System.Drawing.Size(287, 58);
+            this.sacrament_button_menu.Size = new System.Drawing.Size(232, 45);
             this.sacrament_button_menu.TabIndex = 43;
             this.sacrament_button_menu.Text = "Sacraments";
             this.sacrament_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -295,14 +295,14 @@
             this.scheduling_button_menu.FlatAppearance.BorderSize = 0;
             this.scheduling_button_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.scheduling_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.scheduling_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scheduling_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scheduling_button_menu.ForeColor = System.Drawing.Color.White;
             this.scheduling_button_menu.Image = global::ParishSystem.Properties.Resources.Postulancy_indent;
             this.scheduling_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.scheduling_button_menu.Location = new System.Drawing.Point(0, 63);
+            this.scheduling_button_menu.Location = new System.Drawing.Point(0, 56);
             this.scheduling_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.scheduling_button_menu.Name = "scheduling_button_menu";
-            this.scheduling_button_menu.Size = new System.Drawing.Size(287, 58);
+            this.scheduling_button_menu.Size = new System.Drawing.Size(232, 45);
             this.scheduling_button_menu.TabIndex = 44;
             this.scheduling_button_menu.Text = "Scheduling";
             this.scheduling_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -318,9 +318,9 @@
             this.sacrament_cabinet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.sacrament_cabinet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.sacrament_cabinet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sacrament_cabinet.Location = new System.Drawing.Point(3, 0);
+            this.sacrament_cabinet.Location = new System.Drawing.Point(3, 4);
             this.sacrament_cabinet.Name = "sacrament_cabinet";
-            this.sacrament_cabinet.Size = new System.Drawing.Size(60, 60);
+            this.sacrament_cabinet.Size = new System.Drawing.Size(43, 41);
             this.sacrament_cabinet.TabIndex = 56;
             this.sacrament_cabinet.UseVisualStyleBackColor = true;
             this.sacrament_cabinet.Click += new System.EventHandler(this.SubmenuOpen_Click);
@@ -328,11 +328,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(69, 15);
+            this.label3.Location = new System.Drawing.Point(58, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(201, 25);
+            this.label3.Size = new System.Drawing.Size(151, 20);
             this.label3.TabIndex = 54;
             this.label3.Text = "Sacrament Records";
             this.label3.Click += new System.EventHandler(this.SubmenuOpen_Click);
@@ -340,13 +340,13 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(62, 19);
+            this.label4.Location = new System.Drawing.Point(5, 33);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(216, 25);
+            this.label4.Size = new System.Drawing.Size(225, 20);
             this.label4.TabIndex = 55;
-            this.label4.Text = "_________________";
+            this.label4.Text = "________________________";
             this.label4.Click += new System.EventHandler(this.SubmenuOpen_Click);
             // 
             // cash_cabinet_panel
@@ -359,10 +359,10 @@
             this.cash_cabinet_panel.Controls.Add(this.cash_cabinet);
             this.cash_cabinet_panel.Controls.Add(this.label1);
             this.cash_cabinet_panel.Controls.Add(this.label2);
-            this.cash_cabinet_panel.Location = new System.Drawing.Point(0, 60);
+            this.cash_cabinet_panel.Location = new System.Drawing.Point(0, 50);
             this.cash_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.cash_cabinet_panel.Name = "cash_cabinet_panel";
-            this.cash_cabinet_panel.Size = new System.Drawing.Size(283, 60);
+            this.cash_cabinet_panel.Size = new System.Drawing.Size(232, 50);
             this.cash_cabinet_panel.TabIndex = 50;
             this.cash_cabinet_panel.Click += new System.EventHandler(this.SubmenuOpen_Click);
             // 
@@ -372,14 +372,14 @@
             this.itemtypemenu_button.FlatAppearance.BorderSize = 0;
             this.itemtypemenu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.itemtypemenu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.itemtypemenu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemtypemenu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemtypemenu_button.ForeColor = System.Drawing.Color.White;
             this.itemtypemenu_button.Image = ((System.Drawing.Image)(resources.GetObject("itemtypemenu_button.Image")));
             this.itemtypemenu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.itemtypemenu_button.Location = new System.Drawing.Point(0, 293);
+            this.itemtypemenu_button.Location = new System.Drawing.Point(-2, 233);
             this.itemtypemenu_button.Margin = new System.Windows.Forms.Padding(0);
             this.itemtypemenu_button.Name = "itemtypemenu_button";
-            this.itemtypemenu_button.Size = new System.Drawing.Size(283, 58);
+            this.itemtypemenu_button.Size = new System.Drawing.Size(232, 45);
             this.itemtypemenu_button.TabIndex = 42;
             this.itemtypemenu_button.Text = "Cash Item Types";
             this.itemtypemenu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -393,14 +393,14 @@
             this.CRBreport_button.FlatAppearance.BorderSize = 0;
             this.CRBreport_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.CRBreport_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CRBreport_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CRBreport_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CRBreport_button.ForeColor = System.Drawing.Color.White;
             this.CRBreport_button.Image = global::ParishSystem.Properties.Resources.Postulancy_indent;
             this.CRBreport_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CRBreport_button.Location = new System.Drawing.Point(0, 119);
+            this.CRBreport_button.Location = new System.Drawing.Point(0, 98);
             this.CRBreport_button.Margin = new System.Windows.Forms.Padding(0);
             this.CRBreport_button.Name = "CRBreport_button";
-            this.CRBreport_button.Size = new System.Drawing.Size(283, 58);
+            this.CRBreport_button.Size = new System.Drawing.Size(232, 45);
             this.CRBreport_button.TabIndex = 43;
             this.CRBreport_button.Text = "Reciept Reports";
             this.CRBreport_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -414,14 +414,14 @@
             this.CRB_button_menu.FlatAppearance.BorderSize = 0;
             this.CRB_button_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.CRB_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CRB_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CRB_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CRB_button_menu.ForeColor = System.Drawing.Color.White;
             this.CRB_button_menu.Image = ((System.Drawing.Image)(resources.GetObject("CRB_button_menu.Image")));
             this.CRB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CRB_button_menu.Location = new System.Drawing.Point(0, 61);
+            this.CRB_button_menu.Location = new System.Drawing.Point(0, 53);
             this.CRB_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.CRB_button_menu.Name = "CRB_button_menu";
-            this.CRB_button_menu.Size = new System.Drawing.Size(283, 58);
+            this.CRB_button_menu.Size = new System.Drawing.Size(232, 45);
             this.CRB_button_menu.TabIndex = 43;
             this.CRB_button_menu.Text = "Cash Receipt";
             this.CRB_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -435,14 +435,14 @@
             this.CDBreport_button.FlatAppearance.BorderSize = 0;
             this.CDBreport_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.CDBreport_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CDBreport_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CDBreport_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CDBreport_button.ForeColor = System.Drawing.Color.White;
             this.CDBreport_button.Image = global::ParishSystem.Properties.Resources.Postulancy_indent;
             this.CDBreport_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CDBreport_button.Location = new System.Drawing.Point(0, 235);
+            this.CDBreport_button.Location = new System.Drawing.Point(3, 188);
             this.CDBreport_button.Margin = new System.Windows.Forms.Padding(0);
             this.CDBreport_button.Name = "CDBreport_button";
-            this.CDBreport_button.Size = new System.Drawing.Size(283, 58);
+            this.CDBreport_button.Size = new System.Drawing.Size(232, 45);
             this.CDBreport_button.TabIndex = 43;
             this.CDBreport_button.Text = "Disbursment Reports";
             this.CDBreport_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -456,14 +456,14 @@
             this.CDB_button_menu.FlatAppearance.BorderSize = 0;
             this.CDB_button_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.CDB_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CDB_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CDB_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CDB_button_menu.ForeColor = System.Drawing.Color.White;
             this.CDB_button_menu.Image = ((System.Drawing.Image)(resources.GetObject("CDB_button_menu.Image")));
             this.CDB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CDB_button_menu.Location = new System.Drawing.Point(0, 177);
+            this.CDB_button_menu.Location = new System.Drawing.Point(0, 143);
             this.CDB_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.CDB_button_menu.Name = "CDB_button_menu";
-            this.CDB_button_menu.Size = new System.Drawing.Size(283, 58);
+            this.CDB_button_menu.Size = new System.Drawing.Size(232, 45);
             this.CDB_button_menu.TabIndex = 43;
             this.CDB_button_menu.Text = "Cash Disbursment ";
             this.CDB_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -479,10 +479,10 @@
             this.cash_cabinet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.cash_cabinet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.cash_cabinet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cash_cabinet.Location = new System.Drawing.Point(3, 0);
+            this.cash_cabinet.Location = new System.Drawing.Point(3, 4);
             this.cash_cabinet.Margin = new System.Windows.Forms.Padding(0);
             this.cash_cabinet.Name = "cash_cabinet";
-            this.cash_cabinet.Size = new System.Drawing.Size(60, 60);
+            this.cash_cabinet.Size = new System.Drawing.Size(43, 41);
             this.cash_cabinet.TabIndex = 53;
             this.cash_cabinet.UseVisualStyleBackColor = true;
             this.cash_cabinet.Click += new System.EventHandler(this.SubmenuOpen_Click);
@@ -490,28 +490,15 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(78, 17);
+            this.label1.Location = new System.Drawing.Point(58, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 25);
+            this.label1.Size = new System.Drawing.Size(50, 20);
             this.label1.TabIndex = 50;
             this.label1.Text = "Cash ";
             this.label1.Click += new System.EventHandler(this.SubmenuOpen_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(69, 21);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 25);
-            this.label2.TabIndex = 51;
-            this.label2.Text = "______";
-            this.label2.Click += new System.EventHandler(this.SubmenuOpen_Click);
             // 
             // bloodletting_cabinet_panel
             // 
@@ -521,10 +508,10 @@
             this.bloodletting_cabinet_panel.Controls.Add(this.bloodletting_cabinet);
             this.bloodletting_cabinet_panel.Controls.Add(this.label5);
             this.bloodletting_cabinet_panel.Controls.Add(this.label6);
-            this.bloodletting_cabinet_panel.Location = new System.Drawing.Point(0, 120);
+            this.bloodletting_cabinet_panel.Location = new System.Drawing.Point(0, 100);
             this.bloodletting_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.bloodletting_cabinet_panel.Name = "bloodletting_cabinet_panel";
-            this.bloodletting_cabinet_panel.Size = new System.Drawing.Size(283, 60);
+            this.bloodletting_cabinet_panel.Size = new System.Drawing.Size(232, 50);
             this.bloodletting_cabinet_panel.TabIndex = 54;
             this.bloodletting_cabinet_panel.Click += new System.EventHandler(this.SubmenuOpen_Click);
             // 
@@ -534,15 +521,15 @@
             this.bloodlettingevent_button.FlatAppearance.BorderSize = 0;
             this.bloodlettingevent_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bloodlettingevent_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bloodlettingevent_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodlettingevent_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bloodlettingevent_button.ForeColor = System.Drawing.Color.White;
             this.bloodlettingevent_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bloodlettingevent_button.Location = new System.Drawing.Point(0, 121);
+            this.bloodlettingevent_button.Location = new System.Drawing.Point(0, 98);
             this.bloodlettingevent_button.Margin = new System.Windows.Forms.Padding(0);
             this.bloodlettingevent_button.Name = "bloodlettingevent_button";
-            this.bloodlettingevent_button.Size = new System.Drawing.Size(286, 58);
+            this.bloodlettingevent_button.Size = new System.Drawing.Size(232, 45);
             this.bloodlettingevent_button.TabIndex = 44;
-            this.bloodlettingevent_button.Text = "                        Events";
+            this.bloodlettingevent_button.Text = "                           Events";
             this.bloodlettingevent_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bloodlettingevent_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bloodlettingevent_button.UseVisualStyleBackColor = false;
@@ -555,13 +542,13 @@
             this.bloodlettingdonor_button.FlatAppearance.BorderSize = 0;
             this.bloodlettingdonor_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bloodlettingdonor_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bloodlettingdonor_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodlettingdonor_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bloodlettingdonor_button.ForeColor = System.Drawing.Color.White;
             this.bloodlettingdonor_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bloodlettingdonor_button.Location = new System.Drawing.Point(0, 179);
+            this.bloodlettingdonor_button.Location = new System.Drawing.Point(-2, 143);
             this.bloodlettingdonor_button.Margin = new System.Windows.Forms.Padding(0);
             this.bloodlettingdonor_button.Name = "bloodlettingdonor_button";
-            this.bloodlettingdonor_button.Size = new System.Drawing.Size(286, 58);
+            this.bloodlettingdonor_button.Size = new System.Drawing.Size(232, 45);
             this.bloodlettingdonor_button.TabIndex = 43;
             this.bloodlettingdonor_button.Text = "                        Donors";
             this.bloodlettingdonor_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -576,15 +563,15 @@
             this.bloodlettingreport_button.FlatAppearance.BorderSize = 0;
             this.bloodlettingreport_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bloodlettingreport_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bloodlettingreport_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodlettingreport_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bloodlettingreport_button.ForeColor = System.Drawing.Color.White;
             this.bloodlettingreport_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bloodlettingreport_button.Location = new System.Drawing.Point(0, 63);
+            this.bloodlettingreport_button.Location = new System.Drawing.Point(0, 53);
             this.bloodlettingreport_button.Margin = new System.Windows.Forms.Padding(0);
             this.bloodlettingreport_button.Name = "bloodlettingreport_button";
-            this.bloodlettingreport_button.Size = new System.Drawing.Size(286, 58);
+            this.bloodlettingreport_button.Size = new System.Drawing.Size(232, 45);
             this.bloodlettingreport_button.TabIndex = 45;
-            this.bloodlettingreport_button.Text = "                        Reports";
+            this.bloodlettingreport_button.Text = "                           Reports";
             this.bloodlettingreport_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bloodlettingreport_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bloodlettingreport_button.UseVisualStyleBackColor = false;
@@ -599,9 +586,9 @@
             this.bloodletting_cabinet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.bloodletting_cabinet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bloodletting_cabinet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bloodletting_cabinet.Location = new System.Drawing.Point(3, 0);
+            this.bloodletting_cabinet.Location = new System.Drawing.Point(3, 4);
             this.bloodletting_cabinet.Name = "bloodletting_cabinet";
-            this.bloodletting_cabinet.Size = new System.Drawing.Size(60, 60);
+            this.bloodletting_cabinet.Size = new System.Drawing.Size(43, 41);
             this.bloodletting_cabinet.TabIndex = 53;
             this.bloodletting_cabinet.UseVisualStyleBackColor = true;
             this.bloodletting_cabinet.Click += new System.EventHandler(this.SubmenuOpen_Click);
@@ -609,11 +596,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(78, 16);
+            this.label5.Location = new System.Drawing.Point(58, 19);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 25);
+            this.label5.Size = new System.Drawing.Size(97, 20);
             this.label5.TabIndex = 50;
             this.label5.Text = "Bloodletting ";
             this.label5.Click += new System.EventHandler(this.SubmenuOpen_Click);
@@ -621,13 +608,13 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(69, 20);
+            this.label6.Location = new System.Drawing.Point(5, 33);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(144, 25);
+            this.label6.Size = new System.Drawing.Size(225, 20);
             this.label6.TabIndex = 51;
-            this.label6.Text = "___________";
+            this.label6.Text = "________________________";
             this.label6.Click += new System.EventHandler(this.SubmenuOpen_Click);
             // 
             // admin_cabinet_panel
@@ -637,10 +624,10 @@
             this.admin_cabinet_panel.Controls.Add(this.admin_cabinet);
             this.admin_cabinet_panel.Controls.Add(this.label7);
             this.admin_cabinet_panel.Controls.Add(this.label8);
-            this.admin_cabinet_panel.Location = new System.Drawing.Point(0, 180);
+            this.admin_cabinet_panel.Location = new System.Drawing.Point(0, 150);
             this.admin_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.admin_cabinet_panel.Name = "admin_cabinet_panel";
-            this.admin_cabinet_panel.Size = new System.Drawing.Size(283, 60);
+            this.admin_cabinet_panel.Size = new System.Drawing.Size(232, 50);
             this.admin_cabinet_panel.TabIndex = 55;
             this.admin_cabinet_panel.Click += new System.EventHandler(this.SubmenuOpen_Click);
             // 
@@ -650,13 +637,13 @@
             this.Employee_button_menu.FlatAppearance.BorderSize = 0;
             this.Employee_button_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Employee_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Employee_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Employee_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Employee_button_menu.ForeColor = System.Drawing.Color.White;
             this.Employee_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Employee_button_menu.Location = new System.Drawing.Point(3, 119);
+            this.Employee_button_menu.Location = new System.Drawing.Point(3, 98);
             this.Employee_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.Employee_button_menu.Name = "Employee_button_menu";
-            this.Employee_button_menu.Size = new System.Drawing.Size(280, 60);
+            this.Employee_button_menu.Size = new System.Drawing.Size(232, 45);
             this.Employee_button_menu.TabIndex = 54;
             this.Employee_button_menu.Text = "Employee";
             this.Employee_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -670,13 +657,13 @@
             this.ministers_button_menu.FlatAppearance.BorderSize = 0;
             this.ministers_button_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ministers_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ministers_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ministers_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ministers_button_menu.ForeColor = System.Drawing.Color.White;
             this.ministers_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ministers_button_menu.Location = new System.Drawing.Point(3, 61);
+            this.ministers_button_menu.Location = new System.Drawing.Point(3, 53);
             this.ministers_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.ministers_button_menu.Name = "ministers_button_menu";
-            this.ministers_button_menu.Size = new System.Drawing.Size(280, 60);
+            this.ministers_button_menu.Size = new System.Drawing.Size(232, 45);
             this.ministers_button_menu.TabIndex = 50;
             this.ministers_button_menu.Text = "Ministers";
             this.ministers_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -692,9 +679,9 @@
             this.admin_cabinet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.admin_cabinet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.admin_cabinet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.admin_cabinet.Location = new System.Drawing.Point(3, 0);
+            this.admin_cabinet.Location = new System.Drawing.Point(3, 4);
             this.admin_cabinet.Name = "admin_cabinet";
-            this.admin_cabinet.Size = new System.Drawing.Size(60, 60);
+            this.admin_cabinet.Size = new System.Drawing.Size(43, 41);
             this.admin_cabinet.TabIndex = 53;
             this.admin_cabinet.UseVisualStyleBackColor = true;
             this.admin_cabinet.Click += new System.EventHandler(this.SubmenuOpen_Click);
@@ -702,11 +689,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(81, 14);
+            this.label7.Location = new System.Drawing.Point(58, 19);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 25);
+            this.label7.Size = new System.Drawing.Size(54, 20);
             this.label7.TabIndex = 50;
             this.label7.Text = "Admin";
             this.label7.Click += new System.EventHandler(this.SubmenuOpen_Click);
@@ -714,13 +701,13 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(72, 18);
+            this.label8.Location = new System.Drawing.Point(5, 33);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 25);
+            this.label8.Size = new System.Drawing.Size(225, 20);
             this.label8.TabIndex = 51;
-            this.label8.Text = "______";
+            this.label8.Text = "________________________";
             this.label8.Click += new System.EventHandler(this.SubmenuOpen_Click);
             // 
             // flowLayoutPanel1
@@ -801,6 +788,19 @@
             this.Workspace_panel.Size = new System.Drawing.Size(943, 667);
             this.Workspace_panel.TabIndex = 61;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(5, 33);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(225, 20);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "________________________";
+            this.label2.Click += new System.EventHandler(this.SubmenuOpen_Click);
+            // 
             // SAD2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -865,7 +865,6 @@
         private System.Windows.Forms.Panel cash_cabinet_panel;
         private System.Windows.Forms.Button cash_cabinet;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel sacrament_cabinet_panel;
         private System.Windows.Forms.Button sacrament_cabinet;
         private System.Windows.Forms.Label label3;
@@ -881,5 +880,6 @@
         private System.Windows.Forms.Button Employee_button_menu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button logout_button;
+        private System.Windows.Forms.Label label2;
     }
 }
