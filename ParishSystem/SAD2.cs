@@ -351,5 +351,7 @@ namespace ParishSystem
             this.WindowState = FormWindowState.Normal;
             
         }
+
+     
     }
 }

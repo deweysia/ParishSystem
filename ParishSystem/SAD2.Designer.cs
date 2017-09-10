@@ -33,11 +33,12 @@
             this.panel_controlbox = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.welcome_Text = new System.Windows.Forms.Label();
-            this.username_Welcome_Text = new System.Windows.Forms.Label();
             this.logout_button = new System.Windows.Forms.Button();
+            this.username_Welcome_Text = new System.Windows.Forms.Label();
             this.flowLayout_ControlButtons = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_Close = new System.Windows.Forms.Button();
             this.btn_Max = new System.Windows.Forms.Button();
+            this.btn_min = new System.Windows.Forms.Button();
             this.content_panel = new System.Windows.Forms.Panel();
             this.Menu_panel = new System.Windows.Forms.Panel();
             this.menu_flowlayout = new System.Windows.Forms.FlowLayoutPanel();
@@ -59,6 +60,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.bloodletting_cabinet_panel = new System.Windows.Forms.Panel();
+            this.bloodClaimView_menu_button = new System.Windows.Forms.Button();
+            this.bloodClaim_menu_button = new System.Windows.Forms.Button();
             this.bloodlettingevent_button = new System.Windows.Forms.Button();
             this.bloodlettingdonor_button = new System.Windows.Forms.Button();
             this.bloodlettingreport_button = new System.Windows.Forms.Button();
@@ -76,9 +79,6 @@
             this.MenuTimer = new System.Windows.Forms.Timer(this.components);
             this.Panel_Timer = new System.Windows.Forms.Timer(this.components);
             this.Workspace_panel = new System.Windows.Forms.Panel();
-            this.bloodClaim_menu_button = new System.Windows.Forms.Button();
-            this.bloodClaimView_menu_button = new System.Windows.Forms.Button();
-            this.btn_min = new System.Windows.Forms.Button();
             this.panel_controlbox.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayout_ControlButtons.SuspendLayout();
@@ -128,17 +128,6 @@
             this.welcome_Text.TabIndex = 39;
             this.welcome_Text.Text = "Welcome";
             // 
-            // username_Welcome_Text
-            // 
-            this.username_Welcome_Text.AutoSize = true;
-            this.username_Welcome_Text.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username_Welcome_Text.ForeColor = System.Drawing.Color.White;
-            this.username_Welcome_Text.Location = new System.Drawing.Point(75, 5);
-            this.username_Welcome_Text.Name = "username_Welcome_Text";
-            this.username_Welcome_Text.Size = new System.Drawing.Size(110, 23);
-            this.username_Welcome_Text.TabIndex = 40;
-            this.username_Welcome_Text.Text = "USERNAME";
-            // 
             // logout_button
             // 
             this.logout_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -156,6 +145,17 @@
             this.logout_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.logout_button.UseVisualStyleBackColor = false;
             this.logout_button.Click += new System.EventHandler(this.logout_button_Click);
+            // 
+            // username_Welcome_Text
+            // 
+            this.username_Welcome_Text.AutoSize = true;
+            this.username_Welcome_Text.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username_Welcome_Text.ForeColor = System.Drawing.Color.White;
+            this.username_Welcome_Text.Location = new System.Drawing.Point(75, 5);
+            this.username_Welcome_Text.Name = "username_Welcome_Text";
+            this.username_Welcome_Text.Size = new System.Drawing.Size(110, 23);
+            this.username_Welcome_Text.TabIndex = 40;
+            this.username_Welcome_Text.Text = "USERNAME";
             // 
             // flowLayout_ControlButtons
             // 
@@ -203,6 +203,23 @@
             this.btn_Max.TabIndex = 33;
             this.btn_Max.UseVisualStyleBackColor = true;
             this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
+            // 
+            // btn_min
+            // 
+            this.btn_min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_min.FlatAppearance.BorderSize = 0;
+            this.btn_min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_min.Image = global::ParishSystem.Properties.Resources.btn_NEWmaximize;
+            this.btn_min.Location = new System.Drawing.Point(29, 4);
+            this.btn_min.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_min.Name = "btn_min";
+            this.btn_min.Size = new System.Drawing.Size(27, 25);
+            this.btn_min.TabIndex = 35;
+            this.btn_min.UseVisualStyleBackColor = true;
+            this.btn_min.Click += new System.EventHandler(this.btn_min_Click);
             // 
             // content_panel
             // 
@@ -252,9 +269,10 @@
             this.sacrament_cabinet_panel.Location = new System.Drawing.Point(0, 0);
             this.sacrament_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.sacrament_cabinet_panel.Name = "sacrament_cabinet_panel";
-            this.sacrament_cabinet_panel.Size = new System.Drawing.Size(232, 243);
+            this.sacrament_cabinet_panel.Size = new System.Drawing.Size(232, 50);
             this.sacrament_cabinet_panel.TabIndex = 51;
             this.sacrament_cabinet_panel.Click += new System.EventHandler(this.SubmenuOpen_Click);
+          
             // 
             // application_button_menu
             // 
@@ -389,12 +407,13 @@
             this.cash_cabinet_panel.Controls.Add(this.cash_cabinet);
             this.cash_cabinet_panel.Controls.Add(this.label1);
             this.cash_cabinet_panel.Controls.Add(this.label2);
-            this.cash_cabinet_panel.Location = new System.Drawing.Point(0, 243);
+            this.cash_cabinet_panel.Location = new System.Drawing.Point(0, 50);
             this.cash_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.cash_cabinet_panel.Name = "cash_cabinet_panel";
-            this.cash_cabinet_panel.Size = new System.Drawing.Size(232, 50);
+            this.cash_cabinet_panel.Size = new System.Drawing.Size(232, 278);
             this.cash_cabinet_panel.TabIndex = 50;
             this.cash_cabinet_panel.Click += new System.EventHandler(this.SubmenuOpen_Click);
+ 
             // 
             // itemtypemenu_button
             // 
@@ -553,12 +572,52 @@
             this.bloodletting_cabinet_panel.Controls.Add(this.bloodletting_cabinet);
             this.bloodletting_cabinet_panel.Controls.Add(this.label5);
             this.bloodletting_cabinet_panel.Controls.Add(this.label6);
-            this.bloodletting_cabinet_panel.Location = new System.Drawing.Point(0, 293);
+            this.bloodletting_cabinet_panel.Location = new System.Drawing.Point(0, 328);
             this.bloodletting_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.bloodletting_cabinet_panel.Name = "bloodletting_cabinet_panel";
             this.bloodletting_cabinet_panel.Size = new System.Drawing.Size(232, 50);
             this.bloodletting_cabinet_panel.TabIndex = 54;
             this.bloodletting_cabinet_panel.Click += new System.EventHandler(this.SubmenuOpen_Click);
+            // 
+            // bloodClaimView_menu_button
+            // 
+            this.bloodClaimView_menu_button.BackColor = System.Drawing.Color.Transparent;
+            this.bloodClaimView_menu_button.FlatAppearance.BorderSize = 0;
+            this.bloodClaimView_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.bloodClaimView_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bloodClaimView_menu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodClaimView_menu_button.ForeColor = System.Drawing.Color.White;
+            this.bloodClaimView_menu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bloodClaimView_menu_button.Location = new System.Drawing.Point(-2, 228);
+            this.bloodClaimView_menu_button.Margin = new System.Windows.Forms.Padding(0);
+            this.bloodClaimView_menu_button.Name = "bloodClaimView_menu_button";
+            this.bloodClaimView_menu_button.Size = new System.Drawing.Size(232, 45);
+            this.bloodClaimView_menu_button.TabIndex = 55;
+            this.bloodClaimView_menu_button.Text = "                   Claim View";
+            this.bloodClaimView_menu_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bloodClaimView_menu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bloodClaimView_menu_button.UseVisualStyleBackColor = false;
+            this.bloodClaimView_menu_button.Click += new System.EventHandler(this.bloodClaimView_menu_button_Click);
+            // 
+            // bloodClaim_menu_button
+            // 
+            this.bloodClaim_menu_button.BackColor = System.Drawing.Color.Transparent;
+            this.bloodClaim_menu_button.FlatAppearance.BorderSize = 0;
+            this.bloodClaim_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.bloodClaim_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bloodClaim_menu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodClaim_menu_button.ForeColor = System.Drawing.Color.White;
+            this.bloodClaim_menu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bloodClaim_menu_button.Location = new System.Drawing.Point(0, 183);
+            this.bloodClaim_menu_button.Margin = new System.Windows.Forms.Padding(0);
+            this.bloodClaim_menu_button.Name = "bloodClaim_menu_button";
+            this.bloodClaim_menu_button.Size = new System.Drawing.Size(232, 45);
+            this.bloodClaim_menu_button.TabIndex = 54;
+            this.bloodClaim_menu_button.Text = "                   Claim";
+            this.bloodClaim_menu_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bloodClaim_menu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bloodClaim_menu_button.UseVisualStyleBackColor = false;
+            this.bloodClaim_menu_button.Click += new System.EventHandler(this.bloodClaim_menu_button_Click);
             // 
             // bloodlettingevent_button
             // 
@@ -669,7 +728,7 @@
             this.admin_cabinet_panel.Controls.Add(this.admin_cabinet);
             this.admin_cabinet_panel.Controls.Add(this.label7);
             this.admin_cabinet_panel.Controls.Add(this.label8);
-            this.admin_cabinet_panel.Location = new System.Drawing.Point(0, 343);
+            this.admin_cabinet_panel.Location = new System.Drawing.Point(0, 378);
             this.admin_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.admin_cabinet_panel.Name = "admin_cabinet_panel";
             this.admin_cabinet_panel.Size = new System.Drawing.Size(232, 50);
@@ -807,63 +866,6 @@
             this.Workspace_panel.Name = "Workspace_panel";
             this.Workspace_panel.Size = new System.Drawing.Size(943, 667);
             this.Workspace_panel.TabIndex = 61;
-            // 
-            // bloodClaim_menu_button
-            // 
-            this.bloodClaim_menu_button.BackColor = System.Drawing.Color.Transparent;
-            this.bloodClaim_menu_button.FlatAppearance.BorderSize = 0;
-            this.bloodClaim_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.bloodClaim_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bloodClaim_menu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bloodClaim_menu_button.ForeColor = System.Drawing.Color.White;
-            this.bloodClaim_menu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bloodClaim_menu_button.Location = new System.Drawing.Point(0, 183);
-            this.bloodClaim_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.bloodClaim_menu_button.Name = "bloodClaim_menu_button";
-            this.bloodClaim_menu_button.Size = new System.Drawing.Size(232, 45);
-            this.bloodClaim_menu_button.TabIndex = 54;
-            this.bloodClaim_menu_button.Text = "                   Claim";
-            this.bloodClaim_menu_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bloodClaim_menu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bloodClaim_menu_button.UseVisualStyleBackColor = false;
-            this.bloodClaim_menu_button.Click += new System.EventHandler(this.bloodClaim_menu_button_Click);
-            // 
-            // bloodClaimView_menu_button
-            // 
-            this.bloodClaimView_menu_button.BackColor = System.Drawing.Color.Transparent;
-            this.bloodClaimView_menu_button.FlatAppearance.BorderSize = 0;
-            this.bloodClaimView_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.bloodClaimView_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bloodClaimView_menu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bloodClaimView_menu_button.ForeColor = System.Drawing.Color.White;
-            this.bloodClaimView_menu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bloodClaimView_menu_button.Location = new System.Drawing.Point(-2, 228);
-            this.bloodClaimView_menu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.bloodClaimView_menu_button.Name = "bloodClaimView_menu_button";
-            this.bloodClaimView_menu_button.Size = new System.Drawing.Size(232, 45);
-            this.bloodClaimView_menu_button.TabIndex = 55;
-            this.bloodClaimView_menu_button.Text = "                   Claim View";
-            this.bloodClaimView_menu_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bloodClaimView_menu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bloodClaimView_menu_button.UseVisualStyleBackColor = false;
-            this.bloodClaimView_menu_button.Click += new System.EventHandler(this.bloodClaimView_menu_button_Click);
-            // 
-            // btn_min
-            // 
-            this.btn_min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_min.FlatAppearance.BorderSize = 0;
-            this.btn_min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_min.Image = global::ParishSystem.Properties.Resources.btn_NEWmaximize;
-            this.btn_min.Location = new System.Drawing.Point(29, 4);
-            this.btn_min.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_min.Name = "btn_min";
-            this.btn_min.Size = new System.Drawing.Size(27, 25);
-            this.btn_min.TabIndex = 35;
-            this.btn_min.UseVisualStyleBackColor = true;
-            this.btn_min.Click += new System.EventHandler(this.btn_min_Click);
             // 
             // SAD2
             // 
