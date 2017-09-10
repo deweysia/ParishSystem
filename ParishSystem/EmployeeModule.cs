@@ -48,6 +48,7 @@ namespace ParishSystem
             catch
             {
                 Notification.Show(State.DuplicateUsername);
+                
             }
         }
         private void clearFields()

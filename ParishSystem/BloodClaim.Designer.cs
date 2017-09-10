@@ -237,7 +237,6 @@
             this.ln.MaxLength = 32767;
             this.ln.Name = "ln";
             this.ln.PasswordChar = '\0';
-            this.ln.PromptText = "Lastname";
             this.ln.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.ln.SelectedText = "";
             this.ln.SelectionLength = 0;
@@ -272,7 +271,6 @@
             this.sf.MaxLength = 32767;
             this.sf.Name = "sf";
             this.sf.PasswordChar = '\0';
-            this.sf.PromptText = "Sf";
             this.sf.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.sf.SelectedText = "";
             this.sf.SelectionLength = 0;
@@ -307,7 +305,6 @@
             this.fn.MaxLength = 32767;
             this.fn.Name = "fn";
             this.fn.PasswordChar = '\0';
-            this.fn.PromptText = "Firtsname";
             this.fn.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.fn.SelectedText = "";
             this.fn.SelectionLength = 0;
@@ -342,7 +339,6 @@
             this.mi.MaxLength = 32767;
             this.mi.Name = "mi";
             this.mi.PasswordChar = '\0';
-            this.mi.PromptText = "Mi";
             this.mi.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.mi.SelectedText = "";
             this.mi.SelectionLength = 0;
@@ -377,7 +373,6 @@
             this.DonationID_textbox.MaxLength = 32767;
             this.DonationID_textbox.Name = "DonationID_textbox";
             this.DonationID_textbox.PasswordChar = '\0';
-            this.DonationID_textbox.PromptText = "Donation ID";
             this.DonationID_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.DonationID_textbox.SelectedText = "";
             this.DonationID_textbox.SelectionLength = 0;

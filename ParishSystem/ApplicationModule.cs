@@ -15,6 +15,7 @@ namespace ParishSystem
         DataHandler dh;
         private int profileID, groomID, brideID;
         private int applicationID;
+        private int applicantID, groomApplicantID, brideApplicantID;
         public ApplicationModule()
         {
             InitializeComponent();
@@ -103,13 +104,14 @@ namespace ParishSystem
                 DataGridView dgv = getDataGridView(t);
                 ComboBox filter = getFilter(t);
                 dgv.AutoGenerateColumns = false;
-                BindingSource bs = new BindingSource();
-                bs.DataSource = dh.getApplications(t);
-                dgv.DataSource = bs;
+                dgv.DataSource = dh.getApplications(t);
                 dgv.ClearSelection();
                 filter.SelectedIndex = 0;
             }
-            catch { }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
 
         }
 
@@ -222,8 +224,10 @@ namespace ParishSystem
                 lblPrice = marriageApplication_price_label;
             }
 
+            MessageBox.Show("Application ID: " + this.applicationID);
             DataTable dt = dh.getApplicationIncomeDetails(this.applicationID);
 
+            MessageBox.Show(dt.Rows[0]["price"].ToString());
             double price = double.Parse(dt.Rows[0]["price"].ToString());
 
             double totalPayment = double.Parse(dt.Rows[0]["totalPayment"].ToString());
@@ -242,15 +246,16 @@ namespace ParishSystem
             baptismApplicationDetailsPanel.Enabled = true;
             this.applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
             this.profileID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
-            string requirements = dgv.SelectedRows[0].Cells[2].Value.ToString();
+            this.applicantID = int.Parse(dgv.SelectedRows[0].Cells[2].Value.ToString());
+            string requirements = dgv.SelectedRows[0].Cells[3].Value.ToString();
             //MessageBox.Show(requirements);
-            string fn = dgv.SelectedRows[0].Cells[3].Value.ToString();
-            string mn = dgv.SelectedRows[0].Cells[4].Value.ToString();
-            string ln = dgv.SelectedRows[0].Cells[5].Value.ToString();
-            string suffix = dgv.SelectedRows[0].Cells[6].Value.ToString();
-            string gender = dgv.SelectedRows[0].Cells[7].Value.ToString();
-            DateTime birthdate = DateTime.ParseExact(dgv.SelectedRows[0].Cells[8].Value.ToString(), "yyyy-MM-dd", null);
-            ApplicationStatus status = (ApplicationStatus)int.Parse(dgv.SelectedRows[0].Cells[9].Value.ToString());
+            string fn = dgv.SelectedRows[0].Cells[4].Value.ToString();
+            string mn = dgv.SelectedRows[0].Cells[5].Value.ToString();
+            string ln = dgv.SelectedRows[0].Cells[6].Value.ToString();
+            string suffix = dgv.SelectedRows[0].Cells[7].Value.ToString();
+            string gender = dgv.SelectedRows[0].Cells[8].Value.ToString();
+            DateTime birthdate = DateTime.ParseExact(dgv.SelectedRows[0].Cells[9].Value.ToString(), "yyyy-MM-dd", null);
+            ApplicationStatus status = (ApplicationStatus)int.Parse(dgv.SelectedRows[0].Cells[10].Value.ToString());
 
 
 
@@ -282,15 +287,15 @@ namespace ParishSystem
             confirmationApplicationDetailsPanel.Enabled = true;
             this.applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
             this.profileID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
-            int profileID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
-            string requirements = dgv.SelectedRows[0].Cells[2].Value.ToString();
-            string fn = dgv.SelectedRows[0].Cells[3].Value.ToString();
-            string mn = dgv.SelectedRows[0].Cells[4].Value.ToString();
-            string ln = dgv.SelectedRows[0].Cells[5].Value.ToString();
-            string suffix = dgv.SelectedRows[0].Cells[6].Value.ToString();
-            string gender = dgv.SelectedRows[0].Cells[7].Value.ToString();
-            DateTime birthdate = DateTime.ParseExact(dgv.SelectedRows[0].Cells[8].Value.ToString(), "yyyy-MM-dd", null);
-            ApplicationStatus status = (ApplicationStatus)int.Parse(dgv.SelectedRows[0].Cells[9].Value.ToString());
+            this.applicantID = int.Parse(dgv.SelectedRows[0].Cells[2].Value.ToString());
+            string requirements = dgv.SelectedRows[0].Cells[3].Value.ToString();
+            string fn = dgv.SelectedRows[0].Cells[4].Value.ToString();
+            string mn = dgv.SelectedRows[0].Cells[5].Value.ToString();
+            string ln = dgv.SelectedRows[0].Cells[6].Value.ToString();
+            string suffix = dgv.SelectedRows[0].Cells[7].Value.ToString();
+            string gender = dgv.SelectedRows[0].Cells[8].Value.ToString();
+            DateTime birthdate = DateTime.ParseExact(dgv.SelectedRows[0].Cells[9].Value.ToString(), "yyyy-MM-dd", null);
+            ApplicationStatus status = (ApplicationStatus)int.Parse(dgv.SelectedRows[0].Cells[10].Value.ToString());
 
             confirmationApplication_name_lbl.Text = string.Format("{0} {1} {2} {3}", fn, mn, ln, suffix);
             confirmationApplication_gender_lbl.Text = gender == "1" ? "Male" : "Female";
@@ -320,27 +325,30 @@ namespace ParishSystem
             this.applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
 
             this.groomID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
-            this.brideID = this.profileID = int.Parse(dgv.SelectedRows[0].Cells[2].Value.ToString());
+            this.brideID = int.Parse(dgv.SelectedRows[0].Cells[2].Value.ToString());
 
-            string requirements = dgv.SelectedRows[0].Cells[3].Value.ToString();
+            this.groomApplicantID = int.Parse(dgv.SelectedRows[0].Cells[3].Value.ToString());
+            this.brideApplicantID = int.Parse(dgv.SelectedRows[0].Cells[4].Value.ToString());
 
-            string[] GName = dgv.SelectedRows[0].Cells[4].Value.ToString().Split(new char[] { ' ' });
+            string requirements = dgv.SelectedRows[0].Cells[5].Value.ToString();
+
+            string[] GName = dgv.SelectedRows[0].Cells[6].Value.ToString().Split(new char[] { ' ' });
             txtGFN.Text = GName[0];
             txtGMI.Text = GName[1];
             txtGLN.Text = GName[2];
             txtGSuffix.Text = GName[3];
 
-            dtpGBirthDate.Value = DateTime.ParseExact(dgv.SelectedRows[0].Cells[5].Value.ToString(), "yyyy-MM-dd", null);
+            dtpGBirthDate.Value = DateTime.ParseExact(dgv.SelectedRows[0].Cells[7].Value.ToString(), "yyyy-MM-dd", null);
 
-            string[] BName = dgv.SelectedRows[0].Cells[6].Value.ToString().Split(new char[] { ' ' });
+            string[] BName = dgv.SelectedRows[0].Cells[8].Value.ToString().Split(new char[] { ' ' });
             txtBFN.Text = BName[0];
             txtBMI.Text = BName[1];
             txtBLN.Text = BName[2];
             txtBSuffix.Text = BName[3];
 
-            dtpBBirthDate.Value = DateTime.ParseExact(dgv.SelectedRows[0].Cells[7].Value.ToString(), "yyyy-MM-dd", null);
+            dtpBBirthDate.Value = DateTime.ParseExact(dgv.SelectedRows[0].Cells[9].Value.ToString(), "yyyy-MM-dd", null);
 
-            ApplicationStatus status = (ApplicationStatus)int.Parse(dgv.SelectedRows[0].Cells[8].Value.ToString());
+            ApplicationStatus status = (ApplicationStatus)int.Parse(dgv.SelectedRows[0].Cells[10].Value.ToString());
 
             marriageApplication_groomName_lbl.Text = string.Format("{0} {1} {2} {3}", GName[0], GName[1], GName[2], GName[3]);
             marriageApplication_groomBirthdate_lbl.Text = dtpGBirthDate.Value.ToString("yyyy-MM-dd");
@@ -597,6 +605,175 @@ namespace ParishSystem
         }
 
         
+
+        //public bool editApplicationProfile2(SacramentType type)
+        //{
+        //    bool success = true;
+        //    if (type == SacramentType.Baptism)
+        //    {
+        //        if (hasEmptyTextBoxes(baptismApplication_profile_tlp))
+        //        {
+        //            Notification.Show(State.MissingFields);
+        //            return false;
+        //        }
+
+        //        string fn = baptismApplication_firstName_textBox.Text;
+        //        string mi = baptismApplication_midName_textBox.Text;
+        //        string ln = baptismApplication_lastName_textBox.Text;
+        //        string suffix = baptismApplication_suffix_textBox.Text;
+        //        Gender g = baptismApplication_male_radio.Checked ? Gender.Male : Gender.Female;
+        //        DateTime birthDate = baptismApplication_birthDate_dtp.Value;
+
+
+        //        bool profileExists = dh.generalProfileExists(this.profileID, fn, mi, ln, suffix, g, birthDate);
+        //        //if another generalprofile exists, and has no active application
+
+        //        if (profileExists) //Another profile with same biodata exists
+        //        {
+        //            int existingProfileID = dh.getGeneralProfileID(fn, mi, ln, suffix, g, birthDate);
+        //            DataTable dt = dh.getActiveApplicationOf(existingProfileID, type);
+                    
+        //            if (dt.Rows.Count != 0)
+        //            {
+        //                Notification.Show(State.ApplicationExists);
+        //            }
+        //            else
+        //            {//edit applicant, add application
+        //                success &= dh.addApplication(type);
+        //                int newApplicationID = dh.getLatestID("Application", "applicationID");
+        //                success &= dh.editApplicant(this.applicantID, existingProfileID, newApplicationID);
+        //                success &= dh.editSacramentIncome(this.applicationID, newApplicationID);
+        //            }
+
+        //        }else
+        //        {
+        //            success &= dh.editGeneralProfile(this.profileID, fn, mi, ln, suffix, g, birthDate);
+        //        }
+
+        //        success &= dh.editApplication(this.applicationID, getRequirements(type));
+                
+
+        //    }
+        //    else if (type == SacramentType.Confirmation)
+        //    {
+        //        if (hasEmptyTextBoxes(confirmationApplication_profile_tlp))
+        //        {
+        //            Notification.Show(State.MissingFields);
+        //            return false;
+        //        }
+
+        //        string fn = confirmationApplication_firstName_textBox.Text;
+        //        string mi = confirmationApplication_lastName_textBox.Text;
+        //        string ln = confirmationApplication_midName_textBox.Text;
+        //        string suffix = confirmationApplication_suffix_textBox.Text;
+        //        Gender g = confirmationApplication_male_radio.Checked ? Gender.Male : Gender.Female;
+        //        DateTime birthDate = confirmationApplication_birthDate_dtp.Value;
+
+        //        bool profileExists = dh.generalProfileExists(this.profileID, fn, mi, ln, suffix, g, birthDate);
+        //        if (profileExists) //Another profile with same biodata exists
+        //        {
+        //            int existingProfileID = dh.getGeneralProfileID(fn, mi, ln, suffix, g, birthDate);
+        //            DataTable dt = dh.getActiveApplicationOf(existingProfileID, type);
+
+        //            if (dt.Rows.Count != 0)
+        //            {
+        //                Notification.Show(State.ApplicationExists);
+        //            }
+        //            else
+        //            {//edit applicant, add application
+        //                success &= dh.addApplication(type);
+        //                int newApplicationID = dh.getLatestID("Application", "applicationID");
+        //                success &= dh.editApplicant(this.applicantID, existingProfileID, newApplicationID);
+        //                success &= dh.editSacramentIncome(this.applicationID, newApplicationID);
+        //            }
+
+        //        }
+        //        else
+        //        {
+        //            success &= dh.editGeneralProfile(this.profileID, fn, mi, ln, suffix, g, birthDate);
+        //        }
+
+        //        success &= dh.editApplication(this.applicationID, getRequirements(type));
+
+        //    }
+        //    else //Marriage
+        //    {
+
+        //        if (hasEmptyTextBoxes(marriageApplication_profile_tlp))
+        //        {
+        //            Notification.Show(State.MissingFields);
+        //            return false;
+        //        }
+
+
+        //        string gfn = txtGFN.Text;
+        //        string gmi = txtGMI.Text;
+        //        string gln = txtGLN.Text;
+        //        string gsuffix = txtGSuffix.Text;
+        //        DateTime gbd = dtpGBirthDate.Value;
+        //        bool groomExists = dh.generalProfileExists(this.groomID, gfn, gmi, gln, gsuffix, Gender.Male, gbd);
+
+        //        if (groomExists)
+        //        {
+        //            Notification.Show(State.GroomExists);
+        //            return false;
+        //        }
+
+        //        if (groomExists) //Another profile with same biodata exists
+        //        {
+        //            int existingProfileID = dh.getGeneralProfileID(gfn, gmi, gln, gsuffix, Gender.Male, gbd);
+
+        //            //Map to the new general profile
+        //            dh.editApplicant(this.applicantID, existingProfileID, this.applicantID);
+
+        //        }
+        //        else
+        //        {
+        //            success &= dh.editGeneralProfile(this.groomID, gfn, gmi, gln, gsuffix, Gender.Male, gbd);
+        //        }
+
+        //        string bfn = txtBFN.Text;
+        //        string bmi = txtBMI.Text;
+        //        string bln = txtBLN.Text;
+        //        string bsuffix = txtBSuffix.Text;
+        //        DateTime bbd = dtpBBirthDate.Value;
+
+        //        bool brideExists = dh.generalProfileExists(this.brideID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
+
+        //        if (brideExists)
+        //        {
+        //            int existingProfileID = dh.getGeneralProfileID(bfn, bmi, bln, bsuffix, Gender.Female, bbd);
+
+        //            //Map to the new general profile
+        //            dh.editApplicant(this.applicantID, existingProfileID, this.applicantID);
+        //        }
+        //        else
+        //        {
+        //            success &= dh.editGeneralProfile(this.brideID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
+        //        }
+
+
+        //        success &= dh.editApplication(this.applicationID, getRequirements(type));
+        //        //success &= dh.editGeneralProfile(this.groomID, gfn, gmi, gln, gsuffix, Gender.Male, gbd);
+        //        //success &= dh.editGeneralProfile(this.brideID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
+        //    }
+
+        //    if (success)
+        //    {
+        //        Notification.Show(State.MinisterAddSuccess);
+        //        loadApplications(type);
+        //        Panel p = getApplicationDetailsPanel(type);
+        //        RecursiveClearControl(p);
+
+        //    }
+        //    else
+        //    {
+        //        Notification.Show(State.MinisterAddFail);
+        //    }
+
+        //    return success;
+        //}
+
         public bool editApplicationProfile(SacramentType type)
         {
 
@@ -616,18 +793,43 @@ namespace ParishSystem
                 string suffix = baptismApplication_suffix_textBox.Text;
                 Gender g = baptismApplication_male_radio.Checked ? Gender.Male : Gender.Female;
                 DateTime birthDate = baptismApplication_birthDate_dtp.Value;
-                
 
-                bool profileExists = dh.generalProfileExists(profileID, fn, mi, ln, suffix, g, birthDate);
-                //MessageBox.Show("Profile Exists: " + profileExists);
-                if (profileExists)
+                bool profileExists = dh.generalProfileExists(this.profileID, fn, mi, ln, suffix, g, birthDate);
+
+                //If another person with same info exists,
+                if (profileExists) 
                 {
-                    Notification.Show(State.ProfileExists);
-                    return false;
-                }
+                    //Get the GeneralProfileID of the other person
+                    int existingProfileID = dh.getGeneralProfileID(fn, mi, ln, suffix, g, birthDate);
 
+                    //Retrieve active baptism application of the other person
+                    DataTable dt = dh.getActiveApplicationOf(existingProfileID, type);
+
+                    //If he has an existing baptism application, by checking if an active application is returned
+                    if (dt.Rows.Count != 0)
+                    {
+                        //If the other person has active application, process failed. Return.
+                        Notification.Show(State.ApplicationExists);
+                        return false;
+                    }
+                    else
+                    {//If other person has no active application, 
+                        //Add new application
+                        success &= dh.addApplication(type);
+                        int newApplicationID = dh.getLatestID("Application", "applicationID");
+                        //Rereference the applicant record of current person to point to the ID of the other person. Also reference new application
+                        success &= dh.editApplicant(this.applicantID, existingProfileID, newApplicationID);
+                        //Rereference sacrament income to point to new application
+                        success &= dh.editSacramentIncome(this.applicationID, newApplicationID);
+                    }
+
+                }else
+                {
+                    //If no profile with same info exists, simply update person's info
+                    success &= dh.editGeneralProfile(this.profileID, fn, mi, ln, suffix, g, birthDate);
+                }
+                //Update the requirements
                 success &= dh.editApplication(this.applicationID, getRequirements(type));
-                success &= dh.editGeneralProfile(this.profileID, fn, mi, ln, suffix, g, birthDate);
                 
             }
             else if (type == SacramentType.Confirmation)
@@ -648,12 +850,35 @@ namespace ParishSystem
                 bool profileExists = dh.generalProfileExists(this.profileID, fn, mi, ln, suffix, g, birthDate);
                 if (profileExists)
                 {
-                    Notification.Show(State.ProfileExists);
-                    return false;
+                    int existingProfileID = dh.getGeneralProfileID(fn, mi, ln, suffix, g, birthDate);
+                    MessageBox.Show("Existing profileID: " + existingProfileID);
+                    DataTable dt = dh.getActiveApplicationOf(existingProfileID, type);
+                    MessageBox.Show("Existing Application of Confirmation: " + dt.Rows.Count);
+                    //Has active application
+                    if (dt.Rows.Count != 0)
+                    {
+                        Notification.Show(State.ApplicationExists);
+                        return false;
+                    }
+                    else
+                    {//edit applicant, add application
+                        //success &= dh.addNewApplicant(existingProfileID, type);
+
+                        success &= dh.addApplication(type);
+
+                        int newApplicationID = dh.getLatestID("Application", "applicationID");
+                        MessageBox.Show("newApplicationID: " + newApplicationID);
+                        success &= dh.editApplicant(this.applicantID, existingProfileID, newApplicationID);
+                        success &= dh.editSacramentIncome(this.applicationID, newApplicationID);
+                    }
+                }
+                else
+                {
+                    success &= dh.editGeneralProfile(this.profileID, fn, mi, ln, suffix, g, birthDate);
                 }
 
                 success &= dh.editApplication(this.applicationID, getRequirements(type));
-                success &= dh.editGeneralProfile(this.profileID, fn, mi, ln, suffix, g, birthDate);
+                //success &= dh.editGeneralProfile(this.profileID, fn, mi, ln, suffix, g, birthDate);
                 
             }
             else //Marriage
@@ -675,8 +900,12 @@ namespace ParishSystem
 
                 if (groomExists)
                 {
-                    Notification.Show(State.GroomExists);
-                    return false;
+                    int existingProfileID = dh.getGeneralProfileID(gfn, gmi, gln, gsuffix, Gender.Male, gbd);
+                    success &= dh.editApplicant(this.groomApplicantID, existingProfileID, this.applicationID);
+                }
+                else
+                {
+                    success &= success &= dh.editGeneralProfile(this.groomID, gfn, gmi, gln, gsuffix, Gender.Male, gbd);
                 }
 
                 string bfn = txtBFN.Text;
@@ -688,13 +917,15 @@ namespace ParishSystem
                 bool brideExists = dh.generalProfileExists(this.brideID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
                 if (brideExists)
                 {
-                    Notification.Show(State.BrideExists);
-                    return false;
+                    int existingProfileID = dh.getGeneralProfileID(bfn, bmi, bln, bsuffix, Gender.Female, bbd);
+                    success &= dh.editApplicant(this.brideApplicantID, existingProfileID, this.applicationID);
+                }
+                else
+                {
+                    success &= dh.editGeneralProfile(this.brideID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
                 }
 
                 success &= dh.editApplication(this.applicationID, getRequirements(type));
-                success &= dh.editGeneralProfile(this.groomID, gfn, gmi, gln, gsuffix, Gender.Male, gbd);
-                success &= dh.editGeneralProfile(this.brideID, bfn, bmi, bln, bsuffix, Gender.Female, bbd);
             }
 
             if (success)
@@ -717,9 +948,9 @@ namespace ParishSystem
         // DGV CELL FORMATTING ==================================================================================================
         private void baptismApplication_dgv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {//Might be really slow!
-            if (e.ColumnIndex == 7)//Gender
+            if (e.ColumnIndex == 8)//Gender
                 e.Value = e.Value.ToString() == "1" ? "M" : "F";
-            else if (e.ColumnIndex == 9)
+            else if (e.ColumnIndex == 10)
             {
                 switch (e.Value.ToString())
                 {
@@ -746,7 +977,7 @@ namespace ParishSystem
 
         private void marriageApplication_dgv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.ColumnIndex == 8)
+            if (e.ColumnIndex == 10)
             {
                 switch (e.Value.ToString())
                 {
@@ -998,6 +1229,11 @@ namespace ParishSystem
         private void confirmationApplication_dgv_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             loadApplicationDetails(SacramentType.Confirmation);
+        }
+
+        private void panel16_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void marriageApplication_dgv_CellEnter(object sender, DataGridViewCellEventArgs e)

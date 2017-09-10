@@ -88,7 +88,6 @@ namespace ParishSystem
             bool success = !string.IsNullOrWhiteSpace(txtFN.Text);
             success &= !string.IsNullOrWhiteSpace(txtMI.Text);
             success &= !string.IsNullOrWhiteSpace(txtLN.Text);
-            success &= !string.IsNullOrWhiteSpace(txtSuffix.Text);
             return success;
         }
 

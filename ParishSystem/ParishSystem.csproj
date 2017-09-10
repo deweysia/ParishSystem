@@ -329,7 +329,7 @@
     <Compile Include="SAD2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SAD2.Designer.cs">
+    <Compile Include="SAD2.designer.cs">
       <DependentUpon>SAD2.cs</DependentUpon>
     </Compile>
     <Compile Include="ScheduleModule.cs">
@@ -416,6 +416,7 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MarriageApplication.resx" />
     <EmbeddedResource Include="MinisterModule.resx">
       <DependentUpon>MinisterModule.cs</DependentUpon>
     </EmbeddedResource>

@@ -28,7 +28,10 @@ namespace ParishSystem
 
             Draggable drag = new Draggable(this);
             drag.makeDraggable(controlBar_panel);
-            
+
+            baptismDateDTP.MinDate = DateTime.ParseExact(row[9].Value.ToString(), "yyyy-MM-dd", null);
+
+
 
             if (type == SacramentType.Confirmation)
             {
@@ -38,10 +41,10 @@ namespace ParishSystem
                 this.Text = "Confirmation Fill-up Form";
             }
 
-            //3 - Last Name    4 - First Name   5 - MI  6 - Suffix
-            nameLabel.Text = string.Format("{0} {1}. {2} {3}", row[4].Value, row[5].Value, row[3].Value, row[6].Value);
-            birthdateLabel.Text = row[8].Value.ToString();
-            genderLabel.Text = row[7].ToString() == "1" ? "Male" : "Female";
+            //4 - First Name 5 - MI 6 - Last Name   7 - Suffix
+            nameLabel.Text = string.Format("{0} {1}. {2} {3}", row[4].Value, row[5].Value, row[6].Value, row[7].Value);
+            birthdateLabel.Text = row[9].Value.ToString();
+            genderLabel.Text = row[8].Value.ToString() == "1" ? "Male" : "Female";
 
 
             legitimacyCBox.DataSource = Enum.GetValues(typeof(Legitimacy));
@@ -168,6 +171,11 @@ namespace ParishSystem
         private void close_button_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void baptismDateDTP_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

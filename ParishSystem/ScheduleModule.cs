@@ -241,5 +241,11 @@ namespace ParishSystem
             loadEvents();
             PlaceItems();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            notifyIcon1.ShowBalloonTip(20000);
+        }
     }
 }

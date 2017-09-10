@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange1 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange2 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange3 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange4 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange5 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange16 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange17 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange18 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange19 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange20 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
             this.monthView1 = new System.Windows.Forms.Calendar.MonthView();
             this.calendar1 = new System.Windows.Forms.Calendar.Calendar();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -51,6 +52,7 @@
             this.lblExtra = new System.Windows.Forms.Label();
             this.lblExtraInfo = new System.Windows.Forms.Label();
             this.panelRemoveEdit = new System.Windows.Forms.Panel();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.gbDetails.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelRemoveEdit.SuspendLayout();
@@ -86,27 +88,27 @@
             this.calendar1.AllowNew = false;
             this.calendar1.BackColor = System.Drawing.Color.Maroon;
             this.calendar1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            calendarHighlightRange1.DayOfWeek = System.DayOfWeek.Monday;
-            calendarHighlightRange1.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange1.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange2.DayOfWeek = System.DayOfWeek.Tuesday;
-            calendarHighlightRange2.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange2.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange3.DayOfWeek = System.DayOfWeek.Wednesday;
-            calendarHighlightRange3.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange3.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange4.DayOfWeek = System.DayOfWeek.Thursday;
-            calendarHighlightRange4.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange4.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange5.DayOfWeek = System.DayOfWeek.Friday;
-            calendarHighlightRange5.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange5.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange16.DayOfWeek = System.DayOfWeek.Monday;
+            calendarHighlightRange16.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange16.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange17.DayOfWeek = System.DayOfWeek.Tuesday;
+            calendarHighlightRange17.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange17.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange18.DayOfWeek = System.DayOfWeek.Wednesday;
+            calendarHighlightRange18.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange18.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange19.DayOfWeek = System.DayOfWeek.Thursday;
+            calendarHighlightRange19.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange19.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange20.DayOfWeek = System.DayOfWeek.Friday;
+            calendarHighlightRange20.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange20.StartTime = System.TimeSpan.Parse("08:00:00");
             this.calendar1.HighlightRanges = new System.Windows.Forms.Calendar.CalendarHighlightRange[] {
-        calendarHighlightRange1,
-        calendarHighlightRange2,
-        calendarHighlightRange3,
-        calendarHighlightRange4,
-        calendarHighlightRange5};
+        calendarHighlightRange16,
+        calendarHighlightRange17,
+        calendarHighlightRange18,
+        calendarHighlightRange19,
+        calendarHighlightRange20};
             this.calendar1.Location = new System.Drawing.Point(226, 12);
             this.calendar1.Name = "calendar1";
             this.calendar1.Size = new System.Drawing.Size(692, 516);
@@ -305,6 +307,13 @@
             this.panelRemoveEdit.Size = new System.Drawing.Size(118, 28);
             this.panelRemoveEdit.TabIndex = 3;
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipText = "Yo time na dude";
+            this.notifyIcon1.BalloonTipTitle = "Yo it\'s time";
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // ScheduleModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,5 +355,6 @@
         private System.Windows.Forms.Panel panelRemoveEdit;
         private System.Windows.Forms.Label lblExtra;
         private System.Windows.Forms.Label lblExtraInfo;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

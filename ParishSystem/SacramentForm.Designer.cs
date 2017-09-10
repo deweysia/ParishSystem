@@ -143,6 +143,7 @@
             this.baptismDateDTP.Name = "baptismDateDTP";
             this.baptismDateDTP.Size = new System.Drawing.Size(200, 29);
             this.baptismDateDTP.TabIndex = 1;
+            this.baptismDateDTP.ValueChanged += new System.EventHandler(this.baptismDateDTP_ValueChanged);
             // 
             // label4
             // 

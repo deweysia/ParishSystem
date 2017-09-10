@@ -40,9 +40,11 @@ namespace ParishSystem
 
         private void dgvBaptism_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
+            
             DataGridView dgv = (DataGridView)sender;
             if (!dgv.Focused || dgv.SelectedRows.Count == 0)
                 return;
+
 
             this.sacramentID = Convert.ToInt32(dgvBaptism.SelectedRows[0].Cells["baptismID"].Value);
             this.profileID = Convert.ToInt32(dgvBaptism.SelectedRows[0].Cells["bapProfileID"].Value);
@@ -55,11 +57,13 @@ namespace ParishSystem
             string suffix = dgvBaptism.SelectedRows[0].Cells["bapSuffix"].Value.ToString();
             lblNameBap.Text = string.Format("{0} {1} {2} {3}", fn, mn, ln, suffix);
 
-            
+
             int pageIndex = dgvBaptism.SelectedRows[0].Cells.Count - 2;
             btnAddReferencesBap.Enabled = string.IsNullOrWhiteSpace(dgvBaptism.SelectedRows[0].Cells[pageIndex].Value.ToString());
 
             tlpProfileBap.Enabled = true;
+
+
         }
 
         private void dgvConfirmation_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -69,7 +73,7 @@ namespace ParishSystem
                 return;
 
             this.sacramentID = Convert.ToInt32(dgvConfirmation.SelectedRows[0].Cells["confirmationID"].Value);
-            this.profileID = Convert.ToInt32(dgvBaptism.SelectedRows[0].Cells["conProfileID"].Value);
+            this.profileID = Convert.ToInt32(dgvConfirmation.SelectedRows[0].Cells["conProfileID"].Value);
 
             DataTable dt = ((BindingSource)dgv.DataSource).DataSource as DataTable;
 
@@ -78,8 +82,6 @@ namespace ParishSystem
             string ln = dgvConfirmation.SelectedRows[0].Cells["conLastName"].Value.ToString();
             string suffix = dgvConfirmation.SelectedRows[0].Cells["conSuffix"].Value.ToString();
             lblNameBap.Text = string.Format("{0} {1} {2} {3}", fn, mn, ln, suffix);
-
-            
 
             int pageIndex = dgvConfirmation.SelectedRows[0].Cells.Count - 2;
             btnAddReferencesBap.Enabled = string.IsNullOrWhiteSpace(dgvConfirmation.SelectedRows[0].Cells[pageIndex].Value.ToString());
@@ -151,11 +153,8 @@ namespace ParishSystem
                 dh.editApplication(this.applicationID, ApplicationStatus.Final);
                 loadSacrament(t);
             }
-
-            
-            
-
         }
+
         private void btnAddReferencesBap_Click(object sender, EventArgs e)
         {
             openAddReferences(SacramentType.Baptism);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Controls;
 
 namespace ParishSystem
 {
@@ -27,14 +28,15 @@ namespace ParishSystem
 
             DataTable dt = dh.getMinisters(MinisterStatus.Active);
 
+            cmbMinister.Items.Add("");
             foreach (DataRow r in dt.Rows)
             {
                 ComboboxContent cc = new ComboboxContent(int.Parse(r["ministerID"].ToString()), r["name"].ToString());
                 cmbMinister.Items.Add(cc);
             }
 
-            lblGName.Text = row[4].Value.ToString();
-            lblBName.Text = row[6].Value.ToString();
+            lblGName.Text = row[6].Value.ToString();
+            lblBName.Text = row[8].Value.ToString();
 
             loadParents();
 
@@ -124,13 +126,19 @@ namespace ParishSystem
 
         private bool allFilled()
         {
+            
             bool allFilled = true;
-            foreach (Control c in this.Controls)
+
+            IEnumerable<Control> controls = panelGroom.Controls.Cast<Control>().Concat(panelBride.Controls.Cast<Control>());
+
+            foreach (Control c in controls)
             {
-                if (c is TextBox && c.Tag == null)
+                Console.WriteLine("Is MetroTextBox? {0} - {1}", c.Name, c is MetroTextBox);
+                if (c is MetroTextBox && c.Tag == null)
                 {
-                    TextBox t = c as TextBox;
+                    MetroTextBox t = c as MetroTextBox;
                     allFilled &= !string.IsNullOrWhiteSpace(t.Text);
+                    Console.WriteLine("All filled? {0}", allFilled);
                     if (!allFilled)
                     {
                         MessageBox.Show("Error at " + t.Name.ToString());
@@ -140,7 +148,8 @@ namespace ParishSystem
                 }
             }
 
-            allFilled &= cmbMinister.SelectedIndex != -1;
+            allFilled &= cmbMinister.SelectedIndex > 0; //SelectedIndex must not be -1 or 0
+            allFilled &= dgvSponsor.Rows.Count >= 2;
 
             return allFilled;
         }
@@ -153,7 +162,8 @@ namespace ParishSystem
 
         private void loadParents()
         {
-            int groomID = int.Parse(row[2].Value.ToString());
+            int groomID = int.Parse(row[1].Value.ToString());
+
             DataTable dt = dh.getParentsOf(groomID);
             if (dt.Rows.Count == 2)
             {
@@ -171,8 +181,8 @@ namespace ParishSystem
                 
             }
 
-            int brideID = int.Parse(row[3].Value.ToString());
-            dt = dh.getParentsOf(groomID);
+            int brideID = int.Parse(row[2].Value.ToString());
+            dt = dh.getParentsOf(brideID);
 
             if (dt.Rows.Count == 2)
             {
@@ -193,6 +203,16 @@ namespace ParishSystem
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void close_button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
         {
 
         }
