@@ -237,6 +237,7 @@ namespace ParishSystem
 
             double totalPayment = double.Parse(dt.Rows[0]["totalPayment"].ToString());
             btnPayment.Enabled = (price - totalPayment) != 0;
+            lblRemarks.Text = dt.Rows[0]["remarks"].ToString();
             lblPrice.Text = (price - totalPayment).ToString("C");
 
         }
@@ -1372,11 +1373,14 @@ namespace ParishSystem
             }
 
 
-            tlpProfile.Visible = checkEdit.Checked;
-            gbReq.Enabled = checkEdit.Checked;
-
             if (!checkEdit.Checked)
             {
+                if (!allFilled(type))
+                {
+                    Notification.Show(State.MissingFields);
+                    return;
+                }
+
                 checkEdit.Text = "Edit";
                 editApplicationProfile(type);
                 clearApplicationsDetailsPanel(type);
@@ -1388,6 +1392,30 @@ namespace ParishSystem
             }
 
 
+            tlpProfile.Visible = checkEdit.Checked;
+            gbReq.Enabled = checkEdit.Checked;
+
+            
+
+            
+        }
+
+        /// <summary>
+        /// Indicates whether the required name fields of an application detail panel is filled
+        /// </summary>
+        /// <param name="t"></param>
+        /// <returns></returns>
+        private bool allFilled(SacramentType t)
+        {
+            bool success;
+            if (t == SacramentType.Baptism)
+                success = string.IsNullOrWhiteSpace(txtBapFN.Text) || string.IsNullOrWhiteSpace(txtBapMI.Text) || string.IsNullOrWhiteSpace(txtBapLN.Text);
+            else if (t == SacramentType.Confirmation)
+                success = string.IsNullOrWhiteSpace(txtConFN.Text) || string.IsNullOrWhiteSpace(txtConMI.Text) || string.IsNullOrWhiteSpace(txtConLN.Text);
+            else
+                success = string.IsNullOrWhiteSpace(txtGFN.Text) || string.IsNullOrWhiteSpace(txtGMI.Text) || string.IsNullOrWhiteSpace(txtGLN.Text)
+                    && string.IsNullOrWhiteSpace(txtBFN.Text) || string.IsNullOrWhiteSpace(txtBMI.Text) || string.IsNullOrWhiteSpace(txtBLN.Text);
+            return !success;
         }
     }
 }
