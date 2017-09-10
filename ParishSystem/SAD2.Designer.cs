@@ -272,7 +272,6 @@
             this.sacrament_cabinet_panel.Size = new System.Drawing.Size(232, 50);
             this.sacrament_cabinet_panel.TabIndex = 51;
             this.sacrament_cabinet_panel.Click += new System.EventHandler(this.SubmenuOpen_Click);
-          
             // 
             // application_button_menu
             // 
@@ -410,10 +409,9 @@
             this.cash_cabinet_panel.Location = new System.Drawing.Point(0, 50);
             this.cash_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.cash_cabinet_panel.Name = "cash_cabinet_panel";
-            this.cash_cabinet_panel.Size = new System.Drawing.Size(232, 278);
+            this.cash_cabinet_panel.Size = new System.Drawing.Size(232, 50);
             this.cash_cabinet_panel.TabIndex = 50;
             this.cash_cabinet_panel.Click += new System.EventHandler(this.SubmenuOpen_Click);
- 
             // 
             // itemtypemenu_button
             // 
@@ -572,7 +570,7 @@
             this.bloodletting_cabinet_panel.Controls.Add(this.bloodletting_cabinet);
             this.bloodletting_cabinet_panel.Controls.Add(this.label5);
             this.bloodletting_cabinet_panel.Controls.Add(this.label6);
-            this.bloodletting_cabinet_panel.Location = new System.Drawing.Point(0, 328);
+            this.bloodletting_cabinet_panel.Location = new System.Drawing.Point(0, 100);
             this.bloodletting_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.bloodletting_cabinet_panel.Name = "bloodletting_cabinet_panel";
             this.bloodletting_cabinet_panel.Size = new System.Drawing.Size(232, 50);
@@ -728,7 +726,7 @@
             this.admin_cabinet_panel.Controls.Add(this.admin_cabinet);
             this.admin_cabinet_panel.Controls.Add(this.label7);
             this.admin_cabinet_panel.Controls.Add(this.label8);
-            this.admin_cabinet_panel.Location = new System.Drawing.Point(0, 378);
+            this.admin_cabinet_panel.Location = new System.Drawing.Point(0, 150);
             this.admin_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.admin_cabinet_panel.Name = "admin_cabinet_panel";
             this.admin_cabinet_panel.Size = new System.Drawing.Size(232, 50);
