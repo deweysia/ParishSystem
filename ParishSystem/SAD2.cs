@@ -22,6 +22,7 @@ namespace ParishSystem
         public SAD2()
         {
             InitializeComponent();
+            UserID = 1;
         }
 
         public SAD2(string  Username)
