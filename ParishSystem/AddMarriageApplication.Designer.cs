@@ -151,7 +151,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.close_picturebox);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -217,6 +217,7 @@
             this.txtGroomFN.MaxLength = 32767;
             this.txtGroomFN.Name = "txtGroomFN";
             this.txtGroomFN.PasswordChar = '\0';
+            this.txtGroomFN.PromptText = "First Name";
             this.txtGroomFN.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtGroomFN.SelectedText = "";
             this.txtGroomFN.SelectionLength = 0;
@@ -248,6 +249,7 @@
             this.txtGroomMI.MaxLength = 32767;
             this.txtGroomMI.Name = "txtGroomMI";
             this.txtGroomMI.PasswordChar = '\0';
+            this.txtGroomMI.PromptText = "M.I.";
             this.txtGroomMI.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtGroomMI.SelectedText = "";
             this.txtGroomMI.SelectionLength = 0;
@@ -279,6 +281,9 @@
             this.txtGroomLN.MaxLength = 32767;
             this.txtGroomLN.Name = "txtGroomLN";
             this.txtGroomLN.PasswordChar = '\0';
+            this.txtGroomLN.PromptText = "Last Name";
+            this.txtGroomLN.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtGroomLN.SelectedText = "";
             this.txtGroomLN.SelectionLength = 0;
             this.txtGroomLN.SelectionStart = 0;
             this.txtGroomLN.ShortcutsEnabled = true;
@@ -308,6 +313,7 @@
             this.txtGroomSuffix.MaxLength = 32767;
             this.txtGroomSuffix.Name = "txtGroomSuffix";
             this.txtGroomSuffix.PasswordChar = '\0';
+            this.txtGroomSuffix.PromptText = "Suffix";
             this.txtGroomSuffix.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtGroomSuffix.SelectedText = "";
             this.txtGroomSuffix.SelectionLength = 0;
@@ -339,6 +345,7 @@
             this.txtBrideFN.MaxLength = 32767;
             this.txtBrideFN.Name = "txtBrideFN";
             this.txtBrideFN.PasswordChar = '\0';
+            this.txtBrideFN.PromptText = "First Name";
             this.txtBrideFN.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBrideFN.SelectedText = "";
             this.txtBrideFN.SelectionLength = 0;
@@ -370,6 +377,7 @@
             this.txtBrideMI.MaxLength = 32767;
             this.txtBrideMI.Name = "txtBrideMI";
             this.txtBrideMI.PasswordChar = '\0';
+            this.txtBrideMI.PromptText = "M.I.";
             this.txtBrideMI.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBrideMI.SelectedText = "";
             this.txtBrideMI.SelectionLength = 0;
@@ -401,6 +409,7 @@
             this.txtBrideLN.MaxLength = 32767;
             this.txtBrideLN.Name = "txtBrideLN";
             this.txtBrideLN.PasswordChar = '\0';
+            this.txtBrideLN.PromptText = "Last Name";
             this.txtBrideLN.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBrideLN.SelectedText = "";
             this.txtBrideLN.SelectionLength = 0;
@@ -432,6 +441,7 @@
             this.txtBrideSuffix.MaxLength = 32767;
             this.txtBrideSuffix.Name = "txtBrideSuffix";
             this.txtBrideSuffix.PasswordChar = '\0';
+            this.txtBrideSuffix.PromptText = "Suffix";
             this.txtBrideSuffix.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBrideSuffix.SelectedText = "";
             this.txtBrideSuffix.SelectionLength = 0;
@@ -514,6 +524,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddMarriageApplication";
             this.Padding = new System.Windows.Forms.Padding(20);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.AddMarriageApplication_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddMarriageApplication_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddMarriageApplication_MouseMove);

@@ -44,6 +44,7 @@
             this.btnResetMar = new System.Windows.Forms.Button();
             this.btnAdvanceSearchMar = new System.Windows.Forms.Button();
             this.btnSearchMar = new System.Windows.Forms.Button();
+            this.txtSearchMar = new ParishSystem.CueTextBox();
             this.tlpProfileMar = new System.Windows.Forms.TableLayoutPanel();
             this.btnOpenBrideProfile = new System.Windows.Forms.Button();
             this.btnAddReferencesMar = new System.Windows.Forms.Button();
@@ -70,6 +71,7 @@
             this.btnAdvanceSearchCon = new System.Windows.Forms.Button();
             this.btnResetCon = new System.Windows.Forms.Button();
             this.btnSearchCon = new System.Windows.Forms.Button();
+            this.txtSearchCon = new ParishSystem.CueTextBox();
             this.tlpProfileCon = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddReferencesCon = new System.Windows.Forms.Button();
             this.btnOpenProfileCon = new System.Windows.Forms.Button();
@@ -81,6 +83,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnResetBap = new System.Windows.Forms.Button();
             this.btnSearchBap = new System.Windows.Forms.Button();
+            this.txtSearchBap = new ParishSystem.CueTextBox();
             this.btnAdvanceSearchBap = new System.Windows.Forms.Button();
             this.tlpProfileBap = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddReferencesBap = new System.Windows.Forms.Button();
@@ -88,6 +91,8 @@
             this.lblNameBap = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.dgvBaptism = new MetroFramework.Controls.MetroGrid();
+            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.bsSacrament = new System.Windows.Forms.BindingSource(this.components);
             this.baptismID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bapApplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bapProfileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,8 +106,6 @@
             this.bapRecordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bapPageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bapRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.bsSacrament = new System.Windows.Forms.BindingSource(this.components);
             this.confirmationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.conApplicationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.conProfileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -116,9 +119,6 @@
             this.conRecordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.conPageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.conRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtSearchBap = new ParishSystem.CueTextBox();
-            this.txtSearchCon = new ParishSystem.CueTextBox();
-            this.txtSearchMar = new ParishSystem.CueTextBox();
             this.metroTabPage6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -156,20 +156,22 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.tableLayoutPanel1);
             this.panel3.Controls.Add(this.tlpProfileMar);
             this.panel3.Controls.Add(this.lblNameBride);
             this.panel3.Controls.Add(this.lblNameGroom);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 404);
+            this.panel3.Location = new System.Drawing.Point(30, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(922, 94);
+            this.panel3.Size = new System.Drawing.Size(861, 94);
             this.panel3.TabIndex = 14;
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -178,7 +180,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnAdvanceSearchMar, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnSearchMar, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtSearchMar, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(574, 27);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(513, 27);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -234,6 +236,18 @@
             this.btnSearchMar.Text = "Search";
             this.btnSearchMar.UseVisualStyleBackColor = false;
             this.btnSearchMar.Click += new System.EventHandler(this.btnSearchMar_Click);
+            // 
+            // txtSearchMar
+            // 
+            this.txtSearchMar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchMar.Cue = null;
+            this.txtSearchMar.CueColor = System.Drawing.Color.Gray;
+            this.txtSearchMar.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtSearchMar.Location = new System.Drawing.Point(73, 3);
+            this.txtSearchMar.Name = "txtSearchMar";
+            this.txtSearchMar.Size = new System.Drawing.Size(160, 25);
+            this.txtSearchMar.TabIndex = 11;
+            this.txtSearchMar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchMar_KeyDown);
             // 
             // tlpProfileMar
             // 
@@ -334,6 +348,9 @@
             this.dgvMarriage.AllowUserToAddRows = false;
             this.dgvMarriage.AllowUserToDeleteRows = false;
             this.dgvMarriage.AllowUserToResizeRows = false;
+            this.dgvMarriage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMarriage.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgvMarriage.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvMarriage.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -373,7 +390,7 @@
             this.dgvMarriage.EnableHeadersVisualStyles = false;
             this.dgvMarriage.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvMarriage.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvMarriage.Location = new System.Drawing.Point(0, 16);
+            this.dgvMarriage.Location = new System.Drawing.Point(30, 103);
             this.dgvMarriage.MultiSelect = false;
             this.dgvMarriage.Name = "dgvMarriage";
             this.dgvMarriage.ReadOnly = true;
@@ -389,7 +406,7 @@
             this.dgvMarriage.RowHeadersVisible = false;
             this.dgvMarriage.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvMarriage.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMarriage.Size = new System.Drawing.Size(919, 382);
+            this.dgvMarriage.Size = new System.Drawing.Size(861, 382);
             this.dgvMarriage.Style = MetroFramework.MetroColorStyle.Silver;
             this.dgvMarriage.TabIndex = 7;
             this.dgvMarriage.TabStop = false;
@@ -516,19 +533,21 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.tableLayoutPanel3);
             this.panel2.Controls.Add(this.tlpProfileCon);
             this.panel2.Controls.Add(this.lblNameCon);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 404);
+            this.panel2.Location = new System.Drawing.Point(30, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(922, 94);
+            this.panel2.Size = new System.Drawing.Size(861, 94);
             this.panel2.TabIndex = 14;
             // 
             // tableLayoutPanel3
             // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -538,7 +557,7 @@
             this.tableLayoutPanel3.Controls.Add(this.btnSearchCon, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtSearchCon, 1, 0);
             this.tableLayoutPanel3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(574, 27);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(513, 27);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -594,6 +613,17 @@
             this.btnSearchCon.Text = "Search";
             this.btnSearchCon.UseVisualStyleBackColor = false;
             this.btnSearchCon.Click += new System.EventHandler(this.btnSearchCon_Click);
+            // 
+            // txtSearchCon
+            // 
+            this.txtSearchCon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchCon.Cue = null;
+            this.txtSearchCon.CueColor = System.Drawing.Color.Gray;
+            this.txtSearchCon.Location = new System.Drawing.Point(73, 3);
+            this.txtSearchCon.Name = "txtSearchCon";
+            this.txtSearchCon.Size = new System.Drawing.Size(160, 25);
+            this.txtSearchCon.TabIndex = 11;
+            this.txtSearchCon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchCon_KeyDown);
             // 
             // tlpProfileCon
             // 
@@ -666,7 +696,10 @@
             this.dgvConfirmation.AllowUserToAddRows = false;
             this.dgvConfirmation.AllowUserToDeleteRows = false;
             this.dgvConfirmation.AllowUserToResizeRows = false;
-            this.dgvConfirmation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvConfirmation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvConfirmation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvConfirmation.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvConfirmation.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvConfirmation.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -706,23 +739,23 @@
             this.dgvConfirmation.EnableHeadersVisualStyles = false;
             this.dgvConfirmation.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvConfirmation.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvConfirmation.Location = new System.Drawing.Point(0, 16);
+            this.dgvConfirmation.Location = new System.Drawing.Point(30, 103);
             this.dgvConfirmation.MultiSelect = false;
             this.dgvConfirmation.Name = "dgvConfirmation";
             this.dgvConfirmation.ReadOnly = true;
             this.dgvConfirmation.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvConfirmation.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvConfirmation.RowHeadersVisible = false;
             this.dgvConfirmation.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvConfirmation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConfirmation.Size = new System.Drawing.Size(919, 382);
+            this.dgvConfirmation.Size = new System.Drawing.Size(861, 382);
             this.dgvConfirmation.Style = MetroFramework.MetroColorStyle.Silver;
             this.dgvConfirmation.TabIndex = 6;
             this.dgvConfirmation.TabStop = false;
@@ -748,19 +781,21 @@
             // 
             // panel12
             // 
+            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel12.BackColor = System.Drawing.Color.White;
             this.panel12.Controls.Add(this.tableLayoutPanel2);
             this.panel12.Controls.Add(this.tlpProfileBap);
             this.panel12.Controls.Add(this.lblNameBap);
             this.panel12.Controls.Add(this.label63);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel12.Location = new System.Drawing.Point(0, 404);
+            this.panel12.Location = new System.Drawing.Point(30, 3);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(922, 94);
+            this.panel12.Size = new System.Drawing.Size(861, 94);
             this.panel12.TabIndex = 13;
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -770,7 +805,7 @@
             this.tableLayoutPanel2.Controls.Add(this.txtSearchBap, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAdvanceSearchBap, 1, 1);
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(574, 27);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(513, 27);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -809,6 +844,17 @@
             this.btnSearchBap.Text = "Search";
             this.btnSearchBap.UseVisualStyleBackColor = false;
             this.btnSearchBap.Click += new System.EventHandler(this.btnSearchBap_Click);
+            // 
+            // txtSearchBap
+            // 
+            this.txtSearchBap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchBap.Cue = null;
+            this.txtSearchBap.CueColor = System.Drawing.Color.Gray;
+            this.txtSearchBap.Location = new System.Drawing.Point(73, 3);
+            this.txtSearchBap.Name = "txtSearchBap";
+            this.txtSearchBap.Size = new System.Drawing.Size(160, 25);
+            this.txtSearchBap.TabIndex = 11;
+            this.txtSearchBap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBap_KeyDown);
             // 
             // btnAdvanceSearchBap
             // 
@@ -899,7 +945,10 @@
             this.dgvBaptism.AllowUserToAddRows = false;
             this.dgvBaptism.AllowUserToDeleteRows = false;
             this.dgvBaptism.AllowUserToResizeRows = false;
-            this.dgvBaptism.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvBaptism.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvBaptism.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBaptism.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvBaptism.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBaptism.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -931,7 +980,7 @@
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -939,7 +988,7 @@
             this.dgvBaptism.EnableHeadersVisualStyles = false;
             this.dgvBaptism.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvBaptism.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvBaptism.Location = new System.Drawing.Point(0, 16);
+            this.dgvBaptism.Location = new System.Drawing.Point(30, 103);
             this.dgvBaptism.MultiSelect = false;
             this.dgvBaptism.Name = "dgvBaptism";
             this.dgvBaptism.ReadOnly = true;
@@ -955,19 +1004,33 @@
             this.dgvBaptism.RowHeadersVisible = false;
             this.dgvBaptism.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvBaptism.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBaptism.Size = new System.Drawing.Size(919, 382);
+            this.dgvBaptism.Size = new System.Drawing.Size(861, 357);
             this.dgvBaptism.Style = MetroFramework.MetroColorStyle.Silver;
             this.dgvBaptism.TabIndex = 6;
             this.dgvBaptism.TabStop = false;
-            this.dgvBaptism.UseCustomBackColor = true;
-            this.dgvBaptism.UseCustomForeColor = true;
-            this.dgvBaptism.UseStyleColors = true;
+            this.dgvBaptism.Theme = MetroFramework.MetroThemeStyle.Light;
             this.dgvBaptism.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBaptism_CellEnter);
             this.dgvBaptism.SelectionChanged += new System.EventHandler(this.dgvBaptism_SelectionChanged);
             this.dgvBaptism.VisibleChanged += new System.EventHandler(this.dgvBaptism_VisibleChanged);
             // 
+            // metroTabControl1
+            // 
+            this.metroTabControl1.Controls.Add(this.metroTabPage4);
+            this.metroTabControl1.Controls.Add(this.metroTabPage5);
+            this.metroTabControl1.Controls.Add(this.metroTabPage6);
+            this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.metroTabControl1.Name = "metroTabControl1";
+            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.Size = new System.Drawing.Size(930, 540);
+            this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Silver;
+            this.metroTabControl1.TabIndex = 11;
+            this.metroTabControl1.UseSelectable = true;
+            this.metroTabControl1.UseStyleColors = true;
+            // 
             // baptismID
             // 
+            this.baptismID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.baptismID.DataPropertyName = "baptismID";
             this.baptismID.HeaderText = "baptismID";
             this.baptismID.Name = "baptismID";
@@ -982,7 +1045,6 @@
             this.bapApplicationID.Name = "bapApplicationID";
             this.bapApplicationID.ReadOnly = true;
             this.bapApplicationID.Visible = false;
-            this.bapApplicationID.Width = 120;
             // 
             // bapProfileID
             // 
@@ -991,7 +1053,6 @@
             this.bapProfileID.Name = "bapProfileID";
             this.bapProfileID.ReadOnly = true;
             this.bapProfileID.Visible = false;
-            this.bapProfileID.Width = 75;
             // 
             // bapMinisterID
             // 
@@ -1000,7 +1061,6 @@
             this.bapMinisterID.Name = "bapMinisterID";
             this.bapMinisterID.ReadOnly = true;
             this.bapMinisterID.Visible = false;
-            this.bapMinisterID.Width = 82;
             // 
             // baptismDate
             // 
@@ -1008,39 +1068,40 @@
             this.baptismDate.HeaderText = "Baptism Date";
             this.baptismDate.Name = "baptismDate";
             this.baptismDate.ReadOnly = true;
-            this.baptismDate.Width = 98;
             // 
             // bapFirstName
             // 
+            this.bapFirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.bapFirstName.DataPropertyName = "firstName";
             this.bapFirstName.HeaderText = "First Name";
             this.bapFirstName.Name = "bapFirstName";
             this.bapFirstName.ReadOnly = true;
-            this.bapFirstName.Width = 84;
             // 
             // bapMI
             // 
+            this.bapMI.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.bapMI.DataPropertyName = "midName";
             this.bapMI.HeaderText = "MI";
             this.bapMI.Name = "bapMI";
             this.bapMI.ReadOnly = true;
-            this.bapMI.Width = 43;
+            this.bapMI.Width = 114;
             // 
             // bapLastName
             // 
+            this.bapLastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.bapLastName.DataPropertyName = "lastName";
             this.bapLastName.HeaderText = "Last Name";
             this.bapLastName.Name = "bapLastName";
             this.bapLastName.ReadOnly = true;
-            this.bapLastName.Width = 82;
             // 
             // bapSuffix
             // 
+            this.bapSuffix.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.bapSuffix.DataPropertyName = "suffix";
             this.bapSuffix.HeaderText = "Suffix";
             this.bapSuffix.Name = "bapSuffix";
             this.bapSuffix.ReadOnly = true;
-            this.bapSuffix.Width = 59;
+            this.bapSuffix.Width = 114;
             // 
             // bapRegistryNumber
             // 
@@ -1048,7 +1109,6 @@
             this.bapRegistryNumber.HeaderText = "Registry";
             this.bapRegistryNumber.Name = "bapRegistryNumber";
             this.bapRegistryNumber.ReadOnly = true;
-            this.bapRegistryNumber.Width = 71;
             // 
             // bapRecordNumber
             // 
@@ -1056,7 +1116,6 @@
             this.bapRecordNumber.HeaderText = "Record";
             this.bapRecordNumber.Name = "bapRecordNumber";
             this.bapRecordNumber.ReadOnly = true;
-            this.bapRecordNumber.Width = 66;
             // 
             // bapPageNumber
             // 
@@ -1064,7 +1123,6 @@
             this.bapPageNumber.HeaderText = "Page";
             this.bapPageNumber.Name = "bapPageNumber";
             this.bapPageNumber.ReadOnly = true;
-            this.bapPageNumber.Width = 55;
             // 
             // bapRemarks
             // 
@@ -1074,21 +1132,6 @@
             this.bapRemarks.Name = "bapRemarks";
             this.bapRemarks.ReadOnly = true;
             // 
-            // metroTabControl1
-            // 
-            this.metroTabControl1.Controls.Add(this.metroTabPage4);
-            this.metroTabControl1.Controls.Add(this.metroTabPage5);
-            this.metroTabControl1.Controls.Add(this.metroTabPage6);
-            this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
-            this.metroTabControl1.Size = new System.Drawing.Size(930, 540);
-            this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Silver;
-            this.metroTabControl1.TabIndex = 11;
-            this.metroTabControl1.UseSelectable = true;
-            this.metroTabControl1.UseStyleColors = true;
-            // 
             // confirmationID
             // 
             this.confirmationID.DataPropertyName = "confirmationID";
@@ -1096,7 +1139,6 @@
             this.confirmationID.Name = "confirmationID";
             this.confirmationID.ReadOnly = true;
             this.confirmationID.Visible = false;
-            this.confirmationID.Width = 107;
             // 
             // conApplicationID
             // 
@@ -1105,7 +1147,6 @@
             this.conApplicationID.Name = "conApplicationID";
             this.conApplicationID.ReadOnly = true;
             this.conApplicationID.Visible = false;
-            this.conApplicationID.Width = 119;
             // 
             // conProfileID
             // 
@@ -1114,7 +1155,6 @@
             this.conProfileID.Name = "conProfileID";
             this.conProfileID.ReadOnly = true;
             this.conProfileID.Visible = false;
-            this.conProfileID.Width = 75;
             // 
             // conMinisterID
             // 
@@ -1123,7 +1163,6 @@
             this.conMinisterID.Name = "conMinisterID";
             this.conMinisterID.ReadOnly = true;
             this.conMinisterID.Visible = false;
-            this.conMinisterID.Width = 102;
             // 
             // confirmationDate
             // 
@@ -1132,7 +1171,6 @@
             this.confirmationDate.HeaderText = "Confirmation Date";
             this.confirmationDate.Name = "confirmationDate";
             this.confirmationDate.ReadOnly = true;
-            this.confirmationDate.Width = 125;
             // 
             // conFirstName
             // 
@@ -1141,7 +1179,6 @@
             this.conFirstName.HeaderText = "First Name";
             this.conFirstName.Name = "conFirstName";
             this.conFirstName.ReadOnly = true;
-            this.conFirstName.Width = 84;
             // 
             // conMI
             // 
@@ -1150,7 +1187,6 @@
             this.conMI.HeaderText = "MI";
             this.conMI.Name = "conMI";
             this.conMI.ReadOnly = true;
-            this.conMI.Width = 43;
             // 
             // conLastName
             // 
@@ -1159,7 +1195,6 @@
             this.conLastName.HeaderText = "Last Name";
             this.conLastName.Name = "conLastName";
             this.conLastName.ReadOnly = true;
-            this.conLastName.Width = 82;
             // 
             // conSuffix
             // 
@@ -1168,7 +1203,6 @@
             this.conSuffix.HeaderText = "Suffix";
             this.conSuffix.Name = "conSuffix";
             this.conSuffix.ReadOnly = true;
-            this.conSuffix.Width = 59;
             // 
             // conRegistryNumber
             // 
@@ -1177,7 +1211,6 @@
             this.conRegistryNumber.HeaderText = "Registry";
             this.conRegistryNumber.Name = "conRegistryNumber";
             this.conRegistryNumber.ReadOnly = true;
-            this.conRegistryNumber.Width = 71;
             // 
             // conRecordNumber
             // 
@@ -1186,7 +1219,6 @@
             this.conRecordNumber.HeaderText = "Record";
             this.conRecordNumber.Name = "conRecordNumber";
             this.conRecordNumber.ReadOnly = true;
-            this.conRecordNumber.Width = 66;
             // 
             // conPageNumber
             // 
@@ -1195,50 +1227,14 @@
             this.conPageNumber.HeaderText = "Page";
             this.conPageNumber.Name = "conPageNumber";
             this.conPageNumber.ReadOnly = true;
-            this.conPageNumber.Width = 55;
             // 
             // conRemarks
             // 
-            this.conRemarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.conRemarks.DataPropertyName = "remarks";
             this.conRemarks.FillWeight = 337.1614F;
             this.conRemarks.HeaderText = "Remarks";
             this.conRemarks.Name = "conRemarks";
             this.conRemarks.ReadOnly = true;
-            // 
-            // txtSearchBap
-            // 
-            this.txtSearchBap.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearchBap.Cue = null;
-            this.txtSearchBap.CueColor = System.Drawing.Color.Gray;
-            this.txtSearchBap.Location = new System.Drawing.Point(73, 3);
-            this.txtSearchBap.Name = "txtSearchBap";
-            this.txtSearchBap.Size = new System.Drawing.Size(160, 25);
-            this.txtSearchBap.TabIndex = 11;
-            this.txtSearchBap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBap_KeyDown);
-            // 
-            // txtSearchCon
-            // 
-            this.txtSearchCon.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearchCon.Cue = null;
-            this.txtSearchCon.CueColor = System.Drawing.Color.Gray;
-            this.txtSearchCon.Location = new System.Drawing.Point(73, 3);
-            this.txtSearchCon.Name = "txtSearchCon";
-            this.txtSearchCon.Size = new System.Drawing.Size(160, 25);
-            this.txtSearchCon.TabIndex = 11;
-            this.txtSearchCon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchCon_KeyDown);
-            // 
-            // txtSearchMar
-            // 
-            this.txtSearchMar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearchMar.Cue = null;
-            this.txtSearchMar.CueColor = System.Drawing.Color.Gray;
-            this.txtSearchMar.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtSearchMar.Location = new System.Drawing.Point(73, 3);
-            this.txtSearchMar.Name = "txtSearchMar";
-            this.txtSearchMar.Size = new System.Drawing.Size(160, 25);
-            this.txtSearchMar.TabIndex = 11;
-            this.txtSearchMar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchMar_KeyDown);
             // 
             // SacramentModule
             // 
@@ -1333,19 +1329,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn marRecordNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn marPageNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn marRemarks;
-        private System.Windows.Forms.DataGridViewTextBoxColumn baptismID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapApplicationID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapProfileID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapMinisterID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn baptismDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapFirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapMI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapLastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapSuffix;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapRegistryNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapRecordNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapPageNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bapRemarks;
         private System.Windows.Forms.DataGridViewTextBoxColumn confirmationID;
         private System.Windows.Forms.DataGridViewTextBoxColumn conApplicationID;
         private System.Windows.Forms.DataGridViewTextBoxColumn conProfileID;
@@ -1359,5 +1342,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn conRecordNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn conPageNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn conRemarks;
+        private System.Windows.Forms.DataGridViewTextBoxColumn baptismID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapApplicationID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapProfileID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapMinisterID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn baptismDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapFirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapMI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapLastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapSuffix;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapRegistryNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapRecordNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapPageNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bapRemarks;
     }
 }

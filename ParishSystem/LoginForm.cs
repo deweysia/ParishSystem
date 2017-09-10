@@ -71,5 +71,13 @@ namespace ParishSystem
                 login_button.PerformClick();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SAD2 sad = new SAD2();
+            sad.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -114,7 +114,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.88235F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.11765F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.tableLayoutPanel1.Controls.Add(this.dtpTimeStart, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.dtpDateEnd, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
@@ -135,7 +135,7 @@
             this.dtpTimeStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpTimeStart.CustomFormat = "hh:mm tt";
             this.dtpTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTimeStart.Location = new System.Drawing.Point(248, 14);
+            this.dtpTimeStart.Location = new System.Drawing.Point(247, 14);
             this.dtpTimeStart.Name = "dtpTimeStart";
             this.dtpTimeStart.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpTimeStart.ShowUpDown = true;
@@ -147,7 +147,7 @@
             // 
             this.dtpDateEnd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDateEnd.FontSize = MetroFramework.MetroDateTimeSize.Small;
-            this.dtpDateEnd.Location = new System.Drawing.Point(65, 59);
+            this.dtpDateEnd.Location = new System.Drawing.Point(64, 59);
             this.dtpDateEnd.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpDateEnd.Name = "dtpDateEnd";
             this.dtpDateEnd.Size = new System.Drawing.Size(158, 25);
@@ -158,7 +158,7 @@
             // 
             this.dtpDateStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDateStart.FontSize = MetroFramework.MetroDateTimeSize.Small;
-            this.dtpDateStart.Location = new System.Drawing.Point(65, 11);
+            this.dtpDateStart.Location = new System.Drawing.Point(64, 11);
             this.dtpDateStart.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpDateStart.Name = "dtpDateStart";
             this.dtpDateStart.Size = new System.Drawing.Size(158, 25);
@@ -170,7 +170,7 @@
             this.dtpTimeEnd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpTimeEnd.CustomFormat = "hh:mm tt";
             this.dtpTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTimeEnd.Location = new System.Drawing.Point(248, 62);
+            this.dtpTimeEnd.Location = new System.Drawing.Point(247, 62);
             this.dtpTimeEnd.Name = "dtpTimeEnd";
             this.dtpTimeEnd.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpTimeEnd.ShowUpDown = true;
@@ -319,6 +319,7 @@
             this.Controls.Add(this.cmbScheduleType);
             this.Controls.Add(this.label1);
             this.Name = "AddSchedule";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddSchedule";
             this.Load += new System.EventHandler(this.AddSchedule_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

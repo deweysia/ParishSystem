@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MetroFramework.Forms;
-using Transitions;
 
 namespace ParishSystem
 {
@@ -16,7 +14,6 @@ namespace ParishSystem
     {
         //#5587e0
 
-        
         Color ButtonPressed = Color.FromArgb(115,115,115);
         Color ButtonBackColor = Color.Transparent;
         DataHandler dh = DataHandler.getDataHandler();
@@ -25,7 +22,7 @@ namespace ParishSystem
         public SAD2()
         {
             InitializeComponent();
-            
+            UserID = 1;
         }
 
         public SAD2(string  Username)
@@ -40,10 +37,10 @@ namespace ParishSystem
             drag.makeDraggable(panel_controlbox);
             drag.makeDraggable(panel2);
 
-            SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(300, 60,sacrament_cabinet_panel,false));
-            SubMenu.Add(cash_cabinet, new Panel_Size_Pair(370, 60, cash_cabinet_panel, false));
-            SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(245, 60, bloodletting_cabinet_panel, false));
-            SubMenu.Add(admin_cabinet, new Panel_Size_Pair(190, 60, admin_cabinet_panel, false));
+            SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(255, 50,sacrament_cabinet_panel,false));
+            SubMenu.Add(cash_cabinet, new Panel_Size_Pair(295, 50, cash_cabinet_panel, false));
+            SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));
+            SubMenu.Add(admin_cabinet, new Panel_Size_Pair(155, 50, admin_cabinet_panel, false));
 
           
             menu_flowlayout.HorizontalScroll.Maximum = 0;
@@ -77,31 +74,21 @@ namespace ParishSystem
         {
             sender.Controls.Clear();
             f.TopLevel = false;
-            //f.AutoScroll = true;
+            f.AutoScroll = true;
             sender.Controls.Add(f);
 
             f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
             f.Show();
-
-            
-
-
-
-            //this.IsMdiContainer = true;
-            //f.TopLevel = false;
-            //sender.Controls.Add(f);
-            //f.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            //f.Dock = DockStyle.Fill;
-            //f.Show();
         }
         int Menu_velocity = 1;
         bool Menu_open = true;
         private void MenuTimer_Tick(object sender, EventArgs e)
         {
+            this.Update();
             if (!Menu_open)//menuopen== false 
             {
-                if (Menu_panel.Size.Width < 286)
+                if (Menu_panel.Size.Width < 232)
                 {
                     Menu_panel.Size =  new Size(Menu_panel.Size.Width+Menu_velocity, Menu_panel.Size.Height);
                     Menu_panel.BackColor = Color.FromArgb(Menu_panel.BackColor.R-2, Menu_panel.BackColor.B-2, Menu_panel.BackColor.G-2);
@@ -109,7 +96,7 @@ namespace ParishSystem
                 }
                 else
                 {
-                    Menu_panel.Size = new Size(286, Menu_panel.Size.Height);
+                    Menu_panel.Size = new Size(232, Menu_panel.Size.Height);
                     MenuTimer.Stop();
                     Menu_velocity = 0;
                     Menu_open = true;
@@ -141,8 +128,6 @@ namespace ParishSystem
         {
             MenuTimer.Start();
             OpenMenu_button.Enabled = false;
-
-
         }
 
         int temp_openSize;
@@ -247,8 +232,11 @@ namespace ParishSystem
             bloodlettingdonor_button.BackColor = ButtonBackColor;
             bloodlettingevent_button.BackColor = ButtonBackColor;
             bloodlettingreport_button.BackColor = ButtonBackColor;
+            bloodClaim_menu_button.BackColor = ButtonBackColor;
+            bloodClaimView_menu_button.BackColor = ButtonBackColor;
             Employee_button_menu.BackColor = ButtonBackColor;
             ministers_button_menu.BackColor = ButtonBackColor;
+            
         }
         private void button_menu_MouseDown(object sender, MouseEventArgs e)
         {
@@ -339,12 +327,32 @@ namespace ParishSystem
             Form A = new EmployeeModule(dh);
             showForm(content_panel, A);
         }
-
+        private void bloodClaim_menu_button_Click(object sender, EventArgs e)
+        {
+            Form A = new BloodClaim();
+            showForm(content_panel, A);
+        }
+        private void bloodClaimView_menu_button_Click(object sender, EventArgs e)
+        {
+            Form A = new BloodClaimView();
+            showForm(content_panel, A);
+        }
         private void logout_button_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        
+        private void flowLayout_ControlButtons_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_min_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            
+        }
+
+     
     }
 }
