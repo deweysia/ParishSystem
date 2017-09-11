@@ -277,7 +277,7 @@ namespace ParishSystem
 
         private void CRBreport_button_Click(object sender, EventArgs e)
         {
-            Form A = new CashReport_Module(2,1);
+            Form A = new CashReport_Module(1,1);
             showForm(content_panel, A);
         }
 
@@ -289,7 +289,7 @@ namespace ParishSystem
 
         private void CDBreport_button_Click(object sender, EventArgs e)
         {
-            Form A = new CashReport_Module(1, 1);
+            Form A = new CashReport_Module(2, 1);
             showForm(content_panel, A);
         }
         private void itemtypemenu_button_Click(object sender, EventArgs e)
