@@ -46,9 +46,9 @@
             this.cmbMinister = new MetroFramework.Controls.MetroComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -253,6 +253,18 @@
             this.panel2.Size = new System.Drawing.Size(393, 33);
             this.panel2.TabIndex = 11;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(8, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(135, 20);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "Advanced Search";
+            // 
             // button1
             // 
             this.button1.BackgroundImage = global::ParishSystem.Properties.Resources.icons8_Delete_20;
@@ -281,18 +293,6 @@
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(8, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 20);
-            this.label6.TabIndex = 37;
-            this.label6.Text = "Advanced Search";
             // 
             // AdvanceSearch
             // 

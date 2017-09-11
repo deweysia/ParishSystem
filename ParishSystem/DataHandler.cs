@@ -3796,8 +3796,30 @@ namespace ParishSystem
         {
             return runQuery($@"SELECT *,case when status = 1 then ""Active"" else ""Inactive"" end as WStatus ,concat(lastname,"" "",coalesce(suffix,"" ""),"" "",firstName,"" "",midname,""."")as name FROM sad2.employee ");
         }
+        public DataTable getGeneralProfilesProper()
+        {
+            string q = $@"SELECT  profileid, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', COALESCE(suffix, '')) as Name,birthdate,case 
+                        when gender = 1 then 'Male'
+                        when gender = 2 then 'Female'
+                        end as gender,birthplace, residence FROM GeneralProfile";
 
-    
-} 
+            DataTable dt = runQuery(q);
+
+
+            return dt;
+        }
+        public DataTable getGeneralProfilesProperLike(string like)
+        {
+            string q = $@"SELECT  profileid, CONCAT(firstname, ' ', midname, ' ' , lastname, ' ', COALESCE(suffix, '')) as Name,birthdate,case 
+                        when gender = 1 then 'Male'
+                        when gender = 2 then 'Female'
+                        end as gender,birthplace, residence FROM GeneralProfile where firstname like ""%{like}%"" or midname like ""%{like}%"" or lastname like ""%{like}%""";
+
+            DataTable dt = runQuery(q);
+
+
+            return dt;
+        }
+    } 
 
 }

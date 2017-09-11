@@ -353,6 +353,26 @@ namespace ParishSystem
             
         }
 
-     
+    
+      
+
+        private void OnLeave(object sender, EventArgs e)
+        {
+
+           
+        }
+
+        private void Menu_panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void content_panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (!Menu_panel.Bounds.Contains(e.Location))
+            {
+                OpenMenu_button.PerformClick();
+            }
+        }
     }
 }
