@@ -2475,7 +2475,7 @@ namespace ParishSystem
                     + "JOIN(SELECT profileID, firstName, midName, lastName, suffix, birthdate FROM GeneralProfile) AS b "
                     + "JOIN Applicant AS bb ON bb.profileID = b.profileID "
                     + "JOIN Application ON(Application.applicationID = aa.applicationID AND Application.applicationID = bb.applicationID) "
-                    + "WHERE sacramentType = " + (int)type + " AND a.profileID != b.profileID AND a.gender = 1";
+                    + "WHERE sacramentType = " + (int)type + " AND a.profileID != b.profileID GROUP BY application.applicationID";
 
             }
             else

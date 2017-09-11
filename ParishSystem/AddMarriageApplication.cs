@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Transitions;
 
 namespace ParishSystem
 {
@@ -65,6 +66,7 @@ namespace ParishSystem
             int bID = dh.getGeneralProfileID(bFN, bMI, bLN, bSuffix, bG, bBD);
 
             
+            //Check if either bride or groom has a pending application
             if(dh.hasApplication(gID, SacramentType.Marriage, ApplicationStatus.Pending))
             {
                 Notification.Show(State.GroomApplicationExists);
@@ -80,9 +82,7 @@ namespace ParishSystem
             if (gID != -1 && bID != -1)
             {
                 //Check if they're in the same marriage already
-                
                 success = dh.addNewMarriageApplicants(gID, bID);
-                
             }
             else if (gID != -1)
             {
@@ -90,7 +90,6 @@ namespace ParishSystem
                 bID = dh.getLatestID("GeneralProfile", "profileID");
                 
                 success = dh.addNewMarriageApplicants(bID, gID);
-
             }
             else if (bID != -1)
             {

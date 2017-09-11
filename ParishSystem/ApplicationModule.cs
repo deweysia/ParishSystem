@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Controls;
 
 namespace ParishSystem
 {
@@ -112,7 +113,6 @@ namespace ParishSystem
             {
                 MessageBox.Show(e.ToString());
             }
-
         }
 
 
@@ -141,6 +141,7 @@ namespace ParishSystem
             LoadApplicationDetailsDelegate Load;
             if (t == SacramentType.Baptism)
             {
+                
                 dgv = baptismApplication_dgv;
                 Load = loadBaptismApplicationDetails;
 
@@ -210,18 +211,22 @@ namespace ParishSystem
         {
             Button btnPayment;
             Label lblPrice;
+            Label lblRemarks;
             if(t == SacramentType.Baptism)
             {
                 btnPayment = baptismApplication_addPayment_btn;
                 lblPrice = baptismApplication_payment_label;
+                lblRemarks = lblBapRemarks;
             }else if(t == SacramentType.Confirmation)
             {
                 btnPayment = confirmationApplication_addPayment_btn;
                 lblPrice = confirmationApplication_payment_label;
+                lblRemarks = lblConRemarks;
             }else
             {
                 btnPayment = marriageApplication_addPayment_btn;
                 lblPrice = marriageApplication_price_label;
+                lblRemarks = lblMarRemarks;
             }
 
             MessageBox.Show("Application ID: " + this.applicationID);
@@ -232,6 +237,7 @@ namespace ParishSystem
 
             double totalPayment = double.Parse(dt.Rows[0]["totalPayment"].ToString());
             btnPayment.Enabled = (price - totalPayment) != 0;
+            lblRemarks.Text = dt.Rows[0]["remarks"].ToString();
             lblPrice.Text = (price - totalPayment).ToString("C");
 
         }
@@ -260,10 +266,10 @@ namespace ParishSystem
 
 
             //Load into Edit Panel
-            baptismApplication_firstName_textBox.Text = fn;
-            baptismApplication_midName_textBox.Text = mn;
-            baptismApplication_lastName_textBox.Text = ln;
-            baptismApplication_suffix_textBox.Text = suffix;
+            txtBapFN.Text = fn;
+            txtBapMI.Text = mn;
+            txtBapLN.Text = ln;
+            txtBapSuffix.Text = suffix;
             baptismApplication_birthDate_dtp.Value = birthdate;
             baptismApplication_male_radio.Checked = gender == "1";
             baptismApplication_female_radio.Checked = gender == "2";
@@ -274,7 +280,11 @@ namespace ParishSystem
             baptismApplication_gender_lbl.Text = gender == "1" ? "Male" : "Female";
             baptismApplication_birthdate_lbl.Text = birthdate.ToString("yyyy-MM-dd");
 
-            tickRequirements(baptismApplication_requirements_tlp, requirements);
+            //Determine whether edit, approve, revoke is possible
+            pnlBapApproveRevoke.Enabled = status == ApplicationStatus.Pending;
+            cbBapEdit.Enabled = status == ApplicationStatus.Pending;
+
+            tickRequirements(SacramentType.Baptism, requirements);
             loadApplicationPaymentDetails(SacramentType.Baptism);   
         }
 
@@ -301,16 +311,20 @@ namespace ParishSystem
             confirmationApplication_gender_lbl.Text = gender == "1" ? "Male" : "Female";
             confirmationApplication_birthDate_lbl.Text = birthdate.ToString("yyyy-MM-dd");
 
-            confirmationApplication_firstName_textBox.Text = fn;
-            confirmationApplication_lastName_textBox.Text = mn;
-            confirmationApplication_midName_textBox.Text = ln;
-            confirmationApplication_suffix_textBox.Text = suffix;
+            txtConFN.Text = fn;
+            txtConLN.Text = mn;
+            txtConMI.Text = ln;
+            txtConSuffix.Text = suffix;
             confirmationApplication_birthDate_dtp.Value = birthdate;
             confirmationApplication_male_radio.Checked = gender == "1";
             confirmationApplication_female_radio.Checked = gender == "2";
             confirmationApplication_status_label.Text = status.ToString();
-            tickRequirements(confirmationApplication_requirements_tlp, requirements);
 
+
+            pnlConApproveRevoke.Enabled = status == ApplicationStatus.Pending;
+            cbConEdit.Enabled = status == ApplicationStatus.Pending;
+
+            tickRequirements(SacramentType.Confirmation, requirements);
             loadApplicationPaymentDetails(SacramentType.Confirmation);
         }
 
@@ -354,11 +368,14 @@ namespace ParishSystem
             marriageApplication_groomBirthdate_lbl.Text = dtpGBirthDate.Value.ToString("yyyy-MM-dd");
             marriageApplication_brideName_lbl.Text = string.Format("{0} {1} {2} {3}", BName[0], BName[1], BName[2], BName[3]);
             marriageApplication_brideBirthDate_lbl.Text = dtpBBirthDate.Value.ToString("yyyy-MM-dd");
+            marriageApplication_status_label.Text = status.ToString();
 
 
 
-            tickRequirements(marriageApplication_requirements_tlp, requirements);
+            pnlMarApproveRevoke.Enabled = status == ApplicationStatus.Pending;
+            cbMarEdit.Enabled = status == ApplicationStatus.Pending;
 
+            tickRequirements(SacramentType.Marriage, requirements);
             loadApplicationPaymentDetails(SacramentType.Marriage);
         }
 
@@ -444,8 +461,7 @@ namespace ParishSystem
             DataGridView dgv = getDataGridView(t);
             ComboBox filter = getFilter(t);
             
-            BindingSource bs = dgv.DataSource as BindingSource;
-            DataTable dt = bs.DataSource as DataTable;
+            DataTable dt = dgv.DataSource as DataTable;
 
             if (filter.SelectedIndex == 0)
                 dt.DefaultView.RowFilter = "";
@@ -522,17 +538,21 @@ namespace ParishSystem
         /// </summary>
         /// <param name="p"></param>
         /// <param name="requirements"></param>
-        private void tickRequirements(Panel p, string requirements)
+        private void tickRequirements(SacramentType t, string requirements)
         {
+            TableLayoutPanel tlpReq = getRequirementTableLayoutPanel(t);
+
             bool allChecked = true;
-            foreach (CheckBox c in p.Controls)
+            foreach (CheckBox c in tlpReq.Controls)
             {
-                int i = p.Controls.GetChildIndex(c);
+                int i = tlpReq.Controls.GetChildIndex(c);
                 c.Checked = requirements[i] == '1';
                 allChecked &= c.Checked;
             }
 
-            baptismApplication_checkAll_checkBox.Checked = allChecked;
+            CheckBox checkAll = getCheckAllCheckBox(t);
+
+            checkAll.Checked = allChecked;
         }
 
 
@@ -787,10 +807,10 @@ namespace ParishSystem
                     return false;
                 }
 
-                string fn = baptismApplication_firstName_textBox.Text;
-                string mi = baptismApplication_midName_textBox.Text;
-                string ln = baptismApplication_lastName_textBox.Text;
-                string suffix = baptismApplication_suffix_textBox.Text;
+                string fn = txtBapFN.Text;
+                string mi = txtBapMI.Text;
+                string ln = txtBapLN.Text;
+                string suffix = txtBapSuffix.Text;
                 Gender g = baptismApplication_male_radio.Checked ? Gender.Male : Gender.Female;
                 DateTime birthDate = baptismApplication_birthDate_dtp.Value;
 
@@ -840,10 +860,10 @@ namespace ParishSystem
                     return false;
                 }
 
-                string fn = confirmationApplication_firstName_textBox.Text;
-                string mi = confirmationApplication_lastName_textBox.Text;
-                string ln = confirmationApplication_midName_textBox.Text;
-                string suffix = confirmationApplication_suffix_textBox.Text;
+                string fn = txtConFN.Text;
+                string mi = txtConLN.Text;
+                string ln = txtConMI.Text;
+                string suffix = txtConSuffix.Text;
                 Gender g = confirmationApplication_male_radio.Checked ? Gender.Male : Gender.Female;
                 DateTime birthDate = confirmationApplication_birthDate_dtp.Value;
 
@@ -930,7 +950,7 @@ namespace ParishSystem
 
             if (success)
             {
-                Notification.Show(State.MinisterAddSuccess);
+                Notification.Show(State.ApplicationEditSuccess);
                 loadApplications(type);
                 Panel p = getApplicationDetailsPanel(type);
                 RecursiveClearControl(p);
@@ -938,7 +958,7 @@ namespace ParishSystem
             }
             else
             {
-                Notification.Show(State.MinisterAddFail);
+                Notification.Show(State.ApplicationEditFail);
             }
 
             return success;
@@ -1305,21 +1325,24 @@ namespace ParishSystem
 
         private void applicationTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (applicationTabControl.SelectedIndex == 0)
-            {
-                RecursiveClearControl(baptismApplicationDetailsPanel);
-                baptismApplicationDetailsPanel.Enabled = false;
-            }
-            else if (applicationTabControl.SelectedIndex == 0)
-            {
-                RecursiveClearControl(confirmationApplicationDetailsPanel);
-                confirmationApplicationDetailsPanel.Enabled = false;
-            }
+            TabControl t = sender as TabControl;
+            clearApplicationsDetailsPanel((SacramentType)(t.SelectedIndex + 1));
+        }
+
+        private void clearApplicationsDetailsPanel(SacramentType t)
+        {
+            Panel applicataionDetailsPanel;
+
+            if (t == SacramentType.Baptism)
+                applicataionDetailsPanel = baptismApplicationDetailsPanel;
+            else if (t == SacramentType.Confirmation)
+                applicataionDetailsPanel = confirmationApplicationDetailsPanel;
             else
-            {
-                RecursiveClearControl(marriageApplicationDetailsPanel);
-                marriageApplicationDetailsPanel.Enabled = false;
-            }
+                applicataionDetailsPanel = marriageApplicationDetailsPanel;
+
+
+            applicataionDetailsPanel.Enabled = false;
+            RecursiveClearControl(applicataionDetailsPanel);
         }
 
         private void applicationEditCheckChanged(SacramentType type)
@@ -1333,30 +1356,35 @@ namespace ParishSystem
             {
                 tlpProfile = baptismApplication_profile_tlp;
                 gbReq = baptismApplication_requirements_groupbox;
-                checkEdit = baptismApplication_edit_check;
+                checkEdit = cbBapEdit;
 
             }
             else if (type == SacramentType.Confirmation)
             {
                 tlpProfile = confirmationApplication_profile_tlp;
                 gbReq = confirmationApplication_requirements_groupbox;
-                checkEdit = confirmationApplication_edit_check;
+                checkEdit = cbConEdit;
             }
             else
             {
                 tlpProfile = marriageApplication_profile_tlp;
                 gbReq = marriageApplication_requirements_groupbox;
-                checkEdit = marriageApplication_edit_check;
+                checkEdit = cbMarEdit;
             }
 
 
-            tlpProfile.Visible = checkEdit.Checked;
-            gbReq.Enabled = checkEdit.Checked;
-
             if (!checkEdit.Checked)
             {
+                if (!allFilled(type))
+                {
+                    Notification.Show(State.MissingFields);
+                    return;
+                }
+
                 checkEdit.Text = "Edit";
                 editApplicationProfile(type);
+                clearApplicationsDetailsPanel(type);
+
             }
             else
             {
@@ -1364,6 +1392,30 @@ namespace ParishSystem
             }
 
 
+            tlpProfile.Visible = checkEdit.Checked;
+            gbReq.Enabled = checkEdit.Checked;
+
+            
+
+            
+        }
+
+        /// <summary>
+        /// Indicates whether the required name fields of an application detail panel is filled
+        /// </summary>
+        /// <param name="t"></param>
+        /// <returns></returns>
+        private bool allFilled(SacramentType t)
+        {
+            bool success;
+            if (t == SacramentType.Baptism)
+                success = string.IsNullOrWhiteSpace(txtBapFN.Text) || string.IsNullOrWhiteSpace(txtBapMI.Text) || string.IsNullOrWhiteSpace(txtBapLN.Text);
+            else if (t == SacramentType.Confirmation)
+                success = string.IsNullOrWhiteSpace(txtConFN.Text) || string.IsNullOrWhiteSpace(txtConMI.Text) || string.IsNullOrWhiteSpace(txtConLN.Text);
+            else
+                success = string.IsNullOrWhiteSpace(txtGFN.Text) || string.IsNullOrWhiteSpace(txtGMI.Text) || string.IsNullOrWhiteSpace(txtGLN.Text)
+                    && string.IsNullOrWhiteSpace(txtBFN.Text) || string.IsNullOrWhiteSpace(txtBMI.Text) || string.IsNullOrWhiteSpace(txtBLN.Text);
+            return !success;
         }
     }
 }

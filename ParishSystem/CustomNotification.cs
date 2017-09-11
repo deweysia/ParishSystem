@@ -207,7 +207,9 @@ namespace ParishSystem
             ScheduleAddFail = new State("Failed to add to schedule", NotificationType.error),
             ScheduleMinisterUnavailable = new State("The selected minister is currently unavailable", NotificationType.warning),
             GroomApplicationExists = new State("Groom already has an existing application", NotificationType.error),
-            BrideApplicationExists = new State("Bride already has an existing application", NotificationType.error);
+            BrideApplicationExists = new State("Bride already has an existing application", NotificationType.error),
+            ApplicationEditSuccess = new State("Application changes successfully applied", NotificationType.success),
+            ApplicationEditFail = new State("Application changes failed to apply", NotificationType.error);
     }
 
     
