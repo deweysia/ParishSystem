@@ -256,5 +256,10 @@ namespace ParishSystem
         {
             
         }
+
+        private void calendar1_ItemCreating(object sender, CalendarItemCancelEventArgs e)
+        {
+            e.Cancel = true;
+        }
     }
 }

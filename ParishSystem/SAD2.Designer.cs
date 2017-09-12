@@ -242,8 +242,6 @@
             this.Menu_panel.Name = "Menu_panel";
             this.Menu_panel.Size = new System.Drawing.Size(232, 667);
             this.Menu_panel.TabIndex = 45;
-            this.Menu_panel.Leave += new System.EventHandler(this.OnLeave);
-            this.Menu_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Menu_panel_MouseDown);
             // 
             // menu_flowlayout
             // 
