@@ -21,16 +21,17 @@ namespace ParishSystem
         public ScheduleModule()
         {
             InitializeComponent();
+            //Loading and placing moved to LoadItems Event
+            loadEvents();
+            PlaceItems();
 
             //Monthview colors
             monthView1.MonthTitleColor = monthView1.MonthTitleColorInactive = CalendarColorTable.FromHex("#C2DAFC");
             monthView1.ArrowsColor = CalendarColorTable.FromHex("#77A1D3");
             monthView1.DaySelectedBackgroundColor = CalendarColorTable.FromHex("#F4CC52");
             monthView1.DaySelectedTextColor = monthView1.ForeColor;
-            calendar1.BackColor = Color.Black;
 
-            loadEvents();
-            PlaceItems();
+            calendar1.BackColor = Color.Black;
 
         }
 
@@ -191,6 +192,7 @@ namespace ParishSystem
         {
             AddSchedule f = new AddSchedule();
             f.ShowDialog();
+            //deselectItems();
 
             loadEvents();
             PlaceItems();
@@ -215,6 +217,11 @@ namespace ParishSystem
             clearLabels();
         }
 
+        private void deselectItems()
+        {
+            
+        }
+
         private void btnEdit_Click(object sender, EventArgs e)
         {
             CalendarItem i = calendar1.GetSelectedItems().ToList()[0];
@@ -222,14 +229,10 @@ namespace ParishSystem
 
             AddSchedule f = new AddSchedule(ev.type, ev);
             f.ShowDialog();
-
+            //deselectItems();
+            
             loadEvents();
             PlaceItems();
-        }
-
-        private void calendar1_ItemCreated(object sender, CalendarItemCancelEventArgs e)
-        {
-            
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -237,6 +240,7 @@ namespace ParishSystem
             CalendarItem i = calendar1.GetSelectedItems().ToList()[0];
             CalendarEvent ev = _events[i];
 
+            deselectItems();
 
             loadEvents();
             PlaceItems();
@@ -245,7 +249,12 @@ namespace ParishSystem
         private void button1_Click(object sender, EventArgs e)
         {
             
-            notifyIcon1.ShowBalloonTip(20000);
+            
+        }
+
+        private void calendar1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            
         }
     }
 }

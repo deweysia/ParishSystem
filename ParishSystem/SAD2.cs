@@ -13,24 +13,71 @@ namespace ParishSystem
     public partial class SAD2 : Form
     {
         //#5587e0
+        private enum CabinetModule
+        {
+            Application,
+            Sacrament,
+            Profile,
+            Scheduling,
+            Minister,
+            Bloodletting_DonorMode_EventMode,
+            CashReceipt_BookModeFullPay,
+            ReceiptReports_Disbursement_Release_Parish_Community_Postulancy,
+            CashDisbursement_CashRealeaseMode,
+            ItemTypes_CashReceipt_CashDisbursement,
+            BloodlettingReports,
+            BloodDonors,
+            BloodClaim,
+            ClaimView,
+            Employee
+        }
 
-        Color ButtonPressed = Color.FromArgb(115,115,115);
-        Color ButtonBackColor = Color.Transparent;
-        DataHandler dh = DataHandler.getDataHandler();
-        Dictionary<Button, Panel_Size_Pair> SubMenu = new Dictionary<Button, Panel_Size_Pair>();
+        private Color ButtonPressed = Color.FromArgb(115,115,115);
+        private Color ButtonBackColor = Color.Transparent;
+        private DataHandler dh = DataHandler.getDataHandler();
+
+        private Dictionary<CabinetModule, Form> modules = new Dictionary<CabinetModule, Form>();
+        private Dictionary<Button, Panel_Size_Pair> SubMenu = new Dictionary<Button, Panel_Size_Pair>();
         int UserID=-1;
         public SAD2()
         {
             InitializeComponent();
+            addModules();
             UserID = 1;
+
         }
 
-        public SAD2(string  Username)
+        private void addModules()
         {
-            InitializeComponent();
+            //Sacrament Module
+            modules.Add(CabinetModule.Application, new ApplicationModule());
+            modules.Add(CabinetModule.Scheduling, new ScheduleModule());
+            modules.Add(CabinetModule.Sacrament, new SacramentModule());
+            modules.Add(CabinetModule.Profile, new ProfileModule());
+            modules.Add(CabinetModule.Minister, new MinisterModule());
+
+            //Bloodletting Module
+            modules.Add(CabinetModule.Bloodletting_DonorMode_EventMode, new Bloodletting_Module(1));
+            modules.Add(CabinetModule.BloodClaim, new BloodClaim());
+            modules.Add(CabinetModule.BloodlettingReports, new BloodlettingReports_Module());
+
+            //Cash Module
+            modules.Add(CabinetModule.CashDisbursement_CashRealeaseMode, new CashDisbursment(1));
+            modules.Add(CabinetModule.ItemTypes_CashReceipt_CashDisbursement, new ItemTypes_Module(1));
+            modules.Add(CabinetModule.CashReceipt_BookModeFullPay, new CashReciept(1));
+            modules.Add(CabinetModule.ReceiptReports_Disbursement_Release_Parish_Community_Postulancy, new CashReport_Module(1, 1));
+
+            modules.Add(CabinetModule.Employee, new EmployeeModule());
+            
+            
+        }
+
+        public SAD2(string  Username) : this()
+        {
             this.username_Welcome_Text.Text = Username.ToUpper();
             this.UserID = int.Parse(dh.getEmployee(Username).Rows[0]["employeeID"].ToString());
         }
+
         private void SAD2_Load(object sender, EventArgs e)
         {
             Draggable drag = new Draggable(this);
@@ -247,94 +294,106 @@ namespace ParishSystem
 
         private void scheduling_button_menu_Click(object sender, EventArgs e)
         {
-            Form A = new ScheduleModule();
+            Form A = modules[CabinetModule.Scheduling];
             showForm(content_panel,A);
         }
 
         private void sacrament_button_menu_Click(object sender, EventArgs e)
         {
-            Form A = new SacramentModule();
+            Form A = modules[CabinetModule.Sacrament];
             showForm(content_panel, A);
         }
 
         private void profile_menu_button_Click(object sender, EventArgs e)
         {
-            Form A = new ProfileModule();
+            Form A = modules[CabinetModule.Profile];
             showForm(content_panel, A);
         }
 
         private void application_button_menu_Click(object sender, EventArgs e)
         {
-            Form A = new ApplicationModule();
+            Form A = modules[CabinetModule.Application];
             showForm(content_panel, A);
         }
 
         private void CRB_button_menu_Click(object sender, EventArgs e)
         {
-            Form A = new CashReciept(1);
+            //Form A = new CashReciept(1);
+            Form A = modules[CabinetModule.CashReceipt_BookModeFullPay];
             showForm(content_panel, A);
         }
 
         private void CRBreport_button_Click(object sender, EventArgs e)
         {
-            Form A = new CashReport_Module(2,1);
+            //Form A = new CashReport_Module(2,1);
+            Form A = modules[CabinetModule.ReceiptReports_Disbursement_Release_Parish_Community_Postulancy];
             showForm(content_panel, A);
         }
 
         private void CDB_button_menu_Click(object sender, EventArgs e)
         {
-            Form A = new CashDisbursment(1);
+            //Form A = new CashDisbursment(1);
+            Form A = modules[CabinetModule.CashDisbursement_CashRealeaseMode];
             showForm(content_panel, A);
         }
 
         private void CDBreport_button_Click(object sender, EventArgs e)
         {
-            Form A = new CashReport_Module(1, 1);
+            //Form A = new CashReport_Module(1, 1);
+            Form A = modules[CabinetModule.ReceiptReports_Disbursement_Release_Parish_Community_Postulancy];
             showForm(content_panel, A);
         }
         private void itemtypemenu_button_Click(object sender, EventArgs e)
         {
-            Form A = new ItemTypes_Module(1);
+            //Form A = new ItemTypes_Module(1);
+            Form A = modules[CabinetModule.ItemTypes_CashReceipt_CashDisbursement];
             showForm(content_panel, A);
         }
 
         private void bloodlettingreport_button_Click(object sender, EventArgs e)
         {
-            Form A = new BloodlettingReports_Module();
+            //Form A = new BloodlettingReports_Module();
+            Form A = modules[CabinetModule.BloodlettingReports];
             showForm(content_panel, A);
         }
 
         private void bloodlettingevent_button_Click(object sender, EventArgs e)
         {
-            Form A = new Bloodletting_Module(2);
+            //Form A = new Bloodletting_Module(2);
+            Form A = modules[CabinetModule.Bloodletting_DonorMode_EventMode];
             showForm(content_panel, A);
         }
 
         private void bloodlettingdonor_button_Click(object sender, EventArgs e)
         {
-            Form A = new Bloodletting_Module(1);
+            //Form A = new Bloodletting_Module(1);
+            Form A = modules[CabinetModule.Bloodletting_DonorMode_EventMode];
             showForm(content_panel, A);
         }
 
         private void ministers_button_menu_Click(object sender, EventArgs e)
         {
-            Form A = new MinisterModule();
+            //Form A = new MinisterModule();
+            Form A = modules[CabinetModule.Minister];
             showForm(content_panel, A);
         }
 
         private void Employee_button_menu_Click(object sender, EventArgs e)
         {
-            Form A = new EmployeeModule(dh);
+            //Form A = new EmployeeModule();
+            Form A = modules[CabinetModule.Employee];
             showForm(content_panel, A);
         }
         private void bloodClaim_menu_button_Click(object sender, EventArgs e)
         {
-            Form A = new BloodClaim();
+            //Form A = new BloodClaim();
+            Form A = modules[CabinetModule.BloodClaim];
             showForm(content_panel, A);
         }
         private void bloodClaimView_menu_button_Click(object sender, EventArgs e)
         {
-            Form A = new BloodClaimView();
+            //Form A = new BloodClaimView();
+            Form A = modules[CabinetModule.BloodClaim];
             showForm(content_panel, A);
         }
         private void logout_button_Click(object sender, EventArgs e)

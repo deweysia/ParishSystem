@@ -148,11 +148,15 @@ namespace ParishSystem
                 return;
             }
 
-            if (!ministerAvailable())
+            if(cmbScheduleType.SelectedItem.ToString() == "Appointment")
             {
-                Notification.Show(State.ScheduleMinisterUnavailable);
-                return;
+                if (!ministerAvailable()) //Checks if selected minister is available
+                {
+                    Notification.Show(State.ScheduleMinisterUnavailable);
+                    return;
+                }
             }
+            
 
             bool success = ev == null ? addEntry() : editEntry();
 
