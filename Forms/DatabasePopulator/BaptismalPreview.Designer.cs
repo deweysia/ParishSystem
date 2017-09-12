@@ -68,9 +68,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -558,9 +559,9 @@
             // 
             this.button2.BackColor = System.Drawing.Color.LawnGreen;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(908, 65);
+            this.button2.Location = new System.Drawing.Point(926, 23);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 47);
+            this.button2.Size = new System.Drawing.Size(136, 48);
             this.button2.TabIndex = 0;
             this.button2.Text = "SAVE DOCUMENT";
             this.button2.UseVisualStyleBackColor = false;
@@ -570,29 +571,39 @@
             // 
             this.saveFileDialog1.Filter = "Document (.pdf)|*.pdf";
             // 
-            // printDialog1
+            // button1
             // 
-            this.printDialog1.AllowSelection = true;
-            this.printDialog1.AllowSomePages = true;
-            this.printDialog1.Document = this.printDocument1;
-            this.printDialog1.UseEXDialog = true;
+            this.button1.BackColor = System.Drawing.Color.Salmon;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(926, 77);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 48);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "CANCEL";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Salmon;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(926, 131);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(136, 48);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "PRINT";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // printPreviewDialog1
             // 
             this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
             this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
             this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Document = this.printDocument1;
             this.printPreviewDialog1.Enabled = true;
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.UseAntiAlias = true;
             this.printPreviewDialog1.Visible = false;
-            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
-            // 
-            // printDocument1
-            // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage_1);
             // 
             // BaptismalPreview
             // 
@@ -600,10 +611,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1102, 525);
+            this.ClientSize = new System.Drawing.Size(1085, 852);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BaptismalPreview";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BAPTISMAL CERTIFICATE PREVIEW";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
@@ -652,9 +667,10 @@
         private System.Windows.Forms.Label purposeField;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.PrintDialog printDialog1;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
 

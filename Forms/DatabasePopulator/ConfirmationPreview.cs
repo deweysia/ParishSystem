@@ -12,7 +12,7 @@ using System.Drawing.Imaging;
 using PdfSharp;
 using PdfSharp.Pdf;
 using PdfSharp.Drawing;
-
+using System.IO;
 
 namespace DatabasePopulator
 {
@@ -103,36 +103,47 @@ namespace DatabasePopulator
         {
 
         }
-
+        string filepath;
         private void button1_Click(object sender, EventArgs e)
         {
+
+            saveFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             int width = panel1.Size.Width;
             int height = panel1.Size.Height;
 
-            Bitmap bm = new Bitmap(width, height);
-            panel1.DrawToBitmap(bm, new Rectangle(0, 0, width, height));
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
 
-            bm.Save(@"C://Users//Josh//Desktop//Reports//confirmation.bmp", ImageFormat.Bmp);
+                // --------------------FINDING FILEPATH---------------------- //
+                filepath = saveFileDialog1.FileName;
 
-            // --------------------DOCUMENT---------------------- //
-
-            PdfDocument doc = new PdfDocument();
-            PdfPage page = new PdfPage();
-            page.Height = height;
-            page.Width = width;
-            page.Orientation = PageOrientation.Portrait;
-            doc.Pages.Add(page);
+                Bitmap bm = new Bitmap(width, height);
+                panel1.DrawToBitmap(bm, new Rectangle(0, 0, width, height));
 
 
-            XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
+                string tempFolder = Path.GetTempPath();
+                bm.Save(tempFolder + "//tempReport.bmp", ImageFormat.Bmp);
 
 
+                // --------------------DOCUMENT---------------------- //
 
-            XImage poop = XImage.FromFile("C://Users//Josh//Desktop//Reports//confirmation.bmp");
+                PdfDocument doc = new PdfDocument();
+                PdfPage page = new PdfPage();
+                page.Height = height;
+                page.Width = width;
+                page.Orientation = PageOrientation.Portrait;
+                doc.Pages.Add(page);
 
-            xgr.DrawImage(poop, 0, 0, width, height);
-            doc.Save("C://Users//Josh//Desktop//Reports//ConfirmationReport.pdf");
-            doc.Close();
+                // --------------------DRAWING PDF---------------------- //
+                XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
+                XImage saved = XImage.FromFile(tempFolder + "//temp2.bmp");
+                xgr.DrawImage(saved, 0, 0, width, height);
+
+                doc.Save(filepath);
+                doc.Close();
+
+                this.Close();
+            }
 
 
         }
@@ -140,6 +151,11 @@ namespace DatabasePopulator
         private void ConfirmationPreview_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

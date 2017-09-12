@@ -14,9 +14,7 @@ using PdfSharp.Pdf;
 using PdfSharp.Drawing;
 using System.IO;
 using System.Drawing.Printing;
-
-
-
+using System.Diagnostics;
 
 namespace DatabasePopulator
 {
@@ -123,47 +121,53 @@ private void Form1_Load(object sender, EventArgs e)
 
         }
 
+        private void Save()
+        {
+
+        }
+        public string filepath;
+        
         private void button1_Click_1(object sender, EventArgs e) 
         {
 
-            
+            saveFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); 
             int width = panel1.Size.Width;
             int height = panel1.Size.Height;
 
-            saveFileDialog1.ShowDialog();
-            string filepath = saveFileDialog1.FileName;
-                
-            Bitmap bm = new Bitmap(width, height);
-            panel1.DrawToBitmap(bm, new Rectangle(0, 0, width, height));
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+
+                // --------------------FINDING FILEPATH---------------------- //
+                filepath = saveFileDialog1.FileName;
+
+                Bitmap bm = new Bitmap(width, height);
+                panel1.DrawToBitmap(bm, new Rectangle(0, 0, width, height));
 
 
-            string tempFolder = Path.GetTempPath();
-            bm.Save(tempFolder + "//temp2.bmp", ImageFormat.Bmp);
-                
-
-            // --------------------DOCUMENT---------------------- //
-
-            PdfDocument doc = new PdfDocument();
-            PdfPage page = new PdfPage();
-            page.Height = height;
-            page.Width = width;
-            page.Orientation = PageOrientation.Portrait;
-            doc.Pages.Add(page);
+                string tempFolder = Path.GetTempPath();
+                bm.Save(tempFolder + "//tempReport.bmp", ImageFormat.Bmp);
 
 
-            XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
+                // --------------------DOCUMENT---------------------- //
 
+                PdfDocument doc = new PdfDocument();
+                PdfPage page = new PdfPage();
+                page.Height = height;
+                page.Width = width;
+                page.Orientation = PageOrientation.Portrait;
+                doc.Pages.Add(page);
 
+                // --------------------DRAWING PDF---------------------- //
+                XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
+                XImage saved = XImage.FromFile(tempFolder + "//temp2.bmp");
+                xgr.DrawImage(saved, 0, 0, width, height);
 
-            XImage saved = XImage.FromFile(tempFolder + "//temp2.bmp");
+                doc.Save(filepath);
+                doc.Close();
 
-            xgr.DrawImage(saved, 0, 0, width, height);
-            doc.Save(filepath);
-
-            doc.Close();
-            this.Close();
+                this.Close();
+            }
             
-           
            
 
         }
@@ -173,17 +177,37 @@ private void Form1_Load(object sender, EventArgs e)
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+
+        private void printDocument1_PrintPage_1(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
+
+        }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            #region SAVING PDF TO TEMP
+            // --------------------FINDING FILEPATH---------------------- //
             int width = panel1.Size.Width;
             int height = panel1.Size.Height;
+            
 
             Bitmap bm = new Bitmap(width, height);
             panel1.DrawToBitmap(bm, new Rectangle(0, 0, width, height));
 
 
             string tempFolder = Path.GetTempPath();
-            bm.Save(tempFolder + "//temp2.bmp", ImageFormat.Bmp);
+            bm.Save(tempFolder + "//tempReport.bmp", ImageFormat.Bmp);
 
 
             // --------------------DOCUMENT---------------------- //
@@ -195,33 +219,27 @@ private void Form1_Load(object sender, EventArgs e)
             page.Orientation = PageOrientation.Portrait;
             doc.Pages.Add(page);
 
-
+            // --------------------DRAWING PDF---------------------- //
             XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
-            XImage saved = XImage.FromFile(tempFolder + "\\temp2.bmp");
-
+            XImage saved = XImage.FromFile(tempFolder + "//temp2.bmp");
             xgr.DrawImage(saved, 0, 0, width, height);
 
-            string filepath = tempFolder + "tempreport.pdf";
-            doc.Save(filepath);
-
+            doc.Save(tempFolder + "//rep.pdf");
             doc.Close();
+            #endregion
 
-            // ---------------------PRINTING------------------//
-            
-            printDocument1.DocumentName = "nope.pdf";
-            
-            printDocument1.
+            Process p = new Process();
+            p.StartInfo = new ProcessStartInfo()
+            {
+                CreateNoWindow = true,
+                Verb = "open",
+                FileName = tempFolder + "//rep.pdf"
+            };
+            p.Start();
 
-
-        }
-
-        private void printDocument1_PrintPage_1(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-
-        }
-
-        private void printPreviewDialog1_Load(object sender, EventArgs e)
-        {
+            String savedDoc = tempFolder + "//rep.pdf";
+            printDocument1.DocumentName = savedDoc;
+            printPreviewDialog1.ShowDialog();
 
         }
     }
