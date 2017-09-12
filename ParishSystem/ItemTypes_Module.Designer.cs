@@ -38,28 +38,37 @@
             this.add_button_itemType = new System.Windows.Forms.Button();
             this.itemType_dgv = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.Disbursment_label = new System.Windows.Forms.Label();
+            this.Receipt_label = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.IncomeCashReleaseType_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemType_dgv)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // IncomeCashReleaseType_panel
             // 
             this.IncomeCashReleaseType_panel.BackColor = System.Drawing.Color.White;
+            this.IncomeCashReleaseType_panel.Controls.Add(this.Disbursment_label);
+            this.IncomeCashReleaseType_panel.Controls.Add(this.Receipt_label);
+            this.IncomeCashReleaseType_panel.Controls.Add(this.label15);
+            this.IncomeCashReleaseType_panel.Controls.Add(this.panel1);
             this.IncomeCashReleaseType_panel.Controls.Add(this.searchButton);
             this.IncomeCashReleaseType_panel.Controls.Add(this.label1);
             this.IncomeCashReleaseType_panel.Controls.Add(this.searchTextbox);
-            this.IncomeCashReleaseType_panel.Controls.Add(this.enable_button_itemType);
-            this.IncomeCashReleaseType_panel.Controls.Add(this.add_button_itemType);
             this.IncomeCashReleaseType_panel.Controls.Add(this.itemType_dgv);
             this.IncomeCashReleaseType_panel.Controls.Add(this.label2);
+            this.IncomeCashReleaseType_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.IncomeCashReleaseType_panel.Location = new System.Drawing.Point(0, 0);
             this.IncomeCashReleaseType_panel.Margin = new System.Windows.Forms.Padding(0);
             this.IncomeCashReleaseType_panel.Name = "IncomeCashReleaseType_panel";
-            this.IncomeCashReleaseType_panel.Size = new System.Drawing.Size(931, 543);
+            this.IncomeCashReleaseType_panel.Size = new System.Drawing.Size(943, 669);
             this.IncomeCashReleaseType_panel.TabIndex = 0;
             // 
             // searchButton
             // 
+            this.searchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchButton.FlatAppearance.BorderSize = 0;
             this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -74,6 +83,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(534, 32);
@@ -84,6 +94,7 @@
             // 
             // searchTextbox
             // 
+            this.searchTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.searchTextbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchTextbox.Location = new System.Drawing.Point(587, 28);
@@ -94,13 +105,14 @@
             // 
             // enable_button_itemType
             // 
-            this.enable_button_itemType.BackColor = System.Drawing.Color.Gray;
+            this.enable_button_itemType.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.enable_button_itemType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.enable_button_itemType.FlatAppearance.BorderSize = 0;
-            this.enable_button_itemType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.enable_button_itemType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.enable_button_itemType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enable_button_itemType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enable_button_itemType.ForeColor = System.Drawing.Color.White;
-            this.enable_button_itemType.Location = new System.Drawing.Point(537, 472);
+            this.enable_button_itemType.Location = new System.Drawing.Point(383, 16);
             this.enable_button_itemType.Name = "enable_button_itemType";
             this.enable_button_itemType.Size = new System.Drawing.Size(204, 37);
             this.enable_button_itemType.TabIndex = 3;
@@ -110,13 +122,14 @@
             // 
             // add_button_itemType
             // 
-            this.add_button_itemType.BackColor = System.Drawing.Color.Gray;
+            this.add_button_itemType.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.add_button_itemType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.add_button_itemType.FlatAppearance.BorderSize = 0;
-            this.add_button_itemType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.add_button_itemType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.add_button_itemType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_button_itemType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_button_itemType.ForeColor = System.Drawing.Color.White;
-            this.add_button_itemType.Location = new System.Drawing.Point(199, 472);
+            this.add_button_itemType.Location = new System.Drawing.Point(81, 16);
             this.add_button_itemType.Name = "add_button_itemType";
             this.add_button_itemType.Size = new System.Drawing.Size(204, 37);
             this.add_button_itemType.TabIndex = 1;
@@ -131,24 +144,27 @@
             this.itemType_dgv.AllowUserToDeleteRows = false;
             this.itemType_dgv.AllowUserToOrderColumns = true;
             this.itemType_dgv.AllowUserToResizeRows = false;
+            this.itemType_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.itemType_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.itemType_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.itemType_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.itemType_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.itemType_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.itemType_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.itemType_dgv.ColumnHeadersHeight = 40;
             this.itemType_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.itemType_dgv.EnableHeadersVisualStyles = false;
             this.itemType_dgv.GridColor = System.Drawing.Color.White;
-            this.itemType_dgv.Location = new System.Drawing.Point(31, 66);
+            this.itemType_dgv.Location = new System.Drawing.Point(50, 66);
             this.itemType_dgv.MultiSelect = false;
             this.itemType_dgv.Name = "itemType_dgv";
             this.itemType_dgv.ReadOnly = true;
@@ -164,7 +180,7 @@
             this.itemType_dgv.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.itemType_dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.itemType_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.itemType_dgv.Size = new System.Drawing.Size(868, 383);
+            this.itemType_dgv.Size = new System.Drawing.Size(849, 505);
             this.itemType_dgv.TabIndex = 0;
             this.itemType_dgv.TabStop = false;
             this.itemType_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemType_dgv_CellClick);
@@ -174,6 +190,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(584, 40);
             this.label2.Name = "label2";
@@ -181,11 +198,58 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "_____________________________________________";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.enable_button_itemType);
+            this.panel1.Controls.Add(this.add_button_itemType);
+            this.panel1.Location = new System.Drawing.Point(136, 590);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(684, 71);
+            this.panel1.TabIndex = 8;
+            // 
+            // Disbursment_label
+            // 
+            this.Disbursment_label.AutoSize = true;
+            this.Disbursment_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Disbursment_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Disbursment_label.Location = new System.Drawing.Point(183, 23);
+            this.Disbursment_label.Name = "Disbursment_label";
+            this.Disbursment_label.Size = new System.Drawing.Size(130, 30);
+            this.Disbursment_label.TabIndex = 88;
+            this.Disbursment_label.Text = "Disbursment";
+            this.Disbursment_label.Click += new System.EventHandler(this.Disbursment_label_Click);
+            // 
+            // Receipt_label
+            // 
+            this.Receipt_label.AutoSize = true;
+            this.Receipt_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Receipt_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Receipt_label.Location = new System.Drawing.Point(70, 23);
+            this.Receipt_label.Name = "Receipt_label";
+            this.Receipt_label.Size = new System.Drawing.Size(85, 30);
+            this.Receipt_label.TabIndex = 87;
+            this.Receipt_label.Text = "Receipt";
+            this.Receipt_label.Click += new System.EventHandler(this.Receipt_label_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.LightGray;
+            this.label15.Location = new System.Drawing.Point(50, 42);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(281, 16);
+            this.label15.TabIndex = 90;
+            this.label15.Text = "_______________________________________";
+            // 
             // ItemTypes_Module
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 540);
+            this.ClientSize = new System.Drawing.Size(943, 669);
             this.Controls.Add(this.IncomeCashReleaseType_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ItemTypes_Module";
@@ -195,6 +259,7 @@
             this.IncomeCashReleaseType_panel.ResumeLayout(false);
             this.IncomeCashReleaseType_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemType_dgv)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -209,5 +274,9 @@
         private System.Windows.Forms.TextBox searchTextbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label Disbursment_label;
+        private System.Windows.Forms.Label Receipt_label;
+        private System.Windows.Forms.Label label15;
     }
 }

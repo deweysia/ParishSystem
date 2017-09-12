@@ -22,9 +22,13 @@ namespace ParishSystem
         }
         private void CashDisbursment_Module_Load(object sender, EventArgs e)
         {
+            cashLoad();
+        }
+        private void cashLoad()
+        {
             itemtype_combobox_CRB.Items.Clear();
             itemtype_combobox_CRB.Items.Add("");
-            DataTable dt = dh.getItems(cashreleaseMode,2);
+            DataTable dt = dh.getItems(cashreleaseMode, 2);
             foreach (DataRow dr in dt.Rows)
             {
                 itemtype_combobox_CRB.Items.Add(new ComboboxContent(int.Parse(dr["itemTypeID"].ToString()), dr["itemType"].ToString(), dr["suggestedPrice"].ToString()));
@@ -219,6 +223,47 @@ namespace ParishSystem
             {
                 final_button_CRB.Enabled = false;
             }
+        }
+
+        private void parish_label_Click(object sender, EventArgs e)
+        {
+            this.cashreleaseMode = 1;
+            cashLoad();
+            parish_label.Font = new Font(parish_label.Font, FontStyle.Bold);
+            community_label.Font = new Font(community_label.Font, FontStyle.Regular);
+            postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
+            parish_label.ForeColor = Color.Black;
+            community_label.ForeColor = Color.FromArgb(64, 64, 64);
+            postulancy_label.ForeColor = Color.FromArgb(64, 64, 64);
+        }
+
+        private void community_label_Click(object sender, EventArgs e)
+        {
+            this.cashreleaseMode = 2;
+            cashLoad();
+            parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
+            community_label.Font = new Font(community_label.Font, FontStyle.Bold);
+            postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
+            parish_label.ForeColor = Color.FromArgb(64, 64, 64);
+            community_label.ForeColor = Color.Black;
+            postulancy_label.ForeColor = Color.FromArgb(64, 64, 64);
+        }
+
+        private void postulancy_label_Click(object sender, EventArgs e)
+        {
+            this.cashreleaseMode = 3;
+            cashLoad();
+            parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
+            community_label.Font = new Font(community_label.Font, FontStyle.Regular);
+            postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Bold);
+            parish_label.ForeColor = Color.FromArgb(64, 64, 64);
+            community_label.ForeColor = Color.FromArgb(64, 64, 64);
+            postulancy_label.ForeColor = Color.Black;
+        }
+
+        private void parish_label_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

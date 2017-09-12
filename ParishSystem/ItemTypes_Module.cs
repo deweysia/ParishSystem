@@ -138,5 +138,26 @@ namespace ParishSystem
             searchButton.Image = ParishSystem.Properties.Resources.icons8_Search_Filled_20;
             searchButton.Tag = "s";
         }
+
+        private void Receipt_label_Click(object sender, EventArgs e)
+        {
+            this.cashreceipt_cashdisbursment = 1;
+            refreshItemTypes();
+            Receipt_label.Font = new Font(Receipt_label.Font, FontStyle.Bold);
+            Disbursment_label.Font = new Font(Disbursment_label.Font, FontStyle.Regular);
+            Receipt_label.ForeColor = Color.Black;
+            Disbursment_label.ForeColor = Color.FromArgb(64, 64, 64);
+             
+        }
+
+        private void Disbursment_label_Click(object sender, EventArgs e)
+        {
+            this.cashreceipt_cashdisbursment = 2;
+            refreshItemTypes();
+            Receipt_label.Font = new Font(Receipt_label.Font, FontStyle.Regular);
+            Disbursment_label.Font = new Font(Disbursment_label.Font, FontStyle.Bold);
+            Receipt_label.ForeColor = Color.FromArgb(64, 64, 64);
+            Disbursment_label.ForeColor = Color.Black;
+        }
     }
 }

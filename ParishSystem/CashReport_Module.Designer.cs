@@ -34,6 +34,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Reports_panel = new System.Windows.Forms.Panel();
             this.excel = new System.Windows.Forms.Button();
             this.reportFilter_panel = new System.Windows.Forms.Panel();
@@ -63,12 +66,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.filterBy_combobox_disbursment = new System.Windows.Forms.ComboBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.report_datagridview_cashdisbursment = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.summary_datagridview_report_disbursment = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.postulancy_label = new System.Windows.Forms.Label();
+            this.community_label = new System.Windows.Forms.Label();
+            this.parish_label = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.report_datagridview_cashdisbursment = new System.Windows.Forms.DataGridView();
+            this.summary_datagridview_report_disbursment = new System.Windows.Forms.DataGridView();
             this.Reports_panel.SuspendLayout();
             this.reportFilter_panel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -76,35 +83,40 @@
             this.date_pnl.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.metroTabControl1.SuspendLayout();
+            this.metroTabPage1.SuspendLayout();
+            this.metroTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.report_datagridview_cashdisbursment)).BeginInit();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.summary_datagridview_report_disbursment)).BeginInit();
             this.SuspendLayout();
             // 
             // Reports_panel
             // 
             this.Reports_panel.BackColor = System.Drawing.Color.White;
-            this.Reports_panel.Controls.Add(this.excel);
+            this.Reports_panel.Controls.Add(this.postulancy_label);
+            this.Reports_panel.Controls.Add(this.community_label);
+            this.Reports_panel.Controls.Add(this.parish_label);
+            this.Reports_panel.Controls.Add(this.label15);
             this.Reports_panel.Controls.Add(this.reportFilter_panel);
-            this.Reports_panel.Controls.Add(this.tabControl1);
+            this.Reports_panel.Controls.Add(this.metroTabControl1);
+            this.Reports_panel.Controls.Add(this.excel);
             this.Reports_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Reports_panel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reports_panel.Location = new System.Drawing.Point(0, 0);
             this.Reports_panel.Name = "Reports_panel";
-            this.Reports_panel.Size = new System.Drawing.Size(935, 547);
+            this.Reports_panel.Size = new System.Drawing.Size(943, 669);
             this.Reports_panel.TabIndex = 13;
             // 
             // excel
             // 
-            this.excel.BackColor = System.Drawing.Color.Gray;
+            this.excel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.excel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.excel.Enabled = false;
             this.excel.FlatAppearance.BorderSize = 0;
-            this.excel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.excel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.excel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.excel.ForeColor = System.Drawing.Color.White;
-            this.excel.Location = new System.Drawing.Point(731, 501);
+            this.excel.Location = new System.Drawing.Point(734, 611);
             this.excel.Name = "excel";
             this.excel.Size = new System.Drawing.Size(178, 34);
             this.excel.TabIndex = 20;
@@ -114,6 +126,7 @@
             // 
             // reportFilter_panel
             // 
+            this.reportFilter_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.reportFilter_panel.BackColor = System.Drawing.Color.White;
             this.reportFilter_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.reportFilter_panel.Controls.Add(this.Open_button);
@@ -121,7 +134,7 @@
             this.reportFilter_panel.Controls.Add(this.button1);
             this.reportFilter_panel.Controls.Add(this.label23);
             this.reportFilter_panel.Controls.Add(this.filterBy_combobox_disbursment);
-            this.reportFilter_panel.Location = new System.Drawing.Point(542, 21);
+            this.reportFilter_panel.Location = new System.Drawing.Point(550, 26);
             this.reportFilter_panel.Name = "reportFilter_panel";
             this.reportFilter_panel.Size = new System.Drawing.Size(366, 34);
             this.reportFilter_panel.TabIndex = 18;
@@ -129,10 +142,10 @@
             // 
             // Open_button
             // 
-            this.Open_button.BackColor = System.Drawing.Color.Gray;
+            this.Open_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Open_button.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Open_button.FlatAppearance.BorderSize = 0;
-            this.Open_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.Open_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Open_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Open_button.ForeColor = System.Drawing.Color.White;
             this.Open_button.Location = new System.Drawing.Point(0, -2);
@@ -369,9 +382,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(49, 227);
@@ -410,142 +423,245 @@
             this.filterBy_combobox_disbursment.TabIndex = 13;
             this.filterBy_combobox_disbursment.SelectedIndexChanged += new System.EventHandler(this.filterBy_combobox_disbursment_SelectedIndexChanged);
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(23, 56);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(889, 439);
-            this.tabControl1.TabIndex = 16;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.report_datagridview_cashdisbursment);
-            this.tabPage1.Location = new System.Drawing.Point(4, 30);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(881, 405);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "   Report   ";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // report_datagridview_cashdisbursment
-            // 
-            this.report_datagridview_cashdisbursment.AllowUserToAddRows = false;
-            this.report_datagridview_cashdisbursment.AllowUserToDeleteRows = false;
-            this.report_datagridview_cashdisbursment.AllowUserToResizeRows = false;
-            this.report_datagridview_cashdisbursment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.report_datagridview_cashdisbursment.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.report_datagridview_cashdisbursment.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.report_datagridview_cashdisbursment.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.report_datagridview_cashdisbursment.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.report_datagridview_cashdisbursment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.report_datagridview_cashdisbursment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.report_datagridview_cashdisbursment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.report_datagridview_cashdisbursment.GridColor = System.Drawing.Color.White;
-            this.report_datagridview_cashdisbursment.Location = new System.Drawing.Point(3, 3);
-            this.report_datagridview_cashdisbursment.Name = "report_datagridview_cashdisbursment";
-            this.report_datagridview_cashdisbursment.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.report_datagridview_cashdisbursment.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.report_datagridview_cashdisbursment.RowHeadersVisible = false;
-            this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
-            this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.report_datagridview_cashdisbursment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.report_datagridview_cashdisbursment.Size = new System.Drawing.Size(875, 399);
-            this.report_datagridview_cashdisbursment.TabIndex = 0;
-            this.report_datagridview_cashdisbursment.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.breakdown_datagridview_report_disbursment_CellContentDoubleClick);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.summary_datagridview_report_disbursment);
-            this.tabPage2.Location = new System.Drawing.Point(4, 30);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(881, 405);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "   Summary    ";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // summary_datagridview_report_disbursment
-            // 
-            this.summary_datagridview_report_disbursment.AllowUserToAddRows = false;
-            this.summary_datagridview_report_disbursment.AllowUserToDeleteRows = false;
-            this.summary_datagridview_report_disbursment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.summary_datagridview_report_disbursment.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.summary_datagridview_report_disbursment.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.summary_datagridview_report_disbursment.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.summary_datagridview_report_disbursment.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.summary_datagridview_report_disbursment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.summary_datagridview_report_disbursment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.summary_datagridview_report_disbursment.DefaultCellStyle = dataGridViewCellStyle4;
-            this.summary_datagridview_report_disbursment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.summary_datagridview_report_disbursment.Location = new System.Drawing.Point(3, 3);
-            this.summary_datagridview_report_disbursment.Name = "summary_datagridview_report_disbursment";
-            this.summary_datagridview_report_disbursment.ReadOnly = true;
-            this.summary_datagridview_report_disbursment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.summary_datagridview_report_disbursment.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.summary_datagridview_report_disbursment.RowHeadersVisible = false;
-            this.summary_datagridview_report_disbursment.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.summary_datagridview_report_disbursment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.summary_datagridview_report_disbursment.Size = new System.Drawing.Size(875, 399);
-            this.summary_datagridview_report_disbursment.TabIndex = 16;
-            // 
             // timer1
             // 
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // metroTabControl1
+            // 
+            this.metroTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroTabControl1.Controls.Add(this.metroTabPage1);
+            this.metroTabControl1.Controls.Add(this.metroTabPage2);
+            this.metroTabControl1.Location = new System.Drawing.Point(38, 66);
+            this.metroTabControl1.Name = "metroTabControl1";
+            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.Size = new System.Drawing.Size(878, 539);
+            this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Silver;
+            this.metroTabControl1.TabIndex = 21;
+            this.metroTabControl1.UseSelectable = true;
+            // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.Controls.Add(this.report_datagridview_cashdisbursment);
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.HorizontalScrollbarSize = 10;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(870, 497);
+            this.metroTabPage1.TabIndex = 0;
+            this.metroTabPage1.Text = "          Reports         ";
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.Controls.Add(this.summary_datagridview_report_disbursment);
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.HorizontalScrollbarSize = 10;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(870, 497);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "          Summary          ";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // postulancy_label
+            // 
+            this.postulancy_label.AutoSize = true;
+            this.postulancy_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postulancy_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.postulancy_label.Location = new System.Drawing.Point(315, 25);
+            this.postulancy_label.Name = "postulancy_label";
+            this.postulancy_label.Size = new System.Drawing.Size(112, 30);
+            this.postulancy_label.TabIndex = 73;
+            this.postulancy_label.Text = "Postulancy";
+            this.postulancy_label.Click += new System.EventHandler(this.postulancy_label_Click);
+            // 
+            // community_label
+            // 
+            this.community_label.AutoSize = true;
+            this.community_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.community_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.community_label.Location = new System.Drawing.Point(171, 25);
+            this.community_label.Name = "community_label";
+            this.community_label.Size = new System.Drawing.Size(120, 30);
+            this.community_label.TabIndex = 72;
+            this.community_label.Text = "Community";
+            this.community_label.Click += new System.EventHandler(this.community_label_Click);
+            // 
+            // parish_label
+            // 
+            this.parish_label.AutoSize = true;
+            this.parish_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parish_label.Location = new System.Drawing.Point(66, 25);
+            this.parish_label.Name = "parish_label";
+            this.parish_label.Size = new System.Drawing.Size(72, 30);
+            this.parish_label.TabIndex = 71;
+            this.parish_label.Text = "Parish";
+            this.parish_label.Click += new System.EventHandler(this.parish_label_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.LightGray;
+            this.label15.Location = new System.Drawing.Point(37, 44);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(407, 16);
+            this.label15.TabIndex = 74;
+            this.label15.Text = "_________________________________________________________";
+            // 
+            // report_datagridview_cashdisbursment
+            // 
+            this.report_datagridview_cashdisbursment.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.report_datagridview_cashdisbursment.AllowUserToAddRows = false;
+            this.report_datagridview_cashdisbursment.AllowUserToDeleteRows = false;
+            this.report_datagridview_cashdisbursment.AllowUserToOrderColumns = true;
+            this.report_datagridview_cashdisbursment.AllowUserToResizeRows = false;
+            this.report_datagridview_cashdisbursment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.report_datagridview_cashdisbursment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.report_datagridview_cashdisbursment.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.report_datagridview_cashdisbursment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.report_datagridview_cashdisbursment.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.report_datagridview_cashdisbursment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.report_datagridview_cashdisbursment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.report_datagridview_cashdisbursment.ColumnHeadersHeight = 40;
+            this.report_datagridview_cashdisbursment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.report_datagridview_cashdisbursment.DefaultCellStyle = dataGridViewCellStyle2;
+            this.report_datagridview_cashdisbursment.EnableHeadersVisualStyles = false;
+            this.report_datagridview_cashdisbursment.GridColor = System.Drawing.Color.White;
+            this.report_datagridview_cashdisbursment.Location = new System.Drawing.Point(0, 23);
+            this.report_datagridview_cashdisbursment.MultiSelect = false;
+            this.report_datagridview_cashdisbursment.Name = "report_datagridview_cashdisbursment";
+            this.report_datagridview_cashdisbursment.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Magenta;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.report_datagridview_cashdisbursment.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.report_datagridview_cashdisbursment.RowHeadersVisible = false;
+            this.report_datagridview_cashdisbursment.RowHeadersWidth = 50;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DarkRed;
+            this.report_datagridview_cashdisbursment.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
+            this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.report_datagridview_cashdisbursment.RowTemplate.Height = 35;
+            this.report_datagridview_cashdisbursment.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.report_datagridview_cashdisbursment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.report_datagridview_cashdisbursment.Size = new System.Drawing.Size(870, 454);
+            this.report_datagridview_cashdisbursment.TabIndex = 4;
+            this.report_datagridview_cashdisbursment.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.breakdown_datagridview_report_disbursment_CellContentDoubleClick);
+            // 
+            // summary_datagridview_report_disbursment
+            // 
+            this.summary_datagridview_report_disbursment.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.summary_datagridview_report_disbursment.AllowUserToAddRows = false;
+            this.summary_datagridview_report_disbursment.AllowUserToDeleteRows = false;
+            this.summary_datagridview_report_disbursment.AllowUserToOrderColumns = true;
+            this.summary_datagridview_report_disbursment.AllowUserToResizeRows = false;
+            this.summary_datagridview_report_disbursment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.summary_datagridview_report_disbursment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.summary_datagridview_report_disbursment.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.summary_datagridview_report_disbursment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.summary_datagridview_report_disbursment.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.summary_datagridview_report_disbursment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.summary_datagridview_report_disbursment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.summary_datagridview_report_disbursment.ColumnHeadersHeight = 40;
+            this.summary_datagridview_report_disbursment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.summary_datagridview_report_disbursment.DefaultCellStyle = dataGridViewCellStyle6;
+            this.summary_datagridview_report_disbursment.EnableHeadersVisualStyles = false;
+            this.summary_datagridview_report_disbursment.GridColor = System.Drawing.Color.White;
+            this.summary_datagridview_report_disbursment.Location = new System.Drawing.Point(0, 23);
+            this.summary_datagridview_report_disbursment.MultiSelect = false;
+            this.summary_datagridview_report_disbursment.Name = "summary_datagridview_report_disbursment";
+            this.summary_datagridview_report_disbursment.ReadOnly = true;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Magenta;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.summary_datagridview_report_disbursment.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.summary_datagridview_report_disbursment.RowHeadersVisible = false;
+            this.summary_datagridview_report_disbursment.RowHeadersWidth = 50;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.DarkRed;
+            this.summary_datagridview_report_disbursment.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.summary_datagridview_report_disbursment.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.summary_datagridview_report_disbursment.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.summary_datagridview_report_disbursment.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.summary_datagridview_report_disbursment.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
+            this.summary_datagridview_report_disbursment.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.summary_datagridview_report_disbursment.RowTemplate.Height = 35;
+            this.summary_datagridview_report_disbursment.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.summary_datagridview_report_disbursment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.summary_datagridview_report_disbursment.Size = new System.Drawing.Size(870, 454);
+            this.summary_datagridview_report_disbursment.TabIndex = 17;
+            // 
             // CashReport_Module
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 547);
+            this.ClientSize = new System.Drawing.Size(943, 669);
             this.Controls.Add(this.Reports_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CashReport_Module";
             this.Text = "CashReport_Module";
             this.Reports_panel.ResumeLayout(false);
+            this.Reports_panel.PerformLayout();
             this.reportFilter_panel.ResumeLayout(false);
             this.reportFilter_panel.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -557,10 +673,10 @@
             this.panel11.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.metroTabControl1.ResumeLayout(false);
+            this.metroTabPage1.ResumeLayout(false);
+            this.metroTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.report_datagridview_cashdisbursment)).EndInit();
-            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.summary_datagridview_report_disbursment)).EndInit();
             this.ResumeLayout(false);
 
@@ -585,11 +701,6 @@
         private System.Windows.Forms.RadioButton notGrouped_radiobutton_cashdisbursment;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView report_datagridview_cashdisbursment;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView summary_datagridview_report_disbursment;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel reportFilter_panel;
         private System.Windows.Forms.Label from_lbl;
@@ -603,5 +714,14 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button excel;
+        private MetroFramework.Controls.MetroTabControl metroTabControl1;
+        private MetroFramework.Controls.MetroTabPage metroTabPage1;
+        private MetroFramework.Controls.MetroTabPage metroTabPage2;
+        private System.Windows.Forms.Label postulancy_label;
+        private System.Windows.Forms.Label community_label;
+        private System.Windows.Forms.Label parish_label;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DataGridView report_datagridview_cashdisbursment;
+        private System.Windows.Forms.DataGridView summary_datagridview_report_disbursment;
     }
 }

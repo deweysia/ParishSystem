@@ -29,16 +29,24 @@ namespace ParishSystem
         #region Clean and Load
         private void RefreshMain()
         {
+            itemType_combobox_fullpay.SelectedIndex = 0;
             orNumber_label_fullpay.Text=dh.getnextORof(bookModeFullPay).ToString();
             item_dgv_fullpay.Rows.Clear();
             sourceName_textbox_fullpay.Clear();
             remarks_textbox_fullpay.Clear();
             final_button_fullpay.Enabled = false;
             DataTable dt = dh.getItems(1,bookModeFullPay);
+            itemType_combobox_fullpay.Items.Clear();
+            itemType_combobox_fullpay.Items.Add("");
             foreach (DataRow dr in dt.Rows)
             {
                 itemType_combobox_fullpay.Items.Add(new ComboboxContent(int.Parse(dr["itemTypeID"].ToString()), dr["itemType"].ToString(), dr["suggestedPrice"].ToString()));
             }
+            suggestedPrice_nud_fullpay.Value = 0;
+            subtotal_panel.Visible = false;
+            Person_panel.Visible = false;
+            price_panel.Visible = false;
+            ClearNonPerson();
         }
         private void suggestedPrice_nud_fullpay_parish_ValueChanged(object sender, EventArgs e)
         {
@@ -564,6 +572,47 @@ namespace ParishSystem
             {
                 final_button_fullpay.Enabled = true;
             }
+        }
+
+        private void parish_label_Click(object sender, EventArgs e)
+        {
+            this.bookModeFullPay = 1;
+            RefreshMain();
+            parish_label.Font = new Font(parish_label.Font, FontStyle.Bold);
+            community_label.Font= new Font(community_label.Font, FontStyle.Regular);
+            postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
+            parish_label.ForeColor = Color.Black;
+            community_label.ForeColor = Color.FromArgb(64,64,64);
+            postulancy_label.ForeColor= Color.FromArgb(64, 64, 64);
+        }
+
+        private void community_label_Click(object sender, EventArgs e)
+        {
+            this.bookModeFullPay = 2;
+            RefreshMain();
+            parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
+            community_label.Font = new Font(community_label.Font, FontStyle.Bold);
+            postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
+            parish_label.ForeColor = Color.FromArgb(64, 64, 64);
+            community_label.ForeColor = Color.Black;
+            postulancy_label.ForeColor = Color.FromArgb(64, 64, 64);
+        }
+
+        private void postulancy_label_Click(object sender, EventArgs e)
+        {
+            this.bookModeFullPay = 3;
+            RefreshMain();
+            parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
+            community_label.Font = new Font(community_label.Font, FontStyle.Regular);
+            postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Bold);
+            parish_label.ForeColor = Color.FromArgb(64, 64, 64);
+            community_label.ForeColor = Color.FromArgb(64, 64, 64);
+            postulancy_label.ForeColor = Color.Black;
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
