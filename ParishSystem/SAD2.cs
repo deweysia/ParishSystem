@@ -23,6 +23,7 @@ namespace ParishSystem
         {
             InitializeComponent();
             UserID = 1;
+            privilegesHiding(0);
         }
 
         public SAD2(string  Username)
@@ -30,24 +31,51 @@ namespace ParishSystem
             InitializeComponent();
             this.username_Welcome_Text.Text = Username.ToUpper();
             this.UserID = int.Parse(dh.getEmployee(Username).Rows[0]["employeeID"].ToString());
+            //privilegesHiding(1);
         }
+        private void privilegesHiding(int p)//all, secretary bookkeeper priest
+        {
+            if (p == 0)
+            {
+                SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(255, 50, sacrament_cabinet_panel, false));
+                SubMenu.Add(cash_cabinet, new Panel_Size_Pair(295, 50, cash_cabinet_panel, false));
+                SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));
+                SubMenu.Add(admin_cabinet, new Panel_Size_Pair(155, 50, admin_cabinet_panel, false));
+            }
+            else if (p == 1)
+            {
+                admin_cabinet_panel.Visible = false;
+                SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(255, 50, sacrament_cabinet_panel, false));
+                SubMenu.Add(cash_cabinet, new Panel_Size_Pair(144, 50, cash_cabinet_panel, false));
+                SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));
+                SubMenu.Add(admin_cabinet, new Panel_Size_Pair(155, 50, admin_cabinet_panel, false));
+                CRBreport_button.Visible = false;
+                CRB_button_menu.Visible = false;
+                CDBreport_button.Visible = false;
+                CDB_button_menu.Visible = false;
+                itemtypemenu_button.Visible = false;
+            }
+            else if (p == 2)
+            {
+                sacrament_cabinet_panel.Visible = false;
+                bloodletting_cabinet_panel.Visible = false;
+                SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(255, 50, sacrament_cabinet_panel, false));
+                SubMenu.Add(cash_cabinet, new Panel_Size_Pair(295, 50, cash_cabinet_panel, false));
+                SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));
+                SubMenu.Add(admin_cabinet, new Panel_Size_Pair(155, 50, admin_cabinet_panel, false));
+            }
+        }
+
         private void SAD2_Load(object sender, EventArgs e)
         {
             Draggable drag = new Draggable(this);
             drag.makeDraggable(panel_controlbox);
             drag.makeDraggable(panel2);
-
-            SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(255, 50,sacrament_cabinet_panel,false));
-            SubMenu.Add(cash_cabinet, new Panel_Size_Pair(295, 50, cash_cabinet_panel, false));
-            SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));
-            SubMenu.Add(admin_cabinet, new Panel_Size_Pair(155, 50, admin_cabinet_panel, false));
-
+/*
+            
+*/
           
-            menu_flowlayout.HorizontalScroll.Maximum = 0;
-            menu_flowlayout.AutoScroll = false;
-            menu_flowlayout.VerticalScroll.Visible = false;
-            menu_flowlayout.HorizontalScroll.Visible = false;
-            menu_flowlayout.AutoScroll = true;
+         
 
         }
         #region Effects
@@ -342,24 +370,11 @@ namespace ParishSystem
             this.Close();
         }
 
-        private void flowLayout_ControlButtons_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+     
         private void btn_min_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
             
-        }
-
-    
-      
-
-        private void OnLeave(object sender, EventArgs e)
-        {
-
-           
         }
 
         private void Menu_panel_MouseDown(object sender, MouseEventArgs e)
@@ -374,5 +389,12 @@ namespace ParishSystem
                 OpenMenu_button.PerformClick();
             }
         }
+
+        private void x(object sender, MouseEventArgs e)
+        {
+            DataHandler dh = DataHandler.getDataHandler();
+        }
+
+     
     }
 }

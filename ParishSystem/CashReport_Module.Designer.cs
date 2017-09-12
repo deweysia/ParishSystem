@@ -38,7 +38,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Reports_panel = new System.Windows.Forms.Panel();
-            this.excel = new System.Windows.Forms.Button();
+            this.postulancy_label = new System.Windows.Forms.Label();
+            this.community_label = new System.Windows.Forms.Label();
+            this.parish_label = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.reportFilter_panel = new System.Windows.Forms.Panel();
             this.Open_button = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -66,16 +69,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.filterBy_combobox_disbursment = new System.Windows.Forms.ComboBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.postulancy_label = new System.Windows.Forms.Label();
-            this.community_label = new System.Windows.Forms.Label();
-            this.parish_label = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.report_datagridview_cashdisbursment = new System.Windows.Forms.DataGridView();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.summary_datagridview_report_disbursment = new System.Windows.Forms.DataGridView();
+            this.excel = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Reports_panel.SuspendLayout();
             this.reportFilter_panel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -85,8 +85,8 @@
             this.panel10.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
-            this.metroTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.report_datagridview_cashdisbursment)).BeginInit();
+            this.metroTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.summary_datagridview_report_disbursment)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,22 +107,53 @@
             this.Reports_panel.Size = new System.Drawing.Size(943, 669);
             this.Reports_panel.TabIndex = 13;
             // 
-            // excel
+            // postulancy_label
             // 
-            this.excel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.excel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.excel.Enabled = false;
-            this.excel.FlatAppearance.BorderSize = 0;
-            this.excel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.excel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.excel.ForeColor = System.Drawing.Color.White;
-            this.excel.Location = new System.Drawing.Point(734, 611);
-            this.excel.Name = "excel";
-            this.excel.Size = new System.Drawing.Size(178, 34);
-            this.excel.TabIndex = 20;
-            this.excel.Text = "Export to Excel";
-            this.excel.UseVisualStyleBackColor = false;
-            this.excel.Click += new System.EventHandler(this.excel_Click);
+            this.postulancy_label.AutoSize = true;
+            this.postulancy_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postulancy_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.postulancy_label.Location = new System.Drawing.Point(315, 25);
+            this.postulancy_label.Name = "postulancy_label";
+            this.postulancy_label.Size = new System.Drawing.Size(112, 30);
+            this.postulancy_label.TabIndex = 73;
+            this.postulancy_label.Text = "Postulancy";
+            this.postulancy_label.Click += new System.EventHandler(this.postulancy_label_Click);
+            // 
+            // community_label
+            // 
+            this.community_label.AutoSize = true;
+            this.community_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.community_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.community_label.Location = new System.Drawing.Point(171, 25);
+            this.community_label.Name = "community_label";
+            this.community_label.Size = new System.Drawing.Size(120, 30);
+            this.community_label.TabIndex = 72;
+            this.community_label.Text = "Community";
+            this.community_label.Click += new System.EventHandler(this.community_label_Click);
+            // 
+            // parish_label
+            // 
+            this.parish_label.AutoSize = true;
+            this.parish_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parish_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.parish_label.Location = new System.Drawing.Point(66, 25);
+            this.parish_label.Name = "parish_label";
+            this.parish_label.Size = new System.Drawing.Size(72, 30);
+            this.parish_label.TabIndex = 71;
+            this.parish_label.Text = "Parish";
+            this.parish_label.Click += new System.EventHandler(this.parish_label_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.LightGray;
+            this.label15.Location = new System.Drawing.Point(37, 44);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(407, 16);
+            this.label15.TabIndex = 74;
+            this.label15.Text = "_________________________________________________________";
             // 
             // reportFilter_panel
             // 
@@ -423,11 +454,6 @@
             this.filterBy_combobox_disbursment.TabIndex = 13;
             this.filterBy_combobox_disbursment.SelectedIndexChanged += new System.EventHandler(this.filterBy_combobox_disbursment_SelectedIndexChanged);
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // metroTabControl1
             // 
             this.metroTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -457,68 +483,6 @@
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
-            // 
-            // metroTabPage2
-            // 
-            this.metroTabPage2.Controls.Add(this.summary_datagridview_report_disbursment);
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 10;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(870, 497);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "          Summary          ";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 10;
-            // 
-            // postulancy_label
-            // 
-            this.postulancy_label.AutoSize = true;
-            this.postulancy_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postulancy_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.postulancy_label.Location = new System.Drawing.Point(315, 25);
-            this.postulancy_label.Name = "postulancy_label";
-            this.postulancy_label.Size = new System.Drawing.Size(112, 30);
-            this.postulancy_label.TabIndex = 73;
-            this.postulancy_label.Text = "Postulancy";
-            this.postulancy_label.Click += new System.EventHandler(this.postulancy_label_Click);
-            // 
-            // community_label
-            // 
-            this.community_label.AutoSize = true;
-            this.community_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.community_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.community_label.Location = new System.Drawing.Point(171, 25);
-            this.community_label.Name = "community_label";
-            this.community_label.Size = new System.Drawing.Size(120, 30);
-            this.community_label.TabIndex = 72;
-            this.community_label.Text = "Community";
-            this.community_label.Click += new System.EventHandler(this.community_label_Click);
-            // 
-            // parish_label
-            // 
-            this.parish_label.AutoSize = true;
-            this.parish_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.parish_label.Location = new System.Drawing.Point(66, 25);
-            this.parish_label.Name = "parish_label";
-            this.parish_label.Size = new System.Drawing.Size(72, 30);
-            this.parish_label.TabIndex = 71;
-            this.parish_label.Text = "Parish";
-            this.parish_label.Click += new System.EventHandler(this.parish_label_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.LightGray;
-            this.label15.Location = new System.Drawing.Point(37, 44);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(407, 16);
-            this.label15.TabIndex = 74;
-            this.label15.Text = "_________________________________________________________";
             // 
             // report_datagridview_cashdisbursment
             // 
@@ -586,6 +550,21 @@
             this.report_datagridview_cashdisbursment.TabIndex = 4;
             this.report_datagridview_cashdisbursment.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.breakdown_datagridview_report_disbursment_CellContentDoubleClick);
             // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.Controls.Add(this.summary_datagridview_report_disbursment);
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.HorizontalScrollbarSize = 10;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(870, 497);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "          Summary          ";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
             // summary_datagridview_report_disbursment
             // 
             this.summary_datagridview_report_disbursment.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -651,6 +630,28 @@
             this.summary_datagridview_report_disbursment.Size = new System.Drawing.Size(870, 454);
             this.summary_datagridview_report_disbursment.TabIndex = 17;
             // 
+            // excel
+            // 
+            this.excel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.excel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.excel.Enabled = false;
+            this.excel.FlatAppearance.BorderSize = 0;
+            this.excel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.excel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.excel.ForeColor = System.Drawing.Color.White;
+            this.excel.Location = new System.Drawing.Point(734, 611);
+            this.excel.Name = "excel";
+            this.excel.Size = new System.Drawing.Size(178, 34);
+            this.excel.TabIndex = 20;
+            this.excel.Text = "Export to Excel";
+            this.excel.UseVisualStyleBackColor = false;
+            this.excel.Click += new System.EventHandler(this.excel_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // CashReport_Module
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -675,8 +676,8 @@
             this.panel10.PerformLayout();
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
-            this.metroTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.report_datagridview_cashdisbursment)).EndInit();
+            this.metroTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.summary_datagridview_report_disbursment)).EndInit();
             this.ResumeLayout(false);
 

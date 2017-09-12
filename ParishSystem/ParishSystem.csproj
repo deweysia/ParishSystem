@@ -184,12 +184,6 @@
     <Compile Include="CashReciept.Designer.cs">
       <DependentUpon>CashReciept.cs</DependentUpon>
     </Compile>
-    <Compile Include="CDB_SacramentPayment_Module.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CDB_SacramentPayment_Module.Designer.cs">
-      <DependentUpon>CDB_SacramentPayment_Module.cs</DependentUpon>
-    </Compile>
     <Compile Include="CueTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -394,9 +388,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CashReciept.resx">
       <DependentUpon>CashReciept.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CDB_SacramentPayment_Module.resx">
-      <DependentUpon>CDB_SacramentPayment_Module.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CueTextBox.resx">
       <DependentUpon>CueTextBox.cs</DependentUpon>

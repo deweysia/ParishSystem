@@ -22,11 +22,11 @@ namespace ParishSystem
         {
             if (donationAdd.Tag.ToString()=="a") {
                 int a;
-                a = dh.getDonationIDPrimaryKey(label2.Text);
+                a = dh.getDonationIDPrimaryKey(donationPK.Text);
                 if (a!=-1)
                 {
                     int index = BloodDonationsDGV.Rows.Add();
-                    BloodDonationsDGV.Rows[index].Cells[0].Value = label2.Text;
+                    BloodDonationsDGV.Rows[index].Cells[0].Value = donationPK.Text;
                     BloodDonationsDGV.Rows[index].Cells[1].Value = a.ToString();
                     DonationID_textbox.Clear();
                     donationAdd.Enabled = false;
@@ -39,10 +39,10 @@ namespace ParishSystem
             else
             {
                 int a;
-                a = dh.getDonationIDPrimaryKey(label2.Text);
+                a = dh.getDonationIDPrimaryKey(donationPK.Text);
                 if (a != -1)
                 {
-                    BloodDonationsDGV.SelectedRows[0].Cells[0].Value = label2.Text;
+                    BloodDonationsDGV.SelectedRows[0].Cells[0].Value = donationPK.Text;
                     BloodDonationsDGV.SelectedRows[0].Cells[1].Value = a.ToString();
                     DonationID_textbox.Clear();
                     donationAdd.Tag = "a";
@@ -59,7 +59,7 @@ namespace ParishSystem
 
         private void BloodDonationsDGV_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            label2.Text = BloodDonationsDGV.SelectedRows[0].Cells[0].Value.ToString();
+            donationPK.Text = BloodDonationsDGV.SelectedRows[0].Cells[0].Value.ToString();
             donationDelete.Enabled = true;
             donationAdd.Text = "Edit";
             donationAdd.Tag = "e";
@@ -76,7 +76,7 @@ namespace ParishSystem
 
         private void DonationID_textbox_TextChanged(object sender, EventArgs e)
         {
-            if (label2.Text != "")
+            if (donationPK.Text != "")
             {
                 donationAdd.Enabled = true;
             }
@@ -132,6 +132,10 @@ namespace ParishSystem
             DonationID_textbox.Clear();
             donationAdd.Tag = "a";
             donationAdd.Text = "Add";
+            fn.Clear();
+            mi.Clear();
+            ln.Clear();
+            sf.Clear();
         }
 
         private void Claim_button_Click(object sender, EventArgs e)
@@ -150,6 +154,11 @@ namespace ParishSystem
             mi.Clear();
             ln.Clear();
             sf.Clear();
+        }
+
+        private void BloodClaim_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

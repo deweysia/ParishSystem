@@ -35,7 +35,7 @@ namespace ParishSystem
             sourceName_textbox_fullpay.Clear();
             remarks_textbox_fullpay.Clear();
             final_button_fullpay.Enabled = false;
-            DataTable dt = dh.getItems(1,bookModeFullPay);
+            DataTable dt = dh.getItemsActive(1,bookModeFullPay);
             itemType_combobox_fullpay.Items.Clear();
             itemType_combobox_fullpay.Items.Add("");
             foreach (DataRow dr in dt.Rows)
@@ -581,9 +581,6 @@ namespace ParishSystem
             parish_label.Font = new Font(parish_label.Font, FontStyle.Bold);
             community_label.Font= new Font(community_label.Font, FontStyle.Regular);
             postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
-            parish_label.ForeColor = Color.Black;
-            community_label.ForeColor = Color.FromArgb(64,64,64);
-            postulancy_label.ForeColor= Color.FromArgb(64, 64, 64);
         }
 
         private void community_label_Click(object sender, EventArgs e)
@@ -593,9 +590,6 @@ namespace ParishSystem
             parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
             community_label.Font = new Font(community_label.Font, FontStyle.Bold);
             postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
-            parish_label.ForeColor = Color.FromArgb(64, 64, 64);
-            community_label.ForeColor = Color.Black;
-            postulancy_label.ForeColor = Color.FromArgb(64, 64, 64);
         }
 
         private void postulancy_label_Click(object sender, EventArgs e)
@@ -605,9 +599,6 @@ namespace ParishSystem
             parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
             community_label.Font = new Font(community_label.Font, FontStyle.Regular);
             postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Bold);
-            parish_label.ForeColor = Color.FromArgb(64, 64, 64);
-            community_label.ForeColor = Color.FromArgb(64, 64, 64);
-            postulancy_label.ForeColor = Color.Black;
         }
 
         private void label15_Click(object sender, EventArgs e)

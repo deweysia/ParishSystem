@@ -3718,6 +3718,12 @@ namespace ParishSystem
                      case when status=1 then 'Active' when status=2 then 'Inactive' end as Status ,suggestedprice FROM sad2.itemtype where booktype={bookType} and cashreceipt_cashdisbursment ={cashreceipt_cashdisbursment}";
             return runQuery(q);
         }
+        public DataTable getItemsActive(int bookType, int cashreceipt_cashdisbursment)
+        {
+            string q = $@"SELECT itemType, itemTypeID  ,case when bookType=1 then 'Parish' when bookType=2 then 'Community' when bookType=3 then 'Postulancy' end as Book,
+                     case when status=1 then 'Active' when status=2 then 'Inactive' end as Status ,suggestedprice FROM sad2.itemtype where booktype={bookType} and cashreceipt_cashdisbursment ={cashreceipt_cashdisbursment}  and status = 1";
+            return runQuery(q);
+        }
         public int getDonationIDPrimaryKey(string donationID)
         {
             string q = $@"select * from blooddonation where donationID='{donationID}' and bloodclaimant is null";

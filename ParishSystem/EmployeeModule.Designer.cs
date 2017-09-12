@@ -46,9 +46,6 @@
             this.clear_button = new System.Windows.Forms.Button();
             this.add_button = new System.Windows.Forms.Button();
             this.active_checkbox = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeDGV)).BeginInit();
             this.panel.SuspendLayout();
             this.SuspendLayout();
@@ -60,16 +57,19 @@
             this.EmployeeDGV.AllowUserToDeleteRows = false;
             this.EmployeeDGV.AllowUserToOrderColumns = true;
             this.EmployeeDGV.AllowUserToResizeRows = false;
+            this.EmployeeDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.EmployeeDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.EmployeeDGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.EmployeeDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EmployeeDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.EmployeeDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.EmployeeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -85,7 +85,7 @@
             this.EmployeeDGV.DefaultCellStyle = dataGridViewCellStyle2;
             this.EmployeeDGV.EnableHeadersVisualStyles = false;
             this.EmployeeDGV.GridColor = System.Drawing.Color.White;
-            this.EmployeeDGV.Location = new System.Drawing.Point(28, 27);
+            this.EmployeeDGV.Location = new System.Drawing.Point(42, 50);
             this.EmployeeDGV.MultiSelect = false;
             this.EmployeeDGV.Name = "EmployeeDGV";
             this.EmployeeDGV.ReadOnly = true;
@@ -112,12 +112,13 @@
             this.EmployeeDGV.RowTemplate.Height = 35;
             this.EmployeeDGV.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.EmployeeDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.EmployeeDGV.Size = new System.Drawing.Size(483, 492);
+            this.EmployeeDGV.Size = new System.Drawing.Size(469, 582);
             this.EmployeeDGV.TabIndex = 4;
             this.EmployeeDGV.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmployeeDGV_CellContentDoubleClick);
             // 
             // panel
             // 
+            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.Controls.Add(this.employeeType_combobox);
             this.panel.Controls.Add(this.password_textbox);
             this.panel.Controls.Add(this.username_textbox);
@@ -130,11 +131,8 @@
             this.panel.Controls.Add(this.clear_button);
             this.panel.Controls.Add(this.add_button);
             this.panel.Controls.Add(this.active_checkbox);
-            this.panel.Controls.Add(this.label1);
-            this.panel.Controls.Add(this.label2);
-            this.panel.Controls.Add(this.label3);
             this.panel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel.Location = new System.Drawing.Point(517, 27);
+            this.panel.Location = new System.Drawing.Point(517, 68);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(406, 492);
             this.panel.TabIndex = 5;
@@ -177,6 +175,7 @@
             this.password_textbox.MaxLength = 32767;
             this.password_textbox.Name = "password_textbox";
             this.password_textbox.PasswordChar = '\0';
+            this.password_textbox.PromptText = "Password";
             this.password_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.password_textbox.SelectedText = "";
             this.password_textbox.SelectionLength = 0;
@@ -213,6 +212,7 @@
             this.username_textbox.MaxLength = 32767;
             this.username_textbox.Name = "username_textbox";
             this.username_textbox.PasswordChar = '\0';
+            this.username_textbox.PromptText = "Username";
             this.username_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.username_textbox.SelectedText = "";
             this.username_textbox.SelectionLength = 0;
@@ -251,6 +251,7 @@
             this.middleinitial_textbox.MaxLength = 32767;
             this.middleinitial_textbox.Name = "middleinitial_textbox";
             this.middleinitial_textbox.PasswordChar = '\0';
+            this.middleinitial_textbox.PromptText = "Mi";
             this.middleinitial_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.middleinitial_textbox.SelectedText = "";
             this.middleinitial_textbox.SelectionLength = 0;
@@ -289,6 +290,7 @@
             this.firstname_textbox.MaxLength = 32767;
             this.firstname_textbox.Name = "firstname_textbox";
             this.firstname_textbox.PasswordChar = '\0';
+            this.firstname_textbox.PromptText = "Firstname";
             this.firstname_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.firstname_textbox.SelectedText = "";
             this.firstname_textbox.SelectionLength = 0;
@@ -327,6 +329,7 @@
             this.suffix_textbox.MaxLength = 32767;
             this.suffix_textbox.Name = "suffix_textbox";
             this.suffix_textbox.PasswordChar = '\0';
+            this.suffix_textbox.PromptText = "Sf";
             this.suffix_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.suffix_textbox.SelectedText = "";
             this.suffix_textbox.SelectionLength = 0;
@@ -364,6 +367,7 @@
             this.lastname_textbox.MaxLength = 32767;
             this.lastname_textbox.Name = "lastname_textbox";
             this.lastname_textbox.PasswordChar = '\0';
+            this.lastname_textbox.PromptText = "Lastname";
             this.lastname_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.lastname_textbox.SelectedText = "";
             this.lastname_textbox.SelectionLength = 0;
@@ -392,7 +396,7 @@
             // 
             // resetPassword_button
             // 
-            this.resetPassword_button.BackColor = System.Drawing.Color.Gray;
+            this.resetPassword_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.resetPassword_button.FlatAppearance.BorderSize = 0;
             this.resetPassword_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.resetPassword_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -408,7 +412,7 @@
             // 
             // clear_button
             // 
-            this.clear_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
+            this.clear_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.clear_button.FlatAppearance.BorderSize = 0;
             this.clear_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.clear_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -423,7 +427,7 @@
             // 
             // add_button
             // 
-            this.add_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
+            this.add_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.add_button.Enabled = false;
             this.add_button.FlatAppearance.BorderSize = 0;
             this.add_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
@@ -451,39 +455,12 @@
             this.active_checkbox.Text = "Active";
             this.active_checkbox.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(388, 21);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "______________________________________________________";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(98, 142);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(220, 21);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "______________________________";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(98, 199);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 21);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "______________________________";
-            // 
             // EmployeeModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(935, 547);
+            this.ClientSize = new System.Drawing.Size(943, 669);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.EmployeeDGV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -505,9 +482,6 @@
         private System.Windows.Forms.Button clear_button;
         private System.Windows.Forms.Button add_button;
         private System.Windows.Forms.Button resetPassword_button;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label employeeID_label;
         private MetroFramework.Controls.MetroTextBox lastname_textbox;
         private MetroFramework.Controls.MetroTextBox middleinitial_textbox;

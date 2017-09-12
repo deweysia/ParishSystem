@@ -54,7 +54,7 @@
             // 
             // controlBar_panel
             // 
-            this.controlBar_panel.BackColor = System.Drawing.Color.DimGray;
+            this.controlBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.controlBar_panel.Controls.Add(this.close_button);
             this.controlBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlBar_panel.Location = new System.Drawing.Point(0, 0);

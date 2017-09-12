@@ -712,9 +712,6 @@ namespace ParishSystem
             parish_label.Font = new Font(parish_label.Font, FontStyle.Bold);
             community_label.Font = new Font(community_label.Font, FontStyle.Regular);
             postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
-            parish_label.ForeColor = Color.Black;
-            community_label.ForeColor = Color.FromArgb(64, 64, 64);
-            postulancy_label.ForeColor = Color.FromArgb(64, 64, 64);
             excel.Enabled = false;
         }
 
@@ -726,9 +723,6 @@ namespace ParishSystem
             parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
             community_label.Font = new Font(community_label.Font, FontStyle.Bold);
             postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
-            parish_label.ForeColor = Color.FromArgb(64, 64, 64);
-            community_label.ForeColor = Color.Black;
-            postulancy_label.ForeColor = Color.FromArgb(64, 64, 64);
             excel.Enabled = false;
         }
 
@@ -740,9 +734,6 @@ namespace ParishSystem
             parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
             community_label.Font = new Font(community_label.Font, FontStyle.Regular);
             postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Bold);
-            parish_label.ForeColor = Color.FromArgb(64, 64, 64);
-            community_label.ForeColor = Color.FromArgb(64, 64, 64);
-            postulancy_label.ForeColor = Color.Black;
             excel.Enabled = false;
         }
     }
