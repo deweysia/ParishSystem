@@ -94,7 +94,6 @@ namespace ParishSystem
         {
             waitTimer.Stop();
             stopTimer.Start();
-            //Console.WriteLine("WAIT TICK");
         }
 
         private void CustomNotification_MouseEnter(object sender, EventArgs e)
@@ -210,7 +209,8 @@ namespace ParishSystem
             GroomApplicationExists = new State("Groom already has an existing application", NotificationType.error),
             BrideApplicationExists = new State("Bride already has an existing application", NotificationType.error),
             ApplicationEditSuccess = new State("Application changes successfully applied", NotificationType.success),
-            ApplicationEditFail = new State("Application changes failed to apply", NotificationType.error);
+            ApplicationEditFail = new State("Application changes failed to apply", NotificationType.error),
+            NoMinisterSelected = new State("Please assign a minister to the appointment", NotificationType.warning);
     }
 
     

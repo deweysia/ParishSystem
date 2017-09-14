@@ -12,11 +12,10 @@ namespace ParishSystem
 {
     public partial class EmployeeModule : Form
     {
-        DataHandler login;
-        public EmployeeModule(DataHandler dh)
+        DataHandler login = DataHandler.getDataHandler();
+        public EmployeeModule()
         {
             InitializeComponent();
-            login =dh;
         }
 
         private void addButton_Click(object sender, EventArgs e)

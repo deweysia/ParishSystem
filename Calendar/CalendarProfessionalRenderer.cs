@@ -11,15 +11,15 @@ namespace System.Windows.Forms.Calendar
     {
         #region Fields
 
-        public Color HeaderA = FromHex("#E4ECF6");
-        public Color HeaderB = FromHex("#D6E2F1");
-        public Color HeaderC = FromHex("#C2D4EB");
-        public Color HeaderD = FromHex("#D0DEEF");
+        public Color HeaderA = FromHex("#333333");//FromHex("#E4ECF6");
+        public Color HeaderB = FromHex("#333333");//FromHex("#D6E2F1");
+        public Color HeaderC = FromHex("#333333");//FromHex("#C2D4EB");
+        public Color HeaderD = FromHex("#333333");//FromHex("#D0DEEF");
 
-        public Color TodayA = FromHex("#F8D478");
-        public Color TodayB = FromHex("#F8D478");
-        public Color TodayC = FromHex("#F2AA36");
-        public Color TodayD = FromHex("#F7C966");
+        public Color TodayA = FromHex("#7f7f7f");
+        public Color TodayB = FromHex("#7f7f7f");
+        public Color TodayC = FromHex("#7f7f7f");
+        public Color TodayD = FromHex("#7f7f7f");
 
         #endregion
 
@@ -29,42 +29,42 @@ namespace System.Windows.Forms.Calendar
             : base(c)
         {
             
-            ColorTable.Background = FromHex("#E3EFFF");
-            ColorTable.DayBackgroundEven = FromHex("#A5BFE1");
-            ColorTable.DayBackgroundOdd = FromHex("#FFFFFF");
-            ColorTable.DayBackgroundSelected = FromHex("#E6EDF7");
-            ColorTable.DayBorder = FromHex("#5D8CC9");
-            ColorTable.DayHeaderBackground = FromHex("#DFE8F5");
-            ColorTable.DayHeaderText = Color.Black;
+            ColorTable.Background = FromHex("#262626"); //Formerly E3EFFF
+            ColorTable.DayBackgroundEven = FromHex("#696969"); //FromHex("#A5BFE1");
+            ColorTable.DayBackgroundOdd = FromHex("#C6C7C8"); //FromHex("#FFFFFF");
+            ColorTable.DayBackgroundSelected = Color.Chocolate;//FromHex("#00B294"); //Formerly E6EDF7
+            ColorTable.DayBorder = Color.Wheat;//FromHex("#171918"); //Color.Red;//FromHex("#5D8CC9");
+            ColorTable.DayHeaderBackground = FromHex("#DFE8F5"); //Done
+            ColorTable.DayHeaderText = Color.Wheat;//FromHex("#656B64"); //Color.Black;
             ColorTable.DayHeaderSecondaryText = Color.Black;
-            ColorTable.DayTopBorder = FromHex("#5D8CC9");
-            ColorTable.DayTopSelectedBorder = FromHex("#5D8CC9");
-            ColorTable.DayTopBackground = FromHex("#A5BFE1");
-            ColorTable.DayTopSelectedBackground = FromHex("#294C7A");
-            ColorTable.ItemBorder = FromHex("#5D8CC9");
+            ColorTable.DayTopBorder = FromHex("#5D8CC9"); //Color.Green; //FromHex("#5D8CC9");
+            ColorTable.DayTopSelectedBorder = FromHex("#5D8CC9"); //Color.Pink; //FromHex("#5D8CC9");
+            ColorTable.DayTopBackground = FromHex("#333333");//Color.Purple; //FromHex("#A5BFE1");
+            ColorTable.DayTopSelectedBackground = FromHex("#262626"); //Color.Tomato; //FromHex("#294C7A");
+            ColorTable.ItemBorder = FromHex("#5D8CC9"); //Color.Lime; //FromHex("#5D8CC9");
             ColorTable.ItemBackground = FromHex("#C0D3EA");
-            ColorTable.ItemText = Color.Black;
-            ColorTable.ItemSecondaryText = FromHex("#294C7A");
-            ColorTable.ItemSelectedBorder = Color.Black;
+            ColorTable.ItemText = FromHex("#373737"); //Formerly Color.Black
+            ColorTable.ItemSecondaryText = FromHex("#262626"); //FromHex("#294C7A");
+            ColorTable.ItemSelectedBorder = Color.White; //Formerly Color.Black
             ColorTable.ItemSelectedBackground = FromHex("#C0D3EA");
             ColorTable.ItemSelectedText = Color.Black;
-            ColorTable.WeekHeaderBackground = FromHex("#DFE8F5");
-            ColorTable.WeekHeaderBorder = FromHex("#5D8CC9");
-            ColorTable.WeekHeaderText = FromHex("#5D8CC9");
-            ColorTable.TodayBorder = FromHex("#EE9311");
-            ColorTable.TodayTopBackground = FromHex("#EE9311");
-            ColorTable.TimeScaleLine = FromHex("#6593CF");
-            ColorTable.TimeScaleHours = FromHex("#6593CF");
-            ColorTable.TimeScaleMinutes = FromHex("#6593CF");
-            ColorTable.TimeUnitBackground = FromHex("#E6EDF7");
+            ColorTable.WeekHeaderBackground = FromHex("#262626"); //Color.Red; //FromHex("#DFE8F5");
+            ColorTable.WeekHeaderBorder = FromHex("#171918"); //Color.Red;// FromHex("#5D8CC9");
+            ColorTable.WeekHeaderText = Color.Wheat;//Color.Red;// FromHex("#5D8CC9");
+            ColorTable.TodayBorder = Color.Chocolate; //FromHex("#00B294"); //Color.Red;// FromHex("#EE9311");
+            ColorTable.TodayTopBackground = Color.Chocolate;// FromHex("#00B294"); //Color.Gray; //FromHex("#EE9311");
+            ColorTable.TimeScaleLine = FromHex("#515151"); //FromHex("#1A1A1A");// FromHex("#ff0000"); //Formerly 6593CF
+            ColorTable.TimeScaleHours = FromHex("#515151"); //Color.White; //FromHex("#6593CF");
+            ColorTable.TimeScaleMinutes = FromHex("#515151");// Color.White; //FromHex("#6593CF");
+            ColorTable.TimeUnitBackground = FromHex("#E6EDF7"); //FromHex("#00B294"); 
             ColorTable.TimeUnitHighlightedBackground = Color.White;
-            ColorTable.TimeUnitSelectedBackground = FromHex("#294C7A");
+            ColorTable.TimeUnitSelectedBackground = Color.Chocolate; //FromHex("#00B294"); //294C7A
             ColorTable.TimeUnitBorderLight = FromHex("#D5E1F1");
-            ColorTable.TimeUnitBorderDark = FromHex("#A5BFE1");
-            ColorTable.WeekDayName = FromHex("#6593CF");
+            ColorTable.TimeUnitBorderDark = FromHex("#696969"); // FromHex("#A5BFE1");
+            ColorTable.WeekDayName = Color.Wheat; //FromHex("#515151"); //Color.White; // FromHex("#6593CF");
 
             SelectedItemBorder = 2f;
-            ItemRoundness = 5;
+            ItemRoundness = 2;
         }
 
         #endregion

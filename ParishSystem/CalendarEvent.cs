@@ -25,17 +25,17 @@ namespace ParishSystem
 
             if(type == ScheduleType.Unspecified)
             {
-                item.BackgroundColor = Color.AliceBlue;
-                item.ApplyColor(Color.DarkViolet);
+                
+                item.ApplyColor(Color.FromArgb(181, 230, 29));
             }else if(type == ScheduleType.Appointment)
             {
-                item.BackgroundColor = Color.DarkOrange;
-                item.ApplyColor(Color.DarkOrange);
+                
+                item.ApplyColor(Color.FromArgb(255, 127, 39));
             }
             else
             {
-                item.BackgroundColor = Color.Yellow;
-                item.ApplyColor(Color.Maroon);
+                
+                item.ApplyColor(Color.FromArgb(112, 146, 190));
             }
             
             
