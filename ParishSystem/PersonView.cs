@@ -33,17 +33,14 @@ namespace ParishSystem
             {
                 if (int.Parse(dr["sacramentType"].ToString()) == (int)SacramentType.Baptism)
                 {
-                    baptism_label_menu.ForeColor = Color.Black;
                     baptism_label_menu.Enabled = true;
                 }
                 else if (int.Parse(dr["sacramentType"].ToString()) == (int)SacramentType.Confirmation)
                 {
-                    confirmation_label_menu.ForeColor = Color.Black;
                     confirmation_label_menu.Enabled = true;
                 }
                 else if (int.Parse(dr["sacramentType"].ToString()) == (int)SacramentType.Marriage)
                 {
-                    marriage_label_menu.ForeColor = Color.Black;
                     marriage_label_menu.Enabled = true;
                 }
             }
@@ -52,7 +49,7 @@ namespace ParishSystem
             suffix_label.Text = temp.Rows[0]["suffix"].ToString();
             firstname_label.Text = temp.Rows[0]["firstname"].ToString();
             mi_label.Text = temp.Rows[0]["midname"].ToString();
-            if (temp.Rows[0]["birthdate"].ToString()!="") { birthdate_label.Text = dh.toDateTime(temp.Rows[0]["birthdate"].ToString(),false).ToString("MMMM dd, yyyy");  } else { birthdate_panel.Visible = false; }
+            if (temp.Rows[0]["birthdate"].ToString()!="") { birthdate_label.Text = DateTime.Parse(temp.Rows[0]["birthdate"].ToString()).ToString("MMMM dd, yyyy");  } else { birthdate_panel.Visible = false; }
 
             if (temp.Rows[0]["gender"].ToString() != "")
             {
@@ -94,18 +91,9 @@ namespace ParishSystem
             baptism_panel.Visible = true;
             confirmation_panel.Visible = false;
             marriage_panel.Visible = false;
-            baptism_label_menu.BackColor = Color.FromArgb(224, 224, 224);
-            baptism_label_menu.ForeColor = Color.White;
-            if (confirmation_label_menu.Enabled == true)
-            {
-                confirmation_label_menu.BackColor = Color.White;
-                confirmation_label_menu.ForeColor = Color.Black;
-            }
-            if (marriage_label_menu.Enabled == true)
-            {
-                marriage_label_menu.BackColor = Color.White;
-                marriage_label_menu.ForeColor = Color.Black;
-            }
+            baptism_label_menu.Font = new Font(baptism_label_menu.Font, FontStyle.Bold);
+            confirmation_label_menu.Font = new Font(confirmation_label_menu.Font, FontStyle.Regular);
+            marriage_label_menu.Font = new Font(marriage_label_menu.Font, FontStyle.Regular);
             refreshBaptism();
         }
 
@@ -152,7 +140,7 @@ namespace ParishSystem
                         {
                             legitimacy_label_baptism.Text = "Natural";
                         }
-                        date_label_baptism.Text = dh.toDateTime(temp.Rows[0]["baptismDate"].ToString(), false).ToString("MMMM dd yyyy");
+                        date_label_baptism.Text = DateTime.Parse(temp.Rows[0]["baptismDate"].ToString()).ToString("MMMM dd yyyy");
 
                         name_label_minister_baptism.Text = dh.getMinister(int.Parse(dh.getBaptism(int.Parse(dr["applicationID"].ToString())).Rows[0]["ministerID"].ToString())).Rows[0]["name"].ToString();
                     }
@@ -185,18 +173,9 @@ namespace ParishSystem
             baptism_panel.Visible = false;
             confirmation_panel.Visible = true;
             marriage_panel.Visible = false;
-            if (baptism_label_menu.Enabled == true)
-            {
-                baptism_label_menu.BackColor = Color.White;
-                baptism_label_menu.ForeColor = Color.Black;
-            }
-            confirmation_label_menu.BackColor = Color.FromArgb(30, 30, 30);
-            confirmation_label_menu.ForeColor = Color.White;
-            if (marriage_label_menu.Enabled == true)
-            {
-                marriage_label_menu.BackColor = Color.White;
-                marriage_label_menu.ForeColor = Color.Black;
-            }
+            baptism_label_menu.Font = new Font(baptism_label_menu.Font, FontStyle.Regular);
+            confirmation_label_menu.Font = new Font(confirmation_label_menu.Font, FontStyle.Bold);
+            marriage_label_menu.Font = new Font(marriage_label_menu.Font, FontStyle.Regular);
             refreshConfirmation();
             
         }
@@ -229,7 +208,7 @@ namespace ParishSystem
                     DataTable temp = dh.getConfirmation(int.Parse(dr["applicationID"].ToString()));
                     try
                     {
-                        date_label_confirmation.Text = dh.toDateTime(temp.Rows[0]["confirmationDate"].ToString(), false).ToString("MMMM dd yyyy");
+                        date_label_confirmation.Text = DateTime.Parse(temp.Rows[0]["confirmationDate"].ToString()).ToString("MMMM dd yyyy");
 
                         name_label_minister_confirmation.Text = dh.getMinister(int.Parse(dh.getConfirmation(int.Parse(dr["applicationID"].ToString())).Rows[0]["ministerID"].ToString())).Rows[0]["name"].ToString();
                     }
@@ -255,18 +234,9 @@ namespace ParishSystem
             baptism_panel.Visible = false;
             confirmation_panel.Visible = false;
             marriage_panel.Visible = true;
-            if (baptism_label_menu.Enabled == true)
-            {
-                baptism_label_menu.BackColor = Color.White;
-                baptism_label_menu.ForeColor = Color.Black;
-            }
-            if (confirmation_label_menu.Enabled == true)
-            {
-                confirmation_label_menu.BackColor = Color.White;
-                confirmation_label_menu.ForeColor = Color.Black;
-            }
-            marriage_label_menu.BackColor = Color.FromArgb(30, 30, 30);
-            marriage_label_menu.ForeColor = Color.White;
+            baptism_label_menu.Font = new Font(baptism_label_menu.Font, FontStyle.Regular);
+            confirmation_label_menu.Font = new Font(confirmation_label_menu.Font, FontStyle.Regular);
+            marriage_label_menu.Font = new Font(marriage_label_menu.Font, FontStyle.Bold);
             Partners = dh.getPartner(ProfileID);
             if (marriageFirstClick)
             {
@@ -287,7 +257,7 @@ namespace ParishSystem
                    
                     if (dr["birthdate"].ToString() != "")
                     {
-                        birthdate_label_spouse_marriage.Text = dh.toDateTime((dr["birthdate"].ToString()), false).ToString("MMMM dd, yyyy");
+                        birthdate_label_spouse_marriage.Text = DateTime.Parse((dr["birthdate"].ToString())).ToString("MMMM dd, yyyy");
                     }
                     else
                     {
@@ -356,7 +326,7 @@ namespace ParishSystem
                     //minister
                     try
                     {
-                        date_label_marriage.Text = dh.toDateTime(temp.Rows[0]["marriageDate"].ToString(), false).ToString("MMMM dd yyyy");
+                        date_label_marriage.Text = DateTime.Parse(temp.Rows[0]["marriageDate"].ToString()).ToString("MMMM dd yyyy");
 
                         name_label_minister_marriage.Text = dh.getMinister(int.Parse(dh.getMarriage(int.Parse(dr["applicationID"].ToString())).Rows[0]["ministerID"].ToString())).Rows[0]["name"].ToString();
                     }

@@ -637,15 +637,7 @@ namespace ParishSystem
             refreshReports();
             open = !open;
             timer1.Start();
-            if (breakdown_radiobutton_cashdisbursment.Checked) 
-            {
-                report_datagridview_cashdisbursment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-            }
-            else
-            {
-                report_datagridview_cashdisbursment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            }
-            excel.Enabled = true;
+            SaveExcelButton.Enabled = true;
         }
         bool open = false;
         int velocity = 0;
@@ -690,11 +682,7 @@ namespace ParishSystem
          
         }
 
-        private void excel_Click(object sender, EventArgs e)
-        {
-            //dh.DisplayInExcel(report_datagridview_cashdisbursment);
-            dh.CashReciept_Grouped_Breakdown(report_datagridview_cashdisbursment,1,1);
-        }
+      
 
         private void reportFilter_panel_Paint(object sender, PaintEventArgs e)
         {
@@ -709,7 +697,7 @@ namespace ParishSystem
             parish_label.Font = new Font(parish_label.Font, FontStyle.Bold);
             community_label.Font = new Font(community_label.Font, FontStyle.Regular);
             postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
-            excel.Enabled = false;
+            SaveExcelButton.Enabled = false;
         }
 
         private void community_label_Click(object sender, EventArgs e)
@@ -720,7 +708,7 @@ namespace ParishSystem
             parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
             community_label.Font = new Font(community_label.Font, FontStyle.Bold);
             postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
-            excel.Enabled = false;
+            SaveExcelButton.Enabled = false;
         }
 
         private void postulancy_label_Click(object sender, EventArgs e)
@@ -731,7 +719,78 @@ namespace ParishSystem
             parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
             community_label.Font = new Font(community_label.Font, FontStyle.Regular);
             postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Bold);
-            excel.Enabled = false;
+            SaveExcelButton.Enabled = false;
+        }
+
+        private void PreviewClick(object sender, EventArgs e)
+        {
+            if (total_radiobutton_cashdisbursment.Checked)
+            {
+                if (grouped_radiobutton_cashdisbursment.Checked)
+                {
+                    dh.Excel_CashReciept_Grouped_Total(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 1);
+                }
+                else
+                {
+                    dh.Excel_CashReciept_Ungrouped_Total(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 1);
+                }
+            }
+            else
+            {
+                if (grouped_radiobutton_cashdisbursment.Checked)
+                {
+                    dh.Excel_CashReciept_Grouped_Breakdown(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 1);
+                }
+                else
+                {
+                    dh.Excel_CashReciept_UnGrouped_Breakdown(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 1);
+                }
+            }
+        }
+        private void excel_Click(object sender, EventArgs e)
+        {
+            if (total_radiobutton_cashdisbursment.Checked)
+            {
+                if (grouped_radiobutton_cashdisbursment.Checked)
+                {
+                    dh.Excel_CashReciept_Grouped_Total(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 2);
+                }
+                else
+                {
+                    dh.Excel_CashReciept_Ungrouped_Total(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 2);
+                }
+            }
+            else
+            {
+                if (grouped_radiobutton_cashdisbursment.Checked)
+                {
+                    dh.Excel_CashReciept_Grouped_Breakdown(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 2);
+                }
+                else
+                {
+                    dh.Excel_CashReciept_UnGrouped_Breakdown(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 2);
+                }
+            }
+            dh.killAllExcel();
+        }
+
+        private void report_datagridview_cashdisbursment_DataSourceChanged(object sender, EventArgs e)
+        {
+            if (report_datagridview_cashdisbursment.DataSource != null)
+            {
+                PreviewButton.Enabled = true;
+                SaveExcelButton.Enabled = true;
+            }
+            else
+            {
+                PreviewButton.Enabled = false;
+                SaveExcelButton.Enabled = false;
+            }
+        }
+
+        private void CashReport_Module_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
