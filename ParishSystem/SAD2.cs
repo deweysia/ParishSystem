@@ -21,7 +21,8 @@ namespace ParishSystem
             Profile,
             Scheduling,
             Minister,
-            Bloodletting_DonorMode_EventMode,
+            Bloodletting_DonorMode,
+            Bloodletting_EventMode,
             CashReceipt_BookModeFullPay,
             ReceiptReports_Disbursement_Release_Parish_Community_Postulancy,
             CashDisbursement_CashRealeaseMode,
@@ -79,9 +80,11 @@ namespace ParishSystem
             modules.Add(CabinetModule.Minister, new MinisterModule());
 
             //Bloodletting Module
-            modules.Add(CabinetModule.Bloodletting_DonorMode_EventMode, new Bloodletting_Module(1));
+            modules.Add(CabinetModule.Bloodletting_DonorMode, new Bloodletting_Module(1));
+            modules.Add(CabinetModule.Bloodletting_EventMode, new Bloodletting_Module(2));
             modules.Add(CabinetModule.BloodClaim, new BloodClaim());
             modules.Add(CabinetModule.BloodlettingReports, new BloodlettingReports_Module());
+            modules.Add(CabinetModule.ClaimView, new BloodClaimView());
 
             //Cash Module
             modules.Add(CabinetModule.CashDisbursement_CashRealeaseMode, new CashDisbursment(1));
@@ -378,14 +381,14 @@ namespace ParishSystem
         private void bloodlettingevent_button_Click(object sender, EventArgs e)
         {
             //Form A = new Bloodletting_Module(2);
-            Form A = modules[CabinetModule.Bloodletting_DonorMode_EventMode];
+            Form A = modules[CabinetModule.Bloodletting_EventMode];
             showForm(content_panel, A);
         }
 
         private void bloodlettingdonor_button_Click(object sender, EventArgs e)
         {
             //Form A = new Bloodletting_Module(1);
-            Form A = modules[CabinetModule.Bloodletting_DonorMode_EventMode];
+            Form A = modules[CabinetModule.Bloodletting_DonorMode]; 
             showForm(content_panel, A);
         }
 
@@ -411,7 +414,7 @@ namespace ParishSystem
         private void bloodClaimView_menu_button_Click(object sender, EventArgs e)
         {
             //Form A = new BloodClaimView();
-            Form A = modules[CabinetModule.BloodClaim];
+            Form A = modules[CabinetModule.ClaimView];
             showForm(content_panel, A);
         }
         private void logout_button_Click(object sender, EventArgs e)
