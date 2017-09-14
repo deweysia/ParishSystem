@@ -39,14 +39,19 @@
             // search_button
             // 
             this.search_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.search_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.search_button.FlatAppearance.BorderSize = 0;
+            this.search_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.search_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.search_button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search_button.Location = new System.Drawing.Point(799, 36);
+            this.search_button.ForeColor = System.Drawing.Color.White;
+            this.search_button.Location = new System.Drawing.Point(799, 37);
             this.search_button.Name = "search_button";
             this.search_button.Size = new System.Drawing.Size(102, 29);
             this.search_button.TabIndex = 6;
             this.search_button.Tag = "s";
             this.search_button.Text = "Search";
-            this.search_button.UseVisualStyleBackColor = true;
+            this.search_button.UseVisualStyleBackColor = false;
             this.search_button.Click += new System.EventHandler(this.search_button_Click);
             // 
             // search_textbox

@@ -168,7 +168,6 @@
             this.flowLayout_ControlButtons.Name = "flowLayout_ControlButtons";
             this.flowLayout_ControlButtons.Size = new System.Drawing.Size(130, 33);
             this.flowLayout_ControlButtons.TabIndex = 20;
-  
             // 
             // btn_Close
             // 
@@ -242,7 +241,6 @@
             this.Menu_panel.Name = "Menu_panel";
             this.Menu_panel.Size = new System.Drawing.Size(232, 667);
             this.Menu_panel.TabIndex = 45;
-       
             this.Menu_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Menu_panel_MouseDown);
             // 
             // menu_flowlayout
@@ -276,7 +274,6 @@
             this.sacrament_cabinet_panel.Size = new System.Drawing.Size(232, 50);
             this.sacrament_cabinet_panel.TabIndex = 51;
             this.sacrament_cabinet_panel.Click += new System.EventHandler(this.SubmenuOpen_Click);
-
             // 
             // application_button_menu
             // 
@@ -417,7 +414,6 @@
             this.cash_cabinet_panel.Size = new System.Drawing.Size(232, 50);
             this.cash_cabinet_panel.TabIndex = 50;
             this.cash_cabinet_panel.Click += new System.EventHandler(this.SubmenuOpen_Click);
-
             // 
             // itemtypemenu_button
             // 
@@ -883,6 +879,7 @@
             this.Controls.Add(this.panel_controlbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SAD2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SAD2";
             this.Load += new System.EventHandler(this.SAD2_Load);
             this.panel_controlbox.ResumeLayout(false);

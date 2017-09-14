@@ -631,11 +631,7 @@ namespace ParishSystem
 
         }
 
-        private void refreshReport()
-        {
-
-        }
-       
+    
         private void generate_report(object sender, EventArgs e)
         {
             refreshReports();
@@ -696,7 +692,8 @@ namespace ParishSystem
 
         private void excel_Click(object sender, EventArgs e)
         {
-            dh.DisplayInExcel(report_datagridview_cashdisbursment);
+            //dh.DisplayInExcel(report_datagridview_cashdisbursment);
+            dh.CashReciept_Grouped_Breakdown(report_datagridview_cashdisbursment,1,1);
         }
 
         private void reportFilter_panel_Paint(object sender, PaintEventArgs e)
@@ -706,7 +703,7 @@ namespace ParishSystem
 
         private void parish_label_Click(object sender, EventArgs e)
         {
-            this.bookReportMode = 1;
+            this.cashDisbursmentMode = 1;
             report_datagridview_cashdisbursment.DataSource = null;
             summary_datagridview_report_disbursment.DataSource = null;
             parish_label.Font = new Font(parish_label.Font, FontStyle.Bold);
@@ -717,7 +714,7 @@ namespace ParishSystem
 
         private void community_label_Click(object sender, EventArgs e)
         {
-            this.bookReportMode = 2;
+            this.cashDisbursmentMode = 2;
             report_datagridview_cashdisbursment.DataSource = null;
             summary_datagridview_report_disbursment.DataSource = null;
             parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
@@ -728,7 +725,7 @@ namespace ParishSystem
 
         private void postulancy_label_Click(object sender, EventArgs e)
         {
-            this.bookReportMode = 3;
+            this.cashDisbursmentMode = 3;
             report_datagridview_cashdisbursment.DataSource = null;
             summary_datagridview_report_disbursment.DataSource = null;
             parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);

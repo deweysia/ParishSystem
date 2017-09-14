@@ -71,6 +71,8 @@ namespace ParishSystem
             Draggable drag = new Draggable(this);
             drag.makeDraggable(panel_controlbox);
             drag.makeDraggable(panel2);
+            
+
 /*
             
 */
@@ -93,7 +95,11 @@ namespace ParishSystem
 
         private void btn_Max_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
+            this.Left = 0;
+            this.Top = 0;
+            Width = Screen.PrimaryScreen.WorkingArea.Width;
+            Height = Screen.PrimaryScreen.WorkingArea.Height;
         }
         #endregion
 
@@ -373,8 +379,11 @@ namespace ParishSystem
      
         private void btn_min_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
-            
+            //this.WindowState = FormWindowState.Normal;
+            Width = 1000;
+            Height = 700;
+            CenterToParent();
+
         }
 
         private void Menu_panel_MouseDown(object sender, MouseEventArgs e)

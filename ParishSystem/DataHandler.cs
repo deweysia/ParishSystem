@@ -232,7 +232,7 @@ namespace ParishSystem
           
 
         }
-
+     
         #endregion
         /*
                                          =============================================================
@@ -943,8 +943,7 @@ namespace ParishSystem
             string q = "SELECT COALESCE(SUM(amount), 0) AS sum FROM Payment WHERE sacramentIncomeID = " + sacramentIncomeID;
 
             DataTable dt = runQuery(q);
-
-            //MessageBox.Show(dt.Rows[0]["sum"].ToString());
+        
             double sum = double.Parse(dt.Rows[0]["sum"].ToString());
             return sum;
         }
@@ -2776,7 +2775,7 @@ namespace ParishSystem
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where primaryincome.booktype = {BookType} and 
                             ORnum like '%{OR}%'
-                            union
+                            union all
                             select primaryincome.primaryIncomeID,sourceName,primaryincome.bookType,ORnum,primaryIncomeDateTime,amount,itemType from primaryincome 
                             inner join payment on payment.primaryIncomeID = primaryincome.primaryIncomeID 
                             inner join sacramentincome on sacramentincome.sacramentIncomeID = payment.sacramentIncomeID 
@@ -2793,7 +2792,7 @@ namespace ParishSystem
                             inner join item on item.primaryIncomeID = primaryincome.primaryincomeid 
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where DAY(primaryIncomeDateTime) = {Day} and MONTH(primaryIncomeDateTime) = {Month} and YEAR(primaryIncomeDateTime) = {Year} and primaryIncome.bookType = {BookType}
-                            union
+                            union all
                             select primaryincome.primaryIncomeID,sourceName,primaryincome.bookType,ORnum,primaryIncomeDateTime,amount,itemType from primaryincome 
                             inner join payment on payment.primaryIncomeID = primaryincome.primaryIncomeID 
                             inner join sacramentincome on sacramentincome.sacramentIncomeID = payment.sacramentIncomeID 
@@ -2809,7 +2808,7 @@ namespace ParishSystem
                             inner join item on item.primaryIncomeID = primaryincome.primaryincomeid 
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where MONTH(primaryIncomeDateTime) = {Month} and YEAR(primaryIncomeDateTime) = {Year} and primaryIncome.bookType = {BookType}
-                            union
+                            union all
                             select primaryincome.primaryIncomeID,sourceName,primaryincome.bookType,ORnum,primaryIncomeDateTime,amount,itemType from primaryincome 
                             inner join payment on payment.primaryIncomeID = primaryincome.primaryIncomeID 
                             inner join sacramentincome on sacramentincome.sacramentIncomeID = payment.sacramentIncomeID 
@@ -2825,7 +2824,7 @@ namespace ParishSystem
                             inner join item on item.primaryIncomeID = primaryincome.primaryincomeid 
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where YEAR(primaryIncomeDateTime) = {Year} and primaryIncome.bookType = {BookType}
-                            union
+                            union all
                             select primaryincome.primaryIncomeID,sourceName,primaryincome.bookType,ORnum,primaryIncomeDateTime,amount,itemType from primaryincome 
                             inner join payment on payment.primaryIncomeID = primaryincome.primaryIncomeID 
                             inner join sacramentincome on sacramentincome.sacramentIncomeID = payment.sacramentIncomeID 
@@ -2842,7 +2841,7 @@ namespace ParishSystem
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where(primaryIncomeDateTime between '{ from.ToString("yyyy-MM-dd 00:00:00")}' and '{to.ToString("yyyy-MM-dd 23:59:59")}')
                             and primaryIncome.bookType = { BookType }
-                            union
+                            union all
                             select primaryincome.primaryIncomeID,sourceName,primaryincome.bookType,ORnum,primaryIncomeDateTime,amount,itemType from primaryincome 
                             inner join payment on payment.primaryIncomeID = primaryincome.primaryIncomeID 
                             inner join sacramentincome on sacramentincome.sacramentIncomeID = payment.sacramentIncomeID 
@@ -2860,7 +2859,7 @@ namespace ParishSystem
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where(primaryIncomeDateTime between '{ (DateTime.Now - new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd")}' and '{DateTime.Now.ToString("yyyy-MM-dd 23:59:59")}')
                             and primaryIncome.bookType = {BookType}
-                            union
+                            union all
                             select primaryincome.primaryIncomeID,sourceName,primaryincome.bookType,ORnum,primaryIncomeDateTime,amount,itemType from primaryincome 
                             inner join payment on payment.primaryIncomeID = primaryincome.primaryIncomeID 
                             inner join sacramentincome on sacramentincome.sacramentIncomeID = payment.sacramentIncomeID 
@@ -2894,6 +2893,7 @@ namespace ParishSystem
                     itemtypes[dr["itemtype"].ToString()] = float.Parse(itemtypes[dr["itemtype"].ToString()].ToString()) + float.Parse(dr["price"].ToString());
                 }
             }
+
             DataTable output = new DataTable();
             output.Columns.Add("Type", typeof(string));
             output.Columns.Add("Sum", typeof(float));
@@ -2930,7 +2930,7 @@ namespace ParishSystem
                     }
                     row["OR Number"] = dr["ORnum"].ToString();
                     row["Name"] = dr["SourceName"].ToString();
-                    row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString(" MMMM dd yyyy, hh:mm");
+                    row["Date Paid"] = DateTime.Parse(dr["primaryincomedatetime"].ToString()).ToString(" MMMM dd yyyy, hh:mm");
                     try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["price"].ToString()); } catch { row["Amount"] = float.Parse(dr["price"].ToString()); };
                 }
                 output.Rows.Add(row);
@@ -2947,22 +2947,22 @@ namespace ParishSystem
                 output.Columns.Add("Amount", typeof(float));
                 output.Columns.Add("Date Paid", typeof(string));
                 DataRow row = output.NewRow();
-                DateTime currentDate = toDateTime(transactions.Rows[0]["primaryIncomeDateTime"].ToString(), false);
+                DateTime currentDate = DateTime.Parse(transactions.Rows[0]["primaryIncomeDateTime"].ToString()).Date;
                 int minOR = int.MaxValue;
                 int maxOR = 0;
 
                 foreach (DataRow dr in transactions.Rows)
                 {
-                    if (!currentDate.Equals(toDateTime(dr["primaryIncomeDateTime"].ToString(), false)))
+                    if (!currentDate.Equals(DateTime.Parse(dr["primaryIncomeDateTime"].ToString()).Date))
                     {
-                        row["OR Number"] = minOR.ToString() + "-" + maxOR.ToString();
+                        row["OR Number"] = minOR.ToString() + " -- " + maxOR.ToString();
                         output.Rows.Add(row);
                         row = output.NewRow();
-                        currentDate = toDateTime(dr["primaryIncomeDateTime"].ToString(), false);
+                        currentDate = DateTime.Parse(dr["primaryIncomeDateTime"].ToString()).Date;
                         minOR = int.MaxValue;
                         maxOR = 0;
                     }
-                    row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString("MMMM dd yyyy");
+                    row["Date Paid"] = DateTime.Parse(dr["primaryincomedatetime"].ToString()).ToString("MMMM dd yyyy");
                     if (minOR > int.Parse(dr["ORnum"].ToString()))
                     {
                         minOR = int.Parse(dr["ORnum"].ToString());
@@ -2972,10 +2972,10 @@ namespace ParishSystem
                     {
                         maxOR = int.Parse(dr["ORnum"].ToString());
                     }
-                    row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString("MMMM dd yyyy");
+                    row["Date Paid"] = DateTime.Parse(dr["primaryincomedatetime"].ToString()).ToString("MMMM dd yyyy");
                     try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["price"].ToString()); } catch { row["Amount"] = float.Parse(dr["price"].ToString()); };
                 }
-                row["OR Number"] = minOR.ToString() + "-" + maxOR.ToString();
+                row["OR Number"] = minOR.ToString() + " -- " + maxOR.ToString();
                 output.Rows.Add(row);
                 return output;
             }
@@ -3010,7 +3010,8 @@ namespace ParishSystem
                     }
                     row["OR Number"] = dr["ORnum"].ToString();
                     row["Name"] = dr["SourceName"].ToString();
-                    row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString("MMMM dd yyyy, hh:mm");
+                   
+                    row["Date Paid"] = DateTime.Parse(dr["primaryincomedatetime"].ToString()).ToString("MMMM dd yyyy, hh:mm");
                     row[dr["itemType"].ToString()] = (row[dr["itemType"].ToString()] == null ? 0 : float.Parse(row[dr["itemType"].ToString()].ToString())) + float.Parse(dr["price"].ToString());
                 }
                 output.Rows.Add(row);
@@ -3055,7 +3056,7 @@ namespace ParishSystem
         {
             if (transactions.Rows.Count > 0)
             {
-                DateTime currentDate = toDateTime(transactions.Rows[0]["primaryIncomeDateTime"].ToString(), false);
+                DateTime currentDate = DateTime.Parse(transactions.Rows[0]["primaryIncomeDateTime"].ToString()).Date;
                 int minOR = int.MaxValue;
                 int maxOR = 0;
 
@@ -3074,16 +3075,16 @@ namespace ParishSystem
                 DataRow row = output.NewRow();
                 foreach (DataRow dr in transactions.Rows)
                 {
-                    if (!currentDate.Equals(toDateTime(dr["primaryIncomeDateTime"].ToString(), false)))
+                    if (!currentDate.Equals(DateTime.Parse(dr["primaryIncomeDateTime"].ToString()).Date))
                     {
-                        row["OR Number"] = minOR.ToString() + "-" + maxOR.ToString();
+                        row["OR Number"] = minOR.ToString() +  " -- " + maxOR.ToString();
                         output.Rows.Add(row);
                         row = output.NewRow();
-                        currentDate = toDateTime(dr["primaryIncomeDateTime"].ToString(), false);
+                        currentDate = DateTime.Parse(dr["primaryIncomeDateTime"].ToString()).Date;
                         minOR = int.MaxValue;
                         maxOR = 0;
                     }
-                    row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString("MMMM dd yyyy");
+                    row["Date Paid"] = DateTime.Parse(dr["primaryincomedatetime"].ToString()).ToString("MMMM dd yyyy");
                     if (minOR > int.Parse(dr["ORnum"].ToString()))
                     {
                         minOR = int.Parse(dr["ORnum"].ToString());
@@ -3094,11 +3095,11 @@ namespace ParishSystem
                         maxOR = int.Parse(dr["ORnum"].ToString());
                     }
                     //per itemtype code starts here
-                    row["Date Paid"] = toDateTime(dr["primaryincomedatetime"].ToString(), true).ToString("MMMM dd yyyy");
+                    row["Date Paid"] = DateTime.Parse(dr["primaryincomedatetime"].ToString()).ToString("MMMM dd yyyy");
                     row[dr["itemType"].ToString()] = (row[dr["itemType"].ToString()] == null ? 0 : float.Parse(row[dr["itemType"].ToString()].ToString())) + float.Parse(dr["price"].ToString());
                     //per item type code ends here
                 }
-                row["OR Number"] = minOR.ToString() + "-" + maxOR.ToString();
+                row["OR Number"] = minOR.ToString() + " -- " + maxOR.ToString();
                 output.Rows.Add(row);
 
                 bool[] columns = new bool[output.Columns.Count - 3];
@@ -3307,7 +3308,7 @@ namespace ParishSystem
                     row["CVnum"] = dr["CVnum"].ToString();
                     row["CheckNum"] = dr["checkNum"].ToString();
                     row["Name"] = dr["name"].ToString();
-                    row["Date Paid"] = toDateTime(dr["cashReleaseDateTime"].ToString(), true).ToString("MMMM dd yyyy, hh-mm");
+                    row["Date Paid"] = DateTime.Parse(dr["cashReleaseDateTime"].ToString()).ToString("MMMM dd yyyy, hh-mm");
                     try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["releaseAmount"].ToString()); } catch { row["Amount"] = float.Parse(dr["releaseAmount"].ToString()); };
                 }
                 output.Rows.Add(row);
@@ -3328,26 +3329,26 @@ namespace ParishSystem
                 output.Columns.Add("Amount", typeof(float));
                 output.Columns.Add("Date Paid", typeof(string));
                 DataRow row = output.NewRow();
-                DateTime currentDate = toDateTime(transactions.Rows[0]["cashReleaseDateTime"].ToString(), false);
+                DateTime currentDate = DateTime.Parse(transactions.Rows[0]["cashReleaseDateTime"].ToString()).Date;
                 int minCV = int.MaxValue;
                 int maxCV = 0;
                 int minCN = int.MaxValue;
                 int maxCN = 0;
                 foreach (DataRow dr in transactions.Rows)
                 {
-                    if (!currentDate.Equals(toDateTime(dr["cashReleaseDateTime"].ToString(), false)))
+                    if (!currentDate.Equals(DateTime.Parse(dr["cashReleaseDateTime"].ToString()).Date))
                     {
-                        row["CVnum"] = minCV.ToString() + "-" + maxCV.ToString();
-                        row["CheckNum"] = minCN.ToString() + "-" + maxCN.ToString();
+                        row["CVnum"] = minCV.ToString() + " -- " + maxCV.ToString();
+                        row["CheckNum"] = minCN.ToString() + " -- " + maxCN.ToString();
                         output.Rows.Add(row);
                         row = output.NewRow();
-                        currentDate = toDateTime(dr["cashReleaseDateTime"].ToString(), false);
+                        currentDate = DateTime.Parse(dr["cashReleaseDateTime"].ToString()).Date;
                         minCV = int.MaxValue;
                         maxCV = 0;
                         minCN = int.MaxValue;
                         maxCN = 0;
                     }
-                    row["Date Paid"] = toDateTime(dr["cashReleaseDateTime"].ToString(), true).ToString("MMMM dd yyyy");
+                    row["Date Paid"] = DateTime.Parse(dr["cashReleaseDateTime"].ToString()).ToString("MMMM dd yyyy");
                     if (minCV > int.Parse(dr["CVnum"].ToString()))
                     {
                         minCV = int.Parse(dr["CVnum"].ToString());
@@ -3359,11 +3360,11 @@ namespace ParishSystem
                         maxCV = int.Parse(dr["CVnum"].ToString());
                         maxCN = int.Parse(dr["checkNum"].ToString());
                     }
-                    row["Date Paid"] = toDateTime(dr["cashReleaseDateTime"].ToString(), true).ToString("MMMM dd yyyy");
+                    row["Date Paid"] = DateTime.Parse(dr["cashReleaseDateTime"].ToString()).ToString("MMMM dd yyyy");
                     try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["releaseAmount"].ToString()); } catch { row["Amount"] = float.Parse(dr["releaseAmount"].ToString()); };
                 }
-                row["CVnum"] = minCV.ToString() + "-" + maxCV.ToString();
-                row["CheckNum"] = minCN.ToString() + "-" + maxCN.ToString();
+                row["CVnum"] = minCV.ToString() + " -- " + maxCV.ToString();
+                row["CheckNum"] = minCN.ToString() + " -- " + maxCN.ToString();
                 output.Rows.Add(row);
                 return output;
             }
@@ -3406,7 +3407,7 @@ namespace ParishSystem
                     row["CVnum"] = dr["CVnum"].ToString();
                     row["CheckNum"] = dr["checkNum"].ToString();
                     row["Name"] = dr["name"].ToString();
-                    row["Date Paid"] = toDateTime(dr["cashReleaseDateTime"].ToString(), true).ToString("MMMM dd yyyy, hh-mm");
+                    row["Date Paid"] = DateTime.Parse(dr["cashReleaseDateTime"].ToString()).ToString("MMMM dd yyyy, hh-mm");
                     row[dr["itemtype"].ToString()] = (row[dr["itemtype"].ToString()] == null ? 0 : float.Parse(row[dr["itemtype"].ToString()].ToString())) + float.Parse(dr["releaseAmount"].ToString());
                 }
                 output.Rows.Add(row);
@@ -3423,7 +3424,7 @@ namespace ParishSystem
         {
             if (transactions.Rows.Count > 0)
             {
-                DateTime currentDate = toDateTime(transactions.Rows[0]["cashReleaseDateTime"].ToString(), false);
+                DateTime currentDate = DateTime.Parse(transactions.Rows[0]["cashReleaseDateTime"].ToString()).Date;
                 DataTable output = new DataTable();
                 DataTable itemTypes = getItems(bookType, 2);
 
@@ -3446,19 +3447,19 @@ namespace ParishSystem
                 DataRow row = output.NewRow();
                 foreach (DataRow dr in transactions.Rows)
                 {
-                    if (!currentDate.Equals(toDateTime(dr["cashReleaseDateTime"].ToString(), false)))
+                    if (!currentDate.Equals(DateTime.Parse(dr["cashReleaseDateTime"].ToString()).Date))
                     {
-                        row["CVnum"] = minCV.ToString() + "-" + maxCV.ToString();
-                        row["CheckNum"] = minCN.ToString() + "-" + maxCN.ToString();
+                        row["CVnum"] = minCV.ToString() + " -- " + maxCV.ToString();
+                        row["CheckNum"] = minCN.ToString() + " -- " + maxCN.ToString();
                         output.Rows.Add(row);
                         row = output.NewRow();
-                        currentDate = toDateTime(dr["cashReleaseDateTime"].ToString(), false);
+                        currentDate = DateTime.Parse(dr["cashReleaseDateTime"].ToString()).Date;
                         minCV = int.MaxValue;
                         maxCV = 0;
                         minCN = int.MaxValue;
                         maxCN = 0;
                     }
-                    row["Date Paid"] = toDateTime(dr["cashReleaseDateTime"].ToString(), true).ToString("MMMM dd yyyy");
+                    row["Date Paid"] = DateTime.Parse(dr["cashReleaseDateTime"].ToString()).ToString("MMMM dd yyyy");
                     if (minCV > int.Parse(dr["CVnum"].ToString()))
                     {
                         minCV = int.Parse(dr["CVnum"].ToString());
@@ -3471,12 +3472,12 @@ namespace ParishSystem
                         maxCN = int.Parse(dr["checkNum"].ToString());
                     }
                     //per itemtype code starts here
-                    row["Date Paid"] = toDateTime(dr["cashReleaseDateTime"].ToString(), true).ToString("MMMM dd yyyy");
+                    row["Date Paid"] = DateTime.Parse(dr["cashReleaseDateTime"].ToString()).ToString("MMMM dd yyyy");
                     row[dr["itemtype"].ToString()] = (row[dr["itemtype"].ToString()] == null ? 0 : float.Parse(row[dr["itemtype"].ToString()].ToString())) + float.Parse(dr["releaseAmount"].ToString());
                     //per item type code ends here
                 }
-                row["CVnum"] = minCV.ToString() + "-" + maxCV.ToString();
-                row["CheckNum"] = minCN.ToString() + "-" + maxCN.ToString();
+                row["CVnum"] = minCV.ToString() + " --"  + maxCV.ToString();
+                row["CheckNum"] = minCN.ToString() + " -- " + maxCN.ToString();
                 output.Rows.Add(row);
 
                 return output;
@@ -3826,6 +3827,265 @@ namespace ParishSystem
 
             return dt;
         }
+
+        public void CashReciept_Ungrouped_Total(DataGridView dgvr, int cashReceiptCashDisbursment, int parish_community_postulancy)
+        {
+            Microsoft.Office.Interop.Excel.Application App = new Microsoft.Office.Interop.Excel.Application();
+            Excel.Workbook newWorkbook = App.Workbooks.Add();
+            Microsoft.Office.Interop.Excel.Worksheet x = App.Worksheets[1];
+            x.Name = "Report";
+
+            x.Range["A1", "D1"].Merge();
+            x.Range["A2", "D2"].Merge();
+            x.Range["B3", "D3"].Merge();
+            x.Range["B4", "D4"].Merge();
+            x.Range["A5", "D5"].Merge();
+
+            x.Range["A1"].Value = "     Assumption Parish     ";
+            x.Range["A2"].Value = (cashReceiptCashDisbursment == 1 ? "Cash Receipt: " : "Cash Disbursment: ") + " " + (parish_community_postulancy == 1 ? "Parish" : (parish_community_postulancy == 2 ? "Community" : "Postulancy"));
+            x.Range["A3"].Value = "     From";
+            x.Range["A4"].Value = "     To";
+
+            x.Range["B3"].Value = dgvr.Rows[0].Cells[3].Value.ToString();
+            x.Range["B4"].Value = dgvr.Rows[dgvr.Rows.Count - 1].Cells[3].Value.ToString();
+
+            x.Range["A1"].Cells.Font.Size = 18;
+            x.Range["A1"].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+            x.Range["A6"].Value = "     Official Reciept Number     ";
+            x.Range["B6"].Value = "     Amount     ";
+            x.Range["C6"].Value = "     Name     ";
+            x.Range["D6"].Value = "     Date Paid     ";
+
+            x.Range["A6", "D6"].Cells.Font.Size = 15;
+            x.Range["A6", "D6"].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+
+            x.Range["A1", "D4"].EntireRow.Font.Bold = true;
+
+            DateTime min = DateTime.MaxValue;
+            DateTime max = DateTime.MinValue;
+            int row = 7;
+            foreach (DataGridViewRow rows in dgvr.Rows)
+            {
+                for (int num = 1; num <= 4; num++)
+                {
+                    x.Cells[row, num].Value = rows.Cells[num - 1].Value.ToString();
+
+                }
+                row++;
+            }
+
+
+            x.Rows.AutoFit();
+            x.Columns.AutoFit();
+
+            x.Range["A1", "D" + (row - 1)].Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+            App.Visible = true;
+            //newWorkbook.Close(false);
+            //App.Application.Workbooks.Close();
+
+            //App.Quit();
+
+
+            try
+            {
+                // cells[rows , columns]
+                //x.usedrange               -gives you y x of all the cells used
+                //x.Columns.AutoFit();      -autofits
+                //x.Rows.AutoFit();         -autofits
+                //Excel.Range a             -x.Cells[1,5];//highlights these columns [rows,columns]
+                //a.Columns.Count           -count columns of range
+                //a.Rows.Count              -count rows of range
+                //x.Cells[5, 5] = "ooooo";  -types in cell 5,5
+                //   x.Range[1].EntireRow.Font.Bold = true;
+                // x.Range[2].EntireRow.Font.Bold = true;
+                //x.Range[x.Cells[6,1], x.Cells[6,2]].Merge(); //- merge
+                //x.Range["A1","A2"].Merge(); //- merge
+                //Excel.Range b = x.Cells[x.Cells[6, 1]];
+                //b.Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+                //b.Borders.Weight = 2d;
+
+                //x.Range["B7"].Value ="Hello";
+                //x.Range["A1"].Formula="=SUM(A1:A2)";
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+
+            }
+        }
+        public void CashReciept_Grouped_Total(DataGridView dgvr, int cashReceiptCashDisbursment, int parish_community_postulancy)
+        {
+            Microsoft.Office.Interop.Excel.Application App = new Microsoft.Office.Interop.Excel.Application();
+            Excel.Workbook newWorkbook = App.Workbooks.Add();
+            Microsoft.Office.Interop.Excel.Worksheet x = App.Worksheets[1];
+            x.Name = "Report";
+
+            x.Range["A1", "C1"].Merge();
+            x.Range["A2", "C2"].Merge();
+            x.Range["B3", "C3"].Merge();
+            x.Range["B4", "C4"].Merge();
+            x.Range["A5", "C5"].Merge();
+
+            x.Range["A1"].Value = "     Assumption Parish     ";
+            x.Range["A2"].Value = (cashReceiptCashDisbursment == 1 ? "Cash Receipt: " : "Cash Disbursment: ") + " " + (parish_community_postulancy == 1 ? "Parish" : (parish_community_postulancy == 2 ? "Community" : "Postulancy"));
+            x.Range["A3"].Value = "     From";
+            x.Range["A4"].Value = "     To";
+
+            x.Range["B3"].Value = dgvr.Rows[0].Cells[2].Value.ToString();
+            x.Range["B4"].Value = dgvr.Rows[dgvr.Rows.Count - 1].Cells[2].Value.ToString();
+
+            x.Range["A1"].Cells.Font.Size = 18;
+            x.Range["A1"].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+            x.Range["A6"].Value = "     Official Reciept Number Range    ";
+            x.Range["B6"].Value = "     Amount     ";
+            x.Range["C6"].Value = "     Date Paid     ";
+
+            x.Range["A6", "C6"].Cells.Font.Size = 15;
+            x.Range["A6", "C6"].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+
+            x.Range["A1", "C4"].EntireRow.Font.Bold = true;
+
+            DateTime min = DateTime.MaxValue;
+            DateTime max = DateTime.MinValue;
+            int row = 7;
+            foreach (DataGridViewRow rows in dgvr.Rows)
+            {
+                for (int num = 1; num <= 3; num++)
+                {
+                    x.Cells[row, num].Value = rows.Cells[num - 1].Value.ToString();
+                }
+                row++;
+            }
+            x.Rows.AutoFit();
+            x.Columns.AutoFit();
+            x.Range["A1", "C" + (row - 1)].Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+            App.Visible = true;
+        }
+        public void CashReciept_UnGrouped_Breakdown(DataGridView dgvr, int cashReceiptCashDisbursment, int parish_community_postulancy)
+        {
+            Microsoft.Office.Interop.Excel.Application App = new Microsoft.Office.Interop.Excel.Application();
+            Excel.Workbook newWorkbook = App.Workbooks.Add();
+            Microsoft.Office.Interop.Excel.Worksheet x = App.Worksheets[1];
+            x.Name = "Report";
+
+            string lastColumn = (Convert.ToChar(64 + dgvr.Rows[0].Cells.Count)).ToString();
+
+            x.Range["A1", lastColumn + "1"].Merge();
+            x.Range["A2", lastColumn + "2"].Merge();
+            x.Range["B3", lastColumn + "3"].Merge();
+            x.Range["B4", lastColumn + "4"].Merge();
+            x.Range["A5", lastColumn + "5"].Merge();
+
+            x.Range["A1"].Value = "     Assumption Parish     ";
+            x.Range["A2"].Value = (cashReceiptCashDisbursment == 1 ? "Cash Receipt: " : "Cash Disbursment: ") + " " + (parish_community_postulancy == 1 ? "Parish" : (parish_community_postulancy == 2 ? "Community" : "Postulancy"));
+            x.Range["A3"].Value = "     From";
+            x.Range["A4"].Value = "     To";
+
+            x.Range["B3"].Value = dgvr.Rows[0].Cells[1].Value.ToString();
+            x.Range["B4"].Value = dgvr.Rows[dgvr.Rows.Count - 1].Cells[1].Value.ToString();
+
+            x.Range["A1"].Cells.Font.Size = 18;
+            x.Range["A1"].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+            x.Range["A6"].Value = "     Official Reciept Number     ";
+            x.Range["B6"].Value = "     Name    ";
+
+            int a = 67;
+            for (int i =2; i < dgvr.Rows[0].Cells.Count; i++)
+            {
+                x.Range[Convert.ToChar(a)+"6"].Value = dgvr.Columns[i].HeaderText;
+                a++;
+            }
+            x.Range["A6", lastColumn + "6"].Cells.Font.Size = 15;
+            x.Range["A6", lastColumn + "6"].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+
+            x.Range["A1", "C4"].EntireRow.Font.Bold = true;
+
+            DateTime min = DateTime.MaxValue;
+            DateTime max = DateTime.MinValue;
+            int row = 7;
+            foreach (DataGridViewRow rows in dgvr.Rows)
+            {
+                for (int num = 1; num <= dgvr.Columns.Count; num++)
+                {
+                    x.Cells[row, num].Value = rows.Cells[num - 1].Value.ToString();
+                }
+                row++;
+            }
+            x.Rows.AutoFit();
+            x.Columns.AutoFit();
+            x.Range["A1", lastColumn + (row - 1)].Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+            App.Visible = true;
+        }
+
+        public void CashReciept_Grouped_Breakdown(DataGridView dgvr, int cashReceiptCashDisbursment, int parish_community_postulancy)
+        {
+            Microsoft.Office.Interop.Excel.Application App = new Microsoft.Office.Interop.Excel.Application();
+            Excel.Workbook newWorkbook = App.Workbooks.Add();
+            Microsoft.Office.Interop.Excel.Worksheet x = App.Worksheets[1];
+            x.Name = "Report";
+
+            string lastColumn = (Convert.ToChar(64 + dgvr.Rows[0].Cells.Count)).ToString();
+
+            x.Range["A1", lastColumn + "1"].Merge();
+            x.Range["A2", lastColumn + "2"].Merge();
+            x.Range["B3", lastColumn + "3"].Merge();
+            x.Range["B4", lastColumn + "4"].Merge();
+            x.Range["A5", lastColumn + "5"].Merge();
+
+            x.Range["A1"].Value = "     Assumption Parish     ";
+            x.Range["A2"].Value = (cashReceiptCashDisbursment == 1 ? "Cash Receipt: " : "Cash Disbursment: ") + " " + (parish_community_postulancy == 1 ? "Parish" : (parish_community_postulancy == 2 ? "Community" : "Postulancy"));
+            x.Range["A3"].Value = "     From";
+            x.Range["A4"].Value = "     To";
+
+            x.Range["B3"].Value = dgvr.Rows[0].Cells[1].Value.ToString();
+            x.Range["B4"].Value = dgvr.Rows[dgvr.Rows.Count - 1].Cells[1].Value.ToString();
+
+            x.Range["A1"].Cells.Font.Size = 18;
+            x.Range["A1"].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+            x.Range["A6"].Value = "     Official Reciept Number Range    ";
+            x.Range["B6"].Value = "     Date Paid     ";
+
+            int a = 67;
+            for (int i = 2; i < dgvr.Rows[0].Cells.Count; i++)
+            {
+                x.Range[Convert.ToChar(a) + "6"].Value = dgvr.Columns[i].HeaderText;
+                a++;
+            }
+            x.Range["A6", lastColumn + "6"].Cells.Font.Size = 15;
+            x.Range["A6", lastColumn + "6"].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+
+            x.Range["A1", "C4"].EntireRow.Font.Bold = true;
+
+            DateTime min = DateTime.MaxValue;
+            DateTime max = DateTime.MinValue;
+            int row = 7;
+            foreach (DataGridViewRow rows in dgvr.Rows)
+            {
+                for (int num = 1; num <= dgvr.Columns.Count; num++)
+                {
+                    x.Cells[row, num].Value = rows.Cells[num - 1].Value.ToString();
+                }
+                row++;
+            }
+            x.Rows.AutoFit();
+            x.Columns.AutoFit();
+            x.Range["A1", lastColumn + (row - 1)].Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+            App.Visible = true;
+        }
+    }
     } 
 
-}
+
+

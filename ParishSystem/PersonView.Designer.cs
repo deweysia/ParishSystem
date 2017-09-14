@@ -221,6 +221,7 @@
             this.marriage_panel = new System.Windows.Forms.Panel();
             this.blank_panel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.generalDetails_panel.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.birthdate_panel.SuspendLayout();
@@ -499,6 +500,7 @@
             // controlBar_panel
             // 
             this.controlBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.controlBar_panel.Controls.Add(this.label3);
             this.controlBar_panel.Controls.Add(this.close_button);
             this.controlBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlBar_panel.Location = new System.Drawing.Point(0, 0);
@@ -2280,6 +2282,18 @@
             this.panel3.Size = new System.Drawing.Size(383, 443);
             this.panel3.TabIndex = 6;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(5, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Person Profile";
+            // 
             // PersonView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2310,6 +2324,7 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.controlBar_panel.ResumeLayout(false);
+            this.controlBar_panel.PerformLayout();
             this.menu_panel.ResumeLayout(false);
             this.menu_panel.PerformLayout();
             this.baptism_panel.ResumeLayout(false);
@@ -2580,5 +2595,6 @@
         private System.Windows.Forms.Label address_textbox_spouse_marriage;
         private System.Windows.Forms.Label remarks_label_confirmation;
         private System.Windows.Forms.Label remarks_label_marriage;
+        private System.Windows.Forms.Label label3;
     }
 }

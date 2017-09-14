@@ -66,6 +66,7 @@
             this.Username_textbox.SelectionStart = 0;
             this.Username_textbox.ShortcutsEnabled = true;
             this.Username_textbox.Size = new System.Drawing.Size(255, 30);
+            this.Username_textbox.Style = MetroFramework.MetroColorStyle.Silver;
             this.Username_textbox.TabIndex = 0;
             this.Username_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Username_textbox.UseSelectable = true;
@@ -101,6 +102,7 @@
             this.Password_textbox.SelectionStart = 0;
             this.Password_textbox.ShortcutsEnabled = true;
             this.Password_textbox.Size = new System.Drawing.Size(255, 30);
+            this.Password_textbox.Style = MetroFramework.MetroColorStyle.Silver;
             this.Password_textbox.TabIndex = 1;
             this.Password_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Password_textbox.UseSelectable = true;

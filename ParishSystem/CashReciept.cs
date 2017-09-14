@@ -35,7 +35,7 @@ namespace ParishSystem
             sourceName_textbox_fullpay.Clear();
             remarks_textbox_fullpay.Clear();
             final_button_fullpay.Enabled = false;
-            DataTable dt = dh.getItemsActive(1,bookModeFullPay);
+            DataTable dt = dh.getItemsActive(bookModeFullPay,1);
             itemType_combobox_fullpay.Items.Clear();
             itemType_combobox_fullpay.Items.Add("");
             foreach (DataRow dr in dt.Rows)

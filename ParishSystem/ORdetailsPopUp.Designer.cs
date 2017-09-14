@@ -36,6 +36,7 @@
             this.total_label = new System.Windows.Forms.Label();
             this.controlBar_panel = new System.Windows.Forms.Panel();
             this.close_button = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.items_dgv)).BeginInit();
             this.controlBar_panel.SuspendLayout();
             this.SuspendLayout();
@@ -86,7 +87,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(270, 229);
+            this.label2.Location = new System.Drawing.Point(188, 228);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 32);
             this.label2.TabIndex = 3;
@@ -112,7 +113,7 @@
             this.total_label.BackColor = System.Drawing.Color.White;
             this.total_label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_label.ForeColor = System.Drawing.Color.Black;
-            this.total_label.Location = new System.Drawing.Point(350, 229);
+            this.total_label.Location = new System.Drawing.Point(268, 228);
             this.total_label.Name = "total_label";
             this.total_label.Size = new System.Drawing.Size(54, 32);
             this.total_label.TabIndex = 5;
@@ -121,7 +122,8 @@
             // 
             // controlBar_panel
             // 
-            this.controlBar_panel.BackColor = System.Drawing.Color.DimGray;
+            this.controlBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.controlBar_panel.Controls.Add(this.label3);
             this.controlBar_panel.Controls.Add(this.close_button);
             this.controlBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlBar_panel.Location = new System.Drawing.Point(0, 0);
@@ -132,16 +134,28 @@
             // 
             // close_button
             // 
-            this.close_button.BackColor = System.Drawing.Color.DimGray;
+            this.close_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.close_button.FlatAppearance.BorderSize = 0;
             this.close_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close_button.Image = global::ParishSystem.Properties.Resources.icons8_Delete_20;
-            this.close_button.Location = new System.Drawing.Point(378, 4);
+            this.close_button.Location = new System.Drawing.Point(378, 0);
             this.close_button.Name = "close_button";
-            this.close_button.Size = new System.Drawing.Size(40, 29);
+            this.close_button.Size = new System.Drawing.Size(40, 33);
             this.close_button.TabIndex = 0;
             this.close_button.UseVisualStyleBackColor = false;
             this.close_button.Click += new System.EventHandler(this.close_button_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(1, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(145, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Transaction Details";
             // 
             // ORdetailsPopUp
             // 
@@ -163,6 +177,7 @@
             this.Load += new System.EventHandler(this.ORdetailsPopUp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.items_dgv)).EndInit();
             this.controlBar_panel.ResumeLayout(false);
+            this.controlBar_panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,5 +191,6 @@
         private System.Windows.Forms.Label total_label;
         private System.Windows.Forms.Panel controlBar_panel;
         private System.Windows.Forms.Button close_button;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -59,16 +59,7 @@ namespace ParishSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form f = new ApplicationModule();
-            f.TopLevel = false;
-            f.AutoScroll = true;
-            panel1.Controls.Add(f);
-
-            f.FormBorderStyle = FormBorderStyle.None;
-            MessageBox.Show("2");
-            f.Dock = DockStyle.Fill;
-            f.Show();
-            MessageBox.Show("3");
+            //dh.TESTING(null);
         }
 
         private void button1_Click_1(object sender, EventArgs e)

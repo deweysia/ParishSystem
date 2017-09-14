@@ -64,6 +64,7 @@
             this.dtpGroomBirthDate.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpGroomBirthDate.Name = "dtpGroomBirthDate";
             this.dtpGroomBirthDate.Size = new System.Drawing.Size(200, 25);
+            this.dtpGroomBirthDate.Style = MetroFramework.MetroColorStyle.Silver;
             this.dtpGroomBirthDate.TabIndex = 4;
             this.dtpGroomBirthDate.Value = new System.DateTime(2017, 7, 16, 0, 0, 0, 0);
             // 
@@ -137,6 +138,7 @@
             this.dtpBrideBirthDate.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpBrideBirthDate.Name = "dtpBrideBirthDate";
             this.dtpBrideBirthDate.Size = new System.Drawing.Size(200, 25);
+            this.dtpBrideBirthDate.Style = MetroFramework.MetroColorStyle.Silver;
             this.dtpBrideBirthDate.TabIndex = 30;
             this.dtpBrideBirthDate.Value = new System.DateTime(2017, 7, 16, 0, 0, 0, 0);
             // 
@@ -165,7 +167,7 @@
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(7, 10);
+            this.label8.Location = new System.Drawing.Point(3, 9);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(153, 20);
             this.label8.TabIndex = 36;
@@ -224,6 +226,7 @@
             this.txtGroomFN.SelectionStart = 0;
             this.txtGroomFN.ShortcutsEnabled = true;
             this.txtGroomFN.Size = new System.Drawing.Size(107, 23);
+            this.txtGroomFN.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtGroomFN.TabIndex = 39;
             this.txtGroomFN.UseSelectable = true;
             this.txtGroomFN.WaterMark = "First Name";
@@ -256,6 +259,7 @@
             this.txtGroomMI.SelectionStart = 0;
             this.txtGroomMI.ShortcutsEnabled = true;
             this.txtGroomMI.Size = new System.Drawing.Size(31, 23);
+            this.txtGroomMI.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtGroomMI.TabIndex = 39;
             this.txtGroomMI.UseSelectable = true;
             this.txtGroomMI.WaterMark = "M.I.";
@@ -288,6 +292,7 @@
             this.txtGroomLN.SelectionStart = 0;
             this.txtGroomLN.ShortcutsEnabled = true;
             this.txtGroomLN.Size = new System.Drawing.Size(107, 23);
+            this.txtGroomLN.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtGroomLN.TabIndex = 39;
             this.txtGroomLN.UseSelectable = true;
             this.txtGroomLN.WaterMark = "Last Name";
@@ -320,6 +325,7 @@
             this.txtGroomSuffix.SelectionStart = 0;
             this.txtGroomSuffix.ShortcutsEnabled = true;
             this.txtGroomSuffix.Size = new System.Drawing.Size(50, 23);
+            this.txtGroomSuffix.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtGroomSuffix.TabIndex = 39;
             this.txtGroomSuffix.UseSelectable = true;
             this.txtGroomSuffix.WaterMark = "Suffix";
@@ -352,6 +358,7 @@
             this.txtBrideFN.SelectionStart = 0;
             this.txtBrideFN.ShortcutsEnabled = true;
             this.txtBrideFN.Size = new System.Drawing.Size(107, 23);
+            this.txtBrideFN.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtBrideFN.TabIndex = 39;
             this.txtBrideFN.UseSelectable = true;
             this.txtBrideFN.WaterMark = "First Name";
@@ -384,6 +391,7 @@
             this.txtBrideMI.SelectionStart = 0;
             this.txtBrideMI.ShortcutsEnabled = true;
             this.txtBrideMI.Size = new System.Drawing.Size(31, 23);
+            this.txtBrideMI.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtBrideMI.TabIndex = 39;
             this.txtBrideMI.UseSelectable = true;
             this.txtBrideMI.WaterMark = "M.I.";
@@ -416,6 +424,7 @@
             this.txtBrideLN.SelectionStart = 0;
             this.txtBrideLN.ShortcutsEnabled = true;
             this.txtBrideLN.Size = new System.Drawing.Size(107, 23);
+            this.txtBrideLN.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtBrideLN.TabIndex = 39;
             this.txtBrideLN.UseSelectable = true;
             this.txtBrideLN.WaterMark = "Last Name";
@@ -448,6 +457,7 @@
             this.txtBrideSuffix.SelectionStart = 0;
             this.txtBrideSuffix.ShortcutsEnabled = true;
             this.txtBrideSuffix.Size = new System.Drawing.Size(50, 23);
+            this.txtBrideSuffix.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtBrideSuffix.TabIndex = 39;
             this.txtBrideSuffix.UseSelectable = true;
             this.txtBrideSuffix.WaterMark = "Suffix";

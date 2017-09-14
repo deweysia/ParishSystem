@@ -74,6 +74,7 @@
             this.legitimacyCBox = new MetroFramework.Controls.MetroComboBox();
             this.controlBar_panel = new System.Windows.Forms.Panel();
             this.close_button = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.controlBar_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -481,7 +482,8 @@
             // 
             // controlBar_panel
             // 
-            this.controlBar_panel.BackColor = System.Drawing.Color.DimGray;
+            this.controlBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.controlBar_panel.Controls.Add(this.label1);
             this.controlBar_panel.Controls.Add(this.close_button);
             this.controlBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlBar_panel.Location = new System.Drawing.Point(0, 0);
@@ -503,6 +505,18 @@
             this.close_button.TabIndex = 0;
             this.close_button.UseVisualStyleBackColor = true;
             this.close_button.Click += new System.EventHandler(this.close_button_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(169, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Sacrament Application";
             // 
             // SacramentForm
             // 
@@ -560,6 +574,7 @@
             this.Text = "Baptism Fill-up Form";
             this.Load += new System.EventHandler(this.SacramentForm_Load);
             this.controlBar_panel.ResumeLayout(false);
+            this.controlBar_panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -613,5 +628,6 @@
         private MetroFramework.Controls.MetroComboBox legitimacyCBox;
         private System.Windows.Forms.Panel controlBar_panel;
         private System.Windows.Forms.Button close_button;
+        private System.Windows.Forms.Label label1;
     }
 }

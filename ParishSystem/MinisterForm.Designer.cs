@@ -45,6 +45,7 @@
             this.controlBar_panel = new System.Windows.Forms.Panel();
             this.close_button = new System.Windows.Forms.Button();
             this.addBtn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.controlBar_panel.SuspendLayout();
             this.SuspendLayout();
@@ -197,7 +198,8 @@
             // 
             // controlBar_panel
             // 
-            this.controlBar_panel.BackColor = System.Drawing.Color.DimGray;
+            this.controlBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.controlBar_panel.Controls.Add(this.label4);
             this.controlBar_panel.Controls.Add(this.close_button);
             this.controlBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlBar_panel.Location = new System.Drawing.Point(0, 0);
@@ -209,13 +211,13 @@
             // 
             // close_button
             // 
-            this.close_button.BackColor = System.Drawing.Color.DimGray;
+            this.close_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.close_button.FlatAppearance.BorderSize = 0;
             this.close_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close_button.Image = global::ParishSystem.Properties.Resources.icons8_Delete_20;
-            this.close_button.Location = new System.Drawing.Point(378, 4);
+            this.close_button.Location = new System.Drawing.Point(381, 0);
             this.close_button.Name = "close_button";
-            this.close_button.Size = new System.Drawing.Size(40, 29);
+            this.close_button.Size = new System.Drawing.Size(40, 33);
             this.close_button.TabIndex = 0;
             this.close_button.UseVisualStyleBackColor = false;
             this.close_button.Click += new System.EventHandler(this.close_button_Click);
@@ -223,9 +225,9 @@
             // addBtn
             // 
             this.addBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.addBtn.BackColor = System.Drawing.Color.Gray;
+            this.addBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.addBtn.FlatAppearance.BorderSize = 0;
-            this.addBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.addBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addBtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBtn.ForeColor = System.Drawing.Color.White;
@@ -236,6 +238,18 @@
             this.addBtn.Text = "Apply";
             this.addBtn.UseVisualStyleBackColor = false;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(3, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(146, 20);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Minister Application";
             // 
             // MinisterForm
             // 
@@ -255,6 +269,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.controlBar_panel.ResumeLayout(false);
+            this.controlBar_panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -279,5 +294,6 @@
         private System.Windows.Forms.Panel controlBar_panel;
         private System.Windows.Forms.Button close_button;
         private System.Windows.Forms.Button addBtn;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -183,6 +183,7 @@
             this.password_textbox.ShortcutsEnabled = true;
             this.password_textbox.ShowClearButton = true;
             this.password_textbox.Size = new System.Drawing.Size(207, 23);
+            this.password_textbox.Style = MetroFramework.MetroColorStyle.Silver;
             this.password_textbox.TabIndex = 43;
             this.password_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.password_textbox.UseSelectable = true;
@@ -220,6 +221,7 @@
             this.username_textbox.ShortcutsEnabled = true;
             this.username_textbox.ShowClearButton = true;
             this.username_textbox.Size = new System.Drawing.Size(207, 23);
+            this.username_textbox.Style = MetroFramework.MetroColorStyle.Silver;
             this.username_textbox.TabIndex = 42;
             this.username_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.username_textbox.UseSelectable = true;
@@ -259,6 +261,7 @@
             this.middleinitial_textbox.ShortcutsEnabled = true;
             this.middleinitial_textbox.ShowClearButton = true;
             this.middleinitial_textbox.Size = new System.Drawing.Size(45, 23);
+            this.middleinitial_textbox.Style = MetroFramework.MetroColorStyle.Silver;
             this.middleinitial_textbox.TabIndex = 41;
             this.middleinitial_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.middleinitial_textbox.UseSelectable = true;
@@ -298,6 +301,7 @@
             this.firstname_textbox.ShortcutsEnabled = true;
             this.firstname_textbox.ShowClearButton = true;
             this.firstname_textbox.Size = new System.Drawing.Size(124, 23);
+            this.firstname_textbox.Style = MetroFramework.MetroColorStyle.Silver;
             this.firstname_textbox.TabIndex = 40;
             this.firstname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.firstname_textbox.UseSelectable = true;
@@ -337,6 +341,7 @@
             this.suffix_textbox.ShortcutsEnabled = true;
             this.suffix_textbox.ShowClearButton = true;
             this.suffix_textbox.Size = new System.Drawing.Size(45, 23);
+            this.suffix_textbox.Style = MetroFramework.MetroColorStyle.Silver;
             this.suffix_textbox.TabIndex = 39;
             this.suffix_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.suffix_textbox.UseSelectable = true;
@@ -375,6 +380,7 @@
             this.lastname_textbox.ShortcutsEnabled = true;
             this.lastname_textbox.ShowClearButton = true;
             this.lastname_textbox.Size = new System.Drawing.Size(124, 23);
+            this.lastname_textbox.Style = MetroFramework.MetroColorStyle.Silver;
             this.lastname_textbox.TabIndex = 38;
             this.lastname_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.lastname_textbox.UseSelectable = true;
