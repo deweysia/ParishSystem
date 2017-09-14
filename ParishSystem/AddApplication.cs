@@ -78,6 +78,9 @@ namespace ParishSystem
             int profileID = dh.getGeneralProfileID(fn, mn, ln, suffix, gender, birthDate);
             if(profileID != -1)//gen prof exists
             {
+                DialogResult dr = MessageDialog.Show(MessageDialog.State.ProfileExists);
+                if (dr != DialogResult.OK)
+                    return;
                 //gen prof does not have active application
                 if (!dh.hasActiveApplication(profileID, sacramentType))
                 {

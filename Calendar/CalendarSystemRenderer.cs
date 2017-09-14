@@ -271,7 +271,7 @@ namespace System.Windows.Forms.Calendar
                 color2 = e.Item.BackgroundColor;
             }
 
-            ItemFill(e, e.Bounds, Color.FromArgb(alpha, color1), Color.FromArgb(alpha, color2));
+            ItemFill(e, e.Bounds, Color.FromArgb(alpha, color2), Color.FromArgb(alpha, color2));
 
         }
 

@@ -94,7 +94,6 @@ namespace ParishSystem
         {
             waitTimer.Stop();
             stopTimer.Start();
-            //Console.WriteLine("WAIT TICK");
         }
 
         private void CustomNotification_MouseEnter(object sender, EventArgs e)

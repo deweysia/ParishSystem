@@ -30,10 +30,10 @@ namespace System.Windows.Forms.Calendar
         {
             
             ColorTable.Background = FromHex("#262626"); //Formerly E3EFFF
-            ColorTable.DayBackgroundEven = FromHex("#333333"); //FromHex("#A5BFE1");
+            ColorTable.DayBackgroundEven = FromHex("#696969"); //FromHex("#A5BFE1");
             ColorTable.DayBackgroundOdd = FromHex("#C6C7C8"); //FromHex("#FFFFFF");
-            ColorTable.DayBackgroundSelected = FromHex("#00B294"); //Formerly E6EDF7
-            ColorTable.DayBorder = FromHex("#171918"); //Color.Red;//FromHex("#5D8CC9");
+            ColorTable.DayBackgroundSelected = Color.Chocolate;//FromHex("#00B294"); //Formerly E6EDF7
+            ColorTable.DayBorder = Color.Wheat;//FromHex("#171918"); //Color.Red;//FromHex("#5D8CC9");
             ColorTable.DayHeaderBackground = FromHex("#DFE8F5"); //Done
             ColorTable.DayHeaderText = Color.Wheat;//FromHex("#656B64"); //Color.Black;
             ColorTable.DayHeaderSecondaryText = Color.Black;
@@ -51,16 +51,16 @@ namespace System.Windows.Forms.Calendar
             ColorTable.WeekHeaderBackground = FromHex("#262626"); //Color.Red; //FromHex("#DFE8F5");
             ColorTable.WeekHeaderBorder = FromHex("#171918"); //Color.Red;// FromHex("#5D8CC9");
             ColorTable.WeekHeaderText = Color.Wheat;//Color.Red;// FromHex("#5D8CC9");
-            ColorTable.TodayBorder = FromHex("#00B294"); //Color.Red;// FromHex("#EE9311");
-            ColorTable.TodayTopBackground = FromHex("#00B294"); //Color.Gray; //FromHex("#EE9311");
+            ColorTable.TodayBorder = Color.Chocolate; //FromHex("#00B294"); //Color.Red;// FromHex("#EE9311");
+            ColorTable.TodayTopBackground = Color.Chocolate;// FromHex("#00B294"); //Color.Gray; //FromHex("#EE9311");
             ColorTable.TimeScaleLine = FromHex("#515151"); //FromHex("#1A1A1A");// FromHex("#ff0000"); //Formerly 6593CF
             ColorTable.TimeScaleHours = FromHex("#515151"); //Color.White; //FromHex("#6593CF");
             ColorTable.TimeScaleMinutes = FromHex("#515151");// Color.White; //FromHex("#6593CF");
             ColorTable.TimeUnitBackground = FromHex("#E6EDF7"); //FromHex("#00B294"); 
             ColorTable.TimeUnitHighlightedBackground = Color.White;
-            ColorTable.TimeUnitSelectedBackground = FromHex("#00B294"); //294C7A
+            ColorTable.TimeUnitSelectedBackground = Color.Chocolate; //FromHex("#00B294"); //294C7A
             ColorTable.TimeUnitBorderLight = FromHex("#D5E1F1");
-            ColorTable.TimeUnitBorderDark = FromHex("#333333"); // FromHex("#A5BFE1");
+            ColorTable.TimeUnitBorderDark = FromHex("#696969"); // FromHex("#A5BFE1");
             ColorTable.WeekDayName = Color.Wheat; //FromHex("#515151"); //Color.White; // FromHex("#6593CF");
 
             SelectedItemBorder = 2f;

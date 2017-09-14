@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange1 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange2 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange3 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange4 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange5 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange26 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange27 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange28 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange29 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange30 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
@@ -89,6 +89,7 @@
             // gbDetails
             // 
             this.gbDetails.Controls.Add(this.tableLayoutPanel1);
+            this.gbDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbDetails.Location = new System.Drawing.Point(12, 187);
             this.gbDetails.Name = "gbDetails";
             this.gbDetails.Size = new System.Drawing.Size(208, 302);
@@ -251,27 +252,27 @@
             this.calendar1.BackColor = System.Drawing.Color.OrangeRed;
             this.calendar1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.calendar1.ForeColor = System.Drawing.Color.Maroon;
-            calendarHighlightRange1.DayOfWeek = System.DayOfWeek.Monday;
-            calendarHighlightRange1.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange1.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange2.DayOfWeek = System.DayOfWeek.Tuesday;
-            calendarHighlightRange2.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange2.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange3.DayOfWeek = System.DayOfWeek.Wednesday;
-            calendarHighlightRange3.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange3.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange4.DayOfWeek = System.DayOfWeek.Thursday;
-            calendarHighlightRange4.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange4.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange5.DayOfWeek = System.DayOfWeek.Friday;
-            calendarHighlightRange5.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange5.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange26.DayOfWeek = System.DayOfWeek.Monday;
+            calendarHighlightRange26.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange26.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange27.DayOfWeek = System.DayOfWeek.Tuesday;
+            calendarHighlightRange27.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange27.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange28.DayOfWeek = System.DayOfWeek.Wednesday;
+            calendarHighlightRange28.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange28.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange29.DayOfWeek = System.DayOfWeek.Thursday;
+            calendarHighlightRange29.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange29.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange30.DayOfWeek = System.DayOfWeek.Friday;
+            calendarHighlightRange30.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange30.StartTime = System.TimeSpan.Parse("08:00:00");
             this.calendar1.HighlightRanges = new System.Windows.Forms.Calendar.CalendarHighlightRange[] {
-        calendarHighlightRange1,
-        calendarHighlightRange2,
-        calendarHighlightRange3,
-        calendarHighlightRange4,
-        calendarHighlightRange5};
+        calendarHighlightRange26,
+        calendarHighlightRange27,
+        calendarHighlightRange28,
+        calendarHighlightRange29,
+        calendarHighlightRange30};
             this.calendar1.Location = new System.Drawing.Point(226, 12);
             this.calendar1.Name = "calendar1";
             this.calendar1.Size = new System.Drawing.Size(692, 516);
@@ -290,21 +291,21 @@
             this.monthView1.ArrowsSelectedColor = System.Drawing.Color.Gold;
             this.monthView1.DayBackgroundColor = System.Drawing.Color.Empty;
             this.monthView1.DayGrayedText = System.Drawing.SystemColors.GrayText;
-            this.monthView1.DaySelectedBackgroundColor = System.Drawing.SystemColors.Highlight;
+            this.monthView1.DaySelectedBackgroundColor = System.Drawing.Color.PaleTurquoise;
             this.monthView1.DaySelectedColor = System.Drawing.SystemColors.WindowText;
             this.monthView1.DaySelectedTextColor = System.Drawing.SystemColors.HighlightText;
             this.monthView1.ItemPadding = new System.Windows.Forms.Padding(2);
             this.monthView1.Location = new System.Drawing.Point(12, 12);
             this.monthView1.MaxSelectionCount = 35;
             this.monthView1.MonthTitleColor = System.Drawing.SystemColors.ActiveCaption;
-            this.monthView1.MonthTitleColorInactive = System.Drawing.SystemColors.InactiveCaption;
-            this.monthView1.MonthTitleTextColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.monthView1.MonthTitleTextColorInactive = System.Drawing.SystemColors.InactiveCaptionText;
+            this.monthView1.MonthTitleColorInactive = System.Drawing.Color.DimGray;
+            this.monthView1.MonthTitleTextColor = System.Drawing.Color.White;
+            this.monthView1.MonthTitleTextColorInactive = System.Drawing.Color.WhiteSmoke;
             this.monthView1.Name = "monthView1";
             this.monthView1.Size = new System.Drawing.Size(208, 135);
             this.monthView1.TabIndex = 5;
             this.monthView1.Text = "monthView1";
-            this.monthView1.TodayBorderColor = System.Drawing.Color.Maroon;
+            this.monthView1.TodayBorderColor = System.Drawing.Color.LightSeaGreen;
             this.monthView1.SelectionChanged += new System.EventHandler(this.monthView1_SelectionChanged);
             // 
             // ScheduleModule

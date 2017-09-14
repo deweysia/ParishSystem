@@ -12,40 +12,18 @@ namespace ParishSystem
 {
     public partial class CustomMessage : Form
     {
-
-
-
-        protected override void WndProc(ref Message m)
-        {
-            switch (m.Msg)
-            {
-                case 0x84:
-                    base.WndProc(ref m);
-                    if ((int)m.Result == 0x1)
-                        m.Result = (IntPtr)0x2;
-                    return;
-            }
-
-            base.WndProc(ref m);
-        }
-
         public CustomMessage()
         {
             InitializeComponent();
+            Draggable drag = new Draggable(this);
+            drag.makeDraggable(this);
             infoLabel.MaximumSize = this.Size - this.Padding.Size;
         }
 
         private void CustomMessage_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void customControlBar1_Load(object sender, EventArgs e)
-        {
             
         }
-
-
 
         public DialogResult Show(string information, MessageDialogButtons b = MessageDialogButtons.OK, MessageDialogIcon i = MessageDialogIcon.Information)
         {
@@ -63,16 +41,6 @@ namespace ParishSystem
             iconPictureBox.Image = imageList1.Images[(int)i];
             return this.ShowDialog();
         }
-
-        private void customControlBar1_Click(object sender, EventArgs e)
-        {
-            //this.DialogResult = DialogResult.Cancel;
-        }
-
-        private void customControlBar1_Load_1(object sender, EventArgs e)
-        {
-
-        }
     }
 
     public static class MessageDialog
@@ -89,10 +57,33 @@ namespace ParishSystem
             return cm.Show(information, b, i);
         }
 
+        public static DialogResult Show(State s)
+        {
+            CustomMessage cm = new CustomMessage();
+            return cm.Show(s._msg, s._btn, s._icon);
+            
+        }
+
         public static DialogResult Show(string information, string title, MessageDialogButtons b = MessageDialogButtons.OK, MessageDialogIcon i = MessageDialogIcon.Information)
         {
             CustomMessage cm = new CustomMessage();
             return cm.Show(information, title, b, i);
+        }
+
+        public class State
+        {
+            public string _msg { get; }
+            public MessageDialogButtons _btn { get; }
+            public MessageDialogIcon _icon { get; }
+            private State(string msg, MessageDialogButtons btn, MessageDialogIcon icon)
+            {
+                this._msg = msg;
+                this._btn = btn;
+                this._icon = icon;
+            }
+
+            public static State ProfileExists = new State("A profile record with the same name, birthday, and gender already exists. This profile will refer to the existing record. Proceed?", MessageDialogButtons.OKCancel, MessageDialogIcon.Information);
+
         }
     }
 
@@ -113,4 +104,6 @@ namespace ParishSystem
         Warning,
         Question
     }
+
+    
 }

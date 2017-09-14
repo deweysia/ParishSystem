@@ -26,9 +26,10 @@ namespace ParishSystem
             PlaceItems();
 
             //Monthview colors
-            monthView1.MonthTitleColor = monthView1.MonthTitleColorInactive = CalendarColorTable.FromHex("#C2DAFC");
-            monthView1.ArrowsColor = CalendarColorTable.FromHex("#77A1D3");
-            monthView1.DaySelectedBackgroundColor = CalendarColorTable.FromHex("#F4CC52");
+            monthView1.MonthTitleColor = CalendarColorTable.FromHex("#262626");
+            //monthView1.ForeColor = Color.Wheat;
+            //monthView1.ArrowsColor = CalendarColorTable.FromHex("#77A1D3");
+            //monthView1.DaySelectedBackgroundColor = CalendarColorTable.FromHex("#F4CC52");
             monthView1.DaySelectedTextColor = monthView1.ForeColor;
 
             calendar1.BackColor = Color.Black;
