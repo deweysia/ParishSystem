@@ -361,6 +361,11 @@ namespace ParishSystem
             openAdvanceSearch(SacramentType.Marriage);
         }
 
+        private void metroTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnSearchBap_Click(object sender, EventArgs e)
         {
             searchDVG(SacramentType.Baptism);

@@ -5,8 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
+using Transitions;
 
 namespace ParishSystem
 {
@@ -41,10 +42,31 @@ namespace ParishSystem
         int UserID=-1;
         public SAD2()
         {
+            Thread t = new Thread(new ThreadStart(showSplash));
+            t.Start();
+            
+            
             InitializeComponent();
             addModules();
             UserID = 1;
 
+            try
+            {
+                t.Abort();
+            }
+            catch (Exception e) { }
+            
+        }
+
+        public void showSplash()
+        {
+            Application.Run(new SplashScreen());
+        }
+
+        public SAD2(string Username) : this()
+        {
+            this.username_Welcome_Text.Text = Username.ToUpper();
+            this.UserID = int.Parse(dh.getEmployee(Username).Rows[0]["employeeID"].ToString());
         }
 
         private void addModules()
@@ -72,11 +94,7 @@ namespace ParishSystem
             
         }
 
-        public SAD2(string  Username) : this()
-        {
-            this.username_Welcome_Text.Text = Username.ToUpper();
-            this.UserID = int.Parse(dh.getEmployee(Username).Rows[0]["employeeID"].ToString());
-        }
+        
 
         private void SAD2_Load(object sender, EventArgs e)
         {

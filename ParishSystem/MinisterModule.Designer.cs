@@ -33,10 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flpEditDeleteMinister = new System.Windows.Forms.FlowLayoutPanel();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvMinister = new MetroFramework.Controls.MetroGrid();
-            this.button1 = new System.Windows.Forms.Button();
             this.ministerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.midName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,11 +52,10 @@
             // flpEditDeleteMinister
             // 
             this.flpEditDeleteMinister.Controls.Add(this.btnEdit);
-            this.flpEditDeleteMinister.Controls.Add(this.btnDelete);
             this.flpEditDeleteMinister.Controls.Add(this.button1);
             this.flpEditDeleteMinister.Location = new System.Drawing.Point(93, 400);
             this.flpEditDeleteMinister.Name = "flpEditDeleteMinister";
-            this.flpEditDeleteMinister.Size = new System.Drawing.Size(331, 32);
+            this.flpEditDeleteMinister.Size = new System.Drawing.Size(230, 32);
             this.flpEditDeleteMinister.TabIndex = 13;
             // 
             // btnEdit
@@ -70,14 +68,14 @@
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // btnDelete
+            // button1
             // 
-            this.btnDelete.Location = new System.Drawing.Point(84, 3);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(96, 23);
-            this.btnDelete.TabIndex = 9;
-            this.btnDelete.Text = "Delete Minister";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(84, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Upcoming appointments";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnAdd
             // 
@@ -153,15 +151,6 @@
             this.dgvMinister.UseStyleColors = true;
             this.dgvMinister.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMinister_CellEnter);
             this.dgvMinister.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMinister_CellFormatting);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(186, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Upcoming appointments";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // ministerID
             // 
@@ -249,7 +238,6 @@
 
         private System.Windows.Forms.FlowLayoutPanel flpEditDeleteMinister;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private MetroFramework.Controls.MetroGrid dgvMinister;
         private System.Windows.Forms.Button button1;

@@ -192,7 +192,8 @@ namespace ParishSystem
         {
             AddSchedule f = new AddSchedule();
             f.ShowDialog();
-            //deselectItems();
+            panelRemoveEdit.Enabled = false;
+            clearLabels();
 
             loadEvents();
             PlaceItems();
@@ -217,11 +218,6 @@ namespace ParishSystem
             clearLabels();
         }
 
-        private void deselectItems()
-        {
-            
-        }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             CalendarItem i = calendar1.GetSelectedItems().ToList()[0];
@@ -229,8 +225,10 @@ namespace ParishSystem
 
             AddSchedule f = new AddSchedule(ev.type, ev);
             f.ShowDialog();
-            //deselectItems();
-            
+
+            panelRemoveEdit.Enabled = false;
+            clearLabels();
+
             loadEvents();
             PlaceItems();
         }
@@ -240,7 +238,8 @@ namespace ParishSystem
             CalendarItem i = calendar1.GetSelectedItems().ToList()[0];
             CalendarEvent ev = _events[i];
 
-            deselectItems();
+            panelRemoveEdit.Enabled = false;
+            clearLabels();
 
             loadEvents();
             PlaceItems();
