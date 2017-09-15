@@ -201,6 +201,7 @@
             this.btn_Max.Name = "btn_Max";
             this.btn_Max.Size = new System.Drawing.Size(27, 25);
             this.btn_Max.TabIndex = 33;
+            this.btn_Max.Tag = "+";
             this.btn_Max.UseVisualStyleBackColor = true;
             this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
             // 
@@ -273,6 +274,7 @@
             this.sacrament_cabinet_panel.Size = new System.Drawing.Size(232, 50);
             this.sacrament_cabinet_panel.TabIndex = 51;
             this.sacrament_cabinet_panel.Click += new System.EventHandler(this.SubmenuOpen_Click);
+            this.sacrament_cabinet_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.sacrament_cabinet_panel_Paint);
             // 
             // application_button_menu
             // 
@@ -878,6 +880,7 @@
             this.Controls.Add(this.panel_controlbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SAD2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SAD2";
             this.Load += new System.EventHandler(this.SAD2_Load);
             this.panel_controlbox.ResumeLayout(false);
