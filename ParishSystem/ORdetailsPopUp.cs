@@ -25,6 +25,11 @@ namespace ParishSystem
 
         private void ORdetailsPopUp_Load(object sender, EventArgs e)
         {
+            Draggable draggable = new Draggable(this);
+            draggable.makeDraggable(controlBar_panel);
+
+           
+
             or_label.Text = OR.ToString();
            
                 DataTable trial1 =dh.getItemsOfIncomeFromItems(int.Parse(or_label.Text),BookType);
@@ -79,6 +84,14 @@ namespace ParishSystem
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ORdetailsPopUp_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Escape)
+            {
+                this.Close();
+            }
         }
     }
 }

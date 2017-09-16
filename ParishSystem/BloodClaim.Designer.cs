@@ -34,8 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Claim_button = new System.Windows.Forms.Button();
             this.BloodDonationsDGV = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.donationAdd = new System.Windows.Forms.Button();
             this.donationDelete = new System.Windows.Forms.Button();
             this.clear_button = new System.Windows.Forms.Button();
@@ -47,6 +45,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.donationPK = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.BloodDonationsDGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,19 +136,6 @@
             this.BloodDonationsDGV.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BloodDonationsDGV_CellContentDoubleClick);
             this.BloodDonationsDGV.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.BloodDonationsDGV_RowsAdded);
             this.BloodDonationsDGV.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.BloodDonationsDGV_RowsRemoved);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // DonationID
-            // 
-            this.DonationID.HeaderText = "";
-            this.DonationID.Name = "DonationID";
-            this.DonationID.ReadOnly = true;
-            this.DonationID.Visible = false;
             // 
             // donationAdd
             // 
@@ -327,7 +314,7 @@
             this.mi.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.mi.Lines = new string[0];
             this.mi.Location = new System.Drawing.Point(702, 91);
-            this.mi.MaxLength = 32767;
+            this.mi.MaxLength = 1;
             this.mi.Name = "mi";
             this.mi.PasswordChar = '\0';
             this.mi.PromptText = "Mi";
@@ -415,6 +402,19 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "_________________________________________________________";
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // DonationID
+            // 
+            this.DonationID.HeaderText = "";
+            this.DonationID.Name = "DonationID";
+            this.DonationID.ReadOnly = true;
+            // 
             // BloodClaim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -451,8 +451,6 @@
         private System.Windows.Forms.DataGridView BloodDonationsDGV;
         private System.Windows.Forms.Button donationAdd;
         private System.Windows.Forms.Button donationDelete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonationID;
         private System.Windows.Forms.Button clear_button;
         private MetroFramework.Controls.MetroTextBox ln;
         private MetroFramework.Controls.MetroTextBox sf;
@@ -462,5 +460,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label donationPK;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonationID;
     }
 }

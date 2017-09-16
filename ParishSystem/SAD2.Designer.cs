@@ -213,7 +213,7 @@
             this.btn_min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_min.Image = global::ParishSystem.Properties.Resources.btn_NEWmaximize;
+            this.btn_min.Image = global::ParishSystem.Properties.Resources.icons8_Expand_Arrow_20;
             this.btn_min.Location = new System.Drawing.Point(29, 4);
             this.btn_min.Margin = new System.Windows.Forms.Padding(4);
             this.btn_min.Name = "btn_min";

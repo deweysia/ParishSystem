@@ -22,12 +22,12 @@ namespace ParishSystem
         {
             if (donationAdd.Tag.ToString()=="a") {
                 int a;
-                a = dh.getDonationIDPrimaryKey(donationPK.Text);
+                a = dh.getDonationIDPrimaryKey(DonationID_textbox.Text);
                 if (a!=-1)
                 {
                     int index = BloodDonationsDGV.Rows.Add();
-                    BloodDonationsDGV.Rows[index].Cells[0].Value = donationPK.Text;
-                    BloodDonationsDGV.Rows[index].Cells[1].Value = a.ToString();
+                    BloodDonationsDGV.Rows[index].Cells[0].Value = a;
+                    BloodDonationsDGV.Rows[index].Cells[1].Value = DonationID_textbox.Text;
                     DonationID_textbox.Clear();
                     donationAdd.Enabled = false;
                 }
@@ -39,11 +39,11 @@ namespace ParishSystem
             else
             {
                 int a;
-                a = dh.getDonationIDPrimaryKey(donationPK.Text);
+                a = dh.getDonationIDPrimaryKey(DonationID_textbox.Text);
                 if (a != -1)
                 {
                     BloodDonationsDGV.SelectedRows[0].Cells[0].Value = donationPK.Text;
-                    BloodDonationsDGV.SelectedRows[0].Cells[1].Value = a.ToString();
+                    BloodDonationsDGV.SelectedRows[0].Cells[1].Value = DonationID_textbox.Text;
                     DonationID_textbox.Clear();
                     donationAdd.Tag = "a";
                     donationAdd.Text = "Add";
@@ -76,7 +76,7 @@ namespace ParishSystem
 
         private void DonationID_textbox_TextChanged(object sender, EventArgs e)
         {
-            if (donationPK.Text != "")
+            if (DonationID_textbox.Text != "")
             {
                 donationAdd.Enabled = true;
             }
@@ -143,7 +143,7 @@ namespace ParishSystem
             int a = dh.AddClaimant(fn.Text,mi.Text,ln.Text,sf.Text);
             foreach (DataGridViewRow dgvr in BloodDonationsDGV.Rows)
             {
-                dh.ClaimBloodDonation(int.Parse(dgvr.Cells[1].Value.ToString()),a);
+                dh.ClaimBloodDonation(int.Parse(dgvr.Cells[0].Value.ToString()),a);
             }
             Claim_button.Enabled = false;
             BloodDonationsDGV.Rows.Clear();

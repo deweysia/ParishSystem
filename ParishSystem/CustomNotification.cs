@@ -162,6 +162,10 @@ namespace ParishSystem
 
 
         public static State
+            ItemTypeUsed = new State("This Item name is already used", NotificationType.error),
+            BloodDonationIDUsed = new State("This Blood Donation ID is already used", NotificationType.error),
+            PersonHasDonations = new State("Cannot delete person with donations", NotificationType.error),
+            EventNameUsed = new State("Event name is alreaady used", NotificationType.error),
             ExcelExported = new State("Excel file has been Exported", NotificationType.success),
             WrongCredentials = new State("Wrong username or password", NotificationType.warning),
             DuplicateUsername = new State("This username is taken", NotificationType.warning),
@@ -212,6 +216,4 @@ namespace ParishSystem
             ApplicationEditFail = new State("Application changes failed to apply", NotificationType.error),
             NoMinisterSelected = new State("Please assign a minister to the appointment", NotificationType.warning);
     }
-
-    
 }

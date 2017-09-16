@@ -2307,6 +2307,7 @@
             this.Controls.Add(this.controlBar_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PersonView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.PersonView_Load);
             this.generalDetails_panel.ResumeLayout(false);
             this.generalDetails_panel.PerformLayout();

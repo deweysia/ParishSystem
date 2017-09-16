@@ -658,10 +658,10 @@ namespace ParishSystem
 
         public bool editBloodDonationEvent(int bloodDonationEventID, string eventName, DateTime startTime, DateTime endTime, string eventVenue, string eventDetails)
         {
-            string q = "UPDATE BloodDonationEvent SET eventName = @eventName, startTime = @startTime, endTime = @endTime, eventVenue = @eventVenue, eventDetails = @eventDetails WHERE bloodDonationEventID = @bloodDonationEventID";
-            bool success = ExecuteNonQuery(q, eventName, startTime.ToString("yyyy-MM-dd HH:mm:ss"), endTime.ToString("yyyy-MM-dd HH:mm:ss"), eventVenue, eventDetails, bloodDonationEventID);
+            string q = $@"UPDATE `sad2`.`blooddonationevent` SET `eventName`='{eventName}', `startDateTime`='{startTime.ToString("yyyy-MM-dd hh:mm:ss")}', `endDateTime`='{endTime.ToString("yyyy-MM-dd hh:mm:ss")}', `eventVenue`='{eventVenue}', `eventDetails`='{eventDetails}' WHERE `bloodDonationEventID`='{bloodDonationEventID}'";
+            bool success = ExecuteNonQuery(q);
             return success;
-
+            //dewey
         }
 
         public bool deleteBloodDonationEvent(int bloodDonationEventID)
@@ -2413,12 +2413,10 @@ namespace ParishSystem
             return success;
         }
 
-        public bool editBloodDonation(int profleID, string donationID, int bloodDonationEventID)
+        public bool editBloodDonation(int bloodDonationID, string donationID, int bloodDonationEventID)
         {
             //edit donation
-            string q = "UPDATE BloodDonation SET donationID = '" + donationID
-                + "', bloodDonationEventID = '" + bloodDonationEventID
-                + "' WHERE blooddonationID = '" + profleID + "'";
+            string q = $@"UPDATE `sad2`.`blooddonation` SET `bloodDonationEventID`='{bloodDonationEventID}', `donationID`='{donationID}' WHERE `bloodDonationID`='{bloodDonationID}'";
 
             bool success = runNonQuery(q);
             return success;
@@ -4297,7 +4295,7 @@ namespace ParishSystem
 
         public void Excel_CashReciept_Grouped_Breakdown(DataGridView dgvr, int cashReceiptCashDisbursment, int parish_community_postulancy,int popup_save)
         {
-            //here
+            
             Microsoft.Office.Interop.Excel.Application App = new Microsoft.Office.Interop.Excel.Application();
             Excel.Workbook newWorkbook = App.Workbooks.Add();
             Microsoft.Office.Interop.Excel.Worksheet x = App.Worksheets[1];
@@ -4439,6 +4437,100 @@ namespace ParishSystem
                     catch { }
                 }
             }
+        }
+        /*
+        public void ExcelBloodlettingReports()
+        {
+            Microsoft.Office.Interop.Excel.Application App = new Microsoft.Office.Interop.Excel.Application();
+            Excel.Workbook newWorkbook = App.Workbooks.Add();
+            Microsoft.Office.Interop.Excel.Worksheet x = App.Worksheets[1];
+            x.Name = "Report";
+
+            if (cashReceiptCashDisbursment == 1)
+            {
+                int lastColumn = dgvr.Rows[0].Cells.Count;
+
+                x.Range["A1", x.Cells[1, lastColumn]].Merge();
+                x.Range["A2", x.Cells[2, lastColumn]].Merge();
+                x.Range["B3", x.Cells[3, lastColumn]].Merge();
+                x.Range["B4", x.Cells[4, lastColumn]].Merge();
+                x.Range["A5", x.Cells[5, lastColumn]].Merge();
+
+                x.Range["A1"].Value = "     Assumption Parish     ";
+                x.Range["A2"].Value = (cashReceiptCashDisbursment == 1 ? "Cash Receipt: " : "Cash Disbursment: ") + " " + (parish_community_postulancy == 1 ? "Parish" : (parish_community_postulancy == 2 ? "Community" : "Postulancy"));
+                x.Range["A3"].Value = "     From";
+                x.Range["A4"].Value = "     To";
+
+                DateTime dt1 = DateTime.Parse(dgvr.Rows[dgvr.Rows.Count - 1].Cells[1].Value.ToString(), new System.Globalization.CultureInfo("en-US", true), System.Globalization.DateTimeStyles.AssumeLocal);
+                DateTime dt2 = DateTime.Parse(dgvr.Rows[0].Cells[1].Value.ToString(), new System.Globalization.CultureInfo("en-US", true), System.Globalization.DateTimeStyles.AssumeLocal);
+
+                x.Range["B3"].Value = (dt1 < dt2 ? dt1.ToString("MMMM dd yyyy, hh - mm") : dt2.ToString("MMMM dd yyyy"));
+                x.Range["B4"].Value = (dt1 > dt2 ? dt1.ToString("MMMM dd yyyy, hh - mm") : dt2.ToString("MMMM dd yyyy"));
+
+                x.Range["A1"].Cells.Font.Size = 18;
+                x.Range["A1"].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+                x.Range["A6"].Value = "     Official Reciept Number     ";
+                x.Range["B6"].Value = "     Date Paid    ";
+
+                for (int i = 3; i <= dgvr.Columns.Count; i++)
+                {
+                    x.Cells[6, i].Value = dgvr.Columns[i - 1].HeaderText;
+                }
+                x.Range["A6", x.Cells[6, lastColumn]].Cells.Font.Size = 15;
+                x.Range["A6", x.Cells[6, lastColumn]].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+
+                x.Range["A1", x.Cells[4, lastColumn]].EntireRow.Font.Bold = true;
+
+                DateTime min = DateTime.MaxValue;
+                DateTime max = DateTime.MinValue;
+                int row = 7;
+                foreach (DataGridViewRow rows in dgvr.Rows)
+                {
+                    for (int num = 1; num <= dgvr.Columns.Count; num++)
+                    {
+                        x.Cells[row, num].Value = rows.Cells[num - 1].Value.ToString();
+                    }
+                    row++;
+                }
+                x.Rows.AutoFit();
+                x.Columns.AutoFit();
+                x.Range["A1", x.Cells[(row - 1), lastColumn]].Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+                if (popup_save == 1)
+                {
+                    App.Visible = true;
+                }
+                else
+                {
+                    SaveExcelFile(newWorkbook);
+                }
+            }
+        }
+        */
+        public bool isEventNameExist(string name,int ID)
+        {
+            if (runQuery($@"SELECT * FROM sad2.blooddonationevent where eventName = ""{name}"" and bloodDonationEventID != {ID};").Rows.Count >= 1)
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool isBloodDonationIDExist(string ID)
+        {
+            if (runQuery($@"SELECT * FROM sad2.blooddonation where donationID = ""{ID}""").Rows.Count >= 1)
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool isItemTypeExist(string name,int ID,int bookType,int CashReceipt_CashDisbursment)
+        {
+            if (runQuery($@"SELECT * FROM sad2.itemtype where itemtype=""{name}""and itemTypeID != {ID} and bookType={bookType} and cashreceipt_cashdisbursment={CashReceipt_CashDisbursment};").Rows.Count >= 1)
+            {
+                return true;
+            }
+            return false;
         }
     }
     } 

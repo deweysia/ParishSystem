@@ -32,10 +32,11 @@ namespace ParishSystem
         }
 
         private void save_button_Click(object sender, EventArgs e)
-        {      
+        {
+            if (!dh.isItemTypeExist(name_textbox.Text, IncomeTypeID,book_combobox.SelectedIndex ,cashreceipt_cashdisbursment)) {
                 if (name_textbox.Text.Trim() == "" || book_combobox.Text == "")
                 {
-                Notification.Show(State.MissingFields);
+                    Notification.Show(State.MissingFields);
                 }
                 else
                 {
@@ -48,8 +49,13 @@ namespace ParishSystem
                     {
                         dh.editIncomeType(IncomeTypeID, name_textbox.Text, book_combobox.SelectedIndex, suggestedPrice_nud.Value, (active_button.Checked ? 1 : 2), cashreceipt_cashdisbursment, details_textbox.Text);
                     }
-                this.Close();
+                    this.Close();
                 }
+            }
+            else
+            {
+                Notification.Show(State.ItemTypeUsed);
+            }
        }
            
         public void refreshIncomeType()
@@ -76,9 +82,21 @@ namespace ParishSystem
 
         private void IncomeType_Load(object sender, EventArgs e)
         {
+            Draggable draggable = new Draggable(this);
+            draggable.makeDraggable(controlBar_panel);
+
             refreshIncomeType();
-            Draggable a = new Draggable(this);
-            a.makeDraggable(controlBar_panel);
+
+            if((IncomeTypeID==1|| IncomeTypeID==2 ||IncomeTypeID==3)&& cashreceipt_cashdisbursment == 1)
+            {
+                cancel_button.Visible = false;
+                save_button.Visible = false;
+                name_textbox.Enabled = false;
+                book_combobox.Enabled = false;
+                suggestedPrice_nud.Enabled = false;
+                active_button.Enabled = false;
+                details_textbox.Enabled = false;
+            }
 
         }
 

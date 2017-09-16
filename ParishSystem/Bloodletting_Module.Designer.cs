@@ -104,6 +104,7 @@
             this.search_textbox_blood.Size = new System.Drawing.Size(814, 22);
             this.search_textbox_blood.TabIndex = 7;
             this.search_textbox_blood.TextChanged += new System.EventHandler(this.search_button_blood_TextChanged);
+            this.search_textbox_blood.KeyDown += new System.Windows.Forms.KeyEventHandler(this.search_textbox_blood_KeyDown);
             // 
             // add_button_donor
             // 
@@ -173,6 +174,7 @@
             this.bloodletting_dgv.Size = new System.Drawing.Size(858, 476);
             this.bloodletting_dgv.TabIndex = 0;
             this.bloodletting_dgv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bloodletting_dgv_CellContentDoubleClick);
+            this.bloodletting_dgv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bloodletting_dgv_KeyDown);
             // 
             // Bloodletting_Module
             // 
