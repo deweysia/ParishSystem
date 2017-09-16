@@ -92,7 +92,7 @@ namespace ParishSystem
         {
             if (search_button_blood.Tag.ToString() == "s")
             {
-                if (search_textbox_blood.Text!="") {
+         
                     if (Mode == 1)
                     {
                         bloodletting_dgv.DataSource = dh.getBloodDonorsLike(search_textbox_blood.Text);
@@ -114,13 +114,13 @@ namespace ParishSystem
                         bloodletting_dgv.Columns["bloodDonationEventID"].Visible = false;
                     }
                     search_button_blood.Tag = "c";
-                    search_button_blood.Text = "Clear";
+                    search_button_blood.Image = ParishSystem.Properties.Resources.icons8_Delete_Filled_20_666666;
                 }
-            }
+            
             else
             {
                 search_textbox_blood.Text = "";
-                search_button_blood.Text = "Search";
+                search_button_blood.Image = ParishSystem.Properties.Resources.icons8_Search_Filled_20;
                 search_button_blood.Tag = "s";
                 if (Mode == 1)
                 {
@@ -154,6 +154,16 @@ namespace ParishSystem
         {
            
           
+        }
+
+        private void search_button_blood_TextChanged(object sender, EventArgs e)
+        {
+            if (search_textbox_blood.Text =="")
+            {
+                refresh();
+            }
+            search_button_blood.Tag = "s";
+            search_button_blood.Image = ParishSystem.Properties.Resources.icons8_Search_Filled_20;
         }
     }
 }

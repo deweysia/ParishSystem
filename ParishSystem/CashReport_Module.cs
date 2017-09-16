@@ -13,7 +13,7 @@ namespace ParishSystem
     public partial class CashReport_Module : Form
     {
         int cashDisbursmentMode; //parish community post
-        int bookReportMode; // cash disburs cash release  -->opposite sila
+        int bookReportMode; // cash receipt cash disb  -->opposite sila
         DataHandler dh = new DataHandler();
         public CashReport_Module(int cashdisbursment_cashrelease, int parish_community_postulancy)
         {
@@ -790,7 +790,7 @@ namespace ParishSystem
 
         private void CashReport_Module_Load(object sender, EventArgs e)
         {
-            
+            cash_label.Text = (bookReportMode == 1 ? "Cash Receipt" : "Cash Disbursment");
         }
     }
 }

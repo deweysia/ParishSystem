@@ -3566,8 +3566,8 @@ namespace ParishSystem
                         concat(""(+63)"",contactnumber) as contactnumber,
                         eventname
                         from blooddonor
-                        inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
-                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
+                        left outer join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
+                        left outer join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
                         where bloodDonationEvent.bloodDonationEventID = ""{blooddonationeventid}""";
             return runQuery(q);
         }
@@ -3589,8 +3589,8 @@ namespace ParishSystem
                         concat(""(+63)"",contactnumber) as contactnumber,
                         eventname
                         from blooddonor
-                        inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
-                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
+                        left outer join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
+                        left outer join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
                         where startDateTime>=""{Start.ToString("yyyy-MM-dd 00:00:00")}"" and startDateTime<=""{Start.ToString("yyyy-MM-dd 23:59:59")}""";
             return runQuery(q);
         }
@@ -3612,16 +3612,16 @@ namespace ParishSystem
                         concat(""(+63)"",contactnumber) as contactnumber,
                         eventname
                         from blooddonor
-                        inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
-                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
+                        left outer join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
+                        left outer join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
                         where startDateTime between ""{Start.ToString("yyyy-MM-dd 00:00:00")}"" and ""{Stop.ToString("yyyy-MM-dd 23:59:59")}""";
             return runQuery(q);
         }
         public DataTable getTotalDonationsOnEvents()
         {
             string q = $@"select blooddonationevent.bloodDonationEventID,eventname,count(donationid) as total from blooddonor 
-                            inner join blooddonation on blooddonation.profileid =blooddonor.blooddonorID
-                            inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
+                            left outer join blooddonation on blooddonation.profileid =blooddonor.blooddonorID
+                            left outer join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
                             group by bloodDonationEvent.bloodDonationEventID;";
             return runQuery(q);
         }
@@ -3672,8 +3672,8 @@ namespace ParishSystem
                         concat(""(+63)"",contactnumber) as contactnumber,
                         address
                         from blooddonor
-                        inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
-                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
+                        left outer join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
+                        left outer join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
                         where firstname like ""%{name}%"" or lastname like ""%{name}%""
                         group by blooddonor.blooddonorID";
             return runQuery(q);
@@ -3699,8 +3699,8 @@ namespace ParishSystem
                         concat(""(+63)"",contactnumber) as contactnumber,
                         address
                         from blooddonor
-                        inner join blooddonation on blooddonation.profileid =blooddonor.blooddonorID
-                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
+                        left outer join blooddonation on blooddonation.profileid =blooddonor.blooddonorID
+                        left outer join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
                         group by blooddonor.blooddonorID";
             return runQuery(q);
         }
@@ -3793,7 +3793,7 @@ namespace ParishSystem
         {
             string q = $@"select *, concat(blooddonor.lastname,"" "",coalesce(blooddonor.suffix,"" ""),"" "",blooddonor.firstName,"" "",blooddonor.midname,""."")as Donor,
                         concat(bloodclaimant.lastname, "" "", coalesce(bloodclaimant.suffix, "" ""), "" "", bloodclaimant.firstName, "" "", bloodclaimant.midname, ""."") as Claimant
-                        from blooddonation inner join bloodclaimant on bloodclaimant.bloodclaimantID = blooddonation.bloodclaimant inner
+                        from blooddonation left outer join bloodclaimant on bloodclaimant.bloodclaimantID = blooddonation.bloodclaimant left outer
                         join blooddonor on blooddonor.blooddonorID = blooddonation.profileID order by donationID desc";
             return runQuery(q);
         }
@@ -3801,7 +3801,7 @@ namespace ParishSystem
         {
             string q = $@"select *, concat(blooddonor.lastname,"" "",coalesce(blooddonor.suffix,"" ""),"" "",blooddonor.firstName,"" "",blooddonor.midname,""."")as Donor,
                         concat(bloodclaimant.lastname, "" "", coalesce(bloodclaimant.suffix, "" ""), "" "", bloodclaimant.firstName, "" "", bloodclaimant.midname, ""."") as Claimant
-                        from blooddonation inner join bloodclaimant on bloodclaimant.bloodclaimantID = blooddonation.bloodclaimant inner
+                        from blooddonation left outer join bloodclaimant on bloodclaimant.bloodclaimantID = blooddonation.bloodclaimant left outer
                         join blooddonor on blooddonor.blooddonorID = blooddonation.profileID where donationID like ""%{like}%"" order by donationID desc";
             return runQuery(q);
         }

@@ -90,7 +90,7 @@ namespace ParishSystem
             //Cash Module
             modules.Add(CabinetModule.CashDisbursement_CashRealeaseMode, new CashDisbursment(1));
             modules.Add(CabinetModule.ItemTypes_CashReceipt_CashDisbursement, new ItemTypes_Module(1));
-            modules.Add(CabinetModule.CashReceipt_BookModeFullPay, new CashReciept(1));
+            modules.Add(CabinetModule.CashReceipt_BookModeFullPay, new CashReceipt(1));
             modules.Add(CabinetModule.ReceiptReports, new CashReport_Module(1, 1));
             modules.Add(CabinetModule.DisbursementReports, new CashReport_Module(2, 1));
             modules.Add(CabinetModule.Employee, new EmployeeModule());

@@ -45,7 +45,7 @@
             // 
             // messageLabel
             // 
-            this.messageLabel.BackColor = System.Drawing.Color.White;
+            this.messageLabel.BackColor = System.Drawing.Color.Transparent;
             this.messageLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.messageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.messageLabel.ForeColor = System.Drawing.Color.Black;
@@ -117,6 +117,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::ParishSystem.Properties.Resources.Ok_32px;
             this.pictureBox1.Location = new System.Drawing.Point(10, 41);
             this.pictureBox1.Name = "pictureBox1";

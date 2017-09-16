@@ -186,11 +186,11 @@
     <Compile Include="CashReport_Module.Designer.cs">
       <DependentUpon>CashReport_Module.cs</DependentUpon>
     </Compile>
-    <Compile Include="CashReciept.cs">
+    <Compile Include="CashReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CashReciept.Designer.cs">
-      <DependentUpon>CashReciept.cs</DependentUpon>
+    <Compile Include="CashReceipt.Designer.cs">
+      <DependentUpon>CashReceipt.cs</DependentUpon>
     </Compile>
     <Compile Include="CueTextBox.cs">
       <SubType>Component</SubType>
@@ -229,12 +229,6 @@
     </Compile>
     <Compile Include="HiddenNumericUpDown.Designer.cs">
       <DependentUpon>HiddenNumericUpDown.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HomeModule.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HomeModule.Designer.cs">
-      <DependentUpon>HomeModule.cs</DependentUpon>
     </Compile>
     <Compile Include="ItemTypePopUp.cs">
       <SubType>Form</SubType>
@@ -400,8 +394,8 @@
     <EmbeddedResource Include="CashReport_Module.resx">
       <DependentUpon>CashReport_Module.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CashReciept.resx">
-      <DependentUpon>CashReciept.cs</DependentUpon>
+    <EmbeddedResource Include="CashReceipt.resx">
+      <DependentUpon>CashReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CueTextBox.resx">
       <DependentUpon>CueTextBox.cs</DependentUpon>
@@ -417,9 +411,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HomeModule.resx">
-      <DependentUpon>HomeModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemTypePopUp.resx">
       <DependentUpon>ItemTypePopUp.cs</DependentUpon>
