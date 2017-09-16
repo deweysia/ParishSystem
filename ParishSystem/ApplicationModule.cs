@@ -819,6 +819,10 @@ namespace ParishSystem
                 //If another person with same info exists,
                 if (profileExists) 
                 {
+                    DialogResult dr = MessageDialog.Show(MessageDialog.State.ProfileExists);
+                    if (dr == DialogResult.Cancel)
+                        return false;
+
                     //Get the GeneralProfileID of the other person
                     int existingProfileID = dh.getGeneralProfileID(fn, mi, ln, suffix, g, birthDate);
 
