@@ -434,7 +434,11 @@ namespace ParishSystem
         }
         private void logout_button_Click(object sender, EventArgs e)
         {
-            this.Close();
+            CustomMessage msg = new CustomMessage();
+            if (msg.Show("Are you sure you want to log out?", MessageDialogButtons.YesNo, MessageDialogIcon.Question)==DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void flowLayout_ControlButtons_Paint(object sender, PaintEventArgs e)

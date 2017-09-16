@@ -2776,14 +2776,14 @@ namespace ParishSystem
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where primaryincome.booktype = {BookType} and 
                             ORnum like '%{OR}%'
-                            union all
+                            {(BookType==1? $@"union all
                             select primaryincome.primaryIncomeID,sourceName,primaryincome.bookType,ORnum,primaryIncomeDateTime,amount,itemType from primaryincome 
                             inner join payment on payment.primaryIncomeID = primaryincome.primaryIncomeID 
                             inner join sacramentincome on sacramentincome.sacramentIncomeID = payment.sacramentIncomeID 
                             inner join application on application.applicationID = sacramentincome.applicationID 
                             inner join itemtype on itemtype.itemTypeID = application.sacramentType 
                             where primaryincome.booktype = {BookType} and 
-                            ORnum like '%{OR}%'
+                            ORnum like '%{OR}%'" :"" )}
                             ) as A  order by ORnum desc;";
             return runQuery(q);
         }
@@ -2793,29 +2793,29 @@ namespace ParishSystem
                             inner join item on item.primaryIncomeID = primaryincome.primaryincomeid 
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where DAY(primaryIncomeDateTime) = {Day} and MONTH(primaryIncomeDateTime) = {Month} and YEAR(primaryIncomeDateTime) = {Year} and primaryIncome.bookType = {BookType}
-                            union all
+                            {(BookType==1? $@"union all
                             select primaryincome.primaryIncomeID,sourceName,primaryincome.bookType,ORnum,primaryIncomeDateTime,amount,itemType from primaryincome 
                             inner join payment on payment.primaryIncomeID = primaryincome.primaryIncomeID 
                             inner join sacramentincome on sacramentincome.sacramentIncomeID = payment.sacramentIncomeID 
                             inner join application on application.applicationID = sacramentincome.applicationID 
                             inner join itemtype on itemtype.itemTypeID = application.sacramentType 
-                            where DAY(primaryIncomeDateTime) = {Day} and MONTH(primaryIncomeDateTime) = {Month} and YEAR(primaryIncomeDateTime) = {Year} and primaryIncome.bookType = {BookType}
+                            where DAY(primaryIncomeDateTime) = {Day} and MONTH(primaryIncomeDateTime) = {Month} and YEAR(primaryIncomeDateTime) = {Year} and primaryIncome.bookType = {BookType}" :"")}
                             ) as A  order by ORnum desc;";
             return runQuery(q);
-        }
+        }//{(BookType==1? $@"":"")}
         public DataTable getTransactionsByAccountingBookFormatByMonth(int BookType, int Month, int Year)
         {
             string q = $@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,(price*quantity)as price,itemType from primaryincome 
                             inner join item on item.primaryIncomeID = primaryincome.primaryincomeid 
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where MONTH(primaryIncomeDateTime) = {Month} and YEAR(primaryIncomeDateTime) = {Year} and primaryIncome.bookType = {BookType}
-                            union all
+                            {(BookType==1? $@"union all
                             select primaryincome.primaryIncomeID,sourceName,primaryincome.bookType,ORnum,primaryIncomeDateTime,amount,itemType from primaryincome 
                             inner join payment on payment.primaryIncomeID = primaryincome.primaryIncomeID 
                             inner join sacramentincome on sacramentincome.sacramentIncomeID = payment.sacramentIncomeID 
                             inner join application on application.applicationID = sacramentincome.applicationID 
                             inner join itemtype on itemtype.itemTypeID = application.sacramentType 
-                            where MONTH(primaryIncomeDateTime) = {Month} and YEAR(primaryIncomeDateTime) = {Year} and primaryIncome.bookType = {BookType}
+                            where MONTH(primaryIncomeDateTime) = {Month} and YEAR(primaryIncomeDateTime) = {Year} and primaryIncome.bookType = {BookType}" :"")}
                             ) as A  order by ORnum desc;";
             return runQuery(q);
         }
@@ -2825,13 +2825,13 @@ namespace ParishSystem
                             inner join item on item.primaryIncomeID = primaryincome.primaryincomeid 
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where YEAR(primaryIncomeDateTime) = {Year} and primaryIncome.bookType = {BookType}
-                            union all
+                            {(BookType == 1 ? $@"union all
                             select primaryincome.primaryIncomeID,sourceName,primaryincome.bookType,ORnum,primaryIncomeDateTime,amount,itemType from primaryincome 
                             inner join payment on payment.primaryIncomeID = primaryincome.primaryIncomeID 
                             inner join sacramentincome on sacramentincome.sacramentIncomeID = payment.sacramentIncomeID 
                             inner join application on application.applicationID = sacramentincome.applicationID 
                             inner join itemtype on itemtype.itemTypeID = application.sacramentType 
-                            where YEAR(primaryIncomeDateTime) = {Year} and primaryIncome.bookType = {BookType}
+                            where YEAR(primaryIncomeDateTime) = {Year} and primaryIncome.bookType = {BookType}" : "")}
                             ) as A  order by ORnum desc;";
             return runQuery(q);
         }
@@ -2842,14 +2842,14 @@ namespace ParishSystem
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where(primaryIncomeDateTime between '{ from.ToString("yyyy-MM-dd 00:00:00")}' and '{to.ToString("yyyy-MM-dd 23:59:59")}')
                             and primaryIncome.bookType = { BookType }
-                            union all
+                            {(BookType == 1 ? $@"union all
                             select primaryincome.primaryIncomeID,sourceName,primaryincome.bookType,ORnum,primaryIncomeDateTime,amount,itemType from primaryincome 
                             inner join payment on payment.primaryIncomeID = primaryincome.primaryIncomeID 
                             inner join sacramentincome on sacramentincome.sacramentIncomeID = payment.sacramentIncomeID 
                             inner join application on application.applicationID = sacramentincome.applicationID 
                             inner join itemtype on itemtype.itemTypeID = application.sacramentType 
                             where(primaryIncomeDateTime between '{ from.ToString("yyyy-MM-dd 00:00:00")}' and '{to.ToString("yyyy-MM-dd 23:59:59")}')
-                            and primaryIncome.bookType = { BookType }
+                            and primaryIncome.bookType = { BookType }" : "")}
                             ) as A  order by ORnum desc;";
             return runQuery(q);
         }
@@ -2860,14 +2860,14 @@ namespace ParishSystem
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where(primaryIncomeDateTime between '{ (DateTime.Now - new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd")}' and '{DateTime.Now.ToString("yyyy-MM-dd 23:59:59")}')
                             and primaryIncome.bookType = {BookType}
-                            union all
+                            {(BookType == 1 ? $@"union all
                             select primaryincome.primaryIncomeID,sourceName,primaryincome.bookType,ORnum,primaryIncomeDateTime,amount,itemType from primaryincome 
                             inner join payment on payment.primaryIncomeID = primaryincome.primaryIncomeID 
                             inner join sacramentincome on sacramentincome.sacramentIncomeID = payment.sacramentIncomeID 
                             inner join application on application.applicationID = sacramentincome.applicationID 
                             inner join itemtype on itemtype.itemTypeID = application.sacramentType 
                              where(primaryIncomeDateTime between '{ (DateTime.Now - new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd")}' and '{DateTime.Now.ToString("yyyy-MM-dd 23:59:59")}')
-                             and primaryIncome.bookType = {BookType}
+                             and primaryIncome.bookType = {BookType}" : "")}
                             ) as A  order by ORnum desc;";
             return runQuery(q);
         }
@@ -3540,8 +3540,8 @@ namespace ParishSystem
                         concat(""(+63)"",contactnumber) as contactnumber,
                         address
                         from blooddonor
-                        left outer join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
-                        left outer join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
+                        inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
+                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
                         group by blooddonor.blooddonorID";
             return runQuery(q);
         }
@@ -3564,8 +3564,8 @@ namespace ParishSystem
                         concat(""(+63)"",contactnumber) as contactnumber,
                         eventname
                         from blooddonor
-                        left outer join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
-                        left outer join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
+                        inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
+                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
                         where bloodDonationEvent.bloodDonationEventID = ""{blooddonationeventid}""";
             return runQuery(q);
         }
@@ -3587,8 +3587,8 @@ namespace ParishSystem
                         concat(""(+63)"",contactnumber) as contactnumber,
                         eventname
                         from blooddonor
-                        left outer join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
-                        left outer join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
+                        inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
+                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
                         where startDateTime>=""{Start.ToString("yyyy-MM-dd 00:00:00")}"" and startDateTime<=""{Start.ToString("yyyy-MM-dd 23:59:59")}""";
             return runQuery(q);
         }
@@ -3610,16 +3610,16 @@ namespace ParishSystem
                         concat(""(+63)"",contactnumber) as contactnumber,
                         eventname
                         from blooddonor
-                        left outer join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
-                        left outer join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
+                        inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
+                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
                         where startDateTime between ""{Start.ToString("yyyy-MM-dd 00:00:00")}"" and ""{Stop.ToString("yyyy-MM-dd 23:59:59")}""";
             return runQuery(q);
         }
         public DataTable getTotalDonationsOnEvents()
         {
             string q = $@"select blooddonationevent.bloodDonationEventID,eventname,count(donationid) as total from blooddonor 
-                            left outer join blooddonation on blooddonation.profileid =blooddonor.blooddonorID
-                            left outer join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
+                            inner join blooddonation on blooddonation.profileid =blooddonor.blooddonorID
+                            inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
                             group by bloodDonationEvent.bloodDonationEventID;";
             return runQuery(q);
         }

@@ -582,6 +582,8 @@
     <None Include="Resources\icons8-Fit to Width-20.png" />
     <None Include="Resources\icons8-Fit to Width-30.png" />
     <None Include="Resources\icons8-Delete Filled-30.png" />
+    <None Include="Resources\icons8-Sign Out Filled-20.png" />
+    <None Include="Resources\icons8-Expand Arrow-20 White.png" />
     <Content Include="Tools\SQL_Writer.jar" />
     <None Include="Resources\messageBox_cancel.png" />
     <None Include="Resources\messageBox_success.png" />

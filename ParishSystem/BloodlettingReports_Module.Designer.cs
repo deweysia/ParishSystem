@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bloodlettingreports_panel = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.summary_dgv_bloodletting = new System.Windows.Forms.DataGridView();
             this.bloodlettingeventreport_datagridview = new System.Windows.Forms.DataGridView();
             this.generateReport_button = new System.Windows.Forms.Button();
@@ -41,24 +42,31 @@
             this.from_bloodlettingeventreport_dtp = new System.Windows.Forms.DateTimePicker();
             this.bloodlettingeventreport_combobox = new System.Windows.Forms.ComboBox();
             this.animation = new System.Windows.Forms.Timer(this.components);
-            this.label8 = new System.Windows.Forms.Label();
+            this.filterPanel = new System.Windows.Forms.Panel();
+            this.event_label = new System.Windows.Forms.Label();
+            this.from_label = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.to_label = new System.Windows.Forms.Label();
+            this.PreviewButton = new System.Windows.Forms.Button();
+            this.SaveExcelButton = new System.Windows.Forms.Button();
+            this.filterButton = new System.Windows.Forms.Button();
+            this.panelOpen = new System.Windows.Forms.Timer(this.components);
             this.bloodlettingreports_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.summary_dgv_bloodletting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bloodlettingeventreport_datagridview)).BeginInit();
+            this.filterPanel.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bloodlettingreports_panel
             // 
             this.bloodlettingreports_panel.BackColor = System.Drawing.Color.White;
+            this.bloodlettingreports_panel.Controls.Add(this.filterPanel);
             this.bloodlettingreports_panel.Controls.Add(this.label8);
             this.bloodlettingreports_panel.Controls.Add(this.summary_dgv_bloodletting);
             this.bloodlettingreports_panel.Controls.Add(this.bloodlettingeventreport_datagridview);
-            this.bloodlettingreports_panel.Controls.Add(this.generateReport_button);
             this.bloodlettingreports_panel.Controls.Add(this.open_button);
-            this.bloodlettingreports_panel.Controls.Add(this.filterBy_combobox_bloodletting);
-            this.bloodlettingreports_panel.Controls.Add(this.to_bloodlettingeventreport_dtp);
-            this.bloodlettingreports_panel.Controls.Add(this.from_bloodlettingeventreport_dtp);
-            this.bloodlettingreports_panel.Controls.Add(this.bloodlettingeventreport_combobox);
             this.bloodlettingreports_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bloodlettingreports_panel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bloodlettingreports_panel.Location = new System.Drawing.Point(0, 0);
@@ -66,6 +74,18 @@
             this.bloodlettingreports_panel.Size = new System.Drawing.Size(943, 669);
             this.bloodlettingreports_panel.TabIndex = 37;
             this.bloodlettingreports_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.bloodlettingreports_panel_Paint);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(27, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(277, 32);
+            this.label8.TabIndex = 40;
+            this.label8.Text = "Blood Donation Reports";
             // 
             // summary_dgv_bloodletting
             // 
@@ -79,19 +99,19 @@
             this.summary_dgv_bloodletting.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.summary_dgv_bloodletting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.summary_dgv_bloodletting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.summary_dgv_bloodletting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.summary_dgv_bloodletting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.summary_dgv_bloodletting.ColumnHeadersHeight = 40;
             this.summary_dgv_bloodletting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.summary_dgv_bloodletting.EnableHeadersVisualStyles = false;
             this.summary_dgv_bloodletting.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.summary_dgv_bloodletting.Location = new System.Drawing.Point(45, 111);
+            this.summary_dgv_bloodletting.Location = new System.Drawing.Point(45, 117);
             this.summary_dgv_bloodletting.Margin = new System.Windows.Forms.Padding(3, 3, 10, 10);
             this.summary_dgv_bloodletting.MultiSelect = false;
             this.summary_dgv_bloodletting.Name = "summary_dgv_bloodletting";
@@ -105,7 +125,7 @@
             this.summary_dgv_bloodletting.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.summary_dgv_bloodletting.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.summary_dgv_bloodletting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.summary_dgv_bloodletting.Size = new System.Drawing.Size(562, 0);
+            this.summary_dgv_bloodletting.Size = new System.Drawing.Size(485, 0);
             this.summary_dgv_bloodletting.TabIndex = 6;
             this.summary_dgv_bloodletting.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.summary_dgv_bloodletting_CellContentDoubleClick);
             // 
@@ -122,14 +142,14 @@
             this.bloodlettingeventreport_datagridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bloodlettingeventreport_datagridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.bloodlettingeventreport_datagridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bloodlettingeventreport_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bloodlettingeventreport_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bloodlettingeventreport_datagridview.ColumnHeadersHeight = 40;
             this.bloodlettingeventreport_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.bloodlettingeventreport_datagridview.EnableHeadersVisualStyles = false;
@@ -153,15 +173,14 @@
             // 
             // generateReport_button
             // 
-            this.generateReport_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.generateReport_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.generateReport_button.FlatAppearance.BorderSize = 0;
             this.generateReport_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.generateReport_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.generateReport_button.ForeColor = System.Drawing.Color.White;
-            this.generateReport_button.Location = new System.Drawing.Point(634, 66);
+            this.generateReport_button.Location = new System.Drawing.Point(16, 140);
             this.generateReport_button.Name = "generateReport_button";
-            this.generateReport_button.Size = new System.Drawing.Size(266, 29);
+            this.generateReport_button.Size = new System.Drawing.Size(324, 34);
             this.generateReport_button.TabIndex = 7;
             this.generateReport_button.Text = "Generate";
             this.generateReport_button.UseVisualStyleBackColor = false;
@@ -175,7 +194,7 @@
             this.open_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.open_button.ForeColor = System.Drawing.Color.White;
             this.open_button.Image = global::ParishSystem.Properties.Resources.icons8_Expand_Arrow_20;
-            this.open_button.Location = new System.Drawing.Point(45, 66);
+            this.open_button.Location = new System.Drawing.Point(45, 82);
             this.open_button.Name = "open_button";
             this.open_button.Size = new System.Drawing.Size(34, 29);
             this.open_button.TabIndex = 8;
@@ -184,7 +203,6 @@
             // 
             // filterBy_combobox_bloodletting
             // 
-            this.filterBy_combobox_bloodletting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.filterBy_combobox_bloodletting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.filterBy_combobox_bloodletting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.filterBy_combobox_bloodletting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -194,18 +212,20 @@
             "Donations on Date",
             "Donations between Dates",
             "All Blood Donations"});
-            this.filterBy_combobox_bloodletting.Location = new System.Drawing.Point(634, 21);
+            this.filterBy_combobox_bloodletting.Location = new System.Drawing.Point(94, 10);
+            this.filterBy_combobox_bloodletting.Margin = new System.Windows.Forms.Padding(10);
             this.filterBy_combobox_bloodletting.Name = "filterBy_combobox_bloodletting";
-            this.filterBy_combobox_bloodletting.Size = new System.Drawing.Size(266, 29);
+            this.filterBy_combobox_bloodletting.Size = new System.Drawing.Size(246, 29);
             this.filterBy_combobox_bloodletting.TabIndex = 5;
             this.filterBy_combobox_bloodletting.SelectedIndexChanged += new System.EventHandler(this.filterBy_combobox_bloodletting_SelectedIndexChanged);
             // 
             // to_bloodlettingeventreport_dtp
             // 
             this.to_bloodlettingeventreport_dtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.to_bloodlettingeventreport_dtp.Location = new System.Drawing.Point(331, 64);
+            this.to_bloodlettingeventreport_dtp.Location = new System.Drawing.Point(49, 59);
+            this.to_bloodlettingeventreport_dtp.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.to_bloodlettingeventreport_dtp.Name = "to_bloodlettingeventreport_dtp";
-            this.to_bloodlettingeventreport_dtp.Size = new System.Drawing.Size(276, 29);
+            this.to_bloodlettingeventreport_dtp.Size = new System.Drawing.Size(275, 29);
             this.to_bloodlettingeventreport_dtp.TabIndex = 4;
             this.to_bloodlettingeventreport_dtp.Visible = false;
             this.to_bloodlettingeventreport_dtp.ValueChanged += new System.EventHandler(this.to_bloodlettingeventreport_dtp_ValueChanged);
@@ -213,9 +233,10 @@
             // from_bloodlettingeventreport_dtp
             // 
             this.from_bloodlettingeventreport_dtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.from_bloodlettingeventreport_dtp.Location = new System.Drawing.Point(331, 18);
+            this.from_bloodlettingeventreport_dtp.Location = new System.Drawing.Point(47, 10);
+            this.from_bloodlettingeventreport_dtp.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.from_bloodlettingeventreport_dtp.Name = "from_bloodlettingeventreport_dtp";
-            this.from_bloodlettingeventreport_dtp.Size = new System.Drawing.Size(276, 29);
+            this.from_bloodlettingeventreport_dtp.Size = new System.Drawing.Size(277, 29);
             this.from_bloodlettingeventreport_dtp.TabIndex = 2;
             this.from_bloodlettingeventreport_dtp.Visible = false;
             this.from_bloodlettingeventreport_dtp.ValueChanged += new System.EventHandler(this.from_bloodlettingeventreport_dtp_ValueChanged);
@@ -225,9 +246,10 @@
             this.bloodlettingeventreport_combobox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bloodlettingeventreport_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.bloodlettingeventreport_combobox.FormattingEnabled = true;
-            this.bloodlettingeventreport_combobox.Location = new System.Drawing.Point(331, 18);
+            this.bloodlettingeventreport_combobox.Location = new System.Drawing.Point(48, 108);
+            this.bloodlettingeventreport_combobox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.bloodlettingeventreport_combobox.Name = "bloodlettingeventreport_combobox";
-            this.bloodlettingeventreport_combobox.Size = new System.Drawing.Size(276, 29);
+            this.bloodlettingeventreport_combobox.Size = new System.Drawing.Size(274, 29);
             this.bloodlettingeventreport_combobox.TabIndex = 0;
             this.bloodlettingeventreport_combobox.Visible = false;
             this.bloodlettingeventreport_combobox.SelectedIndexChanged += new System.EventHandler(this.bloodlettingeventreport_combobox_SelectedIndexChanged);
@@ -237,17 +259,126 @@
             this.animation.Interval = 1;
             this.animation.Tick += new System.EventHandler(this.animation_Tick);
             // 
-            // label8
+            // filterPanel
             // 
-            this.label8.AutoSize = true;
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(27, 21);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(277, 32);
-            this.label8.TabIndex = 40;
-            this.label8.Text = "Blood Donation Reports";
+            this.filterPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.filterPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.filterPanel.Controls.Add(this.filterButton);
+            this.filterPanel.Controls.Add(this.PreviewButton);
+            this.filterPanel.Controls.Add(this.SaveExcelButton);
+            this.filterPanel.Controls.Add(this.flowLayoutPanel1);
+            this.filterPanel.Controls.Add(this.label3);
+            this.filterPanel.Controls.Add(this.filterBy_combobox_bloodletting);
+            this.filterPanel.Controls.Add(this.generateReport_button);
+            this.filterPanel.Location = new System.Drawing.Point(539, 86);
+            this.filterPanel.Name = "filterPanel";
+            this.filterPanel.Size = new System.Drawing.Size(354, 34);
+            this.filterPanel.TabIndex = 41;
+            // 
+            // event_label
+            // 
+            this.event_label.AutoSize = true;
+            this.event_label.Location = new System.Drawing.Point(0, 108);
+            this.event_label.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.event_label.Name = "event_label";
+            this.event_label.Size = new System.Drawing.Size(48, 21);
+            this.event_label.TabIndex = 8;
+            this.event_label.Text = "Event";
+            // 
+            // from_label
+            // 
+            this.from_label.AutoSize = true;
+            this.from_label.Location = new System.Drawing.Point(0, 10);
+            this.from_label.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.from_label.Name = "from_label";
+            this.from_label.Size = new System.Drawing.Size(47, 21);
+            this.from_label.TabIndex = 9;
+            this.from_label.Text = "From";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 13);
+            this.label3.Margin = new System.Windows.Forms.Padding(10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 21);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Filter By";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.from_label);
+            this.flowLayoutPanel1.Controls.Add(this.from_bloodlettingeventreport_dtp);
+            this.flowLayoutPanel1.Controls.Add(this.to_label);
+            this.flowLayoutPanel1.Controls.Add(this.to_bloodlettingeventreport_dtp);
+            this.flowLayoutPanel1.Controls.Add(this.event_label);
+            this.flowLayoutPanel1.Controls.Add(this.bloodlettingeventreport_combobox);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 39);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(324, 95);
+            this.flowLayoutPanel1.TabIndex = 42;
+            // 
+            // to_label
+            // 
+            this.to_label.AutoSize = true;
+            this.to_label.Location = new System.Drawing.Point(0, 59);
+            this.to_label.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.to_label.Name = "to_label";
+            this.to_label.Size = new System.Drawing.Size(49, 21);
+            this.to_label.TabIndex = 10;
+            this.to_label.Text = "     To ";
+            // 
+            // PreviewButton
+            // 
+            this.PreviewButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PreviewButton.Enabled = false;
+            this.PreviewButton.FlatAppearance.BorderSize = 0;
+            this.PreviewButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.PreviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PreviewButton.ForeColor = System.Drawing.Color.White;
+            this.PreviewButton.Location = new System.Drawing.Point(17, 189);
+            this.PreviewButton.Name = "PreviewButton";
+            this.PreviewButton.Size = new System.Drawing.Size(158, 34);
+            this.PreviewButton.TabIndex = 77;
+            this.PreviewButton.Text = "Export as Excel";
+            this.PreviewButton.UseVisualStyleBackColor = false;
+            // 
+            // SaveExcelButton
+            // 
+            this.SaveExcelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SaveExcelButton.Enabled = false;
+            this.SaveExcelButton.FlatAppearance.BorderSize = 0;
+            this.SaveExcelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.SaveExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveExcelButton.ForeColor = System.Drawing.Color.White;
+            this.SaveExcelButton.Location = new System.Drawing.Point(181, 189);
+            this.SaveExcelButton.Name = "SaveExcelButton";
+            this.SaveExcelButton.Size = new System.Drawing.Size(158, 34);
+            this.SaveExcelButton.TabIndex = 76;
+            this.SaveExcelButton.Text = "Quick Save";
+            this.SaveExcelButton.UseVisualStyleBackColor = false;
+            // 
+            // filterButton
+            // 
+            this.filterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.filterButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.filterButton.FlatAppearance.BorderSize = 0;
+            this.filterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.filterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.filterButton.ForeColor = System.Drawing.Color.White;
+            this.filterButton.Location = new System.Drawing.Point(0, -2);
+            this.filterButton.Name = "filterButton";
+            this.filterButton.Size = new System.Drawing.Size(352, 34);
+            this.filterButton.TabIndex = 78;
+            this.filterButton.Tag = "o";
+            this.filterButton.Text = "Filter";
+            this.filterButton.UseVisualStyleBackColor = false;
+            this.filterButton.Click += new System.EventHandler(this.filterButton_Click);
+            // 
+            // panelOpen
+            // 
+            this.panelOpen.Interval = 1;
+            this.panelOpen.Tick += new System.EventHandler(this.panelOpen_Tick);
             // 
             // BloodlettingReports_Module
             // 
@@ -263,6 +394,10 @@
             this.bloodlettingreports_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.summary_dgv_bloodletting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bloodlettingeventreport_datagridview)).EndInit();
+            this.filterPanel.ResumeLayout(false);
+            this.filterPanel.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -280,5 +415,15 @@
         private System.Windows.Forms.Button open_button;
         private System.Windows.Forms.Timer animation;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel filterPanel;
+        private System.Windows.Forms.Label event_label;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label from_label;
+        private System.Windows.Forms.Label to_label;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button PreviewButton;
+        private System.Windows.Forms.Button SaveExcelButton;
+        private System.Windows.Forms.Button filterButton;
+        private System.Windows.Forms.Timer panelOpen;
     }
 }
