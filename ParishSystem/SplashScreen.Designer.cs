@@ -34,11 +34,12 @@
             // 
             // metroProgressSpinner1
             // 
-            this.metroProgressSpinner1.Location = new System.Drawing.Point(208, 211);
+            this.metroProgressSpinner1.Location = new System.Drawing.Point(201, 211);
             this.metroProgressSpinner1.Maximum = 100;
             this.metroProgressSpinner1.Name = "metroProgressSpinner1";
             this.metroProgressSpinner1.Size = new System.Drawing.Size(50, 50);
             this.metroProgressSpinner1.Speed = 3F;
+            this.metroProgressSpinner1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroProgressSpinner1.TabIndex = 1;
             this.metroProgressSpinner1.UseSelectable = true;
             // 
@@ -62,6 +63,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SplashScreen";
+            this.Style = MetroFramework.MetroColorStyle.Silver;
             this.Text = "Assumption Parish Management System";
             this.ResumeLayout(false);
             this.PerformLayout();

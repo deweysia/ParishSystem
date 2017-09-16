@@ -34,6 +34,7 @@
             this.name_textbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.controlBar_panel = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.close_button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cancel_button = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.details_textbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.controlBar_panel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -110,7 +110,7 @@
             // 
             // controlBar_panel
             // 
-            this.controlBar_panel.BackColor = System.Drawing.Color.DimGray;
+            this.controlBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.controlBar_panel.Controls.Add(this.label6);
             this.controlBar_panel.Controls.Add(this.close_button);
             this.controlBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -121,9 +121,21 @@
             this.controlBar_panel.TabIndex = 4;
             this.controlBar_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.controlBar_panel_Paint);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(7, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 20);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Item Type";
+            // 
             // close_button
             // 
-            this.close_button.BackColor = System.Drawing.Color.DimGray;
+            this.close_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.close_button.Dock = System.Windows.Forms.DockStyle.Right;
             this.close_button.FlatAppearance.BorderSize = 0;
             this.close_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
@@ -275,18 +287,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(362, 88);
             this.panel4.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(7, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 20);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Item Type";
             // 
             // ItemTypePopUp
             // 

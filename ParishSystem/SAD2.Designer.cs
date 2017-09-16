@@ -201,6 +201,7 @@
             this.btn_Max.Name = "btn_Max";
             this.btn_Max.Size = new System.Drawing.Size(27, 25);
             this.btn_Max.TabIndex = 33;
+            this.btn_Max.Tag = "+";
             this.btn_Max.UseVisualStyleBackColor = true;
             this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
             // 
@@ -273,6 +274,7 @@
             this.sacrament_cabinet_panel.Size = new System.Drawing.Size(232, 50);
             this.sacrament_cabinet_panel.TabIndex = 51;
             this.sacrament_cabinet_panel.Click += new System.EventHandler(this.SubmenuOpen_Click);
+            this.sacrament_cabinet_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.sacrament_cabinet_panel_Paint);
             // 
             // application_button_menu
             // 
@@ -410,7 +412,7 @@
             this.cash_cabinet_panel.Location = new System.Drawing.Point(0, 50);
             this.cash_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.cash_cabinet_panel.Name = "cash_cabinet_panel";
-            this.cash_cabinet_panel.Size = new System.Drawing.Size(232, 289);
+            this.cash_cabinet_panel.Size = new System.Drawing.Size(232, 50);
             this.cash_cabinet_panel.TabIndex = 50;
             this.cash_cabinet_panel.Click += new System.EventHandler(this.SubmenuOpen_Click);
             // 
@@ -571,7 +573,7 @@
             this.bloodletting_cabinet_panel.Controls.Add(this.bloodletting_cabinet);
             this.bloodletting_cabinet_panel.Controls.Add(this.label5);
             this.bloodletting_cabinet_panel.Controls.Add(this.label6);
-            this.bloodletting_cabinet_panel.Location = new System.Drawing.Point(0, 339);
+            this.bloodletting_cabinet_panel.Location = new System.Drawing.Point(0, 100);
             this.bloodletting_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.bloodletting_cabinet_panel.Name = "bloodletting_cabinet_panel";
             this.bloodletting_cabinet_panel.Size = new System.Drawing.Size(232, 50);
@@ -587,7 +589,7 @@
             this.bloodClaimView_menu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bloodClaimView_menu_button.ForeColor = System.Drawing.Color.White;
             this.bloodClaimView_menu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bloodClaimView_menu_button.Location = new System.Drawing.Point(-2, 228);
+            this.bloodClaimView_menu_button.Location = new System.Drawing.Point(-2, 233);
             this.bloodClaimView_menu_button.Margin = new System.Windows.Forms.Padding(0);
             this.bloodClaimView_menu_button.Name = "bloodClaimView_menu_button";
             this.bloodClaimView_menu_button.Size = new System.Drawing.Size(232, 45);
@@ -597,6 +599,7 @@
             this.bloodClaimView_menu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bloodClaimView_menu_button.UseVisualStyleBackColor = false;
             this.bloodClaimView_menu_button.Click += new System.EventHandler(this.bloodClaimView_menu_button_Click);
+            this.bloodClaimView_menu_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_menu_MouseDown);
             // 
             // bloodClaim_menu_button
             // 
@@ -607,7 +610,7 @@
             this.bloodClaim_menu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bloodClaim_menu_button.ForeColor = System.Drawing.Color.White;
             this.bloodClaim_menu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bloodClaim_menu_button.Location = new System.Drawing.Point(0, 183);
+            this.bloodClaim_menu_button.Location = new System.Drawing.Point(0, 188);
             this.bloodClaim_menu_button.Margin = new System.Windows.Forms.Padding(0);
             this.bloodClaim_menu_button.Name = "bloodClaim_menu_button";
             this.bloodClaim_menu_button.Size = new System.Drawing.Size(232, 45);
@@ -617,6 +620,7 @@
             this.bloodClaim_menu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bloodClaim_menu_button.UseVisualStyleBackColor = false;
             this.bloodClaim_menu_button.Click += new System.EventHandler(this.bloodClaim_menu_button_Click);
+            this.bloodClaim_menu_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_menu_MouseDown);
             // 
             // bloodlettingevent_button
             // 
@@ -727,7 +731,7 @@
             this.admin_cabinet_panel.Controls.Add(this.admin_cabinet);
             this.admin_cabinet_panel.Controls.Add(this.label7);
             this.admin_cabinet_panel.Controls.Add(this.label8);
-            this.admin_cabinet_panel.Location = new System.Drawing.Point(0, 389);
+            this.admin_cabinet_panel.Location = new System.Drawing.Point(0, 150);
             this.admin_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.admin_cabinet_panel.Name = "admin_cabinet_panel";
             this.admin_cabinet_panel.Size = new System.Drawing.Size(232, 50);
@@ -876,6 +880,7 @@
             this.Controls.Add(this.panel_controlbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SAD2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SAD2";
             this.Load += new System.EventHandler(this.SAD2_Load);
             this.panel_controlbox.ResumeLayout(false);

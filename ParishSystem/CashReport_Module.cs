@@ -631,25 +631,13 @@ namespace ParishSystem
 
         }
 
-        private void refreshReport()
-        {
-
-        }
-       
+    
         private void generate_report(object sender, EventArgs e)
         {
             refreshReports();
             open = !open;
             timer1.Start();
-            if (breakdown_radiobutton_cashdisbursment.Checked) 
-            {
-                report_datagridview_cashdisbursment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-            }
-            else
-            {
-                report_datagridview_cashdisbursment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            }
-            excel.Enabled = true;
+            SaveExcelButton.Enabled = true;
         }
         bool open = false;
         int velocity = 0;
@@ -694,10 +682,7 @@ namespace ParishSystem
          
         }
 
-        private void excel_Click(object sender, EventArgs e)
-        {
-            dh.DisplayInExcel(report_datagridview_cashdisbursment);
-        }
+      
 
         private void reportFilter_panel_Paint(object sender, PaintEventArgs e)
         {
@@ -706,44 +691,106 @@ namespace ParishSystem
 
         private void parish_label_Click(object sender, EventArgs e)
         {
-            this.bookReportMode = 1;
+            this.cashDisbursmentMode = 1;
             report_datagridview_cashdisbursment.DataSource = null;
             summary_datagridview_report_disbursment.DataSource = null;
             parish_label.Font = new Font(parish_label.Font, FontStyle.Bold);
             community_label.Font = new Font(community_label.Font, FontStyle.Regular);
             postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
-            parish_label.ForeColor = Color.Black;
-            community_label.ForeColor = Color.FromArgb(64, 64, 64);
-            postulancy_label.ForeColor = Color.FromArgb(64, 64, 64);
-            excel.Enabled = false;
+            SaveExcelButton.Enabled = false;
         }
 
         private void community_label_Click(object sender, EventArgs e)
         {
-            this.bookReportMode = 2;
+            this.cashDisbursmentMode = 2;
             report_datagridview_cashdisbursment.DataSource = null;
             summary_datagridview_report_disbursment.DataSource = null;
             parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
             community_label.Font = new Font(community_label.Font, FontStyle.Bold);
             postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
-            parish_label.ForeColor = Color.FromArgb(64, 64, 64);
-            community_label.ForeColor = Color.Black;
-            postulancy_label.ForeColor = Color.FromArgb(64, 64, 64);
-            excel.Enabled = false;
+            SaveExcelButton.Enabled = false;
         }
 
         private void postulancy_label_Click(object sender, EventArgs e)
         {
-            this.bookReportMode = 3;
+            this.cashDisbursmentMode = 3;
             report_datagridview_cashdisbursment.DataSource = null;
             summary_datagridview_report_disbursment.DataSource = null;
             parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
             community_label.Font = new Font(community_label.Font, FontStyle.Regular);
             postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Bold);
-            parish_label.ForeColor = Color.FromArgb(64, 64, 64);
-            community_label.ForeColor = Color.FromArgb(64, 64, 64);
-            postulancy_label.ForeColor = Color.Black;
-            excel.Enabled = false;
+            SaveExcelButton.Enabled = false;
+        }
+
+        private void PreviewClick(object sender, EventArgs e)
+        {
+            if (total_radiobutton_cashdisbursment.Checked)
+            {
+                if (grouped_radiobutton_cashdisbursment.Checked)
+                {
+                    dh.Excel_CashReciept_Grouped_Total(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 1);
+                }
+                else
+                {
+                    dh.Excel_CashReciept_Ungrouped_Total(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 1);
+                }
+            }
+            else
+            {
+                if (grouped_radiobutton_cashdisbursment.Checked)
+                {
+                    dh.Excel_CashReciept_Grouped_Breakdown(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 1);
+                }
+                else
+                {
+                    dh.Excel_CashReciept_UnGrouped_Breakdown(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 1);
+                }
+            }
+        }
+        private void excel_Click(object sender, EventArgs e)
+        {
+            if (total_radiobutton_cashdisbursment.Checked)
+            {
+                if (grouped_radiobutton_cashdisbursment.Checked)
+                {
+                    dh.Excel_CashReciept_Grouped_Total(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 2);
+                }
+                else
+                {
+                    dh.Excel_CashReciept_Ungrouped_Total(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 2);
+                }
+            }
+            else
+            {
+                if (grouped_radiobutton_cashdisbursment.Checked)
+                {
+                    dh.Excel_CashReciept_Grouped_Breakdown(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 2);
+                }
+                else
+                {
+                    dh.Excel_CashReciept_UnGrouped_Breakdown(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 2);
+                }
+            }
+            dh.killAllExcel();
+        }
+
+        private void report_datagridview_cashdisbursment_DataSourceChanged(object sender, EventArgs e)
+        {
+            if (report_datagridview_cashdisbursment.DataSource != null)
+            {
+                PreviewButton.Enabled = true;
+                SaveExcelButton.Enabled = true;
+            }
+            else
+            {
+                PreviewButton.Enabled = false;
+                SaveExcelButton.Enabled = false;
+            }
+        }
+
+        private void CashReport_Module_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

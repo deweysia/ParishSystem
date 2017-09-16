@@ -64,6 +64,7 @@
             this.dtpGroomBirthDate.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpGroomBirthDate.Name = "dtpGroomBirthDate";
             this.dtpGroomBirthDate.Size = new System.Drawing.Size(200, 25);
+            this.dtpGroomBirthDate.Style = MetroFramework.MetroColorStyle.Silver;
             this.dtpGroomBirthDate.TabIndex = 4;
             this.dtpGroomBirthDate.Value = new System.DateTime(2017, 7, 16, 0, 0, 0, 0);
             // 
@@ -137,6 +138,7 @@
             this.dtpBrideBirthDate.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpBrideBirthDate.Name = "dtpBrideBirthDate";
             this.dtpBrideBirthDate.Size = new System.Drawing.Size(200, 25);
+            this.dtpBrideBirthDate.Style = MetroFramework.MetroColorStyle.Silver;
             this.dtpBrideBirthDate.TabIndex = 30;
             this.dtpBrideBirthDate.Value = new System.DateTime(2017, 7, 16, 0, 0, 0, 0);
             // 
@@ -165,7 +167,7 @@
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(7, 10);
+            this.label8.Location = new System.Drawing.Point(3, 9);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(153, 20);
             this.label8.TabIndex = 36;
@@ -184,9 +186,9 @@
             // 
             // btnApply
             // 
-            this.btnApply.BackColor = System.Drawing.Color.Gray;
+            this.btnApply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnApply.FlatAppearance.BorderSize = 0;
-            this.btnApply.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnApply.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApply.ForeColor = System.Drawing.Color.White;
@@ -224,11 +226,12 @@
             this.txtGroomFN.SelectionStart = 0;
             this.txtGroomFN.ShortcutsEnabled = true;
             this.txtGroomFN.Size = new System.Drawing.Size(107, 23);
+            this.txtGroomFN.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtGroomFN.TabIndex = 39;
             this.txtGroomFN.UseSelectable = true;
             this.txtGroomFN.WaterMark = "First Name";
             this.txtGroomFN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtGroomFN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtGroomFN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // txtGroomMI
             // 
@@ -256,11 +259,12 @@
             this.txtGroomMI.SelectionStart = 0;
             this.txtGroomMI.ShortcutsEnabled = true;
             this.txtGroomMI.Size = new System.Drawing.Size(31, 23);
+            this.txtGroomMI.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtGroomMI.TabIndex = 39;
             this.txtGroomMI.UseSelectable = true;
             this.txtGroomMI.WaterMark = "M.I.";
             this.txtGroomMI.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtGroomMI.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtGroomMI.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // txtGroomLN
             // 
@@ -288,11 +292,12 @@
             this.txtGroomLN.SelectionStart = 0;
             this.txtGroomLN.ShortcutsEnabled = true;
             this.txtGroomLN.Size = new System.Drawing.Size(107, 23);
+            this.txtGroomLN.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtGroomLN.TabIndex = 39;
             this.txtGroomLN.UseSelectable = true;
             this.txtGroomLN.WaterMark = "Last Name";
             this.txtGroomLN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtGroomLN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtGroomLN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // txtGroomSuffix
             // 
@@ -320,11 +325,12 @@
             this.txtGroomSuffix.SelectionStart = 0;
             this.txtGroomSuffix.ShortcutsEnabled = true;
             this.txtGroomSuffix.Size = new System.Drawing.Size(50, 23);
+            this.txtGroomSuffix.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtGroomSuffix.TabIndex = 39;
             this.txtGroomSuffix.UseSelectable = true;
             this.txtGroomSuffix.WaterMark = "Suffix";
             this.txtGroomSuffix.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtGroomSuffix.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtGroomSuffix.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // txtBrideFN
             // 
@@ -352,11 +358,12 @@
             this.txtBrideFN.SelectionStart = 0;
             this.txtBrideFN.ShortcutsEnabled = true;
             this.txtBrideFN.Size = new System.Drawing.Size(107, 23);
+            this.txtBrideFN.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtBrideFN.TabIndex = 39;
             this.txtBrideFN.UseSelectable = true;
             this.txtBrideFN.WaterMark = "First Name";
             this.txtBrideFN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtBrideFN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBrideFN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // txtBrideMI
             // 
@@ -384,11 +391,12 @@
             this.txtBrideMI.SelectionStart = 0;
             this.txtBrideMI.ShortcutsEnabled = true;
             this.txtBrideMI.Size = new System.Drawing.Size(31, 23);
+            this.txtBrideMI.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtBrideMI.TabIndex = 39;
             this.txtBrideMI.UseSelectable = true;
             this.txtBrideMI.WaterMark = "M.I.";
             this.txtBrideMI.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtBrideMI.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBrideMI.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // txtBrideLN
             // 
@@ -416,11 +424,12 @@
             this.txtBrideLN.SelectionStart = 0;
             this.txtBrideLN.ShortcutsEnabled = true;
             this.txtBrideLN.Size = new System.Drawing.Size(107, 23);
+            this.txtBrideLN.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtBrideLN.TabIndex = 39;
             this.txtBrideLN.UseSelectable = true;
             this.txtBrideLN.WaterMark = "Last Name";
             this.txtBrideLN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtBrideLN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBrideLN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // txtBrideSuffix
             // 
@@ -448,11 +457,12 @@
             this.txtBrideSuffix.SelectionStart = 0;
             this.txtBrideSuffix.ShortcutsEnabled = true;
             this.txtBrideSuffix.Size = new System.Drawing.Size(50, 23);
+            this.txtBrideSuffix.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtBrideSuffix.TabIndex = 39;
             this.txtBrideSuffix.UseSelectable = true;
             this.txtBrideSuffix.WaterMark = "Suffix";
             this.txtBrideSuffix.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtBrideSuffix.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBrideSuffix.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // txtPrice
             // 

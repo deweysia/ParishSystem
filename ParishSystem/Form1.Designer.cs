@@ -91,7 +91,7 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 61);
+            this.button2.Location = new System.Drawing.Point(524, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(193, 47);
             this.button2.TabIndex = 4;

@@ -64,6 +64,7 @@
             this.dtpFrom.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Size = new System.Drawing.Size(130, 29);
+            this.dtpFrom.Style = MetroFramework.MetroColorStyle.Silver;
             this.dtpFrom.TabIndex = 0;
             // 
             // dtpTo
@@ -75,6 +76,7 @@
             this.dtpTo.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Size = new System.Drawing.Size(130, 29);
+            this.dtpTo.Style = MetroFramework.MetroColorStyle.Silver;
             this.dtpTo.TabIndex = 0;
             // 
             // label1
@@ -155,6 +157,7 @@
             this.cbBetweenDates.Location = new System.Drawing.Point(12, 218);
             this.cbBetweenDates.Name = "cbBetweenDates";
             this.cbBetweenDates.Size = new System.Drawing.Size(138, 15);
+            this.cbBetweenDates.Style = MetroFramework.MetroColorStyle.Silver;
             this.cbBetweenDates.TabIndex = 6;
             this.cbBetweenDates.Text = "Search Between Dates";
             this.cbBetweenDates.UseSelectable = true;
@@ -229,6 +232,7 @@
             this.cmbMinister.Location = new System.Drawing.Point(3, 121);
             this.cmbMinister.Name = "cmbMinister";
             this.cmbMinister.Size = new System.Drawing.Size(221, 25);
+            this.cmbMinister.Style = MetroFramework.MetroColorStyle.Silver;
             this.cmbMinister.TabIndex = 3;
             this.cmbMinister.UseSelectable = true;
             // 
@@ -244,7 +248,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.DimGray;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -280,9 +284,9 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.Gray;
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;

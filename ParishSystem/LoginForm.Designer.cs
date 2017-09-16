@@ -66,6 +66,7 @@
             this.Username_textbox.SelectionStart = 0;
             this.Username_textbox.ShortcutsEnabled = true;
             this.Username_textbox.Size = new System.Drawing.Size(255, 30);
+            this.Username_textbox.Style = MetroFramework.MetroColorStyle.Silver;
             this.Username_textbox.TabIndex = 0;
             this.Username_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Username_textbox.UseSelectable = true;
@@ -101,6 +102,7 @@
             this.Password_textbox.SelectionStart = 0;
             this.Password_textbox.ShortcutsEnabled = true;
             this.Password_textbox.Size = new System.Drawing.Size(255, 30);
+            this.Password_textbox.Style = MetroFramework.MetroColorStyle.Silver;
             this.Password_textbox.TabIndex = 1;
             this.Password_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Password_textbox.UseSelectable = true;
@@ -111,9 +113,9 @@
             // 
             // login_button
             // 
-            this.login_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
+            this.login_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.login_button.FlatAppearance.BorderSize = 0;
-            this.login_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.login_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.login_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login_button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_button.ForeColor = System.Drawing.Color.White;
@@ -155,7 +157,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.Close_button);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;

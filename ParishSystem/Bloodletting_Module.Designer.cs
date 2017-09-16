@@ -50,18 +50,19 @@
             this.blooddonor_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.blooddonor_panel.Location = new System.Drawing.Point(0, 0);
             this.blooddonor_panel.Name = "blooddonor_panel";
-            this.blooddonor_panel.Size = new System.Drawing.Size(930, 540);
+            this.blooddonor_panel.Size = new System.Drawing.Size(943, 669);
             this.blooddonor_panel.TabIndex = 68;
             // 
             // search_button_blood
             // 
-            this.search_button_blood.BackColor = System.Drawing.Color.Gray;
+            this.search_button_blood.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.search_button_blood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.search_button_blood.FlatAppearance.BorderSize = 0;
-            this.search_button_blood.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.search_button_blood.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.search_button_blood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.search_button_blood.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.search_button_blood.ForeColor = System.Drawing.Color.White;
-            this.search_button_blood.Location = new System.Drawing.Point(765, 33);
+            this.search_button_blood.Location = new System.Drawing.Point(778, 33);
             this.search_button_blood.Name = "search_button_blood";
             this.search_button_blood.Size = new System.Drawing.Size(122, 30);
             this.search_button_blood.TabIndex = 8;
@@ -72,21 +73,23 @@
             // 
             // search_textbox_blood
             // 
+            this.search_textbox_blood.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.search_textbox_blood.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search_textbox_blood.Location = new System.Drawing.Point(42, 35);
+            this.search_textbox_blood.Location = new System.Drawing.Point(55, 35);
             this.search_textbox_blood.Name = "search_textbox_blood";
             this.search_textbox_blood.Size = new System.Drawing.Size(700, 29);
             this.search_textbox_blood.TabIndex = 7;
             // 
             // add_button_donor
             // 
-            this.add_button_donor.BackColor = System.Drawing.Color.Gray;
+            this.add_button_donor.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.add_button_donor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.add_button_donor.FlatAppearance.BorderSize = 0;
-            this.add_button_donor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.add_button_donor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.add_button_donor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_button_donor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_button_donor.ForeColor = System.Drawing.Color.White;
-            this.add_button_donor.Location = new System.Drawing.Point(362, 487);
+            this.add_button_donor.Location = new System.Drawing.Point(368, 616);
             this.add_button_donor.Name = "add_button_donor";
             this.add_button_donor.Size = new System.Drawing.Size(204, 37);
             this.add_button_donor.TabIndex = 4;
@@ -101,13 +104,16 @@
             this.bloodletting_dgv.AllowUserToOrderColumns = true;
             this.bloodletting_dgv.AllowUserToResizeColumns = false;
             this.bloodletting_dgv.AllowUserToResizeRows = false;
+            this.bloodletting_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bloodletting_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.bloodletting_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.bloodletting_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bloodletting_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.bloodletting_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
@@ -139,7 +145,7 @@
             this.bloodletting_dgv.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.bloodletting_dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.bloodletting_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bloodletting_dgv.Size = new System.Drawing.Size(845, 390);
+            this.bloodletting_dgv.Size = new System.Drawing.Size(858, 519);
             this.bloodletting_dgv.TabIndex = 0;
             this.bloodletting_dgv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bloodletting_dgv_CellContentDoubleClick);
             // 
@@ -151,7 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 540);
+            this.ClientSize = new System.Drawing.Size(943, 669);
             this.Controls.Add(this.blooddonor_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Bloodletting_Module";

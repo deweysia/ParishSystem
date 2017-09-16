@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Reports_panel = new System.Windows.Forms.Panel();
-            this.excel = new System.Windows.Forms.Button();
+            this.postulancy_label = new System.Windows.Forms.Label();
+            this.community_label = new System.Windows.Forms.Label();
+            this.parish_label = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.reportFilter_panel = new System.Windows.Forms.Panel();
             this.Open_button = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -66,16 +69,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.filterBy_combobox_disbursment = new System.Windows.Forms.ComboBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.postulancy_label = new System.Windows.Forms.Label();
-            this.community_label = new System.Windows.Forms.Label();
-            this.parish_label = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.report_datagridview_cashdisbursment = new System.Windows.Forms.DataGridView();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.summary_datagridview_report_disbursment = new System.Windows.Forms.DataGridView();
+            this.SaveExcelButton = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.PreviewButton = new System.Windows.Forms.Button();
             this.Reports_panel.SuspendLayout();
             this.reportFilter_panel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -85,21 +86,22 @@
             this.panel10.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
-            this.metroTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.report_datagridview_cashdisbursment)).BeginInit();
+            this.metroTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.summary_datagridview_report_disbursment)).BeginInit();
             this.SuspendLayout();
             // 
             // Reports_panel
             // 
             this.Reports_panel.BackColor = System.Drawing.Color.White;
+            this.Reports_panel.Controls.Add(this.PreviewButton);
             this.Reports_panel.Controls.Add(this.postulancy_label);
             this.Reports_panel.Controls.Add(this.community_label);
             this.Reports_panel.Controls.Add(this.parish_label);
             this.Reports_panel.Controls.Add(this.label15);
             this.Reports_panel.Controls.Add(this.reportFilter_panel);
             this.Reports_panel.Controls.Add(this.metroTabControl1);
-            this.Reports_panel.Controls.Add(this.excel);
+            this.Reports_panel.Controls.Add(this.SaveExcelButton);
             this.Reports_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Reports_panel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reports_panel.Location = new System.Drawing.Point(0, 0);
@@ -107,22 +109,53 @@
             this.Reports_panel.Size = new System.Drawing.Size(943, 669);
             this.Reports_panel.TabIndex = 13;
             // 
-            // excel
+            // postulancy_label
             // 
-            this.excel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.excel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.excel.Enabled = false;
-            this.excel.FlatAppearance.BorderSize = 0;
-            this.excel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.excel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.excel.ForeColor = System.Drawing.Color.White;
-            this.excel.Location = new System.Drawing.Point(734, 611);
-            this.excel.Name = "excel";
-            this.excel.Size = new System.Drawing.Size(178, 34);
-            this.excel.TabIndex = 20;
-            this.excel.Text = "Export to Excel";
-            this.excel.UseVisualStyleBackColor = false;
-            this.excel.Click += new System.EventHandler(this.excel_Click);
+            this.postulancy_label.AutoSize = true;
+            this.postulancy_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postulancy_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.postulancy_label.Location = new System.Drawing.Point(315, 25);
+            this.postulancy_label.Name = "postulancy_label";
+            this.postulancy_label.Size = new System.Drawing.Size(112, 30);
+            this.postulancy_label.TabIndex = 73;
+            this.postulancy_label.Text = "Postulancy";
+            this.postulancy_label.Click += new System.EventHandler(this.postulancy_label_Click);
+            // 
+            // community_label
+            // 
+            this.community_label.AutoSize = true;
+            this.community_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.community_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.community_label.Location = new System.Drawing.Point(171, 25);
+            this.community_label.Name = "community_label";
+            this.community_label.Size = new System.Drawing.Size(120, 30);
+            this.community_label.TabIndex = 72;
+            this.community_label.Text = "Community";
+            this.community_label.Click += new System.EventHandler(this.community_label_Click);
+            // 
+            // parish_label
+            // 
+            this.parish_label.AutoSize = true;
+            this.parish_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parish_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.parish_label.Location = new System.Drawing.Point(66, 25);
+            this.parish_label.Name = "parish_label";
+            this.parish_label.Size = new System.Drawing.Size(72, 30);
+            this.parish_label.TabIndex = 71;
+            this.parish_label.Text = "Parish";
+            this.parish_label.Click += new System.EventHandler(this.parish_label_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.LightGray;
+            this.label15.Location = new System.Drawing.Point(37, 44);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(407, 16);
+            this.label15.TabIndex = 74;
+            this.label15.Text = "_________________________________________________________";
             // 
             // reportFilter_panel
             // 
@@ -136,7 +169,7 @@
             this.reportFilter_panel.Controls.Add(this.filterBy_combobox_disbursment);
             this.reportFilter_panel.Location = new System.Drawing.Point(550, 26);
             this.reportFilter_panel.Name = "reportFilter_panel";
-            this.reportFilter_panel.Size = new System.Drawing.Size(366, 34);
+            this.reportFilter_panel.Size = new System.Drawing.Size(360, 34);
             this.reportFilter_panel.TabIndex = 18;
             this.reportFilter_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.reportFilter_panel_Paint);
             // 
@@ -150,7 +183,7 @@
             this.Open_button.ForeColor = System.Drawing.Color.White;
             this.Open_button.Location = new System.Drawing.Point(0, -2);
             this.Open_button.Name = "Open_button";
-            this.Open_button.Size = new System.Drawing.Size(364, 34);
+            this.Open_button.Size = new System.Drawing.Size(358, 34);
             this.Open_button.TabIndex = 19;
             this.Open_button.Text = "Filter";
             this.Open_button.UseVisualStyleBackColor = false;
@@ -423,11 +456,6 @@
             this.filterBy_combobox_disbursment.TabIndex = 13;
             this.filterBy_combobox_disbursment.SelectedIndexChanged += new System.EventHandler(this.filterBy_combobox_disbursment_SelectedIndexChanged);
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // metroTabControl1
             // 
             this.metroTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -437,7 +465,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Location = new System.Drawing.Point(38, 66);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(878, 539);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroTabControl1.TabIndex = 21;
@@ -458,68 +486,6 @@
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
             // 
-            // metroTabPage2
-            // 
-            this.metroTabPage2.Controls.Add(this.summary_datagridview_report_disbursment);
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 10;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(870, 497);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "          Summary          ";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 10;
-            // 
-            // postulancy_label
-            // 
-            this.postulancy_label.AutoSize = true;
-            this.postulancy_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postulancy_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.postulancy_label.Location = new System.Drawing.Point(315, 25);
-            this.postulancy_label.Name = "postulancy_label";
-            this.postulancy_label.Size = new System.Drawing.Size(112, 30);
-            this.postulancy_label.TabIndex = 73;
-            this.postulancy_label.Text = "Postulancy";
-            this.postulancy_label.Click += new System.EventHandler(this.postulancy_label_Click);
-            // 
-            // community_label
-            // 
-            this.community_label.AutoSize = true;
-            this.community_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.community_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.community_label.Location = new System.Drawing.Point(171, 25);
-            this.community_label.Name = "community_label";
-            this.community_label.Size = new System.Drawing.Size(120, 30);
-            this.community_label.TabIndex = 72;
-            this.community_label.Text = "Community";
-            this.community_label.Click += new System.EventHandler(this.community_label_Click);
-            // 
-            // parish_label
-            // 
-            this.parish_label.AutoSize = true;
-            this.parish_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.parish_label.Location = new System.Drawing.Point(66, 25);
-            this.parish_label.Name = "parish_label";
-            this.parish_label.Size = new System.Drawing.Size(72, 30);
-            this.parish_label.TabIndex = 71;
-            this.parish_label.Text = "Parish";
-            this.parish_label.Click += new System.EventHandler(this.parish_label_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.LightGray;
-            this.label15.Location = new System.Drawing.Point(37, 44);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(407, 16);
-            this.label15.TabIndex = 74;
-            this.label15.Text = "_________________________________________________________";
-            // 
             // report_datagridview_cashdisbursment
             // 
             this.report_datagridview_cashdisbursment.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -535,45 +501,45 @@
             this.report_datagridview_cashdisbursment.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.report_datagridview_cashdisbursment.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.report_datagridview_cashdisbursment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.report_datagridview_cashdisbursment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.report_datagridview_cashdisbursment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle41;
             this.report_datagridview_cashdisbursment.ColumnHeadersHeight = 40;
             this.report_datagridview_cashdisbursment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.report_datagridview_cashdisbursment.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.report_datagridview_cashdisbursment.DefaultCellStyle = dataGridViewCellStyle42;
             this.report_datagridview_cashdisbursment.EnableHeadersVisualStyles = false;
             this.report_datagridview_cashdisbursment.GridColor = System.Drawing.Color.White;
             this.report_datagridview_cashdisbursment.Location = new System.Drawing.Point(0, 23);
             this.report_datagridview_cashdisbursment.MultiSelect = false;
             this.report_datagridview_cashdisbursment.Name = "report_datagridview_cashdisbursment";
             this.report_datagridview_cashdisbursment.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Magenta;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.report_datagridview_cashdisbursment.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle43.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.Magenta;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.report_datagridview_cashdisbursment.RowHeadersDefaultCellStyle = dataGridViewCellStyle43;
             this.report_datagridview_cashdisbursment.RowHeadersVisible = false;
             this.report_datagridview_cashdisbursment.RowHeadersWidth = 50;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DarkRed;
-            this.report_datagridview_cashdisbursment.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.DarkRed;
+            this.report_datagridview_cashdisbursment.RowsDefaultCellStyle = dataGridViewCellStyle44;
             this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -584,7 +550,23 @@
             this.report_datagridview_cashdisbursment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.report_datagridview_cashdisbursment.Size = new System.Drawing.Size(870, 454);
             this.report_datagridview_cashdisbursment.TabIndex = 4;
+            this.report_datagridview_cashdisbursment.DataSourceChanged += new System.EventHandler(this.report_datagridview_cashdisbursment_DataSourceChanged);
             this.report_datagridview_cashdisbursment.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.breakdown_datagridview_report_disbursment_CellContentDoubleClick);
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.Controls.Add(this.summary_datagridview_report_disbursment);
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.HorizontalScrollbarSize = 10;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(870, 497);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "          Summary          ";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.VerticalScrollbarSize = 10;
             // 
             // summary_datagridview_report_disbursment
             // 
@@ -601,45 +583,45 @@
             this.summary_datagridview_report_disbursment.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.summary_datagridview_report_disbursment.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.summary_datagridview_report_disbursment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.summary_datagridview_report_disbursment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.summary_datagridview_report_disbursment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle45;
             this.summary_datagridview_report_disbursment.ColumnHeadersHeight = 40;
             this.summary_datagridview_report_disbursment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.summary_datagridview_report_disbursment.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle46.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle46.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle46.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.summary_datagridview_report_disbursment.DefaultCellStyle = dataGridViewCellStyle46;
             this.summary_datagridview_report_disbursment.EnableHeadersVisualStyles = false;
             this.summary_datagridview_report_disbursment.GridColor = System.Drawing.Color.White;
             this.summary_datagridview_report_disbursment.Location = new System.Drawing.Point(0, 23);
             this.summary_datagridview_report_disbursment.MultiSelect = false;
             this.summary_datagridview_report_disbursment.Name = "summary_datagridview_report_disbursment";
             this.summary_datagridview_report_disbursment.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Magenta;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.summary_datagridview_report_disbursment.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle47.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.Color.Magenta;
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.summary_datagridview_report_disbursment.RowHeadersDefaultCellStyle = dataGridViewCellStyle47;
             this.summary_datagridview_report_disbursment.RowHeadersVisible = false;
             this.summary_datagridview_report_disbursment.RowHeadersWidth = 50;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.DarkRed;
-            this.summary_datagridview_report_disbursment.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle48.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.DarkRed;
+            this.summary_datagridview_report_disbursment.RowsDefaultCellStyle = dataGridViewCellStyle48;
             this.summary_datagridview_report_disbursment.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.summary_datagridview_report_disbursment.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.summary_datagridview_report_disbursment.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -651,6 +633,45 @@
             this.summary_datagridview_report_disbursment.Size = new System.Drawing.Size(870, 454);
             this.summary_datagridview_report_disbursment.TabIndex = 17;
             // 
+            // SaveExcelButton
+            // 
+            this.SaveExcelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveExcelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SaveExcelButton.Enabled = false;
+            this.SaveExcelButton.FlatAppearance.BorderSize = 0;
+            this.SaveExcelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.SaveExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveExcelButton.ForeColor = System.Drawing.Color.White;
+            this.SaveExcelButton.Location = new System.Drawing.Point(734, 611);
+            this.SaveExcelButton.Name = "SaveExcelButton";
+            this.SaveExcelButton.Size = new System.Drawing.Size(178, 34);
+            this.SaveExcelButton.TabIndex = 20;
+            this.SaveExcelButton.Text = "Quick Save";
+            this.SaveExcelButton.UseVisualStyleBackColor = false;
+            this.SaveExcelButton.Click += new System.EventHandler(this.excel_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // PreviewButton
+            // 
+            this.PreviewButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.PreviewButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PreviewButton.Enabled = false;
+            this.PreviewButton.FlatAppearance.BorderSize = 0;
+            this.PreviewButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.PreviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PreviewButton.ForeColor = System.Drawing.Color.White;
+            this.PreviewButton.Location = new System.Drawing.Point(528, 611);
+            this.PreviewButton.Name = "PreviewButton";
+            this.PreviewButton.Size = new System.Drawing.Size(178, 34);
+            this.PreviewButton.TabIndex = 75;
+            this.PreviewButton.Text = "Export as Excel";
+            this.PreviewButton.UseVisualStyleBackColor = false;
+            this.PreviewButton.Click += new System.EventHandler(this.PreviewClick);
+            // 
             // CashReport_Module
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -660,6 +681,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CashReport_Module";
             this.Text = "CashReport_Module";
+            this.Load += new System.EventHandler(this.CashReport_Module_Load);
             this.Reports_panel.ResumeLayout(false);
             this.Reports_panel.PerformLayout();
             this.reportFilter_panel.ResumeLayout(false);
@@ -675,8 +697,8 @@
             this.panel10.PerformLayout();
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
-            this.metroTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.report_datagridview_cashdisbursment)).EndInit();
+            this.metroTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.summary_datagridview_report_disbursment)).EndInit();
             this.ResumeLayout(false);
 
@@ -713,7 +735,7 @@
         private System.Windows.Forms.Button Open_button;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button excel;
+        private System.Windows.Forms.Button SaveExcelButton;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
@@ -723,5 +745,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView report_datagridview_cashdisbursment;
         private System.Windows.Forms.DataGridView summary_datagridview_report_disbursment;
+        private System.Windows.Forms.Button PreviewButton;
     }
 }

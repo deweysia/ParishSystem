@@ -107,6 +107,7 @@
             this.birthdate_dtp.MinimumSize = new System.Drawing.Size(0, 25);
             this.birthdate_dtp.Name = "birthdate_dtp";
             this.birthdate_dtp.Size = new System.Drawing.Size(200, 25);
+            this.birthdate_dtp.Style = MetroFramework.MetroColorStyle.Silver;
             this.birthdate_dtp.TabIndex = 7;
             this.birthdate_dtp.Value = new System.DateTime(2017, 7, 16, 0, 0, 0, 0);
             // 
@@ -118,7 +119,7 @@
             this.male_radio.Location = new System.Drawing.Point(3, 3);
             this.male_radio.Name = "male_radio";
             this.male_radio.Size = new System.Drawing.Size(49, 15);
-            this.male_radio.Style = MetroFramework.MetroColorStyle.Black;
+            this.male_radio.Style = MetroFramework.MetroColorStyle.Silver;
             this.male_radio.TabIndex = 5;
             this.male_radio.TabStop = true;
             this.male_radio.Text = "Male";
@@ -135,7 +136,7 @@
             this.female_radio.Location = new System.Drawing.Point(58, 3);
             this.female_radio.Name = "female_radio";
             this.female_radio.Size = new System.Drawing.Size(61, 15);
-            this.female_radio.Style = MetroFramework.MetroColorStyle.Black;
+            this.female_radio.Style = MetroFramework.MetroColorStyle.Silver;
             this.female_radio.TabIndex = 6;
             this.female_radio.Text = "Female";
             this.female_radio.UseCustomBackColor = true;
@@ -177,7 +178,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-2, -1);
@@ -240,11 +241,12 @@
             this.txtSuffix.SelectionStart = 0;
             this.txtSuffix.ShortcutsEnabled = true;
             this.txtSuffix.Size = new System.Drawing.Size(50, 23);
+            this.txtSuffix.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtSuffix.TabIndex = 40;
             this.txtSuffix.UseSelectable = true;
             this.txtSuffix.WaterMark = "Suffix";
             this.txtSuffix.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSuffix.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtSuffix.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // txtLastName
             // 
@@ -272,11 +274,12 @@
             this.txtLastName.SelectionStart = 0;
             this.txtLastName.ShortcutsEnabled = true;
             this.txtLastName.Size = new System.Drawing.Size(107, 23);
+            this.txtLastName.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtLastName.TabIndex = 41;
             this.txtLastName.UseSelectable = true;
             this.txtLastName.WaterMark = "Last Name";
             this.txtLastName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtLastName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtLastName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // txtMI
             // 
@@ -304,11 +307,12 @@
             this.txtMI.SelectionStart = 0;
             this.txtMI.ShortcutsEnabled = true;
             this.txtMI.Size = new System.Drawing.Size(31, 23);
+            this.txtMI.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtMI.TabIndex = 42;
             this.txtMI.UseSelectable = true;
             this.txtMI.WaterMark = "M.I.";
             this.txtMI.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtMI.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtMI.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // txtFN
             // 
@@ -336,11 +340,12 @@
             this.txtFN.SelectionStart = 0;
             this.txtFN.ShortcutsEnabled = true;
             this.txtFN.Size = new System.Drawing.Size(107, 23);
+            this.txtFN.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtFN.TabIndex = 43;
             this.txtFN.UseSelectable = true;
             this.txtFN.WaterMark = "First Name";
             this.txtFN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtFN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // flowLayoutPanel1
             // 
@@ -392,9 +397,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;

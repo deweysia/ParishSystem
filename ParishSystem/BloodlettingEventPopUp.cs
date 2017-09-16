@@ -106,8 +106,8 @@ namespace ParishSystem
                 edit_button.Tag = "e";
                 edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
                 event_name.Text = dt.Rows[0]["eventName"].ToString();
-                start_dateTimePicker.Value = dh.toDateTime(dt.Rows[0]["startDateTime"].ToString(), false);
-                end_DateTimePicker.Value = dh.toDateTime(dt.Rows[0]["endDateTime"].ToString(), false);
+                start_dateTimePicker.Value = DateTime.Parse(dt.Rows[0]["startDateTime"].ToString()).Date;
+                end_DateTimePicker.Value = DateTime.Parse(dt.Rows[0]["endDateTime"].ToString()).Date;
                 venue_textbox.Text = dt.Rows[0]["eventVenue"].ToString();
                 details_textarea.Text = dt.Rows[0]["eventDetails"].ToString();
             }

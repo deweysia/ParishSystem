@@ -21,9 +21,11 @@ namespace ParishSystem
             Profile,
             Scheduling,
             Minister,
-            Bloodletting_DonorMode_EventMode,
+            Bloodletting_DonorMode,
+            Bloodletting_EventMode,
             CashReceipt_BookModeFullPay,
-            ReceiptReports_Disbursement_Release_Parish_Community_Postulancy,
+            ReceiptReports,
+            DisbursementReports,
             CashDisbursement_CashRealeaseMode,
             ItemTypes_CashReceipt_CashDisbursement,
             BloodlettingReports,
@@ -79,16 +81,18 @@ namespace ParishSystem
             modules.Add(CabinetModule.Minister, new MinisterModule());
 
             //Bloodletting Module
-            modules.Add(CabinetModule.Bloodletting_DonorMode_EventMode, new Bloodletting_Module(1));
+            modules.Add(CabinetModule.Bloodletting_DonorMode, new Bloodletting_Module(1));
+            modules.Add(CabinetModule.Bloodletting_EventMode, new Bloodletting_Module(2));
             modules.Add(CabinetModule.BloodClaim, new BloodClaim());
             modules.Add(CabinetModule.BloodlettingReports, new BloodlettingReports_Module());
+            modules.Add(CabinetModule.ClaimView, new BloodClaimView());
 
             //Cash Module
             modules.Add(CabinetModule.CashDisbursement_CashRealeaseMode, new CashDisbursment(1));
             modules.Add(CabinetModule.ItemTypes_CashReceipt_CashDisbursement, new ItemTypes_Module(1));
             modules.Add(CabinetModule.CashReceipt_BookModeFullPay, new CashReciept(1));
-            modules.Add(CabinetModule.ReceiptReports_Disbursement_Release_Parish_Community_Postulancy, new CashReport_Module(1, 1));
-
+            modules.Add(CabinetModule.ReceiptReports, new CashReport_Module(1, 1));
+            modules.Add(CabinetModule.DisbursementReports, new CashReport_Module(2, 1));
             modules.Add(CabinetModule.Employee, new EmployeeModule());
             
             
@@ -130,7 +134,16 @@ namespace ParishSystem
 
         private void btn_Max_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            if (btn_Max.Tag.ToString() == "+")
+            {
+                this.WindowState = FormWindowState.Maximized;
+                btn_Max.Tag = "-";
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+                btn_Max.Tag = "+";
+            }
         }
         #endregion
 
@@ -344,7 +357,7 @@ namespace ParishSystem
         private void CRBreport_button_Click(object sender, EventArgs e)
         {
             //Form A = new CashReport_Module(2,1);
-            Form A = modules[CabinetModule.ReceiptReports_Disbursement_Release_Parish_Community_Postulancy];
+            Form A = modules[CabinetModule.ReceiptReports];
             showForm(content_panel, A);
         }
 
@@ -358,7 +371,7 @@ namespace ParishSystem
         private void CDBreport_button_Click(object sender, EventArgs e)
         {
             //Form A = new CashReport_Module(1, 1);
-            Form A = modules[CabinetModule.ReceiptReports_Disbursement_Release_Parish_Community_Postulancy];
+            Form A = modules[CabinetModule.DisbursementReports];
             showForm(content_panel, A);
         }
         private void itemtypemenu_button_Click(object sender, EventArgs e)
@@ -378,14 +391,14 @@ namespace ParishSystem
         private void bloodlettingevent_button_Click(object sender, EventArgs e)
         {
             //Form A = new Bloodletting_Module(2);
-            Form A = modules[CabinetModule.Bloodletting_DonorMode_EventMode];
+            Form A = modules[CabinetModule.Bloodletting_EventMode];
             showForm(content_panel, A);
         }
 
         private void bloodlettingdonor_button_Click(object sender, EventArgs e)
         {
             //Form A = new Bloodletting_Module(1);
-            Form A = modules[CabinetModule.Bloodletting_DonorMode_EventMode];
+            Form A = modules[CabinetModule.Bloodletting_DonorMode]; 
             showForm(content_panel, A);
         }
 
@@ -411,7 +424,7 @@ namespace ParishSystem
         private void bloodClaimView_menu_button_Click(object sender, EventArgs e)
         {
             //Form A = new BloodClaimView();
-            Form A = modules[CabinetModule.BloodClaim];
+            Form A = modules[CabinetModule.ClaimView];
             showForm(content_panel, A);
         }
         private void logout_button_Click(object sender, EventArgs e)
@@ -438,6 +451,9 @@ namespace ParishSystem
             }
         }
 
+        private void sacrament_cabinet_panel_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }

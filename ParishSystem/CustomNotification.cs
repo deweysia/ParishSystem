@@ -162,6 +162,7 @@ namespace ParishSystem
 
 
         public static State
+            ExcelExported = new State("Excel file has been Exported", NotificationType.success),
             WrongCredentials = new State("Wrong username or password", NotificationType.warning),
             DuplicateUsername = new State("This username is taken", NotificationType.warning),
             InnvalidDononationID = new State("No donation ID was found", NotificationType.warning),

@@ -186,7 +186,7 @@ namespace ParishSystem
         bool open = true;
         private void open_button_Click(object sender, EventArgs e)
         {
-            animation.Start();
+           // animation.Start();
         }
         int velocity = 0;
         private void animation_Tick(object sender, EventArgs e)
@@ -237,6 +237,11 @@ namespace ParishSystem
         private void backgroundWorker1_DoWork_1(object sender, DoWorkEventArgs e)
         {
           
+        }
+
+        private void container_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -31,20 +31,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.IncomeCashReleaseType_panel = new System.Windows.Forms.Panel();
-            this.searchButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.searchTextbox = new System.Windows.Forms.TextBox();
-            this.enable_button_itemType = new System.Windows.Forms.Button();
-            this.add_button_itemType = new System.Windows.Forms.Button();
-            this.itemType_dgv = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.Disbursment_label = new System.Windows.Forms.Label();
             this.Receipt_label = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.enable_button_itemType = new System.Windows.Forms.Button();
+            this.add_button_itemType = new System.Windows.Forms.Button();
+            this.searchButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.searchTextbox = new System.Windows.Forms.TextBox();
+            this.itemType_dgv = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.IncomeCashReleaseType_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.itemType_dgv)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itemType_dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // IncomeCashReleaseType_panel
@@ -66,42 +66,52 @@
             this.IncomeCashReleaseType_panel.Size = new System.Drawing.Size(943, 669);
             this.IncomeCashReleaseType_panel.TabIndex = 0;
             // 
-            // searchButton
+            // Disbursment_label
             // 
-            this.searchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchButton.FlatAppearance.BorderSize = 0;
-            this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchButton.Image = global::ParishSystem.Properties.Resources.icons8_Search_Filled_20;
-            this.searchButton.Location = new System.Drawing.Point(867, 23);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(30, 30);
-            this.searchButton.TabIndex = 7;
-            this.searchButton.Tag = "s";
-            this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            this.Disbursment_label.AutoSize = true;
+            this.Disbursment_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Disbursment_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Disbursment_label.Location = new System.Drawing.Point(183, 23);
+            this.Disbursment_label.Name = "Disbursment_label";
+            this.Disbursment_label.Size = new System.Drawing.Size(130, 30);
+            this.Disbursment_label.TabIndex = 88;
+            this.Disbursment_label.Text = "Disbursment";
+            this.Disbursment_label.Click += new System.EventHandler(this.Disbursment_label_Click);
             // 
-            // label1
+            // Receipt_label
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(534, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 15);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Search";
+            this.Receipt_label.AutoSize = true;
+            this.Receipt_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Receipt_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Receipt_label.Location = new System.Drawing.Point(70, 23);
+            this.Receipt_label.Name = "Receipt_label";
+            this.Receipt_label.Size = new System.Drawing.Size(85, 30);
+            this.Receipt_label.TabIndex = 87;
+            this.Receipt_label.Text = "Receipt";
+            this.Receipt_label.Click += new System.EventHandler(this.Receipt_label_Click);
             // 
-            // searchTextbox
+            // label15
             // 
-            this.searchTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.searchTextbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTextbox.Location = new System.Drawing.Point(587, 28);
-            this.searchTextbox.Name = "searchTextbox";
-            this.searchTextbox.Size = new System.Drawing.Size(271, 22);
-            this.searchTextbox.TabIndex = 4;
-            this.searchTextbox.TextChanged += new System.EventHandler(this.searchTextbox_TextChanged);
+            this.label15.AutoSize = true;
+            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.LightGray;
+            this.label15.Location = new System.Drawing.Point(50, 42);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(281, 16);
+            this.label15.TabIndex = 90;
+            this.label15.Text = "_______________________________________";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.enable_button_itemType);
+            this.panel1.Controls.Add(this.add_button_itemType);
+            this.panel1.Location = new System.Drawing.Point(136, 590);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(684, 71);
+            this.panel1.TabIndex = 8;
             // 
             // enable_button_itemType
             // 
@@ -136,6 +146,43 @@
             this.add_button_itemType.Text = "Add";
             this.add_button_itemType.UseVisualStyleBackColor = false;
             this.add_button_itemType.Click += new System.EventHandler(this.add_button_itemType_Click);
+            // 
+            // searchButton
+            // 
+            this.searchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchButton.FlatAppearance.BorderSize = 0;
+            this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchButton.Image = global::ParishSystem.Properties.Resources.icons8_Search_Filled_20;
+            this.searchButton.Location = new System.Drawing.Point(867, 23);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(30, 30);
+            this.searchButton.TabIndex = 7;
+            this.searchButton.Tag = "s";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(524, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 21);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Search";
+            // 
+            // searchTextbox
+            // 
+            this.searchTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.searchTextbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTextbox.Location = new System.Drawing.Point(587, 28);
+            this.searchTextbox.Name = "searchTextbox";
+            this.searchTextbox.Size = new System.Drawing.Size(271, 22);
+            this.searchTextbox.TabIndex = 4;
+            this.searchTextbox.TextChanged += new System.EventHandler(this.searchTextbox_TextChanged);
             // 
             // itemType_dgv
             // 
@@ -183,9 +230,8 @@
             this.itemType_dgv.Size = new System.Drawing.Size(849, 505);
             this.itemType_dgv.TabIndex = 0;
             this.itemType_dgv.TabStop = false;
-            this.itemType_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemType_dgv_CellClick);
-            this.itemType_dgv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemType_dgv_CellContentDoubleClick);
-            this.itemType_dgv.Click += new System.EventHandler(this.itemType_dgv_Click);
+            this.itemType_dgv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemType_dgv_CellContentDoubleClick);
+            this.itemType_dgv.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemType_dgv_RowEnter);
             this.itemType_dgv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.itemType_dgv_KeyDown);
             // 
             // label2
@@ -197,53 +243,6 @@
             this.label2.Size = new System.Drawing.Size(277, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "_____________________________________________";
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.enable_button_itemType);
-            this.panel1.Controls.Add(this.add_button_itemType);
-            this.panel1.Location = new System.Drawing.Point(136, 590);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(684, 71);
-            this.panel1.TabIndex = 8;
-            // 
-            // Disbursment_label
-            // 
-            this.Disbursment_label.AutoSize = true;
-            this.Disbursment_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Disbursment_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Disbursment_label.Location = new System.Drawing.Point(183, 23);
-            this.Disbursment_label.Name = "Disbursment_label";
-            this.Disbursment_label.Size = new System.Drawing.Size(130, 30);
-            this.Disbursment_label.TabIndex = 88;
-            this.Disbursment_label.Text = "Disbursment";
-            this.Disbursment_label.Click += new System.EventHandler(this.Disbursment_label_Click);
-            // 
-            // Receipt_label
-            // 
-            this.Receipt_label.AutoSize = true;
-            this.Receipt_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Receipt_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Receipt_label.Location = new System.Drawing.Point(70, 23);
-            this.Receipt_label.Name = "Receipt_label";
-            this.Receipt_label.Size = new System.Drawing.Size(85, 30);
-            this.Receipt_label.TabIndex = 87;
-            this.Receipt_label.Text = "Receipt";
-            this.Receipt_label.Click += new System.EventHandler(this.Receipt_label_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.LightGray;
-            this.label15.Location = new System.Drawing.Point(50, 42);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(281, 16);
-            this.label15.TabIndex = 90;
-            this.label15.Text = "_______________________________________";
             // 
             // ItemTypes_Module
             // 
@@ -258,8 +257,8 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ItemTypes_Module_KeyDown);
             this.IncomeCashReleaseType_panel.ResumeLayout(false);
             this.IncomeCashReleaseType_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.itemType_dgv)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.itemType_dgv)).EndInit();
             this.ResumeLayout(false);
 
         }

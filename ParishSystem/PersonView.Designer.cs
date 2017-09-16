@@ -51,6 +51,7 @@
             this.suffix_label = new System.Windows.Forms.Label();
             this.line1 = new System.Windows.Forms.Label();
             this.controlBar_panel = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.close_button = new System.Windows.Forms.Button();
             this.menu_panel = new System.Windows.Forms.Panel();
             this.marriage_label_menu = new System.Windows.Forms.Label();
@@ -323,7 +324,7 @@
             // 
             this.birthdate_label.AutoSize = true;
             this.birthdate_label.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.birthdate_label.ForeColor = System.Drawing.Color.Black;
+            this.birthdate_label.ForeColor = System.Drawing.Color.White;
             this.birthdate_label.Location = new System.Drawing.Point(110, 1);
             this.birthdate_label.Name = "birthdate_label";
             this.birthdate_label.Size = new System.Drawing.Size(0, 21);
@@ -352,7 +353,7 @@
             // 
             this.gender_label.AutoSize = true;
             this.gender_label.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gender_label.ForeColor = System.Drawing.Color.Black;
+            this.gender_label.ForeColor = System.Drawing.Color.White;
             this.gender_label.Location = new System.Drawing.Point(110, 1);
             this.gender_label.Name = "gender_label";
             this.gender_label.Size = new System.Drawing.Size(0, 21);
@@ -371,7 +372,7 @@
             // 
             this.po_label.AutoSize = true;
             this.po_label.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.po_label.ForeColor = System.Drawing.Color.Black;
+            this.po_label.ForeColor = System.Drawing.Color.White;
             this.po_label.Location = new System.Drawing.Point(110, 4);
             this.po_label.Name = "po_label";
             this.po_label.Size = new System.Drawing.Size(0, 21);
@@ -411,7 +412,7 @@
             // 
             this.residence_label.AutoSize = true;
             this.residence_label.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.residence_label.ForeColor = System.Drawing.Color.Black;
+            this.residence_label.ForeColor = System.Drawing.Color.White;
             this.residence_label.Location = new System.Drawing.Point(110, 4);
             this.residence_label.Name = "residence_label";
             this.residence_label.Size = new System.Drawing.Size(0, 21);
@@ -438,7 +439,7 @@
             // 
             this.firstname_label.AutoSize = true;
             this.firstname_label.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstname_label.ForeColor = System.Drawing.Color.Black;
+            this.firstname_label.ForeColor = System.Drawing.Color.White;
             this.firstname_label.Location = new System.Drawing.Point(3, 0);
             this.firstname_label.Name = "firstname_label";
             this.firstname_label.Size = new System.Drawing.Size(0, 25);
@@ -448,7 +449,7 @@
             // 
             this.mi_label.AutoSize = true;
             this.mi_label.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mi_label.ForeColor = System.Drawing.Color.Black;
+            this.mi_label.ForeColor = System.Drawing.Color.White;
             this.mi_label.Location = new System.Drawing.Point(9, 0);
             this.mi_label.Name = "mi_label";
             this.mi_label.Size = new System.Drawing.Size(0, 25);
@@ -469,7 +470,7 @@
             // 
             this.lastname_label.AutoSize = true;
             this.lastname_label.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastname_label.ForeColor = System.Drawing.Color.Black;
+            this.lastname_label.ForeColor = System.Drawing.Color.White;
             this.lastname_label.Location = new System.Drawing.Point(3, 0);
             this.lastname_label.Name = "lastname_label";
             this.lastname_label.Size = new System.Drawing.Size(0, 40);
@@ -479,7 +480,7 @@
             // 
             this.suffix_label.AutoSize = true;
             this.suffix_label.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suffix_label.ForeColor = System.Drawing.Color.Black;
+            this.suffix_label.ForeColor = System.Drawing.Color.White;
             this.suffix_label.Location = new System.Drawing.Point(9, 23);
             this.suffix_label.Name = "suffix_label";
             this.suffix_label.Size = new System.Drawing.Size(0, 17);
@@ -499,6 +500,7 @@
             // controlBar_panel
             // 
             this.controlBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.controlBar_panel.Controls.Add(this.label3);
             this.controlBar_panel.Controls.Add(this.close_button);
             this.controlBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlBar_panel.Location = new System.Drawing.Point(0, 0);
@@ -507,6 +509,18 @@
             this.controlBar_panel.Size = new System.Drawing.Size(685, 35);
             this.controlBar_panel.TabIndex = 2;
             this.controlBar_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.controlBar_panel_Paint);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(5, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Person Profile";
             // 
             // close_button
             // 
@@ -539,11 +553,11 @@
             // 
             this.marriage_label_menu.AutoSize = true;
             this.marriage_label_menu.Enabled = false;
-            this.marriage_label_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.marriage_label_menu.ForeColor = System.Drawing.Color.Black;
-            this.marriage_label_menu.Location = new System.Drawing.Point(272, 2);
+            this.marriage_label_menu.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.marriage_label_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.marriage_label_menu.Location = new System.Drawing.Point(260, 1);
             this.marriage_label_menu.Name = "marriage_label_menu";
-            this.marriage_label_menu.Size = new System.Drawing.Size(121, 25);
+            this.marriage_label_menu.Size = new System.Drawing.Size(120, 30);
             this.marriage_label_menu.TabIndex = 2;
             this.marriage_label_menu.Text = " Marriage   ";
             this.marriage_label_menu.Click += new System.EventHandler(this.marriage_label_menu_Click);
@@ -552,11 +566,11 @@
             // 
             this.confirmation_label_menu.AutoSize = true;
             this.confirmation_label_menu.Enabled = false;
-            this.confirmation_label_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmation_label_menu.ForeColor = System.Drawing.Color.Black;
-            this.confirmation_label_menu.Location = new System.Drawing.Point(129, 2);
+            this.confirmation_label_menu.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmation_label_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.confirmation_label_menu.Location = new System.Drawing.Point(122, 2);
             this.confirmation_label_menu.Name = "confirmation_label_menu";
-            this.confirmation_label_menu.Size = new System.Drawing.Size(133, 25);
+            this.confirmation_label_menu.Size = new System.Drawing.Size(134, 30);
             this.confirmation_label_menu.TabIndex = 1;
             this.confirmation_label_menu.Text = "Confirmation";
             this.confirmation_label_menu.Click += new System.EventHandler(this.confirmation_label_menu_Click);
@@ -566,11 +580,11 @@
             this.baptism_label_menu.AutoSize = true;
             this.baptism_label_menu.BackColor = System.Drawing.Color.Transparent;
             this.baptism_label_menu.Enabled = false;
-            this.baptism_label_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.baptism_label_menu.ForeColor = System.Drawing.Color.Black;
+            this.baptism_label_menu.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.baptism_label_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.baptism_label_menu.Location = new System.Drawing.Point(1, 2);
             this.baptism_label_menu.Name = "baptism_label_menu";
-            this.baptism_label_menu.Size = new System.Drawing.Size(125, 25);
+            this.baptism_label_menu.Size = new System.Drawing.Size(123, 30);
             this.baptism_label_menu.TabIndex = 0;
             this.baptism_label_menu.Text = "   Baptism   ";
             this.baptism_label_menu.Click += new System.EventHandler(this.baptism_menu_label_Click);
@@ -2310,6 +2324,7 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.controlBar_panel.ResumeLayout(false);
+            this.controlBar_panel.PerformLayout();
             this.menu_panel.ResumeLayout(false);
             this.menu_panel.PerformLayout();
             this.baptism_panel.ResumeLayout(false);
@@ -2580,5 +2595,6 @@
         private System.Windows.Forms.Label address_textbox_spouse_marriage;
         private System.Windows.Forms.Label remarks_label_confirmation;
         private System.Windows.Forms.Label remarks_label_marriage;
+        private System.Windows.Forms.Label label3;
     }
 }
