@@ -186,7 +186,7 @@ namespace ParishSystem
         bool open = true;
         private void open_button_Click(object sender, EventArgs e)
         {
-           // animation.Start();
+            animation.Start();
         }
         int velocity = 0;
         private void animation_Tick(object sender, EventArgs e)
@@ -196,8 +196,8 @@ namespace ParishSystem
                 if (summary_dgv_bloodletting.Height <= 350)
                 {
                     open_button.Image = ParishSystem.Properties.Resources.icons8_Expand_Arrow_20;
-                    summary_dgv_bloodletting.Size = new Size(576, summary_dgv_bloodletting.Height  + velocity);
-                    //bloodlettingeventreport_datagridview.Size = new Size(884, bloodlettingeventreport_datagridview.Height +velocity);
+                    summary_dgv_bloodletting.Size = new Size(summary_dgv_bloodletting.Width  , summary_dgv_bloodletting.Height + velocity);
+                    bloodlettingeventreport_datagridview.Location = new Point(bloodlettingeventreport_datagridview.Location.X , bloodlettingeventreport_datagridview.Location.Y + velocity);
                 }
                 else
                 {
@@ -214,7 +214,8 @@ namespace ParishSystem
                 if (summary_dgv_bloodletting.Height >= 1)
                 {
                     open_button.Image = ParishSystem.Properties.Resources.icons8_Collapse_Arrow_20;
-                    summary_dgv_bloodletting.Size = new Size(576, summary_dgv_bloodletting.Height  - velocity);
+                    summary_dgv_bloodletting.Size = new Size(summary_dgv_bloodletting.Width  , summary_dgv_bloodletting.Height - velocity);
+                    bloodlettingeventreport_datagridview.Location = new Point(bloodlettingeventreport_datagridview.Location.X , bloodlettingeventreport_datagridview.Location.Y - velocity);
                 }
                 else
                 {
@@ -240,6 +241,11 @@ namespace ParishSystem
         }
 
         private void container_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bloodlettingreports_panel_Paint(object sender, PaintEventArgs e)
         {
 
         }

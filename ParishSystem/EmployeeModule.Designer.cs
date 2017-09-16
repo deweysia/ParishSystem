@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.EmployeeDGV = new System.Windows.Forms.DataGridView();
             this.panel = new System.Windows.Forms.Panel();
             this.employeeType_combobox = new System.Windows.Forms.ComboBox();
@@ -46,6 +47,7 @@
             this.clear_button = new System.Windows.Forms.Button();
             this.add_button = new System.Windows.Forms.Button();
             this.active_checkbox = new System.Windows.Forms.CheckBox();
+            this.tooltip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeDGV)).BeginInit();
             this.panel.SuspendLayout();
             this.SuspendLayout();
@@ -65,45 +67,45 @@
             this.EmployeeDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EmployeeDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.EmployeeDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.EmployeeDGV.ColumnHeadersHeight = 40;
             this.EmployeeDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EmployeeDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EmployeeDGV.DefaultCellStyle = dataGridViewCellStyle6;
             this.EmployeeDGV.EnableHeadersVisualStyles = false;
             this.EmployeeDGV.GridColor = System.Drawing.Color.White;
             this.EmployeeDGV.Location = new System.Drawing.Point(42, 50);
             this.EmployeeDGV.MultiSelect = false;
             this.EmployeeDGV.Name = "EmployeeDGV";
             this.EmployeeDGV.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Magenta;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Magenta;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.EmployeeDGV.RowHeadersVisible = false;
             this.EmployeeDGV.RowHeadersWidth = 50;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DarkRed;
-            this.EmployeeDGV.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.DarkRed;
+            this.EmployeeDGV.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.EmployeeDGV.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.EmployeeDGV.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.EmployeeDGV.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -152,6 +154,7 @@
             this.employeeType_combobox.Name = "employeeType_combobox";
             this.employeeType_combobox.Size = new System.Drawing.Size(204, 29);
             this.employeeType_combobox.TabIndex = 44;
+            this.tooltip.SetToolTip(this.employeeType_combobox, "Employee Type");
             this.employeeType_combobox.SelectedIndexChanged += new System.EventHandler(this.employeeType_combobox_SelectedIndexChanged);
             // 
             // password_textbox
@@ -402,16 +405,17 @@
             // 
             // resetPassword_button
             // 
-            this.resetPassword_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.resetPassword_button.BackColor = System.Drawing.Color.IndianRed;
             this.resetPassword_button.FlatAppearance.BorderSize = 0;
-            this.resetPassword_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.resetPassword_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
             this.resetPassword_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.resetPassword_button.ForeColor = System.Drawing.Color.White;
-            this.resetPassword_button.Location = new System.Drawing.Point(316, 188);
+            this.resetPassword_button.Location = new System.Drawing.Point(315, 184);
             this.resetPassword_button.Name = "resetPassword_button";
-            this.resetPassword_button.Size = new System.Drawing.Size(30, 30);
+            this.resetPassword_button.Size = new System.Drawing.Size(69, 32);
             this.resetPassword_button.TabIndex = 26;
-            this.resetPassword_button.Text = "R";
+            this.resetPassword_button.Text = "Reset";
+            this.tooltip.SetToolTip(this.resetPassword_button, "Resets password of employee");
             this.resetPassword_button.UseVisualStyleBackColor = false;
             this.resetPassword_button.Visible = false;
             this.resetPassword_button.Click += new System.EventHandler(this.resetPassword_button_Click);
@@ -496,5 +500,6 @@
         private MetroFramework.Controls.MetroTextBox password_textbox;
         private MetroFramework.Controls.MetroTextBox username_textbox;
         private System.Windows.Forms.ComboBox employeeType_combobox;
+        private System.Windows.Forms.ToolTip tooltip;
     }
 }

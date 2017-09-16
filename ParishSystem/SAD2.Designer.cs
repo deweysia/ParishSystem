@@ -173,7 +173,7 @@
             // btn_Close
             // 
             this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Close.BackgroundImage = global::ParishSystem.Properties.Resources.icons8_Delete_50;
+            this.btn_Close.BackgroundImage = global::ParishSystem.Properties.Resources.icons8_Delete_Filled_30;
             this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Close.FlatAppearance.BorderSize = 0;
             this.btn_Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -195,7 +195,7 @@
             this.btn_Max.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Max.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Max.Image = global::ParishSystem.Properties.Resources.btn_NEWmaximize;
+            this.btn_Max.Image = global::ParishSystem.Properties.Resources.icons8_Fit_to_Width_30;
             this.btn_Max.Location = new System.Drawing.Point(64, 4);
             this.btn_Max.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Max.Name = "btn_Max";
@@ -839,7 +839,7 @@
             this.OpenMenu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OpenMenu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpenMenu_button.ForeColor = System.Drawing.Color.White;
-            this.OpenMenu_button.Image = global::ParishSystem.Properties.Resources.Home_32px;
+            this.OpenMenu_button.Image = global::ParishSystem.Properties.Resources.icons8_Menu_35;
             this.OpenMenu_button.Location = new System.Drawing.Point(0, 0);
             this.OpenMenu_button.Margin = new System.Windows.Forms.Padding(0);
             this.OpenMenu_button.Name = "OpenMenu_button";
