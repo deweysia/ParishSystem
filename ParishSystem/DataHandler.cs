@@ -1376,7 +1376,7 @@ namespace ParishSystem
 
         public DataTable getBaptisms()
         {
-            string q = "SELECT profileID, applicationID, baptismID, Minister.ministerID, p.firstName, p.midname, p.lastName, p.suffix, DATE_FORMAT(baptismDate, '%Y-%m-%d') AS baptismDate, registryNumber, pageNumber, recordNumber  "
+            string q = "SELECT profileID, applicationID, baptismID, Minister.ministerID, p.firstName, p.midname, p.lastName, p.suffix, DATE_FORMAT(baptismDate, '%Y-%m-%d') AS baptismDate, registryNumber, pageNumber, recordNumber, remarks  "
                 + "FROM Baptism NATURAL JOIN Application NATURAL JOIN Applicant NATURAL JOIN GeneralProfile AS p JOIN Minister ON Baptism.ministerID = Minister.ministerID";
 
             
@@ -1542,7 +1542,7 @@ namespace ParishSystem
 
         public DataTable getConfirmations()
         {
-            string q = "SELECT profileID, applicationID, confirmationID, Minister.ministerID, p.firstName, p.midname, p.lastName, p.suffix, DATE_FORMAT(confirmationDate, '%m-%Y-%d') AS confirmationDate, registryNumber, pageNumber, recordNumber  "
+            string q = "SELECT profileID, applicationID, confirmationID, Minister.ministerID, p.firstName, p.midname, p.lastName, p.suffix, DATE_FORMAT(confirmationDate, '%m-%Y-%d') AS confirmationDate, registryNumber, pageNumber, recordNumber, remarks  "
                 + "FROM Confirmation NATURAL JOIN Application NATURAL JOIN Applicant NATURAL JOIN GeneralProfile AS p JOIN Minister ON Confirmation.ministerID = Minister.ministerID";
 
             DataTable dt = runQuery(q);

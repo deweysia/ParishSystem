@@ -371,12 +371,36 @@ namespace ParishSystem
 
         private void btnEditBap_Click(object sender, EventArgs e)
         {
+            DataGridViewRow dgvr = dgvBaptism.SelectedRows[0];
+            DataRow dr = ((DataRowView)dgvr.DataBoundItem).Row;
+            SacramentForm f = new SacramentForm(OperationType.Edit, SacramentType.Baptism, dr);
+            DialogResult result = f.ShowDialog();
+
+            if(result == DialogResult.OK)
+            {
+                Notification.Show(State.SacramentEditSuccess);
+            }else if (result != DialogResult.Cancel)
+            {
+                Notification.Show(State.SacramentEditFail);
+            }
             
         }
 
         private void btnEditSacramentCon_Click(object sender, EventArgs e)
         {
+            DataGridViewRow dgvr = dgvConfirmation.SelectedRows[0];
+            DataRow dr = ((DataRowView)dgvr.DataBoundItem).Row;
+            SacramentForm f = new SacramentForm(OperationType.Edit, SacramentType.Confirmation, dr);
+            DialogResult result = f.ShowDialog();
 
+            if (result == DialogResult.OK)
+            {
+                Notification.Show(State.SacramentEditSuccess);
+            }
+            else if (result != DialogResult.Cancel)
+            {
+                Notification.Show(State.SacramentEditFail);
+            }
         }
 
         private void btnSearchBap_Click(object sender, EventArgs e)

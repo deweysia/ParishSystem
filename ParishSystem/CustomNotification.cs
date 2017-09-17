@@ -210,7 +210,9 @@ namespace ParishSystem
             BrideApplicationExists = new State("Bride already has an existing application", NotificationType.error),
             ApplicationEditSuccess = new State("Application changes successfully applied", NotificationType.success),
             ApplicationEditFail = new State("Application changes failed to apply", NotificationType.error),
-            NoMinisterSelected = new State("Please assign a minister to the appointment", NotificationType.warning);
+            NoMinisterSelected = new State("Please assign a minister to the appointment", NotificationType.warning),
+            SacramentEditSuccess = new State("Successfully updated sacrament profile", NotificationType.success),
+            SacramentEditFail = new State("Failed to update sacrament profile", NotificationType.error);
     }
 
     
