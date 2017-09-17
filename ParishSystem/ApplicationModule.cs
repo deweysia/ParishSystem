@@ -122,11 +122,11 @@ namespace ParishSystem
             if (t == SacramentType.Baptism)
             {
                 dgvr = baptismApplication_dgv.SelectedRows[0];
-                return new SacramentForm(SacramentType.Baptism, dgvr);
+                return new SacramentForm(OperationType.Add, SacramentType.Baptism, dgvr);
             }else if (t == SacramentType.Confirmation)
             {
                 dgvr = confirmationApplication_dgv.SelectedRows[0];
-                return new SacramentForm(SacramentType.Confirmation, dgvr);
+                return new SacramentForm(OperationType.Add, SacramentType.Confirmation, dgvr);
             }else
             {
                 dgvr = marriageApplication_dgv.SelectedRows[0];

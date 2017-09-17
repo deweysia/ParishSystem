@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParishSystem
 {
-    class Sacrament
+    public class Sacrament
     {
         private int _applicationID = -1;
         private int _ministerID = -1;
@@ -39,7 +39,7 @@ namespace ParishSystem
         public string remarks { get { return _remarks; } }
         public DateTime sacramentDate { get { return _sacramentDate; } }
 
-        protected Sacrament(int applicationID, int ministerID, string registryNumber, string recordNumber, string pageNumber, string remarks, DateTime sacramentDate)
+        protected Sacrament(int applicationID, int ministerID, string registryNumber, string pageNumber, string recordNumber, string remarks, DateTime sacramentDate)
         {
             this._applicationID = applicationID;
             this._ministerID = ministerID;

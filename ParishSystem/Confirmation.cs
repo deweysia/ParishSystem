@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ParishSystem
 {
-    class Confirmation : Sacrament
+    public class Confirmation : Sacrament
     {
-        Confirmation(int applicationID, int ministerID, string registryNumber, string recordNumber, string pageNumber, string remarks, DateTime sacramentDate, Legitimacy legitimacy)
-            : base(applicationID, ministerID, registryNumber, recordNumber, pageNumber, remarks, sacramentDate) { }
+        public Confirmation(int applicationID, int ministerID, string registryNumber, string pageNumber, string recordNumber, string remarks, DateTime sacramentDate)
+            : base(applicationID, ministerID, registryNumber, pageNumber, recordNumber, remarks, sacramentDate) { }
     }
 }

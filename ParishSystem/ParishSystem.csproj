@@ -137,6 +137,13 @@
     <Compile Include="ApplicationPayment.Designer.cs">
       <DependentUpon>ApplicationPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="AuditModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditModule.Designer.cs">
+      <DependentUpon>AuditModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Baptism.cs" />
     <Compile Include="BloodClaim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +199,7 @@
     <Compile Include="CashReciept.Designer.cs">
       <DependentUpon>CashReciept.cs</DependentUpon>
     </Compile>
+    <Compile Include="Confirmation.cs" />
     <Compile Include="CueTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -255,11 +263,13 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Marriage.cs" />
     <Compile Include="MarriageApplication.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MarriageApplication.resx</DependentUpon>
     </Compile>
+    <Compile Include="Minister.cs" />
     <Compile Include="MinisterModule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,12 +283,15 @@
       <DependentUpon>ORdetailsPopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Panel_Size_Pair.cs" />
+    <Compile Include="Parent.cs" />
+    <Compile Include="Profile.cs" />
     <Compile Include="ProfileModule.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ProfileModule.Designer.cs">
       <DependentUpon>ProfileModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sacrament.cs" />
     <Compile Include="SacramentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -337,6 +350,7 @@
     <Compile Include="SacramentModule.Designer.cs">
       <DependentUpon>SacramentModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="SacramentProfile.cs" />
     <Compile Include="SAD2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -354,6 +368,18 @@
     </Compile>
     <Compile Include="SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSettings.Designer.cs">
+      <DependentUpon>SystemSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddApplication.resx">
       <DependentUpon>AddApplication.cs</DependentUpon>
@@ -375,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationPayment.resx">
       <DependentUpon>ApplicationPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditModule.resx">
+      <DependentUpon>AuditModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BloodClaim.resx">
       <DependentUpon>BloodClaim.cs</DependentUpon>
@@ -479,6 +508,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSettings.resx">
+      <DependentUpon>SystemSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\ParishSystem.exe.config" />
     <None Include="bin\Debug\ParishSystem.vshost.exe.config" />

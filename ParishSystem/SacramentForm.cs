@@ -16,22 +16,21 @@ namespace ParishSystem
         DataHandler dh;
         DataGridViewCellCollection row;
         SacramentType type;
-
+        OperationType operation;
         
-        public SacramentForm(SacramentType type, DataGridViewRow dr)
+        public SacramentForm(OperationType operation, SacramentType type, DataGridViewRow dr)
         {
             InitializeComponent();
 
             this.dh = DataHandler.getDataHandler();
             this.row = dr.Cells;
             this.type = type;
+            this.operation = operation;
 
             Draggable drag = new Draggable(this);
             drag.makeDraggable(controlBar_panel);
 
-            baptismDateDTP.MinDate = DateTime.ParseExact(row[9].Value.ToString(), "yyyy-MM-dd", null);
-
-
+            sacramentDateDTP.MinDate = DateTime.ParseExact(row[9].Value.ToString(), "yyyy-MM-dd", null);
 
             if (type == SacramentType.Confirmation)
             {
@@ -50,6 +49,11 @@ namespace ParishSystem
             legitimacyCBox.DataSource = Enum.GetValues(typeof(Legitimacy));
             loadMinisters();
             loadParents();
+
+            if(operation == OperationType.Edit)
+            {
+                loadSponsors();
+            }
 
             MinisterCBox.SelectedIndex = 0;
         }
@@ -106,11 +110,29 @@ namespace ParishSystem
             }
         }
 
+        private void loadSponsors()
+        {
+            int applicationID = int.Parse(row[0].Value.ToString());
+            DataTable dt = dh.getSponsors(applicationID);
+
+            gFatherFirstNameText.Text = dt.Rows[0]["firstName"].ToString();
+            gFatherMiText.Text = dt.Rows[0]["midName"].ToString();
+            gFatherLastNameText.Text = dt.Rows[0]["lastName"].ToString();
+            gFatherSuffixText.Text = dt.Rows[0]["suffix"].ToString();
+            gFatherResidenceText.Text = dt.Rows[0]["residence"].ToString();
+
+            gMotherFirstNameText.Text = dt.Rows[1]["firstName"].ToString();
+            gMotherMiText.Text = dt.Rows[1]["midName"].ToString();
+            gMotherLastNameText.Text = dt.Rows[1]["lastName"].ToString();
+            gMotherSuffixText.Text = dt.Rows[1]["suffix"].ToString();
+            gMotherResidenceText.Text = dt.Rows[1]["residence"].ToString();
+        }
+
         private void submitBtn_Click(object sender, EventArgs e)
         {
             if (!allFilled())
             {
-                MessageDialog.Show("Please input all necessary fields!", "Missing fields", MessageDialogButtons.OK, MessageDialogIcon.Warning);
+                Notification.Show(State.MissingFields);
                 return;
             }
 
@@ -119,15 +141,48 @@ namespace ParishSystem
 
             int ministerID = ((ComboboxContent)MinisterCBox.SelectedItem).ID;
             Legitimacy l = (Legitimacy)legitimacyCBox.SelectedItem;
-            DateTime dt = baptismDateDTP.Value;
+            DateTime dt = sacramentDateDTP.Value;
             string remarks = remarksText.Text;
 
 
+            if (operation == OperationType.Add)
+                addOperation(applicationID, profileID, ministerID, l, dt, remarks);
+            else editOperation(applicationID, profileID, ministerID, l, dt, remarks);
+               
+        }
+
+        private void editOperation(int applicationID, int profileID, int ministerID, Legitimacy legitimacy, DateTime sacramentDate, string remarks)
+        {
             bool success = true;
             if (type == SacramentType.Baptism)
-                success &= dh.addBaptism(applicationID, ministerID, l, dt, remarks);
+                success &= dh.editBaptism(applicationID, ministerID, sacramentDate, legitimacy, remarks);
             else
-                success &= dh.addConfirmation(applicationID, ministerID, dt, remarks);
+                success &= dh.editConfirmation(applicationID, ministerID, sacramentDate, remarks);
+
+
+            //Add Mother
+            success &= dh.addEditParent(profileID, motherFirstNameText.Text, motherMiText.Text, motherLastNameText.Text, motherSuffixText.Text, Gender.Female, motherBirthPlaceText.Text);
+            //Add Father
+            success &= dh.addEditParent(profileID, fatherFirstNameText.Text, fatherMiText.Text, fatherLastNameText.Text, fatherSuffixText.Text, Gender.Male, fatherBirthPlaceText.Text);
+
+            //Add God Mother
+            success &= dh.editSponsor(applicationID, gMotherFirstNameText.Text, gMotherMiText.Text, gMotherLastNameText.Text, gMotherSuffixText.Text, Gender.Female, gMotherResidenceText.Text);
+            //Add God Father
+            success &= dh.editSponsor(applicationID, gFatherFirstNameText.Text, gFatherMiText.Text, gFatherLastNameText.Text, gFatherSuffixText.Text, Gender.Male, gFatherResidenceText.Text);
+
+            dh.editApplication(applicationID, ApplicationStatus.Approved);
+
+            this.DialogResult = success ? DialogResult.OK : DialogResult.None;
+        }
+
+        private void addOperation(int applicationID, int profileID, int ministerID, Legitimacy legitimacy, DateTime sacramentDate, string remarks)
+        {
+            
+            bool success = true;
+            if (type == SacramentType.Baptism)
+                success &= dh.addBaptism(applicationID, ministerID, legitimacy, sacramentDate, remarks);
+            else
+                success &= dh.addConfirmation(applicationID, ministerID, sacramentDate, remarks);
 
 
             //Add Mother
