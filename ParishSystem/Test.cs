@@ -47,5 +47,11 @@ namespace ParishSystem
             printDialog1.ShowDialog();
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SystemSettings sys = new SystemSettings();
+            sys.Show();
+        }
     }
 }

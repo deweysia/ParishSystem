@@ -44,7 +44,6 @@
             this.btnResetMar = new System.Windows.Forms.Button();
             this.btnAdvanceSearchMar = new System.Windows.Forms.Button();
             this.btnSearchMar = new System.Windows.Forms.Button();
-            this.txtSearchMar = new ParishSystem.CueTextBox();
             this.tlpProfileMar = new System.Windows.Forms.TableLayoutPanel();
             this.btnOpenBrideProfile = new System.Windows.Forms.Button();
             this.btnAddReferencesMar = new System.Windows.Forms.Button();
@@ -71,7 +70,6 @@
             this.btnAdvanceSearchCon = new System.Windows.Forms.Button();
             this.btnResetCon = new System.Windows.Forms.Button();
             this.btnSearchCon = new System.Windows.Forms.Button();
-            this.txtSearchCon = new ParishSystem.CueTextBox();
             this.tlpProfileCon = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddReferencesCon = new System.Windows.Forms.Button();
             this.btnOpenProfileCon = new System.Windows.Forms.Button();
@@ -96,11 +94,11 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnResetBap = new System.Windows.Forms.Button();
             this.btnSearchBap = new System.Windows.Forms.Button();
-            this.txtSearchBap = new ParishSystem.CueTextBox();
             this.btnAdvanceSearchBap = new System.Windows.Forms.Button();
             this.tlpProfileBap = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddReferencesBap = new System.Windows.Forms.Button();
             this.btnOpenProfileBap = new System.Windows.Forms.Button();
+            this.btnEditBap = new System.Windows.Forms.Button();
             this.lblNameBap = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.dgvBaptism = new MetroFramework.Controls.MetroGrid();
@@ -119,6 +117,10 @@
             this.bapRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.bsSacrament = new System.Windows.Forms.BindingSource(this.components);
+            this.btnEditSacramentCon = new System.Windows.Forms.Button();
+            this.txtSearchBap = new ParishSystem.CueTextBox();
+            this.txtSearchCon = new ParishSystem.CueTextBox();
+            this.txtSearchMar = new ParishSystem.CueTextBox();
             this.metroTabPage6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -236,18 +238,6 @@
             this.btnSearchMar.Text = "Search";
             this.btnSearchMar.UseVisualStyleBackColor = false;
             this.btnSearchMar.Click += new System.EventHandler(this.btnSearchMar_Click);
-            // 
-            // txtSearchMar
-            // 
-            this.txtSearchMar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearchMar.Cue = null;
-            this.txtSearchMar.CueColor = System.Drawing.Color.Gray;
-            this.txtSearchMar.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtSearchMar.Location = new System.Drawing.Point(73, 3);
-            this.txtSearchMar.Name = "txtSearchMar";
-            this.txtSearchMar.Size = new System.Drawing.Size(160, 25);
-            this.txtSearchMar.TabIndex = 11;
-            this.txtSearchMar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchMar_KeyDown);
             // 
             // tlpProfileMar
             // 
@@ -614,30 +604,21 @@
             this.btnSearchCon.UseVisualStyleBackColor = false;
             this.btnSearchCon.Click += new System.EventHandler(this.btnSearchCon_Click);
             // 
-            // txtSearchCon
-            // 
-            this.txtSearchCon.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearchCon.Cue = null;
-            this.txtSearchCon.CueColor = System.Drawing.Color.Gray;
-            this.txtSearchCon.Location = new System.Drawing.Point(73, 3);
-            this.txtSearchCon.Name = "txtSearchCon";
-            this.txtSearchCon.Size = new System.Drawing.Size(160, 25);
-            this.txtSearchCon.TabIndex = 11;
-            this.txtSearchCon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchCon_KeyDown);
-            // 
             // tlpProfileCon
             // 
-            this.tlpProfileCon.ColumnCount = 1;
+            this.tlpProfileCon.ColumnCount = 2;
             this.tlpProfileCon.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpProfileCon.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
             this.tlpProfileCon.Controls.Add(this.btnAddReferencesCon, 0, 1);
             this.tlpProfileCon.Controls.Add(this.btnOpenProfileCon, 0, 0);
+            this.tlpProfileCon.Controls.Add(this.btnEditSacramentCon, 1, 1);
             this.tlpProfileCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tlpProfileCon.Location = new System.Drawing.Point(8, 27);
             this.tlpProfileCon.Name = "tlpProfileCon";
             this.tlpProfileCon.RowCount = 2;
             this.tlpProfileCon.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpProfileCon.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpProfileCon.Size = new System.Drawing.Size(121, 59);
+            this.tlpProfileCon.Size = new System.Drawing.Size(245, 59);
             this.tlpProfileCon.TabIndex = 13;
             // 
             // btnAddReferencesCon
@@ -949,17 +930,6 @@
             this.btnSearchBap.UseVisualStyleBackColor = false;
             this.btnSearchBap.Click += new System.EventHandler(this.btnSearchBap_Click);
             // 
-            // txtSearchBap
-            // 
-            this.txtSearchBap.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearchBap.Cue = null;
-            this.txtSearchBap.CueColor = System.Drawing.Color.Gray;
-            this.txtSearchBap.Location = new System.Drawing.Point(73, 3);
-            this.txtSearchBap.Name = "txtSearchBap";
-            this.txtSearchBap.Size = new System.Drawing.Size(160, 25);
-            this.txtSearchBap.TabIndex = 11;
-            this.txtSearchBap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBap_KeyDown);
-            // 
             // btnAdvanceSearchBap
             // 
             this.btnAdvanceSearchBap.BackColor = System.Drawing.Color.Gray;
@@ -979,10 +949,12 @@
             // 
             // tlpProfileBap
             // 
-            this.tlpProfileBap.ColumnCount = 1;
+            this.tlpProfileBap.ColumnCount = 2;
             this.tlpProfileBap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpProfileBap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
             this.tlpProfileBap.Controls.Add(this.btnAddReferencesBap, 0, 1);
             this.tlpProfileBap.Controls.Add(this.btnOpenProfileBap, 0, 0);
+            this.tlpProfileBap.Controls.Add(this.btnEditBap, 1, 1);
             this.tlpProfileBap.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tlpProfileBap.Location = new System.Drawing.Point(8, 27);
             this.tlpProfileBap.Name = "tlpProfileBap";
@@ -990,7 +962,7 @@
             this.tlpProfileBap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpProfileBap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpProfileBap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpProfileBap.Size = new System.Drawing.Size(121, 59);
+            this.tlpProfileBap.Size = new System.Drawing.Size(244, 59);
             this.tlpProfileBap.TabIndex = 13;
             // 
             // btnAddReferencesBap
@@ -1003,7 +975,7 @@
             this.btnAddReferencesBap.ForeColor = System.Drawing.Color.White;
             this.btnAddReferencesBap.Location = new System.Drawing.Point(3, 32);
             this.btnAddReferencesBap.Name = "btnAddReferencesBap";
-            this.btnAddReferencesBap.Size = new System.Drawing.Size(113, 23);
+            this.btnAddReferencesBap.Size = new System.Drawing.Size(112, 23);
             this.btnAddReferencesBap.TabIndex = 16;
             this.btnAddReferencesBap.Text = "Add References";
             this.btnAddReferencesBap.UseVisualStyleBackColor = false;
@@ -1019,11 +991,27 @@
             this.btnOpenProfileBap.ForeColor = System.Drawing.Color.White;
             this.btnOpenProfileBap.Location = new System.Drawing.Point(3, 3);
             this.btnOpenProfileBap.Name = "btnOpenProfileBap";
-            this.btnOpenProfileBap.Size = new System.Drawing.Size(113, 23);
+            this.btnOpenProfileBap.Size = new System.Drawing.Size(112, 23);
             this.btnOpenProfileBap.TabIndex = 15;
             this.btnOpenProfileBap.Text = "Open Profile";
             this.btnOpenProfileBap.UseVisualStyleBackColor = false;
             this.btnOpenProfileBap.Click += new System.EventHandler(this.btnOpenProfileBap_Click);
+            // 
+            // btnEditBap
+            // 
+            this.btnEditBap.BackColor = System.Drawing.Color.Gray;
+            this.btnEditBap.FlatAppearance.BorderSize = 0;
+            this.btnEditBap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnEditBap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditBap.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditBap.ForeColor = System.Drawing.Color.White;
+            this.btnEditBap.Location = new System.Drawing.Point(121, 32);
+            this.btnEditBap.Name = "btnEditBap";
+            this.btnEditBap.Size = new System.Drawing.Size(112, 23);
+            this.btnEditBap.TabIndex = 16;
+            this.btnEditBap.Text = "Edit Sacrament";
+            this.btnEditBap.UseVisualStyleBackColor = false;
+            this.btnEditBap.Click += new System.EventHandler(this.btnEditBap_Click);
             // 
             // lblNameBap
             // 
@@ -1237,6 +1225,56 @@
             this.metroTabControl1.UseStyleColors = true;
             this.metroTabControl1.SelectedIndexChanged += new System.EventHandler(this.metroTabControl1_SelectedIndexChanged);
             // 
+            // btnEditSacramentCon
+            // 
+            this.btnEditSacramentCon.BackColor = System.Drawing.Color.Gray;
+            this.btnEditSacramentCon.FlatAppearance.BorderSize = 0;
+            this.btnEditSacramentCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnEditSacramentCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditSacramentCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditSacramentCon.ForeColor = System.Drawing.Color.White;
+            this.btnEditSacramentCon.Location = new System.Drawing.Point(138, 32);
+            this.btnEditSacramentCon.Name = "btnEditSacramentCon";
+            this.btnEditSacramentCon.Size = new System.Drawing.Size(104, 23);
+            this.btnEditSacramentCon.TabIndex = 18;
+            this.btnEditSacramentCon.Text = "Edit Sacrament";
+            this.btnEditSacramentCon.UseVisualStyleBackColor = false;
+            this.btnEditSacramentCon.Click += new System.EventHandler(this.btnEditSacramentCon_Click);
+            // 
+            // txtSearchBap
+            // 
+            this.txtSearchBap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchBap.Cue = null;
+            this.txtSearchBap.CueColor = System.Drawing.Color.Gray;
+            this.txtSearchBap.Location = new System.Drawing.Point(73, 3);
+            this.txtSearchBap.Name = "txtSearchBap";
+            this.txtSearchBap.Size = new System.Drawing.Size(160, 25);
+            this.txtSearchBap.TabIndex = 11;
+            this.txtSearchBap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBap_KeyDown);
+            // 
+            // txtSearchCon
+            // 
+            this.txtSearchCon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchCon.Cue = null;
+            this.txtSearchCon.CueColor = System.Drawing.Color.Gray;
+            this.txtSearchCon.Location = new System.Drawing.Point(73, 3);
+            this.txtSearchCon.Name = "txtSearchCon";
+            this.txtSearchCon.Size = new System.Drawing.Size(160, 25);
+            this.txtSearchCon.TabIndex = 11;
+            this.txtSearchCon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchCon_KeyDown);
+            // 
+            // txtSearchMar
+            // 
+            this.txtSearchMar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchMar.Cue = null;
+            this.txtSearchMar.CueColor = System.Drawing.Color.Gray;
+            this.txtSearchMar.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtSearchMar.Location = new System.Drawing.Point(73, 3);
+            this.txtSearchMar.Name = "txtSearchMar";
+            this.txtSearchMar.Size = new System.Drawing.Size(160, 25);
+            this.txtSearchMar.TabIndex = 11;
+            this.txtSearchMar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchMar_KeyDown);
+            // 
             // SacramentModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1356,5 +1394,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bapRecordNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn bapPageNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn bapRemarks;
+        private System.Windows.Forms.Button btnEditBap;
+        private System.Windows.Forms.Button btnEditSacramentCon;
     }
 }

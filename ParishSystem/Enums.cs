@@ -61,12 +61,10 @@ namespace ParishSystem
         
     }
 
-    public enum DialogType
+    public enum OperationType
     {
-        Add,
-        Edit
+        Add, Edit
     }
-
     
 
 }

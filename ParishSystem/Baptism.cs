@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ParishSystem
 {
-    class Baptism : Sacrament
+    public class Baptism : Sacrament
     {
         private Legitimacy _legitimacy;
         public Legitimacy legitimacy { get { return _legitimacy; } }
-        Baptism(int applicationID, int ministerID, string registryNumber, string recordNumber, string pageNumber, string remarks, DateTime sacramentDate, Legitimacy legitimacy)
-            : base (applicationID, ministerID, registryNumber, recordNumber, pageNumber, remarks, sacramentDate)
+        public Baptism(int applicationID, int ministerID, string registryNumber, string pageNumber, string recordNumber, string remarks, DateTime sacramentDate, Legitimacy legitimacy)
+            : base (applicationID, ministerID, registryNumber, pageNumber, recordNumber, remarks, sacramentDate)
         {
             this._legitimacy = legitimacy;
         }

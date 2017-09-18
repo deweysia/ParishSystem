@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParishSystem
 {
-    class Marriage : Sacrament
+    public class Marriage : Sacrament
     {
         private DateTime _licenseDate;
         private CivilStatus _groomStatus;
@@ -15,8 +15,8 @@ namespace ParishSystem
         public DateTime licenseDate { get { return _licenseDate; } }
         public CivilStatus groomStatus { get { return _groomStatus; } }
         public CivilStatus brideStatus { get { return _brideStatus;} }
-        Marriage(int applicationID, int ministerID, string registryNumber, string recordNumber, string pageNumber, string remarks, DateTime sacramentDate, DateTime licenseDate, CivilStatus groomStatus, CivilStatus brideStatus)
-            : base (applicationID, ministerID, registryNumber, recordNumber, pageNumber, remarks, sacramentDate)
+        public Marriage(int applicationID, int ministerID, string registryNumber, string pageNumber, string recordNumber, string remarks, DateTime sacramentDate, DateTime licenseDate, CivilStatus groomStatus, CivilStatus brideStatus)
+            : base (applicationID, ministerID, registryNumber, pageNumber, recordNumber, remarks, sacramentDate)
         {
             this._licenseDate = licenseDate;
             this._groomStatus = groomStatus;

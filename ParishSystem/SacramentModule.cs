@@ -48,6 +48,7 @@ namespace ParishSystem
 
             this.sacramentID = Convert.ToInt32(dgvBaptism.SelectedRows[0].Cells["baptismID"].Value);
             this.profileID = Convert.ToInt32(dgvBaptism.SelectedRows[0].Cells["bapProfileID"].Value);
+            this.applicationID = Convert.ToInt32(dgvBaptism.SelectedRows[0].Cells["bapApplicationID"].Value);
 
             DataTable dt = ((BindingSource)dgv.DataSource).DataSource as DataTable;
 
@@ -74,6 +75,7 @@ namespace ParishSystem
 
             this.sacramentID = Convert.ToInt32(dgvConfirmation.SelectedRows[0].Cells["confirmationID"].Value);
             this.profileID = Convert.ToInt32(dgvConfirmation.SelectedRows[0].Cells["conProfileID"].Value);
+            this.applicationID = Convert.ToInt32(dgvConfirmation.SelectedRows[0].Cells["conApplicationID"].Value);
 
             DataTable dt = ((BindingSource)dgv.DataSource).DataSource as DataTable;
 
@@ -96,6 +98,7 @@ namespace ParishSystem
                 return;
 
             this.sacramentID = Convert.ToInt32(dgvMarriage.SelectedRows[0].Cells["marriageID"].Value);
+            this.applicationID = Convert.ToInt32(dgvMarriage.SelectedRows[0].Cells["marApplicationID"].Value);
             this.groomID = Convert.ToInt32(dgvMarriage.SelectedRows[0].Cells["marGroomID"].Value);
             this.brideID = Convert.ToInt32(dgvMarriage.SelectedRows[0].Cells["marBrideID"].Value);
             MessageBox.Show(groomID + " " + brideID);
@@ -364,6 +367,40 @@ namespace ParishSystem
         private void metroTabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEditBap_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow dgvr = dgvBaptism.SelectedRows[0];
+            DataRow dr = ((DataRowView)dgvr.DataBoundItem).Row;
+            SacramentForm f = new SacramentForm(OperationType.Edit, SacramentType.Baptism, dr);
+            DialogResult result = f.ShowDialog();
+
+            if(result == DialogResult.OK)
+            {
+                Notification.Show(State.SacramentEditSuccess);
+            }else if (result != DialogResult.Cancel)
+            {
+                Notification.Show(State.SacramentEditFail);
+            }
+            
+        }
+
+        private void btnEditSacramentCon_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow dgvr = dgvConfirmation.SelectedRows[0];
+            DataRow dr = ((DataRowView)dgvr.DataBoundItem).Row;
+            SacramentForm f = new SacramentForm(OperationType.Edit, SacramentType.Confirmation, dr);
+            DialogResult result = f.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                Notification.Show(State.SacramentEditSuccess);
+            }
+            else if (result != DialogResult.Cancel)
+            {
+                Notification.Show(State.SacramentEditFail);
+            }
         }
 
         private void btnSearchBap_Click(object sender, EventArgs e)
