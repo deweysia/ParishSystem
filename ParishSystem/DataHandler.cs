@@ -3404,7 +3404,7 @@ namespace ParishSystem
                 return new DataTable();
             }
         }
-
+       
         public DataTable getBloodDonors()
         {
             string q = $@"select blooddonor.blooddonorID , concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
@@ -3417,7 +3417,7 @@ namespace ParishSystem
                         when bloodType =6 then 'AB-'  
                         when bloodType =7 then 'O+'  
                         when bloodType =8 then 'O-' end as bloodT,
-                        count(bloodDonationID),
+                        count(bloodDonationID) as Quantity,
                         concat(""(+63)"",contactnumber) as contactnumber,
                         address
                         from blooddonor
@@ -3498,13 +3498,14 @@ namespace ParishSystem
         }
         public DataTable getTotalDonationsOnEvents()
         {
-            string q = $@"select blooddonationevent.bloodDonationEventID,eventname,count(donationid) as total from blooddonor 
+            string q = $@"select eventname,count(donationid) as total from blooddonor 
                             inner join blooddonation on blooddonation.profileid =blooddonor.blooddonorID
                             inner join blooddonationevent on blooddonationevent.bloodDonationEventID=blooddonation.bloodDonationEventID
                             group by bloodDonationEvent.bloodDonationEventID;";
             return runQuery(q);
         }
 
+        
         public DataTable getsummaryOfBloodleting(DataTable bloodlettingData)
         {
             DataTable Events = getBloodlettingEvents();
@@ -3565,22 +3566,23 @@ namespace ParishSystem
         public DataTable getAllDonations()
         {
             string q = $@"select blooddonor.blooddonorID , concat(lastname,"","",coalesce("""",suffix),"" "",firstname,"" "",midname)as name,
+                        donationid,
                         case 
-                        when bloodType =1 then 'A+' 
-                        when bloodType =2 then 'A-'  
-                        when bloodType =3 then 'B+'  
-                        when bloodType =4 then 'B-'  
-                        when bloodType =5 then 'AB+'  
-                        when bloodType =6 then 'AB-'  
-                        when bloodType =7 then 'O+'  
-                        when bloodType =8 then 'O-' end as bloodT,
-                        count(donationid),
-                        concat(""(+63)"",contactnumber) as contactnumber,
-                        address
+                        when bloodType = 1 then 'A+'
+                        when bloodType = 2 then 'A-'
+                        when bloodType = 3 then 'B+'
+                        when bloodType = 4 then 'B-'
+                        when bloodType = 5 then 'AB+'
+                        when bloodType = 6 then 'AB-'
+                        when bloodType = 7 then 'O+'
+                        when bloodType = 8 then 'O-' end as bloodT,
+                        concat(""(+63)"", contactnumber) as contactnumber,
+                        address,
+                        eventname
                         from blooddonor
-                        left outer join blooddonation on blooddonation.profileid =blooddonor.blooddonorID
-                        left outer join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
-                        group by blooddonor.blooddonorID";
+                        inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
+                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
+                 ";
             return runQuery(q);
         }
 
@@ -4173,7 +4175,6 @@ namespace ParishSystem
                 }
             }
         }
-
         public void Excel_CashReciept_Grouped_Breakdown(DataGridView dgvr, int cashReceiptCashDisbursment, int parish_community_postulancy,int popup_save)
         {
             
@@ -4413,8 +4414,155 @@ namespace ParishSystem
             }
             return false;
         }
-    }
-    } 
+        public void ExcelBloodlettingReports(DataGridView dgvr, DataGridView summary, int popup_save)
+        {
+            Microsoft.Office.Interop.Excel.Application App = new Microsoft.Office.Interop.Excel.Application();
+            Excel.Workbook newWorkbook = App.Workbooks.Add();
+            Microsoft.Office.Interop.Excel.Worksheet x = App.Worksheets[1];
+            x.Name = "Report";
+            x.Range["A1"].Value = "     Assumption Parish - Bloodletting Report     ";
+            x.Range["A1"].Cells.Font.Size = 18;
+            x.Range["A1"].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+            int count = 1;
+            foreach(DataGridViewColumn col in dgvr.Columns)
+            {
+                if (col.Visible)
+                {
+                    x.Cells[2, count++ ].Value = "     " + col.HeaderText.ToString() + "     ";
+                }
+               
+            }
+            count = count - 1;
+            x.Range["A1", x.Cells[1, count+3]].Merge();
+            x.Range[x.Cells[2, 1], x.Cells[2, count+3]].Cells.Font.Size = 15;
+            x.Range[x.Cells[2, 1], x.Cells[2, count+3]].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+            x.Range[x.Cells[2, 1], x.Cells[2, count+3]].EntireRow.Font.Bold = true;
+
+            for (int row =0;row <dgvr.Rows.Count; row++)
+            {
+                for(int cell=1;cell < dgvr.Rows[row].Cells.Count; cell++)
+                {
+                    if (dgvr.Rows[row].Cells[cell].Visible)
+                    {
+                        x.Cells[row + 3, cell].Value = dgvr.Rows[row].Cells[cell].Value.ToString();
+                    }
+                }
+            }
+            x.Range["A1", x.Cells[(dgvr.Rows.Count>summary.Rows.Count?dgvr.Rows.Count+2:summary.Rows.Count+2), (count+3)]].Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+            int colEvent = count + 2;
+            int colQuantity = count + 3;
+            x.Cells[2, count + 2].Value = "      Event Name     ";
+            x.Cells[2, count + 3].Value = "      Total Quantity     ";
+
+            for (int a=0;a< summary.Rows.Count; a++)
+            {
+                x.Cells[a + 3, colEvent].Value = summary.Rows[a].Cells[0].Value.ToString();  
+                x.Cells[a + 3, colQuantity].Value = summary.Rows[a].Cells[1].Value.ToString();
+            }
+  
+            x.Rows.AutoFit();
+            x.Columns.AutoFit();
+            if (popup_save == 1)
+            {
+                App.Visible = true;
+            }
+            else
+            {
+                SaveExcelFile(newWorkbook);
+            }
+        }
+        public void Excel_CashReports(DataGridView dgvr,DataGridView summary, int cashReceiptCashDisbursment, int parish_community_postulancy, int popup_save)
+        {
+            Microsoft.Office.Interop.Excel.Application App = new Microsoft.Office.Interop.Excel.Application();
+            Excel.Workbook newWorkbook = App.Workbooks.Add();
+            Microsoft.Office.Interop.Excel.Worksheet x = App.Worksheets[1];
+            x.Name = "Report";
+
+            if (cashReceiptCashDisbursment == 1)
+            {
+                int count = 0;
+                foreach (DataGridViewColumn dc in dgvr.Columns)
+                {
+                    if (dc.Visible)
+                    {
+                        count++;
+                    }
+                }
+
+                x.Range["A1", x.Cells[1, count+3]].Merge();
+                x.Range["A2", x.Cells[2, count+3]].Merge();
+                x.Range["B3", x.Cells[3, count+3]].Merge();
+                x.Range["B4", x.Cells[4, count+3]].Merge();
+                x.Range["B5", x.Cells[5, count+3]].Merge();
+                
+                x.Range["A1"].Value = "     Assumption Parish     ";
+                x.Range["A2"].Value = (cashReceiptCashDisbursment == 1 ? "Cash Receipt: " : "Cash Disbursment: ") + " " + (parish_community_postulancy == 1 ? "Parish" : (parish_community_postulancy == 2 ? "Community" : "Postulancy"));
+                x.Range["A3"].Value = "     From";
+                x.Range["A4"].Value = "     To";
+
+                DateTime dt1 = DateTime.Parse(dgvr.Rows[dgvr.Rows.Count - 1].Cells[3].Value.ToString(), new System.Globalization.CultureInfo("en-US", true), System.Globalization.DateTimeStyles.AssumeLocal);
+                DateTime dt2 = DateTime.Parse(dgvr.Rows[0].Cells[3].Value.ToString(), new System.Globalization.CultureInfo("en-US", true), System.Globalization.DateTimeStyles.AssumeLocal);
+
+                x.Range["B3"].Value = (dt1 < dt2 ? dt1.ToString("MMMM dd yyyy, hh : mm") : dt2.ToString("MMMM dd yyyy, hh : mm"));
+                x.Range["B4"].Value = (dt1 > dt2 ? dt1.ToString("MMMM dd yyyy, hh : mm") : dt2.ToString("MMMM dd yyyy, hh : mm"));
+
+                x.Range["A1"].Cells.Font.Size = 18;
+                x.Range["A1"].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+                int a = 1;
+                foreach (DataGridViewColumn dc in dgvr.Columns)
+                {
+                    if (dc.Visible) 
+                    {
+                        x.Cells[6,a].Value = "     "+dc.HeaderText.ToString()+"     ";
+                        a++;
+                    }
+                }
+                x.Range["A6", x.Cells[6, a+3]].Cells.Font.Size = 15;
+                x.Range["A6", x.Cells[6, a+3]].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                x.Range["A1", x.Cells[6, a+3]].EntireRow.Font.Bold = true;
+
+                int b=0;
+                foreach(DataGridViewRow dr in dgvr.Rows)
+                {
+                    int c = 1;
+                    foreach (DataGridViewCell dc in dr.Cells)
+                    {
+                        x.Cells[b+7,c].Value = "     " + dc.Value.ToString() + "     ";
+                        c++;
+                    }
+                    b++;
+                }
+
+                x.Cells[6, a + 1].Value = "      Item      ";
+                x.Cells[6, a + 2].Value = "      Total      ";
+
+                int d = 1;
+                foreach(DataGridViewRow sdgvr in summary.Rows)
+                {
+                    x.Cells[d+6, a + 1].Value = sdgvr.Cells[0].Value.ToString();
+                    x.Cells[d+6, a + 2].Value = sdgvr.Cells[1].Value.ToString();
+                    d++;
+                }
+
+                x.Rows.AutoFit();
+                x.Columns.AutoFit();
+                x.Range["A1", x.Cells[(dgvr.Rows.Count>summary.Rows.Count? dgvr.Rows.Count+1:summary.Rows.Count+1)+5,(dgvr.Columns.Count+3)]].Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+
+                if (popup_save == 1)
+                {
+                    App.Visible = true;
+                }
+                else
+                {
+                    SaveExcelFile(newWorkbook);
+                }
+            }
+
+        }
+        }
+} 
 
 
 

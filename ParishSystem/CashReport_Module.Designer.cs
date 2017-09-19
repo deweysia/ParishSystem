@@ -198,9 +198,9 @@
             this.reportFilter_panel.Controls.Add(this.button1);
             this.reportFilter_panel.Controls.Add(this.label23);
             this.reportFilter_panel.Controls.Add(this.filterBy_combobox_disbursment);
-            this.reportFilter_panel.Location = new System.Drawing.Point(550, 83);
+            this.reportFilter_panel.Location = new System.Drawing.Point(558, 82);
             this.reportFilter_panel.Name = "reportFilter_panel";
-            this.reportFilter_panel.Size = new System.Drawing.Size(358, 34);
+            this.reportFilter_panel.Size = new System.Drawing.Size(358, 330);
             this.reportFilter_panel.TabIndex = 18;
             this.reportFilter_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.reportFilter_panel_Paint);
             // 
@@ -212,7 +212,7 @@
             this.Open_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Open_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Open_button.ForeColor = System.Drawing.Color.White;
-            this.Open_button.Location = new System.Drawing.Point(0, -2);
+            this.Open_button.Location = new System.Drawing.Point(0, 294);
             this.Open_button.Name = "Open_button";
             this.Open_button.Size = new System.Drawing.Size(356, 34);
             this.Open_button.TabIndex = 19;
@@ -225,7 +225,7 @@
             this.flowLayoutPanel1.Controls.Add(this.input_panel);
             this.flowLayoutPanel1.Controls.Add(this.panel11);
             this.flowLayoutPanel1.Controls.Add(this.panel10);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(14, 53);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 53);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(349, 168);
             this.flowLayoutPanel1.TabIndex = 19;
@@ -451,7 +451,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(49, 227);
+            this.button1.Location = new System.Drawing.Point(39, 227);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(277, 30);
             this.button1.TabIndex = 18;
@@ -463,7 +463,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(16, 20);
+            this.label23.Location = new System.Drawing.Point(6, 20);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(66, 21);
             this.label23.TabIndex = 15;
@@ -481,7 +481,7 @@
             "Month",
             "Year",
             "Date Range"});
-            this.filterBy_combobox_disbursment.Location = new System.Drawing.Point(124, 17);
+            this.filterBy_combobox_disbursment.Location = new System.Drawing.Point(114, 17);
             this.filterBy_combobox_disbursment.Name = "filterBy_combobox_disbursment";
             this.filterBy_combobox_disbursment.Size = new System.Drawing.Size(234, 29);
             this.filterBy_combobox_disbursment.TabIndex = 13;

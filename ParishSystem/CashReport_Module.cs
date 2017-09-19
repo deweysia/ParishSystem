@@ -786,53 +786,13 @@ namespace ParishSystem
 
         private void PreviewClick(object sender, EventArgs e)
         {
-            if (total_radiobutton_cashdisbursment.Checked)
-            {
-                if (grouped_radiobutton_cashdisbursment.Checked)
-                {
-                    dh.Excel_CashReciept_Grouped_Total(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 1);
-                }
-                else
-                {
-                    dh.Excel_CashReciept_Ungrouped_Total(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 1);
-                }
-            }
-            else
-            {
-                if (grouped_radiobutton_cashdisbursment.Checked)
-                {
-                    dh.Excel_CashReciept_Grouped_Breakdown(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 1);
-                }
-                else
-                {
-                    dh.Excel_CashReciept_UnGrouped_Breakdown(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 1);
-                }
-            }
+            
+                dh.Excel_CashReports(report_datagridview_cashdisbursment, summary_datagridview_report_disbursment, bookReportMode, cashDisbursmentMode, 1);
+            
         }
         private void excel_Click(object sender, EventArgs e)
         {
-            if (total_radiobutton_cashdisbursment.Checked)
-            {
-                if (grouped_radiobutton_cashdisbursment.Checked)
-                {
-                    dh.Excel_CashReciept_Grouped_Total(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 2);
-                }
-                else
-                {
-                    dh.Excel_CashReciept_Ungrouped_Total(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 2);
-                }
-            }
-            else
-            {
-                if (grouped_radiobutton_cashdisbursment.Checked)
-                {
-                    dh.Excel_CashReciept_Grouped_Breakdown(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 2);
-                }
-                else
-                {
-                    dh.Excel_CashReciept_UnGrouped_Breakdown(report_datagridview_cashdisbursment, bookReportMode, cashDisbursmentMode, 2);
-                }
-            }
+            dh.Excel_CashReports(report_datagridview_cashdisbursment, summary_datagridview_report_disbursment, bookReportMode, cashDisbursmentMode, 2);
             dh.killAllExcel();
         }
 
