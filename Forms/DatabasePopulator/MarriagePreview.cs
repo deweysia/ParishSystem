@@ -13,6 +13,7 @@ using PdfSharp;
 using PdfSharp.Pdf;
 using PdfSharp.Drawing;
 using System.IO;
+using System.Diagnostics;
 
 namespace DatabasePopulator
 {
@@ -154,6 +155,53 @@ namespace DatabasePopulator
 
                 this.Close();
             }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            #region SAVING PDF TO TEMP
+            // --------------------FINDING FILEPATH---------------------- //
+            int width = panel1.Size.Width;
+            int height = panel1.Size.Height;
+
+
+            Bitmap bm = new Bitmap(width, height);
+            panel1.DrawToBitmap(bm, new Rectangle(0, 0, width, height));
+
+
+            string tempFolder = Path.GetTempPath();
+            bm.Save(tempFolder + "//tempReport.bmp", ImageFormat.Bmp);
+
+
+            // --------------------DOCUMENT---------------------- //
+
+            PdfDocument doc = new PdfDocument();
+            PdfPage page = new PdfPage();
+            page.Height = height;
+            page.Width = width;
+            page.Orientation = PageOrientation.Portrait;
+            doc.Pages.Add(page);
+
+            // --------------------DRAWING PDF---------------------- //
+            XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
+            XImage saved = XImage.FromFile(tempFolder + "//temp2.bmp");
+            xgr.DrawImage(saved, 0, 0, width, height);
+
+            doc.Save(tempFolder + "//rep.pdf");
+            doc.Close();
+            #endregion
+
+            Process p = new Process();
+            p.StartInfo = new ProcessStartInfo()
+            {
+                CreateNoWindow = true,
+                Verb = "open",
+                FileName = tempFolder + "//rep.pdf"
+            };
+            p.Start();
+
+
 
         }
     }

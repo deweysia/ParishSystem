@@ -164,7 +164,7 @@ private void Form1_Load(object sender, EventArgs e)
 
                 doc.Save(filepath);
                 doc.Close();
-
+                
                 this.Close();
             }
             
@@ -237,9 +237,7 @@ private void Form1_Load(object sender, EventArgs e)
             };
             p.Start();
 
-            String savedDoc = tempFolder + "//rep.pdf";
-            printDocument1.DocumentName = savedDoc;
-            printPreviewDialog1.ShowDialog();
+         
 
         }
     }

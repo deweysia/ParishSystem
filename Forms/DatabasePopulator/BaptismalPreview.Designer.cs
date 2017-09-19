@@ -575,7 +575,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Salmon;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(926, 77);
+            this.button1.Location = new System.Drawing.Point(926, 131);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 48);
             this.button1.TabIndex = 0;
@@ -585,9 +585,9 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Salmon;
+            this.button3.BackColor = System.Drawing.Color.LightSteelBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(926, 131);
+            this.button3.Location = new System.Drawing.Point(926, 77);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(136, 48);
             this.button3.TabIndex = 0;
@@ -611,7 +611,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1085, 852);
+            this.ClientSize = new System.Drawing.Size(1102, 852);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
