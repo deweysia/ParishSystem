@@ -49,8 +49,8 @@
             this.txtBrideMI = new MetroFramework.Controls.MetroTextBox();
             this.txtBrideLN = new MetroFramework.Controls.MetroTextBox();
             this.txtBrideSuffix = new MetroFramework.Controls.MetroTextBox();
-            this.txtPrice = new ParishSystem.HiddenNumericUpDown();
             this.txtRemarks = new MetroFramework.Controls.MetroTextBox();
+            this.txtPrice = new ParishSystem.HiddenNumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.close_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice)).BeginInit();
@@ -464,14 +464,6 @@
             this.txtBrideSuffix.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtBrideSuffix.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // txtPrice
-            // 
-            this.txtPrice.DecimalPlaces = 2;
-            this.txtPrice.Location = new System.Drawing.Point(9, 309);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(120, 20);
-            this.txtPrice.TabIndex = 41;
-            // 
             // txtRemarks
             // 
             // 
@@ -502,6 +494,14 @@
             this.txtRemarks.UseSelectable = true;
             this.txtRemarks.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtRemarks.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.DecimalPlaces = 2;
+            this.txtPrice.Location = new System.Drawing.Point(9, 309);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(120, 20);
+            this.txtPrice.TabIndex = 41;
             // 
             // AddMarriageApplication
             // 
@@ -536,6 +536,7 @@
             this.Padding = new System.Windows.Forms.Padding(20);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.AddMarriageApplication_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddMarriageApplication_KeyDown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddMarriageApplication_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddMarriageApplication_MouseMove);
             this.panel1.ResumeLayout(false);

@@ -1,6 +1,6 @@
 ﻿namespace ParishSystem
 {
-    partial class CashReciept
+    partial class CashReceipt
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.fullpay_panel_CDB = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.postulancy_label = new System.Windows.Forms.Label();
             this.community_label = new System.Windows.Forms.Label();
             this.parish_label = new System.Windows.Forms.Label();
@@ -67,12 +68,12 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.remarks_textbox_fullpay = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.sourceName_textbox_fullpay = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.final_button_fullpay = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.cancelTransaction_button_fullpay = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.total_label_fullpay = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -101,6 +102,7 @@
             // fullpay_panel_CDB
             // 
             this.fullpay_panel_CDB.BackColor = System.Drawing.Color.White;
+            this.fullpay_panel_CDB.Controls.Add(this.label1);
             this.fullpay_panel_CDB.Controls.Add(this.postulancy_label);
             this.fullpay_panel_CDB.Controls.Add(this.community_label);
             this.fullpay_panel_CDB.Controls.Add(this.parish_label);
@@ -123,12 +125,24 @@
             this.fullpay_panel_CDB.Size = new System.Drawing.Size(442, 669);
             this.fullpay_panel_CDB.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(22, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(154, 32);
+            this.label1.TabIndex = 88;
+            this.label1.Text = "Cash Receipt";
+            // 
             // postulancy_label
             // 
             this.postulancy_label.AutoSize = true;
             this.postulancy_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.postulancy_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.postulancy_label.Location = new System.Drawing.Point(294, 33);
+            this.postulancy_label.Location = new System.Drawing.Point(294, 66);
             this.postulancy_label.Name = "postulancy_label";
             this.postulancy_label.Size = new System.Drawing.Size(112, 30);
             this.postulancy_label.TabIndex = 69;
@@ -140,7 +154,7 @@
             this.community_label.AutoSize = true;
             this.community_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.community_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.community_label.Location = new System.Drawing.Point(150, 33);
+            this.community_label.Location = new System.Drawing.Point(150, 66);
             this.community_label.Name = "community_label";
             this.community_label.Size = new System.Drawing.Size(120, 30);
             this.community_label.TabIndex = 68;
@@ -151,7 +165,7 @@
             // 
             this.parish_label.AutoSize = true;
             this.parish_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.parish_label.Location = new System.Drawing.Point(45, 33);
+            this.parish_label.Location = new System.Drawing.Point(45, 66);
             this.parish_label.Name = "parish_label";
             this.parish_label.Size = new System.Drawing.Size(72, 30);
             this.parish_label.TabIndex = 67;
@@ -162,7 +176,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(68, 199);
+            this.label9.Location = new System.Drawing.Point(63, 202);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(94, 21);
             this.label9.TabIndex = 66;
@@ -217,7 +231,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 10);
+            this.label3.Location = new System.Drawing.Point(-4, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 21);
             this.label3.TabIndex = 39;
@@ -264,13 +278,13 @@
             this.person_SubPanel.Controls.Add(this.pricePaid_label);
             this.person_SubPanel.Location = new System.Drawing.Point(3, 47);
             this.person_SubPanel.Name = "person_SubPanel";
-            this.person_SubPanel.Size = new System.Drawing.Size(200, 82);
+            this.person_SubPanel.Size = new System.Drawing.Size(306, 82);
             this.person_SubPanel.TabIndex = 64;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 11);
+            this.label4.Location = new System.Drawing.Point(165, 10);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 21);
             this.label4.TabIndex = 62;
@@ -279,7 +293,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 56);
+            this.label10.Location = new System.Drawing.Point(165, 55);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(75, 21);
             this.label10.TabIndex = 63;
@@ -288,7 +302,7 @@
             // targetPrice_label
             // 
             this.targetPrice_label.AutoSize = true;
-            this.targetPrice_label.Location = new System.Drawing.Point(105, 11);
+            this.targetPrice_label.Location = new System.Drawing.Point(262, 10);
             this.targetPrice_label.Name = "targetPrice_label";
             this.targetPrice_label.Size = new System.Drawing.Size(40, 21);
             this.targetPrice_label.TabIndex = 59;
@@ -297,7 +311,7 @@
             // pricePaid_label
             // 
             this.pricePaid_label.AutoSize = true;
-            this.pricePaid_label.Location = new System.Drawing.Point(105, 56);
+            this.pricePaid_label.Location = new System.Drawing.Point(262, 55);
             this.pricePaid_label.Name = "pricePaid_label";
             this.pricePaid_label.Size = new System.Drawing.Size(40, 21);
             this.pricePaid_label.TabIndex = 60;
@@ -306,7 +320,7 @@
             // name_label
             // 
             this.name_label.AutoSize = true;
-            this.name_label.Location = new System.Drawing.Point(7, 12);
+            this.name_label.Location = new System.Drawing.Point(-4, 12);
             this.name_label.Name = "name_label";
             this.name_label.Size = new System.Drawing.Size(64, 21);
             this.name_label.TabIndex = 57;
@@ -484,7 +498,7 @@
             this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.LightGray;
-            this.label15.Location = new System.Drawing.Point(16, 52);
+            this.label15.Location = new System.Drawing.Point(16, 85);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(407, 16);
             this.label15.TabIndex = 70;
@@ -534,18 +548,6 @@
             this.remarks_textbox_fullpay.Name = "remarks_textbox_fullpay";
             this.remarks_textbox_fullpay.Size = new System.Drawing.Size(385, 69);
             this.remarks_textbox_fullpay.TabIndex = 14;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(90, 20);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(381, 21);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "_____________________________________________________";
             // 
             // sourceName_textbox_fullpay
             // 
@@ -618,6 +620,18 @@
             this.cancelTransaction_button_fullpay.UseVisualStyleBackColor = false;
             this.cancelTransaction_button_fullpay.Click += new System.EventHandler(this.cancelTransaction_button_fullpay_parish_Click);
             // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(90, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(381, 21);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "_____________________________________________________";
+            // 
             // total_label_fullpay
             // 
             this.total_label_fullpay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -671,14 +685,14 @@
             this.item_dgv_fullpay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.item_dgv_fullpay.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.item_dgv_fullpay.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.item_dgv_fullpay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.item_dgv_fullpay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.item_dgv_fullpay.ColumnHeadersHeight = 40;
             this.item_dgv_fullpay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.item_dgv_fullpay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -690,35 +704,35 @@
             this.ApplicationID,
             this.nameIndex,
             this.targetprice});
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.item_dgv_fullpay.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.item_dgv_fullpay.DefaultCellStyle = dataGridViewCellStyle2;
             this.item_dgv_fullpay.EnableHeadersVisualStyles = false;
             this.item_dgv_fullpay.GridColor = System.Drawing.Color.White;
             this.item_dgv_fullpay.Location = new System.Drawing.Point(32, 65);
             this.item_dgv_fullpay.MultiSelect = false;
             this.item_dgv_fullpay.Name = "item_dgv_fullpay";
             this.item_dgv_fullpay.ReadOnly = true;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.Magenta;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.item_dgv_fullpay.RowHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Magenta;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.item_dgv_fullpay.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.item_dgv_fullpay.RowHeadersVisible = false;
             this.item_dgv_fullpay.RowHeadersWidth = 50;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.DarkRed;
-            this.item_dgv_fullpay.RowsDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DarkRed;
+            this.item_dgv_fullpay.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.item_dgv_fullpay.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -785,7 +799,7 @@
             this.targetprice.ReadOnly = true;
             this.targetprice.Visible = false;
             // 
-            // CashReciept
+            // CashReceipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -796,7 +810,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "CashReciept";
+            this.Name = "CashReceipt";
             this.Text = "CDB_FullPayment_Module";
             this.Load += new System.EventHandler(this.CDB_FullPayment_Module_Load);
             this.fullpay_panel_CDB.ResumeLayout(false);
@@ -876,5 +890,6 @@
         private System.Windows.Forms.Label parish_label;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }

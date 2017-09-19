@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.controlBar_panel = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.close_button = new System.Windows.Forms.Button();
             this.start_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.end_DateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -55,6 +56,7 @@
             // controlBar_panel
             // 
             this.controlBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.controlBar_panel.Controls.Add(this.label8);
             this.controlBar_panel.Controls.Add(this.close_button);
             this.controlBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlBar_panel.Location = new System.Drawing.Point(0, 0);
@@ -63,6 +65,18 @@
             this.controlBar_panel.Size = new System.Drawing.Size(378, 33);
             this.controlBar_panel.TabIndex = 14;
             this.controlBar_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.controlBar_panel_Paint);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(3, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(146, 20);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Bloodletting Events";
             // 
             // close_button
             // 
@@ -86,6 +100,8 @@
             this.start_dateTimePicker.Name = "start_dateTimePicker";
             this.start_dateTimePicker.Size = new System.Drawing.Size(246, 29);
             this.start_dateTimePicker.TabIndex = 16;
+            this.start_dateTimePicker.ValueChanged += new System.EventHandler(this.start_dateTimePicker_ValueChanged);
+            this.start_dateTimePicker.Enter += new System.EventHandler(this.start_dateTimePicker_Enter);
             // 
             // end_DateTimePicker
             // 
@@ -280,8 +296,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "BloodlettingEventPopUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.BloodlettingEventPopUp_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BloodlettingEventPopUp_KeyDown);
             this.controlBar_panel.ResumeLayout(false);
+            this.controlBar_panel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -312,5 +331,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button delete_button;
+        private System.Windows.Forms.Label label8;
     }
 }

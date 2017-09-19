@@ -193,11 +193,11 @@
     <Compile Include="CashReport_Module.Designer.cs">
       <DependentUpon>CashReport_Module.cs</DependentUpon>
     </Compile>
-    <Compile Include="CashReciept.cs">
+    <Compile Include="CashReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CashReciept.Designer.cs">
-      <DependentUpon>CashReciept.cs</DependentUpon>
+    <Compile Include="CashReceipt.Designer.cs">
+      <DependentUpon>CashReceipt.cs</DependentUpon>
     </Compile>
     <Compile Include="Confirmation.cs" />
     <Compile Include="CueTextBox.cs">
@@ -237,12 +237,6 @@
     </Compile>
     <Compile Include="HiddenNumericUpDown.Designer.cs">
       <DependentUpon>HiddenNumericUpDown.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HomeModule.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HomeModule.Designer.cs">
-      <DependentUpon>HomeModule.cs</DependentUpon>
     </Compile>
     <Compile Include="ItemTypePopUp.cs">
       <SubType>Form</SubType>
@@ -431,8 +425,8 @@
     <EmbeddedResource Include="CashReport_Module.resx">
       <DependentUpon>CashReport_Module.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CashReciept.resx">
-      <DependentUpon>CashReciept.cs</DependentUpon>
+    <EmbeddedResource Include="CashReceipt.resx">
+      <DependentUpon>CashReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CueTextBox.resx">
       <DependentUpon>CueTextBox.cs</DependentUpon>
@@ -448,9 +442,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HomeModule.resx">
-      <DependentUpon>HomeModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemTypePopUp.resx">
       <DependentUpon>ItemTypePopUp.cs</DependentUpon>
@@ -618,6 +609,18 @@
     <None Include="Resources\icons8-Search Filled-20.png" />
     <None Include="Resources\icons8-Delete Filled-20-666666.png" />
     <None Include="Resources\icons8-Eye-20.png" />
+    <None Include="Resources\icons8-Full Screen-20.png" />
+    <None Include="Resources\icons8-Horizontal Line Filled-20.png" />
+    <None Include="Resources\icons8-Menu-48.png" />
+    <None Include="Resources\icons8-Menu-35.png" />
+    <None Include="Resources\icons8-Full Screen Filled.png" />
+    <None Include="Resources\icons8-Delete-20 %281%29.png" />
+    <None Include="Resources\icons8-Delete Filled-20 %281%29.png" />
+    <None Include="Resources\icons8-Fit to Width-20.png" />
+    <None Include="Resources\icons8-Fit to Width-30.png" />
+    <None Include="Resources\icons8-Delete Filled-30.png" />
+    <None Include="Resources\icons8-Sign Out Filled-20.png" />
+    <None Include="Resources\icons8-Expand Arrow-20 White.png" />
     <Content Include="Tools\SQL_Writer.jar" />
     <None Include="Resources\messageBox_cancel.png" />
     <None Include="Resources\messageBox_success.png" />

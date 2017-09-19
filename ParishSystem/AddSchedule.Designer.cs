@@ -39,7 +39,6 @@
             this.dtpDateStart = new MetroFramework.Controls.MetroDateTime();
             this.dtpTimeEnd = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.tabScheduleType = new ParishSystem.HiddenTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -50,31 +49,38 @@
             this.txtVenue = new System.Windows.Forms.TextBox();
             this.txtDetails = new ParishSystem.CueTextBox();
             this.txtTitle = new ParishSystem.CueTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabScheduleType.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 25);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.Size = new System.Drawing.Size(100, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Schedule Type";
             // 
             // cmbScheduleType
             // 
+            this.cmbScheduleType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbScheduleType.FormattingEnabled = true;
             this.cmbScheduleType.Items.AddRange(new object[] {
             "Unspecified",
             "Appointment",
             "Blood Donation Event"});
-            this.cmbScheduleType.Location = new System.Drawing.Point(18, 41);
+            this.cmbScheduleType.Location = new System.Drawing.Point(11, 71);
             this.cmbScheduleType.Name = "cmbScheduleType";
-            this.cmbScheduleType.Size = new System.Drawing.Size(121, 21);
+            this.cmbScheduleType.Size = new System.Drawing.Size(136, 24);
             this.cmbScheduleType.TabIndex = 3;
             this.cmbScheduleType.SelectedIndexChanged += new System.EventHandler(this.cmbScheduleType_SelectedIndexChanged);
             // 
@@ -82,9 +88,9 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 11);
+            this.label2.Location = new System.Drawing.Point(10, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 26);
+            this.label2.Size = new System.Drawing.Size(39, 32);
             this.label2.TabIndex = 4;
             this.label2.Text = "Start Time";
             // 
@@ -92,9 +98,9 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 65);
+            this.label3.Location = new System.Drawing.Point(10, 56);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(39, 32);
             this.label3.TabIndex = 4;
             this.label3.Text = "End Time";
             // 
@@ -102,9 +108,10 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 72);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 108);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 13);
+            this.label4.Size = new System.Drawing.Size(34, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Title";
             // 
@@ -114,14 +121,15 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.88235F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.11765F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
             this.tableLayoutPanel1.Controls.Add(this.dtpTimeStart, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.dtpDateEnd, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.dtpDateStart, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.dtpTimeEnd, 2, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 149);
+            this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 182);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -135,11 +143,11 @@
             this.dtpTimeStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpTimeStart.CustomFormat = "hh:mm tt";
             this.dtpTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTimeStart.Location = new System.Drawing.Point(247, 14);
+            this.dtpTimeStart.Location = new System.Drawing.Point(246, 13);
             this.dtpTimeStart.Name = "dtpTimeStart";
             this.dtpTimeStart.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpTimeStart.ShowUpDown = true;
-            this.dtpTimeStart.Size = new System.Drawing.Size(72, 20);
+            this.dtpTimeStart.Size = new System.Drawing.Size(72, 22);
             this.dtpTimeStart.TabIndex = 7;
             this.dtpTimeStart.ValueChanged += new System.EventHandler(this.dtpTimeStart_ValueChanged);
             // 
@@ -170,11 +178,11 @@
             this.dtpTimeEnd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpTimeEnd.CustomFormat = "hh:mm tt";
             this.dtpTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTimeEnd.Location = new System.Drawing.Point(247, 62);
+            this.dtpTimeEnd.Location = new System.Drawing.Point(246, 61);
             this.dtpTimeEnd.Name = "dtpTimeEnd";
             this.dtpTimeEnd.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpTimeEnd.ShowUpDown = true;
-            this.dtpTimeEnd.Size = new System.Drawing.Size(72, 20);
+            this.dtpTimeEnd.Size = new System.Drawing.Size(72, 22);
             this.dtpTimeEnd.TabIndex = 7;
             this.dtpTimeEnd.ValueChanged += new System.EventHandler(this.dtpTimeEnd_ValueChanged);
             // 
@@ -182,39 +190,31 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 271);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(9, 314);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 13);
+            this.label5.Size = new System.Drawing.Size(50, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "Details";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(135, 377);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(115, 23);
-            this.btnAdd.TabIndex = 7;
-            this.btnAdd.Text = "Save";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_ClickAdd);
             // 
             // tabScheduleType
             // 
             this.tabScheduleType.Controls.Add(this.tabPage1);
             this.tabScheduleType.Controls.Add(this.tabPage2);
             this.tabScheduleType.Controls.Add(this.tabPage3);
-            this.tabScheduleType.Location = new System.Drawing.Point(184, 12);
+            this.tabScheduleType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabScheduleType.Location = new System.Drawing.Point(153, 56);
             this.tabScheduleType.Name = "tabScheduleType";
             this.tabScheduleType.SelectedIndex = 0;
-            this.tabScheduleType.Size = new System.Drawing.Size(200, 100);
+            this.tabScheduleType.Size = new System.Drawing.Size(231, 100);
             this.tabScheduleType.TabIndex = 8;
             // 
             // tabPage1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(192, 74);
+            this.tabPage1.Size = new System.Drawing.Size(223, 71);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Unspecified";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -235,9 +235,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label6.Location = new System.Drawing.Point(3, 37);
+            this.label6.Location = new System.Drawing.Point(3, 31);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.Size = new System.Drawing.Size(54, 16);
             this.label6.TabIndex = 6;
             this.label6.Text = "Minister";
             // 
@@ -247,9 +247,9 @@
             this.cmbMinister.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.cmbMinister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMinister.FormattingEnabled = true;
-            this.cmbMinister.Location = new System.Drawing.Point(3, 50);
+            this.cmbMinister.Location = new System.Drawing.Point(3, 47);
             this.cmbMinister.Name = "cmbMinister";
-            this.cmbMinister.Size = new System.Drawing.Size(186, 21);
+            this.cmbMinister.Size = new System.Drawing.Size(186, 24);
             this.cmbMinister.TabIndex = 7;
             // 
             // tabPage3
@@ -268,18 +268,18 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label7.Location = new System.Drawing.Point(3, 38);
+            this.label7.Location = new System.Drawing.Point(3, 33);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.Size = new System.Drawing.Size(47, 16);
             this.label7.TabIndex = 8;
             this.label7.Text = "Venue";
             // 
             // txtVenue
             // 
             this.txtVenue.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtVenue.Location = new System.Drawing.Point(3, 51);
+            this.txtVenue.Location = new System.Drawing.Point(3, 49);
             this.txtVenue.Name = "txtVenue";
-            this.txtVenue.Size = new System.Drawing.Size(186, 20);
+            this.txtVenue.Size = new System.Drawing.Size(186, 22);
             this.txtVenue.TabIndex = 9;
             // 
             // txtDetails
@@ -287,7 +287,8 @@
             this.txtDetails.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDetails.Cue = null;
             this.txtDetails.CueColor = System.Drawing.Color.Gray;
-            this.txtDetails.Location = new System.Drawing.Point(12, 287);
+            this.txtDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDetails.Location = new System.Drawing.Point(12, 330);
             this.txtDetails.MaxLength = 1000;
             this.txtDetails.Multiline = true;
             this.txtDetails.Name = "txtDetails";
@@ -299,18 +300,73 @@
             this.txtTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTitle.Cue = null;
             this.txtTitle.CueColor = System.Drawing.Color.Gray;
-            this.txtTitle.Location = new System.Drawing.Point(18, 88);
+            this.txtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitle.Location = new System.Drawing.Point(12, 127);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(157, 20);
+            this.txtTitle.Size = new System.Drawing.Size(135, 22);
             this.txtTitle.TabIndex = 5;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(396, 34);
+            this.panel1.TabIndex = 23;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.FlatAppearance.BorderSize = 0;
+            this.pictureBox1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
+            this.pictureBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pictureBox1.Image = global::ParishSystem.Properties.Resources.icons8_Delete_20;
+            this.pictureBox1.Location = new System.Drawing.Point(356, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 34);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(7, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 20);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Schedule";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(100, 404);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(188, 32);
+            this.btnAdd.TabIndex = 24;
+            this.btnAdd.Text = "Save";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_ClickAdd);
             // 
             // AddSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 425);
-            this.Controls.Add(this.tabScheduleType);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(396, 454);
             this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tabScheduleType);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.txtDetails);
             this.Controls.Add(this.label5);
@@ -318,6 +374,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cmbScheduleType);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddSchedule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddSchedule";
@@ -329,6 +386,8 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,7 +407,6 @@
         private CueTextBox txtDetails;
         private System.Windows.Forms.DateTimePicker dtpTimeStart;
         private System.Windows.Forms.DateTimePicker dtpTimeEnd;
-        private System.Windows.Forms.Button btnAdd;
         private HiddenTabControl tabScheduleType;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -357,5 +415,9 @@
         private System.Windows.Forms.ComboBox cmbMinister;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtVenue;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button pictureBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

@@ -17,10 +17,9 @@ namespace ParishSystem
         {
             InitializeComponent();
         }
-
-        private void BloodClaims_Load(object sender, EventArgs e)
+        public void refresh()
         {
-            bloodletting_dgv.DataSource= dh.getDonationClaims();
+            bloodletting_dgv.DataSource = dh.getDonationClaims();
             foreach (DataGridViewColumn dc in bloodletting_dgv.Columns)
             {
                 dc.Visible = false;
@@ -29,6 +28,10 @@ namespace ParishSystem
             bloodletting_dgv.Columns["donationID"].Visible = true;
             bloodletting_dgv.Columns["Donor"].Visible = true;
             bloodletting_dgv.Columns["Claimant"].Visible = true;
+        }
+        private void BloodClaims_Load(object sender, EventArgs e)
+        {
+            Refresh();
         }
 
         private void search_button_Click(object sender, EventArgs e)
@@ -44,8 +47,9 @@ namespace ParishSystem
                 bloodletting_dgv.Columns["donationID"].Visible = true;
                 bloodletting_dgv.Columns["Donor"].Visible = true;
                 bloodletting_dgv.Columns["Claimant"].Visible = true;
-                search_button.Text = "Clear";
                 search_button.Tag = "c";
+                search_button.Image = ParishSystem.Properties.Resources.icons8_Delete_Filled_20_666666;
+                
             }
             else
             {
@@ -58,16 +62,20 @@ namespace ParishSystem
                 bloodletting_dgv.Columns["donationID"].Visible = true;
                 bloodletting_dgv.Columns["Donor"].Visible = true;
                 bloodletting_dgv.Columns["Claimant"].Visible = true;
-                search_button.Text = "Search";
                 search_button.Tag = "s";
                 search_textbox.Clear();
+                search_button.Image = ParishSystem.Properties.Resources.icons8_Search_Filled_20;
             }
         }
 
         private void search_textbox_TextChanged(object sender, EventArgs e)
         {
-            search_button.Text = "Search";
+            if (search_textbox.Text == "")
+            {
+                refresh();
+            }
             search_button.Tag = "s";
+            search_button.Image = ParishSystem.Properties.Resources.icons8_Search_Filled_20;
         }
     }
 }

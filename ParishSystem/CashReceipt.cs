@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
-    public partial class CashReciept : Form
+    public partial class CashReceipt : Form
     {
         int bookModeFullPay;
         DataHandler dh = new DataHandler();
-        public CashReciept(int bookModeFullPay)
+        public CashReceipt(int bookModeFullPay)
         {
             InitializeComponent();
             this.bookModeFullPay = bookModeFullPay;

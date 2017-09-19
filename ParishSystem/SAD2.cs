@@ -13,7 +13,7 @@ namespace ParishSystem
 {
     public partial class SAD2 : Form
     {
-        //#5587e0
+        Point lastMinimize = new Point(0, 0);
         private enum CabinetModule
         {
             Application,
@@ -89,16 +89,14 @@ namespace ParishSystem
             //Cash Module
             modules.Add(CabinetModule.CashDisbursement_CashRealeaseMode, new CashDisbursment(1));
             modules.Add(CabinetModule.ItemTypes_CashReceipt_CashDisbursement, new ItemTypes_Module(1));
-            modules.Add(CabinetModule.CashReceipt_BookModeFullPay, new CashReciept(1));
+            modules.Add(CabinetModule.CashReceipt_BookModeFullPay, new CashReceipt(1));
             modules.Add(CabinetModule.ReceiptReports, new CashReport_Module(1, 1));
             modules.Add(CabinetModule.DisbursementReports, new CashReport_Module(2, 1));
             modules.Add(CabinetModule.Employee, new EmployeeModule());
             
             
         }
-
         
-
         private void SAD2_Load(object sender, EventArgs e)
         {
             Draggable drag = new Draggable(this);
@@ -133,17 +131,24 @@ namespace ParishSystem
 
         private void btn_Max_Click(object sender, EventArgs e)
         {
-            if (btn_Max.Tag.ToString() == "+")
+            if (btn_Max.Tag.ToString()=="+")
             {
-                this.WindowState = FormWindowState.Maximized;
+                lastMinimize = this.Location;
+                Height= Screen.PrimaryScreen.WorkingArea.Height;
+                Width = Screen.PrimaryScreen.WorkingArea.Width;
+                Location = new Point(0,0);
                 btn_Max.Tag = "-";
+                btn_Max.Image = ParishSystem.Properties.Resources.icons8_Horizontal_Line_Filled_20;
             }
             else
             {
-                this.WindowState = FormWindowState.Maximized;
+                Height =700;
+                Width = 1000;
+                Location = lastMinimize;
                 btn_Max.Tag = "+";
+                btn_Max.Image = ParishSystem.Properties.Resources.icons8_Fit_to_Width_30;
             }
-        }
+    }
         #endregion
 
 
@@ -428,7 +433,11 @@ namespace ParishSystem
         }
         private void logout_button_Click(object sender, EventArgs e)
         {
-            this.Close();
+            CustomMessage msg = new CustomMessage();
+            if (msg.Show("Are you sure you want to log out?", MessageDialogButtons.YesNo, MessageDialogIcon.Question)==DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void flowLayout_ControlButtons_Paint(object sender, PaintEventArgs e)
@@ -438,7 +447,7 @@ namespace ParishSystem
 
         private void btn_min_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
+            this.WindowState = FormWindowState.Minimized;
             
         }
 

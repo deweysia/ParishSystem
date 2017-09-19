@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -46,6 +47,7 @@
             this.clear_button = new System.Windows.Forms.Button();
             this.add_button = new System.Windows.Forms.Button();
             this.active_checkbox = new System.Windows.Forms.CheckBox();
+            this.tooltip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeDGV)).BeginInit();
             this.panel.SuspendLayout();
             this.SuspendLayout();
@@ -152,6 +154,7 @@
             this.employeeType_combobox.Name = "employeeType_combobox";
             this.employeeType_combobox.Size = new System.Drawing.Size(204, 29);
             this.employeeType_combobox.TabIndex = 44;
+            this.tooltip.SetToolTip(this.employeeType_combobox, "Employee Type");
             this.employeeType_combobox.SelectedIndexChanged += new System.EventHandler(this.employeeType_combobox_SelectedIndexChanged);
             // 
             // password_textbox
@@ -250,7 +253,7 @@
             this.middleinitial_textbox.Lines = new string[0];
             this.middleinitial_textbox.Location = new System.Drawing.Point(339, 80);
             this.middleinitial_textbox.Margin = new System.Windows.Forms.Padding(0);
-            this.middleinitial_textbox.MaxLength = 32767;
+            this.middleinitial_textbox.MaxLength = 1;
             this.middleinitial_textbox.Name = "middleinitial_textbox";
             this.middleinitial_textbox.PasswordChar = '\0';
             this.middleinitial_textbox.PromptText = "Mi";
@@ -402,16 +405,17 @@
             // 
             // resetPassword_button
             // 
-            this.resetPassword_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.resetPassword_button.BackColor = System.Drawing.Color.IndianRed;
             this.resetPassword_button.FlatAppearance.BorderSize = 0;
-            this.resetPassword_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.resetPassword_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
             this.resetPassword_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.resetPassword_button.ForeColor = System.Drawing.Color.White;
-            this.resetPassword_button.Location = new System.Drawing.Point(316, 188);
+            this.resetPassword_button.Location = new System.Drawing.Point(315, 184);
             this.resetPassword_button.Name = "resetPassword_button";
-            this.resetPassword_button.Size = new System.Drawing.Size(30, 30);
+            this.resetPassword_button.Size = new System.Drawing.Size(69, 32);
             this.resetPassword_button.TabIndex = 26;
-            this.resetPassword_button.Text = "R";
+            this.resetPassword_button.Text = "Reset";
+            this.tooltip.SetToolTip(this.resetPassword_button, "Resets password of employee");
             this.resetPassword_button.UseVisualStyleBackColor = false;
             this.resetPassword_button.Visible = false;
             this.resetPassword_button.Click += new System.EventHandler(this.resetPassword_button_Click);
@@ -496,5 +500,6 @@
         private MetroFramework.Controls.MetroTextBox password_textbox;
         private MetroFramework.Controls.MetroTextBox username_textbox;
         private System.Windows.Forms.ComboBox employeeType_combobox;
+        private System.Windows.Forms.ToolTip tooltip;
     }
 }

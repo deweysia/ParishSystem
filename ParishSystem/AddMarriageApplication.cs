@@ -170,5 +170,10 @@ namespace ParishSystem
         {
             //lastClick = new Point(e.X, e.Y);
         }
+
+        private void AddMarriageApplication_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }

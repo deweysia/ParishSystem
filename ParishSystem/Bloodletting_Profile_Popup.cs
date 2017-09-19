@@ -38,7 +38,9 @@ namespace ParishSystem
             hasProfile = false;
             edit_button.Tag = "s";
             edit_button.Image= Properties.Resources.icons8_Save_Filled_32__1_;
-            
+            loaddonationinfo();
+
+
         }
         private void profileEditmode()
         {
@@ -75,7 +77,9 @@ namespace ParishSystem
 
         private void Bloodletting_Details_Popup_Load(object sender, EventArgs e)
         {
-            
+            Draggable draggable = new Draggable(this);
+            draggable.makeDraggable(controlBar_panel);
+
             if (hasProfile)
             {
                 profileViewmode();
@@ -84,12 +88,7 @@ namespace ParishSystem
                 mi_label_bloodletting.Text = dt.Rows[0]["midname"].ToString();
                 lastname_label_bloodletting.Text = dt.Rows[0]["lastname"].ToString();
                 suffix_label_bloodletting.Text = dt.Rows[0]["suffix"].ToString();
-                try
-                {
-                    bloodtype_label.Text = bloodType[int.Parse(dt.Rows[0]["bloodtype"].ToString())-1];
-                    
-                }
-                catch { }
+                bloodtype_label.Text = bloodType[int.Parse(dt.Rows[0]["bloodtype"].ToString())-1];
                 address_textbox.Text = dt.Rows[0]["address"].ToString();
                 contactNumber_textbox.Text = dt.Rows[0]["contactNumber"].ToString();
             }
@@ -112,6 +111,7 @@ namespace ParishSystem
             if (edit_button.Tag.ToString() == "s")
             {
                 cancel_button.Visible = false;
+                delete_button.Visible = false;
                 if (fn.Text != "" && mn.Text != "" && ln.Text != "" && address_textbox.Text != "" && contactNumber_textbox.MaskFull && bloodtype_combobox.Text != "")
                 {
                     if (hasProfile)//edit
@@ -180,6 +180,7 @@ namespace ParishSystem
                 }
                 cover.Visible = true;
                 cancel_button.Visible = true;
+                delete_button.Visible = true;
             }
         }
         private void ClearProfile()
@@ -221,6 +222,7 @@ namespace ParishSystem
             {
                 profileViewmode();
                 cancel_button.Visible = false;
+                delete_button.Visible = false;
                 edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
                 edit_button.Tag = "e";
                 cover.Visible = false;
@@ -233,31 +235,43 @@ namespace ParishSystem
 
         private void addDonation_button_bloodletting_Click(object sender, EventArgs e)
         {
-            
-            if (addDonation_button_bloodletting.Text == "Add")
-            {
-                dh.addBloodDonation(ProfileID, donationID_textbox.Text, ((ComboboxContent)event_combobox_bloodletting.SelectedItem).ID);
-                
+            if (!dh.isBloodDonationIDExist(donationID_textbox.Text)) {
+                if (addDonation_button_bloodletting.Text == "Add")
+                {
+                    dh.addBloodDonation(ProfileID, donationID_textbox.Text, ((ComboboxContent)event_combobox_bloodletting.SelectedItem).ID);
+
+                }
+                else if (addDonation_button_bloodletting.Text == "Edit")
+                {
+                    dh.editBloodDonation(int.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["blooddonationid"].Value.ToString()), donationID_textbox.Text, ((ComboboxContent)event_combobox_bloodletting.SelectedItem).ID);
+                    addDonation_button_bloodletting.Text = "Add";
+
+                }
+                clearAddInfo();
+                loaddonationinfo();
+                addDonation_button_bloodletting.Enabled = false;
+                delete_button_bloodletting.Enabled = false;
             }
-            else if (addDonation_button_bloodletting.Text == "Edit")
+            else
             {
-                dh.editBloodDonation(int.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["bloodDonationID"].Value.ToString()), donationID_textbox.Text, ((ComboboxContent)event_combobox_bloodletting.SelectedItem).ID);
-                
+                Notification.Show(State.BloodDonationIDUsed);
             }
-            clearAddInfo();
-            loaddonationinfo();
-            addDonation_button_bloodletting.Enabled = false;
-            delete_button_bloodletting.Enabled = false;
-            
         }
         private void blooddonation_dataGridView_bloodletting_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            donationID_textbox.Text =blooddonation_dataGridView_bloodletting.CurrentRow.Cells["donationid"].Value.ToString();
-            addDonation_button_bloodletting.Text = "Edit";
-            addDonation_button_bloodletting.Enabled = true;
-            delete_button_bloodletting.Enabled = true;
-            event_combobox_bloodletting.SelectedItem = new ComboboxContent(int.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["bloodDonationEventID"].Value.ToString()), (blooddonation_dataGridView_bloodletting.CurrentRow.Cells["eventname"].Value.ToString()));
-            event_combobox_bloodletting.Text = (blooddonation_dataGridView_bloodletting.CurrentRow.Cells["eventname"].Value.ToString());
+            //try
+            {
+                donationID_textbox.Text = blooddonation_dataGridView_bloodletting.CurrentRow.Cells["DonationID"].Value.ToString();
+                addDonation_button_bloodletting.Text = "Edit";
+                addDonation_button_bloodletting.Enabled = true;
+                delete_button_bloodletting.Enabled = true;
+                event_combobox_bloodletting.SelectedItem = new ComboboxContent(int.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["DonationID"].Value.ToString()), (blooddonation_dataGridView_bloodletting.CurrentRow.Cells["EventName"].Value.ToString()));
+                event_combobox_bloodletting.Text = (blooddonation_dataGridView_bloodletting.CurrentRow.Cells["EventName"].Value.ToString());
+            }
+            //catch
+            {
+
+            }
         }
         private void clearAddInfo()
         {
@@ -266,6 +280,7 @@ namespace ParishSystem
         }
        private void refreshBloodDonation()
         {
+         /*   
             blooddonation_dataGridView_bloodletting.DataSource = dh.getBloodDonations(ProfileID);
             totalDonation_label.Text = dh.getTotalBloodDonationOf(ProfileID).ToString();
             foreach (DataGridViewColumn c in blooddonation_dataGridView_bloodletting.Columns)
@@ -276,6 +291,27 @@ namespace ParishSystem
             blooddonation_dataGridView_bloodletting.Columns["eventName"].Visible = true;
             blooddonation_dataGridView_bloodletting.Columns["donationID"].HeaderText = "Donation ID";
             blooddonation_dataGridView_bloodletting.Columns["donationID"].Visible = true;
+            */
+            
+            
+            if (hasProfile) {
+                blooddonation_dataGridView_bloodletting.Rows.Clear();
+                int rows = 0;
+                    foreach (DataRow dr in dh.getBloodDonations(ProfileID).Rows)
+                    {
+                    blooddonation_dataGridView_bloodletting.Rows.Add(dr["donationID"].ToString(), dr["eventName"].ToString(), dr["bloodDonationEventID"].ToString(),dr["bloodDonationID"].ToString());
+                    var a = dr["bloodclaimant"].ToString();
+                    if (!(dr["bloodclaimant"].ToString()==""))
+                        {
+                        blooddonation_dataGridView_bloodletting.Rows[rows].Cells[0].Style.BackColor = Color.LightCoral;
+                        blooddonation_dataGridView_bloodletting.Rows[rows].Cells[1].Style.BackColor = Color.LightCoral;
+                    }
+                    rows++;
+                    }
+                    
+            }
+            
+            
         }
 
         private void clear_button_bloodletting_Click(object sender, EventArgs e)
@@ -288,11 +324,12 @@ namespace ParishSystem
 
         private void delete_button_bloodletting_Click(object sender, EventArgs e)
         {
-            dh.deleteBloodDonation(int.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["bloodDonationID"].Value.ToString()));
+            dh.deleteBloodDonation(int.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["DonationID"].Value.ToString()));
             refreshBloodDonation();
             delete_button_bloodletting.Enabled = false;
             addDonation_button_bloodletting.Enabled = false;
             clearAddInfo();
+            addDonation_button_bloodletting.Text = "Add";
         }
 
         private void checkContent()
@@ -346,6 +383,30 @@ namespace ParishSystem
             }
         }
 
-        
+        private void Bloodletting_Profile_Popup_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+
+        private void delete_button_Click(object sender, EventArgs e)
+        {
+            CustomMessage msg = new CustomMessage();
+            if (msg.Show("Are you sure you want to delete this profile?", MessageDialogButtons.YesNoCancel, MessageDialogIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    dh.deleteBloodDonor(ProfileID);
+                    this.Close();
+                }
+                catch
+                {
+                    dh.conn.Close();
+                    Notification.Show(State.PersonHasDonations);
+                }
+            }
+        }
     }
 }

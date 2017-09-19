@@ -441,6 +441,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddApplication";
             this.Load += new System.EventHandler(this.AddApplication_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddApplication_KeyDown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddApplication_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddApplication_MouseMove);
             this.panel1.ResumeLayout(false);

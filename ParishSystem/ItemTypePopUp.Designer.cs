@@ -302,6 +302,7 @@
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ItemTypePopUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.IncomeType_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ItemType_KeyDown);
             this.panel1.ResumeLayout(false);

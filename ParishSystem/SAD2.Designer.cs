@@ -121,7 +121,7 @@
             this.welcome_Text.BackColor = System.Drawing.Color.Transparent;
             this.welcome_Text.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcome_Text.ForeColor = System.Drawing.Color.LightGray;
-            this.welcome_Text.Location = new System.Drawing.Point(4, 6);
+            this.welcome_Text.Location = new System.Drawing.Point(5, 5);
             this.welcome_Text.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.welcome_Text.Name = "welcome_Text";
             this.welcome_Text.Size = new System.Drawing.Size(71, 19);
@@ -136,11 +136,11 @@
             this.logout_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logout_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logout_button.ForeColor = System.Drawing.Color.White;
-            this.logout_button.Image = global::ParishSystem.Properties.Resources.Home_32px;
-            this.logout_button.Location = new System.Drawing.Point(188, 2);
+            this.logout_button.Image = global::ParishSystem.Properties.Resources.icons8_Sign_Out_Filled_20;
+            this.logout_button.Location = new System.Drawing.Point(189, 1);
             this.logout_button.Margin = new System.Windows.Forms.Padding(0);
             this.logout_button.Name = "logout_button";
-            this.logout_button.Size = new System.Drawing.Size(57, 27);
+            this.logout_button.Size = new System.Drawing.Size(40, 31);
             this.logout_button.TabIndex = 46;
             this.logout_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.logout_button.UseVisualStyleBackColor = false;
@@ -151,7 +151,7 @@
             this.username_Welcome_Text.AutoSize = true;
             this.username_Welcome_Text.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username_Welcome_Text.ForeColor = System.Drawing.Color.White;
-            this.username_Welcome_Text.Location = new System.Drawing.Point(75, 5);
+            this.username_Welcome_Text.Location = new System.Drawing.Point(76, 4);
             this.username_Welcome_Text.Name = "username_Welcome_Text";
             this.username_Welcome_Text.Size = new System.Drawing.Size(110, 23);
             this.username_Welcome_Text.TabIndex = 40;
@@ -173,7 +173,7 @@
             // btn_Close
             // 
             this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Close.BackgroundImage = global::ParishSystem.Properties.Resources.icons8_Delete_50;
+            this.btn_Close.BackgroundImage = global::ParishSystem.Properties.Resources.icons8_Delete_Filled_30;
             this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Close.FlatAppearance.BorderSize = 0;
             this.btn_Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -195,7 +195,7 @@
             this.btn_Max.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Max.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Max.Image = global::ParishSystem.Properties.Resources.btn_NEWmaximize;
+            this.btn_Max.Image = global::ParishSystem.Properties.Resources.icons8_Fit_to_Width_30;
             this.btn_Max.Location = new System.Drawing.Point(64, 4);
             this.btn_Max.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Max.Name = "btn_Max";
@@ -213,7 +213,7 @@
             this.btn_min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_min.Image = global::ParishSystem.Properties.Resources.btn_NEWmaximize;
+            this.btn_min.Image = global::ParishSystem.Properties.Resources.icons8_Expand_Arrow_20_White;
             this.btn_min.Location = new System.Drawing.Point(29, 4);
             this.btn_min.Margin = new System.Windows.Forms.Padding(4);
             this.btn_min.Name = "btn_min";
@@ -839,7 +839,7 @@
             this.OpenMenu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OpenMenu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpenMenu_button.ForeColor = System.Drawing.Color.White;
-            this.OpenMenu_button.Image = global::ParishSystem.Properties.Resources.Home_32px;
+            this.OpenMenu_button.Image = global::ParishSystem.Properties.Resources.icons8_Menu_35;
             this.OpenMenu_button.Location = new System.Drawing.Point(0, 0);
             this.OpenMenu_button.Margin = new System.Windows.Forms.Padding(0);
             this.OpenMenu_button.Name = "OpenMenu_button";

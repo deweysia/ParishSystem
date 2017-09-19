@@ -31,6 +31,7 @@ namespace ParishSystem
                 profile_dgv.Columns["residence"].HeaderText = "Residence";
                 search_button.Text = "Clear";
                 search_button.Tag = "c";
+                search_button.Image = ParishSystem.Properties.Resources.icons8_Delete_Filled_20_666666;
             }
             else
             {
@@ -44,12 +45,13 @@ namespace ParishSystem
                 search_button.Text = "Search";
                 search_button.Tag = "s";
                 search_textbox.Clear();
+                search_button.Image = ParishSystem.Properties.Resources.icons8_Search_Filled_20;
+                search_button.Tag = "s";
             }
         }
-
-        private void ProfileModule_Load(object sender, EventArgs e)
+        public void refresh()
         {
-            profile_dgv.DataSource=dh.getGeneralProfilesProper();
+            profile_dgv.DataSource = dh.getGeneralProfilesProper();
             profile_dgv.Columns["profileid"].Visible = false;
             profile_dgv.Columns["Name"].HeaderText = "Name";
             profile_dgv.Columns["Birthdate"].HeaderText = "Birthdate";
@@ -57,11 +59,25 @@ namespace ParishSystem
             profile_dgv.Columns["birthplace"].HeaderText = "Birthplace";
             profile_dgv.Columns["residence"].HeaderText = "Residence";
         }
+        private void ProfileModule_Load(object sender, EventArgs e)
+        {
+            refresh();
+        }
 
         private void profile_dgv_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             Form A = new PersonView(int.Parse(profile_dgv.SelectedRows[0].Cells["profileid"].Value.ToString()),dh);
             A.ShowDialog();
+        }
+
+        private void search_textbox_TextChanged(object sender, EventArgs e)
+        {
+            if (search_textbox.Text == "")
+            {
+                refresh();
+            }
+            search_button.Tag = "s";
+            search_button.Image = ParishSystem.Properties.Resources.icons8_Search_Filled_20;
         }
     }
 }
