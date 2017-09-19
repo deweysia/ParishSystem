@@ -25,27 +25,29 @@ namespace ParishSystem
         public MySqlConnection conn;
         public MySqlCommand com;
 
+        public const string CONNECTION_STRING = "Server=" + "localhost" + ";Database=" + "sad2" + ";Uid=" + "root" + ";Pwd=" + "root" + ";pooling = false; convert zero datetime=True; Allow User Variables=True;";
         //public int userID = 1;
 
         public DataHandler()
         {
-            conn = new MySqlConnection("Server=" + "localhost" + ";Database=" + "sad2" + ";Uid=" + "root" + ";Pwd=" + "root" + ";pooling = false; convert zero datetime=True; Allow User Variables=True;");
-            
+            conn = new MySqlConnection(CONNECTION_STRING);
         }
+
         //  MySqlConnection connect = new MySqlConnection("server=localhost; database=sad2; user=root; password=root; pooling = false; convert zero datetime=True");
-        public DataHandler(string server, string database, string user, string password, int UserID)
-        {
-            conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True; Allow User Variables=True");
-            //userID = UserID;
-        }
+        //public DataHandler(string server, string database, string user, string password, int UserID)
+        //{
+        //    conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True; Allow User Variables=True");
+        //    //userID = UserID;
+        //}
 
-        public DataHandler(string server, string database, string user, string password)
-        {
-            conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True; Allow User Variables=True");
-            //this.userID = -1;
-        }
+        //public DataHandler(string server, string database, string user, string password)
+        //{
+        //    conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True; Allow User Variables=True");
+        //    //this.userID = -1;
+        //}
 
-
+        
+        
 
         //====== SINGLETON PATTERN IMPLEMENTATION OF DATAHANDLER
         private static DataHandler _dh;
@@ -84,19 +86,29 @@ namespace ParishSystem
             return dt;
         }
 
-        public bool storeUserID(int userID)
-        {
-            string q = "SET @userID = " + userID;
-            bool success = runNonQuery(q);
-            return success;
-        }
+
+
 
         //                                         ========[HELPER FUNCTIONS]=========
         #region
+
+        /// <summary>
+        /// Assumes database connection is open. Stores the userID of User as a User Defined variable in MySQL.
+        /// </summary>
+        /// <param name="userID"></param>
+        /// <returns></returns>
+        private void _storeUserID()
+        {
+            string q = "SET @userID = " + User.getCurrentUser().userID;
+            com = new MySqlCommand(q, conn);
+            com.ExecuteNonQuery();
+        }
+
         public bool runNonQuery(string q)
         {
             Console.WriteLine(q);
             conn.Open();
+            _storeUserID();
             com = new MySqlCommand(q, conn);
             int rowsAffected = com.ExecuteNonQuery();
             conn.Close();
@@ -108,6 +120,7 @@ namespace ParishSystem
         {
             Console.WriteLine(q);
             conn.Open();
+            _storeUserID();
             com = new MySqlCommand(q, conn);
             MySqlDataAdapter adp = new MySqlDataAdapter(com);
             DataTable dt = new DataTable();
@@ -126,6 +139,7 @@ namespace ParishSystem
             var ParameterValues = parameters.Zip(values, (p, v) => new { Parameter = p, Value = v });
 
             conn.Open();
+            _storeUserID();
             com = new MySqlCommand(q, conn);
             foreach (var pv in ParameterValues)
             {
@@ -156,6 +170,7 @@ namespace ParishSystem
             var ParameterValues = parameters.Zip(values, (p, v) => new { Parameter = p, Value = v });
 
             conn.Open();
+            _storeUserID();
             com = new MySqlCommand(q, conn);
             foreach (var pv in ParameterValues)
             {

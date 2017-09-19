@@ -50,7 +50,7 @@ namespace ParishSystem
             MessageBox.Show(dt.Rows[0]["birthDate"].ToString());
             birthdateLabel.Text = DateTime.ParseExact(dt.Rows[0]["birthDate"].ToString(), "dd/MM/yyyy hh:mm:ss tt", null).ToString("yyyy-MM-dd");
             genderLabel.Text = dt.Rows[0]["gender"].ToString() == "1" ? "Male" : "Female";
-            remarksText.Text = dr["remarks"].ToString();
+            //remarksText.Text = dr["remarks"].ToString();
 
 
             legitimacyCBox.DataSource = Enum.GetValues(typeof(Legitimacy));
