@@ -40,7 +40,7 @@ namespace ParishSystem
 
         public bool verify(string username, string password)
         {
-            DataTable dt = runQuery($@"SELECT pass FROM sad2.employee where username='{username}'and status=1");
+            DataTable dt = runQuery($@"SELECT pass FROM sad2.user where username='{username}'and status=1");
             if (dt.Rows.Count > 0)
             {
                 string savedPasswordHash = dt.Rows[0][0].ToString();

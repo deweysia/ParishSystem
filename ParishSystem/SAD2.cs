@@ -68,7 +68,7 @@ namespace ParishSystem
         public SAD2(string Username) : this()
         {
             this.username_Welcome_Text.Text = Username.ToUpper();
-            this.UserID = int.Parse(dh.getEmployee(Username).Rows[0]["employeeID"].ToString());
+            
         }
 
         private void addModules()
