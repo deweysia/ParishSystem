@@ -29,19 +29,19 @@ namespace ParishSystem
 
         public DataHandler()
         {
-            conn = new MySqlConnection("Server=" + "localhost" + ";Database=" + "sad2" + ";Uid=" + "root" + ";Pwd=" + "root" + ";pooling = false; convert zero datetime=True;");
+            conn = new MySqlConnection("Server=" + "localhost" + ";Database=" + "sad2" + ";Uid=" + "root" + ";Pwd=" + "root" + ";pooling = false; convert zero datetime=True; Allow User Variables=True;");
             
         }
         //  MySqlConnection connect = new MySqlConnection("server=localhost; database=sad2; user=root; password=root; pooling = false; convert zero datetime=True");
         public DataHandler(string server, string database, string user, string password, int UserID)
         {
-            conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True;");
+            conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True; Allow User Variables=True");
             //userID = UserID;
         }
 
         public DataHandler(string server, string database, string user, string password)
         {
-            conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True;");
+            conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True; Allow User Variables=True");
             //this.userID = -1;
         }
 
@@ -68,10 +68,18 @@ namespace ParishSystem
         /// <param name="userName"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public DataTable getUser(string userName, string password, UserStatus status = UserStatus.Active)
+        //public DataTable getUser(string userName, string password, UserStatus status = UserStatus.Active)
+        //{
+        //    string q = "SELECT * FROM User WHERE userName = @userName AND pass = @pass AND status = @status;";
+        //    DataTable dt = ExecuteQuery(q, userName, password, status);
+
+        //    return dt;
+        //}
+
+        public DataTable getUser(string userName)
         {
-            string q = "SELECT * FROM User WHERE userName = @userName AND password = @password AND status = @status;";
-            DataTable dt = ExecuteQuery(q, userName, password, status);
+            string q = "SELECT * FROM User WHERE userName = @userName";
+            DataTable dt = ExecuteQuery(q, userName);
 
             return dt;
         }
@@ -200,7 +208,7 @@ namespace ParishSystem
 
         public bool updateModificationInfo(string tableName, string primaryKeyName, int primaryKeyValue)
         {
-            User user = User.getUser();
+            User user = User.getCurrentUser();
             string q = "UPDATE " + tableName + " SET " + primaryKeyName + " = " + primaryKeyValue + ", lastModified = NOW(), userID = '" + user.userID + "'";
 
             return runNonQuery(q);
@@ -3711,6 +3719,8 @@ namespace ParishSystem
             return runQuery(q);
         }
 
+
+
         public void AddUser(string fn, string mn, string ln, string sf, string username, string password, UserPrivileges privilege)
         {
             byte[] salt;
@@ -3721,12 +3731,18 @@ namespace ParishSystem
             Array.Copy(salt, 0, hashBytes, 0, 16);
             Array.Copy(hash, 0, hashBytes, 16, 20);
             string savedPasswordHash = Convert.ToBase64String(hashBytes);
-            User user = User.getUser();
+            User user = User.getCurrentUser();
             string q = $@"INSERT INTO `sad2`.`user` (`firstname`, `midname`, `lastname`, `suffix`, `username`, `pass`, `status`, `addedBy`, `privileges`) VALUES ('{fn}', '{mn}', '{ln}', '{sf}', '{username}', '{savedPasswordHash}',1,{user.userID},{privilege});";
             runNonQuery(q);
         }
 
+        public DataTable getUserPassword(string userName)
+        {
+            string q = "SELECT pass FROM user WHERE userName = @userName AND status = @status";
+            DataTable dt = ExecuteQuery(q, userName, (int)UserStatus.Active);
 
+            return dt;
+        }
 
         public void editUserResetPassword(string fn, string mn, string ln, string sf, string username, string password, bool status, UserPrivileges privilege, int userID)
         {

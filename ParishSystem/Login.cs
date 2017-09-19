@@ -38,27 +38,7 @@ namespace ParishSystem
 
        
 
-        public bool verify(string username, string password)
-        {
-            DataTable dt = runQuery($@"SELECT pass FROM sad2.user where username='{username}'and status=1");
-            if (dt.Rows.Count > 0)
-            {
-                string savedPasswordHash = dt.Rows[0][0].ToString();
-                byte[] hashBytes = Convert.FromBase64String(savedPasswordHash);
-                byte[] salt = new byte[16];
-                Array.Copy(hashBytes, 0, salt, 0, 16);
-                var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 1000);
-                byte[] hash = pbkdf2.GetBytes(20);
-                for (int i = 0; i < 20; i++)
-                    if (hashBytes[i + 16] != hash[i])
-                        return false;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        
    
     }
 }

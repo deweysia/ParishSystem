@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Security.Cryptography;
+
 namespace ParishSystem
 {
     public enum UserStatus
@@ -56,10 +58,11 @@ namespace ParishSystem
 
         public static bool loginUser(string userName, string password)
         {
-            DataTable dt = dh.getUser(userName, password);
-            if (dt.Rows.Count == 0)
+            bool verified = verify(userName, password);
+            if (!verified)
                 return false;
-            
+
+            DataTable dt = dh.getUser(userName);
 
             int userID = Convert.ToInt32(dt.Rows[0]["userID"].ToString());
             string firstName = dt.Rows[0]["firstName"].ToString();
@@ -76,7 +79,7 @@ namespace ParishSystem
             return true;
         }
 
-        public static User getUser()
+        public static User getCurrentUser()
         {
             if(_user == null)
             {
@@ -84,6 +87,47 @@ namespace ParishSystem
             }
                 
             return _user;
+        }
+
+
+        private static bool verify(string username, string password)
+        {
+            DataHandler dh = DataHandler.getDataHandler();
+
+            DataTable dt = dh.getUserPassword(username);
+
+            if (dt.Rows.Count > 0)
+            {
+                string savedPasswordHash = dt.Rows[0][0].ToString();
+                byte[] hashBytes = Convert.FromBase64String(savedPasswordHash);
+                byte[] salt = new byte[16];
+                Array.Copy(hashBytes, 0, salt, 0, 16);
+                var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 1000);
+                byte[] hash = pbkdf2.GetBytes(20);
+                for (int i = 0; i < 20; i++)
+                    if (hashBytes[i + 16] != hash[i])
+                        return false;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private static string encrypt(string password)
+        {
+            byte[] salt;
+            new RNGCryptoServiceProvider().GetBytes(salt = new byte[16]);
+            var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 1000);
+            byte[] hash = pbkdf2.GetBytes(20);
+            byte[] hashBytes = new byte[36];
+            Array.Copy(salt, 0, hashBytes, 0, 16);
+            Array.Copy(hash, 0, hashBytes, 16, 20);
+            string savedPasswordHash = Convert.ToBase64String(hashBytes);
+
+            Console.WriteLine(savedPasswordHash);
+            return savedPasswordHash;
         }
 
     }
