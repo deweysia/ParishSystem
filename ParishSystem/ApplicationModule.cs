@@ -131,8 +131,10 @@ namespace ParishSystem
                 return new SacramentForm(OperationType.Add, SacramentType.Confirmation, dr);
             }else
             {
+                
                 dgvr = marriageApplication_dgv.SelectedRows[0];
-                return new MarriageForm(dgvr);
+                DataRow dr = ((DataRowView)dgvr.DataBoundItem).Row;
+                return new MarriageForm(OperationType.Add, dr);
             }
                 
         }
@@ -314,8 +316,8 @@ namespace ParishSystem
             confirmationApplication_birthDate_lbl.Text = birthdate.ToString("yyyy-MM-dd");
 
             txtConFN.Text = fn;
-            txtConLN.Text = mn;
-            txtConMI.Text = ln;
+            txtConLN.Text = ln;
+            txtConMI.Text = mn;
             txtConSuffix.Text = suffix;
             confirmationApplication_birthDate_dtp.Value = birthdate;
             confirmationApplication_male_radio.Checked = gender == "1";
@@ -1184,17 +1186,29 @@ namespace ParishSystem
         //APPLICATION DGV VISIBLE CHANGED========================================================================================
         private void baptismApplication_dgv_VisibleChanged(object sender, EventArgs e)
         {
+            if (cbBapEdit.Checked)
+                applicationEditCheckChanged(SacramentType.Baptism);
+            //clearApplicationsDetailsPanel((SacramentType)(applicationTabControl.SelectedIndex + 1));
+
             loadApplications(SacramentType.Baptism);
             
+
         }
 
         private void confirmationApplication_dgv_VisibleChanged(object sender, EventArgs e)
         {
+            if (cbConEdit.Checked)
+                applicationEditCheckChanged(SacramentType.Confirmation);
+            //clearApplicationsDetailsPanel((SacramentType)(applicationTabControl.SelectedIndex + 1));
             loadApplications(SacramentType.Confirmation);
         }
 
         private void marriageApplication_dgv_VisibleChanged(object sender, EventArgs e)
         {
+            if (cbMarEdit.Checked)
+                applicationEditCheckChanged(SacramentType.Marriage);
+            //clearApplicationsDetailsPanel((SacramentType)(applicationTabControl.SelectedIndex + 1));
+
             loadApplications(SacramentType.Marriage);
         }
         //========================================================================================================================
@@ -1327,12 +1341,39 @@ namespace ParishSystem
             }
         }
 
-        
+        private void cbMarEdit_VisibleChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Edit visible changed! mar");
+
+            //if (cbMarEdit.Checked)
+            //{
+            //    applicationEditCheckChanged(SacramentType.Marriage);
+            //}
+        }
+
+        private void cbConEdit_VisibleChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Edit visible changed! con");
+
+            //if (cbConEdit.Checked)
+            //{
+            //    applicationEditCheckChanged(SacramentType.Confirmation);
+            //}
+        }
+
+        private void cbBapEdit_VisibleChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Edit visible changed! bap");
+
+            //if (cbBapEdit.Checked)
+            //{
+            //    applicationEditCheckChanged(SacramentType.Baptism);
+            //}
+        }
 
         private void applicationTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TabControl t = sender as TabControl;
-            clearApplicationsDetailsPanel((SacramentType)(t.SelectedIndex + 1));
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         }
 
         private void clearApplicationsDetailsPanel(SacramentType t)
@@ -1358,11 +1399,13 @@ namespace ParishSystem
             TableLayoutPanel tlpProfile;
             GroupBox gbReq;
             CheckBox checkEdit;
+            Panel approveRevokePanel;
             if (type == SacramentType.Baptism)
             {
                 tlpProfile = baptismApplication_profile_tlp;
                 gbReq = baptismApplication_requirements_groupbox;
                 checkEdit = cbBapEdit;
+                approveRevokePanel = baptismApplication_buttons_panel;
 
             }
             else if (type == SacramentType.Confirmation)
@@ -1370,14 +1413,16 @@ namespace ParishSystem
                 tlpProfile = confirmationApplication_profile_tlp;
                 gbReq = confirmationApplication_requirements_groupbox;
                 checkEdit = cbConEdit;
+                approveRevokePanel = confirmationApplication_buttons_panel;
             }
             else
             {
                 tlpProfile = marriageApplication_profile_tlp;
                 gbReq = marriageApplication_requirements_groupbox;
                 checkEdit = cbMarEdit;
+                approveRevokePanel = marriageApplication_buttons_panel;
             }
-
+            
 
             if (!checkEdit.Checked)
             {
@@ -1400,7 +1445,7 @@ namespace ParishSystem
 
             tlpProfile.Visible = checkEdit.Checked;
             gbReq.Enabled = checkEdit.Checked;
-
+            approveRevokePanel.Enabled = !checkEdit.Enabled;
             
 
             

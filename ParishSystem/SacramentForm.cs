@@ -17,7 +17,8 @@ namespace ParishSystem
         DataRow row;
         SacramentType type;
         OperationType operation;
-        
+
+
         public SacramentForm(OperationType operation, SacramentType type, DataRow dr)
         {
             InitializeComponent();
@@ -43,22 +44,22 @@ namespace ParishSystem
             int profileID = Convert.ToInt32(row["profileID"].ToString());
             DataTable dt = dh.getGeneralProfile(profileID);
 
-            baptismDateDTP.MinDate = DateTime.ParseExact(dt.Rows[0]["birthdate"].ToString(), "dd/MM/yyyy hh:mm:ss tt", null);
+            
 
             //4 - First Name 5 - MI 6 - Last Name   7 - Suffix
             nameLabel.Text = string.Format("{0} {1}. {2} {3}", row["firstName"], row["midName"], row["lastName"], row["suffix"]);
             MessageBox.Show(dt.Rows[0]["birthDate"].ToString());
             birthdateLabel.Text = DateTime.ParseExact(dt.Rows[0]["birthDate"].ToString(), "dd/MM/yyyy hh:mm:ss tt", null).ToString("yyyy-MM-dd");
             genderLabel.Text = dt.Rows[0]["gender"].ToString() == "1" ? "Male" : "Female";
-            //remarksText.Text = dr["remarks"].ToString();
-
-
+            
             legitimacyCBox.DataSource = Enum.GetValues(typeof(Legitimacy));
             loadMinisters();
             loadParents();
 
             if(operation == OperationType.Edit)
             {
+                //Baptism Date or COnfirmation Date
+                sacramentDateDTP.MinDate = DateTime.ParseExact(dt.Rows[0]["birthdate"].ToString(), "dd/MM/yyyy hh:mm:ss tt", null);
                 loadSponsors();
             }
 
@@ -110,7 +111,7 @@ namespace ParishSystem
                 foreach (ComboboxContent cc in MinisterCBox.Items)
                 {
                     //Console.WriteLine(string.Format("cc.id == sacramentMinisterID - {0} == {1}; Index is {2}", cc.id, sacramentMinisterID, index));
-                    if(cc.id == sacramentMinisterID)
+                    if(cc != null && cc.id == sacramentMinisterID)
                     {
                         MinisterCBox.SelectedIndex = index;
                         
@@ -118,8 +119,6 @@ namespace ParishSystem
                     }
                     index++;
                 }
-
-                
                 
             }
         }
@@ -128,6 +127,7 @@ namespace ParishSystem
         {
             int profileID = int.Parse(row["profileID"].ToString());
             DataTable dt = dh.getParentsOf(profileID);
+            MessageBox.Show("THIS PERSON HAS N PARENTS: " + dt.Rows.Count);
             if(dt.Rows.Count == 2)
             {
                 fatherFirstNameText.Text = dt.Rows[0]["firstName"].ToString();
@@ -175,17 +175,20 @@ namespace ParishSystem
 
             int ministerID = ((ComboboxContent)MinisterCBox.SelectedItem).ID;
             Legitimacy l = (Legitimacy)legitimacyCBox.SelectedItem;
-            DateTime dt = baptismDateDTP.Value;
+            DateTime dt = sacramentDateDTP.Value;
             string remarks = remarksText.Text;
+            MessageBox.Show("VIOLA");
 
-
+            bool success = true;
             if (operation == OperationType.Add)
-                addOperation(applicationID, profileID, ministerID, l, dt, remarks);
-            else editOperation(applicationID, profileID, ministerID, l, dt, remarks);
-               
+                success &= addOperation(applicationID, profileID, ministerID, l, dt, remarks);
+            else success &= editOperation(applicationID, profileID, ministerID, l, dt, remarks);
+
+            this.DialogResult = success ? DialogResult.OK : DialogResult.None;
+
         }
 
-        private void editOperation(int applicationID, int profileID, int ministerID, Legitimacy legitimacy, DateTime sacramentDate, string remarks)
+        private bool editOperation(int applicationID, int profileID, int ministerID, Legitimacy legitimacy, DateTime sacramentDate, string remarks)
         {
             bool success = true;
             if (type == SacramentType.Baptism)
@@ -204,12 +207,14 @@ namespace ParishSystem
             //Add God Father
             success &= dh.editSponsor(applicationID, gFatherFirstNameText.Text, gFatherMiText.Text, gFatherLastNameText.Text, gFatherSuffixText.Text, Gender.Male, gFatherResidenceText.Text);
 
-            dh.editApplication(applicationID, ApplicationStatus.Approved);
+            success &= dh.editApplication(applicationID, ApplicationStatus.Approved);
 
-            this.DialogResult = success ? DialogResult.OK : DialogResult.None;
+            return success;
+            //this.DialogResult = success ? DialogResult.OK : DialogResult.None;
+            //MessageBox.Show("I Should close now");
         }
 
-        private void addOperation(int applicationID, int profileID, int ministerID, Legitimacy legitimacy, DateTime sacramentDate, string remarks)
+        private bool addOperation(int applicationID, int profileID, int ministerID, Legitimacy legitimacy, DateTime sacramentDate, string remarks)
         {
             
             bool success = true;
@@ -228,9 +233,10 @@ namespace ParishSystem
             //Add God Father
             success &= dh.addSponsor(applicationID, gFatherFirstNameText.Text, gFatherMiText.Text, gFatherLastNameText.Text, gFatherSuffixText.Text, Gender.Male, gFatherResidenceText.Text);
 
-            dh.editApplication(applicationID, ApplicationStatus.Approved);
+            success &= dh.editApplication(applicationID, ApplicationStatus.Approved);
 
-            this.DialogResult = success ? DialogResult.OK : DialogResult.None;
+            return success;
+            //MessageBox.Show("I Should close now");
         }
 
         private bool allFilled()

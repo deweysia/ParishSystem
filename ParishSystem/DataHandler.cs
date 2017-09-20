@@ -328,26 +328,20 @@ namespace ParishSystem
 
         public bool editGeneralProfile(int profileID, string firstName, string midName, string lastName, string suffix, Gender gender, DateTime birthDate)
         {
-            string q = "UPDATE GeneralProfile SET firstName = '" + firstName
-                + "', midName = '" + midName + "', lastName = '" + lastName
-                + "', suffix = '" + suffix + "', gender = '" + (int)gender
-                + "', birthDate = '" + birthDate.ToString("yyyy-MM-dd")
-                + "' WHERE profileID = '" + profileID + "'";
-
-            bool success = runNonQuery(q);
-
+            string q = @"UPDATE GeneralProfile SET firstName = @firstName, midName = @midName, lastName = @lastName, suffix = @suffix, 
+                        gender = @gender, birthDate = @birthDate 
+                        WHERE profileID = @profileID";
+            bool success = ExecuteNonQuery(q, firstName, midName, lastName, suffix, gender, birthDate.ToString("yyyy-MM-dd"), profileID);
             return success;
+
         }
 
         public bool editGeneralProfile(int profileID, string residence, string birthplace)
         {
-            string q = "UPDATE GeneralProfile SET residence = '" + residence
-                + "', birthplace = '" + birthplace
-                + "' WHERE profileID = '" + profileID + "'";
-
-            bool success = runNonQuery(q);
-
+            string q = "UPDATE GeneralProfile SET residence = @residence, birthplace = @birthplace WHERE profileID = @profileID";
+            bool success = ExecuteNonQuery(q, residence, birthplace, profileID);
             return success;
+
         }
 
 
@@ -412,7 +406,7 @@ namespace ParishSystem
 
         public DataTable getGeneralProfile(int profileID)
         {
-            string q = "SELECT *, firstName, midName, lastName, suffix, gender, DATE(birthdate), birthplace FROM generalProfile WHERE profileID = " + profileID;
+            string q = "SELECT firstName, midName, lastName, suffix, gender, DATE(birthdate) AS birthDate, birthplace,residence FROM generalProfile WHERE profileID = " + profileID;
 
             DataTable dt = runQuery(q);
 
@@ -1589,7 +1583,7 @@ namespace ParishSystem
 
         public DataTable getConfirmations()
         {
-            string q = "SELECT profileID, applicationID, confirmationID, Minister.ministerID, p.firstName, p.midname, p.lastName, p.suffix, DATE_FORMAT(confirmationDate, '%m-%Y-%d') AS confirmationDate, registryNumber, pageNumber, recordNumber, remarks  "
+            string q = "SELECT profileID, applicationID, confirmationID, Minister.ministerID, p.firstName, p.midname, p.lastName, p.suffix, DATE_FORMAT(confirmationDate, '%Y-%m-%d') AS confirmationDate, registryNumber, pageNumber, recordNumber, remarks  "
                 + "FROM Confirmation NATURAL JOIN Application NATURAL JOIN Applicant NATURAL JOIN GeneralProfile AS p JOIN Minister ON Confirmation.ministerID = Minister.ministerID";
 
             DataTable dt = runQuery(q);
@@ -1630,7 +1624,7 @@ namespace ParishSystem
             string page = Convert.ToString(dr["pageNumber"].ToString());
             string record = Convert.ToString(dr["recordNumber"].ToString());
             string remarks = Convert.ToString(dr["remarks"].ToString());
-            DateTime confirmationDate = DateTime.ParseExact(dr["confirmationDate"].ToString(), "dd/MM/yyyy", null);
+            DateTime confirmationDate = DateTime.ParseExact(dr["confirmationDate"].ToString(), "dd/MM/yyyy hh:mm:tt", null);
 
             Confirmation con = new Confirmation(applicationID, ministerID, registry, page, record, remarks, confirmationDate);
 
@@ -1655,20 +1649,22 @@ namespace ParishSystem
         */
         #region
 
-        public bool addMarriage(int applicationID, int ministerID, DateTime licenseDate, DateTime marriageDate, CivilStatus civilStatusGroom, CivilStatus civilStatusBride)
+        public bool addMarriage(int applicationID, int ministerID, DateTime licenseDate, DateTime marriageDate, CivilStatus civilStatusGroom, CivilStatus civilStatusBride, string remarks)
         {
-            string q = "INSERT INTO Marriage(applicationID, ministerID, licenseDate, marriageDate, civilStatusGroom, civilStatusBride) VALUES (@applicationID, @ministerID, @licenseDate, @marriageDate, @civilStatusGroom, @civilStatusBride)";
-            bool success = ExecuteNonQuery(q, applicationID, ministerID, licenseDate.ToString("yyyy-MM-dd HH:mm:ss"), marriageDate.ToString("yyyy-MM-dd"), civilStatusGroom, civilStatusBride);
+            string q = "INSERT INTO Marriage(applicationID, ministerID, licenseDate, marriageDate, civilStatusGroom, civilStatusBride, remarks, status) VALUES (@applicationID, @ministerID, @licenseDate, @marriageDate, @civilStatusGroom, @civilStatusBride)";
+            bool success = ExecuteNonQuery(q, applicationID, ministerID, licenseDate.ToString("yyyy-MM-dd HH:mm:ss"), marriageDate.ToString("yyyy-MM-dd"), civilStatusGroom, civilStatusBride, remarks, MarriageStatus.Active);
 
             return success;
         }
 
-        public bool editMarriage(int marriageID, int groomID, int brideID, int ministerID, DateTime licenseDate, DateTime marriageDate, MarriageStatus status)
+        public bool editMarriage(int applicationID, int ministerID, DateTime licenseDate, DateTime marriageDate, CivilStatus civilStatusGroom, CivilStatus civilStatusBride, string remarks)
         {
-            string q = "UPDATE Marriage SET groomID = @groomID, brideID = @brideID, ministerID = @ministerID, "
-                + "licenseDate = @licenseDate, marriageDate = @marriageDate, status = @status WHERE marriageID = @marriageID";
-            bool success = ExecuteNonQuery(q, groomID, brideID, ministerID, licenseDate.ToString("yyyy-MM-dd"), marriageDate.ToString("yyyy-MM-dd"), status, marriageID);
+            string q = @"UPDATE Marriage SET ministerID = @ministerID, licenseDate = @licenseDate, marriageDate = @marriageDate, 
+                        civilStatusGroom = @civilStatusGroom, civilStatusBride = @civilStatusBride, remarks = @remarks 
+                        WHERE applicationID = @applicationID";
+            bool success = ExecuteNonQuery(q, ministerID, licenseDate.ToString("yyyy-MM-dd"), marriageDate.ToString("yyyy-MM-dd"), (int)civilStatusGroom, (int)civilStatusBride, remarks, applicationID);
             return success;
+
         }
 
         public bool deleteMarriage(int marriageID)
@@ -1691,6 +1687,8 @@ namespace ParishSystem
         public DataTable getMarriage(int applicationID)
         {
             string q = "SELECT *,concat(firstName,\" \",midname,\" \",lastname,\"\",suffix)as ministerName  FROM Marriage inner join minister on marriage.ministerID=minister.ministerID where  applicationID =" + applicationID;
+
+
             DataTable dt = runQuery(q);
 
             return dt;
@@ -1760,7 +1758,7 @@ namespace ParishSystem
 
         public DataTable getMarriages()
         {
-            string q = @"SELECT marriageID, groom.applicationID, groom.profileID AS groomID, bride.profileID AS brideID, Minister.ministerID, marriageDate,
+            string q = @"SELECT marriageID, groom.applicationID, groom.profileID AS groomID, bride.profileID AS brideID, Minister.ministerID, DATE_FORMAT(marriageDate, '%Y-%m-%d') as marriageDate,
                         CONCAT_WS(' ', groom.firstName, groom.midName, groom.lastName, groom.suffix) AS groomName, 
                         CONCAT_WS(' ', bride.firstName, bride.midName, bride.lastName, bride.suffix) AS brideName,
                         registryNumber, recordNumber, pageNumber, remarks
@@ -1788,10 +1786,11 @@ namespace ParishSystem
             string page = Convert.ToString(dr["pageNumber"].ToString());
             string record = Convert.ToString(dr["recordNumber"].ToString());
             string remarks = Convert.ToString(dr["remarks"].ToString());
-            DateTime marriageDate = DateTime.ParseExact(dr["marriageDate"].ToString(), "dd/MM/yyyy", null);
-            DateTime licenseDate = DateTime.ParseExact(dr["licenseDate"].ToString(), "dd/MM/yyyy", null);
-            CivilStatus groomStatus = (CivilStatus)Convert.ToInt32(dr["groomStatus"]);
-            CivilStatus brideStatus = (CivilStatus)Convert.ToInt32(dr["brideStatus"]);
+            MessageBox.Show(dr["marriageDate"].ToString());
+            DateTime marriageDate = DateTime.ParseExact(dr["marriageDate"].ToString(), "dd/MM/yyyy hh:mm:ss tt", null);
+            DateTime licenseDate = DateTime.ParseExact(dr["licenseDate"].ToString(), "dd/MM/yyyy hh:mm:ss tt", null);
+            CivilStatus groomStatus = (CivilStatus)Convert.ToInt32(dr["civilStatusGroom"]);
+            CivilStatus brideStatus = (CivilStatus)Convert.ToInt32(dr["civilStatusBride"]);
 
             Marriage mar = new Marriage(applicationID, ministerID, registry, page, record, remarks, marriageDate, licenseDate, groomStatus, brideStatus);
 
@@ -1911,6 +1910,14 @@ namespace ParishSystem
         {
             string q = "UPDATE Sponsor SET firstname = @firstname, midname = @midname, lastname = @lastname, suffix = @suffix, gender = @gender, residence = @residence WHERE applicationID = @applicationID";
             bool success = ExecuteNonQuery(q, firstname, midname, lastname, suffix, gender, residence, applicationID);
+            return success;
+        }
+
+        public bool editSponsor(int sponsorID, int applicationID, string firstname, string midname, string lastname, string suffix, Gender gender, string residence)
+        {
+            //ApplicationID is actually not used here. It's just to change the method signature.
+            string q = "UPDATE Sponsor SET firstname = @firstname, midname = @midname, lastname = @lastname, suffix = @suffix, gender = @gender, residence = @residence WHERE sponsorID = @sponsorID";
+            bool success = ExecuteNonQuery(q, firstname, midname, lastname, suffix, gender, residence, sponsorID);
             return success;
         }
 
@@ -4377,6 +4384,178 @@ namespace ParishSystem
                     catch { }
                 }
             }
+        }
+
+        public bool isEventNameExist(string name, int ID)
+        {
+            if (runQuery($@"SELECT * FROM sad2.blooddonationevent where eventName = ""{name}"" and bloodDonationEventID != {ID};").Rows.Count >= 1)
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool isBloodDonationIDExist(string ID)
+        {
+            if (runQuery($@"SELECT * FROM sad2.blooddonation where donationID = ""{ID}""").Rows.Count >= 1)
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool isItemTypeExist(string name, int ID, int bookType, int CashReceipt_CashDisbursment)
+        {
+            if (runQuery($@"SELECT * FROM sad2.itemtype where itemtype=""{name}""and itemTypeID != {ID} and bookType={bookType} and cashreceipt_cashdisbursment={CashReceipt_CashDisbursment};").Rows.Count >= 1)
+            {
+                return true;
+            }
+            return false;
+        }
+        public void ExcelBloodlettingReports(DataGridView dgvr, DataGridView summary, int popup_save)
+        {
+            Microsoft.Office.Interop.Excel.Application App = new Microsoft.Office.Interop.Excel.Application();
+            Excel.Workbook newWorkbook = App.Workbooks.Add();
+            Microsoft.Office.Interop.Excel.Worksheet x = App.Worksheets[1];
+            x.Name = "Report";
+            x.Range["A1"].Value = "     Assumption Parish - Bloodletting Report     ";
+            x.Range["A1"].Cells.Font.Size = 18;
+            x.Range["A1"].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+            int count = 1;
+            foreach (DataGridViewColumn col in dgvr.Columns)
+            {
+                if (col.Visible)
+                {
+                    x.Cells[2, count++].Value = "     " + col.HeaderText.ToString() + "     ";
+                }
+
+            }
+            count = count - 1;
+            x.Range["A1", x.Cells[1, count + 3]].Merge();
+            x.Range[x.Cells[2, 1], x.Cells[2, count + 3]].Cells.Font.Size = 15;
+            x.Range[x.Cells[2, 1], x.Cells[2, count + 3]].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+            x.Range[x.Cells[2, 1], x.Cells[2, count + 3]].EntireRow.Font.Bold = true;
+
+            for (int row = 0; row < dgvr.Rows.Count; row++)
+            {
+                for (int cell = 1; cell < dgvr.Rows[row].Cells.Count; cell++)
+                {
+                    if (dgvr.Rows[row].Cells[cell].Visible)
+                    {
+                        x.Cells[row + 3, cell].Value = dgvr.Rows[row].Cells[cell].Value.ToString();
+                    }
+                }
+            }
+            x.Range["A1", x.Cells[(dgvr.Rows.Count > summary.Rows.Count ? dgvr.Rows.Count + 2 : summary.Rows.Count + 2), (count + 3)]].Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+            int colEvent = count + 2;
+            int colQuantity = count + 3;
+            x.Cells[2, count + 2].Value = "      Event Name     ";
+            x.Cells[2, count + 3].Value = "      Total Quantity     ";
+
+            for (int a = 0; a < summary.Rows.Count; a++)
+            {
+                x.Cells[a + 3, colEvent].Value = summary.Rows[a].Cells[0].Value.ToString();
+                x.Cells[a + 3, colQuantity].Value = summary.Rows[a].Cells[1].Value.ToString();
+            }
+
+            x.Rows.AutoFit();
+            x.Columns.AutoFit();
+            if (popup_save == 1)
+            {
+                App.Visible = true;
+            }
+            else
+            {
+                SaveExcelFile(newWorkbook);
+            }
+        }
+        public void Excel_CashReports(DataGridView dgvr, DataGridView summary, int cashReceiptCashDisbursment, int parish_community_postulancy, int popup_save)
+        {
+            Microsoft.Office.Interop.Excel.Application App = new Microsoft.Office.Interop.Excel.Application();
+            Excel.Workbook newWorkbook = App.Workbooks.Add();
+            Microsoft.Office.Interop.Excel.Worksheet x = App.Worksheets[1];
+            x.Name = "Report";
+
+            if (cashReceiptCashDisbursment == 1)
+            {
+                int count = 0;
+                foreach (DataGridViewColumn dc in dgvr.Columns)
+                {
+                    if (dc.Visible)
+                    {
+                        count++;
+                    }
+                }
+
+                x.Range["A1", x.Cells[1, count + 3]].Merge();
+                x.Range["A2", x.Cells[2, count + 3]].Merge();
+                x.Range["B3", x.Cells[3, count + 3]].Merge();
+                x.Range["B4", x.Cells[4, count + 3]].Merge();
+                x.Range["B5", x.Cells[5, count + 3]].Merge();
+
+                x.Range["A1"].Value = "     Assumption Parish     ";
+                x.Range["A2"].Value = (cashReceiptCashDisbursment == 1 ? "Cash Receipt: " : "Cash Disbursment: ") + " " + (parish_community_postulancy == 1 ? "Parish" : (parish_community_postulancy == 2 ? "Community" : "Postulancy"));
+                x.Range["A3"].Value = "     From";
+                x.Range["A4"].Value = "     To";
+
+                DateTime dt1 = DateTime.Parse(dgvr.Rows[dgvr.Rows.Count - 1].Cells[3].Value.ToString(), new System.Globalization.CultureInfo("en-US", true), System.Globalization.DateTimeStyles.AssumeLocal);
+                DateTime dt2 = DateTime.Parse(dgvr.Rows[0].Cells[3].Value.ToString(), new System.Globalization.CultureInfo("en-US", true), System.Globalization.DateTimeStyles.AssumeLocal);
+
+                x.Range["B3"].Value = (dt1 < dt2 ? dt1.ToString("MMMM dd yyyy, hh : mm") : dt2.ToString("MMMM dd yyyy, hh : mm"));
+                x.Range["B4"].Value = (dt1 > dt2 ? dt1.ToString("MMMM dd yyyy, hh : mm") : dt2.ToString("MMMM dd yyyy, hh : mm"));
+
+                x.Range["A1"].Cells.Font.Size = 18;
+                x.Range["A1"].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+                int a = 1;
+                foreach (DataGridViewColumn dc in dgvr.Columns)
+                {
+                    if (dc.Visible)
+                    {
+                        x.Cells[6, a].Value = "     " + dc.HeaderText.ToString() + "     ";
+                        a++;
+                    }
+                }
+                x.Range["A6", x.Cells[6, a + 3]].Cells.Font.Size = 15;
+                x.Range["A6", x.Cells[6, a + 3]].Style.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                x.Range["A1", x.Cells[6, a + 3]].EntireRow.Font.Bold = true;
+
+                int b = 0;
+                foreach (DataGridViewRow dr in dgvr.Rows)
+                {
+                    int c = 1;
+                    foreach (DataGridViewCell dc in dr.Cells)
+                    {
+                        x.Cells[b + 7, c].Value = "     " + dc.Value.ToString() + "     ";
+                        c++;
+                    }
+                    b++;
+                }
+
+                x.Cells[6, a + 1].Value = "      Item      ";
+                x.Cells[6, a + 2].Value = "      Total      ";
+
+                int d = 1;
+                foreach (DataGridViewRow sdgvr in summary.Rows)
+                {
+                    x.Cells[d + 6, a + 1].Value = sdgvr.Cells[0].Value.ToString();
+                    x.Cells[d + 6, a + 2].Value = sdgvr.Cells[1].Value.ToString();
+                    d++;
+                }
+
+                x.Rows.AutoFit();
+                x.Columns.AutoFit();
+                x.Range["A1", x.Cells[(dgvr.Rows.Count > summary.Rows.Count ? dgvr.Rows.Count + 1 : summary.Rows.Count + 1) + 5, (dgvr.Columns.Count + 3)]].Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+
+                if (popup_save == 1)
+                {
+                    App.Visible = true;
+                }
+                else
+                {
+                    SaveExcelFile(newWorkbook);
+                }
+            }
+
         }
 
     }

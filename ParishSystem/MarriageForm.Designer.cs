@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblGName = new System.Windows.Forms.Label();
             this.panelGroom = new System.Windows.Forms.Panel();
             this.txtGResidence = new MetroFramework.Controls.MetroTextBox();
@@ -72,27 +68,18 @@
             this.lblBName = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.dgvSponsor = new MetroFramework.Controls.MetroGrid();
-            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.midName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.suffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.residence = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtSponsorResidence = new MetroFramework.Controls.MetroTextBox();
-            this.txtSponsorSuffix = new MetroFramework.Controls.MetroTextBox();
-            this.btnAddSponsor = new System.Windows.Forms.Button();
-            this.txtSponsorLN = new MetroFramework.Controls.MetroTextBox();
+            this.txtSponsor1Residence = new MetroFramework.Controls.MetroTextBox();
+            this.txtSponsor1Suffix = new MetroFramework.Controls.MetroTextBox();
+            this.txtSponsor1LN = new MetroFramework.Controls.MetroTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.radioMale = new MetroFramework.Controls.MetroRadioButton();
-            this.radioFemale = new MetroFramework.Controls.MetroRadioButton();
-            this.txtSponsorMI = new MetroFramework.Controls.MetroTextBox();
-            this.txtSponsorFN = new MetroFramework.Controls.MetroTextBox();
+            this.radioSponsor1Male = new MetroFramework.Controls.MetroRadioButton();
+            this.radioSponsor1Female = new MetroFramework.Controls.MetroRadioButton();
+            this.txtSponsor1MI = new MetroFramework.Controls.MetroTextBox();
+            this.txtSponsor1FN = new MetroFramework.Controls.MetroTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panelMinister = new System.Windows.Forms.Panel();
-            this.cueTextBox1 = new ParishSystem.CueTextBox();
             this.dtpLicenseDate = new MetroFramework.Controls.MetroDateTime();
             this.dtpMarriageDate = new MetroFramework.Controls.MetroDateTime();
             this.cmbMinister = new MetroFramework.Controls.MetroComboBox();
@@ -101,17 +88,29 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.controlBar_panel = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
             this.close_button = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtSponsor2FN = new MetroFramework.Controls.MetroTextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtSponsor2MI = new MetroFramework.Controls.MetroTextBox();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.radioSponsor2Male = new MetroFramework.Controls.MetroRadioButton();
+            this.radioSponsor2Female = new MetroFramework.Controls.MetroRadioButton();
+            this.txtSponsor2LN = new MetroFramework.Controls.MetroTextBox();
+            this.txtSponsor2Suffix = new MetroFramework.Controls.MetroTextBox();
+            this.txtSponsor2Residence = new MetroFramework.Controls.MetroTextBox();
+            this.txtRemarks = new MetroFramework.Controls.MetroTextBox();
             this.panelGroom.SuspendLayout();
             this.panelBride.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSponsor)).BeginInit();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panelMinister.SuspendLayout();
             this.controlBar_panel.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblGName
@@ -998,122 +997,25 @@
             this.label13.TabIndex = 51;
             this.label13.Text = "Name";
             // 
-            // dgvSponsor
-            // 
-            this.dgvSponsor.AllowUserToAddRows = false;
-            this.dgvSponsor.AllowUserToDeleteRows = false;
-            this.dgvSponsor.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.dgvSponsor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvSponsor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dgvSponsor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvSponsor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvSponsor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvSponsor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSponsor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvSponsor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSponsor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.firstName,
-            this.midName,
-            this.lastName,
-            this.suffix,
-            this.gender,
-            this.residence});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSponsor.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvSponsor.EnableHeadersVisualStyles = false;
-            this.dgvSponsor.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dgvSponsor.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvSponsor.Location = new System.Drawing.Point(287, 48);
-            this.dgvSponsor.Name = "dgvSponsor";
-            this.dgvSponsor.ReadOnly = true;
-            this.dgvSponsor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSponsor.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvSponsor.RowHeadersVisible = false;
-            this.dgvSponsor.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvSponsor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSponsor.Size = new System.Drawing.Size(347, 133);
-            this.dgvSponsor.TabIndex = 52;
-            this.dgvSponsor.TabStop = false;
-            this.dgvSponsor.UseCustomBackColor = true;
-            this.dgvSponsor.UseCustomForeColor = true;
-            this.dgvSponsor.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvSponsor_CellFormatting);
-            // 
-            // firstName
-            // 
-            this.firstName.HeaderText = "First Name";
-            this.firstName.Name = "firstName";
-            this.firstName.ReadOnly = true;
-            this.firstName.Width = 94;
-            // 
-            // midName
-            // 
-            this.midName.HeaderText = "Middle Name";
-            this.midName.Name = "midName";
-            this.midName.ReadOnly = true;
-            this.midName.Width = 111;
-            // 
-            // lastName
-            // 
-            this.lastName.HeaderText = "Last Name";
-            this.lastName.Name = "lastName";
-            this.lastName.ReadOnly = true;
-            this.lastName.Width = 93;
-            // 
-            // suffix
-            // 
-            this.suffix.HeaderText = "Suffix";
-            this.suffix.Name = "suffix";
-            this.suffix.ReadOnly = true;
-            this.suffix.Width = 62;
-            // 
-            // gender
-            // 
-            this.gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.gender.HeaderText = "Gender";
-            this.gender.Name = "gender";
-            this.gender.ReadOnly = true;
-            this.gender.Width = 74;
-            // 
-            // residence
-            // 
-            this.residence.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.residence.HeaderText = "Residence";
-            this.residence.Name = "residence";
-            this.residence.ReadOnly = true;
-            // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.txtSponsorResidence);
-            this.panel3.Controls.Add(this.txtSponsorSuffix);
-            this.panel3.Controls.Add(this.btnAddSponsor);
-            this.panel3.Controls.Add(this.txtSponsorLN);
+            this.panel3.Controls.Add(this.txtSponsor2Residence);
+            this.panel3.Controls.Add(this.txtSponsor2Suffix);
+            this.panel3.Controls.Add(this.txtSponsor1Residence);
+            this.panel3.Controls.Add(this.txtSponsor1Suffix);
+            this.panel3.Controls.Add(this.txtSponsor2LN);
+            this.panel3.Controls.Add(this.txtSponsor1LN);
+            this.panel3.Controls.Add(this.flowLayoutPanel2);
             this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.txtSponsor2MI);
             this.panel3.Controls.Add(this.flowLayoutPanel1);
-            this.panel3.Controls.Add(this.txtSponsorMI);
+            this.panel3.Controls.Add(this.label24);
+            this.panel3.Controls.Add(this.txtSponsor1MI);
+            this.panel3.Controls.Add(this.txtSponsor2FN);
             this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.dgvSponsor);
-            this.panel3.Controls.Add(this.txtSponsorFN);
+            this.panel3.Controls.Add(this.label23);
+            this.panel3.Controls.Add(this.txtSponsor1FN);
+            this.panel3.Controls.Add(this.label22);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1124,115 +1026,102 @@
             this.panel3.TabIndex = 4;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // txtSponsorResidence
+            // txtSponsor1Residence
             // 
             // 
             // 
             // 
-            this.txtSponsorResidence.CustomButton.Image = null;
-            this.txtSponsorResidence.CustomButton.Location = new System.Drawing.Point(254, 1);
-            this.txtSponsorResidence.CustomButton.Name = "";
-            this.txtSponsorResidence.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtSponsorResidence.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSponsorResidence.CustomButton.TabIndex = 1;
-            this.txtSponsorResidence.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSponsorResidence.CustomButton.UseSelectable = true;
-            this.txtSponsorResidence.CustomButton.Visible = false;
-            this.txtSponsorResidence.Lines = new string[0];
-            this.txtSponsorResidence.Location = new System.Drawing.Point(5, 102);
-            this.txtSponsorResidence.MaxLength = 32767;
-            this.txtSponsorResidence.Name = "txtSponsorResidence";
-            this.txtSponsorResidence.PasswordChar = '\0';
-            this.txtSponsorResidence.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSponsorResidence.SelectedText = "";
-            this.txtSponsorResidence.SelectionLength = 0;
-            this.txtSponsorResidence.SelectionStart = 0;
-            this.txtSponsorResidence.ShortcutsEnabled = true;
-            this.txtSponsorResidence.Size = new System.Drawing.Size(276, 23);
-            this.txtSponsorResidence.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtSponsorResidence.TabIndex = 38;
-            this.txtSponsorResidence.UseSelectable = true;
-            this.txtSponsorResidence.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSponsorResidence.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtSponsor1Residence.CustomButton.Image = null;
+            this.txtSponsor1Residence.CustomButton.Location = new System.Drawing.Point(254, 1);
+            this.txtSponsor1Residence.CustomButton.Name = "";
+            this.txtSponsor1Residence.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSponsor1Residence.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSponsor1Residence.CustomButton.TabIndex = 1;
+            this.txtSponsor1Residence.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSponsor1Residence.CustomButton.UseSelectable = true;
+            this.txtSponsor1Residence.CustomButton.Visible = false;
+            this.txtSponsor1Residence.Lines = new string[0];
+            this.txtSponsor1Residence.Location = new System.Drawing.Point(5, 102);
+            this.txtSponsor1Residence.MaxLength = 32767;
+            this.txtSponsor1Residence.Name = "txtSponsor1Residence";
+            this.txtSponsor1Residence.PasswordChar = '\0';
+            this.txtSponsor1Residence.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSponsor1Residence.SelectedText = "";
+            this.txtSponsor1Residence.SelectionLength = 0;
+            this.txtSponsor1Residence.SelectionStart = 0;
+            this.txtSponsor1Residence.ShortcutsEnabled = true;
+            this.txtSponsor1Residence.Size = new System.Drawing.Size(276, 23);
+            this.txtSponsor1Residence.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtSponsor1Residence.TabIndex = 38;
+            this.txtSponsor1Residence.UseSelectable = true;
+            this.txtSponsor1Residence.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSponsor1Residence.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // txtSponsorSuffix
-            // 
-            // 
-            // 
-            // 
-            this.txtSponsorSuffix.CustomButton.Image = null;
-            this.txtSponsorSuffix.CustomButton.Location = new System.Drawing.Point(11, 1);
-            this.txtSponsorSuffix.CustomButton.Name = "";
-            this.txtSponsorSuffix.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtSponsorSuffix.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSponsorSuffix.CustomButton.TabIndex = 1;
-            this.txtSponsorSuffix.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSponsorSuffix.CustomButton.UseSelectable = true;
-            this.txtSponsorSuffix.CustomButton.Visible = false;
-            this.txtSponsorSuffix.Lines = new string[0];
-            this.txtSponsorSuffix.Location = new System.Drawing.Point(248, 54);
-            this.txtSponsorSuffix.MaxLength = 32767;
-            this.txtSponsorSuffix.Name = "txtSponsorSuffix";
-            this.txtSponsorSuffix.PasswordChar = '\0';
-            this.txtSponsorSuffix.PromptText = "Suffix";
-            this.txtSponsorSuffix.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSponsorSuffix.SelectedText = "";
-            this.txtSponsorSuffix.SelectionLength = 0;
-            this.txtSponsorSuffix.SelectionStart = 0;
-            this.txtSponsorSuffix.ShortcutsEnabled = true;
-            this.txtSponsorSuffix.Size = new System.Drawing.Size(33, 23);
-            this.txtSponsorSuffix.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtSponsorSuffix.TabIndex = 37;
-            this.txtSponsorSuffix.UseSelectable = true;
-            this.txtSponsorSuffix.WaterMark = "Suffix";
-            this.txtSponsorSuffix.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSponsorSuffix.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnAddSponsor
-            // 
-            this.btnAddSponsor.FlatAppearance.BorderSize = 0;
-            this.btnAddSponsor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.btnAddSponsor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddSponsor.Image = global::ParishSystem.Properties.Resources.icons8_Plus_2_Math_32;
-            this.btnAddSponsor.Location = new System.Drawing.Point(150, 148);
-            this.btnAddSponsor.Name = "btnAddSponsor";
-            this.btnAddSponsor.Size = new System.Drawing.Size(30, 30);
-            this.btnAddSponsor.TabIndex = 56;
-            this.btnAddSponsor.UseVisualStyleBackColor = true;
-            this.btnAddSponsor.Click += new System.EventHandler(this.btnAddSponsor_Click);
-            // 
-            // txtSponsorLN
+            // txtSponsor1Suffix
             // 
             // 
             // 
             // 
-            this.txtSponsorLN.CustomButton.Image = null;
-            this.txtSponsorLN.CustomButton.Location = new System.Drawing.Point(70, 1);
-            this.txtSponsorLN.CustomButton.Name = "";
-            this.txtSponsorLN.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtSponsorLN.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSponsorLN.CustomButton.TabIndex = 1;
-            this.txtSponsorLN.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSponsorLN.CustomButton.UseSelectable = true;
-            this.txtSponsorLN.CustomButton.Visible = false;
-            this.txtSponsorLN.Lines = new string[0];
-            this.txtSponsorLN.Location = new System.Drawing.Point(153, 54);
-            this.txtSponsorLN.MaxLength = 32767;
-            this.txtSponsorLN.Name = "txtSponsorLN";
-            this.txtSponsorLN.PasswordChar = '\0';
-            this.txtSponsorLN.PromptText = "Last Name";
-            this.txtSponsorLN.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSponsorLN.SelectedText = "";
-            this.txtSponsorLN.SelectionLength = 0;
-            this.txtSponsorLN.SelectionStart = 0;
-            this.txtSponsorLN.ShortcutsEnabled = true;
-            this.txtSponsorLN.Size = new System.Drawing.Size(92, 23);
-            this.txtSponsorLN.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtSponsorLN.TabIndex = 36;
-            this.txtSponsorLN.UseSelectable = true;
-            this.txtSponsorLN.WaterMark = "Last Name";
-            this.txtSponsorLN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSponsorLN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSponsor1Suffix.CustomButton.Image = null;
+            this.txtSponsor1Suffix.CustomButton.Location = new System.Drawing.Point(11, 1);
+            this.txtSponsor1Suffix.CustomButton.Name = "";
+            this.txtSponsor1Suffix.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSponsor1Suffix.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSponsor1Suffix.CustomButton.TabIndex = 1;
+            this.txtSponsor1Suffix.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSponsor1Suffix.CustomButton.UseSelectable = true;
+            this.txtSponsor1Suffix.CustomButton.Visible = false;
+            this.txtSponsor1Suffix.Lines = new string[0];
+            this.txtSponsor1Suffix.Location = new System.Drawing.Point(248, 54);
+            this.txtSponsor1Suffix.MaxLength = 32767;
+            this.txtSponsor1Suffix.Name = "txtSponsor1Suffix";
+            this.txtSponsor1Suffix.PasswordChar = '\0';
+            this.txtSponsor1Suffix.PromptText = "Suffix";
+            this.txtSponsor1Suffix.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSponsor1Suffix.SelectedText = "";
+            this.txtSponsor1Suffix.SelectionLength = 0;
+            this.txtSponsor1Suffix.SelectionStart = 0;
+            this.txtSponsor1Suffix.ShortcutsEnabled = true;
+            this.txtSponsor1Suffix.Size = new System.Drawing.Size(33, 23);
+            this.txtSponsor1Suffix.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtSponsor1Suffix.TabIndex = 37;
+            this.txtSponsor1Suffix.UseSelectable = true;
+            this.txtSponsor1Suffix.WaterMark = "Suffix";
+            this.txtSponsor1Suffix.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSponsor1Suffix.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // txtSponsor1LN
+            // 
+            // 
+            // 
+            // 
+            this.txtSponsor1LN.CustomButton.Image = null;
+            this.txtSponsor1LN.CustomButton.Location = new System.Drawing.Point(70, 1);
+            this.txtSponsor1LN.CustomButton.Name = "";
+            this.txtSponsor1LN.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSponsor1LN.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSponsor1LN.CustomButton.TabIndex = 1;
+            this.txtSponsor1LN.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSponsor1LN.CustomButton.UseSelectable = true;
+            this.txtSponsor1LN.CustomButton.Visible = false;
+            this.txtSponsor1LN.Lines = new string[0];
+            this.txtSponsor1LN.Location = new System.Drawing.Point(153, 54);
+            this.txtSponsor1LN.MaxLength = 32767;
+            this.txtSponsor1LN.Name = "txtSponsor1LN";
+            this.txtSponsor1LN.PasswordChar = '\0';
+            this.txtSponsor1LN.PromptText = "Last Name";
+            this.txtSponsor1LN.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSponsor1LN.SelectedText = "";
+            this.txtSponsor1LN.SelectionLength = 0;
+            this.txtSponsor1LN.SelectionStart = 0;
+            this.txtSponsor1LN.ShortcutsEnabled = true;
+            this.txtSponsor1LN.Size = new System.Drawing.Size(92, 23);
+            this.txtSponsor1LN.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtSponsor1LN.TabIndex = 36;
+            this.txtSponsor1LN.UseSelectable = true;
+            this.txtSponsor1LN.WaterMark = "Last Name";
+            this.txtSponsor1LN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSponsor1LN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // label16
             // 
@@ -1245,104 +1134,104 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.radioMale);
-            this.flowLayoutPanel1.Controls.Add(this.radioFemale);
+            this.flowLayoutPanel1.Controls.Add(this.radioSponsor1Male);
+            this.flowLayoutPanel1.Controls.Add(this.radioSponsor1Female);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(7, 148);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(136, 28);
             this.flowLayoutPanel1.TabIndex = 53;
             // 
-            // radioMale
+            // radioSponsor1Male
             // 
-            this.radioMale.AutoSize = true;
-            this.radioMale.Checked = true;
-            this.radioMale.Location = new System.Drawing.Point(3, 3);
-            this.radioMale.Name = "radioMale";
-            this.radioMale.Size = new System.Drawing.Size(49, 15);
-            this.radioMale.Style = MetroFramework.MetroColorStyle.Silver;
-            this.radioMale.TabIndex = 40;
-            this.radioMale.TabStop = true;
-            this.radioMale.Text = "Male";
-            this.radioMale.UseSelectable = true;
-            this.radioMale.UseStyleColors = true;
+            this.radioSponsor1Male.AutoSize = true;
+            this.radioSponsor1Male.Checked = true;
+            this.radioSponsor1Male.Location = new System.Drawing.Point(3, 3);
+            this.radioSponsor1Male.Name = "radioSponsor1Male";
+            this.radioSponsor1Male.Size = new System.Drawing.Size(49, 15);
+            this.radioSponsor1Male.Style = MetroFramework.MetroColorStyle.Silver;
+            this.radioSponsor1Male.TabIndex = 40;
+            this.radioSponsor1Male.TabStop = true;
+            this.radioSponsor1Male.Text = "Male";
+            this.radioSponsor1Male.UseSelectable = true;
+            this.radioSponsor1Male.UseStyleColors = true;
             // 
-            // radioFemale
+            // radioSponsor1Female
             // 
-            this.radioFemale.AutoSize = true;
-            this.radioFemale.Location = new System.Drawing.Point(58, 3);
-            this.radioFemale.Name = "radioFemale";
-            this.radioFemale.Size = new System.Drawing.Size(61, 15);
-            this.radioFemale.Style = MetroFramework.MetroColorStyle.Silver;
-            this.radioFemale.TabIndex = 41;
-            this.radioFemale.Text = "Female";
-            this.radioFemale.UseSelectable = true;
-            this.radioFemale.UseStyleColors = true;
+            this.radioSponsor1Female.AutoSize = true;
+            this.radioSponsor1Female.Location = new System.Drawing.Point(58, 3);
+            this.radioSponsor1Female.Name = "radioSponsor1Female";
+            this.radioSponsor1Female.Size = new System.Drawing.Size(61, 15);
+            this.radioSponsor1Female.Style = MetroFramework.MetroColorStyle.Silver;
+            this.radioSponsor1Female.TabIndex = 41;
+            this.radioSponsor1Female.Text = "Female";
+            this.radioSponsor1Female.UseSelectable = true;
+            this.radioSponsor1Female.UseStyleColors = true;
             // 
-            // txtSponsorMI
-            // 
-            // 
-            // 
-            // 
-            this.txtSponsorMI.CustomButton.Image = null;
-            this.txtSponsorMI.CustomButton.Location = new System.Drawing.Point(9, 1);
-            this.txtSponsorMI.CustomButton.Name = "";
-            this.txtSponsorMI.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtSponsorMI.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSponsorMI.CustomButton.TabIndex = 1;
-            this.txtSponsorMI.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSponsorMI.CustomButton.UseSelectable = true;
-            this.txtSponsorMI.CustomButton.Visible = false;
-            this.txtSponsorMI.Lines = new string[0];
-            this.txtSponsorMI.Location = new System.Drawing.Point(116, 54);
-            this.txtSponsorMI.MaxLength = 32767;
-            this.txtSponsorMI.Name = "txtSponsorMI";
-            this.txtSponsorMI.PasswordChar = '\0';
-            this.txtSponsorMI.PromptText = "M.I.";
-            this.txtSponsorMI.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSponsorMI.SelectedText = "";
-            this.txtSponsorMI.SelectionLength = 0;
-            this.txtSponsorMI.SelectionStart = 0;
-            this.txtSponsorMI.ShortcutsEnabled = true;
-            this.txtSponsorMI.Size = new System.Drawing.Size(31, 23);
-            this.txtSponsorMI.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtSponsorMI.TabIndex = 35;
-            this.txtSponsorMI.UseSelectable = true;
-            this.txtSponsorMI.WaterMark = "M.I.";
-            this.txtSponsorMI.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSponsorMI.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // txtSponsorFN
+            // txtSponsor1MI
             // 
             // 
             // 
             // 
-            this.txtSponsorFN.CustomButton.Image = null;
-            this.txtSponsorFN.CustomButton.Location = new System.Drawing.Point(84, 1);
-            this.txtSponsorFN.CustomButton.Name = "";
-            this.txtSponsorFN.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtSponsorFN.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSponsorFN.CustomButton.TabIndex = 1;
-            this.txtSponsorFN.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSponsorFN.CustomButton.UseSelectable = true;
-            this.txtSponsorFN.CustomButton.Visible = false;
-            this.txtSponsorFN.Lines = new string[0];
-            this.txtSponsorFN.Location = new System.Drawing.Point(5, 54);
-            this.txtSponsorFN.MaxLength = 32767;
-            this.txtSponsorFN.Name = "txtSponsorFN";
-            this.txtSponsorFN.PasswordChar = '\0';
-            this.txtSponsorFN.PromptText = "First Name";
-            this.txtSponsorFN.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSponsorFN.SelectedText = "";
-            this.txtSponsorFN.SelectionLength = 0;
-            this.txtSponsorFN.SelectionStart = 0;
-            this.txtSponsorFN.ShortcutsEnabled = true;
-            this.txtSponsorFN.Size = new System.Drawing.Size(106, 23);
-            this.txtSponsorFN.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtSponsorFN.TabIndex = 34;
-            this.txtSponsorFN.UseSelectable = true;
-            this.txtSponsorFN.WaterMark = "First Name";
-            this.txtSponsorFN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSponsorFN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSponsor1MI.CustomButton.Image = null;
+            this.txtSponsor1MI.CustomButton.Location = new System.Drawing.Point(9, 1);
+            this.txtSponsor1MI.CustomButton.Name = "";
+            this.txtSponsor1MI.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSponsor1MI.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSponsor1MI.CustomButton.TabIndex = 1;
+            this.txtSponsor1MI.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSponsor1MI.CustomButton.UseSelectable = true;
+            this.txtSponsor1MI.CustomButton.Visible = false;
+            this.txtSponsor1MI.Lines = new string[0];
+            this.txtSponsor1MI.Location = new System.Drawing.Point(116, 54);
+            this.txtSponsor1MI.MaxLength = 32767;
+            this.txtSponsor1MI.Name = "txtSponsor1MI";
+            this.txtSponsor1MI.PasswordChar = '\0';
+            this.txtSponsor1MI.PromptText = "M.I.";
+            this.txtSponsor1MI.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSponsor1MI.SelectedText = "";
+            this.txtSponsor1MI.SelectionLength = 0;
+            this.txtSponsor1MI.SelectionStart = 0;
+            this.txtSponsor1MI.ShortcutsEnabled = true;
+            this.txtSponsor1MI.Size = new System.Drawing.Size(31, 23);
+            this.txtSponsor1MI.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtSponsor1MI.TabIndex = 35;
+            this.txtSponsor1MI.UseSelectable = true;
+            this.txtSponsor1MI.WaterMark = "M.I.";
+            this.txtSponsor1MI.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSponsor1MI.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // txtSponsor1FN
+            // 
+            // 
+            // 
+            // 
+            this.txtSponsor1FN.CustomButton.Image = null;
+            this.txtSponsor1FN.CustomButton.Location = new System.Drawing.Point(84, 1);
+            this.txtSponsor1FN.CustomButton.Name = "";
+            this.txtSponsor1FN.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSponsor1FN.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSponsor1FN.CustomButton.TabIndex = 1;
+            this.txtSponsor1FN.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSponsor1FN.CustomButton.UseSelectable = true;
+            this.txtSponsor1FN.CustomButton.Visible = false;
+            this.txtSponsor1FN.Lines = new string[0];
+            this.txtSponsor1FN.Location = new System.Drawing.Point(5, 54);
+            this.txtSponsor1FN.MaxLength = 32767;
+            this.txtSponsor1FN.Name = "txtSponsor1FN";
+            this.txtSponsor1FN.PasswordChar = '\0';
+            this.txtSponsor1FN.PromptText = "First Name";
+            this.txtSponsor1FN.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSponsor1FN.SelectedText = "";
+            this.txtSponsor1FN.SelectionLength = 0;
+            this.txtSponsor1FN.SelectionStart = 0;
+            this.txtSponsor1FN.ShortcutsEnabled = true;
+            this.txtSponsor1FN.Size = new System.Drawing.Size(106, 23);
+            this.txtSponsor1FN.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtSponsor1FN.TabIndex = 34;
+            this.txtSponsor1FN.UseSelectable = true;
+            this.txtSponsor1FN.WaterMark = "First Name";
+            this.txtSponsor1FN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSponsor1FN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // label11
             // 
@@ -1355,7 +1244,7 @@
             // 
             // panelMinister
             // 
-            this.panelMinister.Controls.Add(this.cueTextBox1);
+            this.panelMinister.Controls.Add(this.txtRemarks);
             this.panelMinister.Controls.Add(this.dtpLicenseDate);
             this.panelMinister.Controls.Add(this.dtpMarriageDate);
             this.panelMinister.Controls.Add(this.cmbMinister);
@@ -1368,17 +1257,6 @@
             this.panelMinister.Name = "panelMinister";
             this.panelMinister.Size = new System.Drawing.Size(637, 111);
             this.panelMinister.TabIndex = 3;
-            // 
-            // cueTextBox1
-            // 
-            this.cueTextBox1.Cue = null;
-            this.cueTextBox1.CueColor = System.Drawing.Color.Empty;
-            this.cueTextBox1.Location = new System.Drawing.Point(336, 40);
-            this.cueTextBox1.Multiline = true;
-            this.cueTextBox1.Name = "cueTextBox1";
-            this.cueTextBox1.Size = new System.Drawing.Size(286, 64);
-            this.cueTextBox1.TabIndex = 33;
-            this.cueTextBox1.Tag = "o";
             // 
             // dtpLicenseDate
             // 
@@ -1457,6 +1335,18 @@
             this.controlBar_panel.Size = new System.Drawing.Size(660, 33);
             this.controlBar_panel.TabIndex = 56;
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(3, 9);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(153, 20);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "Marriage Application";
+            // 
             // close_button
             // 
             this.close_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1497,17 +1387,261 @@
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // label21
+            // label22
             // 
-            this.label21.AutoSize = true;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(3, 9);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(153, 20);
-            this.label21.TabIndex = 1;
-            this.label21.Text = "Marriage Application";
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(322, 80);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(67, 17);
+            this.label22.TabIndex = 50;
+            this.label22.Text = "Residence";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(323, 128);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(51, 17);
+            this.label23.TabIndex = 50;
+            this.label23.Text = "Gender";
+            // 
+            // txtSponsor2FN
+            // 
+            // 
+            // 
+            // 
+            this.txtSponsor2FN.CustomButton.Image = null;
+            this.txtSponsor2FN.CustomButton.Location = new System.Drawing.Point(84, 1);
+            this.txtSponsor2FN.CustomButton.Name = "";
+            this.txtSponsor2FN.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSponsor2FN.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSponsor2FN.CustomButton.TabIndex = 1;
+            this.txtSponsor2FN.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSponsor2FN.CustomButton.UseSelectable = true;
+            this.txtSponsor2FN.CustomButton.Visible = false;
+            this.txtSponsor2FN.Lines = new string[0];
+            this.txtSponsor2FN.Location = new System.Drawing.Point(326, 54);
+            this.txtSponsor2FN.MaxLength = 32767;
+            this.txtSponsor2FN.Name = "txtSponsor2FN";
+            this.txtSponsor2FN.PasswordChar = '\0';
+            this.txtSponsor2FN.PromptText = "First Name";
+            this.txtSponsor2FN.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSponsor2FN.SelectedText = "";
+            this.txtSponsor2FN.SelectionLength = 0;
+            this.txtSponsor2FN.SelectionStart = 0;
+            this.txtSponsor2FN.ShortcutsEnabled = true;
+            this.txtSponsor2FN.Size = new System.Drawing.Size(106, 23);
+            this.txtSponsor2FN.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtSponsor2FN.TabIndex = 34;
+            this.txtSponsor2FN.UseSelectable = true;
+            this.txtSponsor2FN.WaterMark = "First Name";
+            this.txtSponsor2FN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSponsor2FN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(325, 31);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(43, 17);
+            this.label24.TabIndex = 51;
+            this.label24.Text = "Name";
+            // 
+            // txtSponsor2MI
+            // 
+            // 
+            // 
+            // 
+            this.txtSponsor2MI.CustomButton.Image = null;
+            this.txtSponsor2MI.CustomButton.Location = new System.Drawing.Point(9, 1);
+            this.txtSponsor2MI.CustomButton.Name = "";
+            this.txtSponsor2MI.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSponsor2MI.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSponsor2MI.CustomButton.TabIndex = 1;
+            this.txtSponsor2MI.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSponsor2MI.CustomButton.UseSelectable = true;
+            this.txtSponsor2MI.CustomButton.Visible = false;
+            this.txtSponsor2MI.Lines = new string[0];
+            this.txtSponsor2MI.Location = new System.Drawing.Point(437, 54);
+            this.txtSponsor2MI.MaxLength = 32767;
+            this.txtSponsor2MI.Name = "txtSponsor2MI";
+            this.txtSponsor2MI.PasswordChar = '\0';
+            this.txtSponsor2MI.PromptText = "M.I.";
+            this.txtSponsor2MI.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSponsor2MI.SelectedText = "";
+            this.txtSponsor2MI.SelectionLength = 0;
+            this.txtSponsor2MI.SelectionStart = 0;
+            this.txtSponsor2MI.ShortcutsEnabled = true;
+            this.txtSponsor2MI.Size = new System.Drawing.Size(31, 23);
+            this.txtSponsor2MI.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtSponsor2MI.TabIndex = 35;
+            this.txtSponsor2MI.UseSelectable = true;
+            this.txtSponsor2MI.WaterMark = "M.I.";
+            this.txtSponsor2MI.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSponsor2MI.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.radioSponsor2Male);
+            this.flowLayoutPanel2.Controls.Add(this.radioSponsor2Female);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(328, 148);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(136, 28);
+            this.flowLayoutPanel2.TabIndex = 53;
+            // 
+            // radioSponsor2Male
+            // 
+            this.radioSponsor2Male.AutoSize = true;
+            this.radioSponsor2Male.Checked = true;
+            this.radioSponsor2Male.Location = new System.Drawing.Point(3, 3);
+            this.radioSponsor2Male.Name = "radioSponsor2Male";
+            this.radioSponsor2Male.Size = new System.Drawing.Size(49, 15);
+            this.radioSponsor2Male.Style = MetroFramework.MetroColorStyle.Silver;
+            this.radioSponsor2Male.TabIndex = 40;
+            this.radioSponsor2Male.TabStop = true;
+            this.radioSponsor2Male.Text = "Male";
+            this.radioSponsor2Male.UseSelectable = true;
+            this.radioSponsor2Male.UseStyleColors = true;
+            // 
+            // radioSponsor2Female
+            // 
+            this.radioSponsor2Female.AutoSize = true;
+            this.radioSponsor2Female.Location = new System.Drawing.Point(58, 3);
+            this.radioSponsor2Female.Name = "radioSponsor2Female";
+            this.radioSponsor2Female.Size = new System.Drawing.Size(61, 15);
+            this.radioSponsor2Female.Style = MetroFramework.MetroColorStyle.Silver;
+            this.radioSponsor2Female.TabIndex = 41;
+            this.radioSponsor2Female.Text = "Female";
+            this.radioSponsor2Female.UseSelectable = true;
+            this.radioSponsor2Female.UseStyleColors = true;
+            // 
+            // txtSponsor2LN
+            // 
+            // 
+            // 
+            // 
+            this.txtSponsor2LN.CustomButton.Image = null;
+            this.txtSponsor2LN.CustomButton.Location = new System.Drawing.Point(70, 1);
+            this.txtSponsor2LN.CustomButton.Name = "";
+            this.txtSponsor2LN.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSponsor2LN.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSponsor2LN.CustomButton.TabIndex = 1;
+            this.txtSponsor2LN.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSponsor2LN.CustomButton.UseSelectable = true;
+            this.txtSponsor2LN.CustomButton.Visible = false;
+            this.txtSponsor2LN.Lines = new string[0];
+            this.txtSponsor2LN.Location = new System.Drawing.Point(474, 54);
+            this.txtSponsor2LN.MaxLength = 32767;
+            this.txtSponsor2LN.Name = "txtSponsor2LN";
+            this.txtSponsor2LN.PasswordChar = '\0';
+            this.txtSponsor2LN.PromptText = "Last Name";
+            this.txtSponsor2LN.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSponsor2LN.SelectedText = "";
+            this.txtSponsor2LN.SelectionLength = 0;
+            this.txtSponsor2LN.SelectionStart = 0;
+            this.txtSponsor2LN.ShortcutsEnabled = true;
+            this.txtSponsor2LN.Size = new System.Drawing.Size(92, 23);
+            this.txtSponsor2LN.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtSponsor2LN.TabIndex = 36;
+            this.txtSponsor2LN.UseSelectable = true;
+            this.txtSponsor2LN.WaterMark = "Last Name";
+            this.txtSponsor2LN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSponsor2LN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // txtSponsor2Suffix
+            // 
+            // 
+            // 
+            // 
+            this.txtSponsor2Suffix.CustomButton.Image = null;
+            this.txtSponsor2Suffix.CustomButton.Location = new System.Drawing.Point(11, 1);
+            this.txtSponsor2Suffix.CustomButton.Name = "";
+            this.txtSponsor2Suffix.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSponsor2Suffix.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSponsor2Suffix.CustomButton.TabIndex = 1;
+            this.txtSponsor2Suffix.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSponsor2Suffix.CustomButton.UseSelectable = true;
+            this.txtSponsor2Suffix.CustomButton.Visible = false;
+            this.txtSponsor2Suffix.Lines = new string[0];
+            this.txtSponsor2Suffix.Location = new System.Drawing.Point(569, 54);
+            this.txtSponsor2Suffix.MaxLength = 32767;
+            this.txtSponsor2Suffix.Name = "txtSponsor2Suffix";
+            this.txtSponsor2Suffix.PasswordChar = '\0';
+            this.txtSponsor2Suffix.PromptText = "Suffix";
+            this.txtSponsor2Suffix.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSponsor2Suffix.SelectedText = "";
+            this.txtSponsor2Suffix.SelectionLength = 0;
+            this.txtSponsor2Suffix.SelectionStart = 0;
+            this.txtSponsor2Suffix.ShortcutsEnabled = true;
+            this.txtSponsor2Suffix.Size = new System.Drawing.Size(33, 23);
+            this.txtSponsor2Suffix.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtSponsor2Suffix.TabIndex = 37;
+            this.txtSponsor2Suffix.UseSelectable = true;
+            this.txtSponsor2Suffix.WaterMark = "Suffix";
+            this.txtSponsor2Suffix.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSponsor2Suffix.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // txtSponsor2Residence
+            // 
+            // 
+            // 
+            // 
+            this.txtSponsor2Residence.CustomButton.Image = null;
+            this.txtSponsor2Residence.CustomButton.Location = new System.Drawing.Point(254, 1);
+            this.txtSponsor2Residence.CustomButton.Name = "";
+            this.txtSponsor2Residence.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSponsor2Residence.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSponsor2Residence.CustomButton.TabIndex = 1;
+            this.txtSponsor2Residence.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSponsor2Residence.CustomButton.UseSelectable = true;
+            this.txtSponsor2Residence.CustomButton.Visible = false;
+            this.txtSponsor2Residence.Lines = new string[0];
+            this.txtSponsor2Residence.Location = new System.Drawing.Point(326, 102);
+            this.txtSponsor2Residence.MaxLength = 32767;
+            this.txtSponsor2Residence.Name = "txtSponsor2Residence";
+            this.txtSponsor2Residence.PasswordChar = '\0';
+            this.txtSponsor2Residence.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSponsor2Residence.SelectedText = "";
+            this.txtSponsor2Residence.SelectionLength = 0;
+            this.txtSponsor2Residence.SelectionStart = 0;
+            this.txtSponsor2Residence.ShortcutsEnabled = true;
+            this.txtSponsor2Residence.Size = new System.Drawing.Size(276, 23);
+            this.txtSponsor2Residence.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtSponsor2Residence.TabIndex = 38;
+            this.txtSponsor2Residence.UseSelectable = true;
+            this.txtSponsor2Residence.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSponsor2Residence.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtRemarks
+            // 
+            // 
+            // 
+            // 
+            this.txtRemarks.CustomButton.Image = null;
+            this.txtRemarks.CustomButton.Location = new System.Drawing.Point(227, 2);
+            this.txtRemarks.CustomButton.Name = "";
+            this.txtRemarks.CustomButton.Size = new System.Drawing.Size(59, 59);
+            this.txtRemarks.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtRemarks.CustomButton.TabIndex = 1;
+            this.txtRemarks.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtRemarks.CustomButton.UseSelectable = true;
+            this.txtRemarks.CustomButton.Visible = false;
+            this.txtRemarks.Lines = new string[0];
+            this.txtRemarks.Location = new System.Drawing.Point(333, 40);
+            this.txtRemarks.MaxLength = 32767;
+            this.txtRemarks.Multiline = true;
+            this.txtRemarks.Name = "txtRemarks";
+            this.txtRemarks.PasswordChar = '\0';
+            this.txtRemarks.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtRemarks.SelectedText = "";
+            this.txtRemarks.SelectionLength = 0;
+            this.txtRemarks.SelectionStart = 0;
+            this.txtRemarks.ShortcutsEnabled = true;
+            this.txtRemarks.Size = new System.Drawing.Size(289, 64);
+            this.txtRemarks.TabIndex = 34;
+            this.txtRemarks.UseSelectable = true;
+            this.txtRemarks.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtRemarks.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // MarriageForm
             // 
@@ -1535,7 +1669,6 @@
             this.panelGroom.PerformLayout();
             this.panelBride.ResumeLayout(false);
             this.panelBride.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSponsor)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -1544,6 +1677,8 @@
             this.panelMinister.PerformLayout();
             this.controlBar_panel.ResumeLayout(false);
             this.controlBar_panel.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1567,7 +1702,6 @@
         private System.Windows.Forms.Label lblBName;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private MetroFramework.Controls.MetroGrid dgvSponsor;
         private System.Windows.Forms.Panel panel3;
         private MetroFramework.Controls.MetroComboBox cmbGStatus;
         private System.Windows.Forms.Label label14;
@@ -1580,17 +1714,15 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private CueTextBox cueTextBox1;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private MetroFramework.Controls.MetroRadioButton radioMale;
-        private MetroFramework.Controls.MetroRadioButton radioFemale;
+        private MetroFramework.Controls.MetroRadioButton radioSponsor1Male;
+        private MetroFramework.Controls.MetroRadioButton radioSponsor1Female;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel controlBar_panel;
         private System.Windows.Forms.Button close_button;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnAddSponsor;
         private System.Windows.Forms.Button btnSubmit;
         private MetroFramework.Controls.MetroTextBox txtGResidence;
         private MetroFramework.Controls.MetroTextBox txtGFSuffix;
@@ -1612,17 +1744,23 @@
         private MetroFramework.Controls.MetroTextBox txtBResidence;
         private MetroFramework.Controls.MetroTextBox txtBFFN;
         private MetroFramework.Controls.MetroTextBox txtBBirthPlace;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn midName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn suffix;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn residence;
-        private MetroFramework.Controls.MetroTextBox txtSponsorResidence;
-        private MetroFramework.Controls.MetroTextBox txtSponsorSuffix;
-        private MetroFramework.Controls.MetroTextBox txtSponsorLN;
-        private MetroFramework.Controls.MetroTextBox txtSponsorMI;
-        private MetroFramework.Controls.MetroTextBox txtSponsorFN;
+        private MetroFramework.Controls.MetroTextBox txtSponsor1Residence;
+        private MetroFramework.Controls.MetroTextBox txtSponsor1Suffix;
+        private MetroFramework.Controls.MetroTextBox txtSponsor1LN;
+        private MetroFramework.Controls.MetroTextBox txtSponsor1MI;
+        private MetroFramework.Controls.MetroTextBox txtSponsor1FN;
         private System.Windows.Forms.Label label21;
+        private MetroFramework.Controls.MetroTextBox txtSponsor2Residence;
+        private MetroFramework.Controls.MetroTextBox txtSponsor2Suffix;
+        private MetroFramework.Controls.MetroTextBox txtSponsor2LN;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private MetroFramework.Controls.MetroRadioButton radioSponsor2Male;
+        private MetroFramework.Controls.MetroRadioButton radioSponsor2Female;
+        private MetroFramework.Controls.MetroTextBox txtSponsor2MI;
+        private System.Windows.Forms.Label label24;
+        private MetroFramework.Controls.MetroTextBox txtSponsor2FN;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private MetroFramework.Controls.MetroTextBox txtRemarks;
     }
 }

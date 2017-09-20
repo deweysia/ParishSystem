@@ -49,7 +49,7 @@
             this.txtVenue = new System.Windows.Forms.TextBox();
             this.txtDetails = new ParishSystem.CueTextBox();
             this.txtTitle = new ParishSystem.CueTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelControl = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@
             this.tabScheduleType.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -88,7 +88,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 8);
+            this.label2.Location = new System.Drawing.Point(9, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 32);
             this.label2.TabIndex = 4;
@@ -98,7 +98,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 56);
+            this.label3.Location = new System.Drawing.Point(9, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 32);
             this.label3.TabIndex = 4;
@@ -121,7 +121,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.88235F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.11765F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel1.Controls.Add(this.dtpTimeStart, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.dtpDateEnd, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
@@ -143,7 +143,7 @@
             this.dtpTimeStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpTimeStart.CustomFormat = "hh:mm tt";
             this.dtpTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTimeStart.Location = new System.Drawing.Point(246, 13);
+            this.dtpTimeStart.Location = new System.Drawing.Point(244, 13);
             this.dtpTimeStart.Name = "dtpTimeStart";
             this.dtpTimeStart.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpTimeStart.ShowUpDown = true;
@@ -155,7 +155,7 @@
             // 
             this.dtpDateEnd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDateEnd.FontSize = MetroFramework.MetroDateTimeSize.Small;
-            this.dtpDateEnd.Location = new System.Drawing.Point(64, 59);
+            this.dtpDateEnd.Location = new System.Drawing.Point(62, 59);
             this.dtpDateEnd.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpDateEnd.Name = "dtpDateEnd";
             this.dtpDateEnd.Size = new System.Drawing.Size(158, 25);
@@ -166,7 +166,7 @@
             // 
             this.dtpDateStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDateStart.FontSize = MetroFramework.MetroDateTimeSize.Small;
-            this.dtpDateStart.Location = new System.Drawing.Point(64, 11);
+            this.dtpDateStart.Location = new System.Drawing.Point(62, 11);
             this.dtpDateStart.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpDateStart.Name = "dtpDateStart";
             this.dtpDateStart.Size = new System.Drawing.Size(158, 25);
@@ -178,7 +178,7 @@
             this.dtpTimeEnd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpTimeEnd.CustomFormat = "hh:mm tt";
             this.dtpTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTimeEnd.Location = new System.Drawing.Point(246, 61);
+            this.dtpTimeEnd.Location = new System.Drawing.Point(244, 61);
             this.dtpTimeEnd.Name = "dtpTimeEnd";
             this.dtpTimeEnd.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpTimeEnd.ShowUpDown = true;
@@ -223,10 +223,10 @@
             // 
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.cmbMinister);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
+            this.tabPage2.Size = new System.Drawing.Size(223, 71);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Appt";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -235,7 +235,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label6.Location = new System.Drawing.Point(3, 31);
+            this.label6.Location = new System.Drawing.Point(3, 28);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 16);
             this.label6.TabIndex = 6;
@@ -247,19 +247,19 @@
             this.cmbMinister.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.cmbMinister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMinister.FormattingEnabled = true;
-            this.cmbMinister.Location = new System.Drawing.Point(3, 47);
+            this.cmbMinister.Location = new System.Drawing.Point(3, 44);
             this.cmbMinister.Name = "cmbMinister";
-            this.cmbMinister.Size = new System.Drawing.Size(186, 24);
+            this.cmbMinister.Size = new System.Drawing.Size(217, 24);
             this.cmbMinister.TabIndex = 7;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.txtVenue);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(192, 74);
+            this.tabPage3.Size = new System.Drawing.Size(223, 71);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Blood Event";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -268,7 +268,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label7.Location = new System.Drawing.Point(3, 33);
+            this.label7.Location = new System.Drawing.Point(3, 30);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 16);
             this.label7.TabIndex = 8;
@@ -277,9 +277,9 @@
             // txtVenue
             // 
             this.txtVenue.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtVenue.Location = new System.Drawing.Point(3, 49);
+            this.txtVenue.Location = new System.Drawing.Point(3, 46);
             this.txtVenue.Name = "txtVenue";
-            this.txtVenue.Size = new System.Drawing.Size(186, 22);
+            this.txtVenue.Size = new System.Drawing.Size(217, 22);
             this.txtVenue.TabIndex = 9;
             // 
             // txtDetails
@@ -306,16 +306,16 @@
             this.txtTitle.Size = new System.Drawing.Size(135, 22);
             this.txtTitle.TabIndex = 5;
             // 
-            // panel1
+            // panelControl
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(396, 34);
-            this.panel1.TabIndex = 23;
+            this.panelControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelControl.Controls.Add(this.pictureBox1);
+            this.panelControl.Controls.Add(this.label8);
+            this.panelControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl.Location = new System.Drawing.Point(0, 0);
+            this.panelControl.Name = "panelControl";
+            this.panelControl.Size = new System.Drawing.Size(396, 34);
+            this.panelControl.TabIndex = 23;
             // 
             // pictureBox1
             // 
@@ -329,6 +329,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(40, 34);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.UseVisualStyleBackColor = true;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label8
             // 
@@ -365,7 +366,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(396, 454);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelControl);
             this.Controls.Add(this.tabScheduleType);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.txtDetails);
@@ -386,8 +387,8 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelControl.ResumeLayout(false);
+            this.panelControl.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,7 +416,7 @@
         private System.Windows.Forms.ComboBox cmbMinister;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtVenue;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelControl;
         private System.Windows.Forms.Button pictureBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnAdd;

@@ -366,31 +366,20 @@ namespace ParishSystem
 
         private void metroTabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnEditBap_Click(object sender, EventArgs e)
         {
             DataGridViewRow dgvr = dgvBaptism.SelectedRows[0];
             DataRow dr = ((DataRowView)dgvr.DataBoundItem).Row;
-            SacramentForm f = new SacramentForm(OperationType.Edit, SacramentType.Baptism, dr);
-            DialogResult result = f.ShowDialog();
-
-            if(result == DialogResult.OK)
-            {
-                Notification.Show(State.SacramentEditSuccess);
-            }else if (result != DialogResult.Cancel)
-            {
-                Notification.Show(State.SacramentEditFail);
-            }
+            editSacrament(SacramentType.Baptism, dr);
             
         }
 
-        private void btnEditSacramentCon_Click(object sender, EventArgs e)
+        private void editSacrament(SacramentType sacrament, DataRow dr)
         {
-            DataGridViewRow dgvr = dgvConfirmation.SelectedRows[0];
-            DataRow dr = ((DataRowView)dgvr.DataBoundItem).Row;
-            SacramentForm f = new SacramentForm(OperationType.Edit, SacramentType.Confirmation, dr);
+            SacramentForm f = new SacramentForm(OperationType.Edit, sacrament, dr);
             DialogResult result = f.ShowDialog();
 
             if (result == DialogResult.OK)
@@ -401,6 +390,34 @@ namespace ParishSystem
             {
                 Notification.Show(State.SacramentEditFail);
             }
+
+            loadSacrament(sacrament);
+        }
+        private void btnEditCon_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow dgvr = dgvConfirmation.SelectedRows[0];
+            DataRow dr = ((DataRowView)dgvr.DataBoundItem).Row;
+            editSacrament(SacramentType.Confirmation, dr);
+        }
+
+        private void btnEditMar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow dgvr = dgvMarriage.SelectedRows[0];
+            DataRow dr = ((DataRowView)dgvr.DataBoundItem).Row;
+            
+            MarriageForm f = new MarriageForm(OperationType.Edit, dr);
+
+            DialogResult result = f.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                Notification.Show(State.SacramentEditSuccess);
+            }
+            else if (result != DialogResult.Cancel)
+            {
+                Notification.Show(State.SacramentEditFail);
+            }
+
+            loadSacrament(SacramentType.Marriage);
         }
 
         private void btnSearchBap_Click(object sender, EventArgs e)
