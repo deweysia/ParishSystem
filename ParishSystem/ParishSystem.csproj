@@ -119,6 +119,12 @@
     <Compile Include="AddSchedule.Designer.cs">
       <DependentUpon>AddSchedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminCredentials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCredentials.Designer.cs">
+      <DependentUpon>AdminCredentials.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdvanceSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -389,6 +395,9 @@
     <EmbeddedResource Include="AddSchedule.resx">
       <DependentUpon>AddSchedule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminCredentials.resx">
+      <DependentUpon>AdminCredentials.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdvanceSearch.resx">
       <DependentUpon>AdvanceSearch.cs</DependentUpon>
     </EmbeddedResource>
@@ -621,6 +630,8 @@
     <None Include="Resources\icons8-Delete Filled-30.png" />
     <None Include="Resources\icons8-Sign Out Filled-20.png" />
     <None Include="Resources\icons8-Expand Arrow-20 White.png" />
+    <None Include="Resources\icons8-Pencil-20.png" />
+    <None Include="Resources\icons8-Save-20.png" />
     <Content Include="Tools\SQL_Writer.jar" />
     <None Include="Resources\messageBox_cancel.png" />
     <None Include="Resources\messageBox_success.png" />

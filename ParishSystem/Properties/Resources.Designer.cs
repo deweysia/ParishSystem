@@ -803,6 +803,16 @@ namespace ParishSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Pencil_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Pencil_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Pencil_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Pencil_32", resourceCulture);
@@ -876,6 +886,16 @@ namespace ParishSystem.Properties {
         internal static System.Drawing.Bitmap icons8_Refresh_Filled_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Refresh_Filled_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Save_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Save_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

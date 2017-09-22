@@ -110,7 +110,7 @@
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(22, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 32);
@@ -172,7 +172,7 @@
             this.paymentPanel.Controls.Add(this.editPrice_button);
             this.paymentPanel.Controls.Add(this.price_nud_button_CRB);
             this.paymentPanel.Controls.Add(this.priceHeader_label);
-            this.paymentPanel.Location = new System.Drawing.Point(68, 410);
+            this.paymentPanel.Location = new System.Drawing.Point(68, 408);
             this.paymentPanel.Name = "paymentPanel";
             this.paymentPanel.Size = new System.Drawing.Size(320, 66);
             this.paymentPanel.TabIndex = 82;
@@ -180,11 +180,13 @@
             // 
             // cancelPrice_button
             // 
+            this.cancelPrice_button.FlatAppearance.BorderSize = 0;
+            this.cancelPrice_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelPrice_button.Image = global::ParishSystem.Properties.Resources.icons8_Delete_Filled_20_666666;
             this.cancelPrice_button.Location = new System.Drawing.Point(234, 12);
             this.cancelPrice_button.Name = "cancelPrice_button";
             this.cancelPrice_button.Size = new System.Drawing.Size(36, 40);
             this.cancelPrice_button.TabIndex = 80;
-            this.cancelPrice_button.Text = "C";
             this.cancelPrice_button.UseVisualStyleBackColor = true;
             this.cancelPrice_button.Visible = false;
             this.cancelPrice_button.Click += new System.EventHandler(this.cancelPrice_button_Click);
@@ -202,12 +204,14 @@
             // 
             // editPrice_button
             // 
+            this.editPrice_button.FlatAppearance.BorderSize = 0;
+            this.editPrice_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editPrice_button.Image = global::ParishSystem.Properties.Resources.icons8_Pencil_20;
             this.editPrice_button.Location = new System.Drawing.Point(276, 12);
             this.editPrice_button.Name = "editPrice_button";
             this.editPrice_button.Size = new System.Drawing.Size(36, 40);
             this.editPrice_button.TabIndex = 81;
             this.editPrice_button.Tag = "e";
-            this.editPrice_button.Text = "E";
             this.editPrice_button.UseVisualStyleBackColor = true;
             this.editPrice_button.Click += new System.EventHandler(this.editPrice_button_Click);
             // 
@@ -215,9 +219,11 @@
             // 
             this.price_nud_button_CRB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.price_nud_button_CRB.DecimalPlaces = 2;
-            this.price_nud_button_CRB.Location = new System.Drawing.Point(87, 20);
+            this.price_nud_button_CRB.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price_nud_button_CRB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.price_nud_button_CRB.Location = new System.Drawing.Point(87, 17);
             this.price_nud_button_CRB.Name = "price_nud_button_CRB";
-            this.price_nud_button_CRB.Size = new System.Drawing.Size(115, 25);
+            this.price_nud_button_CRB.Size = new System.Drawing.Size(251, 35);
             this.price_nud_button_CRB.TabIndex = 71;
             this.price_nud_button_CRB.ThousandsSeparator = true;
             this.price_nud_button_CRB.Visible = false;
@@ -226,7 +232,7 @@
             // priceHeader_label
             // 
             this.priceHeader_label.AutoSize = true;
-            this.priceHeader_label.Location = new System.Drawing.Point(5, 20);
+            this.priceHeader_label.Location = new System.Drawing.Point(-3, 22);
             this.priceHeader_label.Name = "priceHeader_label";
             this.priceHeader_label.Size = new System.Drawing.Size(44, 21);
             this.priceHeader_label.TabIndex = 74;
@@ -496,7 +502,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label18.Location = new System.Drawing.Point(64, 221);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(121, 21);
@@ -507,7 +513,7 @@
             // 
             this.CNNumber_CRB.AutoSize = true;
             this.CNNumber_CRB.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
-            this.CNNumber_CRB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.CNNumber_CRB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.CNNumber_CRB.Location = new System.Drawing.Point(61, 242);
             this.CNNumber_CRB.Name = "CNNumber_CRB";
             this.CNNumber_CRB.Size = new System.Drawing.Size(145, 37);
@@ -534,7 +540,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label16.Location = new System.Drawing.Point(65, 121);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(120, 21);
@@ -545,7 +551,7 @@
             // 
             this.CVNumber_CRB.AutoSize = true;
             this.CVNumber_CRB.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
-            this.CVNumber_CRB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.CVNumber_CRB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.CVNumber_CRB.Location = new System.Drawing.Point(61, 142);
             this.CVNumber_CRB.Name = "CVNumber_CRB";
             this.CVNumber_CRB.Size = new System.Drawing.Size(145, 37);

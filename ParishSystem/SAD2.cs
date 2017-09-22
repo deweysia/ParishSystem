@@ -103,18 +103,28 @@ namespace ParishSystem
             drag.makeDraggable(panel_controlbox);
             drag.makeDraggable(panel2);
 
-            SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(255, 50,sacrament_cabinet_panel,false));
-            SubMenu.Add(cash_cabinet, new Panel_Size_Pair(295, 50, cash_cabinet_panel, false));
-            SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));
-            SubMenu.Add(admin_cabinet, new Panel_Size_Pair(155, 50, admin_cabinet_panel, false));
+            if (true)//ALL
+            {
+                SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(255, 50, sacrament_cabinet_panel, false));
+                SubMenu.Add(cash_cabinet, new Panel_Size_Pair(295, 50, cash_cabinet_panel, false));
+                SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));
+                SubMenu.Add(admin_cabinet, new Panel_Size_Pair(155, 50, admin_cabinet_panel, false));
+            }
+            else if (true)//SECRETARY
+            {
+                SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(153, 50, sacrament_cabinet_panel, false));
+                SubMenu.Add(cash_cabinet, new Panel_Size_Pair(295, 50, cash_cabinet_panel, false));
+                SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));
 
-          
-            menu_flowlayout.HorizontalScroll.Maximum = 0;
-            menu_flowlayout.AutoScroll = false;
-            menu_flowlayout.VerticalScroll.Visible = false;
-            menu_flowlayout.HorizontalScroll.Visible = false;
-            menu_flowlayout.AutoScroll = true;
 
+            }
+            else if (true)//TREASURER
+            {
+                SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(255, 50, sacrament_cabinet_panel, false));
+                SubMenu.Add(cash_cabinet, new Panel_Size_Pair(295, 50, cash_cabinet_panel, false));
+                SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));
+                SubMenu.Add(admin_cabinet, new Panel_Size_Pair(155, 50, admin_cabinet_panel, false));
+            }
         }
         #region Effects
 
@@ -167,7 +177,7 @@ namespace ParishSystem
         bool Menu_open = true;
         private void MenuTimer_Tick(object sender, EventArgs e)
         {
-            this.Update();
+            //this.Update();
             if (!Menu_open)//menuopen== false 
             {
                 if (Menu_panel.Size.Width < 232)
@@ -293,7 +303,10 @@ namespace ParishSystem
 
         private void btn_Close_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageDialog.Show("Are you sure you wish to log out?", MessageDialogButtons.YesNo, MessageDialogIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
         private void closeAllSubMenu()
         {

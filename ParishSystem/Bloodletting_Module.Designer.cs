@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.blooddonor_panel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.search_button_blood = new System.Windows.Forms.Button();
             this.search_textbox_blood = new System.Windows.Forms.TextBox();
             this.add_button_donor = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@
             // 
             this.blooddonor_panel.BackColor = System.Drawing.Color.White;
             this.blooddonor_panel.Controls.Add(this.panel1);
-            this.blooddonor_panel.Controls.Add(this.label8);
+            this.blooddonor_panel.Controls.Add(this.label);
             this.blooddonor_panel.Controls.Add(this.search_button_blood);
             this.blooddonor_panel.Controls.Add(this.search_textbox_blood);
             this.blooddonor_panel.Controls.Add(this.add_button_donor);
@@ -65,17 +65,17 @@
             this.panel1.Size = new System.Drawing.Size(816, 1);
             this.panel1.TabIndex = 40;
             // 
-            // label8
+            // label
             // 
-            this.label8.AutoSize = true;
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(35, 20);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(163, 32);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Blood Donors";
+            this.label.AutoSize = true;
+            this.label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.ForeColor = System.Drawing.Color.Black;
+            this.label.Location = new System.Drawing.Point(35, 20);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(163, 32);
+            this.label.TabIndex = 39;
+            this.label.Text = "Blood Donors";
             // 
             // search_button_blood
             // 
@@ -200,7 +200,7 @@
         private System.Windows.Forms.TextBox search_textbox_blood;
         private System.Windows.Forms.Button add_button_donor;
         private System.Windows.Forms.DataGridView bloodletting_dgv;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.Panel panel1;
     }
 }

@@ -41,6 +41,11 @@ namespace ParishSystem
             iconPictureBox.Image = imageList1.Images[(int)i];
             return this.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public static class MessageDialog

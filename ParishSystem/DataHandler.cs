@@ -591,9 +591,6 @@ namespace ParishSystem
 
         public bool deleteBloodDonation(int bloodDonationID)
         {
-            if (!idExists("bloodDonation", "bloodDonationID", bloodDonationID))
-                return false;
-
             //addBloodDonationLog(bloodDonationID); //ModInfo before deletion
             //updateModificationInfo("bloodDonation", "bloodDonationID", bloodDonationID);
 
@@ -4555,6 +4552,11 @@ namespace ParishSystem
                     SaveExcelFile(newWorkbook);
                 }
             }
+
+        }
+        public bool isBloodDonationClaimed(int bloodDonationID)
+        {
+            return runQuery($@"Select * from blooddonation where bloodDonationID = {bloodDonationID} and bloodclaimant is not null").Rows.Count > 0 ;
 
         }
 
