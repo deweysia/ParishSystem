@@ -817,8 +817,8 @@ namespace ParishSystem
             }
             else
             {
-                //update parent
-                int pID = int.Parse(dt.Rows[0][0].ToString());
+                //update parent; The parent is based on the int value of gender - 1;
+                int pID = int.Parse(dt.Rows[(int)Pgender - 1][0].ToString());
                 success &= editParent(pID, PfirstName, PmidName, PlastName, Psuffix, Pgender);
             }
 
