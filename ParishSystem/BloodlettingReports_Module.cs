@@ -26,7 +26,10 @@ namespace ParishSystem
             {
                 bloodlettingeventreport_combobox.Items.Add(new ComboboxContent(int.Parse(dr["bloodDonationEventID"].ToString()), dr["eventName"].ToString()));
             }
+            if (bloodlettingeventreport_combobox.Items.Count > 0)
+            {
                 bloodlettingeventreport_combobox.SelectedIndex = 0;
+            }
                 filterBy_combobox_bloodletting.SelectedIndex = 3;
 
         }

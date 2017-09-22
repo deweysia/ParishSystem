@@ -574,9 +574,6 @@ namespace ParishSystem
 
         public bool deleteBloodDonation(int bloodDonationID)
         {
-            if (!idExists("bloodDonation", "bloodDonationID", bloodDonationID))
-                return false;
-
             //addBloodDonationLog(bloodDonationID); //ModInfo before deletion
             //updateModificationInfo("bloodDonation", "bloodDonationID", bloodDonationID);
 
@@ -3445,8 +3442,8 @@ namespace ParishSystem
                         concat(""(+63)"",contactnumber) as contactnumber,
                         address
                         from blooddonor
-                        inner join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
-                        inner join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
+                        left outer join blooddonation on blooddonation.profileid = blooddonor.blooddonorID
+                        left outer join blooddonationevent on blooddonationevent.bloodDonationEventID = blooddonation.bloodDonationEventID
                         group by blooddonor.blooddonorID";
             return runQuery(q);
         }
@@ -4587,7 +4584,13 @@ namespace ParishSystem
             }
 
         }
+        public bool isBloodDonationClaimed(int bloodDonationID)
+        {
+            return runQuery($@"Select * from blooddonation where bloodDonationID = {bloodDonationID} and bloodclaimant is not null").Rows.Count > 0 ;
 
+        }
+
+       
     }
 
 } 

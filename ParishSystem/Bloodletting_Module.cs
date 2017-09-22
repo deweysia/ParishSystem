@@ -148,6 +148,7 @@ namespace ParishSystem
         private void Bloodletting_Module_Load(object sender, EventArgs e)
         {
             refresh();
+            label.Text = (Mode == 1 ? "Blood Donor" : "Blood Donation Event");
         }
 
         private void search_button_blood_TextChanged(object sender, EventArgs e)

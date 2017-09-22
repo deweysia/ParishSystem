@@ -60,6 +60,7 @@ namespace ParishSystem
                 suggestedPrice_label.Visible = false;
                 editSuggestedPrice_button.Tag = "s";
                 cancelSuggestedPrice_button.Visible = true;
+
             }
             else
             {
@@ -67,6 +68,7 @@ namespace ParishSystem
                 suggestedPrice_label.Visible = true;
                 editSuggestedPrice_button.Tag = "e";
                 cancelSuggestedPrice_button.Visible = false;
+                
             }
         }
         private void cancelSuggestedPrice_button_Click(object sender, EventArgs e)

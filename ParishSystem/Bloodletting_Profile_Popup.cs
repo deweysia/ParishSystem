@@ -107,81 +107,83 @@ namespace ParishSystem
 
         private void edit_button_Click(object sender, EventArgs e)
         {
-            
-            if (edit_button.Tag.ToString() == "s")
-            {
-                cancel_button.Visible = false;
-                delete_button.Visible = false;
-                if (fn.Text != "" && mn.Text != "" && ln.Text != "" && address_textbox.Text != "" && contactNumber_textbox.MaskFull && bloodtype_combobox.Text != "")
+            if(AdminCredentialDialog.Show() == DialogResult.Yes){
+                if (edit_button.Tag.ToString() == "s")
                 {
-                    if (hasProfile)//edit
+                    cancel_button.Visible = false;
+                    delete_button.Visible = false;
+                    if (fn.Text != "" && mn.Text != "" && ln.Text != "" && address_textbox.Text != "" && contactNumber_textbox.MaskFull && bloodtype_combobox.Text != "")
                     {
-                        if (dh.countSameDonor(fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex+1) != 0)//someone exists
+                        if (hasProfile)//edit
                         {
-                            int from = dh.getBloodDonorWhere(fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex+1);
-                            if (from != ProfileID)
+                            if (dh.countSameDonor(fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex + 1) != 0)//someone exists
                             {
-                                DialogResult result = MessageBox.Show("A profile is already existing do you wish to merge the donations?", "", MessageBoxButtons.YesNoCancel);
-                                if (result == DialogResult.Yes)
+                                int from = dh.getBloodDonorWhere(fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex + 1);
+                                if (from != ProfileID)
                                 {
-                                    dh.mergeDonations(from, ProfileID);
-                                    Notification.Show(State.MergingDone);
-                                    
+                                    DialogResult result = MessageBox.Show("A profile is already existing do you wish to merge the donations?", "", MessageBoxButtons.YesNoCancel);
+                                    if (result == DialogResult.Yes)
+                                    {
+                                        dh.mergeDonations(from, ProfileID);
+                                        Notification.Show(State.MergingDone);
+
+                                    }
                                 }
                             }
-                        }
-                        dh.editBloodDonor(ProfileID, fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex+1);
-                        edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
-                        edit_button.Tag = "e";
-                        refreshPerson();
-                    }
-                    else//add
-                    {
-                        if (dh.countSameDonor(fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex) == 0)
-                        {
-                            dh.addBloodDonor(fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex+1);
-                            Notification.Show(State.ProfileAdded);
-                            edit_button.Tag = "e";
+                            dh.editBloodDonor(ProfileID, fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex + 1);
                             edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
-                            hasProfile = true;
+                            edit_button.Tag = "e";
                             refreshPerson();
                         }
-                        else
+                        else//add
                         {
-                            Notification.Show(State.ProfileExists);
-                            ClearProfile();
+                            if (dh.countSameDonor(fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex) == 0)
+                            {
+                                dh.addBloodDonor(fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex + 1);
+                                Notification.Show(State.ProfileAdded);
+                                edit_button.Tag = "e";
+                                edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
+                                hasProfile = true;
+                                refreshPerson();
+                            }
+                            else
+                            {
+                                Notification.Show(State.ProfileExists);
+                                ClearProfile();
+                            }
                         }
-                    }
 
+                    }
+                    else
+                    {
+                        Notification.Show(State.MissingFields);
+                    }
                 }
                 else
                 {
-                    Notification.Show(State.MissingFields);
-                }
-            }
-            else
-            {
-                profileEditmode();
-                edit_button.Tag = "s";
-                edit_button.Image = Properties.Resources.icons8_Save_Filled_32__1_;
-                if (hasProfile)
-                {
-                    fn.Text = firstname_label_bloodletting.Text;
-                    ln.Text = lastname_label_bloodletting.Text;
-                    sf.Text = suffix_label_bloodletting.Text;
-                    mn.Text = mi_label_bloodletting.Text;
+                    profileEditmode();
+                    edit_button.Tag = "s";
+                    edit_button.Image = Properties.Resources.icons8_Save_Filled_32__1_;
+                    if (hasProfile)
+                    {
+                        fn.Text = firstname_label_bloodletting.Text;
+                        ln.Text = lastname_label_bloodletting.Text;
+                        sf.Text = suffix_label_bloodletting.Text;
+                        mn.Text = mi_label_bloodletting.Text;
 
-                    firstname = firstname_label_bloodletting.Text;
-                    midname = mi_label_bloodletting.Text;
-                    lastname = lastname_label_bloodletting.Text;
-                    suffix = suffix_label_bloodletting.Text;
-                    contact = contactNumber_textbox.Text;
-                    addres = address_textbox.Text;
+                        firstname = firstname_label_bloodletting.Text;
+                        midname = mi_label_bloodletting.Text;
+                        lastname = lastname_label_bloodletting.Text;
+                        suffix = suffix_label_bloodletting.Text;
+                        contact = contactNumber_textbox.Text;
+                        addres = address_textbox.Text;
+                    }
+                    cover.Visible = true;
+                    cancel_button.Visible = true;
+                    delete_button.Visible = true;
                 }
-                cover.Visible = true;
-                cancel_button.Visible = true;
-                delete_button.Visible = true;
             }
+           
         }
         private void ClearProfile()
         {
@@ -324,12 +326,18 @@ namespace ParishSystem
 
         private void delete_button_bloodletting_Click(object sender, EventArgs e)
         {
-            dh.deleteBloodDonation(int.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["DonationID"].Value.ToString()));
-            refreshBloodDonation();
-            delete_button_bloodletting.Enabled = false;
-            addDonation_button_bloodletting.Enabled = false;
-            clearAddInfo();
-            addDonation_button_bloodletting.Text = "Add";
+            if (!dh.isBloodDonationClaimed(int.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["blooddonationID"].Value.ToString()))) {
+                dh.deleteBloodDonation(int.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["blooddonationID"].Value.ToString()));
+                refreshBloodDonation();
+                delete_button_bloodletting.Enabled = false;
+                addDonation_button_bloodletting.Enabled = false;
+                clearAddInfo();
+                addDonation_button_bloodletting.Text = "Add";
+            }
+            else
+            {
+                Notification.Show(State.CannotDeleteBloodAlreadyClaimed);
+            }
         }
 
         private void checkContent()
