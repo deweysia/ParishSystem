@@ -278,6 +278,7 @@
     </Compile>
     <Compile Include="Panel_Size_Pair.cs" />
     <Compile Include="Parent.cs" />
+    <Compile Include="Privilege.cs" />
     <Compile Include="Profile.cs" />
     <Compile Include="ProfileModule.cs">
       <SubType>Form</SubType>
@@ -375,6 +376,7 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <EmbeddedResource Include="AddApplication.resx">
       <DependentUpon>AddApplication.cs</DependentUpon>
     </EmbeddedResource>

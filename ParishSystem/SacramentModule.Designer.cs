@@ -44,6 +44,7 @@
             this.btnResetMar = new System.Windows.Forms.Button();
             this.btnAdvanceSearchMar = new System.Windows.Forms.Button();
             this.btnSearchMar = new System.Windows.Forms.Button();
+            this.txtSearchMar = new ParishSystem.CueTextBox();
             this.tlpProfileMar = new System.Windows.Forms.TableLayoutPanel();
             this.btnOpenBrideProfile = new System.Windows.Forms.Button();
             this.btnAddReferencesMar = new System.Windows.Forms.Button();
@@ -70,9 +71,11 @@
             this.btnAdvanceSearchCon = new System.Windows.Forms.Button();
             this.btnResetCon = new System.Windows.Forms.Button();
             this.btnSearchCon = new System.Windows.Forms.Button();
+            this.txtSearchCon = new ParishSystem.CueTextBox();
             this.tlpProfileCon = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddReferencesCon = new System.Windows.Forms.Button();
             this.btnOpenProfileCon = new System.Windows.Forms.Button();
+            this.btnEditSacramentCon = new System.Windows.Forms.Button();
             this.lblNameCon = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvConfirmation = new MetroFramework.Controls.MetroGrid();
@@ -94,6 +97,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnResetBap = new System.Windows.Forms.Button();
             this.btnSearchBap = new System.Windows.Forms.Button();
+            this.txtSearchBap = new ParishSystem.CueTextBox();
             this.btnAdvanceSearchBap = new System.Windows.Forms.Button();
             this.tlpProfileBap = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddReferencesBap = new System.Windows.Forms.Button();
@@ -117,10 +121,6 @@
             this.bapRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.bsSacrament = new System.Windows.Forms.BindingSource(this.components);
-            this.btnEditSacramentCon = new System.Windows.Forms.Button();
-            this.txtSearchBap = new ParishSystem.CueTextBox();
-            this.txtSearchCon = new ParishSystem.CueTextBox();
-            this.txtSearchMar = new ParishSystem.CueTextBox();
             this.metroTabPage6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -238,6 +238,18 @@
             this.btnSearchMar.Text = "Search";
             this.btnSearchMar.UseVisualStyleBackColor = false;
             this.btnSearchMar.Click += new System.EventHandler(this.btnSearchMar_Click);
+            // 
+            // txtSearchMar
+            // 
+            this.txtSearchMar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchMar.Cue = null;
+            this.txtSearchMar.CueColor = System.Drawing.Color.Gray;
+            this.txtSearchMar.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtSearchMar.Location = new System.Drawing.Point(73, 3);
+            this.txtSearchMar.Name = "txtSearchMar";
+            this.txtSearchMar.Size = new System.Drawing.Size(160, 25);
+            this.txtSearchMar.TabIndex = 11;
+            this.txtSearchMar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchMar_KeyDown);
             // 
             // tlpProfileMar
             // 
@@ -604,6 +616,17 @@
             this.btnSearchCon.UseVisualStyleBackColor = false;
             this.btnSearchCon.Click += new System.EventHandler(this.btnSearchCon_Click);
             // 
+            // txtSearchCon
+            // 
+            this.txtSearchCon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchCon.Cue = null;
+            this.txtSearchCon.CueColor = System.Drawing.Color.Gray;
+            this.txtSearchCon.Location = new System.Drawing.Point(73, 3);
+            this.txtSearchCon.Name = "txtSearchCon";
+            this.txtSearchCon.Size = new System.Drawing.Size(160, 25);
+            this.txtSearchCon.TabIndex = 11;
+            this.txtSearchCon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchCon_KeyDown);
+            // 
             // tlpProfileCon
             // 
             this.tlpProfileCon.ColumnCount = 2;
@@ -652,6 +675,22 @@
             this.btnOpenProfileCon.Text = "Open Profile";
             this.btnOpenProfileCon.UseVisualStyleBackColor = false;
             this.btnOpenProfileCon.Click += new System.EventHandler(this.btnOpenProfileConf_Click);
+            // 
+            // btnEditSacramentCon
+            // 
+            this.btnEditSacramentCon.BackColor = System.Drawing.Color.Gray;
+            this.btnEditSacramentCon.FlatAppearance.BorderSize = 0;
+            this.btnEditSacramentCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnEditSacramentCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditSacramentCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditSacramentCon.ForeColor = System.Drawing.Color.White;
+            this.btnEditSacramentCon.Location = new System.Drawing.Point(138, 32);
+            this.btnEditSacramentCon.Name = "btnEditSacramentCon";
+            this.btnEditSacramentCon.Size = new System.Drawing.Size(104, 23);
+            this.btnEditSacramentCon.TabIndex = 18;
+            this.btnEditSacramentCon.Text = "Edit Sacrament";
+            this.btnEditSacramentCon.UseVisualStyleBackColor = false;
+            this.btnEditSacramentCon.Click += new System.EventHandler(this.btnEditSacramentCon_Click);
             // 
             // lblNameCon
             // 
@@ -929,6 +968,17 @@
             this.btnSearchBap.Text = "Search";
             this.btnSearchBap.UseVisualStyleBackColor = false;
             this.btnSearchBap.Click += new System.EventHandler(this.btnSearchBap_Click);
+            // 
+            // txtSearchBap
+            // 
+            this.txtSearchBap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchBap.Cue = null;
+            this.txtSearchBap.CueColor = System.Drawing.Color.Gray;
+            this.txtSearchBap.Location = new System.Drawing.Point(73, 3);
+            this.txtSearchBap.Name = "txtSearchBap";
+            this.txtSearchBap.Size = new System.Drawing.Size(160, 25);
+            this.txtSearchBap.TabIndex = 11;
+            this.txtSearchBap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBap_KeyDown);
             // 
             // btnAdvanceSearchBap
             // 
@@ -1224,56 +1274,6 @@
             this.metroTabControl1.UseSelectable = true;
             this.metroTabControl1.UseStyleColors = true;
             this.metroTabControl1.SelectedIndexChanged += new System.EventHandler(this.metroTabControl1_SelectedIndexChanged);
-            // 
-            // btnEditSacramentCon
-            // 
-            this.btnEditSacramentCon.BackColor = System.Drawing.Color.Gray;
-            this.btnEditSacramentCon.FlatAppearance.BorderSize = 0;
-            this.btnEditSacramentCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnEditSacramentCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditSacramentCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditSacramentCon.ForeColor = System.Drawing.Color.White;
-            this.btnEditSacramentCon.Location = new System.Drawing.Point(138, 32);
-            this.btnEditSacramentCon.Name = "btnEditSacramentCon";
-            this.btnEditSacramentCon.Size = new System.Drawing.Size(104, 23);
-            this.btnEditSacramentCon.TabIndex = 18;
-            this.btnEditSacramentCon.Text = "Edit Sacrament";
-            this.btnEditSacramentCon.UseVisualStyleBackColor = false;
-            this.btnEditSacramentCon.Click += new System.EventHandler(this.btnEditSacramentCon_Click);
-            // 
-            // txtSearchBap
-            // 
-            this.txtSearchBap.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearchBap.Cue = null;
-            this.txtSearchBap.CueColor = System.Drawing.Color.Gray;
-            this.txtSearchBap.Location = new System.Drawing.Point(73, 3);
-            this.txtSearchBap.Name = "txtSearchBap";
-            this.txtSearchBap.Size = new System.Drawing.Size(160, 25);
-            this.txtSearchBap.TabIndex = 11;
-            this.txtSearchBap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBap_KeyDown);
-            // 
-            // txtSearchCon
-            // 
-            this.txtSearchCon.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearchCon.Cue = null;
-            this.txtSearchCon.CueColor = System.Drawing.Color.Gray;
-            this.txtSearchCon.Location = new System.Drawing.Point(73, 3);
-            this.txtSearchCon.Name = "txtSearchCon";
-            this.txtSearchCon.Size = new System.Drawing.Size(160, 25);
-            this.txtSearchCon.TabIndex = 11;
-            this.txtSearchCon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchCon_KeyDown);
-            // 
-            // txtSearchMar
-            // 
-            this.txtSearchMar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearchMar.Cue = null;
-            this.txtSearchMar.CueColor = System.Drawing.Color.Gray;
-            this.txtSearchMar.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtSearchMar.Location = new System.Drawing.Point(73, 3);
-            this.txtSearchMar.Name = "txtSearchMar";
-            this.txtSearchMar.Size = new System.Drawing.Size(160, 25);
-            this.txtSearchMar.TabIndex = 11;
-            this.txtSearchMar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchMar_KeyDown);
             // 
             // SacramentModule
             // 

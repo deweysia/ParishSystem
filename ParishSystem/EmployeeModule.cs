@@ -22,27 +22,29 @@ namespace ParishSystem
         {
             try
             {
+                UserPrivileges privilege = (UserPrivileges)employeeType_combobox.SelectedIndex;
                 if (add_button.Tag.ToString()=="a") {
-                    login.AddUser(firstname_textbox.Text, middleinitial_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, username_textbox.Text, password_textbox.Text, employeeType_combobox.SelectedIndex);
+                    login.AddUser(firstname_textbox.Text, middleinitial_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, username_textbox.Text, password_textbox.Text, privilege);
                     refresEmployees();
                     clearFields();
-            }
-            else
-            {
+
+                }
+                else
+                {
                
-                    if (password_textbox.Enabled)
-                    {
-                        login.editEmployeeResetPassword(firstname_textbox.Text, middleinitial_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, username_textbox.Text, password_textbox.Text,active_checkbox.Checked, employeeType_combobox.SelectedIndex,int.Parse(employeeID_label.Text));
-                    }
-                    else
-                    {
-                        login.editEmployee(firstname_textbox.Text, middleinitial_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, username_textbox.Text,active_checkbox.Checked, employeeType_combobox.SelectedIndex, int.Parse(employeeID_label.Text));
-                    }
-                    add_button.Tag = "a";
-                    add_button.Text = "Add";
-                    refresEmployees();
-                    clearFields();
-            }
+                        if (password_textbox.Enabled)
+                        {
+                            login.editUserResetPassword(firstname_textbox.Text, middleinitial_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, username_textbox.Text, password_textbox.Text,active_checkbox.Checked, privilege, int.Parse(employeeID_label.Text));
+                        }
+                        else
+                        {
+                            login.editEmployee(firstname_textbox.Text, middleinitial_textbox.Text, lastname_textbox.Text, suffix_textbox.Text, username_textbox.Text,active_checkbox.Checked, privilege, int.Parse(employeeID_label.Text));
+                        }
+                        add_button.Tag = "a";
+                        add_button.Text = "Add";
+                        refresEmployees();
+                        clearFields();
+                }
             }
             catch
             {
@@ -78,7 +80,7 @@ namespace ParishSystem
             EmployeeDGV.DataSource= login.getEmployees();
             EmployeeDGV.Columns["name"].HeaderText = "Name";
             EmployeeDGV.Columns["WStatus"].HeaderText = "Status";
-            EmployeeDGV.Columns["employeeid"].Visible = false;
+            EmployeeDGV.Columns["userID"].Visible = false;
             EmployeeDGV.Columns["firstname"].Visible = false;
             EmployeeDGV.Columns["midname"].Visible = false;
             EmployeeDGV.Columns["lastname"].Visible = false;
@@ -99,7 +101,7 @@ namespace ParishSystem
         {
             add_button.Text = "Edit";
             add_button.Tag = "e";
-            employeeID_label.Text = EmployeeDGV.SelectedRows[0].Cells["employeeid"].Value.ToString();
+            employeeID_label.Text = EmployeeDGV.SelectedRows[0].Cells["userID"].Value.ToString();
             firstname_textbox.Text = EmployeeDGV.SelectedRows[0].Cells["firstname"].Value.ToString();
             middleinitial_textbox.Text = EmployeeDGV.SelectedRows[0].Cells["midname"].Value.ToString();
             lastname_textbox.Text = EmployeeDGV.SelectedRows[0].Cells["lastname"].Value.ToString();

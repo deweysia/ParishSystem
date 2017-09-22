@@ -79,5 +79,11 @@ namespace ParishSystem
             sad.ShowDialog();
             this.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EmployeeModule em = new EmployeeModule();
+            em.ShowDialog();
+        }
     }
 }

@@ -25,7 +25,7 @@ namespace ParishSystem
         public MySqlConnection conn;
         public MySqlCommand com;
 
-        public int userID = 1;
+        //public int userID = 1;
 
         public DataHandler()
         {
@@ -36,14 +36,16 @@ namespace ParishSystem
         public DataHandler(string server, string database, string user, string password, int UserID)
         {
             conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True;");
-            userID = UserID;
+            //userID = UserID;
         }
 
         public DataHandler(string server, string database, string user, string password)
         {
             conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True;");
-            this.userID = -1;
+            //this.userID = -1;
         }
+
+
 
         //====== SINGLETON PATTERN IMPLEMENTATION OF DATAHANDLER
         private static DataHandler _dh;
@@ -60,6 +62,27 @@ namespace ParishSystem
         //======================================================
 
         
+        /// <summary>
+        /// Returns a user that is either active or inactive
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public DataTable getUser(string userName, string password, UserStatus status = UserStatus.Active)
+        {
+            string q = "SELECT * FROM User WHERE userName = @userName AND password = @password AND status = @status;";
+            DataTable dt = ExecuteQuery(q, userName, password, status);
+
+            return dt;
+        }
+
+        public bool storeUserID(int userID)
+        {
+            string q = "SET @userID = " + userID;
+            bool success = runNonQuery(q);
+            return success;
+        }
+
         //                                         ========[HELPER FUNCTIONS]=========
         #region
         public bool runNonQuery(string q)
@@ -177,7 +200,8 @@ namespace ParishSystem
 
         public bool updateModificationInfo(string tableName, string primaryKeyName, int primaryKeyValue)
         {
-            string q = "UPDATE " + tableName + " SET " + primaryKeyName + " = " + primaryKeyValue + ", lastModified = NOW(), userID = '" + userID + "'";
+            User user = User.getUser();
+            string q = "UPDATE " + tableName + " SET " + primaryKeyName + " = " + primaryKeyValue + ", lastModified = NOW(), userID = '" + user.userID + "'";
 
             return runNonQuery(q);
         }
@@ -2645,7 +2669,7 @@ namespace ParishSystem
 
         public DataTable getEmployee(string Username)
         {
-            string q = $"Select *,concat(lastname,\" \",coalesce(suffix,\" \"),\"\",firstName,\" \",midname,\".\")as name from employee where Username='{Username}'";
+            string q = $"Select *,concat(lastname,\" \",coalesce(suffix,\" \"),\"\",firstName,\" \",midname,\".\")as name from user where Username='{Username}'";
             return runQuery(q);
         }
 
@@ -3686,7 +3710,8 @@ namespace ParishSystem
                         join blooddonor on blooddonor.blooddonorID = blooddonation.profileID where donationID like ""%{like}%"" order by donationID desc";
             return runQuery(q);
         }
-        public void AddUser(string fn, string mn, string ln, string sf, string username, string password, int employeeType)
+
+        public void AddUser(string fn, string mn, string ln, string sf, string username, string password, UserPrivileges privilege)
         {
             byte[] salt;
             new RNGCryptoServiceProvider().GetBytes(salt = new byte[16]);
@@ -3696,13 +3721,14 @@ namespace ParishSystem
             Array.Copy(salt, 0, hashBytes, 0, 16);
             Array.Copy(hash, 0, hashBytes, 16, 20);
             string savedPasswordHash = Convert.ToBase64String(hashBytes);
-            string q = $@"INSERT INTO `sad2`.`employee` (`firstname`, `midname`, `lastname`, `suffix`, `username`, `pass`, `status`, `addedBy`, `privileges`) VALUES ('{fn}', '{mn}', '{ln}', '{sf}', '{username}', '{savedPasswordHash}',1,{userID},{employeeType});";
+            User user = User.getUser();
+            string q = $@"INSERT INTO `sad2`.`user` (`firstname`, `midname`, `lastname`, `suffix`, `username`, `pass`, `status`, `addedBy`, `privileges`) VALUES ('{fn}', '{mn}', '{ln}', '{sf}', '{username}', '{savedPasswordHash}',1,{user.userID},{privilege});";
             runNonQuery(q);
         }
 
 
 
-        public void editEmployeeResetPassword(string fn, string mn, string ln, string sf, string username, string password, bool status, int employeeType, int employeeID)
+        public void editUserResetPassword(string fn, string mn, string ln, string sf, string username, string password, bool status, UserPrivileges privilege, int userID)
         {
             byte[] salt;
             new RNGCryptoServiceProvider().GetBytes(salt = new byte[16]);
@@ -3712,18 +3738,18 @@ namespace ParishSystem
             Array.Copy(salt, 0, hashBytes, 0, 16);
             Array.Copy(hash, 0, hashBytes, 16, 20);
             string savedPasswordHash = Convert.ToBase64String(hashBytes);
-            string q = $@"UPDATE `sad2`.`employee` SET `firstname`='{fn}', `midname`='{mn}', `lastname`='{ln}', `suffix`='{sf}', `username`='{username}', `pass`='{password}',`status`='{(status ? 1 : 2)}',`privileges`='{employeeType}' WHERE `employeeID`='{employeeID}';";
+            string q = $@"UPDATE `sad2`.`user` SET `firstname`='{fn}', `midname`='{mn}', `lastname`='{ln}', `suffix`='{sf}', `username`='{username}', `pass`='{password}',`status`='{(status ? 1 : 2)}',`privileges`='{privilege}' WHERE `userID`='{userID}';";
             runNonQuery(q);
         }
-        public void editEmployee(string fn, string mn, string ln, string sf, string username, bool status, int employeeType, int employeeID)
+        public void editEmployee(string fn, string mn, string ln, string sf, string username, bool status, UserPrivileges privilege, int userID)
         {
-            string q = $@"UPDATE `sad2`.`employee` SET `firstname`='{fn}', `midname`='{mn}', `lastname`='{ln}', `suffix`='{sf}', `username`='{username}', `status`='{(status ? 1 : 2)}',`privileges`='{employeeType}'  WHERE `employeeID`='{employeeID}';";
+            string q = $@"UPDATE `sad2`.`user` SET `firstname`='{fn}', `midname`='{mn}', `lastname`='{ln}', `suffix`='{sf}', `username`='{username}', `status`='{(status ? 1 : 2)}',`privileges`='{privilege}'  WHERE `userID`='{userID}';";
             runNonQuery(q);
         }
 
         public DataTable getEmployees()
         {
-            return runQuery($@"SELECT *,case when status = 1 then ""Active"" else ""Inactive"" end as WStatus ,concat(lastname,"" "",coalesce(suffix,"" ""),"" "",firstName,"" "",midname,""."")as name FROM sad2.employee ");
+            return runQuery($@"SELECT *,case when status = 1 then ""Active"" else ""Inactive"" end as WStatus ,concat(lastname,"" "",coalesce(suffix,"" ""),"" "",firstName,"" "",midname,""."")as name FROM sad2.user ");
         }
         public DataTable getGeneralProfilesProper()
         {
@@ -4561,7 +4587,9 @@ namespace ParishSystem
             }
 
         }
-        }
+
+    }
+
 } 
 
 
