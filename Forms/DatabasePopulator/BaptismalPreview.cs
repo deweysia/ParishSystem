@@ -50,9 +50,26 @@ namespace DatabasePopulator
 
 private void Form1_Load(object sender, EventArgs e)
         {
-            
+            #region FINDING PRINTERS AND SETTING DEFAULT
+            // Find all of the installed printers.
+            foreach (string printer in PrinterSettings.InstalledPrinters)
+            {
+                selectPrinter.Items.Add(printer);
+            }
+
+            // Find and select the default printer.
+            try
+            {
+                PrinterSettings settings = new PrinterSettings();
+                selectPrinter.Text = settings.PrinterName;
+            }
+            catch
+            {
+            }
+            # endregion
         }
 
+        #region screencapture
         public enum enmScreenCaptureMode
         {
             Screen,
@@ -110,23 +127,9 @@ private void Form1_Load(object sender, EventArgs e)
                 protected set;
             }
         }
+        #endregion
 
-
-
-
-       
-
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-
-        }
-
-        private void Save()
-        {
-
-        }
-        public string filepath;
-        
+        #region saving PDF
         private void button1_Click_1(object sender, EventArgs e) 
         {
 
@@ -145,7 +148,7 @@ private void Form1_Load(object sender, EventArgs e)
 
 
                 string tempFolder = Path.GetTempPath();
-                bm.Save(tempFolder + "//tempReport.bmp", ImageFormat.Bmp);
+                bm.Save(tempFolder + "//tempRep.bmp", ImageFormat.Bmp);
 
 
                 // --------------------DOCUMENT---------------------- //
@@ -159,7 +162,7 @@ private void Form1_Load(object sender, EventArgs e)
 
                 // --------------------DRAWING PDF---------------------- //
                 XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
-                XImage saved = XImage.FromFile(tempFolder + "//temp2.bmp");
+                XImage saved = XImage.FromFile(tempFolder + "//tempRep.bmp");
                 xgr.DrawImage(saved, 0, 0, width, height);
 
                 doc.Save(filepath);
@@ -167,78 +170,83 @@ private void Form1_Load(object sender, EventArgs e)
                 
                 this.Close();
             }
-            
-           
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void printDocument1_PrintPage_1(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-
-        }
-
-        private void printPreviewDialog1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+#endregion
 
+        #region variables
+        String DEFAULTPRINTER;
+        public string filepath;
+        Boolean isSaved = false;
+        #endregion
+
+        #region Sending to printer
         private void button3_Click(object sender, EventArgs e)
         {
-            #region SAVING PDF TO TEMP
-            // --------------------FINDING FILEPATH---------------------- //
-            int width = panel1.Size.Width;
-            int height = panel1.Size.Height;
-            
-
-            Bitmap bm = new Bitmap(width, height);
-            panel1.DrawToBitmap(bm, new Rectangle(0, 0, width, height));
-
-
             string tempFolder = Path.GetTempPath();
-            bm.Save(tempFolder + "//tempReport.bmp", ImageFormat.Bmp);
-
-
-            // --------------------DOCUMENT---------------------- //
-
-            PdfDocument doc = new PdfDocument();
-            PdfPage page = new PdfPage();
-            page.Height = height;
-            page.Width = width;
-            page.Orientation = PageOrientation.Portrait;
-            doc.Pages.Add(page);
-
-            // --------------------DRAWING PDF---------------------- //
-            XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
-            XImage saved = XImage.FromFile(tempFolder + "//temp2.bmp");
-            xgr.DrawImage(saved, 0, 0, width, height);
-
-            doc.Save(tempFolder + "//rep.pdf");
-            doc.Close();
-            #endregion
-
-            Process p = new Process();
-            p.StartInfo = new ProcessStartInfo()
+            if (isSaved == false)
             {
-                CreateNoWindow = true,
-                Verb = "open",
-                FileName = tempFolder + "//rep.pdf"
-            };
-            p.Start();
+                #region SAVING PDF TO TEMP
+                // --------------------FINDING FILEPATH---------------------- //
+                int width = panel1.Size.Width;
+                int height = panel1.Size.Height;
 
-         
+
+                Bitmap bm = new Bitmap(width, height);
+                panel1.DrawToBitmap(bm, new Rectangle(0, 0, width, height));
+
+
+
+                bm.Save(tempFolder + "//tempREPORTPREVIEW.bmp", ImageFormat.Bmp);
+
+
+                // --------------------DOCUMENT---------------------- //
+
+                PdfDocument doc = new PdfDocument();
+                PdfPage page = new PdfPage();
+                page.Height = height;
+                page.Width = width;
+                page.Orientation = PageOrientation.Portrait;
+                doc.Pages.Add(page);
+
+                // --------------------DRAWING PDF---------------------- //
+                XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
+                XImage saved = XImage.FromFile(tempFolder + "//tempREPORTPREVIEW.bmp");
+                xgr.DrawImage(saved, 0, 0, width, height);
+
+                doc.Save(tempFolder + "//rep.pdf");
+                doc.Close();
+                #endregion
+                isSaved = true;
+            }
+            DEFAULTPRINTER = selectPrinter.SelectedItem.ToString();
+            PrintDocument pdfPrinter = new PrintDocument()
+            {
+                PrinterSettings = new PrinterSettings()
+                {
+                    // set the printer to 'Microsoft Print to PDF'
+                    
+                    PrinterName = DEFAULTPRINTER,
+
+                    // tell the object this document will print to file
+                    PrintToFile = true,
+
+                    // set the filename to whatever you like (full path)
+                    PrintFileName = Path.Combine(tempFolder + "//rep.pdf")
+
+
+
+                }
+            };
+            MessageBox.Show("PRINTING WITH " + DEFAULTPRINTER); //THIS IS JUST FOR TESTING
+            pdfPrinter.Print();
+  
 
         }
+#endregion
     }
 }
