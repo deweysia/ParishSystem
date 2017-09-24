@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaptismalPreview));
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -67,21 +66,13 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.selectPrinter = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.LawnGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1280, 13);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 83);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "SAVE AS DOCUMENT";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // panel1
             // 
@@ -124,7 +115,7 @@
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(189, -75);
+            this.panel1.Location = new System.Drawing.Point(120, -75);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1083, 1462);
@@ -136,7 +127,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(590, 498);
+            this.label10.Location = new System.Drawing.Point(589, 498);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(158, 23);
@@ -149,7 +140,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(614, 469);
+            this.label8.Location = new System.Drawing.Point(613, 469);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(134, 23);
@@ -240,7 +231,7 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(140, 744);
+            this.label15.Location = new System.Drawing.Point(140, 743);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(238, 23);
@@ -292,7 +283,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(390, 651);
+            this.label14.Location = new System.Drawing.Point(389, 651);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(40, 24);
@@ -305,7 +296,7 @@
             this.mPlaceofOrigin.AutoSize = true;
             this.mPlaceofOrigin.BackColor = System.Drawing.Color.Transparent;
             this.mPlaceofOrigin.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mPlaceofOrigin.Location = new System.Drawing.Point(778, 521);
+            this.mPlaceofOrigin.Location = new System.Drawing.Point(779, 521);
             this.mPlaceofOrigin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mPlaceofOrigin.Name = "mPlaceofOrigin";
             this.mPlaceofOrigin.Size = new System.Drawing.Size(20, 29);
@@ -318,7 +309,7 @@
             this.nameOfMother.AutoSize = true;
             this.nameOfMother.BackColor = System.Drawing.Color.Transparent;
             this.nameOfMother.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameOfMother.Location = new System.Drawing.Point(778, 492);
+            this.nameOfMother.Location = new System.Drawing.Point(779, 492);
             this.nameOfMother.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameOfMother.Name = "nameOfMother";
             this.nameOfMother.Size = new System.Drawing.Size(20, 29);
@@ -344,7 +335,7 @@
             this.placeOfBirth.AutoSize = true;
             this.placeOfBirth.BackColor = System.Drawing.Color.Transparent;
             this.placeOfBirth.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.placeOfBirth.Location = new System.Drawing.Point(778, 463);
+            this.placeOfBirth.Location = new System.Drawing.Point(779, 463);
             this.placeOfBirth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.placeOfBirth.Name = "placeOfBirth";
             this.placeOfBirth.Size = new System.Drawing.Size(20, 29);
@@ -370,7 +361,7 @@
             this.pagenum.AutoSize = true;
             this.pagenum.BackColor = System.Drawing.Color.Transparent;
             this.pagenum.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pagenum.Location = new System.Drawing.Point(546, 1058);
+            this.pagenum.Location = new System.Drawing.Point(547, 1058);
             this.pagenum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pagenum.Name = "pagenum";
             this.pagenum.Size = new System.Drawing.Size(20, 29);
@@ -383,7 +374,7 @@
             this.booknum.AutoSize = true;
             this.booknum.BackColor = System.Drawing.Color.Transparent;
             this.booknum.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.booknum.Location = new System.Drawing.Point(546, 1029);
+            this.booknum.Location = new System.Drawing.Point(547, 1029);
             this.booknum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.booknum.Name = "booknum";
             this.booknum.Size = new System.Drawing.Size(20, 29);
@@ -396,7 +387,7 @@
             this.registrynum.AutoSize = true;
             this.registrynum.BackColor = System.Drawing.Color.Transparent;
             this.registrynum.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registrynum.Location = new System.Drawing.Point(546, 1000);
+            this.registrynum.Location = new System.Drawing.Point(547, 999);
             this.registrynum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.registrynum.Name = "registrynum";
             this.registrynum.Size = new System.Drawing.Size(20, 29);
@@ -409,7 +400,7 @@
             this.dateIssued.AutoSize = true;
             this.dateIssued.BackColor = System.Drawing.Color.Transparent;
             this.dateIssued.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateIssued.Location = new System.Drawing.Point(438, 906);
+            this.dateIssued.Location = new System.Drawing.Point(437, 906);
             this.dateIssued.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dateIssued.Name = "dateIssued";
             this.dateIssued.Size = new System.Drawing.Size(20, 29);
@@ -422,7 +413,7 @@
             this.purposeField.AutoSize = true;
             this.purposeField.BackColor = System.Drawing.Color.Transparent;
             this.purposeField.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.purposeField.Location = new System.Drawing.Point(830, 849);
+            this.purposeField.Location = new System.Drawing.Point(829, 849);
             this.purposeField.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.purposeField.Name = "purposeField";
             this.purposeField.Size = new System.Drawing.Size(20, 29);
@@ -435,7 +426,7 @@
             this.minister.AutoSize = true;
             this.minister.BackColor = System.Drawing.Color.Transparent;
             this.minister.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minister.Location = new System.Drawing.Point(438, 849);
+            this.minister.Location = new System.Drawing.Point(437, 849);
             this.minister.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.minister.Name = "minister";
             this.minister.Size = new System.Drawing.Size(20, 29);
@@ -487,7 +478,7 @@
             this.nameOfBaptized.AutoSize = true;
             this.nameOfBaptized.BackColor = System.Drawing.Color.Transparent;
             this.nameOfBaptized.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameOfBaptized.Location = new System.Drawing.Point(319, 419);
+            this.nameOfBaptized.Location = new System.Drawing.Point(319, 418);
             this.nameOfBaptized.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameOfBaptized.Name = "nameOfBaptized";
             this.nameOfBaptized.Size = new System.Drawing.Size(20, 29);
@@ -500,7 +491,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(114, 425);
+            this.label6.Location = new System.Drawing.Point(115, 425);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(172, 23);
@@ -532,7 +523,6 @@
             this.label5.Size = new System.Drawing.Size(131, 46);
             this.label5.TabIndex = 0;
             this.label5.Text = "   F. Torres St.,\r\n8000 Davao City";
-            this.label5.Click += new System.EventHandler(this.label2_Click);
             // 
             // label13
             // 
@@ -553,7 +543,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Algerian", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(330, 348);
+            this.label1.Location = new System.Drawing.Point(331, 348);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(405, 36);
@@ -566,7 +556,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(602, 530);
+            this.label12.Location = new System.Drawing.Point(603, 530);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(146, 23);
@@ -598,7 +588,57 @@
             this.label2.Size = new System.Drawing.Size(220, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = " ARCHIODESE OF DAVAO \r\n";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.LawnGreen;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(1240, 117);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(181, 59);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "SAVE DOCUMENT";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "Document (.pdf)|*.pdf";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Salmon;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(1240, 250);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(181, 59);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "CANCEL";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(1240, 184);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(181, 59);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "PRINT";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // selectPrinter
+            // 
+            this.selectPrinter.FormattingEnabled = true;
+            this.selectPrinter.Location = new System.Drawing.Point(1210, 52);
+            this.selectPrinter.Name = "selectPrinter";
+            this.selectPrinter.Size = new System.Drawing.Size(226, 24);
+            this.selectPrinter.TabIndex = 2;
             // 
             // BaptismalPreview
             // 
@@ -606,11 +646,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1470, 646);
+            this.ClientSize = new System.Drawing.Size(1469, 1049);
+            this.Controls.Add(this.selectPrinter);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BaptismalPreview";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BAPTISMAL CERTIFICATE PREVIEW";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
@@ -620,8 +665,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -659,6 +702,11 @@
         private System.Windows.Forms.Label dateOfBaptism;
         private System.Windows.Forms.Label dateOfBirth;
         private System.Windows.Forms.Label purposeField;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox selectPrinter;
     }
 }
 

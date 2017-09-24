@@ -13,42 +13,32 @@ using PdfSharp;
 using PdfSharp.Pdf;
 using PdfSharp.Drawing;
 using System.IO;
-using System.Drawing.Printing;
 using System.Diagnostics;
+using System.Drawing.Printing;
 
 namespace DatabasePopulator
 {
-    public partial class BaptismalPreview : Form
+    public partial class ConfirmationPreview : Form
     {
-
-
-        public BaptismalPreview(String baptizedName, String bPlace
-            , String bdate, String fname, String mname
-            , String fOrigin, String mOrigin, String datemonthyear, String sponsorsname, String issueDate
-
-            , String rno, String bno, String pno, String OMinister, String purpose)
+        public ConfirmationPreview(String name, String day, String monthyear, String priestname, String fathername,
+            String mothername, String godfathername, String godmothername)
         {
             InitializeComponent();
 
-            nameOfBaptized.Text = baptizedName;
-            dateOfBirth.Text = bdate;
-            nameOfFather.Text = fname;
-            nameOfMother.Text = mname;
-            fPlaceOfOrigin.Text = fOrigin;
-            mPlaceofOrigin.Text = mOrigin;
-            dateOfBaptism.Text = datemonthyear;
-            sponsorNames.Text = sponsorsname;
-            purposeField.Text = purpose;
-            minister.Text = OMinister;
-            dateIssued.Text = issueDate;
-            registrynum.Text = rno;
-            pagenum.Text = pno;
-            booknum.Text = bno;
-            placeOfBirth.Text = bPlace;
-        }
-        
+            Name.Text = name;
+            date.Text = day;
+            MonthYear.Text = monthyear;
+            priestName.Text = priestname;
+            fatherName.Text = fathername;
+            motherName.Text = mothername;
+            godFatherName.Text = godfathername;
+            godMotherName.Text = godmothername;
+            day2.Text = day;
+            monthYear2.Text = monthyear;
 
-private void Form1_Load(object sender, EventArgs e)
+
+        }
+        private void ConfirmationPreview_Load(object sender, EventArgs e)
         {
             #region FINDING PRINTERS AND SETTING DEFAULT
             // Find all of the installed printers.
@@ -69,7 +59,7 @@ private void Form1_Load(object sender, EventArgs e)
             # endregion
         }
 
-        #region screencapture
+        #region SCREEN CAPTURE
         public enum enmScreenCaptureMode
         {
             Screen,
@@ -129,11 +119,22 @@ private void Form1_Load(object sender, EventArgs e)
         }
         #endregion
 
-        #region saving PDF
-        private void button1_Click_1(object sender, EventArgs e) 
+        #region VARIABLES
+        string filepath;
+        String DEFAULTPRINTER;
+        Boolean isSaved = false;
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
+
+        #region saving file as pdf
+        private void button1_Click(object sender, EventArgs e)
         {
 
-            saveFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); 
+            saveFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             int width = panel1.Size.Width;
             int height = panel1.Size.Height;
 
@@ -148,7 +149,7 @@ private void Form1_Load(object sender, EventArgs e)
 
 
                 string tempFolder = Path.GetTempPath();
-                bm.Save(tempFolder + "//tempRep.bmp", ImageFormat.Bmp);
+                bm.Save(tempFolder + "//tempReport.bmp", ImageFormat.Bmp);
 
 
                 // --------------------DOCUMENT---------------------- //
@@ -162,29 +163,20 @@ private void Form1_Load(object sender, EventArgs e)
 
                 // --------------------DRAWING PDF---------------------- //
                 XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
-                XImage saved = XImage.FromFile(tempFolder + "//tempRep.bmp");
+                XImage saved = XImage.FromFile(tempFolder + "//tempReport.bmp");
                 xgr.DrawImage(saved, 0, 0, width, height);
 
                 doc.Save(filepath);
                 doc.Close();
-                
+
                 this.Close();
             }
+
+
         }
+#endregion 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-#endregion
-
-        #region variables
-        String DEFAULTPRINTER;
-        public string filepath;
-        Boolean isSaved = false;
-        #endregion
-
-        #region Sending to printer
+        #region sending file to printer 
         private void button3_Click(object sender, EventArgs e)
         {
             string tempFolder = Path.GetTempPath();
@@ -229,7 +221,6 @@ private void Form1_Load(object sender, EventArgs e)
                 PrinterSettings = new PrinterSettings()
                 {
                     // set the printer to 'Microsoft Print to PDF'
-                    
                     PrinterName = DEFAULTPRINTER,
 
                     // tell the object this document will print to file
@@ -239,14 +230,14 @@ private void Form1_Load(object sender, EventArgs e)
                     PrintFileName = Path.Combine(tempFolder + "//rep.pdf")
 
 
-
                 }
             };
-            MessageBox.Show("PRINTING WITH " + DEFAULTPRINTER); //THIS IS JUST FOR TESTING
+
             pdfPrinter.Print();
-  
 
         }
-#endregion
+        #endregion
+
+        
     }
 }

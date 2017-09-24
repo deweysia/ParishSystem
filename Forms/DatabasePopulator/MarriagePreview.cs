@@ -12,6 +12,9 @@ using System.Drawing.Imaging;
 using PdfSharp;
 using PdfSharp.Pdf;
 using PdfSharp.Drawing;
+using System.IO;
+using System.Diagnostics;
+using System.Drawing.Printing;
 
 namespace DatabasePopulator
 {
@@ -52,10 +55,37 @@ namespace DatabasePopulator
 
         private void MarriagePreview_Load(object sender, EventArgs e)
         {
+            #region FINDING PRINTERS AND SETTING DEFAULT
+            // Find all of the installed printers.
+            foreach (string printer in PrinterSettings.InstalledPrinters)
+            {
+                selectPrinter.Items.Add(printer);
+            }
 
+            // Find and select the default printer.
+            try
+            {
+                PrinterSettings settings = new PrinterSettings();
+                selectPrinter.Text = settings.PrinterName;
+            }
+            catch
+            {
+            }
+            #endregion
+        } //ASSIGNS DEFAULT PRINTER
+
+        #region VARIABLES
+        String DEFAULTPRINTER;
+        Boolean isSaved = false;
+        string filepath;
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
+        #endregion
 
-
+        #region screen capture
         public enum enmScreenCaptureMode
         {
             Screen,
@@ -113,39 +143,117 @@ namespace DatabasePopulator
                 protected set;
             }
         }
+        #endregion
 
+        #region saving file as pdf
         private void button1_Click(object sender, EventArgs e)
         {
+            saveFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             int width = panel1.Size.Width;
             int height = panel1.Size.Height;
 
-            Bitmap bm = new Bitmap(width, height);
-            panel1.DrawToBitmap(bm, new Rectangle(0, 0, width, height));
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
 
-            bm.Save(@"C://Users//Josh//Desktop//Reports//marriage.bmp", ImageFormat.Bmp);
+                // --------------------FINDING FILEPATH---------------------- //
+                filepath = saveFileDialog1.FileName;
 
-            // --------------------DOCUMENT---------------------- //
-
-            PdfDocument doc = new PdfDocument();
-            PdfPage page = new PdfPage();
-            page.Height = height;
-            page.Width = width;
-            page.Orientation = PageOrientation.Portrait;
-            doc.Pages.Add(page);
+                Bitmap bm = new Bitmap(width, height);
+                panel1.DrawToBitmap(bm, new Rectangle(0, 0, width, height));
 
 
-            XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
+                string tempFolder = Path.GetTempPath();
+                bm.Save(tempFolder + "//tempReport.bmp", ImageFormat.Bmp);
+
+
+                // --------------------DOCUMENT---------------------- //
+
+                PdfDocument doc = new PdfDocument();
+                PdfPage page = new PdfPage();
+                page.Height = height;
+                page.Width = width;
+                page.Orientation = PageOrientation.Portrait;
+                doc.Pages.Add(page);
+
+                // --------------------DRAWING PDF---------------------- //
+                XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
+                XImage saved = XImage.FromFile(tempFolder + "//tempReport.bmp");
+                xgr.DrawImage(saved, 0, 0, width, height);
+
+                doc.Save(filepath);
+                doc.Close();
+
+                this.Close();
+            }
+
+        }
+#endregion
+
+        #region Sending file to printer
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string tempFolder = Path.GetTempPath();
+            if (isSaved == false)
+            {
+                #region SAVING PDF TO TEMP
+                // --------------------FINDING FILEPATH---------------------- //
+                int width = panel1.Size.Width;
+                int height = panel1.Size.Height;
+
+
+                Bitmap bm = new Bitmap(width, height);
+                panel1.DrawToBitmap(bm, new Rectangle(0, 0, width, height));
 
 
 
-            XImage poop = XImage.FromFile("C://Users//Josh//Desktop//Reports//marriage.bmp");
+                bm.Save(tempFolder + "//tempREPORTPREVIEW.bmp", ImageFormat.Bmp);
 
-            xgr.DrawImage(poop, 0, 0, width, height);
-            doc.Save("C://Users//Josh//Desktop//Reports//MarriageReport.pdf");
-            doc.Close();
+
+                // --------------------DOCUMENT---------------------- //
+
+                PdfDocument doc = new PdfDocument();
+                PdfPage page = new PdfPage();
+                page.Height = height;
+                page.Width = width;
+                page.Orientation = PageOrientation.Portrait;
+                doc.Pages.Add(page);
+
+                // --------------------DRAWING PDF---------------------- //
+                XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
+                XImage saved = XImage.FromFile(tempFolder + "//tempREPORTPREVIEW.bmp");
+                xgr.DrawImage(saved, 0, 0, width, height);
+
+                doc.Save(tempFolder + "//rep.pdf");
+                doc.Close();
+                #endregion
+                isSaved = true;
+            }
+            DEFAULTPRINTER = selectPrinter.SelectedItem.ToString();
+            PrintDocument pdfPrinter = new PrintDocument()
+            {
+                PrinterSettings = new PrinterSettings()
+                {
+                    // set the printer to 'Microsoft Print to PDF'
+                    PrinterName = DEFAULTPRINTER,
+
+                    // tell the object this document will print to file
+                    PrintToFile = true,
+
+                    // set the filename to whatever you like (full path)
+                    PrintFileName = Path.Combine(tempFolder + "//rep.pdf")
+
+
+                }
+            };
+
+            pdfPrinter.Print();
 
 
         }
+        #endregion
+
+      
     }
 
 
