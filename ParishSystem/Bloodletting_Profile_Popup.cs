@@ -107,15 +107,15 @@ namespace ParishSystem
 
         private void edit_button_Click(object sender, EventArgs e)
         {
-            if(AdminCredentialDialog.Show() == DialogResult.Yes){
+           
                 if (edit_button.Tag.ToString() == "s")
                 {
                     cancel_button.Visible = false;
                     delete_button.Visible = false;
                     if (fn.Text != "" && mn.Text != "" && ln.Text != "" && address_textbox.Text != "" && contactNumber_textbox.MaskFull && bloodtype_combobox.Text != "")
                     {
-                        if (hasProfile)//edit
-                        {
+                    if (hasProfile)//edit
+                    {
                             if (dh.countSameDonor(fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex + 1) != 0)//someone exists
                             {
                                 int from = dh.getBloodDonorWhere(fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex + 1);
@@ -133,10 +133,11 @@ namespace ParishSystem
                             dh.editBloodDonor(ProfileID, fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex + 1);
                             edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
                             edit_button.Tag = "e";
-                            refreshPerson();
-                        }
-                        else//add
-                        {
+                            refreshPerson();                      
+                    }
+                    else//add
+                    {
+
                             if (dh.countSameDonor(fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex) == 0)
                             {
                                 dh.addBloodDonor(fn.Text, mn.Text, ln.Text, sf.Text, address_textbox.Text, contactNumber_textbox.Text, bloodtype_combobox.SelectedIndex + 1);
@@ -151,7 +152,8 @@ namespace ParishSystem
                                 Notification.Show(State.ProfileExists);
                                 ClearProfile();
                             }
-                        }
+                        
+                    }
 
                     }
                     else
@@ -160,6 +162,8 @@ namespace ParishSystem
                     }
                 }
                 else
+                {
+                if (AdminCredentialDialog.Show() == DialogResult.Yes)
                 {
                     profileEditmode();
                     edit_button.Tag = "s";
@@ -326,17 +330,19 @@ namespace ParishSystem
 
         private void delete_button_bloodletting_Click(object sender, EventArgs e)
         {
-            if (!dh.isBloodDonationClaimed(int.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["blooddonationID"].Value.ToString()))) {
-                dh.deleteBloodDonation(int.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["blooddonationID"].Value.ToString()));
-                refreshBloodDonation();
-                delete_button_bloodletting.Enabled = false;
-                addDonation_button_bloodletting.Enabled = false;
-                clearAddInfo();
-                addDonation_button_bloodletting.Text = "Add";
-            }
-            else
-            {
-                Notification.Show(State.CannotDeleteBloodAlreadyClaimed);
+            if (AdminCredentialDialog.Show()== DialogResult.Yes) {
+                if (!dh.isBloodDonationClaimed(int.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["blooddonationID"].Value.ToString()))) {
+                    dh.deleteBloodDonation(int.Parse(blooddonation_dataGridView_bloodletting.CurrentRow.Cells["blooddonationID"].Value.ToString()));
+                    refreshBloodDonation();
+                    delete_button_bloodletting.Enabled = false;
+                    addDonation_button_bloodletting.Enabled = false;
+                    clearAddInfo();
+                    addDonation_button_bloodletting.Text = "Add";
+                }
+                else
+                {
+                    Notification.Show(State.CannotDeleteBloodAlreadyClaimed);
+                }
             }
         }
 

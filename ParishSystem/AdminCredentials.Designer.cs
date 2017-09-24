@@ -170,6 +170,7 @@
             this.Controls.Add(this.username_textbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminCredentials";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminCredentials";
             this.Load += new System.EventHandler(this.AdminCredentials_Load);
             this.controlBar_panel.ResumeLayout(false);

@@ -21,7 +21,6 @@ namespace ParishSystem
         private void login_button_Click(object sender, EventArgs e)
         {
 
-
             if (login.verify(Username_textbox.Text, Password_textbox.Text))
             {
                 this.Hide();

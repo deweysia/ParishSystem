@@ -12,6 +12,7 @@ namespace ParishSystem
 {
     public partial class AdminCredentials : Form
     {
+        Login login = new Login();
         public AdminCredentials()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace ParishSystem
 
         private void check_button_Click(object sender, EventArgs e)
         {
-            if (true)
+            if (login.verify(username_textbox.Text,password_textbox.Text))
             {
                 this.DialogResult = DialogResult.Yes;
                 this.Close();
