@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
+            this.selectPrinter = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -66,17 +71,60 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
-            this.selectPrinter = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Salmon;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(1207, 235);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(181, 59);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "CANCEL";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.LawnGreen;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(1207, 102);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(181, 59);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "SAVE DOCUMENT";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(1207, 169);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(181, 59);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "PRINT";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // selectPrinter
+            // 
+            this.selectPrinter.FormattingEnabled = true;
+            this.selectPrinter.Location = new System.Drawing.Point(1178, 49);
+            this.selectPrinter.Name = "selectPrinter";
+            this.selectPrinter.Size = new System.Drawing.Size(226, 24);
+            this.selectPrinter.TabIndex = 7;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackgroundImage = global::DatabasePopulator.Properties.Resources.confirmationFormBG;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.label20);
@@ -115,7 +163,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(88, -409);
+            this.panel1.Location = new System.Drawing.Point(88, -296);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1083, 1462);
@@ -271,7 +319,7 @@
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(693, 978);
+            this.label26.Location = new System.Drawing.Point(675, 981);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(65, 23);
@@ -414,11 +462,11 @@
             this.godMotherName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.godMotherName.AutoSize = true;
             this.godMotherName.BackColor = System.Drawing.Color.Transparent;
-            this.godMotherName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.godMotherName.Location = new System.Drawing.Point(329, 804);
+            this.godMotherName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.godMotherName.Location = new System.Drawing.Point(270, 805);
             this.godMotherName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.godMotherName.Name = "godMotherName";
-            this.godMotherName.Size = new System.Drawing.Size(20, 29);
+            this.godMotherName.Size = new System.Drawing.Size(16, 24);
             this.godMotherName.TabIndex = 0;
             this.godMotherName.Text = "-";
             // 
@@ -427,11 +475,11 @@
             this.godFatherName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.godFatherName.AutoSize = true;
             this.godFatherName.BackColor = System.Drawing.Color.Transparent;
-            this.godFatherName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.godFatherName.Location = new System.Drawing.Point(329, 758);
+            this.godFatherName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.godFatherName.Location = new System.Drawing.Point(270, 759);
             this.godFatherName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.godFatherName.Name = "godFatherName";
-            this.godFatherName.Size = new System.Drawing.Size(20, 29);
+            this.godFatherName.Size = new System.Drawing.Size(16, 24);
             this.godFatherName.TabIndex = 0;
             this.godFatherName.Text = "-";
             // 
@@ -440,11 +488,11 @@
             this.motherName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.motherName.AutoSize = true;
             this.motherName.BackColor = System.Drawing.Color.Transparent;
-            this.motherName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.motherName.Location = new System.Drawing.Point(329, 715);
+            this.motherName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.motherName.Location = new System.Drawing.Point(270, 716);
             this.motherName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.motherName.Name = "motherName";
-            this.motherName.Size = new System.Drawing.Size(20, 29);
+            this.motherName.Size = new System.Drawing.Size(16, 24);
             this.motherName.TabIndex = 0;
             this.motherName.Text = "-";
             // 
@@ -453,11 +501,11 @@
             this.fatherName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.fatherName.AutoSize = true;
             this.fatherName.BackColor = System.Drawing.Color.Transparent;
-            this.fatherName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fatherName.Location = new System.Drawing.Point(329, 676);
+            this.fatherName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fatherName.Location = new System.Drawing.Point(270, 677);
             this.fatherName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fatherName.Name = "fatherName";
-            this.fatherName.Size = new System.Drawing.Size(20, 29);
+            this.fatherName.Size = new System.Drawing.Size(16, 24);
             this.fatherName.TabIndex = 0;
             this.fatherName.Text = "-";
             // 
@@ -466,11 +514,11 @@
             this.Name2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Name2.AutoSize = true;
             this.Name2.BackColor = System.Drawing.Color.Transparent;
-            this.Name2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name2.Location = new System.Drawing.Point(299, 638);
+            this.Name2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name2.Location = new System.Drawing.Point(240, 639);
             this.Name2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Name2.Name = "Name2";
-            this.Name2.Size = new System.Drawing.Size(20, 29);
+            this.Name2.Size = new System.Drawing.Size(16, 24);
             this.Name2.TabIndex = 0;
             this.Name2.Text = "-";
             // 
@@ -480,7 +528,7 @@
             this.monthYear2.AutoSize = true;
             this.monthYear2.BackColor = System.Drawing.Color.Transparent;
             this.monthYear2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthYear2.Location = new System.Drawing.Point(816, 976);
+            this.monthYear2.Location = new System.Drawing.Point(783, 979);
             this.monthYear2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.monthYear2.Name = "monthYear2";
             this.monthYear2.Size = new System.Drawing.Size(20, 29);
@@ -493,7 +541,7 @@
             this.MonthYear.AutoSize = true;
             this.MonthYear.BackColor = System.Drawing.Color.Transparent;
             this.MonthYear.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MonthYear.Location = new System.Drawing.Point(607, 558);
+            this.MonthYear.Location = new System.Drawing.Point(561, 557);
             this.MonthYear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MonthYear.Name = "MonthYear";
             this.MonthYear.Size = new System.Drawing.Size(20, 29);
@@ -505,11 +553,11 @@
             this.priestName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.priestName.AutoSize = true;
             this.priestName.BackColor = System.Drawing.Color.Transparent;
-            this.priestName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priestName.Location = new System.Drawing.Point(299, 596);
+            this.priestName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priestName.Location = new System.Drawing.Point(231, 596);
             this.priestName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.priestName.Name = "priestName";
-            this.priestName.Size = new System.Drawing.Size(20, 29);
+            this.priestName.Size = new System.Drawing.Size(16, 24);
             this.priestName.TabIndex = 0;
             this.priestName.Text = "-";
             // 
@@ -519,7 +567,7 @@
             this.day2.AutoSize = true;
             this.day2.BackColor = System.Drawing.Color.Transparent;
             this.day2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.day2.Location = new System.Drawing.Point(616, 975);
+            this.day2.Location = new System.Drawing.Point(608, 977);
             this.day2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.day2.Name = "day2";
             this.day2.Size = new System.Drawing.Size(20, 29);
@@ -532,7 +580,7 @@
             this.date.AutoSize = true;
             this.date.BackColor = System.Drawing.Color.Transparent;
             this.date.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date.Location = new System.Drawing.Point(365, 561);
+            this.date.Location = new System.Drawing.Point(365, 559);
             this.date.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(20, 29);
@@ -545,7 +593,7 @@
             this.Name.AutoSize = true;
             this.Name.BackColor = System.Drawing.Color.Transparent;
             this.Name.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name.Location = new System.Drawing.Point(421, 511);
+            this.Name.Location = new System.Drawing.Point(365, 511);
             this.Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Name.Name = "Name";
             this.Name.Size = new System.Drawing.Size(20, 29);
@@ -604,60 +652,13 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "ARCHIODESE OF DAVAO";
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Salmon;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(1207, 235);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(181, 59);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "CANCEL";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.LawnGreen;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(1207, 102);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(181, 59);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "SAVE DOCUMENT";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1207, 169);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(181, 59);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "PRINT";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // selectPrinter
-            // 
-            this.selectPrinter.FormattingEnabled = true;
-            this.selectPrinter.Location = new System.Drawing.Point(1178, 49);
-            this.selectPrinter.Name = "selectPrinter";
-            this.selectPrinter.Size = new System.Drawing.Size(226, 24);
-            this.selectPrinter.TabIndex = 7;
-            // 
             // ConfirmationPreview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1442, 902);
+            this.ClientSize = new System.Drawing.Size(1442, 1028);
             this.Controls.Add(this.selectPrinter);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
@@ -665,7 +666,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            
+            this.Name = "ConfirmationPreview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConfirmationPreview";
             this.Load += new System.EventHandler(this.ConfirmationPreview_Load);

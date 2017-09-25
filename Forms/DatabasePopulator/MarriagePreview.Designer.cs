@@ -157,8 +157,8 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(147, -423);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(147, -359);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1083, 1462);
             this.panel1.TabIndex = 3;
@@ -310,7 +310,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(515, 962);
+            this.label18.Location = new System.Drawing.Point(515, 967);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(42, 23);
@@ -404,11 +404,11 @@
             this.BrideName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BrideName.AutoSize = true;
             this.BrideName.BackColor = System.Drawing.Color.Transparent;
-            this.BrideName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BrideName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BrideName.Location = new System.Drawing.Point(464, 818);
             this.BrideName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BrideName.Name = "BrideName";
-            this.BrideName.Size = new System.Drawing.Size(20, 29);
+            this.BrideName.Size = new System.Drawing.Size(16, 24);
             this.BrideName.TabIndex = 4;
             this.BrideName.Text = "-";
             // 
@@ -417,11 +417,11 @@
             this.gStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gStatus.AutoSize = true;
             this.gStatus.BackColor = System.Drawing.Color.Transparent;
-            this.gStatus.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gStatus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gStatus.Location = new System.Drawing.Point(803, 594);
             this.gStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gStatus.Name = "gStatus";
-            this.gStatus.Size = new System.Drawing.Size(20, 29);
+            this.gStatus.Size = new System.Drawing.Size(16, 24);
             this.gStatus.TabIndex = 4;
             this.gStatus.Text = "-";
             // 
@@ -430,11 +430,11 @@
             this.gMotherName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gMotherName.AutoSize = true;
             this.gMotherName.BackColor = System.Drawing.Color.Transparent;
-            this.gMotherName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gMotherName.Location = new System.Drawing.Point(603, 640);
+            this.gMotherName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gMotherName.Location = new System.Drawing.Point(595, 640);
             this.gMotherName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gMotherName.Name = "gMotherName";
-            this.gMotherName.Size = new System.Drawing.Size(20, 29);
+            this.gMotherName.Size = new System.Drawing.Size(16, 24);
             this.gMotherName.TabIndex = 4;
             this.gMotherName.Text = "-";
             // 
@@ -443,11 +443,11 @@
             this.bBornIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bBornIn.AutoSize = true;
             this.bBornIn.BackColor = System.Drawing.Color.Transparent;
-            this.bBornIn.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBornIn.Location = new System.Drawing.Point(257, 1029);
+            this.bBornIn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bBornIn.Location = new System.Drawing.Point(246, 1039);
             this.bBornIn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bBornIn.Name = "bBornIn";
-            this.bBornIn.Size = new System.Drawing.Size(20, 29);
+            this.bBornIn.Size = new System.Drawing.Size(16, 24);
             this.bBornIn.TabIndex = 4;
             this.bBornIn.Text = "-";
             // 
@@ -456,11 +456,11 @@
             this.gBornIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gBornIn.AutoSize = true;
             this.gBornIn.BackColor = System.Drawing.Color.Transparent;
-            this.gBornIn.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBornIn.Location = new System.Drawing.Point(257, 703);
+            this.gBornIn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBornIn.Location = new System.Drawing.Point(240, 705);
             this.gBornIn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gBornIn.Name = "gBornIn";
-            this.gBornIn.Size = new System.Drawing.Size(20, 29);
+            this.gBornIn.Size = new System.Drawing.Size(16, 24);
             this.gBornIn.TabIndex = 4;
             this.gBornIn.Text = "-";
             // 
@@ -469,11 +469,11 @@
             this.bResidency.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bResidency.AutoSize = true;
             this.bResidency.BackColor = System.Drawing.Color.Transparent;
-            this.bResidency.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bResidency.Location = new System.Drawing.Point(257, 997);
+            this.bResidency.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bResidency.Location = new System.Drawing.Point(246, 1004);
             this.bResidency.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bResidency.Name = "bResidency";
-            this.bResidency.Size = new System.Drawing.Size(20, 29);
+            this.bResidency.Size = new System.Drawing.Size(16, 24);
             this.bResidency.TabIndex = 4;
             this.bResidency.Text = "-";
             // 
@@ -482,11 +482,11 @@
             this.bStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bStatus.AutoSize = true;
             this.bStatus.BackColor = System.Drawing.Color.Transparent;
-            this.bStatus.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bStatus.Location = new System.Drawing.Point(803, 919);
+            this.bStatus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bStatus.Location = new System.Drawing.Point(792, 926);
             this.bStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bStatus.Name = "bStatus";
-            this.bStatus.Size = new System.Drawing.Size(20, 29);
+            this.bStatus.Size = new System.Drawing.Size(16, 24);
             this.bStatus.TabIndex = 4;
             this.bStatus.Text = "-";
             // 
@@ -495,11 +495,11 @@
             this.gResidency.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gResidency.AutoSize = true;
             this.gResidency.BackColor = System.Drawing.Color.Transparent;
-            this.gResidency.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gResidency.Location = new System.Drawing.Point(257, 671);
+            this.gResidency.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gResidency.Location = new System.Drawing.Point(240, 673);
             this.gResidency.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gResidency.Name = "gResidency";
-            this.gResidency.Size = new System.Drawing.Size(20, 29);
+            this.gResidency.Size = new System.Drawing.Size(16, 24);
             this.gResidency.TabIndex = 4;
             this.gResidency.Text = "-";
             // 
@@ -522,7 +522,7 @@
             this.MonthYear2.AutoSize = true;
             this.MonthYear2.BackColor = System.Drawing.Color.Transparent;
             this.MonthYear2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MonthYear2.Location = new System.Drawing.Point(628, 1231);
+            this.MonthYear2.Location = new System.Drawing.Point(628, 1229);
             this.MonthYear2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MonthYear2.Name = "MonthYear2";
             this.MonthYear2.Size = new System.Drawing.Size(20, 29);
@@ -535,7 +535,7 @@
             this.Day2.AutoSize = true;
             this.Day2.BackColor = System.Drawing.Color.Transparent;
             this.Day2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Day2.Location = new System.Drawing.Point(449, 1232);
+            this.Day2.Location = new System.Drawing.Point(449, 1228);
             this.Day2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Day2.Name = "Day2";
             this.Day2.Size = new System.Drawing.Size(20, 29);
@@ -547,11 +547,11 @@
             this.Witness.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Witness.AutoSize = true;
             this.Witness.BackColor = System.Drawing.Color.Transparent;
-            this.Witness.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Witness.Location = new System.Drawing.Point(157, 1199);
+            this.Witness.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Witness.Location = new System.Drawing.Point(158, 1201);
             this.Witness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Witness.Name = "Witness";
-            this.Witness.Size = new System.Drawing.Size(20, 29);
+            this.Witness.Size = new System.Drawing.Size(16, 24);
             this.Witness.TabIndex = 4;
             this.Witness.Text = "-";
             // 
@@ -600,7 +600,7 @@
             this.bMotherName.AutoSize = true;
             this.bMotherName.BackColor = System.Drawing.Color.Transparent;
             this.bMotherName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bMotherName.Location = new System.Drawing.Point(609, 960);
+            this.bMotherName.Location = new System.Drawing.Point(609, 967);
             this.bMotherName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bMotherName.Name = "bMotherName";
             this.bMotherName.Size = new System.Drawing.Size(20, 29);
@@ -612,11 +612,11 @@
             this.bFatherName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bFatherName.AutoSize = true;
             this.bFatherName.BackColor = System.Drawing.Color.Transparent;
-            this.bFatherName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bFatherName.Location = new System.Drawing.Point(257, 964);
+            this.bFatherName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bFatherName.Location = new System.Drawing.Point(246, 967);
             this.bFatherName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bFatherName.Name = "bFatherName";
-            this.bFatherName.Size = new System.Drawing.Size(20, 29);
+            this.bFatherName.Size = new System.Drawing.Size(16, 24);
             this.bFatherName.TabIndex = 4;
             this.bFatherName.Text = "-";
             // 
@@ -625,11 +625,11 @@
             this.gFatherName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gFatherName.AutoSize = true;
             this.gFatherName.BackColor = System.Drawing.Color.Transparent;
-            this.gFatherName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gFatherName.Location = new System.Drawing.Point(257, 636);
+            this.gFatherName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gFatherName.Location = new System.Drawing.Point(212, 640);
             this.gFatherName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gFatherName.Name = "gFatherName";
-            this.gFatherName.Size = new System.Drawing.Size(20, 29);
+            this.gFatherName.Size = new System.Drawing.Size(16, 24);
             this.gFatherName.TabIndex = 4;
             this.gFatherName.Text = "-";
             // 
@@ -651,11 +651,11 @@
             this.bAge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bAge.AutoSize = true;
             this.bAge.BackColor = System.Drawing.Color.Transparent;
-            this.bAge.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAge.Location = new System.Drawing.Point(177, 928);
+            this.bAge.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAge.Location = new System.Drawing.Point(167, 928);
             this.bAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bAge.Name = "bAge";
-            this.bAge.Size = new System.Drawing.Size(20, 29);
+            this.bAge.Size = new System.Drawing.Size(16, 24);
             this.bAge.TabIndex = 4;
             this.bAge.Text = "-";
             // 
@@ -664,11 +664,11 @@
             this.gAge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gAge.AutoSize = true;
             this.gAge.BackColor = System.Drawing.Color.Transparent;
-            this.gAge.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gAge.Location = new System.Drawing.Point(177, 594);
+            this.gAge.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gAge.Location = new System.Drawing.Point(166, 594);
             this.gAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gAge.Name = "gAge";
-            this.gAge.Size = new System.Drawing.Size(20, 29);
+            this.gAge.Size = new System.Drawing.Size(16, 24);
             this.gAge.TabIndex = 4;
             this.gAge.Text = "-";
             // 
@@ -798,7 +798,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(515, 642);
+            this.label12.Location = new System.Drawing.Point(515, 640);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(42, 23);
@@ -812,7 +812,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(107, 639);
+            this.label9.Location = new System.Drawing.Point(107, 640);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(67, 23);
@@ -826,7 +826,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(669, 601);
+            this.label13.Location = new System.Drawing.Point(669, 594);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(107, 23);
@@ -840,7 +840,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(107, 601);
+            this.label6.Location = new System.Drawing.Point(107, 594);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 23);
@@ -946,7 +946,7 @@
             this.button2.BackColor = System.Drawing.Color.Salmon;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(1263, 240);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(181, 59);
             this.button2.TabIndex = 6;
@@ -959,7 +959,7 @@
             this.button3.BackColor = System.Drawing.Color.LawnGreen;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(1263, 107);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(181, 59);
             this.button3.TabIndex = 7;
@@ -972,7 +972,7 @@
             this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(1263, 173);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(181, 59);
             this.button1.TabIndex = 8;
@@ -994,7 +994,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1496, 878);
+            this.ClientSize = new System.Drawing.Size(1496, 1092);
             this.Controls.Add(this.selectPrinter);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);

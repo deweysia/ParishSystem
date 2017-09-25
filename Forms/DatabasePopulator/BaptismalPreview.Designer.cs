@@ -192,7 +192,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(701, 855);
+            this.label18.Location = new System.Drawing.Point(701, 850);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(111, 23);
@@ -295,11 +295,11 @@
             this.mPlaceofOrigin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.mPlaceofOrigin.AutoSize = true;
             this.mPlaceofOrigin.BackColor = System.Drawing.Color.Transparent;
-            this.mPlaceofOrigin.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mPlaceofOrigin.Location = new System.Drawing.Point(779, 521);
+            this.mPlaceofOrigin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mPlaceofOrigin.Location = new System.Drawing.Point(750, 525);
             this.mPlaceofOrigin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mPlaceofOrigin.Name = "mPlaceofOrigin";
-            this.mPlaceofOrigin.Size = new System.Drawing.Size(20, 29);
+            this.mPlaceofOrigin.Size = new System.Drawing.Size(16, 24);
             this.mPlaceofOrigin.TabIndex = 0;
             this.mPlaceofOrigin.Text = "-";
             // 
@@ -308,11 +308,11 @@
             this.nameOfMother.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nameOfMother.AutoSize = true;
             this.nameOfMother.BackColor = System.Drawing.Color.Transparent;
-            this.nameOfMother.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameOfMother.Location = new System.Drawing.Point(779, 492);
+            this.nameOfMother.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameOfMother.Location = new System.Drawing.Point(750, 496);
             this.nameOfMother.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameOfMother.Name = "nameOfMother";
-            this.nameOfMother.Size = new System.Drawing.Size(20, 29);
+            this.nameOfMother.Size = new System.Drawing.Size(16, 24);
             this.nameOfMother.TabIndex = 0;
             this.nameOfMother.Text = "-";
             // 
@@ -321,11 +321,11 @@
             this.fPlaceOfOrigin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.fPlaceOfOrigin.AutoSize = true;
             this.fPlaceOfOrigin.BackColor = System.Drawing.Color.Transparent;
-            this.fPlaceOfOrigin.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fPlaceOfOrigin.Location = new System.Drawing.Point(319, 524);
+            this.fPlaceOfOrigin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fPlaceOfOrigin.Location = new System.Drawing.Point(290, 528);
             this.fPlaceOfOrigin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fPlaceOfOrigin.Name = "fPlaceOfOrigin";
-            this.fPlaceOfOrigin.Size = new System.Drawing.Size(20, 29);
+            this.fPlaceOfOrigin.Size = new System.Drawing.Size(16, 24);
             this.fPlaceOfOrigin.TabIndex = 0;
             this.fPlaceOfOrigin.Text = "-";
             // 
@@ -334,11 +334,11 @@
             this.placeOfBirth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.placeOfBirth.AutoSize = true;
             this.placeOfBirth.BackColor = System.Drawing.Color.Transparent;
-            this.placeOfBirth.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.placeOfBirth.Location = new System.Drawing.Point(779, 463);
+            this.placeOfBirth.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.placeOfBirth.Location = new System.Drawing.Point(750, 467);
             this.placeOfBirth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.placeOfBirth.Name = "placeOfBirth";
-            this.placeOfBirth.Size = new System.Drawing.Size(20, 29);
+            this.placeOfBirth.Size = new System.Drawing.Size(16, 24);
             this.placeOfBirth.TabIndex = 0;
             this.placeOfBirth.Text = "-";
             // 
@@ -348,7 +348,7 @@
             this.sponsorNames.AutoSize = true;
             this.sponsorNames.BackColor = System.Drawing.Color.Transparent;
             this.sponsorNames.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sponsorNames.Location = new System.Drawing.Point(395, 738);
+            this.sponsorNames.Location = new System.Drawing.Point(383, 738);
             this.sponsorNames.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sponsorNames.Name = "sponsorNames";
             this.sponsorNames.Size = new System.Drawing.Size(20, 29);
@@ -400,7 +400,7 @@
             this.dateIssued.AutoSize = true;
             this.dateIssued.BackColor = System.Drawing.Color.Transparent;
             this.dateIssued.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateIssued.Location = new System.Drawing.Point(437, 906);
+            this.dateIssued.Location = new System.Drawing.Point(405, 906);
             this.dateIssued.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dateIssued.Name = "dateIssued";
             this.dateIssued.Size = new System.Drawing.Size(20, 29);
@@ -412,11 +412,11 @@
             this.purposeField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.purposeField.AutoSize = true;
             this.purposeField.BackColor = System.Drawing.Color.Transparent;
-            this.purposeField.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.purposeField.Location = new System.Drawing.Point(829, 849);
+            this.purposeField.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.purposeField.Location = new System.Drawing.Point(814, 847);
             this.purposeField.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.purposeField.Name = "purposeField";
-            this.purposeField.Size = new System.Drawing.Size(20, 29);
+            this.purposeField.Size = new System.Drawing.Size(16, 24);
             this.purposeField.TabIndex = 0;
             this.purposeField.Text = "-";
             // 
@@ -426,7 +426,7 @@
             this.minister.AutoSize = true;
             this.minister.BackColor = System.Drawing.Color.Transparent;
             this.minister.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minister.Location = new System.Drawing.Point(437, 849);
+            this.minister.Location = new System.Drawing.Point(432, 849);
             this.minister.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.minister.Name = "minister";
             this.minister.Size = new System.Drawing.Size(20, 29);
@@ -438,11 +438,11 @@
             this.nameOfFather.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nameOfFather.AutoSize = true;
             this.nameOfFather.BackColor = System.Drawing.Color.Transparent;
-            this.nameOfFather.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameOfFather.Location = new System.Drawing.Point(319, 495);
+            this.nameOfFather.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameOfFather.Location = new System.Drawing.Point(290, 499);
             this.nameOfFather.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameOfFather.Name = "nameOfFather";
-            this.nameOfFather.Size = new System.Drawing.Size(20, 29);
+            this.nameOfFather.Size = new System.Drawing.Size(16, 24);
             this.nameOfFather.TabIndex = 0;
             this.nameOfFather.Text = "-";
             // 
@@ -452,7 +452,7 @@
             this.dateOfBaptism.AutoSize = true;
             this.dateOfBaptism.BackColor = System.Drawing.Color.Transparent;
             this.dateOfBaptism.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateOfBaptism.Location = new System.Drawing.Point(459, 646);
+            this.dateOfBaptism.Location = new System.Drawing.Point(440, 646);
             this.dateOfBaptism.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dateOfBaptism.Name = "dateOfBaptism";
             this.dateOfBaptism.Size = new System.Drawing.Size(20, 29);
@@ -464,11 +464,11 @@
             this.dateOfBirth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateOfBirth.AutoSize = true;
             this.dateOfBirth.BackColor = System.Drawing.Color.Transparent;
-            this.dateOfBirth.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateOfBirth.Location = new System.Drawing.Point(319, 466);
+            this.dateOfBirth.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateOfBirth.Location = new System.Drawing.Point(290, 470);
             this.dateOfBirth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dateOfBirth.Name = "dateOfBirth";
-            this.dateOfBirth.Size = new System.Drawing.Size(20, 29);
+            this.dateOfBirth.Size = new System.Drawing.Size(16, 24);
             this.dateOfBirth.TabIndex = 0;
             this.dateOfBirth.Text = "-";
             // 
@@ -477,11 +477,11 @@
             this.nameOfBaptized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nameOfBaptized.AutoSize = true;
             this.nameOfBaptized.BackColor = System.Drawing.Color.Transparent;
-            this.nameOfBaptized.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameOfBaptized.Location = new System.Drawing.Point(319, 418);
+            this.nameOfBaptized.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameOfBaptized.Location = new System.Drawing.Point(290, 422);
             this.nameOfBaptized.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameOfBaptized.Name = "nameOfBaptized";
-            this.nameOfBaptized.Size = new System.Drawing.Size(20, 29);
+            this.nameOfBaptized.Size = new System.Drawing.Size(16, 24);
             this.nameOfBaptized.TabIndex = 0;
             this.nameOfBaptized.Text = "-";
             // 
