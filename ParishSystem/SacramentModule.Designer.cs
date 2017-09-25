@@ -49,6 +49,7 @@
             this.btnOpenBrideProfile = new System.Windows.Forms.Button();
             this.btnAddReferencesMar = new System.Windows.Forms.Button();
             this.btnOpenGroomProfile = new System.Windows.Forms.Button();
+            this.btnEditMar = new System.Windows.Forms.Button();
             this.lblNameBride = new System.Windows.Forms.Label();
             this.lblNameGroom = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -75,7 +76,7 @@
             this.tlpProfileCon = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddReferencesCon = new System.Windows.Forms.Button();
             this.btnOpenProfileCon = new System.Windows.Forms.Button();
-            this.btnEditSacramentCon = new System.Windows.Forms.Button();
+            this.btnEditCon = new System.Windows.Forms.Button();
             this.lblNameCon = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvConfirmation = new MetroFramework.Controls.MetroGrid();
@@ -259,6 +260,7 @@
             this.tlpProfileMar.Controls.Add(this.btnOpenBrideProfile, 1, 0);
             this.tlpProfileMar.Controls.Add(this.btnAddReferencesMar, 0, 1);
             this.tlpProfileMar.Controls.Add(this.btnOpenGroomProfile, 0, 0);
+            this.tlpProfileMar.Controls.Add(this.btnEditMar, 1, 1);
             this.tlpProfileMar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tlpProfileMar.Location = new System.Drawing.Point(8, 27);
             this.tlpProfileMar.Name = "tlpProfileMar";
@@ -315,6 +317,22 @@
             this.btnOpenGroomProfile.Text = "Open Groom";
             this.btnOpenGroomProfile.UseVisualStyleBackColor = false;
             this.btnOpenGroomProfile.Click += new System.EventHandler(this.btnOpenGroomProfile_Click);
+            // 
+            // btnEditMar
+            // 
+            this.btnEditMar.BackColor = System.Drawing.Color.Gray;
+            this.btnEditMar.FlatAppearance.BorderSize = 0;
+            this.btnEditMar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnEditMar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditMar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditMar.ForeColor = System.Drawing.Color.White;
+            this.btnEditMar.Location = new System.Drawing.Point(160, 32);
+            this.btnEditMar.Name = "btnEditMar";
+            this.btnEditMar.Size = new System.Drawing.Size(113, 23);
+            this.btnEditMar.TabIndex = 19;
+            this.btnEditMar.Text = "Edit Sacrament";
+            this.btnEditMar.UseVisualStyleBackColor = false;
+            this.btnEditMar.Click += new System.EventHandler(this.btnEditMar_Click);
             // 
             // lblNameBride
             // 
@@ -634,7 +652,7 @@
             this.tlpProfileCon.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
             this.tlpProfileCon.Controls.Add(this.btnAddReferencesCon, 0, 1);
             this.tlpProfileCon.Controls.Add(this.btnOpenProfileCon, 0, 0);
-            this.tlpProfileCon.Controls.Add(this.btnEditSacramentCon, 1, 1);
+            this.tlpProfileCon.Controls.Add(this.btnEditCon, 1, 1);
             this.tlpProfileCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tlpProfileCon.Location = new System.Drawing.Point(8, 27);
             this.tlpProfileCon.Name = "tlpProfileCon";
@@ -676,21 +694,21 @@
             this.btnOpenProfileCon.UseVisualStyleBackColor = false;
             this.btnOpenProfileCon.Click += new System.EventHandler(this.btnOpenProfileConf_Click);
             // 
-            // btnEditSacramentCon
+            // btnEditCon
             // 
-            this.btnEditSacramentCon.BackColor = System.Drawing.Color.Gray;
-            this.btnEditSacramentCon.FlatAppearance.BorderSize = 0;
-            this.btnEditSacramentCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnEditSacramentCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditSacramentCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditSacramentCon.ForeColor = System.Drawing.Color.White;
-            this.btnEditSacramentCon.Location = new System.Drawing.Point(138, 32);
-            this.btnEditSacramentCon.Name = "btnEditSacramentCon";
-            this.btnEditSacramentCon.Size = new System.Drawing.Size(104, 23);
-            this.btnEditSacramentCon.TabIndex = 18;
-            this.btnEditSacramentCon.Text = "Edit Sacrament";
-            this.btnEditSacramentCon.UseVisualStyleBackColor = false;
-            this.btnEditSacramentCon.Click += new System.EventHandler(this.btnEditSacramentCon_Click);
+            this.btnEditCon.BackColor = System.Drawing.Color.Gray;
+            this.btnEditCon.FlatAppearance.BorderSize = 0;
+            this.btnEditCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnEditCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditCon.ForeColor = System.Drawing.Color.White;
+            this.btnEditCon.Location = new System.Drawing.Point(138, 32);
+            this.btnEditCon.Name = "btnEditCon";
+            this.btnEditCon.Size = new System.Drawing.Size(104, 23);
+            this.btnEditCon.TabIndex = 18;
+            this.btnEditCon.Text = "Edit Sacrament";
+            this.btnEditCon.UseVisualStyleBackColor = false;
+            this.btnEditCon.Click += new System.EventHandler(this.btnEditCon_Click);
             // 
             // lblNameCon
             // 
@@ -1267,7 +1285,7 @@
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(930, 540);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroTabControl1.TabIndex = 11;
@@ -1395,6 +1413,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bapPageNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn bapRemarks;
         private System.Windows.Forms.Button btnEditBap;
-        private System.Windows.Forms.Button btnEditSacramentCon;
+        private System.Windows.Forms.Button btnEditCon;
+        private System.Windows.Forms.Button btnEditMar;
     }
 }

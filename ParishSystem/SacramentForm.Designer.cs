@@ -34,7 +34,7 @@
             this.remarksText = new System.Windows.Forms.TextBox();
             this.MinisterCBox = new MetroFramework.Controls.MetroComboBox();
             this.sacramentDateLabel = new System.Windows.Forms.Label();
-            this.baptismDateDTP = new MetroFramework.Controls.MetroDateTime();
+            this.sacramentDateDTP = new MetroFramework.Controls.MetroDateTime();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -119,11 +119,12 @@
             // 
             // MinisterCBox
             // 
+            this.MinisterCBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.MinisterCBox.FormattingEnabled = true;
-            this.MinisterCBox.ItemHeight = 23;
+            this.MinisterCBox.ItemHeight = 19;
             this.MinisterCBox.Location = new System.Drawing.Point(227, 146);
             this.MinisterCBox.Name = "MinisterCBox";
-            this.MinisterCBox.Size = new System.Drawing.Size(121, 29);
+            this.MinisterCBox.Size = new System.Drawing.Size(121, 25);
             this.MinisterCBox.TabIndex = 2;
             this.MinisterCBox.UseSelectable = true;
             // 
@@ -137,14 +138,15 @@
             this.sacramentDateLabel.TabIndex = 9;
             this.sacramentDateLabel.Text = "Baptism Date";
             // 
-            // baptismDateDTP
+            // sacramentDateDTP
             // 
-            this.baptismDateDTP.Location = new System.Drawing.Point(21, 146);
-            this.baptismDateDTP.MinimumSize = new System.Drawing.Size(0, 29);
-            this.baptismDateDTP.Name = "baptismDateDTP";
-            this.baptismDateDTP.Size = new System.Drawing.Size(200, 29);
-            this.baptismDateDTP.TabIndex = 1;
-            this.baptismDateDTP.ValueChanged += new System.EventHandler(this.baptismDateDTP_ValueChanged);
+            this.sacramentDateDTP.FontSize = MetroFramework.MetroDateTimeSize.Small;
+            this.sacramentDateDTP.Location = new System.Drawing.Point(21, 146);
+            this.sacramentDateDTP.MinimumSize = new System.Drawing.Size(0, 25);
+            this.sacramentDateDTP.Name = "sacramentDateDTP";
+            this.sacramentDateDTP.Size = new System.Drawing.Size(200, 29);
+            this.sacramentDateDTP.TabIndex = 1;
+            this.sacramentDateDTP.ValueChanged += new System.EventHandler(this.baptismDateDTP_ValueChanged);
             // 
             // label4
             // 
@@ -462,11 +464,12 @@
             // 
             // legitimacyCBox
             // 
+            this.legitimacyCBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.legitimacyCBox.FormattingEnabled = true;
-            this.legitimacyCBox.ItemHeight = 23;
+            this.legitimacyCBox.ItemHeight = 19;
             this.legitimacyCBox.Location = new System.Drawing.Point(23, 204);
             this.legitimacyCBox.Name = "legitimacyCBox";
-            this.legitimacyCBox.Size = new System.Drawing.Size(198, 29);
+            this.legitimacyCBox.Size = new System.Drawing.Size(198, 25);
             this.legitimacyCBox.TabIndex = 3;
             this.legitimacyCBox.UseSelectable = true;
             // 
@@ -570,7 +573,7 @@
             this.Controls.Add(this.MinisterCBox);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.sacramentDateLabel);
-            this.Controls.Add(this.baptismDateDTP);
+            this.Controls.Add(this.sacramentDateDTP);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.genderLabel);
@@ -595,7 +598,7 @@
         private System.Windows.Forms.TextBox remarksText;
         private MetroFramework.Controls.MetroComboBox MinisterCBox;
         private System.Windows.Forms.Label sacramentDateLabel;
-        private MetroFramework.Controls.MetroDateTime baptismDateDTP;
+        private MetroFramework.Controls.MetroDateTime sacramentDateDTP;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;

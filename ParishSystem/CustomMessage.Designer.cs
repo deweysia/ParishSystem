@@ -79,11 +79,11 @@
             // 
             // infoLabel
             // 
-            this.infoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infoLabel.ForeColor = System.Drawing.Color.White;
             this.infoLabel.Location = new System.Drawing.Point(75, 37);
             this.infoLabel.Name = "infoLabel";
-            this.infoLabel.Size = new System.Drawing.Size(324, 50);
+            this.infoLabel.Size = new System.Drawing.Size(353, 50);
             this.infoLabel.TabIndex = 2;
             this.infoLabel.Text = "Information";
             this.infoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -101,11 +101,11 @@
             // 
             this.titleLabel.AutoEllipsis = true;
             this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.ForeColor = System.Drawing.Color.White;
             this.titleLabel.Location = new System.Drawing.Point(16, 9);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(39, 21);
+            this.titleLabel.Size = new System.Drawing.Size(38, 20);
             this.titleLabel.TabIndex = 2;
             this.titleLabel.Text = "Title";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -127,7 +127,7 @@
             this.hiddenTabControl1.Controls.Add(this.tabPage4);
             this.hiddenTabControl1.Controls.Add(this.tabPage5);
             this.hiddenTabControl1.Controls.Add(this.tabPage6);
-            this.hiddenTabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hiddenTabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hiddenTabControl1.Location = new System.Drawing.Point(12, 94);
             this.hiddenTabControl1.Name = "hiddenTabControl1";
             this.hiddenTabControl1.SelectedIndex = 0;
@@ -138,10 +138,10 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage1.Controls.Add(this.tableLayoutPanel1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(408, 40);
+            this.tabPage1.Size = new System.Drawing.Size(408, 47);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "AbortRetryIgnore";
             // 
@@ -160,7 +160,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(402, 34);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(402, 41);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // button3
@@ -174,7 +174,7 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(271, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(128, 28);
+            this.button3.Size = new System.Drawing.Size(128, 35);
             this.button3.TabIndex = 6;
             this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = false;
@@ -190,7 +190,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(137, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 28);
+            this.button1.Size = new System.Drawing.Size(128, 35);
             this.button1.TabIndex = 4;
             this.button1.Text = "Retry";
             this.button1.UseVisualStyleBackColor = false;
@@ -206,7 +206,7 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(3, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 28);
+            this.button2.Size = new System.Drawing.Size(128, 35);
             this.button2.TabIndex = 5;
             this.button2.Text = "Abort";
             this.button2.UseVisualStyleBackColor = false;
@@ -216,10 +216,10 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage2.Controls.Add(this.tableLayoutPanel2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(408, 40);
+            this.tabPage2.Size = new System.Drawing.Size(408, 47);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "OK";
             // 
@@ -235,7 +235,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(402, 34);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(402, 41);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // button4
@@ -257,10 +257,10 @@
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage3.Controls.Add(this.tableLayoutPanel3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(408, 40);
+            this.tabPage3.Size = new System.Drawing.Size(408, 47);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "OKCancel";
             // 
@@ -279,15 +279,14 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(402, 34);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(402, 41);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // metroButton6
             // 
             this.metroButton6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroButton6.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.metroButton6.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton6.Location = new System.Drawing.Point(264, 5);
+            this.metroButton6.Location = new System.Drawing.Point(264, 9);
             this.metroButton6.Name = "metroButton6";
             this.metroButton6.Size = new System.Drawing.Size(75, 23);
             this.metroButton6.TabIndex = 2;
@@ -298,8 +297,7 @@
             // 
             this.metroButton5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroButton5.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.metroButton5.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton5.Location = new System.Drawing.Point(63, 5);
+            this.metroButton5.Location = new System.Drawing.Point(63, 9);
             this.metroButton5.Name = "metroButton5";
             this.metroButton5.Size = new System.Drawing.Size(75, 23);
             this.metroButton5.TabIndex = 1;
@@ -310,10 +308,10 @@
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage4.Controls.Add(this.tableLayoutPanel4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(408, 40);
+            this.tabPage4.Size = new System.Drawing.Size(408, 47);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "RetryCancel";
             // 
@@ -330,14 +328,14 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(402, 34);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(402, 41);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
             // metroButton8
             // 
             this.metroButton8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroButton8.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.metroButton8.Location = new System.Drawing.Point(264, 5);
+            this.metroButton8.Location = new System.Drawing.Point(264, 9);
             this.metroButton8.Name = "metroButton8";
             this.metroButton8.Size = new System.Drawing.Size(75, 23);
             this.metroButton8.TabIndex = 2;
@@ -348,7 +346,7 @@
             // 
             this.metroButton7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroButton7.DialogResult = System.Windows.Forms.DialogResult.Retry;
-            this.metroButton7.Location = new System.Drawing.Point(63, 5);
+            this.metroButton7.Location = new System.Drawing.Point(63, 9);
             this.metroButton7.Name = "metroButton7";
             this.metroButton7.Size = new System.Drawing.Size(75, 23);
             this.metroButton7.TabIndex = 1;
@@ -359,10 +357,10 @@
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage5.Controls.Add(this.tableLayoutPanel5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(408, 40);
+            this.tabPage5.Size = new System.Drawing.Size(408, 47);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "YesNo";
             // 
@@ -378,14 +376,14 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(402, 34);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(402, 41);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // metroButton10
             // 
             this.metroButton10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroButton10.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.metroButton10.Location = new System.Drawing.Point(264, 5);
+            this.metroButton10.Location = new System.Drawing.Point(264, 9);
             this.metroButton10.Name = "metroButton10";
             this.metroButton10.Size = new System.Drawing.Size(75, 23);
             this.metroButton10.TabIndex = 2;
@@ -396,7 +394,7 @@
             // 
             this.metroButton9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroButton9.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.metroButton9.Location = new System.Drawing.Point(63, 5);
+            this.metroButton9.Location = new System.Drawing.Point(63, 9);
             this.metroButton9.Name = "metroButton9";
             this.metroButton9.Size = new System.Drawing.Size(75, 23);
             this.metroButton9.TabIndex = 1;
@@ -407,10 +405,10 @@
             // 
             this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage6.Controls.Add(this.tableLayoutPanel6);
-            this.tabPage6.Location = new System.Drawing.Point(4, 29);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(408, 40);
+            this.tabPage6.Size = new System.Drawing.Size(408, 47);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "YesNoCancel";
             // 
@@ -428,14 +426,14 @@
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(402, 34);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(402, 41);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // metroButton13
             // 
             this.metroButton13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroButton13.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.metroButton13.Location = new System.Drawing.Point(297, 5);
+            this.metroButton13.Location = new System.Drawing.Point(297, 9);
             this.metroButton13.Name = "metroButton13";
             this.metroButton13.Size = new System.Drawing.Size(75, 23);
             this.metroButton13.TabIndex = 4;
@@ -446,7 +444,7 @@
             // 
             this.metroButton12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroButton12.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.metroButton12.Location = new System.Drawing.Point(163, 5);
+            this.metroButton12.Location = new System.Drawing.Point(163, 9);
             this.metroButton12.Name = "metroButton12";
             this.metroButton12.Size = new System.Drawing.Size(75, 23);
             this.metroButton12.TabIndex = 3;
@@ -457,7 +455,7 @@
             // 
             this.metroButton11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroButton11.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.metroButton11.Location = new System.Drawing.Point(29, 5);
+            this.metroButton11.Location = new System.Drawing.Point(29, 9);
             this.metroButton11.Name = "metroButton11";
             this.metroButton11.Size = new System.Drawing.Size(75, 23);
             this.metroButton11.TabIndex = 2;

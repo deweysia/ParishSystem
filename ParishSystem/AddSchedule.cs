@@ -30,6 +30,9 @@ namespace ParishSystem
             dtpTimeStart.Value = DateTime.Now;
             dtpTimeEnd.Value = DateTime.Now;
 
+            Draggable drag = new Draggable(this);
+            drag.makeDraggable(panelControl);
+
             DataTable dt = dh.getMinisters(MinisterStatus.Active);
 
             cmbMinister.Items.Add(string.Empty);//Added empty item to cmbMinister
@@ -240,6 +243,11 @@ namespace ParishSystem
 
             bool available = dh.ministerAvailable(((ComboboxContent)cmbMinister.SelectedItem).id, getDateTime(ScheduleTime.Start), getDateTime(ScheduleTime.End));
             return available;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -12,7 +12,8 @@ namespace ParishSystem
 {
     public partial class LoginForm : Form
     {
-        Login login = new Login();
+        
+        DataHandler dh = DataHandler.getDataHandler();
         public LoginForm()
         {
             InitializeComponent();
@@ -20,8 +21,7 @@ namespace ParishSystem
 
         private void login_button_Click(object sender, EventArgs e)
         {
-
-            if (login.verify(Username_textbox.Text, Password_textbox.Text))
+            if (User.loginUser(Username_textbox.Text, Password_textbox.Text))
             {
                 this.Hide();
                 SAD2 sad = new SAD2(Username_textbox.Text);

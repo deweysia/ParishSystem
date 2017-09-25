@@ -55,8 +55,7 @@ namespace ParishSystem
             try
             {
                 t.Abort();
-            }
-            catch (Exception e) { }
+            }catch (Exception e) { }
             
         }
 
