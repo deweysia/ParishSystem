@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DatabasePopulator.Properties {
+namespace Certificates.Properties {
     using System;
     
     

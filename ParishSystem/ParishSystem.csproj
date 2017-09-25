@@ -150,6 +150,12 @@
       <DependentUpon>AuditModule.cs</DependentUpon>
     </Compile>
     <Compile Include="Baptism.cs" />
+    <Compile Include="BaptismPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaptismPreview.Designer.cs">
+      <DependentUpon>BaptismPreview.cs</DependentUpon>
+    </Compile>
     <Compile Include="BloodClaim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,7 +211,19 @@
     <Compile Include="CashReceipt.Designer.cs">
       <DependentUpon>CashReceipt.cs</DependentUpon>
     </Compile>
+    <Compile Include="CertificatePurpose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CertificatePurpose.Designer.cs">
+      <DependentUpon>CertificatePurpose.cs</DependentUpon>
+    </Compile>
     <Compile Include="Confirmation.cs" />
+    <Compile Include="ConfirmationPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmationPreview.Designer.cs">
+      <DependentUpon>ConfirmationPreview.cs</DependentUpon>
+    </Compile>
     <Compile Include="CueTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -268,6 +286,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MarriageApplication.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MarriagePreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarriagePreview.Designer.cs">
+      <DependentUpon>MarriagePreview.cs</DependentUpon>
     </Compile>
     <Compile Include="Minister.cs" />
     <Compile Include="MinisterModule.cs">
@@ -410,6 +434,9 @@
     <EmbeddedResource Include="AuditModule.resx">
       <DependentUpon>AuditModule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaptismPreview.resx">
+      <DependentUpon>BaptismPreview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BloodClaim.resx">
       <DependentUpon>BloodClaim.cs</DependentUpon>
     </EmbeddedResource>
@@ -436,6 +463,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CashReceipt.resx">
       <DependentUpon>CashReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CertificatePurpose.resx">
+      <DependentUpon>CertificatePurpose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmationPreview.resx">
+      <DependentUpon>ConfirmationPreview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CueTextBox.resx">
       <DependentUpon>CueTextBox.cs</DependentUpon>
@@ -464,6 +497,9 @@
     <EmbeddedResource Include="MarriageApplication.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MarriageApplication.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarriagePreview.resx">
+      <DependentUpon>MarriagePreview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MinisterModule.resx">
       <DependentUpon>MinisterModule.cs</DependentUpon>
@@ -632,6 +668,10 @@
     <None Include="Resources\icons8-Expand Arrow-20 White.png" />
     <None Include="Resources\icons8-Pencil-20.png" />
     <None Include="Resources\icons8-Save-20.png" />
+    <None Include="Resources\panel1.BackgroundImage.png" />
+    <None Include="Resources\panel1.BackgroundImage1.png" />
+    <None Include="Resources\panel1.BackgroundImage2.png" />
+    <None Include="Resources\panel1.BackgroundImage3.png" />
     <Content Include="Tools\SQL_Writer.jar" />
     <None Include="Resources\messageBox_cancel.png" />
     <None Include="Resources\messageBox_success.png" />

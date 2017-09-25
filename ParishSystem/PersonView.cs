@@ -10,19 +10,46 @@ using System.Windows.Forms;
 
 namespace ParishSystem
 {
+
+    
     public partial class PersonView : Form
     {
         int ProfileID;
         DataHandler dh;
         DataTable Applications;
         DataTable Partners;
+
+        Dictionary<int, string> dateSuffix = new Dictionary<int, string>();
+
         public PersonView(int profileID, DataHandler DH)
         {
             InitializeComponent();
             ProfileID = profileID;
             dh = DH;
             Applications = dh.getApplicationsOf(ProfileID);
+
+
+            dateSuffix.Add(1, "st");
+            dateSuffix.Add(2, "th");
+            dateSuffix.Add(3, "rd");
         }
+
+        
+
+
+        private string getDayOfMonthWithSuffix(DateTime date)
+        {
+            int day = Convert.ToInt32(date.ToString("dd"));
+
+            int day_ones = day % 10;
+
+            string dayOfMonth = day + dateSuffix.GetValueOrDefault(day_ones, "th");
+
+            return dayOfMonth;
+        }
+
+
+
 
         private void PersonView_Load(object sender, EventArgs e)
         {
@@ -380,6 +407,7 @@ namespace ParishSystem
                 name_label_father_baptism.Text = Father.Rows[0]["Name"].ToString();
                 po_label_father_baptism.Text = Father.Rows[0]["birthplace"].ToString();
                 name_father_self_marriage.Text= Father.Rows[0]["Name"].ToString();
+
             }
             else
             {
@@ -410,14 +438,172 @@ namespace ParishSystem
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void menu_panel_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        private void btnMarriagePrint_Click(object sender, EventArgs e)
+        {
+            
+
+            string groomName;
+            DateTime groomBirthDate;
+            string groomStatus;
+            string groomFather;
+            string groomMother;
+            string groomResidency;
+            string groomOrigin;
+            string groomAge;
+
+            string brideName;
+            DateTime brideBirthDate;
+            string brideStatus;
+            string brideMother;
+            string brideFather;
+            string brideResidency;
+            string brideOrigin;
+            string brideAge;
+
+            string minister = name_label_minister_marriage.Text;
+            DateTime marriageDateTime = DateTime.ParseExact(date_label_marriage.Text, "MMMM dd yyyy", null);
+            DateTime givenDateTime = DateTime.Now;
+            string godFather = name_label_godfather_marriage.Text;
+            string godMother = name_label_godmother_marriage.Text;
+
+            string marriageDay = getDayOfMonthWithSuffix(marriageDateTime);
+            string marriageMonthYear = marriageDateTime.ToString("MM yyyy");
+            string givenDay = getDayOfMonthWithSuffix(givenDateTime);
+            string givenMonthYear = givenDateTime.ToString("MM yyyy");
+
+
+            if (gender_label.Text == "Male")
+            {
+                groomName = String.Join(" ", firstname_label.Text, mi_label.Text, lastname_label.Text, suffix_label.Text);
+                groomBirthDate = DateTime.ParseExact(birthdate_label.Text, "MMMM dd, yyyy", null);
+                groomStatus = civilStatus_self_marriage.Text;
+                groomFather = name_father_self_marriage.Text;
+                groomMother = name_mother_self_marriage.Text;
+                groomResidency = residence_label.Text;
+                groomOrigin = po_label.Text;
+
+                int age = DateTime.Today.Year - groomBirthDate.Year;
+                if (DateTime.Today < groomBirthDate.AddYears(age)) age--;
+                groomAge = age.ToString();
+
+                brideName = name_spouse_combobox.Text;
+                brideBirthDate = DateTime.ParseExact(birthdate_label_spouse_marriage.Text, "MMMM dd, yyyy", null);
+                brideStatus = civilstatus_label_spouse_marriage.Text;
+                brideFather = name_label_father_spouse_marriage.Text;
+                brideMother = name_label_mother_spouse_marriage.Text;
+                brideResidency = residence_label_spouse_marriage.Text;
+                brideOrigin = po_label_spouse_marriage.Text;
+
+                age = DateTime.Today.Year - brideBirthDate.Year;
+                if (DateTime.Today < brideBirthDate.AddYears(age)) age--;
+                brideAge = age.ToString();
+            }
+            else
+            {
+                brideName = String.Join(" ", firstname_label.Text, mi_label.Text, lastname_label.Text, suffix_label.Text);
+                brideBirthDate = DateTime.ParseExact(birthdate_label.Text, "MMMM dd, yyyy", null);
+                brideStatus = civilStatus_self_marriage.Text;
+                brideFather = name_father_self_marriage.Text;
+                brideMother = name_mother_self_marriage.Text;
+                brideResidency = residence_label.Text;
+                brideOrigin = po_label.Text;
+
+                int age = DateTime.Today.Year - brideBirthDate.Year;
+                if (DateTime.Today < brideBirthDate.AddYears(age)) age--;
+                brideAge = age.ToString();
+
+                groomName = name_spouse_combobox.Text;
+                groomBirthDate = DateTime.ParseExact(birthdate_label_spouse_marriage.Text, "MMMM dd, yyyy", null);
+                groomStatus = civilstatus_label_spouse_marriage.Text;
+                groomFather = name_label_father_spouse_marriage.Text;
+                groomMother = name_label_mother_spouse_marriage.Text;
+                groomResidency = residence_label_spouse_marriage.Text;
+                groomOrigin = po_label_spouse_marriage.Text;
+
+                age = DateTime.Today.Year - groomBirthDate.Year;
+                if (DateTime.Today < groomBirthDate.AddYears(age)) age--;
+                groomAge = age.ToString();
+            }
+
+            /*
+             String groomname, String groomage, String groomstatus, String groommother, String groomfather,
+            String groomresidency, String groombornin, String bridename, String brideage, String bridestatus, String bridemother,
+            String bridefather, String brideresidency, String bridebornin, String priest, 
+            String marriageDay, String marriageMonthYear, String givenDay, String givenMonthYear,
+            String witness1, String witness2*/
+            //string groomName = 
+
+            MarriagePreview f = new MarriagePreview(groomName, groomAge, groomStatus, groomMother, groomFather, groomResidency, groomOrigin,
+                brideName, brideAge, brideStatus, brideMother, brideFather, brideResidency, brideOrigin,
+                minister, marriageDay, marriageMonthYear, givenDay, givenMonthYear, godFather, godMother);
+            f.ShowDialog();
+        }
+
+        private void btnBaptismPrint_Click(object sender, EventArgs e)
+        {
+            string name = String.Join(" ", firstname_label.Text, mi_label.Text, lastname_label.Text, suffix_label.Text);
+            string birthplace = po_label.Text;
+            string birthdate = birthdate_label.Text;
+            string fatherName = name_label_father_baptism.Text;
+            string motherName = name_label_mother_baptism.Text;
+            string fatherOrigin = po_label_father_baptism.Text;
+            string motherOrigin = po_label_mother_baptism.Text;
+            string baptismDate = date_label_baptism.Text;
+            string sponsorName = name_label_godFather_baptism.Text + " " + name_label_godMother_baptism.Text;
+            string issueDate = DateTime.Now.ToString("MM dd, yyyy");
+            string registry = registryNumber_label_baptism.Text;
+            string record = recordNumber_label_baptism.Text;
+            string page = pageNumber_label_baptism.Text;
+            string minister = name_label_minister_baptism.Text;
+
+            CertificatePurpose cp = new CertificatePurpose();
+            DialogResult dr = cp.ShowDialog();
+            string purpose = cp.purpose;
+
+            if (dr != DialogResult.OK)
+                return;
+            BaptismalPreview f = new BaptismalPreview(name, birthplace, birthdate, fatherName, motherName, fatherOrigin, motherOrigin, baptismDate, sponsorName, issueDate, registry, record, page, minister, purpose);
+
+            f.ShowDialog();
+        }
+
+        private void btnConfirmationPrint_Click(object sender, EventArgs e)
+        {
+            string name = String.Join(" ", firstname_label.Text, mi_label.Text, lastname_label.Text, suffix_label.Text);
+            string birthplace = po_label.Text;
+            string birthdate = birthdate_label.Text;
+            string fatherName = name_label_father_confirmation.Text;
+            string motherName = name_label_mother_confirmation.Text;
+
+            DateTime confirmationDateTime = DateTime.ParseExact(date_label_confirmation.Text, "MMMM dd yyyy", null);
+            string confirmationDay = getDayOfMonthWithSuffix(confirmationDateTime);
+            string confirmationMonthYear = confirmationDateTime.ToString("MMMM yyyy");
+
+            string godFather = name_label_godFather_confirmation.Text;
+            string godMotherName = name_label_godMother_confirmation.Text;
+
+            string issueDate = DateTime.Now.ToString("MM dd, yyyy");
+            string minister = name_label_minister_confirmation.Text;
+
+            ConfirmationPreview f = new ConfirmationPreview(name, confirmationDay, confirmationMonthYear, minister, fatherName, motherName, godFather, godMotherName);
+
+            f.ShowDialog();
+        }
+    }
+
+    static class DictionaryExtension //Class that declares an extension method for Dictionary
+    {
+        public static TValue GetValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey key, TValue defaultValue)
+        {
+            TValue value;
+            return dictionary.TryGetValue(key, out value) ? value : defaultValue;
+        }
+
+
     }
 }

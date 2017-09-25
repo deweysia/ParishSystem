@@ -16,25 +16,25 @@ using System.IO;
 using System.Diagnostics;
 using System.Drawing.Printing;
 
-namespace Certificates
+namespace ParishSystem
 {
     public partial class ConfirmationPreview : Form
     {
-        public ConfirmationPreview(String name, String day, String monthyear, String priestname, String fathername,
+        public ConfirmationPreview(String name, String confirmationDay, String confirmationMonthYear, String priestname, String fathername,
             String mothername, String godfathername, String godmothername)
         {
             InitializeComponent();
 
             Name.Text = name;
-            date.Text = day;
-            MonthYear.Text = monthyear;
+            lblConfirmationDay.Text = confirmationDay;
+            lblConfirmationMonthYear.Text = confirmationMonthYear;
             priestName.Text = priestname;
             fatherName.Text = fathername;
             motherName.Text = mothername;
             godFatherName.Text = godfathername;
             godMotherName.Text = godmothername;
-            day2.Text = day;
-            monthYear2.Text = monthyear;
+            lblGivenDay.Text = confirmationDay;
+            lblGivenMonthYear.Text = confirmationMonthYear;
 
 
         }
@@ -174,7 +174,7 @@ namespace Certificates
 
 
         }
-#endregion 
+        #endregion
 
         #region sending file to printer 
         private void button3_Click(object sender, EventArgs e)
@@ -238,6 +238,6 @@ namespace Certificates
         }
         #endregion
 
-        
+
     }
 }

@@ -16,29 +16,47 @@ using System.IO;
 using System.Diagnostics;
 using System.Drawing.Printing;
 
-namespace Certificates
+namespace ParishSystem
 {
-    public partial class ConfirmationPreview : Form
+    public partial class MarriagePreview : Form
     {
-        public ConfirmationPreview(String name, String day, String monthyear, String priestname, String fathername,
-            String mothername, String godfathername, String godmothername)
+        public MarriagePreview(String groomname, String groomage, String groomstatus, String groommother, String groomfather,
+            String groomresidency, String groombornin, String bridename, String brideage, String bridestatus, String bridemother,
+            String bridefather, String brideresidency, String bridebornin, String priest, 
+            String marriageDay, String marriageMonthYear, String givenDay, String givenMonthYear,
+            String witness1, String witness2)
         {
             InitializeComponent();
+            //GROOM
+            GroomName.Text = groomname;
+            gAge.Text = groomage;
+            gStatus.Text = groomstatus;
+            gMotherName.Text = groommother;
+            gFatherName.Text = groomfather;
+            gResidency.Text = groomresidency;
+            gBornIn.Text = groombornin;
 
-            Name.Text = name;
-            date.Text = day;
-            MonthYear.Text = monthyear;
-            priestName.Text = priestname;
-            fatherName.Text = fathername;
-            motherName.Text = mothername;
-            godFatherName.Text = godfathername;
-            godMotherName.Text = godmothername;
-            day2.Text = day;
-            monthYear2.Text = monthyear;
+            //BRIDE
+            BrideName.Text = bridename;
+            bAge.Text = brideage;
+            bStatus.Text = bridestatus;
+            bMotherName.Text = bridemother;
+            bFatherName.Text = bridefather;
+            bResidency.Text = brideresidency;
+            bBornIn.Text = bridebornin;
+
+            //MISC.
+            Minister.Text = priest;
+            this.lblMarriageDay.Text = marriageDay;
+            lblGivenDay.Text = givenDay;
+            lblGivenMonthYear.Text = givenMonthYear;
+            this.lblMarriageMonthYear.Text = marriageMonthYear;
+            lblGivenMonthYear.Text = marriageMonthYear;
 
 
         }
-        private void ConfirmationPreview_Load(object sender, EventArgs e)
+
+        private void MarriagePreview_Load(object sender, EventArgs e)
         {
             #region FINDING PRINTERS AND SETTING DEFAULT
             // Find all of the installed printers.
@@ -56,10 +74,21 @@ namespace Certificates
             catch
             {
             }
-            # endregion
-        }
+            #endregion
+        } //ASSIGNS DEFAULT PRINTER
 
-        #region SCREEN CAPTURE
+        #region VARIABLES
+        String DEFAULTPRINTER;
+        Boolean isSaved = false;
+        string filepath;
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
+
+        #region screen capture
         public enum enmScreenCaptureMode
         {
             Screen,
@@ -119,21 +148,9 @@ namespace Certificates
         }
         #endregion
 
-        #region VARIABLES
-        string filepath;
-        String DEFAULTPRINTER;
-        Boolean isSaved = false;
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        #endregion
-
         #region saving file as pdf
         private void button1_Click(object sender, EventArgs e)
         {
-
             saveFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             int width = panel1.Size.Width;
             int height = panel1.Size.Height;
@@ -172,11 +189,11 @@ namespace Certificates
                 this.Close();
             }
 
-
         }
-#endregion 
+        #endregion
 
-        #region sending file to printer 
+        #region Sending file to printer
+
         private void button3_Click(object sender, EventArgs e)
         {
             string tempFolder = Path.GetTempPath();
@@ -235,9 +252,13 @@ namespace Certificates
 
             pdfPrinter.Print();
 
+
         }
         #endregion
 
-        
+
     }
+
+
+
 }

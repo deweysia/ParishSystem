@@ -16,7 +16,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Drawing.Printing;
 
-namespace DatabasePopulator
+namespace Certificates
 {
     public partial class MarriagePreview : Form
     {

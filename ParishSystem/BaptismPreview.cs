@@ -13,32 +13,42 @@ using PdfSharp;
 using PdfSharp.Pdf;
 using PdfSharp.Drawing;
 using System.IO;
-using System.Diagnostics;
 using System.Drawing.Printing;
+using System.Diagnostics;
 
-namespace Certificates
+namespace ParishSystem
 {
-    public partial class ConfirmationPreview : Form
+    public partial class BaptismalPreview : Form
     {
-        public ConfirmationPreview(String name, String day, String monthyear, String priestname, String fathername,
-            String mothername, String godfathername, String godmothername)
+
+
+        public BaptismalPreview(String baptizedName, String bPlace
+            , String bdate, String fname, String mname
+            , String fOrigin, String mOrigin, String baptismDate, String sponsorsname, String issueDate
+
+            , String registry, String record, String page, String OMinister, String purpose)
         {
             InitializeComponent();
 
-            Name.Text = name;
-            date.Text = day;
-            MonthYear.Text = monthyear;
-            priestName.Text = priestname;
-            fatherName.Text = fathername;
-            motherName.Text = mothername;
-            godFatherName.Text = godfathername;
-            godMotherName.Text = godmothername;
-            day2.Text = day;
-            monthYear2.Text = monthyear;
-
-
+            nameOfBaptized.Text = baptizedName;
+            placeOfBirth.Text = bPlace;
+            dateOfBirth.Text = bdate;
+            nameOfFather.Text = fname;
+            nameOfMother.Text = mname;
+            fPlaceOfOrigin.Text = fOrigin;
+            mPlaceofOrigin.Text = mOrigin;
+            dateOfBaptism.Text = baptismDate;
+            sponsorNames.Text = sponsorsname;
+            dateIssued.Text = issueDate;
+            registrynum.Text = registry;
+            pagenum.Text = page;
+            booknum.Text = record;
+            minister.Text = OMinister;
+            purposeField.Text = purpose;
         }
-        private void ConfirmationPreview_Load(object sender, EventArgs e)
+
+
+        private void Form1_Load(object sender, EventArgs e)
         {
             #region FINDING PRINTERS AND SETTING DEFAULT
             // Find all of the installed printers.
@@ -59,7 +69,7 @@ namespace Certificates
             # endregion
         }
 
-        #region SCREEN CAPTURE
+        #region screencapture
         public enum enmScreenCaptureMode
         {
             Screen,
@@ -119,19 +129,8 @@ namespace Certificates
         }
         #endregion
 
-        #region VARIABLES
-        string filepath;
-        String DEFAULTPRINTER;
-        Boolean isSaved = false;
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        #endregion
-
-        #region saving file as pdf
-        private void button1_Click(object sender, EventArgs e)
+        #region saving PDF
+        private void button1_Click_1(object sender, EventArgs e)
         {
 
             saveFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -149,7 +148,7 @@ namespace Certificates
 
 
                 string tempFolder = Path.GetTempPath();
-                bm.Save(tempFolder + "//tempReport.bmp", ImageFormat.Bmp);
+                bm.Save(tempFolder + "//tempRep.bmp", ImageFormat.Bmp);
 
 
                 // --------------------DOCUMENT---------------------- //
@@ -163,7 +162,7 @@ namespace Certificates
 
                 // --------------------DRAWING PDF---------------------- //
                 XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
-                XImage saved = XImage.FromFile(tempFolder + "//tempReport.bmp");
+                XImage saved = XImage.FromFile(tempFolder + "//tempRep.bmp");
                 xgr.DrawImage(saved, 0, 0, width, height);
 
                 doc.Save(filepath);
@@ -171,12 +170,21 @@ namespace Certificates
 
                 this.Close();
             }
-
-
         }
-#endregion 
 
-        #region sending file to printer 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
+
+        #region variables
+        String DEFAULTPRINTER;
+        public string filepath;
+        Boolean isSaved = false;
+        #endregion
+
+        #region Sending to printer
         private void button3_Click(object sender, EventArgs e)
         {
             string tempFolder = Path.GetTempPath();
@@ -221,6 +229,7 @@ namespace Certificates
                 PrinterSettings = new PrinterSettings()
                 {
                     // set the printer to 'Microsoft Print to PDF'
+
                     PrinterName = DEFAULTPRINTER,
 
                     // tell the object this document will print to file
@@ -230,14 +239,14 @@ namespace Certificates
                     PrintFileName = Path.Combine(tempFolder + "//rep.pdf")
 
 
+
                 }
             };
-
+            MessageBox.Show("PRINTING WITH " + DEFAULTPRINTER); //THIS IS JUST FOR TESTING
             pdfPrinter.Print();
+
 
         }
         #endregion
-
-        
     }
 }

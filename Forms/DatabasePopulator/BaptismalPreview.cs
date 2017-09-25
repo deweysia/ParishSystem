@@ -16,7 +16,7 @@ using System.IO;
 using System.Drawing.Printing;
 using System.Diagnostics;
 
-namespace DatabasePopulator
+namespace Certificates
 {
     public partial class BaptismalPreview : Form
     {
