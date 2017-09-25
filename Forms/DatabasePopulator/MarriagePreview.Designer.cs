@@ -967,6 +967,10 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button1_Click);
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "Document (.pdf)|*.pdf";
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -982,6 +986,7 @@
             // 
             // selectPrinter
             // 
+            this.selectPrinter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.selectPrinter.FormattingEnabled = true;
             this.selectPrinter.Location = new System.Drawing.Point(1237, 68);
             this.selectPrinter.Name = "selectPrinter";
