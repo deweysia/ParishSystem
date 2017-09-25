@@ -79,6 +79,7 @@
             this.MenuTimer = new System.Windows.Forms.Timer(this.components);
             this.Panel_Timer = new System.Windows.Forms.Timer(this.components);
             this.Workspace_panel = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_controlbox.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayout_ControlButtons.SuspendLayout();
@@ -90,6 +91,7 @@
             this.admin_cabinet_panel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.Workspace_panel.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_controlbox
@@ -401,11 +403,7 @@
             // 
             // cash_cabinet_panel
             // 
-            this.cash_cabinet_panel.Controls.Add(this.itemtypemenu_button);
-            this.cash_cabinet_panel.Controls.Add(this.CRBreport_button);
-            this.cash_cabinet_panel.Controls.Add(this.CRB_button_menu);
-            this.cash_cabinet_panel.Controls.Add(this.CDBreport_button);
-            this.cash_cabinet_panel.Controls.Add(this.CDB_button_menu);
+            this.cash_cabinet_panel.Controls.Add(this.flowLayoutPanel2);
             this.cash_cabinet_panel.Controls.Add(this.cash_cabinet);
             this.cash_cabinet_panel.Controls.Add(this.label1);
             this.cash_cabinet_panel.Controls.Add(this.label2);
@@ -425,7 +423,7 @@
             this.itemtypemenu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemtypemenu_button.ForeColor = System.Drawing.Color.White;
             this.itemtypemenu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.itemtypemenu_button.Location = new System.Drawing.Point(-2, 233);
+            this.itemtypemenu_button.Location = new System.Drawing.Point(0, 180);
             this.itemtypemenu_button.Margin = new System.Windows.Forms.Padding(0);
             this.itemtypemenu_button.Name = "itemtypemenu_button";
             this.itemtypemenu_button.Size = new System.Drawing.Size(232, 45);
@@ -446,7 +444,7 @@
             this.CRBreport_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CRBreport_button.ForeColor = System.Drawing.Color.White;
             this.CRBreport_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CRBreport_button.Location = new System.Drawing.Point(0, 98);
+            this.CRBreport_button.Location = new System.Drawing.Point(0, 135);
             this.CRBreport_button.Margin = new System.Windows.Forms.Padding(0);
             this.CRBreport_button.Name = "CRBreport_button";
             this.CRBreport_button.Size = new System.Drawing.Size(232, 45);
@@ -467,7 +465,7 @@
             this.CRB_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CRB_button_menu.ForeColor = System.Drawing.Color.White;
             this.CRB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CRB_button_menu.Location = new System.Drawing.Point(0, 53);
+            this.CRB_button_menu.Location = new System.Drawing.Point(0, 0);
             this.CRB_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.CRB_button_menu.Name = "CRB_button_menu";
             this.CRB_button_menu.Size = new System.Drawing.Size(232, 45);
@@ -488,7 +486,7 @@
             this.CDBreport_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CDBreport_button.ForeColor = System.Drawing.Color.White;
             this.CDBreport_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CDBreport_button.Location = new System.Drawing.Point(3, 188);
+            this.CDBreport_button.Location = new System.Drawing.Point(0, 45);
             this.CDBreport_button.Margin = new System.Windows.Forms.Padding(0);
             this.CDBreport_button.Name = "CDBreport_button";
             this.CDBreport_button.Size = new System.Drawing.Size(232, 45);
@@ -509,7 +507,7 @@
             this.CDB_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CDB_button_menu.ForeColor = System.Drawing.Color.White;
             this.CDB_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CDB_button_menu.Location = new System.Drawing.Point(0, 143);
+            this.CDB_button_menu.Location = new System.Drawing.Point(0, 90);
             this.CDB_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.CDB_button_menu.Name = "CDB_button_menu";
             this.CDB_button_menu.Size = new System.Drawing.Size(232, 45);
@@ -870,6 +868,18 @@
             this.Workspace_panel.Size = new System.Drawing.Size(943, 667);
             this.Workspace_panel.TabIndex = 61;
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.CRB_button_menu);
+            this.flowLayoutPanel2.Controls.Add(this.CDBreport_button);
+            this.flowLayoutPanel2.Controls.Add(this.CDB_button_menu);
+            this.flowLayoutPanel2.Controls.Add(this.CRBreport_button);
+            this.flowLayoutPanel2.Controls.Add(this.itemtypemenu_button);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(-1, 54);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(233, 240);
+            this.flowLayoutPanel2.TabIndex = 54;
+            // 
             // SAD2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -899,6 +909,7 @@
             this.admin_cabinet_panel.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.Workspace_panel.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -953,5 +964,6 @@
         private System.Windows.Forms.Button bloodClaim_menu_button;
         private System.Windows.Forms.Button bloodClaimView_menu_button;
         private System.Windows.Forms.Button btn_min;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }

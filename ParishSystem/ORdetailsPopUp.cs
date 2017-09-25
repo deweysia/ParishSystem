@@ -27,38 +27,31 @@ namespace ParishSystem
         {
             Draggable draggable = new Draggable(this);
             draggable.makeDraggable(controlBar_panel);
-
-           
-
             or_label.Text = OR.ToString();
-           
-                DataTable trial1 =dh.getItemsOfIncomeFromItems(int.Parse(or_label.Text),BookType);
-                if (trial1.Rows.Count != 0)
-            {
-                items_dgv.DataSource = trial1;
-                decimal total = 0;
-                foreach (DataGridViewRow dgvr in items_dgv.Rows)
-                {
-                    total += decimal.Parse(dgvr.Cells["price"].Value.ToString());
-                }
-                total_label.Text = total.ToString();
-            }
-            else
-            {
-                DataTable trial2 = dh.getItemsOfIncomeFromSacramentIncome(int.Parse(or_label.Text),BookType);
-                items_dgv.DataSource = trial2;
-                decimal total = 0;
-                foreach (DataGridViewRow dgvr in items_dgv.Rows)
-                {
-                    total += decimal.Parse(dgvr.Cells["amount"].Value.ToString());
-                }
-                total_label.Text = total.ToString();
-            }
 
-            
+            details_dgv.DataSource = dh.getORdetails(BookType,OR);
+            foreach(DataGridViewColumn dc in details_dgv.Columns)
+            {
+                dc.Visible = false;
+            }
+            source_name.Text = details_dgv.Rows[0].Cells["sourceName"].Value.ToString();
+            or_label.Text = details_dgv.Rows[0].Cells["ORnum"].Value.ToString();
+            datepaid_label.Text = details_dgv.Rows[0].Cells["primaryIncomeDateTime"].Value.ToString();
+            remarks_textbox.Text = details_dgv.Rows[0].Cells["remarks"].Value.ToString();
+            details_dgv.Columns["sourceName"].Visible = false;
+            details_dgv.Columns["ORnum"].Visible = false;
+            details_dgv.Columns["primaryIncomeDateTime"].Visible = false;
+            details_dgv.Columns["remarks"].Visible = false;
 
-                
-            
+            details_dgv.Columns["price"].Visible = true;
+            details_dgv.Columns["quantity"].Visible = true;
+            details_dgv.Columns["total"].Visible = true;
+            details_dgv.Columns["itemType"].Visible = true;
+
+            details_dgv.Columns["price"].HeaderText = "Price";
+            details_dgv.Columns["quantity"].HeaderText = "Quantity";
+            details_dgv.Columns["total"].HeaderText = "Total";
+            details_dgv.Columns["itemType"].HeaderText = "Item";
         }
 
         private void close_button_Click(object sender, EventArgs e)
@@ -66,32 +59,6 @@ namespace ParishSystem
             this.Close();
         }
 
-        private void or_label_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void total_label_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ORdetailsPopUp_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.Escape)
-            {
-                this.Close();
-            }
-        }
+    
     }
 }

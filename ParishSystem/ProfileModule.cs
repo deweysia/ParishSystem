@@ -29,7 +29,6 @@ namespace ParishSystem
                 profile_dgv.Columns["gender"].HeaderText = "Gender";
                 profile_dgv.Columns["birthplace"].HeaderText = "Birthplace";
                 profile_dgv.Columns["residence"].HeaderText = "Residence";
-                search_button.Text = "Clear";
                 search_button.Tag = "c";
                 search_button.Image = ParishSystem.Properties.Resources.icons8_Delete_Filled_20_666666;
             }
@@ -42,11 +41,10 @@ namespace ParishSystem
                 profile_dgv.Columns["gender"].HeaderText = "Gender";
                 profile_dgv.Columns["birthplace"].HeaderText = "Birthplace";
                 profile_dgv.Columns["residence"].HeaderText = "Residence";
-                search_button.Text = "Search";
                 search_button.Tag = "s";
                 search_textbox.Clear();
                 search_button.Image = ParishSystem.Properties.Resources.icons8_Search_Filled_20;
-                search_button.Tag = "s";
+               
             }
         }
         public void refresh()
@@ -78,6 +76,19 @@ namespace ParishSystem
             }
             search_button.Tag = "s";
             search_button.Image = ParishSystem.Properties.Resources.icons8_Search_Filled_20;
+        }
+
+        private void profile_dgv_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                try
+                {
+                    Form A = new PersonView(int.Parse(profile_dgv.SelectedRows[0].Cells["profileid"].Value.ToString()), dh);
+                    A.ShowDialog();
+                }
+                catch { }
+            }
         }
     }
 }

@@ -57,7 +57,6 @@
             this.marriage_label_menu = new System.Windows.Forms.Label();
             this.confirmation_label_menu = new System.Windows.Forms.Label();
             this.baptism_label_menu = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.baptism_panel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.baptism_details = new System.Windows.Forms.Panel();
@@ -541,7 +540,6 @@
             this.menu_panel.Controls.Add(this.marriage_label_menu);
             this.menu_panel.Controls.Add(this.confirmation_label_menu);
             this.menu_panel.Controls.Add(this.baptism_label_menu);
-            this.menu_panel.Controls.Add(this.label24);
             this.menu_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.menu_panel.Location = new System.Drawing.Point(302, 35);
             this.menu_panel.Name = "menu_panel";
@@ -555,7 +553,7 @@
             this.marriage_label_menu.Enabled = false;
             this.marriage_label_menu.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.marriage_label_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.marriage_label_menu.Location = new System.Drawing.Point(260, 1);
+            this.marriage_label_menu.Location = new System.Drawing.Point(262, 1);
             this.marriage_label_menu.Name = "marriage_label_menu";
             this.marriage_label_menu.Size = new System.Drawing.Size(120, 30);
             this.marriage_label_menu.TabIndex = 2;
@@ -568,7 +566,7 @@
             this.confirmation_label_menu.Enabled = false;
             this.confirmation_label_menu.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmation_label_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.confirmation_label_menu.Location = new System.Drawing.Point(122, 2);
+            this.confirmation_label_menu.Location = new System.Drawing.Point(126, 2);
             this.confirmation_label_menu.Name = "confirmation_label_menu";
             this.confirmation_label_menu.Size = new System.Drawing.Size(134, 30);
             this.confirmation_label_menu.TabIndex = 1;
@@ -588,15 +586,6 @@
             this.baptism_label_menu.TabIndex = 0;
             this.baptism_label_menu.Text = "   Baptism   ";
             this.baptism_label_menu.Click += new System.EventHandler(this.baptism_menu_label_Click);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(-10, 15);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(412, 13);
-            this.label24.TabIndex = 3;
-            this.label24.Text = "___________________________________________________________________-";
             // 
             // baptism_panel
             // 
@@ -1866,6 +1855,7 @@
             // 
             // name_spouse_combobox
             // 
+            this.name_spouse_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.name_spouse_combobox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name_spouse_combobox.FormattingEnabled = true;
             this.name_spouse_combobox.Location = new System.Drawing.Point(35, 40);
@@ -2284,9 +2274,9 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.blank_panel);
             this.panel3.Controls.Add(this.marriage_panel);
             this.panel3.Controls.Add(this.confirmation_panel);
-            this.panel3.Controls.Add(this.blank_panel);
             this.panel3.Controls.Add(this.baptism_panel);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(302, 67);
@@ -2582,7 +2572,6 @@
         private System.Windows.Forms.Label label81;
         private System.Windows.Forms.Label label82;
         private System.Windows.Forms.Panel marriage_panel;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel blank_panel;
         private System.Windows.Forms.Label legitimacy_label_baptism;
         private System.Windows.Forms.Label label6;

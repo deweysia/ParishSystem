@@ -44,10 +44,12 @@ namespace ParishSystem
                     {
                         dh.addItemType(name_textbox.Text, book_combobox.SelectedIndex, suggestedPrice_nud.Value, (active_button.Checked ? 1 : 2), cashreceipt_cashdisbursment, details_textbox.Text);
                         IncomeTypeID = dh.getMaxIncomeType();
+                        Notification.Show(State.ItemTypeAdded);
                     }
                     else
                     {
                         dh.editIncomeType(IncomeTypeID, name_textbox.Text, book_combobox.SelectedIndex, suggestedPrice_nud.Value, (active_button.Checked ? 1 : 2), cashreceipt_cashdisbursment, details_textbox.Text);
+                        Notification.Show(State.ChangesSaved);
                     }
                     this.Close();
                 }
@@ -107,7 +109,11 @@ namespace ParishSystem
 
         private void close_button_Click(object sender, EventArgs e)
         {
-            this.Close();
+           if (MessageDialog.Show("Changes will not be saved. Are you sure you wish to exit?") == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+         
         }
 
         private void ItemType_KeyDown(object sender, KeyEventArgs e)

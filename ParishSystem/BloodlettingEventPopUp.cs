@@ -68,10 +68,12 @@ namespace ParishSystem
                         if (bloodlettingID.Equals(0)) {
                             dh.addBloodDonationEvent(event_name.Text, start_dateTimePicker.Value, end_DateTimePicker.Value, venue_textbox.Text, details_textarea.Text);
                             bloodlettingID = dh.getMaxBloodEvent() + 1;
+                        Notification.Show(State.EventAdded);
                         }
                         else {
                             dh.editBloodDonationEvent(bloodlettingID, event_name.Text, start_dateTimePicker.Value, end_DateTimePicker.Value, venue_textbox.Text, details_textarea.Text);
-                        }
+                        Notification.Show(State.ChangesSaved);
+                    }
                         edit_button.Tag = "e";
                         edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
                         event_name.ReadOnly = true;
@@ -108,6 +110,7 @@ namespace ParishSystem
              
                 edit_button.Tag = "s";
                 edit_button.Image = Properties.Resources.icons8_Save_Filled_32__1_;
+                delete_button.Visible = false;
             }
             else
             {
@@ -126,12 +129,23 @@ namespace ParishSystem
                 venue_textbox.Text = dt.Rows[0]["eventVenue"].ToString();
                 details_textarea.Text = dt.Rows[0]["eventDetails"].ToString();
                 cancel_button.Visible = false;
+                delete_button.Visible = true;
             }
         }
 
         private void close_button_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (edit_button.Tag.ToString() == "s") 
+            {
+                if (MessageDialog.Show("Pending changes will not be saved. Are you sure you wish to close?") == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
         private void delete_button_Click(object sender, EventArgs e)

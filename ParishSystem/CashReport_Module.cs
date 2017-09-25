@@ -90,6 +90,7 @@ namespace ParishSystem
                 input_panel.Visible = true;
 
                 from_dtp_cashdisbursment.CustomFormat = "MM/dd/yyyy";
+                from_dtp_cashdisbursment.MaxDate = DateTime.Now;
             }
             else if (filterBy_combobox_disbursment.Text == "Month")
             {
@@ -110,6 +111,7 @@ namespace ParishSystem
                 input_panel.Visible = true;
 
                 from_dtp_cashdisbursment.CustomFormat = "MM/yyyy";
+                from_dtp_cashdisbursment.MaxDate = DateTime.Now;
             }
             else if (filterBy_combobox_disbursment.Text == "Year")
             {
@@ -130,6 +132,7 @@ namespace ParishSystem
                 input_panel.Visible = true;
 
                 from_dtp_cashdisbursment.CustomFormat = "yyyy";
+                from_dtp_cashdisbursment.MaxDate = DateTime.Now;
             }
             else if (filterBy_combobox_disbursment.Text == "Date Range")
             {
@@ -151,6 +154,7 @@ namespace ParishSystem
 
                 from_dtp_cashdisbursment.CustomFormat = "MM/dd/yyyy";
                 to_dtp_cashdisbursment.CustomFormat = "MM/dd/yyyy";
+                from_dtp_cashdisbursment.MaxDate = DateTime.Now;
             }
             else if (filterBy_combobox_disbursment.Text == "OR Number")
             {
@@ -813,6 +817,26 @@ namespace ParishSystem
         private void CashReport_Module_Load(object sender, EventArgs e)
         {
             cash_label.Text = (bookReportMode == 1 ? "Cash Receipt" : "Cash Disbursment");
+        }
+
+        private void report_datagridview_cashdisbursment_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                try
+                {
+                    Form A = new ORdetailsPopUp(int.Parse(report_datagridview_cashdisbursment.CurrentRow.Cells[0].Value.ToString()), cashDisbursmentMode, dh);
+                    A.ShowDialog();
+                }
+                catch { }
+            }
+        }
+
+        private void from_dtp_cashdisbursment_ValueChanged(object sender, EventArgs e)
+        {
+            to_dtp_cashdisbursment.MinDate = from_dtp_cashdisbursment.Value;
+            to_dtp_cashdisbursment.MaxDate = DateTime.Now;
+            to_dtp_cashdisbursment.Enabled = true;
         }
     }
 }

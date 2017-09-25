@@ -230,6 +230,7 @@
             this.itemType_dgv.Size = new System.Drawing.Size(849, 505);
             this.itemType_dgv.TabIndex = 0;
             this.itemType_dgv.TabStop = false;
+            this.itemType_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemType_dgv_CellClick);
             this.itemType_dgv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemType_dgv_CellContentDoubleClick);
             this.itemType_dgv.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemType_dgv_RowEnter);
             this.itemType_dgv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.itemType_dgv_KeyDown);

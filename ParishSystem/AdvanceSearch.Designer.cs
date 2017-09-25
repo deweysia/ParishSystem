@@ -61,7 +61,7 @@
             this.dtpFrom.CustomFormat = "";
             this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFrom.Location = new System.Drawing.Point(3, 18);
-            this.dtpFrom.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpFrom.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Size = new System.Drawing.Size(130, 29);
             this.dtpFrom.Style = MetroFramework.MetroColorStyle.Silver;
@@ -73,7 +73,7 @@
             this.dtpTo.CalendarTrailingForeColor = System.Drawing.Color.Black;
             this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpTo.Location = new System.Drawing.Point(187, 18);
-            this.dtpTo.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpTo.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Size = new System.Drawing.Size(130, 29);
             this.dtpTo.Style = MetroFramework.MetroColorStyle.Silver;

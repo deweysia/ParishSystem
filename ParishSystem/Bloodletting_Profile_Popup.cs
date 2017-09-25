@@ -368,7 +368,17 @@ namespace ParishSystem
        
         private void close_button_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (edit_button.Tag.ToString() == "s")
+            {
+                if (MessageDialog.Show("Pending changes will not be saved. Are you sure you wish to close?") == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
      
