@@ -149,7 +149,7 @@ namespace ParishSystem
 
 
                 string tempFolder = Path.GetTempPath();
-                bm.Save(tempFolder + "//tempReport.bmp", ImageFormat.Bmp);
+                bm.Save(tempFolder + "//tempRep.bmp", ImageFormat.Bmp);
 
 
                 // --------------------DOCUMENT---------------------- //
@@ -163,7 +163,7 @@ namespace ParishSystem
 
                 // --------------------DRAWING PDF---------------------- //
                 XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
-                XImage saved = XImage.FromFile(tempFolder + "//tempReport.bmp");
+                XImage saved = XImage.FromFile(tempFolder + "//tempRep.bmp");
                 xgr.DrawImage(saved, 0, 0, width, height);
 
                 doc.Save(filepath);
