@@ -40,7 +40,7 @@
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="PdfSharp">
-      <HintPath>..\..\..\..\..\Documents\Visual Studio 2017\Projects\Forms\DatabasePopulator\bin\Debug\PdfSharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\Documents\PdfSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

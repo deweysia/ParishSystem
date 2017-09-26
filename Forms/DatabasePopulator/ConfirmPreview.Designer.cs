@@ -513,11 +513,12 @@
             this.Name.AutoSize = true;
             this.Name.BackColor = System.Drawing.Color.Transparent;
             this.Name.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name.Location = new System.Drawing.Point(316, 415);
+            this.Name.Location = new System.Drawing.Point(385, 418);
             this.Name.Name = "Name";
             this.Name.Size = new System.Drawing.Size(16, 23);
             this.Name.TabIndex = 0;
             this.Name.Text = "-";
+            this.Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -612,7 +613,7 @@
             this.selectPrinter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.selectPrinter.FormattingEnabled = true;
             this.selectPrinter.Location = new System.Drawing.Point(884, 40);
-            this.selectPrinter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.selectPrinter.Margin = new System.Windows.Forms.Padding(2);
             this.selectPrinter.Name = "selectPrinter";
             this.selectPrinter.Size = new System.Drawing.Size(170, 21);
             this.selectPrinter.TabIndex = 7;
@@ -630,7 +631,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ConfirmationPreview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConfirmationPreview";

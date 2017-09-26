@@ -437,11 +437,12 @@
             this.BrideName.AutoSize = true;
             this.BrideName.BackColor = System.Drawing.Color.Transparent;
             this.BrideName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BrideName.Location = new System.Drawing.Point(350, 665);
+            this.BrideName.Location = new System.Drawing.Point(404, 673);
             this.BrideName.Name = "BrideName";
             this.BrideName.Size = new System.Drawing.Size(16, 23);
             this.BrideName.TabIndex = 4;
             this.BrideName.Text = "-";
+            this.BrideName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gStatus
             // 
@@ -653,11 +654,12 @@
             this.GroomName.AutoSize = true;
             this.GroomName.BackColor = System.Drawing.Color.Transparent;
             this.GroomName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroomName.Location = new System.Drawing.Point(340, 399);
+            this.GroomName.Location = new System.Drawing.Point(404, 395);
             this.GroomName.Name = "GroomName";
             this.GroomName.Size = new System.Drawing.Size(16, 23);
             this.GroomName.TabIndex = 4;
             this.GroomName.Text = "-";
+            this.GroomName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bAge
             // 

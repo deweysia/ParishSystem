@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaptismalPreview));
+            this.button2 = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.selectPrinter = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -66,13 +71,58 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.selectPrinter = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.LawnGreen;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(930, 95);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(136, 48);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "SAVE DOCUMENT";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "Document (.pdf)|*.pdf";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Salmon;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(930, 203);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 48);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "CANCEL";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(930, 150);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(136, 48);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "PRINT";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // selectPrinter
+            // 
+            this.selectPrinter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.selectPrinter.FormattingEnabled = true;
+            this.selectPrinter.Location = new System.Drawing.Point(908, 42);
+            this.selectPrinter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.selectPrinter.Name = "selectPrinter";
+            this.selectPrinter.Size = new System.Drawing.Size(170, 21);
+            this.selectPrinter.TabIndex = 2;
             // 
             // panel1
             // 
@@ -115,7 +165,7 @@
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(90, -61);
+            this.panel1.Location = new System.Drawing.Point(90, -2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(812, 1188);
             this.panel1.TabIndex = 1;
@@ -282,7 +332,7 @@
             this.mPlaceofOrigin.AutoSize = true;
             this.mPlaceofOrigin.BackColor = System.Drawing.Color.Transparent;
             this.mPlaceofOrigin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mPlaceofOrigin.Location = new System.Drawing.Point(565, 425);
+            this.mPlaceofOrigin.Location = new System.Drawing.Point(566, 428);
             this.mPlaceofOrigin.Name = "mPlaceofOrigin";
             this.mPlaceofOrigin.Size = new System.Drawing.Size(14, 19);
             this.mPlaceofOrigin.TabIndex = 0;
@@ -294,7 +344,7 @@
             this.nameOfMother.AutoSize = true;
             this.nameOfMother.BackColor = System.Drawing.Color.Transparent;
             this.nameOfMother.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameOfMother.Location = new System.Drawing.Point(565, 402);
+            this.nameOfMother.Location = new System.Drawing.Point(566, 405);
             this.nameOfMother.Name = "nameOfMother";
             this.nameOfMother.Size = new System.Drawing.Size(14, 19);
             this.nameOfMother.TabIndex = 0;
@@ -306,7 +356,7 @@
             this.fPlaceOfOrigin.AutoSize = true;
             this.fPlaceOfOrigin.BackColor = System.Drawing.Color.Transparent;
             this.fPlaceOfOrigin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fPlaceOfOrigin.Location = new System.Drawing.Point(220, 428);
+            this.fPlaceOfOrigin.Location = new System.Drawing.Point(221, 431);
             this.fPlaceOfOrigin.Name = "fPlaceOfOrigin";
             this.fPlaceOfOrigin.Size = new System.Drawing.Size(14, 19);
             this.fPlaceOfOrigin.TabIndex = 0;
@@ -318,7 +368,7 @@
             this.placeOfBirth.AutoSize = true;
             this.placeOfBirth.BackColor = System.Drawing.Color.Transparent;
             this.placeOfBirth.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.placeOfBirth.Location = new System.Drawing.Point(565, 378);
+            this.placeOfBirth.Location = new System.Drawing.Point(566, 381);
             this.placeOfBirth.Name = "placeOfBirth";
             this.placeOfBirth.Size = new System.Drawing.Size(14, 19);
             this.placeOfBirth.TabIndex = 0;
@@ -414,7 +464,7 @@
             this.nameOfFather.AutoSize = true;
             this.nameOfFather.BackColor = System.Drawing.Color.Transparent;
             this.nameOfFather.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameOfFather.Location = new System.Drawing.Point(220, 404);
+            this.nameOfFather.Location = new System.Drawing.Point(221, 407);
             this.nameOfFather.Name = "nameOfFather";
             this.nameOfFather.Size = new System.Drawing.Size(14, 19);
             this.nameOfFather.TabIndex = 0;
@@ -438,7 +488,7 @@
             this.dateOfBirth.AutoSize = true;
             this.dateOfBirth.BackColor = System.Drawing.Color.Transparent;
             this.dateOfBirth.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateOfBirth.Location = new System.Drawing.Point(220, 381);
+            this.dateOfBirth.Location = new System.Drawing.Point(221, 384);
             this.dateOfBirth.Name = "dateOfBirth";
             this.dateOfBirth.Size = new System.Drawing.Size(14, 19);
             this.dateOfBirth.TabIndex = 0;
@@ -552,63 +602,13 @@
             this.label2.TabIndex = 0;
             this.label2.Text = " ARCHIODESE OF DAVAO \r\n";
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.LawnGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(930, 95);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 48);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "SAVE DOCUMENT";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.Filter = "Document (.pdf)|*.pdf";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Salmon;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(930, 203);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 48);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "CANCEL";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(930, 150);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 48);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "PRINT";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // selectPrinter
-            // 
-            this.selectPrinter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.selectPrinter.FormattingEnabled = true;
-            this.selectPrinter.Location = new System.Drawing.Point(908, 42);
-            this.selectPrinter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.selectPrinter.Name = "selectPrinter";
-            this.selectPrinter.Size = new System.Drawing.Size(170, 21);
-            this.selectPrinter.TabIndex = 2;
-            // 
             // BaptismalPreview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1102, 852);
+            this.ClientSize = new System.Drawing.Size(1102, 1092);
             this.Controls.Add(this.selectPrinter);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
