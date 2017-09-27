@@ -162,6 +162,10 @@ namespace ParishSystem
 
 
         public static State
+            ItemTypeAdded = new State("Item Type has successfully been added", NotificationType.success),
+            ChangesSaved = new State("Changes successfully saved", NotificationType.success),
+            EventAdded = new State("Bloodletting event has been added", NotificationType.success),
+            TransactionAdded = new State("Transaction successfully added", NotificationType.success),
             CannotDeleteBloodAlreadyClaimed = new State("Cannot delete blood donation that is already claimed", NotificationType.error),
             ItemTypeUsed = new State("This Item name is already used", NotificationType.error),
             BloodDonationIDUsed = new State("This Blood Donation ID is already used", NotificationType.error),

@@ -606,7 +606,7 @@
             // 
             // cover
             // 
-            this.cover.Location = new System.Drawing.Point(4, 263);
+            this.cover.Location = new System.Drawing.Point(6, 259);
             this.cover.Name = "cover";
             this.cover.Size = new System.Drawing.Size(365, 355);
             this.cover.TabIndex = 15;

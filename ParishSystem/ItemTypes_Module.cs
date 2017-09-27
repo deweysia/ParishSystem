@@ -28,17 +28,19 @@ namespace ParishSystem
                 itemType_dgv.DataSource = dh.getIncomeTypes(cashreceipt_cashdisbursment);
                 itemType_dgv.Columns["itemTypeID"].Visible = false;
                 itemType_dgv.Columns["itemType"].HeaderText = "Item Type";
-            if (itemType_dgv.Rows[0].Cells["Status"].Value.ToString() == "Active")
-            {
-                enable_button_itemType.Text = "Disable";
-                enable_button_itemType.BackColor = Color.IndianRed;
-                enable_button_itemType.FlatAppearance.MouseOverBackColor = Color.Firebrick;
-            }
-            else
-            {
-                enable_button_itemType.Text = "Enable";
-                enable_button_itemType.BackColor = Color.FromArgb(64, 64, 64);
-                enable_button_itemType.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 50, 50);
+            if (itemType_dgv.Rows.Count>0) {
+                if (itemType_dgv.Rows[0].Cells["Status"].Value.ToString() == "Active")
+                {
+                    enable_button_itemType.Text = "Disable";
+                    enable_button_itemType.BackColor = Color.IndianRed;
+                    enable_button_itemType.FlatAppearance.MouseOverBackColor = Color.Firebrick;
+                }
+                else
+                {
+                    enable_button_itemType.Text = "Enable";
+                    enable_button_itemType.BackColor = Color.FromArgb(64, 64, 64);
+                    enable_button_itemType.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 50, 50);
+                }
             }
         }
         private void itemType_dgv_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -56,37 +58,38 @@ namespace ParishSystem
        
         private void enable_button_itemType_Click(object sender, EventArgs e)
         {
-            if (itemType_dgv.SelectedRows[0].Cells["Status"].Value.ToString()=="Inactive")
+            if (itemType_dgv.Rows.Count > 0 )
+            {
+                if (itemType_dgv.SelectedRows[0].Cells["Status"].Value.ToString() == "Inactive")
                 {
-                dh.enableIncomeType(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment);
-                itemType_dgv.SelectedRows[0].Cells["Status"].Value = "Active";
-                enable_button_itemType.Text = "Disable";
-                enable_button_itemType.BackColor = Color.IndianRed;
-                enable_button_itemType.FlatAppearance.MouseOverBackColor = Color.Firebrick;
-            }
-            else
+                    dh.enableIncomeType(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment);
+                    itemType_dgv.SelectedRows[0].Cells["Status"].Value = "Active";
+                    enable_button_itemType.Text = "Disable";
+                    enable_button_itemType.BackColor = Color.IndianRed;
+                    enable_button_itemType.FlatAppearance.MouseOverBackColor = Color.Firebrick;
+                }
+                else
                 {
-                dh.disableIncomeType(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment);
-                itemType_dgv.SelectedRows[0].Cells["Status"].Value = "Inactive";
-                enable_button_itemType.Text = "Enable";
-                enable_button_itemType.BackColor = Color.FromArgb(64, 64, 64);
-                enable_button_itemType.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 50, 50);
-                
+                    dh.disableIncomeType(int.Parse(itemType_dgv.SelectedRows[0].Cells["itemTypeID"].Value.ToString()), cashreceipt_cashdisbursment);
+                    itemType_dgv.SelectedRows[0].Cells["Status"].Value = "Inactive";
+                    enable_button_itemType.Text = "Enable";
+                    enable_button_itemType.BackColor = Color.FromArgb(64, 64, 64);
+                    enable_button_itemType.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 50, 50);
+
+                }
             }
+            
         }
      
 
         private void ItemTypes_Module_Load(object sender, EventArgs e)
         {
+            if (User.getCurrentUser().Privilege == 3)
+            {
+                Disbursment_label.Visible = false;
+            }
             refreshItemTypes();
-            try
-            {
-              //  itemType_dgv.ClearSelection();
-            }
-            catch
-            {
-
-            }
+         
         }
 
         private void itemType_dgv_KeyDown(object sender, KeyEventArgs e)
@@ -178,6 +181,11 @@ namespace ParishSystem
                 }
             }
             
+        }
+
+        private void itemType_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

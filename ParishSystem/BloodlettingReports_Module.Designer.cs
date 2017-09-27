@@ -88,7 +88,7 @@
             this.filterPanel.Controls.Add(this.generateReport_button);
             this.filterPanel.Location = new System.Drawing.Point(552, 77);
             this.filterPanel.Name = "filterPanel";
-            this.filterPanel.Size = new System.Drawing.Size(344, 34);
+            this.filterPanel.Size = new System.Drawing.Size(342, 237);
             this.filterPanel.TabIndex = 41;
             // 
             // filterButton
@@ -99,9 +99,9 @@
             this.filterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.filterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.filterButton.ForeColor = System.Drawing.Color.White;
-            this.filterButton.Location = new System.Drawing.Point(0, -2);
+            this.filterButton.Location = new System.Drawing.Point(0, 201);
             this.filterButton.Name = "filterButton";
-            this.filterButton.Size = new System.Drawing.Size(342, 34);
+            this.filterButton.Size = new System.Drawing.Size(340, 34);
             this.filterButton.TabIndex = 78;
             this.filterButton.Tag = "o";
             this.filterButton.Text = "Filter";
@@ -355,7 +355,7 @@
             this.bloodlettingeventreport_datagridview.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.bloodlettingeventreport_datagridview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.bloodlettingeventreport_datagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bloodlettingeventreport_datagridview.Size = new System.Drawing.Size(855, 497);
+            this.bloodlettingeventreport_datagridview.Size = new System.Drawing.Size(855, 483);
             this.bloodlettingeventreport_datagridview.TabIndex = 1;
             this.bloodlettingeventreport_datagridview.DataSourceChanged += new System.EventHandler(this.bloodlettingeventreport_datagridview_DataSourceChanged);
             this.bloodlettingeventreport_datagridview.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bloodlettingeventreport_datagridview_CellContentDoubleClick);

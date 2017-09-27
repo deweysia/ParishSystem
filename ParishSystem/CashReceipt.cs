@@ -51,6 +51,8 @@ namespace ParishSystem
         private void suggestedPrice_nud_fullpay_parish_ValueChanged(object sender, EventArgs e)
         {
             suggestedPrice_label.Text = suggestedPrice_nud_fullpay.Value.ToString();
+            subTotal_label_fullpay.Text = (suggestedPrice_nud_fullpay.Value * quantity_nud_fullpay.Value).ToString();
+            AddButtonDataValidation();
         }
         private void editSuggestedPrice_button_Click(object sender, EventArgs e)
         {
@@ -75,7 +77,7 @@ namespace ParishSystem
         {
             if (applicant_combox_fullpay.Text!="")// if non person mode, payments that are not baptism conf or mar
             {
-                suggestedPrice_nud_fullpay.Value = decimal.Parse(targetPrice_label.Text) + decimal.Parse(pricePaid_label.Text);
+                suggestedPrice_nud_fullpay.Value = decimal.Parse(targetPrice_label.Text) - decimal.Parse(pricePaid_label.Text);
             }
             else if (itemType_combobox_fullpay.SelectedIndex!=0)
             {
@@ -104,11 +106,13 @@ namespace ParishSystem
 
         private void itemType_combobox_fullpay_SelectedIndexChanged(object sender, EventArgs e)
         {
+            suggestedPrice_nud_fullpay.Maximum = decimal.MaxValue;
             cancelSuggestedPrice_button.PerformClick();//click cancel edit price so everything is set to uneditable
             if (itemType_combobox_fullpay.SelectedIndex != 0)
             {
                 if (decimal.Parse(((ComboboxContent)itemType_combobox_fullpay.SelectedItem).Content2) == 0)// if there is no set suggested price
-                {   
+                {
+                    suggestedPrice_nud_fullpay.Maximum = decimal.MaxValue;
                     suggestedPrice_nud_fullpay.Value = 0;
                     suggestedPrice_label.Visible = false;
                     editSuggestedPrice_button.Visible = false;
@@ -116,10 +120,12 @@ namespace ParishSystem
                 }
                 else
                 {
+                    
                     suggestedPrice_nud_fullpay.Value = decimal.Parse(((ComboboxContent)itemType_combobox_fullpay.SelectedItem).Content2);
                     suggestedPrice_label.Visible = true;
-                    editSuggestedPrice_button.Visible = true;
+                    editSuggestedPrice_button.Visible = false;
                     suggestedPrice_nud_fullpay.Visible = false;
+
                 }
                 price_panel.Visible = true;
                 if (bookModeFullPay == 1 && (itemType_combobox_fullpay.Text == "Baptism" || itemType_combobox_fullpay.Text == "Confirmation" || itemType_combobox_fullpay.Text == "Marriage"))
@@ -127,6 +133,7 @@ namespace ParishSystem
                     subtotal_panel.Visible = false;
                     Person_panel.Visible = true;
                     RefreshPerson();
+                    
                 }
                 else
                 {
@@ -150,10 +157,12 @@ namespace ParishSystem
             if (itemType_combobox_fullpay.Text == "Baptism")
             {
                 dt = dh.getPendingApplicationsOfType((int)SacramentType.Baptism);
+                editSuggestedPrice_button.Visible = true;
             }
             else if (itemType_combobox_fullpay.Text == "Confirmation")
             {
                 dt = dh.getPendingApplicationsOfType((int)SacramentType.Confirmation);
+                editSuggestedPrice_button.Visible = true;
             }
             else if (itemType_combobox_fullpay.Text == "Marriage")
             {
@@ -221,8 +230,8 @@ namespace ParishSystem
                         {
                             targetPrice_label.Text = paymentDetails.Rows[0][0].ToString();
                             pricePaid_label.Text = (paymentDetails.Rows[0][1].ToString() == "" ? "0.00" : paymentDetails.Rows[0][1].ToString());
+                            suggestedPrice_nud_fullpay.Maximum = decimal.Parse(targetPrice_label.Text) - decimal.Parse(pricePaid_label.Text);
                             suggestedPrice_nud_fullpay.Value = decimal.Parse(targetPrice_label.Text) - decimal.Parse(pricePaid_label.Text);
-                            
                         }
                     }
                     else
@@ -231,6 +240,8 @@ namespace ParishSystem
                         {
                             targetPrice_label.Text = ((ComboboxContent)itemType_combobox_fullpay.SelectedItem).content2;
                             pricePaid_label.Text = 0.ToString();
+                            suggestedPrice_nud_fullpay.Maximum = decimal.Parse(((ComboboxContent)itemType_combobox_fullpay.SelectedItem).content2);
+                            suggestedPrice_nud_fullpay.Value = decimal.Parse(((ComboboxContent)itemType_combobox_fullpay.SelectedItem).content2);
                         }
                     }
                 }
@@ -255,16 +266,35 @@ namespace ParishSystem
        
         private void cancelTransaction_button_fullpay_parish_Click(object sender, EventArgs e)
         {
-            itemType_combobox_fullpay.Enabled = true;
-            itemType_combobox_fullpay.SelectedIndex = 0;
-            item_dgv_fullpay.Rows.Clear();
-            sourceName_textbox_fullpay.Text = "";
-            remarks_textbox_fullpay.Text = "";
-            total_label_fullpay.Text = "0.00";
-            add_button_fullpay.Enabled = false;
-            delete_button_fullpay.Enabled = false;
-            add_button_fullpay.Text = "Add";
-            add_button_fullpay.Tag = "a";
+            if (item_dgv_fullpay.Rows.Count > 0)
+            {
+                if (MessageDialog.Show("This will clear your current transaction. Are you sure you want to proceed?", MessageDialogButtons.YesNo, MessageDialogIcon.Question) == DialogResult.Yes)
+                {
+                    itemType_combobox_fullpay.Enabled = true;
+                    itemType_combobox_fullpay.SelectedIndex = 0;
+                    item_dgv_fullpay.Rows.Clear();
+                    sourceName_textbox_fullpay.Text = "";
+                    remarks_textbox_fullpay.Text = "";
+                    total_label_fullpay.Text = "0.00";
+                    add_button_fullpay.Enabled = false;
+                    delete_button_fullpay.Enabled = false;
+                    add_button_fullpay.Text = "Add";
+                    add_button_fullpay.Tag = "a";
+                }
+            }
+            else
+            {
+                itemType_combobox_fullpay.Enabled = true;
+                itemType_combobox_fullpay.SelectedIndex = 0;
+                item_dgv_fullpay.Rows.Clear();
+                sourceName_textbox_fullpay.Text = "";
+                remarks_textbox_fullpay.Text = "";
+                total_label_fullpay.Text = "0.00";
+                add_button_fullpay.Enabled = false;
+                delete_button_fullpay.Enabled = false;
+                add_button_fullpay.Text = "Add";
+                add_button_fullpay.Tag = "a";
+            }
         }
   
         
@@ -299,7 +329,10 @@ namespace ParishSystem
                         item_dgv_fullpay.Rows[index].Cells[5].Value = ((ComboboxContent)applicant_combox_fullpay.SelectedItem).ID.ToString();//hidden
                         item_dgv_fullpay.Rows[index].Cells[6].Value = applicant_combox_fullpay.SelectedIndex;
                         item_dgv_fullpay.Rows[index].Cells[7].Value = targetPrice_label.Text;
-                    }
+                        item_dgv_fullpay.Rows[index].Cells[8].Value = pricePaid_label.Text;
+                        //add_button_fullpay.Enabled = true;
+                        //itemType_combobox_fullpay.Enabled = true;
+                }
                     else//edit mode
                     {
                         item_dgv_fullpay.SelectedRows[0].Cells[0].Value = itemType_combobox_fullpay.SelectedItem.ToString();
@@ -310,10 +343,12 @@ namespace ParishSystem
                         item_dgv_fullpay.SelectedRows[0].Cells[5].Value = ((ComboboxContent)applicant_combox_fullpay.SelectedItem).ID.ToString();//hidden
                         item_dgv_fullpay.SelectedRows[0].Cells[6].Value = applicant_combox_fullpay.SelectedIndex;
                         item_dgv_fullpay.SelectedRows[0].Cells[7].Value = targetPrice_label.Text;
+                        item_dgv_fullpay.SelectedRows[0].Cells[8].Value = pricePaid_label.Text;
                         delete_button_fullpay.Enabled = false;
                         add_button_fullpay.Text = "Add";
                         add_button_fullpay.Tag = "a";
                         add_button_fullpay.Enabled = false;
+                        itemType_combobox_fullpay.Enabled = true;
                     }
                     refreshTotalLabel();
                     itemType_combobox_fullpay.SelectedIndex = 0;
@@ -349,6 +384,7 @@ namespace ParishSystem
                         add_button_fullpay.Text = "Add";
                         add_button_fullpay.Tag = "a";
                         add_button_fullpay.Enabled = false;
+                        itemType_combobox_fullpay.Enabled = true;
                     }
                     refreshTotalLabel();
                     itemType_combobox_fullpay.SelectedIndex = 0;
@@ -371,14 +407,17 @@ namespace ParishSystem
         }
         private void delete_button_fullpay_parish_Click(object sender, EventArgs e)
         {
-            delete_button_fullpay.Enabled = false;
-            item_dgv_fullpay.Rows.RemoveAt(item_dgv_fullpay.SelectedRows[0].Index);
-            refreshTotalLabel();
+            if (MessageDialog.Show("This delete the current item. Are you sure you want to proceed?", MessageDialogButtons.YesNo, MessageDialogIcon.Question) == DialogResult.Yes)
+            {
+                delete_button_fullpay.Enabled = false;
+                item_dgv_fullpay.Rows.RemoveAt(item_dgv_fullpay.SelectedRows[0].Index);
+                refreshTotalLabel();
 
-            itemType_combobox_fullpay.SelectedIndex = 0;
-            itemType_combobox_fullpay.Enabled = true;
-            add_button_fullpay.Text = "Add";
-            add_button_fullpay.Tag = "a";
+                itemType_combobox_fullpay.SelectedIndex = 0;
+                itemType_combobox_fullpay.Enabled = true;
+                add_button_fullpay.Text = "Add";
+                add_button_fullpay.Tag = "a";
+            }
         }
 
         private void item_dgv_fullpay_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -391,6 +430,16 @@ namespace ParishSystem
             if (item_dgv_fullpay.SelectedRows[0].Cells[5].Value != null)
             {
                 applicant_combox_fullpay.SelectedIndex = int.Parse(item_dgv_fullpay.SelectedRows[0].Cells[6].Value.ToString());
+                targetPrice_label.Text = item_dgv_fullpay.SelectedRows[0].Cells["targetPrice"].Value.ToString();
+                pricePaid_label.Text = item_dgv_fullpay.SelectedRows[0].Cells["totalpaid"].Value.ToString();
+            }
+            if (item_dgv_fullpay.SelectedRows[0].Cells["applicationid"].Value!=null)
+            {
+                suggestedPrice_nud_fullpay.Maximum = decimal.Parse(item_dgv_fullpay.SelectedRows[0].Cells["targetPrice"].Value.ToString())- decimal.Parse(item_dgv_fullpay.SelectedRows[0].Cells["totalpaid"].Value.ToString());
+            }
+            else
+            {
+                suggestedPrice_nud_fullpay.Maximum = decimal.MaxValue;
             }
             suggestedPrice_nud_fullpay.Value = decimal.Parse(item_dgv_fullpay.SelectedRows[0].Cells[1].Value.ToString());
             quantity_nud_fullpay.Value = decimal.Parse(item_dgv_fullpay.SelectedRows[0].Cells[2].Value.ToString());
@@ -414,7 +463,6 @@ namespace ParishSystem
         }
         private void final_button_fullpay_Click(object sender, EventArgs e)
         {
-            
             if (item_dgv_fullpay.Rows.Count > 0)
             {
                 int primaryIncomeID = dh.addPrimaryIncome(sourceName_textbox_fullpay.Text, bookModeFullPay, int.Parse(orNumber_label_fullpay.Text), remarks_textbox_fullpay.Text);
@@ -458,6 +506,7 @@ namespace ParishSystem
                 delete_button_fullpay.Enabled = false;
                 total_label_fullpay.Text = "0.00";
                 item_dgv_fullpay.Rows.Clear();
+                Notification.Show(State.TransactionAdded);
             }
             else
             {
@@ -578,34 +627,82 @@ namespace ParishSystem
 
         private void parish_label_Click(object sender, EventArgs e)
         {
-            this.bookModeFullPay = 1;
-            RefreshMain();
-            parish_label.Font = new Font(parish_label.Font, FontStyle.Bold);
-            community_label.Font= new Font(community_label.Font, FontStyle.Regular);
-            postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
+            if (item_dgv_fullpay.Rows.Count > 0)
+            {
+                if (MessageDialog.Show("This will clear your current transaction. Are you sure you want to proceed?", MessageDialogButtons.YesNo, MessageDialogIcon.Question) == DialogResult.Yes)
+                {
+                    this.bookModeFullPay = 1;
+                    RefreshMain();
+                    parish_label.Font = new Font(parish_label.Font, FontStyle.Bold);
+                    community_label.Font = new Font(community_label.Font, FontStyle.Regular);
+                    postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
+                }
+            }
+            else
+            {
+                this.bookModeFullPay = 1;
+                RefreshMain();
+                parish_label.Font = new Font(parish_label.Font, FontStyle.Bold);
+                community_label.Font = new Font(community_label.Font, FontStyle.Regular);
+                postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
+            }
         }
 
         private void community_label_Click(object sender, EventArgs e)
         {
-            this.bookModeFullPay = 2;
-            RefreshMain();
-            parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
-            community_label.Font = new Font(community_label.Font, FontStyle.Bold);
-            postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
+            if (item_dgv_fullpay.Rows.Count > 0)
+            {
+                if (MessageDialog.Show("This will clear your current transaction. Are you sure you want to proceed?", MessageDialogButtons.YesNo, MessageDialogIcon.Question) == DialogResult.Yes)
+                {
+                    this.bookModeFullPay = 2;
+                    RefreshMain();
+                    parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
+                    community_label.Font = new Font(community_label.Font, FontStyle.Bold);
+                    postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
+                }
+            }
+            else
+            {
+                this.bookModeFullPay = 2;
+                RefreshMain();
+                parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
+                community_label.Font = new Font(community_label.Font, FontStyle.Bold);
+                postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Regular);
+            }
         }
 
         private void postulancy_label_Click(object sender, EventArgs e)
         {
-            this.bookModeFullPay = 3;
-            RefreshMain();
-            parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
-            community_label.Font = new Font(community_label.Font, FontStyle.Regular);
-            postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Bold);
+            if (item_dgv_fullpay.Rows.Count > 0)
+            {
+                if (MessageDialog.Show("This will clear your current transaction. Are you sure you want to proceed?", MessageDialogButtons.YesNo, MessageDialogIcon.Question) == DialogResult.Yes)
+                {
+                    this.bookModeFullPay = 3;
+                    RefreshMain();
+                    parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
+                    community_label.Font = new Font(community_label.Font, FontStyle.Regular);
+                    postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Bold);
+                }
+            }
+            else
+            {
+                this.bookModeFullPay = 3;
+                RefreshMain();
+                parish_label.Font = new Font(parish_label.Font, FontStyle.Regular);
+                community_label.Font = new Font(community_label.Font, FontStyle.Regular);
+                postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Bold);
+            }
         }
 
         private void label15_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void quantity_nud_fullpay_KeyDown(object sender, KeyEventArgs e)
+        {
+            subTotal_label_fullpay.Text = (suggestedPrice_nud_fullpay.Value * quantity_nud_fullpay.Value).ToString();
+            AddButtonDataValidation();
         }
     }
 }

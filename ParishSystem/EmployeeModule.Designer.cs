@@ -146,10 +146,10 @@
             this.employeeType_combobox.FormattingEnabled = true;
             this.employeeType_combobox.Items.AddRange(new object[] {
             "",
-            "Bookkeeper",
+            "Admin",
+            "Book Keeper",
             "Secretary",
-            "Priest",
-            "Admin"});
+            "All"});
             this.employeeType_combobox.Location = new System.Drawing.Point(105, 233);
             this.employeeType_combobox.Name = "employeeType_combobox";
             this.employeeType_combobox.Size = new System.Drawing.Size(204, 29);

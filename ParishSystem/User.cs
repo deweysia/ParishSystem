@@ -37,7 +37,7 @@ namespace ParishSystem
         public string userName { get; }
         private string _password { get; }
         public UserStatus _status { get; }
-        public Privilege Privilege { get; }
+        public int Privilege { get; }
 
 
         //USER SESSION VARIABLE is @userID
@@ -52,13 +52,13 @@ namespace ParishSystem
             this._password = password;
             this._status = status;
             this.addedBy = addedBy;
-            this.Privilege = new Privilege(privileges);
-
+            this.Privilege = (int)privileges;
+   
         }
 
         public static bool loginUser(string userName, string password)
         {
-            bool verified = verify(userName, password);
+            bool verified = verify(userName, password, false);
             if (!verified)
                 return false;
 
@@ -88,11 +88,20 @@ namespace ParishSystem
         }
 
 
-        private static bool verify(string username, string password)
+        public static bool verify(string username, string password,bool isAdmin)
         {
             DataHandler dh = DataHandler.getDataHandler();
 
-            DataTable dt = dh.getUserPassword(username);
+            DataTable dt= new DataTable();
+
+            if (isAdmin==false)
+            {
+                 dt= dh.getUserPassword(username);
+            }
+            else
+            {
+                dt = dh.getAdminPassword(username);
+            }
 
             if (dt.Rows.Count > 0)
             {

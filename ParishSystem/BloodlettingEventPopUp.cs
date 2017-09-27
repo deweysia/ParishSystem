@@ -39,44 +39,50 @@ namespace ParishSystem
 
         private void edit_button_Click(object sender, EventArgs e)
         {
-            if (edit_button.Tag.ToString() == "e")
-            {
-                event_name.ReadOnly = false;
-                start_dateTimePicker.Enabled = true;
-                venue_textbox.ReadOnly = false;
-                details_textarea.ReadOnly = false;
-                edit_button.Tag = "s";
-                edit_button.Image = Properties.Resources.icons8_Save_Filled_32__1_;
-                start_dateTimePicker.Enabled = true;
-                cancel_button.Visible = true;
-            }
-            else
-            {
-                if (event_name.Text.Trim()=="" ||(start_dateTimePicker.Value.Date>end_DateTimePicker.Value.Date)||venue_textbox.Text.Trim()=="")
+          
+                if (edit_button.Tag.ToString() == "e")
                 {
-                    Notification.Show(State.MissingFields);
-                }
-                else if (dh.isEventNameExist(event_name.Text, bloodlettingID))
+                if (AdminCredentialDialog.Show() == DialogResult.Yes)
                 {
-                    Notification.Show(State.EventNameUsed);
+                    event_name.ReadOnly = false;
+                    start_dateTimePicker.Enabled = true;
+                    venue_textbox.ReadOnly = false;
+                    details_textarea.ReadOnly = false;
+                    edit_button.Tag = "s";
+                    edit_button.Image = Properties.Resources.icons8_Save_Filled_32__1_;
+                    start_dateTimePicker.Enabled = true;
+                    cancel_button.Visible = true;
                 }
-                else{
-                    if (bloodlettingID.Equals(0)) {
-                        dh.addBloodDonationEvent(event_name.Text, start_dateTimePicker.Value, end_DateTimePicker.Value, venue_textbox.Text, details_textarea.Text);
-                        bloodlettingID = dh.getMaxBloodEvent()+1;
+                }
+                else
+                {
+                    if (event_name.Text.Trim() == "" || (start_dateTimePicker.Value.Date > end_DateTimePicker.Value.Date) || venue_textbox.Text.Trim() == "")
+                    {
+                        Notification.Show(State.MissingFields);
+                    }
+                    else if (dh.isEventNameExist(event_name.Text, bloodlettingID))
+                    {
+                        Notification.Show(State.EventNameUsed);
                     }
                     else {
-                        dh.editBloodDonationEvent(bloodlettingID,event_name.Text,start_dateTimePicker.Value,end_DateTimePicker.Value,venue_textbox.Text,details_textarea.Text);
+                        if (bloodlettingID.Equals(0)) {
+                            dh.addBloodDonationEvent(event_name.Text, start_dateTimePicker.Value, end_DateTimePicker.Value, venue_textbox.Text, details_textarea.Text);
+                            bloodlettingID = dh.getMaxBloodEvent() + 1;
+                        Notification.Show(State.EventAdded);
+                        }
+                        else {
+                            dh.editBloodDonationEvent(bloodlettingID, event_name.Text, start_dateTimePicker.Value, end_DateTimePicker.Value, venue_textbox.Text, details_textarea.Text);
+                        Notification.Show(State.ChangesSaved);
                     }
-                    edit_button.Tag = "e";
-                    edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
-                    event_name.ReadOnly = true;
-                    end_DateTimePicker.Enabled = false;
-                    venue_textbox.ReadOnly = true;
-                    details_textarea.ReadOnly = true;
-                    this.Close();
+                        edit_button.Tag = "e";
+                        edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
+                        event_name.ReadOnly = true;
+                        end_DateTimePicker.Enabled = false;
+                        venue_textbox.ReadOnly = true;
+                        details_textarea.ReadOnly = true;
+                        this.Close();
+                    }
                 }
-            }
         }
 
         private void cancel_button_Click(object sender, EventArgs e)
@@ -104,6 +110,7 @@ namespace ParishSystem
              
                 edit_button.Tag = "s";
                 edit_button.Image = Properties.Resources.icons8_Save_Filled_32__1_;
+                delete_button.Visible = false;
             }
             else
             {
@@ -122,27 +129,40 @@ namespace ParishSystem
                 venue_textbox.Text = dt.Rows[0]["eventVenue"].ToString();
                 details_textarea.Text = dt.Rows[0]["eventDetails"].ToString();
                 cancel_button.Visible = false;
+                delete_button.Visible = true;
             }
         }
 
         private void close_button_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (edit_button.Tag.ToString() == "s") 
+            {
+                if (MessageDialog.Show("Pending changes will not be saved. Are you sure you wish to close?") == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
         private void delete_button_Click(object sender, EventArgs e)
         {
-            CustomMessage msg = new CustomMessage();
-            if (msg.Show("Are you sure you want to delete this event?", MessageDialogButtons.YesNoCancel, MessageDialogIcon.Question)==DialogResult.Yes) {
-                try
-                {
-                    dh.deleteBloodDonationEvent(bloodlettingID);
-                    close_button.PerformClick();
-                }
-                catch
-                {
-                    dh.conn.Close();
-                    Notification.Show(State.CannotDeleteBloodEvent);
+            if (AdminCredentialDialog.Show()==DialogResult.Yes) {
+                CustomMessage msg = new CustomMessage();
+                if (msg.Show("Are you sure you want to delete this event?", MessageDialogButtons.YesNoCancel, MessageDialogIcon.Question) == DialogResult.Yes) {
+                    try
+                    {
+                        dh.deleteBloodDonationEvent(bloodlettingID);
+                        close_button.PerformClick();
+                    }
+                    catch
+                    {
+                        dh.conn.Close();
+                        Notification.Show(State.CannotDeleteBloodEvent);
+                    }
                 }
             }
         }

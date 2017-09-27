@@ -104,23 +104,55 @@ namespace ParishSystem
             drag.makeDraggable(panel_controlbox);
             drag.makeDraggable(panel2);
 
-            if (true)//ALL
+            
+            if (User.getCurrentUser().Privilege==0)//None
             {
-                SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(255, 50, sacrament_cabinet_panel, false));
-                SubMenu.Add(cash_cabinet, new Panel_Size_Pair(295, 50, cash_cabinet_panel, false));
-                SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));
+                sacrament_cabinet_panel.Visible = false;
+                cash_cabinet_panel.Visible = false;
+                bloodletting_cabinet_panel.Visible = false;
+                admin_cabinet_panel.Visible = false;
+            }
+            else if (User.getCurrentUser().Privilege == 1)//ADMIN
+            {
+                sacrament_cabinet_panel.Visible = false;
+                cash_cabinet_panel.Visible = false;
+                bloodletting_cabinet_panel.Visible = false;
+                admin_cabinet_panel.Visible = true;
+
                 SubMenu.Add(admin_cabinet, new Panel_Size_Pair(155, 50, admin_cabinet_panel, false));
             }
-            else if (true)//SECRETARY
+            else if (User.getCurrentUser().Privilege == 2)//TREASURER
             {
-                SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(153, 50, sacrament_cabinet_panel, false));
+                sacrament_cabinet_panel.Visible = false;
+                cash_cabinet_panel.Visible = true;
+                bloodletting_cabinet_panel.Visible = false;
+                admin_cabinet_panel.Visible = false;
+
                 SubMenu.Add(cash_cabinet, new Panel_Size_Pair(295, 50, cash_cabinet_panel, false));
-                SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));
-
-
             }
-            else if (true)//TREASURER
+            else if (User.getCurrentUser().Privilege == 3)//SECRETARY
             {
+                sacrament_cabinet_panel.Visible = true;
+                cash_cabinet_panel.Visible = true;
+                bloodletting_cabinet_panel.Visible = true;
+                admin_cabinet_panel.Visible = false;
+
+                CDBreport_button.Visible = false;
+                CDB_button_menu.Visible = false;
+                CRBreport_button.Visible = true;
+                CRB_button_menu.Visible = true;
+                itemtypemenu_button.Visible = true;
+                SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(255, 50, sacrament_cabinet_panel, false));
+                SubMenu.Add(cash_cabinet, new Panel_Size_Pair(198, 50, cash_cabinet_panel, false));
+                SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));
+            }
+            else if (User.getCurrentUser().Privilege == 4)//ALL
+            {
+                sacrament_cabinet_panel.Visible = true;
+                cash_cabinet_panel.Visible = true;
+                bloodletting_cabinet_panel.Visible = true;
+                admin_cabinet_panel.Visible = true;
+
                 SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(255, 50, sacrament_cabinet_panel, false));
                 SubMenu.Add(cash_cabinet, new Panel_Size_Pair(295, 50, cash_cabinet_panel, false));
                 SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));

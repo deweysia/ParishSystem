@@ -43,7 +43,6 @@
             this.search_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.search_button.BackColor = System.Drawing.Color.White;
             this.search_button.FlatAppearance.BorderSize = 0;
-            this.search_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.search_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.search_button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.search_button.ForeColor = System.Drawing.Color.White;
@@ -117,6 +116,7 @@
             this.profile_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.profile_dgv.Size = new System.Drawing.Size(858, 517);
             this.profile_dgv.TabIndex = 4;
+            this.profile_dgv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.profile_dgv_KeyDown);
             this.profile_dgv.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.profile_dgv_MouseDoubleClick);
             // 
             // panel1
