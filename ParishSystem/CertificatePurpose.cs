@@ -16,6 +16,8 @@ namespace ParishSystem
         public CertificatePurpose()
         {
             InitializeComponent();
+            Draggable drag = new Draggable(this);
+            drag.makeDraggable(this);
         }
 
         private void btnContinue_Click(object sender, EventArgs e)

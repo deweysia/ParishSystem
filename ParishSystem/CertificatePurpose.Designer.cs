@@ -96,6 +96,7 @@
             // 
             // CertificatePurpose
             // 
+            this.AcceptButton = this.btnContinue;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
@@ -106,6 +107,7 @@
             this.Controls.Add(this.txtPurpose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CertificatePurpose";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CertificatePurpose";
             this.ResumeLayout(false);
             this.PerformLayout();

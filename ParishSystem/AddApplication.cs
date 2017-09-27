@@ -36,7 +36,10 @@ namespace ParishSystem
             this.sacramentType = type;
             label1.Text = sacramentType + " Application";
             sacramentItem = dh.getItem(sacramentType.ToString());
+            nupPrice.Maximum = Int32.MaxValue;
             nupPrice.Text = sacramentItem.Rows[0]["suggestedPrice"].ToString();
+
+
         }
 
         private void AddApplication_Load(object sender, EventArgs e)

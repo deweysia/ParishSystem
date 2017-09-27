@@ -1478,6 +1478,7 @@
             // 
             this.btnMarriagePrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnMarriagePrint.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnMarriagePrint.Enabled = false;
             this.btnMarriagePrint.FlatAppearance.BorderSize = 0;
             this.btnMarriagePrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnMarriagePrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));

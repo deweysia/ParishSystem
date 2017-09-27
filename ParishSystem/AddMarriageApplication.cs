@@ -26,7 +26,8 @@ namespace ParishSystem
             draggable.makeDraggable(panel1);
 
             sacramentItem = dh.getItem(SacramentType.Marriage.ToString());
-            txtPrice.Text = sacramentItem.Rows[0]["suggestedPrice"].ToString();
+            nud.Maximum = Int32.MaxValue;
+            nud.Text = sacramentItem.Rows[0]["suggestedPrice"].ToString();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -111,7 +112,7 @@ namespace ParishSystem
             int applicationID = dh.getLatestID("Application", "applicationID");
 
             int itemTypeID = int.Parse(sacramentItem.Rows[0]["itemTypeID"].ToString());
-            double price = double.Parse(txtPrice.Text.ToString());
+            double price = double.Parse(nud.Text.ToString());
 
             success &= dh.addSacramentIncome(applicationID, price, txtRemarks.Text);
 

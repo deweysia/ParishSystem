@@ -50,10 +50,10 @@
             this.txtBrideLN = new MetroFramework.Controls.MetroTextBox();
             this.txtBrideSuffix = new MetroFramework.Controls.MetroTextBox();
             this.txtRemarks = new MetroFramework.Controls.MetroTextBox();
-            this.txtPrice = new ParishSystem.HiddenNumericUpDown();
+            this.nud = new ParishSystem.HiddenNumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.close_picturebox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpGroomBirthDate
@@ -497,11 +497,11 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.DecimalPlaces = 2;
-            this.txtPrice.Location = new System.Drawing.Point(9, 309);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(120, 20);
-            this.txtPrice.TabIndex = 41;
+            this.nud.DecimalPlaces = 2;
+            this.nud.Location = new System.Drawing.Point(9, 309);
+            this.nud.Name = "txtPrice";
+            this.nud.Size = new System.Drawing.Size(120, 20);
+            this.nud.TabIndex = 41;
             // 
             // AddMarriageApplication
             // 
@@ -511,7 +511,7 @@
             this.ClientSize = new System.Drawing.Size(345, 458);
             this.ControlBox = false;
             this.Controls.Add(this.txtRemarks);
-            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.nud);
             this.Controls.Add(this.txtBrideSuffix);
             this.Controls.Add(this.txtGroomSuffix);
             this.Controls.Add(this.txtBrideLN);
@@ -542,7 +542,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.close_picturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,7 +570,7 @@
         private MetroFramework.Controls.MetroTextBox txtBrideMI;
         private MetroFramework.Controls.MetroTextBox txtBrideLN;
         private MetroFramework.Controls.MetroTextBox txtBrideSuffix;
-        private HiddenNumericUpDown txtPrice;
+        private HiddenNumericUpDown nud;
         private MetroFramework.Controls.MetroTextBox txtRemarks;
     }
 }

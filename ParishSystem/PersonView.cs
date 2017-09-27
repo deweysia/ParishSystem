@@ -278,6 +278,7 @@ namespace ParishSystem
      
         private void name_spouse_combobox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            btnMarriagePrint.Enabled = name_spouse_combobox.SelectedIndex != -1;
             foreach (DataRow dr in Partners.Rows)
             {
                 if (dr["ProfileID"].ToString()==(name_spouse_combobox.SelectedItem as ComboboxContent).ID.ToString()) {
