@@ -882,6 +882,7 @@
             this.Name = "SAD2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SAD2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SAD2_FormClosed);
             this.Load += new System.EventHandler(this.SAD2_Load);
             this.panel_controlbox.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

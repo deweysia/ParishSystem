@@ -25,8 +25,9 @@ namespace ParishSystem
             {
                 this.Hide();
                 SAD2 sad = new SAD2(Username_textbox.Text);
-                sad.ShowDialog();
-                this.Show();
+                sad.Show();
+
+                
             }
             else
             {
