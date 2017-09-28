@@ -3104,7 +3104,7 @@ namespace ParishSystem
                         INNER JOIN itemtype on itemtype.itemTypeID = cashreleaseitem.cashReleaseTypeID 
                         INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
                         where 
-                        itemtype.booktype = {BookType} and 
+                        itemtype.booktype = {BookType}  
                         and cashreceipt_cashdisbursment =2,
                         checknum like '%{checknum}%' and
                         CVnum like '%{CVnum}%'
@@ -4573,16 +4573,28 @@ namespace ParishSystem
                             inner join item on item.primaryIncomeID = primaryincome.primaryincomeid 
                             inner join itemtype on item.itemTypeID=itemtype.itemTypeID 
                             where primaryincome.booktype = {bookType} and 
-                            ORnum ={OR}
-                            union all
+                            ORnum ={OR}"+
+                            (bookType==1?
+                            $@" union all
                             select primaryincome.primaryIncomeID,sourceName,primaryincome.bookType,ORnum,primaryIncomeDateTime,price,1 ,amount, itemType,sacramentincome.remarks from primaryincome
                             inner join payment on payment.primaryIncomeID = primaryincome.primaryIncomeID
                             inner join sacramentincome on sacramentincome.sacramentIncomeID = payment.sacramentIncomeID
                             inner join application on application.applicationID = sacramentincome.applicationID
                             inner join itemtype on itemtype.itemTypeID = application.sacramentType
                             where primaryincome.booktype ={bookType} and
-                            ORnum ={OR})  as A  order by ORnum desc;
-                            ");
+                            ORnum ={OR}" : "")    +   ")  as A  order by ORnum desc");
+        }
+        public DataTable getCVdetails(int bookType,int CV )
+        {
+            string q = $@"SELECT * FROM cashreleaseitem 
+                        INNER JOIN itemtype on itemtype.itemTypeID = cashreleaseitem.cashReleaseTypeID 
+                        INNER JOIN cashreleasevoucher on cashreleasevoucher.cashreleasevoucherid = cashreleaseitem.CashReleaseVoucherID 
+                        where 
+                        itemtype.booktype = {bookType}  
+                        and cashreceipt_cashdisbursment =2
+                        and CVnum = {CV}
+                        order by CVnum desc;";
+            return runQuery(q);
         }
     }
 

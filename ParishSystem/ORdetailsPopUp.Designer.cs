@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.or_label = new System.Windows.Forms.Label();
             this.total_label = new System.Windows.Forms.Label();
@@ -42,7 +42,11 @@
             this.source_name = new System.Windows.Forms.Label();
             this.datepaid_label = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ORTextLabel = new System.Windows.Forms.Label();
+            this.checkNumberTextLabel = new System.Windows.Forms.Label();
+            this.CN_label = new System.Windows.Forms.Label();
+            this.checkVoucherTextLabel = new System.Windows.Forms.Label();
+            this.CV_label = new System.Windows.Forms.Label();
             this.controlBar_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.details_dgv)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +57,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(180, 294);
+            this.label2.Location = new System.Drawing.Point(358, 434);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 32);
             this.label2.TabIndex = 3;
@@ -65,7 +69,7 @@
             this.or_label.BackColor = System.Drawing.Color.White;
             this.or_label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.or_label.ForeColor = System.Drawing.Color.Black;
-            this.or_label.Location = new System.Drawing.Point(133, 101);
+            this.or_label.Location = new System.Drawing.Point(162, 101);
             this.or_label.Name = "or_label";
             this.or_label.Size = new System.Drawing.Size(55, 21);
             this.or_label.TabIndex = 4;
@@ -77,11 +81,11 @@
             this.total_label.BackColor = System.Drawing.Color.White;
             this.total_label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_label.ForeColor = System.Drawing.Color.Black;
-            this.total_label.Location = new System.Drawing.Point(248, 294);
+            this.total_label.Location = new System.Drawing.Point(426, 435);
             this.total_label.Name = "total_label";
-            this.total_label.Size = new System.Drawing.Size(54, 32);
+            this.total_label.Size = new System.Drawing.Size(85, 32);
             this.total_label.TabIndex = 5;
-            this.total_label.Text = "500";
+            this.total_label.Text = "500.00";
             // 
             // controlBar_panel
             // 
@@ -135,30 +139,30 @@
             this.details_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.details_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.details_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.details_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.details_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.details_dgv.ColumnHeadersHeight = 40;
             this.details_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.details_dgv.EnableHeadersVisualStyles = false;
-            this.details_dgv.Location = new System.Drawing.Point(43, 266);
+            this.details_dgv.Location = new System.Drawing.Point(43, 263);
             this.details_dgv.MultiSelect = false;
             this.details_dgv.Name = "details_dgv";
             this.details_dgv.ReadOnly = true;
             this.details_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.details_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.details_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.details_dgv.RowHeadersVisible = false;
             this.details_dgv.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.details_dgv.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -167,7 +171,7 @@
             this.details_dgv.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
             this.details_dgv.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.details_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.details_dgv.Size = new System.Drawing.Size(510, 200);
+            this.details_dgv.Size = new System.Drawing.Size(510, 152);
             this.details_dgv.TabIndex = 59;
             // 
             // remarks_textbox
@@ -216,14 +220,56 @@
             this.label8.TabIndex = 64;
             this.label8.Text = "Date Paid:";
             // 
-            // label1
+            // ORTextLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 21);
-            this.label1.TabIndex = 66;
-            this.label1.Text = "OR:";
+            this.ORTextLabel.AutoSize = true;
+            this.ORTextLabel.Location = new System.Drawing.Point(36, 101);
+            this.ORTextLabel.Name = "ORTextLabel";
+            this.ORTextLabel.Size = new System.Drawing.Size(35, 21);
+            this.ORTextLabel.TabIndex = 66;
+            this.ORTextLabel.Text = "OR:";
+            // 
+            // checkNumberTextLabel
+            // 
+            this.checkNumberTextLabel.AutoSize = true;
+            this.checkNumberTextLabel.Location = new System.Drawing.Point(39, 101);
+            this.checkNumberTextLabel.Name = "checkNumberTextLabel";
+            this.checkNumberTextLabel.Size = new System.Drawing.Size(117, 21);
+            this.checkNumberTextLabel.TabIndex = 68;
+            this.checkNumberTextLabel.Text = "Check Number:";
+            // 
+            // CN_label
+            // 
+            this.CN_label.AutoSize = true;
+            this.CN_label.BackColor = System.Drawing.Color.White;
+            this.CN_label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CN_label.ForeColor = System.Drawing.Color.Black;
+            this.CN_label.Location = new System.Drawing.Point(162, 101);
+            this.CN_label.Name = "CN_label";
+            this.CN_label.Size = new System.Drawing.Size(55, 21);
+            this.CN_label.TabIndex = 67;
+            this.CN_label.Text = "13458";
+            // 
+            // checkVoucherTextLabel
+            // 
+            this.checkVoucherTextLabel.AutoSize = true;
+            this.checkVoucherTextLabel.Location = new System.Drawing.Point(239, 101);
+            this.checkVoucherTextLabel.Name = "checkVoucherTextLabel";
+            this.checkVoucherTextLabel.Size = new System.Drawing.Size(116, 21);
+            this.checkVoucherTextLabel.TabIndex = 70;
+            this.checkVoucherTextLabel.Text = "Check Voucher:";
+            // 
+            // CV_label
+            // 
+            this.CV_label.AutoSize = true;
+            this.CV_label.BackColor = System.Drawing.Color.White;
+            this.CV_label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CV_label.ForeColor = System.Drawing.Color.Black;
+            this.CV_label.Location = new System.Drawing.Point(361, 101);
+            this.CV_label.Name = "CV_label";
+            this.CV_label.Size = new System.Drawing.Size(55, 21);
+            this.CV_label.TabIndex = 69;
+            this.CV_label.Text = "13458";
             // 
             // ORdetailsPopUp
             // 
@@ -232,7 +278,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(585, 493);
             this.ControlBox = false;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.checkVoucherTextLabel);
+            this.Controls.Add(this.CV_label);
+            this.Controls.Add(this.checkNumberTextLabel);
+            this.Controls.Add(this.CN_label);
+            this.Controls.Add(this.ORTextLabel);
             this.Controls.Add(this.datepaid_label);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.source_name);
@@ -270,6 +320,10 @@
         private System.Windows.Forms.Label source_name;
         private System.Windows.Forms.Label datepaid_label;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ORTextLabel;
+        private System.Windows.Forms.Label checkNumberTextLabel;
+        private System.Windows.Forms.Label CN_label;
+        private System.Windows.Forms.Label checkVoucherTextLabel;
+        private System.Windows.Forms.Label CV_label;
     }
 }

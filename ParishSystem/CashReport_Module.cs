@@ -39,14 +39,29 @@ namespace ParishSystem
 
         private void breakdown_datagridview_report_disbursment_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (notGrouped_radiobutton_cashdisbursment.Checked)
+            if (bookReportMode == 1)
             {
-                Form A = new ORdetailsPopUp(int.Parse(report_datagridview_cashdisbursment.CurrentRow.Cells[0].Value.ToString()), cashDisbursmentMode, dh);
-                A.ShowDialog();
+                if (notGrouped_radiobutton_cashdisbursment.Checked)
+                {
+                    Form A = new ORdetailsPopUp(int.Parse(report_datagridview_cashdisbursment.CurrentRow.Cells[0].Value.ToString()), cashDisbursmentMode, dh);
+                    A.ShowDialog();
+                }
+                else
+                {
+
+                }
             }
             else
             {
+                if (notGrouped_radiobutton_cashdisbursment.Checked)
+                {
+                    Form A = new ORdetailsPopUp(int.Parse(report_datagridview_cashdisbursment.CurrentRow.Cells["checkNum"].Value.ToString()), int.Parse(report_datagridview_cashdisbursment.CurrentRow.Cells["CVnum"].Value.ToString()), cashDisbursmentMode, dh);
+                    A.ShowDialog();
+                }
+                else
+                {
 
+                }
             }
         }
        
