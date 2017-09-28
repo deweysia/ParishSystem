@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flpEditDeleteMinister = new System.Windows.Forms.FlowLayoutPanel();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.events_btn = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvMinister = new System.Windows.Forms.DataGridView();
             this.ministerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +39,7 @@
             this.midname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.suffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bitthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ministrytype = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.licensenumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,17 +51,14 @@
             // 
             this.flpEditDeleteMinister.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.flpEditDeleteMinister.Controls.Add(this.btnEdit);
-            this.flpEditDeleteMinister.Controls.Add(this.btnDelete);
-            this.flpEditDeleteMinister.Controls.Add(this.events_btn);
             this.flpEditDeleteMinister.Location = new System.Drawing.Point(218, 584);
             this.flpEditDeleteMinister.Name = "flpEditDeleteMinister";
-            this.flpEditDeleteMinister.Size = new System.Drawing.Size(539, 44);
+            this.flpEditDeleteMinister.Size = new System.Drawing.Size(182, 44);
             this.flpEditDeleteMinister.TabIndex = 13;
             // 
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnEdit.Enabled = false;
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -77,39 +72,6 @@
             this.btnEdit.Text = "Edit Minister";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.IndianRed;
-            this.btnDelete.Enabled = false;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(182, 3);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(173, 37);
-            this.btnDelete.TabIndex = 17;
-            this.btnDelete.Text = "Delete Minister";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // events_btn
-            // 
-            this.events_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.events_btn.Enabled = false;
-            this.events_btn.FlatAppearance.BorderSize = 0;
-            this.events_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.events_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.events_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.events_btn.ForeColor = System.Drawing.Color.White;
-            this.events_btn.Location = new System.Drawing.Point(361, 3);
-            this.events_btn.Name = "events_btn";
-            this.events_btn.Size = new System.Drawing.Size(173, 37);
-            this.events_btn.TabIndex = 16;
-            this.events_btn.Tag = "a";
-            this.events_btn.Text = "Upcoming Events";
-            this.events_btn.UseVisualStyleBackColor = false;
             // 
             // btnAdd
             // 
@@ -144,14 +106,14 @@
             this.dgvMinister.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMinister.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvMinister.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMinister.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMinister.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvMinister.ColumnHeadersHeight = 40;
             this.dgvMinister.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvMinister.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -160,7 +122,7 @@
             this.midname,
             this.lastname,
             this.suffix,
-            this.bitthdate,
+            this.birthdate,
             this.ministrytype,
             this.status,
             this.licensenumber});
@@ -170,14 +132,14 @@
             this.dgvMinister.Name = "dgvMinister";
             this.dgvMinister.ReadOnly = true;
             this.dgvMinister.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMinister.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMinister.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvMinister.RowHeadersVisible = false;
             this.dgvMinister.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.dgvMinister.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -229,12 +191,12 @@
             this.suffix.Name = "suffix";
             this.suffix.ReadOnly = true;
             // 
-            // bitthdate
+            // birthdate
             // 
-            this.bitthdate.DataPropertyName = "bitthdate";
-            this.bitthdate.HeaderText = "Birthdate";
-            this.bitthdate.Name = "bitthdate";
-            this.bitthdate.ReadOnly = true;
+            this.birthdate.DataPropertyName = "birthdate";
+            this.birthdate.HeaderText = "Birthdate";
+            this.birthdate.Name = "birthdate";
+            this.birthdate.ReadOnly = true;
             // 
             // ministrytype
             // 
@@ -281,15 +243,13 @@
         private System.Windows.Forms.FlowLayoutPanel flpEditDeleteMinister;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button events_btn;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dgvMinister;
         private System.Windows.Forms.DataGridViewTextBoxColumn ministerID;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstname;
         private System.Windows.Forms.DataGridViewTextBoxColumn midname;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastname;
         private System.Windows.Forms.DataGridViewTextBoxColumn suffix;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bitthdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn birthdate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ministrytype;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewTextBoxColumn licensenumber;

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ParishSystem
 {
-    class Minister
+    public class Minister
     {
         private int _ministerID = -1;
         private string _firstName, _midName, _lastName, _suffix;
         private DateTime _birthdate;
         private MinistryType _ministryType;
-
+        private MinisterStatus _status;
         public int ministerID
         {
             get
@@ -28,8 +28,9 @@ namespace ParishSystem
         public string suffix { get { return _suffix; } }
         public DateTime birthdate { get { return _birthdate; } }
         public MinistryType ministryType { get { return _ministryType; } }
+        public MinisterStatus status { get { return _status; } }
 
-        public Minister(int ministerID, string firstName, string midName, string lastName, string suffix, DateTime birthDate, MinistryType ministryType)
+        public Minister(int ministerID, string firstName, string midName, string lastName, string suffix, DateTime birthDate, MinistryType ministryType, MinisterStatus status)
         {
             this._ministerID = ministerID;
             this._firstName = firstName;
@@ -38,6 +39,7 @@ namespace ParishSystem
             this._suffix = suffix;
             this._birthdate = birthdate;
             this._ministryType = ministryType;
+            this._status = status;
 
         }
     }

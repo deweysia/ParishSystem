@@ -87,7 +87,7 @@ namespace ParishSystem
             lblNameBap.Text = string.Format("{0} {1} {2} {3}", fn, mn, ln, suffix);
 
             int pageIndex = dgvConfirmation.SelectedRows[0].Cells.Count - 3;
-            btnAddReferencesBap.Enabled = string.IsNullOrWhiteSpace(dgvConfirmation.SelectedRows[0].Cells[pageIndex].Value.ToString());
+            btnAddReferencesCon.Enabled = string.IsNullOrWhiteSpace(dgvConfirmation.SelectedRows[0].Cells[pageIndex].Value.ToString());
             MessageBox.Show("add ref enabled " + btnAddReferencesCon.Enabled);
 
             tlpProfileCon.Enabled = true;
@@ -114,7 +114,7 @@ namespace ParishSystem
             lblNameBride.Text = brideName;
 
             int pageIndex = dgvMarriage.SelectedRows[0].Cells.Count - 3;
-            btnAddReferencesBap.Enabled = string.IsNullOrWhiteSpace(dgvMarriage.SelectedRows[0].Cells[pageIndex].Value.ToString());
+            btnAddReferencesMar.Enabled = string.IsNullOrWhiteSpace(dgvMarriage.SelectedRows[0].Cells[pageIndex].Value.ToString());
             MessageBox.Show("add ref enabled " + btnAddReferencesMar.Enabled);
 
             tlpProfileMar.Enabled = true;

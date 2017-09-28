@@ -14,7 +14,7 @@ namespace ParishSystem
     {
 
         DataHandler dh = DataHandler.getDataHandler();
-
+        private Minister minister = null;
         private DataGridViewRow dgvr = null;
         public MinisterForm()
         {
@@ -30,6 +30,21 @@ namespace ParishSystem
             cmbMinistryType.DataSource = Enum.GetValues(typeof(MinistryType));
             cmbStatus.DataSource = Enum.GetValues(typeof(MinisterStatus));
         }
+
+        /*public MinisterForm(Minister minister) : this()
+        {
+
+            this.minister = minister;
+
+            dtpBirthdate.Value = minister.birthdate;
+            dtpBirthdate.MaxDate = DateTime.Now;
+
+            cmbMinistryType.DataSource = Enum.GetValues(typeof(MinistryType));
+            cmbMinistryType.SelectedIndex = Convert.ToInt32(minister.ministryType) - 1;
+
+            cmbStatus.DataSource = Enum.GetValues(typeof(MinisterStatus));
+            cmbStatus.SelectedIndex = Convert.ToInt32(minister.status) - 1;
+        }*/
 
         public MinisterForm(DataGridViewRow dgvr) : this()
         {
@@ -79,8 +94,6 @@ namespace ParishSystem
                 editMinister();
 
             this.Close();
-
-           
         }
 
         private bool allFilled()
