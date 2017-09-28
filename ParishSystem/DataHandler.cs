@@ -1687,10 +1687,11 @@ namespace ParishSystem
 
         public DataTable getMarriage(int applicationID)
         {
-            string q = "SELECT *,concat(firstName,\" \",midname,\" \",lastname,\"\",suffix)as ministerName  FROM Marriage inner join minister on marriage.ministerID=minister.ministerID where  applicationID =" + applicationID;
+            //string q = "SELECT *,concat(firstName,\" \",midname,\" \",lastname,\"\",suffix)as ministerName  FROM Marriage inner join minister on marriage.ministerID=minister.ministerID where  applicationID =" + applicationID;
 
+            string q = "SELECT *, CONCAT_WS(' ', firstName, midName, lastName, suffix) as MinisterName FROM Marriage JOIN Minister ON Marriage.ministerID = Minister.ministerID WHERE applicationID = @applicationID";
 
-            DataTable dt = runQuery(q);
+            DataTable dt = ExecuteQuery(q, applicationID);
 
             return dt;
         }
@@ -2417,7 +2418,7 @@ namespace ParishSystem
             if (type == SacramentType.Marriage)
             {
                 
-                q = "SELECT application.applicationID, a.profileID AS groomProfileID, b.profileID AS brideProfileID, "
+                q = "SELECT application.applicationID, a.profileID AS groomID, b.profileID AS brideID, "
                     + "aa.applicantID AS groomApplicantID, bb.applicantID AS brideApplicantID, requirements, "
                     + "CONCAT_WS(' ', a.firstName, a.midName, a.lastName, a.suffix) AS groomName, DATE_FORMAT(a.birthdate, '%Y-%m-%d') AS groomBirthDate, "
                     + "CONCAT_WS(' ', b.firstName, b.midName, b.lastName, b.suffix) AS brideName, DATE_FORMAT(b.birthdate, '%Y-%m-%d') AS brideBirthDate, "
@@ -4572,7 +4573,7 @@ namespace ParishSystem
 
         public DataTable getAuditLogs()
         {
-            string q = "SELECT auditLogID, userID, tableName, operation, auditDate, CONCAT_WS(' ', firstName, midName, lastName, suffix) AS name, details, oldRecord, newRecord FROM AuditLog NATURAL JOIN User";
+            string q = "SELECT auditLogID, userID, tableName, operation, auditDate, CONCAT_WS(' ', firstName, midName, lastName, suffix) AS name, details, oldRecord, newRecord FROM AuditLog NATURAL JOIN User ORDER BY AuditDate DESC";
             DataTable dt = ExecuteQuery(q);
             return dt;
         }

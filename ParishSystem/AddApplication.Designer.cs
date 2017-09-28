@@ -412,6 +412,7 @@
             this.nupPrice.Name = "nupPrice";
             this.nupPrice.Size = new System.Drawing.Size(120, 20);
             this.nupPrice.TabIndex = 8;
+            this.nupPrice.ThousandsSeparator = true;
             this.nupPrice.ValueChanged += new System.EventHandler(this.nupPrice_ValueChanged);
             this.nupPrice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nupPrice_KeyDown);
             this.nupPrice.Leave += new System.EventHandler(this.nupPrice_Leave);

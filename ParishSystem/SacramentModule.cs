@@ -61,7 +61,7 @@ namespace ParishSystem
 
             int pageIndex = dgvBaptism.SelectedRows[0].Cells.Count - 3;
             btnAddReferencesBap.Enabled = string.IsNullOrWhiteSpace(dgvBaptism.SelectedRows[0].Cells[pageIndex].Value.ToString());
-            MessageBox.Show("add ref enabled " + btnAddReferencesBap.Enabled);
+            //MessageBox.Show("add ref enabled " + btnAddReferencesBap.Enabled);
 
             tlpProfileBap.Enabled = true;
 
@@ -88,7 +88,7 @@ namespace ParishSystem
 
             int pageIndex = dgvConfirmation.SelectedRows[0].Cells.Count - 3;
             btnAddReferencesCon.Enabled = string.IsNullOrWhiteSpace(dgvConfirmation.SelectedRows[0].Cells[pageIndex].Value.ToString());
-            MessageBox.Show("add ref enabled " + btnAddReferencesCon.Enabled);
+            //MessageBox.Show("add ref enabled " + btnAddReferencesCon.Enabled);
 
             tlpProfileCon.Enabled = true;
         }
@@ -115,7 +115,7 @@ namespace ParishSystem
 
             int pageIndex = dgvMarriage.SelectedRows[0].Cells.Count - 3;
             btnAddReferencesMar.Enabled = string.IsNullOrWhiteSpace(dgvMarriage.SelectedRows[0].Cells[pageIndex].Value.ToString());
-            MessageBox.Show("add ref enabled " + btnAddReferencesMar.Enabled);
+            //MessageBox.Show("add ref enabled " + btnAddReferencesMar.Enabled);
 
             tlpProfileMar.Enabled = true;
         }
