@@ -478,19 +478,10 @@ namespace ParishSystem
         }
         private void SacramentLog_menu_button_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void CashLog_menu_button_Click(object sender, EventArgs e)
-        {
             Form A = new AuditModule();
             showForm(content_panel, A);
         }
 
-        private void BloodlettingLog_menu_button_Click(object sender, EventArgs e)
-        {
-
-        }
         private void logout_button_Click(object sender, EventArgs e)
         {
             CustomMessage msg = new CustomMessage();
