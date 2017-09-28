@@ -93,7 +93,6 @@ namespace ParishSystem
             modules.Add(CabinetModule.ReceiptReports, new CashReport_Module(1, 1));
             modules.Add(CabinetModule.DisbursementReports, new CashReport_Module(2, 1));
             modules.Add(CabinetModule.Employee, new EmployeeModule());
-
             
             
         }
@@ -119,7 +118,7 @@ namespace ParishSystem
                 bloodletting_cabinet_panel.Visible = false;
                 admin_cabinet_panel.Visible = true;
 
-                SubMenu.Add(admin_cabinet, new Panel_Size_Pair(155, 50, admin_cabinet_panel, false));
+                SubMenu.Add(admin_cabinet, new Panel_Size_Pair(285, 50, admin_cabinet_panel, false));
             }
             else if (User.getCurrentUser().Privilege == 2)//TREASURER
             {
@@ -156,7 +155,7 @@ namespace ParishSystem
                 SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(255, 50, sacrament_cabinet_panel, false));
                 SubMenu.Add(cash_cabinet, new Panel_Size_Pair(295, 50, cash_cabinet_panel, false));
                 SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));
-                SubMenu.Add(admin_cabinet, new Panel_Size_Pair(155, 50, admin_cabinet_panel, false));
+                SubMenu.Add(admin_cabinet, new Panel_Size_Pair(285, 50, admin_cabinet_panel, false));
             }
         }
         #region Effects
@@ -477,6 +476,12 @@ namespace ParishSystem
             Form A = modules[CabinetModule.ClaimView];
             showForm(content_panel, A);
         }
+        private void SacramentLog_menu_button_Click(object sender, EventArgs e)
+        {
+            Form A = new AuditModule();
+            showForm(content_panel, A);
+        }
+
         private void logout_button_Click(object sender, EventArgs e)
         {
             CustomMessage msg = new CustomMessage();
@@ -510,10 +515,6 @@ namespace ParishSystem
 
         }
 
-        private void SAD2_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            LoginForm f = new LoginForm();
-            f.Show();
-        }
+        
     }
 }

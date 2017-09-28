@@ -55,7 +55,8 @@
             this.Username_textbox.CustomButton.UseSelectable = true;
             this.Username_textbox.CustomButton.Visible = false;
             this.Username_textbox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.Username_textbox.Lines = new string[0];
+            this.Username_textbox.Lines = new string[] {
+        "r"};
             this.Username_textbox.Location = new System.Drawing.Point(60, 74);
             this.Username_textbox.MaxLength = 32767;
             this.Username_textbox.Name = "Username_textbox";
@@ -69,6 +70,7 @@
             this.Username_textbox.Size = new System.Drawing.Size(255, 30);
             this.Username_textbox.Style = MetroFramework.MetroColorStyle.Silver;
             this.Username_textbox.TabIndex = 0;
+            this.Username_textbox.Text = "r";
             this.Username_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Username_textbox.UseSelectable = true;
             this.Username_textbox.WaterMark = "Username";
@@ -91,7 +93,8 @@
             this.Password_textbox.CustomButton.UseSelectable = true;
             this.Password_textbox.CustomButton.Visible = false;
             this.Password_textbox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.Password_textbox.Lines = new string[0];
+            this.Password_textbox.Lines = new string[] {
+        "rootroot"};
             this.Password_textbox.Location = new System.Drawing.Point(60, 126);
             this.Password_textbox.MaxLength = 32767;
             this.Password_textbox.Name = "Password_textbox";
@@ -105,6 +108,7 @@
             this.Password_textbox.Size = new System.Drawing.Size(255, 30);
             this.Password_textbox.Style = MetroFramework.MetroColorStyle.Silver;
             this.Password_textbox.TabIndex = 1;
+            this.Password_textbox.Text = "rootroot";
             this.Password_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Password_textbox.UseSelectable = true;
             this.Password_textbox.WaterMark = "Password";
@@ -186,6 +190,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "quick login";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
@@ -196,6 +201,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Create Acc";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // LoginForm

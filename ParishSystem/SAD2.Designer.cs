@@ -51,11 +51,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cash_cabinet_panel = new System.Windows.Forms.Panel();
-            this.itemtypemenu_button = new System.Windows.Forms.Button();
-            this.CRBreport_button = new System.Windows.Forms.Button();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.CRB_button_menu = new System.Windows.Forms.Button();
-            this.CDBreport_button = new System.Windows.Forms.Button();
+            this.CRBreport_button = new System.Windows.Forms.Button();
             this.CDB_button_menu = new System.Windows.Forms.Button();
+            this.CDBreport_button = new System.Windows.Forms.Button();
+            this.itemtypemenu_button = new System.Windows.Forms.Button();
             this.cash_cabinet = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -69,6 +70,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.admin_cabinet_panel = new System.Windows.Forms.Panel();
+            this.SacramentLog_menu_button = new System.Windows.Forms.Button();
             this.Employee_button_menu = new System.Windows.Forms.Button();
             this.ministers_button_menu = new System.Windows.Forms.Button();
             this.admin_cabinet = new System.Windows.Forms.Button();
@@ -79,7 +81,6 @@
             this.MenuTimer = new System.Windows.Forms.Timer(this.components);
             this.Panel_Timer = new System.Windows.Forms.Timer(this.components);
             this.Workspace_panel = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_controlbox.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayout_ControlButtons.SuspendLayout();
@@ -87,11 +88,11 @@
             this.menu_flowlayout.SuspendLayout();
             this.sacrament_cabinet_panel.SuspendLayout();
             this.cash_cabinet_panel.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.bloodletting_cabinet_panel.SuspendLayout();
             this.admin_cabinet_panel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.Workspace_panel.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_controlbox
@@ -414,47 +415,17 @@
             this.cash_cabinet_panel.TabIndex = 50;
             this.cash_cabinet_panel.Click += new System.EventHandler(this.SubmenuOpen_Click);
             // 
-            // itemtypemenu_button
+            // flowLayoutPanel2
             // 
-            this.itemtypemenu_button.BackColor = System.Drawing.Color.Transparent;
-            this.itemtypemenu_button.FlatAppearance.BorderSize = 0;
-            this.itemtypemenu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.itemtypemenu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.itemtypemenu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemtypemenu_button.ForeColor = System.Drawing.Color.White;
-            this.itemtypemenu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.itemtypemenu_button.Location = new System.Drawing.Point(0, 180);
-            this.itemtypemenu_button.Margin = new System.Windows.Forms.Padding(0);
-            this.itemtypemenu_button.Name = "itemtypemenu_button";
-            this.itemtypemenu_button.Size = new System.Drawing.Size(232, 45);
-            this.itemtypemenu_button.TabIndex = 42;
-            this.itemtypemenu_button.Text = "                   Cash Item Types";
-            this.itemtypemenu_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.itemtypemenu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.itemtypemenu_button.UseVisualStyleBackColor = false;
-            this.itemtypemenu_button.Click += new System.EventHandler(this.itemtypemenu_button_Click);
-            this.itemtypemenu_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_menu_MouseDown);
-            // 
-            // CRBreport_button
-            // 
-            this.CRBreport_button.BackColor = System.Drawing.Color.Transparent;
-            this.CRBreport_button.FlatAppearance.BorderSize = 0;
-            this.CRBreport_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.CRBreport_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CRBreport_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CRBreport_button.ForeColor = System.Drawing.Color.White;
-            this.CRBreport_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CRBreport_button.Location = new System.Drawing.Point(0, 135);
-            this.CRBreport_button.Margin = new System.Windows.Forms.Padding(0);
-            this.CRBreport_button.Name = "CRBreport_button";
-            this.CRBreport_button.Size = new System.Drawing.Size(232, 45);
-            this.CRBreport_button.TabIndex = 43;
-            this.CRBreport_button.Text = "                   Reciept Reports";
-            this.CRBreport_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CRBreport_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.CRBreport_button.UseVisualStyleBackColor = false;
-            this.CRBreport_button.Click += new System.EventHandler(this.CRBreport_button_Click);
-            this.CRBreport_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_menu_MouseDown);
+            this.flowLayoutPanel2.Controls.Add(this.CRB_button_menu);
+            this.flowLayoutPanel2.Controls.Add(this.CRBreport_button);
+            this.flowLayoutPanel2.Controls.Add(this.CDB_button_menu);
+            this.flowLayoutPanel2.Controls.Add(this.CDBreport_button);
+            this.flowLayoutPanel2.Controls.Add(this.itemtypemenu_button);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(-1, 54);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(233, 240);
+            this.flowLayoutPanel2.TabIndex = 54;
             // 
             // CRB_button_menu
             // 
@@ -477,26 +448,26 @@
             this.CRB_button_menu.Click += new System.EventHandler(this.CRB_button_menu_Click);
             this.CRB_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_menu_MouseDown);
             // 
-            // CDBreport_button
+            // CRBreport_button
             // 
-            this.CDBreport_button.BackColor = System.Drawing.Color.Transparent;
-            this.CDBreport_button.FlatAppearance.BorderSize = 0;
-            this.CDBreport_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.CDBreport_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CDBreport_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CDBreport_button.ForeColor = System.Drawing.Color.White;
-            this.CDBreport_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CDBreport_button.Location = new System.Drawing.Point(0, 45);
-            this.CDBreport_button.Margin = new System.Windows.Forms.Padding(0);
-            this.CDBreport_button.Name = "CDBreport_button";
-            this.CDBreport_button.Size = new System.Drawing.Size(232, 45);
-            this.CDBreport_button.TabIndex = 43;
-            this.CDBreport_button.Text = "                   Disbursment Reports";
-            this.CDBreport_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CDBreport_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.CDBreport_button.UseVisualStyleBackColor = false;
-            this.CDBreport_button.Click += new System.EventHandler(this.CDBreport_button_Click);
-            this.CDBreport_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_menu_MouseDown);
+            this.CRBreport_button.BackColor = System.Drawing.Color.Transparent;
+            this.CRBreport_button.FlatAppearance.BorderSize = 0;
+            this.CRBreport_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.CRBreport_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CRBreport_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CRBreport_button.ForeColor = System.Drawing.Color.White;
+            this.CRBreport_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CRBreport_button.Location = new System.Drawing.Point(0, 45);
+            this.CRBreport_button.Margin = new System.Windows.Forms.Padding(0);
+            this.CRBreport_button.Name = "CRBreport_button";
+            this.CRBreport_button.Size = new System.Drawing.Size(232, 45);
+            this.CRBreport_button.TabIndex = 43;
+            this.CRBreport_button.Text = "                   Reciept Reports";
+            this.CRBreport_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CRBreport_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CRBreport_button.UseVisualStyleBackColor = false;
+            this.CRBreport_button.Click += new System.EventHandler(this.CRBreport_button_Click);
+            this.CRBreport_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_menu_MouseDown);
             // 
             // CDB_button_menu
             // 
@@ -518,6 +489,48 @@
             this.CDB_button_menu.UseVisualStyleBackColor = false;
             this.CDB_button_menu.Click += new System.EventHandler(this.CDB_button_menu_Click);
             this.CDB_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_menu_MouseDown);
+            // 
+            // CDBreport_button
+            // 
+            this.CDBreport_button.BackColor = System.Drawing.Color.Transparent;
+            this.CDBreport_button.FlatAppearance.BorderSize = 0;
+            this.CDBreport_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.CDBreport_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CDBreport_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CDBreport_button.ForeColor = System.Drawing.Color.White;
+            this.CDBreport_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CDBreport_button.Location = new System.Drawing.Point(0, 135);
+            this.CDBreport_button.Margin = new System.Windows.Forms.Padding(0);
+            this.CDBreport_button.Name = "CDBreport_button";
+            this.CDBreport_button.Size = new System.Drawing.Size(232, 45);
+            this.CDBreport_button.TabIndex = 43;
+            this.CDBreport_button.Text = "                   Disbursment Reports";
+            this.CDBreport_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CDBreport_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CDBreport_button.UseVisualStyleBackColor = false;
+            this.CDBreport_button.Click += new System.EventHandler(this.CDBreport_button_Click);
+            this.CDBreport_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_menu_MouseDown);
+            // 
+            // itemtypemenu_button
+            // 
+            this.itemtypemenu_button.BackColor = System.Drawing.Color.Transparent;
+            this.itemtypemenu_button.FlatAppearance.BorderSize = 0;
+            this.itemtypemenu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.itemtypemenu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.itemtypemenu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemtypemenu_button.ForeColor = System.Drawing.Color.White;
+            this.itemtypemenu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.itemtypemenu_button.Location = new System.Drawing.Point(0, 180);
+            this.itemtypemenu_button.Margin = new System.Windows.Forms.Padding(0);
+            this.itemtypemenu_button.Name = "itemtypemenu_button";
+            this.itemtypemenu_button.Size = new System.Drawing.Size(232, 45);
+            this.itemtypemenu_button.TabIndex = 42;
+            this.itemtypemenu_button.Text = "                   Cash Item Types";
+            this.itemtypemenu_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.itemtypemenu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.itemtypemenu_button.UseVisualStyleBackColor = false;
+            this.itemtypemenu_button.Click += new System.EventHandler(this.itemtypemenu_button_Click);
+            this.itemtypemenu_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_menu_MouseDown);
             // 
             // cash_cabinet
             // 
@@ -724,6 +737,7 @@
             // 
             // admin_cabinet_panel
             // 
+            this.admin_cabinet_panel.Controls.Add(this.SacramentLog_menu_button);
             this.admin_cabinet_panel.Controls.Add(this.Employee_button_menu);
             this.admin_cabinet_panel.Controls.Add(this.ministers_button_menu);
             this.admin_cabinet_panel.Controls.Add(this.admin_cabinet);
@@ -735,6 +749,27 @@
             this.admin_cabinet_panel.Size = new System.Drawing.Size(232, 50);
             this.admin_cabinet_panel.TabIndex = 55;
             this.admin_cabinet_panel.Click += new System.EventHandler(this.SubmenuOpen_Click);
+            // 
+            // SacramentLog_menu_button
+            // 
+            this.SacramentLog_menu_button.BackColor = System.Drawing.Color.Transparent;
+            this.SacramentLog_menu_button.FlatAppearance.BorderSize = 0;
+            this.SacramentLog_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.SacramentLog_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SacramentLog_menu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SacramentLog_menu_button.ForeColor = System.Drawing.Color.White;
+            this.SacramentLog_menu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SacramentLog_menu_button.Location = new System.Drawing.Point(0, 143);
+            this.SacramentLog_menu_button.Margin = new System.Windows.Forms.Padding(0);
+            this.SacramentLog_menu_button.Name = "SacramentLog_menu_button";
+            this.SacramentLog_menu_button.Size = new System.Drawing.Size(232, 45);
+            this.SacramentLog_menu_button.TabIndex = 55;
+            this.SacramentLog_menu_button.Text = "                   User Logs";
+            this.SacramentLog_menu_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SacramentLog_menu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.SacramentLog_menu_button.UseVisualStyleBackColor = false;
+            this.SacramentLog_menu_button.Click += new System.EventHandler(this.SacramentLog_menu_button_Click);
+            this.SacramentLog_menu_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_menu_MouseDown);
             // 
             // Employee_button_menu
             // 
@@ -868,18 +903,6 @@
             this.Workspace_panel.Size = new System.Drawing.Size(943, 667);
             this.Workspace_panel.TabIndex = 61;
             // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.CRB_button_menu);
-            this.flowLayoutPanel2.Controls.Add(this.CDBreport_button);
-            this.flowLayoutPanel2.Controls.Add(this.CDB_button_menu);
-            this.flowLayoutPanel2.Controls.Add(this.CRBreport_button);
-            this.flowLayoutPanel2.Controls.Add(this.itemtypemenu_button);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(-1, 54);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(233, 240);
-            this.flowLayoutPanel2.TabIndex = 54;
-            // 
             // SAD2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -904,13 +927,13 @@
             this.sacrament_cabinet_panel.PerformLayout();
             this.cash_cabinet_panel.ResumeLayout(false);
             this.cash_cabinet_panel.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.bloodletting_cabinet_panel.ResumeLayout(false);
             this.bloodletting_cabinet_panel.PerformLayout();
             this.admin_cabinet_panel.ResumeLayout(false);
             this.admin_cabinet_panel.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.Workspace_panel.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -966,5 +989,6 @@
         private System.Windows.Forms.Button bloodClaimView_menu_button;
         private System.Windows.Forms.Button btn_min;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Button SacramentLog_menu_button;
     }
 }

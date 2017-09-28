@@ -109,7 +109,7 @@ namespace ParishSystem
 
         private void close_button_Click(object sender, EventArgs e)
         {
-           if (MessageDialog.Show("Changes will not be saved. Are you sure you wish to exit?") == DialogResult.Yes)
+           if (MessageDialog.Show("Changes will not be saved. Are you sure you wish to exit?",MessageDialogButtons.YesNo,MessageDialogIcon.Question) == DialogResult.Yes)
                 {
                     this.Close();
                 }

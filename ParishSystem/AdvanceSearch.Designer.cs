@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdvanceSearch));
             this.dtpFrom = new MetroFramework.Controls.MetroDateTime();
             this.dtpTo = new MetroFramework.Controls.MetroDateTime();
             this.label1 = new System.Windows.Forms.Label();
@@ -243,7 +244,7 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = global::ParishSystem.Properties.Resources.icons8_Delete_20;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Abort;
             this.button1.FlatAppearance.BorderSize = 0;

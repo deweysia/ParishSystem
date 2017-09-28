@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Claim_button = new System.Windows.Forms.Button();
             this.BloodDonationsDGV = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.donationAdd = new System.Windows.Forms.Button();
             this.donationDelete = new System.Windows.Forms.Button();
             this.clear_button = new System.Windows.Forms.Button();
@@ -44,9 +46,6 @@
             this.DonationID_textbox = new MetroFramework.Controls.MetroTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.donationPK = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.BloodDonationsDGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,49 +80,49 @@
             this.BloodDonationsDGV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.BloodDonationsDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.BloodDonationsDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BloodDonationsDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.BloodDonationsDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.BloodDonationsDGV.ColumnHeadersHeight = 40;
             this.BloodDonationsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.BloodDonationsDGV.ColumnHeadersVisible = false;
             this.BloodDonationsDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.DonationID});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BloodDonationsDGV.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.BloodDonationsDGV.DefaultCellStyle = dataGridViewCellStyle2;
             this.BloodDonationsDGV.EnableHeadersVisualStyles = false;
             this.BloodDonationsDGV.GridColor = System.Drawing.Color.White;
-            this.BloodDonationsDGV.Location = new System.Drawing.Point(332, 204);
+            this.BloodDonationsDGV.Location = new System.Drawing.Point(332, 235);
             this.BloodDonationsDGV.MultiSelect = false;
             this.BloodDonationsDGV.Name = "BloodDonationsDGV";
             this.BloodDonationsDGV.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Magenta;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BloodDonationsDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Magenta;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.BloodDonationsDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.BloodDonationsDGV.RowHeadersVisible = false;
             this.BloodDonationsDGV.RowHeadersWidth = 50;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.DarkRed;
-            this.BloodDonationsDGV.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DarkRed;
+            this.BloodDonationsDGV.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.BloodDonationsDGV.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.BloodDonationsDGV.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BloodDonationsDGV.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -131,11 +130,24 @@
             this.BloodDonationsDGV.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.BloodDonationsDGV.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.BloodDonationsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.BloodDonationsDGV.Size = new System.Drawing.Size(294, 328);
+            this.BloodDonationsDGV.Size = new System.Drawing.Size(294, 297);
             this.BloodDonationsDGV.TabIndex = 11;
             this.BloodDonationsDGV.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BloodDonationsDGV_CellContentDoubleClick);
             this.BloodDonationsDGV.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.BloodDonationsDGV_RowsAdded);
             this.BloodDonationsDGV.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.BloodDonationsDGV_RowsRemoved);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // DonationID
+            // 
+            this.DonationID.HeaderText = "";
+            this.DonationID.Name = "DonationID";
+            this.DonationID.ReadOnly = true;
             // 
             // donationAdd
             // 
@@ -146,7 +158,7 @@
             this.donationAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.donationAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.donationAdd.ForeColor = System.Drawing.Color.White;
-            this.donationAdd.Location = new System.Drawing.Point(632, 204);
+            this.donationAdd.Location = new System.Drawing.Point(632, 265);
             this.donationAdd.Name = "donationAdd";
             this.donationAdd.Size = new System.Drawing.Size(122, 37);
             this.donationAdd.TabIndex = 12;
@@ -164,7 +176,7 @@
             this.donationDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
             this.donationDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.donationDelete.ForeColor = System.Drawing.Color.White;
-            this.donationDelete.Location = new System.Drawing.Point(632, 290);
+            this.donationDelete.Location = new System.Drawing.Point(632, 351);
             this.donationDelete.Name = "donationDelete";
             this.donationDelete.Size = new System.Drawing.Size(120, 37);
             this.donationDelete.TabIndex = 13;
@@ -180,7 +192,7 @@
             this.clear_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.clear_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_button.ForeColor = System.Drawing.Color.White;
-            this.clear_button.Location = new System.Drawing.Point(632, 247);
+            this.clear_button.Location = new System.Drawing.Point(632, 308);
             this.clear_button.Name = "clear_button";
             this.clear_button.Size = new System.Drawing.Size(120, 37);
             this.clear_button.TabIndex = 14;
@@ -195,7 +207,7 @@
             // 
             // 
             this.ln.CustomButton.Image = null;
-            this.ln.CustomButton.Location = new System.Drawing.Point(191, 1);
+            this.ln.CustomButton.Location = new System.Drawing.Point(272, 1);
             this.ln.CustomButton.Name = "";
             this.ln.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.ln.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -205,7 +217,7 @@
             this.ln.CustomButton.Visible = false;
             this.ln.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.ln.Lines = new string[0];
-            this.ln.Location = new System.Drawing.Point(233, 91);
+            this.ln.Location = new System.Drawing.Point(332, 107);
             this.ln.MaxLength = 32767;
             this.ln.Name = "ln";
             this.ln.PasswordChar = '\0';
@@ -215,7 +227,7 @@
             this.ln.SelectionLength = 0;
             this.ln.SelectionStart = 0;
             this.ln.ShortcutsEnabled = true;
-            this.ln.Size = new System.Drawing.Size(213, 23);
+            this.ln.Size = new System.Drawing.Size(294, 23);
             this.ln.TabIndex = 15;
             this.ln.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ln.UseSelectable = true;
@@ -241,7 +253,7 @@
             this.sf.CustomButton.Visible = false;
             this.sf.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.sf.Lines = new string[0];
-            this.sf.Location = new System.Drawing.Point(443, 91);
+            this.sf.Location = new System.Drawing.Point(632, 107);
             this.sf.MaxLength = 32767;
             this.sf.Name = "sf";
             this.sf.PasswordChar = '\0';
@@ -267,7 +279,7 @@
             // 
             // 
             this.fn.CustomButton.Image = null;
-            this.fn.CustomButton.Location = new System.Drawing.Point(191, 1);
+            this.fn.CustomButton.Location = new System.Drawing.Point(271, 1);
             this.fn.CustomButton.Name = "";
             this.fn.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.fn.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -277,7 +289,7 @@
             this.fn.CustomButton.Visible = false;
             this.fn.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.fn.Lines = new string[0];
-            this.fn.Location = new System.Drawing.Point(491, 91);
+            this.fn.Location = new System.Drawing.Point(332, 145);
             this.fn.MaxLength = 32767;
             this.fn.Name = "fn";
             this.fn.PasswordChar = '\0';
@@ -287,7 +299,7 @@
             this.fn.SelectionLength = 0;
             this.fn.SelectionStart = 0;
             this.fn.ShortcutsEnabled = true;
-            this.fn.Size = new System.Drawing.Size(213, 23);
+            this.fn.Size = new System.Drawing.Size(293, 23);
             this.fn.TabIndex = 17;
             this.fn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.fn.UseSelectable = true;
@@ -313,7 +325,7 @@
             this.mi.CustomButton.Visible = false;
             this.mi.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.mi.Lines = new string[0];
-            this.mi.Location = new System.Drawing.Point(702, 91);
+            this.mi.Location = new System.Drawing.Point(632, 145);
             this.mi.MaxLength = 1;
             this.mi.Name = "mi";
             this.mi.PasswordChar = '\0';
@@ -349,7 +361,7 @@
             this.DonationID_textbox.CustomButton.Visible = false;
             this.DonationID_textbox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.DonationID_textbox.Lines = new string[0];
-            this.DonationID_textbox.Location = new System.Drawing.Point(373, 164);
+            this.DonationID_textbox.Location = new System.Drawing.Point(373, 206);
             this.DonationID_textbox.MaxLength = 32767;
             this.DonationID_textbox.Name = "DonationID_textbox";
             this.DonationID_textbox.PasswordChar = '\0';
@@ -391,30 +403,6 @@
             this.donationPK.Text = "00";
             this.donationPK.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(225, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(522, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "_________________________________________________________";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // DonationID
-            // 
-            this.DonationID.HeaderText = "";
-            this.DonationID.Name = "DonationID";
-            this.DonationID.ReadOnly = true;
-            // 
             // BloodClaim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -432,7 +420,6 @@
             this.Controls.Add(this.donationAdd);
             this.Controls.Add(this.BloodDonationsDGV);
             this.Controls.Add(this.Claim_button);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.donationPK);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -459,7 +446,6 @@
         private MetroFramework.Controls.MetroTextBox DonationID_textbox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label donationPK;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonationID;
     }
