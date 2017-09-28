@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileModule));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -48,7 +49,7 @@
             this.search_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.search_button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.search_button.ForeColor = System.Drawing.Color.White;
-            this.search_button.Image = global::ParishSystem.Properties.Resources.icons8_Search_Filled_20;
+            this.search_button.Image = ((System.Drawing.Image)(resources.GetObject("search_button.Image")));
             this.search_button.Location = new System.Drawing.Point(861, 54);
             this.search_button.Name = "search_button";
             this.search_button.Size = new System.Drawing.Size(35, 35);
@@ -126,7 +127,7 @@
             this.profile_dgv.MultiSelect = false;
             this.profile_dgv.Name = "profile_dgv";
             this.profile_dgv.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
@@ -137,15 +138,16 @@
             this.profile_dgv.RowHeadersWidth = 50;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gainsboro;
             this.profile_dgv.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.profile_dgv.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.profile_dgv.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.profile_dgv.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.profile_dgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profile_dgv.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
             this.profile_dgv.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.profile_dgv.RowTemplate.Height = 35;
             this.profile_dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.profile_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.profile_dgv.Size = new System.Drawing.Size(858, 517);
             this.profile_dgv.TabIndex = 42;
+            this.profile_dgv.DoubleClick += new System.EventHandler(this.profile_dgv_MouseDoubleClick);
+            this.profile_dgv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.profile_dgv_KeyDown);
             // 
             // ProfileModule
             // 

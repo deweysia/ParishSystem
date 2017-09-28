@@ -61,13 +61,7 @@ namespace ParishSystem
         {
             refresh();
         }
-
-        private void profile_dgv_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            Form A = new PersonView(int.Parse(profile_dgv.SelectedRows[0].Cells["profileid"].Value.ToString()),dh);
-            A.ShowDialog();
-        }
-
+    
         private void search_textbox_TextChanged(object sender, EventArgs e)
         {
             if (search_textbox.Text == "")
@@ -89,6 +83,12 @@ namespace ParishSystem
                 }
                 catch { }
             }
+        }
+
+        private void profile_dgv_MouseDoubleClick(object sender, EventArgs e)
+        {
+            Form A = new PersonView(int.Parse(profile_dgv.SelectedRows[0].Cells["profileid"].Value.ToString()), dh);
+            A.ShowDialog();
         }
     }
 }

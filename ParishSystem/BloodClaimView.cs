@@ -31,7 +31,7 @@ namespace ParishSystem
         }
         private void BloodClaims_Load(object sender, EventArgs e)
         {
-            Refresh();
+            refresh();
         }
 
         private void search_button_Click(object sender, EventArgs e)
