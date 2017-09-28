@@ -708,9 +708,9 @@ namespace ParishSystem
         public bool deleteBloodDonationEvent(int bloodDonationEventID)
         {
 
-            string q = "DELETE FROM bloodDonationEvent WHERE bloodDonationEventID = " + bloodDonationEventID;
+            string q = "DELETE FROM bloodDonationEvent WHERE bloodDonationEventID = @bloodDonationEventID";
 
-            return runNonQuery(q);
+            return ExecuteNonQuery(q, bloodDonationEventID);
         }
 
         public bool addBloodDonationEventLog(int bloodDonationEventID)
@@ -1417,7 +1417,7 @@ namespace ParishSystem
 
         public DataTable getBaptisms()
         {
-            string q = "SELECT profileID, applicationID, baptismID, Minister.ministerID, p.firstName, p.midname, p.lastName, p.suffix, DATE_FORMAT(baptismDate, '%Y-%m-%d') AS baptismDate, registryNumber, pageNumber, recordNumber, remarks  "
+            string q = "SELECT profileID, applicationID, baptismID, Minister.ministerID, CONCAT_WS(' ', Minister.firstName, Minister.midName, Minister.lastName, Minister.suffix) AS ministerName,  p.firstName, p.midname, p.lastName, p.suffix, DATE_FORMAT(baptismDate, '%Y-%m-%d') AS baptismDate, registryNumber, pageNumber, recordNumber, remarks  "
                 + "FROM Baptism NATURAL JOIN Application NATURAL JOIN Applicant NATURAL JOIN GeneralProfile AS p JOIN Minister ON Baptism.ministerID = Minister.ministerID";
 
             
@@ -1583,8 +1583,9 @@ namespace ParishSystem
 
         public DataTable getConfirmations()
         {
-            string q = "SELECT profileID, applicationID, confirmationID, Minister.ministerID, p.firstName, p.midname, p.lastName, p.suffix, DATE_FORMAT(confirmationDate, '%Y-%m-%d') AS confirmationDate, registryNumber, pageNumber, recordNumber, remarks  "
-                + "FROM Confirmation NATURAL JOIN Application NATURAL JOIN Applicant NATURAL JOIN GeneralProfile AS p JOIN Minister ON Confirmation.ministerID = Minister.ministerID";
+            string q = @"SELECT profileID, applicationID, confirmationID, Minister.ministerID, CONCAT_WS(' ', Minister.firstName, Minister.midName, Minister.lastName, Minister.suffix) AS ministerName,
+                p.firstName, p.midname, p.lastName, p.suffix, DATE_FORMAT(confirmationDate, '%Y-%m-%d') AS confirmationDate, registryNumber, pageNumber, recordNumber, remarks  
+                FROM Confirmation NATURAL JOIN Application NATURAL JOIN Applicant NATURAL JOIN GeneralProfile AS p JOIN Minister ON Confirmation.ministerID = Minister.ministerID";
 
             DataTable dt = runQuery(q);
 
@@ -1686,10 +1687,11 @@ namespace ParishSystem
 
         public DataTable getMarriage(int applicationID)
         {
-            string q = "SELECT *,concat(firstName,\" \",midname,\" \",lastname,\"\",suffix)as ministerName  FROM Marriage inner join minister on marriage.ministerID=minister.ministerID where  applicationID =" + applicationID;
+            //string q = "SELECT *,concat(firstName,\" \",midname,\" \",lastname,\"\",suffix)as ministerName  FROM Marriage inner join minister on marriage.ministerID=minister.ministerID where  applicationID =" + applicationID;
 
+            string q = "SELECT *, CONCAT_WS(' ', firstName, midName, lastName, suffix) as MinisterName FROM Marriage JOIN Minister ON Marriage.ministerID = Minister.ministerID WHERE applicationID = @applicationID";
 
-            DataTable dt = runQuery(q);
+            DataTable dt = ExecuteQuery(q, applicationID);
 
             return dt;
         }
@@ -1758,7 +1760,8 @@ namespace ParishSystem
 
         public DataTable getMarriages()
         {
-            string q = @"SELECT marriageID, groom.applicationID, groom.profileID AS groomID, bride.profileID AS brideID, Minister.ministerID, DATE_FORMAT(marriageDate, '%Y-%m-%d') as marriageDate,
+            string q = @"SELECT marriageID, groom.applicationID, groom.profileID AS groomID, bride.profileID AS brideID, Minister.ministerID, CONCAT_WS(' ', Minister.firstName, Minister.midName, Minister.lastName, Minister.suffix) AS ministerName,
+                        DATE_FORMAT(marriageDate, '%Y-%m-%d') as marriageDate,
                         CONCAT_WS(' ', groom.firstName, groom.midName, groom.lastName, groom.suffix) AS groomName, 
                         CONCAT_WS(' ', bride.firstName, bride.midName, bride.lastName, bride.suffix) AS brideName,
                         registryNumber, recordNumber, pageNumber, remarks
@@ -1844,7 +1847,7 @@ namespace ParishSystem
         /// <returns></returns>
         public DataTable getMinisters(MinisterStatus status)
         {
-            string q = "SELECT ministerID, firstName, midName, lastName, suffix, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix)as Name, birthdate, ministryType, status, licenseNumber FROM Minister WHERE status = @status";
+            string q = "SELECT ministerID, firstName, midName, lastName, suffix, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix) as Name, birthdate, ministryType, status, licenseNumber FROM Minister WHERE status = @status";
 
             DataTable dt = ExecuteQuery(q, (int)status);
 
@@ -2036,6 +2039,13 @@ namespace ParishSystem
             DataTable dt = ExecuteQuery(q, Start.ToString("yyyy-MM-dd hh:mm:ss"), End.ToString("yyyy-MM-dd hh:mm:ss"));
 
             return dt;
+        }
+
+        public bool deleteMinisterSchedule(int ministerScheduleID)
+        {
+            string q = "DELETE FROM MinisterSchedule WHERE ministerScheduleID = @ministerScheduleID";
+            bool success = ExecuteNonQuery(q);
+            return success;
         }
 
         public bool ministerAvailable(int ministerID, DateTime startDateTime, DateTime endDateTime)
@@ -2415,7 +2425,7 @@ namespace ParishSystem
             if (type == SacramentType.Marriage)
             {
                 
-                q = "SELECT application.applicationID, a.profileID AS groomProfileID, b.profileID AS brideProfileID, "
+                q = "SELECT application.applicationID, a.profileID AS groomID, b.profileID AS brideID, "
                     + "aa.applicantID AS groomApplicantID, bb.applicantID AS brideApplicantID, requirements, "
                     + "CONCAT_WS(' ', a.firstName, a.midName, a.lastName, a.suffix) AS groomName, DATE_FORMAT(a.birthdate, '%Y-%m-%d') AS groomBirthDate, "
                     + "CONCAT_WS(' ', b.firstName, b.midName, b.lastName, b.suffix) AS brideName, DATE_FORMAT(b.birthdate, '%Y-%m-%d') AS brideBirthDate, "
@@ -2485,7 +2495,7 @@ namespace ParishSystem
         }
         public DataTable getPartner(int profileID)
         {
-            string q = "select * from (select application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID = " + profileID + ") as A left outer join (select concat(lastname, \" \", coalesce(suffix, \" \"), \"\", firstName, \" \", midname, \".\") as name, generalprofile.profileID, gender, birthplace, birthdate, residence, application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID != " + profileID + ") as B on A.applicationID = B.applicationID";
+            string q = "select * from (select application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID = " + profileID + ") as A left outer join (select CONCAT_WS(' ', firstName, midName, lastName, suffix) as name, generalprofile.profileID, gender, birthplace, birthdate, residence, application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID != " + profileID + ") as B on A.applicationID = B.applicationID";
             return runQuery(q);
         }
 
@@ -3792,7 +3802,7 @@ namespace ParishSystem
 
         public DataTable getEmployees()
         {
-            return runQuery($@"SELECT *,case when status = 1 then ""Active"" else ""Inactive"" end as WStatus ,concat(lastname,"" "",coalesce(suffix,"" ""),"" "",firstName,"" "",midname,""."")as name FROM sad2.user ");
+            return runQuery($@"SELECT *,case when status = 1 then ""Active"" else ""Inactive"" end as WStatus , CONCAT_WS(' ', firstName, midName, lastName, suffix) as name FROM sad2.user ");
         }
         public DataTable getGeneralProfilesProper()
         {
@@ -4567,6 +4577,23 @@ namespace ParishSystem
             return runQuery($@"Select * from blooddonation where bloodDonationID = {bloodDonationID} and bloodclaimant is not null").Rows.Count > 0 ;
 
         }
+
+        public DataTable getAuditLogs()
+        {
+            string q = "SELECT auditLogID, userID, tableName, operation, auditDate, CONCAT_WS(' ', firstName, midName, lastName, suffix) AS name, details, oldRecord, newRecord FROM AuditLog NATURAL JOIN User ORDER BY AuditDate DESC";
+            DataTable dt = ExecuteQuery(q);
+            return dt;
+        }
+
+        public DataTable getAuditTypes()
+        {
+            string q = "SELECT DISTINCT(tableName) FROM AuditLog";
+            DataTable dt = ExecuteQuery(q);
+            return dt;
+        }
+
+        
+
         public DataTable getORdetails(int bookType,int OR)
         {
             return runQuery($@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,price,quantity ,(price * quantity) as total,itemType,primaryincome.remarks from primaryincome 

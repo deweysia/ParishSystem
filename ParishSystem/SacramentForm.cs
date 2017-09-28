@@ -48,7 +48,7 @@ namespace ParishSystem
 
             //4 - First Name 5 - MI 6 - Last Name   7 - Suffix
             nameLabel.Text = string.Format("{0} {1}. {2} {3}", row["firstName"], row["midName"], row["lastName"], row["suffix"]);
-            MessageBox.Show(dt.Rows[0]["birthDate"].ToString());
+            //MessageBox.Show(dt.Rows[0]["birthDate"].ToString());
             birthdateLabel.Text = DateTime.ParseExact(dt.Rows[0]["birthDate"].ToString(), "dd/MM/yyyy hh:mm:ss tt", null).ToString("yyyy-MM-dd");
             genderLabel.Text = dt.Rows[0]["gender"].ToString() == "1" ? "Male" : "Female";
             
@@ -60,6 +60,7 @@ namespace ParishSystem
             {
                 //Baptism Date or COnfirmation Date
                 sacramentDateDTP.MinDate = DateTime.ParseExact(dt.Rows[0]["birthdate"].ToString(), "dd/MM/yyyy hh:mm:ss tt", null);
+                remarksText.Text = row["remarks"].ToString();
                 loadSponsors();
             }
 
@@ -96,6 +97,7 @@ namespace ParishSystem
             {
                 int ministerID = int.Parse(r["ministerID"].ToString());
                 ComboboxContent cc = new ComboboxContent(ministerID, r["name"].ToString());
+                //MessageBox.Show("Minister = " + r["name"].ToString());
                 MinisterCBox.Items.Add(cc);
             }
 
@@ -127,7 +129,6 @@ namespace ParishSystem
         {
             int profileID = int.Parse(row["profileID"].ToString());
             DataTable dt = dh.getParentsOf(profileID);
-            MessageBox.Show("THIS PERSON HAS N PARENTS: " + dt.Rows.Count);
             if(dt.Rows.Count == 2)
             {
                 fatherFirstNameText.Text = dt.Rows[0]["firstName"].ToString();
@@ -177,7 +178,7 @@ namespace ParishSystem
             Legitimacy l = (Legitimacy)legitimacyCBox.SelectedItem;
             DateTime dt = sacramentDateDTP.Value;
             string remarks = remarksText.Text;
-            MessageBox.Show("VIOLA");
+            //MessageBox.Show("VIOLA");
 
             bool success = true;
             if (operation == OperationType.Add)

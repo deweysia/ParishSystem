@@ -58,7 +58,7 @@
             this.confirmation_label_menu = new System.Windows.Forms.Label();
             this.baptism_label_menu = new System.Windows.Forms.Label();
             this.baptism_panel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBaptismPrint = new System.Windows.Forms.Button();
             this.baptism_details = new System.Windows.Forms.Panel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.father_panel_baptism = new System.Windows.Forms.Panel();
@@ -107,7 +107,7 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.confirmation_panel = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnConfirmationPrint = new System.Windows.Forms.Button();
             this.confirmationDetails_panel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.father_panel_confirmation = new System.Windows.Forms.Panel();
@@ -141,7 +141,7 @@
             this.date_label_confirmation = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnMarriagePrint = new System.Windows.Forms.Button();
             this.marriageDetails_panel = new System.Windows.Forms.Panel();
             this.flowlayout = new System.Windows.Forms.FlowLayoutPanel();
             this.civilStatus_panel_marriage = new System.Windows.Forms.Panel();
@@ -589,7 +589,7 @@
             // 
             // baptism_panel
             // 
-            this.baptism_panel.Controls.Add(this.button1);
+            this.baptism_panel.Controls.Add(this.btnBaptismPrint);
             this.baptism_panel.Controls.Add(this.baptism_details);
             this.baptism_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.baptism_panel.Location = new System.Drawing.Point(0, 0);
@@ -597,23 +597,24 @@
             this.baptism_panel.Size = new System.Drawing.Size(383, 443);
             this.baptism_panel.TabIndex = 5;
             // 
-            // button1
+            // btnBaptismPrint
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 409);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(383, 34);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Print Certificate";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnBaptismPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBaptismPrint.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnBaptismPrint.FlatAppearance.BorderSize = 0;
+            this.btnBaptismPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnBaptismPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnBaptismPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaptismPrint.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaptismPrint.ForeColor = System.Drawing.Color.White;
+            this.btnBaptismPrint.Location = new System.Drawing.Point(0, 409);
+            this.btnBaptismPrint.Margin = new System.Windows.Forms.Padding(0);
+            this.btnBaptismPrint.Name = "btnBaptismPrint";
+            this.btnBaptismPrint.Size = new System.Drawing.Size(383, 34);
+            this.btnBaptismPrint.TabIndex = 1;
+            this.btnBaptismPrint.Text = "Print Certificate";
+            this.btnBaptismPrint.UseVisualStyleBackColor = false;
+            this.btnBaptismPrint.Click += new System.EventHandler(this.btnBaptismPrint_Click);
             // 
             // baptism_details
             // 
@@ -1105,7 +1106,7 @@
             // 
             // confirmation_panel
             // 
-            this.confirmation_panel.Controls.Add(this.button2);
+            this.confirmation_panel.Controls.Add(this.btnConfirmationPrint);
             this.confirmation_panel.Controls.Add(this.confirmationDetails_panel);
             this.confirmation_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.confirmation_panel.Location = new System.Drawing.Point(0, 0);
@@ -1113,23 +1114,24 @@
             this.confirmation_panel.Size = new System.Drawing.Size(383, 443);
             this.confirmation_panel.TabIndex = 6;
             // 
-            // button2
+            // btnConfirmationPrint
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 409);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(383, 34);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Print Certificate";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnConfirmationPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnConfirmationPrint.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnConfirmationPrint.FlatAppearance.BorderSize = 0;
+            this.btnConfirmationPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnConfirmationPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnConfirmationPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmationPrint.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmationPrint.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmationPrint.Location = new System.Drawing.Point(0, 409);
+            this.btnConfirmationPrint.Margin = new System.Windows.Forms.Padding(0);
+            this.btnConfirmationPrint.Name = "btnConfirmationPrint";
+            this.btnConfirmationPrint.Size = new System.Drawing.Size(383, 34);
+            this.btnConfirmationPrint.TabIndex = 1;
+            this.btnConfirmationPrint.Text = "Print Certificate";
+            this.btnConfirmationPrint.UseVisualStyleBackColor = false;
+            this.btnConfirmationPrint.Click += new System.EventHandler(this.btnConfirmationPrint_Click);
             // 
             // confirmationDetails_panel
             // 
@@ -1461,24 +1463,25 @@
             this.label68.TabIndex = 0;
             this.label68.Text = "Baptism Details";
             // 
-            // button3
+            // btnMarriagePrint
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 409);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(383, 34);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Print Certificate";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnMarriagePrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMarriagePrint.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnMarriagePrint.Enabled = false;
+            this.btnMarriagePrint.FlatAppearance.BorderSize = 0;
+            this.btnMarriagePrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnMarriagePrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnMarriagePrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMarriagePrint.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMarriagePrint.ForeColor = System.Drawing.Color.White;
+            this.btnMarriagePrint.Location = new System.Drawing.Point(0, 409);
+            this.btnMarriagePrint.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMarriagePrint.Name = "btnMarriagePrint";
+            this.btnMarriagePrint.Size = new System.Drawing.Size(383, 34);
+            this.btnMarriagePrint.TabIndex = 1;
+            this.btnMarriagePrint.Text = "Print Certificate";
+            this.btnMarriagePrint.UseVisualStyleBackColor = false;
+            this.btnMarriagePrint.Click += new System.EventHandler(this.btnMarriagePrint_Click);
             // 
             // marriageDetails_panel
             // 
@@ -2255,7 +2258,7 @@
             // 
             // marriage_panel
             // 
-            this.marriage_panel.Controls.Add(this.button3);
+            this.marriage_panel.Controls.Add(this.btnMarriagePrint);
             this.marriage_panel.Controls.Add(this.marriageDetails_panel);
             this.marriage_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.marriage_panel.Location = new System.Drawing.Point(0, 0);
@@ -2419,7 +2422,7 @@
         private System.Windows.Forms.Panel menu_panel;
         private System.Windows.Forms.Label baptism_label_menu;
         private System.Windows.Forms.Panel baptism_panel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBaptismPrint;
         private System.Windows.Forms.Panel baptism_details;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Panel father_panel_baptism;
@@ -2466,7 +2469,7 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label confirmation_label_menu;
         private System.Windows.Forms.Panel confirmation_panel;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnConfirmationPrint;
         private System.Windows.Forms.Panel confirmationDetails_panel;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.Panel father_panel_confirmation;
@@ -2500,7 +2503,7 @@
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label marriage_label_menu;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnMarriagePrint;
         private System.Windows.Forms.Panel marriageDetails_panel;
         private System.Windows.Forms.FlowLayoutPanel flowlayout;
         private System.Windows.Forms.Panel father_panel_self_marriage;

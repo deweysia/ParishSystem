@@ -1,4 +1,4 @@
-﻿namespace DatabasePopulator
+﻿namespace Certificates
 {
     partial class MarriagePreview
     {
@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
+            this.selectPrinter = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label34 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -87,9 +92,58 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Salmon;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(947, 195);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(136, 48);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "CANCEL";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.LawnGreen;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(947, 87);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(136, 48);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "SAVE DOCUMENT";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "Document (.pdf)|*.pdf";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(947, 141);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 48);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "PRINT";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // selectPrinter
+            // 
+            this.selectPrinter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.selectPrinter.FormattingEnabled = true;
+            this.selectPrinter.Location = new System.Drawing.Point(928, 55);
+            this.selectPrinter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.selectPrinter.Name = "selectPrinter";
+            this.selectPrinter.Size = new System.Drawing.Size(170, 21);
+            this.selectPrinter.TabIndex = 9;
             // 
             // panel1
             // 
@@ -153,7 +207,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(110, -344);
+            this.panel1.Location = new System.Drawing.Point(110, -200);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(812, 1188);
             this.panel1.TabIndex = 3;
@@ -203,7 +257,7 @@
             this.label33.AutoSize = true;
             this.label33.BackColor = System.Drawing.Color.Transparent;
             this.label33.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(80, 999);
+            this.label33.Location = new System.Drawing.Point(80, 1000);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(235, 18);
             this.label33.TabIndex = 7;
@@ -383,21 +437,22 @@
             this.BrideName.AutoSize = true;
             this.BrideName.BackColor = System.Drawing.Color.Transparent;
             this.BrideName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BrideName.Location = new System.Drawing.Point(348, 665);
+            this.BrideName.Location = new System.Drawing.Point(404, 673);
             this.BrideName.Name = "BrideName";
             this.BrideName.Size = new System.Drawing.Size(16, 23);
             this.BrideName.TabIndex = 4;
             this.BrideName.Text = "-";
+            this.BrideName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gStatus
             // 
             this.gStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gStatus.AutoSize = true;
             this.gStatus.BackColor = System.Drawing.Color.Transparent;
-            this.gStatus.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gStatus.Location = new System.Drawing.Point(602, 483);
+            this.gStatus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gStatus.Location = new System.Drawing.Point(602, 490);
             this.gStatus.Name = "gStatus";
-            this.gStatus.Size = new System.Drawing.Size(16, 23);
+            this.gStatus.Size = new System.Drawing.Size(14, 19);
             this.gStatus.TabIndex = 4;
             this.gStatus.Text = "-";
             // 
@@ -406,10 +461,10 @@
             this.gMotherName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gMotherName.AutoSize = true;
             this.gMotherName.BackColor = System.Drawing.Color.Transparent;
-            this.gMotherName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gMotherName.Location = new System.Drawing.Point(452, 520);
+            this.gMotherName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gMotherName.Location = new System.Drawing.Point(452, 526);
             this.gMotherName.Name = "gMotherName";
-            this.gMotherName.Size = new System.Drawing.Size(16, 23);
+            this.gMotherName.Size = new System.Drawing.Size(14, 19);
             this.gMotherName.TabIndex = 4;
             this.gMotherName.Text = "-";
             // 
@@ -419,7 +474,7 @@
             this.bBornIn.AutoSize = true;
             this.bBornIn.BackColor = System.Drawing.Color.Transparent;
             this.bBornIn.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBornIn.Location = new System.Drawing.Point(193, 836);
+            this.bBornIn.Location = new System.Drawing.Point(193, 839);
             this.bBornIn.Name = "bBornIn";
             this.bBornIn.Size = new System.Drawing.Size(16, 23);
             this.bBornIn.TabIndex = 4;
@@ -430,10 +485,10 @@
             this.gBornIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gBornIn.AutoSize = true;
             this.gBornIn.BackColor = System.Drawing.Color.Transparent;
-            this.gBornIn.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBornIn.Location = new System.Drawing.Point(193, 571);
+            this.gBornIn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBornIn.Location = new System.Drawing.Point(178, 578);
             this.gBornIn.Name = "gBornIn";
-            this.gBornIn.Size = new System.Drawing.Size(16, 23);
+            this.gBornIn.Size = new System.Drawing.Size(14, 19);
             this.gBornIn.TabIndex = 4;
             this.gBornIn.Text = "-";
             // 
@@ -443,7 +498,7 @@
             this.bResidency.AutoSize = true;
             this.bResidency.BackColor = System.Drawing.Color.Transparent;
             this.bResidency.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bResidency.Location = new System.Drawing.Point(193, 810);
+            this.bResidency.Location = new System.Drawing.Point(193, 813);
             this.bResidency.Name = "bResidency";
             this.bResidency.Size = new System.Drawing.Size(16, 23);
             this.bResidency.TabIndex = 4;
@@ -455,7 +510,7 @@
             this.bStatus.AutoSize = true;
             this.bStatus.BackColor = System.Drawing.Color.Transparent;
             this.bStatus.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bStatus.Location = new System.Drawing.Point(602, 747);
+            this.bStatus.Location = new System.Drawing.Point(602, 755);
             this.bStatus.Name = "bStatus";
             this.bStatus.Size = new System.Drawing.Size(16, 23);
             this.bStatus.TabIndex = 4;
@@ -466,10 +521,10 @@
             this.gResidency.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gResidency.AutoSize = true;
             this.gResidency.BackColor = System.Drawing.Color.Transparent;
-            this.gResidency.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gResidency.Location = new System.Drawing.Point(193, 545);
+            this.gResidency.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gResidency.Location = new System.Drawing.Point(178, 552);
             this.gResidency.Name = "gResidency";
-            this.gResidency.Size = new System.Drawing.Size(16, 23);
+            this.gResidency.Size = new System.Drawing.Size(14, 19);
             this.gResidency.TabIndex = 4;
             this.gResidency.Text = "-";
             // 
@@ -503,7 +558,7 @@
             this.Day2.AutoSize = true;
             this.Day2.BackColor = System.Drawing.Color.Transparent;
             this.Day2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Day2.Location = new System.Drawing.Point(337, 1001);
+            this.Day2.Location = new System.Drawing.Point(337, 1000);
             this.Day2.Name = "Day2";
             this.Day2.Size = new System.Drawing.Size(16, 23);
             this.Day2.TabIndex = 4;
@@ -515,7 +570,7 @@
             this.Witness.AutoSize = true;
             this.Witness.BackColor = System.Drawing.Color.Transparent;
             this.Witness.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Witness.Location = new System.Drawing.Point(118, 974);
+            this.Witness.Location = new System.Drawing.Point(119, 973);
             this.Witness.Name = "Witness";
             this.Witness.Size = new System.Drawing.Size(16, 23);
             this.Witness.TabIndex = 4;
@@ -563,7 +618,7 @@
             this.bMotherName.AutoSize = true;
             this.bMotherName.BackColor = System.Drawing.Color.Transparent;
             this.bMotherName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bMotherName.Location = new System.Drawing.Point(457, 780);
+            this.bMotherName.Location = new System.Drawing.Point(452, 778);
             this.bMotherName.Name = "bMotherName";
             this.bMotherName.Size = new System.Drawing.Size(16, 23);
             this.bMotherName.TabIndex = 4;
@@ -575,7 +630,7 @@
             this.bFatherName.AutoSize = true;
             this.bFatherName.BackColor = System.Drawing.Color.Transparent;
             this.bFatherName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bFatherName.Location = new System.Drawing.Point(193, 783);
+            this.bFatherName.Location = new System.Drawing.Point(193, 786);
             this.bFatherName.Name = "bFatherName";
             this.bFatherName.Size = new System.Drawing.Size(16, 23);
             this.bFatherName.TabIndex = 4;
@@ -586,10 +641,10 @@
             this.gFatherName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gFatherName.AutoSize = true;
             this.gFatherName.BackColor = System.Drawing.Color.Transparent;
-            this.gFatherName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gFatherName.Location = new System.Drawing.Point(193, 517);
+            this.gFatherName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gFatherName.Location = new System.Drawing.Point(178, 524);
             this.gFatherName.Name = "gFatherName";
-            this.gFatherName.Size = new System.Drawing.Size(16, 23);
+            this.gFatherName.Size = new System.Drawing.Size(14, 19);
             this.gFatherName.TabIndex = 4;
             this.gFatherName.Text = "-";
             // 
@@ -599,11 +654,12 @@
             this.GroomName.AutoSize = true;
             this.GroomName.BackColor = System.Drawing.Color.Transparent;
             this.GroomName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroomName.Location = new System.Drawing.Point(337, 399);
+            this.GroomName.Location = new System.Drawing.Point(404, 395);
             this.GroomName.Name = "GroomName";
             this.GroomName.Size = new System.Drawing.Size(16, 23);
             this.GroomName.TabIndex = 4;
             this.GroomName.Text = "-";
+            this.GroomName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bAge
             // 
@@ -611,7 +667,7 @@
             this.bAge.AutoSize = true;
             this.bAge.BackColor = System.Drawing.Color.Transparent;
             this.bAge.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAge.Location = new System.Drawing.Point(133, 754);
+            this.bAge.Location = new System.Drawing.Point(133, 755);
             this.bAge.Name = "bAge";
             this.bAge.Size = new System.Drawing.Size(16, 23);
             this.bAge.TabIndex = 4;
@@ -622,10 +678,10 @@
             this.gAge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gAge.AutoSize = true;
             this.gAge.BackColor = System.Drawing.Color.Transparent;
-            this.gAge.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gAge.Location = new System.Drawing.Point(133, 483);
+            this.gAge.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gAge.Location = new System.Drawing.Point(131, 490);
             this.gAge.Name = "gAge";
-            this.gAge.Size = new System.Drawing.Size(16, 23);
+            this.gAge.Size = new System.Drawing.Size(14, 19);
             this.gAge.TabIndex = 4;
             this.gAge.Text = "-";
             // 
@@ -878,30 +934,22 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "ARCHIODESE OF DAVAO";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.LawnGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(934, 22);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 74);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "SAVE AS DOCUMENT";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // MarriagePreview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1099, 713);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.ClientSize = new System.Drawing.Size(1122, 989);
+            this.Controls.Add(this.selectPrinter);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MarriagePreview";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MarriagePreview";
             this.Load += new System.EventHandler(this.MarriagePreview_Load);
             this.panel1.ResumeLayout(false);
@@ -971,6 +1019,10 @@
         private System.Windows.Forms.Label witness1;
         private System.Windows.Forms.Label Day;
         private System.Windows.Forms.Label Minister;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox selectPrinter;
     }
 }

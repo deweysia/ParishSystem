@@ -239,6 +239,23 @@ namespace ParishSystem
             CalendarItem i = calendar1.GetSelectedItems().ToList()[0];
             CalendarEvent ev = _events[i];
 
+            Delete delete;
+            switch (ev.type)
+            {
+                case ScheduleType.Appointment:
+                    delete = dh.deleteMinisterSchedule;
+                    break;
+                case ScheduleType.BloodDonation:
+                    delete = dh.deleteBloodDonationEvent;
+                    break;
+                default: //Unspecified event
+                    delete = dh.deleteSchedule;
+                    break;
+            }
+
+            //Deletes the specified event
+            delete(ev.id);
+
             panelRemoveEdit.Enabled = false;
             clearLabels();
 

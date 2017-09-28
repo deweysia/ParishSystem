@@ -39,10 +39,11 @@ namespace ParishSystem
 
             loadMinisters();
             loadParents();
-            loadAdditionalDetails();
+            
             if (this.operation == OperationType.Edit)
             {
                 loadSponsors();
+                loadAdditionalDetails();
             }
         }
 
@@ -199,7 +200,7 @@ namespace ParishSystem
             success &= dh.editGeneralProfile(groomID, txtGResidence.Text, txtGBirthPlace.Text);
             success &= dh.editGeneralProfile(brideID, txtBResidence.Text, txtBBirthPlace.Text);
 
-            MessageBox.Show(string.Format("GROOM {0} BRIDE {1}", txtGBirthPlace.Text, txtBBirthPlace.Text));
+            //MessageBox.Show(string.Format("GROOM {0} BRIDE {1}", txtGBirthPlace.Text, txtBBirthPlace.Text));
             //Adds or edits parents depending on whether they exist or not
             success &= dh.addEditParent(groomID, txtGFFN.Text, txtGFMI.Text, txtGFLN.Text, txtGFSuffix.Text, Gender.Male);
             success &= dh.addEditParent(groomID, txtGMFN.Text, txtGMMI.Text, txtGMLN.Text, txtGMSuffix.Text, Gender.Female);
@@ -239,7 +240,7 @@ namespace ParishSystem
         private bool editOperation(int applicationID, int ministerID, DateTime licenseDate, DateTime marriageDate, CivilStatus groomCS, CivilStatus brideCS, string remarks)
         {
             bool success = true;
-            MessageBox.Show(ministerID.ToString());
+            //MessageBox.Show(ministerID.ToString());
             Gender sponsorGender = radioSponsor1Male.Checked ? Gender.Male : Gender.Female;
             success &= dh.editSponsor(this.sponsor1ID, applicationID, txtSponsor1FN.Text, txtSponsor1MI.Text, txtSponsor1LN.Text, txtSponsor1Suffix.Text, sponsorGender, txtSponsor1Residence.Text);
             sponsorGender = radioSponsor2Male.Checked ? Gender.Male : Gender.Female;
@@ -267,7 +268,7 @@ namespace ParishSystem
                     Console.WriteLine("All filled? {0}", allFilled);
                     if (!allFilled)
                     {
-                        MessageBox.Show("Error at " + t.Name.ToString());
+                        //MessageBox.Show("Error at " + t.Name.ToString());
                         return false;
                     }
 

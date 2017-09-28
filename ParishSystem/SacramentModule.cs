@@ -59,8 +59,9 @@ namespace ParishSystem
             lblNameBap.Text = string.Format("{0} {1} {2} {3}", fn, mn, ln, suffix);
 
 
-            int pageIndex = dgvBaptism.SelectedRows[0].Cells.Count - 2;
+            int pageIndex = dgvBaptism.SelectedRows[0].Cells.Count - 3;
             btnAddReferencesBap.Enabled = string.IsNullOrWhiteSpace(dgvBaptism.SelectedRows[0].Cells[pageIndex].Value.ToString());
+            //MessageBox.Show("add ref enabled " + btnAddReferencesBap.Enabled);
 
             tlpProfileBap.Enabled = true;
 
@@ -85,8 +86,9 @@ namespace ParishSystem
             string suffix = dgvConfirmation.SelectedRows[0].Cells["conSuffix"].Value.ToString();
             lblNameBap.Text = string.Format("{0} {1} {2} {3}", fn, mn, ln, suffix);
 
-            int pageIndex = dgvConfirmation.SelectedRows[0].Cells.Count - 2;
-            btnAddReferencesBap.Enabled = string.IsNullOrWhiteSpace(dgvConfirmation.SelectedRows[0].Cells[pageIndex].Value.ToString());
+            int pageIndex = dgvConfirmation.SelectedRows[0].Cells.Count - 3;
+            btnAddReferencesCon.Enabled = string.IsNullOrWhiteSpace(dgvConfirmation.SelectedRows[0].Cells[pageIndex].Value.ToString());
+            //MessageBox.Show("add ref enabled " + btnAddReferencesCon.Enabled);
 
             tlpProfileCon.Enabled = true;
         }
@@ -101,7 +103,7 @@ namespace ParishSystem
             this.applicationID = Convert.ToInt32(dgvMarriage.SelectedRows[0].Cells["marApplicationID"].Value);
             this.groomID = Convert.ToInt32(dgvMarriage.SelectedRows[0].Cells["marGroomID"].Value);
             this.brideID = Convert.ToInt32(dgvMarriage.SelectedRows[0].Cells["marBrideID"].Value);
-            MessageBox.Show(groomID + " " + brideID);
+            //MessageBox.Show(groomID + " " + brideID);
 
             DataTable dt = ((BindingSource)dgv.DataSource).DataSource as DataTable;
 
@@ -111,8 +113,9 @@ namespace ParishSystem
             lblNameGroom.Text = groomName;
             lblNameBride.Text = brideName;
 
-            int pageIndex = dgvMarriage.SelectedRows[0].Cells.Count - 2;
-            btnAddReferencesBap.Enabled = string.IsNullOrWhiteSpace(dgvMarriage.SelectedRows[0].Cells[pageIndex].Value.ToString());
+            int pageIndex = dgvMarriage.SelectedRows[0].Cells.Count - 3;
+            btnAddReferencesMar.Enabled = string.IsNullOrWhiteSpace(dgvMarriage.SelectedRows[0].Cells[pageIndex].Value.ToString());
+            //MessageBox.Show("add ref enabled " + btnAddReferencesMar.Enabled);
 
             tlpProfileMar.Enabled = true;
         }
@@ -210,8 +213,12 @@ namespace ParishSystem
                 tlp = tlpProfileMar;
                 
             }
-            bsSacrament.DataSource = gs();
-            dgv.DataSource = bsSacrament;
+            try
+            {
+                bsSacrament.DataSource = gs();
+                dgv.DataSource = bsSacrament;
+            }
+            catch (Exception e) { /* Causes an error when closing*/}
 
             clearAndDisable(t);
         }

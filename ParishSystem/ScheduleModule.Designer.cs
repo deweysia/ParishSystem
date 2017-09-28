@@ -28,14 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange26 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange27 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange28 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange29 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange30 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange1 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange2 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange3 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange4 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange5 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
             this.gbDetails = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -51,40 +48,13 @@
             this.panelRemoveEdit = new System.Windows.Forms.Panel();
             this.calendar1 = new System.Windows.Forms.Calendar.Calendar();
             this.monthView1 = new System.Windows.Forms.Calendar.MonthView();
+            this.btnAdd = new MetroFramework.Controls.MetroButton();
+            this.btnEdit = new MetroFramework.Controls.MetroButton();
+            this.btnRemove = new MetroFramework.Controls.MetroButton();
             this.gbDetails.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelRemoveEdit.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(171, 155);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(43, 23);
-            this.btnAdd.TabIndex = 6;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(71, 2);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(43, 23);
-            this.btnEdit.TabIndex = 6;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.Location = new System.Drawing.Point(3, 2);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(62, 23);
-            this.btnRemove.TabIndex = 6;
-            this.btnRemove.Text = "Remove";
-            this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // gbDetails
             // 
@@ -100,6 +70,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.lblTitle, 0, 1);
@@ -241,7 +212,7 @@
             this.panelRemoveEdit.Enabled = false;
             this.panelRemoveEdit.Location = new System.Drawing.Point(15, 153);
             this.panelRemoveEdit.Name = "panelRemoveEdit";
-            this.panelRemoveEdit.Size = new System.Drawing.Size(118, 28);
+            this.panelRemoveEdit.Size = new System.Drawing.Size(128, 28);
             this.panelRemoveEdit.TabIndex = 3;
             // 
             // calendar1
@@ -249,30 +220,33 @@
             this.calendar1.AllowItemEdit = false;
             this.calendar1.AllowItemResize = false;
             this.calendar1.AllowNew = false;
+            this.calendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.calendar1.BackColor = System.Drawing.Color.OrangeRed;
             this.calendar1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.calendar1.ForeColor = System.Drawing.Color.Maroon;
-            calendarHighlightRange26.DayOfWeek = System.DayOfWeek.Monday;
-            calendarHighlightRange26.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange26.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange27.DayOfWeek = System.DayOfWeek.Tuesday;
-            calendarHighlightRange27.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange27.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange28.DayOfWeek = System.DayOfWeek.Wednesday;
-            calendarHighlightRange28.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange28.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange29.DayOfWeek = System.DayOfWeek.Thursday;
-            calendarHighlightRange29.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange29.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange30.DayOfWeek = System.DayOfWeek.Friday;
-            calendarHighlightRange30.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange30.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange1.DayOfWeek = System.DayOfWeek.Monday;
+            calendarHighlightRange1.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange1.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange2.DayOfWeek = System.DayOfWeek.Tuesday;
+            calendarHighlightRange2.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange2.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange3.DayOfWeek = System.DayOfWeek.Wednesday;
+            calendarHighlightRange3.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange3.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange4.DayOfWeek = System.DayOfWeek.Thursday;
+            calendarHighlightRange4.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange4.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange5.DayOfWeek = System.DayOfWeek.Friday;
+            calendarHighlightRange5.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange5.StartTime = System.TimeSpan.Parse("08:00:00");
             this.calendar1.HighlightRanges = new System.Windows.Forms.Calendar.CalendarHighlightRange[] {
-        calendarHighlightRange26,
-        calendarHighlightRange27,
-        calendarHighlightRange28,
-        calendarHighlightRange29,
-        calendarHighlightRange30};
+        calendarHighlightRange1,
+        calendarHighlightRange2,
+        calendarHighlightRange3,
+        calendarHighlightRange4,
+        calendarHighlightRange5};
             this.calendar1.Location = new System.Drawing.Point(226, 12);
             this.calendar1.Name = "calendar1";
             this.calendar1.Size = new System.Drawing.Size(692, 516);
@@ -308,14 +282,47 @@
             this.monthView1.TodayBorderColor = System.Drawing.Color.LightSeaGreen;
             this.monthView1.SelectionChanged += new System.EventHandler(this.monthView1_SelectionChanged);
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(167, 155);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(53, 23);
+            this.btnAdd.TabIndex = 3;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseSelectable = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnEdit.Location = new System.Drawing.Point(72, 3);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(53, 23);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseSelectable = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnRemove.Location = new System.Drawing.Point(3, 2);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(53, 23);
+            this.btnRemove.TabIndex = 3;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseSelectable = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
             // ScheduleModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(930, 540);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panelRemoveEdit);
             this.Controls.Add(this.gbDetails);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.calendar1);
             this.Controls.Add(this.monthView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -333,9 +340,6 @@
         #endregion
         private System.Windows.Forms.Calendar.MonthView monthView1;
         private System.Windows.Forms.Calendar.Calendar calendar1;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.GroupBox gbDetails;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label2;
@@ -349,5 +353,8 @@
         private System.Windows.Forms.Panel panelRemoveEdit;
         private System.Windows.Forms.Label lblExtra;
         private System.Windows.Forms.Label lblExtraInfo;
+        private MetroFramework.Controls.MetroButton btnEdit;
+        private MetroFramework.Controls.MetroButton btnAdd;
+        private MetroFramework.Controls.MetroButton btnRemove;
     }
 }

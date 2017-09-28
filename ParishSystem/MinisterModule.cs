@@ -18,7 +18,7 @@ namespace ParishSystem
             InitializeComponent();
             flpEditDeleteMinister.Enabled = false;
             dgvMinister.AutoGenerateColumns = false;
-            loadMinisters();
+            
         }
 
         private void loadMinisters()
@@ -32,6 +32,7 @@ namespace ParishSystem
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Form f = new MinisterForm();
+            
             f.ShowDialog();
             loadMinisters();
         }
@@ -60,12 +61,17 @@ namespace ParishSystem
 
         private void dgvMinister_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.ColumnIndex == 6)//Ministry Type
+            if (e.ColumnIndex == 7)//Ministry Type
                 e.Value = ((MinistryType)Convert.ToInt32(e.Value)).ToString();
-            else if (e.ColumnIndex == 7)
+            else if (e.ColumnIndex == 8)
             {
                 e.Value = ((MinisterStatus)Convert.ToInt32(e.Value)).ToString();
             }
+        }
+
+        private void dgvMinister_VisibleChanged(object sender, EventArgs e)
+        {
+            loadMinisters();
         }
     }
 }

@@ -21,6 +21,8 @@ namespace ParishSystem
             InitializeComponent();
             lblSacrament.Text = t.ToString();
             lblName.Text = name;
+            Draggable drag = new Draggable(this);
+            drag.makeDraggable(panel1);
 
             this.sacramentID = sacramentID;
             this.t = t;

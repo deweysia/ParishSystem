@@ -35,10 +35,6 @@ namespace ParishSystem
             conn.Close();
             return dt;
         }
-
-       
-
-        
    
     }
 }

@@ -46,9 +46,9 @@
             this.txtMI = new MetroFramework.Controls.MetroTextBox();
             this.txtFN = new MetroFramework.Controls.MetroTextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.nupPrice = new ParishSystem.HiddenNumericUpDown();
             this.txtRemarks = new MetroFramework.Controls.MetroTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnApply = new System.Windows.Forms.Button();
+            this.nupPrice = new ParishSystem.HiddenNumericUpDown();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupPrice)).BeginInit();
@@ -151,7 +151,7 @@
             this.label6.Location = new System.Drawing.Point(10, 199);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(312, 10);
+            this.label6.Size = new System.Drawing.Size(312, 2);
             this.label6.TabIndex = 20;
             // 
             // label5
@@ -159,7 +159,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(6, 226);
+            this.label5.Location = new System.Drawing.Point(6, 214);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(31, 13);
             this.label5.TabIndex = 1;
@@ -170,7 +170,7 @@
             this.application_remarks_textBox.AutoSize = true;
             this.application_remarks_textBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.application_remarks_textBox.ForeColor = System.Drawing.Color.Black;
-            this.application_remarks_textBox.Location = new System.Drawing.Point(8, 273);
+            this.application_remarks_textBox.Location = new System.Drawing.Point(8, 261);
             this.application_remarks_textBox.Name = "application_remarks_textBox";
             this.application_remarks_textBox.Size = new System.Drawing.Size(50, 13);
             this.application_remarks_textBox.TabIndex = 18;
@@ -242,7 +242,8 @@
             this.txtSuffix.ShortcutsEnabled = true;
             this.txtSuffix.Size = new System.Drawing.Size(50, 23);
             this.txtSuffix.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtSuffix.TabIndex = 40;
+            this.txtSuffix.TabIndex = 4;
+            this.txtSuffix.Tag = "NOT_REQUIRED";
             this.txtSuffix.UseSelectable = true;
             this.txtSuffix.WaterMark = "Suffix";
             this.txtSuffix.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -275,7 +276,7 @@
             this.txtLastName.ShortcutsEnabled = true;
             this.txtLastName.Size = new System.Drawing.Size(107, 23);
             this.txtLastName.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtLastName.TabIndex = 41;
+            this.txtLastName.TabIndex = 3;
             this.txtLastName.UseSelectable = true;
             this.txtLastName.WaterMark = "Last Name";
             this.txtLastName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -308,7 +309,7 @@
             this.txtMI.ShortcutsEnabled = true;
             this.txtMI.Size = new System.Drawing.Size(31, 23);
             this.txtMI.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtMI.TabIndex = 42;
+            this.txtMI.TabIndex = 2;
             this.txtMI.UseSelectable = true;
             this.txtMI.WaterMark = "M.I.";
             this.txtMI.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -341,7 +342,7 @@
             this.txtFN.ShortcutsEnabled = true;
             this.txtFN.Size = new System.Drawing.Size(107, 23);
             this.txtFN.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtFN.TabIndex = 43;
+            this.txtFN.TabIndex = 1;
             this.txtFN.UseSelectable = true;
             this.txtFN.WaterMark = "First Name";
             this.txtFN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -355,14 +356,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(126, 22);
             this.flowLayoutPanel1.TabIndex = 44;
-            // 
-            // nupPrice
-            // 
-            this.nupPrice.DecimalPlaces = 2;
-            this.nupPrice.Location = new System.Drawing.Point(8, 242);
-            this.nupPrice.Name = "nupPrice";
-            this.nupPrice.Size = new System.Drawing.Size(120, 20);
-            this.nupPrice.TabIndex = 45;
             // 
             // txtRemarks
             // 
@@ -379,7 +372,7 @@
             this.txtRemarks.CustomButton.UseSelectable = true;
             this.txtRemarks.CustomButton.Visible = false;
             this.txtRemarks.Lines = new string[0];
-            this.txtRemarks.Location = new System.Drawing.Point(9, 289);
+            this.txtRemarks.Location = new System.Drawing.Point(9, 277);
             this.txtRemarks.MaxLength = 32767;
             this.txtRemarks.Multiline = true;
             this.txtRemarks.Name = "txtRemarks";
@@ -390,34 +383,48 @@
             this.txtRemarks.SelectionStart = 0;
             this.txtRemarks.ShortcutsEnabled = true;
             this.txtRemarks.Size = new System.Drawing.Size(313, 41);
-            this.txtRemarks.TabIndex = 46;
+            this.txtRemarks.TabIndex = 9;
+            this.txtRemarks.Tag = "NOT_REQUIRED";
             this.txtRemarks.UseSelectable = true;
             this.txtRemarks.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtRemarks.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // button1
+            // btnApply
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(78, 336);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 32);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Apply";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.application_apply_button_Click);
+            this.btnApply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnApply.FlatAppearance.BorderSize = 0;
+            this.btnApply.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApply.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApply.ForeColor = System.Drawing.Color.White;
+            this.btnApply.Location = new System.Drawing.Point(78, 324);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(188, 32);
+            this.btnApply.TabIndex = 23;
+            this.btnApply.Text = "Apply";
+            this.btnApply.UseVisualStyleBackColor = false;
+            this.btnApply.Click += new System.EventHandler(this.application_apply_button_Click);
+            // 
+            // nupPrice
+            // 
+            this.nupPrice.DecimalPlaces = 2;
+            this.nupPrice.Location = new System.Drawing.Point(8, 230);
+            this.nupPrice.Name = "nupPrice";
+            this.nupPrice.Size = new System.Drawing.Size(120, 20);
+            this.nupPrice.TabIndex = 8;
+            this.nupPrice.ThousandsSeparator = true;
+            this.nupPrice.ValueChanged += new System.EventHandler(this.nupPrice_ValueChanged);
+            this.nupPrice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nupPrice_KeyDown);
+            this.nupPrice.Leave += new System.EventHandler(this.nupPrice_Leave);
             // 
             // AddApplication
             // 
+            this.AcceptButton = this.btnApply;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(332, 383);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(332, 373);
+            this.Controls.Add(this.btnApply);
             this.Controls.Add(this.txtRemarks);
             this.Controls.Add(this.nupPrice);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -442,8 +449,6 @@
             this.Text = "AddApplication";
             this.Load += new System.EventHandler(this.AddApplication_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddApplication_KeyDown);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddApplication_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddApplication_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -475,6 +480,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private HiddenNumericUpDown nupPrice;
         private MetroFramework.Controls.MetroTextBox txtRemarks;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnApply;
     }
 }

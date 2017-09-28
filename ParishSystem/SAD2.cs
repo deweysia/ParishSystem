@@ -93,6 +93,7 @@ namespace ParishSystem
             modules.Add(CabinetModule.ReceiptReports, new CashReport_Module(1, 1));
             modules.Add(CabinetModule.DisbursementReports, new CashReport_Module(2, 1));
             modules.Add(CabinetModule.Employee, new EmployeeModule());
+
             
             
         }
@@ -515,6 +516,10 @@ namespace ParishSystem
 
         }
 
-        
+        private void SAD2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LoginForm f = new LoginForm();
+            f.Show();
+        }
     }
 }

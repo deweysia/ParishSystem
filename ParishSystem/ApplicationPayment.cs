@@ -30,9 +30,11 @@ namespace ParishSystem
             int applicationID = int.Parse(row[0].Value.ToString());
             sacramentIncomeID = dh.getSacramentIncomeID(applicationID);
 
+            
             if (type == SacramentType.Marriage)
             {
-                lblName.Text = row[4].Value + " & " + row[6].Value;
+                //Escaped ampersand by &&
+                lblName.Text = row["groomName"].Value + " && " + row["brideName"].Value;
 
             }
             else
@@ -51,7 +53,7 @@ namespace ParishSystem
             dgvPaymentHistory.AutoGenerateColumns = false;
             dgvPaymentHistory.DataSource = dh.getPaymentHistory(sacramentIncomeID);
 
-            nudPayment.Maximum = decimal.MaxValue;
+            nudPayment.Maximum = Convert.ToDecimal(remainingBalance);
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -72,11 +74,20 @@ namespace ParishSystem
         private void btnPay_Click(object sender, EventArgs e)
         {
             double payment = Convert.ToDouble(nudPayment.Value);
+
             if (payment == 0)
             {
                 Notification.Show(State.PaymentZero);
                 return;
             }
+
+            if (Convert.ToInt32(nudPayment.Value) < 0)
+            {
+                Notification.Show(State.NegativePrice);
+                return;
+            }
+
+
             uint ORnum = uint.Parse(lblOR.Text);
             string remarks = txtRemarks.Text;
             DateTime dt = DateTime.ParseExact(lblDate.Text, "yyyy-MM-dd", null);
@@ -98,16 +109,6 @@ namespace ParishSystem
             }
         }
 
-        private void nudPayment_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(nudPayment.Value.ToString()))
-            {
-                nudPayment.Value = 0;
-            }
-
-            
-        }
-
         private void nudPayment_ValueChanged(object sender, EventArgs e)
         {
             if (Convert.ToDouble(nudPayment.Value) > remainingBalance)
@@ -117,6 +118,18 @@ namespace ParishSystem
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void nudPayment_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.OemMinus || e.KeyCode == Keys.Oemplus)
+                e.SuppressKeyPress = true;
+        }
+
+        private void nudPayment_Leave(object sender, EventArgs e)
+        {
+            if (nudPayment.Text.Length == 0)
+                nudPayment.Text = "0";
         }
     }
 }
