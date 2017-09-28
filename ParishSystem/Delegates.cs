@@ -19,4 +19,5 @@ namespace ParishSystem
     public delegate void CustomEvent(object sender, EventArgs e, SacramentType t);
     public delegate void LoadApplicationDetailsDelegate(DataGridView dgv);
     public delegate DataTable GetSacrament();
+    public delegate bool Delete(int id);
 }

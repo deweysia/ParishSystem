@@ -33,9 +33,6 @@
             System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange3 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
             System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange4 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
             System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange5 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
             this.gbDetails = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -51,40 +48,13 @@
             this.panelRemoveEdit = new System.Windows.Forms.Panel();
             this.calendar1 = new System.Windows.Forms.Calendar.Calendar();
             this.monthView1 = new System.Windows.Forms.Calendar.MonthView();
+            this.btnAdd = new MetroFramework.Controls.MetroButton();
+            this.btnEdit = new MetroFramework.Controls.MetroButton();
+            this.btnRemove = new MetroFramework.Controls.MetroButton();
             this.gbDetails.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelRemoveEdit.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(171, 155);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(43, 23);
-            this.btnAdd.TabIndex = 6;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(71, 2);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(43, 23);
-            this.btnEdit.TabIndex = 6;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.Location = new System.Drawing.Point(3, 2);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(62, 23);
-            this.btnRemove.TabIndex = 6;
-            this.btnRemove.Text = "Remove";
-            this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // gbDetails
             // 
@@ -242,7 +212,7 @@
             this.panelRemoveEdit.Enabled = false;
             this.panelRemoveEdit.Location = new System.Drawing.Point(15, 153);
             this.panelRemoveEdit.Name = "panelRemoveEdit";
-            this.panelRemoveEdit.Size = new System.Drawing.Size(118, 28);
+            this.panelRemoveEdit.Size = new System.Drawing.Size(128, 28);
             this.panelRemoveEdit.TabIndex = 3;
             // 
             // calendar1
@@ -312,14 +282,47 @@
             this.monthView1.TodayBorderColor = System.Drawing.Color.LightSeaGreen;
             this.monthView1.SelectionChanged += new System.EventHandler(this.monthView1_SelectionChanged);
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(167, 155);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(53, 23);
+            this.btnAdd.TabIndex = 3;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseSelectable = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnEdit.Location = new System.Drawing.Point(72, 3);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(53, 23);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseSelectable = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnRemove.Location = new System.Drawing.Point(3, 2);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(53, 23);
+            this.btnRemove.TabIndex = 3;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseSelectable = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
             // ScheduleModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(930, 540);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panelRemoveEdit);
             this.Controls.Add(this.gbDetails);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.calendar1);
             this.Controls.Add(this.monthView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -337,9 +340,6 @@
         #endregion
         private System.Windows.Forms.Calendar.MonthView monthView1;
         private System.Windows.Forms.Calendar.Calendar calendar1;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.GroupBox gbDetails;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label2;
@@ -353,5 +353,8 @@
         private System.Windows.Forms.Panel panelRemoveEdit;
         private System.Windows.Forms.Label lblExtra;
         private System.Windows.Forms.Label lblExtraInfo;
+        private MetroFramework.Controls.MetroButton btnEdit;
+        private MetroFramework.Controls.MetroButton btnAdd;
+        private MetroFramework.Controls.MetroButton btnRemove;
     }
 }

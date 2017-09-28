@@ -708,9 +708,9 @@ namespace ParishSystem
         public bool deleteBloodDonationEvent(int bloodDonationEventID)
         {
 
-            string q = "DELETE FROM bloodDonationEvent WHERE bloodDonationEventID = " + bloodDonationEventID;
+            string q = "DELETE FROM bloodDonationEvent WHERE bloodDonationEventID = @bloodDonationEventID";
 
-            return runNonQuery(q);
+            return ExecuteNonQuery(q, bloodDonationEventID);
         }
 
         public bool addBloodDonationEventLog(int bloodDonationEventID)
@@ -2039,6 +2039,13 @@ namespace ParishSystem
             DataTable dt = ExecuteQuery(q, Start.ToString("yyyy-MM-dd hh:mm:ss"), End.ToString("yyyy-MM-dd hh:mm:ss"));
 
             return dt;
+        }
+
+        public bool deleteMinisterSchedule(int ministerScheduleID)
+        {
+            string q = "DELETE FROM MinisterSchedule WHERE ministerScheduleID = @ministerScheduleID";
+            bool success = ExecuteNonQuery(q);
+            return success;
         }
 
         public bool ministerAvailable(int ministerID, DateTime startDateTime, DateTime endDateTime)
@@ -4584,6 +4591,8 @@ namespace ParishSystem
             DataTable dt = ExecuteQuery(q);
             return dt;
         }
+
+        
 
         public DataTable getORdetails(int bookType,int OR)
         {
