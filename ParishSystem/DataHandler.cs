@@ -4577,6 +4577,14 @@ namespace ParishSystem
             DataTable dt = ExecuteQuery(q);
             return dt;
         }
+
+        public DataTable getAuditTypes()
+        {
+            string q = "SELECT DISTINCT(tableName) FROM AuditLog";
+            DataTable dt = ExecuteQuery(q);
+            return dt;
+        }
+
         public DataTable getORdetails(int bookType,int OR)
         {
             return runQuery($@"select * from (select primaryincome.primaryIncomeID, sourceName, primaryincome.bookType ,ORnum,primaryIncomeDateTime,price,quantity ,(price * quantity) as total,itemType,primaryincome.remarks from primaryincome 

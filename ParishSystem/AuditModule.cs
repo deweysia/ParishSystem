@@ -12,18 +12,28 @@ namespace ParishSystem
 {
     public partial class AuditModule : Form
     {
+        private DataHandler dh = DataHandler.getDataHandler();
         public AuditModule()
         {
             InitializeComponent();
             dgvAudit.AutoGenerateColumns = false;
-            
+            loadAuditTypes();
         }
 
         private void dgvBaptism_VisibleChanged(object sender, EventArgs e)
         {
-            DataHandler dh = DataHandler.getDataHandler();
             DataTable dt = dh.getAuditLogs();
             dgvAudit.DataSource = dt;
+        }
+
+        private void loadAuditTypes()
+        {
+            DataTable dt = dh.getAuditTypes();
+
+            foreach(DataRow row in dt.Rows)
+            {
+                cmbFilter.Items.Add(row.ToString());
+            }
         }
 
         private void dgvAudit_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

@@ -60,6 +60,7 @@ namespace ParishSystem
             {
                 //Baptism Date or COnfirmation Date
                 sacramentDateDTP.MinDate = DateTime.ParseExact(dt.Rows[0]["birthdate"].ToString(), "dd/MM/yyyy hh:mm:ss tt", null);
+                remarksText.Text = row["remarks"].ToString();
                 loadSponsors();
             }
 
