@@ -191,6 +191,7 @@
             this.dgvMinister.TabIndex = 14;
             this.dgvMinister.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMinister_CellEnter);
             this.dgvMinister.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMinister_CellFormatting);
+            this.dgvMinister.VisibleChanged += new System.EventHandler(this.dgvMinister_VisibleChanged);
             // 
             // ministerID
             // 

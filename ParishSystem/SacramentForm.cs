@@ -96,6 +96,7 @@ namespace ParishSystem
             {
                 int ministerID = int.Parse(r["ministerID"].ToString());
                 ComboboxContent cc = new ComboboxContent(ministerID, r["name"].ToString());
+                MessageBox.Show("Minister = " + r["name"].ToString());
                 MinisterCBox.Items.Add(cc);
             }
 

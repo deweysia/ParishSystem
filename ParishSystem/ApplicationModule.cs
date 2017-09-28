@@ -111,7 +111,7 @@ namespace ParishSystem
             }
             catch(Exception e)
             {
-                MessageBox.Show(e.ToString());
+                //MessageBox.Show(e.ToString());
             }
         }
 
@@ -121,18 +121,18 @@ namespace ParishSystem
             DataGridViewRow dgvr;
             if (t == SacramentType.Baptism)
             {
-                dgvr = baptismApplication_dgv.SelectedRows[0];
+                dgvr = getDGVR(t);//baptismApplication_dgv.SelectedRows[0];
                 DataRow dr = ((DataRowView)dgvr.DataBoundItem).Row;
                 return new SacramentForm(OperationType.Add, SacramentType.Baptism, dr);
             }else if (t == SacramentType.Confirmation)
             {
-                dgvr = confirmationApplication_dgv.SelectedRows[0];
+                dgvr = getDGVR(t);//dgvr = confirmationApplication_dgv.SelectedRows[0];
                 DataRow dr = ((DataRowView)dgvr.DataBoundItem).Row;
                 return new SacramentForm(OperationType.Add, SacramentType.Confirmation, dr);
             }else
             {
-                
-                dgvr = marriageApplication_dgv.SelectedRows[0];
+
+                dgvr = getDGVR(t);//dgvr = marriageApplication_dgv.SelectedRows[0];
                 DataRow dr = ((DataRowView)dgvr.DataBoundItem).Row;
                 return new MarriageForm(OperationType.Add, dr);
             }
@@ -233,10 +233,10 @@ namespace ParishSystem
                 lblRemarks = lblMarRemarks;
             }
 
-            MessageBox.Show("Application ID: " + this.applicationID);
+            //MessageBox.Show("Application ID: " + this.applicationID);
             DataTable dt = dh.getApplicationIncomeDetails(this.applicationID);
 
-            MessageBox.Show(dt.Rows[0]["price"].ToString());
+            //MessageBox.Show(dt.Rows[0]["price"].ToString());
             double price = double.Parse(dt.Rows[0]["price"].ToString());
 
             double totalPayment = double.Parse(dt.Rows[0]["totalPayment"].ToString());
@@ -255,6 +255,7 @@ namespace ParishSystem
 
             baptismApplicationDetailsPanel.Enabled = true;
             this.applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
+            this.cbBapEdit.Tag = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
             this.profileID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
             this.applicantID = int.Parse(dgv.SelectedRows[0].Cells[2].Value.ToString());
             string requirements = dgv.SelectedRows[0].Cells[3].Value.ToString();
@@ -300,6 +301,7 @@ namespace ParishSystem
         {
             confirmationApplicationDetailsPanel.Enabled = true;
             this.applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
+            this.cbConEdit.Tag = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
             this.profileID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
             this.applicantID = int.Parse(dgv.SelectedRows[0].Cells[2].Value.ToString());
             string requirements = dgv.SelectedRows[0].Cells[3].Value.ToString();
@@ -341,6 +343,7 @@ namespace ParishSystem
         {
             marriageApplicationDetailsPanel.Enabled = true;
             this.applicationID = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
+            this.cbMarEdit.Tag = int.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
 
             this.groomID = int.Parse(dgv.SelectedRows[0].Cells[1].Value.ToString());
             this.brideID = int.Parse(dgv.SelectedRows[0].Cells[2].Value.ToString());
@@ -392,7 +395,7 @@ namespace ParishSystem
         private void applicationApprove(SacramentType type)
         {
 
-            DataGridViewRow dgvr = getDataGridView(type).SelectedRows[0];
+            DataGridViewRow dgvr = getDGVR(type); //getDataGridView(type).SelectedRows[0];
             TableLayoutPanel tlp = getRequirementTableLayoutPanel(type);
             DialogResult d = DialogResult.None;
 
@@ -584,7 +587,7 @@ namespace ParishSystem
         private void payApplication(SacramentType type)
         {
             DataGridView dgv = getDataGridView(type);
-            DataGridViewRow dgvr = dgv.SelectedRows[0];
+            DataGridViewRow dgvr = getDGVR(type);
             ApplicationPayment ap = new ApplicationPayment(type, dgvr, dh);
             DialogResult dr = ap.ShowDialog();
             Control parent = dgv.Parent;
@@ -600,6 +603,36 @@ namespace ParishSystem
 
             loadApplicationPaymentDetails(type);
 
+        }
+
+        private DataGridViewRow getDGVR(SacramentType type)
+        {
+            DataGridView dgv = getDataGridView(type);
+            int applicationID = getApplicationID(type);
+            foreach(DataGridViewRow dgvr in dgv.Rows)
+            {
+                if (Convert.ToInt32(dgvr.Cells[0].Value) == applicantID)
+                    return dgvr;
+            }
+
+            return null;
+        }
+
+        private int getApplicationID(SacramentType type)
+        {
+            int applicationID = -1;
+            if(type == SacramentType.Baptism)
+            {
+                applicantID = cbBapEdit.Tag != null ? Convert.ToInt32(cbBapEdit.Tag.ToString()) : -1; 
+            }else if(type == SacramentType.Confirmation)
+            {
+                applicantID = cbConEdit.Tag != null ? Convert.ToInt32(cbConEdit.Tag.ToString()) : -1;
+            }else
+            {
+                applicantID = cbMarEdit.Tag != null ? Convert.ToInt32(cbMarEdit.Tag.ToString()) : -1;
+            }
+
+            return applicantID;
         }
 
         /// <summary>
@@ -879,9 +912,9 @@ namespace ParishSystem
                 if (profileExists)
                 {
                     int existingProfileID = dh.getGeneralProfileID(fn, mi, ln, suffix, g, birthDate);
-                    MessageBox.Show("Existing profileID: " + existingProfileID);
+                    //MessageBox.Show("Existing profileID: " + existingProfileID);
                     DataTable dt = dh.getActiveApplicationOf(existingProfileID, type);
-                    MessageBox.Show("Existing Application of Confirmation: " + dt.Rows.Count);
+                    //MessageBox.Show("Existing Application of Confirmation: " + dt.Rows.Count);
                     //Has active application
                     if (dt.Rows.Count != 0)
                     {
@@ -895,7 +928,7 @@ namespace ParishSystem
                         success &= dh.addApplication(type);
 
                         int newApplicationID = dh.getLatestID("Application", "applicationID");
-                        MessageBox.Show("newApplicationID: " + newApplicationID);
+                        //MessageBox.Show("newApplicationID: " + newApplicationID);
                         success &= dh.editApplicant(this.applicantID, existingProfileID, newApplicationID);
                         success &= dh.editSacramentIncome(this.applicationID, newApplicationID);
                     }
@@ -1289,7 +1322,7 @@ namespace ParishSystem
         /// <param name="c"></param>
         private void RecursiveClearControl(Control c)
         {
-            Console.WriteLine("ENTERED RECURSIVE CLEAR");
+            //Console.WriteLine("ENTERED RECURSIVE CLEAR");
             if (c.Controls.Count == 0)
                 return;
             else

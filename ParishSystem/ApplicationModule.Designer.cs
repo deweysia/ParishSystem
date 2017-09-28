@@ -54,6 +54,7 @@
             this.Bbirthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
             this.baptismApplication_filter_cmb = new MetroFramework.Controls.MetroComboBox();
@@ -81,7 +82,6 @@
             this.cbBapEdit = new System.Windows.Forms.CheckBox();
             this.baptismApplication_status_label = new System.Windows.Forms.Label();
             this.baptismApplication_requirements_groupbox = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.baptismApplication_requirements_tlp = new System.Windows.Forms.TableLayoutPanel();
             this.baptismApplication_requirement_checkBox1 = new MetroFramework.Controls.MetroCheckBox();
             this.baptismApplication_requirement_checkBox3 = new MetroFramework.Controls.MetroCheckBox();
@@ -281,7 +281,7 @@
             this.applicationTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicationTabControl.Location = new System.Drawing.Point(0, 0);
             this.applicationTabControl.Name = "applicationTabControl";
-            this.applicationTabControl.SelectedIndex = 0;
+            this.applicationTabControl.SelectedIndex = 2;
             this.applicationTabControl.Size = new System.Drawing.Size(943, 669);
             this.applicationTabControl.Style = MetroFramework.MetroColorStyle.Silver;
             this.applicationTabControl.TabIndex = 70;
@@ -481,6 +481,16 @@
             this.panel16.Size = new System.Drawing.Size(511, 55);
             this.panel16.TabIndex = 0;
             this.panel16.Paint += new System.Windows.Forms.PaintEventHandler(this.panel16_Paint);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(293, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 30);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Open Logs";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -937,16 +947,6 @@
             this.baptismApplication_requirements_groupbox.TabStop = false;
             this.baptismApplication_requirements_groupbox.Text = "Requirements";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(293, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 30);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Open Logs";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // baptismApplication_requirements_tlp
             // 
             this.baptismApplication_requirements_tlp.ColumnCount = 2;
@@ -1038,6 +1038,7 @@
             this.lblBapRemarks.Name = "lblBapRemarks";
             this.lblBapRemarks.Size = new System.Drawing.Size(364, 58);
             this.lblBapRemarks.TabIndex = 18;
+            this.lblBapRemarks.Tag = "detail";
             // 
             // baptismApplication_addPayment_btn
             // 
@@ -1079,6 +1080,7 @@
             this.baptismApplication_payment_label.Name = "baptismApplication_payment_label";
             this.baptismApplication_payment_label.Size = new System.Drawing.Size(36, 17);
             this.baptismApplication_payment_label.TabIndex = 12;
+            this.baptismApplication_payment_label.Tag = "detail";
             this.baptismApplication_payment_label.Text = "Price";
             // 
             // baptismApplication_buttons_panel
@@ -1469,7 +1471,7 @@
             this.confirmationApplication_birthDate_dtp.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.confirmationApplication_birthDate_dtp.FontSize = MetroFramework.MetroDateTimeSize.Small;
             this.confirmationApplication_birthDate_dtp.Location = new System.Drawing.Point(3, 125);
-            this.confirmationApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(4, 25);
+            this.confirmationApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(0, 25);
             this.confirmationApplication_birthDate_dtp.Name = "confirmationApplication_birthDate_dtp";
             this.confirmationApplication_birthDate_dtp.Size = new System.Drawing.Size(190, 25);
             this.confirmationApplication_birthDate_dtp.Style = MetroFramework.MetroColorStyle.Silver;
@@ -1860,6 +1862,7 @@
             this.lblConRemarks.Name = "lblConRemarks";
             this.lblConRemarks.Size = new System.Drawing.Size(366, 58);
             this.lblConRemarks.TabIndex = 19;
+            this.lblConRemarks.Tag = "detail";
             // 
             // confirmationApplication_addPayment_btn
             // 
@@ -1901,6 +1904,7 @@
             this.confirmationApplication_payment_label.Name = "confirmationApplication_payment_label";
             this.confirmationApplication_payment_label.Size = new System.Drawing.Size(36, 17);
             this.confirmationApplication_payment_label.TabIndex = 12;
+            this.confirmationApplication_payment_label.Tag = "detail";
             this.confirmationApplication_payment_label.Text = "Price";
             // 
             // confirmationApplication_buttons_panel
@@ -2261,7 +2265,7 @@
             this.dtpGBirthDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtpGBirthDate.FontSize = MetroFramework.MetroDateTimeSize.Small;
             this.dtpGBirthDate.Location = new System.Drawing.Point(3, 49);
-            this.dtpGBirthDate.MinimumSize = new System.Drawing.Size(4, 25);
+            this.dtpGBirthDate.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpGBirthDate.Name = "dtpGBirthDate";
             this.dtpGBirthDate.Size = new System.Drawing.Size(190, 25);
             this.dtpGBirthDate.Style = MetroFramework.MetroColorStyle.Silver;
@@ -2420,7 +2424,7 @@
             this.dtpBBirthDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtpBBirthDate.FontSize = MetroFramework.MetroDateTimeSize.Small;
             this.dtpBBirthDate.Location = new System.Drawing.Point(3, 132);
-            this.dtpBBirthDate.MinimumSize = new System.Drawing.Size(4, 25);
+            this.dtpBBirthDate.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpBBirthDate.Name = "dtpBBirthDate";
             this.dtpBBirthDate.Size = new System.Drawing.Size(190, 25);
             this.dtpBBirthDate.Style = MetroFramework.MetroColorStyle.Silver;
@@ -2874,6 +2878,7 @@
             this.lblMarRemarks.Name = "lblMarRemarks";
             this.lblMarRemarks.Size = new System.Drawing.Size(365, 58);
             this.lblMarRemarks.TabIndex = 20;
+            this.lblMarRemarks.Tag = "detail";
             // 
             // marriageApplication_addPayment_btn
             // 
@@ -2915,6 +2920,7 @@
             this.marriageApplication_price_label.Name = "marriageApplication_price_label";
             this.marriageApplication_price_label.Size = new System.Drawing.Size(36, 17);
             this.marriageApplication_price_label.TabIndex = 12;
+            this.marriageApplication_price_label.Tag = "detail";
             this.marriageApplication_price_label.Text = "Price";
             // 
             // marriageApplication_buttons_panel

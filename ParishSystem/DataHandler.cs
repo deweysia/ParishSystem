@@ -1846,7 +1846,7 @@ namespace ParishSystem
         /// <returns></returns>
         public DataTable getMinisters(MinisterStatus status)
         {
-            string q = "SELECT ministerID, firstName, midName, lastName, suffix, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix)as Name, birthdate, ministryType, status, licenseNumber FROM Minister WHERE status = @status";
+            string q = "SELECT ministerID, firstName, midName, lastName, suffix, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix) as Name, birthdate, ministryType, status, licenseNumber FROM Minister WHERE status = @status";
 
             DataTable dt = ExecuteQuery(q, (int)status);
 
@@ -2487,7 +2487,7 @@ namespace ParishSystem
         }
         public DataTable getPartner(int profileID)
         {
-            string q = "select * from (select application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID = " + profileID + ") as A left outer join (select concat(firstName, \" \", coalesce(midName, \" \"), \"\", lastName, \" \", suffix, \".\") as name, generalprofile.profileID, gender, birthplace, birthdate, residence, application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID != " + profileID + ") as B on A.applicationID = B.applicationID";
+            string q = "select * from (select application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID = " + profileID + ") as A left outer join (select CONCAT_WS(' ', firstName, midName, lastName, suffix) as name, generalprofile.profileID, gender, birthplace, birthdate, residence, application.applicationID from generalprofile inner join applicant on applicant.profileID = generalprofile.profileID inner join application on application.applicationID = applicant.applicationID where sacramentType = 3 and generalprofile.profileID != " + profileID + ") as B on A.applicationID = B.applicationID";
             return runQuery(q);
         }
 
@@ -3794,7 +3794,7 @@ namespace ParishSystem
 
         public DataTable getEmployees()
         {
-            return runQuery($@"SELECT *,case when status = 1 then ""Active"" else ""Inactive"" end as WStatus ,concat(lastname,"" "",coalesce(suffix,"" ""),"" "",firstName,"" "",midname,""."")as name FROM sad2.user ");
+            return runQuery($@"SELECT *,case when status = 1 then ""Active"" else ""Inactive"" end as WStatus , CONCAT_WS(' ', firstName, midName, lastName, suffix) as name FROM sad2.user ");
         }
         public DataTable getGeneralProfilesProper()
         {

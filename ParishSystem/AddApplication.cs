@@ -29,9 +29,8 @@ namespace ParishSystem
             drag.makeDraggable(this);
             drag.makeDraggable(panel1);
 
-            birthdate_dtp.MaxDate = DateTime.Now;
-            label1.MouseDown += AddApplication_MouseDown;
-            label1.MouseMove += AddApplication_MouseMove;
+            birthdate_dtp.MaxDate = DateTime.Today;
+            birthdate_dtp.Value = DateTime.Today;
 
             this.sacramentType = type;
             label1.Text = sacramentType + " Application";
@@ -66,16 +65,22 @@ namespace ParishSystem
                 Notification.Show(State.MissingFields);
                 return;
             }
+
+            if(Convert.ToInt32(nupPrice.Value) < 0)
+            {
+                Notification.Show(State.NegativePrice);
+                return;
+            }
             
-            string fn = txtFN.Text;
-            string mn = txtMI.Text;
-            string ln = txtLastName.Text;
-            string suffix = txtSuffix.Text == "Suffix" ? "" : txtSuffix.Text;
+            string fn = txtFN.Text.Trim();
+            string mn = txtMI.Text.Trim();
+            string ln = txtLastName.Text.Trim();
+            string suffix = txtSuffix.Text == "Suffix" ? "" : txtSuffix.Text.Trim();
             Gender gender = male_radio.Checked ? Gender.Male : Gender.Female;
             DateTime birthDate = birthdate_dtp.Value;
 
             int itemTypeID = int.Parse(sacramentItem.Rows[0]["itemTypeID"].ToString());
-            double price = double.Parse(nupPrice.Text);
+            double price = Convert.ToDouble(nupPrice.Value);
 
             bool success = true;
             int profileID = dh.getGeneralProfileID(fn, mn, ln, suffix, gender, birthDate);
@@ -89,7 +94,7 @@ namespace ParishSystem
                 {
                     success &= dh.addNewApplicant(profileID, sacramentType);
                     int applicationID = dh.getLatestID("Application", "applicationID");
-                    success &= dh.addSacramentIncome(applicationID, price, txtRemarks.Text);
+                    success &= dh.addSacramentIncome(applicationID, price, txtRemarks.Text.Trim());
                 }
                 else //gen prof has active application
                 {
@@ -117,22 +122,6 @@ namespace ParishSystem
         }
 
 
-
-        private void AddApplication_MouseDown(object sender, MouseEventArgs e)
-        {
-            //lastClick = new Point(e.X, e.Y);
-            
-        }
-
-        private void AddApplication_MouseMove(object sender, MouseEventArgs e)
-        {
-            //if (e.Button == MouseButtons.Left)
-            //{
-            //    this.Left += e.X - lastClick.X;
-            //    this.Top += e.Y - lastClick.Y;
-            //}
-        }
-
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
             pictureBox1.Image = ParishSystem.Properties.Resources.Delete_32px_Light;
@@ -153,19 +142,14 @@ namespace ParishSystem
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Notification.Show(State.GenericError);
-        }
-
         private bool allFilled()
         {
             bool allFilled = true;
             foreach (Control c in this.Controls)
             {
-                if (c is TextBox && c.Tag == null)
+                if (c is MetroTextBox && c.Tag == null)
                 {
-                    TextBox t = c as TextBox;
+                    MetroTextBox t = c as MetroTextBox;
                     allFilled &= !string.IsNullOrWhiteSpace(t.Text);
                     if (!allFilled)
                         return false;
@@ -189,6 +173,24 @@ namespace ParishSystem
         {
            
         }
+
+        private void nupPrice_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void nupPrice_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.OemMinus || e.KeyCode == Keys.Oemplus)
+                e.SuppressKeyPress = true;
+        }
+
+        private void nupPrice_Leave(object sender, EventArgs e)
+        {
+            if (nupPrice.Text.Length == 0)
+                nupPrice.Text = "0";
+            //MessageBox.Show("ENTERED " + nupPrice.Text.Length);
+        }   
     }
 
     

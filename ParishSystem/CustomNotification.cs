@@ -221,6 +221,7 @@ namespace ParishSystem
             ApplicationEditFail = new State("Application changes failed to apply", NotificationType.error),
             NoMinisterSelected = new State("Please assign a minister to the appointment", NotificationType.warning),
             SacramentEditSuccess = new State("Successfully updated sacrament profile", NotificationType.success),
-            SacramentEditFail = new State("Failed to update sacrament profile", NotificationType.error);
+            SacramentEditFail = new State("Failed to update sacrament profile", NotificationType.error),
+            NegativePrice = new State("Price cannot be zero", NotificationType.warning);
     }
 }

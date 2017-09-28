@@ -18,7 +18,7 @@ namespace ParishSystem
             InitializeComponent();
             flpEditDeleteMinister.Enabled = false;
             dgvMinister.AutoGenerateColumns = false;
-            loadMinisters();
+            
         }
 
         private void loadMinisters()
@@ -66,6 +66,11 @@ namespace ParishSystem
             {
                 e.Value = ((MinisterStatus)Convert.ToInt32(e.Value)).ToString();
             }
+        }
+
+        private void dgvMinister_VisibleChanged(object sender, EventArgs e)
+        {
+            loadMinisters();
         }
     }
 }

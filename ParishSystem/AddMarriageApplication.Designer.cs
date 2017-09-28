@@ -50,10 +50,10 @@
             this.txtBrideLN = new MetroFramework.Controls.MetroTextBox();
             this.txtBrideSuffix = new MetroFramework.Controls.MetroTextBox();
             this.txtRemarks = new MetroFramework.Controls.MetroTextBox();
-            this.nud = new ParishSystem.HiddenNumericUpDown();
+            this.nudPrice = new ParishSystem.HiddenNumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.close_picturebox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpGroomBirthDate
@@ -65,11 +65,12 @@
             this.dtpGroomBirthDate.Name = "dtpGroomBirthDate";
             this.dtpGroomBirthDate.Size = new System.Drawing.Size(200, 25);
             this.dtpGroomBirthDate.Style = MetroFramework.MetroColorStyle.Silver;
-            this.dtpGroomBirthDate.TabIndex = 4;
+            this.dtpGroomBirthDate.TabIndex = 5;
             this.dtpGroomBirthDate.Value = new System.DateTime(2017, 7, 16, 0, 0, 0, 0);
             // 
             // application_remarks_textBox
             // 
+            this.application_remarks_textBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.application_remarks_textBox.AutoSize = true;
             this.application_remarks_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.application_remarks_textBox.Location = new System.Drawing.Point(6, 348);
@@ -139,7 +140,7 @@
             this.dtpBrideBirthDate.Name = "dtpBrideBirthDate";
             this.dtpBrideBirthDate.Size = new System.Drawing.Size(200, 25);
             this.dtpBrideBirthDate.Style = MetroFramework.MetroColorStyle.Silver;
-            this.dtpBrideBirthDate.TabIndex = 30;
+            this.dtpBrideBirthDate.TabIndex = 10;
             this.dtpBrideBirthDate.Value = new System.DateTime(2017, 7, 16, 0, 0, 0, 0);
             // 
             // label6
@@ -186,6 +187,7 @@
             // 
             // btnApply
             // 
+            this.btnApply.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnApply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnApply.FlatAppearance.BorderSize = 0;
             this.btnApply.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
@@ -195,7 +197,7 @@
             this.btnApply.Location = new System.Drawing.Point(98, 413);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(150, 29);
-            this.btnApply.TabIndex = 36;
+            this.btnApply.TabIndex = 14;
             this.btnApply.Text = "Apply";
             this.btnApply.UseVisualStyleBackColor = false;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
@@ -227,7 +229,7 @@
             this.txtGroomFN.ShortcutsEnabled = true;
             this.txtGroomFN.Size = new System.Drawing.Size(107, 23);
             this.txtGroomFN.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtGroomFN.TabIndex = 39;
+            this.txtGroomFN.TabIndex = 1;
             this.txtGroomFN.UseSelectable = true;
             this.txtGroomFN.WaterMark = "First Name";
             this.txtGroomFN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -260,7 +262,7 @@
             this.txtGroomMI.ShortcutsEnabled = true;
             this.txtGroomMI.Size = new System.Drawing.Size(31, 23);
             this.txtGroomMI.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtGroomMI.TabIndex = 39;
+            this.txtGroomMI.TabIndex = 2;
             this.txtGroomMI.UseSelectable = true;
             this.txtGroomMI.WaterMark = "M.I.";
             this.txtGroomMI.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -293,7 +295,7 @@
             this.txtGroomLN.ShortcutsEnabled = true;
             this.txtGroomLN.Size = new System.Drawing.Size(107, 23);
             this.txtGroomLN.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtGroomLN.TabIndex = 39;
+            this.txtGroomLN.TabIndex = 3;
             this.txtGroomLN.UseSelectable = true;
             this.txtGroomLN.WaterMark = "Last Name";
             this.txtGroomLN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -326,7 +328,7 @@
             this.txtGroomSuffix.ShortcutsEnabled = true;
             this.txtGroomSuffix.Size = new System.Drawing.Size(50, 23);
             this.txtGroomSuffix.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtGroomSuffix.TabIndex = 39;
+            this.txtGroomSuffix.TabIndex = 4;
             this.txtGroomSuffix.UseSelectable = true;
             this.txtGroomSuffix.WaterMark = "Suffix";
             this.txtGroomSuffix.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -359,7 +361,7 @@
             this.txtBrideFN.ShortcutsEnabled = true;
             this.txtBrideFN.Size = new System.Drawing.Size(107, 23);
             this.txtBrideFN.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtBrideFN.TabIndex = 39;
+            this.txtBrideFN.TabIndex = 6;
             this.txtBrideFN.UseSelectable = true;
             this.txtBrideFN.WaterMark = "First Name";
             this.txtBrideFN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -392,7 +394,7 @@
             this.txtBrideMI.ShortcutsEnabled = true;
             this.txtBrideMI.Size = new System.Drawing.Size(31, 23);
             this.txtBrideMI.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtBrideMI.TabIndex = 39;
+            this.txtBrideMI.TabIndex = 7;
             this.txtBrideMI.UseSelectable = true;
             this.txtBrideMI.WaterMark = "M.I.";
             this.txtBrideMI.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -425,7 +427,7 @@
             this.txtBrideLN.ShortcutsEnabled = true;
             this.txtBrideLN.Size = new System.Drawing.Size(107, 23);
             this.txtBrideLN.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtBrideLN.TabIndex = 39;
+            this.txtBrideLN.TabIndex = 8;
             this.txtBrideLN.UseSelectable = true;
             this.txtBrideLN.WaterMark = "Last Name";
             this.txtBrideLN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -458,7 +460,7 @@
             this.txtBrideSuffix.ShortcutsEnabled = true;
             this.txtBrideSuffix.Size = new System.Drawing.Size(50, 23);
             this.txtBrideSuffix.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtBrideSuffix.TabIndex = 39;
+            this.txtBrideSuffix.TabIndex = 9;
             this.txtBrideSuffix.UseSelectable = true;
             this.txtBrideSuffix.WaterMark = "Suffix";
             this.txtBrideSuffix.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -466,6 +468,7 @@
             // 
             // txtRemarks
             // 
+            this.txtRemarks.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             // 
             // 
             // 
@@ -490,18 +493,20 @@
             this.txtRemarks.SelectionStart = 0;
             this.txtRemarks.ShortcutsEnabled = true;
             this.txtRemarks.Size = new System.Drawing.Size(311, 40);
-            this.txtRemarks.TabIndex = 42;
+            this.txtRemarks.TabIndex = 12;
             this.txtRemarks.UseSelectable = true;
             this.txtRemarks.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtRemarks.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // txtPrice
+            // nudPrice
             // 
-            this.nud.DecimalPlaces = 2;
-            this.nud.Location = new System.Drawing.Point(9, 309);
-            this.nud.Name = "txtPrice";
-            this.nud.Size = new System.Drawing.Size(120, 20);
-            this.nud.TabIndex = 41;
+            this.nudPrice.DecimalPlaces = 2;
+            this.nudPrice.Location = new System.Drawing.Point(9, 309);
+            this.nudPrice.Name = "nudPrice";
+            this.nudPrice.Size = new System.Drawing.Size(120, 20);
+            this.nudPrice.TabIndex = 11;
+            this.nudPrice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nudPrice_KeyDown);
+            this.nudPrice.Leave += new System.EventHandler(this.nudPrice_Leave);
             // 
             // AddMarriageApplication
             // 
@@ -511,7 +516,7 @@
             this.ClientSize = new System.Drawing.Size(345, 458);
             this.ControlBox = false;
             this.Controls.Add(this.txtRemarks);
-            this.Controls.Add(this.nud);
+            this.Controls.Add(this.nudPrice);
             this.Controls.Add(this.txtBrideSuffix);
             this.Controls.Add(this.txtGroomSuffix);
             this.Controls.Add(this.txtBrideLN);
@@ -542,7 +547,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.close_picturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,7 +575,7 @@
         private MetroFramework.Controls.MetroTextBox txtBrideMI;
         private MetroFramework.Controls.MetroTextBox txtBrideLN;
         private MetroFramework.Controls.MetroTextBox txtBrideSuffix;
-        private HiddenNumericUpDown nud;
+        private HiddenNumericUpDown nudPrice;
         private MetroFramework.Controls.MetroTextBox txtRemarks;
     }
 }
