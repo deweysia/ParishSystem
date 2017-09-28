@@ -197,6 +197,7 @@
             this.dgvMinister.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvMinister.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
             this.dgvMinister.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvMinister.RowTemplate.Height = 35;
             this.dgvMinister.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvMinister.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMinister.Size = new System.Drawing.Size(858, 490);

@@ -182,6 +182,7 @@
             this.details_dgv.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
             this.details_dgv.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
             this.details_dgv.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.details_dgv.RowTemplate.Height = 35;
             this.details_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.details_dgv.Size = new System.Drawing.Size(510, 152);
             this.details_dgv.TabIndex = 59;

@@ -142,6 +142,7 @@
             this.profile_dgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profile_dgv.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
             this.profile_dgv.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.profile_dgv.RowTemplate.Height = 35;
             this.profile_dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.profile_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.profile_dgv.Size = new System.Drawing.Size(858, 517);

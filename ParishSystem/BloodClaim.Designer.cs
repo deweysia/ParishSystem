@@ -88,7 +88,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.BloodDonationsDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.BloodDonationsDGV.ColumnHeadersHeight = 40;
+            this.BloodDonationsDGV.ColumnHeadersHeight = 35;
             this.BloodDonationsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.BloodDonationsDGV.ColumnHeadersVisible = false;
             this.BloodDonationsDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -128,6 +128,7 @@
             this.BloodDonationsDGV.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.BloodDonationsDGV.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
             this.BloodDonationsDGV.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.BloodDonationsDGV.RowTemplate.Height = 35;
             this.BloodDonationsDGV.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.BloodDonationsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.BloodDonationsDGV.Size = new System.Drawing.Size(294, 297);
