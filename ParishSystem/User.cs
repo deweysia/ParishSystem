@@ -16,11 +16,10 @@ namespace ParishSystem
 
     public enum UserPrivileges
     {
-        None = 0,
         Supervisor = 1,
         Treasurer = 2,
         Secretary = 3,
-        SuperUser = 4
+        Admin = 4
     }
 
     public class User
@@ -82,11 +81,11 @@ namespace ParishSystem
 
         public static User getCurrentUser()
         {
-            if(_user == null)
+            if (_user == null)
             {
-                _user = new User(-1, null, null, null, null, null, null, UserStatus.Active, -1, UserPrivileges.None);
+                _user = new User(-1, null, null, null, null, null, null, UserStatus.Active, -1, UserPrivileges.Admin);
             }
-                
+
             return _user;
         }
 

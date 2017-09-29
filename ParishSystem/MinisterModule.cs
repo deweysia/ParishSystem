@@ -68,7 +68,7 @@ namespace ParishSystem
 
         private void dgvMinister_VisibleChanged(object sender, EventArgs e)
         {
-            loadMinisters();
+            //loadMinisters();
         }
     }
 }

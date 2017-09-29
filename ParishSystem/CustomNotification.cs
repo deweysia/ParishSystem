@@ -222,6 +222,10 @@ namespace ParishSystem
             NoMinisterSelected = new State("Please assign a minister to the appointment", NotificationType.warning),
             SacramentEditSuccess = new State("Successfully updated sacrament profile", NotificationType.success),
             SacramentEditFail = new State("Failed to update sacrament profile", NotificationType.error),
-            NegativePrice = new State("Price cannot be zero", NotificationType.warning);
+            NegativePrice = new State("Price cannot be zero", NotificationType.warning),
+            UserUpdateSuccess = new State("User profile has successfully updated", NotificationType.success),
+            UserUpdateFail = new State("User profile has failed to update", NotificationType.error),
+            UserPasswordResetSuccess = new State("User password has successfully reset", NotificationType.success),
+            UserPasswordResetFail = new State("User password has failed to reset", NotificationType.error);
     }
 }

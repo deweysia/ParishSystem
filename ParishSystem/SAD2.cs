@@ -93,6 +93,12 @@ namespace ParishSystem
             modules.Add(CabinetModule.ReceiptReports, new CashReport_Module(1, 1));
             modules.Add(CabinetModule.DisbursementReports, new CashReport_Module(2, 1));
             modules.Add(CabinetModule.Employee, new EmployeeModule());
+
+
+            foreach(Form f in modules.Values)
+            {
+                f.Owner = this;
+            }
             
             
         }
@@ -337,7 +343,7 @@ namespace ParishSystem
         {
             if (MessageDialog.Show("Are you sure you wish to log out?", MessageDialogButtons.YesNo, MessageDialogIcon.Question) == DialogResult.Yes)
             {
-                this.Close();
+                this.Hide();
             }
         }
         private void closeAllSubMenu()
@@ -487,7 +493,7 @@ namespace ParishSystem
             CustomMessage msg = new CustomMessage();
             if (msg.Show("Are you sure you want to log out?", MessageDialogButtons.YesNo, MessageDialogIcon.Question)==DialogResult.Yes)
             {
-                this.Close();
+                this.Hide();
             }
         }
 
@@ -521,6 +527,14 @@ namespace ParishSystem
             f.Show();
         }
 
-
+        private void SAD2_VisibleChanged(object sender, EventArgs e)
+        {
+            if (!this.Visible)
+            {
+                LoginForm f = new LoginForm();
+                f.Show();
+            }
+                
+        }
     }
 }

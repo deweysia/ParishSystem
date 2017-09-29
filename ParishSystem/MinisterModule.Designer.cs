@@ -50,6 +50,7 @@
             // 
             this.flpEditDeleteMinister.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.flpEditDeleteMinister.Controls.Add(this.btnEdit);
+            this.flpEditDeleteMinister.Enabled = false;
             this.flpEditDeleteMinister.Location = new System.Drawing.Point(218, 584);
             this.flpEditDeleteMinister.Name = "flpEditDeleteMinister";
             this.flpEditDeleteMinister.Size = new System.Drawing.Size(182, 44);
