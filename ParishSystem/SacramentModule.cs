@@ -378,6 +378,8 @@ namespace ParishSystem
 
         private void btnEditBap_Click(object sender, EventArgs e)
         {
+            
+
             DataGridViewRow dgvr = dgvBaptism.SelectedRows[0];
             DataRow dr = ((DataRowView)dgvr.DataBoundItem).Row;
             editSacrament(SacramentType.Baptism, dr);
@@ -386,6 +388,11 @@ namespace ParishSystem
 
         private void editSacrament(SacramentType sacrament, DataRow dr)
         {
+            User user = User.getCurrentUser();
+            if(user.userPrivilegeLevel == UserPrivileges.Supervisor)
+            if (AdminCredentialDialog.Show() != DialogResult.Yes)
+                return;
+
             SacramentForm f = new SacramentForm(OperationType.Edit, sacrament, dr);
             DialogResult result = f.ShowDialog();
 

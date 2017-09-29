@@ -515,6 +515,12 @@ namespace ParishSystem
 
         }
 
-        
+        private void SAD2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LoginForm f = new LoginForm();
+            f.Show();
+        }
+
+
     }
 }

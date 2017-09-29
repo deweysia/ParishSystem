@@ -80,7 +80,7 @@ namespace ParishSystem
             DateTime birthDate = birthdate_dtp.Value;
 
             int itemTypeID = int.Parse(sacramentItem.Rows[0]["itemTypeID"].ToString());
-            double price = Convert.ToDouble(nupPrice.Value);
+            double price = cbMakeDonation.Checked ? 0 : Convert.ToDouble(nupPrice.Value);
 
             bool success = true;
             int profileID = dh.getGeneralProfileID(fn, mn, ln, suffix, gender, birthDate);
@@ -190,7 +190,12 @@ namespace ParishSystem
             if (nupPrice.Text.Length == 0)
                 nupPrice.Text = "0";
             //MessageBox.Show("ENTERED " + nupPrice.Text.Length);
-        }   
+        }
+
+        private void cbMakeDonation_CheckedChanged(object sender, EventArgs e)
+        {
+            nupPrice.Enabled = !cbMakeDonation.Checked;
+        }
     }
 
     

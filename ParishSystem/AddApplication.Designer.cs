@@ -49,6 +49,7 @@
             this.txtRemarks = new MetroFramework.Controls.MetroTextBox();
             this.btnApply = new System.Windows.Forms.Button();
             this.nupPrice = new ParishSystem.HiddenNumericUpDown();
+            this.cbMakeDonation = new MetroFramework.Controls.MetroCheckBox();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupPrice)).BeginInit();
@@ -410,12 +411,24 @@
             this.nupPrice.DecimalPlaces = 2;
             this.nupPrice.Location = new System.Drawing.Point(8, 230);
             this.nupPrice.Name = "nupPrice";
-            this.nupPrice.Size = new System.Drawing.Size(120, 20);
+            this.nupPrice.ReadOnly = true;
+            this.nupPrice.Size = new System.Drawing.Size(141, 20);
             this.nupPrice.TabIndex = 8;
             this.nupPrice.ThousandsSeparator = true;
             this.nupPrice.ValueChanged += new System.EventHandler(this.nupPrice_ValueChanged);
             this.nupPrice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nupPrice_KeyDown);
             this.nupPrice.Leave += new System.EventHandler(this.nupPrice_Leave);
+            // 
+            // cbMakeDonation
+            // 
+            this.cbMakeDonation.AutoSize = true;
+            this.cbMakeDonation.Location = new System.Drawing.Point(40, 214);
+            this.cbMakeDonation.Name = "cbMakeDonation";
+            this.cbMakeDonation.Size = new System.Drawing.Size(109, 15);
+            this.cbMakeDonation.TabIndex = 45;
+            this.cbMakeDonation.Text = "Free Application";
+            this.cbMakeDonation.UseSelectable = true;
+            this.cbMakeDonation.CheckedChanged += new System.EventHandler(this.cbMakeDonation_CheckedChanged);
             // 
             // AddApplication
             // 
@@ -424,6 +437,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(332, 373);
+            this.Controls.Add(this.cbMakeDonation);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.txtRemarks);
             this.Controls.Add(this.nupPrice);
@@ -481,5 +495,6 @@
         private HiddenNumericUpDown nupPrice;
         private MetroFramework.Controls.MetroTextBox txtRemarks;
         private System.Windows.Forms.Button btnApply;
+        private MetroFramework.Controls.MetroCheckBox cbMakeDonation;
     }
 }

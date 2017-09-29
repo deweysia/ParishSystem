@@ -13,11 +13,28 @@ namespace ParishSystem
     public partial class AuditModule : Form
     {
         private DataHandler dh = DataHandler.getDataHandler();
+        private string searchString = "";
+        private string sourceSearchString = "";
+        private string dateSearchString = "";
+        private string userSearchString = "";
+
         public AuditModule()
         {
             InitializeComponent();
             dgvAudit.AutoGenerateColumns = false;
             loadAuditTypes();
+        }
+
+        private void loadAuditTypes()
+        {
+            DataTable dt = dh.getAuditTypes();
+            cmbFilter.Items.Add("All Sources");
+            foreach (DataRow row in dt.Rows)
+            {
+                cmbFilter.Items.Add(row["tableName"].ToString());
+            }
+
+            cmbFilter.SelectedIndex = 0;
         }
 
         private void dgvBaptism_VisibleChanged(object sender, EventArgs e)
@@ -26,15 +43,7 @@ namespace ParishSystem
             dgvAudit.DataSource = dt;
         }
 
-        private void loadAuditTypes()
-        {
-            DataTable dt = dh.getAuditTypes();
-
-            foreach(DataRow row in dt.Rows)
-            {
-                cmbFilter.Items.Add(row.ToString());
-            }
-        }
+        
 
         private void dgvAudit_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -55,17 +64,40 @@ namespace ParishSystem
             }
         }
 
+        private string getSearchString()
+        {
+            string search = dateSearchString;
+            if (search.Length != 0 && sourceSearchString.Length != 0)
+                search += " AND ";
+            search += sourceSearchString;
+
+            if (search.Length != 0 && userSearchString.Length != 0)
+                search += " AND ";
+            search += userSearchString;
+
+            return search;
+
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             DataTable dt = dgvAudit.DataSource as DataTable;
-            dt.DefaultView.RowFilter = string.Format("auditDate >= #{0}# AND auditDate <= #{1}#", dtpFrom.Value.ToString("yyyy-MM-dd"), dtpTo.Value.ToString("yyyy-MM-dd"));
+            dateSearchString = string.Format("auditDate >= #{0}# AND auditDate <= #{1}#", dtpFrom.Value.ToString("yyyy-MM-dd"), dtpTo.Value.ToString("yyyy-MM-dd"));
+            userSearchString = string.Format("username LIKE '%{0}%'", txtUser.Text.Trim());
+            dt.DefaultView.RowFilter = getSearchString();
+
 
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
             DataTable dt = dgvAudit.DataSource as DataTable;
+            sourceSearchString = "";
+            userSearchString = "";
+            dateSearchString = "";
+
             dt.DefaultView.RowFilter = "";
+            cmbFilter.SelectedIndex = 0;
         }
 
         private void dtpFrom_ValueChanged(object sender, EventArgs e)
@@ -78,6 +110,17 @@ namespace ParishSystem
         {
             if (dtpFrom.Value.Date > dtpTo.Value.Date)
                 dtpFrom.Value = dtpTo.Value.Date;
+        }
+
+        private void cmbFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show(cmbFilter.SelectedItem.ToString());
+            DataTable dt = dgvAudit.DataSource as DataTable;
+            if (cmbFilter.SelectedIndex == 0)
+                sourceSearchString = "";
+            else
+                sourceSearchString = string.Format("tableName = '{0}'", cmbFilter.SelectedItem.ToString());
+            dt.DefaultView.RowFilter = getSearchString();
         }
     }
 }

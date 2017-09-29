@@ -4580,7 +4580,7 @@ namespace ParishSystem
 
         public DataTable getAuditLogs()
         {
-            string q = "SELECT auditLogID, userID, tableName, operation, auditDate, CONCAT_WS(' ', firstName, midName, lastName, suffix) AS name, details, oldRecord, newRecord FROM AuditLog NATURAL JOIN User ORDER BY AuditDate DESC";
+            string q = "SELECT auditLogID, userID, tableName, operation, auditDate, CONCAT_WS(' ', firstName, midName, lastName, suffix) AS name, details, oldRecord, newRecord, userName FROM AuditLog NATURAL JOIN User ORDER BY AuditDate DESC";
             DataTable dt = ExecuteQuery(q);
             return dt;
         }

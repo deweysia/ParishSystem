@@ -128,14 +128,14 @@
             this.ministrytype,
             this.status,
             this.licensenumber});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMinister.DefaultCellStyle = dataGridViewCellStyle3;
+            //dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            //dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gainsboro;
+            //dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            //dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            //dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            //dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            //dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            //this.dgvMinister.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMinister.EnableHeadersVisualStyles = false;
             this.dgvMinister.Location = new System.Drawing.Point(42, 58);
             this.dgvMinister.MultiSelect = false;
