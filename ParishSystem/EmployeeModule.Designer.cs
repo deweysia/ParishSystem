@@ -29,13 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.EmployeeDGV = new System.Windows.Forms.DataGridView();
+            this.userID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.suffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.privileges = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel = new System.Windows.Forms.Panel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.cmbEmployeeType = new MetroFramework.Controls.MetroComboBox();
             this.txtLastName = new MetroFramework.Controls.MetroTextBox();
             this.txtSuffix = new MetroFramework.Controls.MetroTextBox();
             this.txtMI = new MetroFramework.Controls.MetroTextBox();
@@ -48,17 +59,6 @@
             this.txtAdd = new System.Windows.Forms.Button();
             this.active_checkbox = new System.Windows.Forms.CheckBox();
             this.tooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.userID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.midName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.suffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.privileges = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmbEmployeeType = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeDGV)).BeginInit();
             this.panel.SuspendLayout();
             this.SuspendLayout();
@@ -70,8 +70,8 @@
             this.EmployeeDGV.AllowUserToDeleteRows = false;
             this.EmployeeDGV.AllowUserToOrderColumns = true;
             this.EmployeeDGV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.EmployeeDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.EmployeeDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.EmployeeDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -80,14 +80,14 @@
             this.EmployeeDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EmployeeDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.EmployeeDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.EmployeeDGV.ColumnHeadersHeight = 40;
             this.EmployeeDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.EmployeeDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -100,35 +100,35 @@
             this.username,
             this.status,
             this.privileges});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EmployeeDGV.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EmployeeDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.EmployeeDGV.EnableHeadersVisualStyles = false;
             this.EmployeeDGV.GridColor = System.Drawing.Color.White;
-            this.EmployeeDGV.Location = new System.Drawing.Point(12, 50);
+            this.EmployeeDGV.Location = new System.Drawing.Point(30, 50);
             this.EmployeeDGV.MultiSelect = false;
             this.EmployeeDGV.Name = "EmployeeDGV";
             this.EmployeeDGV.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Magenta;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Magenta;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.EmployeeDGV.RowHeadersVisible = false;
             this.EmployeeDGV.RowHeadersWidth = 50;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.DarkRed;
-            this.EmployeeDGV.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.DarkRed;
+            this.EmployeeDGV.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.EmployeeDGV.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.EmployeeDGV.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.EmployeeDGV.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
@@ -141,6 +141,74 @@
             this.EmployeeDGV.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmployeeDGV_CellContentDoubleClick);
             this.EmployeeDGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.EmployeeDGV_CellFormatting);
             this.EmployeeDGV.VisibleChanged += new System.EventHandler(this.EmployeeDGV_VisibleChanged);
+            // 
+            // userID
+            // 
+            this.userID.DataPropertyName = "userID";
+            this.userID.HeaderText = "userID";
+            this.userID.Name = "userID";
+            this.userID.ReadOnly = true;
+            this.userID.Visible = false;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "Name";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // firstName
+            // 
+            this.firstName.DataPropertyName = "firstName";
+            this.firstName.HeaderText = "firstName";
+            this.firstName.Name = "firstName";
+            this.firstName.ReadOnly = true;
+            this.firstName.Visible = false;
+            // 
+            // midName
+            // 
+            this.midName.DataPropertyName = "midName";
+            this.midName.HeaderText = "midName";
+            this.midName.Name = "midName";
+            this.midName.ReadOnly = true;
+            this.midName.Visible = false;
+            // 
+            // lastName
+            // 
+            this.lastName.DataPropertyName = "lastName";
+            this.lastName.HeaderText = "lastName";
+            this.lastName.Name = "lastName";
+            this.lastName.ReadOnly = true;
+            this.lastName.Visible = false;
+            // 
+            // suffix
+            // 
+            this.suffix.DataPropertyName = "suffix";
+            this.suffix.HeaderText = "suffix";
+            this.suffix.Name = "suffix";
+            this.suffix.ReadOnly = true;
+            this.suffix.Visible = false;
+            // 
+            // username
+            // 
+            this.username.DataPropertyName = "username";
+            this.username.HeaderText = "Username";
+            this.username.Name = "username";
+            this.username.ReadOnly = true;
+            // 
+            // status
+            // 
+            this.status.DataPropertyName = "status";
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            // 
+            // privileges
+            // 
+            this.privileges.DataPropertyName = "privileges";
+            this.privileges.HeaderText = "Privilege";
+            this.privileges.Name = "privileges";
+            this.privileges.ReadOnly = true;
             // 
             // panel
             // 
@@ -159,10 +227,31 @@
             this.panel.Controls.Add(this.txtAdd);
             this.panel.Controls.Add(this.active_checkbox);
             this.panel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel.Location = new System.Drawing.Point(517, 68);
+            this.panel.Location = new System.Drawing.Point(535, 69);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(406, 492);
             this.panel.TabIndex = 5;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(165, 41);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(120, 25);
+            this.metroLabel1.TabIndex = 55;
+            this.metroLabel1.Text = "USER PROFILE";
+            // 
+            // cmbEmployeeType
+            // 
+            this.cmbEmployeeType.FormattingEnabled = true;
+            this.cmbEmployeeType.ItemHeight = 23;
+            this.cmbEmployeeType.Location = new System.Drawing.Point(105, 244);
+            this.cmbEmployeeType.Name = "cmbEmployeeType";
+            this.cmbEmployeeType.Size = new System.Drawing.Size(204, 29);
+            this.cmbEmployeeType.TabIndex = 51;
+            this.cmbEmployeeType.UseSelectable = true;
+            this.cmbEmployeeType.SelectedIndexChanged += new System.EventHandler(this.cmbEmployeeType_SelectedIndexChanged);
             // 
             // txtLastName
             // 
@@ -269,7 +358,7 @@
             // 
             // 
             this.txtPassword.CustomButton.Image = null;
-            this.txtPassword.CustomButton.Location = new System.Drawing.Point(185, 1);
+            this.txtPassword.CustomButton.Location = new System.Drawing.Point(182, 1);
             this.txtPassword.CustomButton.Name = "";
             this.txtPassword.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -303,7 +392,7 @@
             // 
             // 
             this.txtUsername.CustomButton.Image = null;
-            this.txtUsername.CustomButton.Location = new System.Drawing.Point(185, 1);
+            this.txtUsername.CustomButton.Location = new System.Drawing.Point(182, 1);
             this.txtUsername.CustomButton.Name = "";
             this.txtUsername.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtUsername.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -390,7 +479,6 @@
             this.resetPassword_button.Text = "Reset";
             this.tooltip.SetToolTip(this.resetPassword_button, "Resets password of employee");
             this.resetPassword_button.UseVisualStyleBackColor = false;
-            this.resetPassword_button.Visible = false;
             this.resetPassword_button.Click += new System.EventHandler(this.resetPassword_button_Click);
             // 
             // txtClear
@@ -438,95 +526,6 @@
             this.active_checkbox.Text = "Active";
             this.active_checkbox.UseVisualStyleBackColor = true;
             // 
-            // userID
-            // 
-            this.userID.DataPropertyName = "userID";
-            this.userID.HeaderText = "userID";
-            this.userID.Name = "userID";
-            this.userID.ReadOnly = true;
-            this.userID.Visible = false;
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "Name";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // firstName
-            // 
-            this.firstName.DataPropertyName = "firstName";
-            this.firstName.HeaderText = "firstName";
-            this.firstName.Name = "firstName";
-            this.firstName.ReadOnly = true;
-            this.firstName.Visible = false;
-            // 
-            // midName
-            // 
-            this.midName.DataPropertyName = "midName";
-            this.midName.HeaderText = "midName";
-            this.midName.Name = "midName";
-            this.midName.ReadOnly = true;
-            this.midName.Visible = false;
-            // 
-            // lastName
-            // 
-            this.lastName.DataPropertyName = "lastName";
-            this.lastName.HeaderText = "lastName";
-            this.lastName.Name = "lastName";
-            this.lastName.ReadOnly = true;
-            this.lastName.Visible = false;
-            // 
-            // suffix
-            // 
-            this.suffix.DataPropertyName = "suffix";
-            this.suffix.HeaderText = "suffix";
-            this.suffix.Name = "suffix";
-            this.suffix.ReadOnly = true;
-            this.suffix.Visible = false;
-            // 
-            // username
-            // 
-            this.username.DataPropertyName = "username";
-            this.username.HeaderText = "Username";
-            this.username.Name = "username";
-            this.username.ReadOnly = true;
-            // 
-            // status
-            // 
-            this.status.DataPropertyName = "status";
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            // 
-            // privileges
-            // 
-            this.privileges.DataPropertyName = "privileges";
-            this.privileges.HeaderText = "Privilege";
-            this.privileges.Name = "privileges";
-            this.privileges.ReadOnly = true;
-            // 
-            // cmbEmployeeType
-            // 
-            this.cmbEmployeeType.FormattingEnabled = true;
-            this.cmbEmployeeType.ItemHeight = 23;
-            this.cmbEmployeeType.Location = new System.Drawing.Point(105, 244);
-            this.cmbEmployeeType.Name = "cmbEmployeeType";
-            this.cmbEmployeeType.Size = new System.Drawing.Size(204, 29);
-            this.cmbEmployeeType.TabIndex = 51;
-            this.cmbEmployeeType.UseSelectable = true;
-            this.cmbEmployeeType.SelectedIndexChanged += new System.EventHandler(this.cmbEmployeeType_SelectedIndexChanged);
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(165, 41);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(94, 19);
-            this.metroLabel1.TabIndex = 55;
-            this.metroLabel1.Text = "USER PROFILE";
-            // 
             // EmployeeModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -539,6 +538,7 @@
             this.Name = "EmployeeModule";
             this.Text = "EmployeeModule";
             this.Load += new System.EventHandler(this.EmployeeModule_Load);
+            this.VisibleChanged += new System.EventHandler(this.EmployeeModule_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeDGV)).EndInit();
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();

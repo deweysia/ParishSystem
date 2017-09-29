@@ -178,7 +178,7 @@ namespace ParishSystem
             string midName = txtMI.Text.Trim();
             string suffix = txtSuffix.Text.Trim();
             string lastName = txtLastName.Text.Trim();
-
+           
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text;
             bool namesFilled = firstName.Length != 0 && midName.Length != 0 && lastName.Length != 0;
@@ -217,6 +217,11 @@ namespace ParishSystem
             {
                 e.Value = ((UserPrivileges)Convert.ToInt32(e.Value)).ToString();
             }
+        }
+
+        private void EmployeeModule_VisibleChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

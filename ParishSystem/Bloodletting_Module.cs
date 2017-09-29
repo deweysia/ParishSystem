@@ -147,8 +147,8 @@ namespace ParishSystem
 
         private void Bloodletting_Module_Load(object sender, EventArgs e)
         {
-            refresh();
-            label.Text = (Mode == 1 ? "Blood Donor" : "Blood Donation Event");
+            //refresh();
+            //label.Text = (Mode == 1 ? "Blood Donor" : "Blood Donation Event");
         }
 
         private void search_button_blood_TextChanged(object sender, EventArgs e)
@@ -174,6 +174,18 @@ namespace ParishSystem
             if (e.KeyData == Keys.Enter)
             {
                 OpenEvent();
+            }
+        }
+
+        private void blooddonor_panel_VisibleChanged(object sender, EventArgs e)
+        {
+            if (Visible)
+            {
+                refresh();
+                search_textbox_blood.Clear();
+                search_button_blood.Image = ParishSystem.Properties.Resources.icons8_Search_Filled_20;
+                search_button_blood.Tag = "s";
+                label.Text = (Mode == 1 ? "Blood Donor" : "Blood Donation Event");
             }
         }
     }

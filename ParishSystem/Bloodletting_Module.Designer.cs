@@ -58,6 +58,7 @@
             this.blooddonor_panel.Name = "blooddonor_panel";
             this.blooddonor_panel.Size = new System.Drawing.Size(943, 669);
             this.blooddonor_panel.TabIndex = 68;
+            this.blooddonor_panel.VisibleChanged += new System.EventHandler(this.blooddonor_panel_VisibleChanged);
             // 
             // panel1
             // 
@@ -177,7 +178,6 @@
             this.bloodletting_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.bloodletting_dgv.RowHeadersVisible = false;
             this.bloodletting_dgv.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.bloodletting_dgv.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Empty;
             this.bloodletting_dgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bloodletting_dgv.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.bloodletting_dgv.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;

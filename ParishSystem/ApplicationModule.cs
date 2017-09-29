@@ -468,6 +468,7 @@ namespace ParishSystem
             DataGridView dgv = getDataGridView(t);
             ComboBox filter = getFilter(t);
             
+            
             DataTable dt = dgv.DataSource as DataTable;
 
             if (filter.SelectedIndex == 0)

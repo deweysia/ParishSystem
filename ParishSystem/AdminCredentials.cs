@@ -43,6 +43,22 @@ namespace ParishSystem
             Draggable draggable = new Draggable(this);
             draggable.makeDraggable(controlBar_panel);
         }
+
+        private void username_textbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                check_button.PerformClick();
+            }
+        }
+
+        private void password_textbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                check_button.PerformClick();
+            }
+        }
     }
 
     public static class AdminCredentialDialog

@@ -674,6 +674,13 @@
     <None Include="Resources\panel1.BackgroundImage3.png" />
     <None Include="Resources\confirmationFormBG.png" />
     <None Include="Resources\icons8-Church-35.png" />
+    <None Include="Resources\icons8-User-40.png" />
+    <None Include="Resources\icons8-Pulse-40.png" />
+    <None Include="Resources\icons8-Money-40.png" />
+    <None Include="Resources\icons8-Calendar-40.png" />
+    <None Include="Resources\icons8-Open Book-40.png" />
+    <None Include="Resources\icons8-Checked Filled-40.png" />
+    <None Include="Resources\icons8-Approval Filled-40.png" />
     <Content Include="Tools\SQL_Writer.jar" />
     <None Include="Resources\messageBox_cancel.png" />
     <None Include="Resources\messageBox_success.png" />

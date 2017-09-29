@@ -46,7 +46,6 @@
             this.application_button_menu = new System.Windows.Forms.Button();
             this.profile_menu_button = new System.Windows.Forms.Button();
             this.sacrament_button_menu = new System.Windows.Forms.Button();
-            this.scheduling_button_menu = new System.Windows.Forms.Button();
             this.sacrament_cabinet = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -69,6 +68,9 @@
             this.bloodletting_cabinet = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.schedule_cabinet_panel = new System.Windows.Forms.Panel();
+            this.schedule_cabinet = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.admin_cabinet_panel = new System.Windows.Forms.Panel();
             this.SacramentLog_menu_button = new System.Windows.Forms.Button();
             this.Employee_button_menu = new System.Windows.Forms.Button();
@@ -90,6 +92,7 @@
             this.cash_cabinet_panel.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.bloodletting_cabinet_panel.SuspendLayout();
+            this.schedule_cabinet_panel.SuspendLayout();
             this.admin_cabinet_panel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.Workspace_panel.SuspendLayout();
@@ -180,7 +183,7 @@
             this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Close.FlatAppearance.BorderSize = 0;
             this.btn_Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
             this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Close.Location = new System.Drawing.Point(99, 4);
             this.btn_Close.Margin = new System.Windows.Forms.Padding(4);
@@ -255,6 +258,7 @@
             this.menu_flowlayout.Controls.Add(this.sacrament_cabinet_panel);
             this.menu_flowlayout.Controls.Add(this.cash_cabinet_panel);
             this.menu_flowlayout.Controls.Add(this.bloodletting_cabinet_panel);
+            this.menu_flowlayout.Controls.Add(this.schedule_cabinet_panel);
             this.menu_flowlayout.Controls.Add(this.admin_cabinet_panel);
             this.menu_flowlayout.Location = new System.Drawing.Point(0, 51);
             this.menu_flowlayout.Margin = new System.Windows.Forms.Padding(0);
@@ -267,7 +271,6 @@
             this.sacrament_cabinet_panel.Controls.Add(this.application_button_menu);
             this.sacrament_cabinet_panel.Controls.Add(this.profile_menu_button);
             this.sacrament_cabinet_panel.Controls.Add(this.sacrament_button_menu);
-            this.sacrament_cabinet_panel.Controls.Add(this.scheduling_button_menu);
             this.sacrament_cabinet_panel.Controls.Add(this.sacrament_cabinet);
             this.sacrament_cabinet_panel.Controls.Add(this.label3);
             this.sacrament_cabinet_panel.Controls.Add(this.label4);
@@ -288,7 +291,7 @@
             this.application_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.application_button_menu.ForeColor = System.Drawing.Color.White;
             this.application_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.application_button_menu.Location = new System.Drawing.Point(0, 194);
+            this.application_button_menu.Location = new System.Drawing.Point(0, 145);
             this.application_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.application_button_menu.Name = "application_button_menu";
             this.application_button_menu.Size = new System.Drawing.Size(232, 45);
@@ -309,7 +312,7 @@
             this.profile_menu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profile_menu_button.ForeColor = System.Drawing.Color.White;
             this.profile_menu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.profile_menu_button.Location = new System.Drawing.Point(0, 148);
+            this.profile_menu_button.Location = new System.Drawing.Point(0, 99);
             this.profile_menu_button.Margin = new System.Windows.Forms.Padding(0);
             this.profile_menu_button.Name = "profile_menu_button";
             this.profile_menu_button.Size = new System.Drawing.Size(232, 45);
@@ -330,7 +333,7 @@
             this.sacrament_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sacrament_button_menu.ForeColor = System.Drawing.Color.White;
             this.sacrament_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sacrament_button_menu.Location = new System.Drawing.Point(0, 102);
+            this.sacrament_button_menu.Location = new System.Drawing.Point(0, 53);
             this.sacrament_button_menu.Margin = new System.Windows.Forms.Padding(0);
             this.sacrament_button_menu.Name = "sacrament_button_menu";
             this.sacrament_button_menu.Size = new System.Drawing.Size(232, 45);
@@ -342,30 +345,9 @@
             this.sacrament_button_menu.Click += new System.EventHandler(this.sacrament_button_menu_Click);
             this.sacrament_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_menu_MouseDown);
             // 
-            // scheduling_button_menu
-            // 
-            this.scheduling_button_menu.BackColor = System.Drawing.Color.Transparent;
-            this.scheduling_button_menu.FlatAppearance.BorderSize = 0;
-            this.scheduling_button_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.scheduling_button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.scheduling_button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scheduling_button_menu.ForeColor = System.Drawing.Color.White;
-            this.scheduling_button_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.scheduling_button_menu.Location = new System.Drawing.Point(0, 56);
-            this.scheduling_button_menu.Margin = new System.Windows.Forms.Padding(0);
-            this.scheduling_button_menu.Name = "scheduling_button_menu";
-            this.scheduling_button_menu.Size = new System.Drawing.Size(232, 45);
-            this.scheduling_button_menu.TabIndex = 44;
-            this.scheduling_button_menu.Text = "                   Scheduling";
-            this.scheduling_button_menu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.scheduling_button_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.scheduling_button_menu.UseVisualStyleBackColor = false;
-            this.scheduling_button_menu.Click += new System.EventHandler(this.scheduling_button_menu_Click);
-            this.scheduling_button_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_menu_MouseDown);
-            // 
             // sacrament_cabinet
             // 
-            this.sacrament_cabinet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sacrament_cabinet.BackgroundImage")));
+            this.sacrament_cabinet.BackgroundImage = global::ParishSystem.Properties.Resources.icons8_Open_Book_40;
             this.sacrament_cabinet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.sacrament_cabinet.FlatAppearance.BorderSize = 0;
             this.sacrament_cabinet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -383,7 +365,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(58, 19);
+            this.label3.Location = new System.Drawing.Point(58, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 20);
             this.label3.TabIndex = 54;
@@ -534,7 +516,7 @@
             // 
             // cash_cabinet
             // 
-            this.cash_cabinet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cash_cabinet.BackgroundImage")));
+            this.cash_cabinet.BackgroundImage = global::ParishSystem.Properties.Resources.icons8_Money_40;
             this.cash_cabinet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.cash_cabinet.FlatAppearance.BorderSize = 0;
             this.cash_cabinet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -553,7 +535,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(58, 19);
+            this.label1.Location = new System.Drawing.Point(58, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 20);
@@ -698,7 +680,7 @@
             // 
             // bloodletting_cabinet
             // 
-            this.bloodletting_cabinet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bloodletting_cabinet.BackgroundImage")));
+            this.bloodletting_cabinet.BackgroundImage = global::ParishSystem.Properties.Resources.icons8_Pulse_40;
             this.bloodletting_cabinet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.bloodletting_cabinet.FlatAppearance.BorderSize = 0;
             this.bloodletting_cabinet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -716,7 +698,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(58, 19);
+            this.label5.Location = new System.Drawing.Point(58, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 20);
             this.label5.TabIndex = 50;
@@ -735,6 +717,48 @@
             this.label6.Text = "________________________";
             this.label6.Click += new System.EventHandler(this.SubmenuOpen_Click);
             // 
+            // schedule_cabinet_panel
+            // 
+            this.schedule_cabinet_panel.Controls.Add(this.schedule_cabinet);
+            this.schedule_cabinet_panel.Controls.Add(this.label9);
+            this.schedule_cabinet_panel.Location = new System.Drawing.Point(0, 150);
+            this.schedule_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
+            this.schedule_cabinet_panel.Name = "schedule_cabinet_panel";
+            this.schedule_cabinet_panel.Size = new System.Drawing.Size(232, 50);
+            this.schedule_cabinet_panel.TabIndex = 56;
+            this.schedule_cabinet_panel.Click += new System.EventHandler(this.scheduling_button_menu_Click);
+            this.schedule_cabinet_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.schedule_cabinet_panel_MouseUp);
+            // 
+            // schedule_cabinet
+            // 
+            this.schedule_cabinet.BackgroundImage = global::ParishSystem.Properties.Resources.icons8_Calendar_40;
+            this.schedule_cabinet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.schedule_cabinet.FlatAppearance.BorderSize = 0;
+            this.schedule_cabinet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.schedule_cabinet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.schedule_cabinet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.schedule_cabinet.Location = new System.Drawing.Point(3, 4);
+            this.schedule_cabinet.Name = "schedule_cabinet";
+            this.schedule_cabinet.Size = new System.Drawing.Size(43, 41);
+            this.schedule_cabinet.TabIndex = 56;
+            this.schedule_cabinet.UseVisualStyleBackColor = true;
+            this.schedule_cabinet.Click += new System.EventHandler(this.scheduling_button_menu_Click);
+            this.schedule_cabinet.MouseDown += new System.Windows.Forms.MouseEventHandler(this.schedule_cabinet_panel_MouseUp);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(55, 15);
+            this.label9.Margin = new System.Windows.Forms.Padding(0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 20);
+            this.label9.TabIndex = 57;
+            this.label9.Text = "Scheduling";
+            this.label9.Click += new System.EventHandler(this.scheduling_button_menu_Click);
+            this.label9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.schedule_cabinet_panel_MouseUp);
+            // 
             // admin_cabinet_panel
             // 
             this.admin_cabinet_panel.Controls.Add(this.SacramentLog_menu_button);
@@ -743,7 +767,7 @@
             this.admin_cabinet_panel.Controls.Add(this.admin_cabinet);
             this.admin_cabinet_panel.Controls.Add(this.label7);
             this.admin_cabinet_panel.Controls.Add(this.label8);
-            this.admin_cabinet_panel.Location = new System.Drawing.Point(0, 150);
+            this.admin_cabinet_panel.Location = new System.Drawing.Point(0, 200);
             this.admin_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.admin_cabinet_panel.Name = "admin_cabinet_panel";
             this.admin_cabinet_panel.Size = new System.Drawing.Size(232, 50);
@@ -815,7 +839,7 @@
             // 
             // admin_cabinet
             // 
-            this.admin_cabinet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("admin_cabinet.BackgroundImage")));
+            this.admin_cabinet.BackgroundImage = global::ParishSystem.Properties.Resources.icons8_User_40;
             this.admin_cabinet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.admin_cabinet.FlatAppearance.BorderSize = 0;
             this.admin_cabinet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -833,7 +857,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(58, 19);
+            this.label7.Location = new System.Drawing.Point(58, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 20);
             this.label7.TabIndex = 50;
@@ -932,6 +956,8 @@
             this.flowLayoutPanel2.ResumeLayout(false);
             this.bloodletting_cabinet_panel.ResumeLayout(false);
             this.bloodletting_cabinet_panel.PerformLayout();
+            this.schedule_cabinet_panel.ResumeLayout(false);
+            this.schedule_cabinet_panel.PerformLayout();
             this.admin_cabinet_panel.ResumeLayout(false);
             this.admin_cabinet_panel.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -956,7 +982,6 @@
         private System.Windows.Forms.Panel Menu_panel;
         private System.Windows.Forms.Button profile_menu_button;
         private System.Windows.Forms.Button CRB_button_menu;
-        private System.Windows.Forms.Button scheduling_button_menu;
         private System.Windows.Forms.Button CDB_button_menu;
         private System.Windows.Forms.Button sacrament_button_menu;
         private System.Windows.Forms.FlowLayoutPanel menu_flowlayout;
@@ -992,5 +1017,8 @@
         private System.Windows.Forms.Button btn_min;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button SacramentLog_menu_button;
+        private System.Windows.Forms.Panel schedule_cabinet_panel;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button schedule_cabinet;
     }
 }
