@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminCredentials));
             this.username_textbox = new MetroFramework.Controls.MetroTextBox();
             this.password_textbox = new MetroFramework.Controls.MetroTextBox();
             this.controlBar_panel = new System.Windows.Forms.Panel();
@@ -65,12 +66,13 @@
             this.username_textbox.SelectionStart = 0;
             this.username_textbox.ShortcutsEnabled = true;
             this.username_textbox.Size = new System.Drawing.Size(258, 23);
-            this.username_textbox.TabIndex = 0;
+            this.username_textbox.TabIndex = 1;
             this.username_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.username_textbox.UseSelectable = true;
             this.username_textbox.WaterMark = "Username";
             this.username_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.username_textbox.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username_textbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.username_textbox_KeyDown);
             // 
             // password_textbox
             // 
@@ -100,12 +102,13 @@
             this.password_textbox.SelectionStart = 0;
             this.password_textbox.ShortcutsEnabled = true;
             this.password_textbox.Size = new System.Drawing.Size(258, 23);
-            this.password_textbox.TabIndex = 0;
+            this.password_textbox.TabIndex = 2;
             this.password_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.password_textbox.UseSelectable = true;
             this.password_textbox.WaterMark = "Password";
             this.password_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.password_textbox.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password_textbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.password_textbox_KeyDown);
             // 
             // controlBar_panel
             // 
@@ -140,7 +143,7 @@
             this.close_button.Location = new System.Drawing.Point(285, 5);
             this.close_button.Name = "close_button";
             this.close_button.Size = new System.Drawing.Size(21, 20);
-            this.close_button.TabIndex = 0;
+            this.close_button.TabIndex = 4;
             this.close_button.UseVisualStyleBackColor = true;
             this.close_button.Click += new System.EventHandler(this.close_button_Click);
             // 
@@ -149,12 +152,11 @@
             this.check_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.check_button.FlatAppearance.BorderSize = 0;
             this.check_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.check_button.Image = global::ParishSystem.Properties.Resources.icons8_Delete_20;
-            this.check_button.Location = new System.Drawing.Point(227, 136);
+            this.check_button.Image = global::ParishSystem.Properties.Resources.icons8_Approval_Filled_40;
+            this.check_button.Location = new System.Drawing.Point(237, 118);
             this.check_button.Name = "check_button";
-            this.check_button.Size = new System.Drawing.Size(58, 20);
-            this.check_button.TabIndex = 15;
-            this.check_button.Text = "Check";
+            this.check_button.Size = new System.Drawing.Size(48, 42);
+            this.check_button.TabIndex = 3;
             this.check_button.UseVisualStyleBackColor = true;
             this.check_button.Click += new System.EventHandler(this.check_button_Click);
             // 
@@ -169,6 +171,7 @@
             this.Controls.Add(this.password_textbox);
             this.Controls.Add(this.username_textbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminCredentials";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminCredentials";

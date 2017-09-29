@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationPayment));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -127,7 +128,7 @@
             this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(112, 3);
+            this.lblName.Location = new System.Drawing.Point(111, 3);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(39, 15);
             this.lblName.TabIndex = 1;
@@ -138,7 +139,7 @@
             this.lblPaymentFor.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblPaymentFor.AutoSize = true;
             this.lblPaymentFor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaymentFor.Location = new System.Drawing.Point(112, 24);
+            this.lblPaymentFor.Location = new System.Drawing.Point(111, 24);
             this.lblPaymentFor.Name = "lblPaymentFor";
             this.lblPaymentFor.Size = new System.Drawing.Size(82, 15);
             this.lblPaymentFor.TabIndex = 0;
@@ -149,7 +150,7 @@
             this.lblOR.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblOR.AutoSize = true;
             this.lblOR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOR.Location = new System.Drawing.Point(112, 45);
+            this.lblOR.Location = new System.Drawing.Point(111, 45);
             this.lblOR.Name = "lblOR";
             this.lblOR.Size = new System.Drawing.Size(70, 15);
             this.lblOR.TabIndex = 1;
@@ -173,7 +174,7 @@
             this.lblDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(112, 66);
+            this.lblDate.Location = new System.Drawing.Point(111, 66);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(31, 15);
             this.lblDate.TabIndex = 1;
@@ -448,6 +449,7 @@
             this.Controls.Add(this.dgvPaymentHistory);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ApplicationPayment";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

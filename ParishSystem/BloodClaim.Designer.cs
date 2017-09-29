@@ -428,6 +428,7 @@
             this.Name = "BloodClaim";
             this.Text = "BloodClaim";
             this.Load += new System.EventHandler(this.BloodClaim_Load);
+            this.VisibleChanged += new System.EventHandler(this.BloodClaim_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.BloodDonationsDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

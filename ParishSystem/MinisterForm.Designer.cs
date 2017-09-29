@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MinisterForm));
             this.dtpBirthdate = new MetroFramework.Controls.MetroDateTime();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,7 +56,7 @@
             this.dtpBirthdate.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpBirthdate.Name = "dtpBirthdate";
             this.dtpBirthdate.Size = new System.Drawing.Size(233, 29);
-            this.dtpBirthdate.TabIndex = 17;
+            this.dtpBirthdate.TabIndex = 5;
             // 
             // label1
             // 
@@ -94,7 +95,7 @@
             this.cmbStatus.Location = new System.Drawing.Point(104, 147);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(177, 29);
-            this.cmbStatus.TabIndex = 19;
+            this.cmbStatus.TabIndex = 7;
             this.cmbStatus.UseSelectable = true;
             // 
             // label5
@@ -163,7 +164,7 @@
             this.txtLN.SelectionStart = 0;
             this.txtLN.ShortcutsEnabled = true;
             this.txtLN.Size = new System.Drawing.Size(110, 23);
-            this.txtLN.TabIndex = 15;
+            this.txtLN.TabIndex = 13;
             this.txtLN.UseSelectable = true;
             this.txtLN.WaterMark = "Last Name";
             this.txtLN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -196,7 +197,7 @@
             this.txtSuffix.SelectionStart = 0;
             this.txtSuffix.ShortcutsEnabled = true;
             this.txtSuffix.Size = new System.Drawing.Size(39, 23);
-            this.txtSuffix.TabIndex = 16;
+            this.txtSuffix.TabIndex = 13;
             this.txtSuffix.UseSelectable = true;
             this.txtSuffix.WaterMark = "Suffix";
             this.txtSuffix.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -228,7 +229,7 @@
             this.txtMI.SelectionStart = 0;
             this.txtMI.ShortcutsEnabled = true;
             this.txtMI.Size = new System.Drawing.Size(39, 23);
-            this.txtMI.TabIndex = 14;
+            this.txtMI.TabIndex = 13;
             this.txtMI.UseSelectable = true;
             this.txtMI.WaterMark = "M.I.";
             this.txtMI.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -278,7 +279,7 @@
             this.cmbMinistryType.Location = new System.Drawing.Point(104, 112);
             this.cmbMinistryType.Name = "cmbMinistryType";
             this.cmbMinistryType.Size = new System.Drawing.Size(177, 29);
-            this.cmbMinistryType.TabIndex = 18;
+            this.cmbMinistryType.TabIndex = 11;
             this.cmbMinistryType.UseSelectable = true;
             // 
             // controlBar_panel
@@ -316,7 +317,6 @@
             this.close_button.Name = "close_button";
             this.close_button.Size = new System.Drawing.Size(40, 33);
             this.close_button.TabIndex = 0;
-            this.close_button.TabStop = false;
             this.close_button.UseVisualStyleBackColor = false;
             this.close_button.Click += new System.EventHandler(this.close_button_Click);
             // 
@@ -332,14 +332,13 @@
             this.addBtn.Location = new System.Drawing.Point(164, 261);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(128, 35);
-            this.addBtn.TabIndex = 20;
+            this.addBtn.TabIndex = 58;
             this.addBtn.Text = "Apply";
             this.addBtn.UseVisualStyleBackColor = false;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // MinisterForm
             // 
-            this.AcceptButton = this.addBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
@@ -350,6 +349,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MinisterForm";
             this.Text = "MinisterForm";
             this.Load += new System.EventHandler(this.MinisterForm_Load);

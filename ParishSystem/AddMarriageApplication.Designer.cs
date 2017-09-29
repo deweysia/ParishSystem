@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddMarriageApplication));
             this.dtpGroomBirthDate = new MetroFramework.Controls.MetroDateTime();
             this.application_remarks_textBox = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -537,6 +538,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dtpGroomBirthDate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddMarriageApplication";
             this.Padding = new System.Windows.Forms.Padding(20);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

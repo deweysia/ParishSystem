@@ -160,5 +160,10 @@ namespace ParishSystem
         {
 
         }
+
+        private void BloodClaim_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
