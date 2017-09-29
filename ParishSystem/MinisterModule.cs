@@ -16,13 +16,13 @@ namespace ParishSystem
         public MinisterModule()
         {
             InitializeComponent();
-            flpEditDeleteMinister.Enabled = false;
             dgvMinister.AutoGenerateColumns = false;
-            
+            flpEditDeleteMinister.Enabled = false;
         }
 
         private void loadMinisters()
         {
+            dgvMinister.AutoGenerateColumns = false;
             dgvMinister.DataSource = dh.getMinisters();
             dgvMinister.ClearSelection();
             flpEditDeleteMinister.Enabled = false;
@@ -32,7 +32,7 @@ namespace ParishSystem
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Form f = new MinisterForm();
-            
+
             f.ShowDialog();
             loadMinisters();
         }
@@ -47,16 +47,13 @@ namespace ParishSystem
 
         private void dgvMinister_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            //Control c = sender as Control;
-            //if (!c.Focused)
-            //    return;
 
             flpEditDeleteMinister.Enabled = true;
         }
 
         private void MinisterModule_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dgvMinister_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

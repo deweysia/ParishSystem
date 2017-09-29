@@ -1877,7 +1877,7 @@ namespace ParishSystem
         /// <returns></returns>
         public DataTable getMinisters()
         {
-            string q = "SELECT ministerID, firstName, midName, lastName, suffix, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix)as Name, birthdate, ministryType, status, licenseNumber FROM Minister";
+            string q = "SELECT ministerID, firstName, midName, lastName, suffix, CONCAT(firstName, ' ', midName, ' ', lastName, ' ', suffix)as Name, birthdate, ministryType, status FROM Minister";
 
             DataTable dt = runQuery(q);
 
