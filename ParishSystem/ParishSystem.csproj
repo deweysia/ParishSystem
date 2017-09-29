@@ -673,6 +673,7 @@
     <None Include="Resources\panel1.BackgroundImage2.png" />
     <None Include="Resources\panel1.BackgroundImage3.png" />
     <None Include="Resources\confirmationFormBG.png" />
+    <None Include="Resources\icons8-Church-35.png" />
     <Content Include="Tools\SQL_Writer.jar" />
     <None Include="Resources\messageBox_cancel.png" />
     <None Include="Resources\messageBox_success.png" />

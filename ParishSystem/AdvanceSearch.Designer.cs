@@ -347,6 +347,7 @@
             this.Controls.Add(this.cbBetweenDates);
             this.Controls.Add(this.tlpBetweenDates);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdvanceSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdvanceSearch";

@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddReferences));
             this.lblSacrament = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtRecord = new ParishSystem.CueTextBox();
+            this.txtRegistry = new ParishSystem.CueTextBox();
+            this.txtPage = new ParishSystem.CueTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.txtRecord = new ParishSystem.CueTextBox();
-            this.txtRegistry = new ParishSystem.CueTextBox();
-            this.txtPage = new ParishSystem.CueTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -123,6 +124,39 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Page no";
             // 
+            // txtRecord
+            // 
+            this.txtRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtRecord.Cue = null;
+            this.txtRecord.CueColor = System.Drawing.Color.Gray;
+            this.txtRecord.Location = new System.Drawing.Point(97, 11);
+            this.txtRecord.Name = "txtRecord";
+            this.txtRecord.Size = new System.Drawing.Size(187, 22);
+            this.txtRecord.TabIndex = 1;
+            this.txtRecord.TextChanged += new System.EventHandler(this.txtRecord_TextChanged);
+            // 
+            // txtRegistry
+            // 
+            this.txtRegistry.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtRegistry.Cue = null;
+            this.txtRegistry.CueColor = System.Drawing.Color.Gray;
+            this.txtRegistry.Location = new System.Drawing.Point(97, 55);
+            this.txtRegistry.Name = "txtRegistry";
+            this.txtRegistry.Size = new System.Drawing.Size(187, 22);
+            this.txtRegistry.TabIndex = 1;
+            this.txtRegistry.TextChanged += new System.EventHandler(this.txtRecord_TextChanged);
+            // 
+            // txtPage
+            // 
+            this.txtPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPage.Cue = null;
+            this.txtPage.CueColor = System.Drawing.Color.Gray;
+            this.txtPage.Location = new System.Drawing.Point(97, 99);
+            this.txtPage.Name = "txtPage";
+            this.txtPage.Size = new System.Drawing.Size(187, 22);
+            this.txtPage.TabIndex = 1;
+            this.txtPage.TextChanged += new System.EventHandler(this.txtRecord_TextChanged);
+            // 
             // button1
             // 
             this.button1.BackgroundImage = global::ParishSystem.Properties.Resources.icons8_Delete_20;
@@ -174,39 +208,6 @@
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // txtRecord
-            // 
-            this.txtRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRecord.Cue = null;
-            this.txtRecord.CueColor = System.Drawing.Color.Gray;
-            this.txtRecord.Location = new System.Drawing.Point(97, 11);
-            this.txtRecord.Name = "txtRecord";
-            this.txtRecord.Size = new System.Drawing.Size(187, 22);
-            this.txtRecord.TabIndex = 1;
-            this.txtRecord.TextChanged += new System.EventHandler(this.txtRecord_TextChanged);
-            // 
-            // txtRegistry
-            // 
-            this.txtRegistry.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRegistry.Cue = null;
-            this.txtRegistry.CueColor = System.Drawing.Color.Gray;
-            this.txtRegistry.Location = new System.Drawing.Point(97, 55);
-            this.txtRegistry.Name = "txtRegistry";
-            this.txtRegistry.Size = new System.Drawing.Size(187, 22);
-            this.txtRegistry.TabIndex = 1;
-            this.txtRegistry.TextChanged += new System.EventHandler(this.txtRecord_TextChanged);
-            // 
-            // txtPage
-            // 
-            this.txtPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPage.Cue = null;
-            this.txtPage.CueColor = System.Drawing.Color.Gray;
-            this.txtPage.Location = new System.Drawing.Point(97, 99);
-            this.txtPage.Name = "txtPage";
-            this.txtPage.Size = new System.Drawing.Size(187, 22);
-            this.txtPage.TabIndex = 1;
-            this.txtPage.TextChanged += new System.EventHandler(this.txtRecord_TextChanged);
-            // 
             // AddReferences
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,6 +220,7 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblSacrament);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddReferences";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddReferences";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MinisterForm));
             this.dtpBirthdate = new MetroFramework.Controls.MetroDateTime();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,15 +37,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtLN = new MetroFramework.Controls.MetroTextBox();
+            this.txtSuffix = new MetroFramework.Controls.MetroTextBox();
+            this.txtMI = new MetroFramework.Controls.MetroTextBox();
+            this.txtFN = new MetroFramework.Controls.MetroTextBox();
             this.cmbMinistryType = new MetroFramework.Controls.MetroComboBox();
             this.controlBar_panel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.close_button = new System.Windows.Forms.Button();
             this.addBtn = new System.Windows.Forms.Button();
-            this.txtFN = new MetroFramework.Controls.MetroTextBox();
-            this.txtMI = new MetroFramework.Controls.MetroTextBox();
-            this.txtLN = new MetroFramework.Controls.MetroTextBox();
-            this.txtSuffix = new MetroFramework.Controls.MetroTextBox();
             this.panel1.SuspendLayout();
             this.controlBar_panel.SuspendLayout();
             this.SuspendLayout();
@@ -137,6 +138,137 @@
             this.panel1.Size = new System.Drawing.Size(436, 200);
             this.panel1.TabIndex = 12;
             // 
+            // txtLN
+            // 
+            // 
+            // 
+            // 
+            this.txtLN.CustomButton.Image = null;
+            this.txtLN.CustomButton.Location = new System.Drawing.Point(88, 1);
+            this.txtLN.CustomButton.Name = "";
+            this.txtLN.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtLN.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtLN.CustomButton.TabIndex = 1;
+            this.txtLN.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtLN.CustomButton.UseSelectable = true;
+            this.txtLN.CustomButton.Visible = false;
+            this.txtLN.Lines = new string[0];
+            this.txtLN.Location = new System.Drawing.Point(265, 48);
+            this.txtLN.MaxLength = 32767;
+            this.txtLN.Name = "txtLN";
+            this.txtLN.PasswordChar = '\0';
+            this.txtLN.PromptText = "Last Name";
+            this.txtLN.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtLN.SelectedText = "";
+            this.txtLN.SelectionLength = 0;
+            this.txtLN.SelectionStart = 0;
+            this.txtLN.ShortcutsEnabled = true;
+            this.txtLN.Size = new System.Drawing.Size(110, 23);
+            this.txtLN.TabIndex = 13;
+            this.txtLN.UseSelectable = true;
+            this.txtLN.WaterMark = "Last Name";
+            this.txtLN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtLN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtLN.TextChanged += new System.EventHandler(this.licenseNum_textBox_TextChanged);
+            // 
+            // txtSuffix
+            // 
+            // 
+            // 
+            // 
+            this.txtSuffix.CustomButton.Image = null;
+            this.txtSuffix.CustomButton.Location = new System.Drawing.Point(17, 1);
+            this.txtSuffix.CustomButton.Name = "";
+            this.txtSuffix.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSuffix.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSuffix.CustomButton.TabIndex = 1;
+            this.txtSuffix.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSuffix.CustomButton.UseSelectable = true;
+            this.txtSuffix.CustomButton.Visible = false;
+            this.txtSuffix.Lines = new string[0];
+            this.txtSuffix.Location = new System.Drawing.Point(381, 48);
+            this.txtSuffix.MaxLength = 5;
+            this.txtSuffix.Name = "txtSuffix";
+            this.txtSuffix.PasswordChar = '\0';
+            this.txtSuffix.PromptText = "Suffix";
+            this.txtSuffix.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSuffix.SelectedText = "";
+            this.txtSuffix.SelectionLength = 0;
+            this.txtSuffix.SelectionStart = 0;
+            this.txtSuffix.ShortcutsEnabled = true;
+            this.txtSuffix.Size = new System.Drawing.Size(39, 23);
+            this.txtSuffix.TabIndex = 13;
+            this.txtSuffix.UseSelectable = true;
+            this.txtSuffix.WaterMark = "Suffix";
+            this.txtSuffix.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSuffix.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtMI
+            // 
+            // 
+            // 
+            // 
+            this.txtMI.CustomButton.Image = null;
+            this.txtMI.CustomButton.Location = new System.Drawing.Point(17, 1);
+            this.txtMI.CustomButton.Name = "";
+            this.txtMI.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtMI.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtMI.CustomButton.TabIndex = 1;
+            this.txtMI.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtMI.CustomButton.UseSelectable = true;
+            this.txtMI.CustomButton.Visible = false;
+            this.txtMI.Lines = new string[0];
+            this.txtMI.Location = new System.Drawing.Point(220, 48);
+            this.txtMI.MaxLength = 1;
+            this.txtMI.Name = "txtMI";
+            this.txtMI.PasswordChar = '\0';
+            this.txtMI.PromptText = "M.I.";
+            this.txtMI.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtMI.SelectedText = "";
+            this.txtMI.SelectionLength = 0;
+            this.txtMI.SelectionStart = 0;
+            this.txtMI.ShortcutsEnabled = true;
+            this.txtMI.Size = new System.Drawing.Size(39, 23);
+            this.txtMI.TabIndex = 13;
+            this.txtMI.UseSelectable = true;
+            this.txtMI.WaterMark = "M.I.";
+            this.txtMI.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtMI.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtMI.TextChanged += new System.EventHandler(this.licenseNum_textBox_TextChanged);
+            // 
+            // txtFN
+            // 
+            // 
+            // 
+            // 
+            this.txtFN.CustomButton.Image = null;
+            this.txtFN.CustomButton.Location = new System.Drawing.Point(88, 1);
+            this.txtFN.CustomButton.Name = "";
+            this.txtFN.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtFN.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtFN.CustomButton.TabIndex = 1;
+            this.txtFN.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtFN.CustomButton.UseSelectable = true;
+            this.txtFN.CustomButton.Visible = false;
+            this.txtFN.Lines = new string[0];
+            this.txtFN.Location = new System.Drawing.Point(104, 48);
+            this.txtFN.MaxLength = 32767;
+            this.txtFN.Name = "txtFN";
+            this.txtFN.PasswordChar = '\0';
+            this.txtFN.PromptText = "First Name";
+            this.txtFN.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtFN.SelectedText = "";
+            this.txtFN.SelectionLength = 0;
+            this.txtFN.SelectionStart = 0;
+            this.txtFN.ShortcutsEnabled = true;
+            this.txtFN.Size = new System.Drawing.Size(110, 23);
+            this.txtFN.TabIndex = 13;
+            this.txtFN.UseSelectable = true;
+            this.txtFN.WaterMark = "First Name";
+            this.txtFN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtFN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFN.TextChanged += new System.EventHandler(this.licenseNum_textBox_TextChanged);
+            // 
             // cmbMinistryType
             // 
             this.cmbMinistryType.FormattingEnabled = true;
@@ -205,137 +337,6 @@
             this.addBtn.UseVisualStyleBackColor = false;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
-            // txtFN
-            // 
-            // 
-            // 
-            // 
-            this.txtFN.CustomButton.Image = null;
-            this.txtFN.CustomButton.Location = new System.Drawing.Point(88, 1);
-            this.txtFN.CustomButton.Name = "";
-            this.txtFN.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtFN.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtFN.CustomButton.TabIndex = 1;
-            this.txtFN.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtFN.CustomButton.UseSelectable = true;
-            this.txtFN.CustomButton.Visible = false;
-            this.txtFN.Lines = new string[0];
-            this.txtFN.Location = new System.Drawing.Point(104, 48);
-            this.txtFN.MaxLength = 32767;
-            this.txtFN.Name = "txtFN";
-            this.txtFN.PasswordChar = '\0';
-            this.txtFN.PromptText = "First Name";
-            this.txtFN.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtFN.SelectedText = "";
-            this.txtFN.SelectionLength = 0;
-            this.txtFN.SelectionStart = 0;
-            this.txtFN.ShortcutsEnabled = true;
-            this.txtFN.Size = new System.Drawing.Size(110, 23);
-            this.txtFN.TabIndex = 13;
-            this.txtFN.UseSelectable = true;
-            this.txtFN.WaterMark = "First Name";
-            this.txtFN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtFN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtFN.TextChanged += new System.EventHandler(this.licenseNum_textBox_TextChanged);
-            // 
-            // txtMI
-            // 
-            // 
-            // 
-            // 
-            this.txtMI.CustomButton.Image = null;
-            this.txtMI.CustomButton.Location = new System.Drawing.Point(17, 1);
-            this.txtMI.CustomButton.Name = "";
-            this.txtMI.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtMI.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtMI.CustomButton.TabIndex = 1;
-            this.txtMI.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtMI.CustomButton.UseSelectable = true;
-            this.txtMI.CustomButton.Visible = false;
-            this.txtMI.Lines = new string[0];
-            this.txtMI.Location = new System.Drawing.Point(220, 48);
-            this.txtMI.MaxLength = 1;
-            this.txtMI.Name = "txtMI";
-            this.txtMI.PasswordChar = '\0';
-            this.txtMI.PromptText = "M.I.";
-            this.txtMI.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtMI.SelectedText = "";
-            this.txtMI.SelectionLength = 0;
-            this.txtMI.SelectionStart = 0;
-            this.txtMI.ShortcutsEnabled = true;
-            this.txtMI.Size = new System.Drawing.Size(39, 23);
-            this.txtMI.TabIndex = 13;
-            this.txtMI.UseSelectable = true;
-            this.txtMI.WaterMark = "M.I.";
-            this.txtMI.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtMI.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtMI.TextChanged += new System.EventHandler(this.licenseNum_textBox_TextChanged);
-            // 
-            // txtLN
-            // 
-            // 
-            // 
-            // 
-            this.txtLN.CustomButton.Image = null;
-            this.txtLN.CustomButton.Location = new System.Drawing.Point(88, 1);
-            this.txtLN.CustomButton.Name = "";
-            this.txtLN.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtLN.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtLN.CustomButton.TabIndex = 1;
-            this.txtLN.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtLN.CustomButton.UseSelectable = true;
-            this.txtLN.CustomButton.Visible = false;
-            this.txtLN.Lines = new string[0];
-            this.txtLN.Location = new System.Drawing.Point(265, 48);
-            this.txtLN.MaxLength = 32767;
-            this.txtLN.Name = "txtLN";
-            this.txtLN.PasswordChar = '\0';
-            this.txtLN.PromptText = "Last Name";
-            this.txtLN.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtLN.SelectedText = "";
-            this.txtLN.SelectionLength = 0;
-            this.txtLN.SelectionStart = 0;
-            this.txtLN.ShortcutsEnabled = true;
-            this.txtLN.Size = new System.Drawing.Size(110, 23);
-            this.txtLN.TabIndex = 13;
-            this.txtLN.UseSelectable = true;
-            this.txtLN.WaterMark = "Last Name";
-            this.txtLN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtLN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtLN.TextChanged += new System.EventHandler(this.licenseNum_textBox_TextChanged);
-            // 
-            // txtSuffix
-            // 
-            // 
-            // 
-            // 
-            this.txtSuffix.CustomButton.Image = null;
-            this.txtSuffix.CustomButton.Location = new System.Drawing.Point(17, 1);
-            this.txtSuffix.CustomButton.Name = "";
-            this.txtSuffix.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtSuffix.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSuffix.CustomButton.TabIndex = 1;
-            this.txtSuffix.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSuffix.CustomButton.UseSelectable = true;
-            this.txtSuffix.CustomButton.Visible = false;
-            this.txtSuffix.Lines = new string[0];
-            this.txtSuffix.Location = new System.Drawing.Point(381, 48);
-            this.txtSuffix.MaxLength = 5;
-            this.txtSuffix.Name = "txtSuffix";
-            this.txtSuffix.PasswordChar = '\0';
-            this.txtSuffix.PromptText = "Suffix";
-            this.txtSuffix.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSuffix.SelectedText = "";
-            this.txtSuffix.SelectionLength = 0;
-            this.txtSuffix.SelectionStart = 0;
-            this.txtSuffix.ShortcutsEnabled = true;
-            this.txtSuffix.Size = new System.Drawing.Size(39, 23);
-            this.txtSuffix.TabIndex = 13;
-            this.txtSuffix.UseSelectable = true;
-            this.txtSuffix.WaterMark = "Suffix";
-            this.txtSuffix.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSuffix.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // MinisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -348,6 +349,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MinisterForm";
             this.Text = "MinisterForm";
             this.Load += new System.EventHandler(this.MinisterForm_Load);

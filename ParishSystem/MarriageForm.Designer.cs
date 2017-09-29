@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarriageForm));
             this.lblGName = new System.Windows.Forms.Label();
             this.panelGroom = new System.Windows.Forms.Panel();
             this.txtGResidence = new MetroFramework.Controls.MetroTextBox();
@@ -1662,6 +1663,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MarriageForm";
             this.Text = "MarriageForm";
             this.Load += new System.EventHandler(this.MarriageForm_Load);

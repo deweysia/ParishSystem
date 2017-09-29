@@ -4623,6 +4623,18 @@ namespace ParishSystem
                         order by CVnum desc;";
             return runQuery(q);
         }
+        public DataTable getApplicationsWithoutPay(int sacramentType)
+        {
+            return runQuery($@"SELECT generalprofile.profileid,application.applicationID,concat(lastname, "" "", coalesce(suffix, "" ""), "" "", firstName, "" "", midName, ""."") as name,  sacramentType,sacramentincome.price,case when sum(amount) is null  then 0 else sum(amount) end as amountInt,case when sacramentincome.price is null  then 0 else sacramentincome.price end as priceInt
+                            FROM GeneralProfile left outer JOIN Applicant ON  GeneralProfile.profileID = Applicant.profileID 
+                            left outer JOIN Application ON Application.applicationID = Applicant.applicationID 
+                            left outer Join sacramentincome on sacramentincome.applicationID= application.applicationID
+                            left outer join payment on payment.sacramentIncomeID = sacramentincome.sacramentIncomeID
+                            WHERE sacramenttype= {sacramentType}
+                            group by application.applicationID
+                            having amountInt < sacramentincome.price and priceInt  != 0
+                            ");
+        }
     }
 
 } 

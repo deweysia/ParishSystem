@@ -176,7 +176,6 @@
             this.details_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.details_dgv.RowHeadersVisible = false;
             this.details_dgv.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.details_dgv.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Empty;
             this.details_dgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.details_dgv.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.details_dgv.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
@@ -308,6 +307,7 @@
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ORdetailsPopUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

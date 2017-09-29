@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminCredentials));
             this.username_textbox = new MetroFramework.Controls.MetroTextBox();
             this.password_textbox = new MetroFramework.Controls.MetroTextBox();
             this.controlBar_panel = new System.Windows.Forms.Panel();
@@ -169,6 +170,7 @@
             this.Controls.Add(this.password_textbox);
             this.Controls.Add(this.username_textbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminCredentials";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminCredentials";

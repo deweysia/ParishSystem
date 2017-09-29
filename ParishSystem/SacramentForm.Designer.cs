@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SacramentForm));
             this.nameLabel = new System.Windows.Forms.Label();
             this.birthdateLabel = new System.Windows.Forms.Label();
             this.genderLabel = new System.Windows.Forms.Label();
@@ -582,6 +583,7 @@
             this.Controls.Add(this.birthdateLabel);
             this.Controls.Add(this.nameLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SacramentForm";
             this.Text = "Baptism Fill-up Form";
             this.Load += new System.EventHandler(this.SacramentForm_Load);
