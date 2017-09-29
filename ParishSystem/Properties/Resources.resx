@@ -391,9 +391,6 @@
   <data name="Water_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Water_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="panel1.BackgroundImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\panel1.BackgroundImage1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8_Pencil_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-Pencil-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -528,5 +525,14 @@
   </data>
   <data name="icons8_Checked_Filled_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-Checked Filled-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dot_bloodletting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dot_bloodletting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dot_schedule" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dot_schedule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dot_unspecified" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dot_unspecified.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

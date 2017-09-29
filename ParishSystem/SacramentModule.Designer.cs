@@ -544,7 +544,7 @@
             this.metroTabPage5.HorizontalScrollbarSize = 1;
             this.metroTabPage5.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(922, 498);
+            this.metroTabPage5.Size = new System.Drawing.Size(935, 627);
             this.metroTabPage5.TabIndex = 1;
             this.metroTabPage5.Text = "Confirmation";
             this.metroTabPage5.VerticalScrollbarBarColor = true;
@@ -562,7 +562,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(30, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(861, 94);
+            this.panel2.Size = new System.Drawing.Size(874, 94);
             this.panel2.TabIndex = 14;
             // 
             // tableLayoutPanel3
@@ -577,7 +577,7 @@
             this.tableLayoutPanel3.Controls.Add(this.btnSearchCon, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtSearchCon, 1, 0);
             this.tableLayoutPanel3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(513, 27);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(526, 27);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -783,7 +783,7 @@
             this.dgvConfirmation.RowHeadersVisible = false;
             this.dgvConfirmation.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvConfirmation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConfirmation.Size = new System.Drawing.Size(861, 382);
+            this.dgvConfirmation.Size = new System.Drawing.Size(874, 511);
             this.dgvConfirmation.Style = MetroFramework.MetroColorStyle.Silver;
             this.dgvConfirmation.TabIndex = 6;
             this.dgvConfirmation.TabStop = false;
@@ -923,7 +923,7 @@
             this.metroTabPage4.HorizontalScrollbarSize = 1;
             this.metroTabPage4.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(922, 498);
+            this.metroTabPage4.Size = new System.Drawing.Size(935, 627);
             this.metroTabPage4.TabIndex = 0;
             this.metroTabPage4.Text = "Baptism";
             this.metroTabPage4.VerticalScrollbarBarColor = true;
@@ -941,7 +941,7 @@
             this.panel12.Controls.Add(this.label63);
             this.panel12.Location = new System.Drawing.Point(30, 3);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(861, 94);
+            this.panel12.Size = new System.Drawing.Size(874, 94);
             this.panel12.TabIndex = 13;
             // 
             // tableLayoutPanel2
@@ -956,7 +956,7 @@
             this.tableLayoutPanel2.Controls.Add(this.btnSearchBap, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAdvanceSearchBap, 1, 1);
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(513, 27);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(526, 27);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1164,7 +1164,7 @@
             this.dgvBaptism.RowHeadersVisible = false;
             this.dgvBaptism.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvBaptism.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBaptism.Size = new System.Drawing.Size(861, 357);
+            this.dgvBaptism.Size = new System.Drawing.Size(874, 486);
             this.dgvBaptism.Style = MetroFramework.MetroColorStyle.Silver;
             this.dgvBaptism.TabIndex = 6;
             this.dgvBaptism.TabStop = false;
@@ -1301,8 +1301,8 @@
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
-            this.metroTabControl1.Size = new System.Drawing.Size(930, 540);
+            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.Size = new System.Drawing.Size(943, 669);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroTabControl1.TabIndex = 11;
             this.metroTabControl1.UseSelectable = true;
@@ -1412,7 +1412,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 540);
+            this.ClientSize = new System.Drawing.Size(943, 669);
             this.Controls.Add(this.metroTabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SacramentModule";
