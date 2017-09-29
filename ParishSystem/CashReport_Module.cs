@@ -853,5 +853,10 @@ namespace ParishSystem
             to_dtp_cashdisbursment.MaxDate = DateTime.Now;
             to_dtp_cashdisbursment.Enabled = true;
         }
+
+        private void CashReport_Module_VisibleChanged(object sender, EventArgs e)
+        {
+            parish_label.PerformClick();
+        }
     }
 }

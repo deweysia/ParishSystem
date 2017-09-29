@@ -59,9 +59,9 @@
             this.Claim_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Claim_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Claim_button.ForeColor = System.Drawing.Color.White;
-            this.Claim_button.Location = new System.Drawing.Point(339, 553);
+            this.Claim_button.Location = new System.Drawing.Point(332, 570);
             this.Claim_button.Name = "Claim_button";
-            this.Claim_button.Size = new System.Drawing.Size(286, 37);
+            this.Claim_button.Size = new System.Drawing.Size(293, 37);
             this.Claim_button.TabIndex = 4;
             this.Claim_button.Text = "Claim";
             this.Claim_button.UseVisualStyleBackColor = false;
@@ -104,7 +104,7 @@
             this.BloodDonationsDGV.DefaultCellStyle = dataGridViewCellStyle2;
             this.BloodDonationsDGV.EnableHeadersVisualStyles = false;
             this.BloodDonationsDGV.GridColor = System.Drawing.Color.White;
-            this.BloodDonationsDGV.Location = new System.Drawing.Point(332, 235);
+            this.BloodDonationsDGV.Location = new System.Drawing.Point(332, 256);
             this.BloodDonationsDGV.MultiSelect = false;
             this.BloodDonationsDGV.Name = "BloodDonationsDGV";
             this.BloodDonationsDGV.ReadOnly = true;
@@ -131,7 +131,7 @@
             this.BloodDonationsDGV.RowTemplate.Height = 35;
             this.BloodDonationsDGV.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.BloodDonationsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.BloodDonationsDGV.Size = new System.Drawing.Size(294, 297);
+            this.BloodDonationsDGV.Size = new System.Drawing.Size(293, 297);
             this.BloodDonationsDGV.TabIndex = 11;
             this.BloodDonationsDGV.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BloodDonationsDGV_CellContentDoubleClick);
             this.BloodDonationsDGV.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.BloodDonationsDGV_RowsAdded);
@@ -159,7 +159,7 @@
             this.donationAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.donationAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.donationAdd.ForeColor = System.Drawing.Color.White;
-            this.donationAdd.Location = new System.Drawing.Point(632, 265);
+            this.donationAdd.Location = new System.Drawing.Point(632, 256);
             this.donationAdd.Name = "donationAdd";
             this.donationAdd.Size = new System.Drawing.Size(122, 37);
             this.donationAdd.TabIndex = 12;
@@ -177,7 +177,7 @@
             this.donationDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
             this.donationDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.donationDelete.ForeColor = System.Drawing.Color.White;
-            this.donationDelete.Location = new System.Drawing.Point(632, 351);
+            this.donationDelete.Location = new System.Drawing.Point(632, 342);
             this.donationDelete.Name = "donationDelete";
             this.donationDelete.Size = new System.Drawing.Size(120, 37);
             this.donationDelete.TabIndex = 13;
@@ -193,7 +193,7 @@
             this.clear_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.clear_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_button.ForeColor = System.Drawing.Color.White;
-            this.clear_button.Location = new System.Drawing.Point(632, 308);
+            this.clear_button.Location = new System.Drawing.Point(632, 299);
             this.clear_button.Name = "clear_button";
             this.clear_button.Size = new System.Drawing.Size(120, 37);
             this.clear_button.TabIndex = 14;
@@ -208,7 +208,7 @@
             // 
             // 
             this.ln.CustomButton.Image = null;
-            this.ln.CustomButton.Location = new System.Drawing.Point(272, 1);
+            this.ln.CustomButton.Location = new System.Drawing.Point(214, 1);
             this.ln.CustomButton.Name = "";
             this.ln.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.ln.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -218,7 +218,7 @@
             this.ln.CustomButton.Visible = false;
             this.ln.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.ln.Lines = new string[0];
-            this.ln.Location = new System.Drawing.Point(332, 107);
+            this.ln.Location = new System.Drawing.Point(332, 156);
             this.ln.MaxLength = 32767;
             this.ln.Name = "ln";
             this.ln.PasswordChar = '\0';
@@ -228,7 +228,7 @@
             this.ln.SelectionLength = 0;
             this.ln.SelectionStart = 0;
             this.ln.ShortcutsEnabled = true;
-            this.ln.Size = new System.Drawing.Size(294, 23);
+            this.ln.Size = new System.Drawing.Size(236, 23);
             this.ln.TabIndex = 15;
             this.ln.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ln.UseSelectable = true;
@@ -254,7 +254,7 @@
             this.sf.CustomButton.Visible = false;
             this.sf.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.sf.Lines = new string[0];
-            this.sf.Location = new System.Drawing.Point(632, 107);
+            this.sf.Location = new System.Drawing.Point(574, 156);
             this.sf.MaxLength = 32767;
             this.sf.Name = "sf";
             this.sf.PasswordChar = '\0';
@@ -280,7 +280,7 @@
             // 
             // 
             this.fn.CustomButton.Image = null;
-            this.fn.CustomButton.Location = new System.Drawing.Point(271, 1);
+            this.fn.CustomButton.Location = new System.Drawing.Point(214, 1);
             this.fn.CustomButton.Name = "";
             this.fn.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.fn.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -290,7 +290,7 @@
             this.fn.CustomButton.Visible = false;
             this.fn.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.fn.Lines = new string[0];
-            this.fn.Location = new System.Drawing.Point(332, 145);
+            this.fn.Location = new System.Drawing.Point(332, 117);
             this.fn.MaxLength = 32767;
             this.fn.Name = "fn";
             this.fn.PasswordChar = '\0';
@@ -300,7 +300,7 @@
             this.fn.SelectionLength = 0;
             this.fn.SelectionStart = 0;
             this.fn.ShortcutsEnabled = true;
-            this.fn.Size = new System.Drawing.Size(293, 23);
+            this.fn.Size = new System.Drawing.Size(236, 23);
             this.fn.TabIndex = 17;
             this.fn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.fn.UseSelectable = true;
@@ -326,7 +326,7 @@
             this.mi.CustomButton.Visible = false;
             this.mi.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.mi.Lines = new string[0];
-            this.mi.Location = new System.Drawing.Point(632, 145);
+            this.mi.Location = new System.Drawing.Point(574, 117);
             this.mi.MaxLength = 1;
             this.mi.Name = "mi";
             this.mi.PasswordChar = '\0';
@@ -352,7 +352,7 @@
             // 
             // 
             this.DonationID_textbox.CustomButton.Image = null;
-            this.DonationID_textbox.CustomButton.Location = new System.Drawing.Point(183, 1);
+            this.DonationID_textbox.CustomButton.Location = new System.Drawing.Point(214, 1);
             this.DonationID_textbox.CustomButton.Name = "";
             this.DonationID_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.DonationID_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -362,7 +362,7 @@
             this.DonationID_textbox.CustomButton.Visible = false;
             this.DonationID_textbox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.DonationID_textbox.Lines = new string[0];
-            this.DonationID_textbox.Location = new System.Drawing.Point(373, 206);
+            this.DonationID_textbox.Location = new System.Drawing.Point(332, 215);
             this.DonationID_textbox.MaxLength = 32767;
             this.DonationID_textbox.Name = "DonationID_textbox";
             this.DonationID_textbox.PasswordChar = '\0';
@@ -372,7 +372,7 @@
             this.DonationID_textbox.SelectionLength = 0;
             this.DonationID_textbox.SelectionStart = 0;
             this.DonationID_textbox.ShortcutsEnabled = true;
-            this.DonationID_textbox.Size = new System.Drawing.Size(205, 23);
+            this.DonationID_textbox.Size = new System.Drawing.Size(236, 23);
             this.DonationID_textbox.TabIndex = 19;
             this.DonationID_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.DonationID_textbox.UseSelectable = true;
@@ -387,7 +387,7 @@
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(68, 46);
+            this.label8.Location = new System.Drawing.Point(68, 61);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(146, 32);
             this.label8.TabIndex = 37;
@@ -397,7 +397,7 @@
             // 
             this.donationPK.AutoSize = true;
             this.donationPK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.donationPK.Location = new System.Drawing.Point(245, 56);
+            this.donationPK.Location = new System.Drawing.Point(245, 71);
             this.donationPK.Name = "donationPK";
             this.donationPK.Size = new System.Drawing.Size(27, 20);
             this.donationPK.TabIndex = 7;

@@ -31,7 +31,7 @@ namespace ParishSystem
         }
         private void BloodClaims_Load(object sender, EventArgs e)
         {
-            refresh();
+            //refresh();
         }
 
         private void search_button_Click(object sender, EventArgs e)
@@ -76,6 +76,11 @@ namespace ParishSystem
             }
             search_button.Tag = "s";
             search_button.Image = ParishSystem.Properties.Resources.icons8_Search_Filled_20;
+        }
+
+        private void BloodClaimView_VisibleChanged(object sender, EventArgs e)
+        {
+            refresh();
         }
     }
 }

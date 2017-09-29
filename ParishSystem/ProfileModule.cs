@@ -59,7 +59,7 @@ namespace ParishSystem
         }
         private void ProfileModule_Load(object sender, EventArgs e)
         {
-            refresh();
+            //refresh();
         }
     
         private void search_textbox_TextChanged(object sender, EventArgs e)
@@ -89,6 +89,14 @@ namespace ParishSystem
         {
             Form A = new PersonView(int.Parse(profile_dgv.SelectedRows[0].Cells["profileid"].Value.ToString()), dh);
             A.ShowDialog();
+        }
+
+        private void ProfileModule_VisibleChanged(object sender, EventArgs e)
+        {
+            refresh();
+            search_button.Tag = "s";
+            search_textbox.Clear();
+            search_button.Image = ParishSystem.Properties.Resources.icons8_Search_Filled_20;
         }
     }
 }

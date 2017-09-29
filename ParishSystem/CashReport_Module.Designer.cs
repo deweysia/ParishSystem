@@ -40,9 +40,6 @@
             this.Reports_panel = new System.Windows.Forms.Panel();
             this.cash_label = new System.Windows.Forms.Label();
             this.PreviewButton = new System.Windows.Forms.Button();
-            this.postulancy_label = new System.Windows.Forms.Label();
-            this.community_label = new System.Windows.Forms.Label();
-            this.parish_label = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.reportFilter_panel = new System.Windows.Forms.Panel();
             this.Open_button = new System.Windows.Forms.Button();
@@ -78,6 +75,9 @@
             this.summary_datagridview_report_disbursment = new System.Windows.Forms.DataGridView();
             this.SaveExcelButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.postulancy_label = new System.Windows.Forms.Button();
+            this.community_label = new System.Windows.Forms.Button();
+            this.parish_label = new System.Windows.Forms.Button();
             this.Reports_panel.SuspendLayout();
             this.reportFilter_panel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -95,11 +95,11 @@
             // Reports_panel
             // 
             this.Reports_panel.BackColor = System.Drawing.Color.White;
-            this.Reports_panel.Controls.Add(this.cash_label);
-            this.Reports_panel.Controls.Add(this.PreviewButton);
             this.Reports_panel.Controls.Add(this.postulancy_label);
             this.Reports_panel.Controls.Add(this.community_label);
             this.Reports_panel.Controls.Add(this.parish_label);
+            this.Reports_panel.Controls.Add(this.cash_label);
+            this.Reports_panel.Controls.Add(this.PreviewButton);
             this.Reports_panel.Controls.Add(this.label15);
             this.Reports_panel.Controls.Add(this.reportFilter_panel);
             this.Reports_panel.Controls.Add(this.metroTabControl1);
@@ -116,8 +116,8 @@
             this.cash_label.AutoSize = true;
             this.cash_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cash_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cash_label.ForeColor = System.Drawing.Color.Black;
-            this.cash_label.Location = new System.Drawing.Point(36, 29);
+            this.cash_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cash_label.Location = new System.Drawing.Point(36, 34);
             this.cash_label.Name = "cash_label";
             this.cash_label.Size = new System.Drawing.Size(67, 32);
             this.cash_label.TabIndex = 89;
@@ -140,42 +140,6 @@
             this.PreviewButton.UseVisualStyleBackColor = false;
             this.PreviewButton.Click += new System.EventHandler(this.PreviewClick);
             // 
-            // postulancy_label
-            // 
-            this.postulancy_label.AutoSize = true;
-            this.postulancy_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postulancy_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.postulancy_label.Location = new System.Drawing.Point(315, 82);
-            this.postulancy_label.Name = "postulancy_label";
-            this.postulancy_label.Size = new System.Drawing.Size(112, 30);
-            this.postulancy_label.TabIndex = 73;
-            this.postulancy_label.Text = "Postulancy";
-            this.postulancy_label.Click += new System.EventHandler(this.postulancy_label_Click);
-            // 
-            // community_label
-            // 
-            this.community_label.AutoSize = true;
-            this.community_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.community_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.community_label.Location = new System.Drawing.Point(171, 82);
-            this.community_label.Name = "community_label";
-            this.community_label.Size = new System.Drawing.Size(120, 30);
-            this.community_label.TabIndex = 72;
-            this.community_label.Text = "Community";
-            this.community_label.Click += new System.EventHandler(this.community_label_Click);
-            // 
-            // parish_label
-            // 
-            this.parish_label.AutoSize = true;
-            this.parish_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.parish_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.parish_label.Location = new System.Drawing.Point(66, 82);
-            this.parish_label.Name = "parish_label";
-            this.parish_label.Size = new System.Drawing.Size(72, 30);
-            this.parish_label.TabIndex = 71;
-            this.parish_label.Text = "Parish";
-            this.parish_label.Click += new System.EventHandler(this.parish_label_Click);
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -184,9 +148,9 @@
             this.label15.ForeColor = System.Drawing.Color.LightGray;
             this.label15.Location = new System.Drawing.Point(37, 101);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(407, 16);
+            this.label15.Size = new System.Drawing.Size(449, 16);
             this.label15.TabIndex = 74;
-            this.label15.Text = "_________________________________________________________";
+            this.label15.Text = "_______________________________________________________________";
             // 
             // reportFilter_panel
             // 
@@ -649,7 +613,7 @@
             this.summary_datagridview_report_disbursment.RowTemplate.Height = 35;
             this.summary_datagridview_report_disbursment.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.summary_datagridview_report_disbursment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.summary_datagridview_report_disbursment.Size = new System.Drawing.Size(870, 397);
+            this.summary_datagridview_report_disbursment.Size = new System.Drawing.Size(878, 482);
             this.summary_datagridview_report_disbursment.TabIndex = 5;
             // 
             // SaveExcelButton
@@ -674,6 +638,54 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // postulancy_label
+            // 
+            this.postulancy_label.FlatAppearance.BorderSize = 0;
+            this.postulancy_label.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.postulancy_label.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.postulancy_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.postulancy_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postulancy_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.postulancy_label.Location = new System.Drawing.Point(324, 69);
+            this.postulancy_label.Name = "postulancy_label";
+            this.postulancy_label.Size = new System.Drawing.Size(138, 46);
+            this.postulancy_label.TabIndex = 94;
+            this.postulancy_label.Text = "Postulancy";
+            this.postulancy_label.UseVisualStyleBackColor = true;
+            this.postulancy_label.Click += new System.EventHandler(this.postulancy_label_Click);
+            // 
+            // community_label
+            // 
+            this.community_label.FlatAppearance.BorderSize = 0;
+            this.community_label.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.community_label.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.community_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.community_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.community_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.community_label.Location = new System.Drawing.Point(141, 69);
+            this.community_label.Name = "community_label";
+            this.community_label.Size = new System.Drawing.Size(177, 46);
+            this.community_label.TabIndex = 93;
+            this.community_label.Text = "Community";
+            this.community_label.UseVisualStyleBackColor = true;
+            this.community_label.Click += new System.EventHandler(this.community_label_Click);
+            // 
+            // parish_label
+            // 
+            this.parish_label.FlatAppearance.BorderSize = 0;
+            this.parish_label.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.parish_label.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.parish_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.parish_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parish_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.parish_label.Location = new System.Drawing.Point(42, 69);
+            this.parish_label.Name = "parish_label";
+            this.parish_label.Size = new System.Drawing.Size(93, 46);
+            this.parish_label.TabIndex = 92;
+            this.parish_label.Text = "Parish";
+            this.parish_label.UseVisualStyleBackColor = true;
+            this.parish_label.Click += new System.EventHandler(this.parish_label_Click);
+            // 
             // CashReport_Module
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -684,6 +696,7 @@
             this.Name = "CashReport_Module";
             this.Text = "CashReport_Module";
             this.Load += new System.EventHandler(this.CashReport_Module_Load);
+            this.VisibleChanged += new System.EventHandler(this.CashReport_Module_VisibleChanged);
             this.Reports_panel.ResumeLayout(false);
             this.Reports_panel.PerformLayout();
             this.reportFilter_panel.ResumeLayout(false);
@@ -741,13 +754,13 @@
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
-        private System.Windows.Forms.Label postulancy_label;
-        private System.Windows.Forms.Label community_label;
-        private System.Windows.Forms.Label parish_label;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView report_datagridview_cashdisbursment;
         private System.Windows.Forms.Button PreviewButton;
         private System.Windows.Forms.Label cash_label;
         private System.Windows.Forms.DataGridView summary_datagridview_report_disbursment;
+        private System.Windows.Forms.Button postulancy_label;
+        private System.Windows.Forms.Button community_label;
+        private System.Windows.Forms.Button parish_label;
     }
 }

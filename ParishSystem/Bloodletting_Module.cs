@@ -188,5 +188,10 @@ namespace ParishSystem
                 label.Text = (Mode == 1 ? "Blood Donor" : "Blood Donation Event");
             }
         }
+
+        private void Bloodletting_Module_VisibleChanged(object sender, EventArgs e)
+        {
+            refresh();
+        }
     }
 }

@@ -252,6 +252,9 @@ namespace ParishSystem
             postulancy_label.Font = new Font(postulancy_label.Font, FontStyle.Bold);
         }
 
-      
+        private void CashDisbursment_VisibleChanged(object sender, EventArgs e)
+        {
+            cashLoad();
+        }
     }
 }

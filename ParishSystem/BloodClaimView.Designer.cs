@@ -162,6 +162,7 @@
             this.Name = "BloodClaimView";
             this.Text = "BloodClaims";
             this.Load += new System.EventHandler(this.BloodClaims_Load);
+            this.VisibleChanged += new System.EventHandler(this.BloodClaimView_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.bloodletting_dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
