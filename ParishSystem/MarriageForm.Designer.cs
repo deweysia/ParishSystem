@@ -1086,6 +1086,7 @@
             this.txtSponsor2Suffix.Size = new System.Drawing.Size(50, 23);
             this.txtSponsor2Suffix.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtSponsor2Suffix.TabIndex = 43;
+            this.txtSponsor2Suffix.Tag = "NOT_REQUIRED";
             this.txtSponsor2Suffix.UseSelectable = true;
             this.txtSponsor2Suffix.WaterMark = "Suffix";
             this.txtSponsor2Suffix.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -1150,6 +1151,7 @@
             this.txtSponsor1Suffix.Size = new System.Drawing.Size(50, 23);
             this.txtSponsor1Suffix.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtSponsor1Suffix.TabIndex = 38;
+            this.txtSponsor1Suffix.Tag = "NOT_REQUIRED";
             this.txtSponsor1Suffix.UseSelectable = true;
             this.txtSponsor1Suffix.WaterMark = "Suffix";
             this.txtSponsor1Suffix.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));

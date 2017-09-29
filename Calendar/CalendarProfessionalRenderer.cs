@@ -11,10 +11,10 @@ namespace System.Windows.Forms.Calendar
     {
         #region Fields
 
-        public Color HeaderA = FromHex("#333333");//FromHex("#E4ECF6");
-        public Color HeaderB = FromHex("#333333");//FromHex("#D6E2F1");
-        public Color HeaderC = FromHex("#333333");//FromHex("#C2D4EB");
-        public Color HeaderD = FromHex("#333333");//FromHex("#D0DEEF");
+        public Color HeaderA = Color.White; //FromHex("#333333");//FromHex("#E4ECF6");
+        public Color HeaderB = Color.White; //FromHex("#333333");//FromHex("#D6E2F1");
+        public Color HeaderC = Color.White; //FromHex("#333333");//FromHex("#C2D4EB");
+        public Color HeaderD = Color.White; //FromHex("#333333");//FromHex("#D0DEEF");
 
         public Color TodayA = FromHex("#7f7f7f");
         public Color TodayB = FromHex("#7f7f7f");
@@ -28,11 +28,11 @@ namespace System.Windows.Forms.Calendar
         public CalendarProfessionalRenderer(Calendar c)
             : base(c)
         {
-            
+
             ColorTable.Background = FromHex("#262626"); //Formerly E3EFFF
             ColorTable.DayBackgroundEven = FromHex("#696969"); //FromHex("#A5BFE1");
             ColorTable.DayBackgroundOdd = FromHex("#C6C7C8"); //FromHex("#FFFFFF");
-            ColorTable.DayBackgroundSelected = Color.Chocolate;//FromHex("#00B294"); //Formerly E6EDF7
+            ColorTable.DayBackgroundSelected = Color.WhiteSmoke;//FromHex("#00B294"); //Formerly E6EDF7
             ColorTable.DayBorder = Color.Wheat;//FromHex("#171918"); //Color.Red;//FromHex("#5D8CC9");
             ColorTable.DayHeaderBackground = FromHex("#DFE8F5"); //Done
             ColorTable.DayHeaderText = Color.Wheat;//FromHex("#656B64"); //Color.Black;
@@ -51,14 +51,14 @@ namespace System.Windows.Forms.Calendar
             ColorTable.WeekHeaderBackground = FromHex("#262626"); //Color.Red; //FromHex("#DFE8F5");
             ColorTable.WeekHeaderBorder = FromHex("#171918"); //Color.Red;// FromHex("#5D8CC9");
             ColorTable.WeekHeaderText = Color.Wheat;//Color.Red;// FromHex("#5D8CC9");
-            ColorTable.TodayBorder = Color.Chocolate; //FromHex("#00B294"); //Color.Red;// FromHex("#EE9311");
-            ColorTable.TodayTopBackground = Color.Chocolate;// FromHex("#00B294"); //Color.Gray; //FromHex("#EE9311");
-            ColorTable.TimeScaleLine = FromHex("#515151"); //FromHex("#1A1A1A");// FromHex("#ff0000"); //Formerly 6593CF
-            ColorTable.TimeScaleHours = FromHex("#515151"); //Color.White; //FromHex("#6593CF");
-            ColorTable.TimeScaleMinutes = FromHex("#515151");// Color.White; //FromHex("#6593CF");
+            ColorTable.TodayBorder = Color.WhiteSmoke; //FromHex("#00B294"); //Color.Red;// FromHex("#EE9311");
+            ColorTable.TodayTopBackground = Color.WhiteSmoke;// FromHex("#00B294"); //Color.Gray; //FromHex("#EE9311");
+            ColorTable.TimeScaleLine = Color.White;// FromHex("#515151"); //FromHex("#1A1A1A");// FromHex("#ff0000"); //Formerly 6593CF
+            ColorTable.TimeScaleHours = Color.White;// FromHex("#515151"); //Color.White; //FromHex("#6593CF");
+            ColorTable.TimeScaleMinutes = Color.White;//FromHex("#515151");// Color.White; //FromHex("#6593CF");
             ColorTable.TimeUnitBackground = FromHex("#E6EDF7"); //FromHex("#00B294"); 
             ColorTable.TimeUnitHighlightedBackground = Color.White;
-            ColorTable.TimeUnitSelectedBackground = Color.Chocolate; //FromHex("#00B294"); //294C7A
+            ColorTable.TimeUnitSelectedBackground = Color.WhiteSmoke; //FromHex("#00B294"); //294C7A
             ColorTable.TimeUnitBorderLight = FromHex("#D5E1F1");
             ColorTable.TimeUnitBorderDark = FromHex("#696969"); // FromHex("#A5BFE1");
             ColorTable.WeekDayName = Color.Wheat; //FromHex("#515151"); //Color.White; // FromHex("#6593CF");

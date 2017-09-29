@@ -141,6 +141,7 @@
             this.Padding = new System.Windows.Forms.Padding(10);
             this.ShowInTaskbar = false;
             this.Text = "Notification";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Notification_Load);
             this.MouseEnter += new System.EventHandler(this.CustomNotification_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.CustomNotification_MouseLeave);

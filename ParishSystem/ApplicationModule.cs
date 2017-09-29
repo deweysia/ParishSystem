@@ -1475,20 +1475,15 @@ namespace ParishSystem
                 checkEdit.Text = "Edit";
                 editApplicationProfile(type);
                 clearApplicationsDetailsPanel(type);
-
             }
             else
             {
                 checkEdit.Text = "Save";
             }
 
-
             tlpProfile.Visible = checkEdit.Checked;
             gbReq.Enabled = checkEdit.Checked;
             approveRevokePanel.Enabled = !checkEdit.Enabled;
-            
-
-            
         }
 
         /// <summary>

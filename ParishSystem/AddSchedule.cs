@@ -175,8 +175,8 @@ namespace ParishSystem
         {
             
 
-            string title = txtTitle.Text;
-            string details = txtDetails.Text;
+            string title = txtTitle.Text.Trim();
+            string details = txtDetails.Text.Trim();
             DateTime start = getDateTime(ScheduleTime.Start);
             DateTime end = getDateTime(ScheduleTime.End);
 
@@ -202,8 +202,8 @@ namespace ParishSystem
         private bool addEntry()
         {
 
-            string title = txtTitle.Text;
-            string details = txtDetails.Text;
+            string title = txtTitle.Text.Trim();
+            string details = txtDetails.Text.Trim();
             DateTime start = getDateTime(ScheduleTime.Start);
             DateTime end = getDateTime(ScheduleTime.End);
 
@@ -230,7 +230,8 @@ namespace ParishSystem
             bool success = !string.IsNullOrWhiteSpace(txtTitle.Text);
             if (cmbScheduleType.SelectedIndex == (int)ScheduleType.Appointment) //Checks if Appointment type is selected
                 success &= cmbMinister.SelectedIndex != 0;
-
+            else if (cmbScheduleType.SelectedIndex == (int)ScheduleType.BloodDonation)
+                success &= txtVenue.Text.Trim().Length != 0;
             return success;
                 
         }

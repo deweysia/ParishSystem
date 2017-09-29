@@ -34,6 +34,7 @@
             this.iconPictureBox = new System.Windows.Forms.PictureBox();
             this.titleLabel = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBox1 = new System.Windows.Forms.Button();
             this.hiddenTabControl1 = new ParishSystem.HiddenTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -60,7 +61,6 @@
             this.metroButton13 = new MetroFramework.Controls.MetroButton();
             this.metroButton12 = new MetroFramework.Controls.MetroButton();
             this.metroButton11 = new MetroFramework.Controls.MetroButton();
-            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox)).BeginInit();
             this.hiddenTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -119,6 +119,19 @@
             this.imageList1.Images.SetKeyName(2, "Error_45.ico");
             this.imageList1.Images.SetKeyName(3, "Help_45.ico");
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.pictureBox1.FlatAppearance.BorderSize = 0;
+            this.pictureBox1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
+            this.pictureBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pictureBox1.Image = global::ParishSystem.Properties.Resources.icons8_Delete_20;
+            this.pictureBox1.Location = new System.Drawing.Point(388, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 34);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.UseVisualStyleBackColor = true;
+            // 
             // hiddenTabControl1
             // 
             this.hiddenTabControl1.Controls.Add(this.tabPage1);
@@ -166,6 +179,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.IndianRed;
+            this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
@@ -182,6 +196,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -198,6 +213,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.IndianRed;
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Abort;
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
@@ -241,6 +257,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Gray;
+            this.button4.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -462,28 +479,13 @@
             this.metroButton11.Text = "Yes";
             this.metroButton11.UseSelectable = true;
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Gray;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(311, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(126, 28);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "OK";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
             // CustomMessage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(438, 179);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.iconPictureBox);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.infoLabel);
@@ -543,8 +545,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private MetroFramework.Controls.MetroButton metroButton5;
+        private System.Windows.Forms.Button pictureBox1;
     }
 }

@@ -44,7 +44,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmbMinister = new System.Windows.Forms.ComboBox();
+            this.cmbMinister = new MetroFramework.Controls.MetroComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
             this.txtVenue = new System.Windows.Forms.TextBox();
@@ -122,7 +122,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.88235F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.11765F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel1.Controls.Add(this.dtpTimeStart, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.dtpDateEnd, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
@@ -142,24 +142,26 @@
             // dtpTimeStart
             // 
             this.dtpTimeStart.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpTimeStart.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTimeStart.CustomFormat = "hh:mm tt";
+            this.dtpTimeStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTimeStart.Location = new System.Drawing.Point(243, 13);
+            this.dtpTimeStart.Location = new System.Drawing.Point(233, 13);
             this.dtpTimeStart.Name = "dtpTimeStart";
             this.dtpTimeStart.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpTimeStart.ShowUpDown = true;
-            this.dtpTimeStart.Size = new System.Drawing.Size(72, 22);
-            this.dtpTimeStart.TabIndex = 7;
+            this.dtpTimeStart.Size = new System.Drawing.Size(84, 21);
+            this.dtpTimeStart.TabIndex = 6;
             this.dtpTimeStart.ValueChanged += new System.EventHandler(this.dtpTimeStart_ValueChanged);
             // 
             // dtpDateEnd
             // 
             this.dtpDateEnd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDateEnd.FontSize = MetroFramework.MetroDateTimeSize.Small;
-            this.dtpDateEnd.Location = new System.Drawing.Point(62, 59);
+            this.dtpDateEnd.Location = new System.Drawing.Point(60, 59);
             this.dtpDateEnd.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpDateEnd.Name = "dtpDateEnd";
-            this.dtpDateEnd.Size = new System.Drawing.Size(158, 25);
+            this.dtpDateEnd.Size = new System.Drawing.Size(157, 25);
             this.dtpDateEnd.TabIndex = 7;
             this.dtpDateEnd.ValueChanged += new System.EventHandler(this.dtpDateEnd_ValueChanged);
             // 
@@ -167,24 +169,26 @@
             // 
             this.dtpDateStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDateStart.FontSize = MetroFramework.MetroDateTimeSize.Small;
-            this.dtpDateStart.Location = new System.Drawing.Point(62, 11);
+            this.dtpDateStart.Location = new System.Drawing.Point(60, 11);
             this.dtpDateStart.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpDateStart.Name = "dtpDateStart";
-            this.dtpDateStart.Size = new System.Drawing.Size(158, 25);
-            this.dtpDateStart.TabIndex = 7;
+            this.dtpDateStart.Size = new System.Drawing.Size(157, 25);
+            this.dtpDateStart.TabIndex = 5;
             this.dtpDateStart.ValueChanged += new System.EventHandler(this.dtpDateStart_ValueChanged);
             // 
             // dtpTimeEnd
             // 
             this.dtpTimeEnd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpTimeEnd.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTimeEnd.CustomFormat = "hh:mm tt";
+            this.dtpTimeEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTimeEnd.Location = new System.Drawing.Point(243, 61);
+            this.dtpTimeEnd.Location = new System.Drawing.Point(233, 61);
             this.dtpTimeEnd.Name = "dtpTimeEnd";
             this.dtpTimeEnd.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpTimeEnd.ShowUpDown = true;
-            this.dtpTimeEnd.Size = new System.Drawing.Size(72, 22);
-            this.dtpTimeEnd.TabIndex = 7;
+            this.dtpTimeEnd.Size = new System.Drawing.Size(84, 21);
+            this.dtpTimeEnd.TabIndex = 8;
             this.dtpTimeEnd.ValueChanged += new System.EventHandler(this.dtpTimeEnd_ValueChanged);
             // 
             // label5
@@ -208,7 +212,7 @@
             this.tabScheduleType.Name = "tabScheduleType";
             this.tabScheduleType.SelectedIndex = 0;
             this.tabScheduleType.Size = new System.Drawing.Size(231, 100);
-            this.tabScheduleType.TabIndex = 8;
+            this.tabScheduleType.TabIndex = 5;
             // 
             // tabPage1
             // 
@@ -236,7 +240,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label6.Location = new System.Drawing.Point(3, 28);
+            this.label6.Location = new System.Drawing.Point(3, 27);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 16);
             this.label6.TabIndex = 6;
@@ -244,14 +248,15 @@
             // 
             // cmbMinister
             // 
-            this.cmbMinister.BackColor = System.Drawing.SystemColors.Control;
             this.cmbMinister.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.cmbMinister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbMinister.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.cmbMinister.FormattingEnabled = true;
-            this.cmbMinister.Location = new System.Drawing.Point(3, 44);
+            this.cmbMinister.ItemHeight = 19;
+            this.cmbMinister.Location = new System.Drawing.Point(3, 43);
             this.cmbMinister.Name = "cmbMinister";
-            this.cmbMinister.Size = new System.Drawing.Size(217, 24);
-            this.cmbMinister.TabIndex = 7;
+            this.cmbMinister.Size = new System.Drawing.Size(217, 25);
+            this.cmbMinister.TabIndex = 11;
+            this.cmbMinister.UseSelectable = true;
             // 
             // tabPage3
             // 
@@ -279,6 +284,7 @@
             // 
             this.txtVenue.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtVenue.Location = new System.Drawing.Point(3, 46);
+            this.txtVenue.MaxLength = 1000;
             this.txtVenue.Name = "txtVenue";
             this.txtVenue.Size = new System.Drawing.Size(217, 22);
             this.txtVenue.TabIndex = 9;
@@ -294,7 +300,7 @@
             this.txtDetails.Multiline = true;
             this.txtDetails.Name = "txtDetails";
             this.txtDetails.Size = new System.Drawing.Size(365, 53);
-            this.txtDetails.TabIndex = 5;
+            this.txtDetails.TabIndex = 9;
             // 
             // txtTitle
             // 
@@ -303,9 +309,10 @@
             this.txtTitle.CueColor = System.Drawing.Color.Gray;
             this.txtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitle.Location = new System.Drawing.Point(12, 127);
+            this.txtTitle.MaxLength = 150;
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(135, 22);
-            this.txtTitle.TabIndex = 5;
+            this.txtTitle.TabIndex = 4;
             // 
             // panelControl
             // 
@@ -415,12 +422,12 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbMinister;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtVenue;
         private System.Windows.Forms.Panel panelControl;
         private System.Windows.Forms.Button pictureBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnAdd;
+        private MetroFramework.Controls.MetroComboBox cmbMinister;
     }
 }

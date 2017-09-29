@@ -809,7 +809,7 @@ namespace ParishSystem
             DataTable dt = getParentsOf(profileID);
 
             bool success = true;
-            if (dt.Rows.Count == 0)
+            if (dt.Rows.Count < 2)
             {
                 //add parents
                 success &= addParent(profileID, PfirstName, PmidName, PlastName, Psuffix, Pgender);
@@ -1652,7 +1652,7 @@ namespace ParishSystem
 
         public bool addMarriage(int applicationID, int ministerID, DateTime licenseDate, DateTime marriageDate, CivilStatus civilStatusGroom, CivilStatus civilStatusBride, string remarks)
         {
-            string q = "INSERT INTO Marriage(applicationID, ministerID, licenseDate, marriageDate, civilStatusGroom, civilStatusBride, remarks, status) VALUES (@applicationID, @ministerID, @licenseDate, @marriageDate, @civilStatusGroom, @civilStatusBride)";
+            string q = "INSERT INTO Marriage(applicationID, ministerID, licenseDate, marriageDate, civilStatusGroom, civilStatusBride, remarks, status) VALUES (@applicationID, @ministerID, @licenseDate, @marriageDate, @civilStatusGroom, @civilStatusBride, @remarks, @status)";
             bool success = ExecuteNonQuery(q, applicationID, ministerID, licenseDate.ToString("yyyy-MM-dd HH:mm:ss"), marriageDate.ToString("yyyy-MM-dd"), civilStatusGroom, civilStatusBride, remarks, MarriageStatus.Active);
 
             return success;
@@ -2434,7 +2434,7 @@ namespace ParishSystem
                     + "JOIN(SELECT profileID, firstName, midName, lastName, suffix, birthdate FROM GeneralProfile) AS b "
                     + "JOIN Applicant AS bb ON bb.profileID = b.profileID "
                     + "JOIN Application ON(Application.applicationID = aa.applicationID AND Application.applicationID = bb.applicationID) "
-                    + "WHERE sacramentType = " + (int)type + " AND a.profileID != b.profileID GROUP BY application.applicationID";
+                    + "WHERE sacramentType = " + (int)type + " AND a.profileID != b.profileID GROUP BY application.applicationID ORDER BY application.applicationID DESC";
 
             }
             else
@@ -2444,7 +2444,8 @@ namespace ParishSystem
                     + "FROM GeneralProfile"
                     + " NATURAL JOIN Applicant "
                     + "NATURAL JOIN Application "
-                    + "WHERE sacramentType = " + (int)type;
+                    + "WHERE sacramentType = " + (int)type 
+                    + " ORDER BY application.applicationID DESC";
 
 
             }

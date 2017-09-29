@@ -32,7 +32,7 @@ namespace ParishSystem
             this.operation = operation;
 
             cmbBStatus.DataSource = Enum.GetValues(typeof(CivilStatus));
-            cmbGStatus.DataSource = cmbBStatus.DataSource;
+            cmbGStatus.DataSource = Enum.GetValues(typeof(CivilStatus));
 
             lblGName.Text = row[6].ToString();
             lblBName.Text = row[8].ToString();
@@ -268,7 +268,7 @@ namespace ParishSystem
                     Console.WriteLine("All filled? {0}", allFilled);
                     if (!allFilled)
                     {
-                        //MessageBox.Show("Error at " + t.Name.ToString());
+                        MessageBox.Show("Error at " + t.Name.ToString());
                         return false;
                     }
 

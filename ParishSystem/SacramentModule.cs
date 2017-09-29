@@ -84,7 +84,7 @@ namespace ParishSystem
             string mn = dgvConfirmation.SelectedRows[0].Cells["conMI"].Value.ToString();
             string ln = dgvConfirmation.SelectedRows[0].Cells["conLastName"].Value.ToString();
             string suffix = dgvConfirmation.SelectedRows[0].Cells["conSuffix"].Value.ToString();
-            lblNameBap.Text = string.Format("{0} {1} {2} {3}", fn, mn, ln, suffix);
+            lblNameCon.Text = string.Format("{0} {1} {2} {3}", fn, mn, ln, suffix);
 
             int pageIndex = dgvConfirmation.SelectedRows[0].Cells.Count - 3;
             btnAddReferencesCon.Enabled = string.IsNullOrWhiteSpace(dgvConfirmation.SelectedRows[0].Cells[pageIndex].Value.ToString());
@@ -452,7 +452,7 @@ namespace ParishSystem
             else if (t == SacramentType.Confirmation)
             {
                 dt = ((BindingSource)dgvConfirmation.DataSource).DataSource as DataTable;
-                filter = string.Format("firstName LIKE '%{0}%' OR midName LIKE '%{0}%' OR lastName LIKE '%{0}%' OR suffix LIKE '%{0}%'", txtSearchBap.Text);
+                filter = string.Format("firstName LIKE '%{0}%' OR midName LIKE '%{0}%' OR lastName LIKE '%{0}%' OR suffix LIKE '%{0}%'", txtSearchCon.Text);
             }
             else
             {

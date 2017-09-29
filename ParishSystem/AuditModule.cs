@@ -89,7 +89,7 @@ namespace ParishSystem
 
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
+        private void reset_Click(object sender, EventArgs e)
         {
             DataTable dt = dgvAudit.DataSource as DataTable;
             sourceSearchString = "";
@@ -97,8 +97,8 @@ namespace ParishSystem
             dateSearchString = "";
 
 
-            dtpFrom.Value = DateTime.Today;
-            dtpTo.Value = DateTime.Today;
+            dtpFrom.Value = DateTime.Today.Date;
+            dtpTo.Value = DateTime.Today.Date;
 
             txtUser.Text = "";
 

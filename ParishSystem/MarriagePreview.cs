@@ -52,6 +52,8 @@ namespace ParishSystem
             lblGivenMonthYear.Text = givenMonthYear;
             this.lblMarriageMonthYear.Text = marriageMonthYear;
             lblGivenMonthYear.Text = marriageMonthYear;
+            lblWitness1.Text = witness1;
+            lblWithness2.Text = witness2;
 
 
         }

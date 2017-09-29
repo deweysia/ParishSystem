@@ -18,6 +18,7 @@ namespace ParishSystem
             InitializeComponent();
             Draggable drag = new Draggable(this);
             drag.makeDraggable(this);
+            drag.makeDraggable(metroLabel1);
         }
 
         private void btnContinue_Click(object sender, EventArgs e)
