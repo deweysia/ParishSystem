@@ -238,6 +238,7 @@
             this.itemType_dgv.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.itemType_dgv.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
             this.itemType_dgv.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.itemType_dgv.RowTemplate.Height = 35;
             this.itemType_dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.itemType_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.itemType_dgv.Size = new System.Drawing.Size(849, 505);

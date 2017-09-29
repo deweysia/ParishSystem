@@ -75,9 +75,9 @@
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.report_datagridview_cashdisbursment = new System.Windows.Forms.DataGridView();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.summary_datagridview_report_disbursment = new System.Windows.Forms.DataGridView();
             this.SaveExcelButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.summary_datagridview_report_disbursment = new System.Windows.Forms.DataGridView();
             this.Reports_panel.SuspendLayout();
             this.reportFilter_panel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -498,7 +498,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Location = new System.Drawing.Point(38, 123);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(878, 482);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroTabControl1.TabIndex = 21;
@@ -556,7 +556,6 @@
             this.report_datagridview_cashdisbursment.Name = "report_datagridview_cashdisbursment";
             this.report_datagridview_cashdisbursment.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
@@ -568,7 +567,7 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gainsboro;
             this.report_datagridview_cashdisbursment.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Empty;
+            this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
             this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
             this.report_datagridview_cashdisbursment.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.report_datagridview_cashdisbursment.RowTemplate.Height = 35;
@@ -594,28 +593,6 @@
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
-            // 
-            // SaveExcelButton
-            // 
-            this.SaveExcelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveExcelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SaveExcelButton.Enabled = false;
-            this.SaveExcelButton.FlatAppearance.BorderSize = 0;
-            this.SaveExcelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.SaveExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveExcelButton.ForeColor = System.Drawing.Color.White;
-            this.SaveExcelButton.Location = new System.Drawing.Point(734, 611);
-            this.SaveExcelButton.Name = "SaveExcelButton";
-            this.SaveExcelButton.Size = new System.Drawing.Size(178, 34);
-            this.SaveExcelButton.TabIndex = 20;
-            this.SaveExcelButton.Text = "Quick Save";
-            this.SaveExcelButton.UseVisualStyleBackColor = false;
-            this.SaveExcelButton.Click += new System.EventHandler(this.excel_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // summary_datagridview_report_disbursment
             // 
@@ -674,6 +651,28 @@
             this.summary_datagridview_report_disbursment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.summary_datagridview_report_disbursment.Size = new System.Drawing.Size(870, 397);
             this.summary_datagridview_report_disbursment.TabIndex = 5;
+            // 
+            // SaveExcelButton
+            // 
+            this.SaveExcelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveExcelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SaveExcelButton.Enabled = false;
+            this.SaveExcelButton.FlatAppearance.BorderSize = 0;
+            this.SaveExcelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.SaveExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveExcelButton.ForeColor = System.Drawing.Color.White;
+            this.SaveExcelButton.Location = new System.Drawing.Point(734, 611);
+            this.SaveExcelButton.Name = "SaveExcelButton";
+            this.SaveExcelButton.Size = new System.Drawing.Size(178, 34);
+            this.SaveExcelButton.TabIndex = 20;
+            this.SaveExcelButton.Text = "Quick Save";
+            this.SaveExcelButton.UseVisualStyleBackColor = false;
+            this.SaveExcelButton.Click += new System.EventHandler(this.excel_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // CashReport_Module
             // 
