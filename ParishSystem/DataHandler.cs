@@ -2844,12 +2844,12 @@ namespace ParishSystem
 
             DataTable output = new DataTable();
             output.Columns.Add("Type", typeof(string));
-            output.Columns.Add("Sum", typeof(float));
+            output.Columns.Add("Sum", typeof(string));
             foreach (KeyValuePair<string, float> entry in itemtypes)
             {
                 if (entry.Value != 0)
                 {
-                    output.Rows.Add(entry.Key, entry.Value);
+                    output.Rows.Add(entry.Key, entry.Value.ToString("0.00"));
                 }
             }
             return output;
@@ -2864,7 +2864,7 @@ namespace ParishSystem
                 DataRow row = output.NewRow();
 
                 output.Columns.Add("OR Number", typeof(string));
-                output.Columns.Add("Amount", typeof(float));
+                output.Columns.Add("Amount", typeof(string));
                 output.Columns.Add("Name", typeof(string));
                 output.Columns.Add("Date Paid", typeof(string));
 
@@ -2879,7 +2879,7 @@ namespace ParishSystem
                     row["OR Number"] = dr["ORnum"].ToString();
                     row["Name"] = dr["SourceName"].ToString();
                     row["Date Paid"] = DateTime.Parse(dr["primaryincomedatetime"].ToString()).ToString(" MMMM dd yyyy, hh:mm");
-                    try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["price"].ToString()); } catch { row["Amount"] = float.Parse(dr["price"].ToString()); };
+                    try { row["Amount"] = (float.Parse(row["Amount"].ToString()) + float.Parse(dr["price"].ToString())).ToString("0.00"); } catch { row["Amount"] = float.Parse(dr["price"].ToString()).ToString("0.00"); };
                 }
                 output.Rows.Add(row);
                 return output;
@@ -2892,7 +2892,7 @@ namespace ParishSystem
             {
                 DataTable output = new DataTable();
                 output.Columns.Add("OR Number", typeof(string));
-                output.Columns.Add("Amount", typeof(float));
+                output.Columns.Add("Amount", typeof(string));
                 output.Columns.Add("Date Paid", typeof(string));
                 DataRow row = output.NewRow();
                 DateTime currentDate = DateTime.Parse(transactions.Rows[0]["primaryIncomeDateTime"].ToString()).Date;
@@ -2921,7 +2921,7 @@ namespace ParishSystem
                         maxOR = int.Parse(dr["ORnum"].ToString());
                     }
                     row["Date Paid"] = DateTime.Parse(dr["primaryincomedatetime"].ToString()).ToString("MMMM dd yyyy");
-                    try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["price"].ToString()); } catch { row["Amount"] = float.Parse(dr["price"].ToString()); };
+                    try { row["Amount"] = (float.Parse(row["Amount"].ToString()) + float.Parse(dr["price"].ToString())).ToString("0.00"); } catch { row["Amount"] = float.Parse(dr["price"].ToString()).ToString("0.00"); };
                 }
                 row["OR Number"] = minOR.ToString() + " -- " + maxOR.ToString();
                 output.Rows.Add(row);
@@ -2942,7 +2942,7 @@ namespace ParishSystem
 
                 foreach (DataRow dr in itemTypes.Rows)
                 {
-                    output.Columns.Add(dr["itemType"].ToString(), typeof(float)); //add columns 
+                    output.Columns.Add(dr["itemType"].ToString(), typeof(string)); //add columns 
                     output.Columns[dr["itemType"].ToString()].DefaultValue = 0;
                 }
 
@@ -2960,7 +2960,7 @@ namespace ParishSystem
                     row["Name"] = dr["SourceName"].ToString();
                    
                     row["Date Paid"] = DateTime.Parse(dr["primaryincomedatetime"].ToString()).ToString("MMMM dd yyyy, hh:mm");
-                    row[dr["itemType"].ToString()] = (row[dr["itemType"].ToString()] == null ? 0 : float.Parse(row[dr["itemType"].ToString()].ToString())) + float.Parse(dr["price"].ToString());
+                    row[dr["itemType"].ToString()] = ((row[dr["itemType"].ToString()] == null ? 0 : float.Parse(row[dr["itemType"].ToString()].ToString())) + float.Parse(dr["price"].ToString())).ToString("0.00");
                 }
                 output.Rows.Add(row);
                 //remove all empty columns
@@ -3009,7 +3009,7 @@ namespace ParishSystem
 
                 foreach (DataRow dr in itemTypes.Rows)
                 {
-                    output.Columns.Add(dr["itemType"].ToString(), typeof(float)); //add columns 
+                    output.Columns.Add(dr["itemType"].ToString(), typeof(string)); //add columns 
                     output.Columns[dr["itemType"].ToString()].DefaultValue = 0;
                 }
                 int currentOR = int.Parse(transactions.Rows[0]["ORnum"].ToString());
@@ -3037,7 +3037,7 @@ namespace ParishSystem
                     }
                     //per itemtype code starts here
                     row["Date Paid"] = DateTime.Parse(dr["primaryincomedatetime"].ToString()).ToString("MMMM dd yyyy");
-                    row[dr["itemType"].ToString()] = (row[dr["itemType"].ToString()] == null ? 0 : float.Parse(row[dr["itemType"].ToString()].ToString())) + float.Parse(dr["price"].ToString());
+                    row[dr["itemType"].ToString()] = ((row[dr["itemType"].ToString()] == null ? 0 : float.Parse(row[dr["itemType"].ToString()].ToString())) + float.Parse(dr["price"].ToString())).ToString("0.00");
                     //per item type code ends here
                 }
                 row["OR Number"] = minOR.ToString() + " -- " + maxOR.ToString();
@@ -3198,13 +3198,13 @@ namespace ParishSystem
                 }
                 DataTable output = new DataTable();
                 output.Columns.Add("Type", typeof(string));
-                output.Columns.Add("Sum", typeof(float));
+                output.Columns.Add("Sum", typeof(string));
 
                 foreach (KeyValuePair<string, float> entry in itemtypes)
                 {
                     if (entry.Value != 0)
                     {
-                        output.Rows.Add(entry.Key, entry.Value);
+                        output.Rows.Add(entry.Key, entry.Value.ToString("0.00"));
                     }
                 }
 
@@ -3227,7 +3227,7 @@ namespace ParishSystem
 
                 output.Columns.Add("CVnum", typeof(string));
                 output.Columns.Add("CheckNum", typeof(string));
-                output.Columns.Add("Amount", typeof(float));
+                output.Columns.Add("Amount", typeof(string));
                 output.Columns.Add("Name", typeof(string));
                 output.Columns.Add("Date Paid", typeof(string));
 
@@ -3243,7 +3243,7 @@ namespace ParishSystem
                     row["CheckNum"] = dr["checkNum"].ToString();
                     row["Name"] = dr["name"].ToString();
                     row["Date Paid"] = DateTime.Parse(dr["cashReleaseDateTime"].ToString()).ToString("MMMM dd yyyy, hh:mm");
-                    try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["releaseAmount"].ToString()); } catch { row["Amount"] = float.Parse(dr["releaseAmount"].ToString()); };
+                    try { row["Amount"] = (float.Parse(row["Amount"].ToString()) + float.Parse(dr["releaseAmount"].ToString())).ToString("0.00"); } catch { row["Amount"] =(dr["releaseAmount"].ToString()); };
                 }
                 output.Rows.Add(row);
                 return output;
@@ -3260,7 +3260,7 @@ namespace ParishSystem
                 DataTable output = new DataTable();
                 output.Columns.Add("CVnum", typeof(string));
                 output.Columns.Add("CheckNum", typeof(string));
-                output.Columns.Add("Amount", typeof(float));
+                output.Columns.Add("Amount", typeof(string));
                 output.Columns.Add("Date Paid", typeof(string));
                 DataRow row = output.NewRow();
                 DateTime currentDate = DateTime.Parse(transactions.Rows[0]["cashReleaseDateTime"].ToString()).Date;
@@ -3295,7 +3295,7 @@ namespace ParishSystem
                         maxCN = int.Parse(dr["checkNum"].ToString());
                     }
                     row["Date Paid"] = DateTime.Parse(dr["cashReleaseDateTime"].ToString()).ToString("MMMM dd yyyy");
-                    try { row["Amount"] = float.Parse(row["Amount"].ToString()) + float.Parse(dr["releaseAmount"].ToString()); } catch { row["Amount"] = float.Parse(dr["releaseAmount"].ToString()); };
+                    try { row["Amount"] = (float.Parse(row["Amount"].ToString()) + float.Parse(dr["releaseAmount"].ToString())).ToString("0.00"); } catch { row["Amount"] = dr["releaseAmount"].ToString(); };
                 }
                 row["CVnum"] = minCV.ToString() + " -- " + maxCV.ToString();
                 row["CheckNum"] = minCN.ToString() + " -- " + maxCN.ToString();
@@ -3322,7 +3322,7 @@ namespace ParishSystem
 
                 foreach (DataRow dr in itemTypes.Rows)
                 {
-                    output.Columns.Add(dr["itemtype"].ToString(), typeof(float)); //add columns 
+                    output.Columns.Add(dr["itemtype"].ToString(), typeof(string)); //add columns 
                     output.Columns[dr["itemtype"].ToString()].DefaultValue = 0;
 
                 }
@@ -3342,7 +3342,7 @@ namespace ParishSystem
                     row["CheckNum"] = dr["checkNum"].ToString();
                     row["Name"] = dr["name"].ToString();
                     row["Date Paid"] = DateTime.Parse(dr["cashReleaseDateTime"].ToString()).ToString("MMMM dd yyyy, hh:mm");
-                    row[dr["itemtype"].ToString()] = (row[dr["itemtype"].ToString()] == null ? 0 : float.Parse(row[dr["itemtype"].ToString()].ToString())) + float.Parse(dr["releaseAmount"].ToString());
+                    row[dr["itemtype"].ToString()] = ((row[dr["itemtype"].ToString()] == null ? 0 : float.Parse(row[dr["itemtype"].ToString()].ToString())) + float.Parse(dr["releaseAmount"].ToString())).ToString("0.00");
                 }
                 output.Rows.Add(row);
 
@@ -3393,7 +3393,7 @@ namespace ParishSystem
 
                 foreach (DataRow dr in itemTypes.Rows)
                 {
-                    output.Columns.Add(dr["itemtype"].ToString(), typeof(float)); //add columns 
+                    output.Columns.Add(dr["itemtype"].ToString(), typeof(string)); //add columns 
                     output.Columns[dr["itemtype"].ToString()].DefaultValue = 0;
                 }
 
@@ -3431,7 +3431,7 @@ namespace ParishSystem
                     }
                     //per itemtype code starts here
                     row["Date Paid"] = DateTime.Parse(dr["cashReleaseDateTime"].ToString()).ToString("MMMM dd yyyy");
-                    row[dr["itemtype"].ToString()] = (row[dr["itemtype"].ToString()] == null ? 0 : float.Parse(row[dr["itemtype"].ToString()].ToString())) + float.Parse(dr["releaseAmount"].ToString());
+                    row[dr["itemtype"].ToString()] = (row[dr["itemtype"].ToString()] == null ? "0" : (float.Parse(row[dr["itemtype"].ToString()].ToString()) + float.Parse(dr["releaseAmount"].ToString())).ToString("0.00"));
                     //per item type code ends here
                 }
                 row["CVnum"] = minCV.ToString() + " --"  + maxCV.ToString();
