@@ -29,15 +29,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.applicationTabControl = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -157,6 +157,17 @@
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.panel21 = new System.Windows.Forms.Panel();
             this.marriageApplication_dgv = new MetroFramework.Controls.MetroGrid();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brideName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel18 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -208,17 +219,6 @@
             this.pnlMarApproveRevoke = new System.Windows.Forms.FlowLayoutPanel();
             this.marriageApplication_approve_btn = new MetroFramework.Controls.MetroButton();
             this.marriageApplication_revoke_btn = new MetroFramework.Controls.MetroButton();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brideName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.applicationTabControl.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -281,7 +281,7 @@
             this.applicationTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicationTabControl.Location = new System.Drawing.Point(0, 0);
             this.applicationTabControl.Name = "applicationTabControl";
-            this.applicationTabControl.SelectedIndex = 2;
+            this.applicationTabControl.SelectedIndex = 1;
             this.applicationTabControl.Size = new System.Drawing.Size(943, 669);
             this.applicationTabControl.Style = MetroFramework.MetroColorStyle.Silver;
             this.applicationTabControl.TabIndex = 70;
@@ -329,14 +329,14 @@
             this.baptismApplication_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.baptismApplication_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.baptismApplication_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.baptismApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.baptismApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.baptismApplication_dgv.ColumnHeadersHeight = 25;
             this.baptismApplication_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.baptismApplication_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -351,14 +351,14 @@
             this.Bgender,
             this.Bbirthdate,
             this.Bstatus});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.baptismApplication_dgv.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.baptismApplication_dgv.DefaultCellStyle = dataGridViewCellStyle20;
             this.baptismApplication_dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.baptismApplication_dgv.EnableHeadersVisualStyles = false;
             this.baptismApplication_dgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -368,14 +368,14 @@
             this.baptismApplication_dgv.Name = "baptismApplication_dgv";
             this.baptismApplication_dgv.ReadOnly = true;
             this.baptismApplication_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.baptismApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.baptismApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.baptismApplication_dgv.RowHeadersVisible = false;
             this.baptismApplication_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.baptismApplication_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -641,13 +641,13 @@
             this.baptismApplication_profile_tlp.Controls.Add(this.baptismApplication_birthDate_dtp, 0, 2);
             this.baptismApplication_profile_tlp.Controls.Add(this.flowLayoutPanel3, 0, 1);
             this.baptismApplication_profile_tlp.Controls.Add(this.flowLayoutPanel6, 0, 0);
-            this.baptismApplication_profile_tlp.Location = new System.Drawing.Point(65, 42);
+            this.baptismApplication_profile_tlp.Location = new System.Drawing.Point(68, 42);
             this.baptismApplication_profile_tlp.Name = "baptismApplication_profile_tlp";
             this.baptismApplication_profile_tlp.RowCount = 3;
             this.baptismApplication_profile_tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.baptismApplication_profile_tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.baptismApplication_profile_tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.baptismApplication_profile_tlp.Size = new System.Drawing.Size(329, 166);
+            this.baptismApplication_profile_tlp.Size = new System.Drawing.Size(324, 166);
             this.baptismApplication_profile_tlp.TabIndex = 30;
             this.baptismApplication_profile_tlp.Visible = false;
             // 
@@ -657,7 +657,7 @@
             this.baptismApplication_birthDate_dtp.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.baptismApplication_birthDate_dtp.FontSize = MetroFramework.MetroDateTimeSize.Small;
             this.baptismApplication_birthDate_dtp.Location = new System.Drawing.Point(3, 125);
-            this.baptismApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(4, 25);
+            this.baptismApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(0, 25);
             this.baptismApplication_birthDate_dtp.Name = "baptismApplication_birthDate_dtp";
             this.baptismApplication_birthDate_dtp.Size = new System.Drawing.Size(190, 25);
             this.baptismApplication_birthDate_dtp.Style = MetroFramework.MetroColorStyle.Silver;
@@ -707,7 +707,7 @@
             this.flowLayoutPanel6.Controls.Add(this.txtBapSuffix);
             this.flowLayoutPanel6.Location = new System.Drawing.Point(3, 12);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(323, 30);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(318, 30);
             this.flowLayoutPanel6.TabIndex = 0;
             // 
             // txtBapFN
@@ -828,7 +828,7 @@
             this.txtBapSuffix.CustomButton.UseSelectable = true;
             this.txtBapSuffix.CustomButton.Visible = false;
             this.txtBapSuffix.Lines = new string[0];
-            this.txtBapSuffix.Location = new System.Drawing.Point(275, 3);
+            this.txtBapSuffix.Location = new System.Drawing.Point(3, 32);
             this.txtBapSuffix.MaxLength = 32767;
             this.txtBapSuffix.Name = "txtBapSuffix";
             this.txtBapSuffix.PasswordChar = '\0';
@@ -854,7 +854,7 @@
             this.baptismApplication_profileLabels_tlp.Controls.Add(this.baptismApplication_birthdate_lbl, 0, 2);
             this.baptismApplication_profileLabels_tlp.Controls.Add(this.baptismApplication_gender_lbl, 0, 1);
             this.baptismApplication_profileLabels_tlp.Controls.Add(this.baptismApplication_name_lbl, 0, 0);
-            this.baptismApplication_profileLabels_tlp.Location = new System.Drawing.Point(69, 42);
+            this.baptismApplication_profileLabels_tlp.Location = new System.Drawing.Point(68, 44);
             this.baptismApplication_profileLabels_tlp.Name = "baptismApplication_profileLabels_tlp";
             this.baptismApplication_profileLabels_tlp.RowCount = 3;
             this.baptismApplication_profileLabels_tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -1175,14 +1175,14 @@
             this.confirmationApplication_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.confirmationApplication_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.confirmationApplication_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.confirmationApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.confirmationApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.confirmationApplication_dgv.ColumnHeadersHeight = 25;
             this.confirmationApplication_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.confirmationApplication_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1197,14 +1197,14 @@
             this.Cgender,
             this.Cbirthdate,
             this.Cstatus});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.confirmationApplication_dgv.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.confirmationApplication_dgv.DefaultCellStyle = dataGridViewCellStyle23;
             this.confirmationApplication_dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.confirmationApplication_dgv.EnableHeadersVisualStyles = false;
             this.confirmationApplication_dgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -1214,14 +1214,14 @@
             this.confirmationApplication_dgv.Name = "confirmationApplication_dgv";
             this.confirmationApplication_dgv.ReadOnly = true;
             this.confirmationApplication_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.confirmationApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.confirmationApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.confirmationApplication_dgv.RowHeadersVisible = false;
             this.confirmationApplication_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.confirmationApplication_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1428,7 +1428,7 @@
             this.confirmationApplication_profile_tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.confirmationApplication_profile_tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.confirmationApplication_profile_tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.confirmationApplication_profile_tlp.Size = new System.Drawing.Size(329, 166);
+            this.confirmationApplication_profile_tlp.Size = new System.Drawing.Size(324, 166);
             this.confirmationApplication_profile_tlp.TabIndex = 31;
             this.confirmationApplication_profile_tlp.Visible = false;
             // 
@@ -1471,22 +1471,22 @@
             this.confirmationApplication_birthDate_dtp.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.confirmationApplication_birthDate_dtp.FontSize = MetroFramework.MetroDateTimeSize.Small;
             this.confirmationApplication_birthDate_dtp.Location = new System.Drawing.Point(3, 125);
-            this.confirmationApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(4, 25);
+            this.confirmationApplication_birthDate_dtp.MinimumSize = new System.Drawing.Size(0, 25);
             this.confirmationApplication_birthDate_dtp.Name = "confirmationApplication_birthDate_dtp";
-            this.confirmationApplication_birthDate_dtp.Size = new System.Drawing.Size(190, 25);
+            this.confirmationApplication_birthDate_dtp.Size = new System.Drawing.Size(159, 25);
             this.confirmationApplication_birthDate_dtp.Style = MetroFramework.MetroColorStyle.Silver;
             this.confirmationApplication_birthDate_dtp.TabIndex = 8;
             // 
             // flowLayoutPanel8
             // 
-            this.flowLayoutPanel8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.flowLayoutPanel8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.flowLayoutPanel8.Controls.Add(this.txtConFN);
             this.flowLayoutPanel8.Controls.Add(this.txtConMI);
             this.flowLayoutPanel8.Controls.Add(this.txtConLN);
             this.flowLayoutPanel8.Controls.Add(this.txtConSuffix);
             this.flowLayoutPanel8.Location = new System.Drawing.Point(3, 12);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(323, 30);
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(318, 30);
             this.flowLayoutPanel8.TabIndex = 0;
             // 
             // txtConFN
@@ -1607,7 +1607,7 @@
             this.txtConSuffix.CustomButton.UseSelectable = true;
             this.txtConSuffix.CustomButton.Visible = false;
             this.txtConSuffix.Lines = new string[0];
-            this.txtConSuffix.Location = new System.Drawing.Point(275, 3);
+            this.txtConSuffix.Location = new System.Drawing.Point(3, 32);
             this.txtConSuffix.MaxLength = 32767;
             this.txtConSuffix.Name = "txtConSuffix";
             this.txtConSuffix.PasswordChar = '\0';
@@ -1643,8 +1643,8 @@
             // 
             // confirmationApplication_birthDate_lbl
             // 
-            this.confirmationApplication_birthDate_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.confirmationApplication_birthDate_lbl.Location = new System.Drawing.Point(58, 127);
+            this.confirmationApplication_birthDate_lbl.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.confirmationApplication_birthDate_lbl.Location = new System.Drawing.Point(3, 127);
             this.confirmationApplication_birthDate_lbl.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.confirmationApplication_birthDate_lbl.Name = "confirmationApplication_birthDate_lbl";
             this.confirmationApplication_birthDate_lbl.Size = new System.Drawing.Size(213, 22);
@@ -1653,8 +1653,8 @@
             // 
             // confirmationApplication_gender_lbl
             // 
-            this.confirmationApplication_gender_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.confirmationApplication_gender_lbl.Location = new System.Drawing.Point(58, 71);
+            this.confirmationApplication_gender_lbl.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.confirmationApplication_gender_lbl.Location = new System.Drawing.Point(3, 71);
             this.confirmationApplication_gender_lbl.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.confirmationApplication_gender_lbl.Name = "confirmationApplication_gender_lbl";
             this.confirmationApplication_gender_lbl.Size = new System.Drawing.Size(213, 22);
@@ -1663,8 +1663,8 @@
             // 
             // confirmationApplication_name_lbl
             // 
-            this.confirmationApplication_name_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.confirmationApplication_name_lbl.Location = new System.Drawing.Point(58, 16);
+            this.confirmationApplication_name_lbl.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.confirmationApplication_name_lbl.Location = new System.Drawing.Point(3, 16);
             this.confirmationApplication_name_lbl.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.confirmationApplication_name_lbl.Name = "confirmationApplication_name_lbl";
             this.confirmationApplication_name_lbl.Size = new System.Drawing.Size(213, 22);
@@ -1998,14 +1998,14 @@
             this.marriageApplication_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.marriageApplication_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.marriageApplication_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.marriageApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.marriageApplication_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.marriageApplication_dgv.ColumnHeadersHeight = 25;
             this.marriageApplication_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.marriageApplication_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -2020,14 +2020,14 @@
             this.brideName,
             this.Column2,
             this.dataGridViewTextBoxColumn10});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.marriageApplication_dgv.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.marriageApplication_dgv.DefaultCellStyle = dataGridViewCellStyle26;
             this.marriageApplication_dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.marriageApplication_dgv.EnableHeadersVisualStyles = false;
             this.marriageApplication_dgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -2037,14 +2037,14 @@
             this.marriageApplication_dgv.Name = "marriageApplication_dgv";
             this.marriageApplication_dgv.ReadOnly = true;
             this.marriageApplication_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.marriageApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.marriageApplication_dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.marriageApplication_dgv.RowHeadersVisible = false;
             this.marriageApplication_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.marriageApplication_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -2055,6 +2055,90 @@
             this.marriageApplication_dgv.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.marriageApplication_dgv_CellEnter);
             this.marriageApplication_dgv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.marriageApplication_dgv_CellFormatting);
             this.marriageApplication_dgv.VisibleChanged += new System.EventHandler(this.marriageApplication_dgv_VisibleChanged);
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "applicationID";
+            this.dataGridViewTextBoxColumn2.HeaderText = "applicationID";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "groomID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Groom ProfileID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "brideID";
+            this.Column1.HeaderText = "Bride ProfileID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "groomApplicantID";
+            this.Column3.HeaderText = "groomApplicantID";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "brideApplicantID";
+            this.Column4.HeaderText = "brideApplicantID";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "requirements";
+            this.dataGridViewTextBoxColumn3.HeaderText = "requirements";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // groomName
+            // 
+            this.groomName.DataPropertyName = "groomName";
+            this.groomName.HeaderText = "Groom Name";
+            this.groomName.Name = "groomName";
+            this.groomName.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "groomBirthDate";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Groom Birthdate";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // brideName
+            // 
+            this.brideName.DataPropertyName = "brideName";
+            this.brideName.HeaderText = "Bride Name";
+            this.brideName.Name = "brideName";
+            this.brideName.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "brideBirthDate";
+            this.Column2.HeaderText = "Bride Birthdate";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "status";
+            this.dataGridViewTextBoxColumn10.FillWeight = 50F;
+            this.dataGridViewTextBoxColumn10.HeaderText = "Status";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // panel18
             // 
@@ -2190,10 +2274,10 @@
             // flowLayoutPanel10
             // 
             this.flowLayoutPanel10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.flowLayoutPanel10.Controls.Add(this.txtBSuffix);
-            this.flowLayoutPanel10.Controls.Add(this.txtBLN);
             this.flowLayoutPanel10.Controls.Add(this.txtBFN);
+            this.flowLayoutPanel10.Controls.Add(this.txtBLN);
             this.flowLayoutPanel10.Controls.Add(this.txtBMI);
+            this.flowLayoutPanel10.Controls.Add(this.txtBSuffix);
             this.flowLayoutPanel10.Location = new System.Drawing.Point(3, 89);
             this.flowLayoutPanel10.Name = "flowLayoutPanel10";
             this.flowLayoutPanel10.Size = new System.Drawing.Size(320, 26);
@@ -2206,7 +2290,7 @@
             // 
             // 
             this.txtBSuffix.CustomButton.Image = null;
-            this.txtBSuffix.CustomButton.Location = new System.Drawing.Point(88, 1);
+            this.txtBSuffix.CustomButton.Location = new System.Drawing.Point(23, 1);
             this.txtBSuffix.CustomButton.Name = "";
             this.txtBSuffix.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtBSuffix.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -2215,21 +2299,21 @@
             this.txtBSuffix.CustomButton.UseSelectable = true;
             this.txtBSuffix.CustomButton.Visible = false;
             this.txtBSuffix.Lines = new string[0];
-            this.txtBSuffix.Location = new System.Drawing.Point(3, 3);
+            this.txtBSuffix.Location = new System.Drawing.Point(266, 3);
             this.txtBSuffix.MaxLength = 32767;
             this.txtBSuffix.Name = "txtBSuffix";
             this.txtBSuffix.PasswordChar = '\0';
-            this.txtBSuffix.PromptText = "First Name";
+            this.txtBSuffix.PromptText = "Suffix";
             this.txtBSuffix.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBSuffix.SelectedText = "";
             this.txtBSuffix.SelectionLength = 0;
             this.txtBSuffix.SelectionStart = 0;
             this.txtBSuffix.ShortcutsEnabled = true;
-            this.txtBSuffix.Size = new System.Drawing.Size(110, 23);
+            this.txtBSuffix.Size = new System.Drawing.Size(45, 23);
             this.txtBSuffix.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtBSuffix.TabIndex = 32;
             this.txtBSuffix.UseSelectable = true;
-            this.txtBSuffix.WaterMark = "First Name";
+            this.txtBSuffix.WaterMark = "Suffix";
             this.txtBSuffix.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtBSuffix.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
@@ -2283,11 +2367,11 @@
             this.txtBFN.CustomButton.UseSelectable = true;
             this.txtBFN.CustomButton.Visible = false;
             this.txtBFN.Lines = new string[0];
-            this.txtBFN.Location = new System.Drawing.Point(150, 3);
+            this.txtBFN.Location = new System.Drawing.Point(3, 3);
             this.txtBFN.MaxLength = 32767;
             this.txtBFN.Name = "txtBFN";
             this.txtBFN.PasswordChar = '\0';
-            this.txtBFN.PromptText = "Last Name";
+            this.txtBFN.PromptText = "First Name";
             this.txtBFN.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBFN.SelectedText = "";
             this.txtBFN.SelectionLength = 0;
@@ -2297,7 +2381,7 @@
             this.txtBFN.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtBFN.TabIndex = 34;
             this.txtBFN.UseSelectable = true;
-            this.txtBFN.WaterMark = "Last Name";
+            this.txtBFN.WaterMark = "First Name";
             this.txtBFN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtBFN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
@@ -2308,7 +2392,7 @@
             // 
             // 
             this.txtBMI.CustomButton.Image = null;
-            this.txtBMI.CustomButton.Location = new System.Drawing.Point(23, 1);
+            this.txtBMI.CustomButton.Location = new System.Drawing.Point(88, 1);
             this.txtBMI.CustomButton.Name = "";
             this.txtBMI.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtBMI.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -2317,21 +2401,21 @@
             this.txtBMI.CustomButton.UseSelectable = true;
             this.txtBMI.CustomButton.Visible = false;
             this.txtBMI.Lines = new string[0];
-            this.txtBMI.Location = new System.Drawing.Point(266, 3);
+            this.txtBMI.Location = new System.Drawing.Point(150, 3);
             this.txtBMI.MaxLength = 32767;
             this.txtBMI.Name = "txtBMI";
             this.txtBMI.PasswordChar = '\0';
-            this.txtBMI.PromptText = "Suffix";
+            this.txtBMI.PromptText = "Last Name";
             this.txtBMI.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBMI.SelectedText = "";
             this.txtBMI.SelectionLength = 0;
             this.txtBMI.SelectionStart = 0;
             this.txtBMI.ShortcutsEnabled = true;
-            this.txtBMI.Size = new System.Drawing.Size(45, 23);
+            this.txtBMI.Size = new System.Drawing.Size(110, 23);
             this.txtBMI.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtBMI.TabIndex = 35;
             this.txtBMI.UseSelectable = true;
-            this.txtBMI.WaterMark = "Suffix";
+            this.txtBMI.WaterMark = "Last Name";
             this.txtBMI.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtBMI.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
@@ -2890,90 +2974,6 @@
             this.marriageApplication_revoke_btn.UseCustomForeColor = true;
             this.marriageApplication_revoke_btn.UseSelectable = true;
             this.marriageApplication_revoke_btn.Click += new System.EventHandler(this.marriageApplication_revoke_btn_Click);
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "applicationID";
-            this.dataGridViewTextBoxColumn2.HeaderText = "applicationID";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "groomID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Groom ProfileID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "brideID";
-            this.Column1.HeaderText = "Bride ProfileID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "groomApplicantID";
-            this.Column3.HeaderText = "groomApplicantID";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Visible = false;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "brideApplicantID";
-            this.Column4.HeaderText = "brideApplicantID";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "requirements";
-            this.dataGridViewTextBoxColumn3.HeaderText = "requirements";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // groomName
-            // 
-            this.groomName.DataPropertyName = "groomName";
-            this.groomName.HeaderText = "Groom Name";
-            this.groomName.Name = "groomName";
-            this.groomName.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "groomBirthDate";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Groom Birthdate";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // brideName
-            // 
-            this.brideName.DataPropertyName = "brideName";
-            this.brideName.HeaderText = "Bride Name";
-            this.brideName.Name = "brideName";
-            this.brideName.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "brideBirthDate";
-            this.Column2.HeaderText = "Bride Birthdate";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "status";
-            this.dataGridViewTextBoxColumn10.FillWeight = 50F;
-            this.dataGridViewTextBoxColumn10.HeaderText = "Status";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // ApplicationModule
             // 

@@ -18,6 +18,7 @@ namespace ParishSystem
             InitializeComponent();
             dgvMinister.AutoGenerateColumns = false;
             flpEditDeleteMinister.Enabled = false;
+            loadMinisters();
         }
 
         private void loadMinisters()
