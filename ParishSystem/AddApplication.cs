@@ -111,7 +111,7 @@ namespace ParishSystem
                 profileID = dh.getLatestID("GeneralProfile", "profileID");
                 success &= dh.addNewApplicant(profileID, sacramentType);
                 int applicationID = dh.getLatestID("Application", "applicationID");
-                success &= dh.addSacramentIncome(applicationID, price, txtRemarks.Text);
+                success &= dh.addSacramentIncome(applicationID, price, txtRemarks.Text.Trim());
             }
 
             if (success)

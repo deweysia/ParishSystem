@@ -62,14 +62,14 @@ namespace ParishSystem
             // Find all of the installed printers.
             foreach (string printer in PrinterSettings.InstalledPrinters)
             {
-                selectPrinter.Items.Add(printer);
+                cmbSelectPrinter.Items.Add(printer);
             }
 
             // Find and select the default printer.
             try
             {
                 PrinterSettings settings = new PrinterSettings();
-                selectPrinter.Text = settings.PrinterName;
+                cmbSelectPrinter.Text = settings.PrinterName;
             }
             catch
             {
@@ -155,6 +155,7 @@ namespace ParishSystem
             int width = panel1.Size.Width;
             int height = panel1.Size.Height;
 
+            saveFileDialog1.FileName = string.Format("Marriage - {0} & {1}", GroomName.Text, BrideName.Text);
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
 
@@ -185,7 +186,7 @@ namespace ParishSystem
 
                 doc.Save(filepath);
                 doc.Close();
-
+                saved.Dispose();
                 this.Close();
             }
 
@@ -232,7 +233,7 @@ namespace ParishSystem
                 #endregion
                 isSaved = true;
             }
-            DEFAULTPRINTER = selectPrinter.SelectedItem.ToString();
+            DEFAULTPRINTER = cmbSelectPrinter.SelectedItem.ToString();
             PrintDocument pdfPrinter = new PrintDocument()
             {
                 PrinterSettings = new PrinterSettings()

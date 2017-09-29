@@ -15,6 +15,7 @@ using PdfSharp.Drawing;
 using System.IO;
 using System.Drawing.Printing;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace ParishSystem
 {
@@ -54,14 +55,14 @@ namespace ParishSystem
             // Find all of the installed printers.
             foreach (string printer in PrinterSettings.InstalledPrinters)
             {
-                selectPrinter.Items.Add(printer);
+                cmbSelectPrinter.Items.Add(printer);
             }
 
             // Find and select the default printer.
             try
             {
                 PrinterSettings settings = new PrinterSettings();
-                selectPrinter.Text = settings.PrinterName;
+                cmbSelectPrinter.Text = settings.PrinterName;
             }
             catch
             {
@@ -136,7 +137,7 @@ namespace ParishSystem
             saveFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             int width = panel1.Size.Width;
             int height = panel1.Size.Height;
-
+            saveFileDialog1.FileName = "Baptism - " + nameOfBaptized.Text;
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
 
@@ -146,7 +147,7 @@ namespace ParishSystem
                 Bitmap bm = new Bitmap(width, height);
                 panel1.DrawToBitmap(bm, new Rectangle(0, 0, width, height));
 
-
+               
                 string tempFolder = Path.GetTempPath();
                 bm.Save(tempFolder + "//tempRep.bmp", ImageFormat.Bmp);
 
@@ -167,7 +168,8 @@ namespace ParishSystem
 
                 doc.Save(filepath);
                 doc.Close();
-
+                saved.Dispose();
+               
                 this.Close();
             }
         }
@@ -223,7 +225,7 @@ namespace ParishSystem
                 #endregion
                 isSaved = true;
             }
-            DEFAULTPRINTER = selectPrinter.SelectedItem.ToString();
+            DEFAULTPRINTER = cmbSelectPrinter.SelectedItem.ToString();
             PrintDocument pdfPrinter = new PrintDocument()
             {
                 PrinterSettings = new PrinterSettings()

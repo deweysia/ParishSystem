@@ -96,6 +96,12 @@ namespace ParishSystem
             userSearchString = "";
             dateSearchString = "";
 
+
+            dtpFrom.Value = DateTime.Today;
+            dtpTo.Value = DateTime.Today;
+
+            txtUser.Text = "";
+
             dt.DefaultView.RowFilter = "";
             cmbFilter.SelectedIndex = 0;
         }

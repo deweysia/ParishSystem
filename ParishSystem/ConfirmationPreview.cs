@@ -44,14 +44,14 @@ namespace ParishSystem
             // Find all of the installed printers.
             foreach (string printer in PrinterSettings.InstalledPrinters)
             {
-                selectPrinter.Items.Add(printer);
+                cmbSelectPrinter.Items.Add(printer);
             }
 
             // Find and select the default printer.
             try
             {
                 PrinterSettings settings = new PrinterSettings();
-                selectPrinter.Text = settings.PrinterName;
+                cmbSelectPrinter.Text = settings.PrinterName;
             }
             catch
             {
@@ -133,11 +133,10 @@ namespace ParishSystem
         #region saving file as pdf
         private void button1_Click(object sender, EventArgs e)
         {
-
             saveFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             int width = panel1.Size.Width;
             int height = panel1.Size.Height;
-
+            saveFileDialog1.FileName = "Confirmation - " + Name.Text;
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
 
@@ -168,11 +167,9 @@ namespace ParishSystem
 
                 doc.Save(filepath);
                 doc.Close();
-
+                saved.Dispose();
                 this.Close();
             }
-
-
         }
         #endregion
 
@@ -215,7 +212,8 @@ namespace ParishSystem
                 #endregion
                 isSaved = true;
             }
-            DEFAULTPRINTER = selectPrinter.SelectedItem.ToString();
+
+            DEFAULTPRINTER = cmbSelectPrinter.SelectedItem.ToString();
             PrintDocument pdfPrinter = new PrintDocument()
             {
                 PrinterSettings = new PrinterSettings()
@@ -236,8 +234,12 @@ namespace ParishSystem
             pdfPrinter.Print();
 
         }
+
         #endregion
 
+        private void btnSaveDocument_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -65,11 +65,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.selectPrinter = new System.Windows.Forms.ComboBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnSaveDocument = new System.Windows.Forms.Button();
+            this.cmbSelectPrinter = new MetroFramework.Controls.MetroComboBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -550,76 +551,104 @@
             this.label2.TabIndex = 0;
             this.label2.Text = " ARCHIODESE OF DAVAO \r\n";
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.LawnGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(930, 95);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 48);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "SAVE DOCUMENT";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // saveFileDialog1
             // 
             this.saveFileDialog1.Filter = "Document (.pdf)|*.pdf";
             // 
-            // button1
+            // btnCancel
             // 
-            this.button1.BackColor = System.Drawing.Color.Salmon;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(930, 203);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 48);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "CANCEL";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCancel.BackColor = System.Drawing.Color.IndianRed;
+            this.btnCancel.Enabled = false;
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(909, 170);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(170, 37);
+            this.btnCancel.TabIndex = 81;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button3
+            // btnPrint
             // 
-            this.button3.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(930, 150);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 48);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "PRINT";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnPrint.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Location = new System.Drawing.Point(909, 84);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(170, 37);
+            this.btnPrint.TabIndex = 79;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.button3_Click);
             // 
-            // selectPrinter
+            // btnSaveDocument
             // 
-            this.selectPrinter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.selectPrinter.FormattingEnabled = true;
-            this.selectPrinter.Location = new System.Drawing.Point(908, 42);
-            this.selectPrinter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.selectPrinter.Name = "selectPrinter";
-            this.selectPrinter.Size = new System.Drawing.Size(170, 21);
-            this.selectPrinter.TabIndex = 2;
+            this.btnSaveDocument.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSaveDocument.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSaveDocument.FlatAppearance.BorderSize = 0;
+            this.btnSaveDocument.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnSaveDocument.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnSaveDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveDocument.ForeColor = System.Drawing.Color.White;
+            this.btnSaveDocument.Location = new System.Drawing.Point(908, 127);
+            this.btnSaveDocument.Name = "btnSaveDocument";
+            this.btnSaveDocument.Size = new System.Drawing.Size(170, 37);
+            this.btnSaveDocument.TabIndex = 80;
+            this.btnSaveDocument.Tag = "a";
+            this.btnSaveDocument.Text = "Save Document";
+            this.btnSaveDocument.UseVisualStyleBackColor = false;
+            this.btnSaveDocument.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // cmbSelectPrinter
+            // 
+            this.cmbSelectPrinter.FormattingEnabled = true;
+            this.cmbSelectPrinter.ItemHeight = 23;
+            this.cmbSelectPrinter.Location = new System.Drawing.Point(909, 54);
+            this.cmbSelectPrinter.Name = "cmbSelectPrinter";
+            this.cmbSelectPrinter.Size = new System.Drawing.Size(169, 29);
+            this.cmbSelectPrinter.TabIndex = 82;
+            this.cmbSelectPrinter.UseSelectable = true;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(908, 31);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(114, 20);
+            this.label22.TabIndex = 83;
+            this.label22.Text = "Choose Printer";
             // 
             // BaptismalPreview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1136, 1053);
-            this.Controls.Add(this.selectPrinter);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.cmbSelectPrinter);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnPrint);
+            this.Controls.Add(this.btnSaveDocument);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "BaptismalPreview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BAPTISMAL CERTIFICATE PREVIEW";
+            this.Text = "Baptism Certificate Preview";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -661,11 +690,12 @@
         private System.Windows.Forms.Label dateOfBaptism;
         private System.Windows.Forms.Label dateOfBirth;
         private System.Windows.Forms.Label purposeField;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox selectPrinter;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnSaveDocument;
+        private MetroFramework.Controls.MetroComboBox cmbSelectPrinter;
+        private System.Windows.Forms.Label label22;
     }
 }
 
