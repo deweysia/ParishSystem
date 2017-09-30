@@ -370,7 +370,7 @@ namespace ParishSystem
         {
             if (edit_button.Tag.ToString() == "s")
             {
-                if (MessageDialog.Show("Pending changes will not be saved. Are you sure you wish to close?") == DialogResult.Yes)
+                if (MessageDialog.Show("Pending changes will not be saved. Are you sure you wish to close?",MessageDialogButtons.YesNo,MessageDialogIcon.Question) == DialogResult.Yes)
                 {
                     this.Close();
                 }
