@@ -73,6 +73,7 @@
             this.bloodlettingreports_panel.Controls.Add(this.summary_dgv_bloodletting);
             this.bloodlettingreports_panel.Controls.Add(this.bloodlettingeventreport_datagridview);
             this.bloodlettingreports_panel.Controls.Add(this.open_button);
+            this.bloodlettingreports_panel.Controls.Add(this.generateReport_button);
             this.bloodlettingreports_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bloodlettingreports_panel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bloodlettingreports_panel.Location = new System.Drawing.Point(0, 0);
@@ -91,7 +92,6 @@
             this.filterPanel.Controls.Add(this.flowLayoutPanel1);
             this.filterPanel.Controls.Add(this.label3);
             this.filterPanel.Controls.Add(this.filterBy_combobox_bloodletting);
-            this.filterPanel.Controls.Add(this.generateReport_button);
             this.filterPanel.Location = new System.Drawing.Point(552, 77);
             this.filterPanel.Name = "filterPanel";
             this.filterPanel.Size = new System.Drawing.Size(340, 34);
@@ -110,7 +110,7 @@
             this.filterButton.Size = new System.Drawing.Size(338, 34);
             this.filterButton.TabIndex = 78;
             this.filterButton.Tag = "o";
-            this.filterButton.Text = "Filter";
+            this.filterButton.Text = "View Options";
             this.filterButton.UseVisualStyleBackColor = false;
             this.filterButton.Click += new System.EventHandler(this.filterButton_Click);
             // 
@@ -261,9 +261,9 @@
             this.generateReport_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.generateReport_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.generateReport_button.ForeColor = System.Drawing.Color.White;
-            this.generateReport_button.Location = new System.Drawing.Point(13, 140);
+            this.generateReport_button.Location = new System.Drawing.Point(552, 37);
             this.generateReport_button.Name = "generateReport_button";
-            this.generateReport_button.Size = new System.Drawing.Size(324, 34);
+            this.generateReport_button.Size = new System.Drawing.Size(340, 34);
             this.generateReport_button.TabIndex = 7;
             this.generateReport_button.Text = "Generate";
             this.generateReport_button.UseVisualStyleBackColor = false;

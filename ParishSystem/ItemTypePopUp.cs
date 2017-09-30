@@ -33,30 +33,35 @@ namespace ParishSystem
 
         private void save_button_Click(object sender, EventArgs e)
         {
-            if (!dh.isItemTypeExist(name_textbox.Text, IncomeTypeID,book_combobox.SelectedIndex ,cashreceipt_cashdisbursment)) {
-                if (name_textbox.Text.Trim() == "" || book_combobox.Text == "")
-                {
-                    Notification.Show(State.MissingFields);
-                }
-                else
-                {
-                    if (IncomeTypeID == 0)
+            if(AdminCredentialDialog.Show() == DialogResult.Yes){
+                if (!dh.isItemTypeExist(name_textbox.Text, IncomeTypeID, book_combobox.SelectedIndex, cashreceipt_cashdisbursment)) {
+                    if (name_textbox.Text.Trim() == "" || book_combobox.Text == "")
                     {
-                        dh.addItemType(name_textbox.Text, book_combobox.SelectedIndex, suggestedPrice_nud.Value, (active_button.Checked ? 1 : 2), cashreceipt_cashdisbursment, details_textbox.Text);
-                        IncomeTypeID = dh.getMaxIncomeType();
-                        Notification.Show(State.ItemTypeAdded);
+                        Notification.Show(State.MissingFields);
                     }
                     else
                     {
-                        dh.editIncomeType(IncomeTypeID, name_textbox.Text, book_combobox.SelectedIndex, suggestedPrice_nud.Value, (active_button.Checked ? 1 : 2), cashreceipt_cashdisbursment, details_textbox.Text);
-                        Notification.Show(State.ChangesSaved);
+                        if (IncomeTypeID == 0)
+                        {
+                            dh.addItemType(name_textbox.Text, book_combobox.SelectedIndex, suggestedPrice_nud.Value, (active_button.Checked ? 1 : 2), cashreceipt_cashdisbursment, details_textbox.Text);
+                            IncomeTypeID = dh.getMaxIncomeType();
+                            Notification.Show(State.ItemTypeAdded);
+                        }
+                        else
+                        {
+                            dh.editIncomeType(IncomeTypeID, name_textbox.Text, book_combobox.SelectedIndex, suggestedPrice_nud.Value, (active_button.Checked ? 1 : 2), cashreceipt_cashdisbursment, details_textbox.Text);
+                            Notification.Show(State.ChangesSaved);
+                        }
+                        this.Close();
                     }
-                    this.Close();
+                }
+                else
+                {
+                    Notification.Show(State.ItemTypeUsed);
                 }
             }
-            else
-            {
-                Notification.Show(State.ItemTypeUsed);
+            else{
+                Notification.Show(State.WrongCredentials);
             }
        }
            
