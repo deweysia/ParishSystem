@@ -52,6 +52,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.cboxSearchWithoutRef = new MetroFramework.Controls.MetroCheckBox();
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.tlpBetweenDates.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,7 +66,7 @@
             this.dtpFrom.CustomFormat = "";
             this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFrom.Location = new System.Drawing.Point(3, 18);
-            this.dtpFrom.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpFrom.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Size = new System.Drawing.Size(130, 29);
             this.dtpFrom.Style = MetroFramework.MetroColorStyle.Silver;
@@ -78,7 +79,7 @@
             this.dtpTo.CalendarTrailingForeColor = System.Drawing.Color.Black;
             this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpTo.Location = new System.Drawing.Point(187, 18);
-            this.dtpTo.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpTo.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Size = new System.Drawing.Size(130, 29);
             this.dtpTo.Style = MetroFramework.MetroColorStyle.Silver;
@@ -333,6 +334,12 @@
             this.cboxSearchWithoutRef.UseSelectable = true;
             this.cboxSearchWithoutRef.CheckedChanged += new System.EventHandler(this.cboxSearchWithoutRef_CheckedChanged);
             // 
+            // directorySearcher1
+            // 
+            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
             // AdvanceSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,5 +397,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private MetroFramework.Controls.MetroCheckBox cboxSearchWithoutRef;
+        private System.DirectoryServices.DirectorySearcher directorySearcher1;
     }
 }
