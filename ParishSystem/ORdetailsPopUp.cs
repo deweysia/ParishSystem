@@ -58,7 +58,7 @@ namespace ParishSystem
                 {
                     sum += float.Parse(dgvr.Cells["total"].Value.ToString());
                 }
-                total_label.Text = sum.ToString();
+                total_label.Text = sum.ToString("0.00");
 
                 source_name.Text = details_dgv.Rows[0].Cells["sourceName"].Value.ToString();
                 or_label.Text = details_dgv.Rows[0].Cells["ORnum"].Value.ToString();
@@ -92,7 +92,7 @@ namespace ParishSystem
                 {
                     sum += float.Parse(dgvr.Cells["releaseAmount"].Value.ToString());
                 }
-                total_label.Text = sum.ToString();
+                total_label.Text = sum.ToString("0.00");
                 source_name.Text = details_dgv.Rows[0].Cells["name"].Value.ToString();
                 CN_label.Text = details_dgv.Rows[0].Cells["checknum"].Value.ToString();
                 CV_label.Text = details_dgv.Rows[0].Cells["CVnum"].Value.ToString();

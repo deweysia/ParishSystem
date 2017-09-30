@@ -33,11 +33,11 @@
             this.lblName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtRecord = new ParishSystem.CueTextBox();
-            this.txtRegistry = new ParishSystem.CueTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtPage = new ParishSystem.CueTextBox();
+            this.txtRegistry = new ParishSystem.CueTextBox();
+            this.txtRecord = new ParishSystem.CueTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,6 +56,7 @@
             this.lblSacrament.Size = new System.Drawing.Size(150, 21);
             this.lblSacrament.TabIndex = 0;
             this.lblSacrament.Text = "Whatever Reference";
+            this.lblSacrament.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblName
             // 
@@ -67,6 +68,7 @@
             this.lblName.Size = new System.Drawing.Size(94, 21);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Dewey L Sia";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -102,17 +104,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(287, 133);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(10, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Registry no";
-            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -124,16 +115,27 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Page no";
             // 
-            // txtRecord
+            // label1
             // 
-            this.txtRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRecord.Cue = null;
-            this.txtRecord.CueColor = System.Drawing.Color.Gray;
-            this.txtRecord.Location = new System.Drawing.Point(97, 98);
-            this.txtRecord.Name = "txtRecord";
-            this.txtRecord.Size = new System.Drawing.Size(187, 25);
-            this.txtRecord.TabIndex = 1;
-            this.txtRecord.TextChanged += new System.EventHandler(this.txtRecord_TextChanged);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(10, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Registry no";
+            // 
+            // txtPage
+            // 
+            this.txtPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPage.Cue = null;
+            this.txtPage.CueColor = System.Drawing.Color.Gray;
+            this.txtPage.Location = new System.Drawing.Point(97, 53);
+            this.txtPage.Name = "txtPage";
+            this.txtPage.Size = new System.Drawing.Size(187, 25);
+            this.txtPage.TabIndex = 2;
+            this.txtPage.TextChanged += new System.EventHandler(this.txtRecord_TextChanged);
             // 
             // txtRegistry
             // 
@@ -146,16 +148,16 @@
             this.txtRegistry.TabIndex = 1;
             this.txtRegistry.TextChanged += new System.EventHandler(this.txtRecord_TextChanged);
             // 
-            // txtPage
+            // txtRecord
             // 
-            this.txtPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPage.Cue = null;
-            this.txtPage.CueColor = System.Drawing.Color.Gray;
-            this.txtPage.Location = new System.Drawing.Point(97, 53);
-            this.txtPage.Name = "txtPage";
-            this.txtPage.Size = new System.Drawing.Size(187, 25);
-            this.txtPage.TabIndex = 1;
-            this.txtPage.TextChanged += new System.EventHandler(this.txtRecord_TextChanged);
+            this.txtRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtRecord.Cue = null;
+            this.txtRecord.CueColor = System.Drawing.Color.Gray;
+            this.txtRecord.Location = new System.Drawing.Point(97, 98);
+            this.txtRecord.Name = "txtRecord";
+            this.txtRecord.Size = new System.Drawing.Size(187, 25);
+            this.txtRecord.TabIndex = 3;
+            this.txtRecord.TextChanged += new System.EventHandler(this.txtRecord_TextChanged);
             // 
             // button1
             // 
@@ -168,6 +170,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 25);
             this.button1.TabIndex = 3;
+            this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = true;
             // 
             // panel1
@@ -203,7 +206,7 @@
             this.btnSubmit.Location = new System.Drawing.Point(57, 247);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(213, 31);
-            this.btnSubmit.TabIndex = 5;
+            this.btnSubmit.TabIndex = 4;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);

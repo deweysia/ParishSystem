@@ -569,7 +569,7 @@
             this.bloodletting_cabinet_panel.Location = new System.Drawing.Point(0, 100);
             this.bloodletting_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.bloodletting_cabinet_panel.Name = "bloodletting_cabinet_panel";
-            this.bloodletting_cabinet_panel.Size = new System.Drawing.Size(232, 288);
+            this.bloodletting_cabinet_panel.Size = new System.Drawing.Size(232, 50);
             this.bloodletting_cabinet_panel.TabIndex = 54;
             this.bloodletting_cabinet_panel.Click += new System.EventHandler(this.SubmenuOpen_Click);
             // 
@@ -721,7 +721,7 @@
             // 
             this.schedule_cabinet_panel.Controls.Add(this.schedule_cabinet);
             this.schedule_cabinet_panel.Controls.Add(this.label9);
-            this.schedule_cabinet_panel.Location = new System.Drawing.Point(0, 388);
+            this.schedule_cabinet_panel.Location = new System.Drawing.Point(0, 150);
             this.schedule_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.schedule_cabinet_panel.Name = "schedule_cabinet_panel";
             this.schedule_cabinet_panel.Size = new System.Drawing.Size(232, 50);
@@ -767,7 +767,7 @@
             this.admin_cabinet_panel.Controls.Add(this.admin_cabinet);
             this.admin_cabinet_panel.Controls.Add(this.label7);
             this.admin_cabinet_panel.Controls.Add(this.label8);
-            this.admin_cabinet_panel.Location = new System.Drawing.Point(0, 438);
+            this.admin_cabinet_panel.Location = new System.Drawing.Point(0, 200);
             this.admin_cabinet_panel.Margin = new System.Windows.Forms.Padding(0);
             this.admin_cabinet_panel.Name = "admin_cabinet_panel";
             this.admin_cabinet_panel.Size = new System.Drawing.Size(232, 50);

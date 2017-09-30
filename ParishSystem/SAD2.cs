@@ -369,6 +369,8 @@ namespace ParishSystem
             bloodClaimView_menu_button.BackColor = ButtonBackColor;
             Employee_button_menu.BackColor = ButtonBackColor;
             ministers_button_menu.BackColor = ButtonBackColor;
+            SacramentLog_menu_button.BackColor = ButtonBackColor;
+
             
         }
         private void button_menu_MouseDown(object sender, MouseEventArgs e)

@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.postulancy_label = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.community_label = new System.Windows.Forms.Button();
+            this.parish_label = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.paymentPanel = new System.Windows.Forms.Panel();
             this.cancelPrice_button = new System.Windows.Forms.Button();
@@ -68,9 +71,6 @@
             this.add_button_CRB = new System.Windows.Forms.Button();
             this.itemtype_combobox_CRB = new System.Windows.Forms.ComboBox();
             this.CRB_panel = new System.Windows.Forms.Panel();
-            this.postulancy_label = new System.Windows.Forms.Button();
-            this.community_label = new System.Windows.Forms.Button();
-            this.parish_label = new System.Windows.Forms.Button();
             this.panel9.SuspendLayout();
             this.paymentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.price_nud_button_CRB)).BeginInit();
@@ -105,6 +105,22 @@
             this.panel9.Size = new System.Drawing.Size(943, 669);
             this.panel9.TabIndex = 70;
             // 
+            // postulancy_label
+            // 
+            this.postulancy_label.FlatAppearance.BorderSize = 0;
+            this.postulancy_label.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.postulancy_label.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.postulancy_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.postulancy_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postulancy_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.postulancy_label.Location = new System.Drawing.Point(292, 73);
+            this.postulancy_label.Name = "postulancy_label";
+            this.postulancy_label.Size = new System.Drawing.Size(138, 46);
+            this.postulancy_label.TabIndex = 94;
+            this.postulancy_label.Text = "Postulancy";
+            this.postulancy_label.UseVisualStyleBackColor = true;
+            this.postulancy_label.Click += new System.EventHandler(this.postulancy_label_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -116,6 +132,38 @@
             this.label1.Size = new System.Drawing.Size(218, 32);
             this.label1.TabIndex = 87;
             this.label1.Text = "Cash Disbursment ";
+            // 
+            // community_label
+            // 
+            this.community_label.FlatAppearance.BorderSize = 0;
+            this.community_label.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.community_label.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.community_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.community_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.community_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.community_label.Location = new System.Drawing.Point(116, 73);
+            this.community_label.Name = "community_label";
+            this.community_label.Size = new System.Drawing.Size(177, 46);
+            this.community_label.TabIndex = 93;
+            this.community_label.Text = "Community";
+            this.community_label.UseVisualStyleBackColor = true;
+            this.community_label.Click += new System.EventHandler(this.community_label_Click);
+            // 
+            // parish_label
+            // 
+            this.parish_label.FlatAppearance.BorderSize = 0;
+            this.parish_label.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.parish_label.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.parish_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.parish_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parish_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.parish_label.Location = new System.Drawing.Point(17, 73);
+            this.parish_label.Name = "parish_label";
+            this.parish_label.Size = new System.Drawing.Size(93, 46);
+            this.parish_label.TabIndex = 92;
+            this.parish_label.Text = "Parish";
+            this.parish_label.UseVisualStyleBackColor = true;
+            this.parish_label.Click += new System.EventHandler(this.parish_label_Click);
             // 
             // label15
             // 
@@ -187,7 +235,7 @@
             this.price_nud_button_CRB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.price_nud_button_CRB.Location = new System.Drawing.Point(87, 17);
             this.price_nud_button_CRB.Name = "price_nud_button_CRB";
-            this.price_nud_button_CRB.Size = new System.Drawing.Size(251, 35);
+            this.price_nud_button_CRB.Size = new System.Drawing.Size(237, 35);
             this.price_nud_button_CRB.TabIndex = 71;
             this.price_nud_button_CRB.ThousandsSeparator = true;
             this.price_nud_button_CRB.Visible = false;
@@ -225,7 +273,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(367, 434);
+            this.label14.Location = new System.Drawing.Point(332, 432);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(26, 25);
             this.label14.TabIndex = 87;
@@ -347,7 +395,7 @@
             this.total_label_cashrelease.AutoSize = true;
             this.total_label_cashrelease.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_label_cashrelease.ForeColor = System.Drawing.Color.Black;
-            this.total_label_cashrelease.Location = new System.Drawing.Point(392, 434);
+            this.total_label_cashrelease.Location = new System.Drawing.Point(357, 432);
             this.total_label_cashrelease.Name = "total_label_cashrelease";
             this.total_label_cashrelease.Size = new System.Drawing.Size(54, 25);
             this.total_label_cashrelease.TabIndex = 84;
@@ -368,14 +416,14 @@
             this.item_dgv_fullpay_CRB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.item_dgv_fullpay_CRB.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.item_dgv_fullpay_CRB.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle49.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle49.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.item_dgv_fullpay_CRB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle49;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.item_dgv_fullpay_CRB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.item_dgv_fullpay_CRB.ColumnHeadersHeight = 40;
             this.item_dgv_fullpay_CRB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.item_dgv_fullpay_CRB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -383,35 +431,35 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn5,
             this.ItemTypeII});
-            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle50.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle50.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.item_dgv_fullpay_CRB.DefaultCellStyle = dataGridViewCellStyle50;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.item_dgv_fullpay_CRB.DefaultCellStyle = dataGridViewCellStyle6;
             this.item_dgv_fullpay_CRB.EnableHeadersVisualStyles = false;
             this.item_dgv_fullpay_CRB.GridColor = System.Drawing.Color.White;
             this.item_dgv_fullpay_CRB.Location = new System.Drawing.Point(32, 65);
             this.item_dgv_fullpay_CRB.MultiSelect = false;
             this.item_dgv_fullpay_CRB.Name = "item_dgv_fullpay_CRB";
             this.item_dgv_fullpay_CRB.ReadOnly = true;
-            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle51.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle51.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.Magenta;
-            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.item_dgv_fullpay_CRB.RowHeadersDefaultCellStyle = dataGridViewCellStyle51;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Magenta;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.item_dgv_fullpay_CRB.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.item_dgv_fullpay_CRB.RowHeadersVisible = false;
             this.item_dgv_fullpay_CRB.RowHeadersWidth = 50;
-            dataGridViewCellStyle52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle52.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.Color.DarkRed;
-            this.item_dgv_fullpay_CRB.RowsDefaultCellStyle = dataGridViewCellStyle52;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.DarkRed;
+            this.item_dgv_fullpay_CRB.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.item_dgv_fullpay_CRB.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.item_dgv_fullpay_CRB.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.item_dgv_fullpay_CRB.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -457,7 +505,7 @@
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.label32.ForeColor = System.Drawing.Color.Black;
-            this.label32.Location = new System.Drawing.Point(325, 440);
+            this.label32.Location = new System.Drawing.Point(290, 438);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(36, 17);
             this.label32.TabIndex = 85;
@@ -589,54 +637,6 @@
             this.CRB_panel.Name = "CRB_panel";
             this.CRB_panel.Size = new System.Drawing.Size(943, 669);
             this.CRB_panel.TabIndex = 13;
-            // 
-            // postulancy_label
-            // 
-            this.postulancy_label.FlatAppearance.BorderSize = 0;
-            this.postulancy_label.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.postulancy_label.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.postulancy_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.postulancy_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postulancy_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.postulancy_label.Location = new System.Drawing.Point(292, 73);
-            this.postulancy_label.Name = "postulancy_label";
-            this.postulancy_label.Size = new System.Drawing.Size(138, 46);
-            this.postulancy_label.TabIndex = 94;
-            this.postulancy_label.Text = "Postulancy";
-            this.postulancy_label.UseVisualStyleBackColor = true;
-            this.postulancy_label.Click += new System.EventHandler(this.postulancy_label_Click);
-            // 
-            // community_label
-            // 
-            this.community_label.FlatAppearance.BorderSize = 0;
-            this.community_label.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.community_label.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.community_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.community_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.community_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.community_label.Location = new System.Drawing.Point(116, 73);
-            this.community_label.Name = "community_label";
-            this.community_label.Size = new System.Drawing.Size(177, 46);
-            this.community_label.TabIndex = 93;
-            this.community_label.Text = "Community";
-            this.community_label.UseVisualStyleBackColor = true;
-            this.community_label.Click += new System.EventHandler(this.community_label_Click);
-            // 
-            // parish_label
-            // 
-            this.parish_label.FlatAppearance.BorderSize = 0;
-            this.parish_label.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.parish_label.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.parish_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.parish_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.parish_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.parish_label.Location = new System.Drawing.Point(17, 73);
-            this.parish_label.Name = "parish_label";
-            this.parish_label.Size = new System.Drawing.Size(93, 46);
-            this.parish_label.TabIndex = 92;
-            this.parish_label.Text = "Parish";
-            this.parish_label.UseVisualStyleBackColor = true;
-            this.parish_label.Click += new System.EventHandler(this.parish_label_Click);
             // 
             // CashDisbursment
             // 

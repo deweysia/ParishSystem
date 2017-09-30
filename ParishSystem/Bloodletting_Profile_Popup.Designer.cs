@@ -69,8 +69,6 @@
             this.controlBar_panel = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.close_button = new System.Windows.Forms.Button();
-            this.totalDonation_label = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.donationID_textbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.blooddonation_dataGridView_bloodletting)).BeginInit();
@@ -607,7 +605,7 @@
             // 
             // cover
             // 
-            this.cover.Location = new System.Drawing.Point(6, 259);
+            this.cover.Location = new System.Drawing.Point(6, 263);
             this.cover.Name = "cover";
             this.cover.Size = new System.Drawing.Size(365, 355);
             this.cover.TabIndex = 15;
@@ -650,28 +648,6 @@
             this.close_button.UseVisualStyleBackColor = true;
             this.close_button.Click += new System.EventHandler(this.close_button_Click);
             // 
-            // totalDonation_label
-            // 
-            this.totalDonation_label.AutoSize = true;
-            this.totalDonation_label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalDonation_label.ForeColor = System.Drawing.Color.Black;
-            this.totalDonation_label.Location = new System.Drawing.Point(173, 586);
-            this.totalDonation_label.Name = "totalDonation_label";
-            this.totalDonation_label.Size = new System.Drawing.Size(29, 32);
-            this.totalDonation_label.TabIndex = 14;
-            this.totalDonation_label.Text = "0";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(137, 594);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 17);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Total";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -700,8 +676,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.cover);
             this.Controls.Add(this.donationID_textbox);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.totalDonation_label);
             this.Controls.Add(this.controlBar_panel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.delete_button_bloodletting);
@@ -749,8 +723,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel controlBar_panel;
         private System.Windows.Forms.Button close_button;
-        private System.Windows.Forms.Label totalDonation_label;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;

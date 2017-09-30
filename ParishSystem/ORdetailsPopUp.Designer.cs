@@ -120,7 +120,7 @@
             this.close_button.FlatAppearance.BorderSize = 0;
             this.close_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close_button.Image = ((System.Drawing.Image)(resources.GetObject("close_button.Image")));
-            this.close_button.Location = new System.Drawing.Point(545, 1);
+            this.close_button.Location = new System.Drawing.Point(545, 2);
             this.close_button.Name = "close_button";
             this.close_button.Size = new System.Drawing.Size(40, 33);
             this.close_button.TabIndex = 0;

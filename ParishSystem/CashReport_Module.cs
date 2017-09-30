@@ -716,8 +716,8 @@ namespace ParishSystem
         private void generate_report(object sender, EventArgs e)
         {
             refreshReports();
-            open = !open;
-            timer1.Start();
+            //open = !open;
+            //timer1.Start();
             SaveExcelButton.Enabled = true;
         }
         bool open = false;
@@ -726,7 +726,7 @@ namespace ParishSystem
         {
             if (open)
             {
-                if (reportFilter_panel.Height <= 300)
+                if (reportFilter_panel.Height <= 267)
                 {
                     reportFilter_panel.Height = reportFilter_panel.Height + velocity;
                     velocity++;
@@ -734,7 +734,7 @@ namespace ParishSystem
                 else
                 {
                     timer1.Stop();
-                    reportFilter_panel.Height = 300;
+                    reportFilter_panel.Height = 267;
                     velocity = 0;
                    
                 }
