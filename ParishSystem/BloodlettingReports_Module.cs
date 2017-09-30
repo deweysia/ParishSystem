@@ -323,5 +323,11 @@ namespace ParishSystem
         {
 
         }
+
+        private void BloodlettingReports_Module_VisibleChanged(object sender, EventArgs e)
+        {
+            bloodlettingeventreport_datagridview.DataSource = null;
+            summary_dgv_bloodletting.DataSource = null;
+        }
     }
 }

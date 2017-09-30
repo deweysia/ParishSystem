@@ -641,8 +641,7 @@ namespace ParishSystem
                     add_button_fullpay.Tag = "a";
                     add_button_fullpay.Enabled = false;
                     itemType_combobox_fullpay.Enabled = true;
-
-                }
+                }//HERE JUSTIN
             }
             else
             {
@@ -719,6 +718,11 @@ namespace ParishSystem
         {
             subTotal_label_fullpay.Text = (suggestedPrice_nud_fullpay.Value * quantity_nud_fullpay.Value).ToString("0.00"); ;
             AddButtonDataValidation();
+        }
+
+        private void CashReceipt_VisibleChanged(object sender, EventArgs e)
+        {
+            parish_label.PerformClick();
         }
     }
 }

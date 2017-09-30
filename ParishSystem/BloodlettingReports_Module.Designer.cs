@@ -322,7 +322,6 @@
             this.summary_dgv_bloodletting.ReadOnly = true;
             this.summary_dgv_bloodletting.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -331,7 +330,6 @@
             this.summary_dgv_bloodletting.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.summary_dgv_bloodletting.RowHeadersVisible = false;
             this.summary_dgv_bloodletting.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.summary_dgv_bloodletting.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Empty;
             this.summary_dgv_bloodletting.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.summary_dgv_bloodletting.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
             this.summary_dgv_bloodletting.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
@@ -389,7 +387,6 @@
             this.bloodlettingeventreport_datagridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.bloodlettingeventreport_datagridview.RowHeadersVisible = false;
             this.bloodlettingeventreport_datagridview.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.bloodlettingeventreport_datagridview.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Empty;
             this.bloodlettingeventreport_datagridview.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.bloodlettingeventreport_datagridview.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
             this.bloodlettingeventreport_datagridview.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
@@ -436,6 +433,7 @@
             this.Name = "BloodlettingReports_Module";
             this.Text = "CashReports_Module";
             this.Load += new System.EventHandler(this.BloodlettingReports_Module_Load);
+            this.VisibleChanged += new System.EventHandler(this.BloodlettingReports_Module_VisibleChanged);
             this.bloodlettingreports_panel.ResumeLayout(false);
             this.bloodlettingreports_panel.PerformLayout();
             this.filterPanel.ResumeLayout(false);

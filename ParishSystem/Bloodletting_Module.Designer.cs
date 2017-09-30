@@ -200,6 +200,7 @@
             this.Name = "Bloodletting_Module";
             this.Text = "Bloodletting_Module";
             this.Load += new System.EventHandler(this.Bloodletting_Module_Load);
+            this.VisibleChanged += new System.EventHandler(this.Bloodletting_Module_VisibleChanged);
             this.blooddonor_panel.ResumeLayout(false);
             this.blooddonor_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bloodletting_dgv)).EndInit();

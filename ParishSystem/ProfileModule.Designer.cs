@@ -165,6 +165,7 @@
             this.Name = "ProfileModule";
             this.Text = "ProfileModule";
             this.Load += new System.EventHandler(this.ProfileModule_Load);
+            this.VisibleChanged += new System.EventHandler(this.ProfileModule_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.profile_dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
