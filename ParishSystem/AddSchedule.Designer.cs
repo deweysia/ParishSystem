@@ -40,6 +40,10 @@
             this.dtpDateStart = new MetroFramework.Controls.MetroDateTime();
             this.dtpTimeEnd = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
+            this.panelControl = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.tabScheduleType = new ParishSystem.HiddenTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -50,15 +54,11 @@
             this.txtVenue = new System.Windows.Forms.TextBox();
             this.txtDetails = new ParishSystem.CueTextBox();
             this.txtTitle = new ParishSystem.CueTextBox();
-            this.panelControl = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panelControl.SuspendLayout();
             this.tabScheduleType.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.panelControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -89,7 +89,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 8);
+            this.label2.Location = new System.Drawing.Point(8, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 32);
             this.label2.TabIndex = 4;
@@ -99,7 +99,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 56);
+            this.label3.Location = new System.Drawing.Point(8, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 32);
             this.label3.TabIndex = 4;
@@ -122,7 +122,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.88235F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.11765F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tableLayoutPanel1.Controls.Add(this.dtpTimeStart, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.dtpDateEnd, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
@@ -146,7 +146,7 @@
             this.dtpTimeStart.CustomFormat = "hh:mm tt";
             this.dtpTimeStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTimeStart.Location = new System.Drawing.Point(233, 13);
+            this.dtpTimeStart.Location = new System.Drawing.Point(227, 13);
             this.dtpTimeStart.Name = "dtpTimeStart";
             this.dtpTimeStart.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpTimeStart.ShowUpDown = true;
@@ -158,10 +158,10 @@
             // 
             this.dtpDateEnd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDateEnd.FontSize = MetroFramework.MetroDateTimeSize.Small;
-            this.dtpDateEnd.Location = new System.Drawing.Point(60, 59);
+            this.dtpDateEnd.Location = new System.Drawing.Point(58, 61);
             this.dtpDateEnd.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpDateEnd.Name = "dtpDateEnd";
-            this.dtpDateEnd.Size = new System.Drawing.Size(157, 25);
+            this.dtpDateEnd.Size = new System.Drawing.Size(153, 25);
             this.dtpDateEnd.TabIndex = 7;
             this.dtpDateEnd.ValueChanged += new System.EventHandler(this.dtpDateEnd_ValueChanged);
             // 
@@ -169,10 +169,10 @@
             // 
             this.dtpDateStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDateStart.FontSize = MetroFramework.MetroDateTimeSize.Small;
-            this.dtpDateStart.Location = new System.Drawing.Point(60, 11);
+            this.dtpDateStart.Location = new System.Drawing.Point(58, 13);
             this.dtpDateStart.MinimumSize = new System.Drawing.Size(0, 25);
             this.dtpDateStart.Name = "dtpDateStart";
-            this.dtpDateStart.Size = new System.Drawing.Size(157, 25);
+            this.dtpDateStart.Size = new System.Drawing.Size(153, 25);
             this.dtpDateStart.TabIndex = 5;
             this.dtpDateStart.ValueChanged += new System.EventHandler(this.dtpDateStart_ValueChanged);
             // 
@@ -183,7 +183,7 @@
             this.dtpTimeEnd.CustomFormat = "hh:mm tt";
             this.dtpTimeEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTimeEnd.Location = new System.Drawing.Point(233, 61);
+            this.dtpTimeEnd.Location = new System.Drawing.Point(227, 61);
             this.dtpTimeEnd.Name = "dtpTimeEnd";
             this.dtpTimeEnd.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpTimeEnd.ShowUpDown = true;
@@ -201,6 +201,59 @@
             this.label5.Size = new System.Drawing.Size(50, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "Details";
+            // 
+            // panelControl
+            // 
+            this.panelControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelControl.Controls.Add(this.pictureBox1);
+            this.panelControl.Controls.Add(this.label8);
+            this.panelControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl.Location = new System.Drawing.Point(0, 0);
+            this.panelControl.Name = "panelControl";
+            this.panelControl.Size = new System.Drawing.Size(396, 34);
+            this.panelControl.TabIndex = 23;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.FlatAppearance.BorderSize = 0;
+            this.pictureBox1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
+            this.pictureBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pictureBox1.Image = global::ParishSystem.Properties.Resources.icons8_Delete_20;
+            this.pictureBox1.Location = new System.Drawing.Point(356, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 34);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.UseVisualStyleBackColor = true;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(7, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 20);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Schedule";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(100, 404);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(188, 32);
+            this.btnAdd.TabIndex = 24;
+            this.btnAdd.Text = "Save";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_ClickAdd);
             // 
             // tabScheduleType
             // 
@@ -314,59 +367,6 @@
             this.txtTitle.Size = new System.Drawing.Size(135, 22);
             this.txtTitle.TabIndex = 4;
             // 
-            // panelControl
-            // 
-            this.panelControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl.Controls.Add(this.pictureBox1);
-            this.panelControl.Controls.Add(this.label8);
-            this.panelControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl.Location = new System.Drawing.Point(0, 0);
-            this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(396, 34);
-            this.panelControl.TabIndex = 23;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.FlatAppearance.BorderSize = 0;
-            this.pictureBox1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
-            this.pictureBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pictureBox1.Image = global::ParishSystem.Properties.Resources.icons8_Delete_20;
-            this.pictureBox1.Location = new System.Drawing.Point(356, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 34);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.UseVisualStyleBackColor = true;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(7, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 20);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Schedule";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(100, 404);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(188, 32);
-            this.btnAdd.TabIndex = 24;
-            this.btnAdd.Text = "Save";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_ClickAdd);
-            // 
             // AddSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,13 +391,13 @@
             this.Load += new System.EventHandler(this.AddSchedule_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.panelControl.ResumeLayout(false);
+            this.panelControl.PerformLayout();
             this.tabScheduleType.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.panelControl.ResumeLayout(false);
-            this.panelControl.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

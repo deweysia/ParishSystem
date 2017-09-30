@@ -48,6 +48,8 @@
             this.venue_textbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.dtpTimeStart = new System.Windows.Forms.DateTimePicker();
+            this.dtpTimeEnd = new System.Windows.Forms.DateTimePicker();
             this.controlBar_panel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -99,7 +101,7 @@
             this.start_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.start_dateTimePicker.Location = new System.Drawing.Point(65, 12);
             this.start_dateTimePicker.Name = "start_dateTimePicker";
-            this.start_dateTimePicker.Size = new System.Drawing.Size(246, 29);
+            this.start_dateTimePicker.Size = new System.Drawing.Size(183, 29);
             this.start_dateTimePicker.TabIndex = 16;
             this.start_dateTimePicker.ValueChanged += new System.EventHandler(this.start_dateTimePicker_ValueChanged);
             this.start_dateTimePicker.Enter += new System.EventHandler(this.start_dateTimePicker_Enter);
@@ -111,7 +113,7 @@
             this.end_DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.end_DateTimePicker.Location = new System.Drawing.Point(65, 57);
             this.end_DateTimePicker.Name = "end_DateTimePicker";
-            this.end_DateTimePicker.Size = new System.Drawing.Size(246, 29);
+            this.end_DateTimePicker.Size = new System.Drawing.Size(183, 29);
             this.end_DateTimePicker.TabIndex = 17;
             // 
             // details_textarea
@@ -202,6 +204,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.dtpTimeEnd);
+            this.panel2.Controls.Add(this.dtpTimeStart);
             this.panel2.Controls.Add(this.start_dateTimePicker);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
@@ -278,6 +282,36 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "__________________________";
             // 
+            // dtpTimeStart
+            // 
+            this.dtpTimeStart.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpTimeStart.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTimeStart.CustomFormat = "hh:mm tt";
+            this.dtpTimeStart.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTimeStart.Location = new System.Drawing.Point(254, 12);
+            this.dtpTimeStart.Name = "dtpTimeStart";
+            this.dtpTimeStart.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtpTimeStart.ShowUpDown = true;
+            this.dtpTimeStart.Size = new System.Drawing.Size(110, 29);
+            this.dtpTimeStart.TabIndex = 25;
+            this.dtpTimeStart.ValueChanged += new System.EventHandler(this.start_dateTimePicker_ValueChanged);
+            this.dtpTimeStart.Enter += new System.EventHandler(this.start_dateTimePicker_Enter);
+            // 
+            // dtpTimeEnd
+            // 
+            this.dtpTimeEnd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpTimeEnd.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTimeEnd.CustomFormat = "hh:mm tt";
+            this.dtpTimeEnd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTimeEnd.Location = new System.Drawing.Point(254, 57);
+            this.dtpTimeEnd.Name = "dtpTimeEnd";
+            this.dtpTimeEnd.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtpTimeEnd.ShowUpDown = true;
+            this.dtpTimeEnd.Size = new System.Drawing.Size(110, 29);
+            this.dtpTimeEnd.TabIndex = 26;
+            // 
             // BloodlettingEventPopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -334,5 +368,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button delete_button;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker dtpTimeEnd;
+        private System.Windows.Forms.DateTimePicker dtpTimeStart;
     }
 }

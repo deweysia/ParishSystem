@@ -699,10 +699,9 @@ namespace ParishSystem
 
         public bool editBloodDonationEvent(int bloodDonationEventID, string eventName, DateTime startTime, DateTime endTime, string eventVenue, string eventDetails)
         {
-            string q = "UPDATE BloodDonationEvent SET eventName = @eventName, startTime = @startTime, endTime = @endTime, eventVenue = @eventVenue, eventDetails = @eventDetails WHERE bloodDonationEventID = @bloodDonationEventID";
+            string q = "UPDATE BloodDonationEvent SET eventName = @eventName, startDateTime = @startTime, endDateTime = @endTime, eventVenue = @eventVenue, eventDetails = @eventDetails WHERE bloodDonationEventID = @bloodDonationEventID";
             bool success = ExecuteNonQuery(q, eventName, startTime.ToString("yyyy-MM-dd HH:mm:ss"), endTime.ToString("yyyy-MM-dd HH:mm:ss"), eventVenue, eventDetails, bloodDonationEventID);
             return success;
-
         }
 
         public bool deleteBloodDonationEvent(int bloodDonationEventID)

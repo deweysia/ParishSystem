@@ -26,6 +26,7 @@ namespace ParishSystem
             InitializeComponent();
             this.dh = dh;
             start_dateTimePicker.MinDate = DateTime.Now;
+            
         }
 
         private void BloodlettingEventPopUp_Load(object sender, EventArgs e)
@@ -47,12 +48,15 @@ namespace ParishSystem
                 {
                     event_name.ReadOnly = false;
                     start_dateTimePicker.Enabled = true;
+                    dtpTimeStart.Enabled = true;
                     venue_textbox.ReadOnly = false;
                     details_textarea.ReadOnly = false;
                     edit_button.Tag = "s";
                     edit_button.Image = Properties.Resources.icons8_Save_Filled_32__1_;
                     start_dateTimePicker.Enabled = true;
+                    dtpTimeStart.Enabled = true;
                     cancel_button.Visible = true;
+                    dtpTimeStart.Enabled = true;
                 }
                 else
                 {
@@ -60,12 +64,15 @@ namespace ParishSystem
                     {
                         event_name.ReadOnly = false;
                         start_dateTimePicker.Enabled = true;
+                        dtpTimeStart.Enabled = true;
                         venue_textbox.ReadOnly = false;
                         details_textarea.ReadOnly = false;
                         edit_button.Tag = "s";
                         edit_button.Image = Properties.Resources.icons8_Save_Filled_32__1_;
                         start_dateTimePicker.Enabled = true;
+                        dtpTimeStart.Enabled = true;
                         cancel_button.Visible = true;
+                       
                     }
                 }
                 
@@ -82,18 +89,22 @@ namespace ParishSystem
                 }
                 else {
                     if (bloodlettingID.Equals(0)) {
-                        dh.addBloodDonationEvent(event_name.Text, start_dateTimePicker.Value, end_DateTimePicker.Value, venue_textbox.Text, details_textarea.Text);
+                        dh.addBloodDonationEvent(event_name.Text, new DateTime(start_dateTimePicker.Value.Year, start_dateTimePicker.Value.Month, start_dateTimePicker.Value.Day, dtpTimeStart.Value.Hour, dtpTimeStart.Value.Minute, 0)
+                                                , new DateTime(end_DateTimePicker.Value.Year, end_DateTimePicker.Value.Month, end_DateTimePicker.Value.Day, dtpTimeEnd.Value.Hour, dtpTimeEnd.Value.Minute, 0)
+                                                , venue_textbox.Text, details_textarea.Text);
                         bloodlettingID = dh.getMaxBloodEvent() + 1;
                     Notification.Show(State.EventAdded);
                     }
                     else {
-                        dh.editBloodDonationEvent(bloodlettingID, event_name.Text, start_dateTimePicker.Value, end_DateTimePicker.Value, venue_textbox.Text, details_textarea.Text);
+                        dh.editBloodDonationEvent(bloodlettingID, event_name.Text, new DateTime(start_dateTimePicker.Value.Year, start_dateTimePicker.Value.Month, start_dateTimePicker.Value.Day, dtpTimeStart.Value.Hour, dtpTimeStart.Value.Minute, 0)
+                                                , new DateTime(end_DateTimePicker.Value.Year, end_DateTimePicker.Value.Month, end_DateTimePicker.Value.Day, dtpTimeEnd.Value.Hour, dtpTimeEnd.Value.Minute, 0), venue_textbox.Text, details_textarea.Text);
                     Notification.Show(State.ChangesSaved);
                 }
                     edit_button.Tag = "e";
                     edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
                     event_name.ReadOnly = true;
                     end_DateTimePicker.Enabled = false;
+                    dtpTimeEnd.Enabled = false;
                     venue_textbox.ReadOnly = true;
                     details_textarea.ReadOnly = true;
                     this.Close();
@@ -111,16 +122,22 @@ namespace ParishSystem
             {
                 
                 start_dateTimePicker.MinDate = DateTime.Now;
+                dtpTimeStart.Value = DateTime.Now;
                 end_DateTimePicker.MinDate = start_dateTimePicker.Value;
+                dtpTimeEnd.Value = DateTime.Now;
                 event_name.Clear();
                 start_dateTimePicker.Value = DateTime.Now;
+                dtpTimeStart.Value = DateTime.Now;
                 end_DateTimePicker.Value = DateTime.Now;
+                dtpTimeEnd.Value = DateTime.Now;
                 venue_textbox.Clear();
                 details_textarea.Clear();
 
                 event_name.ReadOnly = false;
                 start_dateTimePicker.Enabled = true;
+                dtpTimeStart.Enabled = true;
                 end_DateTimePicker.Enabled = true;
+                dtpTimeEnd.Enabled =true;
                 venue_textbox.ReadOnly = false;
                 details_textarea.ReadOnly = false;
              
@@ -132,7 +149,9 @@ namespace ParishSystem
             {
                 event_name.ReadOnly = true;
                 start_dateTimePicker.Enabled = false;
+                dtpTimeStart.Enabled = false;
                 end_DateTimePicker.Enabled = false;
+                dtpTimeEnd.Enabled = false;
                 venue_textbox.ReadOnly = true;
                 details_textarea.ReadOnly = true;
 
@@ -141,7 +160,9 @@ namespace ParishSystem
                 edit_button.Image = Properties.Resources.icons8_Pencil_32__1_;
                 event_name.Text = dt.Rows[0]["eventName"].ToString();
                 start_dateTimePicker.Value = DateTime.Parse(dt.Rows[0]["startDateTime"].ToString()).Date;
+                dtpTimeStart.Value = DateTime.Parse(dt.Rows[0]["startDateTime"].ToString());
                 end_DateTimePicker.Value = DateTime.Parse(dt.Rows[0]["endDateTime"].ToString()).Date;
+                dtpTimeEnd.Value = DateTime.Parse(dt.Rows[0]["endDateTime"].ToString());
                 venue_textbox.Text = dt.Rows[0]["eventVenue"].ToString();
                 details_textarea.Text = dt.Rows[0]["eventDetails"].ToString();
                 cancel_button.Visible = false;
@@ -219,6 +240,7 @@ namespace ParishSystem
         private void start_dateTimePicker_ValueChanged(object sender, EventArgs e)
         {
                 end_DateTimePicker.MinDate = start_dateTimePicker.Value;
+               
         }
 
         private void BloodlettingEventPopUp_KeyDown(object sender, KeyEventArgs e)
@@ -235,6 +257,7 @@ namespace ParishSystem
             {
                 end_DateTimePicker.MinDate = start_dateTimePicker.Value;
                 end_DateTimePicker.Enabled = true;
+                dtpTimeEnd.Enabled = true;
             }
         }
     }

@@ -249,6 +249,7 @@
             this.cmbEmployeeType.Location = new System.Drawing.Point(105, 244);
             this.cmbEmployeeType.Name = "cmbEmployeeType";
             this.cmbEmployeeType.Size = new System.Drawing.Size(204, 29);
+            this.cmbEmployeeType.Style = MetroFramework.MetroColorStyle.Silver;
             this.cmbEmployeeType.TabIndex = 51;
             this.cmbEmployeeType.UseSelectable = true;
             this.cmbEmployeeType.SelectedIndexChanged += new System.EventHandler(this.cmbEmployeeType_SelectedIndexChanged);
