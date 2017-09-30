@@ -263,7 +263,7 @@
             this.flowLayoutPanel1.Controls.Add(this.subtotal_panel);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(64, 332);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(317, 150);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(317, 134);
             this.flowLayoutPanel1.TabIndex = 65;
             // 
             // Person_panel
@@ -274,7 +274,7 @@
             this.Person_panel.Location = new System.Drawing.Point(0, 0);
             this.Person_panel.Margin = new System.Windows.Forms.Padding(0);
             this.Person_panel.Name = "Person_panel";
-            this.Person_panel.Size = new System.Drawing.Size(317, 55);
+            this.Person_panel.Size = new System.Drawing.Size(317, 127);
             this.Person_panel.TabIndex = 55;
             this.Person_panel.Visible = false;
             this.Person_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Person_panel_Paint);
@@ -358,7 +358,7 @@
             this.subtotal_panel.Controls.Add(this.subTotal_label_fullpay);
             this.subtotal_panel.Controls.Add(this.quantity_nud_fullpay);
             this.subtotal_panel.Controls.Add(this.label5);
-            this.subtotal_panel.Location = new System.Drawing.Point(0, 55);
+            this.subtotal_panel.Location = new System.Drawing.Point(0, 127);
             this.subtotal_panel.Margin = new System.Windows.Forms.Padding(0);
             this.subtotal_panel.Name = "subtotal_panel";
             this.subtotal_panel.Size = new System.Drawing.Size(317, 111);
