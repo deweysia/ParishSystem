@@ -51,7 +51,8 @@ namespace ParishSystem
             //MessageBox.Show(dt.Rows[0]["birthDate"].ToString());
             birthdateLabel.Text = DateTime.ParseExact(dt.Rows[0]["birthDate"].ToString(), "dd/MM/yyyy hh:mm:ss tt", null).ToString("yyyy-MM-dd");
             genderLabel.Text = dt.Rows[0]["gender"].ToString() == "1" ? "Male" : "Female";
-            
+
+            txtBirthplace.Text = dt.Rows[0]["birthplace"].ToString();
             legitimacyCBox.DataSource = Enum.GetValues(typeof(Legitimacy));
             loadMinisters();
             loadParents();
@@ -180,7 +181,8 @@ namespace ParishSystem
             string remarks = remarksText.Text;
             //MessageBox.Show("VIOLA");
 
-            bool success = true;
+
+            bool success = dh.editPlaceOfBirth(profileID, txtBirthplace.Text.Trim());
             if (operation == OperationType.Add)
                 success &= addOperation(applicationID, profileID, ministerID, l, dt, remarks);
             else success &= editOperation(applicationID, profileID, ministerID, l, dt, remarks);
@@ -251,7 +253,7 @@ namespace ParishSystem
                     allFilled &= !string.IsNullOrWhiteSpace(t.Text);
                     if (!allFilled)
                     {
-                        MessageBox.Show("Error at " + t.Name.ToString());
+                        //MessageBox.Show("Error at " + t.Name.ToString());
                         return false;
                     }
                         

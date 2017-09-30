@@ -27,7 +27,7 @@ namespace ParishSystem
             , String bdate, String fname, String mname
             , String fOrigin, String mOrigin, String baptismDate, String sponsorsname, String issueDate
 
-            , String registry, String record, String page, String OMinister, String purpose)
+            , String registry, String record, String page, String OMinister, String purpose, String PlaceOfBirth)
         {
             InitializeComponent();
 

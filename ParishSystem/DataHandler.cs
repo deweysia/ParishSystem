@@ -326,6 +326,15 @@ namespace ParishSystem
             return success;
         }
 
+
+        public bool editPlaceOfBirth(int profileID, string placeOfBirth)
+        {
+            string q = "UPDATE GeneralProfile SET birthPlace = @birthPlace WHERE profileID = @profileID";
+            bool success = ExecuteNonQuery(q, placeOfBirth, profileID);
+
+            return success;
+        }
+
         public bool editGeneralProfile(int profileID, string firstName, string midName, string lastName, string suffix, Gender gender, DateTime birthDate)
         {
             string q = @"UPDATE GeneralProfile SET firstName = @firstName, midName = @midName, lastName = @lastName, suffix = @suffix, 
@@ -697,11 +706,12 @@ namespace ParishSystem
 
         }
 
-        public bool editBloodDonationEvent(int bloodDonationEventID, string eventName, DateTime startTime, DateTime endTime, string eventVenue, string eventDetails)
+        public bool editBloodDonationEvent(int bloodDonationEventID, string eventName, DateTime startDateTime, DateTime endDateTime, string eventVenue, string eventDetails)
         {
-            string q = "UPDATE BloodDonationEvent SET eventName = @eventName, startDateTime = @startTime, endDateTime = @endTime, eventVenue = @eventVenue, eventDetails = @eventDetails WHERE bloodDonationEventID = @bloodDonationEventID";
-            bool success = ExecuteNonQuery(q, eventName, startTime.ToString("yyyy-MM-dd HH:mm:ss"), endTime.ToString("yyyy-MM-dd HH:mm:ss"), eventVenue, eventDetails, bloodDonationEventID);
+            string q = "UPDATE BloodDonationEvent SET eventName = @eventName, startDateTime = @startDateTime, endDateTime = @endDateTime, eventVenue = @eventVenue, eventDetails = @eventDetails WHERE bloodDonationEventID = @bloodDonationEventID";
+            bool success = ExecuteNonQuery(q, eventName, startDateTime.ToString("yyyy-MM-dd HH:mm:ss"), endDateTime.ToString("yyyy-MM-dd HH:mm:ss"), eventVenue, eventDetails, bloodDonationEventID);
             return success;
+
         }
 
         public bool deleteBloodDonationEvent(int bloodDonationEventID)

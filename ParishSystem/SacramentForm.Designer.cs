@@ -76,6 +76,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.close_button = new System.Windows.Forms.Button();
             this.submitBtn = new System.Windows.Forms.Button();
+            this.txtBirthplace = new MetroFramework.Controls.MetroTextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.controlBar_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,7 +128,7 @@
             this.MinisterCBox.Location = new System.Drawing.Point(200, 146);
             this.MinisterCBox.Name = "MinisterCBox";
             this.MinisterCBox.Size = new System.Drawing.Size(137, 25);
-            this.MinisterCBox.TabIndex = 2;
+            this.MinisterCBox.TabIndex = 1;
             this.MinisterCBox.UseSelectable = true;
             // 
             // sacramentDateLabel
@@ -148,7 +150,7 @@
             this.sacramentDateDTP.MinimumSize = new System.Drawing.Size(0, 25);
             this.sacramentDateDTP.Name = "sacramentDateDTP";
             this.sacramentDateDTP.Size = new System.Drawing.Size(173, 25);
-            this.sacramentDateDTP.TabIndex = 1;
+            this.sacramentDateDTP.TabIndex = 0;
             this.sacramentDateDTP.ValueChanged += new System.EventHandler(this.baptismDateDTP_ValueChanged);
             // 
             // label4
@@ -473,7 +475,7 @@
             this.legitimacyCBox.Location = new System.Drawing.Point(23, 204);
             this.legitimacyCBox.Name = "legitimacyCBox";
             this.legitimacyCBox.Size = new System.Drawing.Size(171, 25);
-            this.legitimacyCBox.TabIndex = 3;
+            this.legitimacyCBox.TabIndex = 2;
             this.legitimacyCBox.UseSelectable = true;
             // 
             // controlBar_panel
@@ -531,12 +533,53 @@
             this.submitBtn.UseVisualStyleBackColor = false;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
+            // txtBirthplace
+            // 
+            // 
+            // 
+            // 
+            this.txtBirthplace.CustomButton.Image = null;
+            this.txtBirthplace.CustomButton.Location = new System.Drawing.Point(115, 1);
+            this.txtBirthplace.CustomButton.Name = "";
+            this.txtBirthplace.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtBirthplace.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBirthplace.CustomButton.TabIndex = 1;
+            this.txtBirthplace.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBirthplace.CustomButton.UseSelectable = true;
+            this.txtBirthplace.CustomButton.Visible = false;
+            this.txtBirthplace.Lines = new string[0];
+            this.txtBirthplace.Location = new System.Drawing.Point(200, 204);
+            this.txtBirthplace.MaxLength = 32767;
+            this.txtBirthplace.Name = "txtBirthplace";
+            this.txtBirthplace.PasswordChar = '\0';
+            this.txtBirthplace.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBirthplace.SelectedText = "";
+            this.txtBirthplace.SelectionLength = 0;
+            this.txtBirthplace.SelectionStart = 0;
+            this.txtBirthplace.ShortcutsEnabled = true;
+            this.txtBirthplace.Size = new System.Drawing.Size(137, 23);
+            this.txtBirthplace.TabIndex = 3;
+            this.txtBirthplace.UseSelectable = true;
+            this.txtBirthplace.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBirthplace.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(197, 184);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(65, 17);
+            this.label17.TabIndex = 11;
+            this.label17.Text = "Birthplace";
+            // 
             // SacramentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(684, 586);
+            this.Controls.Add(this.txtBirthplace);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.controlBar_panel);
             this.Controls.Add(this.motherFirstNameText);
@@ -578,6 +621,7 @@
             this.Controls.Add(this.sacramentDateLabel);
             this.Controls.Add(this.sacramentDateDTP);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.genderLabel);
             this.Controls.Add(this.birthdateLabel);
@@ -643,5 +687,7 @@
         private System.Windows.Forms.Button close_button;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button submitBtn;
+        private MetroFramework.Controls.MetroTextBox txtBirthplace;
+        private System.Windows.Forms.Label label17;
     }
 }

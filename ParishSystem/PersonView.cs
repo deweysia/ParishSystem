@@ -473,9 +473,9 @@ namespace ParishSystem
             string godMother = name_label_godmother_marriage.Text;
 
             string marriageDay = getDayOfMonthWithSuffix(marriageDateTime);
-            string marriageMonthYear = getDayOfMonthWithSuffix(marriageDateTime);//marriageDateTime.ToString("MM yyyy");
+            string marriageMonthYear = marriageDateTime.ToString("MMMM yyyy");
             string givenDay = getDayOfMonthWithSuffix(givenDateTime);
-            string givenMonthYear = getDayOfMonthWithSuffix(givenDateTime);
+            string givenMonthYear = givenDateTime.ToString("MMMM yyyy");
 
 
             if (gender_label.Text == "Male")
@@ -568,7 +568,7 @@ namespace ParishSystem
 
             if (dr != DialogResult.OK)
                 return;
-            BaptismalPreview f = new BaptismalPreview(name, birthplace, birthdate, fatherName, motherName, fatherOrigin, motherOrigin, baptismDate, sponsorName, issueDate, registry, record, page, minister, purpose);
+            BaptismalPreview f = new BaptismalPreview(name, birthplace, birthdate, fatherName, motherName, fatherOrigin, motherOrigin, baptismDate, sponsorName, issueDate, registry, record, page, minister, purpose, birthplace);
 
             f.ShowDialog();
         }
