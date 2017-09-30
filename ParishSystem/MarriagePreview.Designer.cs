@@ -486,7 +486,7 @@
             this.lblMarriageMonthYear.AutoSize = true;
             this.lblMarriageMonthYear.BackColor = System.Drawing.Color.Transparent;
             this.lblMarriageMonthYear.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarriageMonthYear.Location = new System.Drawing.Point(268, 917);
+            this.lblMarriageMonthYear.Location = new System.Drawing.Point(271, 921);
             this.lblMarriageMonthYear.Name = "lblMarriageMonthYear";
             this.lblMarriageMonthYear.Size = new System.Drawing.Size(14, 19);
             this.lblMarriageMonthYear.TabIndex = 4;

@@ -473,9 +473,9 @@ namespace ParishSystem
             string godMother = name_label_godmother_marriage.Text;
 
             string marriageDay = getDayOfMonthWithSuffix(marriageDateTime);
-            string marriageMonthYear = marriageDateTime.ToString("MM yyyy");
+            string marriageMonthYear = getDayOfMonthWithSuffix(marriageDateTime);//marriageDateTime.ToString("MM yyyy");
             string givenDay = getDayOfMonthWithSuffix(givenDateTime);
-            string givenMonthYear = givenDateTime.ToString("MM yyyy");
+            string givenMonthYear = getDayOfMonthWithSuffix(givenDateTime);
 
 
             if (gender_label.Text == "Male")

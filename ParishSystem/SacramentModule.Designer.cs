@@ -41,6 +41,7 @@
             this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtSearchMar = new MetroFramework.Controls.MetroTextBox();
             this.btnResetMar = new System.Windows.Forms.Button();
             this.btnAdvanceSearchMar = new System.Windows.Forms.Button();
             this.btnSearchMar = new System.Windows.Forms.Button();
@@ -72,6 +73,7 @@
             this.btnAdvanceSearchCon = new System.Windows.Forms.Button();
             this.btnResetCon = new System.Windows.Forms.Button();
             this.btnSearchCon = new System.Windows.Forms.Button();
+            this.txtSearchCon = new MetroFramework.Controls.MetroTextBox();
             this.tlpProfileCon = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddReferencesCon = new System.Windows.Forms.Button();
             this.btnOpenProfileCon = new System.Windows.Forms.Button();
@@ -96,6 +98,7 @@
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.panel12 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtSearchBap = new MetroFramework.Controls.MetroTextBox();
             this.btnResetBap = new System.Windows.Forms.Button();
             this.btnSearchBap = new System.Windows.Forms.Button();
             this.btnAdvanceSearchBap = new System.Windows.Forms.Button();
@@ -122,9 +125,6 @@
             this.bapRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.bsSacrament = new System.Windows.Forms.BindingSource(this.components);
-            this.txtSearchBap = new MetroFramework.Controls.MetroTextBox();
-            this.txtSearchCon = new MetroFramework.Controls.MetroTextBox();
-            this.txtSearchMar = new MetroFramework.Controls.MetroTextBox();
             this.metroTabPage6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -153,7 +153,7 @@
             this.metroTabPage6.HorizontalScrollbarSize = 1;
             this.metroTabPage6.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage6.Name = "metroTabPage6";
-            this.metroTabPage6.Size = new System.Drawing.Size(922, 498);
+            this.metroTabPage6.Size = new System.Drawing.Size(935, 627);
             this.metroTabPage6.TabIndex = 2;
             this.metroTabPage6.Text = "Marriage";
             this.metroTabPage6.VerticalScrollbarBarColor = true;
@@ -193,6 +193,39 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(340, 60);
             this.tableLayoutPanel1.TabIndex = 15;
+            // 
+            // txtSearchMar
+            // 
+            // 
+            // 
+            // 
+            this.txtSearchMar.CustomButton.Image = null;
+            this.txtSearchMar.CustomButton.Location = new System.Drawing.Point(142, 1);
+            this.txtSearchMar.CustomButton.Name = "";
+            this.txtSearchMar.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSearchMar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSearchMar.CustomButton.TabIndex = 1;
+            this.txtSearchMar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSearchMar.CustomButton.UseSelectable = true;
+            this.txtSearchMar.CustomButton.Visible = false;
+            this.txtSearchMar.Lines = new string[0];
+            this.txtSearchMar.Location = new System.Drawing.Point(71, 3);
+            this.txtSearchMar.MaxLength = 32767;
+            this.txtSearchMar.Name = "txtSearchMar";
+            this.txtSearchMar.PasswordChar = '\0';
+            this.txtSearchMar.PromptText = "Search name here";
+            this.txtSearchMar.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSearchMar.SelectedText = "";
+            this.txtSearchMar.SelectionLength = 0;
+            this.txtSearchMar.SelectionStart = 0;
+            this.txtSearchMar.ShortcutsEnabled = true;
+            this.txtSearchMar.Size = new System.Drawing.Size(164, 23);
+            this.txtSearchMar.TabIndex = 16;
+            this.txtSearchMar.UseSelectable = true;
+            this.txtSearchMar.WaterMark = "Search name here";
+            this.txtSearchMar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSearchMar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtSearchMar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchMar_KeyDown);
             // 
             // btnResetMar
             // 
@@ -634,11 +667,44 @@
             this.btnSearchCon.UseVisualStyleBackColor = false;
             this.btnSearchCon.Click += new System.EventHandler(this.btnSearchCon_Click);
             // 
+            // txtSearchCon
+            // 
+            // 
+            // 
+            // 
+            this.txtSearchCon.CustomButton.Image = null;
+            this.txtSearchCon.CustomButton.Location = new System.Drawing.Point(142, 1);
+            this.txtSearchCon.CustomButton.Name = "";
+            this.txtSearchCon.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSearchCon.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSearchCon.CustomButton.TabIndex = 1;
+            this.txtSearchCon.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSearchCon.CustomButton.UseSelectable = true;
+            this.txtSearchCon.CustomButton.Visible = false;
+            this.txtSearchCon.Lines = new string[0];
+            this.txtSearchCon.Location = new System.Drawing.Point(71, 3);
+            this.txtSearchCon.MaxLength = 32767;
+            this.txtSearchCon.Name = "txtSearchCon";
+            this.txtSearchCon.PasswordChar = '\0';
+            this.txtSearchCon.PromptText = "Search name here";
+            this.txtSearchCon.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSearchCon.SelectedText = "";
+            this.txtSearchCon.SelectionLength = 0;
+            this.txtSearchCon.SelectionStart = 0;
+            this.txtSearchCon.ShortcutsEnabled = true;
+            this.txtSearchCon.Size = new System.Drawing.Size(164, 23);
+            this.txtSearchCon.TabIndex = 19;
+            this.txtSearchCon.UseSelectable = true;
+            this.txtSearchCon.WaterMark = "Search name here";
+            this.txtSearchCon.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSearchCon.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtSearchCon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchCon_KeyDown);
+            // 
             // tlpProfileCon
             // 
             this.tlpProfileCon.ColumnCount = 2;
             this.tlpProfileCon.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpProfileCon.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tlpProfileCon.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
             this.tlpProfileCon.Controls.Add(this.btnAddReferencesCon, 0, 1);
             this.tlpProfileCon.Controls.Add(this.btnOpenProfileCon, 0, 0);
             this.tlpProfileCon.Controls.Add(this.btnEditCon, 1, 1);
@@ -661,7 +727,7 @@
             this.btnAddReferencesCon.ForeColor = System.Drawing.Color.White;
             this.btnAddReferencesCon.Location = new System.Drawing.Point(3, 32);
             this.btnAddReferencesCon.Name = "btnAddReferencesCon";
-            this.btnAddReferencesCon.Size = new System.Drawing.Size(113, 23);
+            this.btnAddReferencesCon.Size = new System.Drawing.Size(112, 23);
             this.btnAddReferencesCon.TabIndex = 17;
             this.btnAddReferencesCon.Text = "Add References";
             this.btnAddReferencesCon.UseVisualStyleBackColor = false;
@@ -677,7 +743,7 @@
             this.btnOpenProfileCon.ForeColor = System.Drawing.Color.White;
             this.btnOpenProfileCon.Location = new System.Drawing.Point(3, 3);
             this.btnOpenProfileCon.Name = "btnOpenProfileCon";
-            this.btnOpenProfileCon.Size = new System.Drawing.Size(113, 23);
+            this.btnOpenProfileCon.Size = new System.Drawing.Size(112, 23);
             this.btnOpenProfileCon.TabIndex = 16;
             this.btnOpenProfileCon.Text = "Open Profile";
             this.btnOpenProfileCon.UseVisualStyleBackColor = false;
@@ -691,7 +757,7 @@
             this.btnEditCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditCon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditCon.ForeColor = System.Drawing.Color.White;
-            this.btnEditCon.Location = new System.Drawing.Point(138, 32);
+            this.btnEditCon.Location = new System.Drawing.Point(121, 32);
             this.btnEditCon.Name = "btnEditCon";
             this.btnEditCon.Size = new System.Drawing.Size(104, 23);
             this.btnEditCon.TabIndex = 18;
@@ -964,6 +1030,39 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(340, 60);
             this.tableLayoutPanel2.TabIndex = 14;
             // 
+            // txtSearchBap
+            // 
+            // 
+            // 
+            // 
+            this.txtSearchBap.CustomButton.Image = null;
+            this.txtSearchBap.CustomButton.Location = new System.Drawing.Point(142, 1);
+            this.txtSearchBap.CustomButton.Name = "";
+            this.txtSearchBap.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSearchBap.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSearchBap.CustomButton.TabIndex = 1;
+            this.txtSearchBap.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSearchBap.CustomButton.UseSelectable = true;
+            this.txtSearchBap.CustomButton.Visible = false;
+            this.txtSearchBap.Lines = new string[0];
+            this.txtSearchBap.Location = new System.Drawing.Point(71, 3);
+            this.txtSearchBap.MaxLength = 32767;
+            this.txtSearchBap.Name = "txtSearchBap";
+            this.txtSearchBap.PasswordChar = '\0';
+            this.txtSearchBap.PromptText = "Search name here";
+            this.txtSearchBap.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSearchBap.SelectedText = "";
+            this.txtSearchBap.SelectionLength = 0;
+            this.txtSearchBap.SelectionStart = 0;
+            this.txtSearchBap.ShortcutsEnabled = true;
+            this.txtSearchBap.Size = new System.Drawing.Size(164, 23);
+            this.txtSearchBap.TabIndex = 15;
+            this.txtSearchBap.UseSelectable = true;
+            this.txtSearchBap.WaterMark = "Search name here";
+            this.txtSearchBap.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSearchBap.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtSearchBap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBap_KeyDown);
+            // 
             // btnResetBap
             // 
             this.btnResetBap.BackColor = System.Drawing.Color.Gray;
@@ -1073,7 +1172,7 @@
             this.btnEditBap.ForeColor = System.Drawing.Color.White;
             this.btnEditBap.Location = new System.Drawing.Point(121, 32);
             this.btnEditBap.Name = "btnEditBap";
-            this.btnEditBap.Size = new System.Drawing.Size(112, 23);
+            this.btnEditBap.Size = new System.Drawing.Size(105, 23);
             this.btnEditBap.TabIndex = 16;
             this.btnEditBap.Text = "Edit Sacrament";
             this.btnEditBap.UseVisualStyleBackColor = false;
@@ -1301,112 +1400,13 @@
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(943, 669);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroTabControl1.TabIndex = 11;
             this.metroTabControl1.UseSelectable = true;
             this.metroTabControl1.UseStyleColors = true;
             this.metroTabControl1.SelectedIndexChanged += new System.EventHandler(this.metroTabControl1_SelectedIndexChanged);
-            // 
-            // txtSearchBap
-            // 
-            // 
-            // 
-            // 
-            this.txtSearchBap.CustomButton.Image = null;
-            this.txtSearchBap.CustomButton.Location = new System.Drawing.Point(142, 1);
-            this.txtSearchBap.CustomButton.Name = "";
-            this.txtSearchBap.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtSearchBap.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSearchBap.CustomButton.TabIndex = 1;
-            this.txtSearchBap.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSearchBap.CustomButton.UseSelectable = true;
-            this.txtSearchBap.CustomButton.Visible = false;
-            this.txtSearchBap.Lines = new string[0];
-            this.txtSearchBap.Location = new System.Drawing.Point(71, 3);
-            this.txtSearchBap.MaxLength = 32767;
-            this.txtSearchBap.Name = "txtSearchBap";
-            this.txtSearchBap.PasswordChar = '\0';
-            this.txtSearchBap.PromptText = "Search name here";
-            this.txtSearchBap.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSearchBap.SelectedText = "";
-            this.txtSearchBap.SelectionLength = 0;
-            this.txtSearchBap.SelectionStart = 0;
-            this.txtSearchBap.ShortcutsEnabled = true;
-            this.txtSearchBap.Size = new System.Drawing.Size(164, 23);
-            this.txtSearchBap.TabIndex = 15;
-            this.txtSearchBap.UseSelectable = true;
-            this.txtSearchBap.WaterMark = "Search name here";
-            this.txtSearchBap.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSearchBap.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtSearchBap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBap_KeyDown);
-            // 
-            // txtSearchCon
-            // 
-            // 
-            // 
-            // 
-            this.txtSearchCon.CustomButton.Image = null;
-            this.txtSearchCon.CustomButton.Location = new System.Drawing.Point(142, 1);
-            this.txtSearchCon.CustomButton.Name = "";
-            this.txtSearchCon.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtSearchCon.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSearchCon.CustomButton.TabIndex = 1;
-            this.txtSearchCon.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSearchCon.CustomButton.UseSelectable = true;
-            this.txtSearchCon.CustomButton.Visible = false;
-            this.txtSearchCon.Lines = new string[0];
-            this.txtSearchCon.Location = new System.Drawing.Point(71, 3);
-            this.txtSearchCon.MaxLength = 32767;
-            this.txtSearchCon.Name = "txtSearchCon";
-            this.txtSearchCon.PasswordChar = '\0';
-            this.txtSearchCon.PromptText = "Search name here";
-            this.txtSearchCon.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSearchCon.SelectedText = "";
-            this.txtSearchCon.SelectionLength = 0;
-            this.txtSearchCon.SelectionStart = 0;
-            this.txtSearchCon.ShortcutsEnabled = true;
-            this.txtSearchCon.Size = new System.Drawing.Size(164, 23);
-            this.txtSearchCon.TabIndex = 19;
-            this.txtSearchCon.UseSelectable = true;
-            this.txtSearchCon.WaterMark = "Search name here";
-            this.txtSearchCon.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSearchCon.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtSearchCon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchCon_KeyDown);
-            // 
-            // txtSearchMar
-            // 
-            // 
-            // 
-            // 
-            this.txtSearchMar.CustomButton.Image = null;
-            this.txtSearchMar.CustomButton.Location = new System.Drawing.Point(142, 1);
-            this.txtSearchMar.CustomButton.Name = "";
-            this.txtSearchMar.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtSearchMar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSearchMar.CustomButton.TabIndex = 1;
-            this.txtSearchMar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSearchMar.CustomButton.UseSelectable = true;
-            this.txtSearchMar.CustomButton.Visible = false;
-            this.txtSearchMar.Lines = new string[0];
-            this.txtSearchMar.Location = new System.Drawing.Point(71, 3);
-            this.txtSearchMar.MaxLength = 32767;
-            this.txtSearchMar.Name = "txtSearchMar";
-            this.txtSearchMar.PasswordChar = '\0';
-            this.txtSearchMar.PromptText = "Search name here";
-            this.txtSearchMar.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSearchMar.SelectedText = "";
-            this.txtSearchMar.SelectionLength = 0;
-            this.txtSearchMar.SelectionStart = 0;
-            this.txtSearchMar.ShortcutsEnabled = true;
-            this.txtSearchMar.Size = new System.Drawing.Size(164, 23);
-            this.txtSearchMar.TabIndex = 16;
-            this.txtSearchMar.UseSelectable = true;
-            this.txtSearchMar.WaterMark = "Search name here";
-            this.txtSearchMar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSearchMar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtSearchMar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchMar_KeyDown);
             // 
             // SacramentModule
             // 
