@@ -87,6 +87,11 @@ namespace ParishSystem
                 {
                     Notification.Show(State.EventNameUsed);
                 }
+                else if (new DateTime(start_dateTimePicker.Value.Year, start_dateTimePicker.Value.Month, start_dateTimePicker.Value.Day, dtpTimeStart.Value.Hour, dtpTimeStart.Value.Minute, 0) >
+                           new DateTime(end_DateTimePicker.Value.Year, end_DateTimePicker.Value.Month, end_DateTimePicker.Value.Day, dtpTimeEnd.Value.Hour, dtpTimeEnd.Value.Minute, 0))
+                {
+                    Notification.Show(State.invalidTime);
+                }
                 else {
                     if (bloodlettingID.Equals(0)) {
                         dh.addBloodDonationEvent(event_name.Text, new DateTime(start_dateTimePicker.Value.Year, start_dateTimePicker.Value.Month, start_dateTimePicker.Value.Day, dtpTimeStart.Value.Hour, dtpTimeStart.Value.Minute, 0)

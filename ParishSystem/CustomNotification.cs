@@ -162,6 +162,7 @@ namespace ParishSystem
 
 
         public static State
+            invalidTime = new State("The time set is invalid", NotificationType.error),
             ItemTypeAdded = new State("Item Type has successfully been added", NotificationType.success),
             ChangesSaved = new State("Changes successfully saved", NotificationType.success),
             EventAdded = new State("Bloodletting event has been added", NotificationType.success),
