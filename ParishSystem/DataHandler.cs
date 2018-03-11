@@ -14,6 +14,7 @@ using System.Globalization;
 
 namespace ParishSystem
 {
+    //josh made this comment
     //I changed something
 
 
@@ -40,18 +41,11 @@ namespace ParishSystem
         //    //userID = UserID;
         //}
 
-        //public DataHandler(string server, string database, string user, string password)
-        //{
-        //    conn = new MySqlConnection("Server=" + server + ";Database=" + database + ";Uid=" + user + ";Pwd=" + password + ";pooling = false; convert zero datetime=True; Allow User Variables=True");
-        //    //this.userID = -1;
-        //}
 
-
-
-
-        //====== SINGLETON PATTERN IMPLEMENTATION OF DATAHANDLER
         private static DataHandler _dh;
         public static DataHandler getDataHandler()
+      //  MySqlConnection connect = new MySqlConnection("server=localhost; database=sad2; user=root; password=root; pooling = false; convert zero datetime=True");
+        public DataHandler(string server, string database, string user, string password ,int UserID)
         {
             if (_dh != null)
                 return _dh;
