@@ -49,7 +49,6 @@
             this.label33 = new System.Windows.Forms.Label();
             this.firstname_textbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.searchBar = new System.Windows.Forms.TextBox();
             this.generalprofile_datagridview = new System.Windows.Forms.DataGridView();
             this.btn_Min = new System.Windows.Forms.Button();
@@ -57,8 +56,8 @@
             this.btn_Close = new System.Windows.Forms.Button();
             this.welcome_Text = new System.Windows.Forms.Label();
             this.username_Welcome_Text = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.time_Text = new System.Windows.Forms.Label();
-            this.clear_profile_button = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.home_panel.SuspendLayout();
             this.profile_panel.SuspendLayout();
@@ -203,7 +202,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.clear_profile_button);
             this.panel1.Controls.Add(this.deleteProfile_button);
             this.panel1.Controls.Add(this.openProfile_button);
             this.panel1.Controls.Add(this.addProfile_button);
@@ -221,11 +219,10 @@
             // 
             // deleteProfile_button
             // 
-            this.deleteProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.deleteProfile_button.Enabled = false;
+            this.deleteProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(77)))));
             this.deleteProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteProfile_button.Location = new System.Drawing.Point(301, 176);
+            this.deleteProfile_button.Location = new System.Drawing.Point(301, 144);
             this.deleteProfile_button.Name = "deleteProfile_button";
             this.deleteProfile_button.Size = new System.Drawing.Size(139, 43);
             this.deleteProfile_button.TabIndex = 30;
@@ -235,11 +232,10 @@
             // 
             // openProfile_button
             // 
-            this.openProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.openProfile_button.Enabled = false;
+            this.openProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(77)))));
             this.openProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openProfile_button.Location = new System.Drawing.Point(167, 176);
+            this.openProfile_button.Location = new System.Drawing.Point(167, 144);
             this.openProfile_button.Name = "openProfile_button";
             this.openProfile_button.Size = new System.Drawing.Size(128, 43);
             this.openProfile_button.TabIndex = 29;
@@ -249,11 +245,10 @@
             // 
             // addProfile_button
             // 
-            this.addProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.addProfile_button.Enabled = false;
+            this.addProfile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(77)))));
             this.addProfile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addProfile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addProfile_button.Location = new System.Drawing.Point(33, 176);
+            this.addProfile_button.Location = new System.Drawing.Point(33, 144);
             this.addProfile_button.Name = "addProfile_button";
             this.addProfile_button.Size = new System.Drawing.Size(128, 43);
             this.addProfile_button.TabIndex = 29;
@@ -345,17 +340,6 @@
             this.label2.Size = new System.Drawing.Size(360, 21);
             this.label2.TabIndex = 11;
             this.label2.Text = "__________________________________________________";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 27);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "PROFILES";
             // 
             // searchBar
             // 
@@ -449,12 +433,23 @@
             // 
             this.username_Welcome_Text.AutoSize = true;
             this.username_Welcome_Text.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username_Welcome_Text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.username_Welcome_Text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(77)))));
             this.username_Welcome_Text.Location = new System.Drawing.Point(110, 11);
             this.username_Welcome_Text.Name = "username_Welcome_Text";
             this.username_Welcome_Text.Size = new System.Drawing.Size(123, 27);
             this.username_Welcome_Text.TabIndex = 36;
             this.username_Welcome_Text.Text = "USERNAME";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(3, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 27);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "PROFILES";
             // 
             // time_Text
             // 
@@ -468,19 +463,6 @@
             this.time_Text.Size = new System.Drawing.Size(84, 27);
             this.time_Text.TabIndex = 35;
             this.time_Text.Text = "HH:MM";
-            // 
-            // clear_profile_button
-            // 
-            this.clear_profile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.clear_profile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_profile_button.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear_profile_button.Location = new System.Drawing.Point(167, 245);
-            this.clear_profile_button.Name = "clear_profile_button";
-            this.clear_profile_button.Size = new System.Drawing.Size(128, 43);
-            this.clear_profile_button.TabIndex = 31;
-            this.clear_profile_button.Text = "Clear";
-            this.clear_profile_button.UseVisualStyleBackColor = false;
-            this.clear_profile_button.Click += new System.EventHandler(this.clear_profile_button_Click);
             // 
             // SAD
             // 
@@ -547,6 +529,5 @@
         private System.Windows.Forms.Label username_Welcome_Text;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label time_Text;
-        private System.Windows.Forms.Button clear_profile_button;
     }
 }

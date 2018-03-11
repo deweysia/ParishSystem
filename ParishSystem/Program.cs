@@ -12,12 +12,15 @@ namespace ParishSystem
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
+
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SAD());
+            Application.Run(new LoginForm());
         }
     }
+
 }

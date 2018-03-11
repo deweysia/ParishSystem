@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,13 +49,51 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\Documents\Visual Studio 2015\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,199 +103,480 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\dot-net-transitions.1.2.1.0\lib\net40-full\Transitions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComboBoxItem.cs" />
-    <Compile Include="DataHandler.cs" />
+    <Compile Include="AddApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddApplication.Designer.cs">
+      <DependentUpon>AddApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMarriageApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMarriageApplication.Designer.cs">
+      <DependentUpon>AddMarriageApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddReferences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddReferences.Designer.cs">
+      <DependentUpon>AddReferences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSchedule.Designer.cs">
+      <DependentUpon>AddSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCredentials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCredentials.Designer.cs">
+      <DependentUpon>AdminCredentials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdvanceSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdvanceSearch.Designer.cs">
+      <DependentUpon>AdvanceSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationModule.Designer.cs">
+      <DependentUpon>ApplicationModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationPayment.Designer.cs">
+      <DependentUpon>ApplicationPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuditModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditModule.Designer.cs">
+      <DependentUpon>AuditModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Baptism.cs" />
+    <Compile Include="BaptismPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaptismPreview.Designer.cs">
+      <DependentUpon>BaptismPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodClaim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodClaim.Designer.cs">
+      <DependentUpon>BloodClaim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodClaimView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodClaimView.Designer.cs">
+      <DependentUpon>BloodClaimView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodlettingEventPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodlettingEventPopUp.Designer.cs">
+      <DependentUpon>BloodlettingEventPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bloodletting_Module.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bloodletting_Module.Designer.cs">
+      <DependentUpon>Bloodletting_Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bloodletting_Profile_Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bloodletting_Profile_Popup.Designer.cs">
+      <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarEvent.cs" />
+    <Compile Include="CashDisbursment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashDisbursment.Designer.cs">
+      <DependentUpon>CashDisbursment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodlettingReports_Module.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodlettingReports_Module.Designer.cs">
+      <DependentUpon>BloodlettingReports_Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashReport_Module.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashReport_Module.Designer.cs">
+      <DependentUpon>CashReport_Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashReceipt.Designer.cs">
+      <DependentUpon>CashReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CertificatePurpose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CertificatePurpose.Designer.cs">
+      <DependentUpon>CertificatePurpose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmation.cs" />
+    <Compile Include="ConfirmationPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmationPreview.Designer.cs">
+      <DependentUpon>ConfirmationPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CueTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CueTextBox.designer.cs">
+      <DependentUpon>CueTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrencyTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CurrencyTextBox.Designer.cs">
+      <DependentUpon>CurrencyTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delegates.cs" />
+    <Compile Include="DemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoForm.Designer.cs">
+      <DependentUpon>DemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draggable.cs" />
+    <Compile Include="EmployeeModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeModule.Designer.cs">
+      <DependentUpon>EmployeeModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
+    <Compile Include="HiddenNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HiddenNumericUpDown.Designer.cs">
+      <DependentUpon>HiddenNumericUpDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemTypePopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="ItemTypePopUp.Designer.cs">
+      <DependentUpon>ItemTypePopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="login.cs">
+    <Compile Include="ItemTypes_Module.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
+    <Compile Include="ItemTypes_Module.Designer.cs">
+      <DependentUpon>ItemTypes_Module.cs</DependentUpon>
     </Compile>
-    <Compile Include="menu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="menu.Designer.cs">
-      <DependentUpon>menu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Menu_bar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Menu_bar.Designer.cs">
-      <DependentUpon>Menu_bar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Person.cs">
+    <Compile Include="Login.cs" />
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Person.Designer.cs">
-      <DependentUpon>Person.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marriage.cs" />
+    <Compile Include="MarriageApplication.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarriageApplication.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MarriagePreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarriagePreview.Designer.cs">
+      <DependentUpon>MarriagePreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Minister.cs" />
+    <Compile Include="MinisterModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinisterModule.Designer.cs">
+      <DependentUpon>MinisterModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORdetailsPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORdetailsPopUp.Designer.cs">
+      <DependentUpon>ORdetailsPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel_Size_Pair.cs" />
+    <Compile Include="Parent.cs" />
+    <Compile Include="Privilege.cs" />
+    <Compile Include="Profile.cs" />
+    <Compile Include="ProfileModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileModule.Designer.cs">
+      <DependentUpon>ProfileModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sacrament.cs" />
+    <Compile Include="SacramentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SacramentForm.Designer.cs">
+      <DependentUpon>SacramentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComboboxContent.cs" />
+    <Compile Include="CustomMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMessage.Designer.cs">
+      <DependentUpon>CustomMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomNotification.Designer.cs">
+      <DependentUpon>CustomNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataHandler.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="HiddenTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HiddenTabControl.Designer.cs">
+      <DependentUpon>HiddenTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarriageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarriageForm.Designer.cs">
+      <DependentUpon>MarriageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinisterForm.Designer.cs">
+      <DependentUpon>MinisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonView.Designer.cs">
+      <DependentUpon>PersonView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SAD.cs">
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SacramentModule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SAD.Designer.cs">
-      <DependentUpon>SAD.cs</DependentUpon>
+    <Compile Include="SacramentModule.Designer.cs">
+      <DependentUpon>SacramentModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="sApplicant.cs">
+    <Compile Include="SacramentProfile.cs" />
+    <Compile Include="SAD2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="sApplicant.Designer.cs">
-      <DependentUpon>sApplicant.cs</DependentUpon>
+    <Compile Include="SAD2.designer.cs">
+      <DependentUpon>SAD2.cs</DependentUpon>
     </Compile>
-    <Compile Include="sBaptism.cs">
+    <Compile Include="ScheduleModule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="sBaptism.Designer.cs">
-      <DependentUpon>sBaptism.cs</DependentUpon>
+    <Compile Include="ScheduleModule.Designer.cs">
+      <DependentUpon>ScheduleModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="sBloodletting.cs">
+    <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="sBloodletting.Designer.cs">
-      <DependentUpon>sBloodletting.cs</DependentUpon>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="sConfirmation.cs">
+    <Compile Include="SystemSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="sConfirmation.Designer.cs">
-      <DependentUpon>sConfirmation.cs</DependentUpon>
+    <Compile Include="SystemSettings.Designer.cs">
+      <DependentUpon>SystemSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="sMarriage.cs">
+    <Compile Include="Test.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="sMarriage.Designer.cs">
-      <DependentUpon>sMarriage.cs</DependentUpon>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
     </Compile>
-    <Compile Include="sParent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sParent.Designer.cs">
-      <DependentUpon>sParent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="sSacraments.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sSacraments.Designer.cs">
-      <DependentUpon>sSacraments.cs</DependentUpon>
-    </Compile>
-    <Compile Include="sTransaction.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sTransaction.Designer.cs">
-      <DependentUpon>sTransaction.cs</DependentUpon>
-    </Compile>
-    <Compile Include="tCDB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="tCDB.Designer.cs">
-      <DependentUpon>tCDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="tCRB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="tCRB.Designer.cs">
-      <DependentUpon>tCRB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="topBarControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="topBarControl.Designer.cs">
-      <DependentUpon>topBarControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="tReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="tReport.Designer.cs">
-      <DependentUpon>tReport.cs</DependentUpon>
-    </Compile>
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="AddApplication.resx">
+      <DependentUpon>AddApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMarriageApplication.resx">
+      <DependentUpon>AddMarriageApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddReferences.resx">
+      <DependentUpon>AddReferences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSchedule.resx">
+      <DependentUpon>AddSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCredentials.resx">
+      <DependentUpon>AdminCredentials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvanceSearch.resx">
+      <DependentUpon>AdvanceSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationModule.resx">
+      <DependentUpon>ApplicationModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationPayment.resx">
+      <DependentUpon>ApplicationPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditModule.resx">
+      <DependentUpon>AuditModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaptismPreview.resx">
+      <DependentUpon>BaptismPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodClaim.resx">
+      <DependentUpon>BloodClaim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodClaimView.resx">
+      <DependentUpon>BloodClaimView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodlettingEventPopUp.resx">
+      <DependentUpon>BloodlettingEventPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bloodletting_Module.resx">
+      <DependentUpon>Bloodletting_Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bloodletting_Profile_Popup.resx">
+      <DependentUpon>Bloodletting_Profile_Popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashDisbursment.resx">
+      <DependentUpon>CashDisbursment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodlettingReports_Module.resx">
+      <DependentUpon>BloodlettingReports_Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashReport_Module.resx">
+      <DependentUpon>CashReport_Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashReceipt.resx">
+      <DependentUpon>CashReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CertificatePurpose.resx">
+      <DependentUpon>CertificatePurpose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmationPreview.resx">
+      <DependentUpon>ConfirmationPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CueTextBox.resx">
+      <DependentUpon>CueTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrencyTextBox.resx">
+      <DependentUpon>CurrencyTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemoForm.resx">
+      <DependentUpon>DemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeModule.resx">
+      <DependentUpon>EmployeeModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="ItemTypePopUp.resx">
+      <DependentUpon>ItemTypePopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
-      <DependentUpon>login.cs</DependentUpon>
+    <EmbeddedResource Include="ItemTypes_Module.resx">
+      <DependentUpon>ItemTypes_Module.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_bar.resx">
-      <DependentUpon>Menu_bar.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarriageApplication.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MarriageApplication.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarriagePreview.resx">
+      <DependentUpon>MarriagePreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinisterModule.resx">
+      <DependentUpon>MinisterModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORdetailsPopUp.resx">
+      <DependentUpon>ORdetailsPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileModule.resx">
+      <DependentUpon>ProfileModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SacramentForm.resx">
+      <DependentUpon>SacramentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomMessage.resx">
+      <DependentUpon>CustomMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomNotification.resx">
+      <DependentUpon>CustomNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarriageForm.resx">
+      <DependentUpon>MarriageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinisterForm.resx">
+      <DependentUpon>MinisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\ParishSystem.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\ParishSystem.Properties.Resources.resources" />
-    <EmbeddedResource Include="Person.resx">
-      <DependentUpon>Person.cs</DependentUpon>
+    <EmbeddedResource Include="PersonView.resx">
+      <DependentUpon>PersonView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="SAD.resx">
-      <DependentUpon>SAD.cs</DependentUpon>
+    <EmbeddedResource Include="SacramentModule.resx">
+      <DependentUpon>SacramentModule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="sApplicant.resx">
-      <DependentUpon>sApplicant.cs</DependentUpon>
+    <EmbeddedResource Include="SAD2.resx">
+      <DependentUpon>SAD2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="sBaptism.resx">
-      <DependentUpon>sBaptism.cs</DependentUpon>
+    <EmbeddedResource Include="ScheduleModule.resx">
+      <DependentUpon>ScheduleModule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="sBloodletting.resx">
-      <DependentUpon>sBloodletting.cs</DependentUpon>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="sConfirmation.resx">
-      <DependentUpon>sConfirmation.cs</DependentUpon>
+    <EmbeddedResource Include="SystemSettings.resx">
+      <DependentUpon>SystemSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="sMarriage.resx">
-      <DependentUpon>sMarriage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sParent.resx">
-      <DependentUpon>sParent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sSacraments.resx">
-      <DependentUpon>sSacraments.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sTransaction.resx">
-      <DependentUpon>sTransaction.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="tCDB.resx">
-      <DependentUpon>tCDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="tCRB.resx">
-      <DependentUpon>tCRB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="topBarControl.resx">
-      <DependentUpon>topBarControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="tReport.resx">
-      <DependentUpon>tReport.cs</DependentUpon>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\ParishSystem.exe.config" />
     <None Include="bin\Debug\ParishSystem.vshost.exe.config" />
     <None Include="bin\Debug\ParishSystem.vshost.exe.manifest" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\ParishSystem.csproj.GenerateResource.Cache" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\DataHandler.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -261,25 +596,389 @@
     <Content Include="bin\Debug\ParishSystem.exe" />
     <Content Include="bin\Debug\ParishSystem.pdb" />
     <Content Include="bin\Debug\ParishSystem.vshost.exe" />
+    <Content Include="database\DB_Populator.txt" />
+    <Content Include="database\SQLDB_V7.sql" />
+    <Content Include="database\SQLDB_V9.sql" />
     <Content Include="database\updatedDB.sql" />
+    <Content Include="database\SQLDB_V6.sql" />
+    <Content Include="database\V10.sql" />
     <Content Include="obj\Debug\ParishSystem.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\ParishSystem.exe" />
     <Content Include="obj\Debug\ParishSystem.pdb" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
-    <None Include="Resources\HIcon.png" />
-    <None Include="Resources\FIcon.png" />
-    <None Include="Resources\RIcon.png" />
-    <None Include="Resources\UIcon.png" />
-    <None Include="Resources\user_icon.png" />
-    <None Include="Resources\11273972-orange-leaf-texture.jpg" />
-    <None Include="Resources\BookA.png" />
-    <None Include="Resources\BLIcon.png" />
+    <None Include="Resources\Add.png" />
     <Content Include="Resources\btn_closeImage.png" />
     <Content Include="Resources\btn_maxImage.png" />
     <Content Include="Resources\btn_minImage.png" />
+    <None Include="Resources\Cancel.png" />
+    <None Include="Resources\Cash1.png" />
+    <None Include="Resources\Cash2.png" />
+    <None Include="Resources\Cash3.png" />
+    <None Include="Resources\CashInput.png" />
+    <None Include="Resources\CashReleaseReports.png" />
+    <None Include="Resources\Clear.png" />
+    <None Include="Resources\Community.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\Fullpayment or Downpayment.png" />
+    <None Include="Resources\Home.png" />
+    <None Include="Resources\ITEMS.png" />
+    <None Include="Resources\Parish.png" />
+    <None Include="Resources\Postulancy.png" />
+    <None Include="Resources\Report.png" />
+    <None Include="Resources\icons8-Cancel Filled-50.png" />
+    <None Include="Resources\icons8-Cancel-50.png" />
+    <None Include="Resources\icons8-Checked-50.png" />
+    <None Include="Resources\icons8-Checkmark Filled-50.png" />
+    <None Include="Resources\icons8-Delete-50 %281%29.png" />
+    <None Include="Resources\icons8-Delete-50.png" />
+    <None Include="Resources\icons8-Erase-64.png" />
+    <None Include="Resources\icons8-Plus-48.png" />
+    <None Include="Resources\icons8-Plus-50.png" />
+    <None Include="Resources\icons8-Trash-64.png" />
+    <None Include="Resources\icons8-Plus Math-50.png" />
+    <None Include="Resources\icons8-Screen Wiper-50.png" />
+    <None Include="Resources\icons8-Trash-64 %281%29.png" />
+    <None Include="Resources\cancel_left.png" />
+    <None Include="Resources\cancel_indented.png" />
+    <None Include="Resources\cancel_indent.png" />
+    <None Include="Resources\cash1_indent.png" />
+    <None Include="Resources\Cash2_indent.png" />
+    <None Include="Resources\Cash3_indent.png" />
+    <None Include="Resources\CashInput_indent.png" />
+    <None Include="Resources\CashReleaseReports_indent.png" />
+    <None Include="Resources\community_indent.png" />
+    <None Include="Resources\Home_indent.png" />
+    <None Include="Resources\Items_indent.png" />
+    <None Include="Resources\Parish_indent.png" />
+    <None Include="Resources\Postulancy_indent.png" />
+    <None Include="Resources\icons8-Pencil-32.png" />
+    <None Include="Resources\icons8-Refresh-32.png" />
+    <None Include="Resources\icons8-Save Filled-32.png" />
+    <None Include="Resources\icons8-Delete-20.png" />
+    <None Include="Resources\icons8-Zoom to Extents Filled-20.png" />
+    <None Include="Resources\icons8-Close Window-32.png" />
+    <None Include="Resources\icons8-Delete Filled-50.png" />
+    <None Include="Resources\icons8-Delete Filled-20.png" />
+    <None Include="Resources\icons8-Pencil-32 %281%29.png" />
+    <None Include="Resources\icons8-Refresh Filled-32.png" />
+    <None Include="Resources\icons8-Save Filled-32 %281%29.png" />
+    <None Include="Resources\icons8-Plus 2 Math-32.png" />
+    <None Include="Resources\icons8-Trash-32.png" />
+    <None Include="Resources\icons8-Expand Arrow-20.png" />
+    <None Include="Resources\icons8-Collapse Arrow-20.png" />
+    <None Include="Resources\icons8-Search Filled-20.png" />
+    <None Include="Resources\icons8-Delete Filled-20-666666.png" />
+    <None Include="Resources\icons8-Eye-20.png" />
+    <None Include="Resources\icons8-Full Screen-20.png" />
+    <None Include="Resources\icons8-Horizontal Line Filled-20.png" />
+    <None Include="Resources\icons8-Menu-48.png" />
+    <None Include="Resources\icons8-Menu-35.png" />
+    <None Include="Resources\icons8-Full Screen Filled.png" />
+    <None Include="Resources\icons8-Delete-20 %281%29.png" />
+    <None Include="Resources\icons8-Delete Filled-20 %281%29.png" />
+    <None Include="Resources\icons8-Fit to Width-20.png" />
+    <None Include="Resources\icons8-Fit to Width-30.png" />
+    <None Include="Resources\icons8-Delete Filled-30.png" />
+    <None Include="Resources\icons8-Sign Out Filled-20.png" />
+    <None Include="Resources\icons8-Expand Arrow-20 White.png" />
+    <None Include="Resources\icons8-Pencil-20.png" />
+    <None Include="Resources\icons8-Save-20.png" />
+    <None Include="Resources\panel1.BackgroundImage.png" />
+    <None Include="Resources\panel1.BackgroundImage1.png" />
+    <None Include="Resources\panel1.BackgroundImage2.png" />
+    <None Include="Resources\panel1.BackgroundImage3.png" />
+    <None Include="Resources\confirmationFormBG.png" />
+    <None Include="Resources\icons8-Church-35.png" />
+    <None Include="Resources\icons8-User-40.png" />
+    <None Include="Resources\icons8-Pulse-40.png" />
+    <None Include="Resources\icons8-Money-40.png" />
+    <None Include="Resources\icons8-Calendar-40.png" />
+    <None Include="Resources\icons8-Open Book-40.png" />
+    <None Include="Resources\icons8-Checked Filled-40.png" />
+    <None Include="Resources\icons8-Approval Filled-40.png" />
+    <None Include="Resources\dot_bloodletting.png" />
+    <None Include="Resources\dot_schedule.png" />
+    <None Include="Resources\dot_unspecified.png" />
+    <Content Include="Tools\SQL_Writer.jar" />
+    <None Include="Resources\messageBox_cancel.png" />
+    <None Include="Resources\messageBox_success.png" />
+    <None Include="Resources\messageBox_warning.png" />
+    <None Include="Resources\Water_45.png" />
+    <None Include="Resources\The Pope_45.png" />
+    <None Include="Resources\Initiate Money Transfer_45.png" />
+    <None Include="Resources\Money_45.png" />
+    <None Include="Resources\Resume_45.png" />
+    <None Include="Resources\Home_45.png" />
+    <None Include="Resources\Heart with Pulse_45px.png" />
+    <None Include="Resources\customer_45.png" />
+    <None Include="Resources\Holy Bible_45.png" />
+    <Content Include="Resources\icons\32x32\Cancel_32px.png" />
+    <Content Include="Resources\icons\32x32\Checkmark_32px.png" />
+    <Content Include="Resources\icons\32x32\Clock_32px.png" />
+    <Content Include="Resources\icons\32x32\customer_32px.png" />
+    <Content Include="Resources\icons\32x32\Delete_32px.png" />
+    <None Include="Resources\icons\32x32\Delete_32px_Light.png" />
+    <None Include="Resources\icons\32x32\Delete_32px_Gray.png" />
+    <Content Include="Resources\icons\32x32\Deposit_32px.png" />
+    <Content Include="Resources\icons\32x32\Dove_32px.png" />
+    <None Include="Resources\icons\32x32\Edit_32.png" />
+    <None Include="Resources\icons\32x32\Edit.ico" />
+    <None Include="Resources\icons\32x32\EditDown.ico" />
+    <None Include="Resources\icons\32x32\EditHover.ico" />
+    <Content Include="Resources\icons\32x32\Edit_32px.png" />
+    <None Include="Resources\icons\32x32\Error_32px.png" />
+    <Content Include="Resources\icons\32x32\Eye_32px.png" />
+    <Content Include="Resources\icons\32x32\Google Web Search_32px.png" />
+    <None Include="Resources\icons\32x32\Heart with Pulse_32px.png" />
+    <Content Include="Resources\icons\32x32\Holy Bible_32px.png" />
+    <Content Include="Resources\icons\32x32\Home_32px.png" />
+    <Content Include="Resources\icons\32x32\Info_32px.png" />
+    <Content Include="Resources\icons\32x32\Initiate Money Transfer_32px.png" />
+    <Content Include="Resources\icons\32x32\Login_32px.png" />
+    <Content Include="Resources\icons\32x32\Minimize Window_32px.png" />
+    <Content Include="Resources\icons\32x32\Minus_32px.png" />
+    <Content Include="Resources\icons\32x32\Money_32px.png" />
+    <Content Include="Resources\icons\32x32\Newlyweds_32px.png" />
+    <None Include="Resources\icons\32x32\Ok_32px.png" />
+    <Content Include="Resources\icons\32x32\Password_32px.png" />
+    <Content Include="Resources\icons\32x32\Plus 2 Math_32px.png" />
+    <Content Include="Resources\icons\32x32\Plus_32px.png" />
+    <Content Include="Resources\icons\32x32\Pray_32px.png" />
+    <Content Include="Resources\icons\32x32\Printer Door Open_32px.png" />
+    <Content Include="Resources\icons\32x32\Print_32px.png" />
+    <Content Include="Resources\icons\32x32\Profit_32px.png" />
+    <Content Include="Resources\icons\32x32\Remove User Male_32px.png" />
+    <Content Include="Resources\icons\32x32\Report Card_32px.png" />
+    <Content Include="Resources\icons\32x32\Request Money_32px.png" />
+    <Content Include="Resources\icons\32x32\Resume_32px.png" />
+    <Content Include="Resources\icons\32x32\Search_32px.png" />
+    <Content Include="Resources\icons\32x32\Settings_32px.png" />
+    <Content Include="Resources\icons\32x32\Shellfish_32px.png" />
+    <Content Include="Resources\icons\32x32\Tax_32px.png" />
+    <Content Include="Resources\icons\32x32\The Pope_32px.png" />
+    <None Include="Resources\icons\32x32\Trash.ico" />
+    <None Include="Resources\icons\32x32\TrashDown.ico" />
+    <None Include="Resources\icons\32x32\TrashHover.ico" />
+    <Content Include="Resources\icons\32x32\Trash_32px.png" />
+    <Content Include="Resources\icons\32x32\User Group Man Man_32px.png" />
+    <Content Include="Resources\icons\32x32\Watch_32px.png" />
+    <Content Include="Resources\icons\32x32\Water_32px.png" />
+    <Content Include="Resources\icons\32x32\X Coordinate_32px.png" />
+    <Content Include="Resources\icons\45x45\Cancel_45px.png" />
+    <Content Include="Resources\icons\45x45\Checkmark_45.png" />
+    <Content Include="Resources\icons\45x45\Clock_45.png" />
+    <Content Include="Resources\icons\45x45\customer_45.png" />
+    <Content Include="Resources\icons\45x45\Delete_45.png" />
+    <Content Include="Resources\icons\45x45\Deposit_45.png" />
+    <Content Include="Resources\icons\45x45\Dove_45.png" />
+    <Content Include="Resources\icons\45x45\Edit_45.png" />
+    <Content Include="Resources\icons\45x45\Eye_45.png" />
+    <Content Include="Resources\icons\45x45\Google Web Search_45.png" />
+    <Content Include="Resources\icons\45x45\Heart with Pulse_45px.png" />
+    <Content Include="Resources\icons\45x45\Holy Bible_45.png" />
+    <Content Include="Resources\icons\45x45\Home_45.png" />
+    <Content Include="Resources\icons\45x45\Info_45.png" />
+    <Content Include="Resources\icons\45x45\Initiate Money Transfer_45.png" />
+    <Content Include="Resources\icons\45x45\Login_45.png" />
+    <Content Include="Resources\icons\45x45\Minimize Window_45.png" />
+    <Content Include="Resources\icons\45x45\Minus_45.png" />
+    <Content Include="Resources\icons\45x45\Money_45.png" />
+    <Content Include="Resources\icons\45x45\Newlyweds_45.png" />
+    <Content Include="Resources\icons\45x45\Password_45.png" />
+    <Content Include="Resources\icons\45x45\Plus 2 Math_45.png" />
+    <Content Include="Resources\icons\45x45\Plus_45.png" />
+    <Content Include="Resources\icons\45x45\Pray_45.png" />
+    <Content Include="Resources\icons\45x45\Printer Door Open_45.png" />
+    <Content Include="Resources\icons\45x45\Print_45.png" />
+    <Content Include="Resources\icons\45x45\Profit_45.png" />
+    <Content Include="Resources\icons\45x45\Remove User Male_45.png" />
+    <Content Include="Resources\icons\45x45\Report Card_45.png" />
+    <Content Include="Resources\icons\45x45\Request Money_45.png" />
+    <Content Include="Resources\icons\45x45\Resume_45.png" />
+    <Content Include="Resources\icons\45x45\Search_45.png" />
+    <Content Include="Resources\icons\45x45\Settings_45.png" />
+    <Content Include="Resources\icons\45x45\Shellfish_45.png" />
+    <Content Include="Resources\icons\45x45\Tax_45.png" />
+    <Content Include="Resources\icons\45x45\The Pope_45.png" />
+    <Content Include="Resources\icons\45x45\Trash_45.png" />
+    <Content Include="Resources\icons\45x45\User Group Man Man_45.png" />
+    <Content Include="Resources\icons\45x45\Watch_45.png" />
+    <Content Include="Resources\icons\45x45\Water_45.png" />
+    <Content Include="Resources\icons\45x45\X Coordinate_45.png" />
+    <Content Include="Resources\icons\50x50\Cancel_50px.png" />
+    <Content Include="Resources\icons\50x50\Checkmark_50px.png" />
+    <Content Include="Resources\icons\50x50\Clock_50px.png" />
+    <Content Include="Resources\icons\50x50\customer_50px.png" />
+    <Content Include="Resources\icons\50x50\Delete_50px.png" />
+    <Content Include="Resources\icons\50x50\Deposit_50px.png" />
+    <Content Include="Resources\icons\50x50\Dove_50px.png" />
+    <Content Include="Resources\icons\50x50\Edit_50px.png" />
+    <Content Include="Resources\icons\50x50\Eye_50px.png" />
+    <Content Include="Resources\icons\50x50\Google Web Search_50px.png" />
+    <Content Include="Resources\icons\50x50\Holy Bible_50px.png" />
+    <Content Include="Resources\icons\50x50\Home_50px.png" />
+    <Content Include="Resources\icons\50x50\Info_50px.png" />
+    <Content Include="Resources\icons\50x50\Initiate Money Transfer_50px.png" />
+    <Content Include="Resources\icons\50x50\Login_50px.png" />
+    <Content Include="Resources\icons\50x50\Minimize Window_50px.png" />
+    <Content Include="Resources\icons\50x50\Minus_50px.png" />
+    <Content Include="Resources\icons\50x50\Money_50px.png" />
+    <Content Include="Resources\icons\50x50\Newlyweds_50px.png" />
+    <Content Include="Resources\icons\50x50\Password_50px.png" />
+    <Content Include="Resources\icons\50x50\Plus 2 Math_50px.png" />
+    <Content Include="Resources\icons\50x50\Plus_50px.png" />
+    <Content Include="Resources\icons\50x50\Pray_50px.png" />
+    <Content Include="Resources\icons\50x50\Printer Door Open_50px.png" />
+    <Content Include="Resources\icons\50x50\Print_50px.png" />
+    <Content Include="Resources\icons\50x50\Profit_50px.png" />
+    <Content Include="Resources\icons\50x50\Remove User Male_50px.png" />
+    <Content Include="Resources\icons\50x50\Report Card_50px.png" />
+    <Content Include="Resources\icons\50x50\Request Money_50px.png" />
+    <Content Include="Resources\icons\50x50\Resume_50px.png" />
+    <Content Include="Resources\icons\50x50\Search_50px.png" />
+    <Content Include="Resources\icons\50x50\Settings_50px.png" />
+    <Content Include="Resources\icons\50x50\Shellfish_50px.png" />
+    <Content Include="Resources\icons\50x50\Tax_50px.png" />
+    <Content Include="Resources\icons\50x50\The Pope_50px.png" />
+    <Content Include="Resources\icons\50x50\Trash_50px.png" />
+    <Content Include="Resources\icons\50x50\User Group Man Man_50px.png" />
+    <Content Include="Resources\icons\50x50\Watch_50px.png" />
+    <Content Include="Resources\icons\50x50\Water_50px.png" />
+    <Content Include="Resources\icons\50x50\X Coordinate_50px.png" />
+    <Content Include="Resources\icons\64x64\Cancel_64px.png" />
+    <Content Include="Resources\icons\64x64\Checkmark_64px.png" />
+    <Content Include="Resources\icons\64x64\Clock_64px.png" />
+    <Content Include="Resources\icons\64x64\customer_64px.png" />
+    <Content Include="Resources\icons\64x64\Delete_64px.png" />
+    <Content Include="Resources\icons\64x64\Deposit_64px.png" />
+    <Content Include="Resources\icons\64x64\Dove_64px.png" />
+    <Content Include="Resources\icons\64x64\Edit_64px.png" />
+    <Content Include="Resources\icons\64x64\Eye_64px.png" />
+    <Content Include="Resources\icons\64x64\Google Web Search_64px.png" />
+    <Content Include="Resources\icons\64x64\Holy Bible_64px.png" />
+    <Content Include="Resources\icons\64x64\Home_64px.png" />
+    <Content Include="Resources\icons\64x64\Info_64px.png" />
+    <Content Include="Resources\icons\64x64\Initiate Money Transfer_64px.png" />
+    <Content Include="Resources\icons\64x64\Login_64px.png" />
+    <Content Include="Resources\icons\64x64\Minimize Window_64px.png" />
+    <Content Include="Resources\icons\64x64\Minus_64px.png" />
+    <Content Include="Resources\icons\64x64\Money_64px.png" />
+    <Content Include="Resources\icons\64x64\Newlyweds_64px.png" />
+    <Content Include="Resources\icons\64x64\Password_64px.png" />
+    <Content Include="Resources\icons\64x64\Plus 2 Math_64px.png" />
+    <Content Include="Resources\icons\64x64\Plus_64px.png" />
+    <Content Include="Resources\icons\64x64\Pray_64px.png" />
+    <Content Include="Resources\icons\64x64\Printer Door Open_64px.png" />
+    <Content Include="Resources\icons\64x64\Print_64px.png" />
+    <Content Include="Resources\icons\64x64\Profit_64px.png" />
+    <Content Include="Resources\icons\64x64\Remove User Male_64px.png" />
+    <Content Include="Resources\icons\64x64\Report Card_64px.png" />
+    <Content Include="Resources\icons\64x64\Request Money_64px.png" />
+    <Content Include="Resources\icons\64x64\Resume_64px.png" />
+    <Content Include="Resources\icons\64x64\Search_64px.png" />
+    <Content Include="Resources\icons\64x64\Settings_64px.png" />
+    <Content Include="Resources\icons\64x64\Shellfish_64px.png" />
+    <Content Include="Resources\icons\64x64\Tax_64px.png" />
+    <Content Include="Resources\icons\64x64\The Pope_64px.png" />
+    <Content Include="Resources\icons\64x64\Trash_64px.png" />
+    <Content Include="Resources\icons\64x64\User Group Man Man_64px.png" />
+    <Content Include="Resources\icons\64x64\Watch_64px.png" />
+    <Content Include="Resources\icons\64x64\Water_64px.png" />
+    <Content Include="Resources\icons\64x64\X Coordinate_64px.png" />
+    <Content Include="Resources\icons\96x96\Cancel_96px.png" />
+    <Content Include="Resources\icons\96x96\Checkmark_96px.png" />
+    <Content Include="Resources\icons\96x96\Clock_96px.png" />
+    <Content Include="Resources\icons\96x96\Customer_96px.png" />
+    <Content Include="Resources\icons\96x96\Delete_96px.png" />
+    <Content Include="Resources\icons\96x96\Deposit_96px.png" />
+    <Content Include="Resources\icons\96x96\Dove_96px.png" />
+    <Content Include="Resources\icons\96x96\Edit_96px.png" />
+    <Content Include="Resources\icons\96x96\Eye_96px.png" />
+    <Content Include="Resources\icons\96x96\Google Web Search_96px.png" />
+    <Content Include="Resources\icons\96x96\Heart with Pulse_96px.png" />
+    <Content Include="Resources\icons\96x96\Holy Bible_96px.png" />
+    <Content Include="Resources\icons\96x96\Home_96px.png" />
+    <Content Include="Resources\icons\96x96\Info_96px.png" />
+    <Content Include="Resources\icons\96x96\Initiate Money Transfer_96px.png" />
+    <Content Include="Resources\icons\96x96\Login_96px.png" />
+    <Content Include="Resources\icons\96x96\Minimize Window_96px.png" />
+    <Content Include="Resources\icons\96x96\Minus_96px.png" />
+    <Content Include="Resources\icons\96x96\Money_96px.png" />
+    <Content Include="Resources\icons\96x96\Newlyweds_96px.png" />
+    <Content Include="Resources\icons\96x96\Password_96px.png" />
+    <Content Include="Resources\icons\96x96\Plus 2 Math_96px.png" />
+    <Content Include="Resources\icons\96x96\Plus_96px.png" />
+    <Content Include="Resources\icons\96x96\Pray_96px.png" />
+    <Content Include="Resources\icons\96x96\Printer Door Open_96px.png" />
+    <Content Include="Resources\icons\96x96\Print_96px.png" />
+    <Content Include="Resources\icons\96x96\Profit_96px.png" />
+    <Content Include="Resources\icons\96x96\Remove User Male_96px.png" />
+    <Content Include="Resources\icons\96x96\Report Card_96px.png" />
+    <Content Include="Resources\icons\96x96\Request Money_96px.png" />
+    <Content Include="Resources\icons\96x96\Resume_96px.png" />
+    <Content Include="Resources\icons\96x96\Search_96px.png" />
+    <Content Include="Resources\icons\96x96\Settings_96px.png" />
+    <Content Include="Resources\icons\96x96\Shellfish_96px.png" />
+    <Content Include="Resources\icons\96x96\Tax_96px.png" />
+    <Content Include="Resources\icons\96x96\The Pope_96px.png" />
+    <Content Include="Resources\icons\96x96\Trash_96px.png" />
+    <Content Include="Resources\icons\96x96\User Group Man Man_96px.png" />
+    <Content Include="Resources\icons\96x96\Watch_96px.png" />
+    <Content Include="Resources\icons\96x96\Water_96px.png" />
+    <Content Include="Resources\icons\96x96\X Coordinate_96px.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Calendar\Calendar.csproj">
+      <Project>{916e2f61-7928-4323-b178-b96471a0b372}</Project>
+      <Name>Calendar</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
