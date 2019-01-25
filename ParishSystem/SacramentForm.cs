@@ -49,7 +49,7 @@ namespace ParishSystem
             //4 - First Name 5 - MI 6 - Last Name   7 - Suffix
             nameLabel.Text = string.Format("{0} {1}. {2} {3}", row["firstName"], row["midName"], row["lastName"], row["suffix"]);
             //MessageBox.Show(dt.Rows[0]["birthDate"].ToString());
-            birthdateLabel.Text = DateTime.ParseExact(dt.Rows[0]["birthDate"].ToString(), "dd/MM/yyyy hh:mm:ss tt", null).ToString("yyyy-MM-dd");
+            //birthdateLabel.Text = DateTime.ParseExact(dt.Rows[0]["birthDate"].ToString(), "dd/MM/yyyy hh:mm:ss tt", null).ToString("yyyy-MM-dd");
             genderLabel.Text = dt.Rows[0]["gender"].ToString() == "1" ? "Male" : "Female";
 
             txtBirthplace.Text = dt.Rows[0]["birthplace"].ToString();
@@ -60,7 +60,7 @@ namespace ParishSystem
             if(operation == OperationType.Edit)
             {
                 //Baptism Date or COnfirmation Date
-                sacramentDateDTP.MinDate = DateTime.ParseExact(dt.Rows[0]["birthdate"].ToString(), "dd/MM/yyyy hh:mm:ss tt", null);
+                //sacramentDateDTP.MinDate = DateTime.ParseExact(dt.Rows[0]["birthdate"].ToString(), "dd/MM/yyyy hh:mm:ss tt", null);
                 remarksText.Text = row["remarks"].ToString();
                 loadSponsors();
             }
