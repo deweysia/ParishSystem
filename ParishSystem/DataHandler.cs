@@ -2888,7 +2888,7 @@ namespace ParishSystem
                     }
                     row["OR Number"] = dr["ORnum"].ToString();
                     row["Name"] = dr["SourceName"].ToString();
-                    row["Date Paid"] = DateTime.Parse(dr["primaryincomedatetime"].ToString()).ToString(" MMMM dd yyyy, hh:mm");
+                    row["Date Paid"] = DateTime.Parse(dr["primaryincomedatetime"].ToString()).ToString("MMMM dd yyyy");
                     try { row["Amount"] = (float.Parse(row["Amount"].ToString()) + float.Parse(dr["price"].ToString())).ToString("0.00"); } catch { row["Amount"] = float.Parse(dr["price"].ToString()).ToString("0.00"); };
                 }
                 output.Rows.Add(row);

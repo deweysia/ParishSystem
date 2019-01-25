@@ -51,11 +51,11 @@
             this.bloodlettingeventreport_combobox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.filterBy_combobox_bloodletting = new System.Windows.Forms.ComboBox();
-            this.generateReport_button = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.summary_dgv_bloodletting = new System.Windows.Forms.DataGridView();
             this.bloodlettingeventreport_datagridview = new System.Windows.Forms.DataGridView();
             this.open_button = new System.Windows.Forms.Button();
+            this.generateReport_button = new System.Windows.Forms.Button();
             this.animation = new System.Windows.Forms.Timer(this.components);
             this.panelOpen = new System.Windows.Forms.Timer(this.components);
             this.bloodlettingreports_panel.SuspendLayout();
@@ -73,7 +73,6 @@
             this.bloodlettingreports_panel.Controls.Add(this.summary_dgv_bloodletting);
             this.bloodlettingreports_panel.Controls.Add(this.bloodlettingeventreport_datagridview);
             this.bloodlettingreports_panel.Controls.Add(this.open_button);
-            this.bloodlettingreports_panel.Controls.Add(this.generateReport_button);
             this.bloodlettingreports_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bloodlettingreports_panel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bloodlettingreports_panel.Location = new System.Drawing.Point(0, 0);
@@ -91,6 +90,7 @@
             this.filterPanel.Controls.Add(this.SaveExcelButton);
             this.filterPanel.Controls.Add(this.flowLayoutPanel1);
             this.filterPanel.Controls.Add(this.label3);
+            this.filterPanel.Controls.Add(this.generateReport_button);
             this.filterPanel.Controls.Add(this.filterBy_combobox_bloodletting);
             this.filterPanel.Location = new System.Drawing.Point(552, 77);
             this.filterPanel.Name = "filterPanel";
@@ -105,9 +105,9 @@
             this.filterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.filterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.filterButton.ForeColor = System.Drawing.Color.White;
-            this.filterButton.Location = new System.Drawing.Point(0, -2);
+            this.filterButton.Location = new System.Drawing.Point(0, -1);
             this.filterButton.Name = "filterButton";
-            this.filterButton.Size = new System.Drawing.Size(338, 34);
+            this.filterButton.Size = new System.Drawing.Size(338, 33);
             this.filterButton.TabIndex = 78;
             this.filterButton.Tag = "o";
             this.filterButton.Text = "View Options";
@@ -254,21 +254,6 @@
             this.filterBy_combobox_bloodletting.TabIndex = 5;
             this.filterBy_combobox_bloodletting.SelectedIndexChanged += new System.EventHandler(this.filterBy_combobox_bloodletting_SelectedIndexChanged);
             // 
-            // generateReport_button
-            // 
-            this.generateReport_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.generateReport_button.FlatAppearance.BorderSize = 0;
-            this.generateReport_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.generateReport_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.generateReport_button.ForeColor = System.Drawing.Color.White;
-            this.generateReport_button.Location = new System.Drawing.Point(552, 37);
-            this.generateReport_button.Name = "generateReport_button";
-            this.generateReport_button.Size = new System.Drawing.Size(340, 34);
-            this.generateReport_button.TabIndex = 7;
-            this.generateReport_button.Text = "Generate";
-            this.generateReport_button.UseVisualStyleBackColor = false;
-            this.generateReport_button.Click += new System.EventHandler(this.generateReport_button_Click);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -412,6 +397,21 @@
             this.open_button.TabIndex = 8;
             this.open_button.UseVisualStyleBackColor = false;
             this.open_button.Click += new System.EventHandler(this.open_button_Click);
+            // 
+            // generateReport_button
+            // 
+            this.generateReport_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.generateReport_button.FlatAppearance.BorderSize = 0;
+            this.generateReport_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.generateReport_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.generateReport_button.ForeColor = System.Drawing.Color.White;
+            this.generateReport_button.Location = new System.Drawing.Point(0, 140);
+            this.generateReport_button.Name = "generateReport_button";
+            this.generateReport_button.Size = new System.Drawing.Size(340, 34);
+            this.generateReport_button.TabIndex = 7;
+            this.generateReport_button.Text = "Generate";
+            this.generateReport_button.UseVisualStyleBackColor = false;
+            this.generateReport_button.Click += new System.EventHandler(this.generateReport_button_Click);
             // 
             // animation
             // 

@@ -122,7 +122,7 @@ namespace ParishSystem
             {
                 dt = dh.getBloodDonorsOnDateRange(from_bloodlettingeventreport_dtp.Value, to_bloodlettingeventreport_dtp.Value);
                 summary_dgv_bloodletting.DataSource = dh.getsummaryOfBloodleting(dt);
-                summary_dgv_bloodletting.Columns["bloodDonationEventID"].Visible = false;
+                //summary_dgv_bloodletting.Columns["bloodDonationEventID"].Visible = false;
                 bloodlettingeventreport_datagridview.DataSource = dt;
                 bloodlettingeventreport_datagridview.Columns["blooddonorID"].Visible = false;
                 bloodlettingeventreport_datagridview.Columns["eventname"].HeaderText = "Event Name";
