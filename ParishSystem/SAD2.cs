@@ -139,7 +139,7 @@ namespace ParishSystem
             {
                 sacrament_cabinet_panel.Visible = true;
                 cash_cabinet_panel.Visible = true;
-                bloodletting_cabinet_panel.Visible = true;
+                //bloodletting_cabinet_panel.Visible = true;
                 admin_cabinet_panel.Visible = false;
 
                 CDBreport_button.Visible = false;
@@ -149,18 +149,18 @@ namespace ParishSystem
                 itemtypemenu_button.Visible = true;
                 SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(204, 50, sacrament_cabinet_panel, false));
                 SubMenu.Add(cash_cabinet, new Panel_Size_Pair(198, 50, cash_cabinet_panel, false));
-                SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));
+                //SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));
             }
             else if (User.getCurrentUser().Privilege == 4)//ALL
             {
                 sacrament_cabinet_panel.Visible = true;
                 cash_cabinet_panel.Visible = true;
-                bloodletting_cabinet_panel.Visible = true;
+                //bloodletting_cabinet_panel.Visible = true;
                 admin_cabinet_panel.Visible = true;
 
                 SubMenu.Add(sacrament_cabinet, new Panel_Size_Pair(204, 50, sacrament_cabinet_panel, false));
                 SubMenu.Add(cash_cabinet, new Panel_Size_Pair(295, 50, cash_cabinet_panel, false));
-                SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));
+                //SubMenu.Add(bloodletting_cabinet, new Panel_Size_Pair(285, 50, bloodletting_cabinet_panel, false));
                 SubMenu.Add(admin_cabinet, new Panel_Size_Pair(194, 50, admin_cabinet_panel, false));
             }
         }
@@ -542,6 +542,11 @@ namespace ParishSystem
         private void schedule_cabinet_panel_MouseUp(object sender, MouseEventArgs e)
         {
             OpenMenu_button.PerformClick();
+        }
+
+        private void bloodletting_cabinet_panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

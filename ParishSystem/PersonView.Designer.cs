@@ -615,6 +615,7 @@
             this.btnBaptismPrint.TabIndex = 1;
             this.btnBaptismPrint.Text = "Print Certificate";
             this.btnBaptismPrint.UseVisualStyleBackColor = false;
+            this.btnBaptismPrint.Visible = false;
             this.btnBaptismPrint.Click += new System.EventHandler(this.btnBaptismPrint_Click);
             // 
             // baptism_details
@@ -1132,6 +1133,7 @@
             this.btnConfirmationPrint.TabIndex = 1;
             this.btnConfirmationPrint.Text = "Print Certificate";
             this.btnConfirmationPrint.UseVisualStyleBackColor = false;
+            this.btnConfirmationPrint.Visible = false;
             this.btnConfirmationPrint.Click += new System.EventHandler(this.btnConfirmationPrint_Click);
             // 
             // confirmationDetails_panel
@@ -1482,6 +1484,7 @@
             this.btnMarriagePrint.TabIndex = 1;
             this.btnMarriagePrint.Text = "Print Certificate";
             this.btnMarriagePrint.UseVisualStyleBackColor = false;
+            this.btnMarriagePrint.Visible = false;
             this.btnMarriagePrint.Click += new System.EventHandler(this.btnMarriagePrint_Click);
             // 
             // marriageDetails_panel
